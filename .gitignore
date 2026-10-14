@@ -1,0 +1,21 @@
+# Binaries and local tools
+cloudflared.exe
+
+# Local scratch and temporary scripts
+scratch/
+scratch_toc.json
+backups/
+
+# Local windows batch scripts (not needed on Render linux host)
+*.bat
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# IDE and OS files
+.gemini/
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini

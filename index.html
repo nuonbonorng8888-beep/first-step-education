@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1ˢᵗ Step (First Step) - ប្រព័ន្ធសិក្សាឌីជីថលស្តង់ដា</title>
+  <meta name="description" content="1ˢᵗ Step (First Step) - ប្រព័ន្ធសិក្សាឌីជីថលកម្រិតស្តង់ដា គាំទ្រការទស្សនាវីដេអូមេរៀន ការមើល និងទាញយក PDF និងការបន្ថែមមេរៀនដោយសេរី">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#06b6d4">
+  <link rel="icon" type="image/jpeg" href="assets/app_logo.jpg">
+  <link rel="apple-touch-icon" href="assets/app_logo.jpg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="1st Step">
+  
+  <!-- Google Fonts: Kantumruy Pro & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="nav-left">
+        <a class="brand-logo" onclick="App.backToCatalog()">
+          <img src="assets/mascot.jpg" alt="1st Step Mascot" style="width: 46px; height: 46px; border-radius: 14px; object-fit: cover; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4); border: 2px solid rgba(255, 255, 255, 0.2);">
+          <div class="brand-title">
+            <span class="brand-name">1ˢᵗ Step</span>
+            <span class="brand-sub">First Step • Digital LMS</span>
+          </div>
+        </a>
+
+        <!-- Main Nav Links (Tesdopi Style) -->
+        <div style="display: flex; gap: 8px; margin-left: 12px;" class="desktop-only">
+          <button class="cat-pill active" onclick="App.backToCatalog()" id="nav-link-home">ទំព័រដើម</button>
+          <button class="cat-pill" onclick="App.scrollToLessons()" id="nav-link-lessons">មេរៀន</button>
+          <button class="cat-pill" onclick="App.openDiagnosticModal()" id="nav-link-test">តេស្តសមត្ថភាព</button>
+        </div>
+      </div>
+
+      <!-- Live Search -->
+      <div class="nav-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" class="search-input" placeholder="ស្វែងរកវគ្គសិក្សា មេរៀន ឬឯកសារ...">
+        <span class="search-badge">Ctrl K</span>
+      </div>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Language Switcher (KM / EN) -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btn-lang-km" onclick="App.setLanguage('km')">🇰🇭 KM</button>
+          <button class="lang-btn" id="btn-lang-en" onclick="App.setLanguage('en')">🇺🇸 EN</button>
+        </div>
+
+        <button class="btn btn-secondary" onclick="App.openMobileModal()" title="របៀបបើកលើទូរស័ព្ទដៃ">
+          📱 បើកលើទូរស័ព្ទ
+        </button>
+
+        <button class="btn btn-outline" onclick="App.openMobileModal()" title="ដំឡើង App លើទូរស័ព្ទ">
+          📲 ដំឡើង App
+        </button>
+
+        <button class="btn btn-outline" id="btn-admin-auth" onclick="App.openLoginModal()" title="ចូលគណនីគ្រូបង្រៀន">
+          🔐 គ្រូបង្រៀន (Teacher)
+        </button>
+
+        <button class="btn btn-primary admin-only" onclick="App.openUploadModal()" id="btn-upload-nav" style="display: none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          + បញ្ចូលមេរៀនថ្មី
+        </button>
+
+        <button class="btn-icon" id="theme-toggle-btn" onclick="App.toggleTheme()" title="ប្តូរពន្លឺ / ងងឹត">
+          ☀️
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- ================= CATALOG VIEW (ទំព័រដើម) ================= -->
+    <section id="catalog-view">
+      
+      <!-- Tesdopi-Style Mascot Hero -->
+      <div class="tesdopi-hero">
+        <div class="mascot-container">
+          <img src="assets/mascot.jpg" alt="1st Step Mascot" class="mascot-img">
+        </div>
+        <h1 class="tesdopi-title" id="hero-main-title">1ˢᵗ Step (First Step)</h1>
+        <div class="tesdopi-tagline" id="hero-tagline">ប្រព័ន្ធសិក្សាគណិតវិទ្យាឌីជីថលស្តង់ដា ថ្នាក់ទី ៧ ដល់ ទី ១២</div>
+        <div class="tesdopi-sub" id="hero-slogan">✨ មូលដ្ឋានគ្រឹះរឹងមាំ ឆ្ពោះទៅកាន់និទ្ទេស A • Master Mathematics Grades 7-12!</div>
+
+        <!-- Store Badges (App Store & Google Play) -->
+        <div class="store-badges">
+          <a class="store-badge-btn" onclick="App.openStoreInfoModal('appstore')" title="Apple App Store">
+            <div class="store-badge-icon"></div>
+            <div class="store-badge-text">
+              <span class="store-badge-sub">Download on</span>
+              <span class="store-badge-main">App Store</span>
+            </div>
+          </a>
+
+          <a class="store-badge-btn" onclick="App.openStoreInfoModal('playstore')" title="Google Play Store">
+            <div class="store-badge-icon">▶</div>
+            <div class="store-badge-text">
+              <span class="store-badge-sub">GET IT ON</span>
+              <span class="store-badge-main">Google Play</span>
+            </div>
+          </a>
+
+          <a class="store-badge-btn" style="background: rgba(6, 182, 212, 0.25); border-color: var(--accent-cyan); box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25);" onclick="App.openMobileModal()">
+            <div class="store-badge-icon">📲</div>
+            <div class="store-badge-text">
+              <span class="store-badge-sub">Install on Mobile</span>
+              <span class="store-badge-main">ដំឡើងលើទូរស័ព្ទ</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Grade Selector Track (Tesdopi Style 7-12) -->
+        <div class="grade-track-wrap">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-right: 4px;">កម្រិតថ្នាក់៖</span>
+          <button class="grade-pill active" data-grade="all" onclick="App.filterByGrade('all', this)">ទាំងអស់</button>
+          <button class="grade-pill" data-grade="7" onclick="App.filterByGrade('7', this)">ថ្នាក់ទី ៧</button>
+          <button class="grade-pill" data-grade="8" onclick="App.filterByGrade('8', this)">ថ្នាក់ទី ៨</button>
+          <button class="grade-pill" data-grade="9" onclick="App.filterByGrade('9', this)">ថ្នាក់ទី ៩</button>
+          <button class="grade-pill" data-grade="10" onclick="App.filterByGrade('10', this)">ថ្នាក់ទី ១០</button>
+          <button class="grade-pill" data-grade="11" onclick="App.filterByGrade('11', this)">ថ្នាក់ទី ១១</button>
+          <button class="grade-pill" data-grade="12" onclick="App.filterByGrade('12', this)">ថ្នាក់ទី ១២</button>
+        </div>
+
+      </div>
+
+      <!-- Quick Stats Strip -->
+      <div class="hero-stats" style="justify-content: center; margin-bottom: 24px;">
+        <div class="stat-item">
+          <div class="stat-icon blue">📚</div>
+          <div class="stat-details">
+            <span class="stat-number" id="stat-total-courses">0</span>
+            <span class="stat-label">វគ្គសិក្សា</span>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon purple">🎬</div>
+          <div class="stat-details">
+            <span class="stat-number" id="stat-total-lessons">0</span>
+            <span class="stat-label">វីដេអូមេរៀន</span>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon green">📑</div>
+          <div class="stat-details">
+            <span class="stat-number" id="stat-total-files">0</span>
+            <span class="stat-label">ឯកសារ PDF</span>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon blue">🏆</div>
+          <div class="stat-details">
+            <span class="stat-number" id="stat-total-progress">0%</span>
+            <span class="stat-label">វឌ្ឍនភាព</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toolbar & Category Filter (Math Disciplines) -->
+      <div class="toolbar-section">
+        <div class="toolbar-container">
+          <div class="category-pills">
+            <button class="cat-pill active" data-cat="all">គណិតវិទ្យាទាំងអស់</button>
+            <button class="cat-pill" data-cat="algebra">ពីជគណិត</button>
+            <button class="cat-pill" data-cat="geometry">ធរណីមាត្រ</button>
+            <button class="cat-pill" data-cat="statistics">ស្ថិតិវិទ្យា & ប្រូបាប</button>
+            <button class="cat-pill" data-cat="calculus">គណិតវិភាគ & លីមីត</button>
+          </div>
+
+          <div class="section-badge" id="course-count-badge">
+            6 វគ្គសិក្សា
+          </div>
+        </div>
+      </div>
+
+      <!-- Courses Grid -->
+      <div class="courses-grid" id="courses-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+    </section>
+
+
+    <!-- ================= LESSON PLAYER VIEW (ថ្នាក់រៀនឌីជីថល) ================= -->
+    <section id="player-view" class="player-view">
+      
+      <!-- Player Header Navigation -->
+      <div class="player-nav-header">
+        <button class="back-btn" onclick="App.backToCatalog()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          ត្រឡប់ទៅវគ្គសិក្សាទាំងអស់
+        </button>
+
+        <div class="player-breadcrumbs">
+          <span id="bc-course">គណិតវិទ្យា</span>
+          <span>/</span>
+          <span class="active" id="bc-lesson">មេរៀនទី ១០៖ ស្ថិតិវិទ្យា</span>
+        </div>
+      </div>
+
+      <div class="classroom-layout">
+        
+        <!-- Left: Video Stage & Lesson Tabs -->
+        <div class="video-stage">
+          
+          <!-- Custom Video Player -->
+          <div class="video-container" id="video-container">
+            <video id="main-video" class="main-video" preload="metadata">
+              <source src="Statistic.mp4" type="video/mp4">
+              កម្មវិធីរុករករបស់អ្នកមិនគាំទ្រការចាក់វីដេអូនេះទេ។
+            </video>
+
+            <!-- Custom Controls -->
+            <div class="video-controls">
+              <!-- Scrubber Bar -->
+              <div class="progress-bar-wrap">
+                <div class="progress-bar">
+                  <div class="progress-scrubber"></div>
+                </div>
+              </div>
+
+              <!-- Action Row -->
+              <div class="controls-row">
+                <div class="controls-left">
+                  <button class="ctrl-btn" id="btn-play-pause" title="Play/Pause">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </button>
+
+                  <button class="ctrl-btn" id="btn-skip-back" title="ថយក្រោយ 10 វិនាទី">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M1 4v6h6M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                      <text x="9" y="15" font-size="8" font-family="sans-serif" font-weight="bold">10</text>
+                    </svg>
+                  </button>
+
+                  <button class="ctrl-btn" id="btn-skip-forward" title="ទៅមុខ 10 វិនាទី">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M23 4v6h-6M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                      <text x="9" y="15" font-size="8" font-family="sans-serif" font-weight="bold">10</text>
+                    </svg>
+                  </button>
+
+                  <button class="ctrl-btn" id="btn-volume" title="កម្រិតសំឡេង">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                  </button>
+
+                  <span class="time-display">00:00 / 00:00</span>
+                </div>
+
+                <div class="controls-right">
+                  <select id="player-speed" class="speed-select" title="ល្បឿនចាក់វីដេអូ">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1.0x (ធម្មតា)</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2.0x</option>
+                  </select>
+
+                  <button class="ctrl-btn" id="btn-fullscreen" title="ពង្រីកពេញអេក្រង់">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Current Lesson Info & Tabs -->
+          <div class="lesson-meta-card">
+            <div class="current-lesson-header">
+              <div>
+                <div class="current-lesson-ch" id="current-lesson-chapter">ជំពូកទី ១</div>
+                <h2 class="current-lesson-title" id="current-lesson-title">មេរៀនទី ១០៖ ស្ថិតិវិទ្យា និងការបែងចែកប្រេកង់</h2>
+              </div>
+              <button class="btn btn-outline admin-only" onclick="App.openUploadModal()" style="display: none;">
+                + បន្ថែមឯកសារលើមេរៀននេះ
+              </button>
+            </div>
+
+            <!-- Interactive Tab Headers -->
+            <div class="tab-headers">
+              <button class="tab-btn active" data-tab="materials" onclick="App.switchTab('materials')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                ឯកសារមេរៀន (<span id="materials-tab-count">1</span>)
+              </button>
+
+              <button class="tab-btn" data-tab="notes" onclick="App.switchTab('notes')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                កំណត់ត្រាផ្ទាល់ខ្លួន
+              </button>
+
+              <button class="tab-btn" data-tab="quiz" onclick="App.switchTab('quiz')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                កម្រងសំណួរតេស្ត (Quiz)
+              </button>
+
+              <button class="tab-btn" data-tab="overview" onclick="App.switchTab('overview')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                សេចក្តីសង្ខេប
+              </button>
+            </div>
+
+            <!-- Tab Content: Materials (PDF & Files) -->
+            <div id="tab-content-materials" class="tab-content active">
+              <div class="file-list" id="materials-list">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Tab Content: Notes -->
+            <div id="tab-content-notes" class="tab-content">
+              <div class="notes-container">
+                <div class="note-input-box">
+                  <textarea id="note-input-text" class="note-textarea" placeholder="សរសេរចំណាំ ឬគំនិតរបស់អ្នកពេលកំពុងមើលវីដេអូ... (វានឹងភ្ជាប់ជាមួយវិនាទីវីដេអូដោយស្វ័យប្រវត្តិ)"></textarea>
+                  <div class="note-input-actions">
+                    <span style="font-size:0.8rem; color:var(--text-muted);">ចុចលើម៉ោង ដើម្បីត្រឡប់ទៅមើលវីដេអូត្រង់ចំណុចនោះ</span>
+                    <button class="btn btn-primary" onclick="App.addNote()">
+                      + បន្ថែមចំណាំ
+                    </button>
+                  </div>
+                </div>
+                <div id="notes-list" style="display:flex; flex-direction:column; gap:12px; margin-top:10px;">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Content: Quiz -->
+            <div id="tab-content-quiz" class="tab-content">
+              <div class="quiz-box" id="quiz-container">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Tab Content: Overview -->
+            <div id="tab-content-overview" class="tab-content">
+              <p id="lesson-overview-text" style="line-height:1.7; color:var(--text-secondary);"></p>
+              <div style="margin-top:16px; padding-top:16px; border-top:1px solid var(--border-glass); display:flex; align-items:center; gap:12px;">
+                <div class="avatar">គ្រូ</div>
+                <div>
+                  <div style="font-weight:600;" id="lesson-teacher-name">លោកគ្រូ NGS</div>
+                  <div style="font-size:0.78rem; color:var(--text-muted);">គ្រូបង្រៀនទទួលបន្ទុកមុខវិជ្ជា</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Right: Course Playlist Sidebar -->
+        <div class="playlist-sidebar">
+          <div class="playlist-card">
+            <div class="playlist-header">
+              <span class="playlist-title">មាតិកាវគ្គសិក្សា</span>
+              <span class="playlist-progress">លំដាប់មេរៀន</span>
+            </div>
+            <div id="playlist-chapters-list">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= PDF PREVIEW MODAL (មើលឯកសារផ្ទាល់ក្នុង App) ================= -->
+  <div class="modal-overlay" id="pdf-modal" onclick="if(event.target === this) App.closePdfModal()">
+    <div class="modal-card pdf-modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="pdf-modal-title">ឯកសារមេរៀន (PDF Preview)</h3>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <a id="pdf-modal-download" href="#" download class="btn btn-outline" style="padding:6px 14px; font-size:0.8rem;">
+            ទាញយក PDF
+          </a>
+          <button class="btn-icon" onclick="App.closePdfModal()">✕</button>
+        </div>
+      </div>
+      <div style="flex:1; width:100%; height:calc(100% - 70px); background:#333;">
+        <iframe id="pdf-frame" class="pdf-viewer-frame" src="about:blank"></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= UPLOAD LESSON & FILE MODAL (បញ្ចូលមេរៀន និងឯកសារ) ================= -->
+  <div class="modal-overlay" id="upload-modal" onclick="if(event.target === this) App.closeUploadModal()">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">📤 បញ្ចូលមេរៀន វីដេអូ ឬឯកសារថ្មី</h3>
+        <button class="btn-icon" onclick="App.closeUploadModal()">✕</button>
+      </div>
+
+      <form id="upload-form" onsubmit="App.handleFormUpload(event)">
+        <div class="modal-body">
+          
+          <div class="form-group">
+            <label class="form-label">ជ្រើសរើសវគ្គសិក្សា (Course):</label>
+            <select id="upload-course-select" class="form-select"></select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">ចំណងជើងមេរៀនជាភាសាខ្មែរ (Lesson Title) *:</label>
+            <input type="text" id="upload-lesson-title" class="form-input" placeholder="ឧ. មេរៀនទី ១១៖ ការគណនាមធ្យមភាគ និងមេដ្យាន" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">ជំពូក (Chapter):</label>
+            <input type="text" id="upload-chapter-title" class="form-input" placeholder="ឧ. ជំពូកទី ១៖ ស្ថិតិវិទ្យា" value="ជំពូកទី ១">
+          </div>
+
+          <!-- Video Upload or Link -->
+          <div class="form-group">
+            <label class="form-label">វីដេអូមេរៀន (Video):</label>
+            <div class="dropzone" onclick="document.getElementById('upload-video-file').click()">
+              <input type="file" id="upload-video-file" accept="video/mp4,video/webm,video/ogg" style="display:none;">
+              <div class="dropzone-icon">🎬</div>
+              <div class="dropzone-title">ចុចទីនេះ ដើម្បីជ្រើសរើសវីដេអូពីកុំព្យូទ័រ (MP4)</div>
+              <div class="dropzone-sub">ឬ Drag & Drop វីដេអូមេរៀនទម្លាក់ចូលទីនេះ</div>
+            </div>
+            <div id="video-file-preview" style="font-size:0.85rem; color:var(--accent-cyan); margin-top:4px;"></div>
+            
+            <div style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin: 6px 0;">— ឬដាក់ Link វីដេអូពី YouTube/Cloud —</div>
+            <input type="text" id="upload-video-url" class="form-input" placeholder="https://www.youtube.com/... ឬ Link វីដេអូផ្សេងៗ">
+          </div>
+
+          <!-- Document Upload -->
+          <div class="form-group">
+            <label class="form-label">ឯកសារមេរៀនភ្ជាប់ (PDF / Docs / Exercises):</label>
+            <div class="dropzone" onclick="document.getElementById('upload-pdf-file').click()">
+              <input type="file" id="upload-pdf-file" accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.zip" style="display:none;">
+              <div class="dropzone-icon">📄</div>
+              <div class="dropzone-title">ចុចទីនេះ ដើម្បីជ្រើសរើសឯកសារ PDF ឬសៀវភៅជំនួយ</div>
+              <div class="dropzone-sub">គាំទ្រ PDF, Word, PowerPoint, Excel, ZIP</div>
+            </div>
+            <div id="pdf-file-preview" style="font-size:0.85rem; color:var(--accent-emerald); margin-top:4px;"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">សេចក្តីពិពណ៌នាសង្ខេប (Description):</label>
+            <textarea id="upload-lesson-desc" class="form-textarea" rows="3" placeholder="ពិពណ៌នាអំពីខ្លឹមសារសំខាន់នៃមេរៀននេះ..."></textarea>
+          </div>
+
+          <!-- Upload Progress Bar -->
+          <div id="upload-progress-container" style="display:none; margin-top:8px;">
+            <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:4px;">
+              <span>កំពុង Upload ចូលក្នុងប្រព័ន្ធ...</span>
+              <span id="upload-pct-label">រង់ចាំបន្តិច</span>
+            </div>
+            <div style="width:100%; height:8px; background:var(--bg-tertiary); border-radius:var(--radius-full); overflow:hidden;">
+              <div id="upload-progress-bar" style="width:0%; height:100%; background:var(--gradient-brand); transition:width 0.2s;"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="App.closeUploadModal()">បោះបង់</button>
+          <button type="submit" class="btn btn-primary" id="btn-save-lesson">
+            💾 រក្សាទុកមេរៀន
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ================= MOBILE ACCESS MODAL (របៀបបើកលើទូរស័ព្ទ) ================= -->
+  <div class="modal-overlay" id="mobile-modal" onclick="if(event.target === this) App.closeMobileModal()">
+    <div class="modal-card" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 class="modal-title">📱 របៀបបើកប្រើលើទូរស័ព្ទដៃ (Mobile App)</h3>
+        <button class="btn-icon" onclick="App.closeMobileModal()">✕</button>
+      </div>
+      <div class="modal-body" style="gap: 16px;">
+        <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); padding: 16px; border-radius: var(--radius-md); text-align: center;">
+          <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px;">
+            អាសយដ្ឋាន Link សម្រាប់បើកលើទូរស័ព្ទ (Wi-Fi ដូចគ្នា)៖
+          </div>
+          <div style="font-family: var(--font-en); font-size: 1.25rem; font-weight: 700; color: var(--accent-cyan); letter-spacing: 0.5px; user-select: all; padding: 8px; background: var(--bg-primary); border-radius: 8px; border: 1px dashed var(--accent-cyan);" id="mobile-ip-link">
+            http://192.168.1.6:8000
+          </div>
+          <button class="btn btn-outline" style="margin-top: 10px; padding: 6px 14px; font-size: 0.8rem;" onclick="navigator.clipboard.writeText('http://192.168.1.6:8000'); App.showToast('បានចម្លង Link រួចរាល់!', 'success');">
+            📋 ចម្លង Link (Copy)
+          </button>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem;">
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--gradient-brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</div>
+            <div>
+              <strong>ភ្ជាប់ Wi-Fi តែមួយ៖</strong>
+              <div style="color: var(--text-secondary); font-size: 0.82rem;">សូមប្រាកដថាទូរស័ព្ទដៃរបស់អ្នក និងកុំព្យូទ័រនេះ បានភ្ជាប់ទៅកាន់ Wi-Fi ជាមួយគ្នា។</div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--gradient-brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</div>
+            <div>
+              <strong>បើក Browser លើទូរស័ព្ទ៖</strong>
+              <div style="color: var(--text-secondary); font-size: 0.82rem;">បើក Safari (iPhone) ឬ Chrome (Android) រួចវាយបញ្ចូល <code>http://192.168.1.6:8000</code></div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--gradient-brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</div>
+            <div>
+              <strong>ដំឡើងជា App (Add to Home Screen)៖</strong>
+              <div style="color: var(--text-secondary); font-size: 0.82rem;">ចុចប៊ូតុង Share (iPhone) ឬ ចុចសញ្ញា <code>⋮</code> (Android) រួចជ្រើសរើស <strong>"Add to Home Screen" (បន្ថែមលើអេក្រង់ដើម)</strong> នោះវានឹងក្លាយជា App 1ˢᵗ Step លើទូរស័ព្ទរបស់អ្នក!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="App.closeMobileModal()">យល់ព្រម</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= STORE PUBLISHING INFO MODAL ================= -->
+  <div class="modal-overlay" id="store-modal" onclick="if(event.target === this) App.closeStoreInfoModal()">
+    <div class="modal-card" style="max-width: 620px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="store-modal-title">🚀 របៀបដាក់ App លើ App Store & Google Play</h3>
+        <button class="btn-icon" onclick="App.closeStoreInfoModal()">✕</button>
+      </div>
+      <div class="modal-body" style="gap: 16px;">
+        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 14px 18px; border-radius: var(--radius-md);">
+          <div style="font-weight: 700; color: var(--accent-emerald); font-size: 0.95rem; margin-bottom: 4px;">
+            ✅ កូដរបស់ 1ˢᵗ Step ត្រូវបានរៀបចំតាមស្តង់ដា Mobile App រួចជាស្រេច!
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+            គម្រោងនេះមានឯកសារ <code>capacitor.config.json</code> ដែលអាច Export ទៅជា Android Studio Project (.aab / .apk) និង Xcode Project (.ipa) ភ្លាមៗ។
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.88rem;">
+          <div style="padding: 12px; background: var(--bg-primary); border-radius: 10px; border: 1px solid var(--border-glass);">
+            <div style="font-weight: 700; color: var(--accent-cyan); margin-bottom: 4px;">
+              ១. Google Play Store (សម្រាប់ទូរស័ព្ទ Android)
+            </div>
+            <div style="color: var(--text-secondary); font-size: 0.82rem;">
+              • ចុះឈ្មោះគណនី <strong>Google Play Console</strong> (តម្លៃ $25 បង់តែម្តងគត់)<br>
+              • បង្កើតឯកសារ <code>.aab (Android App Bundle)</code> តាមរយៈ Android Studio<br>
+              • ដាក់ឈ្មោះ "1st Step", ដាក់រូប Mascot និងសេចក្តីពិពណ៌នា ➔ ដាក់ស្នើឱ្យ Google Review (រយៈពេល ២-៣ ថ្ងៃ នឹង Search ឃើញលើ Play Store)។
+            </div>
+          </div>
+
+          <div style="padding: 12px; background: var(--bg-primary); border-radius: 10px; border: 1px solid var(--border-glass);">
+            <div style="font-weight: 700; color: #a855f7; margin-bottom: 4px;">
+              ២. Apple App Store (សម្រាប់ iPhone & iPad)
+            </div>
+            <div style="color: var(--text-secondary); font-size: 0.82rem;">
+              • ចុះឈ្មោះ <strong>Apple Developer Program</strong> (តម្លៃ $99 ក្នុងមួយឆ្នាំ)<br>
+              • បើក Project ក្នុង Xcode លើកុំព្យូទ័រ Mac ➔ Build ទៅ TestFlight<br>
+              • ដាក់ស្នើទៅ Apple App Review ➔ ពេលអនុម័ត នឹងអាច Search ឃើញលើ App Store ដូច Tesdopi!
+            </div>
+          </div>
+
+          <div style="padding: 12px; background: var(--bg-primary); border-radius: 10px; border: 1px solid var(--border-glass);">
+            <div style="font-weight: 700; color: var(--accent-amber); margin-bottom: 4px;">
+              ៣. Cloud Database & Video Storage
+            </div>
+            <div style="color: var(--text-secondary); font-size: 0.82rem;">
+              ដើម្បីឱ្យសិស្សានុសិស្សទូទាំងប្រទេសទាញយក App មកហើយអាចមើលវីដេអូ និងទាញយក PDF បានភ្លាម យើងគ្រាន់តែភ្ជាប់ API ទៅកាន់ <strong>Firebase Storage</strong> ឬ <strong>Supabase / Cloud</strong> ជាការស្រេច។
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="App.closeStoreInfoModal()">យល់ព្រម</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= DIAGNOSTIC TEST MODAL (តេស្តសមត្ថភាព TESDOPI STYLE) ================= -->
+  <div class="modal-overlay" id="diagnostic-modal" onclick="if(event.target === this) App.closeDiagnosticModal()">
+    <div class="modal-card" style="max-width: 650px;">
+      <div class="modal-header">
+        <h3 class="modal-title">🎯 តេស្តស្ទង់សមត្ថភាពសិស្ស (Diagnostic Test)</h3>
+        <button class="btn-icon" onclick="App.closeDiagnosticModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 16px;">
+          <img src="assets/mascot.jpg" style="width: 70px; height: 70px; border-radius: 18px; margin-bottom: 8px;">
+          <h4 style="font-size: 1.15rem; font-weight: 700;">តេស្តសមត្ថភាពគណិតវិទ្យា & ស្ថិតិ</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">ស្វែងយល់ពីចំណុចខ្លាំង និងចំណុចខ្វះខាតរបស់អ្នក មុននឹងចាប់ផ្តើមរៀនមេរៀនបន្ត!</p>
+        </div>
+
+        <div id="diagnostic-test-container">
+          <!-- Diagnostic Question 1 -->
+          <div class="quiz-card" style="margin-bottom: 14px;">
+            <div class="quiz-question">១. បើទិន្នន័យមាន៖ 4, 8, 6, 5, 3, 4, 4, 8 ។ តើម៉ូត (Mode) ស្មើនឹងប៉ុន្មាន?</div>
+            <div class="quiz-options">
+              <div class="quiz-opt" onclick="App.checkDiagnostic(0, this, true)">A. 4 (ព្រោះកើតឡើង 3 ដង)</div>
+              <div class="quiz-opt" onclick="App.checkDiagnostic(0, this, false)">B. 8</div>
+              <div class="quiz-opt" onclick="App.checkDiagnostic(0, this, false)">C. 5</div>
+              <div class="quiz-opt" onclick="App.checkDiagnostic(0, this, false)">D. 6</div>
+            </div>
+            <div class="quiz-explanation" id="diag-exp-0">💡 <strong>ការពន្យល់៖</strong> លេខ 4 កើតឡើងច្រើនជាងគេ (ប្រេកង់ = 3) ដូច្នេះ Mode = 4។</div>
+          </div>
+
+          <!-- Diagnostic Question 2 -->
+          <div class="quiz-card">
+            <div class="quiz-question">២. តើផលបូកប្រេកង់ទាំងអស់ (Σf) ស្មើនឹងអ្វី?</div>
+            <div class="quiz-options">
+              <div class="quiz-opt" onclick="App.checkDiagnostic(1, this, false)">A. មធ្យមភាគ</div>
+              <div class="quiz-opt" onclick="App.checkDiagnostic(1, this, true)">B. ចំនួនទិន្នន័យសរុប (N)</div>
+              <div class="quiz-opt" onclick="App.checkDiagnostic(1, this, false)">C. ម៉ូត</div>
+              <div class="quiz-opt" onclick="App.checkDiagnostic(1, this, false)">D. មេដ្យាន</div>
+            </div>
+            <div class="quiz-explanation" id="diag-exp-1">💡 <strong>ការពន្យល់៖</strong> ផលបូកប្រេកង់ទាំងអស់ គឺស្មើនឹងចំនួនទិន្នន័យសរុប (N)។</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="App.closeDiagnosticModal()">បិទ</button>
+        <button class="btn btn-primary" onclick="App.closeDiagnosticModal(); App.scrollToLessons();">
+          📚 ចាប់ផ្តើមរៀនមេរៀនលម្អិត
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= TEACHER LOGIN MODAL (ផ្ទាំងលេខកូដសម្ងាត់គ្រូ) ================= -->
+  <div class="modal-overlay" id="login-modal" onclick="if(event.target === this) App.closeLoginModal()">
+    <div class="modal-card" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 class="modal-title">🔐 ផ្ទៀងផ្ទាត់សិទ្ធិគ្រូបង្រៀន</h3>
+        <button class="btn-icon" onclick="App.closeLoginModal()">✕</button>
+      </div>
+      <form onsubmit="App.submitLogin(event)">
+        <div class="modal-body" style="text-align: center; gap: 16px;">
+          <div style="width: 80px; height: 80px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);">
+            <img src="assets/mascot.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">ចូលគណនីគ្រប់គ្រង (Admin / Teacher)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">សូមបញ្ចូលលេខកូដសម្ងាត់ដើម្បីបន្ថែម កែសម្រួល ឬលុបមេរៀន</p>
+          </div>
+
+          <div class="form-group" style="margin-top: 4px;">
+            <input type="password" id="admin-pin-input" class="form-input" placeholder="•••••" maxlength="10" autocomplete="off" style="font-size: 1.8rem; letter-spacing: 12px; text-align: center; font-weight: 800; padding: 12px;" required>
+          </div>
+          <div id="login-error-msg" style="color: var(--accent-rose); font-size: 0.82rem; display: none;"></div>
+        </div>
+        <div class="modal-footer" style="justify-content: space-between;">
+          <button type="button" class="btn btn-secondary" onclick="App.closeLoginModal()">បោះបង់</button>
+          <button type="submit" class="btn btn-primary" id="btn-submit-pin">
+            🔓 បញ្ជាក់លេខសម្ងាត់
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ================= MOBILE INSTALL & ACCESS MODAL ================= -->
+  <div class="modal-overlay" id="mobile-modal" onclick="if(event.target === this) App.closeMobileModal()">
+    <div class="modal-card" style="max-width: 600px;">
+      <div class="modal-header">
+        <h3 class="modal-title">📲 របៀបដំឡើង App 1ˢᵗ Step លើទូរស័ព្ទ</h3>
+        <button class="btn-icon" onclick="App.closeMobileModal()">✕</button>
+      </div>
+      <div class="modal-body" style="gap: 16px;">
+        <div style="text-align: center; margin-bottom: 4px;">
+          <div style="width: 72px; height: 72px; margin: 0 auto 10px; border-radius: 20px; overflow: hidden; box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);">
+            <img src="assets/mascot.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h4 style="font-size: 1.2rem; font-weight: 700;">1ˢᵗ Step (First Step)</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">ដំឡើងជា App ពេញលេញលើអេក្រង់ទូរស័ព្ទដៃ ដោយមិនបាច់ចូលតាម Browser រាល់ដង</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <!-- Android Card -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: #10b981; font-weight: 700; font-size: 0.95rem;">
+              <span style="font-size: 1.3rem;">🤖</span> Android (Samsung / Oppo...)
+            </div>
+            <ol style="margin: 0; padding-left: 18px; font-size: 0.82rem; line-height: 1.6; color: var(--text-secondary);">
+              <li>បើក Link ក្នុង <strong>Google Chrome</strong></li>
+              <li>ចុចសញ្ញាចុច ៣ <strong>(⋮)</strong> នៅខាងលើស្ដាំ</li>
+              <li>ជ្រើសរើស <strong>"ដំឡើងកម្មវិធី" (Install app)</strong> ឬ <strong>"Add to Home screen"</strong></li>
+              <li>ចុច <strong>Install / Add</strong> រួចរាល់!</li>
+            </ol>
+          </div>
+
+          <!-- iPhone Card -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 14px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: #38bdf8; font-weight: 700; font-size: 0.95rem;">
+              <span style="font-size: 1.3rem;">🍏</span> iPhone / iPad (iOS)
+            </div>
+            <ol style="margin: 0; padding-left: 18px; font-size: 0.82rem; line-height: 1.6; color: var(--text-secondary);">
+              <li>បើក Link ក្នុងកម្មវិធី <strong>Safari</strong></li>
+              <li>ចុចប៊ូតុង <strong>Share (⬆️)</strong> នៅបាតខាងក្រោម</li>
+              <li>អូសចុះក្រោម ជ្រើស <strong>"Add to Home Screen" (➕)</strong></li>
+              <li>ចុច <strong>Add (បន្ថែម)</strong> នៅខាងលើស្ដាំ រួចរាល់!</li>
+            </ol>
+          </div>
+        </div>
+
+        <div style="background: rgba(6, 182, 212, 0.08); border: 1px dashed rgba(6, 182, 212, 0.3); border-radius: 12px; padding: 12px; font-size: 0.82rem; color: var(--text-secondary); text-align: center;">
+          💡 <strong>ចំណាំ៖</strong> បន្ទាប់ពីដំឡើងរួច App នឹងមាន Icon រូប Mascot ដ៏ស្រស់ស្អាតលើផ្ទាំងទូរស័ព្ទដៃដូច App ផ្លូវការ ហើយបើកបានពេញអេក្រង់ (Full Screen) គ្មានរបារ Browser ឡើយ!
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="App.closeMobileModal()" style="width: 100%;">យល់ព្រម</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Store Info Modal (Alias to Mobile Modal) -->
+  <div class="modal-overlay" id="store-modal" onclick="if(event.target === this) App.closeStoreInfoModal()">
+    <div class="modal-card" style="max-width: 600px;">
+      <div class="modal-header">
+        <h3 class="modal-title">📲 ព័ត៌មាននៃការដំឡើង App លើទូរស័ព្ទ</h3>
+        <button class="btn-icon" onclick="App.closeStoreInfoModal()">✕</button>
+      </div>
+      <div class="modal-body" style="gap: 16px;">
+        <div style="text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 8px;">🚀</div>
+          <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 6px;">ការដំឡើងតាម PWA Web App (ដំណើរការភ្លាមៗ)</h4>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6;">
+            បច្ចុប្បន្ន លោកគ្រូអាចដំឡើង App លើទូរស័ព្ទ Android និង iPhone បានភ្លាមៗដោយឥតគិតថ្លៃ តាមរយៈមុខងារ <strong>"Add to Home Screen"</strong> ដោយមិនបាច់រង់ចាំការ Upload លើ Play Store ឬ App Store ឡើយ!
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <!-- Android -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 12px;">
+            <div style="font-weight: 700; color: #10b981; margin-bottom: 6px;">🤖 លើ Android</div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              បើកក្នុង Chrome 👉 ចុចសញ្ញា <strong>(⋮)</strong> 👉 ជ្រើសរើស <strong>"Add to Home Screen"</strong>
+            </p>
+          </div>
+          <!-- iPhone -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 12px;">
+            <div style="font-weight: 700; color: #38bdf8; margin-bottom: 6px;">🍏 លើ iPhone / iPad</div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              បើកក្នុង Safari 👉 ចុចប៊ូតុង <strong>Share (⬆️)</strong> 👉 ជ្រើសរើស <strong>"Add to Home Screen"</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="App.closeStoreInfoModal()">បិទ</button>
+        <button class="btn btn-primary" onclick="App.closeStoreInfoModal(); App.openMobileModal();">
+          មើលការណែនាំលម្អិត
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Register Service Worker for seamless PWA Install
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(err => {
+          console.log('SW Note:', err);
+        });
+      });
+    }
+
+    // Handle Android PWA Install Prompt
+    let deferredInstallPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      const installBtn = document.getElementById('btn-pwa-install');
+      if (installBtn) installBtn.style.display = 'inline-flex';
+    });
+
+    function triggerPWAInstall() {
+      if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        deferredInstallPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User installed the PWA');
+          }
+          deferredInstallPrompt = null;
+        });
+      } else {
+        App.openMobileModal();
+      }
+    }
+  </script>
+
+</body>
+</html>

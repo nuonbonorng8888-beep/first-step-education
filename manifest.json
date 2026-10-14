@@ -1,0 +1,24 @@
+{
+  "name": "1ˢᵗ Step (First Step) - Digital LMS",
+  "short_name": "1ˢᵗ Step",
+  "description": "ប្រព័ន្ធសិក្សាឌីជីថល 1ˢᵗ Step (First Step) សម្រាប់សាលារៀន និងការអប់រំ",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0e17",
+  "theme_color": "#06b6d4",
+  "icons": [
+    {
+      "src": "assets/icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/app_logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

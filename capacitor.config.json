@@ -1,0 +1,19 @@
+{
+  "appId": "com.firststep.education",
+  "appName": "1st Step (First Step)",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": {
+    "cleartext": true
+  },
+  "android": {
+    "allowMixedContent": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#0a0e17",
+      "showSpinner": false
+    }
+  }
+}
