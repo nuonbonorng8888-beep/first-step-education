@@ -828,30 +828,24 @@ window.App = {
             <div>${ws.objective}</div>
           </div>
 
-          <!-- Exercises List (Tiered Levels 1, 2, 3) -->
+          <!-- Exercises List -->
           <div class="ws-exercises-container">
-            ${ws.exercises.map((ex, exIdx) => {
-              const levelClass = exIdx === 0 ? 'level-1' : (exIdx === 1 ? 'level-2' : 'level-3');
-              return `
-                <div class="ws-exercise-block">
-                  <div class="ws-ex-header">
-                    <div class="ws-ex-title-wrap">
-                      <span class="ws-ex-num">លំហាត់ទី ${exIdx + 1}</span>
-                      <span class="ws-ex-level-pill ${levelClass}">${ex.level}</span>
-                    </div>
-                    <span class="ws-ex-points">${ex.points} ពិន្ទុ</span>
-                  </div>
-
-                  <div class="ws-ex-instruction">${ex.instruction}</div>
-                  <div class="ws-ex-question">${ex.question}</div>
-
-                  <!-- Ruled Lined Space for Student Working -->
-                  <div class="ws-handwriting-space">
-                    <span class="ws-handwriting-hint">(ទីកន្លែងសម្រាប់សិស្សគិតលេខ និងសរសេរដំណោះស្រាយ)</span>
-                  </div>
+            ${ws.exercises.map((ex, exIdx) => `
+              <div class="ws-exercise-block">
+                <div class="ws-ex-header">
+                  <span class="ws-ex-num">លំហាត់ទី ${exIdx + 1}</span>
+                  <span class="ws-ex-points">${ex.points} ពិន្ទុ</span>
                 </div>
-              `;
-            }).join('')}
+
+                <div class="ws-ex-instruction">${ex.instruction}</div>
+                <div class="ws-ex-question">${ex.question}</div>
+
+                <!-- Ruled Lined Space for Student Working -->
+                <div class="ws-handwriting-space">
+                  <span class="ws-handwriting-hint">(ទីកន្លែងសម្រាប់សិស្សគិតលេខ និងសរសេរដំណោះស្រាយ)</span>
+                </div>
+              </div>
+            `).join('')}
           </div>
 
           <!-- Footer Banner (Strictly matching user uploaded screenshot) -->
@@ -888,7 +882,7 @@ window.App = {
                 ${ws.exercises.map((ex, exIdx) => `
                   <div class="ws-solution-item">
                     <div class="ws-sol-item-header">
-                      <span>ដំណោះស្រាយលំហាត់ទី ${exIdx + 1} (${ex.level})</span>
+                      <span>ដំណោះស្រាយលំហាត់ទី ${exIdx + 1}</span>
                       <span style="color:#d97706; font-size:0.85rem;">[ពិន្ទុសរុប ៖ ${ex.points} ពិន្ទុ]</span>
                     </div>
                     <div class="ws-sol-body">${ex.solution}</div>

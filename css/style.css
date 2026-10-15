@@ -2501,10 +2501,13 @@ body.dark-mode .ws-badge-tag {
 }
 
 .ws-school-logo {
-  height: 58px;
-  width: auto;
+  height: 64px;
+  width: 64px;
   object-fit: contain;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
 }
 
 .ws-header-center {
@@ -2909,6 +2912,14 @@ body.dark-mode .ws-sol-rubric {
 
   .ws-header-title {
     color: #dc2626 !important;
+  }
+
+  .ws-school-logo {
+    height: 64px !important;
+    width: 64px !important;
+    object-fit: contain !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    filter: none !important;
   }
 
   .ws-footer-label {
