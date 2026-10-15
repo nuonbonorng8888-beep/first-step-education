@@ -14,6 +14,8 @@ window.App = {
   player: null,
   quizScore: 0,
   answeredQuiz: {},
+  worksheetsG11: {},
+  teacherUnlocked: false,
 
   dailyQuotes: [
     { quote: "គណិតវិទ្យាគឺជាសិល្បៈនៃការផ្តល់ឈ្មោះដូចគ្នាដល់រឿងខុសៗគ្នា។", author: "Henri Poincaré" },
@@ -41,6 +43,7 @@ window.App = {
     this.updateResumeBanner();
     this.bindGlobalEvents();
     await this.loadCourses();
+    await this.loadWorksheets();
   },
 
   initGreetingAndWisdom() {
@@ -506,6 +509,7 @@ window.App = {
 
     // Update Tabs
     this.renderMaterialsTab();
+    this.renderWorksheetTab();
     this.renderNotesTab();
     this.renderQuizTab();
     this.renderOverviewTab();
@@ -577,6 +581,10 @@ window.App = {
 
     if (activeBtn) activeBtn.classList.add('active');
     if (activeContent) activeContent.classList.add('active');
+
+    if (tabName === 'worksheet') {
+      this.renderWorksheetTab();
+    }
   },
 
   renderMaterialsTab() {
@@ -683,6 +691,289 @@ window.App = {
     if (!this.currentLesson) return;
     StorageService.deleteNote(this.currentLesson.id, noteId);
     this.renderNotesTab();
+  },
+
+  // =========================================================================
+  // Flipped Classroom Worksheets (សន្លឹកកិច្ចការតាមចំណុចនៃមេរៀន)
+  // =========================================================================
+  async loadWorksheets() {
+    try {
+      const res = await fetch('data/worksheets_g11.json');
+      if (res.ok) {
+        this.worksheetsG11 = await res.json();
+      }
+    } catch (e) {
+      console.warn('Worksheets load warning:', e);
+    }
+  },
+
+  renderWorksheetTab() {
+    const container = document.getElementById('worksheet-container');
+    if (!container) return;
+
+    if (!this.currentLesson) {
+      container.innerHTML = `
+        <div style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
+          <div style="font-size: 2.5rem; margin-bottom: 12px;">📝</div>
+          <h3>សូមជ្រើសរើសមេរៀនដើម្បីមើលសន្លឹកកិច្ចការ</h3>
+        </div>
+      `;
+      return;
+    }
+
+    const ws = this.worksheetsG11?.[this.currentLesson.id];
+
+    if (!ws) {
+      container.innerHTML = `
+        <div style="text-align: center; padding: 50px 20px; color: var(--text-muted); background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-glass);">
+          <div style="font-size: 3rem; margin-bottom: 14px;">📝</div>
+          <h3 style="color: var(--text-primary); margin-bottom: 8px;">សន្លឹកកិច្ចការកំពុងត្រូវបានរៀបចំ</h3>
+          <p style="font-size: 0.95rem; line-height: 1.6; max-width: 520px; margin: 0 auto 16px;">
+            សន្លឹកកិច្ចការសម្រាប់មេរៀននេះ នឹងត្រូវដាក់ឱ្យអនុវត្តក្នុងពេលឆាប់ៗ។ បច្ចុប្បន្ន ប្រព័ន្ធគាំទ្រសន្លឹកកិច្ចការពេញលេញសម្រាប់គ្រប់មេរៀនថ្នាក់ទី ១១ ទាំងកម្រិតមូលដ្ឋាន និងកម្រិតខ្ពស់។
+          </p>
+          <button class="btn btn-primary" onclick="App.switchTab('materials')">
+            📑 មើលឯកសារមេរៀនជំនួសវិញ
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    const isUnlocked = this.isAdmin || this.teacherUnlocked;
+
+    container.innerHTML = `
+      <div class="ws-container">
+        <!-- Worksheet Screen Toolbar -->
+        <div class="ws-toolbar">
+          <div class="ws-toolbar-left">
+            <span class="ws-badge-tag">
+              <span>🏫</span>
+              <span>វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)</span>
+            </span>
+            <span class="ws-badge-tag" style="background: rgba(16, 185, 129, 0.12); color: #059669; border-color: rgba(16, 185, 129, 0.3);">
+              <span>🎯</span>
+              <span>Flipped Classroom Model</span>
+            </span>
+          </div>
+
+          <div class="ws-toolbar-actions">
+            <button class="btn btn-primary" onclick="App.printWorksheet(false)" title="បោះពុម្ព ឬទាញយកជា PDF">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
+              </svg>
+              🖨️ ទាញយកជា PDF / បោះពុម្ព
+            </button>
+
+            ${isUnlocked ? `
+              <button class="btn btn-outline" style="border-color: #10b981; color: #10b981;" onclick="App.printWorksheet(true)" title="បោះពុម្ពរួមទាំងដំណោះស្រាយគ្រូ">
+                🖨️ បោះពុម្ពដំណោះស្រាយ
+              </button>
+              <button class="btn btn-secondary" onclick="App.lockTeacherKey()" title="ចាក់សោដំណោះស្រាយឡើងវិញ">
+                🔒 ចាក់សោដំណោះស្រាយ
+              </button>
+            ` : `
+              <button class="btn btn-outline" onclick="App.openWorksheetUnlockModal()" title="សម្រាប់លោកគ្រូ-អ្នកគ្រូ">
+                🔐 ដំណោះស្រាយគ្រូ (ជាប់សោ)
+              </button>
+            `}
+          </div>
+        </div>
+
+        <!-- The Official Printable Paper Sheet -->
+        <div class="worksheet-paper" id="printable-worksheet-paper">
+          <!-- Header Banner (Strictly matching user uploaded screenshot) -->
+          <div class="ws-header-banner">
+            <div class="ws-school-logo-box">
+              <img src="assets/school_logo.png" class="ws-school-logo" alt="Preah Sisowath NGS Logo">
+            </div>
+            <div class="ws-header-center">
+              <h1 class="ws-header-title">${ws.sheetNumber}</h1>
+            </div>
+            <div class="ws-header-right">
+              <h2 class="ws-header-lesson">${ws.lessonTitle}</h2>
+            </div>
+          </div>
+
+          <!-- Student Information Fields -->
+          <div class="ws-student-info">
+            <div class="ws-info-row">
+              <div class="ws-info-item" style="flex: 2;">
+                <span class="ws-info-label">ឈ្មោះសិស្ស ៖</span>
+                <span class="ws-info-dots"></span>
+              </div>
+              <div class="ws-info-item" style="flex: 1;">
+                <span class="ws-info-label">ថ្នាក់ទី ៖</span>
+                <span class="ws-info-dots"></span>
+              </div>
+            </div>
+            <div class="ws-info-row">
+              <div class="ws-info-item" style="flex: 2;">
+                <span class="ws-info-label">កាលបរិច្ឆេទ ៖</span>
+                <span class="ws-info-dots"></span>
+              </div>
+              <div class="ws-info-item" style="flex: 1;">
+                <span class="ws-info-label">ពិន្ទុសរុប ៖</span>
+                <span style="font-weight: 700; color: #dc2626;">........ / ១០</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flipped Classroom Objective -->
+          <div class="ws-objective-card">
+            <div class="ws-objective-title">
+              <span>🎯 គោលបំណងរង្វាយតម្លៃ (Flipped Classroom) ៖</span>
+            </div>
+            <div>${ws.objective}</div>
+          </div>
+
+          <!-- Exercises List (Tiered Levels 1, 2, 3) -->
+          <div class="ws-exercises-container">
+            ${ws.exercises.map((ex, exIdx) => {
+              const levelClass = exIdx === 0 ? 'level-1' : (exIdx === 1 ? 'level-2' : 'level-3');
+              return `
+                <div class="ws-exercise-block">
+                  <div class="ws-ex-header">
+                    <div class="ws-ex-title-wrap">
+                      <span class="ws-ex-num">លំហាត់ទី ${exIdx + 1}</span>
+                      <span class="ws-ex-level-pill ${levelClass}">${ex.level}</span>
+                    </div>
+                    <span class="ws-ex-points">${ex.points} ពិន្ទុ</span>
+                  </div>
+
+                  <div class="ws-ex-instruction">${ex.instruction}</div>
+                  <div class="ws-ex-question">${ex.question}</div>
+
+                  <!-- Ruled Lined Space for Student Working -->
+                  <div class="ws-handwriting-space">
+                    <span class="ws-handwriting-hint">(ទីកន្លែងសម្រាប់សិស្សគិតលេខ និងសរសេរដំណោះស្រាយ)</span>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Footer Banner (Strictly matching user uploaded screenshot) -->
+          <div class="ws-footer-banner">
+            <div class="ws-footer-label">ចំណាំ៖</div>
+            <div class="ws-footer-points">
+              <p>១. រាល់ការងារទាំងអស់សូមធ្វើដោយយកចិត្តទុកដាក់បំផុត ករណីមិនយល់សូមស្រាវជ្រាវ សួរគ្រូ ឬ មិត្ត ( ចម្លងក៏ដោយឲ្យតែយល់)</p>
+              <p>២. សន្លឹកកិច្ចការខ្លះ ត្រូវនឹងសួរបញ្ជាក់ពេលដល់ម៉ោងជួបគ្នា បើឆ្លើយមិនចេញ នោះនឹងទទួលបានពិន្ទុ ០ លើការងារនេះ</p>
+              <p>៣. សូមបញ្ជាក់សន្លឹកកិច្ចការទី.....( ទី២០ឬ ទី ២១,...)ដើម្បីស្រង់ពិន្ទុសកម្មភាព</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teacher Solution Card (Protected by Passcode) -->
+        <div id="ws-teacher-section">
+          ${isUnlocked ? `
+            <div class="ws-teacher-card unlocked">
+              <div class="ws-unlocked-header">
+                <div class="ws-unlocked-title">
+                  <span>🔓</span>
+                  <span>ដំណោះស្រាយលម្អិត & បន្ទាត់ពិន្ទុសម្រាប់គ្រូបង្រៀន (Teacher's Key)</span>
+                </div>
+                <div style="display:flex; gap:8px;">
+                  <button class="btn btn-sm btn-outline" onclick="App.printWorksheet(true)">
+                    🖨️ បោះពុម្ពដំណោះស្រាយ
+                  </button>
+                  <button class="btn btn-sm btn-secondary" onclick="App.lockTeacherKey()">
+                    🔒 ចាក់សោឡើងវិញ
+                  </button>
+                </div>
+              </div>
+
+              <div class="ws-solutions-list">
+                ${ws.exercises.map((ex, exIdx) => `
+                  <div class="ws-solution-item">
+                    <div class="ws-sol-item-header">
+                      <span>ដំណោះស្រាយលំហាត់ទី ${exIdx + 1} (${ex.level})</span>
+                      <span style="color:#d97706; font-size:0.85rem;">[ពិន្ទុសរុប ៖ ${ex.points} ពិន្ទុ]</span>
+                    </div>
+                    <div class="ws-sol-body">${ex.solution}</div>
+                    <div class="ws-sol-rubric">
+                      <strong>បន្ទាត់ពិន្ទុ (Rubric) ៖</strong> ${ex.rubric}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : `
+            <div class="ws-teacher-card locked">
+              <div class="ws-lock-icon">🔒</div>
+              <h3 class="ws-lock-title">ដំណោះស្រាយលម្អិត និងបន្ទាត់ពិន្ទុ (ជាប់សោ)</h3>
+              <p class="ws-lock-desc">
+                ដំណោះស្រាយលម្អិត និងបន្ទាត់ពិន្ទុសម្រាប់សន្លឹកកិច្ចការនេះ គឺរក្សាទុកជាការសម្ងាត់សម្រាប់តែលោកគ្រូ-អ្នកគ្រូប៉ុណ្ណោះ ដើម្បីវាស់ស្ទង់សមត្ថភាពសិស្សពិតប្រាកដ។
+              </p>
+              <button class="btn btn-primary" onclick="App.openWorksheetUnlockModal()">
+                🔑 ដោះសោដំណោះស្រាយ (សម្រាប់គ្រូបង្រៀន)
+              </button>
+            </div>
+          `}
+        </div>
+      </div>
+    `;
+
+    // Render mathematical formulas via KaTeX
+    this.renderMath(container);
+  },
+
+  openWorksheetUnlockModal() {
+    const modal = document.getElementById('worksheet-unlock-modal');
+    const input = document.getElementById('worksheet-pin-input');
+    const err = document.getElementById('worksheet-pin-error');
+    if (err) err.style.display = 'none';
+    if (input) input.value = '';
+    if (modal) modal.classList.add('active');
+    setTimeout(() => input?.focus(), 200);
+  },
+
+  closeWorksheetUnlockModal() {
+    const modal = document.getElementById('worksheet-unlock-modal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  submitWorksheetPin() {
+    const input = document.getElementById('worksheet-pin-input');
+    const err = document.getElementById('worksheet-pin-error');
+    const pin = input ? input.value.trim() : '';
+
+    if (pin === '1234' || pin === '95511') {
+      this.teacherUnlocked = true;
+      this.closeWorksheetUnlockModal();
+      this.renderWorksheetTab();
+      this.showToast('បានដោះសោដំណោះស្រាយគ្រូបង្រៀនជោគជ័យ! 🔓', 'success');
+    } else {
+      if (err) {
+        err.textContent = 'លេខកូដមិនត្រឹមត្រូវទេ! (សាកល្បងលេខ 1234)';
+        err.style.display = 'block';
+      }
+      this.showToast('លេខកូដសម្ងាត់មិនត្រឹមត្រូវ!', 'error');
+      input?.select();
+    }
+  },
+
+  lockTeacherKey() {
+    this.teacherUnlocked = false;
+    this.renderWorksheetTab();
+    this.showToast('បានចាក់សោដំណោះស្រាយឡើងវិញរួចរាល់ 🔒', 'info');
+  },
+
+  printWorksheet(includeSolutions = false) {
+    const teacherSec = document.getElementById('ws-teacher-section');
+    if (teacherSec) {
+      if (includeSolutions && (this.isAdmin || this.teacherUnlocked)) {
+        teacherSec.style.display = 'block';
+      } else {
+        teacherSec.style.display = 'none';
+      }
+    }
+    window.print();
+    // Restore display after print dialog closes
+    setTimeout(() => {
+      if (teacherSec) teacherSec.style.display = '';
+    }, 1000);
   },
 
   renderQuizTab() {
