@@ -285,11 +285,16 @@ def run_server():
     print(f" Folder:     {BASE_DIR}")
     print(f"==================================================")
     sys.stdout.flush()
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("\nStopping server...")
-        server.server_close()
+    while True:
+        try:
+            server.serve_forever()
+        except KeyboardInterrupt:
+            print("\nStopping server...")
+            server.server_close()
+            break
+        except Exception as e:
+            print(f"Server warning (recovering): {e}")
+            sys.stdout.flush()
 
 
 if __name__ == '__main__':
