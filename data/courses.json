@@ -64,7 +64,7 @@
                   "$12$",
                   "-12",
                   "$0$",
-                  "$\\frac{1}{12}$"
+                  "$\\dfrac{1}{12}$"
                 ],
                 "correct": 0,
                 "explanation": "តម្លៃដាច់ខាតនៃចំនួនមួយ គឺជាចម្ងាយពីចំណុចនោះទៅលេខ 0 លើបន្ទាត់ចំនួន ដែលតែងតែវិជ្ជមាន ឬសូន្យ ៖ |-12| = 12។"
@@ -118,7 +118,7 @@
                 "options": [
                   "-18",
                   "18",
-                  "$\\frac{1}{18}$",
+                  "$\\dfrac{1}{18}$",
                   "$0$"
                 ],
                 "correct": 0,
@@ -149,10 +149,10 @@
               {
                 "question": "សម្រួលប្រភាគ 18/24 ឱ្យទៅជាប្រភាគសម្រួលលែងបាន ៖",
                 "options": [
-                  "$\\frac{3}{4}$",
-                  "$\\frac{9}{12}$",
-                  "$\\frac{6}{8}$",
-                  "$\\frac{2}{3}$"
+                  "$\\dfrac{3}{4}$",
+                  "$\\dfrac{9}{12}$",
+                  "$\\dfrac{6}{8}$",
+                  "$\\dfrac{2}{3}$"
                 ],
                 "correct": 0,
                 "explanation": "ចែកភាគយក និងភាគបែងនឹងតួចែករួមធំបំផុត (GCD = 6) ៖ 18/6 = 3, 24/6 = 4 នាំឱ្យបាន 3/4។"
@@ -160,10 +160,10 @@
               {
                 "question": "គណនា៖ 2/5 + 1/5 = ?",
                 "options": [
-                  "$\\frac{3}{5}$",
-                  "$\\frac{3}{10}$",
-                  "$\\frac{2}{25}$",
-                  "$\\frac{1}{5}$"
+                  "$\\dfrac{3}{5}$",
+                  "$\\dfrac{3}{10}$",
+                  "$\\dfrac{2}{25}$",
+                  "$\\dfrac{1}{5}$"
                 ],
                 "correct": 0,
                 "explanation": "ប្រភាគមានភាគបែងដូចគ្នា ត្រូវបូកភាគយក រក្សាភាគបែងនៅដដែល ៖ (2 + 1)/5 = 3/5។"
@@ -171,10 +171,10 @@
               {
                 "question": "គណនា៖ 3/4 - 1/2 = ?",
                 "options": [
-                  "$\\frac{1}{4}$",
-                  "$\\frac{2}{2}$",
-                  "$\\frac{1}{2}$",
-                  "$\\frac{2}{4}$"
+                  "$\\dfrac{1}{4}$",
+                  "$\\dfrac{2}{2}$",
+                  "$\\dfrac{1}{2}$",
+                  "$\\dfrac{2}{4}$"
                 ],
                 "correct": 0,
                 "explanation": "តម្រូវភាគបែងរួម (4) ៖ 3/4 - 2/4 = 1/4។"
@@ -182,10 +182,10 @@
               {
                 "question": "គណនា៖ (2/3) * (5/7) = ?",
                 "options": [
-                  "$\\frac{10}{21}$",
-                  "$\\frac{7}{10}$",
-                  "$\\frac{14}{15}$",
-                  "$\\frac{10}{10}$"
+                  "$\\dfrac{10}{21}$",
+                  "$\\dfrac{7}{10}$",
+                  "$\\dfrac{14}{15}$",
+                  "$\\dfrac{10}{10}$"
                 ],
                 "correct": 0,
                 "explanation": "គុណភាគយកនឹងភាគយក ភាគបែងនឹងភាគបែង ៖ (2 * 5)/(3 * 7) = 10/21។"
@@ -193,10 +193,10 @@
               {
                 "question": "គណនា៖ (4/5) / (2/3) = ?",
                 "options": [
-                  "$\\frac{6}{5}$",
-                  "$\\frac{8}{15}$",
-                  "$\\frac{5}{6}$",
-                  "$\\frac{12}{10}$"
+                  "$\\dfrac{6}{5}$",
+                  "$\\dfrac{8}{15}$",
+                  "$\\dfrac{5}{6}$",
+                  "$\\dfrac{12}{10}$"
                 ],
                 "correct": 0,
                 "explanation": "ចែកប្រភាគ ត្រូវគុណនឹងចម្រាសនៃប្រភាគទីពីរ ៖ (4/5) * (3/2) = 12/10 = 6/5។"
@@ -215,10 +215,10 @@
               {
                 "question": "បំលែងចំនួនទសភាគ 0.75 ទៅជាប្រភាគសម្រួល ៖",
                 "options": [
-                  "$\\frac{3}{4}$",
-                  "$\\frac{75}{10}$",
-                  "$\\frac{7}{5}$",
-                  "$\\frac{1}{2}$"
+                  "$\\dfrac{3}{4}$",
+                  "$\\dfrac{75}{10}$",
+                  "$\\dfrac{7}{5}$",
+                  "$\\dfrac{1}{2}$"
                 ],
                 "correct": 0,
                 "explanation": "0.75 = 75/100 = (75 ÷ 25)/(100 ÷ 25) = 3/4។"
@@ -248,10 +248,10 @@
               {
                 "question": "តើប្រភាគចម្រុះ 2 1/3 ស្មើនឹងប្រភាគមិនសុទ្ធណា?",
                 "options": [
-                  "$\\frac{7}{3}$",
-                  "$\\frac{5}{3}$",
-                  "$\\frac{6}{3}$",
-                  "$\\frac{8}{3}$"
+                  "$\\dfrac{7}{3}$",
+                  "$\\dfrac{5}{3}$",
+                  "$\\dfrac{6}{3}$",
+                  "$\\dfrac{8}{3}$"
                 ],
                 "correct": 0,
                 "explanation": "2 1/3 = (2 * 3 + 1)/3 = 7/3។"
@@ -1468,7 +1468,7 @@
               {
                 "question": "តើតម្លៃនៃ sin(30°) ស្មើនឹងប៉ុន្មាន?",
                 "options": [
-                  "$\\frac{1}{2}$",
+                  "$\\dfrac{1}{2}$",
                   "√3/2",
                   "√2/2",
                   "$1$"
@@ -1479,7 +1479,7 @@
               {
                 "question": "តើតម្លៃនៃ cos(60°) ស្មើនឹងប៉ុន្មាន?",
                 "options": [
-                  "$\\frac{1}{2}$",
+                  "$\\dfrac{1}{2}$",
                   "√3/2",
                   "$0$",
                   "$1$"
@@ -1523,10 +1523,10 @@
               {
                 "question": "បើ sin(x) = 3/5 និង x ជាមុំស្រួច ។ តើ cos(x) ស្មើនឹងប៉ុន្មាន?",
                 "options": [
-                  "$\\frac{4}{5}$",
-                  "$\\frac{3}{4}$",
-                  "$\\frac{5}{4}$",
-                  "$\\frac{2}{5}$"
+                  "$\\dfrac{4}{5}$",
+                  "$\\dfrac{3}{4}$",
+                  "$\\dfrac{5}{4}$",
+                  "$\\dfrac{2}{5}$"
                 ],
                 "correct": 0,
                 "explanation": "cos(x) = √(1 - sin^2(x)) = √(1 - 9/25) = √(16/25) = 4/5។"
@@ -2356,7 +2356,7 @@
                   "$-1$",
                   "$0$",
                   "$1$",
-                  "$\\frac{1}{2}$"
+                  "$\\dfrac{1}{2}$"
                 ],
                 "correct": 0,
                 "explanation": "cos(π) = cos(180°) = -1។"
@@ -2487,7 +2487,7 @@
                   "$0$",
                   "$1$",
                   "$-1$",
-                  "$\\frac{1}{2}$"
+                  "$\\dfrac{1}{2}$"
                 ],
                 "correct": 0,
                 "explanation": "cos(π/2) = 0។"
@@ -2930,114 +2930,114 @@
             ],
             "quiz": [
               {
-                "question": "គណនាលីមីត៖ lim (x \\to  2) [3x^2 - 4x + 1] ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 2} (3x^2 - 4x + 1)$ ៖",
                 "options": [
                   "$5$",
+                  "$3$",
                   "$1$",
-                  "$7$",
-                  "$0$"
+                  "$7$"
                 ],
                 "correct": 0,
-                "explanation": "ជំនួស $x = 2$ ៖ 3(2^2) - 4(2) + 1 = 12 - 8 + 1 = 5។"
+                "explanation": "ជំនួស $x = 2$ ចូល ៖ $3(2)^2 - 4(2) + 1 = 12 - 8 + 1 = 5$។"
               },
               {
                 "question": "តើរាងមិនកំណត់សំខាន់ៗនៃលីមីតមានអ្វីខ្លះ?",
                 "options": [
-                  "0/0 , \\infty/\\infty , 0 * \\infty , \\infty - \\infty",
-                  "0/\\infty , \\infty/0",
-                  "1/0 , 0/1",
-                  "\\infty + \\infty"
+                  "$\\dfrac{0}{0}, \\dfrac{\\infty}{\\infty}, 0 \\times \\infty, \\infty - \\infty$",
+                  "$\\dfrac{1}{0}, \\dfrac{0}{1}$",
+                  "$0^0, 1^\\infty$",
+                  "$+\\infty, -\\infty$"
                 ],
                 "correct": 0,
-                "explanation": "រាងមិនកំណត់គ្រឹះមាន៖ 0/0, \\infty/\\infty, 0 * \\infty, \\infty - \\infty។"
+                "explanation": "រាងមិនកំណត់គ្រឹះមាន ៤ គឺ $\\dfrac{0}{0}, \\dfrac{\\infty}{\\infty}, 0 \\times \\infty, \\infty - \\infty$។"
               },
               {
-                "question": "គណនាលីមីតរាង $\\frac{0}{0}$៖ lim (x \\to  3) [(x^2 - 9) / (x - 3)] ៖",
+                "question": "គណនាលីមីតរាង $\\dfrac{0}{0}$៖ $\\lim\\limits_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}$ ៖",
                 "options": [
                   "$6$",
-                  "$0$",
                   "$3$",
-                  "$\\infty$"
+                  "$0$",
+                  "$9$"
                 ],
                 "correct": 0,
-                "explanation": "(x^2 - 9)/(x - 3) = (x - 3)(x + 3)/(x - 3) = x + 3 \\implies  lim = 3 + 3 = 6។"
+                "explanation": "$\\dfrac{(x - 3)(x + 3)}{x - 3} = x + 3 \\implies \\lim\\limits_{x \\to 3} (x + 3) = 3 + 3 = 6$។"
               },
               {
-                "question": "គណនាលីមីត៖ lim (x \\to  +\\infty) [(2x + 1) / (x + 3)] ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\dfrac{2x + 1}{x + 3}$ ៖",
                 "options": [
                   "$2$",
                   "$1$",
-                  "$\\frac{1}{3}$",
+                  "$\\dfrac{1}{3}$",
                   "$+\\infty$"
                 ],
                 "correct": 0,
-                "explanation": "ទាញតួដឺក្រេខ្ពស់បំផុត៖ lim (2x / x) = 2។"
+                "explanation": "$\\lim\\limits_{x \\to +\\infty} \\dfrac{2x}{x} = 2$។"
               },
               {
-                "question": "គណនាលីមីតត្រីកោណមាត្រគ្រឹះ៖ lim (x \\to  0) [sin(x) / x] ៖",
+                "question": "គណនាលីមីតត្រីកោណមាត្រគ្រឹះ៖ $\\lim\\limits_{x \\to 0} \\dfrac{\\sin x}{x}$ ៖",
                 "options": [
                   "$1$",
                   "$0$",
-                  "$\\infty$",
-                  "π"
+                  "$\\pi$",
+                  "$\\infty$"
                 ],
                 "correct": 0,
-                "explanation": "រូបមន្តលីមីតត្រីកោណមាត្រគ្រឹះ៖ lim (x \\to  0) [sin(x) / x] = 1។"
+                "explanation": "រូបមន្តលីមីតត្រីកោណមាត្រគ្រឹះ ៖ $\\lim\\limits_{x \\to 0} \\dfrac{\\sin x}{x} = 1$។"
               },
               {
-                "question": "គណនាលីមីត៖ lim (x \\to  0) [sin(3x) / x] ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\dfrac{\\sin 3x}{x}$ ៖",
                 "options": [
                   "$3$",
                   "$1$",
-                  "$0$",
-                  "$\\frac{1}{3}$"
+                  "$\\dfrac{1}{3}$",
+                  "$0$"
                 ],
                 "correct": 0,
-                "explanation": "lim 3 * [sin(3x) / (3x)] = 3 * 1 = 3។"
+                "explanation": "$\\lim\\limits_{x \\to 0} \\dfrac{\\sin 3x}{x} = 3 \\times \\lim\\limits_{x \\to 0} \\dfrac{\\sin 3x}{3x} = 3 \\times 1 = 3$។"
               },
               {
-                "question": "គណនាលីមីត៖ lim (x \\to  +\\infty) [1 / x] ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\dfrac{1}{x}$ ៖",
                 "options": [
                   "$0$",
                   "$1$",
                   "$+\\infty$",
-                  "$-\\infty$"
+                  "$-1$"
                 ],
                 "correct": 0,
-                "explanation": "1 ចែកនឹងចំនួនធំអនន្ត ផ្តល់លទ្ធផលខិតជិត 0។"
+                "explanation": "ចំនួនថេរចែកនឹងអនន្តស្មើ $0$ ៖ $\\lim\\limits_{x \\to +\\infty} \\dfrac{1}{x} = 0$។"
               },
               {
-                "question": "គណនាលីមីត៖ lim (x \\to  1) [(x - 1) / (x^2 - 1)] ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 1} \\dfrac{x - 1}{x^2 - 1}$ ៖",
                 "options": [
-                  "$\\frac{1}{2}$",
-                  "$0$",
+                  "$\\dfrac{1}{2}$",
                   "$1$",
-                  "$2$"
+                  "$2$",
+                  "$0$"
                 ],
                 "correct": 0,
-                "explanation": "(x - 1)/((x - 1)(x + 1)) = 1/(x + 1) \\implies  lim = 1/(1 + 1) = 1/2។"
+                "explanation": "$\\dfrac{x - 1}{(x - 1)(x + 1)} = \\dfrac{1}{x + 1} \\implies \\lim\\limits_{x \\to 1} \\dfrac{1}{x + 1} = \\dfrac{1}{2}$។"
               },
               {
-                "question": "គណនាលីមីត៖ lim (x \\to  +\\infty) [(3x^2 + 5) / (2x^2 - 1)] ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\dfrac{3x^2 + 5}{2x^2 - 1}$ ៖",
                 "options": [
-                  "$\\frac{3}{2}$",
-                  "5/(-1)",
+                  "$\\dfrac{3}{2}$",
+                  "$\\dfrac{5}{-1}$",
                   "$+\\infty$",
                   "$0$"
                 ],
                 "correct": 0,
-                "explanation": "lim (3x^2 / 2x^2) = 3/2។"
+                "explanation": "$\\lim\\limits_{x \\to +\\infty} \\dfrac{3x^2}{2x^2} = \\dfrac{3}{2}$។"
               },
               {
-                "question": "តើអនុគមន៍ $f(x)$ ជាប់ត្រង់ចំណុច x = a លុះត្រាតែផ្ទៀងផ្ទាត់លក្ខខណ្ឌអ្វី?",
+                "question": "តើអនុគមន៍ $f(x)$ ជាប់ត្រង់ចំណុច $x = a$ លុះត្រាតែផ្ទៀងផ្ទាត់លក្ខខណ្ឌអ្វី?",
                 "options": [
-                  "lim (x \\to  a) $f(x)$ = f(a)",
-                  "f(a) កំណត់",
-                  "lim ឆ្វេង = lim ស្តាំ",
-                  "គ្រប់លក្ខខណ្ឌខាងលើ"
+                  "$\\lim\\limits_{x \\to a} f(x) = f(a)$",
+                  "$f(a) > 0$",
+                  "$f'(a) = 0$",
+                  "$f(x) \\ge 0$"
                 ],
                 "correct": 0,
-                "explanation": "ភាពជាប់ត្រង់ a តម្រូវឱ្យ f(a) មានន័យ, លីមីតមាន ហើយ lim_{x\\to a} $f(x)$ = f(a)។"
+                "explanation": "និយមន័យភាពជាប់ ៖ $\\lim\\limits_{x \\to a} f(x) = f(a)$។"
               }
             ]
           },
@@ -3358,7 +3358,7 @@
               {
                 "question": "បន្ទាត់ $y = ax + $b ជាអាស៊ីមតូតទ្រេតនៃ y = $f(x)$ លុះត្រាតែ ៖",
                 "options": [
-                  "lim (x \\to  ±\\infty) [$f(x)$ - (ax + b)] = 0",
+                  "$\\lim\\limits_{x \\to ±\\infty} $f(x)$ - (ax + b)$ = 0",
                   "lim $f(x)$ = ax + b",
                   "$f'(x)$ = a",
                   "$f(x) = 0$"
@@ -3484,10 +3484,10 @@
               {
                 "question": "បោះកាក់សុចរិតមួយចំនួន ១ ដង ។ តើប្រូបាបចេញមុខរូប (H) ស្មើនឹងប៉ុន្មាន?",
                 "options": [
-                  "$\\frac{1}{2}$",
+                  "$\\dfrac{1}{2}$",
                   "$1$",
                   "$0$",
-                  "$\\frac{1}{4}$"
+                  "$\\dfrac{1}{4}$"
                 ],
                 "correct": 0,
                 "explanation": "P(H) = 1 / 2 (លទ្ធផលអាចមាន {H, T})។"
@@ -3496,9 +3496,9 @@
                 "question": "បោះគ្រាប់ឡុកឡាក់សុចរិតមួយគ្រាប់ ។ តើប្រូបាបចេញលេខគូស្មើប៉ុន្មាន?",
                 "options": [
                   "1/2 (ព្រោះលេខគូមាន {2, 4, 6})",
-                  "$\\frac{1}{6}$",
-                  "$\\frac{1}{3}$",
-                  "$\\frac{2}{3}$"
+                  "$\\dfrac{1}{6}$",
+                  "$\\dfrac{1}{3}$",
+                  "$\\dfrac{2}{3}$"
                 ],
                 "correct": 0,
                 "explanation": "លេខគូមាន 3 ក្នុងចំណោម 6 ៖ P = 3/6 = 1/2។"
@@ -3550,10 +3550,10 @@
               {
                 "question": "ក្នុងថង់មួយមានឃ្លីក្រហម 3 និងខៀវ 2 ។ ចាប់យកឃ្លី ១ ដោយចៃដន្យ ។ រកប្រូបាបបានឃ្លីក្រហម ៖",
                 "options": [
-                  "$\\frac{3}{5}$",
-                  "$\\frac{2}{5}$",
-                  "$\\frac{1}{5}$",
-                  "$\\frac{3}{2}$"
+                  "$\\dfrac{3}{5}$",
+                  "$\\dfrac{2}{5}$",
+                  "$\\dfrac{1}{5}$",
+                  "$\\dfrac{3}{2}$"
                 ],
                 "correct": 0,
                 "explanation": "ឃ្លីសរុប = 3 + 2 = 5 នាំឱ្យ P(ក្រហម) = 3/5។"
@@ -4071,7 +4071,7 @@
                   "$1$",
                   "$0$",
                   "$+\\infty$",
-                  "$\\frac{1}{2}$"
+                  "$\\dfrac{1}{2}$"
                 ],
                 "correct": 0,
                 "explanation": "lim_{n\\to \\infty} [n / (n + 1)] = 1។"
@@ -5157,10 +5157,10 @@
               {
                 "question": "បោះកាក់ ២ ដង ។ រកប្រូបាបចេញក្បាល (H) ទាំងពីរដង ៖",
                 "options": [
-                  "$\\frac{1}{4}$",
-                  "$\\frac{1}{2}$",
-                  "$\\frac{3}{4}$",
-                  "$\\frac{1}{8}$"
+                  "$\\dfrac{1}{4}$",
+                  "$\\dfrac{1}{2}$",
+                  "$\\dfrac{3}{4}$",
+                  "$\\dfrac{1}{8}$"
                 ],
                 "correct": 0,
                 "explanation": "ការបោះទាំងពីរឯករាជ្យគ្នា ៖ P(HH) = (1/2) * (1/2) = 1/4។"
@@ -5190,10 +5190,10 @@
               {
                 "question": "ក្នុងប្រអប់មានបាល់ស 4 និងខ្មៅ 6 ។ ចាប់បាល់ ២ ម្តងមួយៗដោយមិនដាក់វិញ ។ រកប្រូបាបបានបាល់សទាំងពីរ ៖",
                 "options": [
-                  "$\\frac{2}{15}$",
-                  "$\\frac{4}{25}$",
-                  "$\\frac{1}{5}$",
-                  "$\\frac{8}{45}$"
+                  "$\\dfrac{2}{15}$",
+                  "$\\dfrac{4}{25}$",
+                  "$\\dfrac{1}{5}$",
+                  "$\\dfrac{8}{45}$"
                 ],
                 "correct": 0,
                 "explanation": "P = (4/10) * (3/9) = (2/5) * (1/3) = 2/15។"
@@ -6029,7 +6029,7 @@
             "files": [],
             "quiz": [
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 2} \\dfrac{x^2 - 4}{x - 2}$ ៖",
                 "options": [
                   "$4$",
                   "$0$",
@@ -6037,54 +6037,54 @@
                   "$\\infty$"
                 ],
                 "correct": 0,
-                "explanation": "រាង $\\frac{0}{0}$ ៖ (x - 2)(x + 2)/(x - 2) = x + 2 \\implies  lim = 2 + 2 = 4។"
+                "explanation": "រាង $\\dfrac{0}{0}$ ៖ $\\dfrac{(x - 2)(x + 2)}{x - 2} = x + 2 \\implies \\lim\\limits_{x \\to 2} (x + 2) = 2 + 2 = 4$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to +\\infty} \\frac{3x^2 - 2x + 1}{x^2 + 5}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\dfrac{3x^2 - 2x + 1}{x^2 + 5}$ ៖",
                 "options": [
                   "$3$",
                   "$+\\infty$",
-                  "$\\frac{1}{5}$",
+                  "$\\dfrac{1}{5}$",
                   "$0$"
                 ],
                 "correct": 0,
-                "explanation": "លីមីតនៃប្រភាគពហុធាត្រង់អនន្តស្មើផលធៀបតួដឺក្រេខ្ពស់បំផុត ៖ lim 3x^2/x^2 = 3។"
+                "explanation": "លីមីតនៃប្រភាគពហុធាត្រង់អនន្តស្មើផលធៀបតួដឺក្រេខ្ពស់បំផុត ៖ $\\lim\\limits_{x \\to +\\infty} \\dfrac{3x^2}{x^2} = 3$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\dfrac{\\sin 5x}{x}$ ៖",
                 "options": [
                   "$5$",
                   "$1$",
                   "$0$",
-                  "$\\frac{1}{5}$"
+                  "$\\dfrac{1}{5}$"
                 ],
                 "correct": 0,
-                "explanation": "$\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$ = 5 * lim [sin(5x)/(5x)] = 5 * 1 = 5។"
+                "explanation": "$\\lim\\limits_{x \\to 0} \\dfrac{\\sin 5x}{x} = 5 \\times \\lim\\limits_{x \\to 0} \\dfrac{\\sin 5x}{5x} = 5 \\times 1 = 5$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0} (1 - \\cos \\frac{x)}{x^2}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\left( \\dfrac{1 - \\cos x}{x^2} \\right)$ ៖",
                 "options": [
-                  "$\\frac{1}{2}$",
+                  "$\\dfrac{1}{2}$",
                   "$0$",
                   "$1$",
                   "$2$"
                 ],
                 "correct": 0,
-                "explanation": "1 - cos $x = 2$sin^2(x/2) នាំឱ្យ lim = 2 * (1/4) = 1/2។"
+                "explanation": "$1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right) \\implies \\lim\\limits_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = 2 \\times \\dfrac{1}{4} = \\dfrac{1}{2}$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 4} \\frac{√x - 2}{x - 4}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 4} \\dfrac{\\sqrt{x} - 2}{x - 4}$ ៖",
                 "options": [
-                  "$\\frac{1}{4}$",
-                  "$\\frac{1}{2}$",
+                  "$\\dfrac{1}{4}$",
+                  "$\\dfrac{1}{2}$",
                   "$4$",
                   "$0$"
                 ],
                 "correct": 0,
-                "explanation": "គុណកន្សោមឆ្លាស់ (√x + 2) ៖ (x - 4)/[(x - 4)(√x + 2)] = 1/(√x + 2) \\implies  lim = 1/(2 + 2) = 1/4។"
+                "explanation": "គុណកន្សោមឆ្លាស់ $(\\sqrt{x} + 2)$ ៖ $\\dfrac{x - 4}{(x - 4)(\\sqrt{x} + 2)} = \\dfrac{1}{\\sqrt{x} + 2} \\implies \\lim\\limits_{x \\to 4} \\dfrac{1}{\\sqrt{x} + 2} = \\dfrac{1}{4}$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to +\\infty} √(x^2 + 2x) - x$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\left(\\sqrt{x^2 + 2x} - x\\right)$ ៖",
                 "options": [
                   "$1$",
                   "$0$",
@@ -6092,10 +6092,10 @@
                   "$2$"
                 ],
                 "correct": 0,
-                "explanation": "រាង $\\infty - \\infty$ គុណកន្សោមឆ្លាស់ ៖ 2x / [√(x^2 + 2x) + x] \\to  2x / (x + x) = 2/2 = 1។"
+                "explanation": "រាង $\\infty - \\infty$ គុណកន្សោមឆ្លាស់ ៖ $\\dfrac{2x}{\\sqrt{x^2 + 2x} + x} \\implies \\lim\\limits_{x \\to +\\infty} \\dfrac{2x}{x + x} = 1$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0} ($e^$x - \\frac{1)}{x}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\dfrac{e^x - 1}{x}$ ៖",
                 "options": [
                   "$1$",
                   "$0$",
@@ -6103,32 +6103,32 @@
                   "$+\\infty$"
                 ],
                 "correct": 0,
-                "explanation": "រូបមន្តលីមីតគ្រឹះនៃ $e^x$ ៖ $\\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1$។"
+                "explanation": "រូបមន្តលីមីតគ្រឹះនៃ $e^x$ ៖ $\\lim\\limits_{x \\to 0} \\dfrac{e^x - 1}{x} = 1$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0} ln(1 + \\frac{x)}{x}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\dfrac{\\ln(1 + x)}{x}$ ៖",
                 "options": [
                   "$1$",
                   "$0$",
                   "$e$",
-                  "ln 2"
+                  "$\\ln 2$"
                 ],
                 "correct": 0,
-                "explanation": "រូបមន្តលីមីតគ្រឹះនៃ ln ៖ lim_{x\\to 0} ln(1 + x)/$x = 1$។"
+                "explanation": "រូបមន្តលីមីតគ្រឹះនៃ $\\ln$ ៖ $\\lim\\limits_{x \\to 0} \\dfrac{\\ln(1 + x)}{x} = 1$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to +\\infty} 1 + \\frac{1}{x}$^x ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\left(1 + \\dfrac{1}{x}\\right)^x$ ៖",
                 "options": [
-                  "e (e  \\approx  2.718)",
+                  "$e$ ($e \\approx 2.718$)",
                   "$1$",
                   "$+\\infty$",
                   "$0$"
                 ],
                 "correct": 0,
-                "explanation": "និយមន័យចំនួនអយល័រ e ៖ $\\lim_{x \\to +\\infty} 1 + \\frac{1}{x}$^x = e។"
+                "explanation": "និយមន័យចំនួនអយល័រ $e$ ៖ $\\lim\\limits_{x \\to +\\infty} \\left(1 + \\dfrac{1}{x}\\right)^x = e$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 1} \\dfrac{x^3 - 1}{x - 1}$ ៖",
                 "options": [
                   "$3$",
                   "$1$",
@@ -6136,7 +6136,7 @@
                   "$2$"
                 ],
                 "correct": 0,
-                "explanation": "x^3 - 1 = (x - 1)(x^2 + x + 1) \\implies  lim = 1^2 + 1 + 1 = 3។"
+                "explanation": "$x^3 - 1 = (x - 1)(x^2 + x + 1) \\implies \\lim\\limits_{x \\to 1} (x^2 + x + 1) = 1 + 1 + 1 = 3$។"
               }
             ]
           },
@@ -6450,7 +6450,7 @@
                   "y = -2"
                 ],
                 "correct": 0,
-                "explanation": "$\\lim_{x \\to \\infty} x + 2$/(x - 1) = 1 \\implies  y = 1 គឺជាអាស៊ីមតូតដេក។"
+                "explanation": "$\\lim\\limits_{x \\to \\infty} x + 2$/(x - 1) = 1 \\implies  y = 1 គឺជាអាស៊ីមតូតដេក។"
               },
               {
                 "question": "ក្រាប y = $f(x)$ មានបន្ទាត់ប៉ះដេក (ស្របនឹង Ox) ត្រង់ចំណុចណា?",
@@ -6558,7 +6558,7 @@
                 "explanation": "(e^u)' = u' * e^u = (x^2 - 1)' * e^(x^2 - 1) = 2x e^(x^2 - 1)។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to +\\infty} \\frac{$e^$x}{x}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\dfrac{e^x}{x}$ ៖",
                 "options": [
                   "$+\\infty$",
                   "$0$",
@@ -6679,7 +6679,7 @@
                 "explanation": "លក្ខខណ្ឌ 2x - 1 > 0 \\implies  x > 1/2 ។ 2x - 1 <= e^0 = 1 \\implies  2x <= 2 \\implies  x <= 1 នាំឱ្យ 1/2 < x <= 1។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to +\\infty} ln \\frac{x}{x}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\dfrac{\\ln x}{x}$ ៖",
                 "options": [
                   "$0$",
                   "$+\\infty$",
@@ -6690,7 +6690,7 @@
                 "explanation": "លីមីតនៃអនុគមន៍លោការីតធៀបនឹងពហុធាត្រង់ +\\infty ស្មើ 0 ៖ lim (ln x / x) = 0។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0⁺} x * ln x$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0⁺} x \\ln x$ ៖",
                 "options": [
                   "$0$",
                   "$-\\infty$",
@@ -6918,7 +6918,7 @@
               {
                 "question": "គណនា៖ ∫_1^3 x^2 dx ៖",
                 "options": [
-                  "$\\frac{26}{3}$",
+                  "$\\dfrac{26}{3}$",
                   "$9$",
                   "27",
                   "$8$"
@@ -7033,13 +7033,13 @@
               {
                 "question": "តើអ្វីទៅជាមធ្យមភាគ ($\\text{Me}$an ឬ $\\bar{x}$) នៅក្នុងការគណនាស្ថិតិ?",
                 "options": [
-                  "ផលបូកនៃតម្លៃទិន្នន័យទាំងអស់ចែកនឹងចំនួនទិន្នន័យសរុប ($\\frac{\\sum x}{N}$)",
+                  "ផលបូកនៃតម្លៃទិន្នន័យទាំងអស់ចែកនឹងចំនួនទិន្នន័យសរុប ($\\dfrac{\\sum x}{N}$)",
                   "តម្លៃទិន្នន័យណាដែលមានប្រេកង់កើតឡើងញឹកញាប់ជាងគេ",
                   "តម្លៃទិន្នន័យដែលស្ថិតនៅចំកណ្តាលគេបង្អស់",
                   "ផលដកនៃតម្លៃអតិបរមា និងតម្លៃអប្បបរមា"
                 ],
                 "correct": 0,
-                "explanation": "មធ្យមភាគ ($\\text{Me}$an, $\\bar{x}$) ស្មើនឹងផលបូកតម្លៃទិន្នន័យទាំងអស់ចែកនឹងចំនួនសរុប ($\\bar{x}$ = $\\frac{\\sum x}{N}$)។"
+                "explanation": "មធ្យមភាគ ($\\text{Me}$an, $\\bar{x}$) ស្មើនឹងផលបូកតម្លៃទិន្នន័យទាំងអស់ចែកនឹងចំនួនសរុប ($\\bar{x}$ = $\\dfrac{\\sum x}{N}$)។"
               },
               {
                 "question": "តើម៉ូត ($\\text{Mo}$de ឬ $\\text{Mo}$) នៃទិន្នន័យស្ថិតិសំដៅលើអ្វី?",
@@ -7412,10 +7412,10 @@
               {
                 "question": "បោះកាក់សុចរិតមួយ 3 ដង ។ រកប្រូបាបចេញមុខរូប (H) យ៉ាងតិចមួយដង ៖",
                 "options": [
-                  "$\\frac{7}{8}$",
-                  "$\\frac{1}{8}$",
-                  "$\\frac{1}{2}$",
-                  "$\\frac{3}{8}$"
+                  "$\\dfrac{7}{8}$",
+                  "$\\dfrac{1}{8}$",
+                  "$\\dfrac{1}{2}$",
+                  "$\\dfrac{3}{8}$"
                 ],
                 "correct": 0,
                 "explanation": "ប្រើព្រឹត្តិការណ៍ផ្ទុយ (មិនចេញ H សោះ គឺ TTT) ៖ P(TTT) = (1/2)^3 = 1/8 \\implies  $P = 1$ - 1/8 = 7/8។"
@@ -7424,9 +7424,9 @@
                 "question": "បោះគ្រាប់ឡុកឡាក់ ២ គ្រាប់ព្រមគ្នា ។ រកប្រូបាបដែលផលបូកគ្រាប់ទាំងពីរស្មើ 7 ៖",
                 "options": [
                   "6/36 = 1/6",
-                  "$\\frac{1}{12}$",
-                  "$\\frac{7}{36}$",
-                  "$\\frac{1}{36}$"
+                  "$\\dfrac{1}{12}$",
+                  "$\\dfrac{7}{36}$",
+                  "$\\dfrac{1}{36}$"
                 ],
                 "correct": 0,
                 "explanation": "គូដែលបូកបាន 7៖ (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) មាន 6 ករណី លើសរុប 36 ៖ P = 6/36 = 1/6។"
@@ -7457,9 +7457,9 @@
                 "question": "ដកសន្លឹកបៀ ១ សន្លឹកពីបៀ 52 សន្លឹក ។ រកប្រូបាបបានសន្លឹកអាត់ (Ace) ៖",
                 "options": [
                   "4/52 = 1/13",
-                  "$\\frac{1}{52}$",
-                  "$\\frac{1}{4}$",
-                  "$\\frac{4}{13}$"
+                  "$\\dfrac{1}{52}$",
+                  "$\\dfrac{1}{4}$",
+                  "$\\dfrac{4}{13}$"
                 ],
                 "correct": 0,
                 "explanation": "ក្នុងបៀ 52 សន្លឹកមានសន្លឹក Ace ចំនួន 4 នាំឱ្យ P = 4/52 = 1/13។"
@@ -7467,24 +7467,24 @@
               {
                 "question": "ដកសន្លឹកបៀ ១ សន្លឹក ។ រកប្រូបាបបានបៀពណ៌ក្រហម (បេះដូង ឬការ៉ូ) ៖",
                 "options": [
-                  "$\\frac{26}{52} = \\frac{1}{2}$",
-                  "$\\frac{1}{4}$",
-                  "$\\frac{13}{52}$",
-                  "$\\frac{2}{52}$"
+                  "$\\dfrac{26}{52} = \\dfrac{1}{2}$",
+                  "$\\dfrac{1}{4}$",
+                  "$\\dfrac{13}{52}$",
+                  "$\\dfrac{2}{52}$"
                 ],
                 "correct": 0,
-                "explanation": "បៀក្រហមមាន 26 សន្លឹក នាំឱ្យ P = $\\frac{26}{52} = \\frac{1}{2}$។"
+                "explanation": "បៀក្រហមមាន 26 សន្លឹក នាំឱ្យ P = $\\dfrac{26}{52} = \\dfrac{1}{2}$។"
               },
               {
                 "question": "ក្នុងប្រអប់មានប៊ិចខៀវ 5 និងប៊ិចក្រហម 3 ។ ដកប៊ិច ២ ព្រមគ្នា ។ រកប្រូបាបបានប៊ិចខៀវទាំងពីរ ៖",
                 "options": [
-                  "$\\frac{C_5^2}{C_8^2} = \\frac{10}{28} = \\frac{5}{14}$",
-                  "$\\frac{5}{8}$",
-                  "$\\frac{2}{8}$",
-                  "$\\frac{10}{64}$"
+                  "$\\dfrac{C_5^2}{C_8^2} = \\dfrac{10}{28} = \\dfrac{5}{14}$",
+                  "$\\dfrac{5}{8}$",
+                  "$\\dfrac{2}{8}$",
+                  "$\\dfrac{10}{64}$"
                 ],
                 "correct": 0,
-                "explanation": "P = C(5, 2) / C(8, 2) = 10 / 28 = $\\frac{5}{14}$។"
+                "explanation": "P = C(5, 2) / C(8, 2) = 10 / 28 = $\\dfrac{5}{14}$។"
               },
               {
                 "question": "តើប្រូបាបនៃព្រឹត្តិការណ៍ប្រាកដ (Certain Event) ស្មើនឹងប៉ុន្មាន?",
@@ -7563,7 +7563,7 @@
                 "explanation": "រូបមន្តដឺម័រ៖ $[r(\\cos\\theta + i\\sin\\theta)]^n = r^n[\\cos(n\\theta) + i\\sin(n\\theta)]$ ចំពោះគ្រប់ n ∈ Z។"
               },
               {
-                "question": "គណនា $[\\cos(\\frac{\\pi}{4}) + i\\sin(\\frac{\\pi}{4})]^4$ ៖",
+                "question": "គណនា $[\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4})]^4$ ៖",
                 "options": [
                   "$-1$",
                   "$1$",
@@ -7576,24 +7576,24 @@
               {
                 "question": "សរសេរ $z = 1 - i\\sqrt{3}$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
                 "options": [
-                  "$2[\\cos(-\\frac{\\pi}{3}) + i\\sin(-\\frac{\\pi}{3})]$",
-                  "$2[\\cos(\\frac{\\pi}{3}) + i\\sin(\\frac{\\pi}{3})]$",
-                  "$4[\\cos(-\\frac{\\pi}{3}) + i\\sin(-\\frac{\\pi}{3})]$",
-                  "$2[\\cos(\\frac{2\\pi}{3}) + i\\sin(\\frac{2\\pi}{3})]$"
+                  "$2[\\cos(-\\dfrac{\\pi}{3}) + i\\sin(-\\dfrac{\\pi}{3})]$",
+                  "$2[\\cos(\\dfrac{\\pi}{3}) + i\\sin(\\dfrac{\\pi}{3})]$",
+                  "$4[\\cos(-\\dfrac{\\pi}{3}) + i\\sin(-\\dfrac{\\pi}{3})]$",
+                  "$2[\\cos(\\dfrac{2\\pi}{3}) + i\\sin(\\dfrac{2\\pi}{3})]$"
                 ],
                 "correct": 0,
-                "explanation": "r = √(1 + 3) = 2, cos θ = 1/2, sin θ = -√3/2 \\implies  θ = -π/3 នាំឱ្យ z = $2[\\cos(-\\frac{\\pi}{3}) + i\\sin(-\\frac{\\pi}{3})]$។"
+                "explanation": "r = √(1 + 3) = 2, cos θ = 1/2, sin θ = -√3/2 \\implies  θ = -π/3 នាំឱ្យ z = $2[\\cos(-\\dfrac{\\pi}{3}) + i\\sin(-\\dfrac{\\pi}{3})]$។"
               },
               {
-                "question": "ទម្រង់អិចស្ប៉ូណង់ស្យែលនៃ $z = 2(\\cos\\frac{\\pi}{6} + i\\sin\\frac{\\pi}{6})$ គឺ ៖",
+                "question": "ទម្រង់អិចស្ប៉ូណង់ស្យែលនៃ $z = 2(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6})$ គឺ ៖",
                 "options": [
-                  "$2e^{i\\frac{\\pi}{6}}$",
-                  "$e^{i\\frac{\\pi}{6}}$",
-                  "$2e^{-i\\frac{\\pi}{6}}$",
-                  "$2e^{\\frac{\\pi}{6}}$"
+                  "$2e^{i\\dfrac{\\pi}{6}}$",
+                  "$e^{i\\dfrac{\\pi}{6}}$",
+                  "$2e^{-i\\dfrac{\\pi}{6}}$",
+                  "$2e^{\\dfrac{\\pi}{6}}$"
                 ],
                 "correct": 0,
-                "explanation": "តាមរូបមន្តអយល័រ cos θ + i sin θ = e^(iθ) នាំឱ្យ z = $2e^{i\\frac{\\pi}{6}}$។"
+                "explanation": "តាមរូបមន្តអយល័រ cos θ + i sin θ = e^(iθ) នាំឱ្យ z = $2e^{i\\dfrac{\\pi}{6}}$។"
               },
               {
                 "question": "គណនាតម្លៃនៃ $e^{i\\pi} + 1$ ៖",
@@ -7629,7 +7629,7 @@
                 "explanation": "$\\text{arg}(\\bar{z}) = -$ \\text{arg}(z)"
               },
               {
-                "question": "គណនាម៉ូឌុលនៃ $z = \\frac{1 + i}{1 - i}$ ៖",
+                "question": "គណនាម៉ូឌុលនៃ $z = \\dfrac{1 + i}{1 - i}$ ៖",
                 "options": [
                   "$1$",
                   "√2",
@@ -7800,84 +7800,84 @@
             "files": [],
             "quiz": [
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0} \\frac{\\tan(x)}{x}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\dfrac{\\tan x}{x}$ ៖",
                 "options": [
                   "$1$",
                   "$0$",
                   "$+\\infty$",
-                  "π"
+                  "$\\pi$"
                 ],
                 "correct": 0,
-                "explanation": "lim [sin x / (x cos x)] = 1 * (1/1) = 1។"
+                "explanation": "$\\lim\\limits_{x \\to 0} \\dfrac{\\sin x}{x \\cos x} = 1 \\times 1 = 1$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0} (1 - \\cos \\frac{2x)}{x^2}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\left( \\dfrac{1 - \\cos 2x}{x^2} \\right)$ ៖",
                 "options": [
                   "$2$",
                   "$1$",
-                  "$\\frac{1}{2}$",
+                  "$\\dfrac{1}{2}$",
                   "$4$"
                 ],
                 "correct": 0,
-                "explanation": "1 - $\\cos 2x$ = 2 sin^2(x) \\implies  lim 2 (sin x / x)^2 = 2(1) = 2។"
+                "explanation": "$1 - \\cos 2x = 2\\sin^2 x \\implies \\lim\\limits_{x \\to 0} 2\\left(\\dfrac{\\sin x}{x}\\right)^2 = 2(1)^2 = 2$។"
               },
               {
-                "question": "វិធានឡូពីតាល់ (L'Hôpital's Rule) សម្រាប់រាង $\\frac{0}{0}$ ឬ \\infty/\\infty គឺ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\dfrac{\\sin 3x}{\\sin 5x}$ ៖",
                 "options": [
-                  "lim [$f(x)$ / g(x)] = lim [$f'(x)$ / g'(x)]",
-                  "lim [$f(x)$ / g(x)] = [lim $f'(x)$] / [lim g(x)]",
-                  "lim [$f'(x)$ * g'(x)]",
-                  "lim [$f(x)$ - g(x)]"
+                  "$\\dfrac{3}{5}$",
+                  "$\\dfrac{5}{3}$",
+                  "$1$",
+                  "$0$"
                 ],
                 "correct": 0,
-                "explanation": "វិធាន L'Hôpital៖ lim f/g = lim f'/g' (ដេរីវេភាគយក និងដេរីវេភាគបែងដាច់ដោយឡែកពីគ្នា)។"
+                "explanation": "$\\lim\\limits_{x \\to 0} \\dfrac{\\sin 3x}{3x} \\times \\dfrac{5x}{\\sin 5x} \\times \\dfrac{3}{5} = \\dfrac{3}{5}$។"
               },
               {
-                "question": "គណនាលីមីតតាម L'Hôpital៖ $\\lim_{x \\to 0} (e^(2x) - \\frac{1)}{\\sin(3x)}$ ៖",
+                "question": "គណនាលីមីតតាម L'Hôpital៖ $\\lim\\limits_{x \\to 0} \\left( \\dfrac{e^{2x} - 1}{\\sin 3x} \\right)$ ៖",
                 "options": [
-                  "$\\frac{2}{3}$",
+                  "$\\dfrac{2}{3}$",
                   "$1$",
                   "$0$",
-                  "$\\frac{3}{2}$"
+                  "$\\dfrac{3}{2}$"
                 ],
                 "correct": 0,
-                "explanation": "រាង $\\frac{0}{0}$ \\implies  lim (2e^(2x)) / (3cos 3x) = 2(1) / 3(1) = 2/3។"
+                "explanation": "រាង $\\dfrac{0}{0}$ តាម L'Hôpital ៖ $\\lim\\limits_{x \\to 0} \\dfrac{2e^{2x}}{3\\cos 3x} = \\dfrac{2(1)}{3(1)} = \\dfrac{2}{3}$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to +\\infty} 1 + \\frac{2}{x}$^x ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} \\left(1 + \\dfrac{2}{x}\\right)^x$ ៖",
                 "options": [
-                  "e^2",
+                  "$e^2$",
                   "$e$",
-                  "2e",
+                  "$2e$",
                   "$1$"
                 ],
                 "correct": 0,
-                "explanation": "lim (1 + a/x)^x = e^a \\implies  e^2។"
+                "explanation": "$\\lim\\limits_{x \\to +\\infty} \\left(1 + \\dfrac{a}{x}\\right)^x = e^a \\implies e^2$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0} (ln(1 + \\frac{4x))}{x}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\left( \\dfrac{\\ln(1 + 4x)}{x} \\right)$ ៖",
                 "options": [
                   "$4$",
                   "$1$",
                   "$0$",
-                  "e^4"
+                  "$e^4$"
                 ],
                 "correct": 0,
-                "explanation": "lim 4 * [ln(1 + 4x) / (4x)] = 4 * 1 = 4។"
+                "explanation": "$\\lim\\limits_{x \\to 0} 4 \\times \\dfrac{\\ln(1 + 4x)}{4x} = 4 \\times 1 = 4$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to π/2} (1 - \\sin \\frac{x)}{(}π/2 - x)^2$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to \\dfrac{\\pi}{2}} \\left( \\dfrac{1 - \\sin x}{\\left(\\dfrac{\\pi}{2} - x\\right)^2} \\right)$ ៖",
                 "options": [
-                  "$\\frac{1}{2}$",
+                  "$\\dfrac{1}{2}$",
                   "$1$",
                   "$0$",
                   "$2$"
                 ],
                 "correct": 0,
-                "explanation": "តាង t = π/2 - x \\implies  sin $x = c$os t នាំឱ្យ lim_{t\\to 0} (1 - cos t)/t^2 = 1/2។"
+                "explanation": "តាង $t = \\dfrac{\\pi}{2} - x \\implies \\lim\\limits_{t \\to 0} \\dfrac{1 - \\cos t}{t^2} = \\dfrac{1}{2}$។"
               },
               {
-                "question": "គណនាលីមីត៖ $\\lim_{x \\to 0} x * \\frac{\\sin(1}{x)}$ ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0} \\left[ x \\sin\\left(\\dfrac{1}{x}\\right) \\right]$ ៖",
                 "options": [
                   "$0$ (ទ្រឹស្តីបទគាប)",
                   "$1$",
@@ -7885,10 +7885,10 @@
                   "$\\infty$"
                 ],
                 "correct": 0,
-                "explanation": "|x sin(1/x)| <= |x| ខិតជិត 0 ពេល x \\to  0 តាមទ្រឹស្តីបទគាប (Squeeze theorem) គឺស្មើ 0។"
+                "explanation": "$\\left|x \\sin\\left(\\dfrac{1}{x}\\right)\\right| \\le |x| \\to 0$ ពេល $x \\to 0$ តាមទ្រឹស្តីបទគាប (Squeeze Theorem) គឺស្មើ $0$។"
               },
               {
-                "question": "$\\lim_{x \\to +\\infty} x - $ \\ln x",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to +\\infty} (x - \\ln x)$ ៖",
                 "options": [
                   "$+\\infty$",
                   "$0$",
@@ -7896,10 +7896,10 @@
                   "$-\\infty$"
                 ],
                 "correct": 0,
-                "explanation": "x(1 - ln x / x) \\to  +\\infty * (1 - 0) = +\\infty។"
+                "explanation": "$x\\left(1 - \\dfrac{\\ln x}{x}\\right) \\to +\\infty(1 - 0) = +\\infty$។"
               },
               {
-                "question": "គណនាលីមីត៖ lim_{x \\to  0⁺} x^x ៖",
+                "question": "គណនាលីមីត៖ $\\lim\\limits_{x \\to 0^+} x^x$ ៖",
                 "options": [
                   "$1$",
                   "$0$",
@@ -7907,7 +7907,7 @@
                   "$e$"
                 ],
                 "correct": 0,
-                "explanation": "x^x = e^(x ln x) \\implies  lim x ln $x = 0$ \\implies  e^0 = 1។"
+                "explanation": "$x^x = e^{x \\ln x} \\implies \\lim\\limits_{x \\to 0^+} (x \\ln x) = 0 \\implies e^0 = 1$។"
               }
             ]
           },
@@ -7962,7 +7962,7 @@
                   "មិនអាចបន្តបាន"
                 ],
                 "correct": 0,
-                "explanation": "ដោយសារ $\\lim_{x \\to 0} \\sin $x/$x = $1 នោះគេកំណត់ f(0) = 1 ដើម្បីឱ្យវាជាប់ត្រង់ $x = 0$។"
+                "explanation": "ដោយសារ $\\lim\\limits_{x \\to 0} \\sin $x/$x = $1 នោះគេកំណត់ f(0) = 1 ដើម្បីឱ្យវាជាប់ត្រង់ $x = 0$។"
               },
               {
                 "question": "តើផលបូក ផលដក និងផលគុណនៃអនុគមន៍ជាប់ពីរ ជាអនុគមន៍អ្វី?",
@@ -8171,24 +8171,24 @@
               {
                 "question": "បន្ទាត់ $y = ax + $b ជាអាស៊ីមតូតទ្រេតនៃក្រាប y = $f(x)$ កាលណា x \\to  +\\infty ដោយ a ស្មើនឹង ៖",
                 "options": [
-                  "a = $\\lim_{x \\to +\\infty} \\frac{$f(x)$}{x}$",
+                  "a = $\\lim\\limits_{x \\to +\\infty} \\dfrac{$f(x)$}{x}$",
                   "a = lim $f(x)$",
                   "a = f'(0)",
                   "a = lim [$f(x)$ - x]"
                 ],
                 "correct": 0,
-                "explanation": "មេគុណប្រាប់ទិស a = $\\lim_{x \\to +\\infty} \\frac{$f(x)$}{x}$។"
+                "explanation": "មេគុណប្រាប់ទិស a = $\\lim\\limits_{x \\to +\\infty} \\dfrac{$f(x)$}{x}$។"
               },
               {
                 "question": "តម្លៃ b នៃអាស៊ីមតូតទ្រេត $y = ax + b$ គណនាតាម ៖",
                 "options": [
-                  "$\\lim_{x \\to +\\infty} $ f(x) - ax",
+                  "$\\lim\\limits_{x \\to +\\infty} $ f(x) - ax",
                   "b = lim [$f(x)$ / x]",
                   "b = f(0)",
                   "b = lim ax"
                 ],
                 "correct": 0,
-                "explanation": "$\\lim_{x \\to +\\infty} $ f(x) - ax"
+                "explanation": "$\\lim\\limits_{x \\to +\\infty} $ f(x) - ax"
               },
               {
                 "question": "រកអាស៊ីមតូតទ្រេតនៃ $f(x)$ = (x^2 + 3x + 1) / (x + 1) ៖",
@@ -8584,9 +8584,9 @@
               {
                 "question": "ក្រឡាផ្ទៃរវាងប៉ារ៉ាបូល y = x^2 និងបន្ទាត់ y = x គឺ ៖",
                 "options": [
-                  "$\\frac{1}{6}$",
-                  "$\\frac{1}{3}$",
-                  "$\\frac{1}{2}$",
+                  "$\\dfrac{1}{6}$",
+                  "$\\dfrac{1}{3}$",
+                  "$\\dfrac{1}{2}$",
                   "$1$"
                 ],
                 "correct": 0,
@@ -8595,8 +8595,8 @@
               {
                 "question": "គណនាក្រឡាផ្ទៃរវាងក្រាប y = x^2 - 4 និងអ័ក្ស Ox ៖",
                 "options": [
-                  "$\\frac{32}{3}$",
-                  "$\\frac{16}{3}$",
+                  "$\\dfrac{32}{3}$",
+                  "$\\dfrac{16}{3}$",
                   "$8$",
                   "$0$"
                 ],
@@ -9174,7 +9174,7 @@
                   "x^2 + y^2 = a^2"
                 ],
                 "correct": 0,
-                "explanation": "$\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ (a > b) មានអ័ក្សធំដេកប្រវែង 2a និងអ័ក្សតូចឈរប្រវែង 2b។"
+                "explanation": "$\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ (a > b) មានអ័ក្សធំដេកប្រវែង 2a និងអ័ក្សតូចឈរប្រវែង 2b។"
               },
               {
                 "question": "ទំនាក់ទំនងរវាង a, b, c ក្នុងអេលីបគឺ ៖",
@@ -9221,7 +9221,7 @@
                 "explanation": "$c^2 = a^2 - b^2$ = 25 - 9 = 16 \\implies  c = 4 នាំឱ្យកំណុំ F(±4, 0)។"
               },
               {
-                "question": "ក្រឡាផ្ទៃនៃអេលីប $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ គឺ ៖",
+                "question": "ក្រឡាផ្ទៃនៃអេលីប $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ គឺ ៖",
                 "options": [
                   "S = π * a * b",
                   "S = π * a^2",
@@ -9254,7 +9254,7 @@
                 "explanation": "ច្បាប់កែប្លែទី ១៖ គ្រប់ភពទាំងអស់ធ្វើចលនាតាមគន្លងអេលីបដែលមានព្រះអាទិត្យស្ថិតនៅត្រង់កំណុំមួយ។"
               },
               {
-                "question": "បើ a = b ក្នុងសមីការ $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ នោះអេលីបក្លាយជា ៖",
+                "question": "បើ a = b ក្នុងសមីការ $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ នោះអេលីបក្លាយជា ៖",
                 "options": [
                   "រង្វង់ផ្ចិត O កាំ R = a (e = 0)",
                   "ប៉ារ៉ាបូល",
@@ -9295,7 +9295,7 @@
                   "x^2 - y^2 = 1"
                 ],
                 "correct": 0,
-                "explanation": "$\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ មានអ័ក្សទទឹងដេកប្រវែង 2a និងកំពូល A(±a, 0)។"
+                "explanation": "$\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$ មានអ័ក្សទទឹងដេកប្រវែង 2a និងកំពូល A(±a, 0)។"
               },
               {
                 "question": "ទំនាក់ទំនងរវាង a, b, c ក្នុងអ៊ីពែបូលគឺ ៖",
@@ -9309,7 +9309,7 @@
                 "explanation": "ក្នុងអ៊ីពែបូល c ជាប្រវែងធំជាងគេ (c > a) នាំឱ្យ $c^2 = a^2 + b^2$។"
               },
               {
-                "question": "សមីការបន្ទាត់អាស៊ីមតូតទាំងពីរនៃអ៊ីពែបូល $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ គឺ ៖",
+                "question": "សមីការបន្ទាត់អាស៊ីមតូតទាំងពីរនៃអ៊ីពែបូល $\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$ គឺ ៖",
                 "options": [
                   "y = ± (b / a) x",
                   "y = ± (a / b) x",
@@ -9317,7 +9317,7 @@
                   "y = ± (b / c) x"
                 ],
                 "correct": 0,
-                "explanation": "អាស៊ីមតូតនៃ $\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1$ គឺ y = ± (b/a) x។"
+                "explanation": "អាស៊ីមតូតនៃ $\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$ គឺ y = ± (b/a) x។"
               },
               {
                 "question": "អិចសង់ទ្រិស៊ីតេ (Eccentricity, e) នៃអ៊ីពែបូលគឺ ៖",
@@ -9361,7 +9361,7 @@
                   "x^2 + y^2 = a^2 - b^2"
                 ],
                 "correct": 0,
-                "explanation": "$\\frac{y^2}{a^2} - \\frac{x^2}{b^2} = 1$ មានអ័ក្សទទឹងឈរ និងកំពូល (0, ±a) អាស៊ីមតូត y = ± (a/b) x។"
+                "explanation": "$\\dfrac{y^2}{a^2} - \\dfrac{x^2}{b^2} = 1$ មានអ័ក្សទទឹងឈរ និងកំពូល (0, ±a) អាស៊ីមតូត y = ± (a/b) x។"
               },
               {
                 "question": "អ៊ីពែបូលកែង (Equilateral / Rectangular Hyperbola) ជាអ៊ីពែបូលដែល ៖",
@@ -9539,7 +9539,7 @@
                 "options": [
                   "$E(X)$  = \\sum x_i P(X = x_i)",
                   "$E(X)$  = \\sum P(X = x_i)",
-                  "$E(X)$  = \\frac{\\sum x_i}{n}",
+                  "$E(X)$  = \\dfrac{\\sum x_i}{n}",
                   "$E(X)$  = \\max(x_i)"
                 ],
                 "correct": 0,
@@ -9595,7 +9595,7 @@
                   "$E(X) = np$",
                   "$E(X)$  = np(1 - p)",
                   "$E(X) = p$",
-                  "$E(X)$  = \\frac{n}{p}"
+                  "$E(X)$  = \\dfrac{n}{p}"
                 ],
                 "correct": 0,
                 "explanation": "មធ្យមភាគនៃបំណែងចែកទ្វេធាគឺ $E(X)$ = np។"
