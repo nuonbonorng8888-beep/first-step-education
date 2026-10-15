@@ -12,13 +12,95 @@ window.App = {
   isAdmin: false,
   searchQuery: '',
   player: null,
+  quizScore: 0,
+  answeredQuiz: {},
+
+  dailyQuotes: [
+    { quote: "គណិតវិទ្យាគឺជាសិល្បៈនៃការផ្តល់ឈ្មោះដូចគ្នាដល់រឿងខុសៗគ្នា។", author: "Henri Poincaré" },
+    { quote: "ធម្មជាតិគឺជាសៀវភៅធំមួយដែលសរសេរឡើងដោយភាសាគណិតវិទ្យា។", author: "Galileo Galilei" },
+    { quote: "ការសិក្សាប្រៀបដូចជាការចែវទូកបញ្ច្រាសទឹក បើមិនខំទៅមុខ មុខជានឹងថយក្រោយ។", author: "សុភាសិតខ្មែរ" },
+    { quote: "ភាពបរិសុទ្ធនៃគណិតវិទ្យា គឺស្ថិតនៅលើភាពសាមញ្ញ និងភាពស្រស់ស្អាតនៃតក្កវិជ្ជា។", author: "Albert Einstein" },
+    { quote: "រៀនមួយជំហានម្តងៗ ដោយការយល់ច្បាស់ ប្រសើរជាងប្រញាប់តែមិនចាំ។", author: "1ˢᵗ Step Education" },
+    { quote: "គ្មានផ្លូវកាត់ឆ្ពោះទៅរកធរណីមាត្រនោះទេ (No royal road to geometry)។", author: "Euclid" }
+  ],
+  quoteIndex: 0,
+
+  mascotMessages: [
+    "សួស្តី! ខ្ញុំជា 1ˢᵗ Step Mascot 🐾 រៀនមួយជំហានម្តងៗ ជោគជ័យនឹងនៅខាងមុខ ✨",
+    "ថ្ងៃនេះតើប្អូនបានសាកល្បងលំហាត់ MCQ កម្រិតណាដែរ? ចុចជ្រើសរើសបានណា៎! 🎯",
+    "កុំភ្លេចធ្វើតេស្តសមត្ថភាព ដើម្បីដឹងពីចំណុចខ្លាំង និងចំណុចត្រូវពង្រឹងបន្ថែម 💡",
+    "គណិតវិទ្យាមិនពិបាកទេ ឱ្យតែយើងយល់ពីមូលដ្ឋានគ្រឹះច្បាស់លាស់ 🌟"
+  ],
+  mascotMsgIndex: 0,
 
   async init() {
     this.initTheme();
     this.checkAdminAuth();
     this.initPlayer();
+    this.initGreetingAndWisdom();
+    this.updateResumeBanner();
     this.bindGlobalEvents();
     await this.loadCourses();
+  },
+
+  initGreetingAndWisdom() {
+    const now = new Date();
+    const hours = now.getHours();
+    let greeting = "🌅 អរុណសួស្តីប្អូនៗ!";
+    if (hours >= 12 && hours < 17) {
+      greeting = "☀️ ទិវាសួស្តីប្អូនៗ!";
+    } else if (hours >= 17 || hours < 5) {
+      greeting = "🌙 សាយណ្ហសួស្តីប្អូនៗ!";
+    }
+    const greetEl = document.getElementById('mascot-greeting-text');
+    if (greetEl) greetEl.textContent = greeting;
+
+    this.renderDailyQuote();
+  },
+
+  renderDailyQuote() {
+    const item = this.dailyQuotes[this.quoteIndex % this.dailyQuotes.length];
+    const qEl = document.getElementById('daily-quote-text');
+    const aEl = document.getElementById('daily-quote-author');
+    if (qEl) qEl.textContent = `« ${item.quote} »`;
+    if (aEl) aEl.textContent = `— ${item.author}`;
+  },
+
+  cycleDailyQuote() {
+    this.quoteIndex++;
+    this.renderDailyQuote();
+  },
+
+  cycleMascotMessage() {
+    this.mascotMsgIndex = (this.mascotMsgIndex + 1) % this.mascotMessages.length;
+    const qEl = document.getElementById('mascot-quote-text');
+    if (qEl) qEl.textContent = this.mascotMessages[this.mascotMsgIndex];
+  },
+
+  updateResumeBanner() {
+    const courseId = localStorage.getItem('ngs_last_course_id');
+    const lessonId = localStorage.getItem('ngs_last_lesson_id');
+    const lessonTitle = localStorage.getItem('ngs_last_lesson_title');
+    const resumeCard = document.getElementById('hero-resume-card');
+    const titleEl = document.getElementById('resume-lesson-title');
+    if (courseId && lessonId && lessonTitle && resumeCard && titleEl) {
+      titleEl.textContent = lessonTitle;
+      resumeCard.style.display = 'flex';
+    }
+  },
+
+  resumeLastLesson() {
+    const courseId = localStorage.getItem('ngs_last_course_id');
+    const lessonId = localStorage.getItem('ngs_last_lesson_id');
+    if (courseId && lessonId) {
+      this.openCourse(courseId);
+      this.selectLesson(lessonId);
+    }
+  },
+
+  setDockActive(buttonEl) {
+    document.querySelectorAll('.dock-btn').forEach(btn => btn.classList.remove('active'));
+    if (buttonEl) buttonEl.classList.add('active');
   },
 
   checkAdminAuth() {
@@ -285,35 +367,47 @@ window.App = {
       const totalFiles = course.chapters?.reduce((sum, ch) =>
         sum + ch.lessons?.reduce((fSum, l) => fSum + (l.files?.length || 0), 0)
       , 0) || 0;
+      const totalQuiz = course.chapters?.reduce((sum, ch) =>
+        sum + ch.lessons?.reduce((qSum, l) => qSum + (l.quiz?.length || 0), 0)
+      , 0) || 0;
+
+      let gradeLabel = course.grade || 'NGS';
+      let specialBadge = '🇰🇭 កម្មវិធីសិក្សាជាតិ MoEYS';
+      if (course.id.includes('g12-advanced')) {
+        specialBadge = '⭐ ត្រៀមបាក់ឌុប • វិទ្យាសាស្ត្រពិត';
+      } else if (course.id.includes('g12-basic')) {
+        specialBadge = '🌟 ត្រៀមបាក់ឌុប • វិទ្យាសាស្ត្រសង្គម';
+      } else if (course.id.includes('g9')) {
+        specialBadge = '🎯 ថ្នាក់ត្រៀមប្រឡងឌីប្លូម';
+      }
 
       return `
-        <div class="course-card" data-course-id="${course.id}">
+        <div class="course-card ${course.id}" data-course-id="${course.id}">
           <div class="card-thumb-wrap">
             <img src="${course.coverImage}" alt="${course.title}" class="card-thumb" onerror="this.src='assets/moeys_grade12.jpg'">
             <div class="card-thumb-overlay"></div>
-            <span class="card-grade-badge">${course.grade || 'NGS'}</span>
-            <span class="card-category-badge">${course.categoryLabel || 'ទូទៅ'}</span>
-            <span class="card-moeys-badge">🇰🇭 សៀវភៅគោល MoEYS</span>
+            <span class="card-grade-badge">${gradeLabel}</span>
+            <span class="card-category-badge">${course.categoryLabel || 'គណិតវិទ្យា'}</span>
+            <span class="card-moeys-badge">${specialBadge}</span>
           </div>
           <div class="card-body">
             <h3 class="card-title">${course.title}</h3>
             <p class="card-desc">${course.description || 'គ្មានសេចក្តីពិពណ៌នា'}</p>
-            <div class="card-meta">
-              <div class="meta-group">
-                <span class="meta-tag">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
-                  ${totalLessons} មេរៀន
-                </span>
-                <span class="meta-tag files">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                  ${totalFiles} ឯកសារ (PDF)
-                </span>
-              </div>
+            
+            <div class="card-chips">
+              <span class="card-chip lessons">🎬 ${totalLessons} មេរៀន</span>
+              <span class="card-chip quiz">📝 ${totalQuiz} MCQ</span>
+              <span class="card-chip pdf">📑 ${totalFiles} PDF</span>
             </div>
-            <div class="card-footer">
-              <button class="btn btn-primary card-btn" onclick="App.openCourse('${course.id}')">
+
+            <div class="card-teacher-line">
+              <span>👨‍🏫 ដឹកនាំដោយលោកគ្រូជំនាញ NGS</span>
+            </div>
+
+            <div class="card-footer" style="margin-top: 14px;">
+              <button class="btn btn-primary card-btn" onclick="App.openCourse('${course.id}')" style="width: 100%;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                ចូលរៀនមេរៀន
+                ចូលរៀនមេរៀនឥឡូវនេះ
               </button>
             </div>
           </div>
@@ -387,6 +481,14 @@ window.App = {
 
     if (!targetLesson) return;
     this.currentLesson = targetLesson;
+
+    try {
+      localStorage.setItem('ngs_last_course_id', this.currentCourse?.id || '');
+      localStorage.setItem('ngs_last_lesson_id', targetLesson.id);
+      localStorage.setItem('ngs_last_lesson_title', targetLesson.title);
+      localStorage.setItem('ngs_last_course_title', this.currentCourse?.title || '');
+    } catch(e) {}
+    this.updateResumeBanner();
 
     // Update breadcrumbs & Header
     const bcLesson = document.getElementById('bc-lesson');
@@ -590,30 +692,71 @@ window.App = {
     const quiz = this.currentLesson.quiz || [];
     if (quiz.length === 0) {
       quizContainer.innerHTML = `
-        <div style="text-align: center; padding: 30px; color: var(--text-muted);">
-          <div style="font-size: 2.5rem; margin-bottom: 8px;">🎯</div>
-          <p>មិនទាន់មានលំហាត់តេស្តសម្រាប់មេរៀននេះនៅឡើយទេ</p>
+        <div style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
+          <div style="font-size: 3rem; margin-bottom: 12px;">🎯</div>
+          <h3>មិនទាន់មានលំហាត់តេស្តសម្រាប់មេរៀននេះនៅឡើយទេ</h3>
+          <p style="font-size: 0.9rem; margin-top: 6px;">សូមជ្រើសរើសមេរៀនផ្សេងទៀត</p>
         </div>
       `;
       return;
     }
 
-    quizContainer.innerHTML = quiz.map((q, qIndex) => `
-      <div class="quiz-card" data-q-index="${qIndex}">
-        <h4 class="quiz-question">${qIndex + 1}. ${q.question}</h4>
-        <div class="quiz-options">
-          ${q.options.map((opt, optIndex) => `
-            <div class="quiz-opt" onclick="App.checkQuizAnswer(${qIndex}, ${optIndex}, this)">
-              <span style="font-weight:700; width:24px;">${String.fromCharCode(65 + optIndex)}.</span>
-              <span>${opt}</span>
-            </div>
-          `).join('')}
+    this.quizScore = 0;
+    this.answeredQuiz = {};
+    const totalQ = quiz.length;
+
+    quizContainer.innerHTML = `
+      <div class="quiz-arena-header">
+        <div class="arena-title-col">
+          <div class="arena-kicker">
+            <span class="arena-icon-badge">🎯</span>
+            <span class="arena-kicker-text">លំហាត់អនុវត្តស្តង់ដារ PISA • ${this.currentLesson.title}</span>
+          </div>
+          <div class="arena-hint">សូមជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ រួចផ្ទៀងផ្ទាត់ការពន្យល់លម្អិត</div>
         </div>
-        <div class="quiz-explanation" id="quiz-exp-${qIndex}">
-          💡 <strong>ការពន្យល់៖</strong> ${q.explanation || 'ចម្លើយត្រឹមត្រូវ!'}
+        <div class="arena-score-box">
+          <div class="arena-score-val" id="quiz-live-score">0 / ${totalQ}</div>
+          <div class="arena-score-lbl">ពិន្ទុរបស់អ្នក</div>
         </div>
       </div>
-    `).join('');
+
+      <div class="quiz-questions-list">
+        ${quiz.map((q, qIndex) => `
+          <div class="quiz-card" data-q-index="${qIndex}">
+            <div class="quiz-card-header">
+              <div class="quiz-q-pill">
+                <span class="q-pill-dot"></span>
+                <span class="q-pill-text">សំណួរទី ${qIndex + 1} នៃ ${totalQ}</span>
+              </div>
+              <span class="quiz-status-pill" id="quiz-status-${qIndex}">មិនទាន់ឆ្លើយ</span>
+            </div>
+
+            <div class="quiz-question-box">
+              <h4 class="quiz-question">${q.question}</h4>
+            </div>
+
+            <div class="quiz-options">
+              ${q.options.map((opt, optIndex) => `
+                <div class="quiz-opt" onclick="App.checkQuizAnswer(${qIndex}, ${optIndex}, this)" role="button" tabindex="0">
+                  <div class="opt-badge">${String.fromCharCode(65 + optIndex)}</div>
+                  <div class="opt-content">${opt}</div>
+                </div>
+              `).join('')}
+            </div>
+
+            <div class="quiz-explanation" id="quiz-exp-${qIndex}">
+              <div class="exp-header">
+                <span class="exp-icon">👨‍🏫</span>
+                <span class="exp-title">ការពន្យល់លម្អិតពីលោកគ្រូ ៖</span>
+              </div>
+              <div class="exp-body">
+                ${q.explanation || 'ចម្លើយត្រឹមត្រូវ!'}
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
 
     this.renderMath(quizContainer);
   },
@@ -639,29 +782,47 @@ window.App = {
 
   checkQuizAnswer(qIndex, selectedOptIndex, element) {
     const quiz = this.currentLesson?.quiz?.[qIndex];
-    if (!quiz) return;
+    if (!quiz || this.answeredQuiz[qIndex]) return;
 
+    this.answeredQuiz[qIndex] = true;
     const card = element.closest('.quiz-card');
     const allOptions = card.querySelectorAll('.quiz-opt');
     const expBox = document.getElementById(`quiz-exp-${qIndex}`);
+    const statusPill = document.getElementById(`quiz-status-${qIndex}`);
 
     allOptions.forEach(opt => opt.style.pointerEvents = 'none');
 
+    const totalQ = this.currentLesson.quiz.length;
+
     if (selectedOptIndex === quiz.correct) {
       element.classList.add('correct');
+      this.quizScore++;
+      if (statusPill) {
+        statusPill.textContent = '✓ ត្រឹមត្រូវ';
+        statusPill.className = 'quiz-status-pill correct';
+      }
       if (expBox) {
         expBox.style.display = 'block';
         this.renderMath(expBox);
       }
-      this.showToast('ចម្លើយត្រឹមត្រូវ! ពូកែណាស់ 🎉', 'success');
+      this.showToast('អស្ចារ្យណាស់! ចម្លើយត្រឹមត្រូវ 🎉', 'success');
     } else {
       element.classList.add('wrong');
       allOptions[quiz.correct].classList.add('correct');
+      if (statusPill) {
+        statusPill.textContent = '✕ មិនត្រឹមត្រូវ';
+        statusPill.className = 'quiz-status-pill wrong';
+      }
       if (expBox) {
         expBox.style.display = 'block';
         this.renderMath(expBox);
       }
-      this.showToast('មិនទាន់ត្រឹមត្រូវទេ! សូមមើលការពន្យល់បន្ថែម', 'error');
+      this.showToast('មិនទាន់ត្រឹមត្រូវទេ! សូមមើលការពន្យល់លម្អិតពីគ្រូ 👇', 'error');
+    }
+
+    const scoreEl = document.getElementById('quiz-live-score');
+    if (scoreEl) {
+      scoreEl.textContent = `${this.quizScore} / ${totalQ}`;
     }
   },
 

@@ -26,10 +26,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="1ˢᵗ Step">
   
-  <!-- Google Fonts: Kantumruy Pro & Plus Jakarta Sans -->
+  <!-- Google Fonts: Kantumruy Pro, Preahvihear, Moul & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Moul&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Preahvihear&display=swap" rel="stylesheet">
   
   <!-- KaTeX for Beautiful Mathematical Formulas (PISA-Style) -->
   <link rel="stylesheet" href="lib/katex/katex.min.css">
@@ -110,52 +110,98 @@
     <!-- ================= CATALOG VIEW (ទំព័រដើម) ================= -->
     <section id="catalog-view">
       
-      <!-- Tesdopi-Style Mascot Hero -->
-      <div class="tesdopi-hero">
-        <div class="mascot-container">
-          <img src="assets/mascot.jpg" alt="1st Step Mascot" class="mascot-img">
-        </div>
-        <h1 class="tesdopi-title" id="hero-main-title">1ˢᵗ Step (First Step)</h1>
-        <div class="tesdopi-tagline" id="hero-tagline">ប្រព័ន្ធសិក្សាគណិតវិទ្យាឌីជីថលស្តង់ដា ថ្នាក់ទី ៧ ដល់ ទី ១២</div>
-        <div class="tesdopi-sub" id="hero-slogan">✨ មូលដ្ឋានគ្រឹះរឹងមាំ ឆ្ពោះទៅកាន់និទ្ទេស A • Master Mathematics Grades 7-12!</div>
-
-        <!-- Store Badges (App Store & Google Play) -->
-        <div class="store-badges">
-          <a class="store-badge-btn" onclick="App.openStoreInfoModal('appstore')" title="Apple App Store">
-            <div class="store-badge-icon"></div>
-            <div class="store-badge-text">
-              <span class="store-badge-sub">Download on</span>
-              <span class="store-badge-main">App Store</span>
+      <!-- Creative Human-Crafted Hero Studio -->
+      <div class="creative-hero">
+        <div class="hero-top-row">
+          <!-- Mascot & Welcoming Educator Persona -->
+          <div class="hero-mascot-badge" onclick="App.cycleMascotMessage()" title="ចុចដើម្បីស្តាប់ការលើកទឹកចិត្ត">
+            <div class="mascot-avatar-wrap">
+              <img src="assets/mascot.jpg" alt="1st Step Mascot" class="hero-mascot-img">
+              <span class="mascot-online-dot"></span>
             </div>
-          </a>
-
-          <a class="store-badge-btn" onclick="App.openStoreInfoModal('playstore')" title="Google Play Store">
-            <div class="store-badge-icon">▶</div>
-            <div class="store-badge-text">
-              <span class="store-badge-sub">GET IT ON</span>
-              <span class="store-badge-main">Google Play</span>
+            <div class="mascot-speech-bubble" id="mascot-speech">
+              <span class="mascot-greeting" id="mascot-greeting-text">🌅 អរុណសួស្តីប្អូនៗ!</span>
+              <span class="mascot-quote" id="mascot-quote-text">តោះចាប់ផ្តើមពង្រឹងចំណេះដឹងគណិតវិទ្យាថ្ងៃនេះទាំងអស់គ្នា 🐾✨</span>
             </div>
-          </a>
+          </div>
 
-          <a class="store-badge-btn" style="background: rgba(6, 182, 212, 0.25); border-color: var(--accent-cyan); box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25);" onclick="App.openMobileModal()">
-            <div class="store-badge-icon">📲</div>
-            <div class="store-badge-text">
-              <span class="store-badge-sub">Install on Mobile</span>
-              <span class="store-badge-main">ដំឡើងលើទូរស័ព្ទ</span>
+          <!-- Quick Resume Last Lesson Card (Dynamic) -->
+          <div class="hero-resume-card" id="hero-resume-card" style="display: none;" onclick="App.resumeLastLesson()">
+            <div class="resume-icon">▶</div>
+            <div class="resume-info">
+              <span class="resume-label">បន្តការរៀនសូត្រពីកន្លែងចាស់</span>
+              <span class="resume-title" id="resume-lesson-title">មេរៀន...</span>
             </div>
-          </a>
+          </div>
         </div>
 
-        <!-- Grade Selector Track (Tesdopi Style 7-12) -->
+        <div class="hero-main-content">
+          <div class="hero-title-group">
+            <span class="hero-kicker">✨ ស្ទូឌីយោសិក្សាគណិតវិទ្យាឌីជីថលកម្ពុជា • ថ្នាក់ទី ៧ ដល់ ទី ១២</span>
+            <h1 class="hero-art-title">1ˢᵗ Step <span class="hero-highlight">Education</span></h1>
+            <p class="hero-human-desc">
+              កម្រងមេរៀន វីដេអូបង្រៀន និងលំហាត់ពហុជ្រើសរើស (MCQ) ស្តង់ដារ PISA ស្របតាមកម្មវិធីសិក្សារបស់ក្រសួងអប់រំ យុវជន និងកីឡា
+            </p>
+          </div>
+
+          <!-- Daily Wisdom Card -->
+          <div class="daily-wisdom-card">
+            <div class="wisdom-icon">💡</div>
+            <div class="wisdom-content">
+              <span class="wisdom-quote" id="daily-quote-text">« គណិតវិទ្យាគឺជាសិល្បៈនៃការផ្តល់ឈ្មោះដូចគ្នាដល់រឿងខុសៗគ្នា។ »</span>
+              <span class="wisdom-author" id="daily-quote-author">— Henri Poincaré</span>
+            </div>
+            <button class="btn-icon wisdom-cycle-btn" onclick="App.cycleDailyQuote()" title="ប្តូរពាក្យស្លោកថ្មី">🔄</button>
+          </div>
+        </div>
+
+        <!-- Student Action Strip (Real Features) -->
+        <div class="student-action-strip">
+          <button class="action-strip-btn primary" onclick="App.openDiagnosticModal()">
+            <span class="action-icon">🎯</span>
+            <div class="action-text">
+              <span class="action-title">តេស្តសមត្ថភាពរហ័ស</span>
+              <span class="action-sub">វាយតម្លៃចំណេះដឹងរបស់អ្នក</span>
+            </div>
+          </button>
+
+          <button class="action-strip-btn secondary" onclick="App.scrollToLessons()">
+            <span class="action-icon">📚</span>
+            <div class="action-text">
+              <span class="action-title">រុករកមេរៀនទាំងអស់</span>
+              <span class="action-sub">៧៤ មេរៀន • ៧៤០ MCQ</span>
+            </div>
+          </button>
+
+          <button class="action-strip-btn tertiary" onclick="App.openMobileModal()">
+            <span class="action-icon">📱</span>
+            <div class="action-text">
+              <span class="action-title">ដំឡើងលើទូរស័ព្ទ (PWA)</span>
+              <span class="action-sub">ប្រើលើ iPhone & Android</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Grade Selector Track (Vibrant Hand-Crafted Badges 7-12) -->
         <div class="grade-track-wrap">
-          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-right: 4px;">កម្រិតថ្នាក់៖</span>
-          <button class="grade-pill active" data-grade="all" onclick="App.filterByGrade('all', this)">ទាំងអស់</button>
-          <button class="grade-pill" data-grade="7" onclick="App.filterByGrade('7', this)">ថ្នាក់ទី ៧</button>
-          <button class="grade-pill" data-grade="8" onclick="App.filterByGrade('8', this)">ថ្នាក់ទី ៨</button>
-          <button class="grade-pill" data-grade="9" onclick="App.filterByGrade('9', this)">ថ្នាក់ទី ៩</button>
-          <button class="grade-pill" data-grade="10" onclick="App.filterByGrade('10', this)">ថ្នាក់ទី ១០</button>
-          <button class="grade-pill" data-grade="11" onclick="App.filterByGrade('11', this)">ថ្នាក់ទី ១១</button>
-          <button class="grade-pill" data-grade="12" onclick="App.filterByGrade('12', this)">ថ្នាក់ទី ១២</button>
+          <div class="grade-track-label">
+            <span>កម្រិតថ្នាក់សិក្សា ៖</span>
+          </div>
+          <div class="grade-pills-row">
+            <button class="grade-pill active" data-grade="all" onclick="App.filterByGrade('all', this)">
+              <span class="grade-pill-dot"></span> ទាំងអស់ (All)
+            </button>
+            <button class="grade-pill grade-7" data-grade="7" onclick="App.filterByGrade('7', this)">ថ្នាក់ទី ៧</button>
+            <button class="grade-pill grade-8" data-grade="8" onclick="App.filterByGrade('8', this)">ថ្នាក់ទី ៨</button>
+            <button class="grade-pill grade-9" data-grade="9" onclick="App.filterByGrade('9', this)">
+              ថ្នាក់ទី ៩ <span class="grade-mini-tag">ឌីប្លូម</span>
+            </button>
+            <button class="grade-pill grade-10" data-grade="10" onclick="App.filterByGrade('10', this)">ថ្នាក់ទី ១០</button>
+            <button class="grade-pill grade-11" data-grade="11" onclick="App.filterByGrade('11', this)">ថ្នាក់ទី ១១</button>
+            <button class="grade-pill grade-12" data-grade="12" onclick="App.filterByGrade('12', this)">
+              ថ្នាក់ទី ១២ <span class="grade-mini-tag gold">បាក់ឌុប ⭐</span>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -810,6 +856,30 @@
     </div>
   </div>
 
+
+  <!-- Floating Mobile Glass Navigation Dock (Native App Experience) -->
+  <nav class="mobile-glass-dock" id="mobile-glass-dock">
+    <button class="dock-btn active" id="dock-btn-home" onclick="App.backToCatalog(); App.setDockActive(this);">
+      <span class="dock-icon">🏠</span>
+      <span class="dock-label">ទំព័រដើម</span>
+    </button>
+    <button class="dock-btn" id="dock-btn-courses" onclick="App.scrollToLessons(); App.setDockActive(this);">
+      <span class="dock-icon">📚</span>
+      <span class="dock-label">មេរៀន</span>
+    </button>
+    <button class="dock-btn" id="dock-btn-quiz" onclick="App.openDiagnosticModal(); App.setDockActive(this);">
+      <span class="dock-icon">🎯</span>
+      <span class="dock-label">តេស្ត</span>
+    </button>
+    <button class="dock-btn" id="dock-btn-mobile" onclick="App.openMobileModal(); App.setDockActive(this);">
+      <span class="dock-icon">📲</span>
+      <span class="dock-label">ដំឡើង</span>
+    </button>
+    <button class="dock-btn" id="dock-btn-theme" onclick="App.toggleTheme();">
+      <span class="dock-icon" id="dock-theme-icon">☀️</span>
+      <span class="dock-label">ពន្លឺ</span>
+    </button>
+  </nav>
 
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container"></div>
