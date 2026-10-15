@@ -1,9 +1,12 @@
 // 1st Step Education PWA Service Worker
-const CACHE_NAME = '1st-step-v3';
+const CACHE_NAME = '1st-step-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './css/style.css',
+  './lib/katex/katex.min.css',
+  './lib/katex/katex.min.js',
+  './lib/katex/contrib/auto-render.min.js',
   './js/app.js',
   './js/player.js',
   './js/storage.js',

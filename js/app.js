@@ -614,6 +614,27 @@ window.App = {
         </div>
       </div>
     `).join('');
+
+    this.renderMath(quizContainer);
+  },
+
+  renderMath(element) {
+    const target = element || document.body;
+    if (typeof renderMathInElement === 'function') {
+      try {
+        renderMathInElement(target, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true }
+          ],
+          throwOnError: false
+        });
+      } catch (err) {
+        console.warn('KaTeX render warning:', err);
+      }
+    }
   },
 
   checkQuizAnswer(qIndex, selectedOptIndex, element) {

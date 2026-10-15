@@ -1414,6 +1414,41 @@ body {
   display: none;
 }
 
+/* KaTeX Educational Math Typography (PISA Standard) */
+.katex {
+  font-size: 1.12em !important;
+  text-rendering: auto;
+  font-family: KaTeX_Main, 'Times New Roman', serif;
+}
+
+.quiz-question .katex {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+.quiz-opt .katex {
+  color: var(--text-primary);
+}
+
+.quiz-opt.correct .katex {
+  color: var(--accent-emerald) !important;
+}
+
+.quiz-opt.wrong .katex {
+  color: var(--accent-rose) !important;
+}
+
+.quiz-explanation .katex {
+  color: #34d399;
+}
+
+.katex-display {
+  margin: 0.6em 0 !important;
+  padding: 4px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 /* Playlist Sidebar */
 .playlist-sidebar {
   display: flex;
