@@ -668,11 +668,40 @@ window.App = {
   // Mobile Access Modal
   openMobileModal() {
     const modal = document.getElementById('mobile-modal');
+    const linkEl = document.getElementById('mobile-ip-link');
+    if (linkEl && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      linkEl.textContent = window.location.origin;
+    }
     if (modal) modal.classList.add('active');
   },
 
   closeMobileModal() {
     const modal = document.getElementById('mobile-modal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  copyMobileLink() {
+    const linkEl = document.getElementById('mobile-ip-link');
+    const link = (linkEl && linkEl.textContent.trim()) || window.location.origin;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(link).then(() => {
+        this.showToast('បានចម្លង Link រួចរាល់: ' + link, 'success');
+      }).catch(() => {
+        this.showToast('Link: ' + link, 'info');
+      });
+    } else {
+      this.showToast('Link: ' + link, 'info');
+    }
+  },
+
+  // Mobile Install Modal
+  openMobileInstallModal() {
+    const modal = document.getElementById('mobile-install-modal');
+    if (modal) modal.classList.add('active');
+  },
+
+  closeMobileInstallModal() {
+    const modal = document.getElementById('mobile-install-modal');
     if (modal) modal.classList.remove('active');
   },
 

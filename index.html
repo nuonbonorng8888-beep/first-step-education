@@ -2,16 +2,29 @@
 <html lang="km">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>1ˢᵗ Step (First Step) - ប្រព័ន្ធសិក្សាឌីជីថលស្តង់ដា</title>
   <meta name="description" content="1ˢᵗ Step (First Step) - ប្រព័ន្ធសិក្សាឌីជីថលកម្រិតស្តង់ដា គាំទ្រការទស្សនាវីដេអូមេរៀន ការមើល និងទាញយក PDF និងការបន្ថែមមេរៀនដោយសេរី">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#06b6d4">
-  <link rel="icon" type="image/jpeg" href="assets/app_logo.jpg">
-  <link rel="apple-touch-icon" href="assets/app_logo.jpg">
+
+  <!-- Apple iOS Touch Icons (Required PNG format for iPhone / iPad Home Screen) -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <!-- Favicons for Web & Android -->
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- iOS Standalone WebClip Meta -->
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="1st Step">
+  <meta name="apple-mobile-web-app-title" content="1ˢᵗ Step">
   
   <!-- Google Fonts: Kantumruy Pro & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,7 +78,7 @@
           📱 បើកលើទូរស័ព្ទ
         </button>
 
-        <button class="btn btn-outline" onclick="App.openMobileModal()" title="ដំឡើង App លើទូរស័ព្ទ">
+        <button class="btn btn-outline" onclick="App.openMobileInstallModal()" title="ដំឡើង App លើទូរស័ព្ទ">
           📲 ដំឡើង App
         </button>
 
@@ -517,7 +530,7 @@
           <div style="font-family: var(--font-en); font-size: 1.25rem; font-weight: 700; color: var(--accent-cyan); letter-spacing: 0.5px; user-select: all; padding: 8px; background: var(--bg-primary); border-radius: 8px; border: 1px dashed var(--accent-cyan);" id="mobile-ip-link">
             http://192.168.1.6:8000
           </div>
-          <button class="btn btn-outline" style="margin-top: 10px; padding: 6px 14px; font-size: 0.8rem;" onclick="navigator.clipboard.writeText('http://192.168.1.6:8000'); App.showToast('បានចម្លង Link រួចរាល់!', 'success');">
+          <button class="btn btn-outline" style="margin-top: 10px; padding: 6px 14px; font-size: 0.8rem;" onclick="App.copyMobileLink()">
             📋 ចម្លង Link (Copy)
           </button>
         </div>
@@ -548,7 +561,10 @@
           </div>
         </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" style="display: flex; justify-content: space-between; gap: 8px;">
+        <button class="btn btn-outline" onclick="App.closeMobileModal(); App.openMobileInstallModal();">
+          📲 របៀបដំឡើងលើ Home Screen
+        </button>
         <button class="btn btn-primary" onclick="App.closeMobileModal()">យល់ព្រម</button>
       </div>
     </div>
@@ -696,11 +712,11 @@
 
 
   <!-- ================= MOBILE INSTALL & ACCESS MODAL ================= -->
-  <div class="modal-overlay" id="mobile-modal" onclick="if(event.target === this) App.closeMobileModal()">
+  <div class="modal-overlay" id="mobile-install-modal" onclick="if(event.target === this) App.closeMobileInstallModal()">
     <div class="modal-card" style="max-width: 600px;">
       <div class="modal-header">
         <h3 class="modal-title">📲 របៀបដំឡើង App 1ˢᵗ Step លើទូរស័ព្ទ</h3>
-        <button class="btn-icon" onclick="App.closeMobileModal()">✕</button>
+        <button class="btn-icon" onclick="App.closeMobileInstallModal()">✕</button>
       </div>
       <div class="modal-body" style="gap: 16px;">
         <div style="text-align: center; margin-bottom: 4px;">
@@ -740,11 +756,11 @@
         </div>
 
         <div style="background: rgba(6, 182, 212, 0.08); border: 1px dashed rgba(6, 182, 212, 0.3); border-radius: 12px; padding: 12px; font-size: 0.82rem; color: var(--text-secondary); text-align: center;">
-          💡 <strong>ចំណាំ៖</strong> បន្ទាប់ពីដំឡើងរួច App នឹងមាន Icon រូប Mascot ដ៏ស្រស់ស្អាតលើផ្ទាំងទូរស័ព្ទដៃដូច App ផ្លូវការ ហើយបើកបានពេញអេក្រង់ (Full Screen) គ្មានរបារ Browser ឡើយ!
+          💡 <strong>ចំណាំ៖</strong> បន្ទាប់ពីដំឡើងរួច App នឹងមាន Icon រូបកូនឆ្មា Mascot លើផ្ទាំងទូរស័ព្ទដៃដូច App ផ្លូវការ ហើយបើកបានពេញអេក្រង់ (Full Screen) គ្មានរបារ Browser ឡើយ!
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" onclick="App.closeMobileModal()" style="width: 100%;">យល់ព្រម</button>
+        <button class="btn btn-primary" onclick="App.closeMobileInstallModal()" style="width: 100%;">យល់ព្រម</button>
       </div>
     </div>
   </div>

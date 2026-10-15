@@ -1,5 +1,5 @@
 // 1st Step Education PWA Service Worker
-const CACHE_NAME = '1st-step-v1';
+const CACHE_NAME = '1st-step-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -7,9 +7,17 @@ const ASSETS_TO_CACHE = [
   './js/app.js',
   './js/player.js',
   './js/storage.js',
+  './apple-touch-icon.png',
+  './apple-touch-icon-precomposed.png',
+  './assets/apple-touch-icon.png',
+  './assets/apple-touch-icon-180x180.png',
+  './assets/apple-touch-icon-152x152.png',
+  './assets/apple-touch-icon-120x120.png',
+  './assets/icon-192.png',
+  './assets/icon-512.png',
+  './assets/favicon-32x32.png',
   './assets/mascot.jpg',
   './assets/app_logo.jpg',
-  './assets/icon-192.jpg',
   './manifest.json'
 ];
 
