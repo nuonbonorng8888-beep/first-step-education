@@ -649,12 +649,18 @@ window.App = {
 
     if (selectedOptIndex === quiz.correct) {
       element.classList.add('correct');
-      if (expBox) expBox.style.display = 'block';
+      if (expBox) {
+        expBox.style.display = 'block';
+        this.renderMath(expBox);
+      }
       this.showToast('ចម្លើយត្រឹមត្រូវ! ពូកែណាស់ 🎉', 'success');
     } else {
       element.classList.add('wrong');
       allOptions[quiz.correct].classList.add('correct');
-      if (expBox) expBox.style.display = 'block';
+      if (expBox) {
+        expBox.style.display = 'block';
+        this.renderMath(expBox);
+      }
       this.showToast('មិនទាន់ត្រឹមត្រូវទេ! សូមមើលការពន្យល់បន្ថែម', 'error');
     }
   },
