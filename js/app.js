@@ -1057,6 +1057,10 @@ window.App = {
             { left: '\\(', right: '\\)', display: false },
             { left: '\\[', right: '\\]', display: true }
           ],
+          macros: {
+            "\\lim": "\\mathop{\\mathrm{lim}}\\limits",
+            "\\sum": "\\mathop{\\mathrm{sum}}\\limits"
+          },
           throwOnError: false
         });
       } catch (err) {
