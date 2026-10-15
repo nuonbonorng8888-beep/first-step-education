@@ -9,6 +9,9 @@ backups/
 # Local windows batch scripts (not needed on Render linux host)
 *.bat
 
+# Large raw textbooks
+សៀវភៅគណិតវិទ្យាថ្នាក់ទី_១២*.pdf
+
 # Python bytecode and caches
 __pycache__/
 *.py[cod]
