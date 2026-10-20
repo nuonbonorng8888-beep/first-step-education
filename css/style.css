@@ -47,8 +47,8 @@
   --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  --font-khmer: 'Kantumruy Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-en: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-khmer: 'Times New Roman', 'Kantumruy Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-en: 'Times New Roman', Times, serif;
 }
 
 /* Light Theme Variables */
@@ -2105,11 +2105,35 @@ body.light-theme .opt-badge {
   color: var(--text-primary);
 }
 
-/* KaTeX Educational Math Typography (PISA Standard) */
+/* KaTeX Educational Math Typography (PISA Standard - Times New Roman) */
 .katex {
   font-size: 1.12em !important;
   text-rendering: auto;
-  font-family: KaTeX_Main, 'Times New Roman', serif;
+  font-family: 'Times New Roman', KaTeX_Main, serif !important;
+  color: var(--text-primary) !important;
+}
+
+.katex .mathnormal,
+.katex .mord,
+.katex .mbin,
+.katex .mrel,
+.katex .mopen,
+.katex .mclose,
+.katex .mpunct,
+.katex .text {
+  font-family: 'Times New Roman', KaTeX_Math, KaTeX_Main, serif !important;
+}
+
+.quiz-question,
+.opt-content,
+.opt-badge,
+.quiz-explanation,
+.exp-body,
+.worksheet-paper,
+.ws-ex-question,
+.ws-ex-instruction,
+.ws-sol-body {
+  font-family: 'Times New Roman', 'Kantumruy Pro', serif;
 }
 
 .quiz-question .katex {
