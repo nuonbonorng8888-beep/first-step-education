@@ -2113,12 +2113,12 @@ body.light-theme .opt-badge {
 }
 
 .quiz-question .katex {
-  color: #38bdf8;
-  font-weight: 500;
+  color: var(--text-primary) !important;
+  font-weight: 600;
 }
 
 .quiz-opt .katex {
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
 }
 
 .quiz-opt.correct .katex {
@@ -2130,7 +2130,7 @@ body.light-theme .opt-badge {
 }
 
 .quiz-explanation .katex {
-  color: #34d399;
+  color: var(--text-primary) !important;
 }
 
 .katex-display {
