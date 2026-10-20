@@ -1,5 +1,5 @@
 // 1st Step Education PWA Service Worker
-const CACHE_NAME = '1st-step-v12';
+const CACHE_NAME = '1st-step-v15';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -10,6 +10,7 @@ const ASSETS_TO_CACHE = [
   './js/app.js',
   './js/player.js',
   './js/storage.js',
+  './data/worksheets.json',
   './data/worksheets_g11.json',
   './apple-touch-icon.png',
   './apple-touch-icon-precomposed.png',
@@ -62,7 +63,18 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Network-first with dynamic cache update for seamless mobile sync
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
+    fetch(event.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+        }
+        return networkResponse;
+      })
+      .catch(() => caches.match(event.request))
   );
 });

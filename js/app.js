@@ -14,8 +14,10 @@ window.App = {
   player: null,
   quizScore: 0,
   answeredQuiz: {},
+  worksheets: {},
   worksheetsG11: {},
   teacherUnlocked: false,
+  activeWorksheetPoint: 0,
 
   dailyQuotes: [
     { quote: "គណិតវិទ្យាគឺជាសិល្បៈនៃការផ្តល់ឈ្មោះដូចគ្នាដល់រឿងខុសៗគ្នា។", author: "Henri Poincaré" },
@@ -125,14 +127,14 @@ window.App = {
     const authBtn = document.getElementById('btn-admin-auth');
     if (authBtn) {
       if (this.isAdmin) {
-        authBtn.className = 'btn btn-secondary';
+        authBtn.className = 'btn btn-secondary nav-auth-btn';
         authBtn.innerHTML = `
-          <span style="color:var(--accent-emerald); font-weight:700;">👨‍🏫 គ្រូ (Admin)</span>
-          <span onclick="event.stopPropagation(); App.logoutAdmin()" style="margin-left:8px; opacity:0.7; cursor:pointer;" title="ចាកចេញ (Logout)">✕</span>
+          <span style="color:var(--accent-emerald); font-weight:700;">👨‍🏫 <span class="nav-auth-text">គ្រូ (Admin)</span></span>
+          <span onclick="event.stopPropagation(); App.logoutAdmin()" style="margin-left:8px; opacity:0.7; cursor:pointer; font-weight:bold;" title="ចាកចេញ (Logout)">✕</span>
         `;
       } else {
-        authBtn.className = 'btn btn-outline';
-        authBtn.innerHTML = '🔐 គ្រូបង្រៀន (Teacher)';
+        authBtn.className = 'btn btn-outline nav-auth-btn';
+        authBtn.innerHTML = '🔐 <span class="nav-auth-text">គ្រូបង្រៀន</span>';
       }
     }
 
@@ -507,6 +509,9 @@ window.App = {
       this.player.loadLessonVideo(targetLesson);
     }
 
+    // Reset active worksheet point to first point
+    this.activeWorksheetPoint = 0;
+
     // Update Tabs
     this.renderMaterialsTab();
     this.renderWorksheetTab();
@@ -696,15 +701,28 @@ window.App = {
   // =========================================================================
   // Flipped Classroom Worksheets (សន្លឹកកិច្ចការតាមចំណុចនៃមេរៀន)
   // =========================================================================
-  async loadWorksheets() {
+  async loadWorksheets(forceRefresh = false) {
     try {
-      const res = await fetch('data/worksheets_g11.json');
+      const cacheBust = forceRefresh ? `?v=${Date.now()}` : `?v=15`;
+      const fetchOpts = forceRefresh ? { cache: 'no-store' } : {};
+      let res = await fetch(`data/worksheets.json${cacheBust}`, fetchOpts);
+      if (!res.ok) {
+        res = await fetch(`data/worksheets_g11.json${cacheBust}`, fetchOpts);
+      }
       if (res.ok) {
-        this.worksheetsG11 = await res.json();
+        this.worksheets = await res.json();
+        this.worksheetsG11 = this.worksheets; // backward compatibility
       }
     } catch (e) {
       console.warn('Worksheets load warning:', e);
     }
+  },
+
+  async forceSyncWorksheets() {
+    this.showToast('កំពុងទាញយកទិន្នន័យសន្លឹកកិច្ចការថ្មីបំផុត...', 'info');
+    await this.loadWorksheets(true);
+    this.renderWorksheetTab();
+    this.showToast('បានធ្វើបច្ចុប្បន្នភាពសន្លឹកកិច្ចការរួចរាល់!', 'success');
   },
 
   renderWorksheetTab() {
@@ -721,7 +739,7 @@ window.App = {
       return;
     }
 
-    const ws = this.worksheetsG11?.[this.currentLesson.id];
+    const ws = (this.worksheets || this.worksheetsG11)?.[this.currentLesson.id];
 
     if (!ws) {
       container.innerHTML = `
@@ -729,7 +747,7 @@ window.App = {
           <div style="font-size: 3rem; margin-bottom: 14px;">📝</div>
           <h3 style="color: var(--text-primary); margin-bottom: 8px;">សន្លឹកកិច្ចការកំពុងត្រូវបានរៀបចំ</h3>
           <p style="font-size: 0.95rem; line-height: 1.6; max-width: 520px; margin: 0 auto 16px;">
-            សន្លឹកកិច្ចការសម្រាប់មេរៀននេះ នឹងត្រូវដាក់ឱ្យអនុវត្តក្នុងពេលឆាប់ៗ។ បច្ចុប្បន្ន ប្រព័ន្ធគាំទ្រសន្លឹកកិច្ចការពេញលេញសម្រាប់គ្រប់មេរៀនថ្នាក់ទី ១១ ទាំងកម្រិតមូលដ្ឋាន និងកម្រិតខ្ពស់។
+            សន្លឹកកិច្ចការសម្រាប់មេរៀននេះ នឹងត្រូវដាក់ឱ្យអនុវត្តក្នុងពេលឆាប់ៗ។ បច្ចុប្បន្ន ប្រព័ន្ធគាំទ្រសន្លឹកកិច្ចការពេញលេញសម្រាប់គ្រប់កម្រិតថ្នាក់ពីទី ៧ ដល់ទី ១២។
           </p>
           <button class="btn btn-primary" onclick="App.switchTab('materials')">
             📑 មើលឯកសារមេរៀនជំនួសវិញ
@@ -738,6 +756,11 @@ window.App = {
       `;
       return;
     }
+
+    const hasPoints = Array.isArray(ws.points) && ws.points.length > 0;
+    const pointIndex = hasPoints ? Math.min(Math.max(0, this.activeWorksheetPoint || 0), ws.points.length - 1) : 0;
+    const currentPoint = hasPoints ? ws.points[pointIndex] : ws;
+    const currentExercises = currentPoint.exercises || ws.exercises || [];
 
     const isUnlocked = this.isAdmin || this.teacherUnlocked;
 
@@ -754,17 +777,29 @@ window.App = {
               <span>🎯</span>
               <span>Flipped Classroom Model</span>
             </span>
+            ${hasPoints && ws.points.length > 1 ? `
+              <span class="ws-badge-tag" style="background: rgba(99, 102, 241, 0.12); color: #4f46e5; border-color: rgba(99, 102, 241, 0.3);">
+                <span>📍</span>
+                <span>ចំណុចទី ${currentPoint.pointNumber || (pointIndex + 1)} នៃ ${ws.points.length}</span>
+              </span>
+            ` : ''}
           </div>
 
           <div class="ws-toolbar-actions">
-            <button class="btn btn-primary" onclick="App.printWorksheet(false)" title="បោះពុម្ព ឬទាញយកជា PDF">
+            <button class="btn btn-primary" onclick="App.printWorksheet(false)" title="បោះពុម្ព ឬទាញយកជា PDF សន្លឹកចំណុចនេះ">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 6 2 18 2 18 9"></polyline>
                 <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
                 <rect x="6" y="14" width="12" height="8"></rect>
               </svg>
-              🖨️ ទាញយកជា PDF / បោះពុម្ព
+              🖨️ បោះពុម្ពសន្លឹកចំណុចនេះ
             </button>
+
+            ${hasPoints && ws.points.length > 1 ? `
+              <button class="btn btn-outline" style="border-color: #2563eb; color: #2563eb;" onclick="App.printAllWorksheetPoints(false)" title="បោះពុម្ពគ្រប់សន្លឹកកិច្ចការនៃមេរៀននេះ">
+                📚 បោះពុម្ពគ្រប់ចំណុច (${ws.points.length} សន្លឹក)
+              </button>
+            ` : ''}
 
             ${isUnlocked ? `
               <button class="btn btn-outline" style="border-color: #10b981; color: #10b981;" onclick="App.printWorksheet(true)" title="បោះពុម្ពរួមទាំងដំណោះស្រាយគ្រូ">
@@ -778,8 +813,35 @@ window.App = {
                 🔐 ដំណោះស្រាយគ្រូ (ជាប់សោ)
               </button>
             `}
+
+            <button class="btn btn-outline" onclick="App.forceSyncWorksheets()" title="ធ្វើបច្ចុប្បន្នភាពទាញយកសន្លឹកកិច្ចការថ្មី">
+              🔄 ធ្វើបច្ចុប្បន្នភាព
+            </button>
           </div>
         </div>
+
+        <!-- Section Points Selector Bar (Flipped Classroom Points) -->
+        ${hasPoints && ws.points.length > 1 ? `
+          <div class="ws-points-selector-bar">
+            <div class="ws-points-label">
+              <div class="ws-points-label-left">
+                <span class="ws-points-icon">📌</span>
+                <span class="ws-points-title">សន្លឹកកិច្ចការរៀបតាមចំណុចមេរៀន ៖</span>
+              </div>
+              <span class="ws-points-count-badge">សរុប ${ws.points.length} ចំណុច (${ws.points.length} សន្លឹក)</span>
+            </div>
+            <div class="ws-points-track">
+              ${ws.points.map((p, pIdx) => `
+                <button class="ws-point-pill ${pIdx === pointIndex ? 'active' : ''}" 
+                        onclick="App.selectWorksheetPoint(${pIdx})"
+                        title="${p.pointTitle || `ចំណុចទី ${pIdx + 1}`}">
+                  <span class="ws-pill-num">ចំណុច ${p.pointNumber || (pIdx + 1)}</span>
+                  <span class="ws-pill-title">${(p.pointTitle || `ចំណុចទី ${pIdx + 1}`).replace(/^ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+\s*[៖:]?\s*/, '')}</span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
 
         <!-- The Official Printable Paper Sheet -->
         <div class="worksheet-paper" id="printable-worksheet-paper">
@@ -789,7 +851,8 @@ window.App = {
               <img src="assets/school_logo.png" class="ws-school-logo" alt="Preah Sisowath NGS Logo">
             </div>
             <div class="ws-header-center">
-              <h1 class="ws-header-title">${ws.sheetNumber}</h1>
+              <h1 class="ws-header-title">${currentPoint.sheetNumber || ws.sheetNumber}</h1>
+              ${currentPoint.pointTitle ? `<div class="ws-header-point-subtitle">${currentPoint.pointTitle}</div>` : ''}
             </div>
             <div class="ws-header-right">
               <h2 class="ws-header-lesson">${ws.lessonTitle}</h2>
@@ -825,15 +888,16 @@ window.App = {
             <div class="ws-objective-title">
               <span>🎯 គោលបំណងរង្វាយតម្លៃ (Flipped Classroom) ៖</span>
             </div>
-            <div>${ws.objective}</div>
+            <div>${currentPoint.objective || ws.objective}</div>
           </div>
 
           <!-- Exercises List -->
           <div class="ws-exercises-container">
-            ${ws.exercises.map((ex, exIdx) => `
+            ${currentExercises.map((ex, exIdx) => `
               <div class="ws-exercise-block">
                 <div class="ws-ex-header">
                   <span class="ws-ex-num">លំហាត់ទី ${exIdx + 1}</span>
+                  ${ex.level ? `<span class="ws-ex-level">${ex.level}</span>` : ''}
                   <span class="ws-ex-points">${ex.points} ពិន្ទុ</span>
                 </div>
 
@@ -879,11 +943,11 @@ window.App = {
               </div>
 
               <div class="ws-solutions-list">
-                ${ws.exercises.map((ex, exIdx) => `
+                ${currentExercises.map((ex, exIdx) => `
                   <div class="ws-solution-item">
                     <div class="ws-sol-item-header">
                       <span>ដំណោះស្រាយលំហាត់ទី ${exIdx + 1}</span>
-                      <span style="color:#d97706; font-size:0.85rem;">[ពិន្ទុសរុប ៖ ${ex.points} ពិន្ទុ]</span>
+                      <span style="color:#d97706; font-size:0.85rem;">[${ex.level || ''} — ពិន្ទុសរុប ៖ ${ex.points} ពិន្ទុ]</span>
                     </div>
                     <div class="ws-sol-body">${ex.solution}</div>
                     <div class="ws-sol-rubric">
@@ -911,6 +975,15 @@ window.App = {
 
     // Render mathematical formulas via KaTeX
     this.renderMath(container);
+  },
+
+  selectWorksheetPoint(index) {
+    this.activeWorksheetPoint = index;
+    this.renderWorksheetTab();
+    const paper = document.getElementById('printable-worksheet-paper');
+    if (paper && window.innerWidth <= 768) {
+      paper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   },
 
   openWorksheetUnlockModal() {
@@ -966,6 +1039,115 @@ window.App = {
     window.print();
     // Restore display after print dialog closes
     setTimeout(() => {
+      if (teacherSec) teacherSec.style.display = '';
+    }, 1000);
+  },
+
+  printAllWorksheetPoints(includeSolutions = false) {
+    const ws = (this.worksheets || this.worksheetsG11)?.[this.currentLesson?.id];
+    if (!ws || !ws.points || ws.points.length === 0) {
+      this.printWorksheet(includeSolutions);
+      return;
+    }
+
+    const printContainer = document.createElement('div');
+    printContainer.id = 'ws-all-points-print-container';
+    printContainer.className = 'ws-all-points-print-container';
+
+    printContainer.innerHTML = ws.points.map((pt, ptIdx) => `
+      <div class="worksheet-paper ${ptIdx < ws.points.length - 1 ? 'ws-page-break' : ''}">
+        <div class="ws-header-banner">
+          <div class="ws-school-logo-box">
+            <img src="assets/school_logo.png" class="ws-school-logo" alt="Preah Sisowath NGS Logo">
+          </div>
+          <div class="ws-header-center">
+            <h1 class="ws-header-title">${pt.sheetNumber || ws.sheetNumber}</h1>
+            <div class="ws-header-point-subtitle">${pt.pointTitle}</div>
+          </div>
+          <div class="ws-header-right">
+            <h2 class="ws-header-lesson">${ws.lessonTitle}</h2>
+          </div>
+        </div>
+
+        <div class="ws-student-info">
+          <div class="ws-info-row">
+            <div class="ws-info-item" style="flex: 2;">
+              <span class="ws-info-label">ឈ្មោះសិស្ស ៖</span>
+              <span class="ws-info-dots"></span>
+            </div>
+            <div class="ws-info-item" style="flex: 1;">
+              <span class="ws-info-label">ថ្នាក់ទី ៖</span>
+              <span class="ws-info-dots"></span>
+            </div>
+          </div>
+          <div class="ws-info-row">
+            <div class="ws-info-item" style="flex: 2;">
+              <span class="ws-info-label">កាលបរិច្ឆេទ ៖</span>
+              <span class="ws-info-dots"></span>
+            </div>
+            <div class="ws-info-item" style="flex: 1;">
+              <span class="ws-info-label">ពិន្ទុសរុប ៖</span>
+              <span style="font-weight: 700; color: #dc2626;">........ / ១០</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ws-objective-card">
+          <div class="ws-objective-title">
+            <span>🎯 គោលបំណងរង្វាយតម្លៃ (Flipped Classroom) ៖</span>
+          </div>
+          <div>${pt.objective || ws.objective}</div>
+        </div>
+
+        <div class="ws-exercises-container">
+          ${pt.exercises.map((ex, exIdx) => `
+            <div class="ws-exercise-block">
+              <div class="ws-ex-header">
+                <span class="ws-ex-num">លំហាត់ទី ${exIdx + 1}</span>
+                ${ex.level ? `<span class="ws-ex-level">${ex.level}</span>` : ''}
+                <span class="ws-ex-points">${ex.points} ពិន្ទុ</span>
+              </div>
+              <div class="ws-ex-instruction">${ex.instruction}</div>
+              <div class="ws-ex-question">${ex.question}</div>
+              <div class="ws-handwriting-space">
+                <span class="ws-handwriting-hint">(ទីកន្លែងសម្រាប់សិស្សគិតលេខ និងសរសេរដំណោះស្រាយ)</span>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="ws-footer-banner">
+          <div class="ws-footer-label">ចំណាំ៖</div>
+          <div class="ws-footer-points">
+            <p>១. រាល់ការងារទាំងអស់សូមធ្វើដោយយកចិត្តទុកដាក់បំផុត ករណីមិនយល់សូមស្រាវជ្រាវ សួរគ្រូ ឬ មិត្ត ( ចម្លងក៏ដោយឲ្យតែយល់)</p>
+            <p>២. សន្លឹកកិច្ចការខ្លះ ត្រូវនឹងសួរបញ្ជាក់ពេលដល់ម៉ោងជួបគ្នា បើឆ្លើយមិនចេញ នោះនឹងទទួលបានពិន្ទុ ០ លើការងារនេះ</p>
+            <p>៣. សូមបញ្ជាក់សន្លឹកកិច្ចការទី.....( ទី២០ឬ ទី ២១,...)ដើម្បីស្រង់ពិន្ទុសកម្មភាព</p>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    document.body.appendChild(printContainer);
+    this.renderMath(printContainer);
+
+    const mainWsPaper = document.getElementById('printable-worksheet-paper');
+    const mainToolbar = document.querySelector('.ws-toolbar');
+    const mainPointsBar = document.querySelector('.ws-points-selector-bar');
+    const teacherSec = document.getElementById('ws-teacher-section');
+    if (mainWsPaper) mainWsPaper.style.display = 'none';
+    if (mainToolbar) mainToolbar.style.display = 'none';
+    if (mainPointsBar) mainPointsBar.style.display = 'none';
+    if (teacherSec) teacherSec.style.display = 'none';
+
+    window.print();
+
+    setTimeout(() => {
+      if (printContainer && printContainer.parentNode) {
+        printContainer.parentNode.removeChild(printContainer);
+      }
+      if (mainWsPaper) mainWsPaper.style.display = '';
+      if (mainToolbar) mainToolbar.style.display = '';
+      if (mainPointsBar) mainPointsBar.style.display = '';
       if (teacherSec) teacherSec.style.display = '';
     }, 1000);
   },
@@ -1323,13 +1505,22 @@ window.App = {
   },
 
   bindGlobalEvents() {
-    // Search Input
+    // Search Inputs (Desktop and Mobile)
     const searchInput = document.getElementById('search-input');
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+
+    const handleSearchInput = (val) => {
+      this.searchQuery = val;
+      if (searchInput && searchInput.value !== val) searchInput.value = val;
+      if (mobileSearchInput && mobileSearchInput.value !== val) mobileSearchInput.value = val;
+      this.renderCourses();
+    };
+
     if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        this.searchQuery = e.target.value;
-        this.renderCourses();
-      });
+      searchInput.addEventListener('input', (e) => handleSearchInput(e.target.value));
+    }
+    if (mobileSearchInput) {
+      mobileSearchInput.addEventListener('input', (e) => handleSearchInput(e.target.value));
     }
 
     // Category Filter Pills
