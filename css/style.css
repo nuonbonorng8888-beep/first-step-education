@@ -47,7 +47,7 @@
   --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  --font-khmer: 'Times New Roman', 'Kantumruy Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-khmer: 'Kantumruy Pro', 'Times New Roman', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-en: 'Times New Roman', Times, serif;
 }
 
@@ -1445,112 +1445,17 @@ body.light-theme .grade-pill {
   gap: 16px;
 }
 
-.video-container {
+.experiment-stage-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-glass);
-}
-
-.main-video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-/* Custom Video Controls */
-.video-controls {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
-  padding: 16px 20px;
-  opacity: 0;
-  transition: opacity var(--transition-normal);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  z-index: 10;
-}
-
-.video-container:hover .video-controls,
-.video-controls.paused {
-  opacity: 1;
-}
-
-.progress-bar-wrap {
-  position: relative;
-  width: 100%;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: height 0.15s ease;
-}
-
-.progress-bar-wrap:hover {
-  height: 10px;
-}
-
-.progress-bar {
-  height: 100%;
-  background: var(--gradient-brand);
-  border-radius: var(--radius-full);
-  position: relative;
-  width: 0%;
-}
-
-.progress-scrubber {
-  position: absolute;
-  right: -6px;
-  top: 50%;
-  transform: translateY(-50%) scale(0);
-  width: 14px;
-  height: 14px;
-  border-radius: var(--radius-full);
-  background: #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.15s ease;
-}
-
-.progress-bar-wrap:hover .progress-scrubber {
-  transform: translateY(-50%) scale(1);
-}
-
-.controls-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.controls-left, .controls-right {
-  display: flex;
-  align-items: center;
   gap: 12px;
 }
 
-.ctrl-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  padding: 6px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color var(--transition-fast), transform var(--transition-fast);
-}
-
-.ctrl-btn:hover {
-  color: var(--accent-cyan);
-  transform: scale(1.1);
+.main-video,
+.video-controls {
+  display: none !important;
 }
 
 .time-display {
@@ -2038,7 +1943,7 @@ body.light-theme .opt-badge {
 .opt-content {
   flex: 1;
   font-size: 0.98rem;
-  line-height: 1.6;
+  line-height: 1.75;
   color: var(--text-primary);
 }
 
@@ -2101,27 +2006,15 @@ body.light-theme .opt-badge {
 
 .exp-body {
   font-size: 0.92rem;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--text-primary);
 }
 
-/* KaTeX Educational Math Typography (PISA Standard - Times New Roman) */
+/* KaTeX Educational Math Typography */
 .katex {
-  font-size: 1.12em !important;
+  font-size: 1.05em;
   text-rendering: auto;
-  font-family: 'Times New Roman', KaTeX_Main, serif !important;
-  color: var(--text-primary) !important;
-}
-
-.katex .mathnormal,
-.katex .mord,
-.katex .mbin,
-.katex .mrel,
-.katex .mopen,
-.katex .mclose,
-.katex .mpunct,
-.katex .text {
-  font-family: 'Times New Roman', KaTeX_Math, KaTeX_Main, serif !important;
+  color: inherit;
 }
 
 .quiz-question,
@@ -2133,27 +2026,92 @@ body.light-theme .opt-badge {
 .ws-ex-question,
 .ws-ex-instruction,
 .ws-sol-body {
-  font-family: 'Times New Roman', 'Kantumruy Pro', serif;
+  font-family: 'Kantumruy Pro', 'Times New Roman', serif;
 }
 
-.quiz-question .katex {
+/* Multiple choice quiz (ពហុជ្រើសរើស) - High contrast white text on dark cards */
+.quiz-question .katex,
+.quiz-question .katex * {
   color: var(--text-primary) !important;
   font-weight: 600;
 }
 
-.quiz-opt .katex {
+.quiz-opt .katex,
+.quiz-opt .katex * {
   color: var(--text-primary) !important;
 }
 
-.quiz-opt.correct .katex {
+.quiz-opt.correct .katex,
+.quiz-opt.correct .katex * {
   color: var(--accent-emerald) !important;
 }
 
-.quiz-opt.wrong .katex {
+.quiz-opt.wrong .katex,
+.quiz-opt.wrong .katex * {
   color: var(--accent-rose) !important;
 }
 
-.quiz-explanation .katex {
+.quiz-explanation .katex,
+.quiz-explanation .katex * {
+  color: var(--text-primary) !important;
+}
+
+/* Worksheet Paper (សន្លឹកកិច្ចការ) - STRICTLY BLACK like text on white paper */
+.worksheet-paper .katex,
+.worksheet-paper .katex *,
+.worksheet-paper .katex-display,
+.worksheet-paper .katex-display *,
+.ws-container .worksheet-paper .katex,
+.ws-container .worksheet-paper .katex *,
+.ws-ex-question .katex,
+.ws-ex-question .katex *,
+.ws-ex-instruction .katex,
+.ws-ex-instruction .katex *,
+.ws-handwriting-space .katex,
+.ws-objective-card .katex,
+.ws-objective-card .katex *,
+.ws-header-center .katex,
+.ws-header-center .katex * {
+  color: #0f172a !important;
+  border-color: #0f172a !important;
+}
+
+.worksheet-paper .katex .frac-line {
+  border-bottom-color: #0f172a !important;
+}
+
+.katex .mfrac {
+  padding: 0 1px;
+}
+
+.worksheet-paper .katex svg path {
+  fill: #0f172a !important;
+  stroke: #0f172a !important;
+}
+
+/* KaTeX Overline & Math Bar Refinement (Crisp, balanced line weight matching font glyphs) */
+.katex .overline .overline-line {
+  border-bottom-width: 1px !important;
+  border-bottom-color: #64748b !important;
+  opacity: 0.82 !important;
+}
+
+.worksheet-paper .katex .overline .overline-line,
+.ws-container .worksheet-paper .katex .overline .overline-line {
+  border-bottom-width: 1px !important;
+  border-bottom-color: #64748b !important;
+  opacity: 0.82 !important;
+}
+
+body.dark-mode .katex .overline .overline-line,
+[data-theme="dark"] .katex .overline .overline-line {
+  border-bottom-color: #94a3b8 !important;
+  opacity: 0.85 !important;
+}
+
+/* Teacher solution when displayed on screen in dark card */
+.ws-teacher-card.unlocked .ws-sol-body .katex,
+.ws-teacher-card.unlocked .ws-sol-body .katex * {
   color: var(--text-primary) !important;
 }
 
@@ -2162,6 +2120,14 @@ body.light-theme .opt-badge {
   padding: 4px 0;
   overflow-x: auto;
   overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.katex-display::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* Playlist Sidebar */
@@ -3058,7 +3024,7 @@ body.dark-mode .ws-points-count-badge {
 .ws-header-right {
   flex-shrink: 0;
   text-align: right;
-  max-width: 42%;
+  max-width: 48%;
 }
 
 .ws-header-lesson {
@@ -3067,6 +3033,19 @@ body.dark-mode .ws-points-count-badge {
   font-weight: 700;
   line-height: 1.4;
   margin: 0;
+}
+
+.ws-header-lesson-title {
+  display: inline;
+}
+
+.ws-header-page-tag {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-left: 4px;
 }
 
 /* Student Information Form Line */
@@ -3105,10 +3084,22 @@ body.dark-mode .ws-points-count-badge {
   white-space: nowrap;
 }
 
-.ws-info-dots {
-  border-bottom: 1px dotted #64748b;
+.ws-info-dots,
+.ws-info-line {
+  border-bottom: 1.5px solid #94a3b8;
   flex: 1;
   height: 14px;
+  margin-left: 6px;
+}
+
+.ws-score-box {
+  font-weight: 700;
+  color: #0284c7;
+  border-bottom: 1.5px solid #94a3b8;
+  padding: 0 10px;
+  min-width: 64px;
+  display: inline-block;
+  text-align: center;
 }
 
 /* Objective Notice Callout */
@@ -3117,7 +3108,7 @@ body.dark-mode .ws-points-count-badge {
   border-left: 4px solid #10b981;
   padding: 12px 18px;
   border-radius: 8px;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
   color: #065f46;
   font-size: 0.92rem;
   line-height: 1.6;
@@ -3129,6 +3120,233 @@ body.dark-mode .ws-points-count-badge {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+/* Point Summary Card (Formulas, Theorems, Definitions & Core Concepts) */
+.ws-summary-card {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-left: 4.5px solid #2563eb;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+  color: #1e293b;
+  font-size: 0.94rem;
+  line-height: 1.85;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.ws-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.ws-summary-badge {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #1d4ed8;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.3px;
+}
+
+.ws-summary-content {
+  color: #334155;
+  font-size: 0.93rem;
+  line-height: 1.85;
+}
+
+.ws-summary-content strong {
+  color: #0f172a;
+}
+
+/* Summary Section Titles (e.g. 1. និយមន័យ..., 2. សមីការ...) */
+.ws-sum-section-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1e40af;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ws-sum-section-title:first-child {
+  margin-top: 0;
+}
+
+.ws-sum-section-title::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563eb;
+  flex-shrink: 0;
+}
+
+/* Summary Unordered List */
+.ws-sum-list {
+  margin: 4px 0 8px 0;
+  padding-left: 10px;
+  list-style: none;
+}
+
+.ws-sum-item {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.ws-sum-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.ws-sum-item strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Sub-items with extra indentation */
+.ws-sum-subitem {
+  margin-left: 18px;
+  color: #475569;
+}
+
+.ws-sum-subitem::before {
+  content: "–";
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Centered Formula / Display Math Block inside Summary */
+.ws-sum-formula {
+  margin: 8px auto;
+  padding: 6px 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.ws-sum-formula::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.ws-sum-formula .katex-display {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.worksheet-paper .katex-display,
+.ws-summary-card .katex-display,
+.ws-exercise-block .katex-display {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  scrollbar-width: none !important;
+}
+
+.worksheet-paper .katex-display::-webkit-scrollbar,
+.ws-summary-card .katex-display::-webkit-scrollbar,
+.ws-exercise-block .katex-display::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.ws-sum-text {
+  margin-bottom: 6px;
+  line-height: 1.8;
+}
+
+.ws-sum-text strong {
+  color: #0f172a;
+}
+
+/* Dark Mode Support for Summary Card */
+[data-theme="dark"] .ws-summary-card {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(148, 163, 184, 0.25);
+  border-left-color: #38bdf8;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .ws-summary-header {
+  border-bottom-color: rgba(148, 163, 184, 0.2);
+}
+
+[data-theme="dark"] .ws-summary-badge {
+  color: #60a5fa;
+}
+
+[data-theme="dark"] .ws-summary-content,
+[data-theme="dark"] .ws-sum-item,
+[data-theme="dark"] .ws-sum-text {
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .ws-sum-section-title {
+  color: #93c5fd;
+}
+
+[data-theme="dark"] .ws-sum-section-title::before {
+  background: #38bdf8;
+}
+
+[data-theme="dark"] .ws-sum-item::before {
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .ws-sum-subitem::before {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .ws-sum-item strong,
+[data-theme="dark"] .ws-sum-text strong {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .ws-sum-formula {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.ws-number-line-wrap {
+  margin: 8px auto 4px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+[data-theme="dark"] .ws-number-line-wrap {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(148, 163, 184, 0.2);
 }
 
 /* Exercises Layout */
@@ -3213,14 +3431,15 @@ body.dark-mode .ws-points-count-badge {
 }
 
 .ws-ex-question {
-  color: #0f172a;
+  color: #0f172a !important;
   font-size: 1.05rem;
   line-height: 1.8;
   white-space: pre-line;
 }
 
 .ws-ex-question .katex {
-  font-size: 1.1em;
+  color: #0f172a !important;
+  font-size: 1em;
 }
 
 /* Lined Handwriting Area for Printed Student Work */
@@ -3361,7 +3580,7 @@ body.dark-mode .ws-points-count-badge {
 .ws-sol-body {
   color: var(--text-primary);
   font-size: 0.98rem;
-  line-height: 1.8;
+  line-height: 1.85;
   white-space: pre-line;
   margin-bottom: 12px;
 }
@@ -3373,7 +3592,7 @@ body.dark-mode .ws-points-count-badge {
   border-radius: 8px;
   font-size: 0.88rem;
   color: #b45309;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 body.dark-mode .ws-sol-rubric {
@@ -3384,13 +3603,13 @@ body.dark-mode .ws-sol-rubric {
    Print & PDF Media Query
    ========================================================================== */
 @media print {
-  /* Set exact A4 page with 12mm margins */
+  /* Set exact A4 page with 8mm 10mm margins */
   @page {
     size: A4 portrait;
-    margin: 12mm 15mm;
+    margin: 8mm 10mm;
   }
 
-  /* Hide app shell elements */
+  /* Hide app shell, top navigation, and 3D simulation laboratory elements */
   body {
     background: #ffffff !important;
     color: #000000 !important;
@@ -3399,10 +3618,22 @@ body.dark-mode .ws-sol-rubric {
   }
 
   .navbar,
+  .site-footer,
   .mobile-glass-dock,
+  .player-nav-header,
+  .video-stage > .experiment-stage-container,
+  .experiment-stage-container,
+  #experiment-stage-container,
+  .math-3d-stage,
+  #math-3d-stage,
+  .math-3d-viewport,
+  #math-3d-viewport,
+  .math-3d-laboratory-deck,
+  #math-3d-laboratory-deck,
+  .math-3d-floating-hud,
   .video-section,
   .playlist-sidebar,
-  .lesson-meta-card > .current-lesson-header,
+  .current-lesson-header,
   .tab-headers,
   .ws-toolbar,
   .ws-points-selector-bar,
@@ -3421,8 +3652,10 @@ body.dark-mode .ws-sol-rubric {
   /* Make sure worksheet container and paper fill printable area cleanly */
   .classroom-layout,
   .classroom-main,
+  .video-stage,
   .lesson-meta-card,
   #tab-content-worksheet,
+  #worksheet-container,
   .ws-all-points-print-container {
     display: block !important;
     width: 100% !important;
@@ -3436,23 +3669,212 @@ body.dark-mode .ws-sol-rubric {
   .worksheet-paper {
     border: 1px solid #cbd5e1 !important;
     box-shadow: none !important;
-    padding: 15px 20px !important;
+    padding: 10px 16px !important;
     max-width: 100% !important;
-    border-radius: 0 !important;
+    width: 100% !important;
+    border-radius: 4px !important;
     background: #ffffff !important;
     color: #000000 !important;
+    box-sizing: border-box !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
-  .ws-header-title {
-    color: #dc2626 !important;
+  .ws-header-banner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 6px 12px !important;
+    margin-bottom: 8px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .ws-school-logo-box {
+    flex-shrink: 0 !important;
   }
 
   .ws-school-logo {
-    height: 64px !important;
-    width: 64px !important;
+    height: 48px !important;
+    width: 48px !important;
     object-fit: contain !important;
     image-rendering: -webkit-optimize-contrast !important;
     filter: none !important;
+  }
+
+  .ws-header-center {
+    flex: 1 !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+  }
+
+  .ws-header-title {
+    font-size: 1.25rem !important;
+    color: #dc2626 !important;
+    margin: 0 !important;
+    line-height: 1.25 !important;
+  }
+
+  .ws-header-point-subtitle {
+    display: inline-block !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    padding: 2px 10px !important;
+    margin-top: 3px !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 12px !important;
+    background: #f8fafc !important;
+    color: #334155 !important;
+  }
+
+  .ws-header-right {
+    flex-shrink: 0 !important;
+    max-width: 50% !important;
+    text-align: right !important;
+  }
+
+  .ws-header-lesson {
+    color: #1e293b !important;
+    font-size: 0.92rem !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+  }
+
+  .ws-header-lesson-title {
+    display: inline !important;
+  }
+
+  .ws-header-page-tag {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    margin-left: 4px !important;
+  }
+
+  .ws-student-info {
+    margin-bottom: 8px !important;
+    padding-bottom: 6px !important;
+    font-size: 0.85rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .ws-objective-card {
+    padding: 6px 10px !important;
+    margin-bottom: 8px !important;
+    font-size: 0.85rem !important;
+    line-height: 1.55 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .ws-summary-card {
+    background: #f8fafc !important;
+    border: 1px solid #94a3b8 !important;
+    border-left: 3.5px solid #2563eb !important;
+    padding: 6px 12px !important;
+    margin-bottom: 8px !important;
+    font-size: 0.84rem !important;
+    line-height: 1.55 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .ws-summary-header {
+    margin-bottom: 4px !important;
+    padding-bottom: 3px !important;
+  }
+
+  .ws-summary-badge {
+    font-size: 0.85rem !important;
+  }
+
+  .ws-sum-section-title {
+    font-size: 0.85rem !important;
+    margin-top: 4px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .ws-sum-list {
+    margin: 2px 0 4px 0 !important;
+    padding-left: 10px !important;
+  }
+
+  .ws-sum-item {
+    margin-bottom: 2px !important;
+    line-height: 1.5 !important;
+  }
+
+  .ws-sum-subitem {
+    margin-left: 12px !important;
+  }
+
+  .ws-sum-formula {
+    margin: 3px auto !important;
+    padding: 2px 8px !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: visible !important;
+  }
+
+  .ws-sum-formula .katex-display {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .ws-number-line-wrap {
+    margin: 4px auto 2px !important;
+    padding: 3px 6px !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  .ws-number-line-wrap svg {
+    max-height: 38px !important;
+  }
+
+  .ws-exercises-container {
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .ws-exercise-block {
+    padding: 8px 12px !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    margin-bottom: 6px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .ws-ex-header {
+    margin-bottom: 4px !important;
+    padding-bottom: 4px !important;
+  }
+
+  .ws-ex-instruction {
+    font-size: 0.82rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .ws-ex-question {
+    font-size: 0.88rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .ws-footer-banner {
+    margin-top: 8px !important;
+    padding-top: 6px !important;
+    font-size: 0.74rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   .ws-footer-label {
@@ -3463,15 +3885,966 @@ body.dark-mode .ws-sol-rubric {
     color: #14532d !important;
   }
 
-  .ws-handwriting-space {
-    min-height: 120px !important;
-    background-image: repeating-linear-gradient(transparent, transparent 27px, #cbd5e1 28px) !important;
-  }
-
   /* KaTeX high-contrast sharp black render for print */
   .katex {
     color: #000000 !important;
   }
+}
+
+/* ==========================================================
+   3D Math Explainer Engine - Immersive Educational Studio
+   ========================================================== */
+.math-3d-stage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Tier 1: Crystal-Clear Unobstructed 3D Canvas Viewport */
+.math-3d-viewport {
+  position: relative;
+  width: 100%;
+  height: 490px;
+  min-height: 440px;
+  background: radial-gradient(circle at 50% 35%, #0f172a 0%, #060913 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 189, 248, 0.12);
+}
+
+#math-3d-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  cursor: grab;
+  touch-action: none !important;
+}
+
+#math-3d-canvas:active {
+  cursor: grabbing;
+}
+
+/* Minimal Non-Intrusive Floating HUD (Top only, center canvas is 100% clear!) */
+.math-3d-floating-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: linear-gradient(to bottom, rgba(10, 15, 29, 0.88) 0%, rgba(10, 15, 29, 0.35) 60%, transparent 100%);
+  z-index: 10;
+}
+
+.math-3d-topbar,
+.math-3d-points-bar,
+.math-3d-tip {
+  pointer-events: auto;
+}
+
+.math-3d-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.math-3d-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.math-3d-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: var(--radius-full);
+  color: #38bdf8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+  animation: pulse-glow 1.5s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.math-3d-point-title {
+  color: #f8fafc;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.math-3d-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.m3d-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 13px;
+  border-radius: var(--radius-full);
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.m3d-btn-pill:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #38bdf8;
+  transform: translateY(-1px);
+}
+
+.m3d-btn-pill:active {
+  transform: scale(0.97);
+}
+
+.math-3d-points-bar {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0;
+  scrollbar-width: none;
+}
+
+.math-3d-points-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.m3d-point-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.m3d-point-pill:hover {
+  background: rgba(30, 41, 59, 0.9);
+  color: #f8fafc;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.m3d-point-pill.active {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+}
+
+.m3d-pill-label {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.math-3d-tip {
+  align-self: flex-start;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 3px 12px;
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(6px);
+  user-select: none;
+}
+
+/* Tier 2: Dedicated Laboratory Control & Narration Deck (Docked below canvas!) */
+.math-3d-laboratory-deck {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+
+.math-3d-workbench {
+  pointer-events: auto;
+  display: none;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 14px;
+  padding: 12px 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  max-width: 100%;
+}
+
+.m3d-wb-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.m3d-wb-modes {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.m3d-wb-tab {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(30, 41, 59, 0.7);
+  color: #94a3b8;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.m3d-wb-tab:hover {
+  background: rgba(51, 65, 85, 0.8);
+  color: #f8fafc;
+}
+
+.m3d-wb-tab.active {
+  background: linear-gradient(135deg, #0284c7, #6366f1);
+  color: #ffffff;
+  border-color: #38bdf8;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+}
+
+.m3d-wb-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.m3d-wb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(30, 41, 59, 0.85);
+  color: #f8fafc;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.m3d-wb-btn:hover {
+  background: rgba(51, 65, 85, 0.95);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-1px);
+}
+
+.m3d-wb-btn:active {
+  transform: translateY(1px);
+}
+
+.m3d-wb-btn.primary {
+  background: linear-gradient(135deg, #059669, #0284c7);
+  border-color: #34d399;
+  box-shadow: 0 2px 10px rgba(5, 150, 105, 0.35);
+}
+
+.m3d-wb-btn.danger {
+  background: rgba(225, 29, 72, 0.2);
+  border-color: rgba(225, 29, 72, 0.4);
+  color: #fda4af;
+}
+
+.m3d-wb-btn.danger:hover {
+  background: rgba(225, 29, 72, 0.35);
+  color: #ffffff;
+}
+
+.m3d-wb-stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.m3d-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.76rem;
+}
+
+.m3d-stat-pill.highlight {
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.m3d-stat-pill.info {
+  border-color: rgba(250, 204, 21, 0.4);
+  color: #facc15;
+  background: rgba(250, 204, 21, 0.1);
+}
+
+.m3d-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.m3d-slider-label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.m3d-range-slider {
+  accent-color: #38bdf8;
+  width: 140px;
+  cursor: pointer;
+}
+
+.m3d-slider-val {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #38bdf8;
+  font-size: 0.8rem;
+}
+
+.m3d-badge-status {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.m3d-badge-status.inc {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.m3d-badge-status.dec {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.m3d-badge-status.extremum {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+/* Pedagogical Narration & Formula Console */
+.math-3d-narration-card {
+  background: rgba(15, 23, 42, 0.94);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 14px;
+  padding: 14px 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.math-3d-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.math-3d-step-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.math-3d-step-badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 3px 9px;
+  border-radius: 6px;
+}
+
+.math-3d-concept-tag {
+  font-size: 0.74rem;
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.math-3d-step-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.math-3d-caption-text {
+  color: #f1f5f9;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 4px 0;
+  font-family: var(--font-km);
+}
+
+.math-3d-formula-box {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 8px;
+  padding: 6px 14px;
+  display: inline-block;
+  align-self: flex-start;
+  color: #38bdf8;
+  font-size: 0.95rem;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.math-3d-formula-box::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.math-3d-formula-box .katex,
+.math-3d-formula-box .katex * {
+  color: #38bdf8 !important;
+}
+
+.m3d-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(30, 41, 59, 0.85);
+  color: #f8fafc;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.m3d-btn:hover {
+  background: rgba(51, 65, 85, 0.95);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-1px);
+}
+
+.m3d-btn.primary {
+  background: linear-gradient(135deg, #0284c7, #2563eb);
+  border-color: #38bdf8;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.35);
+}
+
+/* Fullscreen Mode Styling */
+#math-3d-stage:fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: #060913 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+#math-3d-stage:fullscreen .math-3d-viewport {
+  flex: 1 1 auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+#math-3d-stage:fullscreen .math-3d-laboratory-deck {
+  flex: 0 0 auto !important;
+  max-height: 38vh !important;
+  overflow-y: auto !important;
+  padding: 10px 18px 14px !important;
+  background: rgba(10, 15, 29, 0.96) !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.3) !important;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Responsive Layout for Tablets & Mobile Screens */
+@media (max-width: 768px) {
+  .math-3d-viewport {
+    height: 380px !important;
+    min-height: 340px !important;
+  }
+
+  .math-3d-floating-hud {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .math-3d-topbar {
+    gap: 6px;
+    align-items: flex-start;
+  }
+
+  .math-3d-header-left {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .math-3d-badge {
+    padding: 3px 8px;
+    font-size: 0.72rem;
+  }
+
+  .math-3d-point-title {
+    font-size: 0.8rem;
+  }
+
+  .m3d-btn-pill {
+    padding: 4px 9px;
+    font-size: 0.74rem;
+  }
+
+  .math-3d-points-bar {
+    gap: 6px;
+    padding: 2px 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .m3d-point-pill {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    min-height: 32px;
+  }
+
+  .m3d-pill-label {
+    max-width: 130px;
+  }
+
+  .math-3d-tip {
+    font-size: 0.68rem;
+    padding: 2px 8px;
+  }
+
+  .math-3d-narration-card {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .math-3d-caption-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .math-3d-formula-box {
+    padding: 4px 8px;
+    font-size: 0.88rem;
+  }
+
+  .math-3d-workbench {
+    padding: 8px 10px;
+    border-radius: 12px;
+  }
+
+  .m3d-wb-modes {
+    gap: 4px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+
+  .m3d-wb-tab {
+    padding: 3px 8px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  .m3d-wb-actions {
+    gap: 6px;
+  }
+
+  .m3d-wb-btn {
+    padding: 5px 10px;
+    font-size: 0.74rem;
+  }
+
+  .m3d-slider-wrap {
+    gap: 6px;
+  }
+
+  .m3d-range-slider {
+    width: 110px;
+  }
+}
+
+/* ==========================================================
+   Site Footer & Visitor Counter (Worksheet.Kh)
+   ========================================================== */
+.site-footer {
+  margin-top: 60px;
+  background: var(--bg-glass);
+  border-top: 1px solid var(--border-glass);
+  padding: 50px 0 30px;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr;
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--gradient-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.35);
+  font-size: 1.2rem;
+}
+
+.footer-brand-title {
+  font-family: var(--font-en);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.footer-brand-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.footer-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 380px;
+  margin: 0;
+}
+
+.footer-col-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links li a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.86rem;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links li a:hover {
+  color: var(--accent-cyan);
+  transform: translateX(3px);
+}
+
+/* ==========================================================
+   Visitor Counter Pill Bar (KhmerMath Style)
+   ========================================================== */
+.footer-counter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 12px 20px;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@media (max-width: 900px) {
+  .footer-counter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+}
+
+.vc-badge-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.vc-stats-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.vc-eye-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--accent-cyan);
+  font-size: 1rem;
+}
+
+.vc-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.vc-num {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-khmer);
+  font-size: 0.95rem;
+}
+
+.vc-sep {
+  color: var(--text-muted);
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+.vc-flags-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 4px;
+}
+
+.vc-flag-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  user-select: none;
+}
+
+.vc-flag-chip:hover {
+  transform: translateY(-2px) scale(1.15);
+}
+
+.vc-flag-img {
+  width: 20px;
+  height: 15px;
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+.vc-flag-emoji {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.vc-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 550px) {
+  .vc-actions-group {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.vc-btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  font-family: var(--font-khmer);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+@media (max-width: 550px) {
+  .vc-btn-action {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.vc-btn-action:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-cyan);
+  transform: translateY(-1px);
+}
+
+.vc-btn-action.highlight {
+  background: rgba(244, 63, 94, 0.08);
+  border-color: rgba(244, 63, 94, 0.25);
+  color: var(--text-primary);
+}
+
+.vc-btn-action.highlight:hover {
+  background: rgba(244, 63, 94, 0.16);
+  border-color: var(--accent-rose);
+}
+
+.vc-heart-icon {
+  color: var(--accent-rose);
+  font-size: 0.95rem;
+}
+
+/* Footer Bottom Info */
+.footer-bottom-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-glass);
+  padding-top: 18px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottom-sub {
+  font-size: 0.76rem;
+  color: var(--text-muted);
 }
 
 

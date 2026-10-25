@@ -150,8 +150,12 @@ class VideoPlayerController {
     this.video.pause();
 
     // Check if it's local or web URL
-    this.video.src = encodeURI(lesson.videoUrl);
-    this.video.load();
+    if (lesson.videoUrl && lesson.videoUrl.trim() !== '') {
+      this.video.src = encodeURI(lesson.videoUrl);
+      this.video.load();
+    } else {
+      this.video.removeAttribute('src');
+    }
 
     // Restore last position
     const savedTime = StorageService.getLessonProgress(lesson.id);

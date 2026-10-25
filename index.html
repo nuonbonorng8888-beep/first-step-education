@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>1ˢᵗ Step (First Step) - ប្រព័ន្ធសិក្សាឌីជីថលស្តង់ដា</title>
-  <meta name="description" content="1ˢᵗ Step (First Step) - ប្រព័ន្ធសិក្សាឌីជីថលកម្រិតស្តង់ដា គាំទ្រការទស្សនាវីដេអូមេរៀន ការមើល និងទាញយក PDF និងការបន្ថែមមេរៀនដោយសេរី">
+  <title>Worksheet.Kh - ប្រព័ន្ធសន្លឹកកិច្ចការគណិតវិទ្យា និងសិក្សាឌីជីថល</title>
+  <meta name="description" content="Worksheet.Kh - ប្រព័ន្ធសន្លឹកកិច្ចការគណិតវិទ្យា និងរៀនឌីជីថលកម្រិតស្តង់ដា ថ្នាក់ទី ៧ ដល់ទី ១២ គាំទ្រការអនុវត្តសន្លឹកកិច្ចការ ការពិសោធន៍ 3D KaTeX និងសៀវភៅជំនួយ MoEYS">
+  <meta name="keywords" content="Worksheet.Kh, Worksheet Khmer, សន្លឹកកិច្ចការ, គណិតវិទ្យា, សន្លឹកកិច្ចការគណិតវិទ្យា, ថ្នាក់ទី៧, ថ្នាក់ទី៨, ថ្នាក់ទី៩, ថ្នាក់ទី១០, ថ្នាក់ទី១១, ថ្នាក់ទី១២, MoEYS, NGS, New Generation School, វិទ្យាល័យជំនាន់ថ្មី, PISA, CBA, Flipped Classroom">
+  <meta name="author" content="Worksheet.Kh - NGS Education">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Telegram / Facebook Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Worksheet.Kh - ប្រព័ន្ធសន្លឹកកិច្ចការគណិតវិទ្យា និងសិក្សាឌីជីថល">
+  <meta property="og:description" content="គេហទំព័ររៀន និងអនុវត្តសន្លឹកកិច្ចការគណិតវិទ្យាជាភាសាខ្មែរ សម្រាប់សិស្ស និងគ្រូ ថ្នាក់ទី ៧ ដល់ទី ១២។ ឥតគិតថ្លៃ និងមិនរកប្រាក់ចំណេញ។">
+  <meta property="og:image" content="assets/mascot.jpg">
+
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#06b6d4">
 
@@ -24,7 +34,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="1ˢᵗ Step">
+  <meta name="apple-mobile-web-app-title" content="Worksheet.Kh">
   
   <!-- Google Fonts: Kantumruy Pro, Preahvihear, Moul & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=17">
+  <link rel="stylesheet" href="css/style.css?v=50">
 </head>
 <body>
 
@@ -43,11 +53,11 @@
   <nav class="navbar">
     <div class="container nav-container">
       <div class="nav-left">
-        <a class="brand-logo" onclick="App.backToCatalog()" title="ទៅកាន់ទំព័រដើម">
-          <img src="assets/mascot.jpg" alt="1st Step Mascot" class="brand-mascot-img">
+        <a class="brand-logo" onclick="App.backToCatalog()" title="ទៅកាន់ទំព័រដើម Worksheet.Kh">
+          <img src="assets/mascot.jpg" alt="Worksheet.Kh Mascot" class="brand-mascot-img">
           <div class="brand-title">
-            <span class="brand-name">1ˢᵗ Step</span>
-            <span class="brand-sub">First Step • Digital LMS</span>
+            <span class="brand-name">Worksheet.Kh</span>
+            <span class="brand-sub">សន្លឹកកិច្ចការ & 3D Math • 1ˢᵗ Step</span>
           </div>
         </a>
 
@@ -77,8 +87,8 @@
           <button class="lang-btn" id="btn-lang-en" onclick="App.setLanguage('en')">🇺🇸 EN</button>
         </div>
 
-        <button class="btn btn-secondary nav-device-btn desktop-only" onclick="App.openMobileModal()" title="របៀបបើក និងដំឡើងលើទូរស័ព្ទដៃ">
-          📱 ប្រើលើទូរស័ព្ទ
+        <button class="btn btn-secondary nav-device-btn desktop-only" onclick="App.openWebShareModal()" title="អាសយដ្ឋាន Web សម្រាប់ចូលរៀន និងចែករំលែក">
+          🌐 អាសយដ្ឋាន Web
         </button>
 
         <button class="btn btn-outline nav-auth-btn" id="btn-admin-auth" onclick="App.openLoginModal()" title="ចូលគណនីគ្រូបង្រៀន">
@@ -169,11 +179,11 @@
             </div>
           </button>
 
-          <button class="action-strip-btn tertiary" onclick="App.openMobileModal()">
-            <span class="action-icon">📱</span>
+          <button class="action-strip-btn tertiary" onclick="App.openWebShareModal()">
+            <span class="action-icon">🌐</span>
             <div class="action-text">
-              <span class="action-title">ដំឡើងលើទូរស័ព្ទ (PWA)</span>
-              <span class="action-sub">ប្រើលើ iPhone & Android</span>
+              <span class="action-title">ចូលរៀនតាម Web</span>
+              <span class="action-sub">លើ PC, Laptop & Mobile</span>
             </div>
           </button>
         </div>
@@ -213,10 +223,10 @@
         </div>
 
         <div class="stat-item">
-          <div class="stat-icon purple">🎬</div>
+          <div class="stat-icon purple">🔬</div>
           <div class="stat-details">
             <span class="stat-number" id="stat-total-lessons">0</span>
-            <span class="stat-label">វីដេអូមេរៀន</span>
+            <span class="stat-label">ពិសោធន៍ 3D</span>
           </div>
         </div>
 
@@ -295,75 +305,89 @@
 
       <div class="classroom-layout">
         
-        <!-- Left: Video Stage & Lesson Tabs -->
+        <!-- Left: 3D Experiment Stage & Lesson Tabs -->
         <div class="video-stage">
           
-          <!-- Custom Video Player -->
-          <div class="video-container" id="video-container">
-            <video id="main-video" class="main-video" preload="metadata">
-              <source src="Statistic.mp4" type="video/mp4">
-              កម្មវិធីរុករករបស់អ្នកមិនគាំទ្រការចាក់វីដេអូនេះទេ។
-            </video>
+          <!-- Interactive 3D Simulation & Experiment Laboratory Studio -->
+          <div class="experiment-stage-container" id="experiment-stage-container">
+            <div id="math-3d-stage" class="math-3d-stage">
+              
+              <!-- 3D Canvas Viewport (Unobstructed, pure 3D canvas with sleek top HUD) -->
+              <div class="math-3d-viewport" id="math-3d-viewport">
+                <canvas id="math-3d-canvas"></canvas>
+                
+                <!-- Minimal Floating Top HUD -->
+                <div class="math-3d-floating-hud">
+                  <div class="math-3d-topbar">
+                    <div class="math-3d-header-left">
+                      <span class="math-3d-badge">
+                        <span class="pulse-dot"></span>
+                        <span>🔬 បន្ទប់ពិសោធន៍ 3D អន្តរកម្ម</span>
+                      </span>
+                      <span class="math-3d-point-title" id="math-3d-point-title">ចំណុចទី ១</span>
+                    </div>
 
-            <!-- Custom Controls -->
-            <div class="video-controls">
-              <!-- Scrubber Bar -->
-              <div class="progress-bar-wrap">
-                <div class="progress-bar">
-                  <div class="progress-scrubber"></div>
+                    <div class="math-3d-header-right">
+                      <button class="m3d-btn-pill" id="btn-3d-play-pause" onclick="Math3D.togglePlay()" title="បិទ/បើក ការបង្វិល 3D">
+                        <span id="m3d-play-icon">🔄</span>
+                        <span id="m3d-play-text">បង្វិល 3D</span>
+                      </button>
+                      <button class="m3d-btn-pill" onclick="Math3D.resetCamera()" title="តម្រង់មុំកាមេរ៉ាដើម">
+                        🎯 តម្រង់មុំដើម
+                      </button>
+                      <button class="m3d-btn-pill" onclick="Math3D.toggleFullscreen()" title="ពង្រីកពេញអេក្រង់">
+                        ⛶ ពេញអេក្រង់
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Points Selector Track (Sleek Horizontal Pill Bar) -->
+                  <div class="math-3d-points-bar" id="math-3d-points-bar">
+                    <!-- Rendered dynamically -->
+                  </div>
+
+                  <!-- Discreet Gesture Tip Badge -->
+                  <div class="math-3d-tip">
+                    <span>🖐️ អូសដើម្បីបង្វិល 3D • Pinch/Scroll ដើម្បី Zoom</span>
+                  </div>
                 </div>
               </div>
 
-              <!-- Action Row -->
-              <div class="controls-row">
-                <div class="controls-left">
-                  <button class="ctrl-btn" id="btn-play-pause" title="Play/Pause">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                  </button>
+              <!-- Dedicated Laboratory Control & Narration Deck (Cleanly docked below canvas) -->
+              <div class="math-3d-laboratory-deck" id="math-3d-laboratory-deck">
+                <!-- Interactive Laboratory Workbench (Sliders, simulation buttons, stats) -->
+                <div class="math-3d-workbench" id="math-3d-workbench"></div>
 
-                  <button class="ctrl-btn" id="btn-skip-back" title="ថយក្រោយ 10 វិនាទី">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M1 4v6h6M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
-                      <text x="9" y="15" font-size="8" font-family="sans-serif" font-weight="bold">10</text>
-                    </svg>
-                  </button>
+                <!-- Pedagogical Narration & Formula Console -->
+                <div class="math-3d-narration-card" id="math-3d-narration-card">
+                  <div class="math-3d-step-header">
+                    <div class="math-3d-step-badges">
+                      <span class="math-3d-step-badge" id="math-3d-step-badge">ជំហាន ១/៣</span>
+                      <span class="math-3d-concept-tag" id="math-3d-concept-tag">មូលដ្ឋានគ្រឹះ</span>
+                    </div>
+                    <!-- Step Navigation Buttons -->
+                    <div class="math-3d-step-nav">
+                      <button class="m3d-btn" onclick="Math3D.prevStep()" title="ជំហានមុន">
+                        ⏮️ ជំហានមុន
+                      </button>
+                      <button class="m3d-btn primary" onclick="Math3D.nextStep()" title="ជំហានបន្ទាប់">
+                        ជំហានបន្ទាប់ ⏭️
+                      </button>
+                    </div>
+                  </div>
 
-                  <button class="ctrl-btn" id="btn-skip-forward" title="ទៅមុខ 10 វិនាទី">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M23 4v6h-6M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
-                      <text x="9" y="15" font-size="8" font-family="sans-serif" font-weight="bold">10</text>
-                    </svg>
-                  </button>
+                  <!-- Khmer Pedagogical Explanation Text -->
+                  <div class="math-3d-caption-text" id="math-3d-caption-text">
+                    កំពុងរៀបចំការពិសោធន៍ 3D ពន្យល់ខ្លឹមសារមេរៀន...
+                  </div>
 
-                  <button class="ctrl-btn" id="btn-volume" title="កម្រិតសំឡេង">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                    </svg>
-                  </button>
-
-                  <span class="time-display">00:00 / 00:00</span>
-                </div>
-
-                <div class="controls-right">
-                  <select id="player-speed" class="speed-select" title="ល្បឿនចាក់វីដេអូ">
-                    <option value="0.5">0.5x</option>
-                    <option value="0.75">0.75x</option>
-                    <option value="1" selected>1.0x (ធម្មតា)</option>
-                    <option value="1.25">1.25x</option>
-                    <option value="1.5">1.5x</option>
-                    <option value="2">2.0x</option>
-                  </select>
-
-                  <button class="ctrl-btn" id="btn-fullscreen" title="ពង្រីកពេញអេក្រង់">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
-                    </svg>
-                  </button>
+                  <!-- KaTeX Math Formula Box -->
+                  <div class="math-3d-formula-box" id="math-3d-formula-box">
+                    <!-- KaTeX formula rendered here -->
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -432,9 +456,9 @@
             <div id="tab-content-notes" class="tab-content">
               <div class="notes-container">
                 <div class="note-input-box">
-                  <textarea id="note-input-text" class="note-textarea" placeholder="សរសេរចំណាំ ឬគំនិតរបស់អ្នកពេលកំពុងមើលវីដេអូ... (វានឹងភ្ជាប់ជាមួយវិនាទីវីដេអូដោយស្វ័យប្រវត្តិ)"></textarea>
+                  <textarea id="note-input-text" class="note-textarea" placeholder="សរសេរចំណាំ ឬគំនិតរបស់អ្នកពេលកំពុងពិសោធន៍ 3D... (វានឹងភ្ជាប់ជាមួយចំណុចមេរៀនដោយស្វ័យប្រវត្តិ)"></textarea>
                   <div class="note-input-actions">
-                    <span style="font-size:0.8rem; color:var(--text-muted);">ចុចលើម៉ោង ដើម្បីត្រឡប់ទៅមើលវីដេអូត្រង់ចំណុចនោះ</span>
+                    <span style="font-size:0.8rem; color:var(--text-muted);">ចុចលើចំណាំ ដើម្បីត្រឡប់ទៅមើលការពិសោធន៍ 3D ត្រង់ចំណុចនោះ</span>
                     <button class="btn btn-primary" onclick="App.addNote()">
                       + បន្ថែមចំណាំ
                     </button>
@@ -482,6 +506,103 @@
   </main>
 
 
+  <!-- ================= SITE FOOTER WITH VISITOR COUNTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand & Mission -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand">
+            <div class="footer-brand-header">
+              <div class="footer-brand-badge">
+                📐
+              </div>
+              <div>
+                <h3 class="footer-brand-title">Worksheet.Kh</h3>
+                <span class="footer-brand-subtitle">គណិតវិទ្យាខ្មែរ</span>
+              </div>
+            </div>
+            <p class="footer-desc">
+              គេហទំព័ររៀន និងអនុវត្តសន្លឹកកិច្ចការគណិតវិទ្យាជាភាសាខ្មែរ សម្រាប់សិស្ស និងគ្រូ ថ្នាក់ទី ៧ ដល់ទី ១២។ ឥតគិតថ្លៃ និងមិនរកប្រាក់ចំណេញ។
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2: Worksheets & Lessons -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">កម្រិតថ្នាក់ & មេរៀន</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="App.filterByGrade('all')">កម្រិតថ្នាក់ទាំងអស់</a></li>
+            <li><a href="javascript:void(0)" onclick="App.filterByGrade(7)">ថ្នាក់ទី ៧ (អនុវិទ្យាល័យ)</a></li>
+            <li><a href="javascript:void(0)" onclick="App.filterByGrade(8)">ថ្នាក់ទី ៨</a></li>
+            <li><a href="javascript:void(0)" onclick="App.filterByGrade(9)">ថ្នាក់ទី ៩ (ត្រៀមឌីប្លូម)</a></li>
+            <li><a href="javascript:void(0)" onclick="App.filterByGrade(10)">ថ្នាក់ទី ១០ (វិទ្យាល័យ)</a></li>
+            <li><a href="javascript:void(0)" onclick="App.filterByGrade(11)">ថ្នាក់ទី ១១</a></li>
+            <li><a href="javascript:void(0)" onclick="App.filterByGrade(12)">ថ្នាក់ទី ១២ (ត្រៀមបាក់ឌុប)</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: For Teachers -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">សម្រាប់គ្រូ</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="App.openLoginModal()">ធនធានសម្រាប់គ្រូ</a></li>
+            <li><a href="javascript:void(0)" onclick="App.openWebShareModal()">ប្រើក្នុងបន្ទប់កុំព្យូទ័រ</a></li>
+            <li><a href="javascript:void(0)" onclick="App.openWorksheetUnlockModal()">ដោះសោដំណោះស្រាយ</a></li>
+            <li><a href="javascript:void(0)" onclick="App.openMobileInstallModal()">ដំឡើងលើទូរស័ព្ទដៃ</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: About & Community -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">អំពី</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="App.showAboutModal()">អំពីគម្រោង</a></li>
+            <li><a href="https://t.me/khmermath" target="_blank" rel="noopener">សហគមន៍ Telegram</a></li>
+            <li><a href="javascript:void(0)" onclick="App.openFeedbackModal()">ប្រភព និងអាជ្ញាប័ណ្ណ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Visitor Counter Pill Bar (Exact look from the user's screenshot) -->
+      <div class="footer-counter-bar">
+        <div class="vc-badge-box" id="vc-badge-box">
+          <div class="vc-stats-group">
+            <span class="vc-eye-icon">👁️</span>
+            <span class="vc-text">អ្នកចូលមើល <strong id="vc-total-count" class="vc-num" data-vc="visitors">...</strong> នាក់</span>
+            <span class="vc-sep">·</span>
+            <span class="vc-text">ថ្ងៃនេះ <strong id="vc-today-count" class="vc-num" data-vc="today">...</strong> នាក់</span>
+            <span class="vc-sep">·</span>
+            <span class="vc-text">មកពី <strong id="vc-countries-count" class="vc-num" data-vc="countries">...</strong> ប្រទេស</span>
+            <span class="vc-flags-container" id="vc-flags-container" data-vc-flags="10">
+              <!-- Loaded dynamically via js/visits.js -->
+            </span>
+          </div>
+        </div>
+
+        <div class="vc-actions-group">
+          <button class="vc-btn-action" onclick="App.openFeedbackModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>ឃើញកំហុសក្នុងសំណួរ? ប្រាប់យើង</span>
+          </button>
+          <button class="vc-btn-action highlight" onclick="App.showSupportModal()">
+            <span class="vc-heart-icon">🤍</span>
+            <span>គាំទ្រ Worksheet.Kh</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Copyright & Bottom info -->
+      <div class="footer-bottom-info">
+        <div>© ២០២៦ <strong>Worksheet.Kh</strong> · រក្សាសិទ្ធិគ្រប់យ៉ាង · សហការជាមួយវិទ្យាល័យជំនាន់ថ្មី (NGS)</div>
+        <div class="footer-bottom-sub">ឯកសារ និងសន្លឹកកិច្ចការទាំងអស់បម្រើដល់ការអប់រំ និងការសិក្សាស្រាវជ្រាវដោយឥតគិតថ្លៃ</div>
+      </div>
+    </div>
+  </footer>
+
+
   <!-- ================= PDF PREVIEW MODAL (មើលឯកសារផ្ទាល់ក្នុង App) ================= -->
   <div class="modal-overlay" id="pdf-modal" onclick="if(event.target === this) App.closePdfModal()">
     <div class="modal-card pdf-modal-card">
@@ -527,19 +648,13 @@
             <input type="text" id="upload-chapter-title" class="form-input" placeholder="ឧ. ជំពូកទី ១៖ ស្ថិតិវិទ្យា" value="ជំពូកទី ១">
           </div>
 
-          <!-- Video Upload or Link -->
+          <!-- 3D Simulation Category Note -->
           <div class="form-group">
-            <label class="form-label">វីដេអូមេរៀន (Video):</label>
-            <div class="dropzone" onclick="document.getElementById('upload-video-file').click()">
-              <input type="file" id="upload-video-file" accept="video/mp4,video/webm,video/ogg" style="display:none;">
-              <div class="dropzone-icon">🎬</div>
-              <div class="dropzone-title">ចុចទីនេះ ដើម្បីជ្រើសរើសវីដេអូពីកុំព្យូទ័រ (MP4)</div>
-              <div class="dropzone-sub">ឬ Drag & Drop វីដេអូមេរៀនទម្លាក់ចូលទីនេះ</div>
+            <label class="form-label">ប្រភេទបន្ទប់ពិសោធន៍ 3D (Simulation Category):</label>
+            <div style="padding:12px 14px; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); border-radius:var(--radius-md); font-size:0.88rem; color:var(--accent-cyan); display:flex; align-items:center; gap:8px;">
+              <span>🔬</span>
+              <span>ប្រព័ន្ធ 3D Math Explainer នឹងរៀបចំចលនាពិសោធន៍ 3D អន្តរកម្មដោយស្វ័យប្រវត្តិស្របតាមខ្លឹមសារមេរៀន!</span>
             </div>
-            <div id="video-file-preview" style="font-size:0.85rem; color:var(--accent-cyan); margin-top:4px;"></div>
-            
-            <div style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin: 6px 0;">— ឬដាក់ Link វីដេអូពី YouTube/Cloud —</div>
-            <input type="text" id="upload-video-url" class="form-input" placeholder="https://www.youtube.com/... ឬ Link វីដេអូផ្សេងៗ">
           </div>
 
           <!-- Document Upload -->
@@ -583,57 +698,65 @@
   </div>
 
 
-  <!-- ================= MOBILE ACCESS MODAL (របៀបបើកលើទូរស័ព្ទ) ================= -->
-  <div class="modal-overlay" id="mobile-modal" onclick="if(event.target === this) App.closeMobileModal()">
-    <div class="modal-card" style="max-width: 520px;">
+  <!-- ================= WEB ACCESS & SHARING MODAL ================= -->
+  <div class="modal-overlay" id="mobile-modal" onclick="if(event.target === this) App.closeWebShareModal()">
+    <div class="modal-card" style="max-width: 560px;">
       <div class="modal-header">
-        <h3 class="modal-title">📱 របៀបបើកប្រើលើទូរស័ព្ទដៃ (Mobile App)</h3>
-        <button class="btn-icon" onclick="App.closeMobileModal()">✕</button>
+        <h3 class="modal-title">🌐 អាសយដ្ឋាន Web សម្រាប់ចូលរៀន (Web LMS Access)</h3>
+        <button class="btn-icon" onclick="App.closeWebShareModal()">✕</button>
       </div>
       <div class="modal-body" style="gap: 16px;">
-        <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); padding: 16px; border-radius: var(--radius-md); text-align: center;">
-          <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px;">
-            អាសយដ្ឋាន Link សម្រាប់បើកលើទូរស័ព្ទ (Wi-Fi ដូចគ្នា)៖
+        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 14px 18px; border-radius: var(--radius-md);">
+          <div style="font-weight: 700; color: var(--accent-emerald); font-size: 0.95rem; margin-bottom: 4px;">
+            ✨ គម្រោងនេះដំណើរការជា Web LMS ១០០%
           </div>
-          <div style="font-family: var(--font-en); font-size: 1.25rem; font-weight: 700; color: var(--accent-cyan); letter-spacing: 0.5px; user-select: all; padding: 8px; background: var(--bg-primary); border-radius: 8px; border: 1px dashed var(--accent-cyan);" id="mobile-ip-link">
-            http://192.168.1.6:8000
+          <div style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">
+            លោកគ្រូ អ្នកគ្រូ និងសិស្សានុសិស្ស អាចបើកចូលរៀនបានភ្លាមៗតាមរយៈ Web Browser (Google Chrome, Microsoft Edge, Safari, Firefox) ទាំងលើកុំព្យូទ័រ Laptop, Desktop និងទូរស័ព្ទដៃ ដោយ<strong>មិនចាំបាច់ដំឡើង App</strong> អ្វីឡើយ!
           </div>
-          <button class="btn btn-outline" style="margin-top: 10px; padding: 6px 14px; font-size: 0.8rem;" onclick="App.copyMobileLink()">
-            📋 ចម្លង Link (Copy)
-          </button>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem;">
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--gradient-brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">1</div>
-            <div>
-              <strong>ភ្ជាប់ Wi-Fi តែមួយ៖</strong>
-              <div style="color: var(--text-secondary); font-size: 0.82rem;">សូមប្រាកដថាទូរស័ព្ទដៃរបស់អ្នក និងកុំព្យូទ័រនេះ បានភ្ជាប់ទៅកាន់ Wi-Fi ជាមួយគ្នា។</div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <!-- Local PC Link -->
+          <div style="background: var(--bg-primary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-weight: 700; font-size: 0.88rem; color: var(--accent-cyan);">🖥️ សម្រាប់កុំព្យូទ័រនេះ (Local Web) ៖</span>
+              <button class="btn btn-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="App.copyLink('http://localhost:8000')">📋 ចម្លង (Copy)</button>
+            </div>
+            <div style="font-family: var(--font-en); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); user-select: all; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 8px; border: 1px dashed var(--accent-cyan);">
+              http://localhost:8000
             </div>
           </div>
 
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--gradient-brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">2</div>
-            <div>
-              <strong>បើក Browser លើទូរស័ព្ទ៖</strong>
-              <div style="color: var(--text-secondary); font-size: 0.82rem;">បើក Safari (iPhone) ឬ Chrome (Android) រួចវាយបញ្ចូល <code>http://192.168.1.6:8000</code></div>
+          <!-- Classroom / LAN Wi-Fi Link -->
+          <div style="background: var(--bg-primary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-weight: 700; font-size: 0.88rem; color: #38bdf8;">📱 សម្រាប់ទូរស័ព្ទ / កុំព្យូទ័រសិស្សក្នុងថ្នាក់ (LAN Wi-Fi) ៖</span>
+              <button class="btn btn-outline" style="padding: 4px 10px; font-size: 0.75rem;" onclick="App.copyMobileLink()">📋 ចម្លង (Copy)</button>
+            </div>
+            <div style="font-family: var(--font-en); font-size: 1.05rem; font-weight: 700; color: #38bdf8; user-select: all; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 8px; border: 1px dashed #38bdf8;" id="mobile-ip-link">
+              http://192.168.1.6:8000
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 6px;">
+              💡 ភ្ជាប់ទូរស័ព្ទ ឬ Laptop ទៅ Wi-Fi ជាមួយគ្នារួចបើក Link ខាងលើក្នុង Chrome/Safari ដើម្បីចូលរៀន។
             </div>
           </div>
 
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <div style="width: 28px; height: 28px; border-radius: 50%; background: var(--gradient-brand); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">3</div>
-            <div>
-              <strong>ដំឡើងជា App (Add to Home Screen)៖</strong>
-              <div style="color: var(--text-secondary); font-size: 0.82rem;">ចុចប៊ូតុង Share (iPhone) ឬ ចុចសញ្ញា <code>⋮</code> (Android) រួចជ្រើសរើស <strong>"Add to Home Screen" (បន្ថែមលើអេក្រង់ដើម)</strong> នោះវានឹងក្លាយជា App 1ˢᵗ Step លើទូរស័ព្ទរបស់អ្នក!</div>
+          <!-- Public Internet Link -->
+          <div style="background: var(--bg-primary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px;">
+            <div style="font-weight: 700; font-size: 0.88rem; color: #a855f7; margin-bottom: 4px;">
+              🌍 សម្រាប់ចូលរៀនពីចម្ងាយតាមអ៊ីនធឺណិត (Online Link) ៖
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              ចុចដំណើរការឯកសារ <code>start_public_tunnel.bat</code> ដើម្បីទទួលបាន Link អនឡាញ (HTTPS) មានសុវត្ថិភាពខ្ពស់ ផ្ញើជូនសិស្សតាម Telegram ចូលរៀនពីផ្ទះបានភ្លាមៗ!
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer" style="display: flex; justify-content: space-between; gap: 8px;">
-        <button class="btn btn-outline" onclick="App.closeMobileModal(); App.openMobileInstallModal();">
-          📲 របៀបដំឡើងលើ Home Screen
+        <button class="btn btn-outline" onclick="App.openMobileInstallModal();" style="font-size: 0.82rem;">
+          📲 បន្ថែម Shortcut លើទូរស័ព្ទ (PWA)
         </button>
-        <button class="btn btn-primary" onclick="App.closeMobileModal()">យល់ព្រម</button>
+        <button class="btn btn-primary" onclick="App.closeWebShareModal()">យល់ព្រម</button>
       </div>
     </div>
   </div>
@@ -876,7 +999,7 @@
   </div>
 
   <!-- Teacher Worksheet Unlock Modal -->
-  <div id="worksheet-unlock-modal" class="modal-backdrop">
+  <div id="worksheet-unlock-modal" class="modal-backdrop" style="display: none;">
     <div class="modal-card">
       <div class="modal-header">
         <h3 class="modal-title">🔐 ដោះសោដំណោះស្រាយគ្រូបង្រៀន</h3>
@@ -902,6 +1025,74 @@
 
 
 
+  <!-- ================= FEEDBACK & REPORT ERROR MODAL ================= -->
+  <div class="modal-overlay" id="feedback-modal" onclick="if(event.target === this) App.closeFeedbackModal()">
+    <div class="modal-card" style="max-width: 520px;">
+      <div class="modal-header">
+        <h3 class="modal-title">💬 ឃើញកំហុសក្នុងសំណួរ? ប្រាប់យើង</h3>
+        <button class="btn-icon" onclick="App.closeFeedbackModal()">✕</button>
+      </div>
+      <form onsubmit="App.submitFeedback(event)">
+        <div class="modal-body" style="gap: 14px;">
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            ប្រសិនបើលោកគ្រូ-អ្នកគ្រូ ឬប្អូនៗសិស្សានុសិស្សប្រទះឃើញកំហុសអក្ខរាវិរុទ្ធ រូបមន្តគណិត ឬសំណួរមិនត្រឹមត្រូវ សូមផ្ញើសារប្រាប់យើងដើម្បីកែសម្រួលភ្លាមៗ ៖
+          </p>
+          <div class="form-group">
+            <label class="form-label">ការពិពណ៌នាអំពីកំហុស (Error Details) ៖</label>
+            <textarea id="feedback-text" class="form-textarea" rows="4" placeholder="បញ្ជាក់ពីកម្រិតថ្នាក់ មេរៀន ឬសំណួរដែលមានបញ្ហា..." required></textarea>
+          </div>
+          <div style="background: rgba(6, 182, 212, 0.08); border: 1px dashed rgba(6, 182, 212, 0.3); border-radius: 10px; padding: 10px 14px; font-size: 0.82rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">
+            <span>📢</span>
+            <span>ឬលោកអ្នកអាចចូលរួមផ្តល់មតិផ្ទាល់ក្នុង <strong>Telegram សហគមន៍ គណិតវិទ្យា</strong> បានផងដែរ!</span>
+          </div>
+        </div>
+        <div class="modal-footer" style="justify-content: space-between;">
+          <a href="https://t.me/khmermath" target="_blank" rel="noopener" class="btn btn-outline" style="font-size: 0.82rem;">
+            ✈️ ចូល Telegram
+          </a>
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="btn btn-secondary" onclick="App.closeFeedbackModal()">បោះបង់</button>
+            <button type="submit" class="btn btn-primary">📤 ផ្ញើមតិកែលម្អ</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= SUPPORT WORKSHEET.KH MODAL ================= -->
+  <div class="modal-overlay" id="support-modal" onclick="if(event.target === this) App.closeSupportModal()">
+    <div class="modal-card" style="max-width: 500px;">
+      <div class="modal-header">
+        <h3 class="modal-title">🤍 គាំទ្រ Worksheet.Kh</h3>
+        <button class="btn-icon" onclick="App.closeSupportModal()">✕</button>
+      </div>
+      <div class="modal-body" style="text-align: center; gap: 16px;">
+        <div style="width: 72px; height: 72px; margin: 0 auto; border-radius: 20px; background: rgba(244, 63, 94, 0.12); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: var(--accent-rose);">
+          🤍
+        </div>
+        <div>
+          <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 6px;">Worksheet.Kh - គណិតវិទ្យាខ្មែរ</h4>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+            គម្រោងនេះត្រូវបានបង្កើតឡើងក្នុងគោលបំណងលើកកម្ពស់ការអប់រំគណិតវិទ្យា និងវិទ្យាសាស្ត្រសម្រាប់សិស្សានុសិស្សកម្ពុជា <strong>ដោយឥតគិតថ្លៃ និងមិនស្វែងរកប្រាក់ចំណេញ</strong>។
+          </p>
+        </div>
+        <div style="background: var(--bg-tertiary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 14px; text-align: left; font-size: 0.84rem; color: var(--text-secondary); line-height: 1.6;">
+          ✨ <strong>របៀបដែលលោកអ្នកអាចគាំទ្រយើងបាន ៖</strong><br>
+          • ចែករំលែក Link នេះទៅកាន់មិត្តភក្តិ និងសិស្សានុសិស្សក្នុងថ្នាក់<br>
+          • ជួយពិនិត្យ និងរាយការណ៍កំហុសដើម្បីឱ្យសន្លឹកកិច្ចការកាន់តែសុក្រឹត<br>
+          • ចូលរួមជាមួយសហគមន៍ Telegram ដើម្បីផ្លាស់ប្តូរបទពិសោធន៍បង្រៀន
+        </div>
+      </div>
+      <div class="modal-footer" style="justify-content: space-between;">
+        <button class="btn btn-outline" onclick="App.copyLink(window.location.href); App.showToast('បានចម្លង Link រួចរាល់!', 'success');">
+          📋 ចម្លង Link ចែករំលែក
+        </button>
+        <button class="btn btn-primary" onclick="App.closeSupportModal()">យល់ព្រម</button>
+      </div>
+    </div>
+  </div>
+
+
   <!-- Floating Mobile Glass Navigation Dock (Native App Experience) -->
   <nav class="mobile-glass-dock" id="mobile-glass-dock">
     <button class="dock-btn active" id="dock-btn-home" onclick="App.backToCatalog(); App.setDockActive(this);">
@@ -916,9 +1107,9 @@
       <span class="dock-icon">🎯</span>
       <span class="dock-label">តេស្ត</span>
     </button>
-    <button class="dock-btn" id="dock-btn-mobile" onclick="App.openMobileModal(); App.setDockActive(this);">
-      <span class="dock-icon">📲</span>
-      <span class="dock-label">ដំឡើង</span>
+    <button class="dock-btn" id="dock-btn-mobile" onclick="App.openWebShareModal(); App.setDockActive(this);">
+      <span class="dock-icon">🌐</span>
+      <span class="dock-label">Link Web</span>
     </button>
     <button class="dock-btn" id="dock-btn-theme" onclick="App.toggleTheme();">
       <span class="dock-icon" id="dock-theme-icon">☀️</span>
@@ -929,12 +1120,14 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container"></div>
 
-  <!-- KaTeX Libraries for Offline/Online Math Rendering -->
+  <!-- 3D Graphics & Mathematical Visualization Engine -->
+  <script src="lib/three/three.min.js"></script>
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=17"></script>
-  <script src="js/player.js?v=17"></script>
-  <script src="js/app.js?v=17"></script>
+  <script src="js/storage.js?v=50"></script>
+  <script src="js/math3d.js?v=50"></script>
+  <script src="js/app.js?v=50"></script>
+  <script src="js/visits.js?v=50"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {

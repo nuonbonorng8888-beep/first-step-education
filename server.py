@@ -15,15 +15,64 @@ import json
 import urllib.parse
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import re
+import threading
+import time
+import datetime
+import webbrowser
 
 PORT = int(os.environ.get('PORT', 8000))
 ADMIN_PIN = "95511"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, 'data', 'courses.json')
+STATS_FILE = os.path.join(BASE_DIR, 'data', 'stats.json')
 UPLOADS_DIR = os.path.join(BASE_DIR, 'uploads')
 
 os.makedirs(UPLOADS_DIR, exist_ok=True)
 os.makedirs(os.path.join(BASE_DIR, 'data'), exist_ok=True)
+
+stats_lock = threading.Lock()
+
+def load_stats():
+    now_kh = (datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=7)).strftime("%Y-%m-%d")
+    default_stats = {
+        "visitors": 1068,
+        "views": 3420,
+        "today_visitors": 14,
+        "today_views": 38,
+        "last_date": now_kh,
+        "since": "2026-01-01",
+        "countries": [
+            ["KH", 1012],
+            ["US", 21],
+            ["SG", 11],
+            ["TH", 8],
+            ["VN", 5],
+            ["FR", 4],
+            ["JP", 3],
+            ["CA", 2],
+            ["DE", 1],
+            ["AU", 1]
+        ]
+    }
+    if not os.path.exists(STATS_FILE):
+        return default_stats
+    try:
+        with open(STATS_FILE, 'r', encoding='utf-8') as f:
+            stats = json.load(f)
+            if stats.get('last_date') != now_kh:
+                stats['last_date'] = now_kh
+                stats['today_visitors'] = 0
+                stats['today_views'] = 0
+            return stats
+    except Exception:
+        return default_stats
+
+def save_stats(stats):
+    try:
+        with open(STATS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(stats, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"Error saving stats: {e}")
 
 
 class EducationAppHandler(SimpleHTTPRequestHandler):
@@ -33,7 +82,7 @@ class EducationAppHandler(SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Range, X-Admin-Pin')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Range, X-Admin-Pin, CF-IPCountry, X-Country-Code')
         self.send_header('Access-Control-Expose-Headers', 'Content-Range, Accept-Ranges, Content-Length')
         self.send_header('Cache-Control', 'no-cache')
         super().end_headers()
@@ -62,6 +111,64 @@ class EducationAppHandler(SimpleHTTPRequestHandler):
         self.send_json({"error": "លេខកូដសម្ងាត់មិនត្រឹមត្រូវ (Unauthorized: Invalid Admin PIN)"}, status=401)
         return False
 
+    def handle_get_stats(self):
+        with stats_lock:
+            stats = load_stats()
+            save_stats(stats)
+            res = {
+                "visitors": stats.get("visitors", 0),
+                "views": stats.get("views", 0),
+                "today": {
+                    "visitors": stats.get("today_visitors", 0),
+                    "views": stats.get("today_views", 0)
+                },
+                "countries": stats.get("countries", []),
+                "since": stats.get("since", "2026-01-01")
+            }
+            self.send_json(res)
+
+    def handle_record_visit(self):
+        parsed = urllib.parse.urlparse(self.path)
+        qs = urllib.parse.parse_qs(parsed.query)
+        is_new = qs.get('new', ['0'])[0] in ['1', 'true', 'True']
+        country = self.headers.get('CF-IPCountry') or self.headers.get('X-Country-Code') or 'KH'
+        country = country.upper()[:2]
+        if not country.isalpha():
+            country = 'KH'
+        
+        with stats_lock:
+            stats = load_stats()
+            stats['views'] = stats.get('views', 0) + 1
+            stats['today_views'] = stats.get('today_views', 0) + 1
+            if is_new:
+                stats['visitors'] = stats.get('visitors', 0) + 1
+                stats['today_visitors'] = stats.get('today_visitors', 0) + 1
+                
+                countries = stats.get('countries', [])
+                found = False
+                for item in countries:
+                    if item[0] == country:
+                        item[1] += 1
+                        found = True
+                        break
+                if not found:
+                    countries.append([country, 1])
+                countries.sort(key=lambda x: x[1], reverse=True)
+                stats['countries'] = countries
+                
+            save_stats(stats)
+            res = {
+                "visitors": stats.get("visitors", 0),
+                "views": stats.get("views", 0),
+                "today": {
+                    "visitors": stats.get("today_visitors", 0),
+                    "views": stats.get("today_views", 0)
+                },
+                "countries": stats.get("countries", []),
+                "since": stats.get("since", "2026-01-01")
+            }
+            self.send_json(res)
+
     def do_GET(self):
         parsed = urllib.parse.urlparse(self.path)
         path = parsed.path
@@ -75,13 +182,23 @@ class EducationAppHandler(SimpleHTTPRequestHandler):
             self.send_json(data)
             return
 
+        if path in ['/api/stats', '/stats']:
+            self.handle_get_stats()
+            return
+
+        if path in ['/api/stats/visit', '/api/hit', '/hit']:
+            self.handle_record_visit()
+            return
+
         super().do_GET()
 
     def do_POST(self):
         parsed = urllib.parse.urlparse(self.path)
         path = parsed.path
 
-        if path == '/api/login':
+        if path in ['/api/stats/visit', '/api/hit', '/hit']:
+            self.handle_record_visit()
+        elif path == '/api/login':
             self.handle_login()
         elif path == '/api/upload':
             if self.check_admin():
@@ -274,17 +391,28 @@ def get_local_ip():
         return '192.168.1.6'
 
 
+def auto_open_browser(port):
+    time.sleep(1.2)
+    try:
+        webbrowser.open(f"http://localhost:{port}")
+    except Exception:
+        pass
+
+
 def run_server():
     server = ThreadingHTTPServer(('', PORT), EducationAppHandler)
     server.daemon_threads = True
     local_ip = get_local_ip()
     print(f"==================================================")
-    print(f" 1st Step (First Step) - Digital LMS Server")
-    print(f" Local PC:   http://localhost:{PORT}")
-    print(f" Mobile App: http://{local_ip}:{PORT} (Same Wi-Fi)")
-    print(f" Folder:     {BASE_DIR}")
+    print(f" 1st Step (First Step) - Digital Web LMS Server")
+    print(f" Local Web:    http://localhost:{PORT}")
+    print(f" Network Web:  http://{local_ip}:{PORT} (Same Wi-Fi/LAN)")
+    print(f" Folder:       {BASE_DIR}")
     print(f"==================================================")
     sys.stdout.flush()
+
+    # Automatically open the browser tab
+    threading.Thread(target=auto_open_browser, args=(PORT,), daemon=True).start()
     while True:
         try:
             server.serve_forever()

@@ -9,7 +9,16 @@ backups/
 # Local windows batch scripts (not needed on Render linux host)
 *.bat
 
-# Large raw textbooks
+# Backups and temporary files
+*.bak
+*.bak_*
+data/*.bak*
+js/*.bak
+
+# Large raw textbooks in root
+Ma.G10.pdf
+ថ្នាក់ទី*.pdf
+សៀវភៅ*.pdf
 សៀវភៅគណិតវិទ្យាថ្នាក់ទី_១២*.pdf
 
 # Python bytecode and caches

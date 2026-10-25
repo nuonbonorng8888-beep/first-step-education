@@ -285,10 +285,9 @@ window.App = {
   },
 
   initPlayer() {
-    const video = document.getElementById('main-video');
-    const container = document.getElementById('video-container');
-    if (video && container) {
-      this.player = new VideoPlayerController(video, container);
+    const container = document.getElementById('experiment-stage-container') || document.getElementById('video-container');
+    if (window.Math3D && container) {
+      window.Math3D.init(container);
     }
   },
 
@@ -432,6 +431,7 @@ window.App = {
     const playerView = document.getElementById('player-view');
     playerView.classList.add('active');
     playerView.style.display = 'block';
+    if (window.Math3D) setTimeout(() => window.Math3D.resize(), 50);
 
     // Update breadcrumbs
     const bcCourse = document.getElementById('bc-course');
@@ -458,9 +458,6 @@ window.App = {
   },
 
   backToCatalog() {
-    if (this.player && this.player.video) {
-      this.player.video.pause();
-    }
     document.getElementById('player-view').classList.remove('active');
     document.getElementById('player-view').style.display = 'none';
     document.getElementById('catalog-view').style.display = 'block';
@@ -504,9 +501,10 @@ window.App = {
     if (titleEl) titleEl.textContent = targetLesson.title;
     if (chEl) chEl.textContent = targetChapter?.title || 'ជំពូកទូទៅ';
 
-    // Load video
-    if (this.player) {
-      this.player.loadLessonVideo(targetLesson);
+    // Load 3D Math Explainer & Simulation Studio
+    if (window.Math3D) {
+      window.Math3D.loadLesson(targetLesson, this.currentCourse);
+      setTimeout(() => window.Math3D.resize(), 60);
     }
 
     // Reset active worksheet point to first point
@@ -545,7 +543,7 @@ window.App = {
             <div class="lesson-item-info">
               <span class="lesson-item-title">${lesson.title}</span>
               <div class="lesson-item-meta">
-                <span>⏱️ ${lesson.duration || '10:00'}</span>
+                <span>🔬 ពិសោធន៍ 3D</span>
                 ${fileCount > 0 ? `<span>📄 ${fileCount} PDF</span>` : ''}
               </div>
             </div>
@@ -655,7 +653,7 @@ window.App = {
     if (notes.length === 0) {
       listEl.innerHTML = `
         <div style="text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.88rem;">
-          មិនទាន់មានកំណត់ត្រាផ្ទាល់ខ្លួននៅឡើយទេ។ អ្នកអាចកត់ចំណាំពេលកំពុងមើលវីដេអូបាន។
+          មិនទាន់មានកំណត់ត្រាផ្ទាល់ខ្លួននៅឡើយទេ។ អ្នកអាចកត់ចំណាំពេលកំពុងពិសោធន៍ 3D បាន។
         </div>
       `;
       return;
@@ -664,8 +662,8 @@ window.App = {
     listEl.innerHTML = notes.map(n => `
       <div class="note-item">
         <div class="note-header">
-          <span class="note-time-badge" onclick="App.player.seekTo(${n.timestamp})">
-            ⏱️ ${App.player.formatTime(n.timestamp)}
+          <span class="note-time-badge" onclick="if(window.Math3D) Math3D.selectPoint(${n.pointIndex !== undefined ? n.pointIndex : 0})">
+            📍 ${n.pointLabel || 'ចំណុចទី ' + ((n.pointIndex || 0) + 1)}
           </span>
           <button style="background:none; border:none; color:var(--text-muted); cursor:pointer;" onclick="App.deleteNote('${n.id}')">✕</button>
         </div>
@@ -678,11 +676,12 @@ window.App = {
     const textarea = document.getElementById('note-input-text');
     if (!textarea || !textarea.value.trim() || !this.currentLesson) return;
 
-    const currentTime = this.player?.video?.currentTime || 0;
+    const ptIdx = window.Math3D?.activePointIndex || 0;
     const newNote = {
       id: 'note_' + Date.now(),
       text: textarea.value.trim(),
-      timestamp: Math.floor(currentTime),
+      pointIndex: ptIdx,
+      pointLabel: `ចំណុចទី ${ptIdx + 1}`,
       createdAt: new Date().toLocaleDateString()
     };
 
@@ -703,11 +702,10 @@ window.App = {
   // =========================================================================
   async loadWorksheets(forceRefresh = false) {
     try {
-      const cacheBust = forceRefresh ? `?v=${Date.now()}` : `?v=15`;
-      const fetchOpts = forceRefresh ? { cache: 'no-store' } : {};
-      let res = await fetch(`data/worksheets.json${cacheBust}`, fetchOpts);
+      const cacheBust = `?v=${Date.now()}`;
+      let res = await fetch(`data/worksheets.json${cacheBust}`, { cache: 'no-store' });
       if (!res.ok) {
-        res = await fetch(`data/worksheets_g11.json${cacheBust}`, fetchOpts);
+        res = await fetch(`data/worksheets_g11.json${cacheBust}`, { cache: 'no-store' });
       }
       if (res.ok) {
         this.worksheets = await res.json();
@@ -855,7 +853,7 @@ window.App = {
               ${currentPoint.pointTitle ? `<div class="ws-header-point-subtitle">${currentPoint.pointTitle}</div>` : ''}
             </div>
             <div class="ws-header-right">
-              <h2 class="ws-header-lesson">${ws.lessonTitle}</h2>
+              <h2 class="ws-header-lesson">${this.formatLessonTitleHeader(ws.lessonTitle)}</h2>
             </div>
           </div>
 
@@ -864,21 +862,21 @@ window.App = {
             <div class="ws-info-row">
               <div class="ws-info-item" style="flex: 2;">
                 <span class="ws-info-label">ឈ្មោះសិស្ស ៖</span>
-                <span class="ws-info-dots"></span>
+                <span class="ws-info-line"></span>
               </div>
               <div class="ws-info-item" style="flex: 1;">
                 <span class="ws-info-label">ថ្នាក់ទី ៖</span>
-                <span class="ws-info-dots"></span>
+                <span class="ws-info-line"></span>
               </div>
             </div>
             <div class="ws-info-row">
               <div class="ws-info-item" style="flex: 2;">
                 <span class="ws-info-label">កាលបរិច្ឆេទ ៖</span>
-                <span class="ws-info-dots"></span>
+                <span class="ws-info-line"></span>
               </div>
               <div class="ws-info-item" style="flex: 1;">
-                <span class="ws-info-label">ពិន្ទុសរុប ៖</span>
-                <span style="font-weight: 700; color: #dc2626;">........ / ១០</span>
+                <span class="ws-info-label">ពិន្ទុទទួលបាន ៖</span>
+                <span class="ws-score-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / ២</span>
               </div>
             </div>
           </div>
@@ -891,23 +889,29 @@ window.App = {
             <div>${currentPoint.objective || ws.objective}</div>
           </div>
 
+          <!-- Point Summary: Formulas, Theorems, Definitions & Core Concepts -->
+          ${(currentPoint.summary || currentPoint.topic) ? `
+            <div class="ws-summary-card">
+              <div class="ws-summary-header">
+                <span class="ws-summary-badge">💡 សង្ខេបចំណុចសំខាន់ ៖</span>
+              </div>
+              <div class="ws-summary-content">
+                ${this.formatSummary(currentPoint.summary || currentPoint.topic)}
+              </div>
+            </div>
+          ` : ''}
+
           <!-- Exercises List -->
           <div class="ws-exercises-container">
             ${currentExercises.map((ex, exIdx) => `
               <div class="ws-exercise-block">
                 <div class="ws-ex-header">
-                  <span class="ws-ex-num">លំហាត់ទី ${exIdx + 1}</span>
-                  ${ex.level ? `<span class="ws-ex-level">${ex.level}</span>` : ''}
-                  <span class="ws-ex-points">${ex.points} ពិន្ទុ</span>
+                  <span class="ws-ex-num">លំហាត់ទី ${this.toKhmerNum(exIdx + 1)}</span>
+                  <span class="ws-ex-points">${this.toKhmerNum(ex.points || 1)} ពិន្ទុ</span>
                 </div>
 
                 <div class="ws-ex-instruction">${ex.instruction}</div>
                 <div class="ws-ex-question">${ex.question}</div>
-
-                <!-- Ruled Lined Space for Student Working -->
-                <div class="ws-handwriting-space">
-                  <span class="ws-handwriting-hint">(ទីកន្លែងសម្រាប់សិស្សគិតលេខ និងសរសេរដំណោះស្រាយ)</span>
-                </div>
               </div>
             `).join('')}
           </div>
@@ -918,7 +922,7 @@ window.App = {
             <div class="ws-footer-points">
               <p>១. រាល់ការងារទាំងអស់សូមធ្វើដោយយកចិត្តទុកដាក់បំផុត ករណីមិនយល់សូមស្រាវជ្រាវ សួរគ្រូ ឬ មិត្ត ( ចម្លងក៏ដោយឲ្យតែយល់)</p>
               <p>២. សន្លឹកកិច្ចការខ្លះ ត្រូវនឹងសួរបញ្ជាក់ពេលដល់ម៉ោងជួបគ្នា បើឆ្លើយមិនចេញ នោះនឹងទទួលបានពិន្ទុ ០ លើការងារនេះ</p>
-              <p>៣. សូមបញ្ជាក់សន្លឹកកិច្ចការទី.....( ទី២០ឬ ទី ២១,...)ដើម្បីស្រង់ពិន្ទុសកម្មភាព</p>
+              <p>៣. សូមបញ្ជាក់លេខសន្លឹកកិច្ចការ (ឧ. សន្លឹកទី២០ ឬ ទី២១) ដើម្បីស្រង់ពិន្ទុសកម្មភាព</p>
             </div>
           </div>
         </div>
@@ -947,7 +951,7 @@ window.App = {
                   <div class="ws-solution-item">
                     <div class="ws-sol-item-header">
                       <span>ដំណោះស្រាយលំហាត់ទី ${exIdx + 1}</span>
-                      <span style="color:#d97706; font-size:0.85rem;">[${ex.level || ''} — ពិន្ទុសរុប ៖ ${ex.points} ពិន្ទុ]</span>
+                      <span style="color:#d97706; font-size:0.85rem;">[ពិន្ទុ ៖ ${ex.points || 1} ពិន្ទុ]</span>
                     </div>
                     <div class="ws-sol-body">${ex.solution}</div>
                     <div class="ws-sol-rubric">
@@ -979,6 +983,9 @@ window.App = {
 
   selectWorksheetPoint(index) {
     this.activeWorksheetPoint = index;
+    if (window.Math3D) {
+      window.Math3D.selectPoint(index);
+    }
     this.renderWorksheetTab();
     const paper = document.getElementById('printable-worksheet-paper');
     if (paper && window.innerWidth <= 768) {
@@ -1065,7 +1072,7 @@ window.App = {
             <div class="ws-header-point-subtitle">${pt.pointTitle}</div>
           </div>
           <div class="ws-header-right">
-            <h2 class="ws-header-lesson">${ws.lessonTitle}</h2>
+            <h2 class="ws-header-lesson">${this.formatLessonTitleHeader(ws.lessonTitle)}</h2>
           </div>
         </div>
 
@@ -1073,21 +1080,21 @@ window.App = {
           <div class="ws-info-row">
             <div class="ws-info-item" style="flex: 2;">
               <span class="ws-info-label">ឈ្មោះសិស្ស ៖</span>
-              <span class="ws-info-dots"></span>
+              <span class="ws-info-line"></span>
             </div>
             <div class="ws-info-item" style="flex: 1;">
               <span class="ws-info-label">ថ្នាក់ទី ៖</span>
-              <span class="ws-info-dots"></span>
+              <span class="ws-info-line"></span>
             </div>
           </div>
           <div class="ws-info-row">
             <div class="ws-info-item" style="flex: 2;">
               <span class="ws-info-label">កាលបរិច្ឆេទ ៖</span>
-              <span class="ws-info-dots"></span>
+              <span class="ws-info-line"></span>
             </div>
             <div class="ws-info-item" style="flex: 1;">
-              <span class="ws-info-label">ពិន្ទុសរុប ៖</span>
-              <span style="font-weight: 700; color: #dc2626;">........ / ១០</span>
+              <span class="ws-info-label">ពិន្ទុទទួលបាន ៖</span>
+              <span class="ws-score-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / ២</span>
             </div>
           </div>
         </div>
@@ -1099,19 +1106,27 @@ window.App = {
           <div>${pt.objective || ws.objective}</div>
         </div>
 
+        <!-- Point Summary: Formulas, Theorems, Definitions & Core Concepts -->
+        ${(pt.summary || pt.topic) ? `
+          <div class="ws-summary-card">
+            <div class="ws-summary-header">
+              <span class="ws-summary-badge">💡 សង្ខេបចំណុចសំខាន់ ៖</span>
+            </div>
+            <div class="ws-summary-content">
+              ${this.formatSummary(pt.summary || pt.topic)}
+            </div>
+          </div>
+        ` : ''}
+
         <div class="ws-exercises-container">
           ${pt.exercises.map((ex, exIdx) => `
             <div class="ws-exercise-block">
               <div class="ws-ex-header">
-                <span class="ws-ex-num">លំហាត់ទី ${exIdx + 1}</span>
-                ${ex.level ? `<span class="ws-ex-level">${ex.level}</span>` : ''}
-                <span class="ws-ex-points">${ex.points} ពិន្ទុ</span>
+                <span class="ws-ex-num">លំហាត់ទី ${this.toKhmerNum(exIdx + 1)}</span>
+                <span class="ws-ex-points">${this.toKhmerNum(ex.points || 1)} ពិន្ទុ</span>
               </div>
               <div class="ws-ex-instruction">${ex.instruction}</div>
               <div class="ws-ex-question">${ex.question}</div>
-              <div class="ws-handwriting-space">
-                <span class="ws-handwriting-hint">(ទីកន្លែងសម្រាប់សិស្សគិតលេខ និងសរសេរដំណោះស្រាយ)</span>
-              </div>
             </div>
           `).join('')}
         </div>
@@ -1121,7 +1136,7 @@ window.App = {
           <div class="ws-footer-points">
             <p>១. រាល់ការងារទាំងអស់សូមធ្វើដោយយកចិត្តទុកដាក់បំផុត ករណីមិនយល់សូមស្រាវជ្រាវ សួរគ្រូ ឬ មិត្ត ( ចម្លងក៏ដោយឲ្យតែយល់)</p>
             <p>២. សន្លឹកកិច្ចការខ្លះ ត្រូវនឹងសួរបញ្ជាក់ពេលដល់ម៉ោងជួបគ្នា បើឆ្លើយមិនចេញ នោះនឹងទទួលបានពិន្ទុ ០ លើការងារនេះ</p>
-            <p>៣. សូមបញ្ជាក់សន្លឹកកិច្ចការទី.....( ទី២០ឬ ទី ២១,...)ដើម្បីស្រង់ពិន្ទុសកម្មភាព</p>
+            <p>៣. សូមបញ្ជាក់លេខសន្លឹកកិច្ចការ (ឧ. សន្លឹកទី២០ ឬ ទី២១) ដើម្បីស្រង់ពិន្ទុសកម្មភាព</p>
           </div>
         </div>
       </div>
@@ -1251,6 +1266,139 @@ window.App = {
     }
   },
 
+  toKhmerNum(num) {
+    if (num === null || num === undefined) return '';
+    const khmerDigits = ['០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'];
+    return String(num).replace(/[0-9]/g, d => khmerDigits[parseInt(d, 10)]);
+  },
+
+  formatLessonTitleHeader(title) {
+    if (!title) return '';
+    // Look for (ទំព័រ ...) or (ទំព័រ ... - ...)
+    const match = String(title).match(/^(.*?)\s*(\(ទំព័រ\s*[^)]+\))\s*$/);
+    if (match) {
+      const mainTitle = match[1].trim();
+      // Replace regular spaces inside (ទំព័រ ...) with non-breaking spaces so it never wraps or splits
+      // and ensure clean en-dash for page range
+      const pageTag = match[2].trim()
+        .replace(/\s+/g, '\u00A0')
+        .replace(/-(?!\u00A0)/g, '–\u00A0')
+        .replace(/-/g, '–');
+      return `<span class="ws-header-lesson-title">${mainTitle}</span> <span class="ws-header-page-tag">${pageTag}</span>`;
+    }
+    return `<span class="ws-header-lesson-title">${title}</span>`;
+  },
+
+  formatSummary(rawText) {
+    if (!rawText) return '';
+    let s = String(rawText).trim();
+
+    // Step 1: Protect math blocks ($$...$$ and $...$)
+    const mathBlocks = [];
+    const saveMath = (match) => {
+      const idx = mathBlocks.length;
+      mathBlocks.push(match);
+      return `___MATH_TOKEN_${idx}___`;
+    };
+
+    // Protect display math first, then inline math
+    s = s.replace(/\$\$[\s\S]*?\$\$/g, saveMath);
+    s = s.replace(/\$[^\$\n]+?\$/g, saveMath);
+
+    // Normalize line endings
+    s = s.replace(/\r\n/g, '\n');
+
+    // If display math was immediately followed by a bullet without a newline, add a newline
+    s = s.replace(/(___MATH_TOKEN_\d+___)\s*([•\-\*])/g, '$1\n$2');
+
+    // Replace HTML line breaks with bullets into standard newlines with bullets
+    s = s.replace(/<br\s*\/?>\s*([•\-\*])\s*/gi, '\n- ');
+    s = s.replace(/<br\s*\/?>/gi, '\n');
+
+    // Convert markdown headers: ### Title or ## Title
+    s = s.replace(/^(#{2,4})\s+(.+)$/gm, (match, hashes, title) => {
+      return `\n\n___SECTION_TITLE___${title.trim()}___END_SECTION___\n\n`;
+    });
+
+    // Detect numbered bold titles in HTML or markdown like:
+    // <strong>១. សញ្ញាណ និងនិយមន័យ ៖</strong> or **១. ...**
+    s = s.replace(/<strong>\s*([១២៣៤៥៦៧៨៩០\d]+\.\s*[^<]+?)\s*<\/strong>/gi, (m, title) => {
+      return `\n\n___SECTION_TITLE___${title.trim()}___END_SECTION___\n\n`;
+    });
+    s = s.replace(/\*\*\s*([១២៣៤៥៦៧៨៩០\d]+\.\s*[^\*]+?)\s*\*\*/g, (m, title) => {
+      return `\n\n___SECTION_TITLE___${title.trim()}___END_SECTION___\n\n`;
+    });
+
+    // Convert remaining **text** to <strong>text</strong>
+    s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+    // Split into lines and process blocks
+    const lines = s.split('\n');
+    const outputParts = [];
+    let inList = false;
+
+    const closeList = () => {
+      if (inList) {
+        outputParts.push('</ul>');
+        inList = false;
+      }
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+      const rawLine = lines[i];
+      const stripped = rawLine.trim();
+      if (!stripped) continue;
+
+      // Check for section title marker
+      const secMatch = stripped.match(/___SECTION_TITLE___([\s\S]+?)___END_SECTION___/);
+      if (secMatch) {
+        closeList();
+        outputParts.push(`<div class="ws-sum-section-title">${secMatch[1].trim()}</div>`);
+        continue;
+      }
+
+      // Check for bullet item: starting with -, *, •
+      const isSubItem = /^\s{2,}[-*•]\s+/.test(rawLine);
+      const bulletMatch = stripped.match(/^[-*•]\s+([\s\S]+)$/);
+      if (bulletMatch) {
+        const itemContent = bulletMatch[1].trim();
+        if (!inList) {
+          outputParts.push('<ul class="ws-sum-list">');
+          inList = true;
+        }
+        const itemClass = isSubItem ? 'ws-sum-item ws-sum-subitem' : 'ws-sum-item';
+        outputParts.push(`  <li class="${itemClass}">${itemContent}</li>`);
+        continue;
+      }
+
+      // Check if line is just a display math token
+      if (/^___MATH_TOKEN_\d+___$/.test(stripped)) {
+        closeList();
+        outputParts.push(`<div class="ws-sum-formula">${stripped}</div>`);
+        continue;
+      }
+
+      // Regular text / paragraph
+      closeList();
+      if (stripped.startsWith('<p') || stripped.startsWith('<div')) {
+        outputParts.push(stripped);
+      } else {
+        outputParts.push(`<div class="ws-sum-text">${stripped}</div>`);
+      }
+    }
+
+    closeList();
+
+    let html = outputParts.join('\n');
+
+    // Restore math tokens
+    for (let idx = 0; idx < mathBlocks.length; idx++) {
+      html = html.split(`___MATH_TOKEN_${idx}___`).join(mathBlocks[idx]);
+    }
+
+    return html;
+  },
+
   checkQuizAnswer(qIndex, selectedOptIndex, element) {
     const quiz = this.currentLesson?.quiz?.[qIndex];
     if (!quiz || this.answeredQuiz[qIndex]) return;
@@ -1324,8 +1472,8 @@ window.App = {
     if (modal) modal.classList.remove('active');
   },
 
-  // Mobile Access Modal
-  openMobileModal() {
+  // Web LMS Access & Sharing Modal
+  openWebShareModal() {
     const modal = document.getElementById('mobile-modal');
     const linkEl = document.getElementById('mobile-ip-link');
     if (linkEl && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
@@ -1334,14 +1482,21 @@ window.App = {
     if (modal) modal.classList.add('active');
   },
 
-  closeMobileModal() {
+  closeWebShareModal() {
     const modal = document.getElementById('mobile-modal');
     if (modal) modal.classList.remove('active');
   },
 
-  copyMobileLink() {
-    const linkEl = document.getElementById('mobile-ip-link');
-    const link = (linkEl && linkEl.textContent.trim()) || window.location.origin;
+  openMobileModal() {
+    this.openWebShareModal();
+  },
+
+  closeMobileModal() {
+    this.closeWebShareModal();
+  },
+
+  copyLink(url) {
+    const link = url || window.location.origin;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(link).then(() => {
         this.showToast('បានចម្លង Link រួចរាល់: ' + link, 'success');
@@ -1351,6 +1506,12 @@ window.App = {
     } else {
       this.showToast('Link: ' + link, 'info');
     }
+  },
+
+  copyMobileLink() {
+    const linkEl = document.getElementById('mobile-ip-link');
+    const link = (linkEl && linkEl.textContent.trim()) || window.location.origin;
+    this.copyLink(link);
   },
 
   // Mobile Install Modal
@@ -1450,13 +1611,13 @@ window.App = {
 
       progressBar.style.width = '100%';
 
-      // 3. Construct Lesson object
+      // 3. Construct Lesson object with 3D simulation
       const newLesson = {
         id: 'les_' + Date.now(),
         title: lessonTitle,
         duration: '15:00',
-        videoUrl: finalVideoUrl || 'Statistic.mp4',
-        videoType: finalVideoUrl ? 'uploaded' : 'local',
+        videoUrl: '',
+        videoType: '3d_simulation',
         description: lessonDesc || 'មេរៀនដែលបានបន្ថែមថ្មី',
         files: finalFiles,
         quiz: []
@@ -1571,8 +1732,56 @@ window.App = {
         this.closeStoreInfoModal();
         this.closeDiagnosticModal();
         this.closeLoginModal();
+        this.closeFeedbackModal();
+        this.closeSupportModal();
+        this.closeAboutModal();
       }
     });
+  },
+
+  openFeedbackModal() {
+    const m = document.getElementById('feedback-modal');
+    if (m) m.classList.add('active');
+  },
+  closeFeedbackModal() {
+    const m = document.getElementById('feedback-modal');
+    if (m) m.classList.remove('active');
+  },
+  submitFeedback(e) {
+    if (e) e.preventDefault();
+    const input = document.getElementById('feedback-text');
+    const msg = input ? input.value.trim() : '';
+    if (!msg) {
+      this.showToast('សូមបញ្ចូលមតិកែលម្អរបស់អ្នកជាមុនសិន!', 'warning');
+      return;
+    }
+    this.showToast('សូមអរគុណចំពោះមតិកែលម្អរបស់អ្នក! យើងនឹងកែលម្អភ្លាមៗ។', 'success');
+    if (input) input.value = '';
+    this.closeFeedbackModal();
+  },
+  showSupportModal() {
+    const m = document.getElementById('support-modal');
+    if (m) m.classList.add('active');
+  },
+  closeSupportModal() {
+    const m = document.getElementById('support-modal');
+    if (m) m.classList.remove('active');
+  },
+  showAboutModal() {
+    this.showSupportModal();
+  },
+  closeAboutModal() {
+    this.closeSupportModal();
+  },
+  filterByGrade(grade) {
+    this.backToCatalog();
+    if (typeof this.filterGrade === 'function') {
+      this.filterGrade(grade);
+    } else {
+      this.currentGrade = grade;
+      this.renderCatalog();
+    }
+    this.scrollToLessons();
   },
 
   async confirmDeleteLesson(lessonId, lessonTitle) {

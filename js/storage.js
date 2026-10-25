@@ -4,6 +4,18 @@
 
 const StorageService = {
   async getCourses() {
+    // Try fetching freshest data from data/courses.json first
+    try {
+      const response = await fetch(`data/courses.json?v=${Date.now()}`, { cache: 'no-store' });
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem('ngs_courses_cache', JSON.stringify(data));
+        return data;
+      }
+    } catch (err) {
+      console.warn('Direct courses.json fetch failed, trying API or cache', err);
+    }
+
     try {
       const response = await fetch('/api/courses');
       if (response.ok) {
@@ -12,21 +24,15 @@ const StorageService = {
         return data;
       }
     } catch (err) {
-      console.warn('API fetch failed, reading from cache or fallback', err);
+      console.warn('API fetch failed, reading from cache', err);
     }
 
-    // Fallback to cache or data/courses.json directly
+    // Fallback to cache if offline
     const cached = localStorage.getItem('ngs_courses_cache');
     if (cached) {
       try { return JSON.parse(cached); } catch (e) {}
     }
 
-    try {
-      const response = await fetch('data/courses.json');
-      if (response.ok) return await response.json();
-    } catch (e) {
-      console.error('All course fetch methods failed', e);
-    }
     return [];
   },
 
