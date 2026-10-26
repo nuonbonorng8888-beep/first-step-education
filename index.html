@@ -308,86 +308,10 @@
         <!-- Left: 3D Experiment Stage & Lesson Tabs -->
         <div class="video-stage">
           
-          <!-- Interactive 3D Simulation & Experiment Laboratory Studio -->
+          <!-- Interactive Geometric Construction Studio (សំណង់ធរណីមាត្រ — KhmerMath Style) -->
           <div class="experiment-stage-container" id="experiment-stage-container">
-            <div id="math-3d-stage" class="math-3d-stage">
-              
-              <!-- 3D Canvas Viewport (Unobstructed, pure 3D canvas with sleek top HUD) -->
-              <div class="math-3d-viewport" id="math-3d-viewport">
-                <canvas id="math-3d-canvas"></canvas>
-                
-                <!-- Minimal Floating Top HUD -->
-                <div class="math-3d-floating-hud">
-                  <div class="math-3d-topbar">
-                    <div class="math-3d-header-left">
-                      <span class="math-3d-badge">
-                        <span class="pulse-dot"></span>
-                        <span>🔬 បន្ទប់ពិសោធន៍ 3D អន្តរកម្ម</span>
-                      </span>
-                      <span class="math-3d-point-title" id="math-3d-point-title">ចំណុចទី ១</span>
-                    </div>
-
-                    <div class="math-3d-header-right">
-                      <button class="m3d-btn-pill" id="btn-3d-play-pause" onclick="Math3D.togglePlay()" title="បិទ/បើក ការបង្វិល 3D">
-                        <span id="m3d-play-icon">🔄</span>
-                        <span id="m3d-play-text">បង្វិល 3D</span>
-                      </button>
-                      <button class="m3d-btn-pill" onclick="Math3D.resetCamera()" title="តម្រង់មុំកាមេរ៉ាដើម">
-                        🎯 តម្រង់មុំដើម
-                      </button>
-                      <button class="m3d-btn-pill" onclick="Math3D.toggleFullscreen()" title="ពង្រីកពេញអេក្រង់">
-                        ⛶ ពេញអេក្រង់
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- Points Selector Track (Sleek Horizontal Pill Bar) -->
-                  <div class="math-3d-points-bar" id="math-3d-points-bar">
-                    <!-- Rendered dynamically -->
-                  </div>
-
-                  <!-- Discreet Gesture Tip Badge -->
-                  <div class="math-3d-tip">
-                    <span>🖐️ អូសដើម្បីបង្វិល 3D • Pinch/Scroll ដើម្បី Zoom</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Dedicated Laboratory Control & Narration Deck (Cleanly docked below canvas) -->
-              <div class="math-3d-laboratory-deck" id="math-3d-laboratory-deck">
-                <!-- Interactive Laboratory Workbench (Sliders, simulation buttons, stats) -->
-                <div class="math-3d-workbench" id="math-3d-workbench"></div>
-
-                <!-- Pedagogical Narration & Formula Console -->
-                <div class="math-3d-narration-card" id="math-3d-narration-card">
-                  <div class="math-3d-step-header">
-                    <div class="math-3d-step-badges">
-                      <span class="math-3d-step-badge" id="math-3d-step-badge">ជំហាន ១/៣</span>
-                      <span class="math-3d-concept-tag" id="math-3d-concept-tag">មូលដ្ឋានគ្រឹះ</span>
-                    </div>
-                    <!-- Step Navigation Buttons -->
-                    <div class="math-3d-step-nav">
-                      <button class="m3d-btn" onclick="Math3D.prevStep()" title="ជំហានមុន">
-                        ⏮️ ជំហានមុន
-                      </button>
-                      <button class="m3d-btn primary" onclick="Math3D.nextStep()" title="ជំហានបន្ទាប់">
-                        ជំហានបន្ទាប់ ⏭️
-                      </button>
-                    </div>
-                  </div>
-
-                  <!-- Khmer Pedagogical Explanation Text -->
-                  <div class="math-3d-caption-text" id="math-3d-caption-text">
-                    កំពុងរៀបចំការពិសោធន៍ 3D ពន្យល់ខ្លឹមសារមេរៀន...
-                  </div>
-
-                  <!-- KaTeX Math Formula Box -->
-                  <div class="math-3d-formula-box" id="math-3d-formula-box">
-                    <!-- KaTeX formula rendered here -->
-                  </div>
-                </div>
-              </div>
-
+            <div id="math-3d-stage" class="geom-construction-stage">
+              <!-- Dynamically populated and rendered by window.MathConstruction -->
             </div>
           </div>
 
@@ -1120,14 +1044,14 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container"></div>
 
-  <!-- 3D Graphics & Mathematical Visualization Engine -->
+  <!-- Mathematical Visualization & Geometric Construction Engines (KhmerMath Style) -->
   <script src="lib/three/three.min.js"></script>
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=50"></script>
-  <script src="js/math3d.js?v=50"></script>
-  <script src="js/app.js?v=50"></script>
-  <script src="js/visits.js?v=50"></script>
+  <script src="js/storage.js?v=51"></script>
+  <script src="js/construction.js?v=51"></script>
+  <script src="js/app.js?v=51"></script>
+  <script src="js/visits.js?v=51"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {
