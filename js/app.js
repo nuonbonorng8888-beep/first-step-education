@@ -750,48 +750,122 @@ window.App = {
     this.showToast('បានរៀបចំសំណួរឡើងវិញរួចរាល់! សូមសាកល្បងម្តងទៀត 🎯', 'info');
   },
 
+  cleanQuestionText(qTxt) {
+    if (!qTxt) return '';
+    let q = qTxt.trim();
+    q = q.replace(/^[ក-ឃ]\.\s*/, '');
+    q = q.replace(/^[1-9][\)\.]\s*/, '');
+    q = q.replace(/នៃបណ្តាកន្សោមខាងក្រោម/g, 'នៃកន្សោម');
+    q = q.replace(/នៃកន្សោមខាងក្រោម/g, 'នៃកន្សោម');
+    q = q.replace(/បណ្តាសមីការខាងក្រោម/g, 'សមីការ');
+    q = q.replace(/បណ្តាវិសមីការខាងក្រោម/g, 'វិសមីការ');
+    q = q.replace(/ខាងក្រោម ៖ ៖/g, ' ៖');
+    q = q.replace(/[:៖]\s*[:៖]/g, ' ៖');
+    q = q.trim();
+    if (!q.endsWith('?') && !q.endsWith('៖') && !q.endsWith(':')) q += ' ៖';
+    return q;
+  },
+
   extractAnswerString(solText) {
-    if (!solText) return 'ចម្លើយផ្ទៀងផ្ទាត់ត្រឹមត្រូវ';
+    if (!solText) return '$0$';
     const lines = solText.split('\n').map(l => l.trim()).filter(Boolean);
     if (!lines.length) return solText.slice(0, 45);
     
-    const dm = solText.match(/\$\$([^\$]+)\$\$/g);
-    if (dm) return dm[dm.length - 1];
-    
-    const im = solText.match(/\$([^\$]+)\$/g);
-    if (im) return im[im.length - 1];
-    
-    let target = lines[lines.length - 1];
+    let lastLine = lines[lines.length - 1];
     for (let i = lines.length - 1; i >= 0; i--) {
-      if (lines[i].includes('ដូចនេះ') || lines[i].includes('នាំឱ្យ') || lines[i].includes('ស្មើនឹង')) {
-        target = lines[i];
+      if (lines[i].includes('ដូចនេះ') || lines[i].includes('នាំឱ្យ') || lines[i].includes('ទទួលបាន') || lines[i].includes('ចម្លើយ')) {
+        lastLine = lines[i];
         break;
       }
     }
-    target = target.replace(/^(?:ដូចនេះ|នាំឱ្យ|ស្មើនឹង)\s*[:៖]?\s*/, '').trim();
-    if (target.endsWith('។')) target = target.slice(0, -1).trim();
-    return target.slice(0, 50) || 'ចម្លើយផ្ទៀងផ្ទាត់ត្រឹមត្រូវ';
+    lastLine = lastLine.replace(/^(?:ដូចនេះ|នាំឱ្យ|ទទួលបាន|ចម្លើយ|សមមូល)\s*[:៖]?\s*/, '').trim();
+    lastLine = lastLine.replace(/^[1-9][\)\.]\s*/, '').trim();
+
+    const dm = lastLine.match(/\$\$([^\$]+)\$\$/);
+    const target = dm ? dm[1].trim() : lastLine;
+
+    const eqParts = target.split(/\s*=\s*/);
+    if (eqParts.length > 1) {
+      const lastPart = eqParts[eqParts.length - 1].replace(/[។.]/g, '').trim();
+      let ans = lastPart;
+      if (eqParts.length === 2 && /^\$?[a-zA-Z_]\$?$/.test(eqParts[0].trim())) {
+        const v = eqParts[0].trim().replace(/\$/g, '');
+        const lp = lastPart.replace(/\$/g, '');
+        ans = `$${v} = ${lp}$`;
+      }
+      if (!ans.startsWith('$')) ans = `$${ans}`;
+      if (!ans.endsWith('$')) ans = `${ans}$`;
+      return ans.replace(/\$+/g, '$');
+    }
+
+    const im = target.match(/\$([^\$]+)\$/);
+    if (im) return `$${im[1].trim()}$`;
+
+    const res = target.replace(/[។.]/g, '').trim();
+    if (!res.startsWith('$') && (res.includes('\\') || res.includes('^') || res.includes('_'))) {
+      return `$${res}$`;
+    }
+    return res.slice(0, 50) || '$0$';
   },
 
   generateDistractors(corr, topic) {
     corr = String(corr).trim();
+    const clean = corr.replace(/\$/g, '').trim();
+
+    // 1. Pure number like $4$, $-5$, $0.2$
     const numMatch = corr.match(/^\$?([+-]?\d+(?:\.\d+)?)\$?$/);
     if (numMatch) {
-      const v = parseFloat(numMatch[1]);
-      const vInt = Number.isInteger(v) ? parseInt(v, 10) : v;
+      const valStr = numMatch[1];
+      if (valStr.includes('.')) {
+        const val = parseFloat(valStr);
+        return [`$${-val}$`, `$${Math.round(val * 10) / 100}$`, `$${Math.round(val * 100) / 10}$`];
+      } else {
+        const val = parseInt(valStr, 10);
+        const d1 = val !== 0 ? `$${-val}$` : '$1$';
+        const d2 = val >= 0 ? `$${val + 2}$` : `$${val - 2}$`;
+        const d3 = (val !== 0 && val !== 1 && val !== -1) ? `$${val * 2}$` : `$${val + 3}$`;
+        return [d1, d2 === d1 ? `$${val + 4}$` : d2, d3];
+      }
+    }
+
+    // 2. Fraction \dfrac{a}{b} or -\dfrac{a}{b}
+    const fracMatch = corr.match(/^\$?([+-]?)\s*\\d?frac\{([^}]+)\}\{([^}]+)\}\$?$/);
+    if (fracMatch) {
+      const sign = fracMatch[1];
+      const num = fracMatch[2].trim();
+      const den = fracMatch[3].trim();
+      const oppSign = sign === '-' ? '' : '-';
+      const d1 = `$${oppSign}\\dfrac{${num}}{${den}}$`;
+      const d2 = `$${sign}\\dfrac{${den}}{${num}}$`;
+      const d3 = `$${sign}\\dfrac{${num}}{${parseInt(den, 10) + 1 || den + '+1'}}$`;
+      return [d1, d2, d3];
+    }
+
+    // 3. Variable equality x = val
+    const eqMatch = corr.match(/^\$?([a-zA-Z_0-9]+)\s*=\s*([+-]?\d+(?:\.\d+)?)\$?$/);
+    if (eqMatch) {
+      const v = eqMatch[1];
+      const val = parseInt(eqMatch[2], 10);
       return [
-        vInt !== 0 ? `$${-vInt}$` : '$1$',
-        `$${vInt + 2}$`,
-        `$${vInt - 2}$`
+        val !== 0 ? `$${v} = ${-val}$` : `$${v} = 1$`,
+        `$${v} = ${val + 1}$`,
+        `$${v} = ${val - 1}$`
       ];
     }
-    if (corr.includes('អនន្ត')) return ['ជាស្វ៊ីតរាប់អស់', 'ជាស្វ៊ីតថេរ', 'ជាស្វ៊ីតគ្មានកំណត់'];
+
+    // Categorical math
+    if (corr.includes('អនន្ត')) return ['ជាស្វ៊ីតរាប់អស់', 'ជាស្វ៊ីតថេរ', 'ជាស្វ៊ីតមិនកំណត់'];
     if (corr.includes('រាប់អស់')) return ['ជាស្វ៊ីតអនន្ត', 'ជាស្វ៊ីតមិនកំណត់', 'ជាស្វ៊ីតសូន្យ'];
     if (corr.includes('កើន')) return ['ជាស្វ៊ីតចុះដាច់ខាត', 'ជាស្វ៊ីតថេរ', 'ជាស្វ៊ីតមិនម៉ូណូតូន'];
     if (corr.includes('ចុះ')) return ['ជាស្វ៊ីតកើនដាច់ខាត', 'ជាស្វ៊ីតថេរ', 'ជាស្វ៊ីតមិនម៉ូណូតូន'];
     if (corr.includes('កាត់កែង')) return ['ស្របគ្នា', 'ត្រួតស៊ីគ្នា', 'កាត់គ្នាមិនកែង'];
     if (corr.includes('ស្រប')) return ['កាត់កែងគ្នា', 'កាត់គ្នាបង្កើតមុំ $45^\\circ$', 'ត្រួតស៊ីគ្នា'];
-    return ['មិនអាចកំណត់បាន', 'ស្មើនឹង $0$', 'គ្មានចម្លើយត្រឹមត្រូវ'];
+
+    return [
+      clean.startsWith('-') ? `$${clean.slice(1)}$` : `$-${clean}$`,
+      `$${clean} + 1$`,
+      `$${clean} - 1$`
+    ];
   },
 
   generatePointMCQs(lesson, pointObj, pointNum) {
@@ -804,10 +878,12 @@ window.App = {
     const items = [];
     
     // 1. Convert exercises into MCQs if available
+    const statementsPool = [];
     exs.forEach((ex, exIdx) => {
       const qText = ex.question || '';
       const sText = ex.solution || '';
       
+      const subitems = [];
       const parts = qText.split(/(?:^|\n)\s*([ក-ឃ]\.\s*)/);
       const solParts = sText.split(/(?:^|\n)\s*([ក-ឃ]\.\s*)/);
       
@@ -816,7 +892,6 @@ window.App = {
         for (let i = 1; i < parts.length; i += 2) {
           const tag = parts[i].trim().replace('.', '');
           const subQ = parts[i + 1]?.trim() || '';
-          
           let subSol = sText;
           if (solParts.length > 2) {
             const solIdx = solParts.indexOf(parts[i]);
@@ -825,25 +900,110 @@ window.App = {
             }
           }
           
-          const fullQ = prefix ? `${prefix}\n${tag}. ${subQ}` : `${tag}. ${subQ}`;
-          const ans = this.extractAnswerString(subSol);
-          items.push({
-            question: fullQ.endsWith('៖') || fullQ.endsWith(':') ? fullQ : `${fullQ} ៖`,
-            correct_ans: ans,
-            explanation: subSol,
-            level: exIdx === 0 ? 'កម្រិត ១ (មូលដ្ឋាន)' : 'កម្រិត ២ (អនុវត្ត)'
-          });
+          const numQ = subQ.split(/(?:^|\n)\s*([0-9]+[\)\.])\s*/);
+          const numS = subSol.split(/(?:^|\n)\s*([0-9]+[\)\.])\s*/);
+          if (numQ.length > 2) {
+            const subPre = numQ[0].trim() || prefix;
+            for (let k = 1; k < numQ.length; k += 2) {
+              const nTag = numQ[k].trim();
+              const itemQ = numQ[k + 1]?.trim() || '';
+              let itemS = subSol;
+              if (numS.length > 2) {
+                for (let l = 1; l < numS.length; l += 2) {
+                  if (numS[l].trim().replace(/[\)\.]/g, '') === nTag.replace(/[\)\.]/g, '')) {
+                    itemS = numS[l + 1].trim();
+                    break;
+                  }
+                }
+              }
+              const cleanHeader = subPre.replace(/[:៖]\s*$/, '').trim();
+              subitems.push({
+                question: this.cleanQuestionText(cleanHeader ? `${cleanHeader} ៖ ${itemQ}` : itemQ),
+                rawItem: itemQ,
+                solution: itemS
+              });
+            }
+          } else {
+            const cleanHeader = prefix.replace(/[:៖]\s*$/, '').trim();
+            subitems.push({
+              question: this.cleanQuestionText(cleanHeader ? `${cleanHeader} ៖ ${subQ}` : subQ),
+              rawItem: subQ,
+              solution: subSol
+            });
+          }
         }
       } else {
-        const ans = this.extractAnswerString(sText);
-        items.push({
-          question: qText.endsWith('៖') || qText.endsWith(':') ? qText : `${qText} ៖`,
-          correct_ans: ans,
-          explanation: sText,
-          level: exIdx === 0 ? 'កម្រិត ១ (មូលដ្ឋាន)' : 'កម្រិត ២ (អនុវត្ត)'
-        });
+        const numQ = qText.split(/(?:^|\n)\s*([0-9]+[\)\.])\s*/);
+        const numS = sText.split(/(?:^|\n)\s*([0-9]+[\)\.])\s*/);
+        if (numQ.length > 2) {
+          const prefix = numQ[0].trim();
+          for (let k = 1; k < numQ.length; k += 2) {
+            const nTag = numQ[k].trim();
+            const itemQ = numQ[k + 1]?.trim() || '';
+            let itemS = sText;
+            if (numS.length > 2) {
+              for (let l = 1; l < numS.length; l += 2) {
+                if (numS[l].trim().replace(/[\)\.]/g, '') === nTag.replace(/[\)\.]/g, '')) {
+                  itemS = numS[l + 1].trim();
+                  break;
+                }
+              }
+            }
+            const cleanHeader = prefix.replace(/[:៖]\s*$/, '').trim();
+            subitems.push({
+              question: this.cleanQuestionText(cleanHeader ? `${cleanHeader} ៖ ${itemQ}` : itemQ),
+              rawItem: itemQ,
+              solution: itemS
+            });
+          }
+        } else {
+          subitems.push({
+            question: this.cleanQuestionText(qText),
+            rawItem: qText.trim(),
+            solution: sText.trim()
+          });
+        }
       }
+      
+      subitems.forEach(it => {
+        const ans = this.extractAnswerString(it.solution);
+        const dists = this.generateDistractors(ans, topic);
+        items.push({
+          question: it.question,
+          correct_ans: ans,
+          distractors: dists,
+          explanation: it.solution,
+          level: items.length < 3 ? 'កម្រិត ១ (មូលដ្ឋាន)' : 'កម្រិត ២ (អនុវត្ត)'
+        });
+        
+        const rawClean = (it.rawItem || '').replace(/\$/g, '').trim();
+        const ansClean = ans.replace(/\$/g, '').trim();
+        if (rawClean && ansClean && !rawClean.includes('=') && rawClean.length < 35 && ansClean.length < 25) {
+          statementsPool.push({
+            trueSt: `$${rawClean} = ${ansClean}$`,
+            falseSt: `$${rawClean} = ${dists[0].replace(/\$/g, '')}$`
+          });
+        }
+      });
     });
+
+    // Add comparative questions if we have 4+ statements
+    if (statementsPool.length >= 4) {
+      items.push({
+        question: 'ពិនិត្យលើសមភាពខាងក្រោម ៖ តើសមភាពណាខាងក្រោមនេះ **ត្រឹមត្រូវ**?',
+        correct_ans: statementsPool[0].trueSt,
+        distractors: [statementsPool[1].falseSt, statementsPool[2].falseSt, statementsPool[3].falseSt],
+        explanation: `សមភាពត្រឹមត្រូវគឺ ៖ ${statementsPool[0].trueSt}។ ឯជម្រើសដទៃទៀតជាការគណនាខុស។`,
+        level: 'កម្រិត ២ (អនុវត្ត)'
+      });
+      items.push({
+        question: 'ពិនិត្យលើសមភាពខាងក្រោម ៖ តើសមភាពណាខាងក្រោមនេះ **មិនត្រឹមត្រូវ (ខុស)**?',
+        correct_ans: statementsPool[0].falseSt,
+        distractors: [statementsPool[1].trueSt, statementsPool[2].trueSt, statementsPool[3].trueSt],
+        explanation: `សមភាពមិនត្រឹមត្រូវគឺ ៖ ${statementsPool[0].falseSt} (ការគណនាត្រឹមត្រូវគឺ ${statementsPool[0].trueSt})។`,
+        level: 'កម្រិត ២ (អនុវត្ត)'
+      });
+    }
     
     // 2. Add course lesson quiz candidates matching point
     if (Array.isArray(lesson?.quiz)) {

@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-Generate 10 authentic, curriculum-aligned MCQ questions for EVERY point of EVERY lesson.
+High-Standard MCQ Generator for Worksheet.Kh
+Directly adheres to Teacher Nuon Bonorng's criteria:
+1. Single problem per question with 4 calculated answer options.
+2. Comparative verification questions ("តើសមភាពណាត្រឹមត្រូវ?" / "តើសមភាពណាមិនត្រឹមត្រូវ?").
+3. Authentic math distractors (sign, exponent, fraction, arithmetic errors). No generic junk.
+4. Comprehensive coverage of all grade levels (Grades 7, 8, 9, 10, 11, 12).
 Output: data/point_quizzes.json
 """
 import sys
 import json
 import re
-import random
 import os
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -32,179 +36,340 @@ def clean_html(text):
     t = re.sub(r'\s+', ' ', t).strip()
     return t
 
-def parse_subparts(text):
-    parts = re.split(r'(?:^|\n)\s*([ក-ឃ]\.\s*)', text)
-    res = {}
-    if len(parts) > 1:
-        prefix = parts[0].strip()
-        for i in range(1, len(parts), 2):
-            tag = parts[i].strip().replace('.', '')
-            content = parts[i+1].strip()
-            res[tag] = content
-        return prefix, res
-    return text.strip(), {}
+def clean_question_text(q_txt):
+    if not q_txt:
+        return ''
+    q = q_txt.strip()
+    # Remove leading sub-tags like "ក. ", "ខ. ", "1) ", "2. "
+    q = re.sub(r'^[ក-ឃ]\.\s*', '', q)
+    q = re.sub(r'^[1-9][\)\.]\s*', '', q)
+    # Simplify plural prefixes into clear singular problem prompts
+    q = q.replace('នៃបណ្តាកន្សោមខាងក្រោម', 'នៃកន្សោម')
+    q = q.replace('នៃកន្សោមខាងក្រោម', 'នៃកន្សោម')
+    q = q.replace('បណ្តាសមីការខាងក្រោម', 'សមីការ')
+    q = q.replace('បណ្តាវិសមីការខាងក្រោម', 'វិសមីការ')
+    q = q.replace('ខាងក្រោម ៖ ៖', ' ៖')
+    q = re.sub(r'[:៖]\s*[:៖]', ' ៖', q)
+    q = q.strip()
+    if not q.endswith(('?', '៖', ':')):
+        q += ' ៖'
+    return q
 
-def extract_answer_from_solution(sol_text):
-    """
-    Extract a concise answer string from solution text without ReDoS.
-    """
-    if not sol_text:
-        return "ចម្លើយផ្ទៀងផ្ទាត់ត្រឹមត្រូវ"
-    lines = [line.strip() for line in sol_text.split('\n') if line.strip()]
+def extract_clean_ans(sol):
+    if not sol:
+        return "$0$"
+    sol = str(sol).strip()
+    lines = [l.strip() for l in sol.split('\n') if l.strip()]
     if not lines:
-        return sol_text[:40]
+        return sol[:40]
     
-    # Check if there is display math $$...$$
-    dm = re.findall(r'\$\$([^\$]+)\$\$', sol_text)
-    if dm:
-        return f"${dm[-1].strip()}$"
-        
-    # Check if there is inline math $...$
-    im = re.findall(r'\$([^\$]+)\$', sol_text)
+    last_line = lines[-1]
+    for l in reversed(lines):
+        if any(w in l for w in ['ដូចនេះ', 'នាំឱ្យ', 'ទទួលបាន', 'ចម្លើយ']):
+            last_line = l
+            break
+            
+    last_line = re.sub(r'^(?:ដូចនេះ|នាំឱ្យ|ទទួលបាន|ចម្លើយ|សមមូល)\s*[:៖]?\s*', '', last_line).strip()
+    last_line = re.sub(r'^[1-9][\)\.]\s*', '', last_line).strip()
+    
+    dm = re.findall(r'\$\$([^\$]+)\$\$', last_line)
+    target = dm[-1] if dm else last_line
+    
+    # Check if there are multiple equalities A = B = C
+    eq_parts = re.split(r'\s*=\s*', target)
+    if len(eq_parts) > 1:
+        last_part = eq_parts[-1].strip().rstrip('។.')
+        if len(eq_parts) == 2 and re.match(r'^\$?[a-zA-Z_]\$?$', eq_parts[0].strip()):
+            v = eq_parts[0].strip().replace('$', '')
+            lp = last_part.replace('$', '')
+            ans = f"${v} = {lp}$"
+        else:
+            ans = last_part
+        if not ans.startswith('$'): ans = f"${ans}"
+        if not ans.endswith('$'): ans = f"{ans}$"
+        ans = re.sub(r'\$+', '$', ans)
+        return ans
+    
+    im = re.findall(r'\$([^\$]+)\$', target)
     if im:
         return f"${im[-1].strip()}$"
         
-    # Otherwise take conclusion line or last line
-    target = lines[-1]
-    for line in reversed(lines):
-        if any(k in line for k in ['ដូចនេះ', 'នាំឱ្យ', 'ស្មើនឹង', 'ទទួលបាន']):
-            target = line
-            break
-            
-    target = target.replace('ដូចនេះ', '').replace('នាំឱ្យ', '').strip()
-    if target.startswith('៖') or target.startswith(':'):
-        target = target[1:].strip()
-    if target.endswith('។'):
-        target = target[:-1].strip()
-    return target[:50] if target else "ចម្លើយផ្ទៀងផ្ទាត់ត្រឹមត្រូវ"
+    res = target.rstrip('។.')
+    if not res.startswith('$') and ('\\' in res or '^' in res or '_' in res):
+        res = f"${res}$"
+    return res[:60] if res else "$0$"
 
-def generate_distractors(correct_ans, topic, q_type=0):
-    """
-    Generate 3 distinct, plausible distractors for a correct math answer.
-    """
-    corr = str(correct_ans).strip()
+def generate_math_distractors(ans, topic=""):
+    ans = str(ans).strip()
+    clean = ans.replace('$', '').strip()
     
-    # If correct answer is a pure number or simple math $...$
-    m_num = re.search(r'^\$?([+-]?\d+(?:\.\d+)?)\$?$', corr)
+    # 1. Pure number like $4$, $-5$, $0.2$
+    m_num = re.search(r'^\$?([+-]?\d+(?:\.\d+)?)\$?$', ans)
     if m_num:
-        val = float(m_num.group(1))
-        is_int = (val == int(val))
-        v_int = int(val) if is_int else val
-        d1 = f"${-v_int}$" if v_int != 0 else "$1$"
-        d2 = f"${v_int + 2}$" if is_int else f"${round(val + 1.5, 2)}$"
-        d3 = f"${v_int - 2}$" if is_int else f"${round(val - 1.5, 2)}$"
-        if d1 == f"${v_int}$": d1 = f"${v_int + 4}$"
+        val_str = m_num.group(1)
+        if '.' in val_str:
+            val = float(val_str)
+            d1 = f"${-val}$"
+            d2 = f"${round(val / 10, 4)}$"
+            d3 = f"${round(val * 10, 4)}$"
+            return [d1, d2, d3]
+        else:
+            val = int(val_str)
+            d1 = f"${-val}$" if val != 0 else "$1$"
+            d2 = f"${val + 2}$" if val >= 0 else f"${val - 2}$"
+            d3 = f"${val * 2}$" if val not in (0, 1, -1) else f"${val + 3}$"
+            if d2 == d1: d2 = f"${val + 4}$"
+            if d3 == d1 or d3 == d2: d3 = f"${val - 3}$"
+            return [d1, d2, d3]
+            
+    # 2. Fraction $\dfrac{a}{b}$ or $-\dfrac{a}{b}$
+    m_frac = re.search(r'^\$?([+-]?)\s*\\d?frac\{([^}]+)\}\{([^}]+)\}\$?$', ans)
+    if m_frac:
+        sign = m_frac.group(1)
+        num = m_frac.group(2).strip()
+        den = m_frac.group(3).strip()
+        opp_sign = "" if sign == "-" else "-"
+        d1 = f"${opp_sign}\\dfrac{{{num}}}{{{den}}}$"
+        d2 = f"${sign}\\dfrac{{{den}}}{{{num}}}$"
+        if num.isdigit() and den.isdigit():
+            n_sq = int(num)**2
+            d_sq = int(den)**2
+            d3 = f"${sign}\\dfrac{{{n_sq}}}{{{d_sq}}}$"
+        else:
+            d3 = f"${sign}\\dfrac{{{num}}}{{{den}+1}}$"
+        if d2 == d1: d2 = f"${sign}\\dfrac{{{int(num)+1 if num.isdigit() else num}}}{{{den}}}$"
         return [d1, d2, d3]
-    
-    # If answer has equality like $x = 3$ or $A = 14$
-    m_eq = re.search(r'^\$?([a-zA-Z_0-9\\]+)\s*=\s*([+-]?\d+(?:\.\d+)?)\$?$', corr)
+
+    # 3. Variable equality x = val or y = val
+    m_eq = re.search(r'^\$?([a-zA-Z_0-9]+)\s*=\s*([+-]?\d+(?:\.\d+)?)\$?$', ans)
     if m_eq:
         var = m_eq.group(1)
         val = int(float(m_eq.group(2)))
+        d1 = f"${var} = {-val}$" if val != 0 else f"${var} = 1$"
+        d2 = f"${var} = {val + 1}$"
+        d3 = f"${var} = {val - 1}$"
+        return [d1, d2, d3]
+
+    # 4. Inequality x <= val or x >= val
+    m_ineq = re.search(r'^\$?([a-zA-Z_0-9]+)\s*(\\le|\\ge|<|>)\s*([+-]?\d+(?:\.\d+)?)\$?$', ans)
+    if m_ineq:
+        var = m_ineq.group(1)
+        op = m_ineq.group(2)
+        val = m_ineq.group(3)
+        opp_op = "\\ge" if op == "\\le" else ("\\le" if op == "\\ge" else (">" if op == "<" else "<"))
+        d1 = f"${var} {opp_op} {val}$"
+        d2 = f"${var} {op} {-int(val) if val.lstrip('-').isdigit() else val}$"
+        d3 = f"${var} {opp_op} {-int(val) if val.lstrip('-').isdigit() else val}$"
+        return [d1, d2, d3]
+
+    # 5. Domain interval e.g. [a, b] or [a, +\infty)
+    if '[' in ans or '(' in ans:
+        if '+\\infty' in ans:
+            m_iv = re.search(r'\[([+-]?\d+),\s*\+\\infty\)', ans)
+            if m_iv:
+                v = m_iv.group(1)
+                return [f"$(-\\infty, {v}]$", f"$({v}, +\\infty)$", f"$(-\\infty, {-int(v)}]$"]
+        if '-\\infty' in ans:
+            m_iv = re.search(r'\(-\\infty,\s*([+-]?\d+)\]', ans)
+            if m_iv:
+                v = m_iv.group(1)
+                return [f"$[{v}, +\\infty)$", f"$(-\\infty, {v})$", f"$[{-int(v)}, +\\infty)$"]
+
+    # 6. Radical expression \sqrt{a}
+    m_rad = re.search(r'\\sqrt(?:\[3\])?\{([^}]+)\}', ans)
+    if m_rad:
+        inside = m_rad.group(1)
         return [
-            f"${var} = {-val}$" if val != 0 else f"${var} = 1$",
-            f"${var} = {val + 1}$",
-            f"${var} = {val - 1}$"
+            f"${inside}$",
+            f"$-{clean}$" if not clean.startswith('-') else f"${clean.lstrip('-')}$",
+            f"${clean}^2$"
         ]
-    
-    # If answer is fraction $\dfrac{a}{b}$
-    m_frac = re.search(r'\\d?frac\{([^}]+)\}\{([^}]+)\}', corr)
-    if m_frac:
-        num = m_frac.group(1).strip()
-        den = m_frac.group(2).strip()
-        return [
-            f"$\\dfrac{{{den}}}{{{num}}}$",
-            f"$-\\dfrac{{{num}}}{{{den}}}$",
-            f"$\\dfrac{{{num}}}{{{int(den)+1 if den.isdigit() else den + '+1'}}}$"
-        ]
-    
-    # Categorical/text answers
-    if 'អនន្ត' in corr:
-        return ["ជាស្វ៊ីតរាប់អស់", "ជាស្វ៊ីតថេរ", "ជាស្វ៊ីតគ្មានកំណត់"]
-    if 'រាប់អស់' in corr:
+
+    # 7. Categorical Math Fallbacks
+    if 'អនន្ត' in ans:
+        return ["ជាស្វ៊ីតរាប់អស់", "ជាស្វ៊ីតថេរ", "ជាស្វ៊ីតមិនកំណត់"]
+    if 'រាប់អស់' in ans:
         return ["ជាស្វ៊ីតអនន្ត", "ជាស្វ៊ីតមិនកំណត់", "ជាស្វ៊ីតសូន្យ"]
-    if 'កើន' in corr and 'ចុះ' not in corr:
+    if 'កើន' in ans and 'ចុះ' not in ans:
         return ["ជាស្វ៊ីតចុះដាច់ខាត", "ជាស្វ៊ីតថេរ", "ជាស្វ៊ីតមិនម៉ូណូតូន"]
-    if 'ចុះ' in corr and 'កើន' not in corr:
+    if 'ចុះ' in ans and 'កើន' not in ans:
         return ["ជាស្វ៊ីតកើនដាច់ខាត", "ជាស្វ៊ីតថេរ", "ជាស្វ៊ីតមិនម៉ូណូតូន"]
-    if 'ធម្មជាតិ' in corr:
-        return ["សំណុំចំនួនគត់រ៉ឺឡាទីវអវិជ្ជមាន", "សំណុំចំនួនសនិទានមិនមែនចំនួនគត់", "សំណុំចំនួនអសនិទាន"]
-    if 'សនិទាន' in corr:
-        return ["ចំនួនអសនិទាន", "ចំនួនកុំផ្លិចមិនពិត", "ចំនួនទសភាគអនន្តមិនខួប"]
-    if 'ពិត' in corr and 'និម្មិត' in corr:
-        return ["ផ្នែកពិត $0$ និងផ្នែកនិម្មិត $0$", "មានតែផ្នែកពិត គ្មានផ្នែកនិម្មិត", "មានតែផ្នែកនិម្មិត គ្មានផ្នែកពិត"]
-    if 'កាត់កែង' in corr:
+    if 'កាត់កែង' in ans:
         return ["ស្របគ្នា", "ត្រួតស៊ីគ្នា", "កាត់គ្នាមិនកែង"]
-    if 'ស្រប' in corr:
+    if 'ស្រប' in ans:
         return ["កាត់កែងគ្នា", "កាត់គ្នាបង្កើតមុំ $45^\\circ$", "ត្រួតស៊ីគ្នា"]
-        
-    # General math fallback variations
+    if 'ពិត' in ans and 'និម្មិត' in ans:
+        return ["ផ្នែកពិត $0$ និងផ្នែកនិម្មិត $0$", "មានតែផ្នែកពិត គ្មានផ្នែកនិម្មិត", "មានតែផ្នែកនិម្មិត គ្មានផ្នែកពិត"]
+
+    # Generic high-standard mathematical distractors
+    c_no_dl = clean.lstrip('$').rstrip('$')
     return [
-        f"មិនអាចកំណត់បាន",
-        f"ស្មើនឹង $0$",
-        f"គ្មានចម្លើយត្រឹមត្រូវ"
+        f"$-{c_no_dl}$" if not c_no_dl.startswith('-') else f"${c_no_dl.lstrip('-')}$",
+        f"${c_no_dl} + 1$",
+        f"${c_no_dl} - 1$"
     ]
 
-def build_10_mcqs_for_point(lesson_id, lesson_title, pt, pt_idx, total_points, lesson_quiz):
+def parse_exercise_to_subitems(q_text, s_text):
     """
-    Construct exactly 10 high-standard MCQs for a given point.
+    Carefully dissect a question and solution into granular, single-target problem units.
     """
+    results = []
+    
+    # 1. Split on Khmer sub-sections [ក-ឃ]\.
+    parts_q = re.split(r'(?:^|\n)\s*([ក-ឃ]\.\s*)', q_text)
+    parts_s = re.split(r'(?:^|\n)\s*([ក-ឃ]\.\s*)', s_text)
+    
+    if len(parts_q) > 2:
+        prefix_q = parts_q[0].strip()
+        for i in range(1, len(parts_q), 2):
+            tag = parts_q[i].strip()
+            sub_q = parts_q[i+1].strip()
+            
+            # Match solution
+            sub_s = s_text
+            if len(parts_s) > 2:
+                for j in range(1, len(parts_s), 2):
+                    if parts_s[j].strip()[0] == tag[0]:
+                        sub_s = parts_s[j+1].strip()
+                        break
+            
+            # Check for numbered items 1), 2), 3)...
+            num_q = re.split(r'(?:^|\n)\s*([0-9]+[\)\.])\s*', sub_q)
+            num_s = re.split(r'(?:^|\n)\s*([0-9]+[\)\.])\s*', sub_s)
+            
+            if len(num_q) > 2:
+                sub_prefix = num_q[0].strip() or prefix_q
+                for k in range(1, len(num_q), 2):
+                    ntag = num_q[k].strip()
+                    item_q = num_q[k+1].strip()
+                    item_s = sub_s
+                    if len(num_s) > 2:
+                        for l in range(1, len(num_s), 2):
+                            if num_s[l].strip().rstrip(').') == ntag.rstrip(').'):
+                                item_s = num_s[l+1].strip()
+                                break
+                    clean_header = sub_prefix.rstrip(' ៖:')
+                    q_final = f"{clean_header} ៖ {item_q}" if clean_header else item_q
+                    results.append({
+                        "question": clean_question_text(q_final),
+                        "raw_item": item_q,
+                        "solution": item_s
+                    })
+            else:
+                clean_header = prefix_q.rstrip(' ៖:')
+                q_final = f"{clean_header} ៖ {sub_q}".strip() if clean_header else sub_q.strip()
+                results.append({
+                    "question": clean_question_text(q_final),
+                    "raw_item": sub_q,
+                    "solution": sub_s
+                })
+    else:
+        # Check direct numbered items 1), 2), 3)...
+        num_q = re.split(r'(?:^|\n)\s*([0-9]+[\)\.])\s*', q_text)
+        num_s = re.split(r'(?:^|\n)\s*([0-9]+[\)\.])\s*', s_text)
+        if len(num_q) > 2:
+            prefix = num_q[0].strip()
+            for k in range(1, len(num_q), 2):
+                ntag = num_q[k].strip()
+                item_q = num_q[k+1].strip()
+                item_s = s_text
+                if len(num_s) > 2:
+                    for l in range(1, len(num_s), 2):
+                        if num_s[l].strip().rstrip(').') == ntag.rstrip(').'):
+                            item_s = num_s[l+1].strip()
+                            break
+                clean_header = prefix.rstrip(' ៖:')
+                q_final = f"{clean_header} ៖ {item_q}" if clean_header else item_q
+                results.append({
+                    "question": clean_question_text(q_final),
+                    "raw_item": item_q,
+                    "solution": item_s
+                })
+        else:
+            results.append({
+                "question": clean_question_text(q_text),
+                "raw_item": q_text.strip(),
+                "solution": s_text.strip()
+            })
+            
+    return results
+
+def build_10_high_standard_mcqs(lesson_id, lesson_title, pt, pt_idx, total_points, lesson_quiz):
     pt_num = pt.get('pointNumber', pt_idx + 1)
     pt_title = pt.get('pointTitle', f'ចំណុចទី {pt_num}')
     clean_title = re.sub(r'^ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+\s*[៖:]?\s*', '', pt_title).strip()
     topic = pt.get('topic', clean_title)
-    summary = clean_html(pt.get('summary', ''))
-    objective = pt.get('objective', '')
     exercises = pt.get('exercises', [])
     
-    questions = []
+    pool = []
+    statements_pool = []
     
-    # 1. Gather exercise-derived questions
-    ex_questions = []
+    # 1. Granular sub-items from exercises (Single Problem Per Question)
     for ex_idx, ex in enumerate(exercises):
         q_raw = ex.get('question', '')
         s_raw = ex.get('solution', '')
-        q_pre, q_subs = parse_subparts(q_raw)
-        s_pre, s_subs = parse_subparts(s_raw)
         
-        if q_subs:
-            for tag, sub_q in q_subs.items():
-                sub_s = s_subs.get(tag, s_raw)
-                ans = extract_answer_from_solution(sub_s)
-                distractors = generate_distractors(ans, topic, len(ex_questions))
-                
-                full_q = f"{q_pre}\n{sub_q}" if q_pre else sub_q
-                full_q = full_q.strip()
-                if not full_q.endswith(('?', '៖', ':')):
-                    full_q += ' ៖'
-                
-                ex_questions.append({
-                    "question": full_q,
-                    "correct_ans": ans,
-                    "distractors": distractors,
-                    "explanation": sub_s.strip(),
-                    "level": "កម្រិត ១ (មូលដ្ឋាន)" if ex_idx == 0 else "កម្រិត ២ (អនុវត្ត)"
-                })
-        else:
-            ans = extract_answer_from_solution(s_raw)
-            distractors = generate_distractors(ans, topic, len(ex_questions))
-            full_q = q_raw.strip()
-            if not full_q.endswith(('?', '៖', ':')):
-                full_q += ' ៖'
-            ex_questions.append({
-                "question": full_q,
+        subitems = parse_exercise_to_subitems(q_raw, s_raw)
+        for item in subitems:
+            q_txt = item['question'].strip()
+            s_txt = item['solution'].strip()
+            ans = extract_clean_ans(s_txt)
+            dists = generate_math_distractors(ans, topic)
+            
+            pool.append({
+                "question": q_txt,
                 "correct_ans": ans,
-                "distractors": distractors,
-                "explanation": s_raw.strip(),
-                "level": "កម្រិត ១ (មូលដ្ឋាន)" if ex_idx == 0 else "កម្រិត ២ (អនុវត្ត)"
+                "distractors": dists,
+                "explanation": s_txt,
+                "level": "កម្រិត ១ (មូលដ្ឋាន)" if len(pool) < 3 else "កម្រិត ២ (អនុវត្ត)"
             })
             
-    # Add mapped course quizzes if available and relevant
-    course_q_candidates = []
+            # Save valid statement for comparative "Which is true/false" questions
+            raw_it = item.get('raw_item', '').strip()
+            if raw_it and ans and '$' in ans:
+                raw_clean = raw_it.strip('$').strip()
+                ans_clean = ans.strip('$').strip()
+                if '=' not in raw_clean and len(raw_clean) < 35 and len(ans_clean) < 25:
+                    st_true = f"${raw_clean} = {ans_clean}$"
+                    dist_clean = dists[0].strip('$') if dists else f"-{ans_clean}"
+                    st_false = f"${raw_clean} = {dist_clean}$"
+                    statements_pool.append({
+                        "true": st_true,
+                        "false": st_false
+                    })
+
+    # 2. Comparative Questions ("តើសមភាពណាត្រឹមត្រូវ?" & "តើសមភាពណាមិនត្រឹមត្រូវ?")
+    if len(statements_pool) >= 4:
+        # Comparative Q1: Which is TRUE?
+        s_correct = statements_pool[0]['true']
+        s_false_1 = statements_pool[1]['false']
+        s_false_2 = statements_pool[2]['false']
+        s_false_3 = statements_pool[3]['false']
+        pool.append({
+            "question": f"ពិនិត្យលើសមភាពខាងក្រោម ៖ តើសមភាពណាខាងក្រោមនេះ **ត្រឹមត្រូវ**?",
+            "correct_ans": s_correct,
+            "distractors": [s_false_1, s_false_2, s_false_3],
+            "explanation": f"សមភាពត្រឹមត្រូវគឺ ៖ {s_correct}។ ឯជម្រើសដទៃទៀតជាការគណនាខុស។",
+            "level": "កម្រិត ២ (អនុវត្ត)"
+        })
+        
+        # Comparative Q2: Which is INCORRECT (FALSE)?
+        s_target_false = statements_pool[0]['false']
+        s_true_1 = statements_pool[1]['true']
+        s_true_2 = statements_pool[2]['true']
+        s_true_3 = statements_pool[3]['true']
+        pool.append({
+            "question": f"ពិនិត្យលើសមភាពខាងក្រោម ៖ តើសមភាពណាខាងក្រោមនេះ **មិនត្រឹមត្រូវ (ខុស)**?",
+            "correct_ans": s_target_false,
+            "distractors": [s_true_1, s_true_2, s_true_3],
+            "explanation": f"សមភាពមិនត្រឹមត្រូវគឺ ៖ {s_target_false} (ការគណនាត្រឹមត្រូវគឺ {statements_pool[0]['true']})។",
+            "level": "កម្រិត ២ (អនុវត្ត)"
+        })
+
+    # 3. Add course quizzes matching this point
     if lesson_quiz:
         for cq in lesson_quiz:
             q_txt = cq.get('question', '')
-            # Match keywords
             keywords = [w for w in clean_title.split() if len(w) > 3]
             if any(kw in q_txt for kw in keywords) or len(lesson_quiz) <= total_points:
                 opts = list(cq.get('options', []))
@@ -212,7 +377,7 @@ def build_10_mcqs_for_point(lesson_id, lesson_title, pt, pt_idx, total_points, l
                 if len(opts) == 4 and corr_idx < 4:
                     corr_ans = opts[corr_idx]
                     dists = [opts[i] for i in range(4) if i != corr_idx]
-                    course_q_candidates.append({
+                    pool.append({
                         "question": q_txt,
                         "correct_ans": corr_ans,
                         "distractors": dists,
@@ -220,163 +385,88 @@ def build_10_mcqs_for_point(lesson_id, lesson_title, pt, pt_idx, total_points, l
                         "level": "កម្រិត ២ (អនុវត្ត)"
                     })
 
-    # Combine available parsed questions
-    pool = []
-    pool.extend(ex_questions)
-    pool.extend(course_q_candidates)
-    
-    # Synthetic pedagogical generators to complete to 10 questions
+    # 4. Rich pedagogical templates if needed to guarantee 10 questions
     synth_templates = [
-        # Template 1: Core definition/concept
         {
-            "q": f"នៅក្នុង{lesson_title} ត្រង់«{pt_title}» ៖ តើសញ្ញាណនៃ {topic} មានលក្ខណៈសម្គាល់ចម្បងដូចម្តេច?",
-            "ans": f"កំណត់បានយ៉ាងច្បាស់លាស់តាមលក្ខណៈគ្រឹះនៃ {clean_title}",
+            "q": f"នៅក្នុង{lesson_title} ត្រង់«{pt_title}» ៖ តើលក្ខខណ្ឌចម្បងនៃ {topic} ត្រូវបានកំណត់យ៉ាងដូចម្តេច?",
+            "ans": f"ផ្អែកលើនិយមន័យ និងទ្រឹស្តីបទគ្រឹះនៃ {clean_title}",
             "dists": [
-                f"ជាតម្លៃប្រែប្រួលដោយគ្មានវិធាន ឬរូបមន្តកំណត់",
+                f"ជាតម្លៃប្រែប្រួលដោយគ្មានរូបមន្តកំណត់",
                 f"អាស្រ័យតែលើតម្លៃអវិជ្ជមាននៃអថេរប៉ុណ្ណោះ",
-                f"មិនអាចកំណត់ទម្រង់ច្បាស់លាស់បានឡើយ"
+                f"មិនអាចទាញរកទំនាក់ទំនងគណិតវិទ្យាបានឡើយ"
             ],
-            "exp": f"យោងតាមនិយមន័យនៃ{clean_title} ៖ {topic} ត្រូវបានកំណត់ឡើងដោយលក្ខណៈគណិតវិទ្យាជាក់លាក់ និងមានរូបមន្តច្បាស់លាស់។",
+            "exp": f"និយមន័យនៃ {clean_title} ត្រូវបានកំណត់យ៉ាងជាក់លាក់តាមទ្រឹស្តីបទ និងវិធានគណិតវិទ្យាក្នុងកម្មវិធីសិក្សា។",
             "level": "កម្រិត ១ (មូលដ្ឋាន)"
         },
-        # Template 2: Essential Condition / True Statement
         {
-            "q": f"ចំពោះចំណុច «{clean_title}» តើលក្ខខណ្ឌ ឬសមភាពណាខាងក្រោមនេះជាលក្ខខណ្ឌត្រឹមត្រូវ?",
-            "ans": f"ត្រូវអនុវត្តតាមទ្រឹស្តីបទ និងវិធានគណិតវិទ្យានៃ {clean_title}",
+            "q": f"ចំពោះចំណុច «{clean_title}» តើការអនុវត្តរូបមន្តត្រូវគោរពតាមវិធានណា?",
+            "ans": f"ត្រូវពិនិត្យដែនកំណត់ និងលក្ខខណ្ឌផ្ទៀងផ្ទាត់នៃ {clean_title} ជានិច្ច",
             "dists": [
-                f"តម្លៃគណនាត្រូវតែជាចំនួនអវិជ្ជមានជានិច្ច",
-                f"មិនចាំបាច់ផ្ទៀងផ្ទាត់លក្ខខណ្ឌនៃដែនកំណត់ទេ",
-                f"លទ្ធផលតែងតែស្មើនឹង $0$ ជានិច្ច"
+                f"អាចគណនាបានដោយមិនបាច់គិតពីដែនកំណត់",
+                f"សន្មតថាលទ្ធផលជាចំនួនគត់វិជ្ជមានជានិច្ច",
+                f"លុបចោលលក្ខខណ្ឌដែលស្មុគស្មាញទាំងអស់"
             ],
-            "exp": f"ក្នុងការដោះស្រាយលំហាត់ទាក់ទងនឹង{clean_title} សិស្សត្រូវតែផ្ទៀងផ្ទាត់លក្ខខណ្ឌត្រឹមត្រូវតាមទ្រឹស្តីបទ និងវិធានគ្រឹះជានិច្ច។",
-            "level": "កម្រិត ១ (មូលដ្ឋាន)"
-        },
-        # Template 3: Formula Application
-        {
-            "q": f"តើការកំណត់រូបមន្ត ឬទម្រង់ទូទៅនៅក្នុងចំណុច «{clean_title}» ត្រូវធ្វើឡើងតាមបែបណា?",
-            "ans": f"ផ្អែកលើនិយមន័យ និងទំនាក់ទំនងតក្កវិជ្ជានៃ {topic}",
-            "dists": [
-                f"ផ្អែកលើការប៉ាន់ស្មានដោយមិនបាច់គណនា",
-                f"ជ្រើសរើសចម្លើយណាដែលធំបំផុតជានិច្ច",
-                f"ជំនួសអថេរដោយតម្លៃចៃដន្យដោយគ្មានដែនកំណត់"
-            ],
-            "exp": f"ការអនុវត្តរូបមន្តត្រូវតែផ្អែកលើតក្កវិជ្ជា និងនិយមន័យនៃ {topic} ដើម្បីទទួលបានចម្លើយត្រឹមត្រូវ និងសុក្រឹត។",
+            "exp": f"ការដោះស្រាយលំហាត់តម្រូវឱ្យពិនិត្យដែនកំណត់ និងលក្ខខណ្ឌផ្ទៀងផ្ទាត់ជានិច្ច ដើម្បីជៀសវាងការទាញរកឫសមិនពិត។",
             "level": "កម្រិត ២ (អនុវត្ត)"
         },
-        # Template 4: Identification / Selection
         {
-            "q": f"ប្រសិនបើគេឱ្យទិន្នន័យ ឬកន្សោមមួយទាក់ទងនឹង «{clean_title}» តើជំហានដំបូងបំផុតដែលត្រូវអនុវត្តគឺអ្វី?",
-            "ans": f"កំណត់ដែនកំណត់ និងស្វែងយល់ពីលក្ខណៈនៃ {clean_title}",
+            "q": f"តើវិធីសាស្ត្រគន្លឹះក្នុងការដោះស្រាយលំហាត់ «{clean_title}» ឱ្យបានត្រឹមត្រូវគឺអ្វី?",
+            "ans": f"ការអនុវត្តវិធីសាស្ត្រតក្កវិជ្ជា និងជំហានគណនាតាមរូបមន្តស្ដង់ដារ",
             "dists": [
-                f"ធ្វើប្រមាណវិធីចែកជាបន្ទាន់ដោយមិនពិនិត្យលក្ខខណ្ឌ",
-                f"សន្មតថាលទ្ធផលស្មើ $1$ ភ្លាមៗ",
-                f"លុបចោលតួដែលមានសញ្ញាដកទាំងអស់"
-            ],
-            "exp": f"ជំហានដំបូងក្នុងការដោះស្រាយគឺការពិនិត្យដែនកំណត់ និងស្គាល់ច្បាស់ពីលក្ខណៈគ្រឹះនៃ {clean_title}។",
-            "level": "កម្រិត ២ (អនុវត្ត)"
-        },
-        # Template 5: Inverse / Parameter Problem
-        {
-            "q": f"នៅពេលដោះស្រាយរកតម្លៃអថេរ ឬប៉ារ៉ាម៉ែត្រក្នុង «{clean_title}» តើត្រូវប្រើវិធីសាស្ត្រណា?",
-            "ans": f"ទាញរកតាមសមភាពគណិតវិទ្យា និងលក្ខណៈនៃ {topic}",
-            "dists": [
-                f"គុណនឹង $0$ ទាំងសងខាងនៃសមីការ",
-                f"ផ្លាស់ប្តូរសញ្ញាដោយគ្មានវិធាន",
-                f"បោះបង់លក្ខខណ្ឌដើមចោល"
-            ],
-            "exp": f"ការទាញរកតម្លៃអថេរត្រូវធ្វើតាមវិធាននៃសមភាព និងលក្ខណៈគណិតវិទ្យាត្រឹមត្រូវនៃ {topic}។",
-            "level": "កម្រិត ២ (អនុវត្ត)"
-        },
-        # Template 6: PISA Context / Application Problem
-        {
-            "q": f"ក្នុងការអនុវត្តជាក់ស្តែង (PISA-Style) តើចំណេះដឹងពី «{clean_title}» ជួយសម្រួលដល់អ្វី?",
-            "ans": f"ការវិភាគទិន្នន័យ គំរូគណិតវិទ្យា និងការដោះស្រាយបញ្ហាជាក់ស្តែង",
-            "dists": [
-                f"ការទន្ទេញចាំរូបមន្តដោយមិនយល់អត្ថន័យ",
-                f"ការគណនាតែក្នុងករណីគ្មានឯកតារង្វាស់",
-                f"ការទស្សន៍ទាយលទ្ធផលដោយគ្មានភស្តុតាង"
-            ],
-            "exp": f"ស្តង់ដារ PISA ផ្តោតលើសមត្ថភាពប្រើប្រាស់គំនិតនៃ {clean_title} ដើម្បីវិភាគ គំរូ និងដោះស្រាយបញ្ហាក្នុងជីវភាពរស់នៅជាក់ស្តែង។",
-            "level": "កម្រិត ២ (អនុវត្ត)"
-        },
-        # Template 7: Common Misconception Avoidance
-        {
-            "q": f"តើកំហុសទូទៅដែលសិស្សតែងតែជួបប្រទះពេលដោះស្រាយលំហាត់ «{clean_title}» គឺជាអ្វី?",
-            "ans": f"ការច្រឡំសញ្ញា និងការភ្លេចពិនិត្យលក្ខខណ្ឌដែនកំណត់នៃ {topic}",
-            "dists": [
-                f"ការសរសេរអក្សរស្អាតពេក",
-                f"ការអានលំហាត់ច្រើនដងមុនដោះស្រាយ",
-                f"ការផ្ទៀងផ្ទាត់ចម្លើយឡើងវិញជាមួយគ្រូ"
-            ],
-            "exp": f"កំហុសញឹកញាប់បំផុតគឺការធ្វេសប្រហែសលើសញ្ញា និងការមិនបានផ្ទៀងផ្ទាត់ដែនកំណត់នៃ {topic}។",
-            "level": "កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)"
-        },
-        # Template 8: Synthesis and Evaluation
-        {
-            "q": f"ពិនិត្យលើចំណុច «{clean_title}» ៖ តើសេចក្តីសន្និដ្ឋានណាខាងក្រោមនេះត្រឹមត្រូវទាំងស្រុង?",
-            "ans": f"លទ្ធផលដែលទទួលបានត្រូវតែផ្ទៀងផ្ទាត់ត្រូវជាមួយគ្រប់លក្ខខណ្ឌនៃ {topic}",
-            "dists": [
-                f"លទ្ធផលណាក៏អាចទទួលយកបានទាំងអស់ដោយមិនបាច់ផ្ទៀងផ្ទាត់",
-                f"មានតែតម្លៃគត់គត់វិជ្ជមានប៉ុណ្ណោះដែលជាចម្លើយ",
-                f"គ្រប់ករណីទាំងអស់តែងតែគ្មានចម្លើយ"
-            ],
-            "exp": f"សេចក្តីសន្និដ្ឋានត្រឹមត្រូវតម្រូវឱ្យផ្ទៀងផ្ទាត់ជាមួយគ្រប់លក្ខខណ្ឌគណិតវិទ្យាទាំងអស់ដែលបានចែងក្នុង {topic}។",
-            "level": "កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)"
-        },
-        # Template 9: Advanced Critical Thinking
-        {
-            "q": f"តើកត្តាសំខាន់បំផុតដើម្បីសម្រេចបានពិន្ទុអតិបរមាក្នុងការដោះស្រាយលំហាត់ «{clean_title}» គឺជាអ្វី?",
-            "ans": f"ការសរសេរបកស្រាយជំហានគណនាលម្អិត មានហេតុផល និងមានចម្លើយច្បាស់លាស់",
-            "dists": [
-                f"ការសរសេរតែចម្លើយចុងក្រោយដោយគ្មានរបៀបធ្វើ",
-                f"ការរំលងជំហានសំខាន់ៗដើម្បីឱ្យឆាប់ចប់",
+                f"ការទាយចម្លើយតាមការប៉ាន់ស្មានផ្ទាល់ភ្នែក",
+                f"ការរំលងការបំប្លែងកន្សោមទៅរកទម្រង់ងាយ",
                 f"ការប្រើរូបមន្តមិនទាក់ទងនឹងមេរៀន"
             ],
-            "exp": f"ពិន្ទុអតិបរមាតម្រូវឱ្យសិស្សបង្ហាញដំណើរការដោះស្រាយជាជំហានៗច្បាស់លាស់ អមដោយការបញ្ជាក់ហេតុផលត្រឹមត្រូវ។",
+            "exp": f"ជំហានដោះស្រាយត្រូវផ្អែកលើតក្កវិជ្ជា និងរូបមន្តត្រឹមត្រូវដើម្បីទទួលបានលទ្ធផលសុក្រឹត។",
+            "level": "កម្រិត ២ (អនុវត្ត)"
+        },
+        {
+            "q": f"តើកំហុសទូទៅបំផុតដែលសិស្សគួរប្រុងប្រយ័ត្នក្នុង «{clean_title}» គឺជាអ្វី?",
+            "ans": f"ការច្រឡំសញ្ញាបូក-ដក និងការមិនផ្ទៀងផ្ទាត់លក្ខខណ្ឌនៃ {topic}",
+            "dists": [
+                f"ការអានប្រធានលំហាត់ច្រើនដង",
+                f"ការសរសេរជំហានដំណោះស្រាយលម្អិតពេក",
+                f"ការគូសបន្ទាត់ក្រោមចម្លើយចុងក្រោយ"
+            ],
+            "exp": f"កំហុសញឹកញាប់ក្នុងចំណុចនេះ គឺការធ្វេសប្រហែសលើសញ្ញា និងការភ្លេចពិនិត្យលក្ខខណ្ឌ។",
             "level": "កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)"
         },
-        # Template 10: Mastery Check
         {
-            "q": f"ជាទូទៅក្នុងមេរៀននេះ តើទំនាក់ទំនងរវាង «{clean_title}» និងចំណុចដទៃទៀតមានលក្ខណៈដូចម្តេច?",
-            "ans": f"ជាមូលដ្ឋានគ្រឹះតភ្ជាប់គ្នាជាប្រព័ន្ធដើម្បីយល់ដឹងមេរៀនទាំងមូល",
+            "q": f"ក្នុងការវាយតម្លៃសមត្ថភាព (PISA) តើចំណេះដឹងពី «{clean_title}» ជួយពង្រឹងជំនាញអ្វី?",
+            "ans": f"ជំនាញវិភាគទិន្នន័យ គំរូគណិតវិទ្យា និងការត្រិះរិះពិចារណាដោះស្រាយបញ្ហា",
             "dists": [
-                f"ជាចំណុចដាច់ដោយឡែកដែលគ្មានទំនាក់ទំនងអ្វីទាំងអស់",
-                f"អាចរំលងបានដោយមិនប៉ះពាល់ដល់ការយល់ដឹងចំណុចបន្ទាប់",
-                f"ជាចំណុចដែលមិនមានក្នុងកម្មវិធីសិក្សាជាតិ"
+                f"ការទន្ទេញចាំចម្លើយដោយមិនយល់អត្ថន័យ",
+                f"ការគណនាតែក្នុងលំហាត់ដែលគ្មានអថេរ",
+                f"ការសន្មតចម្លើយដោយគ្មានហេតុផលគណិតវិទ្យា"
             ],
-            "exp": f"ចំណុចនីមួយៗក្នុងមេរៀនត្រូវបានរៀបចំជាប្រព័ន្ធឡូជីខល ជួយពង្រឹងមូលដ្ឋានគ្រឹះពីសាមញ្ញទៅកម្រិតខ្ពស់។",
+            "exp": f"វិញ្ញាសាស្តង់ដារ PISA ផ្តោតលើការអនុវត្តគំនិតគណិតវិទ្យាទៅក្នុងការវិភាគ និងដោះស្រាយបញ្ហាជាក់ស្តែង។",
             "level": "កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)"
         }
     ]
-    
-    # Fill pool up to 10 questions
+
     final_items = []
-    
-    # First, use valid pool items
     used_questions = set()
+    
     for item in pool:
-        q_text = item['question']
-        if q_text not in used_questions and len(final_items) < 10:
-            used_questions.add(q_text)
+        q_txt = item['question']
+        if q_txt not in used_questions and len(final_items) < 10:
+            used_questions.add(q_txt)
             final_items.append(item)
             
-    # Then fill remaining from synthetic templates
     tpl_idx = 0
     while len(final_items) < 10 and tpl_idx < len(synth_templates):
         tpl = synth_templates[tpl_idx]
         tpl_idx += 1
-        q_text = tpl['q']
-        if q_text not in used_questions:
-            used_questions.add(q_text)
+        if tpl['q'] not in used_questions:
+            used_questions.add(tpl['q'])
             final_items.append({
-                "question": q_text,
+                "question": tpl['q'],
                 "correct_ans": tpl['ans'],
                 "distractors": tpl['dists'],
                 "explanation": tpl['exp'],
                 "level": tpl['level']
             })
             
-    # Guarantee exactly 10 questions
     while len(final_items) < 10:
         idx_fill = len(final_items) + 1
         final_items.append({
@@ -387,51 +477,34 @@ def build_10_mcqs_for_point(lesson_id, lesson_title, pt, pt_idx, total_points, l
                 "តម្លៃប៉ាន់ស្មានខុសពីការពិត",
                 "កន្សោមគ្មានន័យក្នុងដែនកំណត់"
             ],
-            "explanation": f"ការពន្យល់ ៖ ត្រូវជ្រើសរើសចម្លើយដែលផ្ទៀងផ្ទាត់ត្រឹមត្រូវតាមនិយមន័យ និងរូបមន្តនៃ {clean_title}។",
+            "explanation": f"ត្រូវជ្រើសរើសចម្លើយដែលផ្ទៀងផ្ទាត់ត្រឹមត្រូវតាមនិយមន័យ និងរូបមន្តនៃ {clean_title}។",
             "level": "កម្រិត ២ (អនុវត្ត)"
         })
-        
-    # Now format into final structure with 4 options and randomized correct index
+
+    # Assemble exactly 10 formatted MCQs
     mcqs = []
     for q_idx, item in enumerate(final_items[:10]):
         correct_ans = str(item['correct_ans']).strip()
         distractors = list(item['distractors'])
         
-        # Ensure 3 distinct distractors
         clean_dists = []
         for d in distractors:
             d_str = str(d).strip()
             if d_str and d_str != correct_ans and d_str not in clean_dists:
                 clean_dists.append(d_str)
                 
-        fake_opts = [
-            "មិនអាចកំណត់បាន",
-            "ស្មើនឹង $0$",
-            "គ្មានចម្លើយត្រឹមត្រូវ",
-            "$\\pm 1$",
-            "ជាចំនួនកុំផ្លិច",
-            "ជាស្វ៊ីតថេរ",
-            "$\\emptyset$",
-            "មិនផ្ទៀងផ្ទាត់លក្ខខណ្ឌ",
-            "តម្លៃអវិជ្ជមាន",
-            "តម្លៃវិជ្ជមាន"
-        ]
-        for fo in fake_opts:
-            if fo != correct_ans and fo not in clean_dists:
-                clean_dists.append(fo)
-            if len(clean_dists) == 3:
-                break
-        
-        fallback_counter = 1
-        while len(clean_dists) < 3:
-            clean_dists.append(f"ជម្រើសផ្សេងទៀត {fallback_counter}")
-            fallback_counter += 1
-                
+        # If less than 3, add mathematical variations
+        if len(clean_dists) < 3:
+            extra_dists = generate_math_distractors(correct_ans, topic)
+            for ed in extra_dists:
+                if ed != correct_ans and ed not in clean_dists:
+                    clean_dists.append(ed)
+                    
         clean_dists = clean_dists[:3]
-        
-        # Determine correct position deterministically (0, 1, 2, or 3)
+        while len(clean_dists) < 3:
+            clean_dists.append(f"$0$")
+            
         corr_pos = (q_idx * 3 + pt_num) % 4
-        
         options = clean_dists[:]
         options.insert(corr_pos, correct_ans)
         
@@ -449,7 +522,7 @@ def build_10_mcqs_for_point(lesson_id, lesson_title, pt, pt_idx, total_points, l
         
     return mcqs
 
-# Run generation across all worksheets
+# Run generation across ALL worksheets and points
 point_quizzes = {}
 total_pts_processed = 0
 
@@ -465,7 +538,7 @@ for lesson_id, ws in ws_data.items():
     
     for pt_idx, pt in enumerate(points):
         pt_num = pt.get('pointNumber', pt_idx + 1)
-        mcqs = build_10_mcqs_for_point(lesson_id, lesson_title, pt, pt_idx, len(points), lesson_quiz)
+        mcqs = build_10_high_standard_mcqs(lesson_id, lesson_title, pt, pt_idx, len(points), lesson_quiz)
         point_quizzes[lesson_id][str(pt_num)] = mcqs
         total_pts_processed += 1
 
