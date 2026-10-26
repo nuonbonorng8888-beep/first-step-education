@@ -464,6 +464,7 @@
           <h4 class="footer-col-title">សម្រាប់គ្រូ</h4>
           <ul class="footer-links">
             <li><a href="javascript:void(0)" onclick="App.openLoginModal()">ធនធានសម្រាប់គ្រូ</a></li>
+            <li><a href="javascript:void(0)" onclick="App.openTeacherSheetModal()">📊 តារាងពិន្ទុ Excel (Google Sheets)</a></li>
             <li><a href="javascript:void(0)" onclick="App.openWebShareModal()">ប្រើក្នុងបន្ទប់កុំព្យូទ័រ</a></li>
             <li><a href="javascript:void(0)" onclick="App.openWorksheetUnlockModal()">ដោះសោដំណោះស្រាយ</a></li>
             <li><a href="javascript:void(0)" onclick="App.openMobileInstallModal()">ដំឡើងលើទូរស័ព្ទដៃ</a></li>
@@ -1125,6 +1126,146 @@
     </div>
   </div>
 
+  <!-- ================= STUDENT INFO MODAL (ព័ត៌មានសិស្សធ្វើតេស្ត/ប្រឡង) ================= -->
+  <div class="modal-overlay" id="student-info-modal" onclick="if(event.target === this) App.closeStudentInfoModal()">
+    <div class="modal-card" style="max-width: 500px;">
+      <div class="modal-header">
+        <h3 class="modal-title">👨‍🎓 ព័ត៌មានសិស្សធ្វើតេស្ត / ប្រឡង</h3>
+        <button class="btn-icon" onclick="App.closeStudentInfoModal()">✕</button>
+      </div>
+      <div class="modal-body" style="gap: 16px;">
+        <div style="background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.25); border-radius: 12px; padding: 12px 14px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+          💡 សូមបំពេញព័ត៌មានឱ្យបានត្រឹមត្រូវ ដើម្បីឱ្យពិន្ទុតេស្តរបស់អ្នកត្រូវបានបញ្ជូនចូលក្នុងតារាង Excel តាមបន្ទប់ថ្នាក់របស់លោកគ្រូដោយស្វ័យប្រវត្ត (មិនច្រឡំថ្នាក់)។
+        </div>
+
+        <form id="student-info-form" onsubmit="App.saveStudentInfoForm(event)">
+          <div class="form-group" style="margin-bottom: 14px;">
+            <label class="form-label" for="student-name-input">ឈ្មោះពេញសិស្ស ៖ <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="student-name-input" class="form-input" placeholder="ឧទាហរណ៍ ៖ សុខ សាន" required autofocus>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+            <div class="form-group">
+              <label class="form-label" for="student-grade-select">កម្រិតថ្នាក់ ៖ <span style="color:#ef4444;">*</span></label>
+              <select id="student-grade-select" class="form-select" required>
+                <option value="7">ថ្នាក់ទី ៧</option>
+                <option value="8">ថ្នាក់ទី ៨</option>
+                <option value="9">ថ្នាក់ទី ៩</option>
+                <option value="10" selected>ថ្នាក់ទី ១០</option>
+                <option value="11">ថ្នាក់ទី ១១</option>
+                <option value="12">ថ្នាក់ទី ១២</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="student-class-input">បន្ទប់ / ថ្នាក់ ៖ <span style="color:#ef4444;">*</span></label>
+              <input type="text" id="student-class-input" class="form-input" placeholder="ឧ. 10A1, 10A2, 7A..." required style="text-transform: uppercase;">
+              <small style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">កត់ចំណាំ៖ បំបែកសន្លឹកក្នុង Excel តាមថ្នាក់នេះ</small>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 8px;">
+            <label class="form-label" for="student-roll-input">លេខរៀងក្នុងបញ្ជី ឬ អត្តលេខ ៖</label>
+            <input type="text" id="student-roll-input" class="form-input" placeholder="ឧទាហរណ៍ ៖ 15 ឬ STU-2026">
+          </div>
+
+          <div class="modal-footer" style="padding: 16px 0 0 0; margin-top: 14px; border-top: 1px solid var(--border-glass); justify-content: flex-end; gap: 10px;">
+            <button type="button" class="btn btn-secondary" onclick="App.closeStudentInfoModal()">បោះបង់</button>
+            <button type="submit" class="btn btn-primary">💾 រក្សាទុកព័ត៌មាន</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TEACHER GOOGLE SHEET / EXCEL SETTINGS MODAL ================= -->
+  <div class="modal-overlay" id="teacher-sheet-modal" onclick="if(event.target === this) App.closeTeacherSheetModal()">
+    <div class="modal-card" style="max-width: 650px;">
+      <div class="modal-header">
+        <h3 class="modal-title">📊 តារាងពិន្ទុស្វ័យប្រវត្ត (Google Sheets & Excel)</h3>
+        <button class="btn-icon" onclick="App.closeTeacherSheetModal()">✕</button>
+      </div>
+      <div class="modal-body" style="gap: 16px; max-height: 75vh; overflow-y: auto;">
+        <!-- Header Highlight -->
+        <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 14px; display: flex; gap: 12px; align-items: flex-start;">
+          <span style="font-size: 1.8rem; line-height: 1;">⚡</span>
+          <div style="font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6;">
+            <strong style="color: var(--text-primary); font-size: 0.95rem;">ប្រព័ន្ធកត់ត្រាពិន្ទុស្វ័យប្រវត្ត និងបំបែកថ្នាក់ ៖</strong><br>
+            ពេលសិស្សធ្វើតេស្តចប់ ពិន្ទុនឹងលោតចូល Google Sheets ភ្លាមៗ ហើយ Google Sheets នឹងបង្កើត Tab ថ្មីតាមបន្ទប់ថ្នាក់នីមួយៗ (ឧទាហរណ៍ Tab <strong>"10A1"</strong>, <strong>"10A2"</strong>, <strong>"7A"</strong>...) ដោយស្វ័យប្រវត្ត មិនច្រឡំគ្នាឡើយ! លោកគ្រូអាច Download ជា File <strong>Microsoft Excel (.xlsx)</strong> បានគ្រប់ពេល។
+          </div>
+        </div>
+
+        <!-- Webhook URL Configuration Form -->
+        <div class="form-group">
+          <label class="form-label" for="teacher-sheet-url-input">អាសយដ្ឋាន Web App URL (Google Apps Script) ៖</label>
+          <div style="display: flex; gap: 8px;">
+            <input type="url" id="teacher-sheet-url-input" class="form-input" placeholder="https://script.google.com/macros/s/.../exec" style="font-family: monospace; font-size: 0.82rem;">
+            <button class="btn btn-primary" onclick="App.saveTeacherSheetUrl()" style="white-space: nowrap;">💾 រក្សាទុក</button>
+          </div>
+          <small style="color: var(--text-muted); font-size: 0.74rem;">URL នេះនឹងត្រូវបានរក្សាទុកក្នុង Browser របស់លោកគ្រូ និងអាចចែករំលែកទៅសិស្សតាម Link។</small>
+        </div>
+
+        <!-- Connection Test & Status -->
+        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; background: var(--bg-tertiary); padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border-glass);">
+          <div id="teacher-sheet-status-text" style="font-size: 0.82rem; color: var(--text-secondary);">
+            ស្ថានភាព ៖ <span style="font-weight: 600;" id="sheet-status-badge">មិនទាន់កំណត់ URL</span>
+          </div>
+          <button class="btn btn-outline" onclick="App.testSheetConnection()" style="font-size: 0.8rem; padding: 5px 12px;">
+            🧪 តេស្តផ្ញើពិន្ទុសាកល្បង
+          </button>
+        </div>
+
+        <!-- Link Generator for Each Class -->
+        <div style="background: var(--bg-tertiary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 14px;">
+          <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+            🔗 បង្កើត Link សម្រាប់ផ្ញើទៅតាមក្រុម Telegram ថ្នាក់នីមួយៗ ៖
+          </h5>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px;">
+            វាយឈ្មោះបន្ទប់ថ្នាក់ ដើម្បីបង្កើត Link ផ្ទាល់។ សិស្សចុច Link នេះ នឹងជាប់ឈ្មោះថ្នាក់ស្រាប់ មិនបាច់សិស្សជ្រើសរើស ឬវាយបញ្ចូលថ្នាក់ទៀតឡើយ!
+          </p>
+          <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+            <input type="text" id="generator-class-input" class="form-input" placeholder="វាយឈ្មោះថ្នាក់ ឧ. 10A1, 10A2, 7A..." style="max-width: 220px; text-transform: uppercase;">
+            <button class="btn btn-secondary" onclick="App.generateClassShareLink()">🔗 បង្កើត Link</button>
+          </div>
+          <div id="generator-result-box" style="display: none; margin-top: 10px;">
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="generator-link-output" class="form-input" readonly style="font-family: monospace; font-size: 0.78rem; background: var(--bg-primary);">
+              <button class="btn btn-primary" onclick="App.copyGeneratedClassLink()" style="white-space: nowrap;">📋 ចម្លង</button>
+            </div>
+            <span style="font-size: 0.74rem; color: #10b981; margin-top: 4px; display: block;">✓ ផ្ញើ Link នេះចូលក្នុង Group Telegram ថ្នាក់នោះ!</span>
+          </div>
+        </div>
+
+        <!-- Step-by-Step Setup Guide Accordion -->
+        <details style="background: var(--bg-tertiary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px; font-size: 0.84rem; color: var(--text-secondary);">
+          <summary style="font-weight: 700; color: var(--text-primary); cursor: pointer; user-select: none;">
+            📖 របៀបដំឡើង Google Sheets (ចំណាយពេលត្រឹម ៣ នាទី - ឥតគិតថ្លៃ ១០០%)
+          </summary>
+          <div style="margin-top: 12px; line-height: 1.65;">
+            <ol style="margin-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+              <li>បើក <a href="https://sheets.new" target="_blank" style="color: #38bdf8; font-weight: 600;">Google Sheets ថ្មីមួយ (ចុចទីនេះ)</a></li>
+              <li>ដាក់ឈ្មោះ File (ឧ. <em>«ពិន្ទុតេស្តគណិតវិទ្យា - លោកគ្រូ នួន បូណង»</em>)</li>
+              <li>ចុច Menu <strong>Extensions (ផ្នែកបន្ថែម)</strong> ➔ ជ្រើសរើស <strong>Apps Script</strong></li>
+              <li>លុបកូដចាស់ចោលទាំងអស់ រួច <strong>Copy កូដខាងក្រោមនេះបិទភ្ជាប់ (Paste)</strong> ចូល</li>
+              <li>ចុចប៊ូតុង <strong>Deploy (ដាក់ឱ្យប្រើ)</strong> (ពណ៌ខៀវខាងលើស្តាំ) ➔ ជ្រើសរើស <strong>New deployment</strong></li>
+              <li>ត្រង់រូបកង់ធ្មេញ ⚙️ ជ្រើស <strong>Web app</strong></li>
+              <li>ត្រង់ <strong>Execute as</strong>: ជ្រើស <em>Me (គណនីខ្ញុំ)</em> | ត្រង់ <strong>Who has access</strong>: ជ្រើស <em>Anyone (អ្នកណាក៏បាន)</em></li>
+              <li>ចុច <strong>Deploy</strong> ➔ ចុច <strong>Authorize Access</strong> ➔ Copy យក <strong>Web app URL</strong> មកបិទភ្ជាប់ក្នុងប្រអប់ខាងលើជាការស្រេច!</li>
+            </ol>
+            <div style="margin-top: 10px;">
+              <button class="btn btn-outline" onclick="App.copyAppsScriptCode()" style="font-size: 0.78rem; padding: 5px 12px;">
+                📋 ចម្លងកូដ Google Apps Script (Copy Code)
+              </button>
+            </div>
+          </div>
+        </details>
+      </div>
+      <div class="modal-footer" style="justify-content: flex-end;">
+        <button class="btn btn-primary" onclick="App.closeTeacherSheetModal()">បិទផ្ទាំង</button>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Floating Mobile Glass Navigation Dock (Native App Experience) -->
   <nav class="mobile-glass-dock" id="mobile-glass-dock">
@@ -1156,9 +1297,9 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=57"></script>
-  <script src="js/app.js?v=57"></script>
-  <script src="js/visits.js?v=57"></script>
+  <script src="js/storage.js?v=58"></script>
+  <script src="js/app.js?v=58"></script>
+  <script src="js/visits.js?v=58"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {

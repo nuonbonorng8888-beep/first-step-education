@@ -5663,5 +5663,205 @@ body.light-theme .quiz-point-pill:not(.active) .quiz-pill-badge {
   transform: translateY(-1px);
 }
 
+/* ==========================================================
+   Quiz Student Bar & Exam Profile
+   ========================================================== */
+.quiz-student-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 18px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+}
+
+body.light-theme .quiz-student-bar {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.student-bar-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.student-bar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-primary);
+}
+
+.student-bar-item.warning {
+  color: #f59e0b;
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+.student-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  background: rgba(14, 165, 233, 0.12);
+  color: #0284c7;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(14, 165, 233, 0.25);
+}
+
+body.dark-theme .student-tag {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.student-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.student-edit-btn, .teacher-sheet-btn {
+  font-size: 0.8rem !important;
+  padding: 5px 12px !important;
+  border-radius: 8px !important;
+}
+
+/* ==========================================================
+   Quiz Completion Card & Score Submission
+   ========================================================== */
+.quiz-completion-card {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  animation: modalScaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.light-theme .quiz-completion-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+}
+
+.completion-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.completion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.completion-trophy {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.completion-title-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.completion-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.completion-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.completion-score-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 16px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 2px solid #10b981;
+}
+
+.comp-score-num {
+  font-family: var(--font-en);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #10b981;
+  line-height: 1.1;
+}
+
+.comp-score-pct {
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #10b981;
+  opacity: 0.9;
+}
+
+.completion-eval-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+}
+
+.eval-pill {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.eval-pill.eval-excellent strong { color: #10b981; }
+.eval-pill.eval-very-good strong { color: #38bdf8; }
+.eval-pill.eval-good strong { color: #0284c7; }
+.eval-pill.eval-average strong { color: #f59e0b; }
+.eval-pill.eval-needs-work strong { color: #ef4444; }
+
+.completion-student-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px dashed rgba(14, 165, 233, 0.3);
+  border-radius: 10px;
+}
+
+.comp-student-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.86rem;
+  color: var(--text-primary);
+}
+
+
 
 

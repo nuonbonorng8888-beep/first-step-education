@@ -40,8 +40,119 @@ window.App = {
   ],
   mascotMsgIndex: 0,
 
+  appsScriptSourceCode: `/**
+ * WORKSHEET.KH - GOOGLE SHEETS LIVE SCORING ENGINE
+ * រៀបចំដោយ៖ លោកគ្រូ នួន បូណង (Nuon Bonorng) - វិទ្យាល័យព្រះយុគន្ធរ សាលារៀនជំនាន់ថ្មី
+ * មុខងារ៖ ទទួលពិន្ទុតេស្តស្វ័យប្រវត្តតាមបន្ទប់/ថ្នាក់នីមួយៗ (បំបែក Tab ដោយស្វ័យប្រវត្ត មិនច្រឡំថ្នាក់ឡើយ)
+ */
+
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.tryLock(10000); // Wait up to 10s for concurrent submissions
+  
+  try {
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var data = {};
+    
+    if (e && e.postData && e.postData.contents) {
+      try {
+        data = JSON.parse(e.postData.contents);
+      } catch (err) {
+        data = e.parameter;
+      }
+    } else if (e && e.parameter) {
+      data = e.parameter;
+    }
+    
+    // បន្ទប់/ថ្នាក់ជាក់លាក់ (ឧទាហរណ៍៖ 10A1, 10A2, 7A, 11S...)
+    var className = (data.studentClass || "ទូទៅ").trim().toUpperCase();
+    if (!className) className = "ទូទៅ";
+    
+    // ស្វែងរក Sheet តាមឈ្មោះថ្នាក់ បើមិនទាន់មាន វានឹងបង្កើត Tab ថ្មីភ្លាមៗ!
+    var sheet = ss.getSheetByName(className);
+    if (!sheet) {
+      sheet = ss.insertSheet(className);
+      // រៀបចំក្បាលតារាង (Headers)
+      var headers = [
+        "កាលបរិច្ឆេទ & ម៉ោង",
+        "លេខរៀង/អត្តលេខ",
+        "ឈ្មោះសិស្ស",
+        "កម្រិតថ្នាក់",
+        "បន្ទប់/ថ្នាក់",
+        "មេរៀន",
+        "ចំណុចតេស្ត",
+        "ពិន្ទុទទួលបាន",
+        "ពិន្ទុសរុប",
+        "ភាគរយ (%)",
+        "និទ្ទេស/ការវាយតម្លៃ"
+      ];
+      sheet.appendRow(headers);
+      
+      // ចាក់ពណ៌ និងទម្រង់ក្បាលតារាងស្អាត
+      var headerRange = sheet.getRange(1, 1, 1, headers.length);
+      headerRange.setBackground("#1e293b");
+      headerRange.setFontColor("#ffffff");
+      headerRange.setFontWeight("bold");
+      headerRange.setHorizontalAlignment("center");
+      sheet.setFrozenRows(1);
+    }
+    
+    // គណនានិទ្ទេស (Grade evaluation)
+    var pct = parseFloat(data.percentage) || 0;
+    var gradeLevel = "ល្អប្រសើរ";
+    if (pct < 50) gradeLevel = "ខ្សោយ (ត្រូវពង្រឹង)";
+    else if (pct < 65) gradeLevel = "មធ្យម";
+    else if (pct < 80) gradeLevel = "ល្អបង្គួរ";
+    else if (pct < 90) gradeLevel = "ល្អ";
+    else gradeLevel = "ល្អប្រសើរ (ឆ្នើម)";
+
+    // បញ្ចូលទិន្នន័យសិស្សចូលក្នុងតារាងថ្នាក់នោះ
+    var newRow = [
+      data.timestamp || Utilities.formatDate(new Date(), "Asia/Phnom_Penh", "yyyy-MM-dd HH:mm:ss"),
+      data.rollNumber || "",
+      data.studentName || "",
+      data.grade ? ("ថ្នាក់ទី " + data.grade) : "",
+      className,
+      data.lessonTitle || "",
+      data.pointTitle || "",
+      data.score !== undefined ? data.score : 0,
+      data.total !== undefined ? data.total : 0,
+      data.percentage || "0%",
+      gradeLevel
+    ];
+    
+    sheet.appendRow(newRow);
+    
+    // Auto-align & format rows
+    var lastRow = sheet.getLastRow();
+    sheet.getRange(lastRow, 1, 1, newRow.length).setVerticalAlignment("middle");
+    sheet.getRange(lastRow, 1).setHorizontalAlignment("center");
+    sheet.getRange(lastRow, 2).setHorizontalAlignment("center");
+    sheet.getRange(lastRow, 4, 1, 2).setHorizontalAlignment("center");
+    sheet.getRange(lastRow, 8, 1, 4).setHorizontalAlignment("center");
+    
+    return ContentService
+      .createTextOutput(JSON.stringify({ "status": "success", "message": "ពិន្ទុត្រូវបានកត់ត្រាក្នុងថ្នាក់ " + className }))
+      .setMimeType(ContentService.MimeType.JSON);
+      
+  } catch (error) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ "status": "error", "message": error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function doGet(e) {
+  return ContentService
+    .createTextOutput(JSON.stringify({ "status": "online", "message": "Worksheet.Kh Scoring Webhook is running!" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}`,
+
   async init() {
     try { this.initTheme(); } catch (e) { console.warn(e); }
+    try { this.initUrlParams(); } catch (e) { console.warn(e); }
     try { this.checkAdminAuth(); } catch (e) { console.warn(e); }
     try { this.initPlayer(); } catch (e) { console.warn(e); }
     try { this.initGreetingAndWisdom(); } catch (e) { console.warn(e); }
@@ -746,6 +857,8 @@ window.App = {
   retakeQuiz() {
     this.quizScore = 0;
     this.answeredQuiz = {};
+    const compCard = document.getElementById('quiz-completion-card');
+    if (compCard) compCard.remove();
     this.renderQuizTab();
     this.showToast('បានរៀបចំសំណួរឡើងវិញរួចរាល់! សូមសាកល្បងម្តងទៀត 🎯', 'info');
   },
@@ -1667,8 +1780,42 @@ window.App = {
     this.answeredQuiz = {};
     const totalQ = quiz.length;
     const hasPoints = points && points.length > 0;
+    const studentInfo = this.getStudentInfo();
+    const hasStudent = !!(studentInfo.name && studentInfo.classRoom);
 
     quizContainer.innerHTML = `
+      <!-- Student Profile & Class Bar -->
+      <div class="quiz-student-bar">
+        <div class="student-bar-info">
+          ${hasStudent ? `
+            <div class="student-bar-item">
+              <span class="student-icon">👨‍🎓</span>
+              <span class="student-name">សិស្ស ៖ <strong>${studentInfo.name}</strong></span>
+            </div>
+            <div class="student-bar-item">
+              <span class="student-tag">ថ្នាក់ <strong>${studentInfo.classRoom}</strong></span>
+            </div>
+            ${studentInfo.rollNo ? `
+              <div class="student-bar-item">
+                <span class="student-tag">លេខ <strong>#${studentInfo.rollNo}</strong></span>
+              </div>
+            ` : ''}
+          ` : `
+            <div class="student-bar-item warning" onclick="App.openStudentInfoModal()" style="cursor:pointer;" title="ចុចដើម្បីបំពេញឈ្មោះ និងថ្នាក់">
+              <span class="student-icon">⚠️</span>
+              <span>សូមចុះឈ្មោះសិស្ស និងបន្ទប់ថ្នាក់ (ឧ. 10A1, 10A2...) ដើម្បីឱ្យពិន្ទុបញ្ជូនទៅលោកគ្រូស្វ័យប្រវត្ត</span>
+            </div>
+          `}
+        </div>
+        <div class="student-bar-actions">
+          <button class="btn btn-sm btn-outline student-edit-btn" onclick="App.openStudentInfoModal()" title="កែប្រែឈ្មោះ និងថ្នាក់សិស្ស">
+            ${hasStudent ? '✏️ កែប្រែ' : '📝 បំពេញឈ្មោះ & ថ្នាក់'}
+          </button>
+          <button class="btn btn-sm btn-outline teacher-sheet-btn" onclick="App.openTeacherSheetModal()" title="ការកំណត់តារាងពិន្ទុ Google Sheets / Excel សម្រាប់គ្រូ">
+            📊 តារាងពិន្ទុ Excel
+          </button>
+        </div>
+      </div>
       ${hasPoints ? `
         <!-- Section Points Selector Bar (MCQ Points Selector) -->
         <div class="quiz-points-selector-bar">
@@ -1975,6 +2122,202 @@ window.App = {
     if (scoreEl) {
       scoreEl.textContent = `${this.quizScore} / ${totalQ}`;
     }
+
+    // Check if all questions are answered
+    if (Object.keys(this.answeredQuiz).length === totalQ) {
+      this.showQuizCompletionBanner(totalQ);
+    }
+  },
+
+  showQuizCompletionBanner(totalQ) {
+    let completionCard = document.getElementById('quiz-completion-card');
+    if (!completionCard) {
+      const qContainer = document.getElementById('quiz-container');
+      if (!qContainer) return;
+      completionCard = document.createElement('div');
+      completionCard.id = 'quiz-completion-card';
+      completionCard.className = 'quiz-completion-card';
+      qContainer.appendChild(completionCard);
+    }
+
+    const studentInfo = this.getStudentInfo();
+    const pct = Math.round((this.quizScore / totalQ) * 100);
+    let evalText = 'ល្អប្រសើរ (ឆ្នើម) 🌟';
+    let evalClass = 'eval-excellent';
+    if (pct < 50) {
+      evalText = 'ត្រូវព្យាយាមបន្ថែមទៀត 💪';
+      evalClass = 'eval-needs-work';
+    } else if (pct < 65) {
+      evalText = 'មធ្យម (អាចធ្វើបានល្អជាងនេះ) 👍';
+      evalClass = 'eval-average';
+    } else if (pct < 80) {
+      evalText = 'ល្អបង្គួរ 👏';
+      evalClass = 'eval-good';
+    } else if (pct < 90) {
+      evalText = 'ល្អណាស់ 🎉';
+      evalClass = 'eval-very-good';
+    }
+
+    completionCard.innerHTML = `
+      <div class="completion-inner">
+        <div class="completion-header">
+          <div class="completion-trophy">🏆</div>
+          <div class="completion-title-col">
+            <h3 class="completion-title">លទ្ធផលនៃការធ្វើតេស្តសរុប</h3>
+            <p class="completion-sub">អ្នកបានឆ្លើយចប់សព្វគ្រប់ទាំង ${totalQ} សំណួរ!</p>
+          </div>
+          <div class="completion-score-badge ${evalClass}">
+            <span class="comp-score-num">${this.quizScore} / ${totalQ}</span>
+            <span class="comp-score-pct">${pct}%</span>
+          </div>
+        </div>
+
+        <div class="completion-eval-row">
+          <div class="eval-pill ${evalClass}">
+            <span>ការវាយតម្លៃ ៖ <strong>${evalText}</strong></span>
+          </div>
+          <button class="quiz-retake-btn" onclick="App.retakeQuiz()">
+            🔄 ធ្វើតេស្តឡើងវិញ
+          </button>
+        </div>
+
+        <!-- Student Identification Info -->
+        <div class="completion-student-strip">
+          <div class="comp-student-meta">
+            ${studentInfo.name ? `
+              <span>👨‍🎓 សិស្ស ៖ <strong>${studentInfo.name}</strong></span>
+              <span>🏫 ថ្នាក់ ៖ <strong>${studentInfo.classRoom || ('ទី ' + studentInfo.grade)}</strong></span>
+              ${studentInfo.rollNo ? `<span>🔢 លេខ ៖ <strong>#${studentInfo.rollNo}</strong></span>` : ''}
+            ` : `
+              <span style="color:#ef4444; font-weight:600;">⚠️ មិនទាន់មានឈ្មោះ និងថ្នាក់ទេ! សូមចុច [បំពេញឈ្មោះ]</span>
+            `}
+          </div>
+          <button class="btn btn-sm btn-outline" onclick="App.openStudentInfoModal()" style="font-size:0.8rem;">
+            ✏️ ${studentInfo.name ? 'កែប្រែឈ្មោះ/ថ្នាក់' : 'បំពេញឈ្មោះ និងថ្នាក់'}
+          </button>
+        </div>
+
+        <!-- Submission Status Box -->
+        <div id="quiz-submission-status" style="margin-top: 12px;"></div>
+      </div>
+    `;
+
+    completionCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    this.submitCompletedQuiz();
+  },
+
+  async submitCompletedQuiz() {
+    const studentInfo = this.getStudentInfo();
+    const quizList = this.currentActiveQuizList || [];
+    const totalQ = quizList.length;
+    if (totalQ === 0) return;
+
+    const score = this.quizScore;
+    const pctNum = Math.round((score / totalQ) * 100);
+    const percentage = `${pctNum}%`;
+
+    const statusCard = document.getElementById('quiz-submission-status');
+
+    if (!studentInfo.name || !studentInfo.classRoom) {
+      if (statusCard) {
+        statusCard.innerHTML = `
+          <div style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 10px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <div style="font-size: 0.85rem; color: #f59e0b;">
+              ⚠️ ដើម្បីឱ្យពិន្ទុនេះត្រូវបានកត់ត្រាក្នុងតារាង Excel របស់លោកគ្រូ សូមចុច [បំពេញឈ្មោះ & ថ្នាក់]
+            </div>
+            <button class="btn btn-primary" onclick="App.openStudentInfoModal()" style="font-size: 0.8rem; padding: 6px 14px;">
+              📝 បំពេញឈ្មោះ & ថ្នាក់
+            </button>
+          </div>
+        `;
+      }
+      this.showToast('សូមបំពេញឈ្មោះ និងថ្នាក់របស់អ្នក ដើម្បីបញ្ជូនពិន្ទុ!', 'warning');
+      return;
+    }
+
+    if (statusCard) {
+      statusCard.innerHTML = `
+        <div style="display:flex; align-items:center; gap:10px; color:#38bdf8; padding: 8px 0;">
+          <span style="display:inline-block; width:16px; height:16px; border:2px solid #38bdf8; border-top-color:transparent; border-radius:50%; animation:spin 0.8s linear infinite;"></span>
+          <span style="font-size: 0.86rem;">កំពុងបញ្ជូនពិន្ទុទៅកាន់តារាង Excel ថ្នាក់ <strong>${studentInfo.classRoom}</strong>...</span>
+        </div>
+      `;
+    }
+
+    const lessonTitle = this.currentLesson ? (this.currentLesson.title || this.currentLesson.name || '') : '';
+    let pointTitle = 'គ្រប់ចំណុចចម្រុះ';
+    if (this.activeQuizPoint > 0) {
+      pointTitle = `ចំណុចទី ${this.activeQuizPoint}`;
+    }
+
+    const now = new Date();
+    const dateFormatted = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+    const payload = {
+      timestamp: dateFormatted,
+      studentName: studentInfo.name,
+      studentClass: studentInfo.classRoom,
+      rollNumber: studentInfo.rollNo || '-',
+      grade: studentInfo.grade || (this.currentLesson?.grade || '10'),
+      lessonTitle: lessonTitle,
+      pointTitle: pointTitle,
+      score: score,
+      total: totalQ,
+      percentage: percentage
+    };
+
+    // Save to local student history
+    try {
+      const history = JSON.parse(localStorage.getItem('worksheet_student_history') || '[]');
+      history.unshift(payload);
+      if (history.length > 50) history.pop();
+      localStorage.setItem('worksheet_student_history', JSON.stringify(history));
+    } catch(e) {}
+
+    const sheetUrl = this.getTeacherSheetUrl();
+    if (sheetUrl) {
+      try {
+        await fetch(sheetUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+        if (statusCard) {
+          statusCard.innerHTML = `
+            <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 10px; padding: 12px 16px; color: #10b981; font-weight: 600; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span>✅</span>
+                <span>បានបញ្ជូនពិន្ទុចូលក្នុងសន្លឹកថ្នាក់ <strong>«${studentInfo.classRoom}»</strong> របស់លោកគ្រូរួចរាល់!</span>
+              </div>
+              <span style="font-size: 0.76rem; opacity: 0.85;">${payload.timestamp}</span>
+            </div>
+          `;
+        }
+        this.showToast(`✅ ពិន្ទុរបស់អ្នក (${score}/${totalQ}) ត្រូវបានបញ្ជូនចូលក្នុងតារាងថ្នាក់ ${studentInfo.classRoom} រួចរាល់!`, 'success');
+      } catch (err) {
+        if (statusCard) {
+          statusCard.innerHTML = `
+            <div style="background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 10px; padding: 10px 14px; color: #f59e0b;">
+              ⚠️ មិនអាចបញ្ជូនទៅកាន់ Sheets បានទេ ប៉ុន្តែបានរក្សាទុកក្នុងទូរស័ព្ទរួចរាល់!
+            </div>
+          `;
+        }
+      }
+    } else {
+      if (statusCard) {
+        statusCard.innerHTML = `
+          <div style="background: var(--bg-tertiary); border: 1px solid var(--border-glass); border-radius: 10px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <div style="font-size: 0.85rem; color: var(--text-secondary);">
+              💾 បានរក្សាទុកក្នុងឧបករណ៍នេះរួចរាល់ (ពិន្ទុ <strong>${score}/${totalQ}</strong>)
+            </div>
+            <button class="btn btn-outline" onclick="App.openTeacherSheetModal()" style="font-size: 0.78rem; padding: 5px 12px;">
+              📊 ភ្ជាប់ Google Sheets សម្រាប់គ្រូ
+            </button>
+          </div>
+        `;
+      }
+    }
   },
 
   renderOverviewTab() {
@@ -2037,6 +2380,265 @@ window.App = {
       });
     } else {
       this.showToast('Link: ' + link, 'info');
+    }
+  },
+
+  copyAppsScriptCode() {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(this.appsScriptSourceCode).then(() => {
+        this.showToast('✅ បានចម្លងកូដ Google Apps Script រួចរាល់! អាចបិទភ្ជាប់ក្នុង Extensions > Apps Script បានភ្លាមៗ', 'success');
+      }).catch(() => {
+        this.copyLinkFallback(this.appsScriptSourceCode);
+      });
+    } else {
+      this.copyLinkFallback(this.appsScriptSourceCode);
+    }
+  },
+
+  copyLinkFallback(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      this.showToast('✅ បានចម្លងកូដរួចរាល់!', 'success');
+    } catch(e) {
+      this.showToast('សូមចម្លងកូដដោយផ្ទាល់', 'info');
+    }
+    ta.remove();
+  },
+
+  initUrlParams() {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sheetParam = urlParams.get('sheet') || urlParams.get('sheetUrl');
+      if (sheetParam) {
+        this.setTeacherSheetUrl(sheetParam);
+      }
+      const classParam = urlParams.get('class') || urlParams.get('room');
+      if (classParam) {
+        const studentInfo = this.getStudentInfo();
+        studentInfo.classRoom = classParam.trim().toUpperCase();
+        this.saveStudentInfo(studentInfo);
+      }
+      const gradeParam = urlParams.get('grade');
+      if (gradeParam) {
+        this.currentGrade = gradeParam;
+      }
+    } catch (e) {
+      console.warn('URL params error:', e);
+    }
+  },
+
+  getStudentInfo() {
+    try {
+      const raw = localStorage.getItem('worksheet_student_info');
+      if (raw) return JSON.parse(raw);
+    } catch(e) {}
+    return {
+      name: '',
+      grade: this.currentGrade !== 'all' ? this.currentGrade : '10',
+      classRoom: '',
+      rollNo: ''
+    };
+  },
+
+  saveStudentInfo(info) {
+    try {
+      localStorage.setItem('worksheet_student_info', JSON.stringify(info));
+    } catch(e) {}
+  },
+
+  getTeacherSheetUrl() {
+    return localStorage.getItem('worksheet_teacher_sheet_url') || '';
+  },
+
+  setTeacherSheetUrl(url) {
+    localStorage.setItem('worksheet_teacher_sheet_url', url.trim());
+  },
+
+  openStudentInfoModal() {
+    const info = this.getStudentInfo();
+    const nameInp = document.getElementById('student-name-input');
+    const gradeSel = document.getElementById('student-grade-select');
+    const classInp = document.getElementById('student-class-input');
+    const rollInp = document.getElementById('student-roll-input');
+    
+    if (nameInp) nameInp.value = info.name || '';
+    if (gradeSel) gradeSel.value = info.grade || (this.currentGrade !== 'all' ? this.currentGrade : '10');
+    if (classInp) classInp.value = info.classRoom || '';
+    if (rollInp) rollInp.value = info.rollNo || '';
+
+    const modal = document.getElementById('student-info-modal');
+    if (modal) modal.classList.add('active');
+    setTimeout(() => {
+      if (!info.name) nameInp?.focus();
+      else if (!info.classRoom) classInp?.focus();
+    }, 200);
+  },
+
+  closeStudentInfoModal() {
+    const modal = document.getElementById('student-info-modal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  saveStudentInfoForm(e) {
+    if (e) e.preventDefault();
+    const name = document.getElementById('student-name-input')?.value.trim() || '';
+    const grade = document.getElementById('student-grade-select')?.value || '10';
+    const classRoom = (document.getElementById('student-class-input')?.value.trim() || '').toUpperCase();
+    const rollNo = document.getElementById('student-roll-input')?.value.trim() || '';
+
+    if (!name) {
+      this.showToast('សូមបញ្ចូលឈ្មោះសិស្ស!', 'warning');
+      return;
+    }
+    if (!classRoom) {
+      this.showToast('សូមបញ្ចូលបន្ទប់/ថ្នាក់ជាក់លាក់ (ឧ. 10A1, 10A2...)!', 'warning');
+      return;
+    }
+
+    const info = { name, grade, classRoom, rollNo };
+    this.saveStudentInfo(info);
+    this.closeStudentInfoModal();
+    this.showToast(`បានរក្សាទុកព័ត៌មានសិស្ស ៖ ${name} (${classRoom}) រួចរាល់! 🎉`, 'success');
+    
+    // Re-render quiz tab if active so badge updates
+    const quizContainer = document.getElementById('quiz-container');
+    if (quizContainer) {
+      this.renderQuizTab();
+      const quizList = this.currentActiveQuizList || [];
+      if (quizList.length > 0 && Object.keys(this.answeredQuiz).length === quizList.length) {
+        this.submitCompletedQuiz();
+      }
+    }
+  },
+
+  openTeacherSheetModal() {
+    const urlInp = document.getElementById('teacher-sheet-url-input');
+    const url = this.getTeacherSheetUrl();
+    if (urlInp) urlInp.value = url;
+    
+    const statusBadge = document.getElementById('sheet-status-badge');
+    if (statusBadge) {
+      if (url) {
+        statusBadge.textContent = '✓ បានកំណត់ URL រួចរាល់';
+        statusBadge.style.color = '#10b981';
+      } else {
+        statusBadge.textContent = 'មិនទាន់កំណត់ URL';
+        statusBadge.style.color = 'var(--text-muted)';
+      }
+    }
+
+    const studentInfo = this.getStudentInfo();
+    const genClassInp = document.getElementById('generator-class-input');
+    if (genClassInp && studentInfo.classRoom) {
+      genClassInp.value = studentInfo.classRoom;
+    }
+
+    const modal = document.getElementById('teacher-sheet-modal');
+    if (modal) modal.classList.add('active');
+  },
+
+  closeTeacherSheetModal() {
+    const modal = document.getElementById('teacher-sheet-modal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  saveTeacherSheetUrl() {
+    const urlInp = document.getElementById('teacher-sheet-url-input');
+    const url = (urlInp?.value || '').trim();
+    this.setTeacherSheetUrl(url);
+    this.showToast('បានរក្សាទុក URL តារាងពិន្ទុរួចរាល់! 🎉', 'success');
+    const statusBadge = document.getElementById('sheet-status-badge');
+    if (statusBadge) {
+      if (url) {
+        statusBadge.textContent = '✓ បានកំណត់ URL រួចរាល់';
+        statusBadge.style.color = '#10b981';
+      } else {
+        statusBadge.textContent = 'មិនទាន់កំណត់ URL';
+        statusBadge.style.color = 'var(--text-muted)';
+      }
+    }
+  },
+
+  async testSheetConnection() {
+    const url = this.getTeacherSheetUrl();
+    if (!url) {
+      this.showToast('សូមបញ្ចូល និងរក្សាទុក Web App URL ជាមុនសិន!', 'warning');
+      return;
+    }
+    const statusBadge = document.getElementById('sheet-status-badge');
+    if (statusBadge) {
+      statusBadge.textContent = '⏳ កំពុងតេស្តផ្ញើទិន្នន័យ...';
+      statusBadge.style.color = '#38bdf8';
+    }
+    this.showToast('⏳ កំពុងផ្ញើទិន្នន័យតេស្តទៅកាន់ Google Sheets...', 'info');
+
+    const testPayload = {
+      timestamp: new Date().toLocaleString('km-KH'),
+      studentName: 'សិស្សតេស្តសាកល្បង',
+      studentClass: 'TEST_CLASS',
+      rollNumber: '00',
+      grade: '10',
+      lessonTitle: 'តេស្តប្រព័ន្ធស្វ័យប្រវត្ត',
+      pointTitle: 'សាកល្បងការតភ្ជាប់',
+      score: 10,
+      total: 10,
+      percentage: '100%'
+    };
+
+    try {
+      await fetch(url, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(testPayload)
+      });
+      if (statusBadge) {
+        statusBadge.textContent = '✅ តភ្ជាប់ជោគជ័យ (សាកល្បងបានជោគជ័យ)';
+        statusBadge.style.color = '#10b981';
+      }
+      this.showToast('✅ បានផ្ញើតេស្តជោគជ័យ! សូមពិនិត្យមើល Tab ឈ្មោះ "TEST_CLASS" ក្នុង Google Sheets របស់លោកគ្រូ 🎉', 'success');
+    } catch (err) {
+      if (statusBadge) {
+        statusBadge.textContent = '❌ បរាជ័យក្នុងការតភ្ជាប់';
+        statusBadge.style.color = '#ef4444';
+      }
+      this.showToast('❌ ការតភ្ជាប់បរាជ័យ៖ ' + err.message, 'error');
+    }
+  },
+
+  generateClassShareLink() {
+    const classInp = document.getElementById('generator-class-input');
+    const cls = (classInp?.value || '').trim().toUpperCase();
+    if (!cls) {
+      this.showToast('សូមបញ្ចូលឈ្មោះថ្នាក់ (ឧ. 10A1, 10A2...)!', 'warning');
+      return;
+    }
+    const baseUrl = window.location.origin + window.location.pathname;
+    const sheetUrl = encodeURIComponent(this.getTeacherSheetUrl());
+    const grade = this.currentGrade !== 'all' ? this.currentGrade : '10';
+    let shareUrl = `${baseUrl}?grade=${grade}&class=${encodeURIComponent(cls)}`;
+    if (sheetUrl) {
+      shareUrl += `&sheet=${sheetUrl}`;
+    }
+
+    const resBox = document.getElementById('generator-result-box');
+    const outInp = document.getElementById('generator-link-output');
+    if (outInp) outInp.value = shareUrl;
+    if (resBox) resBox.style.display = 'block';
+    this.showToast(`បានបង្កើត Link សម្រាប់ថ្នាក់ ${cls} រួចរាល់!`, 'success');
+  },
+
+  copyGeneratedClassLink() {
+    const outInp = document.getElementById('generator-link-output');
+    if (outInp && outInp.value) {
+      this.copyLink(outInp.value);
+      this.showToast('📋 បានចម្លង Link ថ្នាក់រួចរាល់! អាចផ្ញើចូល Telegram ថ្នាក់បានភ្លាមៗ', 'success');
     }
   },
 
