@@ -1216,23 +1216,62 @@
         </div>
 
         <!-- Link Generator for Each Class -->
-        <div style="background: var(--bg-tertiary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 14px;">
-          <h5 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
-            🔗 បង្កើត Link សម្រាប់ផ្ញើទៅតាមក្រុម Telegram ថ្នាក់នីមួយៗ ៖
+        <div style="background: var(--bg-tertiary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 16px;">
+          <h5 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">
+            🔗 បង្កើត Link ប្រឡង/តេស្តផ្ញើទៅតាមក្រុម Telegram ថ្នាក់នីមួយៗ ៖
           </h5>
-          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px;">
-            វាយឈ្មោះបន្ទប់ថ្នាក់ ដើម្បីបង្កើត Link ផ្ទាល់។ សិស្សចុច Link នេះ នឹងជាប់ឈ្មោះថ្នាក់ស្រាប់ មិនបាច់សិស្សជ្រើសរើស ឬវាយបញ្ចូលថ្នាក់ទៀតឡើយ!
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.5;">
+            ពេលសិស្សចុច Link នេះ <strong>នឹងបើកចូលធ្វើតេស្តមេរៀននេះភ្លាមៗតែម្តង</strong> (Direct to Quiz) និងជាប់ឈ្មោះថ្នាក់ស្រាប់ មិនចាំបាច់សិស្សស្វែងរកមេរៀនទៀតឡើយ!
           </p>
-          <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-            <input type="text" id="generator-class-input" class="form-input" placeholder="វាយឈ្មោះថ្នាក់ ឧ. 10A1, 10A2, 7A..." style="max-width: 220px; text-transform: uppercase;">
-            <button class="btn btn-secondary" onclick="App.generateClassShareLink()">🔗 បង្កើត Link</button>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+            <div class="form-group">
+              <label class="form-label" for="generator-class-input">បន្ទប់ / ថ្នាក់ ៖ <span style="color:#ef4444;">*</span></label>
+              <input type="text" id="generator-class-input" class="form-input" placeholder="ឧ. 12B, 10A1, 7A..." oninput="App.onGeneratorClassInput()" style="text-transform: uppercase;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="generator-grade-select">កម្រិតថ្នាក់ ៖</label>
+              <select id="generator-grade-select" class="form-select" onchange="App.populateGeneratorLessons()">
+                <option value="7">ថ្នាក់ទី ៧</option>
+                <option value="8">ថ្នាក់ទី ៨</option>
+                <option value="9">ថ្នាក់ទី ៩</option>
+                <option value="10">ថ្នាក់ទី ១០</option>
+                <option value="11">ថ្នាក់ទី ១១</option>
+                <option value="12" selected>ថ្នាក់ទី ១២</option>
+              </select>
+            </div>
           </div>
-          <div id="generator-result-box" style="display: none; margin-top: 10px;">
+
+          <div class="form-group" style="margin-bottom: 10px;">
+            <label class="form-label" for="generator-lesson-select">មេរៀនដែលត្រូវធ្វើតេស្ត (Test Lesson) ៖</label>
+            <select id="generator-lesson-select" class="form-select" onchange="App.onGeneratorLessonChange()">
+              <!-- Dynamically populated -->
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 12px;" id="generator-point-group">
+            <label class="form-label" for="generator-point-select">ចំណុចតេស្ត ៖</label>
+            <select id="generator-point-select" class="form-select">
+              <option value="0">🌟 គ្រប់ចំណុចចម្រុះ (១០ សំណួរពេញមេរៀន)</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary" onclick="App.generateClassShareLink()" style="width: 100%;">
+            🔗 បង្កើត Link ប្រឡងសម្រាប់ថ្នាក់នេះ
+          </button>
+
+          <div id="generator-result-box" style="display: none; margin-top: 14px; background: var(--bg-primary); padding: 12px; border-radius: 10px; border: 1px solid var(--border-glass);">
+            <div style="font-size: 0.82rem; font-weight: 700; color: #10b981; margin-bottom: 6px;">
+              🎯 Link ប្រឡងផ្ទាល់ (សិស្សចុចបើកចូលធ្វើតេស្តភ្លាម) ៖
+            </div>
             <div style="display: flex; gap: 8px;">
-              <input type="text" id="generator-link-output" class="form-input" readonly style="font-family: monospace; font-size: 0.78rem; background: var(--bg-primary);">
+              <input type="text" id="generator-link-output" class="form-input" readonly style="font-family: monospace; font-size: 0.78rem; background: var(--bg-secondary);">
               <button class="btn btn-primary" onclick="App.copyGeneratedClassLink()" style="white-space: nowrap;">📋 ចម្លង</button>
             </div>
-            <span style="font-size: 0.74rem; color: #10b981; margin-top: 4px; display: block;">✓ ផ្ញើ Link នេះចូលក្នុង Group Telegram ថ្នាក់នោះ!</span>
+            <span style="font-size: 0.76rem; color: #38bdf8; margin-top: 6px; display: block;">
+              ✓ ផ្ញើ Link នេះចូលក្នុង Group Telegram ថ្នាក់នោះ — សិស្សចុច Link នេះ នឹងបើកចូលធ្វើតេស្តភ្លាមៗ មិនបាច់រុករកឡើយ!
+            </span>
           </div>
         </div>
 
@@ -1297,9 +1336,9 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=58"></script>
-  <script src="js/app.js?v=58"></script>
-  <script src="js/visits.js?v=58"></script>
+  <script src="js/storage.js?v=59"></script>
+  <script src="js/app.js?v=59"></script>
+  <script src="js/visits.js?v=59"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {

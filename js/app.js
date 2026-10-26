@@ -163,6 +163,11 @@ function doGet(e) {
     } catch (e) {
       console.error('Error loading courses:', e);
     }
+    try {
+      await this.handleUrlDirectExamRouting();
+    } catch (e) {
+      console.warn('URL direct exam error:', e);
+    }
     // Load worksheets in the background non-blocking for ultra-fast startup
     this.loadWorksheets().catch(e => console.warn('Worksheets background load:', e));
   },
@@ -1811,6 +1816,9 @@ function doGet(e) {
           <button class="btn btn-sm btn-outline student-edit-btn" onclick="App.openStudentInfoModal()" title="កែប្រែឈ្មោះ និងថ្នាក់សិស្ស">
             ${hasStudent ? '✏️ កែប្រែ' : '📝 បំពេញឈ្មោះ & ថ្នាក់'}
           </button>
+          <button class="btn btn-sm btn-primary teacher-share-btn" onclick="App.openTeacherSheetModal(true)" title="ចែករំលែក Link តេស្តមេរៀននេះទៅកាន់ថ្នាក់">
+            🔗 ចែករំលែក Link តេស្តនេះ
+          </button>
           <button class="btn btn-sm btn-outline teacher-sheet-btn" onclick="App.openTeacherSheetModal()" title="ការកំណត់តារាងពិន្ទុ Google Sheets / Excel សម្រាប់គ្រូ">
             📊 តារាងពិន្ទុ Excel
           </button>
@@ -2517,7 +2525,171 @@ function doGet(e) {
     }
   },
 
-  openTeacherSheetModal() {
+  async handleUrlDirectExamRouting() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const classParam = (urlParams.get('class') || urlParams.get('room') || '').trim();
+    let courseParam = urlParams.get('course') || urlParams.get('courseId');
+    let lessonParam = urlParams.get('lesson') || urlParams.get('lessonId');
+    const tabParam = urlParams.get('tab') || (classParam ? 'quiz' : '');
+    const pointParam = parseInt(urlParams.get('point') || '0', 10);
+    const testMode = urlParams.get('test');
+    let gradeParam = urlParams.get('grade');
+
+    if (testMode === 'diagnostic') {
+      this.openDiagnosticModal();
+      return;
+    }
+
+    // Auto-detect grade if given in class name (e.g. 12B -> 12, 10A1 -> 10, 7A -> 7)
+    if (classParam) {
+      const match = classParam.match(/^(12|11|10|9|8|7)/);
+      if (match) {
+        gradeParam = match[1];
+        this.currentGrade = gradeParam;
+      }
+    }
+
+    // If teacher shared a link that only had class (or grade) without course/lesson:
+    if ((classParam || gradeParam) && (!courseParam || !lessonParam)) {
+      const targetGrade = gradeParam || '10';
+      const gradeCourses = this.courses.filter(c => {
+        const cGrade = String(c.grade || '');
+        return cGrade.includes(targetGrade) || (c.id && c.id.includes(`g${targetGrade}`));
+      });
+
+      if (gradeCourses.length > 0) {
+        const targetCourse = gradeCourses[0];
+        courseParam = targetCourse.id;
+        for (const ch of targetCourse.chapters || []) {
+          if (ch.lessons && ch.lessons.length > 0) {
+            lessonParam = ch.lessons[0].id;
+            break;
+          }
+        }
+      }
+    }
+
+    if (courseParam && lessonParam) {
+      this.openCourse(courseParam);
+      this.selectLesson(lessonParam);
+      if (pointParam > 0) {
+        this.selectQuizPoint(pointParam);
+      }
+      if (tabParam === 'quiz' || classParam) {
+        this.switchTab('quiz');
+      }
+
+      // Smooth scroll to the quiz
+      setTimeout(() => {
+        const qContainer = document.getElementById('quiz-container');
+        if (qContainer) {
+          qContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 400);
+
+      // Check student profile
+      const studentInfo = this.getStudentInfo();
+      if (!studentInfo.name) {
+        setTimeout(() => {
+          this.openStudentInfoModal();
+          this.showToast(`សួស្តីប្អូនៗ! សូមបញ្ចូលឈ្មោះដើម្បីចាប់ផ្តើមធ្វើតេស្តថ្នាក់ ${studentInfo.classRoom || classParam} 🎯`, 'info');
+        }, 600);
+      } else {
+        this.showToast(`ស្វាគមន៍ ${studentInfo.name} មកកាន់ការធ្វើតេស្តថ្នាក់ ${studentInfo.classRoom || classParam} 🎯`, 'success');
+      }
+    } else if (gradeParam && gradeParam !== 'all') {
+      this.currentGrade = gradeParam;
+      this.filterByGrade(gradeParam);
+    }
+  },
+
+  populateGeneratorLessons() {
+    const gradeSelect = document.getElementById('generator-grade-select');
+    const lessonSelect = document.getElementById('generator-lesson-select');
+    if (!gradeSelect || !lessonSelect) return;
+
+    const grade = gradeSelect.value;
+    const courses = this.courses.filter(c => {
+      const gStr = String(c.grade || '');
+      return gStr.includes(grade) || (c.id && c.id.includes(`g${grade}`));
+    });
+
+    let optionsHtml = '';
+    // If currently viewing a lesson from this grade, add as first option
+    if (this.currentLesson && this.currentCourse) {
+      const curCourseGrade = String(this.currentCourse.grade || '');
+      if (curCourseGrade.includes(grade) || (this.currentCourse.id && this.currentCourse.id.includes(`g${grade}`))) {
+        optionsHtml += `<option value="${this.currentCourse.id}:::${this.currentLesson.id}" selected>⭐ [មេរៀនកំពុងបើក] ${this.currentLesson.title}</option>`;
+      }
+    }
+
+    courses.forEach(c => {
+      (c.chapters || []).forEach(ch => {
+        (ch.lessons || []).forEach(l => {
+          if (this.currentLesson && this.currentLesson.id === l.id && optionsHtml.includes(l.id)) return;
+          optionsHtml += `<option value="${c.id}:::${l.id}">${l.title}</option>`;
+        });
+      });
+    });
+
+    if (!optionsHtml) {
+      optionsHtml = '<option value="">មិនទាន់មានមេរៀន</option>';
+    }
+
+    lessonSelect.innerHTML = optionsHtml;
+    this.onGeneratorLessonChange();
+  },
+
+  onGeneratorClassInput() {
+    const classInp = document.getElementById('generator-class-input');
+    const gradeSelect = document.getElementById('generator-grade-select');
+    if (!classInp || !gradeSelect) return;
+
+    const val = classInp.value.trim();
+    const match = val.match(/^(12|11|10|9|8|7)/);
+    if (match) {
+      gradeSelect.value = match[1];
+      this.populateGeneratorLessons();
+    }
+  },
+
+  onGeneratorLessonChange() {
+    const lessonSelect = document.getElementById('generator-lesson-select');
+    const pointSelect = document.getElementById('generator-point-select');
+    if (!lessonSelect || !pointSelect) return;
+
+    const val = lessonSelect.value;
+    if (!val || !val.includes(':::')) {
+      pointSelect.innerHTML = '<option value="0">🌟 គ្រប់ចំណុចចម្រុះ (១០ សំណួរ)</option>';
+      return;
+    }
+
+    const [courseId, lessonId] = val.split(':::');
+    const course = this.courses.find(c => c.id === courseId);
+    let targetLesson = null;
+    for (const ch of course?.chapters || []) {
+      const l = ch.lessons?.find(x => x.id === lessonId);
+      if (l) { targetLesson = l; break; }
+    }
+
+    const ws = (this.worksheets || this.worksheetsG11)?.[lessonId];
+    const points = (ws && Array.isArray(ws.points) && ws.points.length > 0)
+      ? ws.points
+      : (targetLesson?.points || []);
+
+    let ptsHtml = '<option value="0">🌟 គ្រប់ចំណុចចម្រុះ (១០ សំណួរពេញមេរៀន)</option>';
+    if (points && points.length > 0) {
+      points.forEach((p, idx) => {
+        const pNum = p.pointNumber || p.number || (idx + 1);
+        const rawTitle = p.pointTitle || p.title || `ចំណុចទី ${pNum}`;
+        const cleanTitle = rawTitle.replace(/^ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+\s*[៖:]?\s*/, '');
+        ptsHtml += `<option value="${pNum}">ចំណុចទី ${pNum} ៖ ${cleanTitle.slice(0, 32)}</option>`;
+      });
+    }
+    pointSelect.innerHTML = ptsHtml;
+  },
+
+  openTeacherSheetModal(preselectCurrent = false) {
     const urlInp = document.getElementById('teacher-sheet-url-input');
     const url = this.getTeacherSheetUrl();
     if (urlInp) urlInp.value = url;
@@ -2539,8 +2711,28 @@ function doGet(e) {
       genClassInp.value = studentInfo.classRoom;
     }
 
+    const gradeSelect = document.getElementById('generator-grade-select');
+    if (gradeSelect) {
+      if (this.currentCourse) {
+        const match = String(this.currentCourse.grade || this.currentCourse.id || '').match(/(12|11|10|9|8|7)/);
+        if (match) gradeSelect.value = match[1];
+      } else if (studentInfo.grade) {
+        gradeSelect.value = studentInfo.grade;
+      }
+    }
+
+    this.populateGeneratorLessons();
+
     const modal = document.getElementById('teacher-sheet-modal');
     if (modal) modal.classList.add('active');
+
+    if (preselectCurrent) {
+      setTimeout(() => {
+        const genClassInp = document.getElementById('generator-class-input');
+        genClassInp?.focus();
+        genClassInp?.select();
+      }, 200);
+    }
   },
 
   closeTeacherSheetModal() {
@@ -2614,15 +2806,36 @@ function doGet(e) {
 
   generateClassShareLink() {
     const classInp = document.getElementById('generator-class-input');
+    const gradeSelect = document.getElementById('generator-grade-select');
+    const lessonSelect = document.getElementById('generator-lesson-select');
+    const pointSelect = document.getElementById('generator-point-select');
+
     const cls = (classInp?.value || '').trim().toUpperCase();
     if (!cls) {
-      this.showToast('សូមបញ្ចូលឈ្មោះថ្នាក់ (ឧ. 10A1, 10A2...)!', 'warning');
+      this.showToast('សូមបញ្ចូលឈ្មោះថ្នាក់ (ឧ. 12B, 10A1...)!', 'warning');
+      classInp?.focus();
       return;
     }
+
+    const grade = gradeSelect?.value || '12';
+    const lessonVal = lessonSelect?.value || '';
+    const point = pointSelect?.value || '0';
+
     const baseUrl = window.location.origin + window.location.pathname;
     const sheetUrl = encodeURIComponent(this.getTeacherSheetUrl());
-    const grade = this.currentGrade !== 'all' ? this.currentGrade : '10';
-    let shareUrl = `${baseUrl}?grade=${grade}&class=${encodeURIComponent(cls)}`;
+
+    let shareUrl = `${baseUrl}?class=${encodeURIComponent(cls)}&grade=${grade}`;
+
+    if (lessonVal && lessonVal.includes(':::')) {
+      const [courseId, lessonId] = lessonVal.split(':::');
+      shareUrl += `&course=${encodeURIComponent(courseId)}&lesson=${encodeURIComponent(lessonId)}&tab=quiz`;
+      if (point && point !== '0') {
+        shareUrl += `&point=${point}`;
+      }
+    } else {
+      shareUrl += `&tab=quiz`;
+    }
+
     if (sheetUrl) {
       shareUrl += `&sheet=${sheetUrl}`;
     }
@@ -2631,7 +2844,7 @@ function doGet(e) {
     const outInp = document.getElementById('generator-link-output');
     if (outInp) outInp.value = shareUrl;
     if (resBox) resBox.style.display = 'block';
-    this.showToast(`បានបង្កើត Link សម្រាប់ថ្នាក់ ${cls} រួចរាល់!`, 'success');
+    this.showToast(`បានបង្កើត Link ប្រឡងសម្រាប់ថ្នាក់ ${cls} រួចរាល់! 🎯`, 'success');
   },
 
   copyGeneratedClassLink() {
