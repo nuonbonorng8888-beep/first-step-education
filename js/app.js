@@ -16,6 +16,9 @@ window.App = {
   answeredQuiz: {},
   worksheets: {},
   worksheetsG11: {},
+  pointQuizzes: {},
+  activeQuizPoint: 0,
+  currentActiveQuizList: [],
   teacherUnlocked: false,
   activeWorksheetPoint: 0,
 
@@ -53,6 +56,11 @@ window.App = {
       await this.loadWorksheets();
     } catch (e) {
       console.error('Error loading worksheets:', e);
+    }
+    try {
+      await this.loadPointQuizzes();
+    } catch (e) {
+      console.error('Error loading point quizzes:', e);
     }
   },
 
@@ -293,14 +301,7 @@ window.App = {
   },
 
   initPlayer() {
-    try {
-      const container = document.getElementById('experiment-stage-container') || document.getElementById('video-container');
-      if (window.Math3D && container) {
-        window.Math3D.init(container);
-      }
-    } catch (e) {
-      console.warn('initPlayer error:', e);
-    }
+    // Experiments removed for ultra-smooth performance and zero CPU/GPU overhead
   },
 
   async loadCourses() {
@@ -443,7 +444,6 @@ window.App = {
     const playerView = document.getElementById('player-view');
     playerView.classList.add('active');
     playerView.style.display = 'block';
-    if (window.Math3D) setTimeout(() => window.Math3D.resize(), 50);
 
     // Update breadcrumbs
     const bcCourse = document.getElementById('bc-course');
@@ -513,14 +513,9 @@ window.App = {
     if (titleEl) titleEl.textContent = targetLesson.title;
     if (chEl) chEl.textContent = targetChapter?.title || 'ជំពូកទូទៅ';
 
-    // Load 3D Math Explainer & Simulation Studio
-    if (window.Math3D) {
-      window.Math3D.loadLesson(targetLesson, this.currentCourse);
-      setTimeout(() => window.Math3D.resize(), 60);
-    }
-
-    // Reset active worksheet point to first point
+    // Reset active points for worksheet and quiz
     this.activeWorksheetPoint = 0;
+    this.activeQuizPoint = 0;
 
     // Update Tabs
     this.renderMaterialsTab();
@@ -555,7 +550,7 @@ window.App = {
             <div class="lesson-item-info">
               <span class="lesson-item-title">${lesson.title}</span>
               <div class="lesson-item-meta">
-                <span>🔬 ពិសោធន៍ 3D</span>
+                <span>📝 សន្លឹកកិច្ចការ & តេស្ត</span>
                 ${fileCount > 0 ? `<span>📄 ${fileCount} PDF</span>` : ''}
               </div>
             </div>
@@ -731,8 +726,36 @@ window.App = {
   async forceSyncWorksheets() {
     this.showToast('កំពុងទាញយកទិន្នន័យសន្លឹកកិច្ចការថ្មីបំផុត...', 'info');
     await this.loadWorksheets(true);
+    await this.loadPointQuizzes(true);
     this.renderWorksheetTab();
-    this.showToast('បានធ្វើបច្ចុប្បន្នភាពសន្លឹកកិច្ចការរួចរាល់!', 'success');
+    this.renderQuizTab();
+    this.showToast('បានធ្វើបច្ចុប្បន្នភាពសន្លឹកកិច្ចការ & តេស្តរួចរាល់!', 'success');
+  },
+
+  async loadPointQuizzes(forceRefresh = false) {
+    try {
+      const cacheBust = `?v=${Date.now()}`;
+      const res = await fetch(`data/point_quizzes.json${cacheBust}`, { cache: 'no-store' });
+      if (res.ok) {
+        this.pointQuizzes = await res.json();
+      }
+    } catch (e) {
+      console.warn('Point quizzes load warning:', e);
+    }
+  },
+
+  selectQuizPoint(pointNum) {
+    this.activeQuizPoint = pointNum;
+    this.quizScore = 0;
+    this.answeredQuiz = {};
+    this.renderQuizTab();
+  },
+
+  retakeQuiz() {
+    this.quizScore = 0;
+    this.answeredQuiz = {};
+    this.renderQuizTab();
+    this.showToast('បានរៀបចំសំណួរឡើងវិញរួចរាល់! សូមសាកល្បងម្តងទៀត 🎯', 'info');
   },
 
   renderWorksheetTab() {
@@ -1183,7 +1206,50 @@ window.App = {
     const quizContainer = document.getElementById('quiz-container');
     if (!quizContainer || !this.currentLesson) return;
 
-    const quiz = this.currentLesson.quiz || [];
+    const ws = (this.worksheets || this.worksheetsG11)?.[this.currentLesson.id];
+    const points = (ws && Array.isArray(ws.points) && ws.points.length > 0) 
+      ? ws.points 
+      : (this.currentLesson.points || []);
+    
+    const lessonPQuizzes = this.pointQuizzes?.[this.currentLesson.id] || {};
+    
+    // Determine active quiz questions
+    let quiz = [];
+    let currentPointTitle = '';
+    
+    if (this.activeQuizPoint > 0) {
+      // Specific point selected: exactly 10 questions for that point!
+      quiz = lessonPQuizzes[String(this.activeQuizPoint)] || [];
+      const ptObj = points.find(p => (p.pointNumber || p.number) === this.activeQuizPoint) || points[this.activeQuizPoint - 1];
+      currentPointTitle = ptObj ? (ptObj.pointTitle || ptObj.title || `ចំណុចទី ${this.activeQuizPoint}`) : `ចំណុចទី ${this.activeQuizPoint}`;
+    } else {
+      // "All points" (0) selected: take balanced set of 10 questions across points
+      const ptsKeys = Object.keys(lessonPQuizzes).sort((a,b) => parseInt(a) - parseInt(b));
+      if (ptsKeys.length > 0) {
+        const perPt = Math.max(1, Math.floor(10 / ptsKeys.length));
+        ptsKeys.forEach(k => {
+          const list = lessonPQuizzes[k] || [];
+          quiz.push(...list.slice(0, perPt));
+        });
+        if (quiz.length < 10 && lessonPQuizzes[ptsKeys[0]]) {
+          for (const q of lessonPQuizzes[ptsKeys[0]]) {
+            if (quiz.length >= 10) break;
+            if (!quiz.some(existing => existing.id === q.id && existing.pointNumber === q.pointNumber)) {
+              quiz.push(q);
+            }
+          }
+        }
+        quiz = quiz.slice(0, 10);
+      } else {
+        quiz = this.currentLesson.quiz || [];
+      }
+      currentPointTitle = 'គ្រប់ចំណុចចម្រុះនៃមេរៀន (All Points)';
+    }
+
+    if (!quiz || quiz.length === 0) {
+      quiz = this.currentLesson.quiz || [];
+    }
+
     if (quiz.length === 0) {
       quizContainer.innerHTML = `
         <div style="text-align: center; padding: 40px 20px; color: var(--text-muted);">
@@ -1195,60 +1261,110 @@ window.App = {
       return;
     }
 
+    this.currentActiveQuizList = quiz;
     this.quizScore = 0;
     this.answeredQuiz = {};
     const totalQ = quiz.length;
+    const hasPoints = points && points.length > 0;
 
     quizContainer.innerHTML = `
+      ${hasPoints ? `
+        <!-- Section Points Selector Bar (MCQ Points Selector) -->
+        <div class="quiz-points-selector-bar">
+          <div class="quiz-points-header">
+            <div class="quiz-points-header-left">
+              <span class="quiz-points-icon">🎯</span>
+              <span class="quiz-points-label">កម្រងសំណួរតេស្ត MCQ តាមចំណុចមេរៀន (១០ លំហាត់ក្នុងមួយចំណុច) ៖</span>
+            </div>
+            <span class="quiz-points-badge">សរុប ${points.length} ចំណុច (${points.length * 10} សំណួរ)</span>
+          </div>
+          <div class="quiz-points-track">
+            <button class="quiz-point-pill ${this.activeQuizPoint === 0 ? 'active' : ''}" 
+                    onclick="App.selectQuizPoint(0)">
+              <span class="quiz-pill-num">🌟</span>
+              <span class="quiz-pill-title">គ្រប់ចំណុចចម្រុះ (${totalQ} សំណួរ)</span>
+            </button>
+            ${points.map((p, pIdx) => {
+              const pNum = p.pointNumber || p.number || (pIdx + 1);
+              const rawTitle = p.pointTitle || p.title || `ចំណុចទី ${pNum}`;
+              const cleanTitle = rawTitle.replace(/^ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+\s*[៖:]?\s*/, '');
+              const isActive = this.activeQuizPoint === pNum;
+              return `
+                <button class="quiz-point-pill ${isActive ? 'active' : ''}" 
+                        onclick="App.selectQuizPoint(${pNum})"
+                        title="${rawTitle}">
+                  <span class="quiz-pill-num">ចំណុច ${pNum}</span>
+                  <span class="quiz-pill-title">${cleanTitle}</span>
+                  <span class="quiz-pill-badge">១០ លំហាត់</span>
+                </button>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      ` : ''}
+
       <div class="quiz-arena-header">
         <div class="arena-title-col">
           <div class="arena-kicker">
             <span class="arena-icon-badge">🎯</span>
-            <span class="arena-kicker-text">លំហាត់អនុវត្តស្តង់ដារ PISA • ${this.currentLesson.title}</span>
+            <span class="arena-kicker-text">${currentPointTitle} • ស្តង់ដារ PISA</span>
           </div>
-          <div class="arena-hint">សូមជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ រួចផ្ទៀងផ្ទាត់ការពន្យល់លម្អិត</div>
+          <div class="arena-hint">សូមជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ រួចផ្ទៀងផ្ទាត់ការពន្យល់លម្អិតពីលោកគ្រូ</div>
         </div>
-        <div class="arena-score-box">
-          <div class="arena-score-val" id="quiz-live-score">0 / ${totalQ}</div>
-          <div class="arena-score-lbl">ពិន្ទុរបស់អ្នក</div>
+        <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+          <button class="quiz-retake-btn" onclick="App.retakeQuiz()" title="កំណត់សំណួរឡើងវិញដើម្បីអនុវត្តម្តងទៀត">
+            🔄 ធ្វើតេស្តឡើងវិញ
+          </button>
+          <div class="arena-score-box">
+            <div class="arena-score-val" id="quiz-live-score">0 / ${totalQ}</div>
+            <div class="arena-score-lbl">ពិន្ទុរបស់អ្នក</div>
+          </div>
         </div>
       </div>
 
       <div class="quiz-questions-list">
-        ${quiz.map((q, qIndex) => `
-          <div class="quiz-card" data-q-index="${qIndex}">
-            <div class="quiz-card-header">
-              <div class="quiz-q-pill">
-                <span class="q-pill-dot"></span>
-                <span class="q-pill-text">សំណួរទី ${qIndex + 1} នៃ ${totalQ}</span>
-              </div>
-              <span class="quiz-status-pill" id="quiz-status-${qIndex}">មិនទាន់ឆ្លើយ</span>
-            </div>
+        ${quiz.map((q, qIndex) => {
+          let lvlClass = 'lvl-easy';
+          let lvlLabel = q.level || 'កម្រិត ១ (មូលដ្ឋាន)';
+          if (lvlLabel.includes('២') || lvlLabel.includes('អនុវត្ត')) lvlClass = 'lvl-med';
+          else if (lvlLabel.includes('៣') || lvlLabel.includes('ខ្ពស់')) lvlClass = 'lvl-hard';
 
-            <div class="quiz-question-box">
-              <h4 class="quiz-question">${q.question}</h4>
-            </div>
-
-            <div class="quiz-options">
-              ${q.options.map((opt, optIndex) => `
-                <div class="quiz-opt" onclick="App.checkQuizAnswer(${qIndex}, ${optIndex}, this)" role="button" tabindex="0">
-                  <div class="opt-badge">${String.fromCharCode(65 + optIndex)}</div>
-                  <div class="opt-content">${opt}</div>
+          return `
+            <div class="quiz-card" data-q-index="${qIndex}">
+              <div class="quiz-card-header">
+                <div class="quiz-q-pill">
+                  <span class="q-pill-dot"></span>
+                  <span class="q-pill-text">សំណួរទី ${qIndex + 1} នៃ ${totalQ}</span>
+                  <span class="quiz-level-pill ${lvlClass}">${lvlLabel}</span>
                 </div>
-              `).join('')}
-            </div>
+                <span class="quiz-status-pill" id="quiz-status-${qIndex}">មិនទាន់ឆ្លើយ</span>
+              </div>
 
-            <div class="quiz-explanation" id="quiz-exp-${qIndex}">
-              <div class="exp-header">
-                <span class="exp-icon">👨‍🏫</span>
-                <span class="exp-title">ការពន្យល់លម្អិតពីលោកគ្រូ ៖</span>
+              <div class="quiz-question-box">
+                <h4 class="quiz-question">${q.question}</h4>
               </div>
-              <div class="exp-body">
-                ${q.explanation || 'ចម្លើយត្រឹមត្រូវ!'}
+
+              <div class="quiz-options">
+                ${q.options.map((opt, optIndex) => `
+                  <div class="quiz-opt" onclick="App.checkQuizAnswer(${qIndex}, ${optIndex}, this)" role="button" tabindex="0">
+                    <div class="opt-badge">${String.fromCharCode(65 + optIndex)}</div>
+                    <div class="opt-content">${opt}</div>
+                  </div>
+                `).join('')}
+              </div>
+
+              <div class="quiz-explanation" id="quiz-exp-${qIndex}">
+                <div class="exp-header">
+                  <span class="exp-icon">👨‍🏫</span>
+                  <span class="exp-title">ការពន្យល់លម្អិតពីលោកគ្រូ ៖</span>
+                </div>
+                <div class="exp-body">
+                  ${q.explanation || 'ចម្លើយត្រឹមត្រូវ!'}
+                </div>
               </div>
             </div>
-          </div>
-        `).join('')}
+          `;
+        }).join('')}
       </div>
     `;
 
@@ -1412,7 +1528,8 @@ window.App = {
   },
 
   checkQuizAnswer(qIndex, selectedOptIndex, element) {
-    const quiz = this.currentLesson?.quiz?.[qIndex];
+    const quizList = this.currentActiveQuizList || this.currentLesson?.quiz || [];
+    const quiz = quizList[qIndex];
     if (!quiz || this.answeredQuiz[qIndex]) return;
 
     this.answeredQuiz[qIndex] = true;
@@ -1423,7 +1540,7 @@ window.App = {
 
     allOptions.forEach(opt => opt.style.pointerEvents = 'none');
 
-    const totalQ = this.currentLesson.quiz.length;
+    const totalQ = quizList.length;
 
     if (selectedOptIndex === quiz.correct) {
       element.classList.add('correct');
@@ -1439,7 +1556,9 @@ window.App = {
       this.showToast('អស្ចារ្យណាស់! ចម្លើយត្រឹមត្រូវ 🎉', 'success');
     } else {
       element.classList.add('wrong');
-      allOptions[quiz.correct].classList.add('correct');
+      if (allOptions[quiz.correct]) {
+        allOptions[quiz.correct].classList.add('correct');
+      }
       if (statusPill) {
         statusPill.textContent = '✕ មិនត្រឹមត្រូវ';
         statusPill.className = 'quiz-status-pill wrong';
