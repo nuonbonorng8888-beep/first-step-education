@@ -38,14 +38,22 @@ window.App = {
   mascotMsgIndex: 0,
 
   async init() {
-    this.initTheme();
-    this.checkAdminAuth();
-    this.initPlayer();
-    this.initGreetingAndWisdom();
-    this.updateResumeBanner();
-    this.bindGlobalEvents();
-    await this.loadCourses();
-    await this.loadWorksheets();
+    try { this.initTheme(); } catch (e) { console.warn(e); }
+    try { this.checkAdminAuth(); } catch (e) { console.warn(e); }
+    try { this.initPlayer(); } catch (e) { console.warn(e); }
+    try { this.initGreetingAndWisdom(); } catch (e) { console.warn(e); }
+    try { this.updateResumeBanner(); } catch (e) { console.warn(e); }
+    try { this.bindGlobalEvents(); } catch (e) { console.warn(e); }
+    try {
+      await this.loadCourses();
+    } catch (e) {
+      console.error('Error loading courses:', e);
+    }
+    try {
+      await this.loadWorksheets();
+    } catch (e) {
+      console.error('Error loading worksheets:', e);
+    }
   },
 
   initGreetingAndWisdom() {
@@ -285,9 +293,13 @@ window.App = {
   },
 
   initPlayer() {
-    const container = document.getElementById('experiment-stage-container') || document.getElementById('video-container');
-    if (window.Math3D && container) {
-      window.Math3D.init(container);
+    try {
+      const container = document.getElementById('experiment-stage-container') || document.getElementById('video-container');
+      if (window.Math3D && container) {
+        window.Math3D.init(container);
+      }
+    } catch (e) {
+      console.warn('initPlayer error:', e);
     }
   },
 

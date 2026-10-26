@@ -14,6 +14,24 @@
 (function(window) {
   'use strict';
 
+  function safeRoundRect(ctx, x, y, w, h, radii) {
+    if (!radii) radii = 0;
+    let r = typeof radii === 'number' ? [radii, radii, radii, radii] : radii;
+    if (!Array.isArray(r)) r = [0, 0, 0, 0];
+    const r0 = r[0] || 0, r1 = r[1] || 0, r2 = r[2] || 0, r3 = r[3] || 0;
+    ctx.beginPath();
+    ctx.moveTo(x + r0, y);
+    ctx.lineTo(x + w - r1, y);
+    ctx.quadraticCurveTo(x + w, y, x + w, y + r1);
+    ctx.lineTo(x + w, y + h - r2);
+    ctx.quadraticCurveTo(x + w, y + h, x + w - r2, y + h);
+    ctx.lineTo(x + r3, y + h);
+    ctx.quadraticCurveTo(x, y + h, x, y + h - r3);
+    ctx.lineTo(x, y + r0);
+    ctx.quadraticCurveTo(x, y, x + r0, y);
+    ctx.closePath();
+  }
+
   class GeometricConstructionEngine {
     constructor() {
       this.container = null;
@@ -24,6 +42,8 @@
       // Playback State
       this.currentModuleId = 'segment_bisector';
       this.currentStepIndex = 0;
+      this.activePointIndex = 0;
+      this.activeStepIndex = 0;
       this.isPlaying = false;
       this.playSpeed = 1.0;
       this.stepProgress = 1.0; // 0.0 -> 1.0 for active step animation
@@ -58,6 +78,12 @@
 
       // Registered Modules Catalog
       this.modules = this.initModules();
+
+      // Initialize default points early
+      const defaultMod = this.modules[this.currentModuleId];
+      if (defaultMod && defaultMod.initPoints) {
+        this.points = defaultMod.initPoints(800, 420);
+      }
     }
 
     /**
@@ -67,10 +93,24 @@
       if (!containerEl) return;
       this.container = containerEl;
       this.setupDOM();
+
+      const mod = this.modules[this.currentModuleId] || this.modules['segment_bisector'];
+      this.points = mod.initPoints(800, 420);
+
       this.setupCanvas();
       this.setupEvents();
       this.setModule(this.currentModuleId);
       this.startLoop();
+    }
+
+    selectPoint(idx) {
+      this.activePointIndex = idx;
+      this.activeStepIndex = idx;
+      this.jumpToStep(idx);
+    }
+
+    resetCamera() {
+      this.resetConstruction();
     }
 
     setupDOM() {
@@ -250,8 +290,8 @@
     resize() {
       if (!this.canvas || !this.canvas.parentElement) return;
       const rect = this.canvas.parentElement.getBoundingClientRect();
-      const width = rect.width || 800;
-      const height = Math.max(380, Math.min(520, window.innerHeight * 0.5));
+      const width = rect.width > 50 ? rect.width : (this.container && this.container.clientWidth > 50 ? this.container.clientWidth : 800);
+      const height = rect.height > 50 ? rect.height : Math.max(380, Math.min(520, window.innerHeight * 0.5));
 
       this.dpr = window.devicePixelRatio || 1;
       this.canvas.width = width * this.dpr;
@@ -263,7 +303,9 @@
         this.ctx.setTransform(1, 0, 0, 1, 0, 0);
         this.ctx.scale(this.dpr, this.dpr);
       }
-      this.render();
+      if (this.points && Object.keys(this.points).length > 0 && width > 50) {
+        this.render();
+      }
     }
 
     setupEvents() {
@@ -647,8 +689,17 @@
     render() {
       if (!this.ctx || !this.canvas) return;
       const ctx = this.ctx;
-      const w = this.canvas.clientWidth;
-      const h = this.canvas.clientHeight;
+      const w = this.canvas.clientWidth || 800;
+      const h = this.canvas.clientHeight || 420;
+
+      if (w === 0 || h === 0) return;
+
+      const mod = this.modules[this.currentModuleId];
+      if (!this.points || Object.keys(this.points).length === 0) {
+        if (mod && mod.initPoints) {
+          this.points = mod.initPoints(w, h);
+        }
+      }
 
       ctx.clearRect(0, 0, w, h);
 
@@ -658,15 +709,20 @@
       }
 
       // 2. Dispatch Module Drawing
-      const mod = this.modules[this.currentModuleId];
-      if (mod) {
-        mod.draw(ctx, w, h, this.points, this.currentStepIndex, this.stepProgress, this);
+      if (mod && mod.draw) {
+        try {
+          mod.draw(ctx, w, h, this.points, this.currentStepIndex, this.stepProgress, this);
+        } catch (err) {
+          console.warn('Module draw error:', err);
+        }
       }
 
       // 3. Draw Anchor Points on top
       if (this.currentModuleId !== 'free_board' && this.currentModuleId !== 'solid_3d') {
-        for (const [id, pt] of Object.entries(this.points)) {
-          this.drawPoint(ctx, pt.x, pt.y, pt.label || id, pt.color || '#38bdf8', id === this.hoveredPointId, pt.draggable);
+        for (const [id, pt] of Object.entries(this.points || {})) {
+          if (pt && typeof pt.x === 'number' && typeof pt.y === 'number') {
+            this.drawPoint(ctx, pt.x, pt.y, pt.label || id, pt.color || '#38bdf8', id === this.hoveredPointId, pt.draggable);
+          }
         }
       }
     }
@@ -771,8 +827,7 @@
       ctx.shadowColor = 'rgba(0, 0, 0, 0.35)';
       ctx.shadowBlur = 12;
 
-      ctx.beginPath();
-      ctx.roundRect(0, -width, length, width, 6);
+      safeRoundRect(ctx, 0, -width, length, width, 6);
       ctx.fill();
       ctx.shadowColor = 'transparent';
       ctx.stroke();
@@ -932,8 +987,7 @@
       ctx.fillStyle = '#94a3b8';
       ctx.fillRect(-5, -82, 10, 8);
       ctx.fillStyle = '#fb7185';
-      ctx.beginPath();
-      ctx.roundRect(-5, -94, 10, 12, [4, 4, 0, 0]);
+      safeRoundRect(ctx, -5, -94, 10, 12, [4, 4, 0, 0]);
       ctx.fill();
 
       ctx.restore();
@@ -1140,6 +1194,7 @@
             </ol>
           `,
           draw(ctx, w, h, pts, stepIdx, progress) {
+            if (!pts || !pts.A || !pts.B) return;
             const A = pts.A;
             const B = pts.B;
             const dx = B.x - A.x;
@@ -1318,6 +1373,7 @@
             </ol>
           `,
           draw(ctx, w, h, pts, stepIdx, progress) {
+            if (!pts || !pts.O || !pts.X || !pts.Y) return;
             const O = pts.O;
             const X = pts.X;
             const Y = pts.Y;
@@ -1473,6 +1529,7 @@
           pitfallsHtml: `<p>កុំរំកិលគន្លឹះដែកឈានពេលលើកចេញពី $AB$ មកកាន់ $A'$។</p>`,
           practiceHtml: `<p>គូសអង្កត់ប្រវែង $5.5\\text{ cm}$ រួចចម្លងវាចំនួន ៣ ដងតៗគ្នាលើបន្ទាត់តែមួយ។</p>`,
           draw(ctx, w, h, pts, stepIdx, progress) {
+            if (!pts || !pts.A || !pts.B || !pts.O) return;
             const A = pts.A;
             const B = pts.B;
             const O = pts.O;
@@ -1593,6 +1650,7 @@
           pitfallsHtml: `<p>បើកដែកឈានតូចជាងចម្ងាយទៅបន្ទាត់ $d$ ធ្នូនឹងមិនកាត់បន្ទាត់ $d$ ឡើយ។</p>`,
           practiceHtml: `<p>គូសបន្ទាត់មួយ រួចដាក់ចំណុចនៅលើបន្ទាត់ និងក្រៅបន្ទាត់ រួចសង់បន្ទាត់កែង។</p>`,
           draw(ctx, w, h, pts, stepIdx, progress) {
+            if (!pts || !pts.P || !pts.L1 || !pts.L2) return;
             const P = pts.P;
             const lineY = pts.L1.y;
 
@@ -1705,6 +1763,7 @@
           pitfallsHtml: `<p>ច្រឡំខ្នាតក្នុង និងខ្នាតក្រៅ៖ បើកាំនៅខាងស្ដាំ ចាប់ផ្ដើមរាប់ពី $0^\\circ$ ខាងស្ដាំឡើងទៅ។</p>`,
           practiceHtml: `<p>ប្រើរ៉ាប័រទ័រសង់មុំ $35^\\circ$, $75^\\circ$, $120^\\circ$ និង $165^\\circ$។</p>`,
           draw(ctx, w, h, pts, stepIdx, progress) {
+            if (!pts || !pts.O || !pts.P) return;
             const O = pts.O;
             const P = pts.P;
             const angleRad = Math.atan2(P.y - O.y, P.x - O.x);
@@ -1786,6 +1845,7 @@
           pitfallsHtml: `<p>ត្រូវប្រាកដថារក្សាកាំ $r$ ដដែលពេលផ្លាស់ពី $O$ ទៅ $A$។</p>`,
           practiceHtml: `<p>សង់មុំ $120^\\circ = 60^\\circ + 60^\\circ$ និងមុំ $15^\\circ = 30^\\circ / 2$ ដោយប្រើតែដែកឈាន។</p>`,
           draw(ctx, w, h, pts, stepIdx, progress) {
+            if (!pts || !pts.O) return;
             const O = pts.O;
             const r = 110;
 
@@ -1904,6 +1964,7 @@
           pitfallsHtml: `<p>បើ $a + b \\le c$ ធ្នូនឹងមិនកាត់គ្នាទេ មិនអាចបង្កើតជាត្រីកោណបានឡើយ។</p>`,
           practiceHtml: `<p>សង់ត្រីកោណមានជ្រុង $3\\text{ cm}$, $4\\text{ cm}$, $5\\text{ cm}$ (ត្រីកោណកែងពីតាករ)។</p>`,
           draw(ctx, w, h, pts, stepIdx, progress) {
+            if (!pts || !pts.A || !pts.B) return;
             const A = pts.A;
             const B = pts.B;
             const c = Math.hypot(B.x - A.x, B.y - A.y);
@@ -2003,6 +2064,7 @@
           pitfallsHtml: `<p>$\pi$ មិនមែនស្មើ $22/7$ ឬ $3.14$ ពិតប្រាកដទេ នោះគ្រាន់តែជាតម្លៃប្រហែលប៉ុណ្ណោះ។</p>`,
           practiceHtml: `<p>វាស់បរិមាត្រមាត់កែវដោយខ្សែអំបោះ រួចចែកនឹងអង្កត់ផ្ចិតមាត់កែវ។ តើអ្នកទទួលបានប្រហែល 3.14 ដែរឬទេ?</p>`,
           draw(ctx, w, h, pts, stepIdx, progress) {
+            if (!pts || !pts.Start) return;
             const startX = pts.Start.x;
             const groundY = pts.Start.y;
             const r = 50;
@@ -2117,6 +2179,7 @@
           pitfallsHtml: `<p>មិនមែនគ្រប់រូបរាងដែលមាន ៦ ការ៉េ សុទ្ធតែបត់ចេញជាគូបនោះទេ។ បើមានការ៉េជាន់គ្នា នឹងមិនអាចបត់បានឡើយ។</p>`,
           practiceHtml: `<p>គូរូបប្លង់លាតនេះលើក្រដាសកាតុង កាត់តាមគែម ហើយបត់បិទកាវធ្វើជាប្រអប់គូបពិតៗ។</p>`,
           draw(ctx, w, h, pts, stepIdx, progress, engine) {
+            if (!pts || !pts.Center) return;
             const cx = pts.Center.x;
             const cy = pts.Center.y;
             const s = 55; // square size
