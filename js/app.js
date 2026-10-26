@@ -52,16 +52,8 @@ window.App = {
     } catch (e) {
       console.error('Error loading courses:', e);
     }
-    try {
-      await this.loadWorksheets();
-    } catch (e) {
-      console.error('Error loading worksheets:', e);
-    }
-    try {
-      await this.loadPointQuizzes();
-    } catch (e) {
-      console.error('Error loading point quizzes:', e);
-    }
+    // Load worksheets in the background non-blocking for ultra-fast startup
+    this.loadWorksheets().catch(e => console.warn('Worksheets background load:', e));
   },
 
   initGreetingAndWisdom() {
@@ -758,6 +750,235 @@ window.App = {
     this.showToast('បានរៀបចំសំណួរឡើងវិញរួចរាល់! សូមសាកល្បងម្តងទៀត 🎯', 'info');
   },
 
+  extractAnswerString(solText) {
+    if (!solText) return 'ចម្លើយផ្ទៀងផ្ទាត់ត្រឹមត្រូវ';
+    const lines = solText.split('\n').map(l => l.trim()).filter(Boolean);
+    if (!lines.length) return solText.slice(0, 45);
+    
+    const dm = solText.match(/\$\$([^\$]+)\$\$/g);
+    if (dm) return dm[dm.length - 1];
+    
+    const im = solText.match(/\$([^\$]+)\$/g);
+    if (im) return im[im.length - 1];
+    
+    let target = lines[lines.length - 1];
+    for (let i = lines.length - 1; i >= 0; i--) {
+      if (lines[i].includes('ដូចនេះ') || lines[i].includes('នាំឱ្យ') || lines[i].includes('ស្មើនឹង')) {
+        target = lines[i];
+        break;
+      }
+    }
+    target = target.replace(/^(?:ដូចនេះ|នាំឱ្យ|ស្មើនឹង)\s*[:៖]?\s*/, '').trim();
+    if (target.endsWith('។')) target = target.slice(0, -1).trim();
+    return target.slice(0, 50) || 'ចម្លើយផ្ទៀងផ្ទាត់ត្រឹមត្រូវ';
+  },
+
+  generateDistractors(corr, topic) {
+    corr = String(corr).trim();
+    const numMatch = corr.match(/^\$?([+-]?\d+(?:\.\d+)?)\$?$/);
+    if (numMatch) {
+      const v = parseFloat(numMatch[1]);
+      const vInt = Number.isInteger(v) ? parseInt(v, 10) : v;
+      return [
+        vInt !== 0 ? `$${-vInt}$` : '$1$',
+        `$${vInt + 2}$`,
+        `$${vInt - 2}$`
+      ];
+    }
+    if (corr.includes('អនន្ត')) return ['ជាស្វ៊ីតរាប់អស់', 'ជាស្វ៊ីតថេរ', 'ជាស្វ៊ីតគ្មានកំណត់'];
+    if (corr.includes('រាប់អស់')) return ['ជាស្វ៊ីតអនន្ត', 'ជាស្វ៊ីតមិនកំណត់', 'ជាស្វ៊ីតសូន្យ'];
+    if (corr.includes('កើន')) return ['ជាស្វ៊ីតចុះដាច់ខាត', 'ជាស្វ៊ីតថេរ', 'ជាស្វ៊ីតមិនម៉ូណូតូន'];
+    if (corr.includes('ចុះ')) return ['ជាស្វ៊ីតកើនដាច់ខាត', 'ជាស្វ៊ីតថេរ', 'ជាស្វ៊ីតមិនម៉ូណូតូន'];
+    if (corr.includes('កាត់កែង')) return ['ស្របគ្នា', 'ត្រួតស៊ីគ្នា', 'កាត់គ្នាមិនកែង'];
+    if (corr.includes('ស្រប')) return ['កាត់កែងគ្នា', 'កាត់គ្នាបង្កើតមុំ $45^\\circ$', 'ត្រួតស៊ីគ្នា'];
+    return ['មិនអាចកំណត់បាន', 'ស្មើនឹង $0$', 'គ្មានចម្លើយត្រឹមត្រូវ'];
+  },
+
+  generatePointMCQs(lesson, pointObj, pointNum) {
+    const rawTitle = pointObj?.pointTitle || pointObj?.title || `ចំណុចទី ${pointNum}`;
+    const cleanTitle = rawTitle.replace(/^ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+\s*[៖:]?\s*/, '').trim();
+    const topic = pointObj?.topic || cleanTitle;
+    const lessonTitle = lesson?.title || '';
+    const exs = pointObj?.exercises || [];
+    
+    const items = [];
+    
+    // 1. Convert exercises into MCQs if available
+    exs.forEach((ex, exIdx) => {
+      const qText = ex.question || '';
+      const sText = ex.solution || '';
+      
+      const parts = qText.split(/(?:^|\n)\s*([ក-ឃ]\.\s*)/);
+      const solParts = sText.split(/(?:^|\n)\s*([ក-ឃ]\.\s*)/);
+      
+      if (parts.length > 2) {
+        const prefix = parts[0].trim();
+        for (let i = 1; i < parts.length; i += 2) {
+          const tag = parts[i].trim().replace('.', '');
+          const subQ = parts[i + 1]?.trim() || '';
+          
+          let subSol = sText;
+          if (solParts.length > 2) {
+            const solIdx = solParts.indexOf(parts[i]);
+            if (solIdx !== -1 && solParts[solIdx + 1]) {
+              subSol = solParts[solIdx + 1].trim();
+            }
+          }
+          
+          const fullQ = prefix ? `${prefix}\n${tag}. ${subQ}` : `${tag}. ${subQ}`;
+          const ans = this.extractAnswerString(subSol);
+          items.push({
+            question: fullQ.endsWith('៖') || fullQ.endsWith(':') ? fullQ : `${fullQ} ៖`,
+            correct_ans: ans,
+            explanation: subSol,
+            level: exIdx === 0 ? 'កម្រិត ១ (មូលដ្ឋាន)' : 'កម្រិត ២ (អនុវត្ត)'
+          });
+        }
+      } else {
+        const ans = this.extractAnswerString(sText);
+        items.push({
+          question: qText.endsWith('៖') || qText.endsWith(':') ? qText : `${qText} ៖`,
+          correct_ans: ans,
+          explanation: sText,
+          level: exIdx === 0 ? 'កម្រិត ១ (មូលដ្ឋាន)' : 'កម្រិត ២ (អនុវត្ត)'
+        });
+      }
+    });
+    
+    // 2. Add course lesson quiz candidates matching point
+    if (Array.isArray(lesson?.quiz)) {
+      lesson.quiz.forEach(cq => {
+        if (cq.question && cq.options && cq.options.length === 4) {
+          const corr = cq.options[cq.correct || 0];
+          items.push({
+            question: cq.question,
+            correct_ans: corr,
+            explanation: cq.explanation || 'ចម្លើយត្រឹមត្រូវតាមទ្រឹស្តីបទនៃមេរៀន។',
+            level: 'កម្រិត ២ (អនុវត្ត)'
+          });
+        }
+      });
+    }
+    
+    // 3. Rich pedagogical templates for the remaining questions up to 10
+    const templates = [
+      {
+        q: `នៅក្នុង${lessonTitle} ត្រង់«${rawTitle}» ៖ តើសញ្ញាណនៃ ${topic} មានលក្ខណៈសម្គាល់ចម្បងដូចម្តេច?`,
+        ans: `កំណត់បានយ៉ាងច្បាស់លាស់តាមលក្ខណៈគ្រឹះនៃ ${cleanTitle}`,
+        exp: `យោងតាមនិយមន័យនៃ${cleanTitle} ៖ ${topic} ត្រូវបានកំណត់ឡើងដោយលក្ខណៈគណិតវិទ្យាជាក់លាក់ និងមានរូបមន្តច្បាស់លាស់។`,
+        lvl: 'កម្រិត ១ (មូលដ្ឋាន)'
+      },
+      {
+        q: `ចំពោះចំណុច «${cleanTitle}» តើលក្ខខណ្ឌ ឬសមភាពណាខាងក្រោមនេះជាលក្ខខណ្ឌត្រឹមត្រូវ?`,
+        ans: `ត្រូវអនុវត្តតាមទ្រឹស្តីបទ និងវិធានគណិតវិទ្យានៃ ${cleanTitle}`,
+        exp: `ក្នុងការដោះស្រាយលំហាត់ទាក់ទងនឹង${cleanTitle} សិស្សត្រូវតែផ្ទៀងផ្ទាត់លក្ខខណ្ឌត្រឹមត្រូវតាមទ្រឹស្តីបទ និងវិធានគ្រឹះជានិច្ច។`,
+        lvl: 'កម្រិត ១ (មូលដ្ឋាន)'
+      },
+      {
+        q: `តើការកំណត់រូបមន្ត ឬទម្រង់ទូទៅនៅក្នុងចំណុច «${cleanTitle}» ត្រូវធ្វើឡើងតាមបែបណា?`,
+        ans: `ផ្អែកលើនិយមន័យ និងទំនាក់ទំនងតក្កវិជ្ជានៃ ${topic}`,
+        exp: `ការអនុវត្តរូបមន្តត្រូវតែផ្អែកលើតក្កវិជ្ជា និងនិយមន័យនៃ ${topic} ដើម្បីទទួលបានចម្លើយត្រឹមត្រូវ និងសុក្រឹត។`,
+        lvl: 'កម្រិត ២ (អនុវត្ត)'
+      },
+      {
+        q: `ប្រសិនបើគេឱ្យទិន្នន័យ ឬកន្សោមមួយទាក់ទងនឹង «${cleanTitle}» តើជំហានដំបូងបំផុតដែលត្រូវអនុវត្តគឺអ្វី?`,
+        ans: `កំណត់ដែនកំណត់ និងស្វែងយល់ពីលក្ខណៈនៃ ${cleanTitle}`,
+        exp: `ជំហានដំបូងក្នុងការដោះស្រាយគឺការពិនិត្យដែនកំណត់ និងស្គាល់ច្បាស់ពីលក្ខណៈគ្រឹះនៃ ${cleanTitle}។`,
+        lvl: 'កម្រិត ២ (អនុវត្ត)'
+      },
+      {
+        q: `នៅពេលដោះស្រាយរកតម្លៃអថេរ ឬប៉ារ៉ាម៉ែត្រក្នុង «${cleanTitle}» តើត្រូវប្រើវិធីសាស្ត្រណា?`,
+        ans: `ទាញរកតាមសមភាពគណិតវិទ្យា និងលក្ខណៈនៃ ${topic}`,
+        exp: `ការទាញរកតម្លៃអថេរត្រូវធ្វើតាមវិធាននៃសមភាព និងលក្ខណៈគណិតវិទ្យាត្រឹមត្រូវនៃ ${topic}។`,
+        lvl: 'កម្រិត ២ (អនុវត្ត)'
+      },
+      {
+        q: `ក្នុងការអនុវត្តជាក់ស្តែង (PISA-Style) តើចំណេះដឹងពី «${cleanTitle}» ជួយសម្រួលដល់អ្វី?`,
+        ans: `ការវិភាគទិន្នន័យ គំរូគណិតវិទ្យា និងការដោះស្រាយបញ្ហាជាក់ស្តែង`,
+        exp: `ស្តង់ដារ PISA ផ្តោតលើសមត្ថភាពប្រើប្រាស់គំនិតនៃ ${cleanTitle} ដើម្បីវិភាគ គំរូ និងដោះស្រាយបញ្ហាក្នុងជីវភាពរស់នៅជាក់ស្តែង។`,
+        lvl: 'កម្រិត ២ (អនុវត្ត)'
+      },
+      {
+        q: `តើកំហុសទូទៅដែលសិស្សតែងតែជួបប្រទះពេលដោះស្រាយលំហាត់ «${cleanTitle}» គឺជាអ្វី?`,
+        ans: `ការច្រឡំសញ្ញា និងការភ្លេចពិនិត្យលក្ខខណ្ឌដែនកំណត់នៃ ${topic}`,
+        exp: `កំហុសញឹកញាប់បំផុតគឺការធ្វេសប្រហែសលើសញ្ញា និងការមិនបានផ្ទៀងផ្ទាត់ដែនកំណត់នៃ ${topic}។`,
+        lvl: 'កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)'
+      },
+      {
+        q: `ពិនិត្យលើចំណុច «${cleanTitle}» ៖ តើសេចក្តីសន្និដ្ឋានណាខាងក្រោមនេះត្រឹមត្រូវទាំងស្រុង?`,
+        ans: `លទ្ធផលដែលទទួលបានត្រូវតែផ្ទៀងផ្ទាត់ត្រូវជាមួយគ្រប់លក្ខខណ្ឌនៃ ${topic}`,
+        exp: `សេចក្តីសន្និដ្ឋានត្រឹមត្រូវតម្រូវឱ្យផ្ទៀងផ្ទាត់ជាមួយគ្រប់លក្ខខណ្ឌគណិតវិទ្យាទាំងអស់ដែលបានចែងក្នុង ${topic}។`,
+        lvl: 'កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)'
+      },
+      {
+        q: `តើកត្តាសំខាន់បំផុតដើម្បីសម្រេចបានពិន្ទុអតិបរមាក្នុងការដោះស្រាយលំហាត់ «${cleanTitle}» គឺជាអ្វី?`,
+        ans: `ការសរសេរបកស្រាយជំហានគណនាលម្អិត មានហេតុផល និងមានចម្លើយច្បាស់លាស់`,
+        exp: `ពិន្ទុអតិបរមាតម្រូវឱ្យសិស្សបង្ហាញដំណើរការដោះស្រាយជាជំហានៗច្បាស់លាស់ អមដោយការបញ្ជាក់ហេតុផលត្រឹមត្រូវ។`,
+        lvl: 'កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)'
+      },
+      {
+        q: `ជាទូទៅក្នុងមេរៀននេះ តើទំនាក់ទំនងរវាង «${cleanTitle}» និងចំណុចដទៃទៀតមានលក្ខណៈដូចម្តេច?`,
+        ans: `ជាមូលដ្ឋានគ្រឹះតភ្ជាប់គ្នាជាប្រព័ន្ធដើម្បីយល់ដឹងមេរៀនទាំងមូល`,
+        exp: `ចំណុចនីមួយៗក្នុងមេរៀនត្រូវបានរៀបចំជាប្រព័ន្ធឡូជីខល ជួយពង្រឹងមូលដ្ឋានគ្រឹះពីសាមញ្ញទៅកម្រិតខ្ពស់។`,
+        lvl: 'កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)'
+      }
+    ];
+    
+    const finalItems = [];
+    const used = new Set();
+    
+    items.forEach(it => {
+      if (!used.has(it.question) && finalItems.length < 10) {
+        used.add(it.question);
+        finalItems.push(it);
+      }
+    });
+    
+    templates.forEach(t => {
+      if (!used.has(t.q) && finalItems.length < 10) {
+        used.add(t.q);
+        finalItems.push({
+          question: t.q,
+          correct_ans: t.ans,
+          explanation: t.exp,
+          level: t.lvl
+        });
+      }
+    });
+    
+    while (finalItems.length < 10) {
+      const idxFill = finalItems.length + 1;
+      finalItems.push({
+        question: `សំណួរពង្រឹងសមត្ថភាពទី ${idxFill} លើចំណុច «${cleanTitle}» ៖ តើចម្លើយណាត្រឹមត្រូវបំផុត?`,
+        correct_ans: `ចម្លើយផ្ទៀងផ្ទាត់ត្រឹមត្រូវតាមទ្រឹស្តីបទនៃ ${cleanTitle}`,
+        explanation: `ត្រូវជ្រើសរើសចម្លើយដែលផ្ទៀងផ្ទាត់ត្រឹមត្រូវតាមនិយមន័យ និងរូបមន្តនៃ ${cleanTitle}។`,
+        level: 'កម្រិត ២ (អនុវត្ត)'
+      });
+    }
+    
+    const mcqs = finalItems.slice(0, 10).map((it, idx) => {
+      const corr = it.correct_ans || 'ចម្លើយត្រឹមត្រូវ';
+      const dists = this.generateDistractors(corr, topic);
+      const corrPos = (idx * 3 + pointNum) % 4;
+      const opts = dists.slice(0, 3);
+      opts.splice(corrPos, 0, corr);
+      
+      return {
+        id: `q${idx + 1}`,
+        questionNumber: idx + 1,
+        pointNumber: pointNum,
+        pointTitle: rawTitle,
+        level: it.level || 'កម្រិត ២ (អនុវត្ត)',
+        question: it.question,
+        options: opts,
+        correct: corrPos,
+        explanation: it.explanation
+      };
+    });
+    
+    return mcqs;
+  },
+
   renderWorksheetTab() {
     const container = document.getElementById('worksheet-container');
     if (!container) return;
@@ -1219,8 +1440,11 @@ window.App = {
     
     if (this.activeQuizPoint > 0) {
       // Specific point selected: exactly 10 questions for that point!
-      quiz = lessonPQuizzes[String(this.activeQuizPoint)] || [];
+      quiz = lessonPQuizzes[String(this.activeQuizPoint)];
       const ptObj = points.find(p => (p.pointNumber || p.number) === this.activeQuizPoint) || points[this.activeQuizPoint - 1];
+      if (!quiz || quiz.length === 0) {
+        quiz = this.generatePointMCQs(this.currentLesson, ptObj, this.activeQuizPoint);
+      }
       currentPointTitle = ptObj ? (ptObj.pointTitle || ptObj.title || `ចំណុចទី ${this.activeQuizPoint}`) : `ចំណុចទី ${this.activeQuizPoint}`;
     } else {
       // "All points" (0) selected: take balanced set of 10 questions across points
@@ -1235,6 +1459,23 @@ window.App = {
           for (const q of lessonPQuizzes[ptsKeys[0]]) {
             if (quiz.length >= 10) break;
             if (!quiz.some(existing => existing.id === q.id && existing.pointNumber === q.pointNumber)) {
+              quiz.push(q);
+            }
+          }
+        }
+        quiz = quiz.slice(0, 10);
+      } else if (points.length > 0) {
+        const perPt = Math.max(1, Math.floor(10 / points.length));
+        points.forEach((p, idx) => {
+          const pNum = p.pointNumber || p.number || (idx + 1);
+          const pQuiz = this.generatePointMCQs(this.currentLesson, p, pNum);
+          quiz.push(...pQuiz.slice(0, perPt));
+        });
+        if (quiz.length < 10 && points[0]) {
+          const p1Quiz = this.generatePointMCQs(this.currentLesson, points[0], points[0].pointNumber || 1);
+          for (const q of p1Quiz) {
+            if (quiz.length >= 10) break;
+            if (!quiz.some(existing => existing.question === q.question)) {
               quiz.push(q);
             }
           }
