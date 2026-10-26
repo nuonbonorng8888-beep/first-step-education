@@ -2140,10 +2140,20 @@ window.App = {
     if (m) m.classList.remove('active');
   },
   showAboutModal() {
-    this.showSupportModal();
+    const m = document.getElementById('about-modal');
+    if (m) m.classList.add('active');
   },
   closeAboutModal() {
-    this.closeSupportModal();
+    const m = document.getElementById('about-modal');
+    if (m) m.classList.remove('active');
+  },
+  showLicenseModal() {
+    const m = document.getElementById('license-modal');
+    if (m) m.classList.add('active');
+  },
+  closeLicenseModal() {
+    const m = document.getElementById('license-modal');
+    if (m) m.classList.remove('active');
   },
   filterByGrade(grade) {
     this.backToCatalog();
