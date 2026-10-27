@@ -41,11 +41,126 @@ window.App = {
   mascotMsgIndex: 0,
 
   appsScriptSourceCode: `/**
- * WORKSHEET.KH - GOOGLE SHEETS LIVE SCORING ENGINE
+ * WORKSHEET.KH - GOOGLE SHEETS LIVE SCORING ENGINE (PRO VERSION)
  * រៀបចំដោយ៖ លោកគ្រូ នួន បូណង (Nuon Bonorng) - វិទ្យាល័យព្រះយុគន្ធរ សាលារៀនជំនាន់ថ្មី
- * មុខងារ៖ ទទួលពិន្ទុតេស្តស្វ័យប្រវត្តតាមបន្ទប់/ថ្នាក់នីមួយៗ (បំបែក Tab ដោយស្វ័យប្រវត្ត មិនច្រឡំថ្នាក់ឡើយ)
+ * មុខងារ៖ 
+ *  1. ទទួលពិន្ទុតេស្តស្វ័យប្រវត្ត (ចូលតារាងសរុប និងបំបែកតាមកម្រិតថ្នាក់/បន្ទប់)
+ *  2. បង្កើត Tab ទុកជាមុនស្វ័យប្រវត្ត (Auto Pre-generate) គ្រប់កម្រិត ៧ ដល់ ១២
+ *  3. កាត់បន្ថយចំនួន Tab ខាងក្រោមឲ្យនៅតិច និងមានសណ្ដាប់ធ្នាប់ ដាក់ពណ៌តាមកម្រិតថ្នាក់ស្អាត
  */
 
+// បង្កើត Menu ពិសេសក្នុង Google Sheets ពេលបើកឯកសារ
+function onOpen() {
+  SpreadsheetApp.getUi()
+    .createMenu('📊 ប្រព័ន្ធ Worksheet.Kh')
+    .addItem('⭐ ១. បង្កើត Tab តាមកម្រិតថ្នាក់ (៧ ដល់ ១២ + តារាងសរុប)', 'setupGradeTabs')
+    .addItem('🏫 ២. បង្កើត Tab តាមបន្ទប់ថ្នាក់ស្តង់ដា (7A..12E)', 'setupClassTabs')
+    .addSeparator()
+    .addItem('🎨 ៣. រៀបចំក្បាលតារាង & ដាក់ពណ៌ស្អាត', 'formatAllWorksheetSheets')
+    .addToUi();
+}
+
+// ក្បាលតារាងស្តង់ដា
+var HEADERS = [
+  "កាលបរិច្ឆេទ & ម៉ោង",
+  "លេខរៀង/អត្តលេខ",
+  "ឈ្មោះសិស្ស",
+  "កម្រិតថ្នាក់",
+  "បន្ទប់/ថ្នាក់",
+  "មេរៀន",
+  "ចំណុចតេស្ត",
+  "ពិន្ទុទទួលបាន",
+  "ពិន្ទុសរុប",
+  "ភាគរយ (%)",
+  "និទ្ទេស/ការវាយតម្លៃ"
+];
+
+// ពណ៌សម្គាល់តាមកម្រិតថ្នាក់ (Tab Colors)
+var TAB_COLORS = {
+  "🌟 តារាងសរុប": "#f59e0b",
+  "ថ្នាក់ទី ៧": "#3b82f6",
+  "ថ្នាក់ទី ៨": "#06b6d4",
+  "ថ្នាក់ទី ៩": "#10b981",
+  "ថ្នាក់ទី ១០": "#6366f1",
+  "ថ្នាក់ទី ១១": "#8b5cf6",
+  "ថ្នាក់ទី ១២": "#f43f5e"
+};
+
+// ជម្រើសទី ១៖ បង្កើត Tab តាមកម្រិតថ្នាក់ (កាត់បន្ថយ Tab ខាងក្រោមឲ្យនៅត្រឹម ៧ Tab ប៉ុណ្ណោះ មិនរញ៉េរញ៉ៃ)
+function setupGradeTabs() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var tabs = ["🌟 តារាងសរុប", "ថ្នាក់ទី ៧", "ថ្នាក់ទី ៨", "ថ្នាក់ទី ៩", "ថ្នាក់ទី ១០", "ថ្នាក់ទី ១១", "ថ្នាក់ទី ១២"];
+  
+  for (var i = 0; i < tabs.length; i++) {
+    var name = tabs[i];
+    var sheet = ss.getSheetByName(name);
+    if (!sheet) {
+      sheet = ss.insertSheet(name);
+    }
+    formatSheetHeader(sheet, name);
+  }
+  
+  SpreadsheetApp.getUi().alert('✅ បានបង្កើត Tab តាមកម្រិតថ្នាក់ (៧ ដល់ ១២ + តារាងសរុប) រួចរាល់ដោយជោគជ័យ! Tab នៅផ្នែកខាងក្រោមមានសណ្ដាប់ធ្នាប់ល្អស្អាត មិនកកស្ទះឡើយ។');
+}
+
+// ជម្រើសទី ២៖ បង្កើត Tab តាមបន្ទប់ថ្នាក់លម្អិត
+function setupClassTabs() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var classes = [
+    "🌟 តារាងសរុប",
+    "7A", "7B", "7C",
+    "8A", "8B", "8C",
+    "9A", "9B", "9C",
+    "10A1", "10A2", "10A3", "10A4",
+    "11A", "11B", "11C",
+    "12A", "12B", "12C"
+  ];
+  
+  for (var i = 0; i < classes.length; i++) {
+    var name = classes[i];
+    var sheet = ss.getSheetByName(name);
+    if (!sheet) {
+      sheet = ss.insertSheet(name);
+    }
+    formatSheetHeader(sheet, name);
+  }
+  
+  SpreadsheetApp.getUi().alert('✅ បានបង្កើត Tab តាមបន្ទប់ថ្នាក់រួចរាល់!');
+}
+
+// រៀបចំក្បាលតារាង និងដាក់ពណ៌
+function formatSheetHeader(sheet, name) {
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(HEADERS);
+  }
+  var headerRange = sheet.getRange(1, 1, 1, HEADERS.length);
+  headerRange.setBackground("#1e293b");
+  headerRange.setFontColor("#ffffff");
+  headerRange.setFontWeight("bold");
+  headerRange.setHorizontalAlignment("center");
+  sheet.setFrozenRows(1);
+  
+  // Set tab color
+  if (TAB_COLORS[name]) {
+    sheet.setTabColor(TAB_COLORS[name]);
+  } else if (name.startsWith("7")) sheet.setTabColor("#3b82f6");
+  else if (name.startsWith("8")) sheet.setTabColor("#06b6d4");
+  else if (name.startsWith("9")) sheet.setTabColor("#10b981");
+  else if (name.startsWith("10")) sheet.setTabColor("#6366f1");
+  else if (name.startsWith("11")) sheet.setTabColor("#8b5cf6");
+  else if (name.startsWith("12")) sheet.setTabColor("#f43f5e");
+}
+
+function formatAllWorksheetSheets() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheets = ss.getSheets();
+  for (var i = 0; i < sheets.length; i++) {
+    formatSheetHeader(sheets[i], sheets[i].getName());
+  }
+  SpreadsheetApp.getUi().alert('✅ បានរៀបចំក្បាលតារាងគ្រប់សន្លឹកទាំងអស់ស្អាតរួចរាល់!');
+}
+
+// ទទួលពិន្ទុពីប្រព័ន្ធ Worksheet.Kh
 function doPost(e) {
   var lock = LockService.getScriptLock();
   lock.tryLock(10000); // Wait up to 10s for concurrent submissions
@@ -64,38 +179,9 @@ function doPost(e) {
       data = e.parameter;
     }
     
-    // បន្ទប់/ថ្នាក់ជាក់លាក់ (ឧទាហរណ៍៖ 10A1, 10A2, 7A, 11S...)
     var className = (data.studentClass || "ទូទៅ").trim().toUpperCase();
     if (!className) className = "ទូទៅ";
-    
-    // ស្វែងរក Sheet តាមឈ្មោះថ្នាក់ បើមិនទាន់មាន វានឹងបង្កើត Tab ថ្មីភ្លាមៗ!
-    var sheet = ss.getSheetByName(className);
-    if (!sheet) {
-      sheet = ss.insertSheet(className);
-      // រៀបចំក្បាលតារាង (Headers)
-      var headers = [
-        "កាលបរិច្ឆេទ & ម៉ោង",
-        "លេខរៀង/អត្តលេខ",
-        "ឈ្មោះសិស្ស",
-        "កម្រិតថ្នាក់",
-        "បន្ទប់/ថ្នាក់",
-        "មេរៀន",
-        "ចំណុចតេស្ត",
-        "ពិន្ទុទទួលបាន",
-        "ពិន្ទុសរុប",
-        "ភាគរយ (%)",
-        "និទ្ទេស/ការវាយតម្លៃ"
-      ];
-      sheet.appendRow(headers);
-      
-      // ចាក់ពណ៌ និងទម្រង់ក្បាលតារាងស្អាត
-      var headerRange = sheet.getRange(1, 1, 1, headers.length);
-      headerRange.setBackground("#1e293b");
-      headerRange.setFontColor("#ffffff");
-      headerRange.setFontWeight("bold");
-      headerRange.setHorizontalAlignment("center");
-      sheet.setFrozenRows(1);
-    }
+    var gradeStr = data.grade ? ("ថ្នាក់ទី " + data.grade) : "";
     
     // គណនានិទ្ទេស (Grade evaluation)
     var pct = parseFloat(data.percentage) || 0;
@@ -106,12 +192,12 @@ function doPost(e) {
     else if (pct < 90) gradeLevel = "ល្អ";
     else gradeLevel = "ល្អប្រសើរ (ឆ្នើម)";
 
-    // បញ្ចូលទិន្នន័យសិស្សចូលក្នុងតារាងថ្នាក់នោះ
+    // ជួរទិន្នន័យថ្មី
     var newRow = [
       data.timestamp || Utilities.formatDate(new Date(), "Asia/Phnom_Penh", "yyyy-MM-dd HH:mm:ss"),
       data.rollNumber || "",
       data.studentName || "",
-      data.grade ? ("ថ្នាក់ទី " + data.grade) : "",
+      gradeStr,
       className,
       data.lessonTitle || "",
       data.pointTitle || "",
@@ -121,15 +207,32 @@ function doPost(e) {
       gradeLevel
     ];
     
-    sheet.appendRow(newRow);
+    // ១. កត់ត្រាចូលក្នុង Tab សរុប (Master Data) ជានិច្ច
+    var masterSheet = ss.getSheetByName("🌟 តារាងសរុប");
+    if (!masterSheet) {
+      masterSheet = ss.insertSheet("🌟 តារាងសរុប", 0);
+      formatSheetHeader(masterSheet, "🌟 តារាងសរុប");
+    }
+    masterSheet.appendRow(newRow);
+    formatDataRow(masterSheet, masterSheet.getLastRow(), newRow.length);
     
-    // Auto-align & format rows
-    var lastRow = sheet.getLastRow();
-    sheet.getRange(lastRow, 1, 1, newRow.length).setVerticalAlignment("middle");
-    sheet.getRange(lastRow, 1).setHorizontalAlignment("center");
-    sheet.getRange(lastRow, 2).setHorizontalAlignment("center");
-    sheet.getRange(lastRow, 4, 1, 2).setHorizontalAlignment("center");
-    sheet.getRange(lastRow, 8, 1, 4).setHorizontalAlignment("center");
+    // ២. ស្វែងរក Sheet បន្ទាប់ (អាទិភាព៖ Tab តាមបន្ទប់ថ្នាក់ -> បើគ្មាន ដាក់ក្នុង Tab តាមកម្រិតថ្នាក់)
+    var targetSheet = ss.getSheetByName(className);
+    if (!targetSheet && gradeStr) {
+      targetSheet = ss.getSheetByName(gradeStr);
+    }
+    
+    // ប្រសិនបើមិនទាន់មាន Tab ទាំងពីរទេ វានឹងបង្កើត Tab តាមឈ្មោះបន្ទប់
+    if (!targetSheet) {
+      targetSheet = ss.insertSheet(className);
+      formatSheetHeader(targetSheet, className);
+    }
+    
+    // បញ្ចូលទិន្នន័យ (បើ targetSheet មិនមែនជា masterSheet)
+    if (targetSheet.getName() !== masterSheet.getName()) {
+      targetSheet.appendRow(newRow);
+      formatDataRow(targetSheet, targetSheet.getLastRow(), newRow.length);
+    }
     
     return ContentService
       .createTextOutput(JSON.stringify({ "status": "success", "message": "ពិន្ទុត្រូវបានកត់ត្រាក្នុងថ្នាក់ " + className }))
@@ -142,6 +245,14 @@ function doPost(e) {
   } finally {
     lock.releaseLock();
   }
+}
+
+function formatDataRow(sheet, rowIdx, colCount) {
+  sheet.getRange(rowIdx, 1, 1, colCount).setVerticalAlignment("middle");
+  sheet.getRange(rowIdx, 1).setHorizontalAlignment("center");
+  sheet.getRange(rowIdx, 2).setHorizontalAlignment("center");
+  sheet.getRange(rowIdx, 4, 1, 2).setHorizontalAlignment("center");
+  sheet.getRange(rowIdx, 8, 1, 4).setHorizontalAlignment("center");
 }
 
 function doGet(e) {
@@ -971,6 +1082,18 @@ function doGet(e) {
       ];
     }
 
+    // 4. Paired variable equality x = a, y = b
+    const pairMatch = corr.match(/^\$?([a-zA-Z_0-9]+)\s*=\s*([+-]?\d+(?:\.\d+)?)\s*,\s*([a-zA-Z_0-9]+)\s*=\s*([+-]?\d+(?:\.\d+)?)\$?$/);
+    if (pairMatch) {
+      const v1 = pairMatch[1], a = parseInt(pairMatch[2], 10);
+      const v2 = pairMatch[3], b = parseInt(pairMatch[4], 10);
+      return [
+        `$${v1} = ${b}, ${v2} = ${a}$`,
+        `$${v1} = ${-a}, ${v2} = ${b}$`,
+        `$${v1} = ${a}, ${v2} = ${-b}$`
+      ];
+    }
+
     // Categorical math
     if (corr.includes('អនន្ត')) return ['ជាស្វ៊ីតរាប់អស់', 'ជាស្វ៊ីតថេរ', 'ជាស្វ៊ីតមិនកំណត់'];
     if (corr.includes('រាប់អស់')) return ['ជាស្វ៊ីតអនន្ត', 'ជាស្វ៊ីតមិនកំណត់', 'ជាស្វ៊ីតសូន្យ'];
@@ -1123,17 +1246,21 @@ function doGet(e) {
       });
     }
     
-    // 2. Add course lesson quiz candidates matching point
-    if (Array.isArray(lesson?.quiz)) {
+    // 2. Add course lesson quiz candidates ONLY if matching point keywords or if point has few items
+    if (Array.isArray(lesson?.quiz) && items.length < 5) {
+      const keywords = cleanTitle.split(/\s+/).filter(w => w.length > 3);
       lesson.quiz.forEach(cq => {
         if (cq.question && cq.options && cq.options.length === 4) {
-          const corr = cq.options[cq.correct || 0];
-          items.push({
-            question: cq.question,
-            correct_ans: corr,
-            explanation: cq.explanation || 'ចម្លើយត្រឹមត្រូវតាមទ្រឹស្តីបទនៃមេរៀន។',
-            level: 'កម្រិត ២ (អនុវត្ត)'
-          });
+          const matchesKeyword = keywords.some(kw => cq.question.includes(kw));
+          if (matchesKeyword || items.length < 2) {
+            const corr = cq.options[cq.correct || 0];
+            items.push({
+              question: cq.question,
+              correct_ans: corr,
+              explanation: cq.explanation || 'ចម្លើយត្រឹមត្រូវតាមទ្រឹស្តីបទនៃមេរៀន។',
+              level: 'កម្រិត ២ (អនុវត្ត)'
+            });
+          }
         }
       });
     }
@@ -2240,6 +2367,9 @@ function doGet(e) {
         `;
       }
       this.showToast('សូមបំពេញឈ្មោះ និងថ្នាក់របស់អ្នក ដើម្បីបញ្ជូនពិន្ទុ!', 'warning');
+      setTimeout(() => {
+        this.openStudentInfoModal();
+      }, 400);
       return;
     }
 
@@ -2460,12 +2590,18 @@ function doGet(e) {
     } catch(e) {}
   },
 
+  defaultTeacherSheetUrl: 'https://script.google.com/macros/s/AKfycbwzTi8_Z9aX1oo421kG7XLiEwxXRAk-28-uQWhSjzBgrTzSTH0PSb0qJvcEenwpUOLvKA/exec',
+
   getTeacherSheetUrl() {
-    return localStorage.getItem('worksheet_teacher_sheet_url') || '';
+    return localStorage.getItem('worksheet_teacher_sheet_url') || this.defaultTeacherSheetUrl || '';
   },
 
   setTeacherSheetUrl(url) {
-    localStorage.setItem('worksheet_teacher_sheet_url', url.trim());
+    if (url) {
+      localStorage.setItem('worksheet_teacher_sheet_url', url.trim());
+    } else {
+      localStorage.removeItem('worksheet_teacher_sheet_url');
+    }
   },
 
   openStudentInfoModal() {
@@ -2743,8 +2879,24 @@ function doGet(e) {
   saveTeacherSheetUrl() {
     const urlInp = document.getElementById('teacher-sheet-url-input');
     const url = (urlInp?.value || '').trim();
+    
+    if (url) {
+      if (url.includes('docs.google.com/spreadsheets')) {
+        this.showToast('❌ Link នេះជា Link តារាង Sheets ធម្មតា! សូមប្រើ Web App URL ដែលចេញពី Apps Script (Deploy > Web App) ដែលបញ្ចប់ដោយ /exec', 'error');
+        return;
+      }
+      if (!url.startsWith('https://script.google.com/macros/s/')) {
+        this.showToast('⚠️ Web App URL ត្រូវតែចាប់ផ្តើមដោយ https://script.google.com/macros/s/.../exec', 'warning');
+      }
+    }
+
     this.setTeacherSheetUrl(url);
-    this.showToast('បានរក្សាទុក URL តារាងពិន្ទុរួចរាល់! 🎉', 'success');
+    if (url) {
+      this.showToast('បានរក្សាទុក Web App URL រួចរាល់! 🎉', 'success');
+    } else {
+      this.showToast('បានលុប Web App URL', 'info');
+    }
+
     const statusBadge = document.getElementById('sheet-status-badge');
     if (statusBadge) {
       if (url) {
@@ -2758,11 +2910,26 @@ function doGet(e) {
   },
 
   async testSheetConnection() {
-    const url = this.getTeacherSheetUrl();
+    const urlInp = document.getElementById('teacher-sheet-url-input');
+    let url = this.getTeacherSheetUrl();
+
+    // Auto-save if typed into input but forgot to click save
+    if (!url && urlInp && urlInp.value.trim()) {
+      this.saveTeacherSheetUrl();
+      url = this.getTeacherSheetUrl();
+    }
+
     if (!url) {
       this.showToast('សូមបញ្ចូល និងរក្សាទុក Web App URL ជាមុនសិន!', 'warning');
+      urlInp?.focus();
       return;
     }
+
+    if (url.includes('docs.google.com/spreadsheets')) {
+      this.showToast('❌ Link នេះជា Link Sheets ធម្មតា មិនមែន Web App URL ទេ! សូមមើលការណែនាំ Apps Script ខាងក្រោម។', 'error');
+      return;
+    }
+
     const statusBadge = document.getElementById('sheet-status-badge');
     if (statusBadge) {
       statusBadge.textContent = '⏳ កំពុងតេស្តផ្ញើទិន្នន័យ...';
@@ -2809,6 +2976,12 @@ function doGet(e) {
     const gradeSelect = document.getElementById('generator-grade-select');
     const lessonSelect = document.getElementById('generator-lesson-select');
     const pointSelect = document.getElementById('generator-point-select');
+    const urlInp = document.getElementById('teacher-sheet-url-input');
+
+    // Auto-save sheet URL if teacher typed or pasted it but didn't click save
+    if (urlInp && urlInp.value.trim() && !this.getTeacherSheetUrl()) {
+      this.saveTeacherSheetUrl();
+    }
 
     const cls = (classInp?.value || '').trim().toUpperCase();
     if (!cls) {
@@ -2822,7 +2995,8 @@ function doGet(e) {
     const point = pointSelect?.value || '0';
 
     const baseUrl = window.location.origin + window.location.pathname;
-    const sheetUrl = encodeURIComponent(this.getTeacherSheetUrl());
+    const rawSheetUrl = this.getTeacherSheetUrl();
+    const sheetUrl = encodeURIComponent(rawSheetUrl);
 
     let shareUrl = `${baseUrl}?class=${encodeURIComponent(cls)}&grade=${grade}`;
 
@@ -2844,7 +3018,27 @@ function doGet(e) {
     const outInp = document.getElementById('generator-link-output');
     if (outInp) outInp.value = shareUrl;
     if (resBox) resBox.style.display = 'block';
-    this.showToast(`បានបង្កើត Link ប្រឡងសម្រាប់ថ្នាក់ ${cls} រួចរាល់! 🎯`, 'success');
+
+    const hintSpan = document.getElementById('generator-link-hint');
+    if (hintSpan) {
+      if (sheetUrl) {
+        hintSpan.innerHTML = `✓ <strong>បានភ្ជាប់ Google Sheets រួចរាល់ ៖</strong> ពេលសិស្សធ្វើតេស្តចប់ ពិន្ទុនឹងលោតចូល Tab <strong>"${cls}"</strong> ក្នុង Sheets ភ្លាមៗ!`;
+        hintSpan.style.color = '#10b981';
+      } else {
+        hintSpan.innerHTML = `⚠️ <strong>មិនទាន់បានភ្ជាប់ Google Sheets ទេ ៖</strong> ពិន្ទុសិស្សនឹងមិនលោតចូល Sheet ឡើយ! សូមបិទភ្ជាប់ Web App URL ខាងលើ រួចចុច «រក្សាទុក»។`;
+        hintSpan.style.color = '#f59e0b';
+      }
+    }
+
+    if (sheetUrl) {
+      this.showToast(`បានបង្កើត Link ប្រឡងសម្រាប់ថ្នាក់ ${cls} (ភ្ជាប់ Google Sheets រួចរាល់)! 🎯`, 'success');
+    } else {
+      this.showToast(`⚠️ ការព្រមាន៖ លោកគ្រូមិនទាន់បានកំណត់ Web App URL ទេ! Link នេះនឹងមិនកត់ត្រាពិន្ទុចូល Sheets ឡើយ`, 'warning');
+      if (urlInp) {
+        urlInp.style.border = '2px solid #f59e0b';
+        setTimeout(() => { urlInp.style.border = ''; }, 3000);
+      }
+    }
   },
 
   copyGeneratedClassLink() {
