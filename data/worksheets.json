@@ -5036,7 +5036,7 @@
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
             "instruction": "រកតម្លៃចំនួនពិត $x$ និង $y$ ពីសមភាពកុំផ្លិចខាងក្រោម ៖",
             "question": "រកតម្លៃពិត $x$ និង $y$ ដែលផ្ទៀងផ្ទាត់ ៖\n\nក. $(2x - 3) + (y + 4)i = 7 - 2i$\n\nខ. $(x + y) + (2x - y)i = 5 + 4i$",
-            "solution": "ក. ផ្ទឹមផ្នែកពិត និងផ្នែកនិម្មិត ៖\n$\\begin{cases} 2x - 3 = 7 \\\\ y + 4 = -2 \\end{cases} \\implies \\begin{cases} 2x = 10 \\\\ y = -6 \\end{cases} \\implies \\begin{cases} x = 5 \\\\ y = -6 \\end{cases}$។\n\nខ. ផ្ទឹមផ្នែកពិត និងផ្នែកនិម្មិត ៖\n$\\begin{cases} x + y = 5 \\\\ 2x - y = 4 \\end{cases}$\nបូកសមីការទាំងពីរ ៖ $3x = 9 \\implies x = 3$។\nជំនួស $x = 3$ ចូលសមីការទីមួយ ៖ $3 + y = 5 \\implies y = 2$។\nដូចនេះ $x = 3, y = 2$។",
+            "solution": "ក. ផ្ទឹមផ្នែកពិត និងផ្នែកនិម្មិត ៖\n$\\begin{cases} 2x - 3 = 7 \\\\ y + 4 = -2 \\end{cases} \\implies \\begin{cases} 2x = 10 \\\\ y = -6 \\end{cases} \\implies \\begin{cases} x = 5 \\\\ y = -6 \\end{cases}$។\nដូចនេះ $x = 5, y = -6$។\n\nខ. ផ្ទឹមផ្នែកពិត និងផ្នែកនិម្មិត ៖\n$\\begin{cases} x + y = 5 \\\\ 2x - y = 4 \\end{cases}$\nបូកសមីការទាំងពីរ ៖ $3x = 9 \\implies x = 3$។\nជំនួស $x = 3$ ចូលសមីការទីមួយ ៖ $3 + y = 5 \\implies y = 2$។\nដូចនេះ $x = 3, y = 2$។",
             "rubric": "ក. រក $x = 5, y = -6$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. រក $x = 3, y = 2$ ត្រូវ (០.៥ ពិន្ទុ)",
             "points": 1
           },

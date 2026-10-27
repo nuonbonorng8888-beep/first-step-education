@@ -1337,14 +1337,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=60"></script>
-  <script src="js/app.js?v=60"></script>
-  <script src="js/visits.js?v=60"></script>
+  <script src="js/storage.js?v=61"></script>
+  <script src="js/app.js?v=61"></script>
+  <script src="js/visits.js?v=61"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=61').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

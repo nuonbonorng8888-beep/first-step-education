@@ -271,16 +271,18 @@ function doGet(e) {
     try { this.bindGlobalEvents(); } catch (e) { console.warn(e); }
     try {
       await this.loadCourses();
+      await Promise.all([
+        this.loadWorksheets(),
+        this.loadPointQuizzes()
+      ]);
     } catch (e) {
-      console.error('Error loading courses:', e);
+      console.error('Error loading data:', e);
     }
     try {
       await this.handleUrlDirectExamRouting();
     } catch (e) {
       console.warn('URL direct exam error:', e);
     }
-    // Load worksheets in the background non-blocking for ultra-fast startup
-    this.loadWorksheets().catch(e => console.warn('Worksheets background load:', e));
   },
 
   initGreetingAndWisdom() {
@@ -997,6 +999,21 @@ function doGet(e) {
 
   extractAnswerString(solText) {
     if (!solText) return '$0$';
+    
+    // 1. Check for paired system of equations or x and y in solution
+    const casesMatch = solText.match(/\\begin\{cases\}\s*([a-zA-Z_]\s*=\s*[^\\\n]+)\\\\?\s*([a-zA-Z_]\s*=\s*[^\\\n\}]+)\s*\\end\{cases\}/);
+    if (casesMatch) {
+      const v1 = casesMatch[1].replace(/[\$\s]/g, '').trim();
+      const v2 = casesMatch[2].replace(/[\$\s]/g, '').trim();
+      return `$${v1}, ${v2}$`;
+    }
+    const pairedMatch = solText.match(/([a-zA-Z_]\s*=\s*[^,\s$]+)\s*,\s*([a-zA-Z_]\s*=\s*[^.\s$]+)/);
+    if (pairedMatch) {
+      const p1 = pairedMatch[1].replace(/[\$\s]/g, '').trim();
+      const p2 = pairedMatch[2].replace(/[\$\s]/g, '').trim();
+      return `$${p1}, ${p2}$`;
+    }
+
     const lines = solText.split('\n').map(l => l.trim()).filter(Boolean);
     if (!lines.length) return solText.slice(0, 45);
     
@@ -1010,10 +1027,20 @@ function doGet(e) {
     lastLine = lastLine.replace(/^(?:ដូចនេះ|នាំឱ្យ|ទទួលបាន|ចម្លើយ|សមមូល)\s*[:៖]?\s*/, '').trim();
     lastLine = lastLine.replace(/^[1-9][\)\.]\s*/, '').trim();
 
+    const lastPaired = lastLine.match(/([a-zA-Z_]\s*=\s*[^,\s$]+)\s*,\s*([a-zA-Z_]\s*=\s*[^.\s$]+)/);
+    if (lastPaired) {
+      const p1 = lastPaired[1].replace(/[\$\s]/g, '').trim();
+      const p2 = lastPaired[2].replace(/[\$\s]/g, '').trim();
+      return `$${p1}, ${p2}$`;
+    }
+
     const dm = lastLine.match(/\$\$([^\$]+)\$\$/);
     const target = dm ? dm[1].trim() : lastLine;
 
-    const eqParts = target.split(/\s*=\s*/);
+    // Safety: strip unclosed \end{cases}
+    let cleanTarget = target.replace(/\\end\{cases\}/g, '').trim();
+
+    const eqParts = cleanTarget.split(/\s*=\s*/);
     if (eqParts.length > 1) {
       const lastPart = eqParts[eqParts.length - 1].replace(/[។.]/g, '').trim();
       let ans = lastPart;
@@ -1027,10 +1054,10 @@ function doGet(e) {
       return ans.replace(/\$+/g, '$');
     }
 
-    const im = target.match(/\$([^\$]+)\$/);
+    const im = cleanTarget.match(/\$([^\$]+)\$/);
     if (im) return `$${im[1].trim()}$`;
 
-    const res = target.replace(/[។.]/g, '').trim();
+    const res = cleanTarget.replace(/[។.]/g, '').trim();
     if (!res.startsWith('$') && (res.includes('\\') || res.includes('^') || res.includes('_'))) {
       return `$${res}$`;
     }
