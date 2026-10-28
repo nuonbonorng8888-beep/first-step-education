@@ -2642,10 +2642,15 @@ function doGet(e) {
     } catch(e) {}
   },
 
-  defaultTeacherSheetUrl: 'https://script.google.com/macros/s/AKfycbwzTi8_Z9aX1oo421kG7XLiEwxXRAk-28-uQWhSjzBgrTzSTH0PSb0qJvcEenwpUOLvKA/exec',
+  defaultTeacherSheetUrl: 'https://script.google.com/macros/s/AKfycbxtsUQk52-Jh_k7VLgVFl66BvT9C2pn44--tZG6CgfRIAHN7Igw8wYrQ6uDbn-4B8uF/exec',
 
   getTeacherSheetUrl() {
-    return localStorage.getItem('worksheet_teacher_sheet_url') || this.defaultTeacherSheetUrl || '';
+    const stored = localStorage.getItem('worksheet_teacher_sheet_url');
+    if (stored && stored.includes('AKfycbwzTi8_Z9aX1oo421kG7XLiEwxXRAk-28-uQWhSjzBgrTzSTH0PSb0qJvcEenwpUOLvKA')) {
+      this.setTeacherSheetUrl(this.defaultTeacherSheetUrl);
+      return this.defaultTeacherSheetUrl;
+    }
+    return stored || this.defaultTeacherSheetUrl || '';
   },
 
   setTeacherSheetUrl(url) {
