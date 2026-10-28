@@ -41,12 +41,12 @@ window.App = {
   mascotMsgIndex: 0,
 
   appsScriptSourceCode: `/**
- * WORKSHEET.KH - GOOGLE SHEETS LIVE SCORING ENGINE (PRO VERSION)
+ * WORKSHEET.KH - GOOGLE SHEETS LIVE SCORING ENGINE (HIGH CONCURRENCY PRO VERSION)
  * រៀបចំដោយ៖ លោកគ្រូ នួន បូណង (Nuon Bonorng) - វិទ្យាល័យព្រះយុគន្ធរ សាលារៀនជំនាន់ថ្មី
  * មុខងារ៖ 
- *  1. ទទួលពិន្ទុតេស្តស្វ័យប្រវត្ត (ចូលតារាងសរុប និងបំបែកតាមកម្រិតថ្នាក់/បន្ទប់)
- *  2. បង្កើត Tab ទុកជាមុនស្វ័យប្រវត្ត (Auto Pre-generate) គ្រប់កម្រិត ៧ ដល់ ១២
- *  3. កាត់បន្ថយចំនួន Tab ខាងក្រោមឲ្យនៅតិច និងមានសណ្ដាប់ធ្នាប់ ដាក់ពណ៌តាមកម្រិតថ្នាក់ស្អាត
+ *  1. ទទួលពិន្ទុតេស្តស្វ័យប្រវត្ត (Ultra-fast concurrent lock - មិនកកស្ទះពេលសិស្សផ្ញើព្រមគ្នា)
+ *  2. កត់ត្រាចូលតារាងសរុប និងបំបែកតាមបន្ទប់ថ្នាក់ស្វ័យប្រវត្ត
+ *  3. រៀបចំក្បាលតារាង Column Styling ជាមុន មិនប្រើ format ម្ដងមួយជួរដែលធ្វើឱ្យយឺតឡើយ
  */
 
 // បង្កើត Menu ពិសេសក្នុង Google Sheets ពេលបើកឯកសារ
@@ -100,7 +100,7 @@ function setupGradeTabs() {
     formatSheetHeader(sheet, name);
   }
   
-  SpreadsheetApp.getUi().alert('✅ បានបង្កើត Tab តាមកម្រិតថ្នាក់ (៧ ដល់ ១២ + តារាងសរុប) រួចរាល់ដោយជោគជ័យ! Tab នៅផ្នែកខាងក្រោមមានសណ្ដាប់ធ្នាប់ល្អស្អាត មិនកកស្ទះឡើយ។');
+  SpreadsheetApp.getUi().alert('✅ បានបង្កើត Tab តាមកម្រិតថ្នាក់ (៧ ដល់ ១២ + តារាងសរុប) រួចរាល់ដោយជោគជ័យ!');
 }
 
 // ជម្រើសទី ២៖ បង្កើត Tab តាមបន្ទប់ថ្នាក់លម្អិត
@@ -112,7 +112,7 @@ function setupClassTabs() {
     "8A", "8B", "8C",
     "9A", "9B", "9C",
     "10A1", "10A2", "10A3", "10A4",
-    "11A", "11B", "11C",
+    "11A", "11B", "11C", "11NGS-P1", "11NGS-P2", "11NGS-P3",
     "12A", "12B", "12C"
   ];
   
@@ -128,7 +128,7 @@ function setupClassTabs() {
   SpreadsheetApp.getUi().alert('✅ បានបង្កើត Tab តាមបន្ទប់ថ្នាក់រួចរាល់!');
 }
 
-// រៀបចំក្បាលតារាង និងដាក់ពណ៌
+// រៀបចំក្បាលតារាង និងកំណត់ទ្រង់ទ្រាយ Column ទាំងមូលជាមុនតែម្តង (លឿនបំផុត និងស្អាត)
 function formatSheetHeader(sheet, name) {
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(HEADERS);
@@ -149,6 +149,14 @@ function formatSheetHeader(sheet, name) {
   else if (name.startsWith("10")) sheet.setTabColor("#6366f1");
   else if (name.startsWith("11")) sheet.setTabColor("#8b5cf6");
   else if (name.startsWith("12")) sheet.setTabColor("#f43f5e");
+  
+  // Format column alignment globally (so rows do not need slow per-row formatting)
+  try {
+    sheet.getRange("A:K").setVerticalAlignment("middle");
+    sheet.getRange("A:B").setHorizontalAlignment("center");
+    sheet.getRange("D:E").setHorizontalAlignment("center");
+    sheet.getRange("H:K").setHorizontalAlignment("center");
+  } catch(e) {}
 }
 
 function formatAllWorksheetSheets() {
@@ -160,10 +168,18 @@ function formatAllWorksheetSheets() {
   SpreadsheetApp.getUi().alert('✅ បានរៀបចំក្បាលតារាងគ្រប់សន្លឹកទាំងអស់ស្អាតរួចរាល់!');
 }
 
-// ទទួលពិន្ទុពីប្រព័ន្ធ Worksheet.Kh
+// ទទួលពិន្ទុពីប្រព័ន្ធ Worksheet.Kh (High Concurrency - រង់ចាំរហូតដល់ 30s មិនបាត់សិស្សឡើយ)
 function doPost(e) {
   var lock = LockService.getScriptLock();
-  lock.tryLock(10000); // Wait up to 10s for concurrent submissions
+  var hasLock = false;
+  
+  try {
+    // រង់ចាំរហូតដល់ 30 វិនាទី ដើម្បីការពារការបាត់សំណើសិស្សពេលផ្ញើព្រមគ្នា
+    lock.waitLock(30000);
+    hasLock = true;
+  } catch (lockErr) {
+    // បើលើស 30s ក៏នៅតែព្យាយាមអនុវត្តកត់ត្រា
+  }
   
   try {
     var ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -173,14 +189,14 @@ function doPost(e) {
       try {
         data = JSON.parse(e.postData.contents);
       } catch (err) {
-        data = e.parameter;
+        data = e.parameter || {};
       }
     } else if (e && e.parameter) {
       data = e.parameter;
     }
     
-    var className = (data.studentClass || "ទូទៅ").trim().toUpperCase();
-    if (!className) className = "ទូទៅ";
+    var rawClass = (data.studentClass || "ទូទៅ").trim().toUpperCase();
+    if (!rawClass) rawClass = "ទូទៅ";
     var gradeStr = data.grade ? ("ថ្នាក់ទី " + data.grade) : "";
     
     // គណនានិទ្ទេស (Grade evaluation)
@@ -195,10 +211,10 @@ function doPost(e) {
     // ជួរទិន្នន័យថ្មី
     var newRow = [
       data.timestamp || Utilities.formatDate(new Date(), "Asia/Phnom_Penh", "yyyy-MM-dd HH:mm:ss"),
-      data.rollNumber || "",
+      data.rollNumber || "-",
       data.studentName || "",
       gradeStr,
-      className,
+      rawClass,
       data.lessonTitle || "",
       data.pointTitle || "",
       data.score !== undefined ? data.score : 0,
@@ -214,28 +230,30 @@ function doPost(e) {
       formatSheetHeader(masterSheet, "🌟 តារាងសរុប");
     }
     masterSheet.appendRow(newRow);
-    formatDataRow(masterSheet, masterSheet.getLastRow(), newRow.length);
     
-    // ២. ស្វែងរក Sheet បន្ទាប់ (អាទិភាព៖ Tab តាមបន្ទប់ថ្នាក់ -> បើគ្មាន ដាក់ក្នុង Tab តាមកម្រិតថ្នាក់)
-    var targetSheet = ss.getSheetByName(className);
+    // ២. ស្វែងរក Sheet តាមបន្ទប់ថ្នាក់
+    var targetSheet = ss.getSheetByName(rawClass);
+    if (!targetSheet) {
+      var cleanClass = rawClass.replace(/\\s+/g, '');
+      targetSheet = ss.getSheetByName(cleanClass);
+    }
     if (!targetSheet && gradeStr) {
       targetSheet = ss.getSheetByName(gradeStr);
     }
     
-    // ប្រសិនបើមិនទាន់មាន Tab ទាំងពីរទេ វានឹងបង្កើត Tab តាមឈ្មោះបន្ទប់
+    // បើគ្មាន Tab ទេ បង្កើត Tab តាមបន្ទប់ថ្នាក់នោះភ្លាម
     if (!targetSheet) {
-      targetSheet = ss.insertSheet(className);
-      formatSheetHeader(targetSheet, className);
+      targetSheet = ss.insertSheet(rawClass);
+      formatSheetHeader(targetSheet, rawClass);
     }
     
-    // បញ្ចូលទិន្នន័យ (បើ targetSheet មិនមែនជា masterSheet)
-    if (targetSheet.getName() !== masterSheet.getName()) {
+    // បញ្ចូលទិន្នន័យក្នុង Sheet ថ្នាក់ (បើមិនមែនជា masterSheet)
+    if (targetSheet && targetSheet.getName() !== masterSheet.getName()) {
       targetSheet.appendRow(newRow);
-      formatDataRow(targetSheet, targetSheet.getLastRow(), newRow.length);
     }
     
     return ContentService
-      .createTextOutput(JSON.stringify({ "status": "success", "message": "ពិន្ទុត្រូវបានកត់ត្រាក្នុងថ្នាក់ " + className }))
+      .createTextOutput(JSON.stringify({ "status": "success", "message": "ពិន្ទុត្រូវបានកត់ត្រាក្នុងថ្នាក់ " + rawClass }))
       .setMimeType(ContentService.MimeType.JSON);
       
   } catch (error) {
@@ -243,16 +261,10 @@ function doPost(e) {
       .createTextOutput(JSON.stringify({ "status": "error", "message": error.toString() }))
       .setMimeType(ContentService.MimeType.JSON);
   } finally {
-    lock.releaseLock();
+    if (hasLock) {
+      try { lock.releaseLock(); } catch(e) {}
+    }
   }
-}
-
-function formatDataRow(sheet, rowIdx, colCount) {
-  sheet.getRange(rowIdx, 1, 1, colCount).setVerticalAlignment("middle");
-  sheet.getRange(rowIdx, 1).setHorizontalAlignment("center");
-  sheet.getRange(rowIdx, 2).setHorizontalAlignment("center");
-  sheet.getRange(rowIdx, 4, 1, 2).setHorizontalAlignment("center");
-  sheet.getRange(rowIdx, 8, 1, 4).setHorizontalAlignment("center");
 }
 
 function doGet(e) {
@@ -2455,7 +2467,12 @@ function doGet(e) {
                 <span>✅</span>
                 <span>បានបញ្ជូនពិន្ទុចូលក្នុងសន្លឹកថ្នាក់ <strong>«${studentInfo.classRoom}»</strong> របស់លោកគ្រូរួចរាល់!</span>
               </div>
-              <span style="font-size: 0.76rem; opacity: 0.85;">${payload.timestamp}</span>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 0.76rem; opacity: 0.85;">${payload.timestamp}</span>
+                <button type="button" class="btn btn-sm" onclick="App.resendCompletedQuiz()" style="background: rgba(16, 185, 129, 0.25); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.5); font-size: 0.76rem; padding: 4px 10px; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;" title="ចុចដើម្បីបញ្ជូនពិន្ទុទៅកាន់ Google Sheets ម្តងទៀត">
+                  🔄 ផ្ញើម្តងទៀត
+                </button>
+              </div>
             </div>
           `;
         }
@@ -2463,8 +2480,11 @@ function doGet(e) {
       } catch (err) {
         if (statusCard) {
           statusCard.innerHTML = `
-            <div style="background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 10px; padding: 10px 14px; color: #f59e0b;">
-              ⚠️ មិនអាចបញ្ជូនទៅកាន់ Sheets បានទេ ប៉ុន្តែបានរក្សាទុកក្នុងទូរស័ព្ទរួចរាល់!
+            <div style="background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 10px; padding: 10px 14px; color: #f59e0b; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+              <div>⚠️ មិនទាន់អាចបញ្ជូនទៅកាន់ Sheets បានទេ ប៉ុន្តែបានរក្សាទុកក្នុងទូរស័ព្ទរួចរាល់!</div>
+              <button type="button" class="btn btn-sm btn-primary" onclick="App.resendCompletedQuiz()" style="font-size: 0.76rem; padding: 5px 12px;">
+                🔄 សាកល្បងផ្ញើម្តងទៀត
+              </button>
             </div>
           `;
         }
@@ -2483,6 +2503,11 @@ function doGet(e) {
         `;
       }
     }
+  },
+
+  async resendCompletedQuiz() {
+    this.showToast('⏳ កំពុងព្យាយាមផ្ញើពិន្ទុទៅកាន់ Google Sheets ម្តងទៀត...', 'info');
+    await this.submitCompletedQuiz();
   },
 
   renderOverviewTab() {
