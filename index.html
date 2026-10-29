@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=69">
+  <link rel="stylesheet" href="css/style.css?v=70">
 </head>
 <body>
 
@@ -1257,7 +1257,7 @@
             </select>
           </div>
 
-          <div class="form-group" style="margin-bottom: 14px;" id="generator-time-group">
+          <div class="form-group" style="margin-bottom: 12px;" id="generator-time-group">
             <label class="form-label" for="generator-time-select">⏱️ កំណត់ថិរវេលាប្រឡង (Exam Time Limit) ៖</label>
             <select id="generator-time-select" class="form-select">
               <option value="0">⏳ គ្មានកំណត់នាទី (សិស្សធ្វើតាមសម្រួល)</option>
@@ -1269,6 +1269,47 @@
               <option value="45">⏱️ ៤៥ នាទី (45 min)</option>
               <option value="60">⏱️ ៦០ នាទី (១ ម៉ោង)</option>
             </select>
+          </div>
+
+          <!-- Exam Date & Time Schedule Controls (ការពារសិស្សប្រឡងថ្ងៃក្រោយ) -->
+          <div style="background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px;">
+            <div style="font-size: 0.84rem; font-weight: 700; color: #38bdf8; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+              <span>📅</span>
+              <span>កាលបរិច្ឆេទប្រឡង & សុពលភាព Link (Date & Schedule Lock) ៖</span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="generator-date-input" style="font-size: 0.78rem;">ថ្ងៃប្រឡង ៖</label>
+                <input type="date" id="generator-date-input" class="form-input" style="font-size: 0.85rem;">
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="generator-window-select" style="font-size: 0.78rem;">ម៉ោងអនុញ្ញាតប្រឡង ៖</label>
+                <select id="generator-window-select" class="form-select" onchange="App.onGeneratorWindowChange()" style="font-size: 0.85rem;">
+                  <option value="all_day" selected>☀️ ពេញមួយថ្ងៃ (០៦:០០ ដល់ ២២:០០)</option>
+                  <option value="morning">🌅 ពេលព្រឹក (០៧:០០ ដល់ ១១:៣០)</option>
+                  <option value="afternoon">🌇 ពេលរសៀល (១៣:០០ ដល់ ១៧:៣០)</option>
+                  <option value="custom">⚙️ កំណត់ម៉ោងផ្ទាល់ខ្លួន (Custom Time)</option>
+                  <option value="anytime">♾️ គ្មានកំណត់ថ្ងៃ/ម៉ោង (បើកជានិច្ច)</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="generator-custom-time-row" style="display: none; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="generator-start-time" style="font-size: 0.76rem;">ម៉ោងចាប់ផ្តើម ៖</label>
+                <input type="time" id="generator-start-time" class="form-input" value="08:00">
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="generator-end-time" style="font-size: 0.76rem;">ម៉ោងបិទទទួល ៖</label>
+                <input type="time" id="generator-end-time" class="form-input" value="10:30">
+              </div>
+            </div>
+
+            <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 8px; line-height: 1.4;">
+              🛡️ <strong>សុវត្ថិភាព ៖</strong> សិស្សប្រឡងបានតែ <strong>១ លើកគត់</strong> នៅថ្ងៃ និងម៉ោងដែលបានកំណត់ខាងលើ។ ផុតថ្ងៃ ឬផុតម៉ោង ប្រព័ន្ធនឹងបិទស្វ័យប្រវត្ត ការពារសិស្សចូលប្រឡងម្តងទៀតនៅថ្ងៃក្រោយ!
+            </div>
           </div>
 
           <button class="btn btn-primary" onclick="App.generateClassShareLink()" style="width: 100%;">
@@ -1351,14 +1392,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=69"></script>
-  <script src="js/app.js?v=69"></script>
-  <script src="js/visits.js?v=69"></script>
+  <script src="js/storage.js?v=70"></script>
+  <script src="js/app.js?v=70"></script>
+  <script src="js/visits.js?v=70"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=69').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=70').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {
