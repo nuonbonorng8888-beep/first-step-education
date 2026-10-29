@@ -1252,14 +1252,14 @@
 
           <div class="form-group" style="margin-bottom: 12px;" id="generator-point-group">
             <label class="form-label" for="generator-point-select">ចំណុចតេស្ត ៖</label>
-            <select id="generator-point-select" class="form-select">
+            <select id="generator-point-select" class="form-select" onchange="App.onGeneratorInputChange()">
               <option value="0">🌟 គ្រប់ចំណុចចម្រុះ (១០ សំណួរពេញមេរៀន)</option>
             </select>
           </div>
 
           <div class="form-group" style="margin-bottom: 12px;" id="generator-time-group">
             <label class="form-label" for="generator-time-select">⏱️ កំណត់ថិរវេលាប្រឡង (Exam Time Limit) ៖</label>
-            <select id="generator-time-select" class="form-select">
+            <select id="generator-time-select" class="form-select" onchange="App.onGeneratorInputChange()">
               <option value="0">⏳ គ្មានកំណត់នាទី (សិស្សធ្វើតាមសម្រួល)</option>
               <option value="5">⏱️ ៥ នាទី (តេស្តល្បឿនរហ័ស 5 min)</option>
               <option value="10">⏱️ ១០ នាទី (10 min)</option>
@@ -1279,15 +1279,16 @@
             </div>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
-              <div class="form-group" style="margin-bottom: 0;">
+              <div class="form-group" style="margin-bottom: 0;" id="generator-date-group">
                 <label class="form-label" for="generator-date-input" style="font-size: 0.78rem;">ថ្ងៃប្រឡង ៖</label>
-                <input type="date" id="generator-date-input" class="form-input" style="font-size: 0.85rem;">
+                <input type="date" id="generator-date-input" class="form-input" onchange="App.onGeneratorInputChange()" style="font-size: 0.85rem;">
+                <div id="generator-anytime-badge" style="display: none; font-size: 0.72rem; color: #10b981; font-weight: 600; margin-top: 4px;">🔓 បើកសេរីជានិច្ច គ្មានថ្ងៃផុតកំណត់</div>
               </div>
 
               <div class="form-group" style="margin-bottom: 0;">
                 <label class="form-label" for="generator-window-select" style="font-size: 0.78rem;">ម៉ោងអនុញ្ញាតប្រឡង ៖</label>
                 <select id="generator-window-select" class="form-select" onchange="App.onGeneratorWindowChange()" style="font-size: 0.85rem;">
-                  <option value="all_day" selected>☀️ ពេញមួយថ្ងៃ (០៦:០០ ដល់ ២២:០០)</option>
+                  <option value="all_day" selected>☀️ ពេញមួយថ្ងៃ (បើកពេញ ២៤ ម៉ោង ដល់ 23:59)</option>
                   <option value="morning">🌅 ពេលព្រឹក (០៧:០០ ដល់ ១១:៣០)</option>
                   <option value="afternoon">🌇 ពេលរសៀល (១៣:០០ ដល់ ១៧:៣០)</option>
                   <option value="custom">⚙️ កំណត់ម៉ោងផ្ទាល់ខ្លួន (Custom Time)</option>
@@ -1299,11 +1300,11 @@
             <div id="generator-custom-time-row" style="display: none; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px;">
               <div class="form-group" style="margin-bottom: 0;">
                 <label class="form-label" for="generator-start-time" style="font-size: 0.76rem;">ម៉ោងចាប់ផ្តើម ៖</label>
-                <input type="time" id="generator-start-time" class="form-input" value="08:00">
+                <input type="time" id="generator-start-time" class="form-input" value="08:00" onchange="App.onGeneratorInputChange()">
               </div>
               <div class="form-group" style="margin-bottom: 0;">
                 <label class="form-label" for="generator-end-time" style="font-size: 0.76rem;">ម៉ោងបិទទទួល ៖</label>
-                <input type="time" id="generator-end-time" class="form-input" value="10:30">
+                <input type="time" id="generator-end-time" class="form-input" value="22:50" onchange="App.onGeneratorInputChange()">
               </div>
             </div>
 
@@ -1320,6 +1321,12 @@
             <div style="font-size: 0.82rem; font-weight: 700; color: #10b981; margin-bottom: 6px;">
               🎯 Link ប្រឡងផ្ទាល់ (សិស្សចុចបើកចូលធ្វើតេស្តភ្លាម) ៖
             </div>
+
+            <!-- Clear Schedule Preview -->
+            <div id="generator-schedule-badge" style="font-size: 0.76rem; color: #38bdf8; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); padding: 6px 10px; border-radius: 6px; margin-bottom: 8px;">
+              📅 កាលវិភាគ ៖ កំពុងគណនា...
+            </div>
+
             <div style="display: flex; gap: 8px;">
               <input type="text" id="generator-link-output" class="form-input" readonly style="font-family: monospace; font-size: 0.78rem; background: var(--bg-secondary);">
               <button class="btn btn-primary" onclick="App.copyGeneratedClassLink()" style="white-space: nowrap;">📋 ចម្លង</button>
@@ -1327,6 +1334,9 @@
             <span id="generator-link-hint" style="font-size: 0.76rem; color: #38bdf8; margin-top: 6px; display: block;">
               ✓ ផ្ញើ Link នេះចូលក្នុង Group Telegram ថ្នាក់នោះ — សិស្សចុច Link នេះ នឹងបើកចូលធ្វើតេស្តភ្លាមៗ មិនបាច់រុករកឡើយ!
             </span>
+            <div style="font-size: 0.72rem; color: #f59e0b; margin-top: 6px; line-height: 1.4;">
+              💡 <strong>ចំណាំ ៖</strong> ប្រសិនបើលោកគ្រូទើបតែកែម៉ោង ឬជ្រើសរើសបើកជានិច្ច សូមចុចប៊ូតុង «📋 ចម្លង» ខាងលើ ដើម្បីយក Link ថ្មីទៅបើក (កុំប្រើ Link ចាស់ដែលបានបើកមុននេះ)។
+            </div>
           </div>
         </div>
 
@@ -1392,14 +1402,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=71"></script>
-  <script src="js/app.js?v=71"></script>
-  <script src="js/visits.js?v=71"></script>
+  <script src="js/storage.js?v=72"></script>
+  <script src="js/app.js?v=72"></script>
+  <script src="js/visits.js?v=72"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=71').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=72').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

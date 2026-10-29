@@ -342,10 +342,16 @@ function doGet(e) {
         this.examDate = dateParam;
       }
       if (startParam) {
-        this.examStartTime = startParam;
+        this.examStartTime = this.normalizeTimeString(startParam) || startParam;
       }
       if (endParam) {
-        this.examEndTime = endParam;
+        this.examEndTime = this.normalizeTimeString(endParam) || endParam;
+      }
+
+      // Backward compatibility: If an old link was created with the previous 'all_day' default (06:00 - 22:00),
+      // auto-extend its cutoff to 23:59 so teachers/students testing late at night aren't blocked!
+      if (this.examStartTime === '06:00' && this.examEndTime === '22:00') {
+        this.examEndTime = '23:59';
       }
 
       // Check if student exam mode is active
@@ -2572,6 +2578,34 @@ function doGet(e) {
     return String(num).replace(/[0-9]/g, d => khmerDigits[parseInt(d, 10)]);
   },
 
+  normalizeTimeString(timeStr) {
+    if (!timeStr) return '';
+    let str = String(timeStr).trim().toUpperCase();
+    const isPM = str.includes('PM');
+    const isAM = str.includes('AM');
+    str = str.replace(/[^\d:]/g, '');
+    const parts = str.split(':');
+    if (parts.length < 2) return '';
+    let hours = parseInt(parts[0], 10);
+    const mins = String(parseInt(parts[1], 10) || 0).padStart(2, '0');
+    if (isPM && hours < 12) hours += 12;
+    if (isAM && hours === 12) hours = 0;
+    return `${String(hours).padStart(2, '0')}:${mins}`;
+  },
+
+  formatKhmerTimeDisplay(timeStr) {
+    if (!timeStr) return '';
+    const norm = this.normalizeTimeString(timeStr) || timeStr;
+    const parts = norm.split(':');
+    if (parts.length < 2) return this.toKhmerNum(norm);
+    const h = parseInt(parts[0], 10);
+    let period = 'ព្រឹក';
+    if (h >= 12 && h < 17) period = 'រសៀល';
+    else if (h >= 17 && h < 21) period = 'ល្ងាច';
+    else if (h >= 21 || h < 5) period = 'យប់';
+    return `${this.toKhmerNum(norm)} (${period})`;
+  },
+
   formatKhmerDate(dateStr, timeStr) {
     if (!dateStr) return '';
     const parts = dateStr.split('-');
@@ -2747,7 +2781,7 @@ function doGet(e) {
           ${this.examStartTime ? `
             <div class="schedule-meta-item">
               <span class="schedule-meta-label">⏰ ម៉ោងចាប់ផ្តើម</span>
-              <span class="schedule-meta-val">${this.toKhmerNum(this.examStartTime)} ព្រឹក</span>
+              <span class="schedule-meta-val">${this.formatKhmerTimeDisplay(this.examStartTime)}</span>
             </div>
           ` : ''}
           ${this.examTimeLimit > 0 ? `
@@ -2838,7 +2872,7 @@ function doGet(e) {
           ${this.examEndTime ? `
             <div class="schedule-meta-item">
               <span class="schedule-meta-label">⏰ ម៉ោងបិទទទួល</span>
-              <span class="schedule-meta-val">${this.toKhmerNum(this.examEndTime)}</span>
+              <span class="schedule-meta-val">${this.formatKhmerTimeDisplay(this.examEndTime)}</span>
             </div>
           ` : ''}
           <div class="schedule-meta-item">
@@ -3774,6 +3808,7 @@ function doGet(e) {
       gradeSelect.value = match[1];
       this.populateGeneratorLessons();
     }
+    this.onGeneratorInputChange();
   },
 
   onGeneratorLessonChange() {
@@ -3784,6 +3819,7 @@ function doGet(e) {
     const val = lessonSelect.value;
     if (!val || !val.includes(':::')) {
       pointSelect.innerHTML = '<option value="0">🌟 គ្រប់ចំណុចចម្រុះ (១០ សំណួរ)</option>';
+      this.onGeneratorInputChange();
       return;
     }
 
@@ -3810,6 +3846,7 @@ function doGet(e) {
       });
     }
     pointSelect.innerHTML = ptsHtml;
+    this.onGeneratorInputChange();
   },
 
   openTeacherSheetModal(preselectCurrent = false) {
@@ -3854,10 +3891,15 @@ function doGet(e) {
       dateInp.value = `${yyyy}-${mm}-${dd}`;
     }
 
+    this.onGeneratorWindowChange();
     this.populateGeneratorLessons();
 
     const modal = document.getElementById('teacher-sheet-modal');
     if (modal) modal.classList.add('active');
+
+    if (genClassInp && genClassInp.value.trim()) {
+      this.generateClassShareLink(true);
+    }
 
     if (preselectCurrent) {
       setTimeout(() => {
@@ -3871,11 +3913,36 @@ function doGet(e) {
   onGeneratorWindowChange() {
     const winSelect = document.getElementById('generator-window-select');
     const customRow = document.getElementById('generator-custom-time-row');
-    if (!winSelect || !customRow) return;
+    const dateInp = document.getElementById('generator-date-input');
+    const dateGroup = document.getElementById('generator-date-group');
+    const anytimeBadge = document.getElementById('generator-anytime-badge');
+    if (!winSelect) return;
+
     if (winSelect.value === 'custom') {
-      customRow.style.display = 'grid';
+      if (customRow) customRow.style.display = 'grid';
+      if (dateInp) dateInp.disabled = false;
+      if (dateGroup) dateGroup.style.opacity = '1';
+      if (anytimeBadge) anytimeBadge.style.display = 'none';
+    } else if (winSelect.value === 'anytime') {
+      if (customRow) customRow.style.display = 'none';
+      if (dateInp) dateInp.disabled = true;
+      if (dateGroup) dateGroup.style.opacity = '0.5';
+      if (anytimeBadge) anytimeBadge.style.display = 'block';
     } else {
-      customRow.style.display = 'none';
+      if (customRow) customRow.style.display = 'none';
+      if (dateInp) dateInp.disabled = false;
+      if (dateGroup) dateGroup.style.opacity = '1';
+      if (anytimeBadge) anytimeBadge.style.display = 'none';
+    }
+
+    this.onGeneratorInputChange();
+  },
+
+  onGeneratorInputChange() {
+    const resBox = document.getElementById('generator-result-box');
+    const classInp = document.getElementById('generator-class-input');
+    if (classInp && classInp.value.trim() && resBox && resBox.style.display !== 'none') {
+      this.generateClassShareLink(true);
     }
   },
 
@@ -3979,7 +4046,7 @@ function doGet(e) {
     }
   },
 
-  generateClassShareLink() {
+  generateClassShareLink(silent = false) {
     const classInp = document.getElementById('generator-class-input');
     const gradeSelect = document.getElementById('generator-grade-select');
     const lessonSelect = document.getElementById('generator-lesson-select');
@@ -3994,8 +4061,10 @@ function doGet(e) {
 
     const cls = (classInp?.value || '').trim().toUpperCase();
     if (!cls) {
-      this.showToast('សូមបញ្ចូលឈ្មោះថ្នាក់ (ឧ. 12B, 10A1...)!', 'warning');
-      classInp?.focus();
+      if (!silent) {
+        this.showToast('សូមបញ្ចូលឈ្មោះថ្នាក់ (ឧ. 12B, 10A1...)!', 'warning');
+        classInp?.focus();
+      }
       return;
     }
 
@@ -4033,24 +4102,35 @@ function doGet(e) {
     const dateVal = (dateInp?.value || '').trim();
     const winVal = winSelect?.value || 'all_day';
     let scheduleDesc = '';
+    let scheduleBadgeText = '';
 
-    if (dateVal && winVal !== 'anytime') {
+    if (winVal === 'anytime') {
+      // 100% open with no date or time constraints!
+      scheduleDesc = ' [♾️ បើកជានិច្ច គ្មានកំណត់ថ្ងៃម៉ោង]';
+      scheduleBadgeText = '🔓 <strong>កាលវិភាគ ៖</strong> បើកសេរីជានិច្ច (គ្មានកាលបរិច្ឆេទផុតកំណត់ សិស្សអាចចូលធ្វើតេស្តបានគ្រប់ពេល)';
+    } else if (dateVal) {
       shareUrl += `&date=${dateVal}`;
       if (winVal === 'morning') {
         shareUrl += `&start=07:00&end=11:30`;
         scheduleDesc = ` [📅 ថ្ងៃ ${dateVal} ពេលព្រឹក 07:00-11:30]`;
+        scheduleBadgeText = `⏰ <strong>កាលវិភាគ ៖</strong> ថ្ងៃទី ${dateVal} ពេលព្រឹក (ម៉ោង ០៧:០០ ដល់ ១១:៣០)`;
       } else if (winVal === 'afternoon') {
         shareUrl += `&start=13:00&end=17:30`;
         scheduleDesc = ` [📅 ថ្ងៃ ${dateVal} ពេលរសៀល 13:00-17:30]`;
+        scheduleBadgeText = `⏰ <strong>កាលវិភាគ ៖</strong> ថ្ងៃទី ${dateVal} ពេលរសៀល (ម៉ោង ១៣:០០ ដល់ ១៧:៣០)`;
       } else if (winVal === 'all_day') {
-        shareUrl += `&start=06:00&end=22:00`;
-        scheduleDesc = ` [📅 ថ្ងៃ ${dateVal} ពេញមួយថ្ងៃ]`;
+        // Whole day: do NOT restrict end to 22:00! Open 24h of that date until midnight!
+        scheduleDesc = ` [📅 ថ្ងៃ ${dateVal} ពេញមួយថ្ងៃ (24 ម៉ោង ដល់ 23:59)]`;
+        scheduleBadgeText = `📅 <strong>កាលវិភាគ ៖</strong> ថ្ងៃទី ${dateVal} ពេញមួយថ្ងៃ (បើក ២៤ ម៉ោង ដល់ពាក់កណ្តាលអធ្រាត្រ ២៣:៥៩)`;
       } else if (winVal === 'custom') {
-        const sTime = (startTimeInp?.value || '').trim();
-        const eTime = (endTimeInp?.value || '').trim();
+        const rawSTime = (startTimeInp?.value || '').trim();
+        const rawETime = (endTimeInp?.value || '').trim();
+        const sTime = this.normalizeTimeString(rawSTime) || rawSTime;
+        const eTime = this.normalizeTimeString(rawETime) || rawETime;
         if (sTime) shareUrl += `&start=${sTime}`;
         if (eTime) shareUrl += `&end=${eTime}`;
         scheduleDesc = ` [📅 ថ្ងៃ ${dateVal} ម៉ោង ${sTime || '00:00'}-${eTime || '23:59'}]`;
+        scheduleBadgeText = `⚙️ <strong>កាលវិភាគ ៖</strong> ថ្ងៃទី ${dateVal} (ចាប់ពីម៉ោង ${sTime || '00:00'} ដល់ម៉ោង ${eTime || '23:59'})`;
       }
     }
 
@@ -4060,13 +4140,15 @@ function doGet(e) {
 
     const resBox = document.getElementById('generator-result-box');
     const outInp = document.getElementById('generator-link-output');
+    const scheduleBadge = document.getElementById('generator-schedule-badge');
     if (outInp) outInp.value = shareUrl;
+    if (scheduleBadge && scheduleBadgeText) scheduleBadge.innerHTML = scheduleBadgeText;
     if (resBox) resBox.style.display = 'block';
 
     const hintSpan = document.getElementById('generator-link-hint');
     if (hintSpan) {
       const timerText = timeVal > 0 ? `⏱️ <strong>កំណត់ពេល៖ ${timeVal} នាទី</strong> | ` : '⏱️ <strong>មិនកំណត់ពេល</strong> | ';
-      const dateText = (dateVal && winVal !== 'anytime') ? `📅 <strong>កាលបរិច្ឆេទ ៖ ${dateVal} (ការពារប្រឡងថ្ងៃក្រោយ)</strong> | ` : '';
+      const dateText = (dateVal && winVal !== 'anytime') ? `📅 <strong>កាលបរិច្ឆេទ ៖ ${dateVal} (ការពារប្រឡងថ្ងៃក្រោយ)</strong> | ` : '🔓 <strong>បើកជានិច្ច</strong> | ';
       if (sheetUrl) {
         hintSpan.innerHTML = `✓ ${timerText}${dateText}<strong>បានភ្ជាប់ Google Sheets ៖</strong> ពេលសិស្សធ្វើតេស្តចប់ ពិន្ទុនឹងលោតចូល Tab <strong>"${cls}"</strong> ក្នុង Sheets ភ្លាមៗ (សិស្សប្រឡងបានតែម្តងគត់)!`;
         hintSpan.style.color = '#10b981';
@@ -4076,23 +4158,26 @@ function doGet(e) {
       }
     }
 
-    const timeDesc = timeVal > 0 ? ` [⏱️ ${timeVal} នាទី]` : '';
-    if (sheetUrl) {
-      this.showToast(`បានបង្កើត Link ប្រឡងសម្រាប់ថ្នាក់ ${cls}${timeDesc}${scheduleDesc} (ភ្ជាប់ Google Sheets រួចរាល់)! 🎯`, 'success');
-    } else {
-      this.showToast(`⚠️ ការព្រមាន៖ លោកគ្រូមិនទាន់បានកំណត់ Web App URL ទេ! Link នេះនឹងមិនកត់ត្រាពិន្ទុចូល Sheets ឡើយ`, 'warning');
-      if (urlInp) {
-        urlInp.style.border = '2px solid #f59e0b';
-        setTimeout(() => { urlInp.style.border = ''; }, 3000);
+    if (!silent) {
+      const timeDesc = timeVal > 0 ? ` [⏱️ ${timeVal} នាទី]` : '';
+      if (sheetUrl) {
+        this.showToast(`បានបង្កើត Link ប្រឡងសម្រាប់ថ្នាក់ ${cls}${timeDesc}${scheduleDesc} (ភ្ជាប់ Google Sheets រួចរាល់)! 🎯`, 'success');
+      } else {
+        this.showToast(`⚠️ ការព្រមាន៖ លោកគ្រូមិនទាន់បានកំណត់ Web App URL ទេ! Link នេះនឹងមិនកត់ត្រាពិន្ទុចូល Sheets ឡើយ`, 'warning');
+        if (urlInp) {
+          urlInp.style.border = '2px solid #f59e0b';
+          setTimeout(() => { urlInp.style.border = ''; }, 3000);
+        }
       }
     }
   },
 
   copyGeneratedClassLink() {
+    this.generateClassShareLink(true);
     const outInp = document.getElementById('generator-link-output');
     if (outInp && outInp.value) {
       this.copyLink(outInp.value);
-      this.showToast('📋 បានចម្លង Link ថ្នាក់រួចរាល់! អាចផ្ញើចូល Telegram ថ្នាក់បានភ្លាមៗ', 'success');
+      this.showToast('📋 បានចម្លង Link ថ្នាក់ថ្មីរួចរាល់! អាចផ្ញើចូល Telegram ថ្នាក់បានភ្លាមៗ', 'success');
     }
   },
 
