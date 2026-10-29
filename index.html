@@ -1257,6 +1257,20 @@
             </select>
           </div>
 
+          <div class="form-group" style="margin-bottom: 14px;" id="generator-time-group">
+            <label class="form-label" for="generator-time-select">⏱️ កំណត់ថិរវេលាប្រឡង (Exam Time Limit) ៖</label>
+            <select id="generator-time-select" class="form-select">
+              <option value="0">⏳ គ្មានកំណត់នាទី (សិស្សធ្វើតាមសម្រួល)</option>
+              <option value="5">⏱️ ៥ នាទី (តេស្តល្បឿនរហ័ស 5 min)</option>
+              <option value="10">⏱️ ១០ នាទី (10 min)</option>
+              <option value="15" selected>⏱️ ១៥ នាទី (15 min - ស្តង់ដា ១០ សំណួរ)</option>
+              <option value="20">⏱️ ២០ នាទី (20 min)</option>
+              <option value="30">⏱️ ៣០ នាទី (30 min)</option>
+              <option value="45">⏱️ ៤៥ នាទី (45 min)</option>
+              <option value="60">⏱️ ៦០ នាទី (១ ម៉ោង)</option>
+            </select>
+          </div>
+
           <button class="btn btn-primary" onclick="App.generateClassShareLink()" style="width: 100%;">
             🔗 បង្កើត Link ប្រឡងសម្រាប់ថ្នាក់នេះ
           </button>

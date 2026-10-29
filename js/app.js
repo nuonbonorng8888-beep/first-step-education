@@ -21,6 +21,11 @@ window.App = {
   currentActiveQuizList: [],
   teacherUnlocked: false,
   activeWorksheetPoint: 0,
+  examTimeLimit: 0,
+  examTimerInterval: null,
+  examSecondsRemaining: 0,
+  examStarted: false,
+  examFinishedByTimeout: false,
 
   dailyQuotes: [
     { quote: "គណិតវិទ្យាគឺជាសិល្បៈនៃការផ្តល់ឈ្មោះដូចគ្នាដល់រឿងខុសៗគ្នា។", author: "Henri Poincaré" },
@@ -294,6 +299,23 @@ function doGet(e) {
       await this.handleUrlDirectExamRouting();
     } catch (e) {
       console.warn('URL direct exam error:', e);
+    }
+  },
+
+  initUrlParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const timeParam = parseInt(urlParams.get('time') || urlParams.get('duration') || '0', 10);
+    if (timeParam > 0) {
+      this.examTimeLimit = timeParam;
+    }
+    const sheetParam = urlParams.get('sheet');
+    if (sheetParam) {
+      try {
+        const decodedSheet = decodeURIComponent(sheetParam);
+        if (decodedSheet.startsWith('https://script.google.com/macros/s/')) {
+          this.setTeacherSheetUrl(decodedSheet);
+        }
+      } catch (e) {}
     }
   },
 
@@ -987,6 +1009,15 @@ function doGet(e) {
   retakeQuiz() {
     this.quizScore = 0;
     this.answeredQuiz = {};
+    if (this.examTimerInterval) {
+      clearInterval(this.examTimerInterval);
+      this.examTimerInterval = null;
+    }
+    this.examStarted = false;
+    this.examFinishedByTimeout = false;
+    const sessionKey = `timed_exam_${this.currentLesson?.id || 'quiz'}`;
+    sessionStorage.removeItem(sessionKey);
+
     const compCard = document.getElementById('quiz-completion-card');
     if (compCard) compCard.remove();
     this.renderQuizTab();
@@ -1946,6 +1977,28 @@ function doGet(e) {
       return;
     }
 
+    if (this.examTimeLimit > 0 && !this.examStarted) {
+      const sessionKey = `timed_exam_${this.currentLesson?.id || 'quiz'}`;
+      const savedStart = parseInt(sessionStorage.getItem(sessionKey) || '0', 10);
+      if (savedStart > 0) {
+        const elapsed = Math.floor((Date.now() - savedStart) / 1000);
+        const totalSec = this.examTimeLimit * 60;
+        if (elapsed < totalSec) {
+          this.examStarted = true;
+          this.examSecondsRemaining = totalSec - elapsed;
+          this.startCountdownTimer();
+        } else {
+          this.examStarted = true;
+          this.examFinishedByTimeout = true;
+        }
+      }
+    }
+
+    if (this.examTimeLimit > 0 && !this.examStarted) {
+      this.renderExamLobby(quizContainer, quiz, points, currentPointTitle);
+      return;
+    }
+
     this.currentActiveQuizList = quiz;
     this.quizScore = 0;
     this.answeredQuiz = {};
@@ -1955,6 +2008,25 @@ function doGet(e) {
     const hasStudent = !!(studentInfo.name && studentInfo.classRoom);
 
     quizContainer.innerHTML = `
+      ${(this.examTimeLimit > 0 && this.examStarted) ? `
+        <!-- Sticky Live Exam Countdown Timer -->
+        <div class="exam-live-bar ${this.examSecondsRemaining <= 60 ? 'warning-red' : (this.examSecondsRemaining <= 120 ? 'warning-amber' : '')}" id="exam-live-bar">
+          <div class="exam-live-bar-left">
+            <div class="exam-timer-chip">
+              <span class="timer-icon">⏱️</span>
+              <span class="timer-label">ពេលវេលានៅសល់ ៖</span>
+              <span class="exam-timer-countdown" id="exam-timer-display">${this.formatTimer(Math.max(0, this.examSecondsRemaining))}</span>
+            </div>
+            <div class="exam-timer-bar-track">
+              <div class="exam-timer-bar-fill" id="exam-live-progress" style="width: ${Math.max(0, Math.min(100, (this.examSecondsRemaining / (this.examTimeLimit * 60)) * 100))}%;"></div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-sm btn-submit-exam-early" onclick="App.confirmFinishExamEarly()">
+            📤 បញ្ចប់ & ផ្ញើពិន្ទុ
+          </button>
+        </div>
+      ` : ''}
+
       <!-- Student Profile & Class Bar -->
       <div class="quiz-student-bar">
         <div class="student-bar-info">
@@ -1990,7 +2062,7 @@ function doGet(e) {
           </button>
         </div>
       </div>
-      ${hasPoints ? `
+      ${(hasPoints && !this.examTimeLimit) ? `
         <!-- Section Points Selector Bar (MCQ Points Selector) -->
         <div class="quiz-points-selector-bar">
           <div class="quiz-points-header">
@@ -2091,6 +2163,227 @@ function doGet(e) {
     `;
 
     this.renderMath(quizContainer);
+  },
+
+  renderExamLobby(container, quiz, points, pointTitle) {
+    const studentInfo = this.getStudentInfo();
+    const totalQ = quiz.length;
+    const lessonTitle = this.currentLesson ? (this.currentLesson.title || this.currentLesson.name || '') : '';
+
+    container.innerHTML = `
+      <div class="exam-lobby-card">
+        <div class="exam-lobby-header">
+          <div class="exam-lobby-badge">⏱️ ការប្រឡងកំណត់ថិរវេលា</div>
+          <h2 class="exam-lobby-title">${lessonTitle || 'ការប្រឡងវាស់ស្ទង់សមត្ថភាព'}</h2>
+          <p class="exam-lobby-subtitle">${pointTitle}</p>
+        </div>
+
+        <div class="exam-lobby-meta-grid">
+          <div class="exam-meta-card">
+            <span class="exam-meta-icon">⏱️</span>
+            <div class="exam-meta-info">
+              <span class="exam-meta-label">ថិរវេលាប្រឡង</span>
+              <span class="exam-meta-value">${this.examTimeLimit} នាទី</span>
+            </div>
+          </div>
+          <div class="exam-meta-card">
+            <span class="exam-meta-icon">📝</span>
+            <div class="exam-meta-info">
+              <span class="exam-meta-label">ចំនួនសំណួរ</span>
+              <span class="exam-meta-value">${totalQ} សំណួរ</span>
+            </div>
+          </div>
+          <div class="exam-meta-card">
+            <span class="exam-meta-icon">🏫</span>
+            <div class="exam-meta-info">
+              <span class="exam-meta-label">បន្ទប់ / ថ្នាក់</span>
+              <span class="exam-meta-value">${studentInfo.classRoom || 'ថ្នាក់ទូទៅ'}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exam-lobby-form">
+          <h4 style="margin-bottom: 12px; font-size: 0.95rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+            <span>👨‍🎓</span>
+            <span>ព័ត៌មានបេក្ខជនប្រឡង (សូមបំពេញឱ្យបានត្រឹមត្រូវ) ៖</span>
+          </h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+            <div class="form-group">
+              <label class="form-label" for="exam-student-name">គោត្តនាម & នាមសិស្ស ៖ <span style="color:#ef4444;">*</span></label>
+              <input type="text" id="exam-student-name" class="form-input" placeholder="ឧ. ហេង សំស្រីពេជ្រ" value="${studentInfo.name || ''}">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="exam-student-class">បន្ទប់ / ថ្នាក់ ៖ <span style="color:#ef4444;">*</span></label>
+              <input type="text" id="exam-student-class" class="form-input" placeholder="ឧ. 11NGS-P3" value="${studentInfo.classRoom || ''}" style="text-transform: uppercase;">
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label" for="exam-student-roll">លេខរៀងក្នុងបញ្ជីវត្តមាន ៖</label>
+            <input type="text" id="exam-student-roll" class="form-input" placeholder="ឧ. 15" value="${studentInfo.rollNo || ''}">
+          </div>
+        </div>
+
+        <div class="exam-lobby-rules">
+          <div style="font-weight: 700; color: #f59e0b; margin-bottom: 6px;">⚠️ បទបញ្ជា និងការណែនាំមុនប្រឡង ៖</div>
+          <ul>
+            <li>ពេលចុច <strong>[ចាប់ផ្តើមធ្វើតេស្ត]</strong> នាឡិកានឹងរាប់ថយក្រោយភ្លាមៗ ដោយមិនអាចផ្អាក (Pause) បានឡើយ។</li>
+            <li>នៅពេលអស់ម៉ោងកំណត់ ប្រព័ន្ធនឹង <strong>កាត់សេចក្តីស្វ័យប្រវត្ត</strong> និងបញ្ជូនពិន្ទុដែលធ្វើបានទៅកាន់លោកគ្រូភ្លាមៗ។</li>
+            <li>ប្រសិនបើប្អូនធ្វើរួចរាល់មុនម៉ោង អាចចុចប៊ូតុង <strong>[បញ្ចប់ & ផ្ញើពិន្ទុ]</strong> នៅផ្នែកខាងលើ។</li>
+          </ul>
+        </div>
+
+        <button type="button" class="btn btn-primary exam-start-btn" onclick="App.startTimedExam()">
+          🚀 ចាប់ផ្តើមធ្វើតេស្តឥឡូវនេះ (Start Exam)
+        </button>
+      </div>
+    `;
+
+    this.renderMath(container);
+
+    setTimeout(() => {
+      const nameInp = document.getElementById('exam-student-name');
+      if (nameInp && !nameInp.value) nameInp.focus();
+    }, 200);
+  },
+
+  startTimedExam() {
+    const nameInp = document.getElementById('exam-student-name');
+    const classInp = document.getElementById('exam-student-class');
+    const rollInp = document.getElementById('exam-student-roll');
+
+    const name = (nameInp?.value || '').trim();
+    const classRoom = (classInp?.value || '').trim().toUpperCase();
+    const rollNo = (rollInp?.value || '').trim();
+
+    if (!name) {
+      this.showToast('សូមបញ្ចូលឈ្មោះប្អូនសិន មុននឹងចាប់ផ្តើមប្រឡង!', 'warning');
+      nameInp?.focus();
+      return;
+    }
+    if (!classRoom) {
+      this.showToast('សូមបញ្ចូលបន្ទប់/ថ្នាក់សិន!', 'warning');
+      classInp?.focus();
+      return;
+    }
+
+    const info = this.getStudentInfo();
+    info.name = name;
+    info.classRoom = classRoom;
+    if (rollNo) info.rollNo = rollNo;
+    this.saveStudentInfo(info);
+
+    const sessionKey = `timed_exam_${this.currentLesson?.id || 'quiz'}`;
+    sessionStorage.setItem(sessionKey, Date.now().toString());
+
+    this.examStarted = true;
+    this.examFinishedByTimeout = false;
+    this.examSecondsRemaining = this.examTimeLimit * 60;
+    this.startCountdownTimer();
+
+    this.renderQuizTab();
+    this.showToast(`⏱️ បានចាប់ផ្តើមការប្រឡង (${this.examTimeLimit} នាទី)! សូមជូនពរទទួលបានជោគជ័យ 🎯`, 'success');
+
+    setTimeout(() => {
+      const liveBar = document.getElementById('exam-live-bar');
+      liveBar?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200);
+  },
+
+  startCountdownTimer() {
+    if (this.examTimerInterval) {
+      clearInterval(this.examTimerInterval);
+    }
+
+    this.examTimerInterval = setInterval(() => {
+      this.examSecondsRemaining--;
+
+      const displayEl = document.getElementById('exam-timer-display');
+      const progressEl = document.getElementById('exam-live-progress');
+      const liveBar = document.getElementById('exam-live-bar');
+
+      const totalSec = (this.examTimeLimit || 1) * 60;
+      const pctLeft = Math.max(0, Math.min(100, (this.examSecondsRemaining / totalSec) * 100));
+
+      if (displayEl) {
+        displayEl.textContent = this.formatTimer(Math.max(0, this.examSecondsRemaining));
+      }
+      if (progressEl) {
+        progressEl.style.width = `${pctLeft}%`;
+      }
+
+      if (liveBar) {
+        if (this.examSecondsRemaining <= 60) {
+          liveBar.className = 'exam-live-bar warning-red';
+        } else if (this.examSecondsRemaining <= 120) {
+          liveBar.className = 'exam-live-bar warning-amber';
+        } else {
+          liveBar.className = 'exam-live-bar';
+        }
+      }
+
+      if (this.examSecondsRemaining <= 0) {
+        clearInterval(this.examTimerInterval);
+        this.examTimerInterval = null;
+        this.onExamTimeUp();
+      }
+    }, 1000);
+  },
+
+  formatTimer(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  },
+
+  confirmFinishExamEarly() {
+    const quizList = this.currentActiveQuizList || [];
+    const totalQ = quizList.length;
+    const answeredCount = Object.keys(this.answeredQuiz).length;
+    const remainingCount = totalQ - answeredCount;
+
+    let msg = 'តើប្អូនពិតជាចង់បញ្ចប់ការប្រឡង និងផ្ញើពិន្ទុឥឡូវនេះមែនទេ?';
+    if (remainingCount > 0) {
+      msg = `ប្អូននៅសល់ ${remainingCount} សំណួរមិនទាន់ឆ្លើយ! តើពិតជាចង់បញ្ចប់ការប្រឡងឥឡូវនេះមែនទេ?`;
+    }
+
+    if (confirm(msg)) {
+      if (this.examTimerInterval) {
+        clearInterval(this.examTimerInterval);
+        this.examTimerInterval = null;
+      }
+      const sessionKey = `timed_exam_${this.currentLesson?.id || 'quiz'}`;
+      sessionStorage.removeItem(sessionKey);
+
+      document.querySelectorAll('.quiz-opt').forEach(opt => {
+        opt.style.pointerEvents = 'none';
+      });
+
+      this.showQuizCompletionBanner(totalQ);
+    }
+  },
+
+  onExamTimeUp() {
+    this.examFinishedByTimeout = true;
+    const sessionKey = `timed_exam_${this.currentLesson?.id || 'quiz'}`;
+    sessionStorage.removeItem(sessionKey);
+
+    document.querySelectorAll('.quiz-opt').forEach(opt => {
+      opt.style.pointerEvents = 'none';
+      opt.style.opacity = '0.7';
+    });
+
+    const displayEl = document.getElementById('exam-timer-display');
+    if (displayEl) displayEl.textContent = '00:00 (អស់ម៉ោង)';
+
+    const liveBar = document.getElementById('exam-live-bar');
+    if (liveBar) {
+      liveBar.className = 'exam-live-bar warning-red';
+    }
+
+    this.showToast('⏰ អស់ម៉ោងប្រឡងហើយ! ប្រព័ន្ធកំពុងកត់ត្រា និងបញ្ជូនពិន្ទុរបស់អ្នកទៅលោកគ្រូ...', 'warning');
+
+    const quizList = this.currentActiveQuizList || this.currentLesson?.quiz || [];
+    this.showQuizCompletionBanner(quizList.length);
   },
 
   renderMath(element) {
@@ -2299,6 +2592,12 @@ function doGet(e) {
 
     // Check if all questions are answered
     if (Object.keys(this.answeredQuiz).length === totalQ) {
+      if (this.examTimerInterval) {
+        clearInterval(this.examTimerInterval);
+        this.examTimerInterval = null;
+      }
+      const sessionKey = `timed_exam_${this.currentLesson?.id || 'quiz'}`;
+      sessionStorage.removeItem(sessionKey);
       this.showQuizCompletionBanner(totalQ);
     }
   },
@@ -2338,13 +2637,20 @@ function doGet(e) {
           <div class="completion-trophy">🏆</div>
           <div class="completion-title-col">
             <h3 class="completion-title">លទ្ធផលនៃការធ្វើតេស្តសរុប</h3>
-            <p class="completion-sub">អ្នកបានឆ្លើយចប់សព្វគ្រប់ទាំង ${totalQ} សំណួរ!</p>
+            <p class="completion-sub">${this.examFinishedByTimeout ? '⏰ ការប្រឡងត្រូវបានបញ្ចប់ដោយសារអស់ថិរវេលាកំណត់!' : `អ្នកបានឆ្លើយចប់សព្វគ្រប់ទាំង ${totalQ} សំណួរ!`}</p>
           </div>
           <div class="completion-score-badge ${evalClass}">
             <span class="comp-score-num">${this.quizScore} / ${totalQ}</span>
             <span class="comp-score-pct">${pct}%</span>
           </div>
         </div>
+
+        ${this.examFinishedByTimeout ? `
+          <div style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 10px; padding: 10px 14px; color: #ef4444; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+            <span>⏰</span>
+            <span>អស់ថិរវេលាប្រឡង (${this.examTimeLimit} នាទី)! ប្រព័ន្ធបានកត់ត្រាពិន្ទុដែលឆ្លើយបានរួចរាល់។</span>
+          </div>
+        ` : ''}
 
         <div class="completion-eval-row">
           <div class="eval-pill ${evalClass}">
@@ -2426,6 +2732,11 @@ function doGet(e) {
     if (this.activeQuizPoint > 0) {
       pointTitle = `ចំណុចទី ${this.activeQuizPoint}`;
     }
+    if (this.examFinishedByTimeout) {
+      pointTitle += ` [⏰ អស់ម៉ោង ${this.examTimeLimit}mn]`;
+    } else if (this.examTimeLimit > 0) {
+      pointTitle += ` [⏱️ ${this.examTimeLimit}mn]`;
+    }
 
     const now = new Date();
     const dateFormatted = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
@@ -2454,6 +2765,8 @@ function doGet(e) {
     const sheetUrl = this.getTeacherSheetUrl();
     if (sheetUrl) {
       try {
+        // Micro-jitter to spread concurrent requests smoothly
+        await new Promise(r => setTimeout(r, Math.floor(Math.random() * 800)));
         await fetch(sheetUrl, {
           method: 'POST',
           mode: 'no-cors',
@@ -2725,8 +3038,13 @@ function doGet(e) {
     let lessonParam = urlParams.get('lesson') || urlParams.get('lessonId');
     const tabParam = urlParams.get('tab') || (classParam ? 'quiz' : '');
     const pointParam = parseInt(urlParams.get('point') || '0', 10);
+    const timeParam = parseInt(urlParams.get('time') || urlParams.get('duration') || '0', 10);
     const testMode = urlParams.get('test');
     let gradeParam = urlParams.get('grade');
+
+    if (timeParam > 0) {
+      this.examTimeLimit = timeParam;
+    }
 
     if (testMode === 'diagnostic') {
       this.openDiagnosticModal();
@@ -2739,6 +3057,11 @@ function doGet(e) {
       if (match) {
         gradeParam = match[1];
         this.currentGrade = gradeParam;
+      }
+      const studentInfo = this.getStudentInfo();
+      if (!studentInfo.classRoom || studentInfo.classRoom !== classParam) {
+        studentInfo.classRoom = classParam;
+        this.saveStudentInfo(studentInfo);
       }
     }
 
@@ -2782,7 +3105,9 @@ function doGet(e) {
 
       // Check student profile
       const studentInfo = this.getStudentInfo();
-      if (!studentInfo.name) {
+      if (this.examTimeLimit > 0) {
+        this.showToast(`⏱️ តេស្តកំណត់ពេល ${this.examTimeLimit} នាទីសម្រាប់ថ្នាក់ ${studentInfo.classRoom || classParam || ''}! សូមពិនិត្យព័ត៌មានរួចចុច «ចាប់ផ្តើម» 🎯`, 'info');
+      } else if (!studentInfo.name) {
         setTimeout(() => {
           this.openStudentInfoModal();
           this.showToast(`សួស្តីប្អូនៗ! សូមបញ្ចូលឈ្មោះដើម្បីចាប់ផ្តើមធ្វើតេស្តថ្នាក់ ${studentInfo.classRoom || classParam} 🎯`, 'info');
@@ -3033,6 +3358,7 @@ function doGet(e) {
     const gradeSelect = document.getElementById('generator-grade-select');
     const lessonSelect = document.getElementById('generator-lesson-select');
     const pointSelect = document.getElementById('generator-point-select');
+    const timeSelect = document.getElementById('generator-time-select');
     const urlInp = document.getElementById('teacher-sheet-url-input');
 
     // Auto-save sheet URL if teacher typed or pasted it but didn't click save
@@ -3050,6 +3376,7 @@ function doGet(e) {
     const grade = gradeSelect?.value || '12';
     const lessonVal = lessonSelect?.value || '';
     const point = pointSelect?.value || '0';
+    const timeVal = parseInt(timeSelect?.value || '0', 10);
 
     const baseUrl = window.location.origin + window.location.pathname;
     const rawSheetUrl = this.getTeacherSheetUrl();
@@ -3067,6 +3394,10 @@ function doGet(e) {
       shareUrl += `&tab=quiz`;
     }
 
+    if (timeVal > 0) {
+      shareUrl += `&time=${timeVal}`;
+    }
+
     if (sheetUrl) {
       shareUrl += `&sheet=${sheetUrl}`;
     }
@@ -3078,17 +3409,19 @@ function doGet(e) {
 
     const hintSpan = document.getElementById('generator-link-hint');
     if (hintSpan) {
+      const timerText = timeVal > 0 ? `⏱️ <strong>កំណត់ពេល៖ ${timeVal} នាទី</strong> (រាប់ថយក្រោយ & ប្រគល់ស្វ័យប្រវត្ត) | ` : '⏱️ <strong>មិនកំណត់ពេល</strong> | ';
       if (sheetUrl) {
-        hintSpan.innerHTML = `✓ <strong>បានភ្ជាប់ Google Sheets រួចរាល់ ៖</strong> ពេលសិស្សធ្វើតេស្តចប់ ពិន្ទុនឹងលោតចូល Tab <strong>"${cls}"</strong> ក្នុង Sheets ភ្លាមៗ!`;
+        hintSpan.innerHTML = `✓ ${timerText}<strong>បានភ្ជាប់ Google Sheets ៖</strong> ពេលសិស្សធ្វើតេស្តចប់ ពិន្ទុនឹងលោតចូល Tab <strong>"${cls}"</strong> ក្នុង Sheets ភ្លាមៗ!`;
         hintSpan.style.color = '#10b981';
       } else {
-        hintSpan.innerHTML = `⚠️ <strong>មិនទាន់បានភ្ជាប់ Google Sheets ទេ ៖</strong> ពិន្ទុសិស្សនឹងមិនលោតចូល Sheet ឡើយ! សូមបិទភ្ជាប់ Web App URL ខាងលើ រួចចុច «រក្សាទុក»។`;
+        hintSpan.innerHTML = `⚠️ ${timerText}<strong>មិនទាន់បានភ្ជាប់ Google Sheets ទេ ៖</strong> ពិន្ទុសិស្សនឹងមិនលោតចូល Sheet ឡើយ! សូមបិទភ្ជាប់ Web App URL ខាងលើ រួចចុច «រក្សាទុក»។`;
         hintSpan.style.color = '#f59e0b';
       }
     }
 
+    const timeDesc = timeVal > 0 ? ` [⏱️ ${timeVal} នាទី]` : '';
     if (sheetUrl) {
-      this.showToast(`បានបង្កើត Link ប្រឡងសម្រាប់ថ្នាក់ ${cls} (ភ្ជាប់ Google Sheets រួចរាល់)! 🎯`, 'success');
+      this.showToast(`បានបង្កើត Link ប្រឡងសម្រាប់ថ្នាក់ ${cls}${timeDesc} (ភ្ជាប់ Google Sheets រួចរាល់)! 🎯`, 'success');
     } else {
       this.showToast(`⚠️ ការព្រមាន៖ លោកគ្រូមិនទាន់បានកំណត់ Web App URL ទេ! Link នេះនឹងមិនកត់ត្រាពិន្ទុចូល Sheets ឡើយ`, 'warning');
       if (urlInp) {
