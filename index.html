@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=57">
+  <link rel="stylesheet" href="css/style.css?v=69">
 </head>
 <body>
 
@@ -53,7 +53,7 @@
   <nav class="navbar">
     <div class="container nav-container">
       <div class="nav-left">
-        <a class="brand-logo" onclick="App.backToCatalog()" title="ទៅកាន់ទំព័រដើម Worksheet.Kh">
+        <a class="brand-logo" onclick="App.handleBrandClick()" title="ទៅកាន់ទំព័រដើម Worksheet.Kh">
           <img src="assets/mascot.jpg" alt="Worksheet.Kh Mascot" class="brand-mascot-img">
           <div class="brand-title">
             <span class="brand-name">Worksheet.Kh</span>
@@ -1351,14 +1351,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=61"></script>
-  <script src="js/app.js?v=61"></script>
-  <script src="js/visits.js?v=61"></script>
+  <script src="js/storage.js?v=69"></script>
+  <script src="js/app.js?v=69"></script>
+  <script src="js/visits.js?v=69"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=61').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=69').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

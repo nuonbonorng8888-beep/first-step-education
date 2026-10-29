@@ -26,6 +26,7 @@ window.App = {
   examSecondsRemaining: 0,
   examStarted: false,
   examFinishedByTimeout: false,
+  isExamMode: false,
 
   dailyQuotes: [
     { quote: "គណិតវិទ្យាគឺជាសិល្បៈនៃការផ្តល់ឈ្មោះដូចគ្នាដល់រឿងខុសៗគ្នា។", author: "Henri Poincaré" },
@@ -303,19 +304,41 @@ function doGet(e) {
   },
 
   initUrlParams() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const timeParam = parseInt(urlParams.get('time') || urlParams.get('duration') || '0', 10);
-    if (timeParam > 0) {
-      this.examTimeLimit = timeParam;
-    }
-    const sheetParam = urlParams.get('sheet');
-    if (sheetParam) {
-      try {
-        const decodedSheet = decodeURIComponent(sheetParam);
-        if (decodedSheet.startsWith('https://script.google.com/macros/s/')) {
-          this.setTeacherSheetUrl(decodedSheet);
-        }
-      } catch (e) {}
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const timeParam = parseInt(urlParams.get('time') || urlParams.get('duration') || '0', 10);
+      if (timeParam > 0) {
+        this.examTimeLimit = timeParam;
+      }
+      const sheetParam = urlParams.get('sheet') || urlParams.get('sheetUrl');
+      if (sheetParam) {
+        try {
+          const decodedSheet = decodeURIComponent(sheetParam);
+          if (decodedSheet.startsWith('https://script.google.com/macros/s/')) {
+            this.setTeacherSheetUrl(decodedSheet);
+          }
+        } catch (e) {}
+      }
+      const classParam = (urlParams.get('class') || urlParams.get('room') || '').trim();
+      if (classParam) {
+        const studentInfo = this.getStudentInfo();
+        studentInfo.classRoom = classParam.toUpperCase();
+        this.saveStudentInfo(studentInfo);
+      }
+      const gradeParam = urlParams.get('grade');
+      if (gradeParam) {
+        this.currentGrade = gradeParam;
+      }
+
+      // Check if student exam mode is active
+      const examParam = urlParams.get('exam') || urlParams.get('mode');
+      const isExam = examParam === '1' || examParam === 'true' || examParam === 'exam' || !!classParam || timeParam > 0;
+      if (isExam) {
+        this.isExamMode = true;
+        document.body.classList.add('exam-mode-active');
+      }
+    } catch (e) {
+      console.warn('initUrlParams error:', e);
     }
   },
 
@@ -725,12 +748,30 @@ function doGet(e) {
   },
 
   backToCatalog() {
+    if (this.isExamMode) {
+      if (this.examStarted && !this.examFinishedByTimeout) {
+        if (!confirm('⚠️ ការប្រឡងកំពុងដំណើរការ! តើប្អូនពិតជាចង់ចាកចេញពីការប្រឡងមែនទេ?')) return;
+      }
+      this.showToast('📝 ប្អូនកំពុងស្ថិតក្នុងទម្រង់ប្រឡង (Exam Mode)', 'info');
+      return;
+    }
     document.getElementById('player-view').classList.remove('active');
     document.getElementById('player-view').style.display = 'none';
     document.getElementById('catalog-view').style.display = 'block';
     this.updateStats();
     this.renderCourses();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  },
+
+  handleBrandClick() {
+    if (this.isExamMode) {
+      if (this.examStarted && !this.examFinishedByTimeout) {
+        if (!confirm('⚠️ ការប្រឡងកំពុងដំណើរការ! តើប្អូនពិតជាចង់ចាកចេញពីការប្រឡងមែនទេ?')) return;
+      }
+      this.showToast('📝 ប្អូនកំពុងស្ថិតក្នុងទម្រង់ប្រឡង (Exam Mode)', 'info');
+      return;
+    }
+    this.backToCatalog();
   },
 
   selectLesson(lessonId) {
@@ -2008,6 +2049,20 @@ function doGet(e) {
     const hasStudent = !!(studentInfo.name && studentInfo.classRoom);
 
     quizContainer.innerHTML = `
+      ${this.isExamMode ? `
+        <!-- Isolated Official Exam Header Banner -->
+        <div class="exam-mode-header-banner">
+          <div class="exam-mode-badge">📝 ការប្រឡងវាស់ស្ទង់សមត្ថភាពគណិតវិទ្យា (Official Exam)</div>
+          <h2 class="exam-mode-title">${this.currentLesson?.title || 'ការប្រឡងវាស់ស្ទង់សមត្ថភាព'}</h2>
+          <div class="exam-mode-meta">
+            <span class="exam-mode-meta-item">📌 <strong>${currentPointTitle}</strong></span>
+            ${studentInfo.classRoom ? `<span class="exam-mode-meta-item">• 🏫 ថ្នាក់ <strong>${studentInfo.classRoom}</strong></span>` : ''}
+            ${this.examTimeLimit > 0 ? `<span class="exam-mode-meta-item">• ⏱️ ថិរវេលា <strong>${this.examTimeLimit} នាទី</strong></span>` : ''}
+            <span class="exam-mode-meta-item">• 🎯 <strong>${totalQ} សំណួរ</strong></span>
+          </div>
+        </div>
+      ` : ''}
+
       ${(this.examTimeLimit > 0 && this.examStarted) ? `
         <!-- Sticky Live Exam Countdown Timer -->
         <div class="exam-live-bar ${this.examSecondsRemaining <= 60 ? 'warning-red' : (this.examSecondsRemaining <= 120 ? 'warning-amber' : '')}" id="exam-live-bar">
@@ -2054,15 +2109,17 @@ function doGet(e) {
           <button class="btn btn-sm btn-outline student-edit-btn" onclick="App.openStudentInfoModal()" title="កែប្រែឈ្មោះ និងថ្នាក់សិស្ស">
             ${hasStudent ? '✏️ កែប្រែ' : '📝 បំពេញឈ្មោះ & ថ្នាក់'}
           </button>
-          <button class="btn btn-sm btn-primary teacher-share-btn" onclick="App.openTeacherSheetModal(true)" title="ចែករំលែក Link តេស្តមេរៀននេះទៅកាន់ថ្នាក់">
-            🔗 ចែករំលែក Link តេស្តនេះ
-          </button>
-          <button class="btn btn-sm btn-outline teacher-sheet-btn" onclick="App.openTeacherSheetModal()" title="ការកំណត់តារាងពិន្ទុ Google Sheets / Excel សម្រាប់គ្រូ">
-            📊 តារាងពិន្ទុ Excel
-          </button>
+          ${!this.isExamMode ? `
+            <button class="btn btn-sm btn-primary teacher-share-btn" onclick="App.openTeacherSheetModal(true)" title="ចែករំលែក Link តេស្តមេរៀននេះទៅកាន់ថ្នាក់">
+              🔗 ចែករំលែក Link តេស្តនេះ
+            </button>
+            <button class="btn btn-sm btn-outline teacher-sheet-btn" onclick="App.openTeacherSheetModal()" title="ការកំណត់តារាងពិន្ទុ Google Sheets / Excel សម្រាប់គ្រូ">
+              📊 តារាងពិន្ទុ Excel
+            </button>
+          ` : ''}
         </div>
       </div>
-      ${(hasPoints && !this.examTimeLimit) ? `
+      ${(hasPoints && !this.examTimeLimit && !this.isExamMode) ? `
         <!-- Section Points Selector Bar (MCQ Points Selector) -->
         <div class="quiz-points-selector-bar">
           <div class="quiz-points-header">
@@ -2106,9 +2163,11 @@ function doGet(e) {
           <div class="arena-hint">សូមជ្រើសរើសចម្លើយដែលត្រឹមត្រូវ រួចផ្ទៀងផ្ទាត់ការពន្យល់លម្អិតពីលោកគ្រូ</div>
         </div>
         <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
-          <button class="quiz-retake-btn" onclick="App.retakeQuiz()" title="កំណត់សំណួរឡើងវិញដើម្បីអនុវត្តម្តងទៀត">
-            🔄 ធ្វើតេស្តឡើងវិញ
-          </button>
+          ${!this.isExamMode ? `
+            <button class="quiz-retake-btn" onclick="App.retakeQuiz()" title="កំណត់សំណួរឡើងវិញដើម្បីអនុវត្តម្តងទៀត">
+              🔄 ធ្វើតេស្តឡើងវិញ
+            </button>
+          ` : ''}
           <div class="arena-score-box">
             <div class="arena-score-val" id="quiz-live-score">0 / ${totalQ}</div>
             <div class="arena-score-lbl">ពិន្ទុរបស់អ្នក</div>
@@ -2166,6 +2225,8 @@ function doGet(e) {
   },
 
   renderExamLobby(container, quiz, points, pointTitle) {
+    this.isExamMode = true;
+    document.body.classList.add('exam-mode-active');
     const studentInfo = this.getStudentInfo();
     const totalQ = quiz.length;
     const lessonTitle = this.currentLesson ? (this.currentLesson.title || this.currentLesson.name || '') : '';
@@ -2656,9 +2717,11 @@ function doGet(e) {
           <div class="eval-pill ${evalClass}">
             <span>ការវាយតម្លៃ ៖ <strong>${evalText}</strong></span>
           </div>
-          <button class="quiz-retake-btn" onclick="App.retakeQuiz()">
-            🔄 ធ្វើតេស្តឡើងវិញ
-          </button>
+          ${!this.isExamMode ? `
+            <button class="quiz-retake-btn" onclick="App.retakeQuiz()">
+              🔄 ធ្វើតេស្តឡើងវិញ
+            </button>
+          ` : ''}
         </div>
 
         <!-- Student Identification Info -->
@@ -2914,28 +2977,6 @@ function doGet(e) {
     ta.remove();
   },
 
-  initUrlParams() {
-    try {
-      const urlParams = new URLSearchParams(window.location.search);
-      const sheetParam = urlParams.get('sheet') || urlParams.get('sheetUrl');
-      if (sheetParam) {
-        this.setTeacherSheetUrl(sheetParam);
-      }
-      const classParam = urlParams.get('class') || urlParams.get('room');
-      if (classParam) {
-        const studentInfo = this.getStudentInfo();
-        studentInfo.classRoom = classParam.trim().toUpperCase();
-        this.saveStudentInfo(studentInfo);
-      }
-      const gradeParam = urlParams.get('grade');
-      if (gradeParam) {
-        this.currentGrade = gradeParam;
-      }
-    } catch (e) {
-      console.warn('URL params error:', e);
-    }
-  },
-
   getStudentInfo() {
     try {
       const raw = localStorage.getItem('worksheet_student_info');
@@ -3042,6 +3083,13 @@ function doGet(e) {
     const testMode = urlParams.get('test');
     let gradeParam = urlParams.get('grade');
 
+    const examParam = urlParams.get('exam') || urlParams.get('mode');
+    const isExam = examParam === '1' || examParam === 'true' || examParam === 'exam' || !!classParam || timeParam > 0;
+    if (isExam) {
+      this.isExamMode = true;
+      document.body.classList.add('exam-mode-active');
+    }
+
     if (timeParam > 0) {
       this.examTimeLimit = timeParam;
     }
@@ -3091,7 +3139,7 @@ function doGet(e) {
       if (pointParam > 0) {
         this.selectQuizPoint(pointParam);
       }
-      if (tabParam === 'quiz' || classParam) {
+      if (tabParam === 'quiz' || classParam || this.isExamMode) {
         this.switchTab('quiz');
       }
 
@@ -3382,7 +3430,7 @@ function doGet(e) {
     const rawSheetUrl = this.getTeacherSheetUrl();
     const sheetUrl = encodeURIComponent(rawSheetUrl);
 
-    let shareUrl = `${baseUrl}?class=${encodeURIComponent(cls)}&grade=${grade}`;
+    let shareUrl = `${baseUrl}?exam=1&class=${encodeURIComponent(cls)}&grade=${grade}`;
 
     if (lessonVal && lessonVal.includes(':::')) {
       const [courseId, lessonId] = lessonVal.split(':::');
