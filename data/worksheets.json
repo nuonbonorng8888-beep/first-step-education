@@ -15061,7 +15061,7 @@
             "rubric": "ក. បញ្ជាក់សមាមាត្រច្រាសត្រូវ (០.៤ ពិន្ទុ) | ខ. គណនា ៨ ថ្ងៃត្រូវ (០.៦ ពិន្ទុ)"
           }
         ],
-        "summary": "<div class=\"ws-sum-text\"><strong>និយមន័យ ៖</strong> ចំនួនទសភាគខួបកើតឡើងនៅពេលចែកភាគយកនឹងភាគបែងមិនដាច់ ហើយមានលេខដដែលៗកើតឡើងមិនចេះចប់។</div>\n<div class=\"ws-sum-text\"><strong>ទម្រង់ ៖</strong> $0.\\bar{a} = \\dfrac{a}{9}$, $0.\\overline{ab} = \\dfrac{ab}{99}$, $0.a\\bar{b} = \\dfrac{ab - a}{90}$។</div>"
+        "summary": "<div class=\"ws-sum-text\"><strong>និយមន័យ ៖</strong> ចំនួនទសភាគខួបកើតឡើងនៅពេលចែកភាគយកនឹងភាគបែងមិនដាច់ ហើយមានលេខដដែលៗកើតឡើងមិនចេះចប់។</div>\n<div class=\"ws-sum-text\"><strong>ទម្រង់ ៖</strong> $0.\\overline{a} = \\dfrac{a}{9}$, $0.\\overline{ab} = \\dfrac{ab}{99}$, $0.a\\bar{b} = \\dfrac{ab - a}{90}$។</div>"
       },
       {
         "pointNumber": 2,
@@ -15209,7 +15209,7 @@
         ]
       }
     ],
-    "summary": "<div class=\"ws-sum-text\"><strong>និយមន័យ ៖</strong> ចំនួនទសភាគខួបកើតឡើងនៅពេលចែកភាគយកនឹងភាគបែងមិនដាច់ ហើយមានលេខដដែលៗកើតឡើងមិនចេះចប់។</div>\n<div class=\"ws-sum-text\"><strong>ទម្រង់ ៖</strong> $0.\\bar{a} = \\dfrac{a}{9}$, $0.\\overline{ab} = \\dfrac{ab}{99}$, $0.a\\bar{b} = \\dfrac{ab - a}{90}$។</div>"
+    "summary": "<div class=\"ws-sum-text\"><strong>និយមន័យ ៖</strong> ចំនួនទសភាគខួបកើតឡើងនៅពេលចែកភាគយកនឹងភាគបែងមិនដាច់ ហើយមានលេខដដែលៗកើតឡើងមិនចេះចប់។</div>\n<div class=\"ws-sum-text\"><strong>ទម្រង់ ៖</strong> $0.\\overline{a} = \\dfrac{a}{9}$, $0.\\overline{ab} = \\dfrac{ab}{99}$, $0.a\\bar{b} = \\dfrac{ab - a}{90}$។</div>"
   },
   "les-g8-04": {
     "lessonId": "les-g8-04",

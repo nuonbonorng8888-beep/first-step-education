@@ -1836,6 +1836,8 @@ body.light-theme .quiz-card {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .quiz-q-pill {
@@ -1845,38 +1847,47 @@ body.light-theme .quiz-card {
   padding: 5px 14px;
   border-radius: 50px;
   background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.28);
   color: #38bdf8;
   font-size: 0.8rem;
   font-weight: 700;
 }
 
+.q-pill-text {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
 .q-pill-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #38bdf8;
-  box-shadow: 0 0 8px #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
 }
 
 .quiz-status-pill {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  color: var(--text-muted);
-  padding: 3px 10px;
+  color: #cbd5e1;
+  padding: 4px 12px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  letter-spacing: 0.2px;
 }
 
 .quiz-status-pill.correct {
-  color: #10b981;
-  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.4);
   font-weight: 700;
 }
 
 .quiz-status-pill.wrong {
-  color: #f43f5e;
-  background: rgba(244, 63, 94, 0.15);
+  color: #fb7185;
+  background: rgba(244, 63, 94, 0.2);
+  border: 1px solid rgba(244, 63, 94, 0.4);
   font-weight: 700;
 }
 
@@ -1891,8 +1902,8 @@ body.light-theme .quiz-card {
 .quiz-question {
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.75;
-  color: var(--text-primary);
+  line-height: 1.8;
+  color: #f8fafc;
   margin: 0;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -1901,9 +1912,28 @@ body.light-theme .quiz-card {
 
 .quiz-options {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px 14px;
   width: 100%;
+}
+
+/* Stacked 1-column layout for multi-part, long formulas or Khmer choices */
+.quiz-options.options-stack {
+  grid-template-columns: 1fr !important;
+}
+
+/* Grid 2-column layout for concise short answers */
+.quiz-options.options-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quiz-options:not(.options-grid):not(.options-stack) {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 540px) {
+  .quiz-options:not(.options-grid):not(.options-stack) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 768px) {
@@ -1916,11 +1946,11 @@ body.light-theme .quiz-card {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 14px;
-  min-height: 54px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 16px;
+  min-height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
   transition: all var(--transition-fast);
   position: relative;
@@ -1931,12 +1961,12 @@ body.light-theme .quiz-card {
 
 body.light-theme .quiz-opt {
   background: #f8fafc;
-  border: 1.5px solid rgba(0, 0, 0, 0.06);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
 }
 
 .quiz-opt:hover {
-  background: rgba(56, 189, 248, 0.06);
-  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.45);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
@@ -1947,16 +1977,16 @@ body.light-theme .quiz-opt:hover {
 }
 
 .opt-badge {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-en);
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 800;
   color: #38bdf8;
   flex-shrink: 0;
@@ -1964,19 +1994,32 @@ body.light-theme .quiz-opt:hover {
 }
 
 body.light-theme .opt-badge {
-  background: #e2e8f0;
+  background: #e0f2fe;
   color: #0284c7;
+  border-color: #bae6fd;
 }
 
 .opt-content {
   flex: 1;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  line-height: 1.55;
-  color: var(--text-primary);
+  line-height: 1.5;
+  color: #f8fafc;
   min-width: 0;
-  overflow-wrap: break-word;
-  word-break: break-word;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.opt-content::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body.light-theme .opt-content {
+  color: #0f172a;
 }
 
 .quiz-opt.correct {
@@ -2044,24 +2087,44 @@ body.light-theme .opt-badge {
 
 /* KaTeX Educational Math Typography */
 .katex {
-  font-size: 1.15em;
+  font-size: 1.12em;
   text-rendering: auto;
   color: inherit;
 }
 
-.quiz-question .katex,
-.quiz-opt .katex,
-.quiz-explanation .katex {
-  font-size: 1.25em !important;
-  line-height: 1.25;
+.quiz-question .katex {
+  font-size: 1.15em !important;
+  line-height: 1.35;
+  white-space: nowrap !important;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-/* Boost KaTeX fractions so numerators & denominators are bold and legible without pinch-to-zoom */
+.quiz-opt .katex {
+  font-size: 1.1em !important;
+  line-height: 1.3;
+  white-space: nowrap !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.quiz-explanation .katex {
+  font-size: 1.12em !important;
+  line-height: 1.4;
+  white-space: nowrap !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Fractions */
 .quiz-card .katex .mfrac {
-  font-size: 1.08em;
+  font-size: 1.02em;
+  padding: 0 1px;
 }
 .quiz-card .katex .mfrac .frac-line {
-  border-bottom-width: 1.5px !important;
+  border-bottom-width: 1.8px !important;
+  border-bottom-color: currentColor !important;
+  opacity: 1 !important;
 }
 
 .quiz-question,
@@ -2076,31 +2139,36 @@ body.light-theme .opt-badge {
   font-family: 'Kantumruy Pro', 'Times New Roman', serif;
 }
 
-/* Multiple choice quiz (ពហុជ្រើសរើស) - High contrast white text on dark cards */
+/* Multiple choice quiz (ពហុជ្រើសរើស) - High contrast crisp white text on dark cards */
 .quiz-question .katex,
 .quiz-question .katex * {
-  color: var(--text-primary) !important;
+  color: #f8fafc !important;
+  border-color: #f8fafc !important;
   font-weight: 600;
 }
 
 .quiz-opt .katex,
 .quiz-opt .katex * {
-  color: var(--text-primary) !important;
+  color: #f8fafc !important;
+  border-color: #f8fafc !important;
 }
 
 .quiz-opt.correct .katex,
 .quiz-opt.correct .katex * {
-  color: var(--accent-emerald) !important;
+  color: #34d399 !important;
+  border-color: #34d399 !important;
 }
 
 .quiz-opt.wrong .katex,
 .quiz-opt.wrong .katex * {
-  color: var(--accent-rose) !important;
+  color: #fb7185 !important;
+  border-color: #fb7185 !important;
 }
 
 .quiz-explanation .katex,
 .quiz-explanation .katex * {
-  color: var(--text-primary) !important;
+  color: #f8fafc !important;
+  border-color: #f8fafc !important;
 }
 
 /* Worksheet Paper (សន្លឹកកិច្ចការ) - STRICTLY BLACK like text on white paper */
@@ -2124,7 +2192,9 @@ body.light-theme .opt-badge {
 }
 
 .worksheet-paper .katex .frac-line {
+  border-bottom-width: 1.8px !important;
   border-bottom-color: #0f172a !important;
+  opacity: 1 !important;
 }
 
 .katex .mfrac {
@@ -2136,24 +2206,74 @@ body.light-theme .opt-badge {
   stroke: #0f172a !important;
 }
 
-/* KaTeX Overline & Math Bar Refinement (Crisp, balanced line weight matching font glyphs) */
+/* KaTeX Overline & Repeating Decimal Bar (ឧ. 0.6បារ / 0.\overline{6}) - Bold, High-Contrast & Visible Everywhere */
 .katex .overline .overline-line {
-  border-bottom-width: 1px !important;
-  border-bottom-color: #64748b !important;
-  opacity: 0.82 !important;
+  border-bottom-width: 2px !important;
+  border-bottom-color: currentColor !important;
+  opacity: 1 !important;
+}
+
+.katex .underline .underline-line {
+  border-bottom-width: 1.8px !important;
+  border-bottom-color: currentColor !important;
+  opacity: 1 !important;
+}
+
+.katex .mfrac .frac-line {
+  border-bottom-width: 1.8px !important;
+  border-bottom-color: currentColor !important;
+  opacity: 1 !important;
+}
+
+.quiz-card .katex .overline .overline-line,
+.quiz-question .katex .overline .overline-line,
+.quiz-opt .katex .overline .overline-line,
+.quiz-explanation .katex .overline .overline-line {
+  border-bottom-width: 2.2px !important;
+  border-bottom-color: currentColor !important;
+  opacity: 1 !important;
+}
+
+.katex .accent {
+  opacity: 1 !important;
+  color: currentColor !important;
+  font-weight: 700;
+}
+
+.katex svg path {
+  fill: currentColor !important;
+  stroke: currentColor !important;
 }
 
 .worksheet-paper .katex .overline .overline-line,
 .ws-container .worksheet-paper .katex .overline .overline-line {
-  border-bottom-width: 1px !important;
-  border-bottom-color: #64748b !important;
-  opacity: 0.82 !important;
+  border-bottom-width: 1.8px !important;
+  border-bottom-color: #0f172a !important;
+  opacity: 1 !important;
+}
+
+body.light-theme .katex .overline .overline-line,
+body.light-theme .katex .underline .underline-line,
+body.light-theme .katex .mfrac .frac-line {
+  border-bottom-color: #0f172a !important;
+  opacity: 1 !important;
+}
+
+body.light-theme .quiz-question .katex,
+body.light-theme .quiz-question .katex *,
+body.light-theme .quiz-opt .katex,
+body.light-theme .quiz-opt .katex *,
+body.light-theme .quiz-explanation .katex,
+body.light-theme .quiz-explanation .katex * {
+  color: #0f172a !important;
+  border-color: #0f172a !important;
 }
 
 body.dark-mode .katex .overline .overline-line,
 [data-theme="dark"] .katex .overline .overline-line {
-  border-bottom-color: #94a3b8 !important;
-  opacity: 0.85 !important;
+  border-bottom-width: 2px !important;
+  border-bottom-color: #f8fafc !important;
+  opacity: 1 !important;
 }
 
 /* Teacher solution when displayed on screen in dark card */
@@ -2668,35 +2788,52 @@ body.dark-mode .katex .overline .overline-line,
   }
 
   .quiz-card {
-    padding: 18px 14px;
+    padding: 16px 12px;
     border-radius: 16px;
   }
 
   .quiz-question {
-    font-size: 1.1rem;
-    line-height: 1.65;
+    font-size: 1.08rem;
+    line-height: 1.7;
   }
 
-  .quiz-options {
+  .quiz-question .katex {
+    font-size: 1.1em !important;
+  }
+
+  .quiz-options.options-stack {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+
+  .quiz-options.options-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 10px;
   }
 
+  .quiz-options:not(.options-grid):not(.options-stack) {
+    grid-template-columns: 1fr !important;
+  }
+
   .quiz-opt {
-    padding: 10px 10px;
-    gap: 8px;
-    min-height: 50px;
+    padding: 10px 12px;
+    gap: 10px;
+    min-height: 48px;
     border-radius: 12px;
   }
 
   .opt-badge {
     width: 30px;
     height: 30px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 
   .opt-content {
     font-size: 0.98rem;
+  }
+
+  .quiz-opt .katex {
+    font-size: 1.04em !important;
   }
 }
 
@@ -2731,30 +2868,47 @@ body.dark-mode .katex .overline .overline-line,
   }
 
   .quiz-question {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.02rem;
+    line-height: 1.65;
   }
 
-  .quiz-options {
+  .quiz-question .katex {
+    font-size: 1.06em !important;
+  }
+
+  .quiz-options.options-stack {
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+  }
+
+  .quiz-options.options-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 8px;
   }
 
+  .quiz-options:not(.options-grid):not(.options-stack) {
+    grid-template-columns: 1fr !important;
+  }
+
   .quiz-opt {
-    padding: 8px 8px;
-    gap: 6px;
-    min-height: 46px;
+    padding: 9px 10px;
+    gap: 8px;
+    min-height: 44px;
     border-radius: 10px;
   }
 
   .opt-badge {
-    width: 26px;
-    height: 26px;
-    font-size: 0.82rem;
+    width: 28px;
+    height: 28px;
+    font-size: 0.84rem;
   }
 
   .opt-content {
-    font-size: 0.92rem;
+    font-size: 0.94rem;
+  }
+
+  .quiz-opt .katex {
+    font-size: 1.02em !important;
   }
 
   .quiz-q-pill {
@@ -2763,7 +2917,7 @@ body.dark-mode .katex .overline .overline-line,
   }
 
   .quiz-card .katex {
-    font-size: 0.98em;
+    font-size: 1em;
   }
 }
 

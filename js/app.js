@@ -1108,8 +1108,56 @@ function doGet(e) {
     q = q.replace(/ខាងក្រោម ៖ ៖/g, ' ៖');
     q = q.replace(/[:៖]\s*[:៖]/g, ' ៖');
     q = q.trim();
-    if (!q.endsWith('?') && !q.endsWith('៖') && !q.endsWith(':')) q += ' ៖';
+    if (q.includes('៖') || q.includes(':')) {
+      q = q.replace(/\s*[:៖]\s*$/, '').trim();
+    }
+    if (!q.endsWith('?') && !q.endsWith('៖') && !q.endsWith(':') && !q.endsWith('។')) {
+      if (!q.includes('៖') && !q.includes(':')) {
+        q += ' ៖';
+      }
+    }
     return q;
+  },
+
+  formatQuestionText(text) {
+    if (!text) return '';
+    let q = String(text).trim();
+    // Prevent duplicate trailing colons when prompt already has introducing colon
+    if ((q.includes('៖') || q.includes(':')) && /[:៖]\s*$/.test(q)) {
+      const firstColonIdx = q.search(/[:៖]/);
+      const lastColonIdx = q.search(/[:៖]\s*$/);
+      if (firstColonIdx < lastColonIdx) {
+        q = q.replace(/\s*[:៖]\s*$/, '').trim();
+      }
+    }
+    return q;
+  },
+
+  isSingleColumnOptions(options) {
+    if (!Array.isArray(options) || options.length === 0) return false;
+    return options.some(opt => {
+      if (opt === null || opt === undefined) return false;
+      const s = String(opt).trim();
+      // 1. Contains Khmer words/text
+      if (/[\u1780-\u17ff]/.test(s)) return true;
+      // 2. Contains multiple equals signs (e.g. x = 2, y = 3)
+      if ((s.match(/=/g) || []).length > 1) return true;
+      // 3. Contains commas separating distinct math parts or formulas
+      if (s.includes(',')) return true;
+      // 4. Contains LaTeX spacing commands (\quad, \qquad) separating multiple formulas
+      if (/\\(?:quad|qquad)/.test(s)) return true;
+      // 5. Contains multiple fractions in one option
+      if ((s.match(/\\(?:d?frac)/g) || []).length > 1) return true;
+      // 6. Contains matrices, systems of equations, or multiline environments
+      if (/\\begin\{(?:matrix|pmatrix|bmatrix|cases|aligned)\}/.test(s)) return true;
+      // 7. Text length check: strip basic LaTeX commands and symbols
+      const cleanMath = s
+        .replace(/\\(?:dfrac|frac|sqrt|cdot|times|pm|approx|ne|le|ge|in|mathbb|mathbf|mathrm|text)\b/g, '')
+        .replace(/[\$\{\}\s\\]/g, '');
+      if (cleanMath.length > 10) return true;
+      if (s.length > 20) return true;
+      return false;
+    });
   },
 
   formatExplanationText(text) {
@@ -2266,10 +2314,10 @@ function doGet(e) {
               </div>
 
               <div class="quiz-question-box">
-                <h4 class="quiz-question">${q.question}</h4>
+                <h4 class="quiz-question">${this.formatQuestionText(q.question)}</h4>
               </div>
 
-              <div class="quiz-options">
+              <div class="quiz-options ${this.isSingleColumnOptions(q.options) ? 'options-stack' : 'options-grid'}">
                 ${q.options.map((opt, optIndex) => `
                   <div class="quiz-opt" onclick="App.checkQuizAnswer(${qIndex}, ${optIndex}, this)" role="button" tabindex="0">
                     <div class="opt-badge">${String.fromCharCode(65 + optIndex)}</div>
@@ -2562,7 +2610,8 @@ function doGet(e) {
           ],
           macros: {
             "\\lim": "\\mathop{\\mathrm{lim}}\\limits",
-            "\\sum": "\\mathop{\\mathrm{sum}}\\limits"
+            "\\sum": "\\mathop{\\mathrm{sum}}\\limits",
+            "\\bar": "\\overline"
           },
           throwOnError: false
         });
@@ -3009,9 +3058,9 @@ function doGet(e) {
                 </span>
               </div>
               <div class="quiz-question-box">
-                <h4 class="quiz-question">${q.question}</h4>
+                <h4 class="quiz-question">${this.formatQuestionText(q.question)}</h4>
               </div>
-              <div class="quiz-options">
+              <div class="quiz-options ${this.isSingleColumnOptions(q.options) ? 'options-stack' : 'options-grid'}">
                 ${q.options.map((opt, optIndex) => {
                   let optClass = '';
                   if (optIndex === correctIdx) optClass = 'correct';
