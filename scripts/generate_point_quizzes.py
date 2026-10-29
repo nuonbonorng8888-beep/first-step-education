@@ -385,65 +385,7 @@ def build_10_high_standard_mcqs(lesson_id, lesson_title, pt, pt_idx, total_point
                         "level": "កម្រិត ២ (អនុវត្ត)"
                     })
 
-    # 4. Rich pedagogical templates if needed to guarantee 10 questions
-    synth_templates = [
-        {
-            "q": f"នៅក្នុង{lesson_title} ត្រង់«{pt_title}» ៖ តើលក្ខខណ្ឌចម្បងនៃ {topic} ត្រូវបានកំណត់យ៉ាងដូចម្តេច?",
-            "ans": f"ផ្អែកលើនិយមន័យ និងទ្រឹស្តីបទគ្រឹះនៃ {clean_title}",
-            "dists": [
-                f"ជាតម្លៃប្រែប្រួលដោយគ្មានរូបមន្តកំណត់",
-                f"អាស្រ័យតែលើតម្លៃអវិជ្ជមាននៃអថេរប៉ុណ្ណោះ",
-                f"មិនអាចទាញរកទំនាក់ទំនងគណិតវិទ្យាបានឡើយ"
-            ],
-            "exp": f"និយមន័យនៃ {clean_title} ត្រូវបានកំណត់យ៉ាងជាក់លាក់តាមទ្រឹស្តីបទ និងវិធានគណិតវិទ្យាក្នុងកម្មវិធីសិក្សា។",
-            "level": "កម្រិត ១ (មូលដ្ឋាន)"
-        },
-        {
-            "q": f"ចំពោះចំណុច «{clean_title}» តើការអនុវត្តរូបមន្តត្រូវគោរពតាមវិធានណា?",
-            "ans": f"ត្រូវពិនិត្យដែនកំណត់ និងលក្ខខណ្ឌផ្ទៀងផ្ទាត់នៃ {clean_title} ជានិច្ច",
-            "dists": [
-                f"អាចគណនាបានដោយមិនបាច់គិតពីដែនកំណត់",
-                f"សន្មតថាលទ្ធផលជាចំនួនគត់វិជ្ជមានជានិច្ច",
-                f"លុបចោលលក្ខខណ្ឌដែលស្មុគស្មាញទាំងអស់"
-            ],
-            "exp": f"ការដោះស្រាយលំហាត់តម្រូវឱ្យពិនិត្យដែនកំណត់ និងលក្ខខណ្ឌផ្ទៀងផ្ទាត់ជានិច្ច ដើម្បីជៀសវាងការទាញរកឫសមិនពិត។",
-            "level": "កម្រិត ២ (អនុវត្ត)"
-        },
-        {
-            "q": f"តើវិធីសាស្ត្រគន្លឹះក្នុងការដោះស្រាយលំហាត់ «{clean_title}» ឱ្យបានត្រឹមត្រូវគឺអ្វី?",
-            "ans": f"ការអនុវត្តវិធីសាស្ត្រតក្កវិជ្ជា និងជំហានគណនាតាមរូបមន្តស្ដង់ដារ",
-            "dists": [
-                f"ការទាយចម្លើយតាមការប៉ាន់ស្មានផ្ទាល់ភ្នែក",
-                f"ការរំលងការបំប្លែងកន្សោមទៅរកទម្រង់ងាយ",
-                f"ការប្រើរូបមន្តមិនទាក់ទងនឹងមេរៀន"
-            ],
-            "exp": f"ជំហានដោះស្រាយត្រូវផ្អែកលើតក្កវិជ្ជា និងរូបមន្តត្រឹមត្រូវដើម្បីទទួលបានលទ្ធផលសុក្រឹត។",
-            "level": "កម្រិត ២ (អនុវត្ត)"
-        },
-        {
-            "q": f"តើកំហុសទូទៅបំផុតដែលសិស្សគួរប្រុងប្រយ័ត្នក្នុង «{clean_title}» គឺជាអ្វី?",
-            "ans": f"ការច្រឡំសញ្ញាបូក-ដក និងការមិនផ្ទៀងផ្ទាត់លក្ខខណ្ឌនៃ {topic}",
-            "dists": [
-                f"ការអានប្រធានលំហាត់ច្រើនដង",
-                f"ការសរសេរជំហានដំណោះស្រាយលម្អិតពេក",
-                f"ការគូសបន្ទាត់ក្រោមចម្លើយចុងក្រោយ"
-            ],
-            "exp": f"កំហុសញឹកញាប់ក្នុងចំណុចនេះ គឺការធ្វេសប្រហែសលើសញ្ញា និងការភ្លេចពិនិត្យលក្ខខណ្ឌ។",
-            "level": "កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)"
-        },
-        {
-            "q": f"ក្នុងការវាយតម្លៃសមត្ថភាព (PISA) តើចំណេះដឹងពី «{clean_title}» ជួយពង្រឹងជំនាញអ្វី?",
-            "ans": f"ជំនាញវិភាគទិន្នន័យ គំរូគណិតវិទ្យា និងការត្រិះរិះពិចារណាដោះស្រាយបញ្ហា",
-            "dists": [
-                f"ការទន្ទេញចាំចម្លើយដោយមិនយល់អត្ថន័យ",
-                f"ការគណនាតែក្នុងលំហាត់ដែលគ្មានអថេរ",
-                f"ការសន្មតចម្លើយដោយគ្មានហេតុផលគណិតវិទ្យា"
-            ],
-            "exp": f"វិញ្ញាសាស្តង់ដារ PISA ផ្តោតលើការអនុវត្តគំនិតគណិតវិទ្យាទៅក្នុងការវិភាគ និងដោះស្រាយបញ្ហាជាក់ស្តែង។",
-            "level": "កម្រិត ៣ (ការគិតកម្រិតខ្ពស់)"
-        }
-    ]
-
+    # 4. Authentic mathematical calculation questions if needed to guarantee 10 questions
     final_items = []
     used_questions = set()
     
@@ -452,34 +394,24 @@ def build_10_high_standard_mcqs(lesson_id, lesson_title, pt, pt_idx, total_point
         if q_txt not in used_questions and len(final_items) < 10:
             used_questions.add(q_txt)
             final_items.append(item)
-            
-    tpl_idx = 0
-    while len(final_items) < 10 and tpl_idx < len(synth_templates):
-        tpl = synth_templates[tpl_idx]
-        tpl_idx += 1
-        if tpl['q'] not in used_questions:
-            used_questions.add(tpl['q'])
-            final_items.append({
-                "question": tpl['q'],
-                "correct_ans": tpl['ans'],
-                "distractors": tpl['dists'],
-                "explanation": tpl['exp'],
-                "level": tpl['level']
-            })
-            
-    while len(final_items) < 10:
-        idx_fill = len(final_items) + 1
-        final_items.append({
-            "question": f"សំណួរអនុវត្តពង្រឹងសមត្ថភាពទី {idx_fill} លើចំណុច «{clean_title}» ៖ តើចម្លើយណាត្រឹមត្រូវបំផុត?",
-            "correct_ans": f"ចម្លើយផ្ទៀងផ្ទាត់ត្រឹមត្រូវតាមទ្រឹស្តីបទនៃ {clean_title}",
-            "distractors": [
-                "ចម្លើយមិនផ្ទៀងផ្ទាត់លក្ខខណ្ឌគណិតវិទ្យា",
-                "តម្លៃប៉ាន់ស្មានខុសពីការពិត",
-                "កន្សោមគ្មានន័យក្នុងដែនកំណត់"
-            ],
-            "explanation": f"ត្រូវជ្រើសរើសចម្លើយដែលផ្ទៀងផ្ទាត់ត្រឹមត្រូវតាមនិយមន័យ និងរូបមន្តនៃ {clean_title}។",
-            "level": "កម្រិត ២ (អនុវត្ត)"
-        })
+
+    if len(final_items) < 10:
+        from scripts.master_replace_boilerplates import detect_domain, generate_clean_math_question
+        domain = detect_domain(lesson_id, pt_title)
+        fill_idx = 0
+        while len(final_items) < 10:
+            seed = fill_idx * 7 + int(pt_num) * 13 + hash(lesson_id) % 100
+            fill_idx += 1
+            mq = generate_clean_math_question(domain, pt_title, seed)
+            if mq['q'] not in used_questions:
+                used_questions.add(mq['q'])
+                final_items.append({
+                    "question": mq['q'],
+                    "correct_ans": mq['ans'],
+                    "distractors": mq['dists'],
+                    "explanation": mq['exp'],
+                    "level": "កម្រិត ២ (អនុវត្ត)"
+                })
 
     # Assemble exactly 10 formatted MCQs
     mcqs = []
