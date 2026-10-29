@@ -84,6 +84,8 @@ body.light-theme {
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -92,7 +94,9 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
+  max-width: 100%;
   overflow-x: hidden;
+  position: relative;
   background-image: var(--gradient-glow);
   background-attachment: fixed;
   transition: background-color var(--transition-normal), color var(--transition-normal);
@@ -1816,6 +1820,9 @@ body.light-theme .quiz-arena-header {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-normal);
   position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 body.light-theme .quiz-card {
@@ -1875,6 +1882,10 @@ body.light-theme .quiz-card {
 
 .quiz-question-box {
   margin-bottom: 18px;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .quiz-question {
@@ -1883,17 +1894,20 @@ body.light-theme .quiz-card {
   line-height: 1.75;
   color: var(--text-primary);
   margin: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .quiz-options {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 14px;
+  width: 100%;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 768px) {
   .quiz-options {
-    grid-template-columns: repeat(2, 1fr);
     gap: 14px 16px;
   }
 }
@@ -1901,9 +1915,9 @@ body.light-theme .quiz-card {
 .quiz-opt {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px 18px;
-  min-height: 58px;
+  gap: 12px;
+  padding: 12px 14px;
+  min-height: 54px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.03);
   border: 1.5px solid rgba(255, 255, 255, 0.08);
@@ -1911,6 +1925,8 @@ body.light-theme .quiz-card {
   transition: all var(--transition-fast);
   position: relative;
   user-select: none;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 body.light-theme .quiz-opt {
@@ -1931,8 +1947,8 @@ body.light-theme .quiz-opt:hover {
 }
 
 .opt-badge {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1940,7 +1956,7 @@ body.light-theme .quiz-opt:hover {
   align-items: center;
   justify-content: center;
   font-family: var(--font-en);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 800;
   color: #38bdf8;
   flex-shrink: 0;
@@ -1954,10 +1970,12 @@ body.light-theme .opt-badge {
 
 .opt-content {
   flex: 1;
-  font-size: 1.15rem;
+  font-size: 1.08rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.55;
   color: var(--text-primary);
+  min-width: 0;
+  overflow-wrap: break-word;
   word-break: break-word;
 }
 
@@ -2640,6 +2658,46 @@ body.dark-mode .katex .overline .overline-line,
     align-items: flex-start;
     gap: 4px;
   }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  body.exam-mode-active .classroom-layout {
+    padding: 8px 4px !important;
+  }
+
+  .quiz-card {
+    padding: 18px 14px;
+    border-radius: 16px;
+  }
+
+  .quiz-question {
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+
+  .quiz-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+  }
+
+  .quiz-opt {
+    padding: 10px 10px;
+    gap: 8px;
+    min-height: 50px;
+    border-radius: 12px;
+  }
+
+  .opt-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .opt-content {
+    font-size: 0.98rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2657,6 +2715,55 @@ body.dark-mode .katex .overline .overline-line,
 
   .brand-name {
     font-size: 1.05rem;
+  }
+
+  .container {
+    padding: 0 8px;
+  }
+
+  body.exam-mode-active .classroom-layout {
+    padding: 4px 2px !important;
+  }
+
+  .quiz-card {
+    padding: 14px 10px;
+    border-radius: 14px;
+  }
+
+  .quiz-question {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .quiz-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px;
+  }
+
+  .quiz-opt {
+    padding: 8px 8px;
+    gap: 6px;
+    min-height: 46px;
+    border-radius: 10px;
+  }
+
+  .opt-badge {
+    width: 26px;
+    height: 26px;
+    font-size: 0.82rem;
+  }
+
+  .opt-content {
+    font-size: 0.92rem;
+  }
+
+  .quiz-q-pill {
+    padding: 4px 10px;
+    font-size: 0.74rem;
+  }
+
+  .quiz-card .katex {
+    font-size: 0.98em;
   }
 }
 

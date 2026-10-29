@@ -1106,6 +1106,18 @@ function doGet(e) {
     return q;
   },
 
+  formatExplanationText(text) {
+    if (!text) return 'ចម្លើយត្រឹមត្រូវ!';
+    // Replace leading dashes/hyphens on any line with clean bullet (•) to avoid confusion with minus signs
+    let formatted = String(text).replace(/(?:^|\n)\s*[-–—]\s*(?=[$0-9a-zA-Z\u1780-\u17ff\(\[\{])/g, '\n• ');
+    if (formatted.startsWith('\n• ')) formatted = formatted.slice(1);
+    // Convert newlines to <br> for HTML rendering if not wrapped in tags
+    if (!formatted.includes('<p>') && !formatted.includes('<div') && !formatted.includes('<ul>')) {
+      formatted = formatted.replace(/\n/g, '<br>');
+    }
+    return formatted;
+  },
+
   extractAnswerString(solText) {
     if (!solText) return '$0$';
     
@@ -2266,7 +2278,7 @@ function doGet(e) {
                   <span class="exp-title">ការពន្យល់លម្អិតពីលោកគ្រូ ៖</span>
                 </div>
                 <div class="exp-body">
-                  ${q.explanation || 'ចម្លើយត្រឹមត្រូវ!'}
+                  ${this.formatExplanationText(q.explanation)}
                 </div>
               </div>
             </div>
@@ -2984,7 +2996,7 @@ function doGet(e) {
                   <span class="exp-title">ការពន្យល់លម្អិតពីលោកគ្រូ ៖</span>
                 </div>
                 <div class="exp-body">
-                  ${q.explanation || 'ចម្លើយត្រឹមត្រូវ!'}
+                  ${this.formatExplanationText(q.explanation)}
                 </div>
               </div>
             </div>
