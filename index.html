@@ -66,6 +66,12 @@
           <button class="cat-pill active" onclick="App.backToCatalog()" id="nav-link-home">ទំព័រដើម</button>
           <button class="cat-pill" onclick="App.scrollToLessons()" id="nav-link-lessons">មេរៀន</button>
           <button class="cat-pill" onclick="App.openDiagnosticModal()" id="nav-link-test">តេស្តសមត្ថភាព</button>
+          <button class="cat-pill" onclick="window.questionBank.openQuestionBankModal()" id="nav-link-bank" style="background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.4); color: #c084fc; font-weight: 700;">
+            📚 ធនាគារសំណួរ
+          </button>
+          <button class="cat-pill" onclick="window.questionBank.openMultiLessonExamModal()" id="nav-link-exam-main" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700;">
+            🎲 បង្កើតវិញ្ញាសា
+          </button>
         </div>
       </div>
 
@@ -108,7 +114,7 @@
           📚 <span class="desktop-only" style="font-size: 0.74rem;">ធនាគារសំណួរ</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v83)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v84)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
           🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
         </button>
 
@@ -182,7 +188,7 @@
           </div>
         </div>
 
-        <!-- Student Action Strip (Real Features) -->
+        <!-- Student & Teacher Action Strip (Real Features) -->
         <div class="student-action-strip">
           <button class="action-strip-btn primary" onclick="App.openDiagnosticModal()">
             <span class="action-icon">🎯</span>
@@ -193,10 +199,26 @@
           </button>
 
           <button class="action-strip-btn secondary" onclick="App.scrollToLessons()">
-            <span class="action-icon">📚</span>
+            <span class="action-icon">📖</span>
             <div class="action-text">
               <span class="action-title">រុករកមេរៀនទាំងអស់</span>
-              <span class="action-sub">៧៤ មេរៀន • ៧៤០ MCQ</span>
+              <span class="action-sub">១៥៦ មេរៀន • ៥,៤៧០ សំណួរ</span>
+            </div>
+          </button>
+
+          <button class="action-strip-btn" onclick="window.questionBank.openQuestionBankModal()" style="border: 1px solid rgba(168, 85, 247, 0.4); background: rgba(168, 85, 247, 0.1);">
+            <span class="action-icon">📚</span>
+            <div class="action-text">
+              <span class="action-title" style="color: #c084fc;">ធនាគារសំណួរ</span>
+              <span class="action-sub">៥,៤៧០ សំណួរ • ថ្នាក់ទី ៧-១២</span>
+            </div>
+          </button>
+
+          <button class="action-strip-btn" onclick="window.questionBank.openMultiLessonExamModal()" style="border: 1px solid rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.1);">
+            <span class="action-icon">🎲</span>
+            <div class="action-text">
+              <span class="action-title" style="color: #38bdf8;">បង្កើតវិញ្ញាសាចម្រុះ</span>
+              <span class="action-sub">១០ MCQ + ៥ សរសេរ & អត្រាកំណែ</span>
             </div>
           </button>
 
@@ -1654,9 +1676,13 @@
       <span class="dock-icon">🎯</span>
       <span class="dock-label">តេស្ត</span>
     </button>
-    <button class="dock-btn" id="dock-btn-exam" onclick="App.openTeacherSheetModal(); App.setDockActive(this);" title="ការប្រឡង & វិញ្ញាសា">
-      <span class="dock-icon">📝</span>
-      <span class="dock-label">ការប្រឡង</span>
+    <button class="dock-btn" id="dock-btn-bank" onclick="window.questionBank.openQuestionBankModal(); App.setDockActive(this);" title="ធនាគារសំណួរ">
+      <span class="dock-icon">📚</span>
+      <span class="dock-label">ធនាគារ</span>
+    </button>
+    <button class="dock-btn" id="dock-btn-exam" onclick="window.questionBank.openMultiLessonExamModal(); App.setDockActive(this);" title="ការប្រឡង & វិញ្ញាសា">
+      <span class="dock-icon">🎲</span>
+      <span class="dock-label">វិញ្ញាសា</span>
     </button>
     <button class="dock-btn" id="dock-btn-mobile" onclick="App.openWebShareModal(); App.setDockActive(this);">
       <span class="dock-icon">🌐</span>
@@ -1674,15 +1700,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=83"></script>
-  <script src="js/question-bank.js?v=83"></script>
-  <script src="js/app.js?v=83"></script>
-  <script src="js/visits.js?v=83"></script>
+  <script src="js/storage.js?v=84"></script>
+  <script src="js/question-bank.js?v=84"></script>
+  <script src="js/app.js?v=84"></script>
+  <script src="js/visits.js?v=84"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=83').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=84').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

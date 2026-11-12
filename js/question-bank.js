@@ -1,8 +1,7 @@
 /**
- * NGS Question Bank & Multi-Lesson Exam Generator
- * (ធនាគារសំណួរ ៣,៣០០+ សំណួរ & ប្រព័ន្ធបង្កើតវិញ្ញាសាចម្រុះ ១០ MCQ + ៥ សរសេរ ជាមួយអត្រាកំណែ)
- * Specially built for Worksheet.Kh / 1st Step Education
- * Admin: លោកគ្រូ នួន បូណង
+ * NGS Unified Question Bank & Multi-Lesson Exam Generator
+ * (ធនាគារសំណួរ ៥,៤៧០+ សំណួរ & ប្រព័ន្ធបង្កើតវិញ្ញាសាចម្រុះ ១០ MCQ + ៥ សរសេរ ជាមួយអត្រាកំណែ)
+ * Strictly organizes questions by Lesson with ZERO cross-lesson leakage!
  */
 
 class QuestionBankController {
@@ -10,7 +9,7 @@ class QuestionBankController {
     this.database = null;
     this.customQuestions = this.loadCustomQuestions();
     this.selectedGrade = 'all';
-    this.selectedLesson = 'all';
+    this.selectedLessonId = 'all';
     this.selectedLevel = 'all';
     this.searchQuery = '';
     this.selectedIds = new Set();
@@ -38,14 +37,11 @@ class QuestionBankController {
   }
 
   /* ================== ROBUST LATEX CLEANSER ================== */
-  /**
-   * Cleans LaTeX formula strings from common corruptions such as /d, /tx, /frac, unescaped macros, etc.
-   */
   cleanLatexFormula(formula) {
     if (!formula || typeof formula !== 'string') return '';
     let f = formula.replace(/^\$+|\$+$/g, '').trim();
 
-    // 1. Auto-repair control characters from unescaped JavaScript strings
+    // 1. Control chars
     f = f.replace(/[\x08]ar/g, '\\bar');
     f = f.replace(/[\x08]egin/g, '\\begin');
     f = f.replace(/[\t]ext/g, '\\text');
@@ -63,7 +59,7 @@ class QuestionBankController {
     f = f.replace(/\\tx\b/g, '\\text');
     f = f.replace(/\/(pm|times|div|le|ge|ne|approx|sim|alpha|beta|theta|pi|Delta|lim|sum|int|infty|dots)\b/g, '\\$1');
 
-    // 3. Handle standalone keywords without backslash
+    // 3. Standalone keywords without backslash
     f = f.replace(/(?:^|[^\\])\bdfrac(?=\{|\b)/g, '\\dfrac');
     f = f.replace(/(?:^|[^\\a-zA-Z])\bfrac(?=\{|\b)/g, '$1\\frac');
 
@@ -77,16 +73,13 @@ class QuestionBankController {
       f = f.replace(reg, '$1\\' + macro);
     });
 
-    // 4. Clean up corrupted combinations and excessive backslashes
+    // 4. Clean up corrupted combinations and multiple backslashes
     f = f.replace(/\\?d\\frac/g, '\\dfrac');
     f = f.replace(/\\{2,}/g, '\\');
 
     return f;
   }
 
-  /**
-   * Renders math text by converting $formula$ into KaTeX HTML
-   */
   formatMath(text) {
     if (!text || typeof text !== 'string') return '';
     if (typeof katex === 'undefined') return text;
@@ -101,9 +94,9 @@ class QuestionBankController {
     });
   }
 
-  /* ================== DATABASE LOADING ================== */
+  /* ================== DATABASE INITIALIZATION ================== */
   async init() {
-    if (this.isInitialized && this.database) return;
+    if (this.isInitialized && this.database && this.database.questions) return;
     this.isLoading = true;
 
     try {
@@ -112,11 +105,7 @@ class QuestionBankController {
         this.database = await res.json();
       }
     } catch (err) {
-      console.warn('Could not load question_bank.json via fetch:', err);
-    }
-
-    if (!this.database && window.MATH_DATABASE) {
-      this.database = window.MATH_DATABASE;
+      console.warn('Could not load question_bank.json:', err);
     }
 
     this.isLoading = false;
@@ -142,47 +131,40 @@ class QuestionBankController {
     };
 
     all.forEach(q => {
-      if (counts[q.g] !== undefined) {
-        counts[q.g]++;
+      const g = q.g;
+      if (counts[g] !== undefined) counts[g]++;
+      else {
+        // match ថ្នាក់ទី X
+        for (const k of Object.keys(counts)) {
+          if (g && g.includes(k)) counts[k]++;
+        }
       }
     });
 
     return counts;
   }
 
+  /**
+   * Returns list of lessons for a given course or grade, strictly preserving IDs
+   */
   getLessonsForGrade(grade) {
-    if (!this.database) return [];
-    
-    // Check chaptersByGrade
-    if (this.database.chaptersByGrade && this.database.chaptersByGrade[grade]) {
-      const lessons = [];
-      this.database.chaptersByGrade[grade].forEach(ch => {
-        (ch.lessons || []).forEach(les => {
-          lessons.push({
-            id: les.id,
-            title: les.title,
-            chapterTitle: ch.title,
-            questionCount: les.questionCount || 0
-          });
-        });
-      });
-      return lessons;
-    }
-
-    // Fallback: derive unique lessons from questions
-    const lessonMap = new Map();
     const all = this.getAllQuestions();
-    all.filter(q => q.g === grade).forEach(q => {
-      const lesKey = q.lesId || q.l;
-      if (lesKey && !lessonMap.has(lesKey)) {
-        lessonMap.set(lesKey, {
-          id: q.lesId || q.l,
-          title: q.l,
-          chapterTitle: q.ch || 'ជំពូកទូទៅ',
-          questionCount: 1
-        });
-      } else if (lesKey) {
-        lessonMap.get(lesKey).questionCount++;
+    const lessonMap = new Map();
+
+    all.forEach(q => {
+      const matchesGrade = !grade || grade === 'all' || q.g === grade || (q.courseTitle && q.courseTitle.includes(grade));
+      if (matchesGrade && q.lesId) {
+        if (!lessonMap.has(q.lesId)) {
+          lessonMap.set(q.lesId, {
+            id: q.lesId,
+            title: q.l || q.lesId,
+            chapterTitle: q.ch || 'ជំពូកទូទៅ',
+            grade: q.g,
+            courseTitle: q.courseTitle || '',
+            questionCount: 0
+          });
+        }
+        lessonMap.get(q.lesId).questionCount++;
       }
     });
 
@@ -190,11 +172,6 @@ class QuestionBankController {
   }
 
   /* ================== PERMISSION GATE ================== */
-  /**
-   * Enforces role permissions:
-   * Member teachers can only access Exam and Worksheets.
-   * Question Bank repository is strictly locked for Admin (លោកគ្រូ នួន បូណង).
-   */
   isTeacherAdmin() {
     return window.App && window.App.isAdmin;
   }
@@ -255,13 +232,8 @@ class QuestionBankController {
     document.body.insertAdjacentHTML('beforeend', modalHtml);
   }
 
-  /* ================== MULTI-LESSON EXAM BUILDER (FLAGSHIP) ================== */
-  /**
-   * Opens the Multi-Lesson Exam Generator Modal
-   * Allows picking 2 or 3 lessons, selecting MCQ and Written count, difficulty level,
-   * and generating the complete 10 MCQ + 5 Written Exam with Answer Key!
-   */
-  async openMultiLessonExamModal(defaultGrade = 'ថ្នាក់ទី ៨') {
+  /* ================== MULTI-LESSON EXAM BUILDER (STRICT MATCHING) ================== */
+  async openMultiLessonExamModal(defaultGrade = 'ថ្នាក់ទី ១១') {
     await this.init();
 
     const currentTeacher = window.App?.currentTeacher;
@@ -276,7 +248,7 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card" style="max-width: 850px; width: 95%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card" style="max-width: 880px; width: 95%; max-height: 90vh; overflow-y: auto;">
         <!-- Header -->
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
@@ -287,21 +259,28 @@ class QuestionBankController {
               </span>
             </h3>
             <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
-              ជ្រើសរើសមេរៀនចំនួន ១, ២ ឬ ៣ ក្នុងកម្រិតថ្នាក់តែមួយ ដើម្បីបង្កើតវិញ្ញាសាប្រឡងផ្លូវការជាមួយអត្រាកំណែ
+              ជ្រើសរើសមេរៀនចំនួន ១, ២ ឬ ៣ — សំណួរនឹងចេញពីមេរៀនដែលបានជ្រើស <strong>១០០% ដោយគ្មានមេរៀនផ្សេងលាយឡំ</strong>!
             </p>
           </div>
           <button class="btn-icon" onclick="document.getElementById('multiLessonExamModal').remove()">✕</button>
         </div>
 
-        <!-- Grade Selector Row -->
+        <!-- Grade & Stream Selector Row -->
         <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px;">
           <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-secondary);">កម្រិតថ្នាក់ ៖</span>
           <div style="display: flex; flex-wrap: wrap; gap: 6px;" id="examGradePills">
-            ${['ថ្នាក់ទី ៧', 'ថ្នាក់ទី ៨', 'ថ្នាក់ទី ៩', 'ថ្នាក់ទី ១០', 'ថ្នាក់ទី ១១', 'ថ្នាក់ទី ១២'].map(g => `
-              <button type="button" class="btn btn-sm ${g === defaultGrade ? 'btn-primary' : 'btn-outline'}" 
+            ${[
+              { id: 'ថ្នាក់ទី ៧', label: 'ថ្នាក់ទី ៧' },
+              { id: 'ថ្នាក់ទី ៨', label: 'ថ្នាក់ទី ៨' },
+              { id: 'ថ្នាក់ទី ៩', label: 'ថ្នាក់ទី ៩' },
+              { id: 'ថ្នាក់ទី ១០', label: 'ថ្នាក់ទី ១០' },
+              { id: 'ថ្នាក់ទី ១១', label: 'ថ្នាក់ទី ១១' },
+              { id: 'ថ្នាក់ទី ១២', label: 'ថ្នាក់ទី ១២' }
+            ].map(g => `
+              <button type="button" class="btn btn-sm ${g.id === defaultGrade ? 'btn-primary' : 'btn-outline'}" 
                 style="padding: 4px 12px; font-size: 0.8rem; border-radius: 8px;"
-                onclick="window.questionBank.switchExamGrade('${g}')">
-                ${g}
+                onclick="window.questionBank.switchExamGrade('${g.id}')">
+                ${g.label}
               </button>
             `).join('')}
           </div>
@@ -384,13 +363,13 @@ class QuestionBankController {
 
     document.body.appendChild(modalBack);
 
-    // Default configuration state
+    // Initial state
     this.examConfig = {
       grade: defaultGrade,
-      lessonMode: 2, // Default 2 lessons
+      lessonMode: 2,
       lessons: [
-        { lessonId: '', mcqCount: 5, writtenCount: 3, level: 'all' },
-        { lessonId: '', mcqCount: 5, writtenCount: 2, level: 'all' }
+        { lesId: '', mcqCount: 5, writtenCount: 3, level: 'all' },
+        { lesId: '', mcqCount: 5, writtenCount: 2, level: 'all' }
       ]
     };
 
@@ -401,25 +380,19 @@ class QuestionBankController {
     if (!this.examConfig) return;
     this.examConfig.grade = grade;
 
-    // Update grade pills
     const pillsContainer = document.getElementById('examGradePills');
     if (pillsContainer) {
       pillsContainer.querySelectorAll('button').forEach(btn => {
-        if (btn.textContent.trim() === grade) {
-          btn.className = 'btn btn-sm btn-primary';
-        } else {
-          btn.className = 'btn btn-sm btn-outline';
-        }
+        if (btn.textContent.trim() === grade) btn.className = 'btn btn-sm btn-primary';
+        else btn.className = 'btn btn-sm btn-outline';
       });
     }
 
-    // Update title
     const titleInput = document.getElementById('examMetaTitle');
     if (titleInput) {
       titleInput.value = `វិញ្ញាសាប្រឡងគណិតវិទ្យាបញ្ចប់មេរៀន (${grade})`;
     }
 
-    // Re-render slots with the new grade lessons
     this.renderExamSlots();
   }
 
@@ -436,18 +409,18 @@ class QuestionBankController {
 
     if (count === 1) {
       this.examConfig.lessons = [
-        { lessonId: '', mcqCount: 10, writtenCount: 5, level: 'all' }
+        { lesId: '', mcqCount: 10, writtenCount: 5, level: 'all' }
       ];
     } else if (count === 2) {
       this.examConfig.lessons = [
-        { lessonId: '', mcqCount: 5, writtenCount: 3, level: 'all' },
-        { lessonId: '', mcqCount: 5, writtenCount: 2, level: 'all' }
+        { lesId: '', mcqCount: 5, writtenCount: 3, level: 'all' },
+        { lesId: '', mcqCount: 5, writtenCount: 2, level: 'all' }
       ];
     } else if (count === 3) {
       this.examConfig.lessons = [
-        { lessonId: '', mcqCount: 4, writtenCount: 2, level: 'all' },
-        { lessonId: '', mcqCount: 3, writtenCount: 2, level: 'all' },
-        { lessonId: '', mcqCount: 3, writtenCount: 1, level: 'all' }
+        { lesId: '', mcqCount: 4, writtenCount: 2, level: 'all' },
+        { lesId: '', mcqCount: 3, writtenCount: 2, level: 'all' },
+        { lesId: '', mcqCount: 3, writtenCount: 1, level: 'all' }
       ];
     }
 
@@ -485,30 +458,30 @@ class QuestionBankController {
     const lessonsList = this.getLessonsForGrade(this.examConfig.grade);
 
     container.innerHTML = this.examConfig.lessons.map((slot, idx) => {
-      // Pick initial lessonId if empty
-      if (!slot.lessonId && lessonsList.length > idx) {
-        slot.lessonId = lessonsList[idx].title;
+      // Pick initial lesId if empty
+      if (!slot.lesId && lessonsList.length > idx) {
+        slot.lesId = lessonsList[idx].id;
       }
 
       return `
-        <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px; position: relative;">
+        <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="width: 24px; height: 24px; border-radius: 50%; background: #9333ea; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.74rem; font-weight: 800;">
                 ${idx + 1}
               </span>
               <strong style="font-size: 0.86rem; color: var(--text-primary);">
-                មេរៀនទី ${idx + 1}
+                ជ្រើសរើសមេរៀនទី ${idx + 1}
               </strong>
             </div>
             <div style="display: flex; align-items: center; gap: 6px;">
-              <span style="font-size: 0.74rem; color: var(--text-muted);">កម្រិតពិបាក ៖</span>
+              <span style="font-size: 0.74rem; color: var(--text-muted);">កម្រិត ៖</span>
               <select class="form-input" style="padding: 2px 8px; font-size: 0.75rem; width: auto;"
                 onchange="window.questionBank.updateExamSlotLevel(${idx}, this.value)">
-                <option value="all" ${slot.level === 'all' ? 'selected' : ''}>ចម្រុះ (ងាយ + មធ្យម + ពិបាក)</option>
-                <option value="ងាយ" ${slot.level === 'ងាយ' ? 'selected' : ''}>ងាយ (Easy)</option>
-                <option value="មធ្យម" ${slot.level === 'មធ្យម' ? 'selected' : ''}>មធ្យម (Medium)</option>
-                <option value="ពិបាក" ${slot.level === 'ពិបាក' ? 'selected' : ''}>ពិបាក (Hard)</option>
+                <option value="all" ${slot.level === 'all' ? 'selected' : ''}>ចម្រុះ (ងាយ+មធ្យម+ពិបាក)</option>
+                <option value="ងាយ" ${slot.level === 'ងាយ' ? 'selected' : ''}>ងាយ</option>
+                <option value="មធ្យម" ${slot.level === 'មធ្យម' ? 'selected' : ''}>មធ្យម</option>
+                <option value="ពិបាក" ${slot.level === 'ពិបាក' ? 'selected' : ''}>ពិបាក</option>
               </select>
             </div>
           </div>
@@ -518,8 +491,8 @@ class QuestionBankController {
             <select class="form-input" style="font-size: 0.84rem; font-weight: 600;"
               onchange="window.questionBank.updateExamSlotLesson(${idx}, this.value)">
               ${lessonsList.map(les => `
-                <option value="${les.title}" ${slot.lessonId === les.title ? 'selected' : ''}>
-                  ${les.title} (${les.questionCount} សំណួរ)
+                <option value="${les.id}" ${slot.lesId === les.id ? 'selected' : ''}>
+                  [${les.chapterTitle}] ➔ ${les.title} (${les.questionCount} សំណួរ)
                 </option>
               `).join('')}
             </select>
@@ -551,9 +524,9 @@ class QuestionBankController {
     this.updateExamCounterBadge();
   }
 
-  updateExamSlotLesson(idx, val) {
+  updateExamSlotLesson(idx, lesId) {
     if (this.examConfig && this.examConfig.lessons[idx]) {
-      this.examConfig.lessons[idx].lessonId = val;
+      this.examConfig.lessons[idx].lesId = lesId;
     }
   }
 
@@ -595,7 +568,7 @@ class QuestionBankController {
     `;
   }
 
-  /* ================== EXAM GENERATION ENGINE ================== */
+  /* ================== EXAM GENERATION (STRICT ZERO-LEAKAGE) ================== */
   executeGenerateExam() {
     if (!this.examConfig) return;
 
@@ -603,56 +576,68 @@ class QuestionBankController {
     const selectedMCQs = [];
     const selectedWritten = [];
     const usedIds = new Set();
+    const chosenLessonTitles = [];
 
-    this.examConfig.lessons.forEach((slot, sIdx) => {
-      let pool = allQuestions.filter(q => {
-        const matchesGrade = q.g === this.examConfig.grade;
-        const matchesLesson = (q.l === slot.lessonId) || (q.lesId === slot.lessonId);
-        return matchesGrade && matchesLesson;
-      });
+    for (let sIdx = 0; sIdx < this.examConfig.lessons.length; sIdx++) {
+      const slot = this.examConfig.lessons[sIdx];
+      
+      // STRICT FILTER BY EXACT LESSON ID:
+      let pool = allQuestions.filter(q => q.lesId === slot.lesId);
 
-      // If pool is empty or small, fallback to grade-wide
-      if (pool.length === 0) {
-        pool = allQuestions.filter(q => q.g === this.examConfig.grade);
+      // If slot.lesId wasn't set, try matching by title
+      if (pool.length === 0 && slot.lessonTitle) {
+        pool = allQuestions.filter(q => q.l === slot.lessonTitle);
       }
 
-      // Filter by level if specified
+      // If still 0, find first lesson matching this grade
+      if (pool.length === 0) {
+        const gradeLessons = this.getLessonsForGrade(this.examConfig.grade);
+        if (gradeLessons.length > sIdx) {
+          slot.lesId = gradeLessons[sIdx].id;
+          pool = allQuestions.filter(q => q.lesId === slot.lesId);
+        }
+      }
+
+      const lessonTitle = pool[0]?.l || `មេរៀនទី ${sIdx + 1}`;
+      chosenLessonTitles.push(lessonTitle);
+
+      // Filter by level if requested and enough questions exist
       let levelPool = slot.level === 'all' ? pool : pool.filter(q => q.level === slot.level);
       if (levelPool.length < slot.mcqCount + slot.writtenCount) {
-        levelPool = pool; // fallback to all levels if not enough
+        levelPool = pool; // use all questions from THIS SAME LESSON only
       }
 
-      // Shuffle
+      // Shuffle strictly within this lesson's pool
       const shuffled = [...levelPool].sort(() => Math.random() - 0.5);
 
-      // Pick MCQs
+      // 1. Pick MCQs for this lesson
       let mcqAdded = 0;
       for (const q of shuffled) {
         if (mcqAdded >= slot.mcqCount) break;
         if (!usedIds.has(q.id)) {
-          selectedMCQs.push({ ...q, originLesson: slot.lessonId || `មេរៀនទី ${sIdx + 1}` });
+          selectedMCQs.push({ ...q, originLesson: lessonTitle });
           usedIds.add(q.id);
           mcqAdded++;
         }
       }
 
-      // Pick Written
+      // 2. Pick Written Problems for this lesson
       let writtenAdded = 0;
       for (const q of shuffled) {
         if (writtenAdded >= slot.writtenCount) break;
         if (!usedIds.has(q.id)) {
-          selectedWritten.push({ ...q, originLesson: slot.lessonId || `មេរៀនទី ${sIdx + 1}` });
+          selectedWritten.push({ ...q, originLesson: lessonTitle });
           usedIds.add(q.id);
           writtenAdded++;
         }
       }
-    });
+    }
 
     // Close config modal
     const configModal = document.getElementById('multiLessonExamModal');
     if (configModal) configModal.remove();
 
-    // Prepare complete Exam Object
+    // Prepare complete Exam Data
     const examData = {
       title: document.getElementById('examMetaTitle')?.value || `វិញ្ញាសាប្រឡងគណិតវិទ្យាបញ្ចប់មេរៀន (${this.examConfig.grade})`,
       grade: this.examConfig.grade,
@@ -660,7 +645,7 @@ class QuestionBankController {
       teacher: document.getElementById('examMetaTeacher')?.value || 'លោកគ្រូ នួន បូណង (វិទ្យាល័យព្រះស៊ីសុវត្ថិ NGS)',
       mcqs: selectedMCQs,
       written: selectedWritten,
-      lessons: this.examConfig.lessons.map(l => l.lessonId).filter(Boolean),
+      lessons: chosenLessonTitles,
       date: new Date().toLocaleDateString('km-KH', { year: 'numeric', month: 'long', day: 'numeric' })
     };
 
@@ -676,7 +661,7 @@ class QuestionBankController {
 
     modalBack.innerHTML = `
       <div class="w-full max-w-5xl bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden my-4">
-        <!-- Top Toolbar (Hidden on Print) -->
+        <!-- Top Toolbar -->
         <div class="no-print p-4 bg-slate-100 border-b border-slate-200 flex flex-wrap items-center justify-between gap-4">
           <div class="flex items-center gap-2">
             <span class="text-2xl">📑</span>
@@ -706,7 +691,7 @@ class QuestionBankController {
           </div>
         </div>
 
-        <!-- Tab Controls inside Preview -->
+        <!-- Tab Controls -->
         <div class="no-print flex border-b border-slate-200 bg-slate-50 text-xs font-bold px-6 pt-2 gap-4">
           <button id="tabBtnPreviewExam" onclick="window.questionBank.switchPreviewTab('exam')" class="py-2.5 border-b-2 border-purple-600 text-purple-700 flex items-center gap-1.5">
             <span>📄 សន្លឹកវិញ្ញាសាប្រឡង (Student Sheet)</span>
@@ -735,10 +720,10 @@ class QuestionBankController {
               </div>
             </div>
 
-            <!-- Exam Title & Student Fill-in Info -->
+            <!-- Exam Title & Info -->
             <div class="text-center space-y-2 py-1">
               <h2 class="font-moul text-base md:text-lg text-slate-900">${exam.title}</h2>
-              <p class="text-xs text-slate-500">
+              <p class="text-xs text-slate-500 font-bold">
                 មេរៀនប្រឡង ៖ ${exam.lessons.join(' • ')}
               </p>
               <div class="flex justify-between items-center text-xs pt-3">
@@ -834,10 +819,10 @@ class QuestionBankController {
               </div>
             </div>
 
-            <!-- Detailed Written Solutions (លំហាត់សរសេរ) -->
+            <!-- Detailed Written Solutions (កំណែខ្លីៗ & ដំណោះស្រាយ) -->
             <div class="space-y-4 pt-4 border-t border-slate-200">
               <h4 class="font-bold text-xs uppercase tracking-wider text-amber-800">
-                ដំណោះស្រាយលម្អិត & លក្ខណៈវិនិច្ឆ័យពិន្ទុផ្នែកទី ២ (លំហាត់សរសេរ ៥ សំណួរ - ១ លំហាត់ = ២ ពិន្ទុ) ៖
+                ដំណោះស្រាយលម្អិត & កំណែខ្លីៗផ្នែកទី ២ (លំហាត់សរសេរ ៥ សំណួរ - ១ លំហាត់ = ២ ពិន្ទុ) ៖
               </h4>
               <div class="space-y-4">
                 ${exam.written.map((q, idx) => `
@@ -847,8 +832,8 @@ class QuestionBankController {
                       <span class="text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded text-[11px]">២.០ ពិន្ទុ</span>
                     </div>
                     <div class="p-3 bg-white rounded-lg border border-slate-200 text-slate-700 leading-relaxed font-mono">
-                      <strong>ដំណោះស្រាយ ៖</strong><br>
-                      ${this.formatMath(q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
+                      <strong>កំណែខ្លីៗ & ដំណោះស្រាយ ៖</strong><br>
+                      ${this.formatMath(q.short_solution || q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
                     </div>
                     <div class="flex flex-wrap gap-4 text-[11px] text-slate-500 pt-1">
                       <span>• សរសេររូបមន្ត / កំណត់លក្ខខណ្ឌ ៖ <strong>០.៥ ពិន្ទុ</strong></span>
@@ -920,7 +905,7 @@ class QuestionBankController {
       text += `សំណួរ ${i + 1}: (${String.fromCharCode(65 + q.a)})\n`;
     });
     ex.written.forEach((q, i) => {
-      text += `លំហាត់ ${i + 1}: ${q.e}\n`;
+      text += `លំហាត់ ${i + 1}: ${q.short_solution || q.e}\n`;
     });
 
     navigator.clipboard.writeText(text).then(() => {
@@ -934,7 +919,6 @@ class QuestionBankController {
 
   createOnlineExamLink() {
     if (!this.currentGeneratedExam) return;
-    // Generate online student exam link with grade
     const gradeNum = this.currentGeneratedExam.grade.replace(/[^0-9]/g, '') || '8';
     const link = `https://worksheet-kh.vercel.app/?exam=1&grade=${gradeNum}&customExam=1`;
 
@@ -947,9 +931,9 @@ class QuestionBankController {
     });
   }
 
-  /* ================== FULL QUESTION BANK VIEW (ADMIN ONLY) ================== */
+  /* ================== FULL QUESTION BANK VIEW (PROMINENT & POWERFUL) ================== */
   async openQuestionBankModal() {
-    // Check permission first
+    // If not Admin, show locked notice explaining permissions
     if (!this.checkBankAccess()) return;
 
     await this.init();
@@ -962,18 +946,18 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card" style="max-width: 1000px; width: 95%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card" style="max-width: 1050px; width: 96%; max-height: 90vh; overflow-y: auto;">
         <!-- Header -->
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
               <span>📚 ធនាគារសំណួរគណិតវិទ្យា (Question Bank)</span>
               <span id="bankTotalCountBadge" style="font-size: 0.76rem; padding: 2px 8px; border-radius: 999px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-weight: 700;">
-                (៣,៣០០+ សំណួរ)
+                (៥,៤៧០ សំណួរ)
               </span>
             </h3>
             <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
-              ប្រព័ន្ធគ្រប់គ្រងសំណួរគណិតវិទ្យា NGS ថ្នាក់ទី ៧ ដល់ ទី ១២ ស្របតាមកម្មវិធីសិក្សាជាតិ
+              ប្រព័ន្ធធនាគារសំណួរផ្លូវការ NGS ថ្នាក់ទី ៧ ដល់ ទី ១២ (ស្របតាមកម្មវិធីសិក្សាជាតិ និង PISA)
             </p>
           </div>
           <div style="display: flex; gap: 8px; align-items: center;">
@@ -990,7 +974,7 @@ class QuestionBankController {
         </div>
 
         <!-- Search & Filter Controls -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 14px; background: rgba(15, 23, 42, 0.4); border-radius: 12px; padding: 12px; border: 1px solid var(--border-glass);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 14px; background: rgba(15, 23, 42, 0.4); border-radius: 12px; padding: 12px; border: 1px solid var(--border-glass);">
           <div>
             <label style="display: block; font-size: 0.72rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">
               មេរៀន / ជំពូក
@@ -1009,7 +993,6 @@ class QuestionBankController {
               <option value="ងាយ">ងាយ (Easy)</option>
               <option value="មធ្យម">មធ្យម (Medium)</option>
               <option value="ពិបាក">ពិបាក (Hard)</option>
-              <option value="បែប PISA">បែប PISA</option>
             </select>
           </div>
 
@@ -1087,7 +1070,7 @@ class QuestionBankController {
 
   selectBankGrade(grade) {
     this.selectedGrade = grade;
-    this.selectedLesson = 'all';
+    this.selectedLessonId = 'all';
     this.currentPage = 1;
     this.renderBankGradeChips();
     this.renderBankLessonDropdown();
@@ -1098,22 +1081,17 @@ class QuestionBankController {
     const select = document.getElementById('bankSelectLesson');
     if (!select) return;
 
-    let lessons = [];
-    if (this.selectedGrade === 'all') {
-      lessons = this.getLessonsForGrade('ថ្នាក់ទី ៨'); // default preview
-    } else {
-      lessons = this.getLessonsForGrade(this.selectedGrade);
-    }
+    const lessons = this.getLessonsForGrade(this.selectedGrade === 'all' ? '' : this.selectedGrade);
 
     select.innerHTML = `<option value="all">📚 គ្រប់មេរៀនទាំងអស់</option>` + lessons.map(les => `
-      <option value="${les.title}" ${this.selectedLesson === les.title ? 'selected' : ''}>
-        ${les.title} (${les.questionCount} សំណួរ)
+      <option value="${les.id}" ${this.selectedLessonId === les.id ? 'selected' : ''}>
+        [${les.chapterTitle}] ➔ ${les.title} (${les.questionCount} សំណួរ)
       </option>
     `).join('');
   }
 
   onLessonFilterChange(val) {
-    this.selectedLesson = val;
+    this.selectedLessonId = val;
     this.currentPage = 1;
     this.renderBankQuestions();
   }
@@ -1135,11 +1113,11 @@ class QuestionBankController {
     let list = this.getAllQuestions();
 
     if (this.selectedGrade !== 'all') {
-      list = list.filter(q => q.g === this.selectedGrade);
+      list = list.filter(q => q.g === this.selectedGrade || (q.courseTitle && q.courseTitle.includes(this.selectedGrade)));
     }
 
-    if (this.selectedLesson !== 'all') {
-      list = list.filter(q => q.l === this.selectedLesson || q.lesId === this.selectedLesson);
+    if (this.selectedLessonId !== 'all') {
+      list = list.filter(q => q.lesId === this.selectedLessonId);
     }
 
     if (this.selectedLevel !== 'all') {
@@ -1151,6 +1129,7 @@ class QuestionBankController {
         (q.q && q.q.toLowerCase().includes(this.searchQuery)) ||
         (q.l && q.l.toLowerCase().includes(this.searchQuery)) ||
         (q.e && q.e.toLowerCase().includes(this.searchQuery)) ||
+        (q.short_solution && q.short_solution.toLowerCase().includes(this.searchQuery)) ||
         (q.o && q.o.some(opt => opt && opt.toLowerCase().includes(this.searchQuery)))
       );
     }
@@ -1216,7 +1195,7 @@ class QuestionBankController {
             ${this.formatMath(q.q)}
           </div>
 
-          <!-- Choices Grid -->
+          <!-- Choices Grid (For MCQ) -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 6px; margin-bottom: 8px;">
             ${q.o.map((opt, oIdx) => `
               <div style="padding: 6px 10px; border-radius: 8px; font-size: 0.78rem; display: flex; align-items: center; gap: 8px; background: ${oIdx === q.a ? 'rgba(16, 185, 129, 0.15)' : 'rgba(15, 23, 42, 0.3)'}; border: 1px solid ${oIdx === q.a ? 'rgba(16, 185, 129, 0.4)' : 'transparent'};">
@@ -1229,17 +1208,15 @@ class QuestionBankController {
             `).join('')}
           </div>
 
-          <!-- Solution toggle -->
-          ${q.e ? `
-            <details style="margin-top: 6px; font-size: 0.76rem; color: var(--text-muted);">
-              <summary style="cursor: pointer; font-weight: 700; color: #f59e0b;">
-                💡 បង្ហាញគន្លឹះដោះស្រាយ (Solution)
-              </summary>
-              <div style="margin-top: 6px; padding: 8px 12px; border-radius: 8px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); color: var(--text-secondary); line-height: 1.6;">
-                ${this.formatMath(q.e)}
-              </div>
-            </details>
-          ` : ''}
+          <!-- Concise Answer / Solution Toggle (កំណែខ្លីៗ & គន្លឹះ) -->
+          <details style="margin-top: 6px; font-size: 0.76rem; color: var(--text-muted);">
+            <summary style="cursor: pointer; font-weight: 700; color: #f59e0b;">
+              💡 បង្ហាញកំណែខ្លីៗ & ដំណោះស្រាយ (Short Solution)
+            </summary>
+            <div style="margin-top: 6px; padding: 8px 12px; border-radius: 8px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); color: var(--text-secondary); line-height: 1.6; font-mono;">
+              ${this.formatMath(q.short_solution || q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
+            </div>
+          </details>
         </div>
       `;
     }).join('');
@@ -1329,7 +1306,7 @@ class QuestionBankController {
       text += `${String.fromCharCode(65 + idx)}. ${opt}\n`;
     });
     text += `ចម្លើយ៖ (${String.fromCharCode(65 + q.a)})\n`;
-    if (q.e) text += `ពន្យល់៖ ${q.e}\n`;
+    if (q.short_solution || q.e) text += `កំណែខ្លីៗ៖ ${q.short_solution || q.e}\n`;
 
     navigator.clipboard.writeText(text).then(() => {
       if (window.App && window.App.showNotification) {
@@ -1344,7 +1321,6 @@ class QuestionBankController {
   async openWorksheetExtractorModal() {
     await this.init();
 
-    const currentTeacher = window.App?.currentTeacher;
     const defaultGrade = 'ថ្នាក់ទី ៨';
 
     const modalBack = document.createElement('div');
@@ -1423,21 +1399,20 @@ class QuestionBankController {
 
     const lessons = this.getLessonsForGrade(grade);
     lesSelect.innerHTML = lessons.map(l => `
-      <option value="${l.title}">${l.title}</option>
+      <option value="${l.id}">[${l.chapterTitle}] ${l.title}</option>
     `).join('');
 
     if (lessons.length > 0) {
-      this.onWsLessonChange(lessons[0].title);
+      this.onWsLessonChange(lessons[0].id);
     }
   }
 
-  onWsLessonChange(lessonTitle) {
+  onWsLessonChange(lesId) {
     const container = document.getElementById('wsPreviewContainer');
     if (!container) return;
 
-    const grade = document.getElementById('wsGradeSelect')?.value || 'ថ្នាក់ទី ៨';
     const all = this.getAllQuestions();
-    const questions = all.filter(q => q.g === grade && (q.l === lessonTitle || q.lesId === lessonTitle));
+    const questions = all.filter(q => q.lesId === lesId);
 
     if (questions.length === 0) {
       container.innerHTML = `
@@ -1447,6 +1422,8 @@ class QuestionBankController {
       `;
       return;
     }
+
+    const lessonTitle = questions[0]?.l || 'មេរៀន';
 
     container.innerHTML = `
       <div style="space-y: 12px;">
@@ -1461,7 +1438,7 @@ class QuestionBankController {
                 លំហាត់ទី ${idx + 1} ៖ ${this.formatMath(q.q)}
               </div>
               <div style="font-size: 0.74rem; color: var(--text-secondary);">
-                ${q.e ? `<strong>គន្លឹះ ៖</strong> ${this.formatMath(q.e)}` : ''}
+                ${(q.short_solution || q.e) ? `<strong>គន្លឹះ & កំណែ ៖</strong> ${this.formatMath(q.short_solution || q.e)}` : ''}
               </div>
             </div>
           `).join('')}
@@ -1478,7 +1455,6 @@ class QuestionBankController {
 // Global instance
 window.questionBank = new QuestionBankController();
 
-// Auto-initialize when document is ready
 document.addEventListener('DOMContentLoaded', () => {
   if (window.questionBank) {
     window.questionBank.init();
