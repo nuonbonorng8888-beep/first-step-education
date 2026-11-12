@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=73">
+  <link rel="stylesheet" href="css/style.css?v=74">
 </head>
 <body>
 
@@ -93,6 +93,10 @@
 
         <button class="btn btn-outline nav-auth-btn" id="btn-admin-auth" onclick="App.openLoginModal()" title="ចូលគណនីគ្រូបង្រៀន">
           🔐 <span class="nav-auth-text">គ្រូបង្រៀន</span>
+        </button>
+
+        <button class="btn btn-secondary nav-members-btn admin-only" onclick="App.openMemberDashboardModal()" id="btn-members-nav" style="display: none;" title="គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព">
+          👥 <span class="nav-auth-text">សមាជិក & សកម្មភាព</span>
         </button>
 
         <button class="btn btn-primary admin-only" onclick="App.openUploadModal()" id="btn-upload-nav" style="display: none;">
@@ -787,33 +791,178 @@
   </div>
 
 
-  <!-- ================= TEACHER LOGIN MODAL (ផ្ទាំងលេខកូដសម្ងាត់គ្រូ) ================= -->
+  <!-- ================= TEACHER LOGIN MODAL (ផ្ទាំងលេខកូដសម្ងាត់គ្រូ & សមាជិក) ================= -->
   <div class="modal-overlay" id="login-modal" onclick="if(event.target === this) App.closeLoginModal()">
     <div class="modal-card" style="max-width: 440px;">
       <div class="modal-header">
-        <h3 class="modal-title">🔐 ផ្ទៀងផ្ទាត់សិទ្ធិគ្រូបង្រៀន</h3>
+        <h3 class="modal-title">🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)</h3>
         <button class="btn-icon" onclick="App.closeLoginModal()">✕</button>
       </div>
       <form onsubmit="App.submitLogin(event)">
         <div class="modal-body" style="text-align: center; gap: 16px;">
-          <div style="width: 80px; height: 80px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);">
+          <div style="width: 76px; height: 76px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);">
             <img src="assets/mascot.jpg" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">ចូលគណនីគ្រប់គ្រង (Admin / Teacher)</h4>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">សូមបញ្ចូលលេខកូដសម្ងាត់ដើម្បីបន្ថែម កែសម្រួល ឬលុបមេរៀន</p>
+            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">ផ្ទៀងផ្ទាត់លេខកូដសម្ងាត់គ្រូ (PIN)</h4>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              បញ្ចូលលេខកូដសម្ងាត់ផ្ទាល់ខ្លួន ដើម្បីបង្កើតការប្រឡង ភ្ជាប់ Google Sheets និងកត់ត្រាពិន្ទុ
+            </p>
           </div>
 
           <div class="form-group" style="margin-top: 4px;">
-            <input type="password" id="admin-pin-input" class="form-input" placeholder="•••••" maxlength="10" autocomplete="off" style="font-size: 1.8rem; letter-spacing: 12px; text-align: center; font-weight: 800; padding: 12px;" required>
+            <input type="password" id="admin-pin-input" class="form-input" placeholder="•••••" maxlength="10" autocomplete="off" style="font-size: 1.6rem; letter-spacing: 10px; text-align: center; font-weight: 800; padding: 12px;" required>
           </div>
+          <div style="display: flex; justify-content: center; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--text-muted); cursor: pointer;" onclick="App.togglePinVisibility()">
+            <span id="pin-toggle-icon">👁️</span>
+            <span id="pin-toggle-text">បង្ហាញលេខកូដ</span>
+          </div>
+
           <div id="login-error-msg" style="color: var(--accent-rose); font-size: 0.82rem; display: none;"></div>
+
+          <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 10px; padding: 10px 12px; font-size: 0.75rem; color: var(--text-secondary); text-align: left; line-height: 1.5;">
+            👑 <strong>Admin (លោកគ្រូ នួន បូណង) ៖</strong> PIN <code>95511</code><br>
+            👨‍🏫 <strong>គ្រូសមាជិក ៖</strong> បញ្ចូលលេខកូដសម្ងាត់ដែល Admin បានផ្ដល់ជូន (ឧ. <code>1001</code>, <code>1002</code>...)
+          </div>
         </div>
         <div class="modal-footer" style="justify-content: space-between;">
           <button type="button" class="btn btn-secondary" onclick="App.closeLoginModal()">បោះបង់</button>
           <button type="submit" class="btn btn-primary" id="btn-submit-pin">
-            🔓 បញ្ជាក់លេខសម្ងាត់
+            🔓 ចូលប្រើប្រព័ន្ធ
           </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ================= MEMBER TEACHERS & ACTIVITY MONITORING DASHBOARD ================= -->
+  <div class="modal-overlay" id="member-dashboard-modal" onclick="if(event.target === this) App.closeMemberDashboardModal()">
+    <div class="modal-card" style="max-width: 860px; max-height: 88vh;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <h3 class="modal-title">👥 គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព</h3>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.72rem; padding: 3px 8px; border-radius: 6px;">Super Admin</span>
+        </div>
+        <button class="btn-icon" onclick="App.closeMemberDashboardModal()">✕</button>
+      </div>
+
+      <!-- Dashboard Navigation Tabs -->
+      <div style="display: flex; gap: 8px; padding: 10px 20px; border-bottom: 1px solid var(--border-glass); background: var(--bg-tertiary); flex-wrap: wrap; align-items: center;">
+        <button class="btn btn-sm btn-primary dash-tab-btn active" id="tab-btn-members" onclick="App.switchMemberDashTab('members')">
+          👥 បញ្ជីគ្រូសមាជិក (<span id="dash-members-count">0</span>)
+        </button>
+        <button class="btn btn-sm btn-secondary dash-tab-btn" id="tab-btn-activities" onclick="App.switchMemberDashTab('activities')">
+          📈 កំណត់ត្រាសកម្មភាព (<span id="dash-activities-count">0</span>)
+        </button>
+        <button class="btn btn-sm btn-outline" onclick="App.openAdminGoogleSheet()" style="margin-left: auto; display: inline-flex; align-items: center; gap: 6px;" title="បើកមើល Google Sheet ផ្ទាល់">
+          📊 បើកមើលក្នុង Google Sheet ↗
+        </button>
+      </div>
+
+      <div class="modal-body" style="padding: 16px 20px; gap: 16px; overflow-y: auto;">
+        <!-- TAB 1: MEMBERS LIST -->
+        <div id="dash-pane-members">
+          <!-- Member Quick Stats -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px;">
+            <div style="background: var(--bg-primary); padding: 12px; border-radius: 10px; border: 1px solid var(--border-glass); text-align: center;">
+              <div style="font-size: 1.35rem; font-weight: 800; color: #38bdf8;" id="stat-total-teachers">0</div>
+              <div style="font-size: 0.74rem; color: var(--text-muted);">គ្រូសរុបក្នុងប្រព័ន្ធ</div>
+            </div>
+            <div style="background: var(--bg-primary); padding: 12px; border-radius: 10px; border: 1px solid var(--border-glass); text-align: center;">
+              <div style="font-size: 1.35rem; font-weight: 800; color: #10b981;" id="stat-active-teachers">0</div>
+              <div style="font-size: 0.74rem; color: var(--text-muted);">កំពុងដំណើរការ (Active)</div>
+            </div>
+            <div style="background: var(--bg-primary); padding: 12px; border-radius: 10px; border: 1px solid var(--border-glass); text-align: center;">
+              <div style="font-size: 1.35rem; font-weight: 800; color: #a855f7;" id="stat-connected-sheets">0</div>
+              <div style="font-size: 0.74rem; color: var(--text-muted);">បានភ្ជាប់ Google Sheets</div>
+            </div>
+          </div>
+
+          <!-- Actions toolbar -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="member-search-input" class="form-input" placeholder="🔍 ស្វែងរកឈ្មោះគ្រូ, PIN, សាលារៀន..." oninput="App.renderMemberList()" style="max-width: 320px; font-size: 0.82rem;">
+            <button class="btn btn-primary btn-sm" onclick="App.openMemberFormModal()">
+              ➕ បន្ថែមគ្រូសមាជិកថ្មី
+            </button>
+          </div>
+
+          <!-- Members Grid / Table -->
+          <div id="members-list-container">
+            <!-- Dynamic members cards rendered here -->
+          </div>
+        </div>
+
+        <!-- TAB 2: ACTIVITY LOGS -->
+        <div id="dash-pane-activities" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 10px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <label style="font-size: 0.8rem; color: var(--text-secondary);">តម្រៀបតាមគ្រូ ៖</label>
+              <select id="activity-filter-teacher" class="form-select" onchange="App.renderActivityLogs()" style="font-size: 0.82rem; padding: 4px 10px;">
+                <option value="all">🌟 គ្រូទាំងអស់</option>
+              </select>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-sm btn-outline" onclick="App.refreshActivityLogs()">🔄 ផ្ទុកឡើងវិញ</button>
+              <button class="btn btn-sm btn-outline" onclick="App.clearActivityLogs()" style="color: var(--accent-rose);">🗑️ សម្អាតកំណត់ត្រា</button>
+            </div>
+          </div>
+
+          <div id="activity-logs-container">
+            <!-- Dynamic activity logs rendered here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= ADD / EDIT MEMBER FORM MODAL ================= -->
+  <div class="modal-overlay" id="member-form-modal" onclick="if(event.target === this) App.closeMemberFormModal()">
+    <div class="modal-card" style="max-width: 500px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="member-form-title">➕ បន្ថែមគ្រូសមាជិកថ្មី</h3>
+        <button class="btn-icon" onclick="App.closeMemberFormModal()">✕</button>
+      </div>
+      <form onsubmit="App.saveMemberForm(event)">
+        <input type="hidden" id="member-form-id">
+        <div class="modal-body" style="gap: 14px;">
+          <div class="form-group">
+            <label class="form-label" for="member-name-inp">គោត្តនាម & នាមគ្រូបង្រៀន ៖ <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="member-name-inp" class="form-input" placeholder="ឧ. លោកគ្រូ សុខា, អ្នកគ្រូ ចិន្តា" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="form-group">
+              <label class="form-label" for="member-pin-inp">លេខកូដសម្ងាត់ (PIN) ៖ <span style="color:#ef4444;">*</span></label>
+              <input type="text" id="member-pin-inp" class="form-input" placeholder="ឧ. 1003 ឬ 4-6 ខ្ទង់" maxlength="8" required style="font-family: monospace; font-weight: 700;">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="member-role-inp">តួនាទី / សិទ្ធិ ៖</label>
+              <select id="member-role-inp" class="form-select">
+                <option value="member" selected>គ្រូសមាជិក (Member)</option>
+                <option value="admin">Super Admin</option>
+              </select>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="form-group">
+              <label class="form-label" for="member-school-inp">សាលារៀន / ស្ថាប័ន ៖</label>
+              <input type="text" id="member-school-inp" class="form-input" placeholder="ឧ. វិទ្យាល័យព្រះស៊ីសុវត្ថិ">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="member-subject-inp">មុខវិជ្ជា ៖</label>
+              <input type="text" id="member-subject-inp" class="form-input" placeholder="ឧ. គណិតវិទ្យា">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="member-sheet-inp">Web App URL នៃ Google Sheet របស់គ្រូ ៖</label>
+            <input type="url" id="member-sheet-inp" class="form-input" placeholder="https://script.google.com/macros/s/.../exec" style="font-family: monospace; font-size: 0.78rem;">
+            <small style="color: var(--text-muted); font-size: 0.72rem;">អាចទុកនៅទំនេរសិនបាន គ្រូសមាជិកអាចចូលមកបំពេញដោយខ្លួនឯងនៅពេលក្រោយ។</small>
+          </div>
+        </div>
+        <div class="modal-footer" style="justify-content: space-between;">
+          <button type="button" class="btn btn-secondary" onclick="App.closeMemberFormModal()">បោះបង់</button>
+          <button type="submit" class="btn btn-primary">💾 រក្សាទុក</button>
         </div>
       </form>
     </div>
@@ -1186,6 +1335,25 @@
         <button class="btn-icon" onclick="App.closeTeacherSheetModal()">✕</button>
       </div>
       <div class="modal-body" style="gap: 16px; max-height: 75vh; overflow-y: auto;">
+        <!-- Active Teacher Profile Indicator -->
+        <div id="teacher-profile-banner" style="display: flex; align-items: center; justify-content: space-between; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 12px 14px; flex-wrap: wrap; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-size: 1.5rem;">👨‍🏫</span>
+            <div>
+              <div style="font-size: 0.92rem; font-weight: 700; color: var(--text-primary);" id="active-teacher-display-name">លោកគ្រូ នួន បូណង (Super Admin)</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);" id="active-teacher-display-school">វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <button type="button" class="btn btn-sm btn-outline admin-only" onclick="App.openMemberDashboardModal()" id="btn-modal-open-members" style="font-size: 0.76rem; padding: 4px 10px;">
+              👥 គ្រប់គ្រងសមាជិក
+            </button>
+            <button type="button" class="btn btn-sm btn-secondary" onclick="App.openLoginModal()" id="btn-modal-switch-teacher" style="font-size: 0.76rem; padding: 4px 10px;">
+              🔄 ប្តូរគណនីគ្រូ
+            </button>
+          </div>
+        </div>
+
         <!-- Header Highlight -->
         <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 14px; display: flex; gap: 12px; align-items: flex-start;">
           <span style="font-size: 1.8rem; line-height: 1;">⚡</span>
@@ -1223,6 +1391,11 @@
           <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.5;">
             ពេលសិស្សចុច Link នេះ <strong>នឹងបើកចូលធ្វើតេស្តមេរៀននេះភ្លាមៗតែម្តង</strong> (Direct to Quiz) និងជាប់ឈ្មោះថ្នាក់ស្រាប់ មិនចាំបាច់សិស្សស្វែងរកមេរៀនទៀតឡើយ!
           </p>
+
+          <div class="form-group" style="margin-bottom: 10px;">
+            <label class="form-label" for="generator-teacher-input">👨‍🏫 ឈ្មោះលោកគ្រូ / អ្នកគ្រូ ៖</label>
+            <input type="text" id="generator-teacher-input" class="form-input" placeholder="ឧ. លោកគ្រូ នួន បូណង, លោកគ្រូ សុខា..." oninput="App.onGeneratorInputChange()">
+          </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
             <div class="form-group">
@@ -1402,14 +1575,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=73"></script>
-  <script src="js/app.js?v=73"></script>
-  <script src="js/visits.js?v=73"></script>
+  <script src="js/storage.js?v=74"></script>
+  <script src="js/app.js?v=74"></script>
+  <script src="js/visits.js?v=74"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=73').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=74').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

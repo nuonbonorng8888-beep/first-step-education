@@ -1895,7 +1895,7 @@ body.light-theme .quiz-card {
   margin-bottom: 18px;
   max-width: 100%;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible !important;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -2007,9 +2007,13 @@ body.light-theme .opt-badge {
   color: #f8fafc;
   min-width: 0;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible !important;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+}
+
+.quiz-opt .katex-html {
+  white-space: nowrap !important;
 }
 
 .opt-content::-webkit-scrollbar {
@@ -2207,37 +2211,55 @@ body.light-theme .opt-content {
 }
 
 /* KaTeX Overline & Repeating Decimal Bar (ឧ. 0.6បារ / 0.\overline{6}) - Bold, High-Contrast & Visible Everywhere */
-.katex .overline .overline-line {
+.katex .overline .overline-line,
+.quiz-card .katex .overline .overline-line,
+.quiz-question .katex .overline .overline-line,
+.quiz-opt .katex .overline .overline-line,
+.quiz-explanation .katex .overline .overline-line,
+.ws-container .katex .overline .overline-line {
+  border-bottom-width: 2.5px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #38bdf8 !important;
+  opacity: 1 !important;
+  min-height: 2px !important;
+}
+
+.katex .overline {
+  padding-top: 2px !important;
+}
+
+body.light-theme .katex .overline .overline-line,
+body.light-theme .quiz-card .katex .overline .overline-line,
+body.light-theme .quiz-question .katex .overline .overline-line,
+body.light-theme .quiz-opt .katex .overline .overline-line,
+body.light-theme .quiz-explanation .katex .overline .overline-line,
+body.light-theme .ws-container .katex .overline .overline-line {
+  border-bottom-width: 2.2px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #0284c7 !important;
+  opacity: 1 !important;
+}
+
+.katex .underline .underline-line {
   border-bottom-width: 2px !important;
   border-bottom-color: currentColor !important;
   opacity: 1 !important;
 }
 
-.katex .underline .underline-line {
-  border-bottom-width: 1.8px !important;
-  border-bottom-color: currentColor !important;
-  opacity: 1 !important;
-}
-
 .katex .mfrac .frac-line {
-  border-bottom-width: 1.8px !important;
-  border-bottom-color: currentColor !important;
-  opacity: 1 !important;
-}
-
-.quiz-card .katex .overline .overline-line,
-.quiz-question .katex .overline .overline-line,
-.quiz-opt .katex .overline .overline-line,
-.quiz-explanation .katex .overline .overline-line {
-  border-bottom-width: 2.2px !important;
+  border-bottom-width: 2px !important;
   border-bottom-color: currentColor !important;
   opacity: 1 !important;
 }
 
 .katex .accent {
   opacity: 1 !important;
-  color: currentColor !important;
-  font-weight: 700;
+  color: #38bdf8 !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .katex .accent {
+  color: #0284c7 !important;
 }
 
 .katex svg path {
@@ -2247,12 +2269,11 @@ body.light-theme .opt-content {
 
 .worksheet-paper .katex .overline .overline-line,
 .ws-container .worksheet-paper .katex .overline .overline-line {
-  border-bottom-width: 1.8px !important;
+  border-bottom-width: 2px !important;
   border-bottom-color: #0f172a !important;
   opacity: 1 !important;
 }
 
-body.light-theme .katex .overline .overline-line,
 body.light-theme .katex .underline .underline-line,
 body.light-theme .katex .mfrac .frac-line {
   border-bottom-color: #0f172a !important;
@@ -2267,13 +2288,6 @@ body.light-theme .quiz-explanation .katex,
 body.light-theme .quiz-explanation .katex * {
   color: #0f172a !important;
   border-color: #0f172a !important;
-}
-
-body.dark-mode .katex .overline .overline-line,
-[data-theme="dark"] .katex .overline .overline-line {
-  border-bottom-width: 2px !important;
-  border-bottom-color: #f8fafc !important;
-  opacity: 1 !important;
 }
 
 /* Teacher solution when displayed on screen in dark card */
@@ -6811,6 +6825,176 @@ body.light-theme .submitted-score-box {
   padding: 4px 12px;
   border-radius: 999px;
   border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* ========================================================
+   MEMBER TEACHERS & ACTIVITY MONITORING DASHBOARD STYLES
+   ======================================================== */
+.dash-tab-btn {
+  transition: all var(--transition-fast);
+  font-weight: 600;
+}
+.dash-tab-btn.active {
+  background: var(--accent-blue) !important;
+  color: #ffffff !important;
+  border-color: var(--accent-blue) !important;
+}
+
+.member-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  transition: all var(--transition-fast);
+}
+.member-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.member-card.is-blocked {
+  opacity: 0.55;
+  filter: grayscale(0.5);
+}
+
+.member-info-col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+  flex: 1;
+}
+.member-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+.member-name {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.member-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.member-badge-admin {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.member-badge-member {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.member-badge-sheet-ok {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.member-badge-sheet-none {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.member-pin-badge {
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--bg-tertiary);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-glass);
+  color: #38bdf8;
+}
+
+.activity-log-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.84rem;
+  transition: all var(--transition-fast);
+}
+.activity-log-item:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+}
+.activity-log-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.activity-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.activity-title {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.activity-details {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.activity-time {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 

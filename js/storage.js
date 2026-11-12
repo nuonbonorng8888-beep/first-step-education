@@ -36,7 +36,92 @@ const StorageService = {
     return [];
   },
 
+  async getTeachers() {
+    let localTeachers = [];
+    try {
+      const raw = localStorage.getItem('worksheet_teachers_list');
+      if (raw) localTeachers = JSON.parse(raw);
+    } catch (e) {}
+
+    let jsonTeachers = [];
+    try {
+      const res = await fetch(`data/teachers.json?v=${Date.now()}`, { cache: 'no-store' });
+      if (res.ok) {
+        jsonTeachers = await res.json();
+      }
+    } catch (e) {
+      console.warn('teachers.json fetch failed:', e);
+    }
+
+    if (!Array.isArray(localTeachers) || localTeachers.length === 0) {
+      if (Array.isArray(jsonTeachers) && jsonTeachers.length > 0) {
+        localStorage.setItem('worksheet_teachers_list', JSON.stringify(jsonTeachers));
+        return jsonTeachers;
+      }
+      return [];
+    }
+
+    // Merge: ensure default Admin and members exist without overwriting custom edits
+    if (Array.isArray(jsonTeachers)) {
+      jsonTeachers.forEach(jt => {
+        const exists = localTeachers.find(lt => lt.id === jt.id || lt.pin === jt.pin);
+        if (!exists) {
+          localTeachers.push(jt);
+        }
+      });
+      localStorage.setItem('worksheet_teachers_list', JSON.stringify(localTeachers));
+    }
+    return localTeachers;
+  },
+
+  saveTeachers(teachers) {
+    try {
+      localStorage.setItem('worksheet_teachers_list', JSON.stringify(teachers));
+    } catch (e) {
+      console.warn('Error saving teachers to localStorage:', e);
+    }
+  },
+
+  getActivityLogs() {
+    try {
+      const raw = localStorage.getItem('worksheet_activity_logs');
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) {
+      return [];
+    }
+  },
+
+  saveActivityLogs(logs) {
+    try {
+      // Keep most recent 300 logs
+      localStorage.setItem('worksheet_activity_logs', JSON.stringify(logs.slice(0, 300)));
+    } catch (e) {}
+  },
+
+  addActivityLog(entry) {
+    const logs = this.getActivityLogs();
+    logs.unshift(entry);
+    this.saveActivityLogs(logs);
+    return logs;
+  },
+
   async login(pin) {
+    // 1. Check local/file teachers first for multi-member support
+    try {
+      const teachers = await this.getTeachers();
+      const matched = teachers.find(t => String(t.pin).trim() === String(pin).trim() && t.status !== 'blocked');
+      if (matched) {
+        return {
+          success: true,
+          token: matched.pin,
+          role: matched.role || (matched.pin === '95511' ? 'admin' : 'member'),
+          teacher: matched
+        };
+      }
+    } catch (err) {
+      console.warn('Teacher lookup error:', err);
+    }
+
     try {
       const response = await fetch('/api/login', {
         method: 'POST',

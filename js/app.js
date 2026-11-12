@@ -208,6 +208,33 @@ function doPost(e) {
     var rawClass = (data.studentClass || "ទូទៅ").trim().toUpperCase();
     if (!rawClass) rawClass = "ទូទៅ";
     var gradeStr = data.grade ? ("ថ្នាក់ទី " + data.grade) : "";
+
+    // ករណីកត់ត្រាសកម្មភាពគ្រូសមាជិក (Teacher Activity Log) ចូល Sheet Admin
+    if (data.type === "activity_log") {
+      var logSheet = ss.getSheetByName("📈 សកម្មភាពសមាជិក");
+      if (!logSheet) {
+        logSheet = ss.insertSheet("📈 សកម្មភាពសមាជិក", 1);
+        logSheet.appendRow(["កាលបរិច្ឆេទ & ម៉ោង", "ឈ្មោះគ្រូ", "សកម្មភាព", "ថ្នាក់/កម្រិត", "មេរៀន/ព័ត៌មានបន្ថែម", "កំណត់សម្គាល់"]);
+        var hRange = logSheet.getRange(1, 1, 1, 6);
+        hRange.setBackground("#0f766e");
+        hRange.setFontColor("#ffffff");
+        hRange.setFontWeight("bold");
+        hRange.setHorizontalAlignment("center");
+        logSheet.setFrozenRows(1);
+        logSheet.setTabColor("#14b8a6");
+      }
+      logSheet.appendRow([
+        data.timestamp || Utilities.formatDate(new Date(), "Asia/Phnom_Penh", "yyyy-MM-dd HH:mm:ss"),
+        data.teacherName || "គ្រូសមាជិក",
+        data.action || "សកម្មភាព",
+        data.targetClass || data.grade || "-",
+        data.details || "-",
+        data.note || ""
+      ]);
+      return ContentService
+        .createTextOutput(JSON.stringify({ "status": "success", "message": "បានកត់ត្រាសកម្មភាពគ្រូសមាជិក" }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
     
     // គណនានិទ្ទេស (Grade evaluation)
     var pct = parseFloat(data.percentage) || 0;
@@ -286,7 +313,8 @@ function doGet(e) {
   async init() {
     try { this.initTheme(); } catch (e) { console.warn(e); }
     try { this.initUrlParams(); } catch (e) { console.warn(e); }
-    try { this.checkAdminAuth(); } catch (e) { console.warn(e); }
+    try { await this.initTeachers(); } catch (e) { console.warn(e); }
+    try { await this.checkAdminAuth(); } catch (e) { console.warn(e); }
     try { this.initPlayer(); } catch (e) { console.warn(e); }
     try { this.initGreetingAndWisdom(); } catch (e) { console.warn(e); }
     try { this.updateResumeBanner(); } catch (e) { console.warn(e); }
@@ -307,6 +335,15 @@ function doGet(e) {
     }
   },
 
+  async initTeachers() {
+    try {
+      this.teachersList = await StorageService.getTeachers();
+    } catch (e) {
+      console.warn('initTeachers error:', e);
+      this.teachersList = [];
+    }
+  },
+
   initUrlParams() {
     try {
       const urlParams = new URLSearchParams(window.location.search);
@@ -319,9 +356,18 @@ function doGet(e) {
         try {
           const decodedSheet = decodeURIComponent(sheetParam);
           if (decodedSheet.startsWith('https://script.google.com/macros/s/')) {
+            this.examTargetSheetUrl = decodedSheet;
             this.setTeacherSheetUrl(decodedSheet);
           }
         } catch (e) {}
+      }
+      const teacherParam = urlParams.get('teacher') || urlParams.get('instructor');
+      if (teacherParam) {
+        try {
+          this.examTeacherName = decodeURIComponent(teacherParam);
+        } catch (e) {
+          this.examTeacherName = teacherParam;
+        }
       }
       const classParam = (urlParams.get('class') || urlParams.get('room') || '').trim();
       if (classParam) {
@@ -426,12 +472,47 @@ function doGet(e) {
     if (buttonEl) buttonEl.classList.add('active');
   },
 
-  checkAdminAuth() {
-    const pin = localStorage.getItem('admin_pin');
-    if (pin === '95511') {
+  async checkAdminAuth() {
+    if (!this.teachersList || this.teachersList.length === 0) {
+      await this.initTeachers();
+    }
+    const storedSession = localStorage.getItem('teacher_session');
+    const oldPin = localStorage.getItem('admin_pin');
+
+    if (storedSession) {
+      try {
+        const t = JSON.parse(storedSession);
+        const matched = this.teachersList.find(x => x.id === t.id || String(x.pin) === String(t.pin));
+        if (matched && matched.status !== 'blocked') {
+          this.currentTeacher = matched;
+          this.isAdmin = (matched.role === 'admin' || String(matched.pin) === '95511');
+          this.isTeacher = true;
+          // Apply teacher's personal sheet URL
+          if (matched.sheetUrl && !this.examTargetSheetUrl) {
+            this.setTeacherSheetUrl(matched.sheetUrl);
+          }
+        } else {
+          this.logoutTeacher(true);
+        }
+      } catch (e) {
+        this.logoutTeacher(true);
+      }
+    } else if (oldPin === '95511') {
+      const adminT = (this.teachersList || []).find(x => String(x.pin) === '95511') || {
+        id: 't-admin',
+        name: 'លោកគ្រូ នួន បូណង',
+        role: 'admin',
+        pin: '95511',
+        sheetUrl: this.defaultTeacherSheetUrl
+      };
+      this.currentTeacher = adminT;
       this.isAdmin = true;
+      this.isTeacher = true;
+      localStorage.setItem('teacher_session', JSON.stringify(adminT));
     } else {
       this.isAdmin = false;
+      this.isTeacher = false;
+      this.currentTeacher = null;
     }
     this.updateAdminUI();
   },
@@ -442,18 +523,46 @@ function doGet(e) {
       el.style.display = this.isAdmin ? (el.tagName === 'BUTTON' ? 'inline-flex' : 'block') : 'none';
     });
 
+    const membersNavBtn = document.getElementById('btn-members-nav');
+    if (membersNavBtn) {
+      membersNavBtn.style.display = this.isAdmin ? 'inline-flex' : 'none';
+    }
+
     const authBtn = document.getElementById('btn-admin-auth');
     if (authBtn) {
-      if (this.isAdmin) {
+      if (this.currentTeacher) {
+        const isAdm = this.isAdmin;
+        const displayName = this.currentTeacher.name || (isAdm ? 'Admin' : 'គ្រូសមាជិក');
         authBtn.className = 'btn btn-secondary nav-auth-btn';
+        authBtn.title = `គណនីគ្រូ ៖ ${displayName} (ចុចលើ ✕ ដើម្បីចាកចេញ)`;
         authBtn.innerHTML = `
-          <span style="color:var(--accent-emerald); font-weight:700;">👨‍🏫 <span class="nav-auth-text">គ្រូ (Admin)</span></span>
-          <span onclick="event.stopPropagation(); App.logoutAdmin()" style="margin-left:8px; opacity:0.7; cursor:pointer; font-weight:bold;" title="ចាកចេញ (Logout)">✕</span>
+          <span style="color: ${isAdm ? 'var(--accent-emerald)' : '#38bdf8'}; font-weight:700;">
+            👨‍🏫 <span class="nav-auth-text">${displayName} (${isAdm ? 'Admin' : 'សមាជិក'})</span>
+          </span>
+          <span onclick="event.stopPropagation(); App.logoutTeacher()" style="margin-left:8px; opacity:0.7; cursor:pointer; font-weight:bold;" title="ចាកចេញ (Logout)">✕</span>
         `;
       } else {
         authBtn.className = 'btn btn-outline nav-auth-btn';
+        authBtn.title = 'ចូលគណនីគ្រូបង្រៀន';
         authBtn.innerHTML = '🔐 <span class="nav-auth-text">គ្រូបង្រៀន</span>';
       }
+    }
+
+    // Update active teacher display in Teacher Sheet Modal if open
+    const nameDisplay = document.getElementById('active-teacher-display-name');
+    const schoolDisplay = document.getElementById('active-teacher-display-school');
+    const modalMembersBtn = document.getElementById('btn-modal-open-members');
+    if (nameDisplay && schoolDisplay) {
+      if (this.currentTeacher) {
+        nameDisplay.textContent = `${this.currentTeacher.name} (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})`;
+        schoolDisplay.textContent = this.currentTeacher.school || 'សាលារៀនជំនាន់ថ្មី';
+      } else {
+        nameDisplay.textContent = 'មិនទាន់ Login (ភ្ញៀវ/គ្រូទូទៅ)';
+        schoolDisplay.textContent = 'សូមចុច «🔄 ប្តូរគណនីគ្រូ» ដើម្បី Login ចូលគណនីផ្ទាល់ខ្លួន';
+      }
+    }
+    if (modalMembersBtn) {
+      modalMembersBtn.style.display = this.isAdmin ? 'inline-flex' : 'none';
     }
 
     // Refresh playlist sidebar if in classroom
@@ -463,9 +572,9 @@ function doGet(e) {
   },
 
   openLoginModal() {
-    if (this.isAdmin) {
-      if (confirm('តើលោកអ្នកចង់ចាកចេញពីគណនីគ្រូ (Switch to Student Mode) ដែរឬទេ?')) {
-        this.logoutAdmin();
+    if (this.currentTeacher) {
+      if (confirm(`តើលោកអ្នកចង់ចាកចេញពីគណនី «${this.currentTeacher.name}» ដែរឬទេ?`)) {
+        this.logoutTeacher();
       }
       return;
     }
@@ -473,7 +582,14 @@ function doGet(e) {
     const input = document.getElementById('admin-pin-input');
     const err = document.getElementById('login-error-msg');
     if (err) err.style.display = 'none';
-    if (input) input.value = '';
+    if (input) {
+      input.value = '';
+      input.type = 'password';
+    }
+    const icon = document.getElementById('pin-toggle-icon');
+    const txt = document.getElementById('pin-toggle-text');
+    if (icon) icon.textContent = '👁️';
+    if (txt) txt.textContent = 'បង្ហាញលេខកូដ';
     if (modal) modal.classList.add('active');
     setTimeout(() => input?.focus(), 200);
   },
@@ -483,33 +599,487 @@ function doGet(e) {
     if (modal) modal.classList.remove('active');
   },
 
+  togglePinVisibility() {
+    const input = document.getElementById('admin-pin-input');
+    const icon = document.getElementById('pin-toggle-icon');
+    const txt = document.getElementById('pin-toggle-text');
+    if (!input) return;
+    if (input.type === 'password') {
+      input.type = 'text';
+      if (icon) icon.textContent = '🙈';
+      if (txt) txt.textContent = 'លាក់លេខកូដ';
+    } else {
+      input.type = 'password';
+      if (icon) icon.textContent = '👁️';
+      if (txt) txt.textContent = 'បង្ហាញលេខកូដ';
+    }
+  },
+
   async submitLogin(e) {
-    e.preventDefault();
+    if (e) e.preventDefault();
     const input = document.getElementById('admin-pin-input');
     const err = document.getElementById('login-error-msg');
     const pin = input ? input.value.trim() : '';
 
-    if (pin === '95511') {
-      localStorage.setItem('admin_pin', '95511');
-      this.isAdmin = true;
-      this.updateAdminUI();
-      this.closeLoginModal();
-      this.showToast('បានផ្ទៀងផ្ទាត់លេខសម្ងាត់ជោគជ័យ! បើកសិទ្ធិគ្រប់គ្រងរួចរាល់ 🎉', 'success');
-    } else {
+    if (!pin) {
       if (err) {
-        err.textContent = 'លេខកូដសម្ងាត់មិនត្រឹមត្រូវទេ! សូមព្យាយាមម្តងទៀត';
+        err.textContent = 'សូមបញ្ចូលលេខកូដសម្ងាត់!';
         err.style.display = 'block';
       }
-      this.showToast('លេខកូដសម្ងាត់មិនត្រឹមត្រូវ!', 'error');
-      input?.select();
+      return;
+    }
+
+    const btnSubmit = document.getElementById('btn-submit-pin');
+    if (btnSubmit) {
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = '⏳ កំពុងផ្ទៀងផ្ទាត់...';
+    }
+
+    try {
+      const res = await StorageService.login(pin);
+      if (res && res.success) {
+        const teacher = res.teacher || {
+          id: 't-admin',
+          name: 'លោកគ្រូ នួន បូណង',
+          role: 'admin',
+          pin: '95511',
+          sheetUrl: this.defaultTeacherSheetUrl
+        };
+
+        this.currentTeacher = teacher;
+        this.isAdmin = (res.role === 'admin' || String(teacher.pin) === '95511');
+        this.isTeacher = true;
+
+        localStorage.setItem('teacher_session', JSON.stringify(teacher));
+        if (this.isAdmin) {
+          localStorage.setItem('admin_pin', '95511');
+        }
+
+        // If member teacher has personal sheet, activate it
+        if (teacher.sheetUrl) {
+          this.setTeacherSheetUrl(teacher.sheetUrl);
+        }
+
+        // Log login activity in local storage & Admin Google Sheet
+        this.logTeacherActivity(
+          teacher.name,
+          'ចូលប្រព័ន្ធ (Login)',
+          `បានចូលប្រើប្រព័ន្ធជោគជ័យ (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})`
+        );
+
+        this.updateAdminUI();
+        this.closeLoginModal();
+        this.showToast(`🎉 ស្វាគមន៍ ${teacher.name} (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})!`, 'success');
+      } else {
+        if (err) {
+          err.textContent = 'លេខកូដសម្ងាត់មិនត្រឹមត្រូវ ឬគណនីត្រូវបានបិទ! សូមទាក់ទង Admin';
+          err.style.display = 'block';
+        }
+        this.showToast('លេខកូដសម្ងាត់មិនត្រឹមត្រូវ!', 'error');
+        input?.select();
+      }
+    } catch (err) {
+      console.warn('Login error:', err);
+      this.showToast('មានបញ្ហាក្នុងការផ្ទៀងផ្ទាត់!', 'error');
+    } finally {
+      if (btnSubmit) {
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = '🔓 ចូលប្រើប្រព័ន្ធ';
+      }
+    }
+  },
+
+  logoutTeacher(silent = false) {
+    if (!silent && this.currentTeacher) {
+      this.logTeacherActivity(this.currentTeacher.name, 'ចាកចេញពីប្រព័ន្ធ (Logout)', 'បានចាកចេញពីគណនីគ្រូ');
+    }
+    localStorage.removeItem('teacher_session');
+    localStorage.removeItem('admin_pin');
+    this.currentTeacher = null;
+    this.isAdmin = false;
+    this.isTeacher = false;
+    this.updateAdminUI();
+    if (!silent) {
+      this.showToast('បានចាកចេញពីគណនីគ្រូ (បានត្រឡប់ទៅ Student Mode)', 'info');
     }
   },
 
   logoutAdmin() {
-    localStorage.removeItem('admin_pin');
-    this.isAdmin = false;
-    this.updateAdminUI();
-    this.showToast('បានចាកចេញពីគណនីគ្រូ (បានត្រឡប់ទៅ Student Mode)', 'info');
+    this.logoutTeacher();
+  },
+
+  async logTeacherActivity(teacherName, action, details = '', targetClass = '') {
+    const tName = teacherName || this.currentTeacher?.name || 'គ្រូសមាជិក';
+    const nowStr = new Date().toLocaleString('km-KH', { dateStyle: 'short', timeStyle: 'short' });
+    const logEntry = {
+      id: 'log-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
+      timestamp: nowStr,
+      teacherName: tName,
+      action: action,
+      targetClass: targetClass || '-',
+      details: details || '-'
+    };
+
+    // 1. Save locally via StorageService
+    StorageService.addActivityLog(logEntry);
+
+    // 2. Send webhook to Admin's Google Sheet in background
+    try {
+      if (this.defaultTeacherSheetUrl) {
+        fetch(this.defaultTeacherSheetUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            type: 'activity_log',
+            timestamp: nowStr,
+            teacherName: tName,
+            action: action,
+            targetClass: targetClass || '-',
+            details: details || '-'
+          })
+        }).catch(() => {});
+      }
+    } catch (e) {}
+  },
+
+  openMemberDashboardModal() {
+    if (!this.isAdmin) {
+      this.showToast('មុខងារនេះសម្រាប់តែ Super Admin (លោកគ្រូ នួន បូណង) ប៉ុណ្ណោះ!', 'warning');
+      return;
+    }
+    const modal = document.getElementById('member-dashboard-modal');
+    if (modal) modal.classList.add('active');
+    this.switchMemberDashTab('members');
+  },
+
+  closeMemberDashboardModal() {
+    const modal = document.getElementById('member-dashboard-modal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  switchMemberDashTab(tabName) {
+    const btnMembers = document.getElementById('tab-btn-members');
+    const btnActivities = document.getElementById('tab-btn-activities');
+    const paneMembers = document.getElementById('dash-pane-members');
+    const paneActivities = document.getElementById('dash-pane-activities');
+
+    if (tabName === 'members') {
+      btnMembers?.classList.add('active');
+      btnMembers?.classList.replace('btn-secondary', 'btn-primary');
+      btnActivities?.classList.remove('active');
+      btnActivities?.classList.replace('btn-primary', 'btn-secondary');
+      if (paneMembers) paneMembers.style.display = 'block';
+      if (paneActivities) paneActivities.style.display = 'none';
+      this.renderMemberList();
+    } else {
+      btnActivities?.classList.add('active');
+      btnActivities?.classList.replace('btn-secondary', 'btn-primary');
+      btnMembers?.classList.remove('active');
+      btnMembers?.classList.replace('btn-primary', 'btn-secondary');
+      if (paneMembers) paneMembers.style.display = 'none';
+      if (paneActivities) paneActivities.style.display = 'block';
+      this.renderActivityLogs();
+    }
+  },
+
+  renderMemberList() {
+    const container = document.getElementById('members-list-container');
+    const searchVal = (document.getElementById('member-search-input')?.value || '').trim().toLowerCase();
+    if (!container) return;
+
+    const teachers = this.teachersList || [];
+    const activeCount = teachers.filter(t => t.status !== 'blocked').length;
+    const sheetCount = teachers.filter(t => !!t.sheetUrl).length;
+
+    // Update stats
+    const statTotal = document.getElementById('stat-total-teachers');
+    const statActive = document.getElementById('stat-active-teachers');
+    const statSheets = document.getElementById('stat-connected-sheets');
+    const countBadge = document.getElementById('dash-members-count');
+
+    if (statTotal) statTotal.textContent = teachers.length;
+    if (statActive) statActive.textContent = activeCount;
+    if (statSheets) statSheets.textContent = sheetCount;
+    if (countBadge) countBadge.textContent = teachers.length;
+
+    // Filter by search
+    const filtered = teachers.filter(t => {
+      if (!searchVal) return true;
+      const haystack = `${t.name} ${t.pin} ${t.school || ''} ${t.subject || ''} ${t.role || ''}`.toLowerCase();
+      return haystack.includes(searchVal);
+    });
+
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div style="text-align: center; padding: 30px; color: var(--text-muted); font-size: 0.9rem;">
+          មិនមានគ្រូសមាជិកដែលត្រូវនឹងការស្វែងរកឡើយ
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = filtered.map(t => {
+      const isAdmin = t.role === 'admin' || String(t.pin) === '95511';
+      const isBlocked = t.status === 'blocked';
+      const hasSheet = !!t.sheetUrl;
+
+      return `
+        <div class="member-card ${isBlocked ? 'is-blocked' : ''}">
+          <div class="member-info-col">
+            <div class="member-avatar">👨‍🏫</div>
+            <div>
+              <div class="member-name">
+                <span>${t.name}</span>
+                <span class="${isAdmin ? 'member-badge-admin' : 'member-badge-member'}">
+                  ${isAdmin ? '👑 Super Admin' : 'គ្រូសមាជិក'}
+                </span>
+                ${isBlocked ? '<span style="color:#ef4444; font-size:0.7rem; font-weight:700;">[បានផ្អាក]</span>' : ''}
+              </div>
+              <div class="member-meta">
+                🏫 ${t.school || 'មិនទាន់បញ្ជាក់សាលា'} • 📚 ${t.subject || 'គណិតវិទ្យា'}
+              </div>
+              <div style="margin-top: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <span class="member-pin-badge" title="លេខកូដសម្ងាត់សម្រាប់ Login">🔑 PIN: <strong>${t.pin}</strong></span>
+                <span class="${hasSheet ? 'member-badge-sheet-ok' : 'member-badge-sheet-none'}">
+                  ${hasSheet ? '✓ បានភ្ជាប់ Google Sheet' : '⚠️ មិនទាន់ភ្ជាប់ Google Sheet'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 6px; align-items: center; margin-left: auto;">
+            <button class="btn btn-sm btn-outline" onclick="App.openMemberFormModal('${t.id}')" title="កែប្រែព័ត៌មានគ្រូ">
+              ✏️ កែប្រែ
+            </button>
+            ${!isAdmin ? `
+              <button class="btn btn-sm btn-outline" onclick="App.toggleBlockMember('${t.id}')" title="${isBlocked ? 'បើកដំណើរការឡើងវិញ' : 'ផ្អាកដំណើរការគ្រូ'}">
+                ${isBlocked ? '🟢 បើកសិទ្ធិ' : '🚫 ផ្អាក'}
+              </button>
+              <button class="btn btn-sm btn-outline" onclick="App.deleteMember('${t.id}')" style="color: var(--accent-rose);" title="លុបគ្រូសមាជិកនេះ">
+                🗑️
+              </button>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }).join('');
+  },
+
+  renderActivityLogs() {
+    const container = document.getElementById('activity-logs-container');
+    const filterSelect = document.getElementById('activity-filter-teacher');
+    const countBadge = document.getElementById('dash-activities-count');
+    if (!container) return;
+
+    const allLogs = StorageService.getActivityLogs();
+    if (countBadge) countBadge.textContent = allLogs.length;
+
+    // Populate teacher filter dropdown
+    if (filterSelect) {
+      const currentVal = filterSelect.value;
+      const teacherNames = Array.from(new Set(allLogs.map(l => l.teacherName).filter(Boolean)));
+      filterSelect.innerHTML = `
+        <option value="all">🌟 គ្រូទាំងអស់ (${allLogs.length})</option>
+        ${teacherNames.map(name => `<option value="${name}" ${name === currentVal ? 'selected' : ''}>👨‍🏫 ${name}</option>`).join('')}
+      `;
+    }
+
+    const filterVal = filterSelect ? filterSelect.value : 'all';
+    const logs = allLogs.filter(l => filterVal === 'all' || l.teacherName === filterVal);
+
+    if (logs.length === 0) {
+      container.innerHTML = `
+        <div style="text-align: center; padding: 30px; color: var(--text-muted); font-size: 0.9rem;">
+          មិនទាន់មានកំណត់ត្រាសកម្មភាពនៅឡើយទេ
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = logs.map(l => {
+      let icon = '⚡';
+      if (l.action?.includes('Login')) icon = '🔐';
+      else if (l.action?.includes('Link')) icon = '🔗';
+      else if (l.action?.includes('ប្រឡង')) icon = '📝';
+      else if (l.action?.includes('Logout')) icon = '🚪';
+
+      return `
+        <div class="activity-log-item">
+          <div class="activity-log-left">
+            <div class="activity-icon">${icon}</div>
+            <div>
+              <div class="activity-title">
+                <strong>${l.teacherName}</strong> ៖ <span style="color: #38bdf8;">${l.action}</span>
+                ${l.targetClass && l.targetClass !== '-' ? `<span class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; margin-left: 6px;">ថ្នាក់ ${l.targetClass}</span>` : ''}
+              </div>
+              <div class="activity-details">${l.details || ''}</div>
+            </div>
+          </div>
+          <div class="activity-time">${l.timestamp || ''}</div>
+        </div>
+      `;
+    }).join('');
+  },
+
+  openMemberFormModal(memberId = null) {
+    const modal = document.getElementById('member-form-modal');
+    const title = document.getElementById('member-form-title');
+    const idInp = document.getElementById('member-form-id');
+    const nameInp = document.getElementById('member-name-inp');
+    const pinInp = document.getElementById('member-pin-inp');
+    const roleInp = document.getElementById('member-role-inp');
+    const schoolInp = document.getElementById('member-school-inp');
+    const subjectInp = document.getElementById('member-subject-inp');
+    const sheetInp = document.getElementById('member-sheet-inp');
+
+    if (memberId) {
+      const t = this.teachersList.find(x => x.id === memberId);
+      if (t) {
+        if (title) title.textContent = '✏️ កែប្រែព័ត៌មានគ្រូសមាជិក';
+        if (idInp) idInp.value = t.id;
+        if (nameInp) nameInp.value = t.name || '';
+        if (pinInp) pinInp.value = t.pin || '';
+        if (roleInp) roleInp.value = t.role || 'member';
+        if (schoolInp) schoolInp.value = t.school || '';
+        if (subjectInp) subjectInp.value = t.subject || 'គណិតវិទ្យា';
+        if (sheetInp) sheetInp.value = t.sheetUrl || '';
+      }
+    } else {
+      if (title) title.textContent = '➕ បន្ថែមគ្រូសមាជិកថ្មី';
+      if (idInp) idInp.value = '';
+      if (nameInp) nameInp.value = '';
+      // Auto-generate unique 4-digit PIN for new member
+      const existingPins = (this.teachersList || []).map(t => String(t.pin));
+      let randPin = String(Math.floor(1000 + Math.random() * 9000));
+      while (existingPins.includes(randPin)) {
+        randPin = String(Math.floor(1000 + Math.random() * 9000));
+      }
+      if (pinInp) pinInp.value = randPin;
+      if (roleInp) roleInp.value = 'member';
+      if (schoolInp) schoolInp.value = '';
+      if (subjectInp) subjectInp.value = 'គណិតវិទ្យា';
+      if (sheetInp) sheetInp.value = '';
+    }
+
+    if (modal) modal.classList.add('active');
+    setTimeout(() => nameInp?.focus(), 200);
+  },
+
+  closeMemberFormModal() {
+    const modal = document.getElementById('member-form-modal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  saveMemberForm(e) {
+    if (e) e.preventDefault();
+    const id = document.getElementById('member-form-id')?.value.trim();
+    const name = document.getElementById('member-name-inp')?.value.trim();
+    const pin = document.getElementById('member-pin-inp')?.value.trim();
+    const role = document.getElementById('member-role-inp')?.value || 'member';
+    const school = document.getElementById('member-school-inp')?.value.trim() || '';
+    const subject = document.getElementById('member-subject-inp')?.value.trim() || 'គណិតវិទ្យា';
+    const sheetUrl = document.getElementById('member-sheet-inp')?.value.trim() || '';
+
+    if (!name || !pin) {
+      this.showToast('សូមបំពេញឈ្មោះគ្រូ និងលេខកូដ PIN!', 'warning');
+      return;
+    }
+
+    // Check duplicate PIN with another member
+    const dup = this.teachersList.find(t => String(t.pin) === String(pin) && t.id !== id);
+    if (dup) {
+      this.showToast(`លេខកូដ PIN ${pin} ត្រូវបានប្រើប្រាស់ដោយ «${dup.name}» រួចហើយ! សូមប្តូរលេខ PIN ផ្សេង`, 'error');
+      return;
+    }
+
+    if (id) {
+      // Edit existing member
+      const idx = this.teachersList.findIndex(t => t.id === id);
+      if (idx !== -1) {
+        this.teachersList[idx] = {
+          ...this.teachersList[idx],
+          name,
+          pin,
+          role,
+          school,
+          subject,
+          sheetUrl
+        };
+        this.showToast(`បានកែប្រែព័ត៌មាន «${name}» រួចរាល់!`, 'success');
+        this.logTeacherActivity('Admin', 'បានកែប្រែព័ត៌មានសមាជិក', `កែប្រែទិន្នន័យ ${name} (PIN: ${pin})`);
+      }
+    } else {
+      // Add new member
+      const newTeacher = {
+        id: 't-' + Date.now(),
+        name,
+        pin,
+        role,
+        school,
+        subject,
+        sheetUrl,
+        createdAt: new Date().toISOString().split('T')[0],
+        status: 'active'
+      };
+      this.teachersList.push(newTeacher);
+      this.showToast(`🎉 បានបន្ថែមគ្រូសមាជិក «${name}» (PIN: ${pin}) ដោយជោគជ័យ!`, 'success');
+      this.logTeacherActivity('Admin', 'បានបន្ថែមគ្រូសមាជិកថ្មី', `បន្ថែម ${name} (PIN: ${pin}, សាលា: ${school || '-'})`);
+    }
+
+    StorageService.saveTeachers(this.teachersList);
+    this.closeMemberFormModal();
+    this.renderMemberList();
+  },
+
+  toggleBlockMember(memberId) {
+    const t = this.teachersList.find(x => x.id === memberId);
+    if (!t) return;
+    t.status = t.status === 'blocked' ? 'active' : 'blocked';
+    StorageService.saveTeachers(this.teachersList);
+    this.showToast(t.status === 'blocked' ? `បានផ្អាកសិទ្ធិ «${t.name}»` : `បានបើកសិទ្ធិ «${t.name}» ឡើងវិញ`, 'info');
+    this.logTeacherActivity('Admin', t.status === 'blocked' ? 'បានផ្អាកសិទ្ធិគ្រូ' : 'បានបើកសិទ្ធិគ្រូឡើងវិញ', t.name);
+    this.renderMemberList();
+  },
+
+  deleteMember(memberId) {
+    const t = this.teachersList.find(x => x.id === memberId);
+    if (!t) return;
+    if (t.role === 'admin' || String(t.pin) === '95511') {
+      this.showToast('មិនអាចលុប Super Admin បានឡើយ!', 'error');
+      return;
+    }
+    if (!confirm(`តើលោកអ្នកពិតជាចង់លុបគ្រូសមាជិក «${t.name}» (PIN: ${t.pin}) ដែរឬទេ?`)) {
+      return;
+    }
+    this.teachersList = this.teachersList.filter(x => x.id !== memberId);
+    StorageService.saveTeachers(this.teachersList);
+    this.showToast(`បានលុបគ្រូសមាជិក «${t.name}» រួចរាល់`, 'info');
+    this.logTeacherActivity('Admin', 'បានលុបគ្រូសមាជិក', t.name);
+    this.renderMemberList();
+  },
+
+  clearActivityLogs() {
+    if (!confirm('តើពិតជាចង់សម្អាតកំណត់ត្រាសកម្មភាពទាំងអស់នៅលើ Browser នេះមែនទេ? (ទិន្នន័យក្នុង Google Sheet មិនបាត់បង់ឡើយ)')) {
+      return;
+    }
+    StorageService.saveActivityLogs([]);
+    this.renderActivityLogs();
+    this.showToast('បានសម្អាតកំណត់ត្រាសកម្មភាពរួចរាល់', 'info');
+  },
+
+  refreshActivityLogs() {
+    this.renderActivityLogs();
+    this.showToast('បានផ្ទុកកំណត់ត្រាសកម្មភាពឡើងវិញ!', 'info');
+  },
+
+  openAdminGoogleSheet() {
+    const url = this.defaultTeacherSheetUrl;
+    if (url) {
+      window.open(url.replace(/\/exec.*$/, ''), '_blank');
+    } else {
+      this.showToast('មិនទាន់មាន Link Google Sheet', 'warning');
+    }
   },
 
   setLanguage(lang) {
@@ -1142,20 +1712,24 @@ function doGet(e) {
       if (/[\u1780-\u17ff]/.test(s)) return true;
       // 2. Contains multiple equals signs (e.g. x = 2, y = 3)
       if ((s.match(/=/g) || []).length > 1) return true;
-      // 3. Contains commas separating distinct math parts or formulas
+      // 3. Contains equals sign with fraction or square root (e.g. 0.75 = 3/4 or x = \frac{1}{2})
+      if (s.includes('=') && /\\(?:d?frac|sqrt)/.test(s)) return true;
+      // 4. Contains commas separating distinct math parts or formulas
       if (s.includes(',')) return true;
-      // 4. Contains LaTeX spacing commands (\quad, \qquad) separating multiple formulas
+      // 5. Contains LaTeX spacing commands (\quad, \qquad) separating multiple formulas
       if (/\\(?:quad|qquad)/.test(s)) return true;
-      // 5. Contains multiple fractions in one option
+      // 6. Contains multiple fractions in one option
       if ((s.match(/\\(?:d?frac)/g) || []).length > 1) return true;
-      // 6. Contains matrices, systems of equations, or multiline environments
+      // 7. Contains fraction with negative signs, operators, or variables (e.g. -\frac{-5}{12}, \frac{a+b}{c})
+      if (/\\(?:d?frac)\{[^}]*[-+*/=a-zA-Z]/.test(s) || /[-+*/=]\s*\\(?:d?frac)/.test(s)) return true;
+      // 8. Contains matrices, systems of equations, or multiline environments
       if (/\\begin\{(?:matrix|pmatrix|bmatrix|cases|aligned)\}/.test(s)) return true;
-      // 7. Text length check: strip basic LaTeX commands and symbols
+      // 9. Text length check: strip basic LaTeX commands and symbols
       const cleanMath = s
         .replace(/\\(?:dfrac|frac|sqrt|cdot|times|pm|approx|ne|le|ge|in|mathbb|mathbf|mathrm|text)\b/g, '')
         .replace(/[\$\{\}\s\\]/g, '');
-      if (cleanMath.length > 10) return true;
-      if (s.length > 20) return true;
+      if (cleanMath.length > 8) return true;
+      if (s.length > 16) return true;
       return false;
     });
   },
@@ -2390,6 +2964,15 @@ function doGet(e) {
               <span class="exam-meta-value">${studentInfo.classRoom || 'ថ្នាក់ទូទៅ'}</span>
             </div>
           </div>
+          ${this.examTeacherName ? `
+            <div class="exam-meta-card">
+              <span class="exam-meta-icon">👨‍🏫</span>
+              <div class="exam-meta-info">
+                <span class="exam-meta-label">លោកគ្រូ / អ្នកគ្រូ</span>
+                <span class="exam-meta-value">${this.examTeacherName}</span>
+              </div>
+            </div>
+          ` : ''}
         </div>
 
         <div class="exam-lobby-form">
@@ -3437,7 +4020,8 @@ function doGet(e) {
       pointTitle: pointTitle,
       score: score,
       total: totalQ,
-      percentage: percentage
+      percentage: percentage,
+      teacherName: this.examTeacherName || (this.currentTeacher?.name || '')
     };
 
     // Save to local student history
@@ -3463,6 +4047,14 @@ function doGet(e) {
         answeredQuiz: this.quizUserAnswers || {},
         answers: this.quizUserAnswers || {}
       });
+
+      // Log exam completion activity
+      this.logTeacherActivity(
+        this.examTeacherName || (this.currentTeacher?.name || 'គ្រូសមាជិក'),
+        'សិស្សប្រឡងចប់',
+        `សិស្ស ${studentInfo.name} (#${studentInfo.rollNo || '-'}) ថ្នាក់ ${studentInfo.classRoom} ទទួលបាន ${score}/${totalQ} (${percentage}) លើ ${lessonTitle}`,
+        studentInfo.classRoom
+      );
     }
 
     const sheetUrl = this.getTeacherSheetUrl();
@@ -3639,19 +4231,45 @@ function doGet(e) {
   defaultTeacherSheetUrl: 'https://script.google.com/macros/s/AKfycbxtsUQk52-Jh_k7VLgVFl66BvT9C2pn44--tZG6CgfRIAHN7Igw8wYrQ6uDbn-4B8uF/exec',
 
   getTeacherSheetUrl() {
-    const stored = localStorage.getItem('worksheet_teacher_sheet_url');
-    if (stored && stored.includes('AKfycbwzTi8_Z9aX1oo421kG7XLiEwxXRAk-28-uQWhSjzBgrTzSTH0PSb0qJvcEenwpUOLvKA')) {
-      this.setTeacherSheetUrl(this.defaultTeacherSheetUrl);
-      return this.defaultTeacherSheetUrl;
+    // 1. Direct target sheet from exam link (?sheet=...)
+    if (this.examTargetSheetUrl) {
+      return this.examTargetSheetUrl;
     }
-    return stored || this.defaultTeacherSheetUrl || '';
+    // 2. If logged in as Member Teacher with personal sheetUrl
+    if (this.currentTeacher && this.currentTeacher.role !== 'admin') {
+      return this.currentTeacher.sheetUrl || '';
+    }
+    // 3. If logged in as Super Admin
+    if (this.isAdmin) {
+      const stored = localStorage.getItem('worksheet_teacher_sheet_url');
+      return stored || this.defaultTeacherSheetUrl;
+    }
+    // 4. Stored local override if set explicitly
+    const stored = localStorage.getItem('worksheet_teacher_sheet_url');
+    if (stored) return stored;
+
+    // 5. Normal visitor / student without specific exam link: return empty to protect Admin sheet
+    return '';
   },
 
   setTeacherSheetUrl(url) {
     if (url) {
       localStorage.setItem('worksheet_teacher_sheet_url', url.trim());
+      if (this.currentTeacher) {
+        this.currentTeacher.sheetUrl = url.trim();
+        if (this.teachersList) {
+          const idx = this.teachersList.findIndex(t => t.id === this.currentTeacher.id);
+          if (idx !== -1) {
+            this.teachersList[idx].sheetUrl = url.trim();
+            StorageService.saveTeachers(this.teachersList);
+          }
+        }
+      }
     } else {
       localStorage.removeItem('worksheet_teacher_sheet_url');
+      if (this.currentTeacher) {
+        this.currentTeacher.sheetUrl = '';
+      }
     }
   },
 
@@ -3903,6 +4521,24 @@ function doGet(e) {
     const url = this.getTeacherSheetUrl();
     if (urlInp) urlInp.value = url;
     
+    // Update active teacher display banner
+    const nameDisplay = document.getElementById('active-teacher-display-name');
+    const schoolDisplay = document.getElementById('active-teacher-display-school');
+    const modalMembersBtn = document.getElementById('btn-modal-open-members');
+    const tInp = document.getElementById('generator-teacher-input');
+
+    if (this.currentTeacher) {
+      if (nameDisplay) nameDisplay.textContent = `${this.currentTeacher.name} (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})`;
+      if (schoolDisplay) schoolDisplay.textContent = this.currentTeacher.school || 'សាលារៀនជំនាន់ថ្មី';
+      if (tInp && !tInp.value) tInp.value = this.currentTeacher.name;
+    } else {
+      if (nameDisplay) nameDisplay.textContent = 'មិនទាន់ Login (ភ្ញៀវ/គ្រូទូទៅ)';
+      if (schoolDisplay) schoolDisplay.textContent = 'សូមចុច «🔄 ប្តូរគណនីគ្រូ» ដើម្បី Login ចូលគណនីផ្ទាល់ខ្លួន';
+    }
+    if (modalMembersBtn) {
+      modalMembersBtn.style.display = this.isAdmin ? 'inline-flex' : 'none';
+    }
+
     const statusBadge = document.getElementById('sheet-status-badge');
     if (statusBadge) {
       if (url) {
@@ -4128,6 +4764,12 @@ function doGet(e) {
 
     let shareUrl = `${baseUrl}?exam=1&class=${encodeURIComponent(cls)}&grade=${grade}`;
 
+    const teacherInp = document.getElementById('generator-teacher-input');
+    const teacherName = (teacherInp?.value || '').trim() || (this.currentTeacher?.name || '');
+    if (teacherName) {
+      shareUrl += `&teacher=${encodeURIComponent(teacherName)}`;
+    }
+
     if (lessonVal && lessonVal.includes(':::')) {
       const [courseId, lessonId] = lessonVal.split(':::');
       shareUrl += `&course=${encodeURIComponent(courseId)}&lesson=${encodeURIComponent(lessonId)}&tab=quiz`;
@@ -4193,6 +4835,15 @@ function doGet(e) {
     if (outInp) outInp.value = shareUrl;
     if (scheduleBadge && scheduleBadgeText) scheduleBadge.innerHTML = scheduleBadgeText;
     if (resBox) resBox.style.display = 'block';
+
+    if (!silent) {
+      this.logTeacherActivity(
+        teacherName || 'គ្រូសមាជិក',
+        'បានបង្កើត Link ប្រឡង',
+        `${lessonVal ? lessonVal.split(':::')[1] : 'មេរៀនចម្រុះ'} (${timeVal > 0 ? timeVal + ' នាទី' : 'មិនកំណត់ពេល'})`,
+        cls
+      );
+    }
 
     const hintSpan = document.getElementById('generator-link-hint');
     if (hintSpan) {

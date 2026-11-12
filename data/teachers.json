@@ -1,0 +1,35 @@
+[
+  {
+    "id": "t-admin",
+    "name": "លោកគ្រូ នួន បូណង",
+    "role": "admin",
+    "pin": "95511",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)",
+    "subject": "គណិតវិទ្យា",
+    "sheetUrl": "https://script.google.com/macros/s/AKfycbxtsUQk52-Jh_k7VLgVFl66BvT9C2pn44--tZG6CgfRIAHN7Igw8wYrQ6uDbn-4B8uF/exec",
+    "createdAt": "2026-01-01",
+    "status": "active"
+  },
+  {
+    "id": "t-1001",
+    "name": "លោកគ្រូ សុខា",
+    "role": "member",
+    "pin": "1001",
+    "school": "សាលារៀនជំនាន់ថ្មី",
+    "subject": "គណិតវិទ្យា",
+    "sheetUrl": "",
+    "createdAt": "2026-11-12",
+    "status": "active"
+  },
+  {
+    "id": "t-1002",
+    "name": "អ្នកគ្រូ ចិន្តា",
+    "role": "member",
+    "pin": "1002",
+    "school": "សាលារៀនជំនាន់ថ្មី",
+    "subject": "គណិតវិទ្យា",
+    "sheetUrl": "",
+    "createdAt": "2026-11-12",
+    "status": "active"
+  }
+]

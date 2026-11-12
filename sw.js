@@ -1,5 +1,5 @@
 // 1st Step Education PWA Service Worker
-const CACHE_NAME = '1st-step-v73';
+const CACHE_NAME = '1st-step-v74';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -10,6 +10,7 @@ const ASSETS_TO_CACHE = [
   './js/visits.js',
   './js/app.js',
   './js/storage.js',
+  './data/teachers.json',
   './data/courses.json',
   './data/worksheets.json',
   './data/worksheets_g11.json',
