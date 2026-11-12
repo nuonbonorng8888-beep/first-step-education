@@ -20,27 +20,5 @@
     "sheetUrl": "",
     "createdAt": "2026-11-12",
     "status": "active"
-  },
-  {
-    "id": "t-1001",
-    "name": "លោកគ្រូ សុខា",
-    "role": "member",
-    "pin": "1001",
-    "school": "សាលារៀនជំនាន់ថ្មី",
-    "subject": "គណិតវិទ្យា",
-    "sheetUrl": "",
-    "createdAt": "2026-11-12",
-    "status": "active"
-  },
-  {
-    "id": "t-1002",
-    "name": "អ្នកគ្រូ ចិន្តា",
-    "role": "member",
-    "pin": "1002",
-    "school": "សាលារៀនជំនាន់ថ្មី",
-    "subject": "គណិតវិទ្យា",
-    "sheetUrl": "",
-    "createdAt": "2026-11-12",
-    "status": "active"
   }
 ]

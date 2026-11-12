@@ -43,6 +43,21 @@ const StorageService = {
       if (raw) localTeachers = JSON.parse(raw);
     } catch (e) {}
 
+    // Clean up legacy sample/dummy teachers (លោកគ្រូ សុខា, អ្នកគ្រូ ចិន្តា) so they never reappear
+    if (Array.isArray(localTeachers)) {
+      localTeachers = localTeachers.filter(t => {
+        if (t.id === 't-1001' || t.name === 'លោកគ្រូ សុខា' || String(t.pin) === '1001') return false;
+        if (t.id === 't-1002' || t.name === 'អ្នកគ្រូ ចិន្តា' || String(t.pin) === '1002') return false;
+        return true;
+      });
+    }
+
+    let deletedIds = [];
+    try {
+      const rawDel = localStorage.getItem('worksheet_deleted_teachers');
+      if (rawDel) deletedIds = JSON.parse(rawDel);
+    } catch (e) {}
+
     let jsonTeachers = [];
     try {
       const res = await fetch(`data/teachers.json?v=${Date.now()}`, { cache: 'no-store' });
@@ -53,31 +68,37 @@ const StorageService = {
       console.warn('teachers.json fetch failed:', e);
     }
 
+    // Filter server teachers to exclude deleted and dummy teachers
+    const validJsonTeachers = (Array.isArray(jsonTeachers) ? jsonTeachers : []).filter(jt => {
+      if (deletedIds.includes(jt.id)) return false;
+      if (jt.id === 't-1001' || jt.name === 'លោកគ្រូ សុខា') return false;
+      if (jt.id === 't-1002' || jt.name === 'អ្នកគ្រូ ចិន្តា') return false;
+      return true;
+    });
+
     if (!Array.isArray(localTeachers) || localTeachers.length === 0) {
-      if (Array.isArray(jsonTeachers) && jsonTeachers.length > 0) {
-        localStorage.setItem('worksheet_teachers_list', JSON.stringify(jsonTeachers));
-        return jsonTeachers;
+      if (validJsonTeachers.length > 0) {
+        localStorage.setItem('worksheet_teachers_list', JSON.stringify(validJsonTeachers));
+        return validJsonTeachers;
       }
       return [];
     }
 
-    // Merge: Canonical server teachers update/insert into local teachers
-    if (Array.isArray(jsonTeachers)) {
-      jsonTeachers.forEach(jt => {
-        const idx = localTeachers.findIndex(lt => lt.id === jt.id || lt.pin === jt.pin);
-        if (idx !== -1) {
-          // Keep local overrides like sheetUrl if set, but sync name, role, school, pin from canonical server
-          localTeachers[idx] = {
-            ...localTeachers[idx],
-            ...jt,
-            sheetUrl: localTeachers[idx].sheetUrl || jt.sheetUrl || ''
-          };
-        } else {
-          localTeachers.push(jt);
-        }
-      });
-      localStorage.setItem('worksheet_teachers_list', JSON.stringify(localTeachers));
-    }
+    // Merge: User local additions and edits MUST take precedence!
+    validJsonTeachers.forEach(jt => {
+      const idx = localTeachers.findIndex(lt => lt.id === jt.id || lt.pin === jt.pin);
+      if (idx !== -1) {
+        // User's local edits (name, school, subject, pin, status) ALWAYS override server defaults!
+        localTeachers[idx] = {
+          ...jt,
+          ...localTeachers[idx]
+        };
+      } else {
+        localTeachers.push(jt);
+      }
+    });
+
+    localStorage.setItem('worksheet_teachers_list', JSON.stringify(localTeachers));
     return localTeachers;
   },
 

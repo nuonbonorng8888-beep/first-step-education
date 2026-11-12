@@ -1,6 +1,6 @@
 {
-  "version": "v79",
-  "build": 79,
-  "updatedAt": "2026-11-12T21:50:00+07:00",
-  "description": "Cross-device Teacher Sync, Usage & Duration Analytics, Instant Auto-Update"
+  "version": "v80",
+  "build": 80,
+  "updatedAt": "2026-11-12T23:59:00+07:00",
+  "description": "Purge sample teachers, prioritize user teacher edits and persistent deletions"
 }

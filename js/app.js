@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v79';
+    this.appVersion = 'v80';
 
     const checkVersion = async () => {
       try {
@@ -1382,6 +1382,14 @@ function doGet(e) {
     if (!confirm(`តើលោកអ្នកពិតជាចង់លុបគ្រូសមាជិក «${t.name}» (PIN: ${t.pin}) ដែរឬទេ?`)) {
       return;
     }
+
+    // Persist deleted ID so it is never re-added from server caches
+    try {
+      let del = JSON.parse(localStorage.getItem('worksheet_deleted_teachers') || '[]');
+      if (!del.includes(memberId)) del.push(memberId);
+      localStorage.setItem('worksheet_deleted_teachers', JSON.stringify(del));
+    } catch (e) {}
+
     this.teachersList = this.teachersList.filter(x => x.id !== memberId);
     StorageService.saveTeachers(this.teachersList);
     this.showToast(`បានលុបគ្រូសមាជិក «${t.name}» រួចរាល់`, 'info');
