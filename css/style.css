@@ -7298,6 +7298,148 @@ body.portal-locked .gate-lock-card {
   margin-top: 4px;
 }
 
+/* ==========================================================
+   A4 EXAM DOCUMENT PRINT & PREVIEW ENGINE
+   (PAGE 1: EXAM PAPER, PAGE 2: OFFICIAL ANSWER KEY & RUBRIC)
+   ========================================================== */
+.a4-preview-desk {
+  background: #0b1120;
+  padding: 30px 14px;
+  overflow-y: auto;
+  max-height: calc(92vh - 65px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.a4-sheet {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  width: 210mm;
+  min-height: 297mm;
+  max-width: 100%;
+  margin: 0 auto 24px auto;
+  padding: 14mm 16mm;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: 'Khmer OS Battambang', 'Battambang', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .a4-preview-desk {
+    padding: 14px 6px;
+  }
+  .a4-sheet {
+    width: 98%;
+    padding: 12px 10px;
+    min-height: auto;
+  }
+}
+
+.page-screen-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+
+  body.printing-exam-active {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.printing-exam-active .navbar,
+  body.printing-exam-active .site-footer,
+  body.printing-exam-active .mobile-glass-dock,
+  body.printing-exam-active #catalog-view,
+  body.printing-exam-active #classroom-view,
+  body.printing-exam-active .toast-container,
+  body.printing-exam-active #app-update-banner,
+  body.printing-exam-active .no-print,
+  body.printing-exam-active .exam-modal-toolbar,
+  body.printing-exam-active .page-screen-badge {
+    display: none !important;
+  }
+
+  body.printing-exam-active #examPreviewModalBack {
+    position: static !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    overflow: visible !important;
+  }
+
+  body.printing-exam-active .a4-preview-desk {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  body.printing-exam-active #examA4Container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    display: block !important;
+  }
+
+  body.printing-exam-active .a4-sheet {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Page 1 forces clean break before Page 2 */
+  body.printing-exam-active .a4-sheet.page-1 {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  body.printing-exam-active.print-only-p1 .a4-sheet.page-2 {
+    display: none !important;
+  }
+
+  body.printing-exam-active.print-only-p1 .a4-sheet.page-1 {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+
+  body.printing-exam-active.print-only-p2 .a4-sheet.page-1 {
+    display: none !important;
+  }
+}
+
 
 
 

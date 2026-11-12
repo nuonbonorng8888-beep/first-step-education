@@ -256,7 +256,7 @@ class QuestionBankController {
     document.body.insertAdjacentHTML('beforeend', modalHtml);
   }
 
-  /* ================== MULTI-LESSON EXAM BUILDER (STRICT MATCHING) ================== */
+  /* ================== MULTI-LESSON EXAM BUILDER (100% WRITTEN & MULTI-LESSON A4 ENGINE) ================== */
   async openMultiLessonExamModal(defaultGrade = 'ថ្នាក់ទី ១១') {
     await this.init();
 
@@ -272,24 +272,24 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card" style="max-width: 880px; width: 95%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card" style="max-width: 900px; width: 95%; max-height: 90vh; overflow-y: auto;">
         <!-- Header -->
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
-              <span>🎲 បង្កើតវិញ្ញាសាបញ្ចប់មេរៀន / វិញ្ញាសាចម្រុះ</span>
-              <span style="font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: rgba(168, 85, 247, 0.2); color: #c084fc; font-weight: 700;">
-                ១០ MCQ + ៥ សរសេរ
+              <span>🎲 បង្កើតវិញ្ញាសាប្រឡង (A4 PDF) — សរសេរ ១០០%</span>
+              <span style="font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: 700;">
+                ២ ទំព័រ A4 ស្តង់ដា
               </span>
             </h3>
             <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
-              ជ្រើសរើសមេរៀនចំនួន ១, ២ ឬ ៣ — សំណួរនឹងចេញពីមេរៀនដែលបានជ្រើស <strong>១០០% ដោយគ្មានមេរៀនផ្សេងលាយឡំ</strong>!
+              ជ្រើសរើសមេរៀនចាប់ពី ១ រហូតដល់លើសពី ២ មេរៀន (៣, ៤, ៥ មេរៀន...) — វិញ្ញាសាសរសេរ ១០០% ចេញចំៗតាមមេរៀន <strong>គ្មានមេរៀនផ្សេងលាយឡំ</strong>!
             </p>
           </div>
           <button class="btn-icon" onclick="document.getElementById('multiLessonExamModal').remove()">✕</button>
         </div>
 
-        <!-- Grade & Stream Selector Row -->
+        <!-- Grade Selector Row -->
         <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px;">
           <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-secondary);">កម្រិតថ្នាក់ & កម្រិត ៖</span>
           <div style="display: flex; flex-wrap: wrap; gap: 6px;" id="examGradePills">
@@ -312,31 +312,40 @@ class QuestionBankController {
           </div>
         </div>
 
-        <!-- Mode Selector (1 Lesson vs 2 Lessons vs 3 Lessons) -->
+        <!-- Mode Selector (Multi-Lesson Selection > 2 Lessons) -->
         <div style="background: rgba(30, 41, 59, 0.5); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px; margin-bottom: 16px;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
-            <label style="font-size: 0.82rem; font-weight: 700; color: var(--text-primary);">
-              ទម្រង់វិញ្ញាសា (Exam Structure) ៖
+            <label style="font-size: 0.82rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+              <span>📚 ចំនួនមេរៀនក្នុងវិញ្ញាសា (ជ្រើសលើសពី ២ មេរៀនបាន) ៖</span>
             </label>
-            <div style="display: flex; gap: 6px;">
-              <button type="button" id="btnMode1Les" class="btn btn-sm btn-outline" style="font-size: 0.76rem; padding: 4px 10px;" onclick="window.questionBank.setLessonCountMode(1)">
+            <div style="display: flex; gap: 6px; flex-wrap: wrap;" id="lessonPresetButtons">
+              <button type="button" id="btnMode1Les" class="btn btn-sm btn-outline" style="font-size: 0.76rem; padding: 4px 9px;" onclick="window.questionBank.setLessonCountMode(1)">
                 ១ មេរៀន
               </button>
-              <button type="button" id="btnMode2Les" class="btn btn-sm btn-primary" style="font-size: 0.76rem; padding: 4px 10px;" onclick="window.questionBank.setLessonCountMode(2)">
-                ២ មេរៀនចម្រុះ
+              <button type="button" id="btnMode2Les" class="btn btn-sm btn-primary" style="font-size: 0.76rem; padding: 4px 9px;" onclick="window.questionBank.setLessonCountMode(2)">
+                ២ មេរៀន
               </button>
-              <button type="button" id="btnMode3Les" class="btn btn-sm btn-outline" style="font-size: 0.76rem; padding: 4px 10px;" onclick="window.questionBank.setLessonCountMode(3)">
-                ៣ មេរៀនចម្រុះ
+              <button type="button" id="btnMode3Les" class="btn btn-sm btn-outline" style="font-size: 0.76rem; padding: 4px 9px;" onclick="window.questionBank.setLessonCountMode(3)">
+                ៣ មេរៀន
+              </button>
+              <button type="button" id="btnMode4Les" class="btn btn-sm btn-outline" style="font-size: 0.76rem; padding: 4px 9px;" onclick="window.questionBank.setLessonCountMode(4)">
+                ៤ មេរៀន
+              </button>
+              <button type="button" id="btnMode5Les" class="btn btn-sm btn-outline" style="font-size: 0.76rem; padding: 4px 9px;" onclick="window.questionBank.setLessonCountMode(5)">
+                ៥ មេរៀន
+              </button>
+              <button type="button" class="btn btn-sm btn-outline" style="font-size: 0.76rem; padding: 4px 9px; border-color: #38bdf8; color: #38bdf8;" onclick="window.questionBank.addExamLessonSlot()" title="បន្ថែមមេរៀនមួយទៀត">
+                ➕ បន្ថែមមេរៀន
               </button>
             </div>
           </div>
 
           <!-- Total Counter & Balance Helper Banner -->
-          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(168, 85, 247, 0.1); border: 1px dashed rgba(168, 85, 247, 0.3); border-radius: 8px; padding: 8px 12px; flex-wrap: wrap; gap: 8px;">
-            <div id="examQuestionCounterBadge" style="font-size: 0.82rem; font-weight: 700; color: #c084fc;">
-              📊 បែងចែក ៖ MCQ: 10 / 10 | សរសេរ: 5 / 5 | សរុប: 15 សំណួរ (២០ ពិន្ទុ)
+          <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(16, 185, 129, 0.1); border: 1px dashed rgba(16, 185, 129, 0.35); border-radius: 8px; padding: 8px 12px; flex-wrap: wrap; gap: 8px;">
+            <div id="examQuestionCounterBadge" style="font-size: 0.82rem; font-weight: 700; color: #34d399;">
+              ✍️ លំហាត់សរសេរ: 5 សំណួរ | សរុប: ២០ ពិន្ទុ (១ លំហាត់ = ៤.០ ពិន្ទុ)
             </div>
-            <button type="button" class="btn btn-sm btn-secondary" onclick="window.questionBank.autoBalanceQuestions()" style="font-size: 0.74rem; padding: 3px 8px;">
+            <button type="button" class="btn btn-sm btn-secondary" onclick="window.questionBank.autoBalanceQuestions()" style="font-size: 0.74rem; padding: 3px 10px;">
               ⚡ ចែកស្វ័យប្រវត្ត (Auto Balance)
             </button>
           </div>
@@ -379,8 +388,8 @@ class QuestionBankController {
           <button type="button" class="btn btn-secondary" onclick="document.getElementById('multiLessonExamModal').remove()">
             បោះបង់
           </button>
-          <button type="button" class="btn btn-primary" onclick="window.questionBank.executeGenerateExam()" style="padding: 8px 20px; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">
-            <span>✨ បង្កើតវិញ្ញាសា & អត្រាកំណែ</span>
+          <button type="button" class="btn btn-primary" onclick="window.questionBank.executeGenerateExam()" style="padding: 8px 22px; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%); border: none;">
+            <span>📄 បង្កើតវិញ្ញាសា A4 (២ ទំព័រ)</span>
             <span>➔</span>
           </button>
         </div>
@@ -389,13 +398,13 @@ class QuestionBankController {
 
     document.body.appendChild(modalBack);
 
-    // Initial state
+    // Initial state: default 2 lessons, writtenCount distributed to 5 total (3 and 2)
     this.examConfig = {
       grade: defaultGrade,
       lessonMode: 2,
       lessons: [
-        { lesId: '', mcqCount: 5, writtenCount: 3, level: 'all' },
-        { lesId: '', mcqCount: 5, writtenCount: 2, level: 'all' }
+        { lesId: '', writtenCount: 3, level: 'all' },
+        { lesId: '', writtenCount: 2, level: 'all' }
       ]
     };
 
@@ -437,53 +446,94 @@ class QuestionBankController {
     if (!this.examConfig) return;
     this.examConfig.lessonMode = count;
 
-    ['1Les', '2Les', '3Les'].forEach((m, idx) => {
-      const btn = document.getElementById(`btnMode${m}`);
+    [1, 2, 3, 4, 5].forEach(n => {
+      const btn = document.getElementById(`btnMode${n}Les`);
       if (btn) {
-        btn.className = (idx + 1 === count) ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline';
+        btn.className = (n === count) ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline';
       }
     });
 
+    const lessonsList = this.getLessonsForGrade(this.examConfig.grade);
+    const newSlots = [];
+
+    // Distribute 5 standard written questions across `count` lessons
     if (count === 1) {
-      this.examConfig.lessons = [
-        { lesId: '', mcqCount: 10, writtenCount: 5, level: 'all' }
-      ];
+      newSlots.push({ lesId: lessonsList[0]?.id || '', writtenCount: 5, level: 'all' });
     } else if (count === 2) {
-      this.examConfig.lessons = [
-        { lesId: '', mcqCount: 5, writtenCount: 3, level: 'all' },
-        { lesId: '', mcqCount: 5, writtenCount: 2, level: 'all' }
-      ];
+      newSlots.push({ lesId: lessonsList[0]?.id || '', writtenCount: 3, level: 'all' });
+      newSlots.push({ lesId: lessonsList[1]?.id || '', writtenCount: 2, level: 'all' });
     } else if (count === 3) {
-      this.examConfig.lessons = [
-        { lesId: '', mcqCount: 4, writtenCount: 2, level: 'all' },
-        { lesId: '', mcqCount: 3, writtenCount: 2, level: 'all' },
-        { lesId: '', mcqCount: 3, writtenCount: 1, level: 'all' }
-      ];
+      newSlots.push({ lesId: lessonsList[0]?.id || '', writtenCount: 2, level: 'all' });
+      newSlots.push({ lesId: lessonsList[1]?.id || '', writtenCount: 2, level: 'all' });
+      newSlots.push({ lesId: lessonsList[2]?.id || '', writtenCount: 1, level: 'all' });
+    } else if (count === 4) {
+      newSlots.push({ lesId: lessonsList[0]?.id || '', writtenCount: 2, level: 'all' });
+      newSlots.push({ lesId: lessonsList[1]?.id || '', writtenCount: 1, level: 'all' });
+      newSlots.push({ lesId: lessonsList[2]?.id || '', writtenCount: 1, level: 'all' });
+      newSlots.push({ lesId: lessonsList[3]?.id || '', writtenCount: 1, level: 'all' });
+    } else if (count >= 5) {
+      for (let i = 0; i < count; i++) {
+        newSlots.push({ lesId: lessonsList[i % lessonsList.length]?.id || '', writtenCount: 1, level: 'all' });
+      }
     }
+
+    this.examConfig.lessons = newSlots;
+    this.renderExamSlots();
+  }
+
+  addExamLessonSlot() {
+    if (!this.examConfig) return;
+    const lessonsList = this.getLessonsForGrade(this.examConfig.grade);
+    const nextIdx = this.examConfig.lessons.length;
+    const pickId = lessonsList[nextIdx % lessonsList.length]?.id || (lessonsList[0]?.id || '');
+
+    this.examConfig.lessons.push({
+      lesId: pickId,
+      writtenCount: 1,
+      level: 'all'
+    });
+
+    this.examConfig.lessonMode = this.examConfig.lessons.length;
+
+    // Reset preset buttons styling
+    [1, 2, 3, 4, 5].forEach(n => {
+      const btn = document.getElementById(`btnMode${n}Les`);
+      if (btn) {
+        btn.className = (n === this.examConfig.lessons.length) ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline';
+      }
+    });
+
+    this.renderExamSlots();
+  }
+
+  removeExamLessonSlot(idx) {
+    if (!this.examConfig || this.examConfig.lessons.length <= 1) return;
+    this.examConfig.lessons.splice(idx, 1);
+    this.examConfig.lessonMode = this.examConfig.lessons.length;
+
+    [1, 2, 3, 4, 5].forEach(n => {
+      const btn = document.getElementById(`btnMode${n}Les`);
+      if (btn) {
+        btn.className = (n === this.examConfig.lessons.length) ? 'btn btn-sm btn-primary' : 'btn btn-sm btn-outline';
+      }
+    });
 
     this.renderExamSlots();
   }
 
   autoBalanceQuestions() {
     if (!this.examConfig) return;
-    const mode = this.examConfig.lessonMode;
+    const totalSlots = this.examConfig.lessons.length;
+    const targetTotal = 5; // Standard written exam has 5 questions (4 pts each = 20 pts)
 
-    if (mode === 1) {
-      this.examConfig.lessons[0].mcqCount = 10;
-      this.examConfig.lessons[0].writtenCount = 5;
-    } else if (mode === 2) {
-      this.examConfig.lessons[0].mcqCount = 5;
-      this.examConfig.lessons[0].writtenCount = 3;
-      this.examConfig.lessons[1].mcqCount = 5;
-      this.examConfig.lessons[1].writtenCount = 2;
-    } else if (mode === 3) {
-      this.examConfig.lessons[0].mcqCount = 4;
-      this.examConfig.lessons[0].writtenCount = 2;
-      this.examConfig.lessons[1].mcqCount = 3;
-      this.examConfig.lessons[1].writtenCount = 2;
-      this.examConfig.lessons[2].mcqCount = 3;
-      this.examConfig.lessons[2].writtenCount = 1;
-    }
+    const base = Math.floor(targetTotal / totalSlots);
+    let remainder = targetTotal % totalSlots;
+
+    this.examConfig.lessons.forEach((slot, idx) => {
+      slot.writtenCount = base + (remainder > 0 ? 1 : 0);
+      if (remainder > 0) remainder--;
+      if (slot.writtenCount < 1) slot.writtenCount = 1;
+    });
 
     this.renderExamSlots();
   }
@@ -495,23 +545,22 @@ class QuestionBankController {
     const lessonsList = this.getLessonsForGrade(this.examConfig.grade);
 
     container.innerHTML = this.examConfig.lessons.map((slot, idx) => {
-      // Pick initial lesId if empty
       if (!slot.lesId && lessonsList.length > idx) {
         slot.lesId = lessonsList[idx].id;
       }
 
       return `
-        <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px;">
+        <div style="background: rgba(30, 41, 59, 0.45); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px 14px; position: relative;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="width: 24px; height: 24px; border-radius: 50%; background: #9333ea; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.74rem; font-weight: 800;">
+              <span style="width: 24px; height: 24px; border-radius: 50%; background: #3b82f6; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.74rem; font-weight: 800;">
                 ${idx + 1}
               </span>
               <strong style="font-size: 0.86rem; color: var(--text-primary);">
                 ជ្រើសរើសមេរៀនទី ${idx + 1}
               </strong>
             </div>
-            <div style="display: flex; align-items: center; gap: 6px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
               <span style="font-size: 0.74rem; color: var(--text-muted);">កម្រិត ៖</span>
               <select class="form-input" style="padding: 2px 8px; font-size: 0.75rem; width: auto;"
                 onchange="window.questionBank.updateExamSlotLevel(${idx}, this.value)">
@@ -520,6 +569,13 @@ class QuestionBankController {
                 <option value="មធ្យម" ${slot.level === 'មធ្យម' ? 'selected' : ''}>មធ្យម</option>
                 <option value="ពិបាក" ${slot.level === 'ពិបាក' ? 'selected' : ''}>ពិបាក</option>
               </select>
+
+              ${this.examConfig.lessons.length > 1 ? `
+                <button type="button" class="btn-icon" style="color: #ef4444; padding: 2px 6px; font-size: 0.76rem;" 
+                  title="លុបមេរៀននេះចេញ" onclick="window.questionBank.removeExamLessonSlot(${idx})">
+                  🗑️
+                </button>
+              ` : ''}
             </div>
           </div>
 
@@ -535,23 +591,19 @@ class QuestionBankController {
             </select>
           </div>
 
-          <!-- Allocation Inputs -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; background: rgba(15, 23, 42, 0.3); border-radius: 8px; padding: 8px 12px;">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-              <label style="font-size: 0.78rem; font-weight: 600; color: #38bdf8;">
-                📝 ចំនួន MCQ ៖
+          <!-- Allocation Inputs: 100% Written Exercises -->
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(15, 23, 42, 0.35); border-radius: 8px; padding: 8px 14px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 0.86rem;">✍️</span>
+              <label style="font-size: 0.80rem; font-weight: 700; color: #f59e0b;">
+                ចំនួនលំហាត់សរសេរដោះស្រាយ ៖
               </label>
-              <input type="number" min="0" max="10" value="${slot.mcqCount}" 
-                class="form-input" style="width: 70px; text-align: center; font-weight: 700; padding: 4px;"
-                onchange="window.questionBank.updateExamSlotCount(${idx}, 'mcqCount', this.value)">
             </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-              <label style="font-size: 0.78rem; font-weight: 600; color: #f59e0b;">
-                ✍️ ចំនួន សរសេរ ៖
-              </label>
-              <input type="number" min="0" max="5" value="${slot.writtenCount}" 
-                class="form-input" style="width: 70px; text-align: center; font-weight: 700; padding: 4px;"
-                onchange="window.questionBank.updateExamSlotCount(${idx}, 'writtenCount', this.value)">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <input type="number" min="1" max="10" value="${slot.writtenCount}" 
+                class="form-input" style="width: 75px; text-align: center; font-weight: 800; font-size: 0.9rem; padding: 4px; border-color: rgba(245, 158, 11, 0.4);"
+                onchange="window.questionBank.updateExamSlotCount(${idx}, this.value)">
+              <span style="font-size: 0.78rem; color: var(--text-muted);">លំហាត់</span>
             </div>
           </div>
         </div>
@@ -573,9 +625,9 @@ class QuestionBankController {
     }
   }
 
-  updateExamSlotCount(idx, field, val) {
+  updateExamSlotCount(idx, val) {
     if (this.examConfig && this.examConfig.lessons[idx]) {
-      this.examConfig.lessons[idx][field] = Math.max(0, parseInt(val, 10) || 0);
+      this.examConfig.lessons[idx].writtenCount = Math.max(1, parseInt(val, 10) || 1);
       this.updateExamCounterBadge();
     }
   }
@@ -584,33 +636,27 @@ class QuestionBankController {
     const badge = document.getElementById('examQuestionCounterBadge');
     if (!badge || !this.examConfig) return;
 
-    let totMcq = 0;
     let totWritten = 0;
     this.examConfig.lessons.forEach(l => {
-      totMcq += l.mcqCount;
-      totWritten += l.writtenCount;
+      totWritten += (l.writtenCount || 0);
     });
 
-    const isMcqOk = totMcq === 10;
-    const isWrittenOk = totWritten === 5;
-    const isAllOk = isMcqOk && isWrittenOk;
+    const ptsPerProblem = totWritten > 0 ? (20 / totWritten).toFixed(1) : '0';
+    const isRecommended = totWritten === 5;
 
     badge.innerHTML = `
-      <span style="color: ${isAllOk ? '#10b981' : '#f59e0b'};">
-        ${isAllOk ? '✅' : '⚠️'} បែងចែក ៖ 
-        MCQ: <strong>${totMcq}</strong>/10 ${isMcqOk ? '✔' : ''} | 
-        សរសេរ: <strong>${totWritten}</strong>/5 ${isWrittenOk ? '✔' : ''} | 
-        សរុប: <strong>${totMcq + totWritten}</strong>/15 (២០ ពិន្ទុ)
+      <span style="color: ${isRecommended ? '#10b981' : '#f59e0b'};">
+        ${isRecommended ? '✅' : 'ℹ️'} វិញ្ញាសាសរសេរ ៖ <strong>${totWritten}</strong> លំហាត់ | 
+        សរុប <strong>២០ ពិន្ទុ</strong> (១ លំហាត់ = <strong>${ptsPerProblem}</strong> ពិន្ទុ)
       </span>
     `;
   }
 
-  /* ================== EXAM GENERATION (STRICT ZERO-LEAKAGE) ================== */
+  /* ================== EXAM GENERATION (STRICT ZERO-LEAKAGE WRITTEN EXAM) ================== */
   executeGenerateExam() {
     if (!this.examConfig) return;
 
     const allQuestions = this.getAllQuestions();
-    const selectedMCQs = [];
     const selectedWritten = [];
     const usedIds = new Set();
     const chosenLessonTitles = [];
@@ -626,7 +672,7 @@ class QuestionBankController {
         pool = allQuestions.filter(q => q.l === slot.lessonTitle);
       }
 
-      // If still 0, find first lesson matching this grade
+      // If still 0, find lesson in this grade matching slot index
       if (pool.length === 0) {
         const gradeLessons = this.getLessonsForGrade(this.examConfig.grade);
         if (gradeLessons.length > sIdx) {
@@ -636,7 +682,9 @@ class QuestionBankController {
       }
 
       const lessonTitle = pool[0]?.l || `មេរៀនទី ${sIdx + 1}`;
-      chosenLessonTitles.push(lessonTitle);
+      if (!chosenLessonTitles.includes(lessonTitle)) {
+        chosenLessonTitles.push(lessonTitle);
+      }
 
       // Filter by level with smart prioritization strictly within this lesson
       let combinedPool = [];
@@ -650,18 +698,7 @@ class QuestionBankController {
         combinedPool = [...pool].sort(() => Math.random() - 0.5);
       }
 
-      // 1. Pick MCQs for this lesson strictly from this lesson
-      let mcqAdded = 0;
-      for (const q of combinedPool) {
-        if (mcqAdded >= slot.mcqCount) break;
-        if (!usedIds.has(q.id)) {
-          selectedMCQs.push({ ...q, originLesson: lessonTitle });
-          usedIds.add(q.id);
-          mcqAdded++;
-        }
-      }
-
-      // 2. Pick Written Problems for this lesson strictly from remaining questions of this lesson
+      // Pick strictly Written Problems for this lesson
       let writtenAdded = 0;
       for (const q of combinedPool) {
         if (writtenAdded >= slot.writtenCount) break;
@@ -673,9 +710,17 @@ class QuestionBankController {
       }
     }
 
+    if (selectedWritten.length === 0) {
+      alert('សូមជ្រើសរើសមេរៀនដែលមានសំណួរក្នុងធនាគារសំណួរ!');
+      return;
+    }
+
     // Close config modal
     const configModal = document.getElementById('multiLessonExamModal');
     if (configModal) configModal.remove();
+
+    const totalWritten = selectedWritten.length;
+    const ptsPerProblem = (20 / totalWritten).toFixed(1);
 
     // Prepare complete Exam Data
     const examData = {
@@ -683,9 +728,9 @@ class QuestionBankController {
       grade: this.examConfig.grade,
       duration: document.getElementById('examMetaDuration')?.value || '៦០ នាទី',
       teacher: document.getElementById('examMetaTeacher')?.value || 'លោកគ្រូ នួន បូណង (វិទ្យាល័យព្រះស៊ីសុវត្ថិ NGS)',
-      mcqs: selectedMCQs,
       written: selectedWritten,
       lessons: chosenLessonTitles,
+      ptsPerProblem: ptsPerProblem,
       date: new Date().toLocaleDateString('km-KH', { year: 'numeric', month: 'long', day: 'numeric' })
     };
 
@@ -693,198 +738,225 @@ class QuestionBankController {
     this.openExamPreviewModal(examData);
   }
 
-  /* ================== EXAM PREVIEW & PRINT MODAL ================== */
+  /* ================== A4 PDF DOCUMENT ENGINE (PAGE 1: EXAM, PAGE 2: KEY) ================== */
   openExamPreviewModal(exam) {
+    const existing = document.getElementById('examPreviewModalBack');
+    if (existing) existing.remove();
+
     const modalBack = document.createElement('div');
     modalBack.id = 'examPreviewModalBack';
-    modalBack.className = 'fixed inset-0 z-50 overflow-y-auto flex items-start justify-center p-3 md:p-6 bg-slate-900/80 backdrop-blur-sm';
+    modalBack.className = 'fixed inset-0 z-50 overflow-y-auto flex flex-col items-center p-2 md:p-6 bg-slate-900/90 backdrop-blur-md';
+
+    // Calculation box height dynamically adjusted so all problems fit within Page 1 (A4)
+    const calcBoxHeight = Math.max(70, Math.min(130, Math.floor(450 / Math.max(1, exam.written.length))));
 
     modalBack.innerHTML = `
-      <div class="w-full max-w-5xl bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden my-4">
-        <!-- Top Toolbar -->
-        <div class="no-print p-4 bg-slate-100 border-b border-slate-200 flex flex-wrap items-center justify-between gap-4">
-          <div class="flex items-center gap-2">
-            <span class="text-2xl">📑</span>
-            <div>
-              <h4 class="font-bold text-sm text-slate-800">${exam.title}</h4>
-              <span class="text-xs text-slate-500">${exam.grade} • ${exam.mcqs.length} MCQ + ${exam.written.length} សរសេរ (ពិន្ទុសរុប ២០)</span>
-            </div>
-          </div>
-
-          <!-- Actions -->
-          <div class="flex flex-wrap items-center gap-2">
-            <button onclick="window.questionBank.printStudentExam()" class="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs shadow flex items-center gap-1.5 transition">
-              <span>📄 បោះពុម្ពវិញ្ញាសា</span>
-            </button>
-            <button onclick="window.questionBank.printTeacherKey()" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow flex items-center gap-1.5 transition">
-              <span>📑 បោះពុម្ពអត្រាកំណែ</span>
-            </button>
-            <button onclick="window.questionBank.copyExamText()" class="px-3 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-xs flex items-center gap-1 transition">
-              <span>📋 ចម្លង</span>
-            </button>
-            <button onclick="window.questionBank.createOnlineExamLink()" class="px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center gap-1 transition">
-              <span>🔗 Link ប្រឡង Online</span>
-            </button>
-            <button onclick="document.getElementById('examPreviewModalBack').remove()" class="px-3 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold text-xs">
-              ✕ បិទ
-            </button>
+      <!-- Top Action Toolbar (Sticky on top, hidden when printing) -->
+      <div class="no-print exam-modal-toolbar w-full max-w-5xl bg-slate-800 text-white rounded-2xl shadow-xl p-3 md:p-4 mb-4 flex flex-wrap items-center justify-between gap-3 border border-slate-700">
+        <div class="flex items-center gap-2.5">
+          <span class="text-2xl">📑</span>
+          <div>
+            <h4 class="font-bold text-sm text-white">${exam.title}</h4>
+            <span class="text-xs text-slate-300">
+              ${exam.grade} • ${exam.written.length} លំហាត់សរសេរដោះស្រាយ (ពិន្ទុសរុប ២០ • ១ លំហាត់ = ${exam.ptsPerProblem} ពិន្ទុ)
+            </span>
           </div>
         </div>
 
-        <!-- Tab Controls -->
-        <div class="no-print flex border-b border-slate-200 bg-slate-50 text-xs font-bold px-6 pt-2 gap-4">
-          <button id="tabBtnPreviewExam" onclick="window.questionBank.switchPreviewTab('exam')" class="py-2.5 border-b-2 border-purple-600 text-purple-700 flex items-center gap-1.5">
-            <span>📄 សន្លឹកវិញ្ញាសាប្រឡង (Student Sheet)</span>
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="window.questionBank.printBothPages()" class="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs shadow flex items-center gap-1.5 transition">
+            <span>🖨️ បោះពុម្ព / សន្សំ PDF (ទាំង២ទំព័រ)</span>
           </button>
-          <button id="tabBtnPreviewKey" onclick="window.questionBank.switchPreviewTab('key')" class="py-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-1.5">
-            <span>📑 អត្រាកំណែ & ដំណោះស្រាយ (Teacher Key)</span>
+          <button onclick="window.questionBank.printPage1Only()" class="px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow flex items-center gap-1.5 transition">
+            <span>📄 ទំព័រទី១ (វិញ្ញាសាសិស្ស)</span>
+          </button>
+          <button onclick="window.questionBank.printPage2Only()" class="px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow flex items-center gap-1.5 transition">
+            <span>📑 ទំព័រទី២ (អត្រាកំណែគ្រូ)</span>
+          </button>
+          <button onclick="window.questionBank.copyExamText()" class="px-3 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold text-xs flex items-center gap-1 transition">
+            <span>📋 ចម្លង</span>
+          </button>
+          <button onclick="document.getElementById('examPreviewModalBack').remove()" class="px-3 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold text-xs">
+            ✕ បិទ
           </button>
         </div>
+      </div>
 
-        <!-- Printable Document Body -->
-        <div id="printableExamDoc" class="p-8 md:p-12 space-y-6 font-battambang bg-white text-slate-900">
-          <!-- View 1: Student Exam Sheet -->
-          <div id="viewStudentExam" class="space-y-6">
-            <!-- MoEYS / School Header -->
-            <div class="flex justify-between items-start border-b-2 border-slate-900 pb-4 text-center">
-              <div class="text-left space-y-1">
-                <p class="font-moul text-xs">ក្រសួងអប់រំ យុវជន និងកីឡា</p>
-                <p class="font-bold text-xs text-purple-900">សាលារៀនជំនាន់ថ្មី (New Generation School)</p>
-                <p class="text-xs">វិទ្យាល័យព្រះស៊ីសុវត្ថិ / វិទ្យាល័យព្រះយុគន្ធរ</p>
-                <p class="text-xs text-slate-600">គ្រូបង្រៀន ៖ <strong>${exam.teacher}</strong></p>
+      <!-- A4 Document Workspace (Displays Page 1 & Page 2) -->
+      <div class="a4-preview-desk w-full max-w-5xl">
+        <div id="examA4Container" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+
+          <!-- ================= PAGE 1 : STUDENT EXAM PAPER ================= -->
+          <div class="a4-sheet page-1">
+            <div class="page-screen-badge no-print" style="margin-bottom: 12px;">
+              📄 ទំព័រទី ១ ៖ សន្លឹកវិញ្ញាសាប្រឡង (Student Exam Sheet) — សរសេរ ១០០%
+            </div>
+
+            <!-- MoEYS & NGS Formal Royal Header -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #0f172a; padding-bottom: 10px; margin-bottom: 12px;">
+              <div style="text-align: left; line-height: 1.4;">
+                <div style="font-family: 'Khmer OS Muol Light', 'Moul', serif; font-size: 0.78rem; font-weight: 700; color: #0f172a;">ក្រសួងអប់រំ យុវជន និងកីឡា</div>
+                <div style="font-weight: 800; font-size: 0.76rem; color: #581c87; margin-top: 1px;">សាលារៀនជំនាន់ថ្មី (New Generation School)</div>
+                <div style="font-size: 0.72rem; color: #334155;">វិទ្យាល័យព្រះស៊ីសុវត្ថិ • វិទ្យាល័យព្រះយុគន្ធរ</div>
+                <div style="font-size: 0.70rem; color: #475569; margin-top: 2px;">គ្រូបង្រៀន ៖ <strong>${exam.teacher}</strong></div>
               </div>
-              <div class="text-center space-y-0.5">
-                <p class="font-moul text-xs">ព្រះរាជាណាចក្រកម្ពុជា</p>
-                <p class="font-moul text-xs">ជាតិ សាសនា ព្រះមហាក្សត្រ</p>
-                <div class="text-sm">☸ ☸ ☸</div>
+              <div style="text-align: center; line-height: 1.4;">
+                <div style="font-family: 'Khmer OS Muol Light', 'Moul', serif; font-size: 0.78rem; font-weight: 700; color: #0f172a;">ព្រះរាជាណាចក្រកម្ពុជា</div>
+                <div style="font-family: 'Khmer OS Muol Light', 'Moul', serif; font-size: 0.76rem; font-weight: 700; color: #0f172a;">ជាតិ សាសនា ព្រះមហាក្សត្រ</div>
+                <div style="font-size: 0.80rem; letter-spacing: 4px; margin-top: 2px; color: #0f172a;">☸ ☸ ☸</div>
               </div>
             </div>
 
-            <!-- Exam Title & Info -->
-            <div class="text-center space-y-2 py-1">
-              <h2 class="font-moul text-base md:text-lg text-slate-900">${exam.title}</h2>
-              <p class="text-xs text-slate-500 font-bold">
-                មេរៀនប្រឡង ៖ ${exam.lessons.join(' • ')}
-              </p>
-              <div class="flex justify-between items-center text-xs pt-3">
+            <!-- Exam Title & Info Bar -->
+            <div style="text-align: center; margin-bottom: 10px;">
+              <h2 style="font-family: 'Khmer OS Muol Light', 'Moul', serif; font-size: 1.05rem; font-weight: 800; color: #0f172a; margin: 0 0 4px 0;">
+                ${exam.title}
+              </h2>
+              <div style="font-size: 0.74rem; font-weight: 700; color: #475569;">
+                មេរៀនប្រឡង ៖ <span style="color: #0f172a;">${exam.lessons.join(' • ')}</span>
+              </div>
+            </div>
+
+            <!-- Student Info & Score Box -->
+            <div style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 10px; margin-bottom: 12px; background: #f8fafc; font-size: 0.74rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                 <div>ឈ្មោះសិស្ស ៖ ................................................................</div>
                 <div>ថ្នាក់ទី ៖ .............</div>
                 <div>កាលបរិច្ឆេទ ៖ ..... / ..... / ២០២៦</div>
               </div>
-              <div class="flex justify-between items-center text-xs text-slate-600 border-t border-dashed border-slate-300 pt-2">
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px dashed #cbd5e1; padding-top: 4px; color: #334155;">
                 <div>មុខវិជ្ជា ៖ <strong>គណិតវិទ្យា</strong></div>
                 <div>រយៈពេល ៖ <strong>${exam.duration}</strong></div>
                 <div>ពិន្ទុសរុប ៖ <strong>២០ ពិន្ទុ</strong></div>
+                <div style="font-weight: 800; color: #0f172a; background: #e2e8f0; padding: 1px 8px; border-radius: 4px;">
+                  ពិន្ទុទទួលបាន ៖ [ ...... / ២០ ]
+                </div>
               </div>
             </div>
 
-            <!-- PART 1: MCQ QUESTIONS (10 QUESTIONS - 10 POINTS) -->
-            <div class="space-y-4 pt-2">
-              <div class="p-2.5 bg-purple-50 rounded-lg border border-purple-200 flex items-center justify-between">
-                <span class="font-bold text-xs text-purple-900 font-moul">
-                  ផ្នែកទី ១ ៖ សំណួរពហុជ្រើសរើស (MCQ) — ចំនួន ១០ សំណួរ (១០ ពិន្ទុ)
-                </span>
-                <span class="text-[11px] text-purple-700 italic">ជ្រើសរើសចម្លើយត្រឹមត្រូវតែមួយគត់</span>
-              </div>
-
-              <div class="space-y-5">
-                ${exam.mcqs.map((q, idx) => `
-                  <div class="space-y-2 break-inside-avoid">
-                    <div class="font-bold text-sm leading-relaxed flex items-start gap-2">
-                      <span class="font-mono text-purple-700 shrink-0">សំណួរទី ${idx + 1} ៖</span>
-                      <span class="flex-1">${this.formatMath(q.q)}</span>
-                      <span class="text-[10px] text-slate-400 font-normal px-2 py-0.5 rounded bg-slate-100">${q.originLesson || ''}</span>
-                    </div>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pl-6 text-xs">
-                      ${q.o.map((opt, oIdx) => `
-                        <div class="flex items-center gap-1.5 p-1.5 rounded border border-slate-200">
-                          <span class="font-bold text-slate-700">(${String.fromCharCode(65 + oIdx)})</span>
-                          <span>${this.formatMath(opt)}</span>
-                        </div>
-                      `).join('')}
-                    </div>
-                  </div>
-                `).join('')}
-              </div>
+            <!-- Instructions Banner -->
+            <div style="background: #f1f5f9; border-left: 3px solid #2563eb; padding: 5px 8px; margin-bottom: 12px; font-size: 0.72rem; color: #1e293b; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-weight: 700;">
+                ✍️ សេចក្តីណែនាំ ៖ ចូរគណនា និងបង្ហាញជំហានដោះស្រាយឱ្យបានក្បោះក្បាយលើគ្រប់លំហាត់ទាំងអស់ (១ លំហាត់ = ${exam.ptsPerProblem} ពិន្ទុ)
+              </span>
+              <span style="font-size: 0.68rem; color: #64748b; font-style: italic;">សរសេរដោយទឹកប៊ិចស្អាត</span>
             </div>
 
-            <!-- PART 2: WRITTEN PROBLEMS (5 QUESTIONS - 10 POINTS) -->
-            <div class="space-y-4 pt-4 border-t-2 border-slate-900 break-before-page">
-              <div class="p-2.5 bg-amber-50 rounded-lg border border-amber-200 flex items-center justify-between">
-                <span class="font-bold text-xs text-amber-900 font-moul">
-                  ផ្នែកទី ២ ៖ លំហាត់សរសេរដោះស្រាយ — ចំនួន ៥ សំណួរ (១០ ពិន្ទុ - ១ លំហាត់ = ២ ពិន្ទុ)
-                </span>
-                <span class="text-[11px] text-amber-800 italic">ចូរគណនា និងបង្ហាញជំហានដោះស្រាយឱ្យបានក្បោះក្បាយ</span>
-              </div>
-
-              <div class="space-y-8">
-                ${exam.written.map((q, idx) => `
-                  <div class="space-y-2 break-inside-avoid">
-                    <div class="font-bold text-sm leading-relaxed flex items-start gap-2">
-                      <span class="font-mono text-amber-800 shrink-0">លំហាត់ទី ${idx + 1} (សំណួរទី ${idx + 11}) ៖</span>
-                      <span class="flex-1">${this.formatMath(q.q)}</span>
-                      <span class="text-[10px] font-bold text-amber-700 px-2 py-0.5 rounded bg-amber-100">[២ ពិន្ទុ]</span>
+            <!-- Written Problems List with Calculation Workspaces -->
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              ${exam.written.map((q, idx) => `
+                <div style="page-break-inside: avoid; break-inside: avoid;">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 0.80rem; font-weight: 700; color: #0f172a; margin-bottom: 4px;">
+                    <div style="display: flex; align-items: baseline; gap: 6px; flex: 1;">
+                      <span style="color: #2563eb; font-weight: 800; white-space: nowrap;">លំហាត់ទី ${idx + 1} ៖</span>
+                      <span style="line-height: 1.45;">${this.formatMath(q.q)}</span>
                     </div>
-                    <!-- Student Calculation Box -->
-                    <div style="min-height: 100px; border: 1px dashed #cbd5e1; border-radius: 8px; background: #fafafa; padding: 8px; margin-top: 6px;">
-                      <span style="font-size: 10px; color: #94a3b8; font-style: italic;">(កន្លែងសម្រាប់សិស្សគណនា និងសរសេរដំណោះស្រាយ)</span>
+                    <div style="display: flex; align-items: center; gap: 6px; margin-left: 8px; white-space: nowrap;">
+                      <span style="font-size: 0.64rem; font-weight: 600; color: #64748b; background: #e2e8f0; padding: 1px 5px; border-radius: 3px;">
+                        ${q.originLesson || ''}
+                      </span>
+                      <span style="font-size: 0.70rem; font-weight: 800; color: #b45309; background: #fef3c7; padding: 1px 6px; border-radius: 4px;">
+                        [${exam.ptsPerProblem} ពិន្ទុ]
+                      </span>
                     </div>
                   </div>
-                `).join('')}
-              </div>
+
+                  <!-- Student Calculation Workspace Box -->
+                  <div style="min-height: ${calcBoxHeight}px; border: 1px dashed #cbd5e1; border-radius: 6px; background: #fafafa; padding: 6px; position: relative;">
+                    <span style="font-size: 0.62rem; color: #94a3b8; font-style: italic; position: absolute; bottom: 4px; right: 8px;">
+                      (កន្លែងសម្រាប់សិស្សធ្វើការគណនា និងសរសេរដំណោះស្រាយ)
+                    </span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+
+            <!-- Page 1 Footer -->
+            <div style="margin-top: 14px; padding-top: 6px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; font-size: 0.65rem; color: #94a3b8;">
+              <span>វិញ្ញាសាប្រឡងគណិតវិទ្យា • សាលារៀនជំនាន់ថ្មី (NGS) • 1st Step Education</span>
+              <span>ទំព័រទី ១ / ២</span>
             </div>
           </div>
 
-          <!-- View 2: Official Teacher's Answer Key (អត្រាកំណែ) -->
-          <div id="viewTeacherKey" class="space-y-6 hidden break-before-page">
-            <div class="text-center space-y-1 pb-4 border-b-2 border-slate-900">
-              <h2 class="font-moul text-base text-purple-900">អត្រាកំណែផ្លូវការ និងតារាងពិន្ទុ (Official Answer Key & Rubric)</h2>
-              <p class="text-xs text-slate-600 font-bold">${exam.title} • គណិតវិទ្យា ${exam.grade}</p>
-              <p class="text-xs text-slate-500">គ្រូបង្រៀន ៖ ${exam.teacher}</p>
+          <!-- ================= PAGE 2 : TEACHER'S OFFICIAL ANSWER KEY & RUBRIC ================= -->
+          <div class="a4-sheet page-2">
+            <div class="page-screen-badge no-print" style="margin-bottom: 12px; background: #dcfce7; color: #166534; border-color: #bbf7d0;">
+              📑 ទំព័រទី ២ ៖ អត្រាកំណែផ្លូវការ & ដំណោះស្រាយខ្លីៗ (Official Answer Key & Rubric)
             </div>
 
-            <!-- MCQ Answers Summary Table -->
-            <div class="space-y-2">
-              <h4 class="font-bold text-xs uppercase tracking-wider text-purple-800">
-                តារាងចម្លើយផ្នែកទី ១ (សំណួរពហុជ្រើសរើស - ១ សំណួរ = ១ ពិន្ទុ) ៖
-              </h4>
-              <div class="grid grid-cols-5 sm:grid-cols-10 gap-2 text-xs">
-                ${exam.mcqs.map((q, idx) => `
-                  <div class="p-2 border-2 border-purple-200 rounded-lg text-center bg-purple-50">
-                    <span class="text-slate-500 font-bold block text-[10px]">សំណួរ ${idx + 1}</span>
-                    <strong class="text-purple-700 text-sm font-black">(${String.fromCharCode(65 + q.a)})</strong>
-                    <span class="text-[9px] text-emerald-600 block font-bold">+១ ពិន្ទុ</span>
-                  </div>
-                `).join('')}
+            <!-- MoEYS & Committee Header -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #0f172a; padding-bottom: 10px; margin-bottom: 12px;">
+              <div style="text-align: left; line-height: 1.4;">
+                <div style="font-family: 'Khmer OS Muol Light', 'Moul', serif; font-size: 0.78rem; font-weight: 700; color: #0f172a;">ក្រសួងអប់រំ យុវជន និងកីឡា</div>
+                <div style="font-weight: 800; font-size: 0.76rem; color: #166534; margin-top: 1px;">សាលារៀនជំនាន់ថ្មី (New Generation School)</div>
+                <div style="font-size: 0.72rem; color: #334155;">គណៈកម្មការរៀបចំវិញ្ញាសា & អត្រាកំណែផ្លូវការ</div>
+                <div style="font-size: 0.70rem; color: #475569; margin-top: 2px;">គ្រូបង្រៀន ៖ <strong>${exam.teacher}</strong></div>
+              </div>
+              <div style="text-align: center; line-height: 1.4;">
+                <div style="font-family: 'Khmer OS Muol Light', 'Moul', serif; font-size: 0.78rem; font-weight: 700; color: #0f172a;">ព្រះរាជាណាចក្រកម្ពុជា</div>
+                <div style="font-family: 'Khmer OS Muol Light', 'Moul', serif; font-size: 0.76rem; font-weight: 700; color: #0f172a;">ជាតិ សាសនា ព្រះមហាក្សត្រ</div>
+                <div style="font-size: 0.80rem; letter-spacing: 4px; margin-top: 2px; color: #0f172a;">☸ ☸ ☸</div>
               </div>
             </div>
 
-            <!-- Detailed Written Solutions (កំណែខ្លីៗ & ដំណោះស្រាយ) -->
-            <div class="space-y-4 pt-4 border-t border-slate-200">
-              <h4 class="font-bold text-xs uppercase tracking-wider text-amber-800">
-                ដំណោះស្រាយលម្អិត & កំណែខ្លីៗផ្នែកទី ២ (លំហាត់សរសេរ ៥ សំណួរ - ១ លំហាត់ = ២ ពិន្ទុ) ៖
-              </h4>
-              <div class="space-y-4">
-                ${exam.written.map((q, idx) => `
-                  <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
-                    <div class="flex justify-between items-center font-bold text-slate-800">
-                      <span>លំហាត់ទី ${idx + 1} (សំណួរទី ${idx + 11}) ៖ ${this.formatMath(q.q)}</span>
-                      <span class="text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded text-[11px]">២.០ ពិន្ទុ</span>
-                    </div>
-                    <div class="p-3 bg-white rounded-lg border border-slate-200 text-slate-700 leading-relaxed font-mono">
-                      <strong>កំណែខ្លីៗ & ដំណោះស្រាយ ៖</strong><br>
-                      ${this.formatMath(q.short_solution || q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
-                    </div>
-                    <div class="flex flex-wrap gap-4 text-[11px] text-slate-500 pt-1">
-                      <span>• សរសេររូបមន្ត / កំណត់លក្ខខណ្ឌ ៖ <strong>០.៥ ពិន្ទុ</strong></span>
-                      <span>• ជំហានជំនួសលេខ & គណនា ៖ <strong>១.០ ពិន្ទុ</strong></span>
-                      <span>• ចម្លើយត្រឹមត្រូវចុងក្រោយ ៖ <strong>០.៥ ពិន្ទុ</strong></span>
-                    </div>
-                  </div>
-                `).join('')}
+            <!-- Title & Rubric Header -->
+            <div style="text-align: center; margin-bottom: 10px;">
+              <h2 style="font-family: 'Khmer OS Muol Light', 'Moul', serif; font-size: 1.0rem; font-weight: 800; color: #166534; margin: 0 0 4px 0;">
+                អត្រាកំណែផ្លូវការ & ដំណោះស្រាយក្បោះក្បាយ (Official Answer Key & Scoring Rubric)
+              </h2>
+              <div style="font-size: 0.74rem; font-weight: 700; color: #475569;">
+                ${exam.title} • គណិតវិទ្យា ${exam.grade} • ពិន្ទុសរុប ២០ ពិន្ទុ
               </div>
+            </div>
+
+            <!-- Official Scoring Rubric Standards Banner -->
+            <div style="background: #f0fdf4; border: 1px solid #86efac; border-radius: 6px; padding: 6px 10px; margin-bottom: 12px; font-size: 0.70rem; color: #166534;">
+              <div style="font-weight: 800; margin-bottom: 2px;">📊 តារាងបែងចែកពិន្ទុស្តង់ដា (Scoring Rubric ក្នុង ១ លំហាត់) ៖</div>
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; font-weight: 600;">
+                <span>• សរសេររូបមន្ត / កំណត់លក្ខខណ្ឌ ៖ <strong>២៥% (${(exam.ptsPerProblem * 0.25).toFixed(1)} ពិន្ទុ)</strong></span>
+                <span>• ជំហានដោះស្រាយ & គណនា ៖ <strong>៥០% (${(exam.ptsPerProblem * 0.50).toFixed(1)} ពិន្ទុ)</strong></span>
+                <span>• ចម្លើយត្រឹមត្រូវចុងក្រោយ ៖ <strong>២៥% (${(exam.ptsPerProblem * 0.25).toFixed(1)} ពិន្ទុ)</strong></span>
+              </div>
+            </div>
+
+            <!-- Detailed Step-by-Step Solutions & Rubric -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              ${exam.written.map((q, idx) => `
+                <div style="border: 1px solid #e2e8f0; border-radius: 6px; padding: 8px 10px; background: #f8fafc; page-break-inside: avoid; break-inside: avoid;">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 0.76rem; font-weight: 700; color: #0f172a; margin-bottom: 4px;">
+                    <div style="display: flex; align-items: baseline; gap: 6px; flex: 1;">
+                      <span style="color: #166534; font-weight: 800; white-space: nowrap;">លំហាត់ទី ${idx + 1} ៖</span>
+                      <span style="line-height: 1.4;">${this.formatMath(q.q)}</span>
+                    </div>
+                    <span style="font-size: 0.70rem; font-weight: 800; color: #166534; background: #dcfce7; padding: 1px 6px; border-radius: 4px; white-space: nowrap; margin-left: 6px;">
+                      ${exam.ptsPerProblem} ពិន្ទុ
+                    </span>
+                  </div>
+
+                  <!-- Short Solution Box -->
+                  <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 6px 8px; font-size: 0.72rem; color: #1e293b; line-height: 1.5; font-family: monospace; margin-bottom: 4px;">
+                    <strong style="color: #b45309; font-family: sans-serif;">💡 កំណែខ្លីៗ & ដំណោះស្រាយ ៖</strong><br>
+                    ${this.formatMath(q.short_solution || q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
+                  </div>
+
+                  <!-- Rubric Point Breakdown for this problem -->
+                  <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: #64748b; border-top: 1px dashed #e2e8f0; padding-top: 3px;">
+                    <span>• រូបមន្ត ៖ <strong>${(exam.ptsPerProblem * 0.25).toFixed(1)} pt</strong></span>
+                    <span>• ជំហានគណនា ៖ <strong>${(exam.ptsPerProblem * 0.50).toFixed(1)} pt</strong></span>
+                    <span>• ចម្លើយ ៖ <strong>${(exam.ptsPerProblem * 0.25).toFixed(1)} pt</strong></span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+
+            <!-- Page 2 Footer -->
+            <div style="margin-top: 14px; padding-top: 6px; border-top: 1px solid #e2e8f0; display: flex; justify-content: space-between; font-size: 0.65rem; color: #94a3b8;">
+              <span>អត្រាកំណែផ្លូវការ • គណិតវិទ្យា សាលារៀនជំនាន់ថ្មី (NGS) • 1st Step Education</span>
+              <span>ទំព័រទី ២ / ២</span>
             </div>
           </div>
+
         </div>
       </div>
     `;
@@ -892,81 +964,61 @@ class QuestionBankController {
     document.body.appendChild(modalBack);
   }
 
-  switchPreviewTab(tab) {
-    const studentView = document.getElementById('viewStudentExam');
-    const teacherView = document.getElementById('viewTeacherKey');
-    const btnExam = document.getElementById('tabBtnPreviewExam');
-    const btnKey = document.getElementById('tabBtnPreviewKey');
-
-    if (tab === 'exam') {
-      if (studentView) studentView.classList.remove('hidden');
-      if (teacherView) teacherView.classList.add('hidden');
-      if (btnExam) btnExam.className = 'py-2.5 border-b-2 border-purple-600 text-purple-700 flex items-center gap-1.5';
-      if (btnKey) btnKey.className = 'py-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-1.5';
-    } else {
-      if (studentView) studentView.classList.add('hidden');
-      if (teacherView) teacherView.classList.remove('hidden');
-      if (btnExam) btnExam.className = 'py-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-800 flex items-center gap-1.5';
-      if (btnKey) btnKey.className = 'py-2.5 border-b-2 border-emerald-600 text-emerald-700 flex items-center gap-1.5';
-    }
+  printBothPages() {
+    document.body.classList.remove('print-only-p1', 'print-only-p2');
+    document.body.classList.add('printing-exam-active');
+    window.onafterprint = () => {
+      document.body.classList.remove('printing-exam-active', 'print-only-p1', 'print-only-p2');
+    };
+    setTimeout(() => window.print(), 100);
   }
 
-  printStudentExam() {
-    this.switchPreviewTab('exam');
-    setTimeout(() => window.print(), 150);
+  printPage1Only() {
+    document.body.classList.remove('print-only-p2');
+    document.body.classList.add('printing-exam-active', 'print-only-p1');
+    window.onafterprint = () => {
+      document.body.classList.remove('printing-exam-active', 'print-only-p1', 'print-only-p2');
+    };
+    setTimeout(() => window.print(), 100);
   }
 
-  printTeacherKey() {
-    this.switchPreviewTab('key');
-    setTimeout(() => window.print(), 150);
+  printPage2Only() {
+    document.body.classList.remove('print-only-p1');
+    document.body.classList.add('printing-exam-active', 'print-only-p2');
+    window.onafterprint = () => {
+      document.body.classList.remove('printing-exam-active', 'print-only-p1', 'print-only-p2');
+    };
+    setTimeout(() => window.print(), 100);
   }
 
   copyExamText() {
     if (!this.currentGeneratedExam) return;
     const ex = this.currentGeneratedExam;
 
-    let text = `${ex.title}\nកម្រិត៖ ${ex.grade} | រយៈពេល៖ ${ex.duration} | ពិន្ទុ៖ ២០\nគ្រូបង្រៀន៖ ${ex.teacher}\n\n`;
-    text += `=== ផ្នែកទី ១ ៖ សំណួរពហុជ្រើសរើស (MCQ) ===\n`;
-    ex.mcqs.forEach((q, i) => {
-      text += `${i + 1}. ${q.q}\n`;
-      q.o.forEach((opt, oI) => {
-        text += `   (${String.fromCharCode(65 + oI)}) ${opt}\n`;
-      });
-      text += '\n';
+    let text = `ក្រសួងអប់រំ យុវជន និងកីឡា - សាលារៀនជំនាន់ថ្មី (NGS)\n`;
+    text += `${ex.title}\n`;
+    text += `កម្រិត៖ ${ex.grade} | រយៈពេល៖ ${ex.duration} | ពិន្ទុសរុប៖ ២០ ពិន្ទុ\n`;
+    text += `គ្រូបង្រៀន៖ ${ex.teacher}\n`;
+    text += `មេរៀនប្រឡង៖ ${ex.lessons.join(' • ')}\n\n`;
+
+    text += `=== ទំព័រទី ១ ៖ សន្លឹកវិញ្ញាសាប្រឡង (Student Exam Sheet) ===\n`;
+    text += `សេចក្តីណែនាំ ៖ ចូរគណនា និងបង្ហាញជំហានដោះស្រាយឱ្យបានក្បោះក្បាយលើគ្រប់លំហាត់ទាំងអស់ (១ លំហាត់ = ${ex.ptsPerProblem} ពិន្ទុ) ៖\n\n`;
+    ex.written.forEach((q, i) => {
+      text += `លំហាត់ទី ${i + 1} (${ex.ptsPerProblem} ពិន្ទុ) [${q.originLesson}] ៖\n${q.q}\n\n`;
     });
 
-    text += `=== ផ្នែកទី ២ ៖ លំហាត់សរសេរដោះស្រាយ ===\n`;
+    text += `\n=== ទំព័រទី ២ ៖ អត្រាកំណែផ្លូវការ & ដំណោះស្រាយខ្លីៗ (Official Teacher Key & Rubric) ===\n\n`;
     ex.written.forEach((q, i) => {
-      text += `លំហាត់ ${i + 1}. ${q.q}\n\n`;
-    });
-
-    text += `=== អត្រាកំណែ (Answer Key) ===\n`;
-    ex.mcqs.forEach((q, i) => {
-      text += `សំណួរ ${i + 1}: (${String.fromCharCode(65 + q.a)})\n`;
-    });
-    ex.written.forEach((q, i) => {
-      text += `លំហាត់ ${i + 1}: ${q.short_solution || q.e}\n`;
+      text += `លំហាត់ទី ${i + 1} (${ex.ptsPerProblem} ពិន្ទុ) ៖ ${q.q}\n`;
+      text += `ដំណោះស្រាយ & កំណែខ្លីៗ ៖ ${q.short_solution || q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។'}\n`;
+      text += `ការបែងចែកពិន្ទុ ៖ រូបមន្ត ${(ex.ptsPerProblem * 0.25).toFixed(1)} ពិន្ទុ | ជំហានគណនា ${(ex.ptsPerProblem * 0.50).toFixed(1)} ពិន្ទុ | ចម្លើយចុងក្រោយ ${(ex.ptsPerProblem * 0.25).toFixed(1)} ពិន្ទុ\n\n`;
     });
 
     navigator.clipboard.writeText(text).then(() => {
       if (window.App && window.App.showNotification) {
-        window.App.showNotification('✅ បានចម្លងវិញ្ញាសា និងអត្រាកំណែរួចរាល់!');
+        window.App.showNotification('✅ បានចម្លងវិញ្ញាសាសរសេរ និងអត្រាកំណែរួចរាល់!');
       } else {
-        alert('✅ បានចម្លងវិញ្ញាសារួចរាល់!');
-      }
-    });
-  }
-
-  createOnlineExamLink() {
-    if (!this.currentGeneratedExam) return;
-    const gradeNum = this.currentGeneratedExam.grade.replace(/[^0-9]/g, '') || '8';
-    const link = `https://worksheet-kh.vercel.app/?exam=1&grade=${gradeNum}&customExam=1`;
-
-    navigator.clipboard.writeText(link).then(() => {
-      if (window.App && window.App.showNotification) {
-        window.App.showNotification('🔗 បានបង្កើត & ចម្លង Link ប្រឡង Online សម្រាប់សិស្សរួចរាល់!');
-      } else {
-        alert('🔗 បានចម្លង Link ប្រឡង Online៖ ' + link);
+        alert('✅ បានចម្លងវិញ្ញាសាសរសេរ និងអត្រាកំណែរួចរាល់!');
       }
     });
   }
@@ -1002,7 +1054,7 @@ class QuestionBankController {
           </div>
           <div style="display: flex; gap: 8px; align-items: center;">
             <button class="btn btn-sm btn-primary" onclick="window.questionBank.openMultiLessonExamModal()">
-              🎲 បង្កើតវិញ្ញាសា ២-៣ មេរៀន
+              🎲 បង្កើតវិញ្ញាសា A4 (PDF)
             </button>
             <button class="btn-icon" onclick="document.getElementById('fullQuestionBankModal').remove()">✕</button>
           </div>
