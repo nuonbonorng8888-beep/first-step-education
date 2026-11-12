@@ -231,6 +231,17 @@ body {
   gap: 8px;
   margin-left: 10px;
   flex-shrink: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-pills-group::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 640px) {
+  .nav-pills-group {
+    display: none !important;
+  }
 }
 
 /* Search Input */
@@ -3020,7 +3031,7 @@ body.light-theme .mobile-glass-dock {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .mobile-glass-dock {
     display: flex;
   }

@@ -152,15 +152,32 @@ class QuestionBankController {
     const lessonMap = new Map();
 
     all.forEach(q => {
-      const matchesGrade = !grade || grade === 'all' || q.g === grade || (q.courseTitle && q.courseTitle.includes(grade));
-      if (matchesGrade && q.lesId) {
+      let matches = false;
+      const ct = q.courseTitle || '';
+      if (!grade || grade === 'all') {
+        matches = true;
+      } else if (grade.includes('មូលដ្ឋាន')) {
+        matches = ct.includes('មូលដ្ឋាន') && (
+          (grade.includes('១១') && ct.includes('១១')) ||
+          (grade.includes('១២') && ct.includes('១២'))
+        );
+      } else if (grade.includes('កម្រិតខ្ពស់')) {
+        matches = ct.includes('កម្រិតខ្ពស់') && (
+          (grade.includes('១១') && ct.includes('១១')) ||
+          (grade.includes('១២') && ct.includes('១២'))
+        );
+      } else {
+        matches = q.g === grade || ct.includes(grade);
+      }
+
+      if (matches && q.lesId) {
         if (!lessonMap.has(q.lesId)) {
           lessonMap.set(q.lesId, {
             id: q.lesId,
             title: q.l || q.lesId,
             chapterTitle: q.ch || 'ជំពូកទូទៅ',
             grade: q.g,
-            courseTitle: q.courseTitle || '',
+            courseTitle: ct,
             questionCount: 0
           });
         }
@@ -185,27 +202,31 @@ class QuestionBankController {
   }
 
   showLockedNotice() {
-    const activeTeacherName = window.App?.currentTeacher?.name || 'គ្រូសមាជិក';
+    const activeTeacherName = window.App?.currentTeacher?.name || 'លោកគ្រូ-អ្នកគ្រូ';
     const modalHtml = `
       <div class="modal-overlay active" id="bank-locked-modal" onclick="if(event.target===this) this.remove()">
-        <div class="modal-card" style="max-width: 500px; text-align: center; border: 1px solid rgba(239, 68, 68, 0.4); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-          <div style="font-size: 3.5rem; margin-bottom: 8px;">🔒</div>
-          <h3 style="color: #f87171; font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">
-            ធនាគារសំណួរត្រូវបានចាក់សោ
+        <div class="modal-card" style="max-width: 520px; text-align: center; border: 1px solid rgba(239, 68, 68, 0.4); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+          <div style="font-size: 3.2rem; margin-bottom: 6px;">🔒</div>
+          <h3 style="color: #f87171; font-size: 1.25rem; font-weight: 800; margin-bottom: 6px;">
+            ធនាគារសំណួរត្រូវបានចាក់សោ (Admin Only)
           </h3>
-          <div style="background: rgba(239, 68, 68, 0.1); border-radius: 12px; padding: 12px 16px; margin: 12px 0; text-align: left; font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary);">
+          <div style="background: rgba(239, 68, 68, 0.1); border-radius: 12px; padding: 12px 16px; margin: 10px 0 14px 0; text-align: left; font-size: 0.85rem; line-height: 1.6; color: var(--text-secondary);">
             <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
               សួស្តី ${activeTeacherName}!
             </div>
-            មុខងារគ្រប់គ្រងធនាគារសំណួរដើមត្រូវបានកំណត់សម្រាប់តែ <strong>Admin (លោកគ្រូ នួន បូណង)</strong> ប៉ុណ្ណោះ។
+            មុខងារគ្រប់គ្រង & កែសម្រួលធនាគារសំណួរដើម (៥,៤៧០ សំណួរ) ត្រូវបានកំណត់សម្រាប់តែ <strong>Admin (លោកគ្រូ នួន បូណង)</strong> ប៉ុណ្ណោះ ដើម្បីធានាសុវត្ថិភាពទិន្នន័យ។
           </div>
 
-          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 14px; text-align: left; font-size: 0.84rem; line-height: 1.6; margin-bottom: 16px;">
-            <div style="color: #10b981; font-weight: 700; margin-bottom: 6px;">✨ សិទ្ធិប្រើប្រាស់របស់លោកគ្រូ-អ្នកគ្រូជាសមាជិក ៖</div>
+          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 12px 16px; text-align: left; font-size: 0.84rem; line-height: 1.6; margin-bottom: 16px;">
+            <div style="color: #10b981; font-weight: 700; margin-bottom: 6px;">✨ សិទ្ធិពេញលេញរបស់លោកគ្រូ-អ្នកគ្រូជាសមាជិក ៖</div>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
               <li style="display: flex; align-items: center; gap: 8px;">
                 <span style="color: #10b981;">✔</span>
-                <strong>ការប្រឡង ៖</strong> បង្កើតវិញ្ញាសា (១០ MCQ + ៥ សរសេរ) និង Link ប្រឡងសិស្ស
+                <strong>បង្កើតវិញ្ញាសា ៖</strong> បង្កើតវិញ្ញាសាប្រឡង (១០ MCQ + ៥ សរសេរ) ជាមួយអត្រាកំណែ
+              </li>
+              <li style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: #10b981;">✔</span>
+                <strong>ប្រឡងសិស្ស ៖</strong> បង្កើត Link ប្រឡង Online និងកត់ត្រាពិន្ទុចូល Google Sheets
               </li>
               <li style="display: flex; align-items: center; gap: 8px;">
                 <span style="color: #10b981;">✔</span>
@@ -214,12 +235,15 @@ class QuestionBankController {
             </ul>
           </div>
 
-          <div style="display: flex; gap: 10px; justify-content: center;">
-            <button class="btn btn-primary" onclick="document.getElementById('bank-locked-modal').remove(); window.questionBank.openMultiLessonExamModal();">
-              📝 ទៅកាន់ការបង្កើតវិញ្ញាសាប្រឡង
+          <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-primary" onclick="document.getElementById('bank-locked-modal').remove(); window.questionBank.openMultiLessonExamModal();" style="font-size: 0.82rem; padding: 7px 14px;">
+              🎲 បង្កើតវិញ្ញាសាប្រឡង
             </button>
-            <button class="btn btn-secondary" onclick="document.getElementById('bank-locked-modal').remove();">
-              យល់ព្រម
+            <button class="btn btn-outline" onclick="document.getElementById('bank-locked-modal').remove(); window.App?.openLoginModal();" style="font-size: 0.82rem; padding: 7px 14px; border-color: #38bdf8; color: #38bdf8;">
+              🔐 ចូលគណនី Admin
+            </button>
+            <button class="btn btn-secondary" onclick="document.getElementById('bank-locked-modal').remove();" style="font-size: 0.82rem; padding: 7px 14px;">
+              បិទ
             </button>
           </div>
         </div>
@@ -267,18 +291,20 @@ class QuestionBankController {
 
         <!-- Grade & Stream Selector Row -->
         <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px;">
-          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-secondary);">កម្រិតថ្នាក់ ៖</span>
+          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-secondary);">កម្រិតថ្នាក់ & កម្រិត ៖</span>
           <div style="display: flex; flex-wrap: wrap; gap: 6px;" id="examGradePills">
             ${[
               { id: 'ថ្នាក់ទី ៧', label: 'ថ្នាក់ទី ៧' },
               { id: 'ថ្នាក់ទី ៨', label: 'ថ្នាក់ទី ៨' },
               { id: 'ថ្នាក់ទី ៩', label: 'ថ្នាក់ទី ៩' },
               { id: 'ថ្នាក់ទី ១០', label: 'ថ្នាក់ទី ១០' },
-              { id: 'ថ្នាក់ទី ១១', label: 'ថ្នាក់ទី ១១' },
-              { id: 'ថ្នាក់ទី ១២', label: 'ថ្នាក់ទី ១២' }
+              { id: 'ថ្នាក់ទី ១១ (មូលដ្ឋាន)', label: 'ថ្នាក់ទី ១១ [មូលដ្ឋាន]' },
+              { id: 'ថ្នាក់ទី ១១ (កម្រិតខ្ពស់)', label: 'ថ្នាក់ទី ១១ [កម្រិតខ្ពស់]' },
+              { id: 'ថ្នាក់ទី ១២ (មូលដ្ឋាន)', label: 'ថ្នាក់ទី ១២ [មូលដ្ឋាន]' },
+              { id: 'ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)', label: 'ថ្នាក់ទី ១២ [កម្រិតខ្ពស់]' }
             ].map(g => `
-              <button type="button" class="btn btn-sm ${g.id === defaultGrade ? 'btn-primary' : 'btn-outline'}" 
-                style="padding: 4px 12px; font-size: 0.8rem; border-radius: 8px;"
+              <button type="button" data-grade="${g.id}" class="btn btn-sm ${g.id === defaultGrade ? 'btn-primary' : 'btn-outline'}" 
+                style="padding: 4px 10px; font-size: 0.78rem; border-radius: 8px;"
                 onclick="window.questionBank.switchExamGrade('${g.id}')">
                 ${g.label}
               </button>
@@ -383,7 +409,8 @@ class QuestionBankController {
     const pillsContainer = document.getElementById('examGradePills');
     if (pillsContainer) {
       pillsContainer.querySelectorAll('button').forEach(btn => {
-        if (btn.textContent.trim() === grade) btn.className = 'btn btn-sm btn-primary';
+        const bg = btn.getAttribute('data-grade') || btn.textContent.trim();
+        if (bg === grade) btn.className = 'btn btn-sm btn-primary';
         else btn.className = 'btn btn-sm btn-outline';
       });
     }
@@ -392,6 +419,16 @@ class QuestionBankController {
     if (titleInput) {
       titleInput.value = `វិញ្ញាសាប្រឡងគណិតវិទ្យាបញ្ចប់មេរៀន (${grade})`;
     }
+
+    // Reset lesson slots for the new grade
+    const lessonsList = this.getLessonsForGrade(grade);
+    this.examConfig.lessons.forEach((slot, idx) => {
+      if (lessonsList[idx]) {
+        slot.lesId = lessonsList[idx].id;
+      } else if (lessonsList[0]) {
+        slot.lesId = lessonsList[0].id;
+      }
+    });
 
     this.renderExamSlots();
   }
@@ -601,18 +638,21 @@ class QuestionBankController {
       const lessonTitle = pool[0]?.l || `មេរៀនទី ${sIdx + 1}`;
       chosenLessonTitles.push(lessonTitle);
 
-      // Filter by level if requested and enough questions exist
-      let levelPool = slot.level === 'all' ? pool : pool.filter(q => q.level === slot.level);
-      if (levelPool.length < slot.mcqCount + slot.writtenCount) {
-        levelPool = pool; // use all questions from THIS SAME LESSON only
+      // Filter by level with smart prioritization strictly within this lesson
+      let combinedPool = [];
+      if (slot.level && slot.level !== 'all') {
+        const matchingLevel = pool.filter(q => q.level === slot.level || (slot.level === 'ងាយ' && q.level === 'ស្រួល') || (slot.level === 'ស្រួល' && q.level === 'ងាយ'));
+        const otherLevel = pool.filter(q => !matchingLevel.includes(q));
+        const shuffledMatches = [...matchingLevel].sort(() => Math.random() - 0.5);
+        const shuffledOthers = [...otherLevel].sort(() => Math.random() - 0.5);
+        combinedPool = [...shuffledMatches, ...shuffledOthers];
+      } else {
+        combinedPool = [...pool].sort(() => Math.random() - 0.5);
       }
 
-      // Shuffle strictly within this lesson's pool
-      const shuffled = [...levelPool].sort(() => Math.random() - 0.5);
-
-      // 1. Pick MCQs for this lesson
+      // 1. Pick MCQs for this lesson strictly from this lesson
       let mcqAdded = 0;
-      for (const q of shuffled) {
+      for (const q of combinedPool) {
         if (mcqAdded >= slot.mcqCount) break;
         if (!usedIds.has(q.id)) {
           selectedMCQs.push({ ...q, originLesson: lessonTitle });
@@ -621,9 +661,9 @@ class QuestionBankController {
         }
       }
 
-      // 2. Pick Written Problems for this lesson
+      // 2. Pick Written Problems for this lesson strictly from remaining questions of this lesson
       let writtenAdded = 0;
-      for (const q of shuffled) {
+      for (const q of combinedPool) {
         if (writtenAdded >= slot.writtenCount) break;
         if (!usedIds.has(q.id)) {
           selectedWritten.push({ ...q, originLesson: lessonTitle });
@@ -1358,8 +1398,10 @@ class QuestionBankController {
               <option value="ថ្នាក់ទី ៨" selected>ថ្នាក់ទី ៨</option>
               <option value="ថ្នាក់ទី ៩">ថ្នាក់ទី ៩</option>
               <option value="ថ្នាក់ទី ១០">ថ្នាក់ទី ១០</option>
-              <option value="ថ្នាក់ទី ១១">ថ្នាក់ទី ១១</option>
-              <option value="ថ្នាក់ទី ១២">ថ្នាក់ទី ១២</option>
+              <option value="ថ្នាក់ទី ១១ (មូលដ្ឋាន)">ថ្នាក់ទី ១១ [មូលដ្ឋាន]</option>
+              <option value="ថ្នាក់ទី ១១ (កម្រិតខ្ពស់)">ថ្នាក់ទី ១១ [កម្រិតខ្ពស់]</option>
+              <option value="ថ្នាក់ទី ១២ (មូលដ្ឋាន)">ថ្នាក់ទី ១២ [មូលដ្ឋាន]</option>
+              <option value="ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)">ថ្នាក់ទី ១២ [កម្រិតខ្ពស់]</option>
             </select>
           </div>
           <div>

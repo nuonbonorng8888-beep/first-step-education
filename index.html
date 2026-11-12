@@ -62,7 +62,7 @@
         </a>
 
         <!-- Main Nav Links (Tesdopi Style) -->
-        <div class="nav-pills-group desktop-only">
+        <div class="nav-pills-group">
           <button class="cat-pill active" onclick="App.backToCatalog()" id="nav-link-home">ទំព័រដើម</button>
           <button class="cat-pill" onclick="App.scrollToLessons()" id="nav-link-lessons">មេរៀន</button>
           <button class="cat-pill" onclick="App.openDiagnosticModal()" id="nav-link-test">តេស្តសមត្ថភាព</button>
@@ -110,11 +110,11 @@
           📑 <span class="desktop-only" style="font-size: 0.74rem;">សន្លឹកកិច្ចការ</span>
         </button>
 
-        <button class="btn btn-outline nav-bank-btn" id="btn-bank-nav" onclick="window.questionBank.openQuestionBankModal()" title="ធនាគារសំណួរ ៣,៣០០+ (សម្រាប់តែ Admin នួន បូណង)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-bank-btn" id="btn-bank-nav" onclick="window.questionBank.openQuestionBankModal()" title="ធនាគារសំណួរ ៥,៤៧០+ (សម្រាប់តែ Admin នួន បូណង)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px;">
           📚 <span class="desktop-only" style="font-size: 0.74rem;">ធនាគារសំណួរ</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v84)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v85)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
           🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
         </button>
 
@@ -1700,15 +1700,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=84"></script>
-  <script src="js/question-bank.js?v=84"></script>
-  <script src="js/app.js?v=84"></script>
-  <script src="js/visits.js?v=84"></script>
+  <script src="js/storage.js?v=85"></script>
+  <script src="js/question-bank.js?v=85"></script>
+  <script src="js/app.js?v=85"></script>
+  <script src="js/visits.js?v=85"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=84').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=85').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

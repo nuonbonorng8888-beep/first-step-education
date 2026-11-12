@@ -1,5 +1,5 @@
 // 1st Step Education PWA Service Worker
-const CACHE_NAME = '1st-step-v84';
+const CACHE_NAME = '1st-step-v85';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -70,10 +70,16 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Version and teachers data must always bypass cache for instant real-time sync across devices
-  if (event.request.url.includes('version.json') || event.request.url.includes('teachers.json')) {
+  // Version, teachers data, and main HTML must always fetch network-first with cache-bust to prevent stale UI
+  if (event.request.url.includes('version.json') || event.request.url.includes('teachers.json') || event.request.mode === 'navigate' || event.request.url.endsWith('/index.html') || event.request.url.endsWith('/')) {
     event.respondWith(
-      fetch(event.request, { cache: 'no-store' }).catch(() => caches.match(event.request))
+      fetch(event.request, { cache: 'no-store' }).then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
+          const resClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
+        }
+        return networkResponse;
+      }).catch(() => caches.match(event.request))
     );
     return;
   }
