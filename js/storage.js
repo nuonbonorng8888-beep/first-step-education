@@ -43,11 +43,11 @@ const StorageService = {
       if (raw) localTeachers = JSON.parse(raw);
     } catch (e) {}
 
-    // Clean up legacy sample/dummy teachers (លោកគ្រូ សុខា, អ្នកគ្រូ ចិន្តា) so they never reappear
+    // Only clean up exact dummy names if present
     if (Array.isArray(localTeachers)) {
       localTeachers = localTeachers.filter(t => {
-        if (t.id === 't-1001' || t.name === 'លោកគ្រូ សុខា' || String(t.pin) === '1001') return false;
-        if (t.id === 't-1002' || t.name === 'អ្នកគ្រូ ចិន្តា' || String(t.pin) === '1002') return false;
+        if (t.name === 'លោកគ្រូ សុខា' && t.role !== 'admin') return false;
+        if (t.name === 'អ្នកគ្រូ ចិន្តា' && t.role !== 'admin') return false;
         return true;
       });
     }
@@ -71,8 +71,7 @@ const StorageService = {
     // Filter server teachers to exclude deleted and dummy teachers
     const validJsonTeachers = (Array.isArray(jsonTeachers) ? jsonTeachers : []).filter(jt => {
       if (deletedIds.includes(jt.id)) return false;
-      if (jt.id === 't-1001' || jt.name === 'លោកគ្រូ សុខា') return false;
-      if (jt.id === 't-1002' || jt.name === 'អ្នកគ្រូ ចិន្តា') return false;
+      if (jt.name === 'លោកគ្រូ សុខា' || jt.name === 'អ្នកគ្រូ ចិន្តា') return false;
       return true;
     });
 

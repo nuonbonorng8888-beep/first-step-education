@@ -1,6 +1,6 @@
 {
-  "version": "v80",
-  "build": 80,
-  "updatedAt": "2026-11-12T23:59:00+07:00",
-  "description": "Purge sample teachers, prioritize user teacher edits and persistent deletions"
+  "version": "v81",
+  "build": 81,
+  "updatedAt": "2026-11-13T00:05:00+07:00",
+  "description": "Safe filter for user custom teachers and cross-device sync"
 }

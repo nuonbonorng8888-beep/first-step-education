@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=80">
+  <link rel="stylesheet" href="css/style.css?v=81">
 </head>
 <body>
 
@@ -95,7 +95,7 @@
           🔐 <span class="nav-auth-text">គ្រូបង្រៀន</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v80)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v81)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
           🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
         </button>
 
@@ -1635,14 +1635,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=80"></script>
-  <script src="js/app.js?v=80"></script>
-  <script src="js/visits.js?v=80"></script>
+  <script src="js/storage.js?v=81"></script>
+  <script src="js/app.js?v=81"></script>
+  <script src="js/visits.js?v=81"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=80').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=81').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {
