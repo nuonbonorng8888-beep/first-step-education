@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=77">
+  <link rel="stylesheet" href="css/style.css?v=78">
 </head>
 <body>
 
@@ -793,49 +793,92 @@
 
   <!-- ================= TEACHER LOGIN MODAL / GATE LOCK ================= -->
   <div class="modal-overlay" id="login-modal" onclick="App.onLoginModalOverlayClick(event)">
-    <div class="modal-card gate-lock-card" style="max-width: 460px;">
+    <div class="modal-card gate-lock-card" style="max-width: 480px;">
       <div class="modal-header">
         <h3 class="modal-title" id="login-modal-title">🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)</h3>
         <button class="btn-icon gate-hide-on-lock" id="btn-close-login-modal" onclick="App.closeLoginModal()">✕</button>
       </div>
-      <form onsubmit="App.submitLogin(event)">
-        <div class="modal-body" style="text-align: center; gap: 16px;">
-          <div style="width: 82px; height: 82px; margin: 0 auto; border-radius: 26px; overflow: hidden; box-shadow: 0 10px 28px rgba(6, 182, 212, 0.35); border: 2px solid rgba(56, 189, 248, 0.3);">
+
+      <!-- VIEW 1: SELECT TEACHER PROFILE (ជ្រើសរើសឈ្មោះគ្រូ) -->
+      <div id="gate-view-select" style="display: block;">
+        <div class="modal-body" style="text-align: center; gap: 14px;">
+          <div style="width: 72px; height: 72px; margin: 0 auto; border-radius: 22px; overflow: hidden; box-shadow: 0 8px 24px rgba(6, 182, 212, 0.35); border: 2px solid rgba(56, 189, 248, 0.35);">
             <img src="assets/mascot.jpg" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <div class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.72rem; padding: 4px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 8px;">
+            <div class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.72rem; padding: 4px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 6px;">
               🔒 វិបសាយត្រូវបានចាក់សោរឯកជន (Private Platform)
             </div>
-            <h4 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 5px; color: var(--text-primary);" id="login-heading-text">
-              បញ្ចូលលេខកូដ PIN ដើម្បីដោះសោរ
+            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; color: var(--text-primary);">
+              សូមជ្រើសរើសឈ្មោះលោកគ្រូ-អ្នកគ្រូ
             </h4>
             <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
-              គេហទំព័រនេះសម្រាប់តែលោកគ្រូ-អ្នកគ្រូដែលមានការអនុញ្ញាតប៉ុណ្ណោះ។ សូមបញ្ចូលលេខកូដសម្ងាត់ (PIN) ដើម្បីបើកដំណើរការមេរៀន និងសន្លឹកកិច្ចការ។
+              ចុចលើឈ្មោះរបស់លោកគ្រូ-អ្នកគ្រូខាងក្រោម ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖
             </p>
           </div>
 
-          <div class="form-group" style="margin-top: 4px;">
-            <input type="password" id="admin-pin-input" class="form-input" placeholder="•••••" maxlength="10" autocomplete="off" style="font-size: 1.8rem; letter-spacing: 12px; text-align: center; font-weight: 800; padding: 12px;" required>
-          </div>
-          <div style="display: flex; justify-content: center; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--text-muted); cursor: pointer;" onclick="App.togglePinVisibility()">
-            <span id="pin-toggle-icon">👁️</span>
-            <span id="pin-toggle-text">បង្ហាញលេខកូដ</span>
+          <!-- DYNAMIC TEACHER CARDS LIST -->
+          <div class="gate-teacher-list" id="gate-teacher-list-container">
+            <!-- Dynamically populated by App.renderGateTeacherList() -->
           </div>
 
-          <div id="login-error-msg" style="color: #fb7185; background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: 8px; padding: 8px 12px; font-size: 0.8rem; display: none; line-height: 1.4;"></div>
-
-          <div style="background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.18); border-radius: 10px; padding: 10px 14px; font-size: 0.78rem; color: var(--text-secondary); text-align: center; line-height: 1.5;">
-            🔒 សូមបញ្ចូលលេខកូដសម្ងាត់ (PIN) ដែលលោកគ្រូ នួន បូណង បានផ្ដល់ជូនដើម្បីចូលប្រើប្រាស់។
+          <div style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.5;">
+            📞 ប្រសិនបើគ្មានឈ្មោះក្នុងបញ្ជីទេ សូមទាក់ទងមកកាន់ <strong>លោកគ្រូ នួន បូណង</strong>
           </div>
         </div>
-        <div class="modal-footer" style="justify-content: center; gap: 12px;">
-          <button type="button" class="btn btn-secondary gate-hide-on-lock" id="btn-cancel-login" onclick="App.closeLoginModal()">បោះបង់</button>
-          <button type="submit" class="btn btn-primary" id="btn-submit-pin" style="min-width: 180px; padding: 10px 24px; font-weight: 700;">
-            🔓 ដោះសោរចូលវិបសាយ
-          </button>
-        </div>
-      </form>
+      </div>
+
+      <!-- VIEW 2: PIN INPUT FOR SELECTED TEACHER (វាយលេខកូដ PIN គ្រូនោះ) -->
+      <div id="gate-view-pin" style="display: none;">
+        <form onsubmit="App.submitLogin(event)">
+          <input type="hidden" id="gate-selected-teacher-id" value="">
+          <div class="modal-body" style="text-align: center; gap: 14px;">
+            <div style="text-align: left; margin-bottom: -4px;">
+              <button type="button" class="btn btn-sm btn-secondary" onclick="App.showGateSelectView()" style="font-size: 0.78rem; padding: 4px 10px; display: inline-flex; align-items: center; gap: 4px;">
+                ← ជ្រើសរើសឈ្មោះផ្សេង
+              </button>
+            </div>
+
+            <!-- Selected Profile Banner -->
+            <div id="gate-selected-profile-card" style="background: rgba(56, 189, 248, 0.08); border: 1.5px solid rgba(56, 189, 248, 0.3); border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; gap: 12px; text-align: left;">
+              <div id="gate-selected-avatar" style="width: 46px; height: 46px; border-radius: 50%; background: rgba(56, 189, 248, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">👑</div>
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                  <span id="gate-selected-name" style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">លោកគ្រូ នួន បូណង</span>
+                  <span id="gate-selected-badge" class="member-badge-admin">Super Admin</span>
+                </div>
+                <div id="gate-selected-school" style="font-size: 0.76rem; color: var(--text-muted); margin-top: 2px;">វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS) • គណិតវិទ្យា</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; color: var(--text-primary);" id="login-heading-text">
+                បញ្ចូលលេខកូដសម្ងាត់ (PIN)
+              </h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary);">
+                សូមវាយលេខកូដ PIN ផ្ទាល់ខ្លួនរបស់លោកគ្រូ-អ្នកគ្រូ
+              </p>
+            </div>
+
+            <div class="form-group" style="margin-top: 2px;">
+              <input type="password" id="admin-pin-input" class="form-input" placeholder="•••••" maxlength="10" autocomplete="off" style="font-size: 1.8rem; letter-spacing: 12px; text-align: center; font-weight: 800; padding: 12px;" required>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--text-muted); cursor: pointer;" onclick="App.togglePinVisibility()">
+              <span id="pin-toggle-icon">👁️</span>
+              <span id="pin-toggle-text">បង្ហាញលេខកូដ</span>
+            </div>
+
+            <div id="login-error-msg" style="color: #fb7185; background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: 8px; padding: 8px 12px; font-size: 0.8rem; display: none; line-height: 1.4;"></div>
+          </div>
+
+          <div class="modal-footer" style="justify-content: center; gap: 12px;">
+            <button type="button" class="btn btn-secondary gate-hide-on-lock" id="btn-cancel-login" onclick="App.closeLoginModal()">បោះបង់</button>
+            <button type="submit" class="btn btn-primary" id="btn-submit-pin" style="min-width: 180px; padding: 10px 24px; font-weight: 700;">
+              🔓 ចូលប្រើប្រព័ន្ធ
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -1579,14 +1622,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=77"></script>
-  <script src="js/app.js?v=77"></script>
-  <script src="js/visits.js?v=77"></script>
+  <script src="js/storage.js?v=78"></script>
+  <script src="js/app.js?v=78"></script>
+  <script src="js/visits.js?v=78"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=77').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=78').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

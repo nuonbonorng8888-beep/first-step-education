@@ -576,39 +576,120 @@ function doGet(e) {
     }
   },
 
-  openLoginModal() {
-    if (this.currentTeacher) {
+  openLoginModal(isGateLock = false) {
+    if (this.currentTeacher && !document.body.classList.contains('portal-locked')) {
       if (confirm(`តើលោកអ្នកចង់ចាកចេញពីគណនី «${this.currentTeacher.name}» ដែរឬទេ?`)) {
         this.logoutTeacher();
       }
       return;
     }
     const modal = document.getElementById('login-modal');
-    const input = document.getElementById('admin-pin-input');
-    const err = document.getElementById('login-error-msg');
     const closeBtn = document.getElementById('btn-close-login-modal');
-    const cancelBtn = document.getElementById('btn-cancel-login');
+    const isLocked = isGateLock || document.body.classList.contains('portal-locked');
+
+    if (closeBtn) closeBtn.style.display = isLocked ? 'none' : 'inline-flex';
+
+    this.showGateSelectView();
+    if (modal) modal.classList.add('active');
+  },
+
+  showGateSelectView() {
+    const viewSelect = document.getElementById('gate-view-select');
+    const viewPin = document.getElementById('gate-view-pin');
     const titleEl = document.getElementById('login-modal-title');
-    const headingEl = document.getElementById('login-heading-text');
+    const isLocked = document.body.classList.contains('portal-locked');
+
+    if (viewSelect) viewSelect.style.display = 'block';
+    if (viewPin) viewPin.style.display = 'none';
+    if (titleEl) titleEl.textContent = isLocked ? '🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)' : '🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)';
+
+    this.renderGateTeacherList();
+  },
+
+  renderGateTeacherList() {
+    const container = document.getElementById('gate-teacher-list-container');
+    if (!container) return;
+
+    const list = [...(this.teachersList || [])];
+    // Sort so Admin (លោកគ្រូ នួន បូណង) is always at the top!
+    list.sort((a, b) => {
+      const aIsAdm = a.role === 'admin' || String(a.pin) === '95511';
+      const bIsAdm = b.role === 'admin' || String(b.pin) === '95511';
+      if (aIsAdm && !bIsAdm) return -1;
+      if (!aIsAdm && bIsAdm) return 1;
+      return (a.name || '').localeCompare(b.name || '', 'km');
+    });
+
+    if (list.length === 0) {
+      container.innerHTML = '<div style="color: var(--text-muted); padding: 14px; text-align: center;">គ្មានបញ្ជីឈ្មោះគ្រូឡើយ</div>';
+      return;
+    }
+
+    container.innerHTML = list.map(t => {
+      const isAdm = t.role === 'admin' || String(t.pin) === '95511';
+      const avatar = isAdm ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫');
+      const badgeClass = isAdm ? 'member-badge-admin' : 'member-badge-member';
+      const badgeLabel = isAdm ? 'Super Admin' : 'គ្រូសមាជិក';
+      const schoolText = t.school || 'សាលារៀនជំនាន់ថ្មី';
+      const subjectText = t.subject || 'គណិតវិទ្យា';
+
+      return `
+        <div class="gate-teacher-card ${isAdm ? 'is-admin' : ''}" onclick="App.selectGateTeacher('${t.id}')" role="button" tabindex="0">
+          <div class="gate-t-avatar">${avatar}</div>
+          <div style="flex: 1; min-width: 0;">
+            <div class="gate-t-name">
+              <span>${t.name}</span>
+              <span class="${badgeClass}">${badgeLabel}</span>
+            </div>
+            <div class="gate-t-meta">${schoolText} • ${subjectText}</div>
+          </div>
+          <div class="gate-t-arrow">➔</div>
+        </div>
+      `;
+    }).join('');
+  },
+
+  selectGateTeacher(teacherId) {
+    const t = (this.teachersList || []).find(x => x.id === teacherId);
+    if (!t) return;
+
+    const viewSelect = document.getElementById('gate-view-select');
+    const viewPin = document.getElementById('gate-view-pin');
+    const idInp = document.getElementById('gate-selected-teacher-id');
+    const nameEl = document.getElementById('gate-selected-name');
+    const avatarEl = document.getElementById('gate-selected-avatar');
+    const badgeEl = document.getElementById('gate-selected-badge');
+    const schoolEl = document.getElementById('gate-selected-school');
+    const pinInp = document.getElementById('admin-pin-input');
+    const err = document.getElementById('login-error-msg');
+    const cancelBtn = document.getElementById('btn-cancel-login');
+    const isLocked = document.body.classList.contains('portal-locked');
+
+    if (idInp) idInp.value = t.id;
+    if (nameEl) nameEl.textContent = t.name;
+    const isAdm = t.role === 'admin' || String(t.pin) === '95511';
+    if (avatarEl) avatarEl.textContent = isAdm ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫');
+    if (badgeEl) {
+      badgeEl.className = isAdm ? 'member-badge-admin' : 'member-badge-member';
+      badgeEl.textContent = isAdm ? 'Super Admin' : 'គ្រូសមាជិក';
+    }
+    if (schoolEl) schoolEl.textContent = `${t.school || 'សាលារៀនជំនាន់ថ្មី'} • ${t.subject || 'គណិតវិទ្យា'}`;
+    if (cancelBtn) cancelBtn.style.display = isLocked ? 'none' : 'inline-block';
 
     if (err) err.style.display = 'none';
-    if (input) {
-      input.value = '';
-      input.type = 'password';
+    if (pinInp) {
+      pinInp.value = '';
+      pinInp.type = 'password';
     }
     const icon = document.getElementById('pin-toggle-icon');
     const txt = document.getElementById('pin-toggle-text');
     if (icon) icon.textContent = '👁️';
     if (txt) txt.textContent = 'បង្ហាញលេខកូដ';
 
-    const isLocked = document.body.classList.contains('portal-locked');
-    if (closeBtn) closeBtn.style.display = isLocked ? 'none' : 'inline-flex';
-    if (cancelBtn) cancelBtn.style.display = isLocked ? 'none' : 'inline-block';
-    if (titleEl) titleEl.textContent = isLocked ? '🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)' : '🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)';
-    if (headingEl) headingEl.textContent = isLocked ? 'បញ្ចូលលេខកូដ PIN ដើម្បីដោះសោរ' : 'ផ្ទៀងផ្ទាត់លេខកូដសម្ងាត់គ្រូ (PIN)';
+    if (viewSelect) viewSelect.style.display = 'none';
+    if (viewPin) viewPin.style.display = 'block';
 
-    if (modal) modal.classList.add('active');
-    setTimeout(() => input?.focus(), 250);
+    setTimeout(() => pinInp?.focus(), 250);
   },
 
   closeLoginModal(force = false) {
@@ -645,6 +726,7 @@ function doGet(e) {
   async submitLogin(e) {
     if (e) e.preventDefault();
     const input = document.getElementById('admin-pin-input');
+    const selectedId = document.getElementById('gate-selected-teacher-id')?.value;
     const err = document.getElementById('login-error-msg');
     const pin = input ? input.value.trim() : '';
 
@@ -663,18 +745,27 @@ function doGet(e) {
     }
 
     try {
-      const res = await StorageService.login(pin);
-      if (res && res.success) {
-        const teacher = res.teacher || {
+      let matched = null;
+      if (selectedId) {
+        matched = (this.teachersList || []).find(t => t.id === selectedId && String(t.pin) === String(pin) && t.status !== 'blocked');
+      } else {
+        matched = (this.teachersList || []).find(t => String(t.pin) === String(pin) && t.status !== 'blocked');
+      }
+
+      if (!matched && String(pin) === '95511') {
+        matched = {
           id: 't-admin',
           name: 'លោកគ្រូ នួន បូណង',
           role: 'admin',
           pin: '95511',
           sheetUrl: this.defaultTeacherSheetUrl
         };
+      }
 
+      if (matched) {
+        const teacher = matched;
         this.currentTeacher = teacher;
-        this.isAdmin = (res.role === 'admin' || String(teacher.pin) === '95511');
+        this.isAdmin = (teacher.role === 'admin' || String(teacher.pin) === '95511');
         this.isTeacher = true;
 
         sessionStorage.setItem('teacher_session', JSON.stringify(teacher));
@@ -699,8 +790,13 @@ function doGet(e) {
         this.closeLoginModal(true);
         this.showToast(`🎉 ស្វាគមន៍ ${teacher.name} (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})!`, 'success');
       } else {
+        const selectedTeacher = selectedId ? (this.teachersList || []).find(t => t.id === selectedId) : null;
         if (err) {
-          err.textContent = 'លេខកូដសម្ងាត់មិនត្រឹមត្រូវ ឬគណនីត្រូវបានបិទ! សូមទាក់ទង Admin';
+          if (selectedTeacher) {
+            err.textContent = `លេខកូដសម្ងាត់មិនត្រឹមត្រូវសម្រាប់ «${selectedTeacher.name}» ទេ! សូមវាយម្តងទៀត។`;
+          } else {
+            err.textContent = 'លេខកូដសម្ងាត់មិនត្រឹមត្រូវ ឬគណនីត្រូវបានបិទ! សូមទាក់ទងលោកគ្រូ នួន បូណង';
+          }
           err.style.display = 'block';
         }
         this.showToast('លេខកូដសម្ងាត់មិនត្រឹមត្រូវ!', 'error');
@@ -1064,6 +1160,7 @@ function doGet(e) {
     StorageService.saveTeachers(this.teachersList);
     this.closeMemberFormModal();
     this.renderMemberList();
+    this.renderGateTeacherList();
   },
 
   toggleBlockMember(memberId) {
@@ -1074,6 +1171,7 @@ function doGet(e) {
     this.showToast(t.status === 'blocked' ? `បានផ្អាកសិទ្ធិ «${t.name}»` : `បានបើកសិទ្ធិ «${t.name}» ឡើងវិញ`, 'info');
     this.logTeacherActivity('Admin', t.status === 'blocked' ? 'បានផ្អាកសិទ្ធិគ្រូ' : 'បានបើកសិទ្ធិគ្រូឡើងវិញ', t.name);
     this.renderMemberList();
+    this.renderGateTeacherList();
   },
 
   deleteMember(memberId) {
@@ -1091,6 +1189,7 @@ function doGet(e) {
     this.showToast(`បានលុបគ្រូសមាជិក «${t.name}» រួចរាល់`, 'info');
     this.logTeacherActivity('Admin', 'បានលុបគ្រូសមាជិក', t.name);
     this.renderMemberList();
+    this.renderGateTeacherList();
   },
 
   clearActivityLogs() {
