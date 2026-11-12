@@ -1,6 +1,6 @@
 {
-  "version": "v82",
-  "build": 82,
-  "updatedAt": "2026-11-13T00:15:00+07:00",
-  "description": "Add Teacher Chhorn Chhunny & Teacher Chan Piseth, switch Super Admin to Admin"
+  "version": "v83",
+  "build": 83,
+  "updatedAt": "2026-11-13T01:05:00+07:00",
+  "description": "Integration of 3,300+ Question Bank (Grade 7-12), Multi-Lesson Exam Generator (10 MCQ + 5 Written + Answer Key), Member Teacher Role Permissions"
 }

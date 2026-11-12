@@ -629,14 +629,53 @@ function doGet(e) {
   },
 
   updateAdminUI() {
+    const isTeacherLoggedIn = !!this.currentTeacher;
+    const isAdm = this.isAdmin;
+
     const adminEls = document.querySelectorAll('.admin-only');
     adminEls.forEach(el => {
-      el.style.display = this.isAdmin ? (el.tagName === 'BUTTON' ? 'inline-flex' : 'block') : 'none';
+      el.style.display = isAdm ? (el.tagName === 'BUTTON' ? 'inline-flex' : 'block') : 'none';
     });
 
     const membersNavBtn = document.getElementById('btn-members-nav');
     if (membersNavBtn) {
-      membersNavBtn.style.display = this.isAdmin ? 'inline-flex' : 'none';
+      membersNavBtn.style.display = isAdm ? 'inline-flex' : 'none';
+    }
+
+    // Teacher Exam Nav Button (Available to both Admin and Member teachers)
+    const examNavBtn = document.getElementById('btn-exam-nav');
+    if (examNavBtn) {
+      examNavBtn.style.display = isTeacherLoggedIn ? 'inline-flex' : 'none';
+    }
+
+    // Teacher Worksheet Extractor Nav Button (Available to both Admin and Member teachers)
+    const wsNavBtn = document.getElementById('btn-ws-nav');
+    if (wsNavBtn) {
+      wsNavBtn.style.display = isTeacherLoggedIn ? 'inline-flex' : 'none';
+    }
+
+    // Question Bank Nav Button (Accessible to Admin; locked with badge for Member teachers)
+    const bankNavBtn = document.getElementById('btn-bank-nav');
+    if (bankNavBtn) {
+      if (isAdm) {
+        bankNavBtn.style.display = 'inline-flex';
+        bankNavBtn.className = 'btn btn-secondary nav-bank-btn';
+        bankNavBtn.title = 'ធនាគារសំណួរ ៣,៣០០+ (គ្រប់គ្រងដោយ Admin)';
+        bankNavBtn.innerHTML = '📚 <span class="desktop-only" style="font-size:0.74rem;">ធនាគារសំណួរ</span>';
+      } else if (isTeacherLoggedIn) {
+        bankNavBtn.style.display = 'inline-flex';
+        bankNavBtn.className = 'btn btn-outline nav-bank-btn';
+        bankNavBtn.title = '🔒 ធនាគារសំណួរ (សម្រាប់តែ Admin នួន បូណង)';
+        bankNavBtn.innerHTML = '🔒 <span class="desktop-only" style="font-size:0.74rem; opacity:0.85;">ធនាគារសំណួរ</span>';
+      } else {
+        bankNavBtn.style.display = 'none';
+      }
+    }
+
+    // Dock Exam Button for mobile/tablet
+    const dockExamBtn = document.getElementById('dock-btn-exam');
+    if (dockExamBtn) {
+      dockExamBtn.style.display = isTeacherLoggedIn ? 'flex' : 'none';
     }
 
     const authBtn = document.getElementById('btn-admin-auth');
