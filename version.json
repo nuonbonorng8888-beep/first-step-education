@@ -1,6 +1,6 @@
 {
-  "version": "v81",
-  "build": 81,
-  "updatedAt": "2026-11-13T00:05:00+07:00",
-  "description": "Safe filter for user custom teachers and cross-device sync"
+  "version": "v82",
+  "build": 82,
+  "updatedAt": "2026-11-13T00:15:00+07:00",
+  "description": "Add Teacher Chhorn Chhunny & Teacher Chan Piseth, switch Super Admin to Admin"
 }

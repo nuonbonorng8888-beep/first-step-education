@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v81';
+    this.appVersion = 'v82';
 
     const checkVersion = async () => {
       try {
@@ -665,7 +665,7 @@ function doGet(e) {
     const modalMembersBtn = document.getElementById('btn-modal-open-members');
     if (nameDisplay && schoolDisplay) {
       if (this.currentTeacher) {
-        nameDisplay.textContent = `${this.currentTeacher.name} (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})`;
+        nameDisplay.textContent = `${this.currentTeacher.name} (${this.isAdmin ? 'Admin' : 'គ្រូសមាជិក'})`;
         schoolDisplay.textContent = this.currentTeacher.school || 'សាលារៀនជំនាន់ថ្មី';
       } else {
         nameDisplay.textContent = 'មិនទាន់ Login (ភ្ញៀវ/គ្រូទូទៅ)';
@@ -742,7 +742,7 @@ function doGet(e) {
       if (isBlocked) return ''; // Blocked members cannot login
       const avatar = isAdm ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫');
       const badgeClass = isAdm ? 'member-badge-admin' : 'member-badge-member';
-      const badgeLabel = isAdm ? 'Super Admin' : 'គ្រូសមាជិក';
+      const badgeLabel = isAdm ? 'Admin' : 'គ្រូសមាជិក';
       const schoolText = t.school || 'សាលារៀនជំនាន់ថ្មី';
       const subjectText = t.subject || 'គណិតវិទ្យា';
 
@@ -785,7 +785,7 @@ function doGet(e) {
     if (avatarEl) avatarEl.textContent = isAdm ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫');
     if (badgeEl) {
       badgeEl.className = isAdm ? 'member-badge-admin' : 'member-badge-member';
-      badgeEl.textContent = isAdm ? 'Super Admin' : 'គ្រូសមាជិក';
+      badgeEl.textContent = isAdm ? 'Admin' : 'គ្រូសមាជិក';
     }
     if (schoolEl) schoolEl.textContent = `${t.school || 'សាលារៀនជំនាន់ថ្មី'} • ${t.subject || 'គណិតវិទ្យា'}`;
     if (cancelBtn) cancelBtn.style.display = isLocked ? 'none' : 'inline-block';
@@ -896,13 +896,13 @@ function doGet(e) {
         this.logTeacherActivity(
           teacher.name,
           'ចូលប្រព័ន្ធ (Login)',
-          `បានចូលប្រើប្រព័ន្ធជោគជ័យ (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})`
+          `បានចូលប្រើប្រព័ន្ធជោគជ័យ (${this.isAdmin ? 'Admin' : 'គ្រូសមាជិក'})`
         );
 
         document.body.classList.remove('portal-locked');
         this.updateAdminUI();
         this.closeLoginModal(true);
-        this.showToast(`🎉 ស្វាគមន៍ ${teacher.name} (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})!`, 'success');
+        this.showToast(`🎉 ស្វាគមន៍ ${teacher.name} (${this.isAdmin ? 'Admin' : 'គ្រូសមាជិក'})!`, 'success');
       } else {
         const selectedTeacher = selectedId ? (this.teachersList || []).find(t => t.id === selectedId) : null;
         if (err) {
@@ -989,7 +989,7 @@ function doGet(e) {
 
   openMemberDashboardModal() {
     if (!this.isAdmin) {
-      this.showToast('មុខងារនេះសម្រាប់តែ Super Admin (លោកគ្រូ នួន បូណង) ប៉ុណ្ណោះ!', 'warning');
+      this.showToast('មុខងារនេះសម្រាប់តែ Admin (លោកគ្រូ នួន បូណង) ប៉ុណ្ណោះ!', 'warning');
       return;
     }
     const modal = document.getElementById('member-dashboard-modal');
@@ -1096,7 +1096,7 @@ function doGet(e) {
               <div class="member-name">
                 <span>${t.name}</span>
                 <span class="${isAdmin ? 'member-badge-admin' : 'member-badge-member'}">
-                  ${isAdmin ? '👑 Super Admin' : 'គ្រូសមាជិក'}
+                  ${isAdmin ? '👑 Admin' : 'គ្រូសមាជិក'}
                 </span>
                 ${isNewlyAdded ? '<span class="member-badge-new">✨ ទើបបន្ថែមថ្មី</span>' : ''}
                 ${isBlocked ? '<span style="color:#ef4444; font-size:0.7rem; font-weight:700;">[បានផ្អាក]</span>' : ''}
@@ -1376,7 +1376,7 @@ function doGet(e) {
     const t = this.teachersList.find(x => x.id === memberId);
     if (!t) return;
     if (t.role === 'admin' || String(t.pin) === '95511') {
-      this.showToast('មិនអាចលុប Super Admin បានឡើយ!', 'error');
+      this.showToast('មិនអាចលុប Admin បានឡើយ!', 'error');
       return;
     }
     if (!confirm(`តើលោកអ្នកពិតជាចង់លុបគ្រូសមាជិក «${t.name}» (PIN: ${t.pin}) ដែរឬទេ?`)) {
@@ -4867,7 +4867,7 @@ function doGet(e) {
     const tInp = document.getElementById('generator-teacher-input');
 
     if (this.currentTeacher) {
-      if (nameDisplay) nameDisplay.textContent = `${this.currentTeacher.name} (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})`;
+      if (nameDisplay) nameDisplay.textContent = `${this.currentTeacher.name} (${this.isAdmin ? 'Admin' : 'គ្រូសមាជិក'})`;
       if (schoolDisplay) schoolDisplay.textContent = this.currentTeacher.school || 'សាលារៀនជំនាន់ថ្មី';
       if (tInp && !tInp.value) tInp.value = this.currentTeacher.name;
     } else {

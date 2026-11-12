@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=81">
+  <link rel="stylesheet" href="css/style.css?v=82">
 </head>
 <body>
 
@@ -95,7 +95,7 @@
           🔐 <span class="nav-auth-text">គ្រូបង្រៀន</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v81)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v82)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
           🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
         </button>
 
@@ -849,7 +849,7 @@
               <div style="flex: 1;">
                 <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
                   <span id="gate-selected-name" style="font-size: 1rem; font-weight: 700; color: var(--text-primary);">លោកគ្រូ នួន បូណង</span>
-                  <span id="gate-selected-badge" class="member-badge-admin">Super Admin</span>
+                  <span id="gate-selected-badge" class="member-badge-admin">Admin</span>
                 </div>
                 <div id="gate-selected-school" style="font-size: 0.76rem; color: var(--text-muted); margin-top: 2px;">វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS) • គណិតវិទ្យា</div>
               </div>
@@ -893,7 +893,7 @@
       <div class="modal-header">
         <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
           <h3 class="modal-title">👥 គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព</h3>
-          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.72rem; padding: 3px 8px; border-radius: 6px;">Super Admin</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.72rem; padding: 3px 8px; border-radius: 6px;">Admin</span>
         </div>
         <button class="btn-icon" onclick="App.closeMemberDashboardModal()">✕</button>
       </div>
@@ -1000,7 +1000,7 @@
               <label class="form-label" for="member-role-inp">តួនាទី / សិទ្ធិ ៖</label>
               <select id="member-role-inp" class="form-select">
                 <option value="member" selected>គ្រូសមាជិក (Member)</option>
-                <option value="admin">Super Admin</option>
+                <option value="admin">Admin</option>
               </select>
             </div>
           </div>
@@ -1400,7 +1400,7 @@
           <div style="display: flex; align-items: center; gap: 10px;">
             <span style="font-size: 1.5rem;">👨‍🏫</span>
             <div>
-              <div style="font-size: 0.92rem; font-weight: 700; color: var(--text-primary);" id="active-teacher-display-name">លោកគ្រូ នួន បូណង (Super Admin)</div>
+              <div style="font-size: 0.92rem; font-weight: 700; color: var(--text-primary);" id="active-teacher-display-name">លោកគ្រូ នួន បូណង (Admin)</div>
               <div style="font-size: 0.75rem; color: var(--text-muted);" id="active-teacher-display-school">វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)</div>
             </div>
           </div>
@@ -1635,14 +1635,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=81"></script>
-  <script src="js/app.js?v=81"></script>
-  <script src="js/visits.js?v=81"></script>
+  <script src="js/storage.js?v=82"></script>
+  <script src="js/app.js?v=82"></script>
+  <script src="js/visits.js?v=82"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=81').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=82').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {
