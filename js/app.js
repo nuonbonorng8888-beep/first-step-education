@@ -514,6 +514,19 @@ function doGet(e) {
       this.isTeacher = false;
       this.currentTeacher = null;
     }
+
+    // Private Gate Lock Verification (ចាក់សោរវិបសាយឯកជន)
+    if (this.isTeacher) {
+      document.body.classList.remove('portal-locked');
+      this.closeLoginModal(true);
+    } else if (this.isExamMode) {
+      document.body.classList.remove('portal-locked');
+      this.closeLoginModal(true);
+    } else {
+      document.body.classList.add('portal-locked');
+      this.openLoginModal(true);
+    }
+
     this.updateAdminUI();
   },
 
@@ -581,6 +594,11 @@ function doGet(e) {
     const modal = document.getElementById('login-modal');
     const input = document.getElementById('admin-pin-input');
     const err = document.getElementById('login-error-msg');
+    const closeBtn = document.getElementById('btn-close-login-modal');
+    const cancelBtn = document.getElementById('btn-cancel-login');
+    const titleEl = document.getElementById('login-modal-title');
+    const headingEl = document.getElementById('login-heading-text');
+
     if (err) err.style.display = 'none';
     if (input) {
       input.value = '';
@@ -590,13 +608,30 @@ function doGet(e) {
     const txt = document.getElementById('pin-toggle-text');
     if (icon) icon.textContent = '👁️';
     if (txt) txt.textContent = 'បង្ហាញលេខកូដ';
+
+    const isLocked = document.body.classList.contains('portal-locked');
+    if (closeBtn) closeBtn.style.display = isLocked ? 'none' : 'inline-flex';
+    if (cancelBtn) cancelBtn.style.display = isLocked ? 'none' : 'inline-block';
+    if (titleEl) titleEl.textContent = isLocked ? '🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)' : '🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)';
+    if (headingEl) headingEl.textContent = isLocked ? 'បញ្ចូលលេខកូដ PIN ដើម្បីដោះសោរ' : 'ផ្ទៀងផ្ទាត់លេខកូដសម្ងាត់គ្រូ (PIN)';
+
     if (modal) modal.classList.add('active');
-    setTimeout(() => input?.focus(), 200);
+    setTimeout(() => input?.focus(), 250);
   },
 
-  closeLoginModal() {
+  closeLoginModal(force = false) {
+    if (!force && document.body.classList.contains('portal-locked')) {
+      return; // Cannot close when portal is locked
+    }
     const modal = document.getElementById('login-modal');
     if (modal) modal.classList.remove('active');
+  },
+
+  onLoginModalOverlayClick(event) {
+    if (document.body.classList.contains('portal-locked')) return;
+    if (event.target && event.target.id === 'login-modal') {
+      this.closeLoginModal();
+    }
   },
 
   togglePinVisibility() {
@@ -667,8 +702,9 @@ function doGet(e) {
           `បានចូលប្រើប្រព័ន្ធជោគជ័យ (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})`
         );
 
+        document.body.classList.remove('portal-locked');
         this.updateAdminUI();
-        this.closeLoginModal();
+        this.closeLoginModal(true);
         this.showToast(`🎉 ស្វាគមន៍ ${teacher.name} (${this.isAdmin ? 'Super Admin' : 'គ្រូសមាជិក'})!`, 'success');
       } else {
         if (err) {
@@ -700,7 +736,11 @@ function doGet(e) {
     this.isTeacher = false;
     this.updateAdminUI();
     if (!silent) {
-      this.showToast('បានចាកចេញពីគណនីគ្រូ (បានត្រឡប់ទៅ Student Mode)', 'info');
+      this.showToast('បានចាកចេញពីគណនីគ្រូ (វិបសាយត្រូវបានចាក់សោរ)', 'info');
+    }
+    if (!this.isExamMode) {
+      document.body.classList.add('portal-locked');
+      this.openLoginModal(true);
     }
   },
 

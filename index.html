@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=74">
+  <link rel="stylesheet" href="css/style.css?v=75">
 </head>
 <body>
 
@@ -791,44 +791,49 @@
   </div>
 
 
-  <!-- ================= TEACHER LOGIN MODAL (ផ្ទាំងលេខកូដសម្ងាត់គ្រូ & សមាជិក) ================= -->
-  <div class="modal-overlay" id="login-modal" onclick="if(event.target === this) App.closeLoginModal()">
-    <div class="modal-card" style="max-width: 440px;">
+  <!-- ================= TEACHER LOGIN MODAL / GATE LOCK ================= -->
+  <div class="modal-overlay" id="login-modal" onclick="App.onLoginModalOverlayClick(event)">
+    <div class="modal-card gate-lock-card" style="max-width: 460px;">
       <div class="modal-header">
-        <h3 class="modal-title">🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)</h3>
-        <button class="btn-icon" onclick="App.closeLoginModal()">✕</button>
+        <h3 class="modal-title" id="login-modal-title">🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)</h3>
+        <button class="btn-icon gate-hide-on-lock" id="btn-close-login-modal" onclick="App.closeLoginModal()">✕</button>
       </div>
       <form onsubmit="App.submitLogin(event)">
         <div class="modal-body" style="text-align: center; gap: 16px;">
-          <div style="width: 76px; height: 76px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);">
+          <div style="width: 82px; height: 82px; margin: 0 auto; border-radius: 26px; overflow: hidden; box-shadow: 0 10px 28px rgba(6, 182, 212, 0.35); border: 2px solid rgba(56, 189, 248, 0.3);">
             <img src="assets/mascot.jpg" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;">ផ្ទៀងផ្ទាត់លេខកូដសម្ងាត់គ្រូ (PIN)</h4>
+            <div class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.72rem; padding: 4px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 8px;">
+              🔒 វិបសាយត្រូវបានចាក់សោរឯកជន (Private Platform)
+            </div>
+            <h4 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 5px; color: var(--text-primary);" id="login-heading-text">
+              បញ្ចូលលេខកូដ PIN ដើម្បីដោះសោរ
+            </h4>
             <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
-              បញ្ចូលលេខកូដសម្ងាត់ផ្ទាល់ខ្លួន ដើម្បីបង្កើតការប្រឡង ភ្ជាប់ Google Sheets និងកត់ត្រាពិន្ទុ
+              គេហទំព័រនេះសម្រាប់តែលោកគ្រូ-អ្នកគ្រូដែលមានការអនុញ្ញាតប៉ុណ្ណោះ។ សូមបញ្ចូលលេខកូដសម្ងាត់ (PIN) ដើម្បីបើកដំណើរការមេរៀន និងសន្លឹកកិច្ចការ។
             </p>
           </div>
 
           <div class="form-group" style="margin-top: 4px;">
-            <input type="password" id="admin-pin-input" class="form-input" placeholder="•••••" maxlength="10" autocomplete="off" style="font-size: 1.6rem; letter-spacing: 10px; text-align: center; font-weight: 800; padding: 12px;" required>
+            <input type="password" id="admin-pin-input" class="form-input" placeholder="•••••" maxlength="10" autocomplete="off" style="font-size: 1.8rem; letter-spacing: 12px; text-align: center; font-weight: 800; padding: 12px;" required>
           </div>
           <div style="display: flex; justify-content: center; align-items: center; gap: 6px; font-size: 0.78rem; color: var(--text-muted); cursor: pointer;" onclick="App.togglePinVisibility()">
             <span id="pin-toggle-icon">👁️</span>
             <span id="pin-toggle-text">បង្ហាញលេខកូដ</span>
           </div>
 
-          <div id="login-error-msg" style="color: var(--accent-rose); font-size: 0.82rem; display: none;"></div>
+          <div id="login-error-msg" style="color: #fb7185; background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: 8px; padding: 8px 12px; font-size: 0.8rem; display: none; line-height: 1.4;"></div>
 
           <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 10px; padding: 10px 12px; font-size: 0.75rem; color: var(--text-secondary); text-align: left; line-height: 1.5;">
             👑 <strong>Admin (លោកគ្រូ នួន បូណង) ៖</strong> PIN <code>95511</code><br>
             👨‍🏫 <strong>គ្រូសមាជិក ៖</strong> បញ្ចូលលេខកូដសម្ងាត់ដែល Admin បានផ្ដល់ជូន (ឧ. <code>1001</code>, <code>1002</code>...)
           </div>
         </div>
-        <div class="modal-footer" style="justify-content: space-between;">
-          <button type="button" class="btn btn-secondary" onclick="App.closeLoginModal()">បោះបង់</button>
-          <button type="submit" class="btn btn-primary" id="btn-submit-pin">
-            🔓 ចូលប្រើប្រព័ន្ធ
+        <div class="modal-footer" style="justify-content: center; gap: 12px;">
+          <button type="button" class="btn btn-secondary gate-hide-on-lock" id="btn-cancel-login" onclick="App.closeLoginModal()">បោះបង់</button>
+          <button type="submit" class="btn btn-primary" id="btn-submit-pin" style="min-width: 180px; padding: 10px 24px; font-weight: 700;">
+            🔓 ដោះសោរចូលវិបសាយ
           </button>
         </div>
       </form>
@@ -1575,14 +1580,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=74"></script>
-  <script src="js/app.js?v=74"></script>
-  <script src="js/visits.js?v=74"></script>
+  <script src="js/storage.js?v=75"></script>
+  <script src="js/app.js?v=75"></script>
+  <script src="js/visits.js?v=75"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=74').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=75').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {
