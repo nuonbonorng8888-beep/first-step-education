@@ -138,7 +138,7 @@ const StorageService = {
   async uploadFile(file, onProgress) {
     const formData = new FormData();
     formData.append('file', file);
-    const pin = localStorage.getItem('admin_pin') || '';
+    const pin = sessionStorage.getItem('admin_pin') || localStorage.getItem('admin_pin') || '';
 
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
@@ -173,7 +173,7 @@ const StorageService = {
   },
 
   async addLesson(courseId, lessonData) {
-    const pin = localStorage.getItem('admin_pin') || '';
+    const pin = sessionStorage.getItem('admin_pin') || localStorage.getItem('admin_pin') || '';
     try {
       const response = await fetch('/api/lessons', {
         method: 'POST',
@@ -197,7 +197,7 @@ const StorageService = {
   },
 
   async deleteLesson(lessonId) {
-    const pin = localStorage.getItem('admin_pin') || '';
+    const pin = sessionStorage.getItem('admin_pin') || localStorage.getItem('admin_pin') || '';
     try {
       const response = await fetch('/api/lessons/' + lessonId, {
         method: 'DELETE',

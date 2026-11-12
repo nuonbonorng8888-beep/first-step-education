@@ -476,8 +476,12 @@ function doGet(e) {
     if (!this.teachersList || this.teachersList.length === 0) {
       await this.initTeachers();
     }
-    const storedSession = localStorage.getItem('teacher_session');
-    const oldPin = localStorage.getItem('admin_pin');
+
+    // Clear legacy persistent localStorage to ensure every fresh visit requires PIN
+    localStorage.removeItem('teacher_session');
+    localStorage.removeItem('admin_pin');
+
+    const storedSession = sessionStorage.getItem('teacher_session');
 
     if (storedSession) {
       try {
@@ -497,18 +501,6 @@ function doGet(e) {
       } catch (e) {
         this.logoutTeacher(true);
       }
-    } else if (oldPin === '95511') {
-      const adminT = (this.teachersList || []).find(x => String(x.pin) === '95511') || {
-        id: 't-admin',
-        name: 'លោកគ្រូ នួន បូណង',
-        role: 'admin',
-        pin: '95511',
-        sheetUrl: this.defaultTeacherSheetUrl
-      };
-      this.currentTeacher = adminT;
-      this.isAdmin = true;
-      this.isTeacher = true;
-      localStorage.setItem('teacher_session', JSON.stringify(adminT));
     } else {
       this.isAdmin = false;
       this.isTeacher = false;
@@ -685,9 +677,9 @@ function doGet(e) {
         this.isAdmin = (res.role === 'admin' || String(teacher.pin) === '95511');
         this.isTeacher = true;
 
-        localStorage.setItem('teacher_session', JSON.stringify(teacher));
+        sessionStorage.setItem('teacher_session', JSON.stringify(teacher));
         if (this.isAdmin) {
-          localStorage.setItem('admin_pin', '95511');
+          sessionStorage.setItem('admin_pin', '95511');
         }
 
         // If member teacher has personal sheet, activate it
@@ -729,6 +721,8 @@ function doGet(e) {
     if (!silent && this.currentTeacher) {
       this.logTeacherActivity(this.currentTeacher.name, 'ចាកចេញពីប្រព័ន្ធ (Logout)', 'បានចាកចេញពីគណនីគ្រូ');
     }
+    sessionStorage.removeItem('teacher_session');
+    sessionStorage.removeItem('admin_pin');
     localStorage.removeItem('teacher_session');
     localStorage.removeItem('admin_pin');
     this.currentTeacher = null;
