@@ -1,8 +1,9 @@
 // 1st Step Education PWA Service Worker
-const CACHE_NAME = '1st-step-v78';
+const CACHE_NAME = '1st-step-v79';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './version.json',
   './css/style.css',
   './lib/katex/katex.min.css',
   './lib/katex/katex.min.js',
@@ -47,6 +48,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         keys.map((key) => {
           if (key !== CACHE_NAME) {
+            console.log('Purging old service worker cache:', key);
             return caches.delete(key);
           }
         })
@@ -57,12 +59,20 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Pass through non-GET and media/API requests directly to network
+  // Pass through non-GET, API, media, and version/teachers files straight to network without stale caching
   if (event.request.method !== 'GET' || 
       event.request.url.includes('/api/') || 
       event.request.url.includes('/media/') ||
       event.request.url.includes('.mp4') ||
       event.request.url.includes('.pdf')) {
+    return;
+  }
+
+  // Version and teachers data must always bypass cache for instant real-time sync across devices
+  if (event.request.url.includes('version.json') || event.request.url.includes('teachers.json')) {
+    event.respondWith(
+      fetch(event.request, { cache: 'no-store' }).catch(() => caches.match(event.request))
+    );
     return;
   }
 

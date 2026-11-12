@@ -61,11 +61,18 @@ const StorageService = {
       return [];
     }
 
-    // Merge: ensure default Admin and members exist without overwriting custom edits
+    // Merge: Canonical server teachers update/insert into local teachers
     if (Array.isArray(jsonTeachers)) {
       jsonTeachers.forEach(jt => {
-        const exists = localTeachers.find(lt => lt.id === jt.id || lt.pin === jt.pin);
-        if (!exists) {
+        const idx = localTeachers.findIndex(lt => lt.id === jt.id || lt.pin === jt.pin);
+        if (idx !== -1) {
+          // Keep local overrides like sheetUrl if set, but sync name, role, school, pin from canonical server
+          localTeachers[idx] = {
+            ...localTeachers[idx],
+            ...jt,
+            sheetUrl: localTeachers[idx].sheetUrl || jt.sheetUrl || ''
+          };
+        } else {
           localTeachers.push(jt);
         }
       });
@@ -80,6 +87,92 @@ const StorageService = {
     } catch (e) {
       console.warn('Error saving teachers to localStorage:', e);
     }
+  },
+
+  getTeacherStatsMap() {
+    try {
+      const raw = localStorage.getItem('worksheet_teacher_stats_map');
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) {
+      return {};
+    }
+  },
+
+  saveTeacherStatsMap(statsMap) {
+    try {
+      localStorage.setItem('worksheet_teacher_stats_map', JSON.stringify(statsMap));
+    } catch (e) {}
+  },
+
+  getTeacherStats(teacherName) {
+    if (!teacherName) return { useCount: 0, loginCount: 0, examCount: 0, durationMinutes: 0, lastActive: 'មិនទាន់ប្រើ', lastAction: '-' };
+    const map = this.getTeacherStatsMap();
+    const stored = map[teacherName] || { useCount: 0, loginCount: 0, examCount: 0, durationMinutes: 0, lastActive: '', lastAction: '' };
+
+    // Also scan activity logs for extra accuracy
+    const logs = this.getActivityLogs().filter(l => l.teacherName === teacherName);
+    const logUses = logs.length;
+    const logLogins = logs.filter(l => l.action && l.action.includes('Login')).length;
+    const logExams = logs.filter(l => l.action && (l.action.includes('Link') || l.action.includes('ប្រឡង'))).length;
+    const latestLog = logs[0];
+
+    const finalUses = Math.max(stored.useCount || 0, logUses);
+    const finalLogins = Math.max(stored.loginCount || 0, logLogins);
+    const finalExams = Math.max(stored.examCount || 0, logExams);
+    const finalLastActive = stored.lastActive || (latestLog ? latestLog.timestamp : 'មិនទាន់ប្រើ');
+    const finalLastAction = stored.lastAction || (latestLog ? latestLog.action : '-');
+
+    return {
+      useCount: finalUses,
+      loginCount: finalLogins,
+      examCount: finalExams,
+      durationMinutes: stored.durationMinutes || 0,
+      lastActive: finalLastActive || 'មិនទាន់ប្រើ',
+      lastAction: finalLastAction || '-'
+    };
+  },
+
+  recordTeacherUsage(teacherName, action = 'ប្រើប្រាស់', details = '') {
+    if (!teacherName) return;
+    const map = this.getTeacherStatsMap();
+    if (!map[teacherName]) {
+      map[teacherName] = { useCount: 0, loginCount: 0, examCount: 0, durationMinutes: 0, lastActive: '', lastAction: '' };
+    }
+    const t = map[teacherName];
+    t.useCount = (t.useCount || 0) + 1;
+    if (action.includes('Login')) t.loginCount = (t.loginCount || 0) + 1;
+    if (action.includes('Link') || action.includes('ប្រឡង')) t.examCount = (t.examCount || 0) + 1;
+    t.lastActive = new Date().toLocaleString('km-KH', { dateStyle: 'short', timeStyle: 'short' });
+    t.lastAction = action;
+    this.saveTeacherStatsMap(map);
+  },
+
+  incrementTeacherDuration(teacherName, minutes = 1) {
+    if (!teacherName) return;
+    const map = this.getTeacherStatsMap();
+    if (!map[teacherName]) {
+      map[teacherName] = { useCount: 1, loginCount: 1, examCount: 0, durationMinutes: 0, lastActive: '', lastAction: 'ចូលប្រព័ន្ធ' };
+    }
+    map[teacherName].durationMinutes = (map[teacherName].durationMinutes || 0) + minutes;
+    map[teacherName].lastActive = new Date().toLocaleString('km-KH', { dateStyle: 'short', timeStyle: 'short' });
+    this.saveTeacherStatsMap(map);
+  },
+
+  getTotalSystemUsageStats(teachersList = []) {
+    const map = this.getTeacherStatsMap();
+    const allLogs = this.getActivityLogs();
+    let totalUses = allLogs.length;
+    let totalDurationMinutes = 0;
+
+    Object.values(map).forEach(s => {
+      if (s.durationMinutes) totalDurationMinutes += s.durationMinutes;
+      if (s.useCount && s.useCount > totalUses) totalUses = s.useCount;
+    });
+
+    return {
+      totalUses: Math.max(totalUses, allLogs.length),
+      totalDurationMinutes
+    };
   },
 
   getActivityLogs() {
@@ -102,6 +195,9 @@ const StorageService = {
     const logs = this.getActivityLogs();
     logs.unshift(entry);
     this.saveActivityLogs(logs);
+    if (entry.teacherName) {
+      this.recordTeacherUsage(entry.teacherName, entry.action, entry.details);
+    }
     return logs;
   },
 
@@ -251,3 +347,7 @@ const StorageService = {
     localStorage.setItem(`completed_${lessonId}`, status ? 'true' : 'false');
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.StorageService = StorageService;
+}

@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=78">
+  <link rel="stylesheet" href="css/style.css?v=79">
 </head>
 <body>
 
@@ -93,6 +93,10 @@
 
         <button class="btn btn-outline nav-auth-btn" id="btn-admin-auth" onclick="App.openLoginModal()" title="ចូលគណនីគ្រូបង្រៀន">
           🔐 <span class="nav-auth-text">គ្រូបង្រៀន</span>
+        </button>
+
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v79)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
+          🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
         </button>
 
         <button class="btn btn-secondary nav-members-btn admin-only" onclick="App.openMemberDashboardModal()" id="btn-members-nav" style="display: none;" title="គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព">
@@ -910,28 +914,37 @@
       <div class="modal-body" style="padding: 16px 20px; gap: 16px; overflow-y: auto;">
         <!-- TAB 1: MEMBERS LIST -->
         <div id="dash-pane-members">
-          <!-- Member Quick Stats -->
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px;">
-            <div style="background: var(--bg-primary); padding: 12px; border-radius: 10px; border: 1px solid var(--border-glass); text-align: center;">
-              <div style="font-size: 1.35rem; font-weight: 800; color: #38bdf8;" id="stat-total-teachers">0</div>
-              <div style="font-size: 0.74rem; color: var(--text-muted);">គ្រូសរុបក្នុងប្រព័ន្ធ</div>
+          <!-- Member Quick Stats (4-grid) -->
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px;">
+            <div class="dash-stat-box">
+              <div class="dash-stat-num" style="color: #38bdf8;" id="stat-total-teachers">0</div>
+              <div class="dash-stat-lbl">គ្រូសរុប</div>
             </div>
-            <div style="background: var(--bg-primary); padding: 12px; border-radius: 10px; border: 1px solid var(--border-glass); text-align: center;">
-              <div style="font-size: 1.35rem; font-weight: 800; color: #10b981;" id="stat-active-teachers">0</div>
-              <div style="font-size: 0.74rem; color: var(--text-muted);">កំពុងដំណើរការ (Active)</div>
+            <div class="dash-stat-box">
+              <div class="dash-stat-num" style="color: #10b981;" id="stat-active-teachers">0</div>
+              <div class="dash-stat-lbl">គ្រូសកម្ម (Active)</div>
             </div>
-            <div style="background: var(--bg-primary); padding: 12px; border-radius: 10px; border: 1px solid var(--border-glass); text-align: center;">
-              <div style="font-size: 1.35rem; font-weight: 800; color: #a855f7;" id="stat-connected-sheets">0</div>
-              <div style="font-size: 0.74rem; color: var(--text-muted);">បានភ្ជាប់ Google Sheets</div>
+            <div class="dash-stat-box">
+              <div class="dash-stat-num" style="color: #f59e0b;" id="stat-total-uses">0 ដង</div>
+              <div class="dash-stat-lbl">ចំនួនដងប្រើប្រាស់</div>
+            </div>
+            <div class="dash-stat-box">
+              <div class="dash-stat-num" style="color: #c084fc;" id="stat-total-duration">0 នាទី</div>
+              <div class="dash-stat-lbl">រយៈពេលប្រើសរុប</div>
             </div>
           </div>
 
           <!-- Actions toolbar -->
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 10px; flex-wrap: wrap;">
             <input type="text" id="member-search-input" class="form-input" placeholder="🔍 ស្វែងរកឈ្មោះគ្រូ, PIN, សាលារៀន..." oninput="App.renderMemberList()" style="max-width: 320px; font-size: 0.82rem;">
-            <button class="btn btn-primary btn-sm" onclick="App.openMemberFormModal()">
-              ➕ បន្ថែមគ្រូសមាជិកថ្មី
-            </button>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="btn btn-sm btn-outline" onclick="App.copyTeachersJson()" title="ចម្លង JSON គ្រូទាំងអស់">
+                📋 ចម្លង JSON
+              </button>
+              <button type="button" class="btn btn-primary btn-sm" onclick="App.openMemberFormModal()">
+                ➕ បន្ថែមគ្រូសមាជិកថ្មី
+              </button>
+            </div>
           </div>
 
           <!-- Members Grid / Table -->
@@ -1622,14 +1635,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=78"></script>
-  <script src="js/app.js?v=78"></script>
-  <script src="js/visits.js?v=78"></script>
+  <script src="js/storage.js?v=79"></script>
+  <script src="js/app.js?v=79"></script>
+  <script src="js/visits.js?v=79"></script>
   <script>
-    // Register Service Worker with Auto-Update for mobile
+    // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=78').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=79').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

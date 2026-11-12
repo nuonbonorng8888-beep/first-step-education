@@ -315,6 +315,8 @@ function doGet(e) {
     try { this.initUrlParams(); } catch (e) { console.warn(e); }
     try { await this.initTeachers(); } catch (e) { console.warn(e); }
     try { await this.checkAdminAuth(); } catch (e) { console.warn(e); }
+    try { this.initTeacherDurationTracking(); } catch (e) { console.warn(e); }
+    try { this.initAutoUpdateChecker(); } catch (e) { console.warn(e); }
     try { this.initPlayer(); } catch (e) { console.warn(e); }
     try { this.initGreetingAndWisdom(); } catch (e) { console.warn(e); }
     try { this.updateResumeBanner(); } catch (e) { console.warn(e); }
@@ -342,6 +344,110 @@ function doGet(e) {
       console.warn('initTeachers error:', e);
       this.teachersList = [];
     }
+  },
+
+  initTeacherDurationTracking() {
+    if (this._durationInterval) clearInterval(this._durationInterval);
+    this._durationInterval = setInterval(() => {
+      if (this.currentTeacher && !document.hidden && !document.body.classList.contains('portal-locked')) {
+        StorageService.incrementTeacherDuration(this.currentTeacher.name, 1);
+      }
+    }, 60000);
+  },
+
+  initAutoUpdateChecker() {
+    this.appVersion = 'v79';
+
+    const checkVersion = async () => {
+      try {
+        const res = await fetch(`version.json?_t=${Date.now()}`, { cache: 'no-store' });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.version && data.version !== this.appVersion) {
+            console.log(`[Auto-Update] New version detected: ${data.version} (running: ${this.appVersion})`);
+            this.notifyAppUpdate(data.version);
+          }
+        }
+      } catch (e) {}
+    };
+
+    // Check after 2.5s on startup
+    setTimeout(checkVersion, 2500);
+
+    // Check whenever tab becomes active again
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        checkVersion();
+        if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+          navigator.serviceWorker.ready.then(reg => reg.update()).catch(() => {});
+        }
+      }
+    });
+
+    // Background interval check every 4 minutes
+    setInterval(checkVersion, 4 * 60 * 1000);
+  },
+
+  notifyAppUpdate(newVersion) {
+    if (this._hasNotifiedUpdate) return;
+    this._hasNotifiedUpdate = true;
+
+    const existing = document.getElementById('app-update-banner');
+    if (existing) return;
+
+    const banner = document.createElement('div');
+    banner.id = 'app-update-banner';
+    banner.className = 'app-update-banner';
+    banner.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 1.3rem;">⚡</span>
+        <div>
+          <strong style="color: #38bdf8;">មានការ Update កំណែថ្មី (${newVersion})!</strong>
+          <div style="font-size: 0.74rem; color: var(--text-secondary);">ចុចប៊ូតុងខាងស្តាំដើម្បីទទួលបានទិន្នន័យចុងក្រោយ</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px; align-items: center;">
+        <button class="btn btn-primary btn-sm" onclick="App.applyUpdateNow()" style="font-weight: 700; padding: 6px 14px;">
+          🔄 Update ឥឡូវនេះ
+        </button>
+        <button class="btn-icon" onclick="this.closest('#app-update-banner').remove()" style="font-size: 0.9rem;">✕</button>
+      </div>
+    `;
+    document.body.appendChild(banner);
+  },
+
+  applyUpdateNow() {
+    this.showToast('កំពុងសម្អាត Cache និងទាញយកទិន្នន័យចុងក្រោយ...', 'info');
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        regs.forEach(r => r.update());
+      });
+      caches.keys().then(keys => {
+        return Promise.all(keys.map(k => caches.delete(k)));
+      }).then(() => {
+        window.location.reload();
+      }).catch(() => {
+        window.location.reload();
+      });
+    } else {
+      window.location.reload();
+    }
+  },
+
+  checkUpdateManual() {
+    this.showToast('🔍 កំពុងពិនិត្យមើលកំណែ Update ចុងក្រោយ...', 'info');
+    fetch(`version.json?_t=${Date.now()}`, { cache: 'no-store' })
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.version && data.version !== this.appVersion) {
+          this.applyUpdateNow();
+        } else {
+          this.showToast(`✅ លោកអ្នកកំពុងប្រើប្រាស់កំណែថ្មីបំផុតហើយ (${data.version || this.appVersion})`, 'success');
+        }
+      })
+      .catch(() => {
+        this.showToast(`✅ វិបសាយដំណើរការលើកំណែចុងក្រោយ (${this.appVersion})`, 'success');
+      });
   },
 
   initUrlParams() {
@@ -611,12 +717,17 @@ function doGet(e) {
     if (!container) return;
 
     const list = [...(this.teachersList || [])];
-    // Sort so Admin (លោកគ្រូ នួន បូណង) is always at the top!
+    // Sort so:
+    // 1. Admin (លោកគ្រូ នួន បូណង) is always at the top!
+    // 2. Newly added teacher (_isJustAdded) is next!
+    // 3. Alphabetical by Khmer name
     list.sort((a, b) => {
       const aIsAdm = a.role === 'admin' || String(a.pin) === '95511';
       const bIsAdm = b.role === 'admin' || String(b.pin) === '95511';
       if (aIsAdm && !bIsAdm) return -1;
       if (!aIsAdm && bIsAdm) return 1;
+      if (a._isJustAdded && !b._isJustAdded) return -1;
+      if (!a._isJustAdded && b._isJustAdded) return 1;
       return (a.name || '').localeCompare(b.name || '', 'km');
     });
 
@@ -627,6 +738,8 @@ function doGet(e) {
 
     container.innerHTML = list.map(t => {
       const isAdm = t.role === 'admin' || String(t.pin) === '95511';
+      const isBlocked = t.status === 'blocked';
+      if (isBlocked) return ''; // Blocked members cannot login
       const avatar = isAdm ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫');
       const badgeClass = isAdm ? 'member-badge-admin' : 'member-badge-member';
       const badgeLabel = isAdm ? 'Super Admin' : 'គ្រូសមាជិក';
@@ -634,12 +747,13 @@ function doGet(e) {
       const subjectText = t.subject || 'គណិតវិទ្យា';
 
       return `
-        <div class="gate-teacher-card ${isAdm ? 'is-admin' : ''}" onclick="App.selectGateTeacher('${t.id}')" role="button" tabindex="0">
+        <div class="gate-teacher-card ${isAdm ? 'is-admin' : ''} ${t._isJustAdded ? 'is-newly-added' : ''}" onclick="App.selectGateTeacher('${t.id}')" role="button" tabindex="0">
           <div class="gate-t-avatar">${avatar}</div>
           <div style="flex: 1; min-width: 0;">
             <div class="gate-t-name">
               <span>${t.name}</span>
               <span class="${badgeClass}">${badgeLabel}</span>
+              ${t._isJustAdded ? '<span class="member-badge-new" style="margin-left: 4px;">✨ ថ្មី</span>' : ''}
             </div>
             <div class="gate-t-meta">${schoolText} • ${subjectText}</div>
           </div>
@@ -920,17 +1034,26 @@ function doGet(e) {
 
     const teachers = this.teachersList || [];
     const activeCount = teachers.filter(t => t.status !== 'blocked').length;
-    const sheetCount = teachers.filter(t => !!t.sheetUrl).length;
+    const sysStats = StorageService.getTotalSystemUsageStats(teachers);
 
-    // Update stats
+    // Update 4 dashboard stats boxes
     const statTotal = document.getElementById('stat-total-teachers');
     const statActive = document.getElementById('stat-active-teachers');
-    const statSheets = document.getElementById('stat-connected-sheets');
+    const statUses = document.getElementById('stat-total-uses');
+    const statDuration = document.getElementById('stat-total-duration');
     const countBadge = document.getElementById('dash-members-count');
 
     if (statTotal) statTotal.textContent = teachers.length;
     if (statActive) statActive.textContent = activeCount;
-    if (statSheets) statSheets.textContent = sheetCount;
+    if (statUses) statUses.textContent = `${sysStats.totalUses} ដង`;
+    if (statDuration) {
+      const dur = sysStats.totalDurationMinutes;
+      if (dur >= 60) {
+        statDuration.textContent = `${Math.floor(dur / 60)} ម៉ោង ${dur % 60} ន`;
+      } else {
+        statDuration.textContent = `${dur} នាទី`;
+      }
+    }
     if (countBadge) countBadge.textContent = teachers.length;
 
     // Filter by search
@@ -953,27 +1076,56 @@ function doGet(e) {
       const isAdmin = t.role === 'admin' || String(t.pin) === '95511';
       const isBlocked = t.status === 'blocked';
       const hasSheet = !!t.sheetUrl;
+      const isNewlyAdded = !!t._isJustAdded;
+      const stats = StorageService.getTeacherStats(t.name);
+
+      let durationText = '0 នាទី';
+      if (stats.durationMinutes >= 60) {
+        const hrs = Math.floor(stats.durationMinutes / 60);
+        const mins = stats.durationMinutes % 60;
+        durationText = `${hrs} ម៉ោង ${mins} នាទី`;
+      } else if (stats.durationMinutes > 0) {
+        durationText = `${stats.durationMinutes} នាទី`;
+      }
 
       return `
-        <div class="member-card ${isBlocked ? 'is-blocked' : ''}">
+        <div class="member-card ${isBlocked ? 'is-blocked' : ''} ${isNewlyAdded ? 'is-newly-added' : ''}" id="member-card-${t.id}">
           <div class="member-info-col">
-            <div class="member-avatar">👨‍🏫</div>
-            <div>
+            <div class="member-avatar">${isAdmin ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫')}</div>
+            <div style="flex: 1; min-width: 0;">
               <div class="member-name">
                 <span>${t.name}</span>
                 <span class="${isAdmin ? 'member-badge-admin' : 'member-badge-member'}">
                   ${isAdmin ? '👑 Super Admin' : 'គ្រូសមាជិក'}
                 </span>
+                ${isNewlyAdded ? '<span class="member-badge-new">✨ ទើបបន្ថែមថ្មី</span>' : ''}
                 ${isBlocked ? '<span style="color:#ef4444; font-size:0.7rem; font-weight:700;">[បានផ្អាក]</span>' : ''}
               </div>
               <div class="member-meta">
                 🏫 ${t.school || 'មិនទាន់បញ្ជាក់សាលា'} • 📚 ${t.subject || 'គណិតវិទ្យា'}
               </div>
-              <div style="margin-top: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <div style="margin-top: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
                 <span class="member-pin-badge" title="លេខកូដសម្ងាត់សម្រាប់ Login">🔑 PIN: <strong>${t.pin}</strong></span>
                 <span class="${hasSheet ? 'member-badge-sheet-ok' : 'member-badge-sheet-none'}">
                   ${hasSheet ? '✓ បានភ្ជាប់ Google Sheet' : '⚠️ មិនទាន់ភ្ជាប់ Google Sheet'}
                 </span>
+              </div>
+
+              <!-- TEACHER USAGE & ACTIVITY ANALYTICS ROW -->
+              <div class="teacher-stats-bar">
+                <div class="t-stat-item stat-uses" title="ចំនួនដង Login និងបង្កើត Link ប្រឡង">
+                  📊 ប្រើបាន <strong>${stats.useCount} ដង</strong>
+                  ${stats.useCount > 0 ? `<small style="opacity: 0.8; font-size: 0.68rem; margin-left: 2px;">(${stats.loginCount} ចូល • ${stats.examCount} Link)</small>` : ''}
+                </div>
+                <div class="t-stat-item stat-duration" title="រយៈពេលដែលគ្រូបានដំណើរការលើ App">
+                  ⏱️ រយៈពេល <strong>${durationText}</strong>
+                </div>
+                <div class="t-stat-item stat-last" title="ពេលវេលាប្រើប្រាស់ចុងក្រោយ">
+                  🕒 ចុងក្រោយ <strong>${stats.lastActive}</strong>
+                </div>
+                <button type="button" class="btn btn-xs btn-outline btn-view-logs" onclick="App.viewTeacherActivityLogs('${t.name}')" title="ចុចដើម្បីមើលកំណត់ត្រាសកម្មភាពគ្រូនេះ">
+                  📜 កំណត់ត្រា
+                </button>
               </div>
             </div>
           </div>
@@ -1101,6 +1253,33 @@ function doGet(e) {
     if (modal) modal.classList.remove('active');
   },
 
+  viewTeacherActivityLogs(teacherName) {
+    this.switchMemberDashTab('activities');
+    const filterSelect = document.getElementById('activity-filter-teacher');
+    if (filterSelect) {
+      filterSelect.value = teacherName;
+      this.renderActivityLogs();
+    }
+  },
+
+  copyTeachersJson() {
+    const cleanList = (this.teachersList || []).map(t => {
+      const clone = { ...t };
+      delete clone._isJustAdded;
+      return clone;
+    });
+    const str = JSON.stringify(cleanList, null, 2);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(str).then(() => {
+        this.showToast('📋 បានចម្លងទិន្នន័យគ្រូទាំងអស់ជាទម្រង់ JSON រួចរាល់!', 'success');
+      }).catch(() => {
+        this.showToast('មិនអាចចម្លងដោយស្វ័យប្រវត្តបានទេ', 'warning');
+      });
+    } else {
+      prompt('ចម្លងកូដ JSON ខាងក្រោម ៖', str);
+    }
+  },
+
   saveMemberForm(e) {
     if (e) e.preventDefault();
     const id = document.getElementById('member-form-id')?.value.trim();
@@ -1150,9 +1329,18 @@ function doGet(e) {
         subject,
         sheetUrl,
         createdAt: new Date().toISOString().split('T')[0],
-        status: 'active'
+        status: 'active',
+        _isJustAdded: true
       };
-      this.teachersList.push(newTeacher);
+
+      // Place right after admin so it's directly visible at the top!
+      const adminIdx = this.teachersList.findIndex(t => t.role === 'admin' || String(t.pin) === '95511');
+      if (adminIdx !== -1) {
+        this.teachersList.splice(adminIdx + 1, 0, newTeacher);
+      } else {
+        this.teachersList.unshift(newTeacher);
+      }
+
       this.showToast(`🎉 បានបន្ថែមគ្រូសមាជិក «${name}» (PIN: ${pin}) ដោយជោគជ័យ!`, 'success');
       this.logTeacherActivity('Admin', 'បានបន្ថែមគ្រូសមាជិកថ្មី', `បន្ថែម ${name} (PIN: ${pin}, សាលា: ${school || '-'})`);
     }
@@ -1161,6 +1349,16 @@ function doGet(e) {
     this.closeMemberFormModal();
     this.renderMemberList();
     this.renderGateTeacherList();
+
+    // Auto-scroll to highlight the new teacher card if added
+    if (!id) {
+      setTimeout(() => {
+        const newCard = document.querySelector('.member-card.is-newly-added');
+        if (newCard) {
+          newCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 150);
+    }
   },
 
   toggleBlockMember(memberId) {
