@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v93';
+    this.appVersion = 'v94';
 
     const checkVersion = async () => {
       try {
@@ -739,13 +739,24 @@ function doGet(e) {
   },
 
   showGateSelectView() {
+    const card = document.querySelector('.gate-lock-card');
     const viewSelect = document.getElementById('gate-view-select');
     const viewPin = document.getElementById('gate-view-pin');
     const titleEl = document.getElementById('login-modal-title');
     const isLocked = document.body.classList.contains('portal-locked');
 
-    if (viewSelect) viewSelect.style.display = 'block';
-    if (viewPin) viewPin.style.display = 'none';
+    if (card) {
+      card.classList.add('view-mode-select');
+      card.classList.remove('view-mode-pin');
+    }
+    if (viewSelect) {
+      viewSelect.classList.remove('is-hidden');
+      viewSelect.style.display = 'block';
+    }
+    if (viewPin) {
+      viewPin.classList.add('is-hidden');
+      viewPin.style.display = 'none';
+    }
     if (titleEl) titleEl.textContent = isLocked ? '🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)' : '🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)';
 
     this.renderGateTeacherList();
@@ -874,8 +885,19 @@ function doGet(e) {
     if (icon) icon.textContent = '👁️';
     if (txt) txt.textContent = 'បង្ហាញលេខកូដ';
 
-    if (viewSelect) viewSelect.style.display = 'none';
-    if (viewPin) viewPin.style.display = 'block';
+    const card = document.querySelector('.gate-lock-card');
+    if (card) {
+      card.classList.remove('view-mode-select');
+      card.classList.add('view-mode-pin');
+    }
+    if (viewSelect) {
+      viewSelect.classList.add('is-hidden');
+      viewSelect.style.display = 'none';
+    }
+    if (viewPin) {
+      viewPin.classList.remove('is-hidden');
+      viewPin.style.display = 'block';
+    }
 
     setTimeout(() => pinInp?.focus(), 250);
   },

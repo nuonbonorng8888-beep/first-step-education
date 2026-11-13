@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=93">
+  <link rel="stylesheet" href="css/style.css?v=94">
 </head>
 <body>
 
@@ -117,7 +117,7 @@
           📚 <span class="desktop-only" style="font-size: 0.74rem;">ធនាគារសំណួរ</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v93)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v94)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
           🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
         </button>
 
@@ -850,7 +850,7 @@
 
   <!-- ================= TEACHER LOGIN MODAL / GATE LOCK ================= -->
   <div class="modal-overlay" id="login-modal" onclick="App.onLoginModalOverlayClick(event)">
-    <div class="modal-card gate-lock-card">
+    <div class="modal-card gate-lock-card view-mode-select">
       <div class="modal-header">
         <h3 class="modal-title" id="login-modal-title">🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)</h3>
         <div style="display: flex; gap: 6px; align-items: center;">
@@ -860,7 +860,7 @@
       </div>
 
       <!-- VIEW 1: SELECT TEACHER PROFILE (ជ្រើសរើសឈ្មោះគ្រូ) -->
-      <div id="gate-view-select" style="display: block;">
+      <div id="gate-view-select" class="gate-view-pane gate-view-select-pane" style="display: block;">
         <div class="modal-body" style="text-align: center; gap: 14px;">
           <div style="width: 72px; height: 72px; margin: 0 auto; border-radius: 22px; overflow: hidden; box-shadow: 0 8px 24px rgba(6, 182, 212, 0.35); border: 2px solid rgba(56, 189, 248, 0.35);">
             <img src="assets/mascot.jpg" style="width: 100%; height: 100%; object-fit: cover;">
@@ -892,7 +892,7 @@
       </div>
 
       <!-- VIEW 2: PIN INPUT FOR SELECTED TEACHER (វាយលេខកូដ PIN គ្រូនោះ) -->
-      <div id="gate-view-pin" style="display: none;">
+      <div id="gate-view-pin" class="gate-view-pane gate-view-pin-pane is-hidden" style="display: none;">
         <form onsubmit="App.submitLogin(event)">
           <input type="hidden" id="gate-selected-teacher-id" value="">
           <div class="modal-body" style="text-align: center; gap: 14px;">
@@ -1745,15 +1745,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=93"></script>
-  <script src="js/question-bank.js?v=93"></script>
-  <script src="js/app.js?v=93"></script>
-  <script src="js/visits.js?v=93"></script>
+  <script src="js/storage.js?v=94"></script>
+  <script src="js/question-bank.js?v=94"></script>
+  <script src="js/app.js?v=94"></script>
+  <script src="js/visits.js?v=94"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=93').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=94').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

@@ -1,6 +1,6 @@
 {
-  "version": "v93",
-  "build": 93,
-  "updatedAt": "2026-11-14T00:25:00+07:00",
-  "changelog": "Desktop computer sizing & centered fullscreen modal without void, all 6 faculty members visible, and unified Competency Test (តេស្តសមត្ថភាព) Google Sheets integration"
+  "version": "v94",
+  "build": 94,
+  "updatedAt": "2026-11-14T00:40:00+07:00",
+  "changelog": "Strict view isolation for Teacher Gate modal, spacious desktop PIN kiosk, and eliminated dual-view stacking"
 }
