@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=89">
+  <link rel="stylesheet" href="css/style.css?v=90">
 </head>
 <body>
 
@@ -72,8 +72,8 @@
           <button class="cat-pill" onclick="window.questionBank.openMultiLessonExamModal()" id="nav-link-exam-main" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700;">
             🎲 បង្កើតវិញ្ញាសា
           </button>
-          <button class="cat-pill" onclick="App.openTeacherSheetModal()" id="nav-link-scores" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 700;" title="តារាងពិន្ទុស្វ័យប្រវត្តិ & ការប្រឡង (Google Sheets)">
-            📊 តារាងពិន្ទុស្វ័យប្រវត្តិ
+          <button class="cat-pill" onclick="App.openTeacherSheetModal()" id="nav-link-scores" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 700;" title="តេស្តសមត្ថភាព & តារាងពិន្ទុ (Google Sheets)">
+            📊 តេស្តសមត្ថភាព
           </button>
         </div>
       </div>
@@ -105,8 +105,8 @@
         </button>
 
         <!-- Teacher Tools (Exams & Multi-Lesson Builder, Worksheets, Question Bank) -->
-        <button class="btn btn-outline nav-exam-btn" id="btn-exam-nav" onclick="App.openTeacherSheetModal()" title="តារាងពិន្ទុស្វ័យប្រវត្តិ & ការប្រឡង (Google Sheets)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px; border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
-          📊 <span class="desktop-only" style="font-size: 0.74rem;">តារាងពិន្ទុ</span>
+        <button class="btn btn-outline nav-exam-btn" id="btn-exam-nav" onclick="App.openTeacherSheetModal()" title="តេស្តសមត្ថភាព & ការប្រឡង (Google Sheets)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px; border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
+          📊 <span class="desktop-only" style="font-size: 0.74rem;">តេស្តសមត្ថភាព</span>
         </button>
 
         <button class="btn btn-outline nav-ws-btn" id="btn-ws-nav" onclick="window.questionBank.openWorksheetExtractorModal()" title="ស្រង់សន្លឹកកិច្ចការគ្រប់កម្រិតថ្នាក់" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px; border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
@@ -228,7 +228,7 @@
           <button class="action-strip-btn" onclick="App.openTeacherSheetModal()" style="border: 1px solid rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1);">
             <span class="action-icon">📊</span>
             <div class="action-text">
-              <span class="action-title" style="color: #34d399;">តារាងពិន្ទុស្វ័យប្រវត្តិ</span>
+              <span class="action-title" style="color: #34d399;">តេស្តសមត្ថភាព</span>
               <span class="action-sub">Google Sheets • ទទួលពិន្ទុតេស្ត</span>
             </div>
           </button>
@@ -1721,15 +1721,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=89"></script>
-  <script src="js/question-bank.js?v=89"></script>
-  <script src="js/app.js?v=89"></script>
-  <script src="js/visits.js?v=89"></script>
+  <script src="js/storage.js?v=90"></script>
+  <script src="js/question-bank.js?v=90"></script>
+  <script src="js/app.js?v=90"></script>
+  <script src="js/visits.js?v=90"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=89').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=90').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

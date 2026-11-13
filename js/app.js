@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v89';
+    this.appVersion = 'v90';
 
     const checkVersion = async () => {
       try {

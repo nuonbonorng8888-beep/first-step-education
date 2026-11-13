@@ -1,6 +1,6 @@
 {
-  "version": "v89",
-  "build": 89,
-  "updatedAt": "2026-11-13T23:30:00+07:00",
-  "changelog": "Promote Automated Score Sheet (Google Sheets) to top header navigation, hero action strip, and mobile dock, with proper Khmer terminology"
+  "version": "v90",
+  "build": 90,
+  "updatedAt": "2026-11-13T23:42:00+07:00",
+  "changelog": "Rename assessment card to តេស្តសមត្ថភាព (Google Sheets • ទទួលពិន្ទុតេស្ត) per user request"
 }
