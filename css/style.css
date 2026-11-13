@@ -7836,6 +7836,132 @@ body.portal-locked .gate-lock-card {
   }
 }
 
+/* ==========================================================
+   Ultra-Widescreen Scaling & Browser Zoom Guard System
+   Protects against tiny rendering on 4K/8K monitors or zoomed-out browsers
+   ========================================================== */
+
+@media (min-width: 2200px) {
+  html {
+    font-size: 26px !important;
+  }
+  .container {
+    max-width: min(2000px, 92vw) !important;
+  }
+  .gate-lock-card {
+    max-width: min(1300px, 90vw) !important;
+  }
+}
+
+@media (min-width: 3200px) {
+  html {
+    font-size: 32px !important;
+  }
+  .container {
+    max-width: min(2800px, 94vw) !important;
+  }
+  .gate-lock-card {
+    max-width: min(1600px, 92vw) !important;
+  }
+}
+
+/* Browser Zoom Warning Banner */
+.browser-zoom-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  color: #ffffff;
+  padding: 12px 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+  font-family: var(--font-khmer);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  animation: slideDownZoomBanner 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDownZoomBanner {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.zoom-banner-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.zoom-banner-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.zoom-banner-text {
+  flex: 1;
+  min-width: 280px;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.zoom-banner-text strong {
+  color: #fef08a;
+}
+
+.zoom-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zoom-banner-btn-help {
+  background: #ffffff !important;
+  color: #9a3412 !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  padding: 6px 14px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+.zoom-banner-btn-close {
+  background: rgba(0, 0, 0, 0.25) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  cursor: pointer;
+}
+
+/* Low-zoom automatic responsiveness boost */
+body.low-zoom-detected .container {
+  max-width: 95vw !important;
+  width: 95vw !important;
+}
+
+body.low-zoom-detected .gate-lock-card {
+  max-width: min(1360px, 94vw) !important;
+  width: min(1360px, 94vw) !important;
+}
+
+/* Zoom Help Modal Styling */
+#zoom-help-modal .modal-card {
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+
 
 
 

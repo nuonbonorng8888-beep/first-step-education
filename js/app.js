@@ -317,6 +317,7 @@ function doGet(e) {
     try { await this.checkAdminAuth(); } catch (e) { console.warn(e); }
     try { this.initTeacherDurationTracking(); } catch (e) { console.warn(e); }
     try { this.initAutoUpdateChecker(); } catch (e) { console.warn(e); }
+    try { this.initZoomAssistant(); } catch (e) { console.warn(e); }
     try { this.initPlayer(); } catch (e) { console.warn(e); }
     try { this.initGreetingAndWisdom(); } catch (e) { console.warn(e); }
     try { this.updateResumeBanner(); } catch (e) { console.warn(e); }
@@ -356,7 +357,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v100';
+    this.appVersion = 'v101';
 
     const checkVersion = async () => {
       try {
@@ -456,6 +457,68 @@ function doGet(e) {
       .catch(() => {
         this.applyUpdateNow();
       });
+  },
+
+  initZoomAssistant() {
+    this.checkBrowserZoom();
+    window.addEventListener('resize', () => {
+      this.checkBrowserZoom();
+    });
+  },
+
+  checkBrowserZoom() {
+    const outerW = window.outerWidth || window.screen.width;
+    const innerW = window.innerWidth;
+    if (!outerW || !innerW) return;
+
+    // Detect zoom ratio: in Chrome, outerWidth/innerWidth reflects zoom level
+    const zoomRatio = outerW / innerW;
+    const isAbnormallyZoomedOut = zoomRatio < 0.82 || (innerW > 2200 && (window.screen.width || 1920) <= 1920);
+
+    const bannerId = 'browser-zoom-warning-banner';
+    let banner = document.getElementById(bannerId);
+
+    if (isAbnormallyZoomedOut) {
+      document.body.classList.add('low-zoom-detected');
+      const pct = Math.max(25, Math.round(zoomRatio * 100));
+
+      if (!banner) {
+        banner = document.createElement('div');
+        banner.id = bannerId;
+        banner.className = 'browser-zoom-banner';
+        document.body.appendChild(banner);
+      }
+
+      banner.innerHTML = `
+        <div class="zoom-banner-inner">
+          <div class="zoom-banner-icon">🔍</div>
+          <div class="zoom-banner-text">
+            <strong>កម្រិតពង្រីក Browser (Zoom) របស់លោកគ្រូស្ថិតក្នុងកម្រិតតូច (${pct}%) ៖</strong>
+            <span>ធ្វើឱ្យទំព័រវិបសាយ និងផ្ទាំងចូលរួមរួញតូចពិបាកមើល។ សូមចុចគ្រាប់ចុច <strong>[Ctrl + 0]</strong> ដើម្បីស្តារមក <strong>100%</strong> ធម្មតាវិញ។</span>
+          </div>
+          <div class="zoom-banner-actions">
+            <button class="zoom-banner-btn-help" onclick="App.showZoomHelpModal()">📖 របៀបដោះស្រាយ</button>
+            <button class="zoom-banner-btn-close" onclick="document.getElementById('${bannerId}').style.display='none'" title="បិទ">✕</button>
+          </div>
+        </div>
+      `;
+      banner.style.display = 'block';
+    } else {
+      document.body.classList.remove('low-zoom-detected');
+      if (banner) {
+        banner.style.display = 'none';
+      }
+    }
+  },
+
+  showZoomHelpModal() {
+    const modal = document.getElementById('zoom-help-modal');
+    if (modal) modal.classList.add('active');
+  },
+
+  closeZoomHelpModal() {
+    const modal = document.getElementById('zoom-help-modal');
+    if (modal) modal.classList.remove('active');
   },
 
   initUrlParams() {
@@ -671,7 +734,7 @@ function doGet(e) {
       if (isAdm) {
         bankNavBtn.style.display = 'inline-flex';
         bankNavBtn.className = 'btn btn-secondary nav-bank-btn';
-        bankNavBtn.title = 'ធនាគារសំណួរ ៦,២៧០+ (គ្រប់គ្រងដោយ Admin)';
+        bankNavBtn.title = 'ធនាគារសំណួរ ៦,៤៧០+ (គ្រប់គ្រងដោយ Admin)';
         bankNavBtn.innerHTML = '📚 <span class="desktop-only" style="font-size:0.74rem;">ធនាគារសំណួរ</span>';
       } else if (isTeacherLoggedIn) {
         bankNavBtn.style.display = 'inline-flex';
