@@ -7263,37 +7263,43 @@ body.portal-locked .gate-lock-card {
 /* Desktop Widescreen Layout for Teacher Gate Modal (Open to Computer Size) */
 @media (min-width: 1024px) {
   .gate-lock-card {
-    max-width: min(94vw, 1080px) !important;
-    width: 92vw !important;
-    padding: 12px 18px !important;
+    max-width: 860px !important;
+    width: 90vw !important;
+    max-height: 92vh !important;
+    margin: auto !important;
+    border-radius: 24px !important;
+    padding: 10px 16px !important;
+    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 45px rgba(56, 189, 248, 0.25) !important;
   }
   .gate-lock-card .gate-teacher-list {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
-    max-height: min(75vh, 620px) !important;
+    gap: 14px !important;
+    max-height: none !important;
+    overflow-y: visible !important;
     padding: 6px 4px !important;
+    margin: 12px 0 !important;
   }
   .gate-teacher-card {
-    padding: 16px 20px !important;
-    min-height: 76px !important;
+    padding: 15px 18px !important;
+    min-height: 74px !important;
     border-radius: 16px !important;
   }
   .gate-t-avatar {
-    width: 52px !important;
-    height: 52px !important;
-    font-size: 1.6rem !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.55rem !important;
   }
   .gate-t-name {
-    font-size: 1.22rem !important;
+    font-size: 1.16rem !important;
     gap: 10px !important;
   }
   .gate-t-meta {
-    font-size: 1.02rem !important;
-    margin-top: 4px !important;
+    font-size: 0.96rem !important;
+    margin-top: 3px !important;
   }
   .gate-t-arrow {
-    font-size: 1.45rem !important;
+    font-size: 1.35rem !important;
   }
   #gate-view-pin > form {
     max-width: 560px !important;
@@ -7303,12 +7309,91 @@ body.portal-locked .gate-lock-card {
 
 @media (min-width: 1440px) {
   .gate-lock-card {
-    max-width: min(94vw, 1180px) !important;
+    max-width: 920px !important;
   }
   .gate-lock-card .gate-teacher-list {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 18px !important;
+    gap: 16px !important;
   }
+  .gate-teacher-card {
+    padding: 16px 20px !important;
+    min-height: 78px !important;
+  }
+  .gate-t-name {
+    font-size: 1.20rem !important;
+  }
+  .gate-t-meta {
+    font-size: 1.00rem !important;
+  }
+}
+
+/* Maximized Mode for Gate Lock Modal: Centered & Beautifully Proportioned (No Bottom Empty Void) */
+.gate-lock-card.is-maximized {
+  max-width: 98vw !important;
+  width: 98vw !important;
+  height: 96vh !important;
+  max-height: 96vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+.gate-lock-card.is-maximized #gate-view-select {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  height: 100% !important;
+  justify-content: center !important;
+}
+.gate-lock-card.is-maximized .modal-body {
+  max-width: 1060px !important;
+  width: 100% !important;
+  margin: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 24px 32px !important;
+  gap: 16px !important;
+  height: auto !important;
+  max-height: none !important;
+}
+.gate-lock-card.is-maximized .gate-teacher-list {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 18px !important;
+  max-height: none !important;
+  overflow: visible !important;
+  margin: 14px 0 !important;
+}
+.gate-lock-card.is-maximized .gate-teacher-card {
+  padding: 18px 24px !important;
+  min-height: 86px !important;
+  border-radius: 18px !important;
+}
+.gate-lock-card.is-maximized .gate-t-avatar {
+  width: 56px !important;
+  height: 56px !important;
+  font-size: 1.85rem !important;
+}
+.gate-lock-card.is-maximized .gate-t-name {
+  font-size: 1.26rem !important;
+}
+.gate-lock-card.is-maximized .gate-t-meta {
+  font-size: 1.02rem !important;
+}
+.gate-lock-card.is-maximized .gate-t-arrow {
+  font-size: 1.55rem !important;
+}
+.gate-lock-card.is-maximized #gate-view-pin {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  height: 100% !important;
+  justify-content: center !important;
+}
+.gate-lock-card.is-maximized #gate-view-pin > form {
+  max-width: 600px !important;
+  width: 100% !important;
+  margin: auto !important;
 }
 
 /* Teacher Analytics & Duration Bar */

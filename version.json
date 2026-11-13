@@ -1,6 +1,6 @@
 {
-  "version": "v92",
-  "build": 92,
-  "updatedAt": "2026-11-14T00:15:00+07:00",
-  "changelog": "Desktop computer widescreen expansion, 2-column teacher gate layout, and responsive root font scaling for crystal-clear readability"
+  "version": "v93",
+  "build": 93,
+  "updatedAt": "2026-11-14T00:25:00+07:00",
+  "changelog": "Desktop computer sizing & centered fullscreen modal without void, all 6 faculty members visible, and unified Competency Test (តេស្តសមត្ថភាព) Google Sheets integration"
 }

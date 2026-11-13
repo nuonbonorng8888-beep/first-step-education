@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=92">
+  <link rel="stylesheet" href="css/style.css?v=93">
 </head>
 <body>
 
@@ -117,7 +117,7 @@
           📚 <span class="desktop-only" style="font-size: 0.74rem;">ធនាគារសំណួរ</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v85)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v93)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
           🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
         </button>
 
@@ -518,7 +518,7 @@
           <h4 class="footer-col-title">សម្រាប់គ្រូ</h4>
           <ul class="footer-links">
             <li><a href="javascript:void(0)" onclick="App.openLoginModal()">ធនធានសម្រាប់គ្រូ</a></li>
-            <li><a href="javascript:void(0)" onclick="App.openTeacherSheetModal()">📊 តារាងពិន្ទុស្វ័យប្រវត្តិ (Google Sheets)</a></li>
+            <li><a href="javascript:void(0)" onclick="App.openTeacherSheetModal()">📊 តេស្តសមត្ថភាព & តារាងពិន្ទុ (Google Sheets)</a></li>
             <li><a href="javascript:void(0)" onclick="App.openWebShareModal()">ប្រើក្នុងបន្ទប់កុំព្យូទ័រ</a></li>
             <li><a href="javascript:void(0)" onclick="App.openWorksheetUnlockModal()">ដោះសោដំណោះស្រាយ</a></li>
             <li><a href="javascript:void(0)" onclick="App.openMobileInstallModal()">ដំឡើងលើទូរស័ព្ទដៃ</a></li>
@@ -872,8 +872,8 @@
             <h4 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 4px; color: var(--text-primary);">
               សូមជ្រើសរើសឈ្មោះលោកគ្រូ-អ្នកគ្រូ
             </h4>
-            <p style="font-size: 0.90rem; color: var(--text-secondary); line-height: 1.5;" id="gate-select-count-hint">
-              ចុចលើឈ្មោះរបស់លោកគ្រូ-អ្នកគ្រូខាងក្រោម <strong style="color: #38bdf8;">(សរុប ៦ រូប)</strong> ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;" id="gate-select-count-hint">
+              👇 សូមចុចលើឈ្មោះលោកគ្រូ-អ្នកគ្រូខាងក្រោម <strong style="color: #38bdf8; font-size: 1.02rem;">(សរុប ៦ រូបពេញលេញ)</strong> ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖
             </p>
           </div>
 
@@ -1456,7 +1456,7 @@
   <div class="modal-overlay" id="teacher-sheet-modal" onclick="if(event.target === this) App.closeTeacherSheetModal()">
     <div class="modal-card modal-lg-desktop">
       <div class="modal-header">
-        <h3 class="modal-title">📊 តារាងពិន្ទុស្វ័យប្រវត្តិ (Google Sheets)</h3>
+        <h3 class="modal-title">📊 ប្រព័ន្ធតេស្តសមត្ថភាព & តារាងពិន្ទុ (Google Sheets)</h3>
         <div style="display: flex; gap: 6px; align-items: center;">
           <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
           <button class="btn-icon" onclick="App.closeTeacherSheetModal()">✕</button>
@@ -1745,15 +1745,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=92"></script>
-  <script src="js/question-bank.js?v=92"></script>
-  <script src="js/app.js?v=92"></script>
-  <script src="js/visits.js?v=92"></script>
+  <script src="js/storage.js?v=93"></script>
+  <script src="js/question-bank.js?v=93"></script>
+  <script src="js/app.js?v=93"></script>
+  <script src="js/visits.js?v=93"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=92').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=93').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

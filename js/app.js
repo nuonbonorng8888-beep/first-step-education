@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v92';
+    this.appVersion = 'v93';
 
     const checkVersion = async () => {
       try {
@@ -756,8 +756,18 @@ function doGet(e) {
     if (!container) return;
 
     let list = [...(this.teachersList || [])];
-    if (list.length === 0 && window.StorageService) {
-      list = window.StorageService.getOfficialTeachers();
+    if (window.StorageService) {
+      const officialTeachers = window.StorageService.getOfficialTeachers();
+      officialTeachers.forEach(ot => {
+        const hasTeacher = list.some(t => 
+          (t.id && ot.id && t.id === ot.id) || 
+          (t.pin && ot.pin && String(t.pin).trim() === String(ot.pin).trim()) ||
+          (t.name && ot.name && t.name.trim() === ot.name.trim())
+        );
+        if (!hasTeacher) {
+          list.push(ot);
+        }
+      });
       this.teachersList = [...list];
     }
 
@@ -778,7 +788,7 @@ function doGet(e) {
     const activeList = list.filter(t => t.status !== 'blocked');
     const countHint = document.getElementById('gate-select-count-hint');
     if (countHint) {
-      countHint.innerHTML = `ចុចលើឈ្មោះរបស់លោកគ្រូ-អ្នកគ្រូខាងក្រោម <strong style="color: #38bdf8;">(សរុប ${activeList.length} រូប)</strong> ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖`;
+      countHint.innerHTML = `👇 សូមចុចលើឈ្មោះលោកគ្រូ-អ្នកគ្រូខាងក្រោម <strong style="color: #38bdf8; font-size: 1.02rem;">(សរុប ${activeList.length} រូបពេញលេញ)</strong> ដើម្បីវាយលេខកូដ PIN ៖`;
     }
 
     if (activeList.length === 0) {
