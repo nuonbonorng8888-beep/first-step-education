@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v96';
+    this.appVersion = 'v97';
 
     const checkVersion = async () => {
       try {
@@ -671,7 +671,7 @@ function doGet(e) {
       if (isAdm) {
         bankNavBtn.style.display = 'inline-flex';
         bankNavBtn.className = 'btn btn-secondary nav-bank-btn';
-        bankNavBtn.title = 'ធនាគារសំណួរ ៥,៤៧០+ (គ្រប់គ្រងដោយ Admin)';
+        bankNavBtn.title = 'ធនាគារសំណួរ ៥,៦៧០+ (គ្រប់គ្រងដោយ Admin)';
         bankNavBtn.innerHTML = '📚 <span class="desktop-only" style="font-size:0.74rem;">ធនាគារសំណួរ</span>';
       } else if (isTeacherLoggedIn) {
         bankNavBtn.style.display = 'inline-flex';
@@ -3286,8 +3286,8 @@ function doGet(e) {
             <button class="btn btn-sm btn-primary teacher-share-btn" onclick="App.openTeacherSheetModal(true)" title="ចែករំលែក Link តេស្តមេរៀននេះទៅកាន់ថ្នាក់">
               🔗 ចែករំលែក Link តេស្តនេះ
             </button>
-            <button class="btn btn-sm btn-outline teacher-sheet-btn" onclick="App.openTeacherSheetModal()" title="ការកំណត់តារាងពិន្ទុ Google Sheets សម្រាប់គ្រូ">
-              📊 តារាងពិន្ទុស្វ័យប្រវត្តិ
+            <button class="btn btn-sm btn-outline teacher-sheet-btn" onclick="App.openTeacherSheetModal()" title="ការកំណត់តេស្តសមត្ថភាព & តារាងពិន្ទុ Google Sheets សម្រាប់គ្រូ">
+              📊 តេស្តសមត្ថភាព (Google Sheets)
             </button>
           ` : ''}
         </div>

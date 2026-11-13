@@ -1,6 +1,6 @@
 /**
  * NGS Unified Question Bank & Multi-Lesson Exam Generator
- * (ធនាគារសំណួរ ៥,៤៧០+ សំណួរ & ប្រព័ន្ធបង្កើតវិញ្ញាសាចម្រុះ ១០ MCQ + ៥ សរសេរ ជាមួយអត្រាកំណែ)
+ * (ធនាគារសំណួរ ៥,៦៧០+ សំណួរ & ប្រព័ន្ធបង្កើតវិញ្ញាសាចម្រុះ ១០ MCQ + ៥ សរសេរ ជាមួយអត្រាកំណែ)
  * Strictly organizes questions by Lesson with ZERO cross-lesson leakage!
  */
 
@@ -223,7 +223,7 @@ class QuestionBankController {
             <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
               សួស្តី ${activeTeacherName}!
             </div>
-            មុខងារគ្រប់គ្រង & កែសម្រួលធនាគារសំណួរដើម (៥,៤៧០ សំណួរ) ត្រូវបានកំណត់សម្រាប់តែ <strong>Admin (លោកគ្រូ នួន បូណង)</strong> ប៉ុណ្ណោះ ដើម្បីធានាសុវត្ថិភាពទិន្នន័យ។
+            មុខងារគ្រប់គ្រង & កែសម្រួលធនាគារសំណួរដើម (៥,៦៧០ សំណួរ) ត្រូវបានកំណត់សម្រាប់តែ <strong>Admin (លោកគ្រូ នួន បូណង)</strong> ប៉ុណ្ណោះ ដើម្បីធានាសុវត្ថិភាពទិន្នន័យ។
           </div>
 
           <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 12px 16px; text-align: left; font-size: 0.84rem; line-height: 1.6; margin-bottom: 16px;">
@@ -710,9 +710,13 @@ class QuestionBankController {
         combinedPool = [...pool].sort(() => Math.random() - 0.5);
       }
 
-      // Pick strictly Written Problems for this lesson
+      // Pick strictly Written Problems for this lesson (prioritize authentic written problems)
+      const authenticWritten = combinedPool.filter(q => q.kind === 'written');
+      const otherQuestions = combinedPool.filter(q => q.kind !== 'written');
+      const prioritizedPool = [...authenticWritten, ...otherQuestions];
+
       let writtenAdded = 0;
-      for (const q of combinedPool) {
+      for (const q of prioritizedPool) {
         if (writtenAdded >= slot.writtenCount) break;
         if (!usedIds.has(q.id)) {
           selectedWritten.push({ ...q, originLesson: lessonTitle });
@@ -1060,7 +1064,7 @@ class QuestionBankController {
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
               <span>📚 ធនាគារសំណួរគណិតវិទ្យា (Question Bank)</span>
               <span id="bankTotalCountBadge" style="font-size: 0.84rem; padding: 3px 10px; border-radius: 999px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-weight: 700;">
-                (៥,៤៧០ សំណួរ)
+                (៥,៦៧០ សំណួរ)
               </span>
             </h3>
             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
@@ -1294,6 +1298,11 @@ class QuestionBankController {
               <span style="font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: rgba(16, 185, 129, 0.15); color: #34d399;">
                 ${q.level || 'មធ្យម'}
               </span>
+              ${q.kind === 'written' ? `
+                <span style="font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
+                  ✍️ សរសេរ
+                </span>
+              ` : ''}
               <button class="btn-icon" style="padding: 4px;" title="ចម្លងសំណួរ" onclick="window.questionBank.copySingleQuestion('${q.id}')">📋</button>
             </div>
           </div>
@@ -1303,9 +1312,16 @@ class QuestionBankController {
             ${this.formatMath(q.q)}
           </div>
 
+          <!-- Choices Grid or Written Banner -->
+          ${q.kind === 'written' ? `
+            <div style="padding: 8px 12px; border-radius: 8px; background: rgba(56, 189, 248, 0.1); border: 1px dashed rgba(56, 189, 248, 0.4); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: #38bdf8;">
+              <span>✍️</span>
+              <span style="font-weight: 700;">ទម្រង់លំហាត់សរសេរដោះស្រាយ (Written Problem) ៖ សិស្សត្រូវសរសេរដំណោះស្រាយលម្អិតតាមលំដាប់លំដោយ</span>
+            </div>
+          ` : `
           <!-- Choices Grid (For MCQ) -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 6px; margin-bottom: 8px;">
-            ${q.o.map((opt, oIdx) => `
+            ${(q.o || []).map((opt, oIdx) => `
               <div style="padding: 6px 10px; border-radius: 8px; font-size: 0.78rem; display: flex; align-items: center; gap: 8px; background: ${oIdx === q.a ? 'rgba(16, 185, 129, 0.15)' : 'rgba(15, 23, 42, 0.3)'}; border: 1px solid ${oIdx === q.a ? 'rgba(16, 185, 129, 0.4)' : 'transparent'};">
                 <span style="width: 20px; height: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800; background: ${oIdx === q.a ? '#10b981' : 'rgba(255,255,255,0.1)'}; color: white;">
                   ${String.fromCharCode(65 + oIdx)}
@@ -1315,14 +1331,15 @@ class QuestionBankController {
               </div>
             `).join('')}
           </div>
+          `}
 
           <!-- Concise Answer / Solution Toggle (កំណែខ្លីៗ & គន្លឹះ) -->
           <details style="margin-top: 6px; font-size: 0.76rem; color: var(--text-muted);">
             <summary style="cursor: pointer; font-weight: 700; color: #f59e0b;">
-              💡 បង្ហាញកំណែខ្លីៗ & ដំណោះស្រាយ (Short Solution)
+              💡 ${q.kind === 'written' ? 'បង្ហាញអត្រាកំណែ & ដំណោះស្រាយលម្អិត (Full Solution & Answer Key)' : 'បង្ហាញកំណែខ្លីៗ & ដំណោះស្រាយ (Short Solution)'}
             </summary>
-            <div style="margin-top: 6px; padding: 8px 12px; border-radius: 8px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); color: var(--text-secondary); line-height: 1.6; font-mono;">
-              ${this.formatMath(q.short_solution || q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
+            <div style="margin-top: 6px; padding: 8px 12px; border-radius: 8px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap;">
+              ${this.formatMath(q.e || q.short_solution || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
             </div>
           </details>
         </div>
