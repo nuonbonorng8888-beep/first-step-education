@@ -1,6 +1,6 @@
 {
-  "version": "v95",
-  "build": 95,
-  "updatedAt": "2026-11-14T01:05:00+07:00",
-  "changelog": "Butter-smooth 60fps performance without idle draw loops, responsive desktop kiosk for Teacher Gate modal, strict view isolation, persistent teacher login, and 1-click cache purge"
+  "version": "v96",
+  "build": 96,
+  "updatedAt": "2026-11-14T01:20:00+07:00",
+  "changelog": "Massive font enlargement across app and modals (+25% to +37.5%), spacious desktop computer layout, high-legibility Khmer typography, and responsive proportions"
 }
