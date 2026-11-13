@@ -1,6 +1,6 @@
 {
-  "version": "v94",
-  "build": 94,
-  "updatedAt": "2026-11-14T00:40:00+07:00",
-  "changelog": "Strict view isolation for Teacher Gate modal, spacious desktop PIN kiosk, and eliminated dual-view stacking"
+  "version": "v95",
+  "build": 95,
+  "updatedAt": "2026-11-14T01:05:00+07:00",
+  "changelog": "Butter-smooth 60fps performance without idle draw loops, responsive desktop kiosk for Teacher Gate modal, strict view isolation, persistent teacher login, and 1-click cache purge"
 }

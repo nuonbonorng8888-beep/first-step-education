@@ -28,7 +28,7 @@ class Math3DExplainer {
     this.activeStepIndex = 0;
     this.isPlaying = true;
     this.isVoiceEnabled = false; // Voice disabled per user request
-    this.is3DMode = true;
+    this.is3DMode = false; // Default false until 3D viewer is actively entered
 
     // Orbit control state (touch/mouse orbit & pinch-to-zoom)
     this.isDragging = false;
@@ -215,9 +215,9 @@ class Math3DExplainer {
 
     this.clock = new THREE.Clock();
 
-    // Start animation loop
+    // Bind animation loop (only starts when 3D viewer is actively opened)
     this.animate = this.animate.bind(this);
-    this.animId = requestAnimationFrame(this.animate);
+    this.animId = null;
   }
 
   setupEvents() {
@@ -7872,14 +7872,36 @@ class Math3DExplainer {
   // --------------------------------------------------------------------------
   // Real-Time 3D Animation Render Loop
   // --------------------------------------------------------------------------
-  animate() {
-    this.animId = requestAnimationFrame(this.animate);
+  startAnimationLoop() {
+    if (!this.animId && this.is3DMode) {
+      this.animId = requestAnimationFrame(this.animate);
+    }
+  }
 
-    // High-Performance Visibility Guard: Stop WebGL rendering when hidden or out of view to ensure 100% butter-smooth UI
-    if (document.hidden || !this.is3DMode) return;
+  stopAnimationLoop() {
+    if (this.animId) {
+      cancelAnimationFrame(this.animId);
+      this.animId = null;
+    }
+  }
+
+  animate() {
+    // High-Performance Guard: Exit immediately and DO NOT reschedule if 3D mode is inactive or hidden
+    if (document.hidden || !this.is3DMode) {
+      this.animId = null;
+      return;
+    }
     const canvas = this.canvas || document.getElementById('math-3d-canvas');
-    if (!canvas || !canvas.isConnected || canvas.offsetParent === null) return;
-    if (!this.container || !this.container.isConnected || this.container.offsetParent === null) return;
+    if (!canvas || !canvas.isConnected || canvas.offsetParent === null) {
+      this.animId = null;
+      return;
+    }
+    if (!this.container || !this.container.isConnected || this.container.offsetParent === null) {
+      this.animId = null;
+      return;
+    }
+
+    this.animId = requestAnimationFrame(this.animate);
 
     if (this.isPlaying && this.animGroup) {
       const time = this.clock ? this.clock.getElapsedTime() : Date.now() * 0.001;

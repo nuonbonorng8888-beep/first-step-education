@@ -89,6 +89,12 @@ html {
 }
 
 /* Computer Desktop Scaling: Boosts all text and UI across the entire app by +12.5% to +18.75% */
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
 @media (min-width: 1024px) {
   html {
     font-size: 18px;
@@ -7118,10 +7124,11 @@ body.portal-locked #login-modal {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
-  backdrop-filter: blur(24px) !important;
-  -webkit-backdrop-filter: blur(24px) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
   background: rgba(10, 15, 30, 0.94) !important;
   z-index: 999999 !important;
+  transform: translateZ(0);
 }
 
 body.portal-locked .gate-hide-on-lock {
@@ -7135,18 +7142,9 @@ body.portal-locked .gate-hide-on-lock {
 }
 
 body.portal-locked .gate-lock-card {
-  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 50px rgba(56, 189, 248, 0.28) !important;
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 35px rgba(56, 189, 248, 0.25) !important;
   border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
-  animation: lockCardPulse 3s infinite alternate ease-in-out;
-}
-
-@keyframes lockCardPulse {
-  0% {
-    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 25px rgba(56, 189, 248, 0.2);
-  }
-  100% {
-    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 55px rgba(56, 189, 248, 0.45);
-  }
+  transform: translateZ(0);
 }
 
 /* Strict Isolation: Ensure inactive gate view is ALWAYS 100% hidden, never leaking or stacking! */
@@ -7273,29 +7271,74 @@ body.portal-locked .gate-lock-card {
   transform: translateX(4px);
 }
 
-/* Desktop Widescreen Layout for Teacher Gate Modal (Open to Computer Size) */
-@media (min-width: 1024px) {
+/* Responsive Widescreen & Tablet Layout for Teacher Gate Modal (Open to Computer Size) */
+@media (min-width: 768px) {
   .gate-lock-card {
-    max-width: 900px !important;
+    max-width: 860px !important;
     width: 92vw !important;
     max-height: 92vh !important;
     margin: auto !important;
-    border-radius: 26px !important;
-    padding: 12px 18px !important;
-    box-shadow: 0 30px 80px -10px rgba(0, 0, 0, 0.9), 0 0 50px rgba(56, 189, 248, 0.28) !important;
+    border-radius: 24px !important;
+    padding: 14px 20px !important;
+    box-shadow: 0 30px 80px -10px rgba(0, 0, 0, 0.9), 0 0 45px rgba(56, 189, 248, 0.28) !important;
   }
   .gate-lock-card .gate-teacher-list {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
+    gap: 14px !important;
     max-height: none !important;
     overflow-y: visible !important;
     padding: 6px 4px !important;
+    margin: 12px 0 !important;
+  }
+  .gate-teacher-card {
+    padding: 14px 18px !important;
+    min-height: 74px !important;
+    border-radius: 15px !important;
+  }
+  .gate-t-avatar {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.55rem !important;
+  }
+  .gate-t-name {
+    font-size: 1.16rem !important;
+    gap: 8px !important;
+  }
+  .gate-t-meta {
+    font-size: 0.96rem !important;
+    margin-top: 3px !important;
+  }
+  .gate-t-arrow {
+    font-size: 1.35rem !important;
+  }
+
+  /* PIN View on Tablets & Scaled Screens */
+  .gate-lock-card.view-mode-pin {
+    max-width: 650px !important;
+  }
+  #gate-view-pin > form {
+    max-width: 580px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 8px 6px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gate-lock-card {
+    max-width: 920px !important;
+    width: 92vw !important;
+    border-radius: 26px !important;
+    padding: 18px 24px !important;
+  }
+  .gate-lock-card .gate-teacher-list {
+    gap: 16px !important;
     margin: 14px 0 !important;
   }
   .gate-teacher-card {
     padding: 16px 20px !important;
-    min-height: 78px !important;
+    min-height: 80px !important;
     border-radius: 16px !important;
   }
   .gate-t-avatar {
@@ -7304,7 +7347,7 @@ body.portal-locked .gate-lock-card {
     font-size: 1.65rem !important;
   }
   .gate-t-name {
-    font-size: 1.20rem !important;
+    font-size: 1.22rem !important;
     gap: 10px !important;
   }
   .gate-t-meta {
@@ -7317,10 +7360,10 @@ body.portal-locked .gate-lock-card {
 
   /* Desktop PIN View: Spacious, Luxurious & Prominent */
   .gate-lock-card.view-mode-pin {
-    max-width: 720px !important;
+    max-width: 680px !important;
   }
   #gate-view-pin > form {
-    max-width: 620px !important;
+    max-width: 600px !important;
     width: 100% !important;
     margin: 0 auto !important;
     padding: 10px 8px !important;
@@ -7379,7 +7422,7 @@ body.portal-locked .gate-lock-card {
 
 @media (min-width: 1440px) {
   .gate-lock-card {
-    max-width: 960px !important;
+    max-width: 980px !important;
   }
   .gate-lock-card .gate-teacher-list {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -7390,25 +7433,28 @@ body.portal-locked .gate-lock-card {
     min-height: 82px !important;
   }
   .gate-t-name {
-    font-size: 1.24rem !important;
+    font-size: 1.25rem !important;
   }
   .gate-t-meta {
     font-size: 1.02rem !important;
   }
   .gate-lock-card.view-mode-pin {
-    max-width: 760px !important;
+    max-width: 720px !important;
   }
 }
 
-/* Maximized Mode for Gate Lock Modal: Centered & Beautifully Proportioned (No Bottom Empty Void, Zero View Overlap) */
+/* Maximized Mode for Gate Lock Modal: Clean, Centered & Beautifully Proportioned Kiosk (Never Distorted 100vw, Zero Overlap) */
 .gate-lock-card.is-maximized {
-  max-width: 98vw !important;
-  width: 98vw !important;
-  height: 96vh !important;
-  max-height: 96vh !important;
+  max-width: min(1080px, 94vw) !important;
+  width: min(1080px, 94vw) !important;
+  height: min(90vh, 840px) !important;
+  max-height: 90vh !important;
+  margin: auto !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
+  border-radius: 26px !important;
+  box-shadow: 0 35px 95px -10px rgba(0, 0, 0, 0.95), 0 0 55px rgba(56, 189, 248, 0.35) !important;
 }
 
 /* Maximized Teacher Selection View */
@@ -7420,13 +7466,13 @@ body.portal-locked .gate-lock-card {
   justify-content: center !important;
 }
 .gate-lock-card.is-maximized #gate-view-select .modal-body {
-  max-width: 1060px !important;
+  max-width: 1020px !important;
   width: 100% !important;
   margin: auto !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-  padding: 24px 32px !important;
+  padding: 20px 28px !important;
   gap: 16px !important;
   height: auto !important;
   max-height: none !important;
@@ -7441,7 +7487,7 @@ body.portal-locked .gate-lock-card {
 }
 .gate-lock-card.is-maximized .gate-teacher-card {
   padding: 18px 24px !important;
-  min-height: 86px !important;
+  min-height: 84px !important;
   border-radius: 18px !important;
 }
 .gate-lock-card.is-maximized .gate-t-avatar {
@@ -7468,7 +7514,7 @@ body.portal-locked .gate-lock-card {
   justify-content: center !important;
 }
 .gate-lock-card.is-maximized #gate-view-pin > form {
-  max-width: 660px !important;
+  max-width: 620px !important;
   width: 100% !important;
   margin: auto !important;
   display: flex !important;
@@ -7476,6 +7522,9 @@ body.portal-locked .gate-lock-card {
   justify-content: center !important;
 }
 .gate-lock-card.is-maximized #gate-view-pin .modal-body {
+  gap: 18px !important;
+  padding: 24px 32px !important;
+}
   gap: 18px !important;
   padding: 24px 32px !important;
 }

@@ -1,5 +1,5 @@
 // 1st Step Education PWA Service Worker
-const CACHE_NAME = '1st-step-v94';
+const CACHE_NAME = '1st-step-v95';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -70,8 +70,10 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Version, teachers data, and main HTML must always fetch network-first with cache-bust to prevent stale UI
-  if (event.request.url.includes('version.json') || event.request.url.includes('teachers.json') || event.request.mode === 'navigate' || event.request.url.endsWith('/index.html') || event.request.url.endsWith('/')) {
+  // Code, Styles, JSON data, and main HTML must always fetch network-first with cache-bust to prevent stale UI
+  const reqUrl = event.request.url;
+  const isCodeOrData = reqUrl.includes('.css') || reqUrl.includes('.js') || reqUrl.includes('.json') || event.request.mode === 'navigate' || reqUrl.endsWith('/index.html') || reqUrl.endsWith('/');
+  if (isCodeOrData) {
     event.respondWith(
       fetch(event.request, { cache: 'no-store' }).then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200) {

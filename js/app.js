@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v94';
+    this.appVersion = 'v95';
 
     const checkVersion = async () => {
       try {
@@ -418,19 +418,27 @@ function doGet(e) {
 
   applyUpdateNow() {
     this.showToast('កំពុងសម្អាត Cache និងទាញយកទិន្នន័យចុងក្រោយ...', 'info');
+    const bustUrl = window.location.origin + window.location.pathname + '?_bust=' + Date.now();
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(regs => {
-        regs.forEach(r => r.update());
-      });
-      caches.keys().then(keys => {
-        return Promise.all(keys.map(k => caches.delete(k)));
-      }).then(() => {
-        window.location.reload();
-      }).catch(() => {
-        window.location.reload();
-      });
+      navigator.serviceWorker.getRegistrations()
+        .then(regs => Promise.all(regs.map(r => r.unregister())))
+        .then(() => ('caches' in window ? caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))) : Promise.resolve()))
+        .then(() => {
+          window.location.replace(bustUrl);
+        })
+        .catch(() => {
+          window.location.replace(bustUrl);
+        });
     } else {
-      window.location.reload();
+      if ('caches' in window) {
+        caches.keys().then(keys => Promise.all(keys.map(k => caches.delete(k)))).then(() => {
+          window.location.replace(bustUrl);
+        }).catch(() => {
+          window.location.replace(bustUrl);
+        });
+      } else {
+        window.location.replace(bustUrl);
+      }
     }
   },
 
@@ -442,11 +450,11 @@ function doGet(e) {
         if (data && data.version && data.version !== this.appVersion) {
           this.applyUpdateNow();
         } else {
-          this.showToast(`✅ លោកអ្នកកំពុងប្រើប្រាស់កំណែថ្មីបំផុតហើយ (${data.version || this.appVersion})`, 'success');
+          this.showToast(`✅ លោកអ្នកកំពុងប្រើប្រាស់កំណែថ្មីបំផុតហើយ (${data?.version || this.appVersion})`, 'success');
         }
       })
       .catch(() => {
-        this.showToast(`✅ វិបសាយដំណើរការលើកំណែចុងក្រោយ (${this.appVersion})`, 'success');
+        this.applyUpdateNow();
       });
   },
 
@@ -583,11 +591,11 @@ function doGet(e) {
       await this.initTeachers();
     }
 
-    // Clear legacy persistent localStorage to ensure every fresh visit requires PIN
-    localStorage.removeItem('teacher_session');
-    localStorage.removeItem('admin_pin');
-
-    const storedSession = sessionStorage.getItem('teacher_session');
+    // Read stored teacher session (supports both sessionStorage and persistent localStorage)
+    let storedSession = sessionStorage.getItem('teacher_session');
+    if (!storedSession) {
+      storedSession = localStorage.getItem('teacher_session');
+    }
 
     if (storedSession) {
       try {
@@ -597,6 +605,9 @@ function doGet(e) {
           this.currentTeacher = matched;
           this.isAdmin = (matched.role === 'admin' || String(matched.pin) === '95511');
           this.isTeacher = true;
+          // Ensure both storage locations have latest valid session
+          sessionStorage.setItem('teacher_session', JSON.stringify(matched));
+          localStorage.setItem('teacher_session', JSON.stringify(matched));
           // Apply teacher's personal sheet URL
           if (matched.sheetUrl && !this.examTargetSheetUrl) {
             this.setTeacherSheetUrl(matched.sheetUrl);
@@ -751,11 +762,11 @@ function doGet(e) {
     }
     if (viewSelect) {
       viewSelect.classList.remove('is-hidden');
-      viewSelect.style.display = 'block';
+      viewSelect.style.setProperty('display', 'block', 'important');
     }
     if (viewPin) {
       viewPin.classList.add('is-hidden');
-      viewPin.style.display = 'none';
+      viewPin.style.setProperty('display', 'none', 'important');
     }
     if (titleEl) titleEl.textContent = isLocked ? '🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)' : '🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)';
 
@@ -892,11 +903,11 @@ function doGet(e) {
     }
     if (viewSelect) {
       viewSelect.classList.add('is-hidden');
-      viewSelect.style.display = 'none';
+      viewSelect.style.setProperty('display', 'none', 'important');
     }
     if (viewPin) {
       viewPin.classList.remove('is-hidden');
-      viewPin.style.display = 'block';
+      viewPin.style.setProperty('display', 'block', 'important');
     }
 
     setTimeout(() => pinInp?.focus(), 250);
@@ -979,8 +990,10 @@ function doGet(e) {
         this.isTeacher = true;
 
         sessionStorage.setItem('teacher_session', JSON.stringify(teacher));
+        localStorage.setItem('teacher_session', JSON.stringify(teacher));
         if (this.isAdmin) {
           sessionStorage.setItem('admin_pin', '95511');
+          localStorage.setItem('admin_pin', '95511');
         }
 
         // If member teacher has personal sheet, activate it
@@ -1815,6 +1828,9 @@ function doGet(e) {
     document.getElementById('player-view').classList.remove('active');
     document.getElementById('player-view').style.display = 'none';
     document.getElementById('catalog-view').style.display = 'block';
+    if (window.Math3D && typeof window.Math3D.stopAnimationLoop === 'function') {
+      window.Math3D.stopAnimationLoop();
+    }
     this.updateStats();
     this.renderCourses();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -5106,6 +5122,19 @@ function doGet(e) {
     const isMax = card.classList.toggle('is-maximized');
     btnEl.innerHTML = isMax ? '🗗' : '⛶';
     btnEl.title = isMax ? 'បង្រួមទំហំដើម (Restore)' : 'ពង្រីកពេញអេក្រង់ (Maximize)';
+
+    // Strict guard for Gate Lock Modal: Enforce active view isolation when maximizing
+    if (card.classList.contains('gate-lock-card')) {
+      const viewSelect = document.getElementById('gate-view-select');
+      const viewPin = document.getElementById('gate-view-pin');
+      if (card.classList.contains('view-mode-pin')) {
+        if (viewSelect) { viewSelect.style.setProperty('display', 'none', 'important'); viewSelect.classList.add('is-hidden'); }
+        if (viewPin) { viewPin.style.setProperty('display', 'block', 'important'); viewPin.classList.remove('is-hidden'); }
+      } else {
+        if (viewPin) { viewPin.style.setProperty('display', 'none', 'important'); viewPin.classList.add('is-hidden'); }
+        if (viewSelect) { viewSelect.style.setProperty('display', 'block', 'important'); viewSelect.classList.remove('is-hidden'); }
+      }
+    }
   },
 
   saveTeacherSheetUrl() {

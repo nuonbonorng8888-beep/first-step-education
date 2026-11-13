@@ -659,7 +659,12 @@
       const tick = (timestamp) => {
         // High-Performance Visibility & Idle Guard: Stop background draw loops to ensure 100% buttery smoothness
         if (document.hidden || !this.canvas || !this.canvas.isConnected || this.canvas.offsetParent === null) {
-          this.animFrameId = requestAnimationFrame(tick);
+          this.animFrameId = null;
+          return;
+        }
+
+        if (!this.isPlaying && !this.isDragging) {
+          this.animFrameId = null;
           return;
         }
 
@@ -686,9 +691,16 @@
           this.render();
         }
 
-        this.animFrameId = requestAnimationFrame(tick);
+        if (this.isPlaying || this.isDragging) {
+          this.animFrameId = requestAnimationFrame(tick);
+        } else {
+          this.animFrameId = null;
+        }
       };
-      this.animFrameId = requestAnimationFrame(tick);
+
+      if (!this.animFrameId) {
+        this.animFrameId = requestAnimationFrame(tick);
+      }
     }
 
     /* ==========================================================================
