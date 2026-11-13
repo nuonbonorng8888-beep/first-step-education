@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=91">
+  <link rel="stylesheet" href="css/style.css?v=92">
 </head>
 <body>
 
@@ -850,7 +850,7 @@
 
   <!-- ================= TEACHER LOGIN MODAL / GATE LOCK ================= -->
   <div class="modal-overlay" id="login-modal" onclick="App.onLoginModalOverlayClick(event)">
-    <div class="modal-card gate-lock-card" style="max-width: 530px;">
+    <div class="modal-card gate-lock-card">
       <div class="modal-header">
         <h3 class="modal-title" id="login-modal-title">🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)</h3>
         <div style="display: flex; gap: 6px; align-items: center;">
@@ -882,9 +882,9 @@
             <!-- Dynamically populated by App.renderGateTeacherList() -->
           </div>
 
-          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; color: var(--text-muted); line-height: 1.5; padding: 0 4px; flex-wrap: wrap; gap: 6px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; padding: 4px 6px; flex-wrap: wrap; gap: 8px;">
             <span>📞 ប្រសិនបើគ្មានឈ្មោះទេ សូមទាក់ទង <strong>លោកគ្រូ នួន បូណង</strong></span>
-            <button type="button" class="btn btn-xs btn-outline" onclick="App.refreshTeachersRoster()" style="font-size: 0.70rem; padding: 2px 8px; border-radius: 6px; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;" title="ទាញយកបញ្ជីគ្រូបច្ចុប្បន្នភាពចុងក្រោយពី Server">
+            <button type="button" class="btn btn-sm btn-outline" onclick="App.refreshTeachersRoster()" style="font-size: 0.84rem; padding: 4px 12px; border-radius: 8px; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;" title="ទាញយកបញ្ជីគ្រូបច្ចុប្បន្នភាពចុងក្រោយពី Server">
               🔄 ផ្ទុកឡើងវិញ
             </button>
           </div>
@@ -1745,15 +1745,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=91"></script>
-  <script src="js/question-bank.js?v=91"></script>
-  <script src="js/app.js?v=91"></script>
-  <script src="js/visits.js?v=91"></script>
+  <script src="js/storage.js?v=92"></script>
+  <script src="js/question-bank.js?v=92"></script>
+  <script src="js/app.js?v=92"></script>
+  <script src="js/visits.js?v=92"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=91').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=92').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

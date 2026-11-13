@@ -1,6 +1,6 @@
 {
-  "version": "v91",
-  "build": 91,
-  "updatedAt": "2026-11-14T00:00:00+07:00",
-  "changelog": "Boost smoothness & 60fps idle performance, expand desktop modal proportions & fullscreen maximize toggle, enlarge small Khmer text for crystal-clear readability"
+  "version": "v92",
+  "build": 92,
+  "updatedAt": "2026-11-14T00:15:00+07:00",
+  "changelog": "Desktop computer widescreen expansion, 2-column teacher gate layout, and responsive root font scaling for crystal-clear readability"
 }

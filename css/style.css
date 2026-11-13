@@ -88,6 +88,19 @@ html {
   overflow-x: hidden;
 }
 
+/* Computer Desktop Scaling: Boosts all text and UI across the entire app by +12.5% to +18.75% */
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 19px;
+  }
+}
+
 body {
   font-family: var(--font-khmer);
   background-color: var(--bg-primary);
@@ -118,11 +131,30 @@ body {
   background: var(--text-muted);
 }
 
-/* Container */
+/* Container: Expands to full desktop computer proportions on PC/laptop */
 .container {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 95vw;
+    width: 95vw;
+    max-width: 1650px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 95vw;
+    width: 95vw;
+    max-width: 1780px;
+    padding: 0 40px;
+  }
 }
 
 /* ==========================================================
@@ -724,24 +756,24 @@ body.light-theme .action-strip-btn {
 }
 
 .action-icon {
-  font-size: 1.6rem;
+  font-size: 1.85rem;
   flex-shrink: 0;
 }
 
 .action-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .action-title {
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .action-sub {
-  font-size: 0.88rem;
+  font-size: 0.96rem;
   color: var(--text-secondary);
 }
 
@@ -759,7 +791,7 @@ body.light-theme .grade-track-wrap {
 }
 
 .grade-track-label {
-  font-size: 0.84rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-secondary);
   display: flex;
@@ -785,10 +817,10 @@ body.light-theme .grade-track-wrap {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
-  min-height: 44px;
+  padding: 12px 22px;
+  min-height: 48px;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 600;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1048,21 +1080,22 @@ body.light-theme .grade-pill {
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
-  border-radius: var(--radius-md);
+  gap: 14px;
+  padding: 12px 22px;
+  border-radius: var(--radius-lg);
   background: var(--bg-glass);
   border: 1px solid var(--border-glass);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .stat-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
 }
 
 .stat-icon.blue { background: rgba(59, 130, 246, 0.2); color: var(--accent-blue); }
@@ -1076,13 +1109,13 @@ body.light-theme .grade-pill {
 
 .stat-number {
   font-family: var(--font-en);
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 700;
   line-height: 1.1;
 }
 
 .stat-label {
-  font-size: 0.88rem;
+  font-size: 0.96rem;
   color: var(--text-secondary);
 }
 
@@ -1315,14 +1348,14 @@ body.light-theme .grade-pill {
 }
 
 .card-body {
-  padding: 20px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 .card-title {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 8px;
@@ -1330,9 +1363,9 @@ body.light-theme .grade-pill {
 }
 
 .card-desc {
-  font-size: 0.86rem;
+  font-size: 0.96rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.6;
   margin-bottom: 16px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1348,7 +1381,7 @@ body.light-theme .grade-pill {
   padding-top: 14px;
   border-top: 1px solid var(--border-glass);
   margin-bottom: 16px;
-  font-size: 0.8rem;
+  font-size: 0.90rem;
   color: var(--text-secondary);
 }
 
@@ -7095,6 +7128,12 @@ body.portal-locked .gate-hide-on-lock {
   display: none !important;
 }
 
+.gate-lock-card {
+  width: 100%;
+  max-width: 540px;
+  transition: all var(--transition-normal);
+}
+
 body.portal-locked .gate-lock-card {
   box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 50px rgba(56, 189, 248, 0.28) !important;
   border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
@@ -7114,12 +7153,12 @@ body.portal-locked .gate-lock-card {
 .gate-teacher-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   max-height: min(72vh, 560px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   padding: 4px 4px;
-  margin: 10px 0;
+  margin: 12px 0;
   text-align: left;
   scrollbar-width: thin;
   scrollbar-color: rgba(56, 189, 248, 0.4) transparent;
@@ -7145,12 +7184,12 @@ body.portal-locked .gate-lock-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 9px 12px;
-  min-height: 54px;
+  gap: 12px;
+  padding: 12px 16px;
+  min-height: 60px;
   background: var(--bg-tertiary);
   border: 1px solid var(--border-glass);
-  border-radius: 12px;
+  border-radius: 14px;
   cursor: pointer;
   transition: all var(--transition-fast);
   text-align: left;
@@ -7161,29 +7200,29 @@ body.portal-locked .gate-lock-card {
   border-color: #38bdf8;
   background: rgba(56, 189, 248, 0.08);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .gate-teacher-card.is-admin {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(56, 189, 248, 0.12) 100%);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(56, 189, 248, 0.14) 100%);
   border: 1.5px solid rgba(16, 185, 129, 0.45);
 }
 
 .gate-teacher-card.is-admin:hover {
   border-color: #10b981;
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8px 26px rgba(16, 185, 129, 0.35);
 }
 
 .gate-t-avatar {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: rgba(56, 189, 248, 0.12);
   border: 1px solid rgba(56, 189, 248, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   flex-shrink: 0;
 }
 
@@ -7193,7 +7232,7 @@ body.portal-locked .gate-lock-card {
 }
 
 .gate-t-name {
-  font-size: 0.96rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: var(--text-primary);
   display: flex;
@@ -7203,22 +7242,73 @@ body.portal-locked .gate-lock-card {
 }
 
 .gate-t-meta {
-  font-size: 0.88rem;
+  font-size: 0.94rem;
   color: var(--text-muted);
   margin-top: 2px;
 }
 
 .gate-t-arrow {
   color: #38bdf8;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  opacity: 0.65;
+  opacity: 0.7;
   transition: transform var(--transition-fast);
 }
 
 .gate-teacher-card:hover .gate-t-arrow {
   opacity: 1;
   transform: translateX(4px);
+}
+
+/* Desktop Widescreen Layout for Teacher Gate Modal (Open to Computer Size) */
+@media (min-width: 1024px) {
+  .gate-lock-card {
+    max-width: min(94vw, 1080px) !important;
+    width: 92vw !important;
+    padding: 12px 18px !important;
+  }
+  .gate-lock-card .gate-teacher-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    max-height: min(75vh, 620px) !important;
+    padding: 6px 4px !important;
+  }
+  .gate-teacher-card {
+    padding: 16px 20px !important;
+    min-height: 76px !important;
+    border-radius: 16px !important;
+  }
+  .gate-t-avatar {
+    width: 52px !important;
+    height: 52px !important;
+    font-size: 1.6rem !important;
+  }
+  .gate-t-name {
+    font-size: 1.22rem !important;
+    gap: 10px !important;
+  }
+  .gate-t-meta {
+    font-size: 1.02rem !important;
+    margin-top: 4px !important;
+  }
+  .gate-t-arrow {
+    font-size: 1.45rem !important;
+  }
+  #gate-view-pin > form {
+    max-width: 560px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gate-lock-card {
+    max-width: min(94vw, 1180px) !important;
+  }
+  .gate-lock-card .gate-teacher-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
 }
 
 /* Teacher Analytics & Duration Bar */
