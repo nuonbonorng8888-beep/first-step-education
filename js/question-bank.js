@@ -1,6 +1,6 @@
 /**
  * NGS Unified Question Bank & Multi-Lesson Exam Generator
- * (ធនាគារសំណួរ ៥,៨៧០+ សំណួរ & ប្រព័ន្ធបង្កើតវិញ្ញាសាចម្រុះ ១០ MCQ + ៥ សរសេរ ជាមួយអត្រាកំណែ)
+ * (ធនាគារសំណួរ ៦,០៧០+ សំណួរ & ប្រព័ន្ធបង្កើតវិញ្ញាសាចម្រុះ ១០ MCQ + ៥ សរសេរ ជាមួយអត្រាកំណែ)
  * Strictly organizes questions by Lesson with ZERO cross-lesson leakage!
  */
 
@@ -223,7 +223,7 @@ class QuestionBankController {
             <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
               សួស្តី ${activeTeacherName}!
             </div>
-            មុខងារគ្រប់គ្រង & កែសម្រួលធនាគារសំណួរដើម (៥,៨៧០ សំណួរ) ត្រូវបានកំណត់សម្រាប់តែ <strong>Admin (លោកគ្រូ នួន បូណង)</strong> ប៉ុណ្ណោះ ដើម្បីធានាសុវត្ថិភាពទិន្នន័យ។
+            មុខងារគ្រប់គ្រង & កែសម្រួលធនាគារសំណួរដើម (៦,០៧០ សំណួរ) ត្រូវបានកំណត់សម្រាប់តែ <strong>Admin (លោកគ្រូ នួន បូណង)</strong> ប៉ុណ្ណោះ ដើម្បីធានាសុវត្ថិភាពទិន្នន័យ។
           </div>
 
           <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 12px; padding: 12px 16px; text-align: left; font-size: 0.84rem; line-height: 1.6; margin-bottom: 16px;">
@@ -1064,7 +1064,7 @@ class QuestionBankController {
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
               <span>📚 ធនាគារសំណួរគណិតវិទ្យា (Question Bank)</span>
               <span id="bankTotalCountBadge" style="font-size: 0.84rem; padding: 3px 10px; border-radius: 999px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-weight: 700;">
-                (៥,៨៧០ សំណួរ)
+                (៦,០៧០ សំណួរ)
               </span>
             </h3>
             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
