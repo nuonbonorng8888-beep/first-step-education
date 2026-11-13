@@ -36,20 +36,71 @@ const StorageService = {
     return [];
   },
 
-  async getTeachers() {
+  getOfficialTeachers() {
+    return [
+      {
+        id: "t-admin",
+        name: "លោកគ្រូ នួន បូណង",
+        role: "admin",
+        pin: "95511",
+        school: "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)",
+        subject: "គណិតវិទ្យា",
+        sheetUrl: "https://script.google.com/macros/s/AKfycbxtsUQk52-Jh_k7VLgVFl66BvT9C2pn44--tZG6CgfRIAHN7Igw8wYrQ6uDbn-4B8uF/exec",
+        createdAt: "2026-01-01",
+        status: "active"
+      },
+      {
+        id: "t-30303",
+        name: "លោកគ្រូ ចាន់ ពិសិដ្ឋ",
+        role: "member",
+        pin: "30303",
+        school: "មិនទាន់បញ្ជាក់សាលា",
+        subject: "គណិតវិទ្យា",
+        sheetUrl: "",
+        createdAt: "2026-11-12",
+        status: "active"
+      },
+      {
+        id: "t-20202",
+        name: "លោកគ្រូ ឈន ឈុន្នី",
+        role: "member",
+        pin: "20202",
+        school: "សាលារៀនជំនាន់ថ្មី",
+        subject: "គណិតវិទ្យា",
+        sheetUrl: "",
+        createdAt: "2026-11-12",
+        status: "active"
+      },
+      {
+        id: "t-10101",
+        name: "អ្នកគ្រូ ថោង សុភាវី",
+        role: "member",
+        pin: "10101",
+        school: "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)",
+        subject: "គណិតវិទ្យា",
+        sheetUrl: "",
+        createdAt: "2026-11-12",
+        status: "active"
+      }
+    ];
+  },
+
+  async getTeachers(forceRefresh = false) {
     let localTeachers = [];
     try {
       const raw = localStorage.getItem('worksheet_teachers_list');
       if (raw) localTeachers = JSON.parse(raw);
     } catch (e) {}
 
-    // Only clean up exact dummy names if present
+    // Only clean up exact legacy dummy names if present
     if (Array.isArray(localTeachers)) {
       localTeachers = localTeachers.filter(t => {
         if (t.name === 'លោកគ្រូ សុខា' && t.role !== 'admin') return false;
         if (t.name === 'អ្នកគ្រូ ចិន្តា' && t.role !== 'admin') return false;
         return true;
       });
+    } else {
+      localTeachers = [];
     }
 
     let deletedIds = [];
@@ -58,47 +109,92 @@ const StorageService = {
       if (rawDel) deletedIds = JSON.parse(rawDel);
     } catch (e) {}
 
+    // Base roster always includes the 4 official faculty members
+    const baseTeachers = this.getOfficialTeachers();
+
+    // Fetch freshest teachers.json from server with a safe timeout
     let jsonTeachers = [];
     try {
-      const res = await fetch(`data/teachers.json?v=${Date.now()}`, { cache: 'no-store' });
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2500);
+      const res = await fetch(`data/teachers.json?v=${Date.now()}`, { 
+        cache: 'no-store',
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
       if (res.ok) {
         jsonTeachers = await res.json();
       }
     } catch (e) {
-      console.warn('teachers.json fetch failed:', e);
+      console.warn('teachers.json fetch note (using base roster):', e.message);
     }
 
-    // Filter server teachers to exclude deleted and dummy teachers
-    const validJsonTeachers = (Array.isArray(jsonTeachers) ? jsonTeachers : []).filter(jt => {
-      if (deletedIds.includes(jt.id)) return false;
+    // Merge source candidates: server teachers or built-in official teachers
+    const incomingTeachers = (Array.isArray(jsonTeachers) && jsonTeachers.length > 0)
+      ? jsonTeachers 
+      : baseTeachers;
+
+    // Filter incoming list (Official faculty members are never suppressed by stale deletedIds)
+    const validIncoming = incomingTeachers.filter(jt => {
+      const isOfficial = jt.id === 't-admin' || jt.id === 't-10101' || jt.id === 't-20202' || jt.id === 't-30303' || String(jt.pin) === '95511';
+      if (!isOfficial && deletedIds.includes(jt.id)) return false;
       if (jt.name === 'លោកគ្រូ សុខា' || jt.name === 'អ្នកគ្រូ ចិន្តា') return false;
       return true;
     });
 
-    if (!Array.isArray(localTeachers) || localTeachers.length === 0) {
-      if (validJsonTeachers.length > 0) {
-        localStorage.setItem('worksheet_teachers_list', JSON.stringify(validJsonTeachers));
-        return validJsonTeachers;
-      }
-      return [];
-    }
+    // Start with localTeachers
+    const merged = [...localTeachers];
 
-    // Merge: User local additions and edits MUST take precedence!
-    validJsonTeachers.forEach(jt => {
-      const idx = localTeachers.findIndex(lt => lt.id === jt.id || lt.pin === jt.pin);
+    // Helper to find match across id, pin, or name (handling coeng no ឈុន្នី / ឈុននី smoothly)
+    const findTeacherIdx = (list, t) => {
+      const cleanPin = String(t.pin || '').trim();
+      const cleanName = (t.name || '').trim();
+      return list.findIndex(item => {
+        if (item.id && t.id && String(item.id).trim() === String(t.id).trim()) return true;
+        if (cleanPin && String(item.pin || '').trim() === cleanPin) return true;
+        if (cleanName && (item.name || '').trim() === cleanName) return true;
+        // Match both spellings of ឈុន្នី / ឈុននី
+        if (cleanName.includes('ឈុន') && (item.name || '').includes('ឈុន')) return true;
+        return false;
+      });
+    };
+
+    // Ensure all incoming teachers are represented in merged list
+    validIncoming.forEach(vt => {
+      const idx = findTeacherIdx(merged, vt);
       if (idx !== -1) {
-        // User's local edits (name, school, subject, pin, status) ALWAYS override server defaults!
-        localTeachers[idx] = {
-          ...jt,
-          ...localTeachers[idx]
+        // Keep local overrides (customized sheetUrl or edits), but preserve name & active status
+        merged[idx] = {
+          ...vt,
+          ...merged[idx],
+          name: vt.name || merged[idx].name,
+          status: merged[idx].status || vt.status || 'active'
         };
       } else {
-        localTeachers.push(jt);
+        merged.push({ ...vt, status: 'active' });
       }
     });
 
-    localStorage.setItem('worksheet_teachers_list', JSON.stringify(localTeachers));
-    return localTeachers;
+    // Also ensure all official faculty members are present in merged list no matter what
+    baseTeachers.forEach(bt => {
+      const idx = findTeacherIdx(merged, bt);
+      if (idx === -1) {
+        merged.push({ ...bt, status: 'active' });
+      } else {
+        merged[idx] = {
+          ...bt,
+          ...merged[idx],
+          status: merged[idx].status || 'active'
+        };
+      }
+    });
+
+    // Save consolidated roster back to localStorage
+    try {
+      localStorage.setItem('worksheet_teachers_list', JSON.stringify(merged));
+    } catch (e) {}
+
+    return merged;
   },
 
   saveTeachers(teachers) {

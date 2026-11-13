@@ -1,6 +1,6 @@
 {
-  "version": "v86",
-  "build": 86,
-  "updatedAt": "2026-11-13T06:22:00+07:00",
-  "description": "Standard 2-Page A4 PDF Exam Engine (Page 1: 100% Written Exam with Student Workspace, Page 2: Official Answer Key & Rubric), Multi-Lesson Selection (>2 Lessons), Zero Lesson Leakage, Teacher Profile Sync"
+  "version": "v87",
+  "build": 87,
+  "updatedAt": "2026-11-13T22:25:00+07:00",
+  "description": "Permanent Teacher Roster Resilience: Built-in Official Faculty Fallback, CSS Responsive Gate List Height, Visible Custom Scrollbar, Total Teacher Counter, and Instant Refresh Sync"
 }

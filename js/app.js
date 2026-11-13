@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v86';
+    this.appVersion = 'v87';
 
     const checkVersion = async () => {
       try {
@@ -755,11 +755,16 @@ function doGet(e) {
     const container = document.getElementById('gate-teacher-list-container');
     if (!container) return;
 
-    const list = [...(this.teachersList || [])];
+    let list = [...(this.teachersList || [])];
+    if (list.length === 0 && window.StorageService) {
+      list = window.StorageService.getOfficialTeachers();
+      this.teachersList = [...list];
+    }
+
     // Sort so:
     // 1. Admin (លោកគ្រូ នួន បូណង) is always at the top!
     // 2. Newly added teacher (_isJustAdded) is next!
-    // 3. Alphabetical by Khmer name
+    // 3. Khmer alphabetical order
     list.sort((a, b) => {
       const aIsAdm = a.role === 'admin' || String(a.pin) === '95511';
       const bIsAdm = b.role === 'admin' || String(b.pin) === '95511';
@@ -770,15 +775,19 @@ function doGet(e) {
       return (a.name || '').localeCompare(b.name || '', 'km');
     });
 
-    if (list.length === 0) {
+    const activeList = list.filter(t => t.status !== 'blocked');
+    const countHint = document.getElementById('gate-select-count-hint');
+    if (countHint) {
+      countHint.innerHTML = `ចុចលើឈ្មោះរបស់លោកគ្រូ-អ្នកគ្រូខាងក្រោម <strong style="color: #38bdf8;">(សរុប ${activeList.length} រូប)</strong> ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖`;
+    }
+
+    if (activeList.length === 0) {
       container.innerHTML = '<div style="color: var(--text-muted); padding: 14px; text-align: center;">គ្មានបញ្ជីឈ្មោះគ្រូឡើយ</div>';
       return;
     }
 
-    container.innerHTML = list.map(t => {
+    container.innerHTML = activeList.map(t => {
       const isAdm = t.role === 'admin' || String(t.pin) === '95511';
-      const isBlocked = t.status === 'blocked';
-      if (isBlocked) return ''; // Blocked members cannot login
       const avatar = isAdm ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫');
       const badgeClass = isAdm ? 'member-badge-admin' : 'member-badge-member';
       const badgeLabel = isAdm ? 'Admin' : 'គ្រូសមាជិក';
@@ -800,6 +809,22 @@ function doGet(e) {
         </div>
       `;
     }).join('');
+  },
+
+  async refreshTeachersRoster() {
+    this.showToast('កំពុងទាញយកបញ្ជីឈ្មោះគ្រូ...', 'info');
+    try {
+      if (window.StorageService) {
+        this.teachersList = await StorageService.getTeachers(true);
+        this.renderGateTeacherList();
+        this.showToast(`✅ បានធ្វើបច្ចុប្បន្នភាពបញ្ជីគ្រូ (សរុប ${this.teachersList.length} រូប)`, 'success');
+      }
+    } catch (e) {
+      if (window.StorageService) {
+        this.teachersList = StorageService.getOfficialTeachers();
+        this.renderGateTeacherList();
+      }
+    }
   },
 
   selectGateTeacher(teacherId) {

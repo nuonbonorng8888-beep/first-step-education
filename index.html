@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=86">
+  <link rel="stylesheet" href="css/style.css?v=87">
 </head>
 <body>
 
@@ -851,8 +851,8 @@
             <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; color: var(--text-primary);">
               សូមជ្រើសរើសឈ្មោះលោកគ្រូ-អ្នកគ្រូ
             </h4>
-            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
-              ចុចលើឈ្មោះរបស់លោកគ្រូ-អ្នកគ្រូខាងក្រោម ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;" id="gate-select-count-hint">
+              ចុចលើឈ្មោះរបស់លោកគ្រូ-អ្នកគ្រូខាងក្រោម <strong style="color: #38bdf8;">(សរុប ៤ រូប)</strong> ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖
             </p>
           </div>
 
@@ -861,8 +861,11 @@
             <!-- Dynamically populated by App.renderGateTeacherList() -->
           </div>
 
-          <div style="font-size: 0.76rem; color: var(--text-muted); line-height: 1.5;">
-            📞 ប្រសិនបើគ្មានឈ្មោះក្នុងបញ្ជីទេ សូមទាក់ទងមកកាន់ <strong>លោកគ្រូ នួន បូណង</strong>
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.74rem; color: var(--text-muted); line-height: 1.5; padding: 0 4px; flex-wrap: wrap; gap: 6px;">
+            <span>📞 ប្រសិនបើគ្មានឈ្មោះទេ សូមទាក់ទង <strong>លោកគ្រូ នួន បូណង</strong></span>
+            <button type="button" class="btn btn-xs btn-outline" onclick="App.refreshTeachersRoster()" style="font-size: 0.70rem; padding: 2px 8px; border-radius: 6px; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;" title="ទាញយកបញ្ជីគ្រូបច្ចុប្បន្នភាពចុងក្រោយពី Server">
+              🔄 ផ្ទុកឡើងវិញ
+            </button>
           </div>
         </div>
       </div>
@@ -1700,15 +1703,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=86"></script>
-  <script src="js/question-bank.js?v=86"></script>
-  <script src="js/app.js?v=86"></script>
-  <script src="js/visits.js?v=86"></script>
+  <script src="js/storage.js?v=87"></script>
+  <script src="js/question-bank.js?v=87"></script>
+  <script src="js/app.js?v=87"></script>
+  <script src="js/visits.js?v=87"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=86').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=87').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {
