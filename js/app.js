@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v99';
+    this.appVersion = 'v100';
 
     const checkVersion = async () => {
       try {
@@ -671,7 +671,7 @@ function doGet(e) {
       if (isAdm) {
         bankNavBtn.style.display = 'inline-flex';
         bankNavBtn.className = 'btn btn-secondary nav-bank-btn';
-        bankNavBtn.title = 'ធនាគារសំណួរ ៦,០៧០+ (គ្រប់គ្រងដោយ Admin)';
+        bankNavBtn.title = 'ធនាគារសំណួរ ៦,២៧០+ (គ្រប់គ្រងដោយ Admin)';
         bankNavBtn.innerHTML = '📚 <span class="desktop-only" style="font-size:0.74rem;">ធនាគារសំណួរ</span>';
       } else if (isTeacherLoggedIn) {
         bankNavBtn.style.display = 'inline-flex';
