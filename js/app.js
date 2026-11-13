@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v90';
+    this.appVersion = 'v91';
 
     const checkVersion = async () => {
       try {
@@ -5065,6 +5065,15 @@ function doGet(e) {
   closeTeacherSheetModal() {
     const modal = document.getElementById('teacher-sheet-modal');
     if (modal) modal.classList.remove('active');
+  },
+
+  toggleModalMaximize(btnEl) {
+    if (!btnEl) return;
+    const card = btnEl.closest('.modal-card') || btnEl.closest('.exam-a4-desk') || btnEl.closest('.modal-content');
+    if (!card) return;
+    const isMax = card.classList.toggle('is-maximized');
+    btnEl.innerHTML = isMax ? '🗗' : '⛶';
+    btnEl.title = isMax ? 'បង្រួមទំហំដើម (Restore)' : 'ពង្រីកពេញអេក្រង់ (Maximize)';
   },
 
   saveTeacherSheetUrl() {

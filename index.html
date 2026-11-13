@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=90">
+  <link rel="stylesheet" href="css/style.css?v=91">
 </head>
 <body>
 
@@ -580,10 +580,11 @@
     <div class="modal-card pdf-modal-card">
       <div class="modal-header">
         <h3 class="modal-title" id="pdf-modal-title">ឯកសារមេរៀន (PDF Preview)</h3>
-        <div style="display:flex; align-items:center; gap:12px;">
-          <a id="pdf-modal-download" href="#" download class="btn btn-outline" style="padding:6px 14px; font-size:0.8rem;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <a id="pdf-modal-download" href="#" download class="btn btn-outline" style="padding:6px 14px; font-size:0.86rem;">
             ទាញយក PDF
           </a>
+          <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
           <button class="btn-icon" onclick="App.closePdfModal()">✕</button>
         </div>
       </div>
@@ -596,10 +597,13 @@
 
   <!-- ================= UPLOAD LESSON & FILE MODAL (បញ្ចូលមេរៀន និងឯកសារ) ================= -->
   <div class="modal-overlay" id="upload-modal" onclick="if(event.target === this) App.closeUploadModal()">
-    <div class="modal-card">
+    <div class="modal-card modal-lg-desktop">
       <div class="modal-header">
         <h3 class="modal-title">📤 បញ្ចូលមេរៀន វីដេអូ ឬឯកសារថ្មី</h3>
-        <button class="btn-icon" onclick="App.closeUploadModal()">✕</button>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
+          <button class="btn-icon" onclick="App.closeUploadModal()">✕</button>
+        </div>
       </div>
 
       <form id="upload-form" onsubmit="App.handleFormUpload(event)">
@@ -793,10 +797,13 @@
 
   <!-- ================= DIAGNOSTIC TEST MODAL (តេស្តសមត្ថភាព TESDOPI STYLE) ================= -->
   <div class="modal-overlay" id="diagnostic-modal" onclick="if(event.target === this) App.closeDiagnosticModal()">
-    <div class="modal-card" style="max-width: 650px;">
+    <div class="modal-card modal-lg-desktop">
       <div class="modal-header">
         <h3 class="modal-title">🎯 តេស្តស្ទង់សមត្ថភាពសិស្ស (Diagnostic Test)</h3>
-        <button class="btn-icon" onclick="App.closeDiagnosticModal()">✕</button>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
+          <button class="btn-icon" onclick="App.closeDiagnosticModal()">✕</button>
+        </div>
       </div>
       <div class="modal-body">
         <div style="text-align: center; margin-bottom: 16px;">
@@ -843,10 +850,13 @@
 
   <!-- ================= TEACHER LOGIN MODAL / GATE LOCK ================= -->
   <div class="modal-overlay" id="login-modal" onclick="App.onLoginModalOverlayClick(event)">
-    <div class="modal-card gate-lock-card" style="max-width: 480px;">
+    <div class="modal-card gate-lock-card" style="max-width: 530px;">
       <div class="modal-header">
         <h3 class="modal-title" id="login-modal-title">🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)</h3>
-        <button class="btn-icon gate-hide-on-lock" id="btn-close-login-modal" onclick="App.closeLoginModal()">✕</button>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
+          <button class="btn-icon gate-hide-on-lock" id="btn-close-login-modal" onclick="App.closeLoginModal()">✕</button>
+        </div>
       </div>
 
       <!-- VIEW 1: SELECT TEACHER PROFILE (ជ្រើសរើសឈ្មោះគ្រូ) -->
@@ -856,14 +866,14 @@
             <img src="assets/mascot.jpg" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
-            <div class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.72rem; padding: 4px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 6px;">
+            <div class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.84rem; padding: 4px 12px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 6px;">
               🔒 វិបសាយត្រូវបានចាក់សោរឯកជន (Private Platform)
             </div>
-            <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; color: var(--text-primary);">
+            <h4 style="font-size: 1.18rem; font-weight: 700; margin-bottom: 4px; color: var(--text-primary);">
               សូមជ្រើសរើសឈ្មោះលោកគ្រូ-អ្នកគ្រូ
             </h4>
-            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;" id="gate-select-count-hint">
-              ចុចលើឈ្មោះរបស់លោកគ្រូ-អ្នកគ្រូខាងក្រោម <strong style="color: #38bdf8;">(សរុប ៤ រូប)</strong> ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖
+            <p style="font-size: 0.90rem; color: var(--text-secondary); line-height: 1.5;" id="gate-select-count-hint">
+              ចុចលើឈ្មោះរបស់លោកគ្រូ-អ្នកគ្រូខាងក្រោម <strong style="color: #38bdf8;">(សរុប ៦ រូប)</strong> ដើម្បីវាយលេខកូដ PIN ចូលប្រព័ន្ធ ៖
             </p>
           </div>
 
@@ -938,13 +948,16 @@
 
   <!-- ================= MEMBER TEACHERS & ACTIVITY MONITORING DASHBOARD ================= -->
   <div class="modal-overlay" id="member-dashboard-modal" onclick="if(event.target === this) App.closeMemberDashboardModal()">
-    <div class="modal-card" style="max-width: 860px; max-height: 88vh;">
+    <div class="modal-card modal-xl-desktop" style="max-height: 90vh;">
       <div class="modal-header">
         <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
           <h3 class="modal-title">👥 គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព</h3>
-          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.72rem; padding: 3px 8px; border-radius: 6px;">Admin</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.82rem; padding: 3px 10px; border-radius: 6px;">Admin</span>
         </div>
-        <button class="btn-icon" onclick="App.closeMemberDashboardModal()">✕</button>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
+          <button class="btn-icon" onclick="App.closeMemberDashboardModal()">✕</button>
+        </div>
       </div>
 
       <!-- Dashboard Navigation Tabs -->
@@ -1441,12 +1454,18 @@
 
   <!-- ================= TEACHER GOOGLE SHEET / EXCEL SETTINGS MODAL ================= -->
   <div class="modal-overlay" id="teacher-sheet-modal" onclick="if(event.target === this) App.closeTeacherSheetModal()">
-    <div class="modal-card" style="max-width: 650px;">
+    <div class="modal-card modal-lg-desktop">
       <div class="modal-header">
         <h3 class="modal-title">📊 តារាងពិន្ទុស្វ័យប្រវត្តិ (Google Sheets)</h3>
-        <button class="btn-icon" onclick="App.closeTeacherSheetModal()">✕</button>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
+          <button class="btn-icon" onclick="App.closeTeacherSheetModal()">✕</button>
+        </div>
       </div>
-      <div class="modal-body" style="gap: 16px; max-height: 75vh; overflow-y: auto;">
+      <div class="modal-body" style="gap: 16px; max-height: 82vh; overflow-y: auto;">
+        <div class="desktop-two-col-grid" style="display: flex; flex-direction: column; gap: 16px;">
+          <!-- COLUMN 1: Profile, Generator Banner, Webhook & Status -->
+          <div style="display: flex; flex-direction: column; gap: 14px;">
         <!-- Active Teacher Profile Indicator -->
         <div id="teacher-profile-banner" style="display: flex; align-items: center; justify-content: space-between; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 12px 14px; flex-wrap: wrap; gap: 8px;">
           <div style="display: flex; align-items: center; gap: 10px;">
@@ -1507,17 +1526,20 @@
           <small style="color: var(--text-muted); font-size: 0.74rem;">URL នេះនឹងត្រូវបានរក្សាទុកក្នុង Browser របស់លោកគ្រូ និងអាចចែករំលែកទៅសិស្សតាម Link។</small>
         </div>
 
-        <!-- Connection Test & Status -->
-        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; background: var(--bg-tertiary); padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border-glass);">
-          <div id="teacher-sheet-status-text" style="font-size: 0.82rem; color: var(--text-secondary);">
-            ស្ថានភាព ៖ <span style="font-weight: 600;" id="sheet-status-badge">មិនទាន់កំណត់ URL</span>
+            <!-- Connection Test & Status -->
+            <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; background: var(--bg-tertiary); padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border-glass);">
+              <div id="teacher-sheet-status-text" style="font-size: 0.88rem; color: var(--text-secondary);">
+                ស្ថានភាព ៖ <span style="font-weight: 600;" id="sheet-status-badge">មិនទាន់កំណត់ URL</span>
+              </div>
+              <button class="btn btn-outline" onclick="App.testSheetConnection()" style="font-size: 0.86rem; padding: 6px 14px;">
+                🧪 តេស្តផ្ញើពិន្ទុសាកល្បង
+              </button>
+            </div>
           </div>
-          <button class="btn btn-outline" onclick="App.testSheetConnection()" style="font-size: 0.8rem; padding: 5px 12px;">
-            🧪 តេស្តផ្ញើពិន្ទុសាកល្បង
-          </button>
-        </div>
 
-        <!-- Link Generator for Each Class -->
+          <!-- COLUMN 2: Class Link Generator & Setup Instructions -->
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <!-- Link Generator for Each Class -->
         <div style="background: var(--bg-tertiary); border: 1px solid var(--border-glass); border-radius: 12px; padding: 16px;">
           <h5 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">
             🔗 បង្កើត Link ប្រឡង/តេស្តផ្ញើទៅតាមក្រុម Telegram ថ្នាក់នីមួយៗ ៖
@@ -1665,12 +1687,14 @@
               <li style="color: #10b981; font-weight: 600;">✨ ពិសេស ៖ ក្រោយបិទភ្ជាប់កូដរួច ក្នុង Google Sheets នឹងលោត Menu <strong>«📊 ប្រព័ន្ធ Worksheet.Kh»</strong> ស្វ័យប្រវត្ត — លោកគ្រូអាចចុច <strong>«បង្កើត Tab តាមកម្រិតថ្នាក់ (៧ ដល់ ១២ + តារាងសរុប)»</strong> តែ ១ ឃ្លីក វានឹងបង្កើត Tab គ្រប់កម្រិតទុកជាមុនភ្លាមៗ មិនបាច់រង់ចាំសិស្ស Submit ឡើយ!</li>
             </ol>
             <div style="margin-top: 10px;">
-              <button class="btn btn-outline" onclick="App.copyAppsScriptCode()" style="font-size: 0.78rem; padding: 5px 12px;">
+              <button class="btn btn-outline" onclick="App.copyAppsScriptCode()" style="font-size: 0.86rem; padding: 6px 14px;">
                 📋 ចម្លងកូដ Google Apps Script (Copy Code)
               </button>
             </div>
           </div>
         </details>
+          </div>
+        </div>
       </div>
       <div class="modal-footer" style="justify-content: flex-end;">
         <button class="btn btn-primary" onclick="App.closeTeacherSheetModal()">បិទផ្ទាំង</button>
@@ -1721,15 +1745,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=90"></script>
-  <script src="js/question-bank.js?v=90"></script>
-  <script src="js/app.js?v=90"></script>
-  <script src="js/visits.js?v=90"></script>
+  <script src="js/storage.js?v=91"></script>
+  <script src="js/question-bank.js?v=91"></script>
+  <script src="js/app.js?v=91"></script>
+  <script src="js/visits.js?v=91"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=90').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=91').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

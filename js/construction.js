@@ -657,6 +657,12 @@
 
     startLoop() {
       const tick = (timestamp) => {
+        // High-Performance Visibility & Idle Guard: Stop background draw loops to ensure 100% buttery smoothness
+        if (document.hidden || !this.canvas || !this.canvas.isConnected || this.canvas.offsetParent === null) {
+          this.animFrameId = requestAnimationFrame(tick);
+          return;
+        }
+
         if (!this.lastTimestamp) this.lastTimestamp = timestamp;
         const delta = (timestamp - this.lastTimestamp) / 1000.0;
         this.lastTimestamp = timestamp;
@@ -675,9 +681,11 @@
               this.updateStepUI();
             }
           }
+          this.render();
+        } else if (this.isDragging) {
+          this.render();
         }
 
-        this.render();
         this.animFrameId = requestAnimationFrame(tick);
       };
       this.animFrameId = requestAnimationFrame(tick);

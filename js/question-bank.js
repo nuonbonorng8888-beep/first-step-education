@@ -84,10 +84,19 @@ class QuestionBankController {
     if (!text || typeof text !== 'string') return '';
     if (typeof katex === 'undefined') return text;
 
+    if (!this._mathCache) this._mathCache = new Map();
+
     return text.replace(/\$([^\$]+)\$/g, (match, formula) => {
+      if (this._mathCache.has(formula)) {
+        return this._mathCache.get(formula);
+      }
       try {
         const clean = this.cleanLatexFormula(formula);
-        return katex.renderToString(clean, { throwOnError: false, displayMode: false });
+        const rendered = katex.renderToString(clean, { throwOnError: false, displayMode: false });
+        if (this._mathCache.size < 5000) {
+          this._mathCache.set(formula, rendered);
+        }
+        return rendered;
       } catch (e) {
         return formula;
       }
@@ -272,21 +281,24 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card" style="max-width: 900px; width: 95%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card modal-lg-desktop" style="max-width: 1100px; width: 95%; max-height: 90vh; overflow-y: auto;">
         <!-- Header -->
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
               <span>🎲 បង្កើតវិញ្ញាសាប្រឡង (A4 PDF) — សរសេរ ១០០%</span>
-              <span style="font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: 700;">
+              <span style="font-size: 0.80rem; padding: 3px 10px; border-radius: 999px; background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: 700;">
                 ២ ទំព័រ A4 ស្តង់ដា
               </span>
             </h3>
-            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
               ជ្រើសរើសមេរៀនចាប់ពី ១ រហូតដល់លើសពី ២ មេរៀន (៣, ៤, ៥ មេរៀន...) — វិញ្ញាសាសរសេរ ១០០% ចេញចំៗតាមមេរៀន <strong>គ្មានមេរៀនផ្សេងលាយឡំ</strong>!
             </p>
           </div>
-          <button class="btn-icon" onclick="document.getElementById('multiLessonExamModal').remove()">✕</button>
+          <div style="display: flex; gap: 6px; align-items: center;">
+            <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
+            <button class="btn-icon" onclick="document.getElementById('multiLessonExamModal').remove()">✕</button>
+          </div>
         </div>
 
         <!-- Grade Selector Row -->
@@ -752,7 +764,7 @@ class QuestionBankController {
 
     modalBack.innerHTML = `
       <!-- Top Action Toolbar (Sticky on top, hidden when printing) -->
-      <div class="no-print exam-modal-toolbar w-full max-w-5xl bg-slate-800 text-white rounded-2xl shadow-xl p-3 md:p-4 mb-4 flex flex-wrap items-center justify-between gap-3 border border-slate-700">
+      <div class="no-print exam-modal-toolbar w-full max-w-6xl bg-slate-800 text-white rounded-2xl shadow-xl p-3 md:p-4 mb-4 flex flex-wrap items-center justify-between gap-3 border border-slate-700">
         <div class="flex items-center gap-2.5">
           <span class="text-2xl">📑</span>
           <div>
@@ -777,6 +789,9 @@ class QuestionBankController {
           <button onclick="window.questionBank.copyExamText()" class="px-3 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold text-xs flex items-center gap-1 transition">
             <span>📋 ចម្លង</span>
           </button>
+          <button onclick="App.toggleModalMaximize(this)" class="px-3 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold text-xs" title="ពង្រីកពេញអេក្រង់ / បង្រួម">
+            ⛶
+          </button>
           <button onclick="document.getElementById('examPreviewModalBack').remove()" class="px-3 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold text-xs">
             ✕ បិទ
           </button>
@@ -784,7 +799,7 @@ class QuestionBankController {
       </div>
 
       <!-- A4 Document Workspace (Displays Page 1 & Page 2) -->
-      <div class="a4-preview-desk w-full max-w-5xl">
+      <div class="a4-preview-desk w-full max-w-6xl">
         <div id="examA4Container" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
 
           <!-- ================= PAGE 1 : STUDENT EXAM PAPER ================= -->
@@ -1038,17 +1053,17 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card" style="max-width: 1050px; width: 96%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card modal-xl-desktop" style="max-width: 1250px; width: 96%; max-height: 90vh; overflow-y: auto;">
         <!-- Header -->
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
               <span>📚 ធនាគារសំណួរគណិតវិទ្យា (Question Bank)</span>
-              <span id="bankTotalCountBadge" style="font-size: 0.76rem; padding: 2px 8px; border-radius: 999px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-weight: 700;">
+              <span id="bankTotalCountBadge" style="font-size: 0.84rem; padding: 3px 10px; border-radius: 999px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-weight: 700;">
                 (៥,៤៧០ សំណួរ)
               </span>
             </h3>
-            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
               ប្រព័ន្ធធនាគារសំណួរផ្លូវការ NGS ថ្នាក់ទី ៧ ដល់ ទី ១២ (ស្របតាមកម្មវិធីសិក្សាជាតិ និង PISA)
             </p>
           </div>
@@ -1056,6 +1071,7 @@ class QuestionBankController {
             <button class="btn btn-sm btn-primary" onclick="window.questionBank.openMultiLessonExamModal()">
               🎲 បង្កើតវិញ្ញាសា A4 (PDF)
             </button>
+            <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
             <button class="btn-icon" onclick="document.getElementById('fullQuestionBankModal').remove()">✕</button>
           </div>
         </div>
@@ -1423,20 +1439,23 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card" style="max-width: 800px; width: 95%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card modal-lg-desktop" style="max-width: 950px; width: 95%; max-height: 90vh; overflow-y: auto;">
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
               <span>📑 ស្រង់សន្លឹកកិច្ចការគណិតវិទ្យា (Worksheets)</span>
-              <span style="font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: 700;">
+              <span style="font-size: 0.80rem; padding: 3px 10px; border-radius: 999px; background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: 700;">
                 ថ្នាក់ទី ៧ ដល់ ទី ១២
               </span>
             </h3>
-            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
               ទាញយក និងបោះពុម្ពសន្លឹកកិច្ចការស្វ័យប្រវត្តតាមមេរៀន សម្រាប់ចែកសិស្សអនុវត្តក្នុងថ្នាក់រៀន
             </p>
           </div>
-          <button class="btn-icon" onclick="document.getElementById('worksheetExtractorModal').remove()">✕</button>
+          <div style="display: flex; gap: 6px; align-items: center;">
+            <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
+            <button class="btn-icon" onclick="document.getElementById('worksheetExtractorModal').remove()">✕</button>
+          </div>
         </div>
 
         <!-- Grade & Lesson Picker -->

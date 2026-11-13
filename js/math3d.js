@@ -7875,6 +7875,12 @@ class Math3DExplainer {
   animate() {
     this.animId = requestAnimationFrame(this.animate);
 
+    // High-Performance Visibility Guard: Stop WebGL rendering when hidden or out of view to ensure 100% butter-smooth UI
+    if (document.hidden || !this.is3DMode) return;
+    const canvas = this.canvas || document.getElementById('math-3d-canvas');
+    if (!canvas || !canvas.isConnected || canvas.offsetParent === null) return;
+    if (!this.container || !this.container.isConnected || this.container.offsetParent === null) return;
+
     if (this.isPlaying && this.animGroup) {
       const time = this.clock ? this.clock.getElapsedTime() : Date.now() * 0.001;
 
