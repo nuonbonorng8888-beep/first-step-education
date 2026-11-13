@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=88">
+  <link rel="stylesheet" href="css/style.css?v=89">
 </head>
 <body>
 
@@ -71,6 +71,9 @@
           </button>
           <button class="cat-pill" onclick="window.questionBank.openMultiLessonExamModal()" id="nav-link-exam-main" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700;">
             🎲 បង្កើតវិញ្ញាសា
+          </button>
+          <button class="cat-pill" onclick="App.openTeacherSheetModal()" id="nav-link-scores" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 700;" title="តារាងពិន្ទុស្វ័យប្រវត្តិ & ការប្រឡង (Google Sheets)">
+            📊 តារាងពិន្ទុស្វ័យប្រវត្តិ
           </button>
         </div>
       </div>
@@ -102,8 +105,8 @@
         </button>
 
         <!-- Teacher Tools (Exams & Multi-Lesson Builder, Worksheets, Question Bank) -->
-        <button class="btn btn-outline nav-exam-btn" id="btn-exam-nav" onclick="App.openTeacherSheetModal()" title="ការប្រឡង & បង្កើតវិញ្ញាសា (១០ MCQ + ៥ សរសេរ)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px; border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;">
-          📝 <span class="desktop-only" style="font-size: 0.74rem;">ការប្រឡង</span>
+        <button class="btn btn-outline nav-exam-btn" id="btn-exam-nav" onclick="App.openTeacherSheetModal()" title="តារាងពិន្ទុស្វ័យប្រវត្តិ & ការប្រឡង (Google Sheets)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px; border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
+          📊 <span class="desktop-only" style="font-size: 0.74rem;">តារាងពិន្ទុ</span>
         </button>
 
         <button class="btn btn-outline nav-ws-btn" id="btn-ws-nav" onclick="window.questionBank.openWorksheetExtractorModal()" title="ស្រង់សន្លឹកកិច្ចការគ្រប់កម្រិតថ្នាក់" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px; border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
@@ -219,6 +222,14 @@
             <div class="action-text">
               <span class="action-title" style="color: #38bdf8;">បង្កើតវិញ្ញាសាចម្រុះ</span>
               <span class="action-sub">១០ MCQ + ៥ សរសេរ & អត្រាកំណែ</span>
+            </div>
+          </button>
+
+          <button class="action-strip-btn" onclick="App.openTeacherSheetModal()" style="border: 1px solid rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1);">
+            <span class="action-icon">📊</span>
+            <div class="action-text">
+              <span class="action-title" style="color: #34d399;">តារាងពិន្ទុស្វ័យប្រវត្តិ</span>
+              <span class="action-sub">Google Sheets • ទទួលពិន្ទុតេស្ត</span>
             </div>
           </button>
 
@@ -507,7 +518,7 @@
           <h4 class="footer-col-title">សម្រាប់គ្រូ</h4>
           <ul class="footer-links">
             <li><a href="javascript:void(0)" onclick="App.openLoginModal()">ធនធានសម្រាប់គ្រូ</a></li>
-            <li><a href="javascript:void(0)" onclick="App.openTeacherSheetModal()">📊 តារាងពិន្ទុ Excel (Google Sheets)</a></li>
+            <li><a href="javascript:void(0)" onclick="App.openTeacherSheetModal()">📊 តារាងពិន្ទុស្វ័យប្រវត្តិ (Google Sheets)</a></li>
             <li><a href="javascript:void(0)" onclick="App.openWebShareModal()">ប្រើក្នុងបន្ទប់កុំព្យូទ័រ</a></li>
             <li><a href="javascript:void(0)" onclick="App.openWorksheetUnlockModal()">ដោះសោដំណោះស្រាយ</a></li>
             <li><a href="javascript:void(0)" onclick="App.openMobileInstallModal()">ដំឡើងលើទូរស័ព្ទដៃ</a></li>
@@ -1432,7 +1443,7 @@
   <div class="modal-overlay" id="teacher-sheet-modal" onclick="if(event.target === this) App.closeTeacherSheetModal()">
     <div class="modal-card" style="max-width: 650px;">
       <div class="modal-header">
-        <h3 class="modal-title">📊 តារាងពិន្ទុស្វ័យប្រវត្ត (Google Sheets & Excel)</h3>
+        <h3 class="modal-title">📊 តារាងពិន្ទុស្វ័យប្រវត្តិ (Google Sheets)</h3>
         <button class="btn-icon" onclick="App.closeTeacherSheetModal()">✕</button>
       </div>
       <div class="modal-body" style="gap: 16px; max-height: 75vh; overflow-y: auto;">
@@ -1690,6 +1701,10 @@
       <span class="dock-icon">🎲</span>
       <span class="dock-label">វិញ្ញាសា</span>
     </button>
+    <button class="dock-btn" id="dock-btn-scores" onclick="App.openTeacherSheetModal(); App.setDockActive(this);" title="តារាងពិន្ទុស្វ័យប្រវត្តិ">
+      <span class="dock-icon">📊</span>
+      <span class="dock-label">ពិន្ទុ</span>
+    </button>
     <button class="dock-btn" id="dock-btn-mobile" onclick="App.openWebShareModal(); App.setDockActive(this);">
       <span class="dock-icon">🌐</span>
       <span class="dock-label">Link Web</span>
@@ -1706,15 +1721,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=88"></script>
-  <script src="js/question-bank.js?v=88"></script>
-  <script src="js/app.js?v=88"></script>
-  <script src="js/visits.js?v=88"></script>
+  <script src="js/storage.js?v=89"></script>
+  <script src="js/question-bank.js?v=89"></script>
+  <script src="js/app.js?v=89"></script>
+  <script src="js/visits.js?v=89"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=88').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=89').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

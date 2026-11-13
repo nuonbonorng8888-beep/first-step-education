@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v88';
+    this.appVersion = 'v89';
 
     const checkVersion = async () => {
       try {
@@ -3238,8 +3238,8 @@ function doGet(e) {
             <button class="btn btn-sm btn-primary teacher-share-btn" onclick="App.openTeacherSheetModal(true)" title="ចែករំលែក Link តេស្តមេរៀននេះទៅកាន់ថ្នាក់">
               🔗 ចែករំលែក Link តេស្តនេះ
             </button>
-            <button class="btn btn-sm btn-outline teacher-sheet-btn" onclick="App.openTeacherSheetModal()" title="ការកំណត់តារាងពិន្ទុ Google Sheets / Excel សម្រាប់គ្រូ">
-              📊 តារាងពិន្ទុ Excel
+            <button class="btn btn-sm btn-outline teacher-sheet-btn" onclick="App.openTeacherSheetModal()" title="ការកំណត់តារាងពិន្ទុ Google Sheets សម្រាប់គ្រូ">
+              📊 តារាងពិន្ទុស្វ័យប្រវត្តិ
             </button>
           ` : ''}
         </div>

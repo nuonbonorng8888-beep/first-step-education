@@ -1,6 +1,6 @@
 {
-  "version": "v88",
-  "build": 88,
-  "updatedAt": "2026-11-13T22:35:00+07:00",
-  "changelog": "Include all 6 official teachers (including newly added members) across all devices and add roster import/export"
+  "version": "v89",
+  "build": 89,
+  "updatedAt": "2026-11-13T23:30:00+07:00",
+  "changelog": "Promote Automated Score Sheet (Google Sheets) to top header navigation, hero action strip, and mobile dock, with proper Khmer terminology"
 }
