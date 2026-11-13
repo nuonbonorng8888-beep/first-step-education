@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=87">
+  <link rel="stylesheet" href="css/style.css?v=88">
 </head>
 <body>
 
@@ -976,8 +976,11 @@
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 10px; flex-wrap: wrap;">
             <input type="text" id="member-search-input" class="form-input" placeholder="🔍 ស្វែងរកឈ្មោះគ្រូ, PIN, សាលារៀន..." oninput="App.renderMemberList()" style="max-width: 320px; font-size: 0.82rem;">
             <div style="display: flex; gap: 8px; align-items: center;">
-              <button type="button" class="btn btn-sm btn-outline" onclick="App.copyTeachersJson()" title="ចម្លង JSON គ្រូទាំងអស់">
+              <button type="button" class="btn btn-sm btn-outline" onclick="App.copyTeachersJson()" title="ចម្លង JSON គ្រូទាំងអស់សម្រាប់ Backup">
                 📋 ចម្លង JSON
+              </button>
+              <button type="button" class="btn btn-sm btn-outline" onclick="App.importTeachersJson()" title="នាំចូល JSON គ្រូពីឧបករណ៍ផ្សេង">
+                📥 នាំចូល JSON
               </button>
               <button type="button" class="btn btn-primary btn-sm" onclick="App.openMemberFormModal()">
                 ➕ បន្ថែមគ្រូសមាជិកថ្មី
@@ -1703,15 +1706,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=87"></script>
-  <script src="js/question-bank.js?v=87"></script>
-  <script src="js/app.js?v=87"></script>
-  <script src="js/visits.js?v=87"></script>
+  <script src="js/storage.js?v=88"></script>
+  <script src="js/question-bank.js?v=88"></script>
+  <script src="js/app.js?v=88"></script>
+  <script src="js/visits.js?v=88"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=87').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=88').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {

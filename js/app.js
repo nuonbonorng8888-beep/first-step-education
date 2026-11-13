@@ -356,7 +356,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v87';
+    this.appVersion = 'v88';
 
     const checkVersion = async () => {
       try {
@@ -1341,6 +1341,34 @@ function doGet(e) {
       });
     } else {
       prompt('ចម្លងកូដ JSON ខាងក្រោម ៖', str);
+    }
+  },
+
+  importTeachersJson() {
+    const raw = prompt('សូមបិទភ្ជាប់ (Paste) កូដ JSON បញ្ជីគ្រូនៅទីនេះដើម្បីធ្វើសមកាលកម្ម (Sync) ៖');
+    if (!raw || !raw.trim()) return;
+    try {
+      const parsed = JSON.parse(raw.trim());
+      if (!Array.isArray(parsed) || parsed.length === 0) {
+        this.showToast('ទិន្នន័យ JSON មិនត្រឹមត្រូវ!', 'error');
+        return;
+      }
+      parsed.forEach(pt => {
+        if (!pt.name || !pt.pin) return;
+        const cleanPin = String(pt.pin).trim();
+        const exists = (this.teachersList || []).find(t => String(t.pin).trim() === cleanPin || (t.id && t.id === pt.id));
+        if (exists) {
+          Object.assign(exists, pt);
+        } else {
+          this.teachersList.push({ ...pt, status: pt.status || 'active' });
+        }
+      });
+      StorageService.saveTeachers(this.teachersList);
+      this.renderMemberList();
+      this.renderGateTeacherList();
+      this.showToast(`✅ បាននាំចូល និងធ្វើបច្ចុប្បន្នភាពបញ្ជីគ្រូ (សរុប ${this.teachersList.length} រូប) ដោយជោគជ័យ!`, 'success');
+    } catch (err) {
+      this.showToast('ទម្រង់ JSON មិនត្រឹមត្រូវ៖ ' + err.message, 'error');
     }
   },
 

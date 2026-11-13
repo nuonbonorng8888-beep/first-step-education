@@ -50,11 +50,33 @@ const StorageService = {
         status: "active"
       },
       {
+        id: "t-1111",
+        name: "លោកគ្រូ ទូច សំណាង",
+        role: "member",
+        pin: "1111",
+        school: "វិទ្យាល័យព្រះយុគន្ធរ",
+        subject: "គណិតវិទ្យា",
+        sheetUrl: "",
+        createdAt: "2026-11-13",
+        status: "active"
+      },
+      {
+        id: "t-40404",
+        name: "អ្នកគ្រូ អេង សុជាតិ",
+        role: "member",
+        pin: "40404",
+        school: "សាលារៀនជំនាន់ថ្មី",
+        subject: "គណិតវិទ្យា",
+        sheetUrl: "",
+        createdAt: "2026-11-12",
+        status: "active"
+      },
+      {
         id: "t-30303",
         name: "លោកគ្រូ ចាន់ ពិសិដ្ឋ",
         role: "member",
         pin: "30303",
-        school: "មិនទាន់បញ្ជាក់សាលា",
+        school: "វិទ្យាល័យ ២៤​ កញ្ញា",
         subject: "គណិតវិទ្យា",
         sheetUrl: "",
         createdAt: "2026-11-12",
@@ -109,7 +131,7 @@ const StorageService = {
       if (rawDel) deletedIds = JSON.parse(rawDel);
     } catch (e) {}
 
-    // Base roster always includes the 4 official faculty members
+    // Base roster always includes the 6 official faculty members
     const baseTeachers = this.getOfficialTeachers();
 
     // Fetch freshest teachers.json from server with a safe timeout
@@ -135,8 +157,9 @@ const StorageService = {
       : baseTeachers;
 
     // Filter incoming list (Official faculty members are never suppressed by stale deletedIds)
+    const officialPins = ['95511', '10101', '20202', '30303', '40404', '1111'];
     const validIncoming = incomingTeachers.filter(jt => {
-      const isOfficial = jt.id === 't-admin' || jt.id === 't-10101' || jt.id === 't-20202' || jt.id === 't-30303' || String(jt.pin) === '95511';
+      const isOfficial = jt.role === 'admin' || officialPins.includes(String(jt.pin)) || baseTeachers.some(bt => bt.id === jt.id || String(bt.pin) === String(jt.pin));
       if (!isOfficial && deletedIds.includes(jt.id)) return false;
       if (jt.name === 'លោកគ្រូ សុខា' || jt.name === 'អ្នកគ្រូ ចិន្តា') return false;
       return true;
@@ -145,7 +168,7 @@ const StorageService = {
     // Start with localTeachers
     const merged = [...localTeachers];
 
-    // Helper to find match across id, pin, or name (handling coeng no ឈុន្នី / ឈុននី smoothly)
+    // Helper to find match across id, pin, or name (handling coeng no ឈុន្នី / ឈុននី, សុភាវី/សុភារី smoothly)
     const findTeacherIdx = (list, t) => {
       const cleanPin = String(t.pin || '').trim();
       const cleanName = (t.name || '').trim();
@@ -155,6 +178,14 @@ const StorageService = {
         if (cleanName && (item.name || '').trim() === cleanName) return true;
         // Match both spellings of ឈុន្នី / ឈុននី
         if (cleanName.includes('ឈុន') && (item.name || '').includes('ឈុន')) return true;
+        // Match both spellings of សុភាវី / សុភារី
+        if (cleanName.includes('ថោង') && (item.name || '').includes('ថោង')) return true;
+        // Match both spellings of សំណាង
+        if (cleanName.includes('សំណាង') && (item.name || '').includes('សំណាង')) return true;
+        // Match both spellings of សុជាតិ
+        if (cleanName.includes('សុជាតិ') && (item.name || '').includes('សុជាតិ')) return true;
+        // Match both spellings of ពិសិដ្ឋ
+        if (cleanName.includes('ពិសិដ្ឋ') && (item.name || '').includes('ពិសិដ្ឋ')) return true;
         return false;
       });
     };
