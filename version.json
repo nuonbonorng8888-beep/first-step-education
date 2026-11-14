@@ -1,7 +1,7 @@
 {
-  "version": "v106",
-  "build": 106,
+  "version": "v107",
+  "build": 107,
   "date": "2026-11-14",
   "author": "Nuon Bonong",
-  "changelog": "Restore authentic full-sheet worksheet layout and paper styling matching user exact original design while preserving multi-line sidebar lesson titles."
+  "changelog": "Center worksheet paper on dark stage, hide sidebar in worksheet view with toggle button, format header title in 3-line red stack, and match exact reference styling."
 }

@@ -1523,6 +1523,47 @@ body.light-theme .grade-pill {
   }
 }
 
+/* Worksheet Active: Centers the worksheet paper full stage with beautiful dark backdrop matching user screenshot */
+.classroom-layout.worksheet-active {
+  display: block !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
+
+.classroom-layout.worksheet-active .video-stage {
+  width: 100% !important;
+}
+
+.classroom-layout.worksheet-active .playlist-sidebar {
+  display: none !important;
+}
+
+.classroom-layout.worksheet-active.worksheet-sidebar-open {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 390px !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.classroom-layout.worksheet-active.worksheet-sidebar-open .playlist-sidebar {
+  display: flex !important;
+}
+
+.classroom-layout.worksheet-active .lesson-meta-card {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.classroom-layout.worksheet-active .tab-headers {
+  background: var(--bg-card);
+  padding: 6px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-glass);
+  margin-bottom: 20px;
+}
+
 /* Video Stage */
 .video-stage {
   display: flex;
@@ -3411,15 +3452,17 @@ body.dark-mode .ws-points-count-badge {
 }
 
 .ws-header-point-subtitle {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #4f46e5;
-  margin-top: 4px;
-  background: rgba(99, 102, 241, 0.08);
-  padding: 2px 10px;
-  border-radius: 6px;
+  color: #7e22ce;
+  margin-top: 6px;
+  background: #faf5ff;
+  padding: 3px 12px;
+  border-radius: 999px;
   display: inline-block;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  border: 1px solid #d8b4fe;
+  line-height: 1.45;
+  box-shadow: 0 1px 3px rgba(126, 34, 206, 0.08);
 }
 
 .ws-ex-level {
@@ -3495,7 +3538,21 @@ body.dark-mode .ws-points-count-badge {
   font-weight: 800;
   letter-spacing: 0.5px;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.ws-header-title .ws-code-num {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #dc2626;
+  letter-spacing: 1px;
+}
+
+.ws-header-title .ws-point-num {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #dc2626;
 }
 
 .ws-header-right {
@@ -3949,8 +4006,8 @@ body.dark-mode .ws-points-count-badge {
 
 .ws-footer-label {
   font-weight: 800;
-  font-size: 1.25rem;
-  color: #7e22ce !important; /* Bold Purple matching user's screenshot */
+  font-size: 1.15rem;
+  color: #a21caf !important; /* Bold Magenta/Purple matching user screenshot */
   white-space: nowrap;
   letter-spacing: 0.5px;
 }
@@ -3958,9 +4015,9 @@ body.dark-mode .ws-points-count-badge {
 .ws-footer-points {
   flex: 1;
   font-style: italic;
-  color: #14532d;
-  font-size: 0.94rem;
-  line-height: 1.85;
+  color: #6b21a8;
+  font-size: 0.90rem;
+  line-height: 1.75;
 }
 
 .ws-footer-points p {

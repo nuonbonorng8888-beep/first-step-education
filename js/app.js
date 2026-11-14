@@ -357,7 +357,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v106';
+    this.appVersion = 'v107';
 
     const checkVersion = async () => {
       try {
@@ -2001,9 +2001,37 @@ function doGet(e) {
     if (activeBtn) activeBtn.classList.add('active');
     if (activeContent) activeContent.classList.add('active');
 
+    const layout = document.querySelector('.classroom-layout');
+    if (layout) {
+      if (tabName === 'worksheet') {
+        layout.classList.add('worksheet-active');
+        layout.classList.remove('worksheet-sidebar-open');
+      } else {
+        layout.classList.remove('worksheet-active');
+        layout.classList.remove('worksheet-sidebar-open');
+      }
+    }
+
     if (tabName === 'worksheet') {
       this.renderWorksheetTab();
     }
+  },
+
+  toggleWorksheetSidebar() {
+    const layout = document.querySelector('.classroom-layout');
+    if (layout) {
+      layout.classList.toggle('worksheet-sidebar-open');
+    }
+  },
+
+  formatSheetTitleHeader(sheetNumber) {
+    if (!sheetNumber) return 'សន្លឹកកិច្ចការ';
+    const s = String(sheetNumber).trim();
+    const m = s.match(/^(សន្លឹកកិច្ចការទី)\s*(.+?)\s*[\(\-]\s*(ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+)\)?$/);
+    if (m) {
+      return `${m[1]}<br><span class="ws-code-num">${m[2].trim()}</span><br><span class="ws-point-num">(${m[3].trim()})</span>`;
+    }
+    return s;
   },
 
   renderMaterialsTab() {
@@ -2740,6 +2768,10 @@ function doGet(e) {
           </div>
 
           <div class="ws-toolbar-actions">
+            <button class="btn btn-outline" onclick="App.toggleWorksheetSidebar()" title="បើក/បិទ បញ្ជីមេរៀនទាំងអស់">
+              📖 បញ្ជីមេរៀន
+            </button>
+
             <button class="btn btn-primary" onclick="App.printWorksheet(false)" title="បោះពុម្ព ឬទាញយកជា PDF សន្លឹកចំណុចនេះ">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -2805,7 +2837,7 @@ function doGet(e) {
               <img src="assets/school_logo.png" class="ws-school-logo" alt="Preah Sisowath NGS Logo">
             </div>
             <div class="ws-header-center">
-              <h1 class="ws-header-title">${currentPoint.sheetNumber || ws.sheetNumber}</h1>
+              <h1 class="ws-header-title">${this.formatSheetTitleHeader(currentPoint.sheetNumber || ws.sheetNumber)}</h1>
               ${currentPoint.pointTitle ? `<div class="ws-header-point-subtitle">${currentPoint.pointTitle}</div>` : ''}
             </div>
             <div class="ws-header-right">
@@ -3024,7 +3056,7 @@ function doGet(e) {
             <img src="assets/school_logo.png" class="ws-school-logo" alt="Preah Sisowath NGS Logo">
           </div>
           <div class="ws-header-center">
-            <h1 class="ws-header-title">${pt.sheetNumber || ws.sheetNumber}</h1>
+            <h1 class="ws-header-title">${this.formatSheetTitleHeader(pt.sheetNumber || ws.sheetNumber)}</h1>
             <div class="ws-header-point-subtitle">${pt.pointTitle}</div>
           </div>
           <div class="ws-header-right">
