@@ -1,7 +1,7 @@
 {
-  "version": "v115",
-  "build": 115,
+  "version": "v116",
+  "build": 116,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Grade 12 Question Bank complete audit & authentic MoEYS curriculum alignment (960 authentic MCQs across all 39 lessons in Basic and Advanced tracks + 85 written problems with responsive SVG diagrams for complex plane, rational curves, exponential/logarithmic functions, integrals, conics, 3D space, and statistics); integrated Grade 12 into Standard Exams Portal with 17 official chapter, semester, and National Baccalaureate (បាក់ឌុប) Science & Social Science mock exams with full step-by-step solutions and scoring rubrics."
+  "changelog": "Grade 7 Worksheets & Question Bank complete upgrade: audited all mathematical typesetting (eliminated all raw slash fractions, fixed \\dots/\\ldots and matched KaTeX delimiters); strictly aligned exercises with MoEYS curriculum progression (isolated natural numbers from integers and removed misplaced concepts in Lessons 1-2); updated all 77 points across 22 lessons with 3 distinct difficulty levels (Level 1: ស្រួល / មូលដ្ឋានគ្រឹះ, Level 2: មធ្យម / ការយល់ដឹង និងអនុវត្ត, Level 3: ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា) totaling 231 comprehensive exercises with full teacher solutions, rubrics, and dynamic score calculation (/ ៣)."
 }

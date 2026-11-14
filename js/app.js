@@ -2885,6 +2885,7 @@ function doGet(e) {
     const pointIndex = hasPoints ? Math.min(Math.max(0, this.activeWorksheetPoint || 0), ws.points.length - 1) : 0;
     const currentPoint = hasPoints ? ws.points[pointIndex] : ws;
     const currentExercises = currentPoint.exercises || ws.exercises || [];
+    const currentTotalScore = currentExercises.reduce((sum, ex) => sum + (Number(ex.points) || 1), 0) || 3;
 
     const isUnlocked = this.isAdmin || this.teacherUnlocked;
 
@@ -3010,7 +3011,7 @@ function doGet(e) {
               </div>
               <div class="ws-info-item" style="flex: 1;">
                 <span class="ws-info-label">ពិន្ទុទទួលបាន ៖</span>
-                <span class="ws-score-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / ២</span>
+                <span class="ws-score-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / ${this.toKhmerNum(currentTotalScore)}</span>
               </div>
             </div>
           </div>
@@ -3040,7 +3041,10 @@ function doGet(e) {
             ${currentExercises.map((ex, exIdx) => `
               <div class="ws-exercise-block">
                 <div class="ws-ex-header">
-                  <span class="ws-ex-num">លំហាត់ទី ${this.toKhmerNum(exIdx + 1)}</span>
+                  <div class="ws-ex-title-wrap">
+                    <span class="ws-ex-num">លំហាត់ទី ${this.toKhmerNum(exIdx + 1)}</span>
+                    ${ex.level ? `<span class="ws-ex-level-pill level-${exIdx + 1}">${ex.level}</span>` : ''}
+                  </div>
                   <span class="ws-ex-points">${this.toKhmerNum(ex.points || 1)} ពិន្ទុ</span>
                 </div>
 
@@ -3202,7 +3206,9 @@ function doGet(e) {
     printContainer.id = 'ws-all-points-print-container';
     printContainer.className = 'ws-all-points-print-container';
 
-    printContainer.innerHTML = ws.points.map((pt, ptIdx) => `
+    printContainer.innerHTML = ws.points.map((pt, ptIdx) => {
+      const ptTotalScore = (pt.exercises || []).reduce((sum, ex) => sum + (Number(ex.points) || 1), 0) || 3;
+      return `
       <div class="worksheet-paper ${ptIdx < ws.points.length - 1 ? 'ws-page-break' : ''}">
         <div class="ws-header-banner">
           <div class="ws-school-logo-box">
@@ -3235,7 +3241,7 @@ function doGet(e) {
             </div>
             <div class="ws-info-item" style="flex: 1;">
               <span class="ws-info-label">ពិន្ទុទទួលបាន ៖</span>
-              <span class="ws-score-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / ២</span>
+              <span class="ws-score-box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / ${this.toKhmerNum(ptTotalScore)}</span>
             </div>
           </div>
         </div>
@@ -3263,7 +3269,10 @@ function doGet(e) {
           ${pt.exercises.map((ex, exIdx) => `
             <div class="ws-exercise-block">
               <div class="ws-ex-header">
-                <span class="ws-ex-num">លំហាត់ទី ${this.toKhmerNum(exIdx + 1)}</span>
+                <div class="ws-ex-title-wrap">
+                  <span class="ws-ex-num">លំហាត់ទី ${this.toKhmerNum(exIdx + 1)}</span>
+                  ${ex.level ? `<span class="ws-ex-level-pill level-${exIdx + 1}">${ex.level}</span>` : ''}
+                </div>
                 <span class="ws-ex-points">${this.toKhmerNum(ex.points || 1)} ពិន្ទុ</span>
               </div>
               <div class="ws-ex-instruction">${ex.instruction}</div>
@@ -3281,7 +3290,8 @@ function doGet(e) {
           </div>
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
 
     document.body.appendChild(printContainer);
     this.renderMath(printContainer);
