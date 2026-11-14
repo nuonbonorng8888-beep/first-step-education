@@ -2463,5 +2463,725 @@
       }
     ],
     "date": "២០២៦-២០២៧"
+  },
+  {
+    "id": "std-exam-g10-01",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ១ ៖ ពហុធា និងវិធីចែកហ័រណឺ",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-1",
+    "chapterTitle": "ជំពូកទី ១ ៖ ពហុធា",
+    "lessonId": "les-g10-1-1",
+    "lessonTitle": "មេរៀនទី ១ ៖ ពហុធា និងវិធីចែកពហុធា",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គណនា និងពង្រាយកន្សោមពហុធាខាងក្រោម ៖\nក. $A(x) = (2x - 3)^2 - (x + 1)(x - 1)$\nខ. $B(x) = (x + 2)^3 - x(x - 1)^2$",
+        "solution": "ក. $A(x) = (4x^2 - 12x + 9) - (x^2 - 1) = 3x^2 - 12x + 10$។\nខ. $B(x) = (x^3 + 6x^2 + 12x + 8) - x(x^2 - 2x + 1) = x^3 + 6x^2 + 12x + 8 - x^3 + 2x^2 - x = 8x^2 + 11x + 8$។",
+        "rubric": "ក. ពន្លាតការេនៃទ្វេធា និងផលគុណកត្តា (៣ពិន្ទុ), បង្រួមត្រឹមត្រូវ $A=3x^2-12x+10$ (២ពិន្ទុ)\nខ. ពន្លាតគូបនៃទ្វេធា (៣ពិន្ទុ), បង្រួមត្រឹមត្រូវ $B=8x^2+11x+8$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ដាក់កន្សោមខាងក្រោមជាផលគុណកត្តា ៖\nក. $C(x) = 4x^2 - 9 + (2x - 3)(x + 5)$\nខ. $D(x) = x^3 - 3x^2 - 4x + 12$",
+        "solution": "ក. $C(x) = (2x - 3)(2x + 3) + (2x - 3)(x + 5) = (2x - 3)[(2x + 3) + (x + 5)] = (2x - 3)(3x + 8)$។\nខ. $D(x) = x^2(x - 3) - 4(x - 3) = (x - 3)(x^2 - 4) = (x - 3)(x - 2)(x + 2)$។",
+        "rubric": "ក. ទាញកត្តារួម $(2x-3)$ (៣ពិន្ទុ), ចម្លើយចុងក្រោយ $(2x-3)(3x+8)$ (២ពិន្ទុ)\nខ. ដាក់ជាក្រុមទាញកត្តា $(x-3)$ (៣ពិន្ទុ), បំបែកបន្តជា $(x-3)(x-2)(x+2)$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យពហុធា $P(x) = 2x^3 - 5x^2 + 4x - 6$។\nក. ធ្វើវិធីចែកពហុធា $P(x)$ នឹង $x - 2$ តាមវិធីចែកទូទៅ។\nខ. រកផលចែក $Q(x)$ និងសំណល់ $R$។",
+        "solution": "ក. និង ខ. ចែក $2x^3 - 5x^2 + 4x - 6$ នឹង $x - 2$ ៖\n- តួទី១ ៖ $2x^3 / x = 2x^2$\n- $(2x^3 - 5x^2) - (2x^3 - 4x^2) = -x^2$\n- តួទី២ ៖ $-x^2 / x = -x$\n- $(-x^2 + 4x) - (-x^2 + 2x) = 2x$\n- តួទី៣ ៖ $2x / x = 2$\n- $(2x - 6) - (2x - 4) = -2$។\nដូចនេះ ផលចែក $Q(x) = 2x^2 - x + 2$ និងសំណល់ $R = -2$។",
+        "rubric": "ក. បង្ហាញដំណើរការចែកត្រឹមត្រូវតាមលំដាប់ (៥ពិន្ទុ)\nខ. កំណត់បានផលចែក $Q(x)=2x^2-x+2$ (៣ពិន្ទុ) និងសំណល់ $R=-2$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គេឱ្យពហុធា $A(x) = 3x^4 - 2x^3 + x - 5$។\nក. ប្រើតារាងហ័រណឺ (Horner's Scheme) ដើម្បីចែក $A(x)$ នឹង $x + 1$។\nខ. សរសេរ $A(x)$ ជាទម្រង់ $A(x) = (x + 1)Q(x) + R$។",
+        "solution": "ក. ហ័រណឺជាមួយ $c = -1$ មេគុណ ៖ $[3, -2, 0, 1, -5]$\n- ទម្លាក់ 3\n- $3(-1) + (-2) = -5$\n- $(-5)(-1) + 0 = 5$\n- $5(-1) + 1 = -4$\n- $(-4)(-1) + (-5) = -1 = R$\nផលចែក $Q(x) = 3x^3 - 5x^2 + 5x - 4$ និងសំណល់ $R = -1$។\nខ. សរសេរបាន ៖ $A(x) = (x + 1)(3x^3 - 5x^2 + 5x - 4) - 1$។",
+        "rubric": "ក. សង់តារាងហ័រណឺត្រឹមត្រូវ (៥ពិន្ទុ), រកឃើញផលចែកនិងសំណល់ (៣ពិន្ទុ)\nខ. សរសេរសមភាពពហុធាត្រឹមត្រូវ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "គេឱ្យពហុធា $P(x) = x^3 + ax^2 - 4x + b$។\nក. កំណត់តម្លៃ $a$ និង $b$ ដើម្បីឱ្យ $P(x)$ ចែកដាច់នឹង $x - 1$ និងចែកនឹង $x + 2$ ឱ្យសំណល់ $6$។\nខ. ដាក់ $P(x)$ ជាផលគុណកត្តានៃពហុធាដឺក្រេទី១ ចំពោះតម្លៃ $a$ និង $b$ ដែលរកឃើញ។",
+        "solution": "ក. តាមទ្រឹស្តីបទសំណល់ ៖\n- $P(x)$ ចែកដាច់នឹង $x - 1 \\iff P(1) = 0 \\implies 1 + a - 4 + b = 0 \\iff a + b = 3$ (១)\n- ចែកនឹង $x + 2$ សល់ 6 $\\iff P(-2) = 6 \\implies -8 + 4a + 8 + b = 6 \\iff 4a + b = 6$ (២)\nយក (២) - (១) ៖ $3a = 3 \\implies a = 1$។ ជំនួសចូល (១) ៖ $1 + b = 3 \\implies b = 2$។\nខ. ចំពោះ $a = 1, b = 2$ គេបាន $P(x) = x^3 + x^2 - 4x + 2$។ ដោយ $P(1) = 0$ គេចែក $P(x)$ នឹង $x - 1$ បាន $P(x) = (x - 1)(x^2 + 2x - 2)$។\nឫសនៃ $x^2 + 2x - 2 = 0$ គឺ $x = -1 \\pm \\sqrt{3}$។\nដូចនេះ $P(x) = (x - 1)(x - (-1 + \\sqrt{3}))(x - (-1 - \\sqrt{3}))$។",
+        "rubric": "ក. បង្កើតប្រព័ន្ធសមីការ (៣ពិន្ទុ), ដោះស្រាយបាន $a=1, b=2$ (៣ពិន្ទុ)\nខ. ចែកពហុធានិងដាក់ជាកត្តាត្រឹមត្រូវ (៤ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-02",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ២ ៖ តក្កវិទ្យា និងសំណុំ",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-2",
+    "chapterTitle": "ជំពូកទី ២ ៖ តក្កវិទ្យា សំណុំ និងចំនួន",
+    "lessonId": "les-g10-2-1",
+    "lessonTitle": "មេរៀនទី ១-២ ៖ តក្កវិទ្យា សំណុំ និងដ្យាក្រាមវ៉ែន",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យសំណើពីរ ៖ $p$ : «$\\sqrt{5}$ ជាចំនួនអសនិទាន» និង $q$ : «$(-3)^2 = -9$»។\nក. កំណត់តម្លៃសច្ចភាពនៃសំណើ $p$ និងសំណើ $q$។\nខ. កំណត់តម្លៃសច្ចភាពនៃសំណើសមាសខាងក្រោម ៖\n១. $p \\land q$\n២. $p \\lor q$\n៣. $p \\implies q$\n៤. $\\overline{q} \\implies p$",
+        "solution": "ក. តម្លៃសច្ចភាព ៖\n- $p$ ពិត (T) ព្រោះ $\\sqrt{5}$ ជាចំនួនអសនិទានពិតប្រាកដ។\n- $q$ មិនពិត (F) ព្រោះ $(-3)^2 = 9 \\neq -9$។\nខ. តម្លៃសច្ចភាពនៃសំណើសមាស ៖\n១. $p \\land q$ ៖ T $\\land$ F = F (មិនពិត)\n២. $p \\lor q$ ៖ T $\\lor$ F = T (ពិត)\n៣. $p \\implies q$ ៖ T $\\implies$ F = F (មិនពិត)\n៤. $\\overline{q} \\implies p$ ៖ ដោយ $\\overline{q}$ ពិត (T) នាំឱ្យ T $\\implies$ T = T (ពិត)។",
+        "rubric": "ក. កំណត់តម្លៃ $p$ និង $q$ ត្រឹមត្រូវ (២ពិន្ទុ)\nខ. គណនាតម្លៃសច្ចភាពនីមួយៗក្នុង ១ ដល់ ៤ (២ពិន្ទុក្នុងមួយចំណុច = ៨ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "សង់តារាងសច្ចភាពនៃសំណើ ៖ $(p \\implies q) \\iff (\\overline{p} \\lor q)$។ តើសំណើនេះជាតូតូឡូជី (Tautology) ដែរឬទេ?",
+        "solution": "តារាងសច្ចភាព ៖\n| $p$ | $q$ | $p \\implies q$ | $\\overline{p}$ | $\\overline{p} \\lor q$ | $(p \\implies q) \\iff (\\overline{p} \\lor q)$ |\n|---|---|---|---|---|---|\n| T | T | T | F | T | T |\n| T | F | F | F | F | T |\n| F | T | T | T | T | T |\n| F | F | T | T | T | T |\nជួរឈរចុងក្រោយមានតម្លៃពិត (T) គ្រប់ករណី។ ដូចនេះ សំណើនេះជា តូតូឡូជី (Tautology)។",
+        "rubric": "សង់តារាងគ្រប់ជួរឈរត្រឹមត្រូវ (៧ពិន្ទុ), សន្និដ្ឋានថាជាតូតូឡូជី (៣ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យសកល $U = \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$ និងសំណុំរងពីរ ៖\n$A = \\{x \\in U \\mid x \\text{ ជាចំនួនគូ}\\}$ និង $B = \\{x \\in U \\mid x \\text{ ជាពហុគុណនៃ } 3\\}$។\nក. សរសេរសំណុំ $A$ និង $B$ ដោយរៀបរាប់ធាតុ។\nខ. រកសំណុំ ៖ $A \\cap B$, $A \\cup B$, $A \\setminus B$ និង $\\overline{A}$។",
+        "illustration": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><rect width=\"320\" height=\"180\" fill=\"#f8fafc\"/><text x=\"15\" y=\"25\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\">ដ្យាក្រាមវ៉ែន ៖ A ∩ B (ប្រពន្ធ័/ប្រសព្វ)</text><defs><clipPath id=\"clipA\"><circle cx=\"120\" cy=\"95\" r=\"55\"/></clipPath></defs><circle cx=\"120\" cy=\"95\" r=\"55\" fill=\"#e0e7ff\" stroke=\"#3b82f6\" stroke-width=\"2\"/><circle cx=\"190\" cy=\"95\" r=\"55\" fill=\"#fef3c7\" stroke=\"#f59e0b\" stroke-width=\"2\"/><circle cx=\"190\" cy=\"95\" r=\"55\" fill=\"#10b981\" fill-opacity=\"0.6\" clip-path=\"url(#clipA)\"/><text x=\"95\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e40af\">A</text><text x=\"215\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#b45309\">B</text><text x=\"145\" y=\"98\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">A ∩ B</text></svg>",
+        "solution": "ក. រៀបរាប់ធាតុ ៖\n$A = \\{2, 4, 6, 8, 10\\}$\n$B = \\{3, 6, 9\\}$\nខ. ប្រមាណវិធីលើសំណុំ ៖\n- $A \\cap B = \\{6\\}$\n- $A \\cup B = \\{2, 3, 4, 6, 8, 9, 10\\}$\n- $A \\setminus B = \\{2, 4, 8, 10\\}$\n- $\\overline{A} = U \\setminus A = \\{1, 3, 5, 7, 9\\}$។",
+        "rubric": "ក. កំណត់សំណុំ $A$ និង $B$ ត្រឹមត្រូវ (២ពិន្ទុ)\nខ. គណនា $A \\cap B, A \\cup B, A \\setminus B, \\overline{A}$ ត្រឹមត្រូវ (២ពិន្ទុក្នុងមួយសំណុំ = ៨ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><rect width=\"320\" height=\"180\" fill=\"#f8fafc\"/><text x=\"15\" y=\"25\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\">ដ្យាក្រាមវ៉ែន ៖ A ∩ B (ប្រពន្ធ័/ប្រសព្វ)</text><defs><clipPath id=\"clipA\"><circle cx=\"120\" cy=\"95\" r=\"55\"/></clipPath></defs><circle cx=\"120\" cy=\"95\" r=\"55\" fill=\"#e0e7ff\" stroke=\"#3b82f6\" stroke-width=\"2\"/><circle cx=\"190\" cy=\"95\" r=\"55\" fill=\"#fef3c7\" stroke=\"#f59e0b\" stroke-width=\"2\"/><circle cx=\"190\" cy=\"95\" r=\"55\" fill=\"#10b981\" fill-opacity=\"0.6\" clip-path=\"url(#clipA)\"/><text x=\"95\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#1e40af\">A</text><text x=\"215\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#b45309\">B</text><text x=\"145\" y=\"98\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#065f46\">A ∩ B</text></svg>"
+      },
+      {
+        "num": 4,
+        "q": "ក្នុងថ្នាក់រៀនមួយមានសិស្ស ៤០ នាក់។ ក្នុងនោះមានសិស្ស ២៥ នាក់ចូលចិត្តលេងបាល់ទាត់ ២០ នាក់ចូលចិត្តលេងបាល់ទះ និង ៨ នាក់មិនចូលចិត្តកីឡាទាំងពីរនេះ។\nក. តើមានសិស្សប៉ុន្មាននាក់ដែលចូលចិត្តលេងកីឡាយ៉ាងហោចណាស់មួយប្រភេទ?\nខ. រកចំនួនសិស្សដែលចូលចិត្តលេងកីឡាទាំងពីរប្រភេទ។",
+        "illustration": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><rect width=\"320\" height=\"180\" fill=\"#f8fafc\"/><text x=\"15\" y=\"25\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\">ដ្យាក្រាមវ៉ែន ៖ A ∪ B (ប្រជុំ)</text><circle cx=\"120\" cy=\"95\" r=\"55\" fill=\"#bae6fd\" fill-opacity=\"0.7\" stroke=\"#0284c7\" stroke-width=\"2\"/><circle cx=\"190\" cy=\"95\" r=\"55\" fill=\"#bae6fd\" fill-opacity=\"0.7\" stroke=\"#0284c7\" stroke-width=\"2\"/><text x=\"90\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0369a1\">A</text><text x=\"215\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0369a1\">B</text><text x=\"142\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A ∪ B</text></svg>",
+        "solution": "តាង $F$ ជាសំណុំសិស្សចូលចិត្តបាល់ទាត់ ($n(F) = 25$)\n$V$ ជាសំណុំសិស្សចូលចិត្តបាល់ទះ ($n(V) = 20$)\nក. ចំនួនសិស្សចូលចិត្តលេងកីឡាយ៉ាងហោចណាស់មួយប្រភេទគឺ $n(F \\cup V) = 40 - 8 = 32$ នាក់។\nខ. តាមរូបមន្តចំនួនធាតុនៃប្រជុំ ៖\n$n(F \\cup V) = n(F) + n(V) - n(F \\cap V)$\n$\\implies 32 = 25 + 20 - n(F \\cap V) \\implies n(F \\cap V) = 45 - 32 = 13$ នាក់។\nដូចនេះ សិស្សចូលចិត្តទាំងពីរកីឡាមាន ១៣ នាក់។",
+        "rubric": "ក. គណនា $n(F \\cup V) = 32$ (៤ពិន្ទុ)\nខ. អនុវត្តរូបមន្តនិងគណនាបាន ១៣ នាក់ (៦ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><rect width=\"320\" height=\"180\" fill=\"#f8fafc\"/><text x=\"15\" y=\"25\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#334155\">ដ្យាក្រាមវ៉ែន ៖ A ∪ B (ប្រជុំ)</text><circle cx=\"120\" cy=\"95\" r=\"55\" fill=\"#bae6fd\" fill-opacity=\"0.7\" stroke=\"#0284c7\" stroke-width=\"2\"/><circle cx=\"190\" cy=\"95\" r=\"55\" fill=\"#bae6fd\" fill-opacity=\"0.7\" stroke=\"#0284c7\" stroke-width=\"2\"/><text x=\"90\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0369a1\">A</text><text x=\"215\" y=\"98\" font-family=\"sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"#0369a1\">B</text><text x=\"142\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#0f172a\">A ∪ B</text></svg>"
+      },
+      {
+        "num": 5,
+        "q": "គេឱ្យចន្លោះនៃចំនួនពិត $A = [-3, 4)$ និង $B = (1, 6]$។\nក. បង្ហាញចន្លោះ $A$ និង $B$ លើបន្ទាត់ចំនួនពិត។\nខ. រកចន្លោះ ៖ $A \\cap B$, $A \\cup B$, និង $A \\setminus B$។",
+        "illustration": "<svg viewBox=\"0 0 340 100\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"20\" y1=\"50\" x2=\"320\" y2=\"50\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"325,50 315,45 315,55\" fill=\"#64748b\"/><line x1=\"90\" y1=\"50\" x2=\"240\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"5\"/><circle cx=\"90\" cy=\"50\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"240\" cy=\"50\" r=\"5\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"85\" y=\"75\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">a</text><text x=\"235\" y=\"75\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">b</text><text x=\"120\" y=\"35\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">ចន្លោះកន្លះបើក [a, b)</text></svg>",
+        "solution": "ក. បង្ហាញលើបន្ទាត់ចំនួន ៖\n$A = [-3, 4)$ រាប់ពី $-3$ (បិទ) ដល់ $4$ (បើក)។\n$B = (1, 6]$ រាប់ពី $1$ (បើក) ដល់ $6$ (បិទ)។\nខ. កំណត់ចន្លោះលទ្ធផល ៖\n- $A \\cap B = (1, 4)$\n- $A \\cup B = [-3, 6]$\n- $A \\setminus B = [-3, 1]$។",
+        "rubric": "ក. គូសបន្ទាត់ចំនួនត្រឹមត្រូវ (៣ពិន្ទុ)\nខ. រកចន្លោះប្រសព្វ ប្រជុំ និងផលដកត្រឹមត្រូវ (៧ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 340 100\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"20\" y1=\"50\" x2=\"320\" y2=\"50\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"325,50 315,45 315,55\" fill=\"#64748b\"/><line x1=\"90\" y1=\"50\" x2=\"240\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"5\"/><circle cx=\"90\" cy=\"50\" r=\"5\" fill=\"#2563eb\"/><circle cx=\"240\" cy=\"50\" r=\"5\" fill=\"#ffffff\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"85\" y=\"75\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">a</text><text x=\"235\" y=\"75\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#1e293b\">b</text><text x=\"120\" y=\"35\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">ចន្លោះកន្លះបើក [a, b)</text></svg>"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-03",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៣ (ភាគ ១) ៖ សមីការដឺក្រេទី ២ និងទ្រឹស្តីបទវៀត",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-3",
+    "chapterTitle": "ជំពូកទី ៣ ៖ សមីការនិងវិសមីការ",
+    "lessonId": "les-g10-3-1",
+    "lessonTitle": "មេរៀនទី ១ ៖ សមីការដឺក្រេទី ២ មានមួយអថេរ និងទ្រឹស្តីបទវៀត",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "ដោះស្រាយសមីការដឺក្រេទីពីរខាងក្រោមក្នុង $\\mathbb{R}$ ៖\nក. $2x^2 - 5x + 2 = 0$\nខ. $3x^2 - 2\\sqrt{3}x - 1 = 0$ (ប្រើ $\\Delta'$)",
+        "solution": "ក. $\\Delta = (-5)^2 - 4(2)(2) = 25 - 16 = 9 > 0$\n$\\implies x_1 = \\dfrac{5 - 3}{4} = \\dfrac{1}{2}, \\quad x_2 = \\dfrac{5 + 3}{4} = 2$។ សំណុំចម្លើយ $S = \\{1/2, 2\\}$។\nខ. $b' = -\\sqrt{3} \\implies \\Delta' = (-\\sqrt{3})^2 - 3(-1) = 3 + 3 = 6 > 0$\n$\\implies x = \\dfrac{\\sqrt{3} \\pm \\sqrt{6}}{3}$។ សំណុំចម្លើយ $S = \\{\\dfrac{\\sqrt{3} - \\sqrt{6}}{3}, \\dfrac{\\sqrt{3} + \\sqrt{6}}{3}\\}$។",
+        "rubric": "ក. គណនា $\\Delta$ (២ពិន្ទុ), រកឫសទាំងពីរ (៣ពិន្ទុ)\nខ. គណនា $\\Delta'$ (២ពិន្ទុ), រកឫសទាំងពីរ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "គេឱ្យសមីការ $x^2 - 7x + 5 = 0$ មានឫសពីរ $x_1$ និង $x_2$។ ដោយមិនបាច់ដោះស្រាយសមីការ ចូរគណនាតម្លៃនៃកន្សោមខាងក្រោម ៖\nក. $A = x_1 + x_2$ និង $B = x_1 x_2$\nខ. $C = x_1^2 + x_2^2$\nគ. $D = \\dfrac{1}{x_1} + \\dfrac{1}{x_2}$",
+        "solution": "ក. តាមទ្រឹស្តីបទវៀត ៖ $S = x_1 + x_2 = -\\dfrac{b}{a} = 7$ និង $P = x_1 x_2 = \\dfrac{c}{a} = 5$។\nខ. $C = x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1 x_2 = 7^2 - 2(5) = 49 - 10 = 39$។\nគ. $D = \\dfrac{x_1 + x_2}{x_1 x_2} = \\dfrac{7}{5}$។",
+        "rubric": "ក. រក $A=7$ និង $B=5$ (៣ពិន្ទុ)\nខ. បំប្លែងរូបមន្ត និងគណនា $C=39$ (៤ពិន្ទុ)\nគ. តម្រូវភាគបែង និងគណនា $D=7/5$ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យសមីការ $(m - 1)x^2 - 2mx + m + 3 = 0$ ($m$ ជាប៉ារ៉ាម៉ែត្រ)។\nក. កំណត់តម្លៃ $m$ ដើម្បីឱ្យសមីការនេះជាសមីការដឺក្រេទីពីរ។\nខ. រកតម្លៃ $m$ ដើម្បីឱ្យសមីការមានឫសឌុប រួចគណនាឫសឌុបនោះ។",
+        "solution": "ក. ដើម្បីឱ្យសមីការជាដឺក្រេទីពីរ លុះត្រាតែមេគុណ $a \\neq 0 \\implies m - 1 \\neq 0 \\iff m \\neq 1$។\nខ. គណនា $\\Delta' = (-m)^2 - (m - 1)(m + 3) = m^2 - (m^2 + 2m - 3) = -2m + 3$។\nសមីការមានឫសឌុប លុះត្រាតែ $\\begin{cases} a \\neq 0 \\\\ \\Delta' = 0 \\end{cases} \\iff \\begin{cases} m \\neq 1 \\\\ -2m + 3 = 0 \\end{cases} \\implies m = \\dfrac{3}{2}$ (យកបាន)។\nឫសឌុប ៖ $x_0 = -\\dfrac{b'}{a} = \\dfrac{m}{m - 1} = \\dfrac{3/2}{3/2 - 1} = \\dfrac{3/2}{1/2} = 3$។",
+        "rubric": "ក. លក្ខខណ្ឌ $m \\neq 1$ (២ពិន្ទុ)\nខ. គណនា $\\Delta'= -2m+3$ (៣ពិន្ទុ), ដោះស្រាយ $m=3/2$ (៣ពិន្ទុ), រកឫសឌុប $x_0=3$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "កំណត់សញ្ញានៃឫសនៃសមីការ $x^2 - 2(m + 1)x + 2m + 1 = 0$ តាមតម្លៃនៃប៉ារ៉ាម៉ែត្រ $m$។",
+        "solution": "គណនា $\\Delta' = (m + 1)^2 - (2m + 1) = m^2 + 2m + 1 - 2m - 1 = m^2 \\ge 0, \\forall m$។\n- $S = x_1 + x_2 = 2(m + 1)$\n- $P = x_1 x_2 = 2m + 1$\nសន្និដ្ឋាន ៖\n- បើ $m = 0$ ៖ $\\Delta' = 0 \\implies$ ឫសឌុប $x_1 = x_2 = 1 > 0$។\n- បើ $m < -1/2$ ៖ $P < 0 \\implies$ សមីការមានឫសពីរមានសញ្ញាផ្ទុយគ្នា។\n- បើ $-1/2 < m < 0$ ឬ $m > 0$ ៖ $P > 0$ និង $S > 0 \\implies$ សមីការមានឫសពីរវិជ្ជមានទាំងពីរ។\n- បើ $m = -1/2$ ៖ ឫសមួយស្មើ 0 និងឫសមួយទៀតវិជ្ជមាន ($x_2 = 1$)។",
+        "rubric": "គណនា $\\Delta'$ ពិនិត្យឃើញ $\\ge 0$ (៣ពិន្ទុ), គណនា $S, P$ (៣ពិន្ទុ), សន្និដ្ឋានគ្រប់ករណី (៤ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ចតុកោណកែងមួយមានបរិមាត្រស្មើនឹង $36\\text{ m}$ និងមានផ្ទៃក្រឡាស្មើនឹង $80\\text{ m}^2$។ រកប្រវែងបណ្តោយ និងទទឹងនៃចតុកោណកែងនោះ។",
+        "solution": "តាង $x, y$ ជាបណ្តោយ និងទទឹងនៃចតុកោណកែង ($x \\ge y > 0$)។\n- កន្លះបរិមាត្រ ៖ $S = x + y = 36 / 2 = 18\\text{ m}$\n- ផ្ទៃក្រឡា ៖ $P = xy = 80\\text{ m}^2$\n$x, y$ ជាឫសនៃសមីការ ៖ $X^2 - SX + P = 0 \\iff X^2 - 18X + 80 = 0$។\n$\\Delta' = (-9)^2 - 80 = 81 - 80 = 1 > 0$\n$\\implies X_1 = 9 + 1 = 10, \\quad X_2 = 9 - 1 = 8$។\nដូចនេះ បណ្តោយគឺ $10\\text{ m}$ និងទទឹងគឺ $8\\text{ m}$។",
+        "rubric": "កំណត់អថេរនិងប្រព័ន្ធ $S=18, P=80$ (៣ពិន្ទុ), បង្កើតសមីការដឺក្រេទី២ (៣ពិន្ទុ), រកឃើញបណ្តោយ ១០m និងទទឹង ៨m (៤ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-04",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៣ (ភាគ ២) ៖ សមីការអសនិទាន និងវិសមីការ",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-3",
+    "chapterTitle": "ជំពូកទី ៣ ៖ សមីការនិងវិសមីការ",
+    "lessonId": "les-g10-3-2",
+    "lessonTitle": "មេរៀនទី ២-៤ ៖ សមីការទ្វេការេ អសនិទាន និងវិសមីការ",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "ដោះស្រាយសមីការទ្វេការេ ៖ $x^4 - 5x^2 + 4 = 0$ ក្នុង $\\mathbb{R}$។",
+        "solution": "តាង $t = x^2$ ($t \\ge 0$)។ សមីការក្លាយជា ៖ $t^2 - 5t + 4 = 0$។\nដោយ $a + b + c = 1 - 5 + 4 = 0 \\implies t_1 = 1, t_2 = 4$ (យកទាំងពីរព្រោះ $\\ge 0$)។\n- ចំពោះ $t = 1 \\implies x^2 = 1 \\iff x = \\pm 1$\n- ចំពោះ $t = 4 \\implies x^2 = 4 \\iff x = \\pm 2$\nដូចនេះ សំណុំចម្លើយ $S = \\{-2, -1, 1, 2\\}$។",
+        "rubric": "ប្តូរអថេរ $t=x^2$ និងលក្ខខណ្ឌ $t \\ge 0$ (៣ពិន្ទុ), ដោះស្រាយរក $t$ (៣ពិន្ទុ), ទាញរកឫស $x$ ទាំង ៤ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ដោះស្រាយសមីការអសនិទាន ៖ $\\sqrt{2x + 3} = x$ ក្នុង $\\mathbb{R}$។",
+        "solution": "សមីការសមមូលនឹង ៖\n$\\begin{cases} x \\ge 0 \\\\ 2x + 3 = x^2 \\end{cases} \\iff \\begin{cases} x \\ge 0 \\\\ x^2 - 2x - 3 = 0 \\end{cases}$\nសមីការ $x^2 - 2x - 3 = 0$ មាន $a - b + c = 1 - (-2) - 3 = 0 \\implies x_1 = -1, x_2 = 3$។\nផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x \\ge 0$ ៖\n- $x = -1 < 0$ (មិនយក)\n- $x = 3 \\ge 0$ (យក)\nដូចនេះ សំណុំចម្លើយ $S = \\{3\\}$។",
+        "rubric": "ដាក់លក្ខខណ្ឌ $x \\ge 0$ (៣ពិន្ទុ), លើកជាការេនិងដោះស្រាយសមីការ (៤ពិន្ទុ), ផ្ទៀងផ្ទាត់ជម្រុះឫសមិនយក (៣ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ដោះស្រាយសមីការដែលមានតម្លៃដាច់ខាត ៖ $|2x - 5| = x + 1$។",
+        "solution": "លក្ខខណ្ឌ ៖ $x + 1 \\ge 0 \\iff x \\ge -1$។\nសមីការសមមូលនឹង ៖\n$2x - 5 = x + 1$ ឬ $2x - 5 = -(x + 1)$\n- ករណី ១ ៖ $2x - x = 1 + 5 \\implies x = 6$ (ផ្ទៀងផ្ទាត់ $6 \\ge -1$, យក)\n- ករណី ២ ៖ $2x + x = -1 + 5 \\implies 3x = 4 \\implies x = \\dfrac{4}{3}$ (ផ្ទៀងផ្ទាត់ $4/3 \\ge -1$, យក)។\nដូចនេះ សំណុំចម្លើយ $S = \\{4/3, 6\\}$។",
+        "rubric": "លក្ខខណ្ឌឬបំបែកករណី (៣ពិន្ទុ), ដោះស្រាយរក $x=6$ និង $x=4/3$ (៥ពិន្ទុ), សន្និដ្ឋានត្រឹមត្រូវ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "ដោះស្រាយវិសមីការដឺក្រេទីពីរ ៖ $2x^2 - 5x + 2 \\le 0$ ដោយប្រើតារាងសញ្ញា។",
+        "solution": "រកឫសនៃ $2x^2 - 5x + 2 = 0$ ៖\n$\\Delta = 25 - 16 = 9 \\implies x_1 = 1/2, x_2 = 2$។\nតារាងសញ្ញា ៖\n- ក្រៅចន្លោះឫស ($x < 1/2$ ឬ $x > 2$) ៖ សញ្ញាដូច $a=2 > 0$ (វិជ្ជមាន $+$\n- ក្នុងចន្លោះឫស ($1/2 < x < 2$) ៖ សញ្ញាផ្ទុយ $a$ (អវិជ្ជមាន $-$)\nគេចង់បានកន្សោម $\\le 0$ នាំឱ្យ $1/2 \\le x \\le 2$។\nដូចនេះ សំណុំចម្លើយ $S = [1/2, 2]$។",
+        "rubric": "រកឫស $1/2$ និង $2$ (៣ពិន្ទុ), សង់តារាងសញ្ញាត្រឹមត្រូវ (៤ពិន្ទុ), សន្និដ្ឋានចន្លោះបិទ $[1/2, 2]$ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ដោះស្រាយវិសមីការសនិទាន ៖ $\\dfrac{x - 3}{x + 2} \\ge 1$។",
+        "solution": "លក្ខខណ្ឌ ៖ $x + 2 \\neq 0 \\iff x \\neq -2$។\nបំប្លែងវិសមីការ ៖\n$\\dfrac{x - 3}{x + 2} - 1 \\ge 0 \\iff \\dfrac{x - 3 - (x + 2)}{x + 2} \\ge 0 \\iff \\dfrac{-5}{x + 2} \\ge 0$។\nដោយភាគយក $-5 < 0$ នោះផលចែកវិជ្ជមាន ឬសូន្យ លុះត្រាតែភាគបែងអវិជ្ជមានដាច់ខាត ៖\n$x + 2 < 0 \\iff x < -2$។\nដូចនេះ សំណុំចម្លើយ $S = (-\\infty, -2)$។",
+        "rubric": "លក្ខខណ្ឌមិនស្មើ $-2$ (២ពិន្ទុ), រុញទៅអង្គម្ខាងនិងតម្រូវភាគបែង (៤ពិន្ទុ), សន្និដ្ឋានចម្លើយ $x < -2$ (៤ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-05",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៣ (ភាគ ៣) ៖ ប្រព័ន្ធសមីការ និងវិធានក្រាម័រ",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-3",
+    "chapterTitle": "ជំពូកទី ៣ ៖ សមីការនិងវិសមីការ",
+    "lessonId": "les-g10-3-3",
+    "lessonTitle": "មេរៀនទី ៣ ៖ ប្រព័ន្ធសមីការលីនេអ៊ែរ និងដេទែរមីណង់ក្រាម័រ",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "ដោះស្រាយប្រព័ន្ធសមីការតាមវិធីដេទែរមីណង់ (វិធានក្រាម័រ) ៖\n$\\begin{cases} 2x + 3y = 8 \\\\ 3x - 4y = -5 \\end{cases}$",
+        "solution": "គណនាដេទែរមីណង់ ៖\n- $D = \\begin{vmatrix} 2 & 3 \\\\ 3 & -4 \\end{vmatrix} = 2(-4) - 3(3) = -8 - 9 = -17 \\neq 0$\n- $D_x = \\begin{vmatrix} 8 & 3 \\\\ -5 & -4 \\end{vmatrix} = 8(-4) - (-5)(3) = -32 + 15 = -17$\n- $D_y = \\begin{vmatrix} 2 & 8 \\\\ 3 & -5 \\end{vmatrix} = 2(-5) - 3(8) = -10 - 24 = -34$\nទាញបាន ៖\n$x = \\dfrac{D_x}{D} = \\dfrac{-17}{-17} = 1, \\quad y = \\dfrac{D_y}{D} = \\dfrac{-34}{-17} = 2$។\nដូចនេះ គូចម្លើយ $(x, y) = (1, 2)$។",
+        "rubric": "គណនា $D=-17$ (៣ពិន្ទុ), គណនា $D_x=-17, D_y=-34$ (៤ពិន្ទុ), រកឃើញ $(1, 2)$ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ដោះស្រាយប្រព័ន្ធសមីការលីនេអ៊ែរមានបីអញ្ញាត ៖\n$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + 2y - z = 2 \\end{cases}$",
+        "solution": "បូកសមីការ (១) និង (៣) ៖\n$(x + y + z) + (x + 2y - z) = 6 + 2 \\implies 2x + 3y = 8$ (៤)\nបូកសមីការ (១) និង (២) ៖\n$(x + y + z) + (2x - y + z) = 6 + 3 \\implies 3x + 2z = 9$ (មិនទាន់កម្ចាត់ y)\nបូកសមីការ (២) និង (៣) ៖\n$(2x - y + z) + (x + 2y - z) = 3 + 2 \\implies 3x + y = 5 \\implies y = 5 - 3x$ (៥)\nយក (៥) ជំនួសចូល (៤) ៖\n$2x + 3(5 - 3x) = 8 \\iff 2x + 15 - 9x = 8 \\iff -7x = -7 \\implies x = 1$។\nជំនួស $x = 1$ ចូល (៥) ៖ $y = 5 - 3(1) = 2$។\nជំនួស $x=1, y=2$ ចូល (១) ៖ $1 + 2 + z = 6 \\implies z = 3$។\nដូចនេះ ត្រីគុណចម្លើយ $(x, y, z) = (1, 2, 3)$។",
+        "rubric": "វិធីសាស្ត្រកម្ចាត់អថេរមួយ (៤ពិន្ទុ), រកឃើញ $x=1, y=2$ (៤ពិន្ទុ), រកឃើញ $z=3$ និងសន្និដ្ឋាន (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ដោះស្រាយប្រព័ន្ធសមីការដឺក្រេទីពីរមានពីរអញ្ញាត ៖\n$\\begin{cases} x + y = 5 \\\\ x^2 + y^2 = 13 \\end{cases}$",
+        "solution": "ពីសមីការ (១) ៖ $y = 5 - x$។\nជំនួសចូលសមីការ (២) ៖\n$x^2 + (5 - x)^2 = 13 \\iff x^2 + 25 - 10x + x^2 = 13$\n$\\iff 2x^2 - 10x + 12 = 0 \\iff x^2 - 5x + 6 = 0$។\nដោះស្រាយសមីការដឺក្រេទីពីរ ៖\n$(x - 2)(x - 3) = 0 \\implies x_1 = 2, \\quad x_2 = 3$។\n- បើ $x = 2 \\implies y = 5 - 2 = 3$\n- បើ $x = 3 \\implies y = 5 - 3 = 2$\nដូចនេះ គូចម្លើយមានពីរគឺ $(2, 3)$ និង $(3, 2)$។",
+        "rubric": "ទាញជំនួស $y=5-x$ (៣ពិន្ទុ), បង្កើតនិងដោះស្រាយសមីការ $x^2-5x+6=0$ (៤ពិន្ទុ), រកគូចម្លើយទាំងពីរ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "ពិភាក្សាតាមតម្លៃ $m$ នូវចំនួនចម្លើយនៃប្រព័ន្ធសមីការ ៖\n$\\begin{cases} mx + 2y = 4 \\\\ 2x + my = 2m \\end{cases}$",
+        "solution": "គណនាដេទែរមីណង់ ៖\n$D = \\begin{vmatrix} m & 2 \\\\ 2 & m \\end{vmatrix} = m^2 - 4 = (m - 2)(m + 2)$\n$D_x = \\begin{vmatrix} 4 & 2 \\\\ 2m & m \\end{vmatrix} = 4m - 4m = 0$\n$D_y = \\begin{vmatrix} m & 4 \\\\ 2 & 2m \\end{vmatrix} = 2m^2 - 8 = 2(m^2 - 4)$។\nពិភាក្សា ៖\n១. បើ $D \\neq 0 \\iff m \\neq \\pm 2$ ៖ ប្រព័ន្ធសមីការមានចម្លើយតែមួយគត់គឺ $x = \\dfrac{D_x}{D} = 0, y = \\dfrac{D_y}{D} = 2$។\n២. បើ $m = 2$ ៖ $D = 0, D_x = 0, D_y = 0$ នាំឱ្យប្រព័ន្ធសមីការមានចម្លើយរាប់មិនអស់ (សមមូលនឹង $2x + 2y = 4 \\iff x + y = 2$)។\n៣. បើ $m = -2$ ៖ $D = 0, D_x = 0, D_y = 0$ នាំឱ្យប្រព័ន្ធសមីការមានចម្លើយរាប់មិនអស់ (សមមូលនឹង $-2x + 2y = 4 \\iff -x + y = 2$)។",
+        "rubric": "គណនា $D, D_x, D_y$ (៤ពិន្ទុ), ករណី $m \\neq \\pm 2$ (២ពិន្ទុ), ករណី $m=2$ និង $m=-2$ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ទិញសៀវភៅ ៣ ក្បាល និងប៊ិច ៥ ដើម អស់ប្រាក់ ២២០០០ រៀល។ បើទិញសៀវភៅ ២ ក្បាល និងប៊ិច ៣ ដើម អស់ប្រាក់ ១៤០០០ រៀល។ រកតម្លៃសៀវភៅ ១ ក្បាល និងប៊ិច ១ ដើម។",
+        "solution": "តាង $x$ ជាតម្លៃសៀវភៅ ១ ក្បាល និង $y$ ជាតម្លៃប៊ិច ១ ដើម (គិតជារៀល, $x, y > 0$)។\nតាមប្រធាន គេបានប្រព័ន្ធសមីការ ៖\n$\\begin{cases} 3x + 5y = 22000 \\quad (1) \\\\ 2x + 3y = 14000 \\quad (2) \\end{cases}$\nគុណ (១) នឹង 2 និង (២) នឹង 3 ៖\n$\\begin{cases} 6x + 10y = 44000 \\\\ 6x + 9y = 42000 \\end{cases}$\nដកសមីការទាំងពីរ ៖ $y = 2000$ រៀល។\nជំនួស $y = 2000$ ចូល (២) ៖\n$2x + 3(2000) = 14000 \\implies 2x = 8000 \\implies x = 4000$ រៀល។\nដូចនេះ សៀវភៅ ១ ក្បាលតម្លៃ ៤០០០ រៀល និងប៊ិច ១ ដើមតម្លៃ ២០០០ រៀល។",
+        "rubric": "កំណត់អថេរនិងបង្កើតប្រព័ន្ធសមីការ (៤ពិន្ទុ), ដំណើរការដោះស្រាយ (៤ពិន្ទុ), សន្និដ្ឋានតម្លៃទំនិញទាំងពីរ (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-06",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៤ ៖ ធរណីមាត្រក្នុងប្លង់ និងសមីការរង្វង់",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-4",
+    "chapterTitle": "ជំពូកទី ៤ ៖ ធរណីមាត្រក្នុងប្លង់",
+    "lessonId": "les-g10-4-1",
+    "lessonTitle": "មេរៀនទី ១-៣ ៖ កូអរដោនេនៃចំណុច សមីការបន្ទាត់ និងសមីការរង្វង់",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "ក្នុងប្លង់កូអរដោនេ $xOy$ គេឱ្យចំណុច $A(1, 2)$ និង $B(5, -1)$។\nក. គណនាប្រវែងអង្កត់ $AB$។\nខ. រកកូអរដោនេនៃចំណុចកណ្តាល $M$ នៃអង្កត់ $AB$។",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"160\" x2=\"290\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"295,160 285,156 285,164\" fill=\"#94a3b8\"/><text x=\"290\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">x</text><line x1=\"60\" y1=\"180\" x2=\"60\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"60,15 56,25 64,25\" fill=\"#94a3b8\"/><text x=\"45\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">y</text><line x1=\"100\" y1=\"130\" x2=\"240\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"100\" y1=\"130\" x2=\"240\" y2=\"130\" stroke=\"#94a3b8\" stroke-dasharray=\"4,4\"/><line x1=\"240\" y1=\"130\" x2=\"240\" y2=\"60\" stroke=\"#94a3b8\" stroke-dasharray=\"4,4\"/><circle cx=\"100\" cy=\"130\" r=\"4\" fill=\"#dc2626\"/><text x=\"80\" y=\"145\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A(x₁, y₁)</text><circle cx=\"240\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><text x=\"235\" y=\"50\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">B(x₂, y₂)</text><text x=\"140\" y=\"85\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">d = √[(x₂-x₁)²+(y₂-y₁)²]</text></svg>",
+        "solution": "ក. ប្រវែង $AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2} = \\sqrt{(5 - 1)^2 + (-1 - 2)^2} = \\sqrt{4^2 + (-3)^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$ ឯកតា។\nខ. ចំណុចកណ្តាល $M(x_M, y_M)$ ៖\n$x_M = \\dfrac{x_A + x_B}{2} = \\dfrac{1 + 5}{2} = 3$\n$y_M = \\dfrac{y_A + y_B}{2} = \\dfrac{2 + (-1)}{2} = \\dfrac{1}{2}$។\nដូចនេះ $M(3, 1/2)$។",
+        "rubric": "ក. រូបមន្តចម្ងាយនិងគណនា $AB=5$ (៥ពិន្ទុ)\nខ. រូបមន្តនិងរកកូអរដោនេ $M(3, 1/2)$ (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"160\" x2=\"290\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"295,160 285,156 285,164\" fill=\"#94a3b8\"/><text x=\"290\" y=\"175\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">x</text><line x1=\"60\" y1=\"180\" x2=\"60\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"60,15 56,25 64,25\" fill=\"#94a3b8\"/><text x=\"45\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">y</text><line x1=\"100\" y1=\"130\" x2=\"240\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"3\"/><line x1=\"100\" y1=\"130\" x2=\"240\" y2=\"130\" stroke=\"#94a3b8\" stroke-dasharray=\"4,4\"/><line x1=\"240\" y1=\"130\" x2=\"240\" y2=\"60\" stroke=\"#94a3b8\" stroke-dasharray=\"4,4\"/><circle cx=\"100\" cy=\"130\" r=\"4\" fill=\"#dc2626\"/><text x=\"80\" y=\"145\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">A(x₁, y₁)</text><circle cx=\"240\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><text x=\"235\" y=\"50\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">B(x₂, y₂)</text><text x=\"140\" y=\"85\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#2563eb\">d = √[(x₂-x₁)²+(y₂-y₁)²]</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "គេឱ្យចំណុច $P(-2, 3)$ និងបន្ទាត់ $(D) : 3x - 4y + 8 = 0$។\nក. សរសេរសមីការបន្ទាត់ $(L)$ កាត់តាម $P$ ហើយស្របនឹង $(D)$។\nខ. គណនាចម្ងាយពីចំណុច $P$ ទៅបន្ទាត់ $(D)$។",
+        "solution": "ក. មេគុណប្រាប់ទិសនៃ $(D)$ គឺ $m = -\\dfrac{a}{b} = -\\dfrac{3}{-4} = \\dfrac{3}{4}$។\nដោយ $(L) \\parallel (D) \\implies m_L = \\dfrac{3}{4}$។\nសមីការបន្ទាត់ $(L)$ កាត់តាម $P(-2, 3)$ គឺ ៖\n$y - 3 = \\dfrac{3}{4}(x + 2) \\iff 4(y - 3) = 3(x + 2) \\iff 3x - 4y + 18 = 0$។\nខ. ចម្ងាយពី $P(-2, 3)$ ទៅ $(D)$ ៖\n$d(P, D) = \\dfrac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}} = \\dfrac{|3(-2) - 4(3) + 8|}{\\sqrt{3^2 + (-4)^2}} = \\dfrac{|-6 - 12 + 8|}{\\sqrt{25}} = \\dfrac{|-10|}{5} = 2$ ឯកតា។",
+        "rubric": "ក. រកមេគុណប្រាប់ទិសនិងសមីការបន្ទាត់ស្រប (៥ពិន្ទុ)\nខ. អនុវត្តរូបមន្តចម្ងាយបាន $d=2$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យរង្វង់ $(C)$ មានសមីការទូទៅ ៖ $x^2 + y^2 - 4x + 6y - 12 = 0$។\nក. បំប្លែងសមីការនេះជាសមីការស្តង់ដារ រួចកំណត់កូអរដោនេផ្ចិត $I$ និងប្រវែងកាំ $R$ នៃរង្វង់ $(C)$។\nខ. បញ្ជាក់ទីតាំងនៃចំណុច $A(2, 3)$ ធៀបនឹងរង្វង់ $(C)$ (នៅខាងក្នុង លើ ឬក្រៅរង្វង់)។",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"140\" cy=\"100\" r=\"60\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"3\" fill=\"#16a34a\"/><text x=\"120\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">I(h, k)</text><line x1=\"140\" y1=\"100\" x2=\"185\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"155\" y=\"75\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#166534\">R</text><circle cx=\"185\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><text x=\"195\" y=\"60\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">P(x₀, y₀)</text><line x1=\"145\" y1=\"15\" x2=\"225\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"210\" y=\"115\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(D): បន្ទាត់ប៉ះ</text></svg>",
+        "solution": "ក. បំប្លែងជាការេពេញលេញ ៖\n$(x^2 - 4x + 4) + (y^2 + 6y + 9) = 12 + 4 + 9$\n$\\iff (x - 2)^2 + (y + 3)^2 = 25 = 5^2$។\nដូចនេះ ផ្ចិត $I(2, -3)$ និងកាំ $R = 5$ ឯកតា។\nខ. គណនាចម្ងាយ $IA$ ៖\n$IA = \\sqrt{(2 - 2)^2 + (3 - (-3))^2} = \\sqrt{0 + 6^2} = 6$។\nដោយ $IA = 6 > R = 5$ នាំឱ្យចំណុច $A(2, 3)$ ស្ថិតនៅខាងក្រៅរង្វង់ $(C)$។",
+        "rubric": "ក. បំប្លែងជាទម្រង់ស្តង់ដារ (៣ពិន្ទុ), កំណត់ផ្ចិត $I(2, -3)$ និងកាំ $R=5$ (៣ពិន្ទុ)\nខ. គណនាចម្ងាយ $IA=6$ និងសន្និដ្ឋានថានៅក្រៅរង្វង់ (៤ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"140\" cy=\"100\" r=\"60\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"3\" fill=\"#16a34a\"/><text x=\"120\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">I(h, k)</text><line x1=\"140\" y1=\"100\" x2=\"185\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"155\" y=\"75\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#166534\">R</text><circle cx=\"185\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><text x=\"195\" y=\"60\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">P(x₀, y₀)</text><line x1=\"145\" y1=\"15\" x2=\"225\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"210\" y=\"115\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(D): បន្ទាត់ប៉ះ</text></svg>"
+      },
+      {
+        "num": 4,
+        "q": "សរសេរសមីការបន្ទាត់ប៉ះនឹងរង្វង់ $(C) : (x - 1)^2 + (y + 2)^2 = 25$ ត្រង់ចំណុច $M(4, 2)$ នៅលើរង្វង់។",
+        "solution": "រង្វង់មានផ្ចិត $I(1, -2)$ និងកាំ $R = 5$។\nពិនិត្យចំណុច $M(4, 2)$ ៖ $(4-1)^2 + (2+2)^2 = 9 + 16 = 25$ (ពិត, $M \\in (C)$)។\nបន្ទាត់ប៉ះ $(\\Delta)$ កែងនឹងកាំ $IM$ ត្រង់ $M$។\nវ៉ិចទ័រណរម៉ាល់នៃ $(\\Delta)$ គឺ $\\vec{n} = \\vec{IM} = (4 - 1, 2 - (-2)) = (3, 4)$។\nសមីការបន្ទាត់ប៉ះ $(\\Delta)$ កាត់តាម $M(4, 2)$ ៖\n$3(x - 4) + 4(y - 2) = 0 \\iff 3x - 12 + 4y - 8 = 0 \\iff 3x + 4y - 20 = 0$។",
+        "rubric": "កំណត់ផ្ចិត $I(1, -2)$ និងផ្ទៀងផ្ទាត់ $M$ (២ពិន្ទុ), គណនា $\\vec{IM}=(3, 4)$ (៤ពិន្ទុ), សរសេរសមីការបន្ទាត់ប៉ះ $3x+4y-20=0$ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ដោះស្រាយប្រព័ន្ធវិសមីការលីនេអ៊ែរតាមក្រាប ៖\n$\\begin{cases} x + y \\le 4 \\\\ 2x - y \\ge -1 \\\\ x \\ge 0, y \\ge 0 \\end{cases}$",
+        "solution": "កំណត់បន្ទាត់ព្រំដែន ៖\n- $(D_1) : x + y = 4$ កាត់តាម $(4, 0)$ និង $(0, 4)$។ ចំណុច $O(0, 0)$ ផ្ទៀងផ្ទាត់ $0+0 \\le 4$ (ពិត)។\n- $(D_2) : 2x - y = -1$ កាត់តាម $(0, 1)$ និង $(-1/2, 0)$។ ចំណុច $O(0, 0)$ ផ្ទៀងផ្ទាត់ $0 - 0 \\ge -1$ (ពិត)។\n- $x \\ge 0, y \\ge 0$ គឺកាដ្រង់ទី ១ នៃប្លង់កូអរដោនេ។\nតំបន់ចម្លើយគឺជាផ្ទៃពហុកោណបិទជិតដែលមានកំពូល ៖\n$O(0, 0), A(0, 1), B(1, 3)$ (ប្រសព្វនៃ $D_1$ និង $D_2$), $C(4, 0)$។",
+        "rubric": "សង់បន្ទាត់ព្រំដែនទាំងពីរ (៤ពិន្ទុ), កំណត់តំបន់ឈូតចម្លើយក្នុងកាដ្រង់ទី១ (៤ពិន្ទុ), រកចំណុចកំពូលនៃតំបន់ចម្លើយ (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-07",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៥ ៖ ផលធៀបត្រីកោណមាត្រ និងការអនុវត្ត",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-5",
+    "chapterTitle": "ជំពូកទី ៥ ៖ ផលធៀបត្រីកោណមាត្រ",
+    "lessonId": "les-g10-03",
+    "lessonTitle": "មេរៀនទី ១-២ ៖ រង្វង់ត្រីកោណមាត្រ ទ្រឹស្តីបទស៊ីនុស និងកូស៊ីនុស",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យ $\\cos \\alpha = -\\dfrac{3}{5}$ ដែល $\\pi < \\alpha < \\dfrac{3\\pi}{2}$ (កាដ្រង់ទី ៣)។\nក. គណនាតម្លៃនៃ $\\sin \\alpha$។\nខ. គណនាតម្លៃនៃ $\\tan \\alpha$ និង $\\cot \\alpha$។",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"265\" y=\"104\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">cos α</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">sin α</text><line x1=\"160\" y1=\"100\" x2=\"210\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"210\" cy=\"50\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"215\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">M(cos α, sin α)</text><path d=\"M 185 100 A 25 25 0 0 0 178 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">α</text><text x=\"190\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">I (+,+)</text><text x=\"115\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">II (-,+)</text><text x=\"115\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">III (-,-)</text><text x=\"190\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">IV (+,-)</text></svg>",
+        "solution": "ក. តាមរូបមន្តគ្រឹះ ៖ $\\sin^2 \\alpha + \\cos^2 \\alpha = 1 \\implies \\sin^2 \\alpha = 1 - (-3/5)^2 = 1 - 9/25 = 16/25$។\nដោយ $\\pi < \\alpha < 3\\pi/2$ (កាដ្រង់ទី ៣) នោះ $\\sin \\alpha < 0$ នាំឱ្យ ៖\n$\\sin \\alpha = -\\sqrt{16/25} = -\\dfrac{4}{5}$។\nខ. គណនាផលធៀប ៖\n$\\tan \\alpha = \\dfrac{\\sin \\alpha}{\\cos \\alpha} = \\dfrac{-4/5}{-3/5} = \\dfrac{4}{3}$។\n$\\cot \\alpha = \\dfrac{1}{\\tan \\alpha} = \\dfrac{3}{4}$។",
+        "rubric": "ក. រូបមន្តគ្រឹះ គិតសញ្ញាកាដ្រង់ទី៣ និងរក $\\sin \\alpha = -4/5$ (៥ពិន្ទុ)\nខ. គណនា $\\tan \\alpha = 4/3$ និង $\\cot \\alpha = 3/4$ (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"265\" y=\"104\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">cos α</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">sin α</text><line x1=\"160\" y1=\"100\" x2=\"210\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"210\" cy=\"50\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"215\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">M(cos α, sin α)</text><path d=\"M 185 100 A 25 25 0 0 0 178 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">α</text><text x=\"190\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">I (+,+)</text><text x=\"115\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">II (-,+)</text><text x=\"115\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">III (-,-)</text><text x=\"190\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">IV (+,-)</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "សម្រួលកន្សោមត្រីកោណមាត្រខាងក្រោម ៖\nក. $A = (\\sin x + \\cos x)^2 + (\\sin x - \\cos x)^2$\nខ. $B = \\dfrac{1}{1 + \\sin x} + \\dfrac{1}{1 - \\sin x} - 2\\tan^2 x$",
+        "solution": "ក. ពន្លាតការេ ៖\n$A = (\\sin^2 x + 2\\sin x \\cos x + \\cos^2 x) + (\\sin^2 x - 2\\sin x \\cos x + \\cos^2 x)$\n$A = 2(\\sin^2 x + \\cos^2 x) = 2(1) = 2$។\nខ. តម្រូវភាគបែង ៖\n$B = \\dfrac{(1 - \\sin x) + (1 + \\sin x)}{(1 + \\sin x)(1 - \\sin x)} - 2\\tan^2 x = \\dfrac{2}{1 - \\sin^2 x} - 2\\tan^2 x$\nដោយ $1 - \\sin^2 x = \\cos^2 x$ នោះ ៖\n$B = \\dfrac{2}{\\cos^2 x} - 2\\dfrac{\\sin^2 x}{\\cos^2 x} = \\dfrac{2(1 - \\sin^2 x)}{\\cos^2 x} = \\dfrac{2\\cos^2 x}{\\cos^2 x} = 2$។",
+        "rubric": "ក. ពន្លាតនិងបង្រួមបាន $A=2$ (៥ពិន្ទុ)\nខ. តម្រូវភាគបែងនិងបង្រួមបាន $B=2$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ក្នុងត្រីកោណ $ABC$ មួយគេឱ្យជ្រុង $b = 8\\text{ cm}$, ជ្រុង $c = 5\\text{ cm}$ និងមុំ $A = 60^\\circ$។\nក. គណនាប្រវែងជ្រុង $a$ ដោយប្រើទ្រឹស្តីបទកូស៊ីនុស។\nខ. គណនាផ្ទៃក្រឡានៃត្រីកោណ $ABC$។",
+        "illustration": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><polygon points=\"70,140 270,140 160,40\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"140\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"50\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">B</text><circle cx=\"270\" cy=\"140\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"275\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">C</text><circle cx=\"160\" cy=\"40\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"155\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">A</text><text x=\"165\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">a</text><text x=\"220\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">b</text><text x=\"100\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">c</text><text x=\"15\" y=\"20\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">a² = b² + c² - 2bc cos A</text></svg>",
+        "solution": "ក. តាមទ្រឹស្តីបទកូស៊ីនុស ៖\n$a^2 = b^2 + c^2 - 2bc \\cos A = 8^2 + 5^2 - 2(8)(5) \\cos 60^\\circ$\n$a^2 = 64 + 25 - 80(1/2) = 89 - 40 = 49$\n$\\implies a = \\sqrt{49} = 7\\text{ cm}$។\nខ. ផ្ទៃក្រឡាត្រីកោណ ៖\n$S = \\dfrac{1}{2} bc \\sin A = \\dfrac{1}{2} (8)(5) \\sin 60^\\circ = 20 \\times \\dfrac{\\sqrt{3}}{2} = 10\\sqrt{3}\\text{ cm}^2$។",
+        "rubric": "ក. រូបមន្តកូស៊ីនុសនិងគណនាបាន $a=7$ cm (៥ពិន្ទុ)\nខ. រូបមន្តផ្ទៃក្រឡានិងគណនាបាន $10\\sqrt{3}\\text{ cm}^2$ (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><polygon points=\"70,140 270,140 160,40\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"140\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"50\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">B</text><circle cx=\"270\" cy=\"140\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"275\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">C</text><circle cx=\"160\" cy=\"40\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"155\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">A</text><text x=\"165\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">a</text><text x=\"220\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">b</text><text x=\"100\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">c</text><text x=\"15\" y=\"20\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">a² = b² + c² - 2bc cos A</text></svg>"
+      },
+      {
+        "num": 4,
+        "q": "ក្នុងត្រីកោណ $ABC$ គេឱ្យជ្រុង $a = 10\\text{ cm}$, មុំ $B = 45^\\circ$ និងមុំ $C = 60^\\circ$។\nក. គណនារង្វាស់មុំ $A$។\nខ. គណនាប្រវែងជ្រុង $b$ និងកាំ $R$ នៃរង្វង់ចារឹកក្រៅត្រីកោណ $ABC$ (ទ្រឹស្តីបទស៊ីនុស)។",
+        "solution": "ក. រង្វាស់មុំ $A$ ៖\n$A = 180^\\circ - (B + C) = 180^\\circ - (45^\\circ + 60^\\circ) = 180^\\circ - 105^\\circ = 75^\\circ$។\nខ. តាមទ្រឹស្តីបទស៊ីនុស ៖ $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = 2R$។\nដោយ $\\sin 75^\\circ = \\sin(45^\\circ + 30^\\circ) = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$ ៖\n$2R = \\dfrac{10}{\\sin 75^\\circ} = \\dfrac{40}{\\sqrt{6} + \\sqrt{2}} = 10(\\sqrt{6} - \\sqrt{2}) \\implies R = 5(\\sqrt{6} - \\sqrt{2})\\text{ cm}$។\n$b = 2R \\sin B = 10(\\sqrt{6} - \\sqrt{2}) \\times \\dfrac{\\sqrt{2}}{2} = 5(\\sqrt{12} - 2) = 10\\sqrt{3} - 10\\text{ cm}$។",
+        "rubric": "ក. គណនាមុំ $A=75^\\circ$ (៣ពិន្ទុ)\nខ. រូបមន្តទ្រឹស្តីបទស៊ីនុស (៣ពិន្ទុ), គណនាជ្រុង $b$ និងកាំ $R$ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "អ្នកសង្កេតការណ៍ម្នាក់ឈរនៅចំណុច $A$ សម្លឹងទៅកំពូលប៉មមួយក្រោមមុំងើប $30^\\circ$។ បន្ទាប់មកគាត់ដើរឆ្ពោះទៅរកប៉មនោះបានចម្ងាយ $40\\text{ m}$ ដល់ចំណុច $B$ នោះគាត់សម្លឹងឃើញកំពូលប៉មក្រោមមុំងើប $60^\\circ$។ គណនាកម្ពស់នៃប៉មនោះ (ចំណុច $A, B$ និងបាតប៉មស្ថិតនៅលើបន្ទាត់ដេកតែមួយ)។",
+        "solution": "តាង $h$ ជាកម្ពស់ប៉ម $CD$ ($D$ ជាបាតប៉ម, $C$ ជាកំពូល)។\nក្នុងត្រីកោណកែង $BCD$ ៖ $\\tan 60^\\circ = \\dfrac{h}{BD} \\implies BD = \\dfrac{h}{\\sqrt{3}}$។\nក្នុងត្រីកោណកែង $ACD$ ៖ $\\tan 30^\\circ = \\dfrac{h}{AD} \\implies AD = \\dfrac{h}{\\tan 30^\\circ} = h\\sqrt{3}$។\nដោយ $AD - BD = AB = 40\\text{ m}$ នាំឱ្យ ៖\n$h\\sqrt{3} - \\dfrac{h}{\\sqrt{3}} = 40 \\iff \\dfrac{3h - h}{\\sqrt{3}} = 40 \\iff 2h = 40\\sqrt{3} \\implies h = 20\\sqrt{3} \\approx 34.64\\text{ m}$។\nដូចនេះ កម្ពស់នៃប៉មគឺ $20\\sqrt{3}\\text{ m}$។",
+        "rubric": "គូសរូបបំភ្លឺនិងសរសេរទំនាក់ទំនងតង់សង់ទាំងពីរ (៤ពិន្ទុ), បង្កើតសមីការដោះស្រាយរក $h$ (៤ពិន្ទុ), សន្និដ្ឋានកម្ពស់ប៉ម $20\\sqrt{3}$ m (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-08",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៦ (ភាគ ១) ៖ អនុគមន៍ដឺក្រេទី ២ និងប៉ារ៉ាបូល",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-6",
+    "chapterTitle": "ជំពូកទី ៦ ៖ អនុគមន៍",
+    "lessonId": "les-g10-01",
+    "lessonTitle": "មេរៀនទី ២ ៖ អនុគមន៍ដឺក្រេទី ២ (ប៉ារ៉ាបូល កំពូល និងអ័ក្សឆ្លុះ)",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យអនុគមន៍ដឺក្រេទីពីរ $f(x) = x^2 - 4x + 3$ មានក្រាប $(P)$។\nក. សរសេរ $f(x)$ ជាទម្រង់កាណូនិច $f(x) = a(x - h)^2 + k$។\nខ. កំណត់កូអរដោនេកំពូល $S(h, k)$ សមីការអ័ក្សឆ្លុះ និងទិសដៅនៃភាពកោង។",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"295,150 285,146 285,154\" fill=\"#94a3b8\"/><text x=\"290\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">x</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"160,15 156,25 164,25\" fill=\"#94a3b8\"/><text x=\"145\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">y</text><path d=\"M 80 40 Q 160 180 240 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"30\" x2=\"160\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><circle cx=\"160\" cy=\"110\" r=\"4\" fill=\"#ef4444\"/><text x=\"165\" y=\"125\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\">S(h, k) កំពូល</text><text x=\"50\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">y = ax² + bx + c (a &gt; 0)</text><text x=\"165\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#ef4444\">អ័ក្សឆ្លុះ x = h</text></svg>",
+        "solution": "ក. ទម្រង់កាណូនិច ៖\n$f(x) = (x^2 - 4x + 4) - 4 + 3 = (x - 2)^2 - 1$។\nខ. កំណត់លក្ខណៈ ៖\n- កំពូល $S(2, -1)$\n- សមីការអ័ក្សឆ្លុះ ៖ $x = 2$\n- ដោយ $a = 1 > 0$ នាំឱ្យប៉ារ៉ាបូលបែរភាពប៉ោងឡើងលើ (មានតម្លៃអប្បបរមាស្មើ $-1$ ត្រង់ $x = 2$)។",
+        "rubric": "ក. បំប្លែងជាទម្រង់កាណូនិចត្រឹមត្រូវ (៥ពិន្ទុ)\nខ. កំណត់កំពូល អ័ក្សឆ្លុះ និងភាពប៉ោង (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"295,150 285,146 285,154\" fill=\"#94a3b8\"/><text x=\"290\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">x</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"160,15 156,25 164,25\" fill=\"#94a3b8\"/><text x=\"145\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">y</text><path d=\"M 80 40 Q 160 180 240 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"30\" x2=\"160\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><circle cx=\"160\" cy=\"110\" r=\"4\" fill=\"#ef4444\"/><text x=\"165\" y=\"125\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\">S(h, k) កំពូល</text><text x=\"50\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">y = ax² + bx + c (a &gt; 0)</text><text x=\"165\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#ef4444\">អ័ក្សឆ្លុះ x = h</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "សង់តារាងអថិរភាព និងរកចំណុចប្រសព្វរវាងប៉ារ៉ាបូល $(P) : y = -x^2 + 2x + 3$ ជាមួយអ័ក្សកូអរដោនេទាំងពីរ។",
+        "solution": "- មេគុណ $a = -1 < 0, b = 2, c = 3$។\n- កំពូល ៖ $x_S = -\\dfrac{b}{2a} = -\\dfrac{2}{-2} = 1$ និង $y_S = -(1)^2 + 2(1) + 3 = 4 \\implies S(1, 4)$ (តម្លៃអតិបរមា)។\n- តារាងអថិរភាព ៖ $y$ កើនពី $-\\infty$ ដល់ $4$ លើ $(-\\infty, 1]$ និងថយពី $4$ ទៅ $-\\infty$ លើ $[1, +\\infty)$។\n- ប្រសព្វជាមួយអ័ក្ស $Oy$ ($x = 0$) ៖ $y = 3 \\implies (0, 3)$។\n- ប្រសព្វជាមួយអ័ក្ស $Ox$ ($y = 0$) ៖ $-x^2 + 2x + 3 = 0 \\iff x^2 - 2x - 3 = 0 \\implies x = -1, x = 3 \\implies (-1, 0)$ និង $(3, 0)$។",
+        "rubric": "រកកំពូល $S(1, 4)$ (៣ពិន្ទុ), សង់តារាងអថិរភាព (៣ពិន្ទុ), រកចំណុចប្រសព្វនឹងអ័ក្សទាំងពីរ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "កំណត់សមីការប៉ារ៉ាបូល $(P) : y = ax^2 + bx + c$ ដោយដឹងថា $(P)$ កាត់តាមចំណុច $A(0, 3)$, $B(1, 0)$ និង $C(2, -1)$។",
+        "solution": "ជំនួសកូអរដោនេចំណុចទាំងបីចូលសមីការ ៖\n- កាត់ $A(0, 3) \\implies c = 3$ (១)\n- កាត់ $B(1, 0) \\implies a(1)^2 + b(1) + c = 0 \\iff a + b + 3 = 0 \\iff a + b = -3$ (២)\n- កាត់ $C(2, -1) \\implies a(2)^2 + b(2) + c = -1 \\iff 4a + 2b + 3 = -1 \\iff 4a + 2b = -4 \\iff 2a + b = -2$ (៣)\nយក (៣) - (២) ៖ $a = -2 - (-3) = 1$។\nជំនួស $a = 1$ ចូល (២) ៖ $1 + b = -3 \\implies b = -4$។\nដូចនេះ សមីការប៉ារ៉ាបូលគឺ $y = x^2 - 4x + 3$។",
+        "rubric": "បង្កើតប្រព័ន្ធសមីការពីចំណុចទាំងបី (៤ពិន្ទុ), ដោះស្រាយរក $a=1, b=-4, c=3$ (៤ពិន្ទុ), សរសេរសមីការប៉ារ៉ាបូល (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "រកទីតាំងធៀប និងកូអរដោនេចំណុចប្រសព្វរវាងប៉ារ៉ាបូល $(P) : y = x^2 - 3x + 2$ និងបន្ទាត់ $(D) : y = x - 1$។",
+        "solution": "សមីការអាប់ស៊ីសចំណុចប្រសព្វ ៖\n$x^2 - 3x + 2 = x - 1 \\iff x^2 - 4x + 3 = 0$។\nដោយ $a + b + c = 1 - 4 + 3 = 0 \\implies x_1 = 1, x_2 = 3$។\n- ចំពោះ $x = 1 \\implies y = 1 - 1 = 0 \\implies M_1(1, 0)$\n- ចំពោះ $x = 3 \\implies y = 3 - 1 = 2 \\implies M_2(3, 2)$។\nដោយសមីការមានឫសពីរផ្សេងគ្នា នោះបន្ទាត់ $(D)$ កាត់ប៉ារ៉ាបូល $(P)$ ត្រង់ពីរចំណុចផ្សេងគ្នាគឺ $M_1(1, 0)$ និង $M_2(3, 2)$។",
+        "rubric": "បង្កើតសមីការអាប់ស៊ីស (៣ពិន្ទុ), ដោះស្រាយរក $x=1, 3$ (៣ពិន្ទុ), រកកូអរដោនេចំណុចប្រសព្វទាំងពីរ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "កសិករម្នាក់ចង់ធ្វើរបងព័ទ្ធដីមួយកន្លែងរាងចតុកោណកែងដោយប្រើសំណាញ់ប្រវែង $100\\text{ m}$។ ជ្រុងម្ខាងនៃដីនោះជាប់នឹងជញ្ជាំងថ្មស្រាប់ ដូច្នេះគាត់ត្រូវធ្វើរបងតែ ៣ ជ្រុងប៉ុណ្ណោះ។ រកវិមាត្រនៃដីដើម្បីឱ្យផ្ទៃក្រឡាព័ទ្ធបានមានតម្លៃធំបំផុត រួចគណនាផ្ទៃក្រឡាអតិបរមានោះ។",
+        "solution": "តាង $x$ ជាប្រវែងជ្រុងកែងនឹងជញ្ជាំងថ្ម ($x > 0$) ទាំងពីរជ្រុង។\nជ្រុងស្របនឹងជញ្ជាំងថ្មមានប្រវែង ៖ $y = 100 - 2x$ (លក្ខខណ្ឌ $100 - 2x > 0 \\iff 0 < x < 50$)។\nផ្ទៃក្រឡាចតុកោណកែង ៖\n$S(x) = x \\cdot y = x(100 - 2x) = -2x^2 + 100x$។\nនេះជាអនុគមន៍ដឺក្រេទីពីរមាន $a = -2 < 0$ នាំឱ្យ $S(x)$ មានតម្លៃអតិបរមាត្រង់កំពូល ៖\n$x = -\\dfrac{b}{2a} = -\\dfrac{100}{2(-2)} = 25\\text{ m}$។\nប្រវែងជ្រុងម្ខាងទៀត ៖ $y = 100 - 2(25) = 50\\text{ m}$។\nផ្ទៃក្រឡាអតិបរមា ៖ $S_{\\max} = 25 \\times 50 = 1250\\text{ m}^2$។\nដូចនេះ វិមាត្រគឺ $25\\text{ m} \\times 50\\text{ m}$ និងផ្ទៃក្រឡាធំបំផុតគឺ $1250\\text{ m}^2$។",
+        "rubric": "កំណត់អថេរនិងកន្សោមផ្ទៃក្រឡា $S(x)=-2x^2+100x$ (៤ពិន្ទុ), រកកំពូល $x=25$ m (៣ពិន្ទុ), គណនាផ្ទៃក្រឡាអតិបរមា $1250\\text{ m}^2$ (៣ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-09",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៦ (ភាគ ២) ៖ អនុគមន៍សនិទាន និងហ៊ីពែរបូល",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-6",
+    "chapterTitle": "ជំពូកទី ៦ ៖ អនុគមន៍",
+    "lessonId": "les-g10-6-3",
+    "lessonTitle": "មេរៀនទី ៣ ៖ អនុគមន៍សនិទាន អាស៊ីមតូត និងក្រាបហ៊ីពែរបូល",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យអនុគមន៍សនិទាន $f(x) = \\dfrac{2x + 1}{x - 1}$ មានក្រាប $(H)$។\nក. រកដែនកំណត់នៃអនុគមន៍ $f$។\nខ. រកសមីការអាស៊ីមតូតឈរ និងអាស៊ីមតូតដេកនៃក្រាប $(H)$។",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"110\" x2=\"290\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"180\" x2=\"150\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"85\" y=\"35\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">អាស៊ីមតូតឈរ</text><line x1=\"30\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"180\" y=\"75\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">អាស៊ីមតូតដេក</text><path d=\"M 40 100 Q 110 95 115 25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M 125 175 Q 130 90 280 85\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"30\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">y = (ax+b)/(cx+d)</text></svg>",
+        "solution": "ក. អនុគមន៍មានន័យកាលណាភាគបែងខុសពីសូន្យ ៖\n$x - 1 \\neq 0 \\iff x \\neq 1$។\nដូចនេះ ដែនកំណត់គឺ $D = \\mathbb{R} \\setminus \\{1\\} = (-\\infty, 1) \\cup (1, +\\infty)$។\nខ. សមីការអាស៊ីមតូត ៖\n- អាស៊ីមតូតឈរ ៖ $x = 1$ (ឫសភាគបែង)\n- អាស៊ីមតូតដេក ៖ $y = \\dfrac{a}{c} = \\dfrac{2}{1} = 2$។",
+        "rubric": "ក. រកដែនកំណត់ត្រឹមត្រូវ (៤ពិន្ទុ)\nខ. រកអាស៊ីមតូតឈរ $x=1$ និងដេក $y=2$ (៦ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"110\" x2=\"290\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"180\" x2=\"150\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"85\" y=\"35\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">អាស៊ីមតូតឈរ</text><line x1=\"30\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"180\" y=\"75\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">អាស៊ីមតូតដេក</text><path d=\"M 40 100 Q 110 95 115 25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M 125 175 Q 130 90 280 85\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"30\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">y = (ax+b)/(cx+d)</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "ចំពោះអនុគមន៍ $f(x) = \\dfrac{2x + 1}{x - 1}$ ដដែល ៖\nក. សរសេរ $f(x)$ ជាទម្រង់ $f(x) = \\beta + \\dfrac{k}{x - \\alpha}$។\nខ. កំណត់កូអរដោនេផ្ចិតឆ្លុះ $I(\\alpha, \\beta)$ នៃក្រាបហ៊ីពែរបូល។",
+        "solution": "ក. បំប្លែងទម្រង់ ៖\n$f(x) = \\dfrac{2(x - 1) + 3}{x - 1} = 2 + \\dfrac{3}{x - 1}$។\nដូចនេះ $\\alpha = 1, \\beta = 2, k = 3$។\nខ. ផ្ចិតឆ្លុះ $I$ គឺជាប្រសព្វនៃអាស៊ីមតូតទាំងពីរ ៖\n$I(\\alpha, \\beta) = I(1, 2)$។",
+        "rubric": "ក. បំប្លែងជាទម្រង់កាណូនិចទាញបាន $k=3$ (៥ពិន្ទុ)\nខ. កំណត់ផ្ចិតឆ្លុះ $I(1, 2)$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "រកចំណុចប្រសព្វរវាងក្រាប $(H) : y = \\dfrac{2x + 1}{x - 1}$ ជាមួយអ័ក្សកូអរដោនេទាំងពីរ $Ox$ និង $Oy$។",
+        "solution": "- ប្រសព្វជាមួយអ័ក្សអរដោនេ $Oy$ ($x = 0$) ៖\n$y = \\dfrac{2(0) + 1}{0 - 1} = -1 \\implies A(0, -1)$។\n- ប្រសព្វជាមួយអ័ក្សអាប់ស៊ីស $Ox$ ($y = 0$) ៖\n$\\dfrac{2x + 1}{x - 1} = 0 \\iff 2x + 1 = 0 \\implies x = -\\dfrac{1}{2} \\implies B(-1/2, 0)$។\nដូចនេះ ចំណុចប្រសព្វទាំងពីរគឺ $A(0, -1)$ និង $B(-1/2, 0)$។",
+        "rubric": "រកចំណុចប្រសព្វជាមួយ $Oy$ (៥ពិន្ទុ), រកចំណុចប្រសព្វជាមួយ $Ox$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "រកដែនកំណត់នៃអនុគមន៍អសនិទានខាងក្រោម ៖\nក. $g(x) = \\sqrt{3x - 6}$\nខ. $h(x) = \\sqrt{\\dfrac{x - 2}{5 - x}}$",
+        "solution": "ក. $g(x)$ មានន័យកាលណាកន្សោមក្រោមរ៉ាឌីកាល់មិនអវិជ្ជមាន ៖\n$3x - 6 \\ge 0 \\iff 3x \\ge 6 \\iff x \\ge 2$។\nដូចនេះ ដែនកំណត់គឺ $D_g = [2, +\\infty)$។\nខ. $h(x)$ មានន័យកាលណា ៖\n$\\dfrac{x - 2}{5 - x} \\ge 0$ និង $5 - x \\neq 0 \\iff x \\neq 5$។\nតារាងសញ្ញា ៖ កន្សោមវិជ្ជមានចន្លោះឫស $2 \\le x < 5$។\nដូចនេះ ដែនកំណត់គឺ $D_h = [2, 5)$។",
+        "rubric": "ក. លក្ខខណ្ឌនិងដែនកំណត់ $D=[2, +\\infty)$ (៥ពិន្ទុ)\nខ. លក្ខខណ្ឌ តារាងសញ្ញា និងដែនកំណត់ $D=[2, 5)$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ដោះស្រាយសមីការសនិទានតាមវិធីពិជគណិត ៖ $\\dfrac{x + 1}{x - 2} = x - 2$ ក្នុង $\\mathbb{R}$។",
+        "solution": "លក្ខខណ្ឌ ៖ $x - 2 \\neq 0 \\iff x \\neq 2$។\nសមីការសមមូលនឹង ៖\n$x + 1 = (x - 2)^2 \\iff x + 1 = x^2 - 4x + 4$\n$\\iff x^2 - 5x + 3 = 0$។\nគណនាឌីស្គ្រីមីណង់ ៖\n$\\Delta = (-5)^2 - 4(1)(3) = 25 - 12 = 13 > 0$\n$\\implies x = \\dfrac{5 \\pm \\sqrt{13}}{2}$។\nដោយ $\\dfrac{5 \\pm \\sqrt{13}}{2} \\neq 2$ ទាំងពីរ (ព្រោះ $2 = 4/2 \\neq (5 \\pm 3.6)/2$) នោះឫសទាំងពីរយកបាន។\nដូចនេះ សំណុំចម្លើយ $S = \\{\\dfrac{5 - \\sqrt{13}}{2}, \\dfrac{5 + \\sqrt{13}}{2}\\}$។",
+        "rubric": "លក្ខខណ្ឌ $x \\neq 2$ (២ពិន្ទុ), គុណកាត់និងបង្កើតសមីការដឺក្រេទី២ (៤ពិន្ទុ), រកឫសនិងផ្ទៀងផ្ទាត់ (៤ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-10",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៧ ៖ ស្ថិតិ និងការវិភាគទិន្នន័យ",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-7",
+    "chapterTitle": "ជំពូកទី ៧ ៖ ស្ថិតិ",
+    "lessonId": "les-g10-7-1",
+    "lessonTitle": "មេរៀនទី ១-២ ៖ តារាងបំណែងចែកប្រេកង់ មធ្យមនព្វន្ធ មេដ្យាន និងក្វាទីល",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេកត់ត្រាពិន្ទុប្រឡងគណិតវិទ្យារបស់សិស្ស ៤០ នាក់ដូចខាងក្រោម ៖\nថ្នាក់ពិន្ទុ $[40, 50)$ : ៦ នាក់, $[50, 60)$ : ១០ នាក់, $[60, 70)$ : ១៤ នាក់, $[70, 80)$ : ៧ នាក់, $[80, 90)$ : ៣ នាក់។\nក. សង់តារាងបំណែងចែកប្រេកង់ ដោយបន្ថែមជួរឈរ ៖ ចំណុចកណ្តាលថ្នាក់ ($x_i$), ប្រេកង់កើន ($F_i$), និងផលគុណ $n_i x_i$។\nខ. គណនាទំហំគំរូសរុប $N$។",
+        "illustration": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"40\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"150\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"25\" y=\"25\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ni</text><text x=\"280\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ថ្នាក់</text><rect x=\"50\" y=\"110\" width=\"40\" height=\"40\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"90\" y=\"70\" width=\"40\" height=\"80\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"130\" y=\"40\" width=\"40\" height=\"110\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"170\" y=\"80\" width=\"40\" height=\"70\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"210\" y=\"120\" width=\"40\" height=\"30\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><polyline points=\"70,110 110,70 150,40 190,80 230,120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"110\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"110\" cy=\"70\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"150\" cy=\"40\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"190\" cy=\"80\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"230\" cy=\"120\" r=\"3\" fill=\"#ef4444\"/><text x=\"80\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">អ៊ីស្តូក្រាម និងពហុកោណប្រេកង់</text></svg>",
+        "solution": "ក. តារាងស្ថិតិ ៖\n| ថ្នាក់ពិន្ទុ | ប្រេកង់ $n_i$ | ចំណុចកណ្តាល $x_i$ | ប្រេកង់កើន $F_i$ | $n_i x_i$ |\n|---|---|---|---|---|\n| [40, 50) | 6 | 45 | 6 | 270 |\n| [50, 60) | 10 | 55 | 16 | 550 |\n| [60, 70) | 14 | 65 | 30 | 910 |\n| [70, 80) | 7 | 75 | 37 | 525 |\n| [80, 90) | 3 | 85 | 40 | 255 |\n| សរុប | $N = 40$ | - | - | $\\sum n_i x_i = 2510$ |\nខ. ទំហំគំរូសរុបគឺ $N = 6 + 10 + 14 + 7 + 3 = 40$ នាក់។",
+        "rubric": "ក. បំពេញចំណុចកណ្តាល $x_i$ (២ពិន្ទុ), ប្រេកង់កើន $F_i$ (២ពិន្ទុ), ផលគុណ $n_ix_i$ (៣ពិន្ទុ)\nខ. ទំហំគំរូ $N=40$ (៣ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"40\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"150\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"25\" y=\"25\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ni</text><text x=\"280\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ថ្នាក់</text><rect x=\"50\" y=\"110\" width=\"40\" height=\"40\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"90\" y=\"70\" width=\"40\" height=\"80\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"130\" y=\"40\" width=\"40\" height=\"110\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"170\" y=\"80\" width=\"40\" height=\"70\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"210\" y=\"120\" width=\"40\" height=\"30\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><polyline points=\"70,110 110,70 150,40 190,80 230,120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"110\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"110\" cy=\"70\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"150\" cy=\"40\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"190\" cy=\"80\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"230\" cy=\"120\" r=\"3\" fill=\"#ef4444\"/><text x=\"80\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">អ៊ីស្តូក្រាម និងពហុកោណប្រេកង់</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "ដោយផ្អែកលើតារាងស្ថិតិនៃលំហាត់ទី ១ ៖\nក. គណនាមធ្យមនព្វន្ធ $\\bar{x}$ នៃពិន្ទុរបស់សិស្ស។\nខ. កំណត់ថ្នាក់ម៉ូដ និងគណនាម៉ូដ ($Mo$) នៃទិន្នន័យ។",
+        "solution": "ក. មធ្យមនព្វន្ធ ៖\n$\\bar{x} = \\dfrac{\\sum n_i x_i}{N} = \\dfrac{2510}{40} = 62.75$ ពិន្ទុ។\nខ. ថ្នាក់ម៉ូដគឺថ្នាក់ដែលមានប្រេកង់ខ្ពស់ជាងគេ ($n = 14$) គឺថ្នាក់ $[60, 70)$។\nម៉ូដតាមរូបមន្ត ៖ $Mo = L + \\left(\\dfrac{\\Delta_1}{\\Delta_1 + \\Delta_2}\\right) c$\n- $L = 60, c = 10$\n- $\\Delta_1 = 14 - 10 = 4$\n- $\\Delta_2 = 14 - 7 = 7$\n$Mo = 60 + \\left(\\dfrac{4}{4 + 7}\\right) 10 = 60 + \\dfrac{40}{11} \\approx 60 + 3.64 = 63.64$ ពិន្ទុ។",
+        "rubric": "ក. គណនាមធ្យមនព្វន្ធ $\\bar{x}=62.75$ (៥ពិន្ទុ)\nខ. កំណត់ថ្នាក់ម៉ូដនិងគណនា $Mo \\approx 63.64$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ដោយផ្អែកលើតារាងស្ថិតិនៃលំហាត់ទី ១ ៖\nក. កំណត់ថ្នាក់មេដ្យាន និងគណនាតម្លៃមេដ្យាន ($Me$)។\nខ. បកស្រាយអត្ថន័យនៃតម្លៃមេដ្យានដែលរកឃើញ។",
+        "solution": "ក. ទីតាំងមេដ្យាន ៖ $N / 2 = 40 / 2 = 20$។\nពិនិត្យប្រេកង់កើន ៖ $F_2 = 16 < 20 \\le F_3 = 30$ នាំឱ្យថ្នាក់មេដ្យានគឺ $[60, 70)$។\nរូបមន្ត ៖ $Me = L + \\left(\\dfrac{N/2 - F_{p-1}}{n_m}\\right) c$\n- $L = 60, c = 10, F_{p-1} = 16, n_m = 14$\n$Me = 60 + \\left(\\dfrac{20 - 16}{14}\\right) 10 = 60 + \\dfrac{40}{14} = 60 + 2.86 = 62.86$ ពិន្ទុ។\nខ. អត្ថន័យ ៖ មានន័យថាសិស្ស ៥០% (២០ នាក់) ទទួលបានពិន្ទុទាបជាង ឬស្មើ $62.86$ ពិន្ទុ និង ៥០% ទៀតទទួលបានពិន្ទុលើសពី $62.86$ ពិន្ទុ។",
+        "rubric": "ក. រកទីតាំងថ្នាក់មេដ្យាននិងគណនា $Me = 62.86$ (៧ពិន្ទុ)\nខ. បកស្រាយអត្ថន័យបានច្បាស់លាស់ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គណនាក្វាទីលទីមួយ ($Q_1$) និងក្វាទីលទីបី ($Q_3$) នៃទិន្នន័យពិន្ទុខាងលើ។",
+        "solution": "១. គណនា $Q_1$ ៖ ទីតាំង $N/4 = 40/4 = 10$។\nថ្នាក់ $Q_1$ គឺ $[50, 60)$ (ព្រោះ $F_1 = 6 < 10 \\le F_2 = 16$)។\n$Q_1 = 50 + \\left(\\dfrac{10 - 6}{10}\\right) 10 = 50 + 4 = 54$ ពិន្ទុ។\n២. គណនា $Q_3$ ៖ ទីតាំង $3N/4 = 3(40)/4 = 30$។\nថ្នាក់ $Q_3$ គឺ $[60, 70)$ (ព្រោះ $F_3 = 30$)។\n$Q_3 = 60 + \\left(\\dfrac{30 - 16}{14}\\right) 10 = 60 + \\left(\\dfrac{14}{14}\\right) 10 = 60 + 10 = 70$ ពិន្ទុ។",
+        "rubric": "គណនាទីតាំងនិងតម្លៃ $Q_1 = 54$ (៥ពិន្ទុ), គណនាទីតាំងនិងតម្លៃ $Q_3 = 70$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ក. គណនាគម្លាតអន្តរក្វាទីល $IQR = Q_3 - Q_1$។\nខ. គណនាភាគរយនៃសិស្សដែលទទួលបានពិន្ទុចាប់ពី ៧០ ឡើងទៅ។",
+        "solution": "ក. គម្លាតអន្តរក្វាទីល ៖\n$IQR = Q_3 - Q_1 = 70 - 54 = 16$ ពិន្ទុ។\nខ. សិស្សដែលទទួលបានពិន្ទុចាប់ពី ៧០ ឡើងទៅគឺស្ថិតក្នុងថ្នាក់ $[70, 80)$ និង $[80, 90)$ ៖\nចំនួនសិស្ស ៖ $7 + 3 = 10$ នាក់។\nភាគរយ ៖ $P = \\dfrac{10}{40} \\times 100\\% = 25\\%$។\nដូចនេះ សិស្សទទួលបានពិន្ទុចាប់ពី ៧០ ឡើងមាន $25\\%$។",
+        "rubric": "ក. គណនា $IQR=16$ (៤ពិន្ទុ)\nខ. រកចំនួនសិស្សនិងគណនាភាគរយ ២៥% (៦ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-11",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៨ ៖ វ៉ិចទ័រក្នុងប្លង់ និងផលគុណស្កាលែ",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-8",
+    "chapterTitle": "ជំពូកទី ៨ ៖ វ៉ិចទ័រក្នុងប្លង់",
+    "lessonId": "les-g10-02",
+    "lessonTitle": "មេរៀនទី ១-២ ៖ វ៉ិចទ័រ ប្រមាណវិធី និងផលគុណស្កាលែ",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យបួនចំណុច $A, B, C, D$ ក្នុងប្លង់។ សម្រួលកន្សោមវ៉ិចទ័រខាងក្រោមតាមវិធានឆាល (Chasles' Relation) ៖\nក. $\\vec{u} = \\vec{AB} + \\vec{BC} + \\vec{CD}$\nខ. $\\vec{v} = \\vec{AB} - \\vec{AC} + \\vec{BC}$",
+        "illustration": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 8 5 L 0 9 z\" fill=\"#2563eb\"/></marker><marker id=\"arrowRed\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 8 5 L 0 9 z\" fill=\"#dc2626\"/></marker></defs><line x1=\"50\" y1=\"130\" x2=\"160\" y2=\"130\" stroke=\"#2563eb\" stroke-width=\"2.5\" marker-end=\"url(#arrow)\"/><text x=\"95\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">AB ⃗</text><line x1=\"160\" y1=\"130\" x2=\"240\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\" marker-end=\"url(#arrow)\"/><text x=\"210\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">BC ⃗</text><line x1=\"50\" y1=\"130\" x2=\"240\" y2=\"50\" stroke=\"#dc2626\" stroke-width=\"2.5\" stroke-dasharray=\"5,3\" marker-end=\"url(#arrowRed)\"/><text x=\"110\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">AC ⃗ = AB ⃗ + BC ⃗</text><text x=\"40\" y=\"145\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"160\" y=\"145\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"245\" y=\"45\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text></svg>",
+        "solution": "ក. អនុវត្តវិធានឆាល ៖\n$\\vec{u} = (\\vec{AB} + \\vec{BC}) + \\vec{CD} = \\vec{AC} + \\vec{CD} = \\vec{AD}$។\nខ. បំប្លែងផលដកជាផលបូក ៖\n$\\vec{v} = \\vec{AB} + \\vec{CA} + \\vec{BC} = (\\vec{CA} + \\vec{AB}) + \\vec{BC} = \\vec{CB} + \\vec{BC} = \\vec{CC} = \\vec{0}$។",
+        "rubric": "ក. សម្រួលបាន $\\vec{u}=\\vec{AD}$ (៥ពិន្ទុ)\nខ. សម្រួលបាន $\\vec{v}=\\vec{0}$ (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 8 5 L 0 9 z\" fill=\"#2563eb\"/></marker><marker id=\"arrowRed\" viewBox=\"0 0 10 10\" refX=\"6\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 1 L 8 5 L 0 9 z\" fill=\"#dc2626\"/></marker></defs><line x1=\"50\" y1=\"130\" x2=\"160\" y2=\"130\" stroke=\"#2563eb\" stroke-width=\"2.5\" marker-end=\"url(#arrow)\"/><text x=\"95\" y=\"150\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">AB ⃗</text><line x1=\"160\" y1=\"130\" x2=\"240\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\" marker-end=\"url(#arrow)\"/><text x=\"210\" y=\"100\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">BC ⃗</text><line x1=\"50\" y1=\"130\" x2=\"240\" y2=\"50\" stroke=\"#dc2626\" stroke-width=\"2.5\" stroke-dasharray=\"5,3\" marker-end=\"url(#arrowRed)\"/><text x=\"110\" y=\"75\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">AC ⃗ = AB ⃗ + BC ⃗</text><text x=\"40\" y=\"145\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">A</text><text x=\"160\" y=\"145\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">B</text><text x=\"245\" y=\"45\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">C</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "ក្នុងតម្រុយអរតូណរម៉ាល់ $(O, \\vec{i}, \\vec{j})$ គេឱ្យចំណុច $A(2, 3)$, $B(-1, 5)$ និង $C(4, -2)$។\nក. រកកូអរដោនេនៃវ៉ិចទ័រ $\\vec{AB}$ និង $\\vec{AC}$។\nខ. គណនាកូអរដោនេនៃវ៉ិចទ័រ $\\vec{w} = 2\\vec{AB} - 3\\vec{AC}$។",
+        "solution": "ក. គណនាកូអរដោនេ ៖\n- $\\vec{AB} = (x_B - x_A, y_B - y_A) = (-1 - 2, 5 - 3) = (-3, 2)$\n- $\\vec{AC} = (x_C - x_A, y_C - y_A) = (4 - 2, -2 - 3) = (2, -5)$។\nខ. គណនា $\\vec{w}$ ៖\n$\\vec{w} = 2(-3, 2) - 3(2, -5) = (-6, 4) - (6, -15) = (-6 - 6, 4 - (-15)) = (-12, 19)$។",
+        "rubric": "ក. រក $\\vec{AB}=(-3, 2)$ និង $\\vec{AC}=(2, -5)$ (៥ពិន្ទុ)\nខ. គណនា $\\vec{w}=(-12, 19)$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យពីរវ៉ិចទ័រ $\\vec{u} = (3, -4)$ និង $\\vec{v} = (5, 12)$។\nក. គណនាប្រវែង (ម៉ូឌុល) $\\|\\vec{u}\\|$ និង $\\|\\vec{v}\\|$។\nខ. គណនាផលគុណស្កាលែ $\\vec{u} \\cdot \\vec{v}$។\nគ. គណនាកូស៊ីនុសនៃមុំ $\\theta$ រវាងពីរវ៉ិចទ័រ $\\vec{u}$ និង $\\vec{v}$។",
+        "solution": "ក. ប្រវែងម៉ូឌុល ៖\n$\\|\\vec{u}\\| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9 + 16} = 5$\n$\\|\\vec{v}\\| = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$។\nខ. ផលគុណស្កាលែ ៖\n$\\vec{u} \\cdot \\vec{v} = x_1 x_2 + y_1 y_2 = 3(5) + (-4)(12) = 15 - 48 = -33$។\nគ. កូស៊ីនុសមុំ ៖\n$\\cos \\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|} = \\dfrac{-33}{5 \\times 13} = -\\dfrac{33}{65}$។",
+        "rubric": "ក. គណនាម៉ូឌុល ៥ និង ១៣ (៣ពិន្ទុ)\nខ. គណនាផលគុណស្កាលែ $-33$ (៤ពិន្ទុ)\nគ. រក $\\cos \\theta = -33/65$ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គេឱ្យពីរវ៉ិចទ័រ $\\vec{u} = (m - 1, 4)$ និង $\\vec{v} = (2, m + 3)$។\nក. រកតម្លៃ $m$ ដើម្បីឱ្យ $\\vec{u}$ កូឡីនេអ៊ែរនឹង $\\vec{v}$។\nខ. រកតម្លៃ $m$ ដើម្បីឱ្យ $\\vec{u}$ កែងនឹង $\\vec{v}$ (អរតូកូណាល់)។",
+        "solution": "ក. $\\vec{u}$ និង $\\vec{v}$ កូឡីនេអ៊ែរគ្នា លុះត្រាតែ ៖\n$x_1 y_2 - x_2 y_1 = 0 \\iff (m - 1)(m + 3) - 2(4) = 0$\n$\\iff m^2 + 2m - 3 - 8 = 0 \\iff m^2 + 2m - 11 = 0$\n$\\Delta' = 1 - (-11) = 12 \\implies m = -1 \\pm \\sqrt{12} = -1 \\pm 2\\sqrt{3}$។\nខ. $\\vec{u}$ កែងនឹង $\\vec{v}$ លុះត្រាតែផលគុណស្កាលែស្មើ 0 ៖\n$\\vec{u} \\cdot \\vec{v} = 0 \\iff 2(m - 1) + 4(m + 3) = 0$\n$\\iff 2m - 2 + 4m + 12 = 0 \\iff 6m + 10 = 0 \\implies m = -\\dfrac{10}{6} = -\\dfrac{5}{3}$។",
+        "rubric": "ក. លក្ខខណ្ឌកូឡីនេអ៊ែរនិងដោះស្រាយរក $m=-1 \\pm 2\\sqrt{3}$ (៥ពិន្ទុ)\nខ. លក្ខខណ្ឌកែង $\\vec{u}\\cdot\\vec{v}=0$ និងរក $m=-5/3$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ក្នុងប្លង់កូអរដោនេ គេឱ្យចំណុច $A(1, 1)$, $B(5, 3)$, $C(3, 7)$ និង $D(-1, 5)$។\nក. បង្ហាញថា ចតុកោណ $ABCD$ ជាប្រលេឡូក្រាម។\nខ. បង្ហាញថា $ABCD$ ជាចតុកោណកែង។",
+        "solution": "ក. គណនាវ៉ិចទ័រជ្រុងឈម ៖\n- $\\vec{AB} = (5 - 1, 3 - 1) = (4, 2)$\n- $\\vec{DC} = (3 - (-1), 7 - 5) = (4, 2)$\nដោយ $\\vec{AB} = \\vec{DC}$ នាំឱ្យចតុកោណ $ABCD$ ជាប្រលេឡូក្រាម។\nខ. គណនាវ៉ិចទ័រជ្រុងជាប់ ៖\n$\\vec{AD} = (-1 - 1, 5 - 1) = (-2, 4)$។\nគណនាផលគុណស្កាលែ $\\vec{AB} \\cdot \\vec{AD}$ ៖\n$\\vec{AB} \\cdot \\vec{AD} = 4(-2) + 2(4) = -8 + 8 = 0$។\nដោយ $\\vec{AB} \\cdot \\vec{AD} = 0 \\implies \\vec{AB} \\perp \\vec{AD}$ (មុំ $A$ ជាមុំកែង)។\nប្រលេឡូក្រាម $ABCD$ មានមុំមួយជាមុំកែង ដូច្នេះ $ABCD$ ជាចតុកោណកែង។",
+        "rubric": "ក. គណនា $\\vec{AB}=\\vec{DC}=(4, 2)$ និងសន្និដ្ឋានប្រលេឡូក្រាម (៥ពិន្ទុ)\nខ. គណនាផលគុណស្កាលែស្មើ 0 និងសន្និដ្ឋានចតុកោណកែង (៥ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-12",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៩ ៖ ការបំប្លែងរូបក្នុងប្លង់",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-9",
+    "chapterTitle": "ជំពូកទី ៩ ៖ ការបំប្លែងរូបក្នុងប្លង់",
+    "lessonId": "les-g10-9-1",
+    "lessonTitle": "មេរៀនទី ១-៤ ៖ ការបំប្លែងកិល ឆ្លុះ វិល និងអូម៉ូតេទី",
+    "duration": "៦០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "ក្នុងប្លង់កូអរដោនេ $xOy$ គេឱ្យវ៉ិចទ័រ $\\vec{v} = (3, -2)$ និងចំណុច $A(1, 4)$។\nក. រកកូអរដោនេនៃចំណុច $A'$ ជារូបភាពនៃ $A$ តាមបំប្លែងកិល $t_{\\vec{v}}$។\nខ. រកសមីការបន្ទាត់ $(D')$ ជារូបភាពនៃបន្ទាត់ $(D) : 2x - y + 5 = 0$ តាមបំប្លែងកិល $t_{\\vec{v}}$។",
+        "illustration": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><polygon points=\"50,130 90,130 70,80\" fill=\"#e0e7ff\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"60\" y=\"120\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">ABC</text><polygon points=\"180,100 220,100 200,50\" fill=\"#fef3c7\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">A'B'C'</text><line x1=\"70\" y1=\"80\" x2=\"200\" y2=\"50\" stroke=\"#10b981\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"50\" y1=\"130\" x2=\"180\" y2=\"100\" stroke=\"#10b981\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"90\" y1=\"130\" x2=\"220\" y2=\"100\" stroke=\"#10b981\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"120\" y=\"60\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">វ៉ិចទ័រកិល v ⃗</text><text x=\"15\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">ការបំប្លែងកិល ៖ tᵥ(ABC) = A'B'C'</text></svg>",
+        "solution": "ក. រូបភាពនៃចំណុច ៖\n$\\vec{AA'} = \\vec{v} \\implies \\begin{cases} x_{A'} = x_A + x_v = 1 + 3 = 4 \\\\ y_{A'} = y_A + y_v = 4 + (-2) = 2 \\end{cases} \\implies A'(4, 2)$។\nខ. រូបភាពនៃបន្ទាត់ ៖\nបំប្លែងកិលបំប្លែងបន្ទាត់ទៅជាបន្ទាត់ស្របនឹងវា ៖ $(D') : 2x - y + c' = 0$។\nយកចំណុច $M(0, 5) \\in (D)$ ព្រោះ $2(0) - 5 + 5 = 0$។\nរូបភាព $M'$ នៃ $M$ តាម $t_{\\vec{v}}$ គឺ $M'(0 + 3, 5 - 2) = M'(3, 3)$។\nដោយ $M' \\in (D')$ នាំឱ្យ ៖ $2(3) - 3 + c' = 0 \\iff 3 + c' = 0 \\implies c' = -3$។\nដូចនេះ សមីការ $(D') : 2x - y - 3 = 0$។",
+        "rubric": "ក. គណនារូបភាពចំណុច $A'(4, 2)$ (៤ពិន្ទុ)\nខ. វិធីសាស្ត្ររកសមីការបន្ទាត់រូបភាព $(D') : 2x - y - 3 = 0$ (៦ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><polygon points=\"50,130 90,130 70,80\" fill=\"#e0e7ff\" stroke=\"#3b82f6\" stroke-width=\"2\"/><text x=\"60\" y=\"120\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e40af\">ABC</text><polygon points=\"180,100 220,100 200,50\" fill=\"#fef3c7\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#b45309\">A'B'C'</text><line x1=\"70\" y1=\"80\" x2=\"200\" y2=\"50\" stroke=\"#10b981\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"50\" y1=\"130\" x2=\"180\" y2=\"100\" stroke=\"#10b981\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><line x1=\"90\" y1=\"130\" x2=\"220\" y2=\"100\" stroke=\"#10b981\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/><text x=\"120\" y=\"60\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#047857\">វ៉ិចទ័រកិល v ⃗</text><text x=\"15\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e293b\">ការបំប្លែងកិល ៖ tᵥ(ABC) = A'B'C'</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "គេឱ្យចំណុច $M(3, -4)$ ក្នុងប្លង់កូអរដោនេ $xOy$។\nក. រកកូអរដោនេនៃ $M_1$ ជារូបភាពនៃ $M$ តាមការបំប្លែងឆ្លុះធៀបនឹងអ័ក្សអាប់ស៊ីស $Ox$ ($s_{Ox}$)។\nខ. រកកូអរដោនេនៃ $M_2$ ជារូបភាពនៃ $M$ តាមការបំប្លែងឆ្លុះធៀបនឹងអ័ក្សអរដោនេ $Oy$ ($s_{Oy}$)។\nគ. រកកូអរដោនេនៃ $M_3$ ជារូបភាពនៃ $M$ តាមការបំប្លែងឆ្លុះធៀបនឹងបន្ទាត់ពុះទីមួយ $y = x$ ($s_{\\Delta}$)$។",
+        "solution": "ក. ឆ្លុះធៀបនឹងអ័ក្ស $Ox$ ៖ $s_{Ox}(x, y) = (x, -y)$\n$\\implies M_1(3, -(-4)) = M_1(3, 4)$។\nខ. ឆ្លុះធៀបនឹងអ័ក្ស $Oy$ ៖ $s_{Oy}(x, y) = (-x, y)$\n$\\implies M_2(-3, -4)$។\nគ. ឆ្លុះធៀបនឹងបន្ទាត់ $y = x$ ៖ $s_{\\Delta}(x, y) = (y, x)$\n$\\implies M_3(-4, 3)$។",
+        "rubric": "ក. រក $M_1(3, 4)$ (៣ពិន្ទុ)\nខ. រក $M_2(-3, -4)$ (៣ពិន្ទុ)\nគ. រក $M_3(-4, 3)$ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យការបំប្លែងវិល $r(O, 90^\\circ)$ ជុំវិញគល់កូអរដោនេ $O$ តាមទិសដៅវិជ្ជមាន (បញ្ច្រាសទ្រនិចនាឡិកា)។\nក. សរសេររូបមន្តបំប្លែងកូអរដោនេនៃចំណុច $M(x, y)$ ទៅ $M'(x', y')$។\nខ. រករូបភាពនៃចំណុច $A(2, 5)$ និង $B(-3, 1)$ តាមការបំប្លែងវិល $r(O, 90^\\circ)$។",
+        "solution": "ក. រូបមន្តបំប្លែងវិល $90^\\circ$ បញ្ច្រាសទ្រនិចនាឡិកា ៖\n$\\begin{cases} x' = -y \\\\ y' = x \\end{cases}$\nខ. រករូបភាព ៖\n- រូបភាពនៃ $A(2, 5)$ គឺ $A'(-5, 2)$។\n- រូបភាពនៃ $B(-3, 1)$ គឺ $B'(-1, -3)$។",
+        "rubric": "ក. រូបមន្តបំប្លែងកូអរដោនេ $x'=-y, y'=x$ (៤ពិន្ទុ)\nខ. រក $A'(-5, 2)$ (៣ពិន្ទុ) និង $B'(-1, -3)$ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គេឱ្យការបំប្លែងអូម៉ូតេទី $h(O, k)$ មានផ្ចិតជាគល់កូអរដោនេ $O(0, 0)$ និងផលធៀប $k = -2$។\nក. រកកូអរដោនេនៃចំណុច $A'$ ជារូបភាពនៃ $A(3, -1)$ តាម $h(O, -2)$។\nខ. រករូបភាពនៃរង្វង់ $(C) : x^2 + y^2 = 4$ តាមការបំប្លែងអូម៉ូតេទីនេះ។",
+        "solution": "ក. តាមនិយមន័យអូម៉ូតេទី ៖ $\\vec{OA'} = k \\vec{OA} = -2\\vec{OA}$\n$\\implies \\begin{cases} x_{A'} = -2(3) = -6 \\\\ y_{A'} = -2(-1) = 2 \\end{cases} \\implies A'(-6, 2)$។\nខ. រង្វង់ $(C)$ មានផ្ចិត $O(0, 0)$ និងកាំ $R = \\sqrt{4} = 2$។\n- ផ្ចិតនៃ $(C')$ គឺ $O' = h(O) = O(0, 0)$។\n- កាំនៃ $(C')$ គឺ $R' = |k| R = |-2| \\times 2 = 4$។\nសមីការរង្វង់រូបភាព $(C')$ គឺ ៖ $x^2 + y^2 = R'^2 = 4^2 = 16$។",
+        "rubric": "ក. រក $A'(-6, 2)$ (៥ពិន្ទុ)\nខ. រកផ្ចិតនិងកាំថ្មី $R'=4$ សរសេរសមីការ $x^2+y^2=16$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ត្រីកោណ $ABC$ មួយមានផ្ទៃក្រឡា $S = 18\\text{ cm}^2$។ ត្រីកោណ $A'B'C'$ ជារូបភាពនៃត្រីកោណ $ABC$ តាមការបំប្លែងអូម៉ូតេទី $h(I, 3/2)$។\nក. គណនាផលធៀបនៃបរិមាត្ររវាងត្រីកោណទាំងពីរ។\nខ. គណនាផ្ទៃក្រឡា $S'$ នៃត្រីកោណ $A'B'C'$។",
+        "solution": "ក. ផលធៀបនៃបរិមាត្រស្មើនឹង $|k|$ ៖\n$\\dfrac{P'}{P} = |k| = \\dfrac{3}{2} = 1.5$។\nខ. ផលធៀបនៃផ្ទៃក្រឡាស្មើនឹង $k^2$ ៖\n$\\dfrac{S'}{S} = k^2 = \\left(\\dfrac{3}{2}\\right)^2 = \\dfrac{9}{4}$។\nនាំឱ្យផ្ទៃក្រឡាត្រីកោណរូបភាព ៖\n$S' = \\dfrac{9}{4} S = \\dfrac{9}{4} \\times 18 = \\dfrac{162}{4} = 40.5\\text{ cm}^2$។\nដូចនេះ ផ្ទៃក្រឡា $S' = 40.5\\text{ cm}^2$។",
+        "rubric": "ក. ផលធៀបបរិមាត្រស្មើ $|k|=3/2$ (៤ពិន្ទុ)\nខ. រូបមន្ត $S'=k^2 S$ និងគណនាបាន $40.5\\text{ cm}^2$ (៦ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-sem1",
+    "title": "វិញ្ញាសាប្រឡងឆមាសទី ១ ៖ គណិតវិទ្យា ថ្នាក់ទី ១០ (ស្តង់ដាកម្រិតវិទ្យាល័យ)",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-sem1",
+    "chapterTitle": "វិញ្ញាសាឆមាសទី ១ (ជំពូកទី ១ ដល់ ជំពូកទី ៤)",
+    "lessonId": "les-g10-sem1",
+    "lessonTitle": "វិញ្ញាសាប្រឡងបញ្ចប់ឆមាសទី ១ (ពហុធា សំណុំ សមីការ និងធរណីមាត្រ)",
+    "duration": "៩០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យពហុធា $P(x) = x^3 - 3x^2 - 10x + 24$។\nក. ផ្ទៀងផ្ទាត់ថា $x = 2$ ជាឫសមួយនៃពហុធា $P(x)$។\nខ. ប្រើវិធីចែកហ័រណឺ ដើម្បីដាក់ $P(x)$ ជាផលគុណកត្តាដឺក្រេទី១ រួចដោះស្រាយសមីការ $P(x) = 0$។",
+        "solution": "ក. គណនា $P(2) = 2^3 - 3(2^2) - 10(2) + 24 = 8 - 12 - 20 + 24 = 0$។\nដូចនេះ $x = 2$ ជាឫសនៃ $P(x)$ ពិតប្រាកដ។\nខ. ចែកហ័រណឺជាមួយ $c = 2$ លើមេគុណ $[1, -3, -10, 24]$ ៖\n- ទម្លាក់ 1\n- $1(2) + (-3) = -1$\n- $(-1)(2) + (-10) = -12$\n- $(-12)(2) + 24 = 0$ (សំណល់ $R = 0$)\nផលចែក ៖ $Q(x) = x^2 - x - 12 = (x - 4)(x + 3)$។\nនាំឱ្យ $P(x) = (x - 2)(x - 4)(x + 3)$។\nសមីការ $P(x) = 0 \\iff (x - 2)(x - 4)(x + 3) = 0 \\implies x \\in \\{-3, 2, 4\\}$។",
+        "rubric": "ក. គណនា $P(2)=0$ (៣ពិន្ទុ)\nខ. ចែកហ័រណឺត្រឹមត្រូវ (៣ពិន្ទុ), ដាក់ជាផលគុណកត្តា (២ពិន្ទុ), ដោះស្រាយរកឫសទាំង ៣ (២ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "គេឱ្យសំណុំ $A = \\{x \\in \\mathbb{R} \\mid |x - 2| \\le 3\\}$ និង $B = \\{x \\in \\mathbb{R} \\mid x^2 - 4x - 5 < 0\\}$។\nក. សរសេរសំណុំ $A$ និង $B$ ជាចន្លោះនៃចំនួនពិត។\nខ. កំណត់ចន្លោះ $A \\cap B$ និង $A \\cup B$។",
+        "solution": "ក. សរសេរជាចន្លោះ ៖\n- សំណុំ $A$ ៖ $|x - 2| \\le 3 \\iff -3 \\le x - 2 \\le 3 \\iff -1 \\le x \\le 5 \\implies A = [-1, 5]$។\n- សំណុំ $B$ ៖ $x^2 - 4x - 5 < 0 \\iff (x + 1)(x - 5) < 0 \\implies -1 < x < 5 \\implies B = (-1, 5)$។\nខ. កំណត់ប្រមាណវិធី ៖\n- $A \\cap B = (-1, 5)$\n- $A \\cup B = [-1, 5]$។",
+        "rubric": "ក. ដោះស្រាយវិសមីការរកចន្លោះ $A=[-1, 5]$ (៣ពិន្ទុ) និង $B=(-1, 5)$ (៣ពិន្ទុ)\nខ. រកប្រសព្វនិងប្រជុំត្រឹមត្រូវ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ដោះស្រាយសមីការ និងប្រព័ន្ធសមីការខាងក្រោម ៖\nក. $\\sqrt{3x + 1} = x - 1$\nខ. $\\begin{cases} 3x - 2y = 7 \\\\ 2x + 5y = -8 \\end{cases}$ (តាមវិធីដេទែរមីណង់)",
+        "solution": "ក. សមីការអសនិទាន ៖\nលក្ខខណ្ឌ ៖ $x - 1 \\ge 0 \\iff x \\ge 1$។\nលើកជាការេ ៖ $3x + 1 = (x - 1)^2 = x^2 - 2x + 1 \\iff x^2 - 5x = 0 \\iff x(x - 5) = 0$។\n$\\implies x = 0$ ឬ $x = 5$។\nផ្ទៀងផ្ទាត់ $x \\ge 1$ ៖ មិនយក $x = 0$, យក $x = 5$។ សំណុំចម្លើយ $S = \\{5\\}$។\nខ. ប្រព័ន្ធសមីការតាមដេទែរមីណង់ ៖\n$D = \\begin{vmatrix} 3 & -2 \\\\ 2 & 5 \\end{vmatrix} = 15 - (-4) = 19 \\neq 0$\n$D_x = \\begin{vmatrix} 7 & -2 \\\\ -8 & 5 \\end{vmatrix} = 35 - 16 = 19 \\implies x = 19/19 = 1$\n$D_y = \\begin{vmatrix} 3 & 7 \\\\ 2 & -8 \\end{vmatrix} = -24 - 14 = -38 \\implies y = -38/19 = -2$។\nដូចនេះ គូចម្លើយ $(x, y) = (1, -2)$។",
+        "rubric": "ក. លក្ខខណ្ឌ ដោះស្រាយ និងជម្រុះឫសយក $x=5$ (៥ពិន្ទុ)\nខ. គណនា $D, D_x, D_y$ និងរក $(1, -2)$ (៥ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "ដោះស្រាយវិសមីការសនិទាន ៖ $\\dfrac{x^2 - 4}{2x - 3} \\ge 0$ ដោយប្រើតារាងសញ្ញា។",
+        "solution": "លក្ខខណ្ឌ ៖ $2x - 3 \\neq 0 \\iff x \\neq 3/2$។\nឫសភាគយក ៖ $x^2 - 4 = 0 \\iff x = -2$ ឬ $x = 2$។\nឫសភាគបែង ៖ $x = 3/2$។\nរៀបលំដាប់ឫស ៖ $-2 < 3/2 < 2$។\nតារាងសញ្ញា ៖\n- $x < -2$ ៖ $(-)/(-) = -$ (អវិជ្ជមាន)\n- $-2 \\le x < 3/2$ ៖ $(+)/(-) = +$ (វិជ្ជមាន)\n- $3/2 < x \\le 2$ ៖ $(+)/(-) = -$ (អវិជ្ជមាន)\n- $x \\ge 2$ ៖ $(+)/(+) = +$ (វិជ្ជមាន)។\nគេចង់បានកន្សោម $\\ge 0$ នាំឱ្យ ៖ $[-2, 3/2) \\cup [2, +\\infty)$។\nដូចនេះ សំណុំចម្លើយ $S = [-2, 3/2) \\cup [2, +\\infty)$។",
+        "rubric": "លក្ខខណ្ឌនិងរកឫសភាគយក/ភាគបែង (៣ពិន្ទុ), សង់តារាងសញ្ញាត្រឹមត្រូវ (៤ពិន្ទុ), សន្និដ្ឋានសំណុំចម្លើយ (៣ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ក្នុងប្លង់កូអរដោនេ $xOy$ គេឱ្យចំណុច $A(3, 1)$ និងបន្ទាត់ $(\\Delta) : 4x + 3y - 5 = 0$។\nក. គណនាចម្ងាយពីចំណុច $A$ ទៅបន្ទាត់ $(\\Delta)$។\nខ. សរសេរសមីការរង្វង់ $(C)$ ដែលមានផ្ចិត $A$ ហើយប៉ះនឹងបន្ទាត់ $(\\Delta)$។",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"140\" cy=\"100\" r=\"60\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"3\" fill=\"#16a34a\"/><text x=\"120\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">I(h, k)</text><line x1=\"140\" y1=\"100\" x2=\"185\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"155\" y=\"75\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#166534\">R</text><circle cx=\"185\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><text x=\"195\" y=\"60\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">P(x₀, y₀)</text><line x1=\"145\" y1=\"15\" x2=\"225\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"210\" y=\"115\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(D): បន្ទាត់ប៉ះ</text></svg>",
+        "solution": "ក. ចម្ងាយពី $A(3, 1)$ ទៅ $(\\Delta)$ ៖\n$d(A, \\Delta) = \\dfrac{|4(3) + 3(1) - 5|}{\\sqrt{4^2 + 3^2}} = \\dfrac{|12 + 3 - 5|}{\\sqrt{25}} = \\dfrac{10}{5} = 2$ ឯកតា។\nខ. ដោយរង្វង់ $(C)$ ប៉ះនឹងបន្ទាត់ $(\\Delta)$ នោះកាំនៃរង្វង់ស្មើនឹងចម្ងាយពីផ្ចិតទៅបន្ទាត់ប៉ះ ៖\n$R = d(A, \\Delta) = 2$។\nសមីការស្តង់ដារនៃរង្វង់ $(C)$ មានផ្ចិត $A(3, 1)$ និងកាំ $R = 2$ គឺ ៖\n$(x - 3)^2 + (y - 1)^2 = 2^2 = 4$។",
+        "rubric": "ក. រូបមន្តចម្ងាយនិងគណនាបាន $d=2$ (៥ពិន្ទុ)\nខ. កំណត់កាំ $R=2$ និងសរសេរសមីការរង្វង់ $(x-3)^2+(y-1)^2=4$ (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"140\" cy=\"100\" r=\"60\" fill=\"#f0fdf4\" stroke=\"#16a34a\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"100\" r=\"3\" fill=\"#16a34a\"/><text x=\"120\" y=\"105\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#166534\">I(h, k)</text><line x1=\"140\" y1=\"100\" x2=\"185\" y2=\"60\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"155\" y=\"75\" font-family=\"sans-serif\" font-size=\"11\" fill=\"#166534\">R</text><circle cx=\"185\" cy=\"60\" r=\"4\" fill=\"#dc2626\"/><text x=\"195\" y=\"60\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">P(x₀, y₀)</text><line x1=\"145\" y1=\"15\" x2=\"225\" y2=\"105\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"210\" y=\"115\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#dc2626\">(D): បន្ទាត់ប៉ះ</text></svg>"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g10-annual",
+    "title": "វិញ្ញាសាប្រឡងបញ្ចប់ថ្នាក់ទី ១០ ប្រចាំឆ្នាំ ៖ គណិតវិទ្យា (កម្រិតវិទ្យាល័យទូទាំងប្រទេស)",
+    "grade": "ថ្នាក់ទី ១០",
+    "gradeId": "g10",
+    "courseId": "course-math-g10",
+    "chapterId": "ch-g10-annual",
+    "chapterTitle": "វិញ្ញាសាប្រឡងបញ្ចប់ឆ្នាំ (គ្រប់ជំពូក)",
+    "lessonId": "les-g10-annual",
+    "lessonTitle": "វិញ្ញាសាប្រឡងបញ្ចប់ឆ្នាំថ្នាក់ទី ១០ (ទូទាំងកម្មវិធីសិក្សា)",
+    "duration": "៩០ នាទី",
+    "totalScore": 50,
+    "teacher": "លោកគ្រូ ទួន ប៊ូណាត (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (សាលារៀនជំនាន់ថ្មី NGS)",
+    "ptsPerProblem": 10,
+    "date": "2026-2027",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យអនុគមន៍ដឺក្រេទីពីរ $f(x) = -x^2 + 4x - 3$ មានក្រាប $(P)$។\nក. កំណត់កូអរដោនេកំពូល $S$ និងសមីការអ័ក្សឆ្លុះនៃ $(P)$។\nខ. សង់តារាងអថិរភាព និងរកតម្លៃអតិបរមានៃ $f(x)$។",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"295,150 285,146 285,154\" fill=\"#94a3b8\"/><text x=\"290\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">x</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"160,15 156,25 164,25\" fill=\"#94a3b8\"/><text x=\"145\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">y</text><path d=\"M 80 40 Q 160 180 240 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"30\" x2=\"160\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><circle cx=\"160\" cy=\"110\" r=\"4\" fill=\"#ef4444\"/><text x=\"165\" y=\"125\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\">S(h, k) កំពូល</text><text x=\"50\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">y = ax² + bx + c (a &gt; 0)</text><text x=\"165\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#ef4444\">អ័ក្សឆ្លុះ x = h</text></svg>",
+        "solution": "ក. ទម្រង់កាណូនិច ៖ $f(x) = -(x^2 - 4x + 4) + 4 - 3 = -(x - 2)^2 + 1$។\nកំពូល $S(2, 1)$ និងសមីការអ័ក្សឆ្លុះ ៖ $x = 2$។\nខ. ដោយ $a = -1 < 0$ ប៉ារ៉ាបូលបែរភាពប៉ោងចុះក្រោម។\nតារាងអថិរភាព ៖ $f(x)$ កើនពី $-\\infty$ ដល់ $1$ លើ $(-\\infty, 2]$ និងថយពី $1$ ទៅ $-\\infty$ លើ $[2, +\\infty)$។\nតម្លៃអតិបរមានៃអនុគមន៍គឺ $f_{\\max} = 1$ ត្រង់ $x = 2$។",
+        "rubric": "ក. រកកំពូល $S(2, 1)$ និងអ័ក្សឆ្លុះ $x=2$ (៥ពិន្ទុ)\nខ. សង់តារាងអថិរភាពនិងរកតម្លៃអតិបរមាស្មើ 1 (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"295,150 285,146 285,154\" fill=\"#94a3b8\"/><text x=\"290\" y=\"165\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">x</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polygon points=\"160,15 156,25 164,25\" fill=\"#94a3b8\"/><text x=\"145\" y=\"25\" font-family=\"sans-serif\" font-size=\"12\" fill=\"#64748b\">y</text><path d=\"M 80 40 Q 160 180 240 40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"30\" x2=\"160\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><circle cx=\"160\" cy=\"110\" r=\"4\" fill=\"#ef4444\"/><text x=\"165\" y=\"125\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#ef4444\">S(h, k) កំពូល</text><text x=\"50\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#2563eb\">y = ax² + bx + c (a &gt; 0)</text><text x=\"165\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#ef4444\">អ័ក្សឆ្លុះ x = h</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "ក្នុងត្រីកោណ $ABC$ គេឱ្យជ្រុង $a = 6\\text{ cm}$, $b = 8\\text{ cm}$ និង $c = 10\\text{ cm}$។\nក. បង្ហាញថា ត្រីកោណ $ABC$ ជាត្រីកោណកែង។\nខ. គណនា $\\sin A$, $\\cos A$, ផ្ទៃក្រឡា $S$ និងកាំ $R$ នៃរង្វង់ចារឹកក្រៅត្រីកោណ $ABC$។",
+        "illustration": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><polygon points=\"70,140 270,140 160,40\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"140\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"50\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">B</text><circle cx=\"270\" cy=\"140\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"275\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">C</text><circle cx=\"160\" cy=\"40\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"155\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">A</text><text x=\"165\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">a</text><text x=\"220\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">b</text><text x=\"100\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">c</text><text x=\"15\" y=\"20\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">a² = b² + c² - 2bc cos A</text></svg>",
+        "solution": "ក. ពិនិត្យផលបូកការេជ្រុងតូចទាំងពីរ ៖\n$a^2 + b^2 = 6^2 + 8^2 = 36 + 64 = 100 = 10^2 = c^2$។\nតាមទ្រឹស្តីបទច្រាសពីតាគ័រ ត្រីកោណ $ABC$ ជាត្រីកោណកែងត្រង់ $C$ (អ៊ីប៉ូតេនុស $c = 10$)។\nខ. គណនាផលធៀប ៖\n- $\\sin A = \\dfrac{\\text{ជ្រុងឈម}}{\\text{អ៊ីប៉ូតេនុស}} = \\dfrac{a}{c} = \\dfrac{6}{10} = \\dfrac{3}{5}$\n- $\\cos A = \\dfrac{\\text{ជ្រុងជាប់}}{\\text{អ៊ីប៉ូតេនុស}} = \\dfrac{b}{c} = \\dfrac{8}{10} = \\dfrac{4}{5}$\n- ផ្ទៃក្រឡា ៖ $S = \\dfrac{1}{2} ab = \\dfrac{1}{2} (6)(8) = 24\\text{ cm}^2$\n- កាំរង្វង់ចារឹកក្រៅ ៖ ក្នុងត្រីកោណកែង កាំស្មើពាក់កណ្តាលអ៊ីប៉ូតេនុស ៖ $R = \\dfrac{c}{2} = \\dfrac{10}{2} = 5\\text{ cm}$។",
+        "rubric": "ក. អនុវត្តច្រាសពីតាគ័រស្រាយត្រីកោណកែង (៣ពិន្ទុ)\nខ. គណនា $\\sin, \\cos$ (២ពិន្ទុ), ផ្ទៃក្រឡា $24\\text{ cm}^2$ (៣ពិន្ទុ), កាំ $R=5$ cm (២ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><polygon points=\"70,140 270,140 160,40\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"140\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"50\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">B</text><circle cx=\"270\" cy=\"140\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"275\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">C</text><circle cx=\"160\" cy=\"40\" r=\"3.5\" fill=\"#1e3a8a\"/><text x=\"155\" y=\"30\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#1e3a8a\">A</text><text x=\"165\" y=\"155\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">a</text><text x=\"220\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">b</text><text x=\"100\" y=\"85\" font-family=\"sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"#dc2626\">c</text><text x=\"15\" y=\"20\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">a² = b² + c² - 2bc cos A</text></svg>"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យអនុគមន៍សនិទាន $y = \\dfrac{x + 3}{x - 2}$ មានក្រាប $(H)$។\nក. រកដែនកំណត់ អាស៊ីមតូតឈរ និងអាស៊ីមតូតដេកនៃ $(H)$។\nខ. រកកូអរដោនេផ្ចិតឆ្លុះ $I$ និងចំណុចប្រសព្វរវាង $(H)$ ជាមួយអ័ក្សកូអរដោនេទាំងពីរ។",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"110\" x2=\"290\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"180\" x2=\"150\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"85\" y=\"35\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">អាស៊ីមតូតឈរ</text><line x1=\"30\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"180\" y=\"75\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">អាស៊ីមតូតដេក</text><path d=\"M 40 100 Q 110 95 115 25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M 125 175 Q 130 90 280 85\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"30\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">y = (ax+b)/(cx+d)</text></svg>",
+        "solution": "ក. ដែនកំណត់ ៖ $D = \\mathbb{R} \\setminus \\{2\\}$។\n- អាស៊ីមតូតឈរ ៖ $x = 2$\n- អាស៊ីមតូតដេក ៖ $y = \\dfrac{1}{1} = 1$។\nខ. ផ្ចិតឆ្លុះ ៖ $I(2, 1)$។\n- ប្រសព្វ $Oy$ ($x = 0$) ៖ $y = \\dfrac{0 + 3}{0 - 2} = -\\dfrac{3}{2} \\implies (0, -3/2)$\n- ប្រសព្វ $Ox$ ($y = 0$) ៖ $x + 3 = 0 \\implies x = -3 \\implies (-3, 0)$។",
+        "rubric": "ក. រកដែនកំណត់និងអាស៊ីមតូតទាំងពីរ (៥ពិន្ទុ)\nខ. រកផ្ចិតឆ្លុះ $I(2, 1)$ និងចំណុចប្រសព្វនឹងអ័ក្សទាំងពីរ (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"30\" y1=\"110\" x2=\"290\" y2=\"110\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"180\" x2=\"150\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"85\" y=\"35\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">អាស៊ីមតូតឈរ</text><line x1=\"30\" y1=\"80\" x2=\"290\" y2=\"80\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/><text x=\"180\" y=\"75\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">អាស៊ីមតូតដេក</text><path d=\"M 40 100 Q 110 95 115 25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><path d=\"M 125 175 Q 130 90 280 85\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"30\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">y = (ax+b)/(cx+d)</text></svg>"
+      },
+      {
+        "num": 4,
+        "q": "ក្នុងតម្រុយអរតូណរម៉ាល់ គេឱ្យវ៉ិចទ័រ $\\vec{u} = (2, 3)$ និង $\\vec{v} = (-1, 4)$។\nក. គណនាផលគុណស្កាលែ $\\vec{u} \\cdot \\vec{v}$។\nខ. រកកូអរដោនេនៃវ៉ិចទ័រ $\\vec{w}$ ដោយដឹងថា $\\vec{w} \\perp \\vec{u}$ និង $\\vec{w} \\cdot \\vec{v} = 11$។",
+        "solution": "ក. ផលគុណស្កាលែ ៖ $\\vec{u} \\cdot \\vec{v} = 2(-1) + 3(4) = -2 + 12 = 10$។\nខ. តាង $\\vec{w} = (x, y)$។\n- $\\vec{w} \\perp \\vec{u} \\iff \\vec{w} \\cdot \\vec{u} = 0 \\iff 2x + 3y = 0$ (១)\n- $\\vec{w} \\cdot \\vec{v} = 11 \\iff -x + 4y = 11$ (២)\nពី (២) ៖ $x = 4y - 11$។ ជំនួសចូល (១) ៖\n$2(4y - 11) + 3y = 0 \\iff 8y - 22 + 3y = 0 \\iff 11y = 22 \\implies y = 2$។\nជំនួស $y = 2$ ចូល (២) ៖ $x = 4(2) - 11 = 8 - 11 = -3$។\nដូចនេះ វ៉ិចទ័រ $\\vec{w} = (-3, 2)$។",
+        "rubric": "ក. គណនាផលគុណស្កាលែស្មើ 10 (៣ពិន្ទុ)\nខ. បង្កើតប្រព័ន្ធសមីការ (៣ពិន្ទុ), ដោះស្រាយបាន $\\vec{w}=(-3, 2)$ (៤ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "គេកត់ត្រាទិន្នន័យប្រាក់ចំណូលប្រចាំថ្ងៃរបស់អាជីវករ ២០ នាក់ (គិតជាពាន់រៀល) ៖\nថ្នាក់ $[40, 60)$ : ៣ នាក់, $[60, 80)$ : ៧ នាក់, $[80, 100)$ : ៦ នាក់, $[100, 120)$ : ៤ នាក់។\nក. គណនាមធ្យមនព្វន្ធ $\\bar{x}$ នៃប្រាក់ចំណូល។\nខ. កំណត់ថ្នាក់មេដ្យាន និងគណនាមេដ្យាន ($Me$)។",
+        "illustration": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"40\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"150\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"25\" y=\"25\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ni</text><text x=\"280\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ថ្នាក់</text><rect x=\"50\" y=\"110\" width=\"40\" height=\"40\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"90\" y=\"70\" width=\"40\" height=\"80\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"130\" y=\"40\" width=\"40\" height=\"110\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"170\" y=\"80\" width=\"40\" height=\"70\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"210\" y=\"120\" width=\"40\" height=\"30\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><polyline points=\"70,110 110,70 150,40 190,80 230,120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"110\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"110\" cy=\"70\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"150\" cy=\"40\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"190\" cy=\"80\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"230\" cy=\"120\" r=\"3\" fill=\"#ef4444\"/><text x=\"80\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">អ៊ីស្តូក្រាម និងពហុកោណប្រេកង់</text></svg>",
+        "solution": "ក. ចំណុចកណ្តាលថ្នាក់ ៖\n- $[40, 60)$ : $x_1 = 50, n_1 = 3 \\implies n_1 x_1 = 150$\n- $[60, 80)$ : $x_2 = 70, n_2 = 7 \\implies n_2 x_2 = 490$\n- $[80, 100)$ : $x_3 = 90, n_3 = 6 \\implies n_3 x_3 = 540$\n- $[100, 120)$ : $x_4 = 110, n_4 = 4 \\implies n_4 x_4 = 440$\nផលបូក ៖ $\\sum n_i x_i = 150 + 490 + 540 + 440 = 1620$។\nមធ្យមនព្វន្ធ ៖ $\\bar{x} = \\dfrac{1620}{20} = 81$ (៨១ ពាន់រៀល)។\nខ. ទីតាំងមេដ្យាន ៖ $N/2 = 20/2 = 10$។\nប្រេកង់កើន ៖ $F_1 = 3, F_2 = 10, F_3 = 16, F_4 = 20$។\nដោយ $F_2 = 10$ នោះថ្នាក់មេដ្យានគឺ $[60, 80)$។\n$Me = 60 + \\left(\\dfrac{10 - 3}{7}\\right) 20 = 60 + \\left(\\dfrac{7}{7}\\right) 20 = 60 + 20 = 80$ (៨០ ពាន់រៀល)។",
+        "rubric": "ក. គណនាមធ្យមនព្វន្ធ $\\bar{x}=81$ ពាន់រៀល (៥ពិន្ទុ)\nខ. កំណត់ថ្នាក់មេដ្យាននិងគណនា $Me=80$ ពាន់រៀល (៥ពិន្ទុ)",
+        "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"40\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"150\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"25\" y=\"25\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ni</text><text x=\"280\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ថ្នាក់</text><rect x=\"50\" y=\"110\" width=\"40\" height=\"40\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"90\" y=\"70\" width=\"40\" height=\"80\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"130\" y=\"40\" width=\"40\" height=\"110\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"170\" y=\"80\" width=\"40\" height=\"70\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"210\" y=\"120\" width=\"40\" height=\"30\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><polyline points=\"70,110 110,70 150,40 190,80 230,120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"110\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"110\" cy=\"70\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"150\" cy=\"40\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"190\" cy=\"80\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"230\" cy=\"120\" r=\"3\" fill=\"#ef4444\"/><text x=\"80\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">អ៊ីស្តូក្រាម និងពហុកោណប្រេកង់</text></svg>"
+      }
+    ]
   }
 ]
