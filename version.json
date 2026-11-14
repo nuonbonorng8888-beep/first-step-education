@@ -1,8 +1,8 @@
 {
-  "version": "v117",
-  "build": 117,
+  "version": "v118",
+  "build": 118,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Grade 8 Worksheets, Quizzes, & Question Bank complete upgrade: audited all mathematical typesetting (eliminated raw slash fractions, standardized \\dfrac, fixed \\ldots and KaTeX math delimiters, converted currency signs to \\text{ ដុល្លារ}); strictly aligned exercises with MoEYS curriculum progression across all 18 lessons (74 points) from Chapter 1 to Chapter 4; created 3 distinct difficulty levels per point (Level 1 Easy, Level 2 Medium, Level 3 Hard) totaling 222 comprehensive exercises with detailed teacher solutions, rubrics, and dynamic score calculation (/ ៣); audited 740 point quiz questions and 805 question bank questions for zero math typography errors.",
-  "lastUpdated": "2026-11-15T02:11:45+07:00"
+  "changelog": "Grade 9 Worksheets, Quizzes, & Question Bank complete upgrade: audited all mathematical typesetting (zero raw slash fractions, standardized \\dfrac, fixed \\ldots and KaTeX math delimiters, converted currency signs to \\text{ ដុល្លារ}); strictly aligned exercises with MoEYS curriculum progression across all 18 lessons (78 points) from Chapter 1 to Chapter 4 (Diploma exam prep); added 78 Level 3 exercises (កម្រិត ៣: ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា) completing 3 distinct difficulty levels per point totaling 234 comprehensive exercises with detailed teacher solutions, rubrics, and dynamic score calculation (/ ៣); audited 830 point quiz questions and 845 question bank questions for zero math typography errors.",
+  "lastUpdated": "2026-11-15T02:24:20+07:00"
 }

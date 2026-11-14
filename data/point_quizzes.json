@@ -49070,7 +49070,7 @@
           "$\\dfrac{1}{2}$"
         ],
         "correct": 0,
-        "explanation": "$\\tan 60^\\circ = \\dfrac{\\sin 60^\\circ}{\\cos 60^\\circ} = \\dfrac{\\sqrt{3}/2}{1/2} = \\sqrt{3}$។"
+        "explanation": "$\\tan 60^\\circ = \\dfrac{\\sin 60^\\circ}{\\cos 60^\\circ} = \\dfrac{\\frac{\\sqrt{3}}{2}}{\\frac{1}{2}} = \\sqrt{3}$។"
       },
       {
         "id": "q6",
@@ -49394,7 +49394,7 @@
           "$\\dfrac{4}{5}$"
         ],
         "correct": 0,
-        "explanation": "$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha} = \\dfrac{3/5}{4/5} = \\dfrac{3}{4}$។"
+        "explanation": "$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha} = \\dfrac{\\frac{3}{5}}{\\frac{4}{5}} = \\dfrac{3}{4}$។"
       },
       {
         "id": "q6",
@@ -50999,7 +50999,7 @@
         "question": "ក្នុងត្រីកោណ $ABC$ បើ $M$ ជាចំណុចកណ្តាល $AB$ ហើយ $(MN) \\parallel (BC)$ ($N \\in [AC]$) តើ $N$ ជាអ្វី?",
         "options": [
           "ចំណុចកណ្តាលនៃ $AC$",
-          "ចំណុច $1/3$ នៃ $AC$",
+          "ចំណុច $\\dfrac{1}{3}$ នៃ $AC$",
           "កំពូលនៃត្រីកោណ",
           "មិនអាចដឹង"
         ],
@@ -67154,7 +67154,7 @@
           "$0.375$"
         ],
         "correct": 0,
-        "explanation": "$\\sqrt{7}$ ជាឫសនៃចំនួនមិនមែនការេពេញ ដូច្នេះជាចំនួនអសនិទាន (ឯ $\\sqrt{9}=3, 22/7, 0.375$ សុទ្ធតែជាចំនួនសនិទាន)។"
+        "explanation": "$\\sqrt{7}$ ជាឫសនៃចំនួនមិនមែនការេពេញ ដូច្នេះជាចំនួនអសនិទាន (ឯ $\\sqrt{9}=3, \\dfrac{22}{7}, 0.375$ សុទ្ធតែជាចំនួនសនិទាន)។"
       },
       {
         "id": "q9",
