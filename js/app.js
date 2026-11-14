@@ -3593,6 +3593,7 @@ function doGet(e) {
 
               <div class="quiz-question-box">
                 <h4 class="quiz-question">${this.formatQuestionText(q.question)}</h4>
+                ${(q.diagram && !(q.question || '').includes('<svg')) ? `<div class="quiz-diagram-box" style="margin: 10px auto; text-align: center;">${q.diagram}</div>` : ''}
               </div>
 
               <div class="quiz-options ${this.isSingleColumnOptions(q.options) ? 'options-stack' : 'options-grid'}">
@@ -4346,6 +4347,7 @@ function doGet(e) {
               </div>
               <div class="quiz-question-box">
                 <h4 class="quiz-question">${this.formatQuestionText(q.question)}</h4>
+                ${(q.diagram && !(q.question || '').includes('<svg')) ? `<div class="quiz-diagram-box" style="margin: 10px auto; text-align: center;">${q.diagram}</div>` : ''}
               </div>
               <div class="quiz-options ${this.isSingleColumnOptions(q.options) ? 'options-stack' : 'options-grid'}">
                 ${q.options.map((opt, optIndex) => {

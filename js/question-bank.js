@@ -20,6 +20,10 @@ class QuestionBankController {
 
     // Active generated exam state
     this.currentGeneratedExam = null;
+    this.standardExams = [];
+    this.examTab = 'standard';
+    this.selectedStandardGrade = 'ថ្នាក់ទី ៧';
+    this.selectedStandardChapter = 'all';
   }
 
   loadCustomQuestions() {
@@ -109,12 +113,12 @@ class QuestionBankController {
     this.isLoading = true;
 
     try {
-      const res = await fetch('data/question_bank.json');
-      if (res.ok) {
-        this.database = await res.json();
-      }
+      await Promise.all([
+        fetch('data/question_bank.json').then(r => r.ok ? r.json() : null).then(d => { if (d) this.database = d; }).catch(() => {}),
+        fetch('data/standard_exams.json').then(r => r.ok ? r.json() : null).then(d => { if (d) this.standardExams = d; }).catch(() => {})
+      ]);
     } catch (err) {
-      console.warn('Could not load question_bank.json:', err);
+      console.warn('Could not load databases:', err);
     }
 
     this.isLoading = false;
@@ -265,8 +269,224 @@ class QuestionBankController {
     document.body.insertAdjacentHTML('beforeend', modalHtml);
   }
 
+  
+  /* ================== STANDARD EXAMS TAB & ENGINE ================== */
+  switchExamModalTab(tab) {
+    this.examTab = tab;
+    const tabStd = document.getElementById('tabStandardExamsBtn');
+    const tabCst = document.getElementById('tabCustomExamsBtn');
+    const contStd = document.getElementById('examStandardTabContent');
+    const contCst = document.getElementById('examCustomTabContent');
+
+    if (tab === 'standard') {
+      if (tabStd) {
+        tabStd.className = 'btn btn-sm btn-primary';
+        tabStd.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+        tabStd.style.borderColor = '#10b981';
+      }
+      if (tabCst) {
+        tabCst.className = 'btn btn-sm btn-outline';
+        tabCst.style.background = 'transparent';
+        tabCst.style.borderColor = 'rgba(255,255,255,0.2)';
+      }
+      if (contStd) contStd.style.display = 'block';
+      if (contCst) contCst.style.display = 'none';
+      this.renderStandardExamsList();
+    } else {
+      if (tabCst) {
+        tabCst.className = 'btn btn-sm btn-primary';
+        tabCst.style.background = 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)';
+        tabCst.style.borderColor = '#6366f1';
+      }
+      if (tabStd) {
+        tabStd.className = 'btn btn-sm btn-outline';
+        tabStd.style.background = 'transparent';
+        tabStd.style.borderColor = 'rgba(255,255,255,0.2)';
+      }
+      if (contStd) contStd.style.display = 'none';
+      if (contCst) contCst.style.display = 'block';
+    }
+  }
+
+  selectStandardGrade(grade) {
+    this.selectedStandardGrade = grade;
+    this.selectedStandardChapter = 'all';
+
+    const container = document.getElementById('stdGradePills');
+    if (container) {
+      container.querySelectorAll('button').forEach(btn => {
+        const g = btn.getAttribute('data-grade');
+        if (g === grade) btn.className = 'btn btn-sm btn-primary';
+        else btn.className = 'btn btn-sm btn-outline';
+      });
+    }
+
+    this.renderStandardChaptersDropdown();
+    this.renderStandardExamsList();
+  }
+
+  selectStandardChapter(chId) {
+    this.selectedStandardChapter = chId;
+    this.renderStandardExamsList();
+  }
+
+  renderStandardChaptersDropdown() {
+    const sel = document.getElementById('stdChapterSelect');
+    if (!sel) return;
+
+    const exams = (this.standardExams || []).filter(e => e.grade === this.selectedStandardGrade);
+    const chaptersMap = new Map();
+    exams.forEach(e => {
+      if (e.chapterId && e.chapterTitle) {
+        chaptersMap.set(e.chapterId, e.chapterTitle);
+      }
+    });
+
+    let opts = '<option value="all">📖 គ្រប់ជំពូកទាំងអស់ (All Chapters)</option>';
+    chaptersMap.forEach((title, id) => {
+      opts += `<option value="${id}">${title}</option>`;
+    });
+    sel.innerHTML = opts;
+    sel.value = this.selectedStandardChapter || 'all';
+  }
+
+  renderStandardExamsList() {
+    const container = document.getElementById('standardExamsGrid');
+    const countBadge = document.getElementById('stdExamsCountBadge');
+    if (!container) return;
+
+    const allExams = this.standardExams || [];
+    let list = allExams.filter(e => e.grade === this.selectedStandardGrade);
+
+    if (this.selectedStandardChapter && this.selectedStandardChapter !== 'all') {
+      list = list.filter(e => e.chapterId === this.selectedStandardChapter);
+    }
+
+    if (countBadge) {
+      countBadge.textContent = `${list.length} វិញ្ញាសាស្តង់ដា`;
+    }
+
+    if (list.length === 0) {
+      container.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: rgba(15, 23, 42, 0.4); border-radius: 12px; border: 1px dashed rgba(255,255,255,0.15);">
+          <div style="font-size: 2.5rem; margin-bottom: 8px;">📚</div>
+          <h4 style="color: var(--text-primary); margin-bottom: 4px;">មិនទាន់មានវិញ្ញាសាស្តង់ដាសម្រាប់កម្រិតនេះនៅឡើយទេ</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">លោកគ្រូអាចប្រើប្រាស់ផ្ទាំង «បង្កើតវិញ្ញាសាចម្រុះតាមចិត្ត» ដើម្បីជ្រើសរើសមេរៀន និងបង្កើតវិញ្ញាសាភ្លាមៗ!</p>
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = list.map((exam, idx) => {
+      const isSem = exam.id.includes('sem');
+      const probCount = exam.written ? exam.written.length : 5;
+      const previewQuestions = (exam.written || []).slice(0, 2).map((p, pIdx) => {
+        const cleanQ = (p.q || '').replace(/<svg[\s\S]*?<\/svg>/gi, '[រូបធរណីមាត្រ]').replace(/\$([^\$]+)\$/g, '$1').trim();
+        const shortQ = cleanQ.length > 70 ? cleanQ.substring(0, 70) + '...' : cleanQ;
+        return `<div style="font-size: 0.73rem; color: #cbd5e1; margin-top: 3px; display: flex; gap: 4px;">
+          <span style="color: #38bdf8; font-weight: 700;">${pIdx + 1}.</span>
+          <span style="line-height: 1.35;">${shortQ}</span>
+        </div>`;
+      }).join('');
+
+      return `
+        <div style="background: rgba(30, 41, 59, 0.6); border: 1px solid ${isSem ? 'rgba(234, 179, 8, 0.4)' : 'rgba(16, 185, 129, 0.3)'}; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s, box-shadow 0.2s;"
+             onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.3)';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+          <div>
+            <!-- Top Badges -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 4px;">
+              <span style="font-size: 0.70rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: ${isSem ? 'rgba(234, 179, 8, 0.2)' : 'rgba(16, 185, 129, 0.2)'}; color: ${isSem ? '#fde047' : '#34d399'};">
+                ${isSem ? '🏆 វិញ្ញាសាប្រឡងរួម' : '📘 វិញ្ញាសាតាមមេរៀន'}
+              </span>
+              <span style="font-size: 0.68rem; color: #94a3b8; font-family: monospace;">
+                ⏱️ ${exam.duration || '៦០ នាទី'} • 💯 ${exam.totalScore || 20} ពិន្ទុ
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h4 style="font-size: 0.88rem; font-weight: 700; color: #f8fafc; margin-bottom: 6px; line-height: 1.4;">
+              ${exam.title}
+            </h4>
+
+            <!-- Chapter Tag -->
+            <div style="font-size: 0.72rem; color: #94a3b8; margin-bottom: 10px; display: flex; align-items: center; gap: 4px;">
+              <span>📖</span>
+              <span>${exam.chapterTitle || exam.lessonTitle || ''}</span>
+            </div>
+
+            <!-- Problem Previews -->
+            <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 8px 10px; margin-bottom: 12px;">
+              <div style="font-size: 0.68rem; font-weight: 700; color: #94a3b8; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;">
+                លំហាត់គំរូ (${probCount} លំហាត់សរសេរ + អត្រាកំណែ) ៖
+              </div>
+              ${previewQuestions}
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div style="display: flex; gap: 8px; margin-top: 6px;">
+            <button type="button" class="btn btn-sm btn-primary" onclick="window.questionBank.openStandardExamPreview('${exam.id}')"
+              style="flex: 1; padding: 7px 10px; font-size: 0.78rem; font-weight: 700; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-color: #10b981; display: flex; align-items: center; justify-content: center; gap: 4px;">
+              <span>📄 មើល & បោះពុម្ព A4</span>
+            </button>
+            <button type="button" class="btn btn-sm btn-outline" onclick="window.questionBank.launchOnlineStandardExam('${exam.id}')"
+              style="padding: 7px 10px; font-size: 0.78rem; font-weight: 700; border-color: #38bdf8; color: #38bdf8; display: flex; align-items: center; justify-content: center; gap: 4px;"
+              title="ចេញតេស្តអនឡាញជូនសិស្ស">
+              <span>🎯 តេស្ត</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  async openStandardExamPreview(examId) {
+    if (!this.standardExams || this.standardExams.length === 0) {
+      await this.init();
+    }
+    const exam = (this.standardExams || []).find(e => e.id === examId);
+    if (!exam) {
+      console.warn('Standard exam not found:', examId);
+      return;
+    }
+
+    const currentTeacher = window.App?.currentTeacher;
+    const teacherName = currentTeacher ? currentTeacher.name : 'លោកគ្រូ នួន បូណង (NGS)';
+    const schoolName = (currentTeacher && currentTeacher.school) ? currentTeacher.school : 'វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)';
+
+    const fullExam = {
+      ...exam,
+      teacher: teacherName,
+      school: schoolName
+    };
+    this.currentGeneratedExam = fullExam;
+    this.openExamPreviewModal(fullExam);
+  }
+
+  launchOnlineStandardExam(examId) {
+    if (!this.standardExams) return;
+    const exam = this.standardExams.find(e => e.id === examId);
+    if (!exam) return;
+
+    // Close modal
+    const modal = document.getElementById('multiLessonExamModal');
+    if (modal) modal.remove();
+
+    if (exam.lessonId && window.App?.selectLesson) {
+      window.App.selectLesson(exam.lessonId);
+      window.App.switchTab('quiz');
+      window.App.isExamMode = true;
+      window.App.examTimeLimit = 60;
+      window.App.showToast(`បានផ្ទុក "${exam.title}" ចូលក្នុងទម្រង់តេស្តអនឡាញរួចរាល់!`, 'success');
+      window.App.renderQuizTab();
+    } else {
+      this.openStandardExamPreview(examId);
+    }
+  }
+
   /* ================== MULTI-LESSON EXAM BUILDER (100% WRITTEN & MULTI-LESSON A4 ENGINE) ================== */
-  async openMultiLessonExamModal(defaultGrade = 'ថ្នាក់ទី ១១') {
+  async openMultiLessonExamModal(defaultGrade = 'ថ្នាក់ទី ៧') {
     await this.init();
 
     const currentTeacher = window.App?.currentTeacher;
@@ -286,13 +506,13 @@ class QuestionBankController {
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
-              <span>🎲 បង្កើតវិញ្ញាសាប្រឡង (A4 PDF) — សរសេរ ១០០%</span>
+              <span>📑 ប្រព័ន្ធវិញ្ញាសាប្រឡងស្តង់ដា & បង្កើតវិញ្ញាសា A4 (សរសេរ ១០០%)</span>
               <span style="font-size: 0.80rem; padding: 3px 10px; border-radius: 999px; background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: 700;">
-                ២ ទំព័រ A4 ស្តង់ដា
+                ២ ទំព័រ A4 + អត្រាកំណែពិស្តារ
               </span>
             </h3>
             <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
-              ជ្រើសរើសមេរៀនចាប់ពី ១ រហូតដល់លើសពី ២ មេរៀន (៣, ៤, ៥ មេរៀន...) — វិញ្ញាសាសរសេរ ១០០% ចេញចំៗតាមមេរៀន <strong>គ្មានមេរៀនផ្សេងលាយឡំ</strong>!
+              វិញ្ញាសាប្រឡងស្តង់ដាតាមមេរៀន និងឆមាស ស្របតាមសៀវភៅសិក្សាគោលក្រសួងអប់រំ យុវជន និងកីឡា (MoEYS) ឬបង្កើតវិញ្ញាសាចម្រុះតាមចិត្ត!
             </p>
           </div>
           <div style="display: flex; gap: 6px; align-items: center;">
@@ -301,6 +521,66 @@ class QuestionBankController {
           </div>
         </div>
 
+        <!-- Tab Navigation -->
+        <div style="display: flex; gap: 8px; border-bottom: 2px solid rgba(255, 255, 255, 0.1); margin-bottom: 16px;">
+          <button type="button" id="tabStandardExamsBtn" onclick="window.questionBank.switchExamModalTab('standard')"
+            class="btn btn-sm btn-primary"
+            style="padding: 8px 16px; font-weight: 700; border-radius: 8px 8px 0 0; background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-color: #10b981; display: flex; align-items: center; gap: 6px;">
+            <span>📚 វិញ្ញាសាស្តង់ដាតាមមេរៀន (Official Standard Exams)</span>
+            <span id="stdExamsCountBadge" style="font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.25);">
+              ២៤ វិញ្ញាសា
+            </span>
+          </button>
+          <button type="button" id="tabCustomExamsBtn" onclick="window.questionBank.switchExamModalTab('custom')"
+            class="btn btn-sm btn-outline"
+            style="padding: 8px 16px; font-weight: 700; border-radius: 8px 8px 0 0; background: transparent; border-color: rgba(255,255,255,0.2); display: flex; align-items: center; gap: 6px;">
+            <span>🛠️ បង្កើតវិញ្ញាសាចម្រុះតាមចិត្ត (Custom Multi-Lesson Builder)</span>
+          </button>
+        </div>
+
+        <!-- ================= TAB 1 : STANDARD EXAMS ================= -->
+        <div id="examStandardTabContent" style="display: block;">
+          <!-- Filter Bar -->
+          <div style="background: rgba(30, 41, 59, 0.5); border: 1px solid var(--border-glass); border-radius: 12px; padding: 12px; margin-bottom: 16px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;">
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
+                <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-secondary);">កម្រិតថ្នាក់ ៖</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;" id="stdGradePills">
+                  ${[
+                    { id: 'ថ្នាក់ទី ៧', label: 'ថ្នាក់ទី ៧' },
+                    { id: 'ថ្នាក់ទី ៨', label: 'ថ្នាក់ទី ៨' },
+                    { id: 'ថ្នាក់ទី ៩', label: 'ថ្នាក់ទី ៩' },
+                    { id: 'ថ្នាក់ទី ១០', label: 'ថ្នាក់ទី ១០' },
+                    { id: 'ថ្នាក់ទី ១១', label: 'ថ្នាក់ទី ១១' },
+                    { id: 'ថ្នាក់ទី ១២', label: 'ថ្នាក់ទី ១២' }
+                  ].map(g => `
+                    <button type="button" data-grade="${g.id}" class="btn btn-sm ${g.id === 'ថ្នាក់ទី ៧' ? 'btn-primary' : 'btn-outline'}"
+                      style="padding: 4px 10px; font-size: 0.78rem; border-radius: 8px;"
+                      onclick="window.questionBank.selectStandardGrade('${g.id}')">
+                      ${g.label}
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-secondary);">ជំពូក ៖</span>
+                <select id="stdChapterSelect" onchange="window.questionBank.selectStandardChapter(this.value)"
+                  class="form-select" style="max-width: 280px; padding: 5px 10px; font-size: 0.78rem; border-radius: 8px; background: rgba(15, 23, 42, 0.7); color: #fff; border: 1px solid var(--border-glass);">
+                  <option value="all">📖 គ្រប់ជំពូកទាំងអស់ (All Chapters)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standard Exams Grid -->
+          <div id="standardExamsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; margin-bottom: 16px;">
+            <!-- Rendered by renderStandardExamsList() -->
+          </div>
+        </div>
+
+        <!-- ================= TAB 2 : CUSTOM MULTI-LESSON BUILDER ================= -->
+        <div id="examCustomTabContent" style="display: none;">
         <!-- Grade Selector Row -->
         <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px;">
           <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-secondary);">កម្រិតថ្នាក់ & កម្រិត ៖</span>
@@ -405,6 +685,7 @@ class QuestionBankController {
             <span>➔</span>
           </button>
         </div>
+        </div> <!-- End of examCustomTabContent -->
       </div>
     `;
 
@@ -420,6 +701,8 @@ class QuestionBankController {
       ]
     };
 
+    this.renderStandardChaptersDropdown();
+    this.renderStandardExamsList();
     this.renderExamSlots();
   }
 
@@ -761,7 +1044,8 @@ class QuestionBankController {
 
     const modalBack = document.createElement('div');
     modalBack.id = 'examPreviewModalBack';
-    modalBack.className = 'fixed inset-0 z-50 overflow-y-auto flex flex-col items-center p-2 md:p-6 bg-slate-900/90 backdrop-blur-md';
+    modalBack.className = 'modal-overlay active';
+    modalBack.style.cssText = 'position: fixed; inset: 0; z-index: 10000; overflow-y: auto; display: flex; flex-direction: column; align-items: center; padding: 16px; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(8px);';
 
     // Calculation box height dynamically adjusted so all problems fit within Page 1 (A4)
     const calcBoxHeight = Math.max(70, Math.min(130, Math.floor(450 / Math.max(1, exam.written.length))));
@@ -833,7 +1117,7 @@ class QuestionBankController {
                 ${exam.title}
               </h2>
               <div style="font-size: 0.74rem; font-weight: 700; color: #475569;">
-                មេរៀនប្រឡង ៖ <span style="color: #0f172a;">${exam.lessons.join(' • ')}</span>
+                មេរៀនប្រឡង ៖ <span style="color: #0f172a;">${(Array.isArray(exam.lessons) ? exam.lessons.join(' • ') : (exam.lessonTitle || exam.chapterTitle || ''))}</span>
               </div>
             </div>
 
@@ -869,7 +1153,10 @@ class QuestionBankController {
                   <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 0.80rem; font-weight: 700; color: #0f172a; margin-bottom: 4px;">
                     <div style="display: flex; align-items: baseline; gap: 6px; flex: 1;">
                       <span style="color: #2563eb; font-weight: 800; white-space: nowrap;">លំហាត់ទី ${idx + 1} ៖</span>
-                      <span style="line-height: 1.45;">${this.formatMath(q.q)}</span>
+                      <div style="line-height: 1.45; width: 100%;">
+                        ${this.formatMath(q.q)}
+                        ${(q.diagram && !q.q.includes('<svg')) ? `<div style="margin: 6px auto; text-align: center;">${q.diagram}</div>` : ''}
+                      </div>
                     </div>
                     <div style="display: flex; align-items: center; gap: 6px; margin-left: 8px; white-space: nowrap;">
                       <span style="font-size: 0.64rem; font-weight: 600; color: #64748b; background: #e2e8f0; padding: 1px 5px; border-radius: 3px;">
@@ -953,17 +1240,22 @@ class QuestionBankController {
                     </span>
                   </div>
 
-                  <!-- Short Solution Box -->
-                  <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 6px 8px; font-size: 0.72rem; color: #1e293b; line-height: 1.5; font-family: monospace; margin-bottom: 4px;">
-                    <strong style="color: #b45309; font-family: sans-serif;">💡 កំណែខ្លីៗ & ដំណោះស្រាយ ៖</strong><br>
-                    ${this.formatMath(q.short_solution || q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
+                  <!-- Solution Box -->
+                  <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 6px 8px; font-size: 0.72rem; color: #1e293b; line-height: 1.5; font-family: monospace; margin-bottom: 4px; white-space: pre-wrap;">
+                    <strong style="color: #b45309; font-family: sans-serif;">💡 កំណែពិស្តារ & ដំណោះស្រាយ ៖</strong><br>
+                    ${this.formatMath(q.solution || q.short_solution || q.e || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
+                    ${(q.diagram && !q.q.includes('<svg') && !(q.solution || '').includes('<svg')) ? `<div style="margin: 6px auto; text-align: center;">${q.diagram}</div>` : ''}
                   </div>
 
                   <!-- Rubric Point Breakdown for this problem -->
-                  <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: #64748b; border-top: 1px dashed #e2e8f0; padding-top: 3px;">
-                    <span>• រូបមន្ត ៖ <strong>${(exam.ptsPerProblem * 0.25).toFixed(1)} pt</strong></span>
-                    <span>• ជំហានគណនា ៖ <strong>${(exam.ptsPerProblem * 0.50).toFixed(1)} pt</strong></span>
-                    <span>• ចម្លើយ ៖ <strong>${(exam.ptsPerProblem * 0.25).toFixed(1)} pt</strong></span>
+                  <div style="font-size: 0.68rem; color: #166534; border-top: 1px dashed #cbd5e1; padding-top: 4px; font-weight: 600;">
+                    ${q.rubric ? `🎯 <strong>ការបែងចែកពិន្ទុ ៖</strong> ${this.formatMath(q.rubric)}` : `
+                      <div style="display: flex; justify-content: space-between;">
+                        <span>• រូបមន្ត ៖ <strong>${(exam.ptsPerProblem * 0.25).toFixed(1)} pt</strong></span>
+                        <span>• ជំហានគណនា ៖ <strong>${(exam.ptsPerProblem * 0.50).toFixed(1)} pt</strong></span>
+                        <span>• ចម្លើយ ៖ <strong>${(exam.ptsPerProblem * 0.25).toFixed(1)} pt</strong></span>
+                      </div>
+                    `}
                   </div>
                 </div>
               `).join('')}
