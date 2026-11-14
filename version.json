@@ -1,7 +1,7 @@
 {
-  "version": "v113",
-  "build": 113,
-  "date": "2026-11-14",
+  "version": "v114",
+  "build": 114,
+  "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Grade 10 Question Bank total audit & authentic MoEYS alignment (760 authentic MCQs across all 26 lessons + 70 written problems with geometric vector, trigonometry, circle, parabola, and hyperbola SVG diagrams); integrated Grade 10 into Standard Exams Portal with 14 official chapter, semester & annual exams with complete step-by-step solutions and scoring rubrics."
+  "changelog": "Grade 11 Question Bank total audit & authentic MoEYS alignment (1320 authentic MCQs across all 33 lessons in Basic & Advanced levels + 75 written problems with geometric vector, trigonometry, complex numbers, matrices, and probability SVG diagrams); integrated Grade 11 into Standard Exams Portal with 15 official chapter, semester & annual exams with complete step-by-step solutions and scoring rubrics."
 }

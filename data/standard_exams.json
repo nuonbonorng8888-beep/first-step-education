@@ -3183,5 +3183,766 @@
         "diagram": "<svg viewBox=\"0 0 320 180\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><line x1=\"40\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"150\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"25\" y=\"25\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ni</text><text x=\"280\" y=\"165\" font-family=\"sans-serif\" font-size=\"10\" fill=\"#64748b\">ថ្នាក់</text><rect x=\"50\" y=\"110\" width=\"40\" height=\"40\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"90\" y=\"70\" width=\"40\" height=\"80\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"130\" y=\"40\" width=\"40\" height=\"110\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"170\" y=\"80\" width=\"40\" height=\"70\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><rect x=\"210\" y=\"120\" width=\"40\" height=\"30\" fill=\"#93c5fd\" stroke=\"#2563eb\"/><polyline points=\"70,110 110,70 150,40 190,80 230,120\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"70\" cy=\"110\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"110\" cy=\"70\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"150\" cy=\"40\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"190\" cy=\"80\" r=\"3\" fill=\"#ef4444\"/><circle cx=\"230\" cy=\"120\" r=\"3\" fill=\"#ef4444\"/><text x=\"80\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">អ៊ីស្តូក្រាម និងពហុកោណប្រេកង់</text></svg>"
       }
     ]
+  },
+  {
+    "id": "std-exam-g11b-01",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ១ ៖ ស្វ៊ីតចំនួនពិត (កម្រិតមូលដ្ឋាន)",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11b-1",
+    "chapterTitle": "ជំពូកទី ១ ៖ ស្វ៊ីត",
+    "lessonId": "les-g11b-1-2",
+    "lessonTitle": "មេរៀនទី ២ ៖ ស្វ៊ីតនព្វន្ត",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យស្វ៊ីត $(u_n)$ កំណត់ដោយ $u_n = 3n - 2$ ចំពោះគ្រប់ $n \\ge 1$ ($n \\in \\mathbb{N}^*$) ៖\nក. គណនា ៤ តួដំបូង $u_1, u_2, u_3, u_4$។\nខ. បង្ហាញថា $(u_n)$ ជាស្វ៊ីតនព្វន្ត រួចបញ្ជាក់ផលសងរួម $d$។",
+        "solution": "ក. គណនា ៤ តួដំបូង ៖\n- $u_1 = 3(1) - 2 = 1$\n- $u_2 = 3(2) - 2 = 4$\n- $u_3 = 3(3) - 2 = 7$\n- $u_4 = 3(4) - 2 = 10$\n\nខ. ពិនិត្យ $u_{n+1} - u_n = [3(n+1) - 2] - (3n - 2) = 3n + 1 - 3n + 2 = 3$ (ថេរ)។\nដូចនេះ $(u_n)$ ជាស្វ៊ីតនព្វន្តដែលមានផលសងរួម $d = 3$។",
+        "rubric": "ក. គណនា $u_1, u_2, u_3, u_4$ ត្រឹមត្រូវ (២ពិន្ទុ)\nខ. បង្ហាញ $u_{n+1} - u_n = 3$ និងសន្និដ្ឋាន $d=3$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"40\" y1=\"180\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><circle cx=\"80\" cy=\"140\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"75\" y=\"155\" font-size=\"10\" fill=\"#2563eb\">u₁</text><circle cx=\"130\" cy=\"115\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"125\" y=\"130\" font-size=\"10\" fill=\"#2563eb\">u₂</text><circle cx=\"180\" cy=\"90\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"175\" y=\"105\" font-size=\"10\" fill=\"#2563eb\">u₃</text><circle cx=\"230\" cy=\"65\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"225\" y=\"80\" font-size=\"10\" fill=\"#2563eb\">u₄</text><circle cx=\"280\" cy=\"40\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"275\" y=\"55\" font-size=\"10\" fill=\"#2563eb\">u₅</text><line x1=\"80\" y1=\"140\" x2=\"280\" y2=\"40\" stroke=\"#2563eb\" stroke-dasharray=\"3,3\" stroke-width=\"1.5\"/><text x=\"100\" y=\"30\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">ស្វ៊ីតនព្វន្ត ៖ uₙ = u₁ + (n-1)d</text><text x=\"80\" y=\"175\" font-size=\"10\" fill=\"#64748b\">1</text><text x=\"130\" y=\"175\" font-size=\"10\" fill=\"#64748b\">2</text><text x=\"180\" y=\"175\" font-size=\"10\" fill=\"#64748b\">3</text><text x=\"230\" y=\"175\" font-size=\"10\" fill=\"#64748b\">4</text><text x=\"280\" y=\"175\" font-size=\"10\" fill=\"#64748b\">5</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"40\" y1=\"180\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><circle cx=\"80\" cy=\"140\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"75\" y=\"155\" font-size=\"10\" fill=\"#2563eb\">u₁</text><circle cx=\"130\" cy=\"115\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"125\" y=\"130\" font-size=\"10\" fill=\"#2563eb\">u₂</text><circle cx=\"180\" cy=\"90\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"175\" y=\"105\" font-size=\"10\" fill=\"#2563eb\">u₃</text><circle cx=\"230\" cy=\"65\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"225\" y=\"80\" font-size=\"10\" fill=\"#2563eb\">u₄</text><circle cx=\"280\" cy=\"40\" r=\"4.5\" fill=\"#2563eb\"/><text x=\"275\" y=\"55\" font-size=\"10\" fill=\"#2563eb\">u₅</text><line x1=\"80\" y1=\"140\" x2=\"280\" y2=\"40\" stroke=\"#2563eb\" stroke-dasharray=\"3,3\" stroke-width=\"1.5\"/><text x=\"100\" y=\"30\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">ស្វ៊ីតនព្វន្ត ៖ uₙ = u₁ + (n-1)d</text><text x=\"80\" y=\"175\" font-size=\"10\" fill=\"#64748b\">1</text><text x=\"130\" y=\"175\" font-size=\"10\" fill=\"#64748b\">2</text><text x=\"180\" y=\"175\" font-size=\"10\" fill=\"#64748b\">3</text><text x=\"230\" y=\"175\" font-size=\"10\" fill=\"#64748b\">4</text><text x=\"280\" y=\"175\" font-size=\"10\" fill=\"#64748b\">5</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "ស្វ៊ីតនព្វន្តមួយមានតួទី ៣ ស្មើ $11$ ($u_3 = 11$) និងតួទី ៧ ស្មើ $27$ ($u_7 = 27$) ៖\nក. រកតួទីមួយ $u_1$ និងផលសងរួម $d$ នៃស្វ៊ីតនេះ។\nខ. គណនាផលបូក ២០ តួដំបូង $S_{20} = u_1 + u_2 + \\dots + u_{20}$។",
+        "solution": "ក. តាមរូបមន្តតួទូទៅ ៖ $u_n = u_1 + (n-1)d$\n- $u_3 = u_1 + 2d = 11$ (១)\n- $u_7 = u_1 + 6d = 27$ (២)\nយក (២) - (១) ៖ $4d = 16 \\Rightarrow d = 4$។\nជំនួស $d = 4$ ក្នុង (១) ៖ $u_1 + 2(4) = 11 \\Rightarrow u_1 = 3$។\n\nខ. ផលបូក ២០ តួដំបូង ៖\n$S_{20} = \\frac{20}{2}[2u_1 + (20-1)d] = 10[2(3) + 19(4)] = 10[6 + 76] = 10 \\times 82 = 820$។",
+        "rubric": "ក. បង្កើតប្រព័ន្ធសមីការ រកបាន $d=4, u_1=3$ (២ពិន្ទុ)\nខ. សរសេររូបមន្ត $S_n$ និងគណនាបាន $S_{20} = 820$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ស្វ៊ីតធរណីមាត្រ $(v_n)$ មួយមានតួវិជ្ជមាន ដោយដឹងថា $v_2 = 6$ និង $v_4 = 24$ ៖\nក. កំណត់តួទីមួយ $v_1$ និងផលធៀបរួម $q$ នៃស្វ៊ីតនេះ។\nខ. គណនាផលបូក ៦ តួដំបូង $S_6 = v_1 + v_2 + \\dots + v_6$។",
+        "solution": "ក. តាមរូបមន្ត $v_n = v_1 q^{n-1}$ ៖\n- $v_2 = v_1 q = 6$\n- $v_4 = v_1 q^3 = 24$\nចែកអង្គនឹងអង្គ ៖ $\\frac{v_1 q^3}{v_1 q} = \\frac{24}{6} \\Rightarrow q^2 = 4 \\Rightarrow q = 2$ (ព្រោះគ្រប់តួវិជ្ជមាន)។\nទាញបាន $v_1 = \\frac{6}{2} = 3$។\n\nខ. ផលបូក ៦ តួដំបូង ៖\n$S_6 = v_1 \\frac{q^6 - 1}{q - 1} = 3 \\times \\frac{2^6 - 1}{2 - 1} = 3(64 - 1) = 3 \\times 63 = 189$។",
+        "rubric": "ក. រកបាន $q=2$ និង $v_1=3$ (២ពិន្ទុ)\nខ. ប្រើរូបមន្តផលបូកស្វ៊ីតធរណីមាត្រ គណនាបាន $S_6 = 189$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គេឱ្យស្វ៊ីត $(a_n)$ កំណត់ដោយ $a_1 = 2$ និង $a_{n+1} = a_n + 4$ ចំពោះគ្រប់ $n \\ge 1$ ៖\nក. កំណត់ប្រភេទនៃស្វ៊ីត $(a_n)$ រួចសរសេរកន្សោមតួទី $n$ ($a_n$) ជាអនុគមន៍នៃ $n$។\nខ. តើចំនួន $102$ ជាតួទីប៉ុន្មាននៃស្វ៊ីតនេះ?",
+        "solution": "ក. ដោយ $a_{n+1} - a_n = 4$ (ថេរ) នោះ $(a_n)$ ជាស្វ៊ីតនព្វន្តដែលមានតួដំបូង $a_1 = 2$ និងផលសងរួម $d = 4$។\nកន្សោមតួទី $n$ ៖ $a_n = a_1 + (n-1)d = 2 + (n-1)4 = 4n - 2$។\n\nខ. ឱ្យ $a_n = 102$ ៖\n$4n - 2 = 102 \\Rightarrow 4n = 104 \\Rightarrow n = 26$។\nដូចនេះ $102$ ជាតួទី $26$ នៃស្វ៊ីត ($a_{26} = 102$)។",
+        "rubric": "ក. បញ្ជាក់ស្វ៊ីតនព្វន្ត និងរកបាន $a_n = 4n - 2$ (២ពិន្ទុ)\nខ. ដោះស្រាយសមីការរកបាន $n = 26$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "គណនាផលបូកអនន្តនៃស្វ៊ីតធរណីមាត្រ ៖\n$S = 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots + \\frac{1}{2^n} + \\dots$",
+        "solution": "ស្វ៊ីតខាងលើជាស្វ៊ីតធរណីមាត្រអនន្តដែលមានតួទីមួយ $u_1 = 1$ និងផលធៀបរួម $q = \\frac{1}{2}$។\nដោយ $|q| = \\left|\\frac{1}{2}\\right| < 1$ នោះស្វ៊ីតនេះជាស្វ៊ីតរួម ហើយផលបូកអនន្តកំណត់ដោយ ៖\n$S = \\frac{u_1}{1 - q} = \\frac{1}{1 - \\frac{1}{2}} = \\frac{1}{\\frac{1}{2}} = 2$។",
+        "rubric": "បញ្ជាក់លក្ខខណ្ឌ $|q| < 1$ (១ពិន្ទុ), សរសេររូបមន្ត $S = \\frac{u_1}{1-q}$ (១.៥ពិន្ទុ), គណនាបាន $S=2$ (១.៥ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11b-02",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល និងលោការីត",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11b-2",
+    "chapterTitle": "ជំពូកទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល និងអនុគមន៍លោការីត",
+    "lessonId": "les-g11b-2-1",
+    "lessonTitle": "មេរៀនទី ១ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "ដោះស្រាយសមីការអិចស្ប៉ូណង់ស្យែលក្នុង $\\mathbb{R}$ ៖\nក. $2^{x+3} = 32$\nខ. $3^{2x+1} - 10 \\cdot 3^x + 3 = 0$",
+        "solution": "ក. $2^{x+3} = 32 = 2^5 \\Rightarrow x + 3 = 5 \\Rightarrow x = 2$។\n\nខ. សរសេរ $3 \\cdot (3^x)^2 - 10 \\cdot 3^x + 3 = 0$។\nតាង $t = 3^x > 0$ ៖ $3t^2 - 10t + 3 = 0$។\n$\\Delta' = (-5)^2 - 3(3) = 25 - 9 = 16 = 4^2$។\n$t = \\frac{5 \\pm 4}{3} \\Rightarrow t_1 = 3, t_2 = \\frac{1}{3}$ (យកទាំងពីរ)។\n- $3^x = 3 \\Rightarrow x = 1$\n- $3^x = 3^{-1} \\Rightarrow x = -1$\nដូចនេះ សំណុំចម្លើយគឺ $S = \\{-1, 1\\}$។",
+        "rubric": "ក. ដោះស្រាយបាន $x=2$ (១.៥ពិន្ទុ)\nខ. តាងអថេរជំនួយ ដោះស្រាយរក $t$ និងទាញបាន $x=\\pm 1$ (២.៥ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"290\" y=\"175\" font-size=\"10\" fill=\"#334155\">x</text><text x=\"168\" y=\"28\" font-size=\"10\" fill=\"#334155\">y</text><path d=\"M 30,158 Q 120,155 160,120 T 260,25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"240\" y=\"20\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = a^x (a > 1)</text><path d=\"M 60,25 Q 120,105 160,120 T 290,158\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4,2\"/><text x=\"40\" y=\"20\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">y = a^x (0 &lt; a &lt; 1)</text><circle cx=\"160\" cy=\"120\" r=\"4\" fill=\"#0f172a\"/><text x=\"168\" y=\"125\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">(0, 1)</text><text x=\"145\" y=\"175\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"70\" y=\"185\" font-size=\"9\" fill=\"#059669\">អ័ក្សដេក y = 0 ជាអាស៊ីមតូតដេក</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"290\" y=\"175\" font-size=\"10\" fill=\"#334155\">x</text><text x=\"168\" y=\"28\" font-size=\"10\" fill=\"#334155\">y</text><path d=\"M 30,158 Q 120,155 160,120 T 260,25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"240\" y=\"20\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = a^x (a > 1)</text><path d=\"M 60,25 Q 120,105 160,120 T 290,158\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4,2\"/><text x=\"40\" y=\"20\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">y = a^x (0 &lt; a &lt; 1)</text><circle cx=\"160\" cy=\"120\" r=\"4\" fill=\"#0f172a\"/><text x=\"168\" y=\"125\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">(0, 1)</text><text x=\"145\" y=\"175\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"70\" y=\"185\" font-size=\"9\" fill=\"#059669\">អ័ក្សដេក y = 0 ជាអាស៊ីមតូតដេក</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "ដោះស្រាយសមីការលោការីតក្នុង $\\mathbb{R}$ ៖\n$\\log_2(x + 2) + \\log_2(x - 2) = 5$",
+        "solution": "- លក្ខខណ្ឌអត្ថិភាព ៖ $\\begin{cases} x + 2 > 0 \\\\ x - 2 > 0 \\end{cases} \\Rightarrow x > 2$។\n- អនុវត្តរូបមន្ត $\\log_a M + \\log_a N = \\log_a(MN)$ ៖\n  $\\log_2[(x+2)(x-2)] = 5$\n  $\\log_2(x^2 - 4) = 5 \\Rightarrow x^2 - 4 = 2^5 = 32$\n  $x^2 = 36 \\Rightarrow x = 6$ ឬ $x = -6$។\n- ផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x > 2$ ៖ យកតែ $x = 6$ (បោះបង់ $x = -6$)។\nដូចនេះ សមីការមានឫសតែមួយគត់គឺ $x = 6$។",
+        "rubric": "កំណត់លក្ខខណ្ឌ $x>2$ (១ពិន្ទុ), ប្រើរូបមន្តផលបូកលោការីត (១.៥ពិន្ទុ), រកឫសនិងផ្ទៀងផ្ទាត់សន្និដ្ឋាន $x=6$ (១.៥ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"190\" x2=\"80\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"290\" y=\"115\" font-size=\"10\" fill=\"#334155\">x</text><text x=\"65\" y=\"30\" font-size=\"10\" fill=\"#334155\">y</text><path d=\"M 85,185 Q 95,120 140,100 T 290,40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"140\" cy=\"100\" r=\"4\" fill=\"#ef4444\"/><text x=\"135\" y=\"118\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">(1, 0)</text><text x=\"220\" y=\"35\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = log_a(x) (a > 1)</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><line x1=\"80\" y1=\"20\" x2=\"80\" y2=\"190\" stroke=\"#dc2626\" stroke-dasharray=\"3,3\" stroke-width=\"1\"/><text x=\"90\" y=\"180\" font-size=\"9\" fill=\"#dc2626\">អាស៊ីមតូតឈរ x = 0</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"80\" y1=\"190\" x2=\"80\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"290\" y=\"115\" font-size=\"10\" fill=\"#334155\">x</text><text x=\"65\" y=\"30\" font-size=\"10\" fill=\"#334155\">y</text><path d=\"M 85,185 Q 95,120 140,100 T 290,40\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"140\" cy=\"100\" r=\"4\" fill=\"#ef4444\"/><text x=\"135\" y=\"118\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">(1, 0)</text><text x=\"220\" y=\"35\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = log_a(x) (a > 1)</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><line x1=\"80\" y1=\"20\" x2=\"80\" y2=\"190\" stroke=\"#dc2626\" stroke-dasharray=\"3,3\" stroke-width=\"1\"/><text x=\"90\" y=\"180\" font-size=\"9\" fill=\"#dc2626\">អាស៊ីមតូតឈរ x = 0</text></svg>"
+      },
+      {
+        "num": 3,
+        "q": "ដោះស្រាយវិសមីការក្នុង $\\mathbb{R}$ ៖\nក. $2^{3x - 1} \\ge 16$\nខ. $\\log_3(2x - 5) < 2$",
+        "solution": "ក. $2^{3x - 1} \\ge 2^4$។ ដោយគោល $2 > 1$ នាំឱ្យ ៖\n   $3x - 1 \\ge 4 \\Rightarrow 3x \\ge 5 \\Rightarrow x \\ge \\frac{5}{3}$។\n\nខ. លក្ខខណ្ឌ ៖ $2x - 5 > 0 \\Rightarrow x > \\frac{5}{2}$។\n   វិសមីការក្លាយជា ៖ $2x - 5 < 3^2 = 9$ (ព្រោះគោល $3 > 1$)\n   $2x < 14 \\Rightarrow x < 7$។\n   ប្រសព្វជាមួយលក្ខខណ្ឌ ៖ $\\frac{5}{2} < x < 7$។",
+        "rubric": "ក. ដោះស្រាយវិសមីការអិចស្ប៉ូបាន $x \\ge 5/3$ (២ពិន្ទុ)\nខ. រកលក្ខខណ្ឌ ដោះស្រាយនិងប្រសព្វសំណុំចម្លើយបាន $5/2 < x < 7$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គណនាតម្លៃលេខនៃកន្សោមលោការីត ៖\n$A = \\log_2 32 - \\log_3 81 + \\ln(e^4) + 5^{\\log_5 7}$",
+        "solution": "- $\\log_2 32 = \\log_2(2^5) = 5$\n- $\\log_3 81 = \\log_3(3^4) = 4$\n- $\\ln(e^4) = 4$\n- $5^{\\log_5 7} = 7$\n\nដូចនេះ ៖ $A = 5 - 4 + 4 + 7 = 12$។",
+        "rubric": "គណនាតម្លៃនីមួយៗបានត្រឹមត្រូវ (១ពិន្ទុ x ៣), សរុបតម្លៃ $A = 12$ (១ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ចំនួនបាក់តេរីក្នុងបន្ទប់ពិសោធន៍មួយកើនឡើងតាមរូបមន្ត $N(t) = N_0 \\cdot e^{0.05t}$ (ដែល $t$ គិតជាម៉ោង)។\nក. ប្រសិនបើដំបូងមានបាក់តេរី $N_0 = 1000$ ក្បាល តើក្រោយពេល $20$ ម៉ោងមានបាក់តេរីចំនួនប៉ុន្មាន? (យក $e \\approx 2.718$)\nខ. តើរយៈពេលប៉ុន្មានម៉ោងទើបចំនួនបាក់តេរីកើនឡើងដល់ទ្វេដងនៃចំនួនដើម? (យក $\\ln 2 \\approx 0.693$)",
+        "solution": "ក. ចំពោះ $N_0 = 1000$ និង $t = 20$ ៖\n   $N(20) = 1000 \\cdot e^{0.05 \\times 20} = 1000 \\cdot e^1 \\approx 1000 \\times 2.718 = 2718$ ក្បាល។\n\nខ. ចំនួនកើនឡើងទ្វេដង ៖ $N(t) = 2N_0$\n   $N_0 e^{0.05t} = 2N_0 \\Rightarrow e^{0.05t} = 2$\n   $0.05t = \\ln 2 \\approx 0.693 \\Rightarrow t = \\frac{0.693}{0.05} = 13.86$ ម៉ោង។",
+        "rubric": "ក. ជំនួសតម្លៃគណនាបាន $N(20) \\approx 2718$ (២ពិន្ទុ)\nខ. បង្កើតសមីការ បំពាក់ $\\ln$ រកបាន $t \\approx 13.86$ ម៉ោង (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11b-03",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៣ ៖ អនុគមន៍ត្រីកោណមាត្រ និងសមីការ",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11b-3",
+    "chapterTitle": "ជំពូកទី ៣ ៖ អនុគមន៍ត្រីកោណមាត្រ",
+    "lessonId": "les-g11b-3-3",
+    "lessonTitle": "មេរៀនទី ៣ ៖ សមីការ និងវិសមីការត្រីកោណមាត្រ",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "ដោះស្រាយសមីការត្រីកោណមាត្រគ្រឹះក្នុង $\\mathbb{R}$ ៖\nក. $\\sin x = \\frac{\\sqrt{3}}{2}$\nខ. $\\cos\\left(2x - \\frac{\\pi}{3}\\right) = \\frac{\\sqrt{2}}{2}$",
+        "solution": "ក. $\\sin x = \\sin\\frac{\\pi}{3} \\Rightarrow \\begin{cases} x = \\frac{\\pi}{3} + 2k\\pi \\\\ x = \\pi - \\frac{\\pi}{3} + 2k\\pi = \\frac{2\\pi}{3} + 2k\\pi \\end{cases} (k \\in \\mathbb{Z})$។\n\nខ. $\\cos\\left(2x - \\frac{\\pi}{3}\\right) = \\cos\\frac{\\pi}{4}$ នាំឱ្យ ៖\n   - $2x - \\frac{\\pi}{3} = \\frac{\\pi}{4} + 2k\\pi \\Rightarrow 2x = \\frac{7\\pi}{12} + 2k\\pi \\Rightarrow x = \\frac{7\\pi}{24} + k\\pi$\n   - $2x - \\frac{\\pi}{3} = -\\frac{\\pi}{4} + 2k\\pi \\Rightarrow 2x = \\frac{\\pi}{12} + 2k\\pi \\Rightarrow x = \\frac{\\pi}{24} + k\\pi$ ($k \\in \\mathbb{Z}$)។",
+        "rubric": "ក. រកចម្លើយពីរក្រុមបានត្រឹមត្រូវ (២ពិន្ទុ)\nខ. អនុវត្តរូបមន្តកូស៊ីនុស រកចម្លើយទាំងពីរក្រុម (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "ដោះស្រាយសមីការត្រីកោណមាត្រលីនេអ៊ែរ ៖\n$\\sqrt{3}\\sin x - \\cos x = \\sqrt{2}$",
+        "solution": "ចែកអង្គទាំងពីរនឹង $\\sqrt{(\\sqrt{3})^2 + (-1)^2} = \\sqrt{3+1} = 2$ ៖\n$\\frac{\\sqrt{3}}{2}\\sin x - \\frac{1}{2}\\cos x = \\frac{\\sqrt{2}}{2}$\n$\\sin x \\cos\\frac{\\pi}{6} - \\cos x \\sin\\frac{\\pi}{6} = \\frac{\\sqrt{2}}{2}$\n$\\sin\\left(x - \\frac{\\pi}{6}\\right) = \\sin\\frac{\\pi}{4}$ នាំឱ្យ ៖\n- $x - \\frac{\\pi}{6} = \\frac{\\pi}{4} + 2k\\pi \\Rightarrow x = \\frac{5\\pi}{12} + 2k\\pi$\n- $x - \\frac{\\pi}{6} = \\pi - \\frac{\\pi}{4} + 2k\\pi = \\frac{3\\pi}{4} + 2k\\pi \\Rightarrow x = \\frac{11\\pi}{12} + 2k\\pi$ ($k \\in \\mathbb{Z}$)។",
+        "rubric": "ចែកនឹង $2$ និងបម្លែងជា $\\sin(x - \\pi/6)$ (២ពិន្ទុ), រកឃើញចម្លើយទាំងពីរក្រុម (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ស្រាយបញ្ជាក់សមភាពត្រីកោណមាត្រ ៖\n$\\frac{\\sin 2x}{1 + \\cos 2x} = \\tan x$ (ចំពោះគ្រប់ $x$ ដែលកន្សោមកំណត់)។",
+        "solution": "ពិនិត្យអង្គខាងឆ្វេង $LHS = \\frac{\\sin 2x}{1 + \\cos 2x}$ ៖\n- តាមរូបមន្តមុំទ្វេ ៖ $\\sin 2x = 2\\sin x \\cos x$\n- $1 + \\cos 2x = 1 + (2\\cos^2 x - 1) = 2\\cos^2 x$\nជំនួសចូល ៖\n$LHS = \\frac{2\\sin x \\cos x}{2\\cos^2 x} = \\frac{\\sin x}{\\cos x} = \\tan x = RHS$។\nសមភាពត្រូវបានស្រាយបញ្ជាក់។",
+        "rubric": "ប្រើរូបមន្ត $\\sin 2x$ (១.៥ពិន្ទុ), ប្រើរូបមន្ត $1+\\cos 2x$ (១.៥ពិន្ទុ), សម្រួលស្មើ $\\tan x$ (១ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គណនាតម្លៃប្រាកដនៃ ៖\nក. $\\cos 15^\\circ$ ដោយប្រើរូបមន្តផលដក ($15^\\circ = 45^\\circ - 30^\\circ$)\nខ. $\\sin 75^\\circ$ ដោយប្រើរូបមន្តផលបូក ($75^\\circ = 45^\\circ + 30^\\circ$)",
+        "solution": "ក. $\\cos 15^\\circ = \\cos(45^\\circ - 30^\\circ) = \\cos 45^\\circ \\cos 30^\\circ + \\sin 45^\\circ \\sin 30^\\circ$\n   $= \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{2} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$។\n\nខ. $\\sin 75^\\circ = \\sin(45^\\circ + 30^\\circ) = \\sin 45^\\circ \\cos 30^\\circ + \\cos 45^\\circ \\sin 30^\\circ$\n   $= \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{2} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$។",
+        "rubric": "ក. អនុវត្តរូបមន្ត $\\cos(a-b)$ គណនាបាន $(\\sqrt{6}+\\sqrt{2})/4$ (២ពិន្ទុ)\nខ. អនុវត្តរូបមន្ត $\\sin(a+b)$ គណនាបាន $(\\sqrt{6}+\\sqrt{2})/4$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ដោះស្រាយសមីការដឺក្រេទីពីរត្រីកោណមាត្រក្នុងចន្លោះ $[0, 2\\pi]$ ៖\n$2\\cos^2 x - 3\\cos x + 1 = 0$",
+        "solution": "តាង $t = \\cos x$ ($-1 \\le t \\le 1$) ៖\n$2t^2 - 3t + 1 = 0$\nមានទម្រង់ $a + b + c = 2 - 3 + 1 = 0$ នាំឱ្យ ៖\n$t_1 = 1$, $t_2 = \\frac{1}{2}$ (យកទាំងពីរ)។\n- ចំពោះ $\\cos x = 1$ ក្នុង $[0, 2\\pi]$ ៖ $x = 0$ ឬ $x = 2\\pi$។\n- ចំពោះ $\\cos x = \\frac{1}{2}$ ក្នុង $[0, 2\\pi]$ ៖ $x = \\frac{\\pi}{3}$ ឬ $x = 2\\pi - \\frac{\\pi}{3} = \\frac{5\\pi}{3}$។\nដូចនេះ សំណុំចម្លើយក្នុង $[0, 2\\pi]$ គឺ $S = \\left\\{0, \\frac{\\pi}{3}, \\frac{5\\pi}{3}, 2\\pi\\right\\}$។",
+        "rubric": "ដោះស្រាយសមីការរក $t=1, t=1/2$ (២ពិន្ទុ), កំណត់ចម្លើយត្រឹមត្រូវក្នុង $[0, 2\\pi]$ (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11b-04",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៤ ៖ ម៉ាទ្រីស និងដេទែរមីណង់",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11b-4",
+    "chapterTitle": "ជំពូកទី ៤ ៖ ម៉ាទ្រីស និងដេទែរមីណង់",
+    "lessonId": "les-g11b-4-2",
+    "lessonTitle": "មេរៀនទី ២ ៖ ដេទែរមីណង់",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យម៉ាទ្រីស $A = \\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\end{pmatrix}$ និង $B = \\begin{pmatrix} 1 & -1 \\\\ 2 & 0 \\end{pmatrix}$ ៖\nក. គណនា $2A - 3B$។\nខ. គណនាផលគុណម៉ាទ្រីស $AB$។",
+        "solution": "ក. $2A = \\begin{pmatrix} 4 & 6 \\\\ 2 & 8 \\end{pmatrix}$, $3B = \\begin{pmatrix} 3 & -3 \\\\ 6 & 0 \\end{pmatrix}$ ៖\n   $2A - 3B = \\begin{pmatrix} 4-3 & 6-(-3) \\\\ 2-6 & 8-0 \\end{pmatrix} = \\begin{pmatrix} 1 & 9 \\\\ -4 & 8 \\end{pmatrix}$។\n\nខ. ផលគុណ $AB$ ៖\n   $AB = \\begin{pmatrix} 2(1) + 3(2) & 2(-1) + 3(0) \\\\ 1(1) + 4(2) & 1(-1) + 4(0) \\end{pmatrix} = \\begin{pmatrix} 2+6 & -2+0 \\\\ 1+8 & -1+0 \\end{pmatrix} = \\begin{pmatrix} 8 & -2 \\\\ 9 & -1 \\end{pmatrix}$។",
+        "rubric": "ក. គណនា $2A-3B$ ត្រឹមត្រូវ (២ពិន្ទុ)\nខ. គុណម៉ាទ្រីស $AB$ ត្រឹមត្រូវ (២ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "គេឱ្យម៉ាទ្រីស $M = \\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$ ៖\nក. គណនាដេទែរមីណង់ $\\det(M)$។\nខ. រកម៉ាទ្រីសច្រាស $M^{-1}$។",
+        "solution": "ក. $\\det(M) = (3)(4) - (2)(1) = 12 - 2 = 10$។\n\nខ. ដោយ $\\det(M) = 10 \\ne 0$ នាំឱ្យ $M$ មានច្រាស ៖\n   $M^{-1} = \\frac{1}{\\det(M)} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} = \\frac{1}{10} \\begin{pmatrix} 4 & -2 \\\\ -1 & 3 \\end{pmatrix} = \\begin{pmatrix} 0.4 & -0.2 \\\\ -0.1 & 0.3 \\end{pmatrix}$។",
+        "rubric": "ក. គណនា $\\det(M) = 10$ (១.៥ពិន្ទុ)\nខ. សរសេររូបមន្តម៉ាទ្រីសច្រាស និងរកបាន $M^{-1}$ (២.៥ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ដោះស្រាយប្រព័ន្ធសមីការលីនេអ៊ែរតាមវិធានក្រាម័រ (Cramer's Rule) ៖\n$\\begin{cases} 2x + 5y = 1 \\\\ 3x - 2y = 11 \\end{cases}$",
+        "solution": "- គណនាដេទែរមីណង់មេគុណ ៖\n  $D = \\begin{vmatrix} 2 & 5 \\\\ 3 & -2 \\end{vmatrix} = 2(-2) - 5(3) = -4 - 15 = -19 \\ne 0$\n- $D_x = \\begin{vmatrix} 1 & 5 \\\\ 11 & -2 \\end{vmatrix} = 1(-2) - 5(11) = -2 - 55 = -57$\n- $D_y = \\begin{vmatrix} 2 & 1 \\\\ 3 & 11 \\end{vmatrix} = 2(11) - 1(3) = 22 - 3 = 19$\n- ទាញរកចម្លើយ ៖\n  $x = \\frac{D_x}{D} = \\frac{-57}{-19} = 3$\n  $y = \\frac{D_y}{D} = \\frac{19}{-19} = -1$\nដូចនេះ គូចម្លើយគឺ $(x, y) = (3, -1)$។",
+        "rubric": "គណនា $D=-19$ (១ពិន្ទុ), គណនា $D_x=-57$ និង $D_y=19$ (២ពិន្ទុ), ទាញបាន $(x,y)=(3,-1)$ (១ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គណនាដេទែរមីណង់លំដាប់ ៣ ៖\n$\\Delta = \\begin{vmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 1 & 0 & 2 \\end{vmatrix}$",
+        "solution": "ពង្រាយតាមជួរដេកទី ១ ៖\n$\\Delta = 1 \\cdot \\begin{vmatrix} 4 & 5 \\\\ 0 & 2 \\end{vmatrix} - 2 \\cdot \\begin{vmatrix} 0 & 5 \\\\ 1 & 2 \\end{vmatrix} + 3 \\cdot \\begin{vmatrix} 0 & 4 \\\\ 1 & 0 \\end{vmatrix}$\n$= 1(8 - 0) - 2(0 - 5) + 3(0 - 4)$\n$= 8 - 2(-5) + 3(-4) = 8 + 10 - 12 = 6$។",
+        "rubric": "ពង្រាយដេទែរមីណង់តាមជួរដេក ឬវិធីសារូស (២ពិន្ទុ), គណនាតម្លៃលេខបាន $\\Delta = 6$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ដោះស្រាយសមីការម៉ាទ្រីស $AX = B$ ដែល ៖\n$A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 5 \\end{pmatrix}$ និង $B = \\begin{pmatrix} 4 \\\\ 11 \\end{pmatrix}$",
+        "solution": "- គណនា $\\det(A) = (1)(5) - (2)(3) = 5 - 6 = -1 \\ne 0$។\n- ម៉ាទ្រីសច្រាស ៖ $A^{-1} = \\frac{1}{-1} \\begin{pmatrix} 5 & -2 \\\\ -3 & 1 \\end{pmatrix} = \\begin{pmatrix} -5 & 2 \\\\ 3 & -1 \\end{pmatrix}$។\n- $X = A^{-1} B = \\begin{pmatrix} -5 & 2 \\\\ 3 & -1 \\end{pmatrix} \\begin{pmatrix} 4 \\\\ 11 \\end{pmatrix} = \\begin{pmatrix} -5(4) + 2(11) \\\\ 3(4) + (-1)(11) \\end{pmatrix} = \\begin{pmatrix} -20 + 22 \\\\ 12 - 11 \\end{pmatrix} = \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$។\nដូចនេះ $X = \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$ (ពោលគឺ $x = 2, y = 1$)។",
+        "rubric": "រកម៉ាទ្រីសច្រាស $A^{-1}$ (២ពិន្ទុ), គុណ $A^{-1}B$ រកបាន $X = \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$ (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11b-05",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៥ ៖ លីមីត និងដេរីវេនៃអនុគមន៍",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11b-5",
+    "chapterTitle": "ជំពូកទី ៥ ៖ លីមីត និងដេរីវេ",
+    "lessonId": "les-g11b-5-2",
+    "lessonTitle": "មេរៀនទី ២ ៖ ដេរីវេនៃអនុគមន៍",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គណនាលីមីតខាងក្រោម ៖\nក. $L_1 = \\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$\nខ. $L_2 = \\lim_{x \\to 0} \\frac{\\sqrt{x + 4} - 2}{x}$",
+        "solution": "ក. រាងមិនកំណត់ $\\frac{0}{0}$ ៖\n   $L_1 = \\lim_{x \\to 2} \\frac{(x - 2)(x + 2)}{x - 2} = \\lim_{x \\to 2} (x + 2) = 2 + 2 = 4$។\n\nខ. រាងមិនកំណត់ $\\frac{0}{0}$ គុណកន្សោមឆ្លាស់ ៖\n   $L_2 = \\lim_{x \\to 0} \\frac{(\\sqrt{x+4} - 2)(\\sqrt{x+4} + 2)}{x(\\sqrt{x+4} + 2)} = \\lim_{x \\to 0} \\frac{x+4 - 4}{x(\\sqrt{x+4} + 2)}$\n   $= \\lim_{x \\to 0} \\frac{x}{x(\\sqrt{x+4} + 2)} = \\lim_{x \\to 0} \\frac{1}{\\sqrt{x+4} + 2} = \\frac{1}{\\sqrt{4} + 2} = \\frac{1}{4}$។",
+        "rubric": "ក. បំបែកកត្តានិងគណនាបាន $L_1 = 4$ (២ពិន្ទុ)\nខ. គុណកន្សោមឆ្លាស់ សម្រួលនិងគណនាបាន $L_2 = 1/4$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "គណនាដេរីវេនៃអនុគមន៍ខាងក្រោម ៖\nក. $f(x) = 3x^4 - 5x^2 + 7x - 9$\nខ. $g(x) = \\frac{2x - 1}{x + 3}$",
+        "solution": "ក. $f'(x) = 3(4x^3) - 5(2x) + 7(1) - 0 = 12x^3 - 10x + 7$។\n\nខ. ប្រើរូបមន្ត $\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$ ៖\n   $u = 2x - 1 \\Rightarrow u' = 2$\n   $v = x + 3 \\Rightarrow v' = 1$\n   $g'(x) = \\frac{2(x + 3) - (2x - 1)(1)}{(x + 3)^2} = \\frac{2x + 6 - 2x + 1}{(x + 3)^2} = \\frac{7}{(x + 3)^2}$។",
+        "rubric": "ក. គណនា $f'(x) = 12x^3 - 10x + 7$ (២ពិន្ទុ)\nខ. អនុវត្តរូបមន្តដេរីវេផលចែក គណនាបាន $7/(x+3)^2$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យអនុគមន៍ $y = f(x) = x^2 - 4x + 3$ មានក្រាប $(C)$ ៖\nក. រកសមីការបន្ទាត់ប៉ះ $(T)$ ទៅនឹងក្រាប $(C)$ ត្រង់ចំណុចដែលមានអាប់ស៊ីស $x_0 = 3$។\nខ. សង់តារាងអថិរភាពនៃអនុគមន៍ $f$ និងកំណត់ចំណុចកំពូលនៃប៉ារ៉ាបូល។",
+        "solution": "ក. - ត្រង់ $x_0 = 3$ ៖ $y_0 = f(3) = 3^2 - 4(3) + 3 = 9 - 12 + 3 = 0$។\n   - ដេរីវេ ៖ $f'(x) = 2x - 4$ នាំឱ្យមេគុណប្រាប់ទិស $m = f'(3) = 2(3) - 4 = 2$។\n   - សមីការបន្ទាត់ប៉ះ ៖ $y - y_0 = f'(x_0)(x - x_0) \\Rightarrow y - 0 = 2(x - 3) \\Rightarrow y = 2x - 6$។\n\nខ. $f'(x) = 0 \\Leftrightarrow 2x - 4 = 0 \\Leftrightarrow x = 2$។\n   $f(2) = 2^2 - 4(2) + 3 = -1$។\n   ដេរីវេ $f'(x) < 0$ ចំពោះ $x < 2$ (អនុគមន៍ចុះ), $f'(x) > 0$ ចំពោះ $x > 2$ (អនុគមន៍កើន)។\n   ចំណុចកំពូល (អប្បបរមាធៀប) គឺ $S(2, -1)$។",
+        "rubric": "ក. រកបាន $y_0=0, m=2$ និងសមីការ $y=2x-6$ (២ពិន្ទុ)\nខ. ដោះស្រាយ $f'(x)=0$ និងរកបានចំណុចកំពូល $S(2,-1)$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"170\" x2=\"300\" y2=\"170\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><path d=\"M 60,150 Q 140,130 180,90 T 290,30\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"260\" y=\"25\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = f(x)</text><line x1=\"100\" y1=\"150\" x2=\"260\" y2=\"30\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"90\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"188\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(x₀, f(x₀))</text><text x=\"120\" y=\"55\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">បន្ទាត់ប៉ះ (T) ៖ មេគុណប្រាប់ទិស m = f'(x₀)</text><line x1=\"180\" y1=\"90\" x2=\"180\" y2=\"170\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"180\" y1=\"90\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"175\" y=\"185\" font-size=\"10\" fill=\"#334155\">x₀</text><text x=\"32\" y=\"94\" font-size=\"10\" fill=\"#334155\">y₀</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"170\" x2=\"300\" y2=\"170\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><path d=\"M 60,150 Q 140,130 180,90 T 290,30\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"260\" y=\"25\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = f(x)</text><line x1=\"100\" y1=\"150\" x2=\"260\" y2=\"30\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"90\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"188\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(x₀, f(x₀))</text><text x=\"120\" y=\"55\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">បន្ទាត់ប៉ះ (T) ៖ មេគុណប្រាប់ទិស m = f'(x₀)</text><line x1=\"180\" y1=\"90\" x2=\"180\" y2=\"170\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"180\" y1=\"90\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"175\" y=\"185\" font-size=\"10\" fill=\"#334155\">x₀</text><text x=\"32\" y=\"94\" font-size=\"10\" fill=\"#334155\">y₀</text></svg>"
+      },
+      {
+        "num": 4,
+        "q": "សិក្សាអថិរភាព និងរកចំណុចបរមាធៀបនៃអនុគមន៍ដឺក្រេទី ៣ ៖\n$f(x) = x^3 - 3x^2 + 2$",
+        "solution": "- ដែនកំណត់ ៖ $D = \\mathbb{R}$\n- ដេរីវេ ៖ $f'(x) = 3x^2 - 6x = 3x(x - 2)$\n- $f'(x) = 0 \\Leftrightarrow x = 0$ ឬ $x = 2$។\n  - ត្រង់ $x = 0$ ៖ $f(0) = 2$។ ដោយ $f'$ ប្តូរសញ្ញាពី $+$ ទៅ $-$ ត្រង់ $0$ នាំឱ្យ $f$ មានអតិបរមាធៀបស្មើ $2$ ត្រង់ $x = 0$។\n  - ត្រង់ $x = 2$ ៖ $f(2) = 2^3 - 3(2^2) + 2 = 8 - 12 + 2 = -2$។ ដោយ $f'$ ប្តូរសញ្ញាពី $-$ ទៅ $+$ ត្រង់ $2$ នាំឱ្យ $f$ មានអប្បបរមាធៀបស្មើ $-2$ ត្រង់ $x = 2$។",
+        "rubric": "គណនា $f'(x) = 3x(x-2)$ និងរកឫស $0, 2$ (២ពិន្ទុ), បញ្ជាក់អតិបរមា $f(0)=2$ និងអប្បបរមា $f(2)=-2$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"40\" y1=\"180\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><path d=\"M 50,140 C 90,30 140,40 180,100 C 220,160 250,150 290,50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"115\" cy=\"48\" r=\"4\" fill=\"#16a34a\"/><line x1=\"85\" y1=\"48\" x2=\"145\" y2=\"48\" stroke=\"#16a34a\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><text x=\"80\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">អតិបរមា f'(x₁) = 0</text><circle cx=\"235\" cy=\"142\" r=\"4\" fill=\"#dc2626\"/><line x1=\"205\" y1=\"142\" x2=\"265\" y2=\"142\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><text x=\"200\" y=\"158\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">អប្បបរមា f'(x₂) = 0</text><text x=\"260\" y=\"45\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = f(x)</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"40\" y1=\"180\" x2=\"40\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><path d=\"M 50,140 C 90,30 140,40 180,100 C 220,160 250,150 290,50\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"115\" cy=\"48\" r=\"4\" fill=\"#16a34a\"/><line x1=\"85\" y1=\"48\" x2=\"145\" y2=\"48\" stroke=\"#16a34a\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><text x=\"80\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">អតិបរមា f'(x₁) = 0</text><circle cx=\"235\" cy=\"142\" r=\"4\" fill=\"#dc2626\"/><line x1=\"205\" y1=\"142\" x2=\"265\" y2=\"142\" stroke=\"#dc2626\" stroke-width=\"1.5\" stroke-dasharray=\"2,2\"/><text x=\"200\" y=\"158\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">អប្បបរមា f'(x₂) = 0</text><text x=\"260\" y=\"45\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = f(x)</text></svg>"
+      },
+      {
+        "num": 5,
+        "q": "គណនាលីមីតត្រង់អនន្ត ៖\nក. $A = \\lim_{x \\to +\\infty} \\frac{4x^3 - 2x + 1}{2x^3 + 5x^2 - 3}$\nខ. $B = \\lim_{x \\to +\\infty} (\\sqrt{x^2 + 4x} - x)$",
+        "solution": "ក. ចំពោះ $x \\to +\\infty$ យកតួដឺក្រេធំជាងគេ ៖\n   $A = \\lim_{x \\to +\\infty} \\frac{4x^3}{2x^3} = \\frac{4}{2} = 2$។\n\nខ. រាង $\\infty - \\infty$ គុណកន្សោមឆ្លាស់ ៖\n   $B = \\lim_{x \\to +\\infty} \\frac{(\\sqrt{x^2+4x} - x)(\\sqrt{x^2+4x} + x)}{\\sqrt{x^2+4x} + x} = \\lim_{x \\to +\\infty} \\frac{x^2+4x - x^2}{\\sqrt{x^2+4x} + x}$\n   $= \\lim_{x \\to +\\infty} \\frac{4x}{x\\sqrt{1 + \\frac{4}{x}} + x} = \\lim_{x \\to +\\infty} \\frac{4}{\\sqrt{1 + \\frac{4}{x}} + 1} = \\frac{4}{\\sqrt{1} + 1} = \\frac{4}{2} = 2$។",
+        "rubric": "ក. គណនាលីមីតកន្សោមសនិទានបាន $A=2$ (២ពិន្ទុ)\nខ. គុណកន្សោមឆ្លាស់ ទាញ $x$ ជាកត្តា គណនាបាន $B=2$ (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11b-06",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៦ ៖ ប្រូបាប",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11b-6",
+    "chapterTitle": "ជំពូកទី ៦ ៖ ប្រូបាប",
+    "lessonId": "les-g11b-6-1",
+    "lessonTitle": "មេរៀនទី ១ ៖ ប្រូបាប",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេបោះគ្រាប់ឡុកឡាក់ថ្លៃមួយគ្រាប់ដែលមាន ៦ មុខ (លេខ ១ ដល់ ៦) ៖\nក. រកប្រូបាបដើម្បីទទួលបានលេខគូ។\nខ. រកប្រូបាបដើម្បីទទួលបានលេខបឋម។",
+        "solution": "លំហសំណាក $\\Omega = \\{1, 2, 3, 4, 5, 6\\} \\Rightarrow n(\\Omega) = 6$។\n\nក. ព្រឹត្តិការណ៍ $A$ : \"ទទួលបានលេខគូ\" ៖\n   $A = \\{2, 4, 6\\} \\Rightarrow n(A) = 3$។\n   $P(A) = \\frac{n(A)}{n(\\Omega)} = \\frac{3}{6} = \\frac{1}{2}$។\n\nខ. ព្រឹត្តិការណ៍ $B$ : \"ទទួលបានលេខបឋម\" ៖\n   $B = \\{2, 3, 5\\} \\Rightarrow n(B) = 3$។\n   $P(B) = \\frac{n(B)}{n(\\Omega)} = \\frac{3}{6} = \\frac{1}{2}$។",
+        "rubric": "ក. រកចំនួនករណីស្រប និងប្រូបាប $P(A) = 1/2$ (២ពិន្ទុ)\nខ. រកលេខបឋម និងប្រូបាប $P(B) = 1/2$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ក្នុងប្រអប់មួយមានប៊ិចសរុប ១០ ដើម រួមមាន ប៊ិចខៀវ ៦ ដើម និងប៊ិចក្រហម ៤ ដើម។ គេចាប់យកប៊ិច ៣ ដើមព្រមគ្នាចេញពីប្រអប់ដោយចៃដន្យ ៖\nក. រកចំនួនករណីអាចទាំងអស់ $n(\\Omega)$។\nខ. រកប្រូបាបដើម្បីចាប់បានប៊ិចខៀវទាំង ៣ ដើម។\nគ. រកប្រូបាបដើម្បីចាប់បានប៊ិចក្រហមយ៉ាងតិច ១ ដើម។",
+        "solution": "ក. $n(\\Omega) = C(10, 3) = \\frac{10 \\times 9 \\times 8}{3 \\times 2 \\times 1} = 120$ ករណី។\n\nខ. ព្រឹត្តិការណ៍ $A$ : \"ចាប់បានខៀវទាំង ៣\" ៖\n   $n(A) = C(6, 3) = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$។\n   $P(A) = \\frac{20}{120} = \\frac{1}{6}$។\n\nគ. ព្រឹត្តិការណ៍ $B$ : \"បានក្រហមយ៉ាងតិច ១\"។ ព្រឹត្តិការណ៍ផ្ទុយ $\\bar{B}$ : \"គ្មានក្រហមសោះ (បានខៀវទាំង ៣)\" ៖\n   $P(B) = 1 - P(\\bar{B}) = 1 - P(A) = 1 - \\frac{1}{6} = \\frac{5}{6}$។",
+        "rubric": "ក. គណនា $n(\\Omega) = 120$ (១ពិន្ទុ)\nខ. គណនា $P(A) = 1/6$ (១.៥ពិន្ទុ)\nគ. ប្រើព្រឹត្តិការណ៍បំពេញ រកបាន $P(B) = 5/6$ (១.៥ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យព្រឹត្តិការណ៍ពីរ $A$ និង $B$ ដែល $P(A) = 0.6$, $P(B) = 0.4$ និង $P(A \\cap B) = 0.2$ ៖\nក. គណនាប្រូបាប $P(A \\cup B)$។\nខ. គណនាប្រូបាបមានលក្ខខណ្ឌ $P(B|A)$។\nគ. តើព្រឹត្តិការណ៍ $A$ និង $B$ ឯករាជ្យនឹងគ្នាឬទេ? ព្រោះអ្វី?",
+        "solution": "ក. $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0.6 + 0.4 - 0.2 = 0.8$។\n\nខ. $P(B|A) = \\frac{P(A \\cap B)}{P(A)} = \\frac{0.2}{0.6} = \\frac{1}{3} \\approx 0.333$។\n\nគ. ពិនិត្យ $P(A) \\times P(B) = 0.6 \\times 0.4 = 0.24$។\n   ដោយ $P(A \\cap B) = 0.2 \\ne 0.24$ នាំឱ្យព្រឹត្តិការណ៍ $A$ និង $B$ មិនឯករាជ្យនឹងគ្នាទេ (ជាព្រឹត្តិការណ៍ទាក់ទងគ្នា)។",
+        "rubric": "ក. ប្រើរូបមន្តប្រូបាបផលបូក គណនាបាន $0.8$ (១.៥ពិន្ទុ)\nខ. គណនាប្រូបាបមានលក្ខខណ្ឌបាន $1/3$ (១.៥ពិន្ទុ)\nគ. ប្រៀបធៀប $P(A \\cap B)$ និង $P(A)P(B)$ និងសន្និដ្ឋាន (១ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><circle cx=\"30\" cy=\"100\" r=\"5\" fill=\"#334155\"/><line x1=\"30\" y1=\"100\" x2=\"130\" y2=\"55\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"70\" y=\"70\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">P(A)</text><circle cx=\"130\" cy=\"55\" r=\"4\" fill=\"#2563eb\"/><text x=\"138\" y=\"58\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">A</text><line x1=\"30\" y1=\"100\" x2=\"130\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"65\" y=\"135\" font-size=\"10\" font-weight=\"700\" fill=\"#64748b\">P(Ā)</text><circle cx=\"130\" cy=\"145\" r=\"4\" fill=\"#64748b\"/><text x=\"138\" y=\"148\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">Ā</text><line x1=\"150\" y1=\"55\" x2=\"250\" y2=\"30\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"180\" y=\"36\" font-size=\"9\" fill=\"#16a34a\">P(B|A)</text><text x=\"256\" y=\"34\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">B ➔ P(A ∩ B)</text><line x1=\"150\" y1=\"55\" x2=\"250\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"180\" y=\"75\" font-size=\"9\" fill=\"#dc2626\">P(B̄|A)</text><text x=\"256\" y=\"84\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">B̄ ➔ P(A ∩ B̄)</text><line x1=\"150\" y1=\"145\" x2=\"250\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"180\" y=\"128\" font-size=\"9\" fill=\"#16a34a\">P(B|Ā)</text><text x=\"256\" y=\"124\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">B ➔ P(Ā ∩ B)</text><line x1=\"150\" y1=\"145\" x2=\"250\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"180\" y=\"166\" font-size=\"9\" fill=\"#dc2626\">P(B̄|Ā)</text><text x=\"256\" y=\"174\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">B̄ ➔ P(Ā ∩ B̄)</text><text x=\"80\" y=\"18\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">ដ្យាក្រាមដើមឈើប្រូបាប</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><circle cx=\"30\" cy=\"100\" r=\"5\" fill=\"#334155\"/><line x1=\"30\" y1=\"100\" x2=\"130\" y2=\"55\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"70\" y=\"70\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">P(A)</text><circle cx=\"130\" cy=\"55\" r=\"4\" fill=\"#2563eb\"/><text x=\"138\" y=\"58\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">A</text><line x1=\"30\" y1=\"100\" x2=\"130\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"65\" y=\"135\" font-size=\"10\" font-weight=\"700\" fill=\"#64748b\">P(Ā)</text><circle cx=\"130\" cy=\"145\" r=\"4\" fill=\"#64748b\"/><text x=\"138\" y=\"148\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">Ā</text><line x1=\"150\" y1=\"55\" x2=\"250\" y2=\"30\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"180\" y=\"36\" font-size=\"9\" fill=\"#16a34a\">P(B|A)</text><text x=\"256\" y=\"34\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">B ➔ P(A ∩ B)</text><line x1=\"150\" y1=\"55\" x2=\"250\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"180\" y=\"75\" font-size=\"9\" fill=\"#dc2626\">P(B̄|A)</text><text x=\"256\" y=\"84\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">B̄ ➔ P(A ∩ B̄)</text><line x1=\"150\" y1=\"145\" x2=\"250\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"180\" y=\"128\" font-size=\"9\" fill=\"#16a34a\">P(B|Ā)</text><text x=\"256\" y=\"124\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">B ➔ P(Ā ∩ B)</text><line x1=\"150\" y1=\"145\" x2=\"250\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"180\" y=\"166\" font-size=\"9\" fill=\"#dc2626\">P(B̄|Ā)</text><text x=\"256\" y=\"174\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">B̄ ➔ P(Ā ∩ B̄)</text><text x=\"80\" y=\"18\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">ដ្យាក្រាមដើមឈើប្រូបាប</text></svg>"
+      },
+      {
+        "num": 4,
+        "q": "គេមានសន្លឹកបៀមួយហ៊ូ (៥២ សន្លឹក)។ គេដកយកសន្លឹកបៀមួយសន្លឹកដោយចៃដន្យ ៖\nក. រកប្រូបាបដើម្បីដកបានសន្លឹកបៀជាអាត់ (Ace)។\nខ. រកប្រូបាបដើម្បីដកបានសន្លឹកបៀជាបេះដូងក្រហម (Heart)។",
+        "solution": "លំហសំណាក $n(\\Omega) = 52$។\n\nក. ចំនួនសន្លឹកអាត់មាន ៤ សន្លឹក ៖\n   $P(\\text{Ace}) = \\frac{4}{52} = \\frac{1}{13}$។\n\nខ. ចំនួនសន្លឹកបេះដូងក្រហមមាន ១៣ សន្លឹក ៖\n   $P(\\text{Heart}) = \\frac{13}{52} = \\frac{1}{4}$។",
+        "rubric": "ក. គណនាបាន $P(\\text{Ace}) = 1/13$ (២ពិន្ទុ)\nខ. គណនាបាន $P(\\text{Heart}) = 1/4$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ក្នុងថ្នាក់រៀនមួយមានសិស្ស ៣០ នាក់ ក្នុងនោះមានប្រុស ១២ នាក់ និងស្រី ១៨ នាក់។ គេជ្រើសរើសសិស្ស ២ នាក់ដោយចៃដន្យដើម្បីធ្វើជាប្រធាន និងអនុប្រធានថ្នាក់ ៖\nក. រកចំនួនរបៀបជ្រើសរើសដែលអាចកើតឡើង។\nខ. រកប្រូបាបដើម្បីជ្រើសរើសបានប្រធានជាប្រុស និងអនុប្រធានជាស្រី។",
+        "solution": "ក. ការជ្រើសរើសមានលំដាប់ (ប្រធាន និងអនុប្រធាន) ៖\n   $n(\\Omega) = A(30, 2) = 30 \\times 29 = 870$ របៀប។\n\nខ. ជ្រើសរើសប្រធានជាប្រុសមាន ១២ ជម្រើស ហើយអនុប្រធានជាស្រីមាន ១៨ ជម្រើស ៖\n   $n(E) = 12 \\times 18 = 216$ របៀប។\n   $P(E) = \\frac{216}{870} = \\frac{36}{145} \\approx 0.248$។",
+        "rubric": "ក. គណនាចាត់ថ្នាក់ $A(30, 2) = 870$ (២ពិន្ទុ)\nខ. គណនា $12 \\times 18 = 216$ និងរកបានប្រូបាប $36/145$ (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11b-07",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៧ ៖ ស្ថិតិ និងបំណែងចែកណ័រម៉ាល់",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11b-7",
+    "chapterTitle": "ជំពូកទី ៧ ៖ ស្ថិតិ",
+    "lessonId": "les-g11b-7-2",
+    "lessonTitle": "មេរៀនទី ២ ៖ រង្វាស់នៃគម្លាត",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យទិន្នន័យពិន្ទុសិស្ស ៥ នាក់ដូចខាងក្រោម ៖ $6, 8, 10, 12, 14$ ៖\nក. គណនាមធ្យមភាគ $\\bar{x}$ នៃទិន្នន័យនេះ។\nខ. គណនាវ៉ារ្យ៉ង់ $s^2$ និងគម្លាតស្តង់ដា $s$។",
+        "solution": "ក. មធ្យមភាគ ៖\n   $\\bar{x} = \\frac{6 + 8 + 10 + 12 + 14}{5} = \\frac{50}{5} = 10$។\n\nខ. វ៉ារ្យ៉ង់ ៖\n   $s^2 = \\frac{(6-10)^2 + (8-10)^2 + (10-10)^2 + (12-10)^2 + (14-10)^2}{5}$\n   $= \\frac{(-4)^2 + (-2)^2 + 0^2 + 2^2 + 4^2}{5} = \\frac{16 + 4 + 0 + 4 + 16}{5} = \\frac{40}{5} = 8$។\n   គម្លាតស្តង់ដា ៖ $s = \\sqrt{s^2} = \\sqrt{8} = 2\\sqrt{2} \\approx 2.83$។",
+        "rubric": "ក. គណនាមធ្យមភាគ $\\bar{x} = 10$ (១.៥ពិន្ទុ)\nខ. គណនាវ៉ារ្យ៉ង់ $s^2=8$ (១.៥ពិន្ទុ) និងគម្លាតស្តង់ដា $s=2\\sqrt{2}$ (១ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ពិន្ទុតេស្តគណិតវិទ្យាមានបំណែងចែកណ័រម៉ាល់ $X \\sim N(\\mu, \\sigma^2)$ ដែលមានមធ្យម $\\mu = 60$ និងគម្លាតស្តង់ដា $\\sigma = 10$ ៖\nក. គណនាពិន្ទុស្តង់ដា $Z$ (Z-score) របស់សិស្សម្នាក់ដែលទទួលបានពិន្ទុ $X = 75$។\nខ. គណនាប្រូបាបដែលសិស្សម្នាក់មានពិន្ទុស្ថិតនៅចន្លោះពី $50$ ដល់ $70$ (ប្រើច្បាប់ជាក់ស្តែង 68-95-99.7)។",
+        "solution": "ក. ពិន្ទុស្តង់ដា $Z$ ៖\n   $Z = \\frac{X - \\mu}{\\sigma} = \\frac{75 - 60}{10} = \\frac{15}{10} = 1.5$។\n\nខ. ចន្លោះពី $50$ ដល់ $70$ គឺ ៖\n   $\\mu - \\sigma = 60 - 10 = 50$ និង $\\mu + \\sigma = 60 + 10 = 70$។\n   តាមច្បាប់ជាក់ស្តែង (Empirical Rule) ទិន្នន័យដែលស្ថិតក្នុងចន្លោះ $[\\mu - \\sigma, \\mu + \\sigma]$ មានប្រមាណ $68.26\\%$ (ឬ $\\approx 68\\%$)។\n   ដូចនេះ $P(50 \\le X \\le 70) \\approx 0.6826$ (ឬ $68.26\\%$)។",
+        "rubric": "ក. រូបមន្តនិងគណនា $Z = 1.5$ (២ពិន្ទុ)\nខ. កំណត់ចន្លោះ $\\pm 1\\sigma$ និងសន្និដ្ឋានប្រូបាប $68.26\\%$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.5\"/><path d=\"M 30,158 C 90,158 120,40 160,40 C 200,40 230,158 290,158\" fill=\"rgba(59, 130, 246, 0.15)\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><text x=\"156\" y=\"175\" font-size=\"11\" font-weight=\"700\" fill=\"#dc2626\">μ</text><line x1=\"120\" y1=\"85\" x2=\"120\" y2=\"160\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"108\" y=\"175\" font-size=\"10\" fill=\"#334155\">μ - σ</text><line x1=\"200\" y1=\"85\" x2=\"200\" y2=\"160\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"190\" y=\"175\" font-size=\"10\" fill=\"#334155\">μ + σ</text><text x=\"142\" y=\"105\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">68.2%</text><text x=\"75\" y=\"25\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">បំណែងចែកណ័រម៉ាល់ N(μ, σ²)</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.5\"/><path d=\"M 30,158 C 90,158 120,40 160,40 C 200,40 230,158 290,158\" fill=\"rgba(59, 130, 246, 0.15)\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"160\" stroke=\"#dc2626\" stroke-width=\"2\" stroke-dasharray=\"3,3\"/><text x=\"156\" y=\"175\" font-size=\"11\" font-weight=\"700\" fill=\"#dc2626\">μ</text><line x1=\"120\" y1=\"85\" x2=\"120\" y2=\"160\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"108\" y=\"175\" font-size=\"10\" fill=\"#334155\">μ - σ</text><line x1=\"200\" y1=\"85\" x2=\"200\" y2=\"160\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"190\" y=\"175\" font-size=\"10\" fill=\"#334155\">μ + σ</text><text x=\"142\" y=\"105\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">68.2%</text><text x=\"75\" y=\"25\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">បំណែងចែកណ័រម៉ាល់ N(μ, σ²)</text></svg>"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យសំណុំទិន្នន័យរៀបតាមលំដាប់ ៖ $12, 15, 18, 20, 22, 25, 28, 30, 35$ ៖\nក. រកមេដ្យាន $Me$ (ឬ $Q_2$) នៃទិន្នន័យនេះ។\nខ. រកក្វាទទីលទីមួយ $Q_1$ និងក្វាទទីលទីបី $Q_3$ រួចគណនាគម្លាតអន្តរក្វាទទីល $IQR = Q_3 - Q_1$។",
+        "solution": "ក. ចំនួនទិន្នន័យ $n = 9$ (ចំនួនសេស) ៖\n   ទីតាំងមេដ្យានគឺតួទី $\\frac{9+1}{2} = 5$ នាំឱ្យ $Me = Q_2 = 22$។\n\nខ. - ពាក់កណ្តាលក្រោម ៖ $12, 15, 18, 20$ នាំឱ្យ $Q_1 = \\frac{15 + 18}{2} = 16.5$។\n   - ពាក់កណ្តាលលើ ៖ $25, 28, 30, 35$ នាំឱ្យ $Q_3 = \\frac{28 + 30}{2} = 29$។\n   - គម្លាតអន្តរក្វាទទីល ៖ $IQR = Q_3 - Q_1 = 29 - 16.5 = 12.5$។",
+        "rubric": "ក. រកមេដ្យាន $Me = 22$ (១.៥ពិន្ទុ)\nខ. រក $Q_1 = 16.5, Q_3 = 29$ និង $IQR = 12.5$ (២.៥ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គេឱ្យតារាងប្រេកង់ទិន្នន័យពិន្ទុសិស្ស ៖\n| ពិន្ទុ ($x_i$) | ៥ | ៦ | ៧ | ៨ | ៩ | ១០ |\n| ប្រេកង់ ($f_i$) | ២ | ៤ | ៨ | ១០ | ៤ | ២ |\nគណនាមធ្យមភាគពិន្ទុ $\\bar{x}$ នៃសិស្សទាំងអស់។",
+        "solution": "- ចំនួនសិស្សសរុប $N = \\sum f_i = 2 + 4 + 8 + 10 + 4 + 2 = 30$ នាក់។\n- ផលបូក $\\sum f_i x_i = (5 \\times 2) + (6 \\times 4) + (7 \\times 8) + (8 \\times 10) + (9 \\times 4) + (10 \\times 2)$\n  $= 10 + 24 + 56 + 80 + 36 + 20 = 226$។\n- មធ្យមភាគ ៖ $\\bar{x} = \\frac{\\sum f_i x_i}{N} = \\frac{226}{30} \\approx 7.53$។",
+        "rubric": "គណនា $N = 30$ (១ពិន្ទុ), គណនា $\\sum f_i x_i = 226$ (២ពិន្ទុ), មធ្យមភាគ $\\bar{x} \\approx 7.53$ (១ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ចូរពន្យល់ពីអត្ថន័យនៃ «គម្លាតស្តង់ដា» ក្នុងស្ថិតិវិទ្យា ព្រមទាំងប្រៀបធៀបថា ប្រសិនបើសិស្សពីរក្រុមមានមធ្យមភាគពិន្ទុស្មើគ្នា $\\bar{x}_A = \\bar{x}_B = 75$ ប៉ុន្តែ $s_A = 4$ និង $s_B = 12$ តើក្រុមណាមានកម្រិតចំណេះដឹងស្មើដៃគ្នាជាង?",
+        "solution": "- គម្លាតស្តង់ដាជារង្វាស់នៃគម្លាតដែលបង្ហាញពីកម្រិតនៃការរបាយ ឬការខ្ចាត់ខ្ចាយនៃទិន្នន័យធៀបនឹងតម្លៃមធ្យមភាគ។\n- ប្រៀបធៀប ៖\n  ដោយ $s_A = 4 < s_B = 12$ បញ្ជាក់ថាពិន្ទុសិស្សក្នុងក្រុម A ប្រមូលផ្តុំជិតៗតម្លៃមធ្យមភាគ ៧៥ ជាងសិស្សក្នុងក្រុម B (ក្រុម B មានការខ្ចាត់ខ្ចាយធំខ្លាំង មានអ្នកពិន្ទុទាបខ្លាំង និងខ្ពស់ខ្លាំង)។\n  ដូចនេះ **ក្រុម A មានកម្រិតចំណេះដឹងស្មើដៃគ្នាជាងក្រុម B**។",
+        "rubric": "ពន្យល់អត្ថន័យគម្លាតស្តង់ដា (២ពិន្ទុ), វិភាគប្រៀបធៀប $s_A < s_B$ និងសន្និដ្ឋានក្រុម A ស្មើដៃជាង (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11a-01",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ១ ៖ ស្វ៊ីត និងវិធានអនុមានរួមគណិតវិទ្យា (កម្រិតខ្ពស់)",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-advanced",
+    "chapterId": "ch-g11a-1",
+    "chapterTitle": "ជំពូកទី ១ ៖ ស្វ៊ីត និងអនុមានរួមគណិតវិទ្យា",
+    "lessonId": "les-g11a-1-3",
+    "lessonTitle": "មេរៀនទី ៣ ៖ វិធានអនុមានរួមគណិតវិទ្យា",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "ស្រាយបញ្ជាក់តាមវិធានអនុមានរួមគណិតវិទ្យាថា ចំពោះគ្រប់ចំនួនគត់វិជ្ជមាន $n \\ge 1$ ៖\n$1 + 2 + 3 + \\dots + n = \\frac{n(n + 1)}{2}$",
+        "solution": "១. ចំពោះ $n = 1$ ៖\n   $LHS = 1$, $RHS = \\frac{1(1+1)}{2} = 1$ ➔ សមភាពពិតចំពោះ $n = 1$។\n\n២. ឧបមាថាសមភាពពិតដល់ $n = k$ ($k \\ge 1$) ៖\n   $1 + 2 + \\dots + k = \\frac{k(k+1)}{2}$ (សម្មតិកម្មអនុមានរួម)។\n\n៣. យើងត្រូវស្រាយថាសមភាពពិតចំពោះ $n = k + 1$ ពោលគឺ ៖\n   $1 + 2 + \\dots + k + (k+1) = \\frac{(k+1)(k+2)}{2}$។\n   ពិនិត្យ $LHS = [1 + 2 + \\dots + k] + (k+1) = \\frac{k(k+1)}{2} + (k+1) = (k+1)\\left[\\frac{k}{2} + 1\\right] = \\frac{(k+1)(k+2)}{2} = RHS$ (ពិត)។\n\nតាមវិធានអនុមានរួម សមភាពពិតចំពោះគ្រប់ $n \\ge 1$។",
+        "rubric": "ផ្ទៀងផ្ទាត់ $n=1$ (១ពិន្ទុ), សម្មតិកម្ម $n=k$ (១ពិន្ទុ), ស្រាយបញ្ជាក់ចំពោះ $n=k+1$ និងសន្និដ្ឋាន (២ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ស្រាយបញ្ជាក់តាមវិធានអនុមានរួមគណិតវិទ្យាថា ចំពោះគ្រប់ $n \\ge 1$ ៖\n$1^2 + 2^2 + 3^2 + \\dots + n^2 = \\frac{n(n + 1)(2n + 1)}{6}$",
+        "solution": "១. ចំពោះ $n = 1$ ៖ $LHS = 1^2 = 1$, $RHS = \\frac{1(2)(3)}{6} = 1$ (ពិត)។\n\n២. ឧបមាថាសមភាពពិតចំពោះ $n = k$ ៖\n   $1^2 + 2^2 + \\dots + k^2 = \\frac{k(k+1)(2k+1)}{6}$។\n\n៣. ស្រាយចំពោះ $n = k + 1$ ៖\n   $LHS = \\frac{k(k+1)(2k+1)}{6} + (k+1)^2 = (k+1)\\left[\\frac{2k^2 + k + 6k + 6}{6}\\right] = \\frac{(k+1)(2k^2 + 7k + 6)}{6} = \\frac{(k+1)(k+2)(2k+3)}{6} = RHS$ (ពិត)។\n\nដូចនេះ សមភាពពិតចំពោះគ្រប់ $n \\ge 1$។",
+        "rubric": "ផ្ទៀងផ្ទាត់ $n=1$ (១ពិន្ទុ), សម្មតិកម្ម $n=k$ (១ពិន្ទុ), គណនាជំហាន $n=k+1$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យផលបូក $S_n = \\frac{1}{1 \\times 2} + \\frac{1}{2 \\times 3} + \\frac{1}{3 \\times 4} + \\dots + \\frac{1}{n(n + 1)}$ ៖\nក. ផ្ទៀងផ្ទាត់ថា $\\frac{1}{k(k+1)} = \\frac{1}{k} - \\frac{1}{k+1}$ ចំពោះគ្រប់ $k \\ge 1$។\nខ. គណនាកន្សោម $S_n$ ជាអនុគមន៍នៃ $n$ រួចគណនា $\\lim_{n \\to \\infty} S_n$។",
+        "solution": "ក. $\\frac{1}{k} - \\frac{1}{k+1} = \\frac{(k+1) - k}{k(k+1)} = \\frac{1}{k(k+1)}$ (ពិត)។\n\nខ. សរសេរផលបូកតេឡេស្កូពិក ៖\n   $S_n = \\left(1 - \\frac{1}{2}\\right) + \\left(\\frac{1}{2} - \\frac{1}{3}\\right) + \\dots + \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right)$\n   $= 1 - \\frac{1}{n+1} = \\frac{n}{n+1}$។\n   លីមីត ៖ $\\lim_{n \\to \\infty} S_n = \\lim_{n \\to \\infty} \\frac{n}{n+1} = 1$។",
+        "rubric": "ក. បង្ហាញសមភាពប្រភាគ (១ពិន្ទុ)\nខ. បំបែកតេឡេស្កូពិករកបាន $S_n = n/(n+1)$ (២ពិន្ទុ), គណនាលីមីតស្មើ ១ (១ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គេឱ្យស្វ៊ីត $(u_n)$ កំណត់ដោយ $u_1 = 1$ និង $u_{n+1} = 2u_n + 3$ ចំពោះគ្រប់ $n \\ge 1$ ៖\nក. តាង $v_n = u_n + 3$។ បង្ហាញថា $(v_n)$ ជាស្វ៊ីតធរណីមាត្រ រួចបញ្ជាក់ $v_1$ និងផលធៀបរួម $q$។\nខ. រកកន្សោម $v_n$ និងទាញរក $u_n$ ជាអនុគមន៍នៃ $n$។",
+        "solution": "ក. ពិនិត្យ $v_{n+1} = u_{n+1} + 3 = (2u_n + 3) + 3 = 2u_n + 6 = 2(u_n + 3) = 2v_n$។\n   នាំឱ្យ $(v_n)$ ជាស្វ៊ីតធរណីមាត្រដែលមានផលធៀបរួម $q = 2$។\n   តួដំបូង $v_1 = u_1 + 3 = 1 + 3 = 4$។\n\nខ. $v_n = v_1 q^{n-1} = 4 \\cdot 2^{n-1} = 2^2 \\cdot 2^{n-1} = 2^{n+1}$។\n   ដោយ $u_n = v_n - 3$ នាំឱ្យ $u_n = 2^{n+1} - 3$។",
+        "rubric": "ក. បង្ហាញ $v_{n+1} = 2v_n$, រកបាន $q=2, v_1=4$ (២ពិន្ទុ)\nខ. រកបាន $v_n = 2^{n+1}$ និងទាញបាន $u_n = 2^{n+1} - 3$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ស្រាយបញ្ជាក់តាមវិធានអនុមានរួមគណិតវិទ្យាថា ចំពោះគ្រប់ $n \\ge 1$ ៖\nកន្សោម $A_n = 4^n - 1$ ចែកដាច់នឹង $3$។",
+        "solution": "១. ចំពោះ $n = 1$ ៖ $A_1 = 4^1 - 1 = 3$ ចែកដាច់នឹង $3$ (ពិត)។\n\n២. ឧបមាថាពិតដល់ $n = k$ ៖ $4^k - 1 = 3m$ ($m \\in \\mathbb{Z}$) នាំឱ្យ $4^k = 3m + 1$។\n\n៣. ស្រាយចំពោះ $n = k + 1$ ៖\n   $A_{k+1} = 4^{k+1} - 1 = 4 \\cdot 4^k - 1 = 4(3m + 1) - 1 = 12m + 4 - 1 = 12m + 3 = 3(4m + 1)$ ចែកដាច់នឹង $3$ (ពិត)។\n\nដូចនេះ $4^n - 1$ ចែកដាច់នឹង $3$ ចំពោះគ្រប់ $n \\ge 1$។",
+        "rubric": "ផ្ទៀងផ្ទាត់ $n=1$ (១ពិន្ទុ), សម្មតិកម្ម $n=k$ (១ពិន្ទុ), ស្រាយជំហាន $n=k+1$ និងសន្និដ្ឋាន (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11a-02",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ២ & ៣ ៖ អនុគមន៍ និងសមីការត្រីកោណមាត្រកម្រិតខ្ពស់",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-advanced",
+    "chapterId": "ch-g11a-2",
+    "chapterTitle": "ជំពូកទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល និងអនុគមន៍លោការីត",
+    "lessonId": "les-g11a-3-1",
+    "lessonTitle": "មេរៀនទី ១ ៖ សមីការ និងវិសមីការត្រីកោណមាត្រ",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "ដោះស្រាយសមីការត្រីកោណមាត្រអូម៉ូសែនដឺក្រេទី ២ ៖\n$2\\sin^2 x - 3\\sin x \\cos x + \\cos^2 x = 0$",
+        "solution": "- ពិនិត្យករណី $\\cos x = 0$ ៖ សមីការក្លាយជា $2\\sin^2 x = 0 \\Rightarrow \\sin x = 0$ (មិនអាចទេព្រោះ $\\sin^2 x + \\cos^2 x = 1$)។\n- ចែកអង្គទាំងពីរនឹង $\\cos^2 x \\ne 0$ ៖\n  $2\\tan^2 x - 3\\tan x + 1 = 0$\n  សមីការមាន $a + b + c = 2 - 3 + 1 = 0$ នាំឱ្យ ៖\n  $\\tan x = 1$ ឬ $\\tan x = \\frac{1}{2}$។\n  - $\\tan x = 1 \\Rightarrow x = \\frac{\\pi}{4} + k\\pi$ ($k \\in \\mathbb{Z}$)\n  - $\\tan x = \\frac{1}{2} \\Rightarrow x = \\arctan\\left(\\frac{1}{2}\\right) + k\\pi$ ($k \\in \\mathbb{Z}$)។",
+        "rubric": "ពិនិត្យ $\\cos x = 0$ និងចែកនឹង $\\cos^2 x$ (១.៥ពិន្ទុ), រកឫស $\\tan x$ និងទាញបានចម្លើយទាំងពីរ (២.៥ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ដោះស្រាយប្រព័ន្ធសមីការអិចស្ប៉ូណង់ស្យែលក្នុង $\\mathbb{R}^2$ ៖\n$\\begin{cases} 2^x \\cdot 3^y = 12 \\\\ 2^y \\cdot 3^x = 18 \\end{cases}$",
+        "solution": "គុណសមីការទាំងពីរអង្គនឹងអង្គ ៖\n$(2^x 3^y)(2^y 3^x) = 12 \\times 18 = 216$\n$(2 \\cdot 3)^{x+y} = 6^{x+y} = 6^3 \\Rightarrow x + y = 3$ (១)\n\nចែកសមីការទីមួយនឹងទីពីរ ៖\n$\\frac{2^x 3^y}{2^y 3^x} = \\frac{12}{18} = \\frac{2}{3} \\Rightarrow \\left(\\frac{2}{3}\\right)^{x-y} = \\left(\\frac{2}{3}\\right)^1 \\Rightarrow x - y = 1$ (២)\n\nបូក (១) និង (២) ៖ $2x = 4 \\Rightarrow x = 2$ នាំឱ្យ $y = 3 - 2 = 1$។\nដូចនេះ គូចម្លើយគឺ $(x, y) = (2, 1)$។",
+        "rubric": "គុណរកបាន $x+y=3$ (១.៥ពិន្ទុ), ចែករកបាន $x-y=1$ (១.៥ពិន្ទុ), ទាញបាន $(x,y)=(2,1)$ (១ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ដោះស្រាយវិសមីការលោការីតក្នុង $\\mathbb{R}$ ៖\n$\\log_{\\frac{1}{2}}(2x - 3) \\ge -2$",
+        "solution": "- លក្ខខណ្ឌ ៖ $2x - 3 > 0 \\Rightarrow x > \\frac{3}{2}$។\n- ដោយគោល $a = \\frac{1}{2} < 1$ ពេលបំពាក់អិចស្ប៉ូណង់ស្យែលត្រូវប្តូរទិសដៅវិសមីការ ៖\n  $2x - 3 \\le \\left(\\frac{1}{2}\\right)^{-2} = 2^2 = 4$\n  $2x \\le 7 \\Rightarrow x \\le \\frac{7}{2}$។\n- ប្រសព្វជាមួយលក្ខខណ្ឌ ៖ $\\frac{3}{2} < x \\le \\frac{7}{2}$។",
+        "rubric": "កំណត់លក្ខខណ្ឌ $x > 3/2$ (១ពិន្ទុ), ប្តូរទិសដៅវិសមីការព្រោះ $a < 1$ (១.៥ពិន្ទុ), សំណុំចម្លើយ $3/2 < x \\le 7/2$ (១.៥ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "ដោះស្រាយសមីការត្រីកោណមាត្រ ៖\n$\\cos 3x + \\cos x = \\cos 2x$",
+        "solution": "បម្លែងផលបូកជាផលគុណអង្គខាងឆ្វេង ៖\n$\\cos 3x + \\cos x = 2\\cos\\left(\\frac{3x+x}{2}\\right)\\cos\\left(\\frac{3x-x}{2}\\right) = 2\\cos 2x \\cos x$។\nសមីការក្លាយជា ៖\n$2\\cos 2x \\cos x - \\cos 2x = 0 \\Leftrightarrow \\cos 2x (2\\cos x - 1) = 0$\n- $\\cos 2x = 0 \\Rightarrow 2x = \\frac{\\pi}{2} + k\\pi \\Rightarrow x = \\frac{\\pi}{4} + \\frac{k\\pi}{2}$ ($k \\in \\mathbb{Z}$)\n- $2\\cos x - 1 = 0 \\Rightarrow \\cos x = \\frac{1}{2} \\Rightarrow x = \\pm \\frac{\\pi}{3} + 2k\\pi$ ($k \\in \\mathbb{Z}$)។",
+        "rubric": "បម្លែងផលបូកជាផលគុណ (១.៥ពិន្ទុ), ដាក់ $\\cos 2x$ ជាកត្តា (១ពិន្ទុ), រកចម្លើយទាំងពីរក្រុម (១.៥ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ដោះស្រាយសមីការលោការីតដែលមានគោលខុសគ្នា ៖\n$\\log_2 x + \\log_4 x + \\log_8 x = 11$",
+        "solution": "- លក្ខខណ្ឌ ៖ $x > 0$។\n- ប្តូរទៅជាគោល $2$ ទាំងអស់ ៖\n  $\\log_4 x = \\log_{2^2} x = \\frac{1}{2}\\log_2 x$\n  $\\log_8 x = \\log_{2^3} x = \\frac{1}{3}\\log_2 x$\n- សមីការក្លាយជា ៖\n  $\\log_2 x + \\frac{1}{2}\\log_2 x + \\frac{1}{3}\\log_2 x = 11$\n  $\\left(1 + \\frac{1}{2} + \\frac{1}{3}\\right)\\log_2 x = 11 \\Rightarrow \\frac{11}{6}\\log_2 x = 11$\n  $\\log_2 x = 6 \\Rightarrow x = 2^6 = 64$។\nផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x > 0$ (ពិត)។ ដូចនេះ $x = 64$។",
+        "rubric": "ប្តូរទៅជាគោល ២ (២ពិន្ទុ), គណនាផលបូកមេគុណស្មើ $11/6$ (១ពិន្ទុ), ចម្លើយ $x = 64$ (១ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11a-03",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៤ ៖ បំលែងលីនេអ៊ែរក្នុងប្លង់ (កម្រិតខ្ពស់)",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-advanced",
+    "chapterId": "ch-g11a-4",
+    "chapterTitle": "ជំពូកទី ៤ ៖ បំលែងលីនេអ៊ែរ",
+    "lessonId": "les-g11a-4-1",
+    "lessonTitle": "មេរៀនទី ១ ៖ បំលែងលីនេអ៊ែរ",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យបំលែងលីនេអ៊ែរ $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ កំណត់ដោយ $f(x, y) = (2x + y, x - 3y)$ ៖\nក. សរសេរម៉ាទ្រីសតំណាង $M$ នៃបំលែង $f$ ក្នុងគោលស្តង់ដា $(\\vec{i}, \\vec{j})$។\nខ. រករូបភាពនៃចំណុច $A(3, -2)$ តាមបំលែង $f$។",
+        "solution": "ក. ពិនិត្យរូបភាពនៃគោលស្តង់ដា ៖\n   $f(1, 0) = (2(1) + 0, 1 - 3(0)) = (2, 1)$\n   $f(0, 1) = (2(0) + 1, 0 - 3(1)) = (1, -3)$\n   នាំឱ្យម៉ាទ្រីសតំណាងគឺ $M = \\begin{pmatrix} 2 & 1 \\\\ 1 & -3 \\end{pmatrix}$។\n\nខ. រូបភាពនៃ $A(3, -2)$ ៖\n   $\\begin{pmatrix} x' \\\\ y' \\end{pmatrix} = \\begin{pmatrix} 2 & 1 \\\\ 1 & -3 \\end{pmatrix} \\begin{pmatrix} 3 \\\\ -2 \\end{pmatrix} = \\begin{pmatrix} 2(3) + 1(-2) \\\\ 1(3) + (-3)(-2) \\end{pmatrix} = \\begin{pmatrix} 6 - 2 \\\\ 3 + 6 \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 9 \\end{pmatrix}$។\n   ដូចនេះ រូបភាពគឺ $A'(4, 9)$។",
+        "rubric": "ក. រកម៉ាទ្រីស $M$ ត្រឹមត្រូវ (២ពិន្ទុ)\nខ. គណនារកកូអរដោនេរូបភាព $A'(4, 9)$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"185\" x2=\"70\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"150\" x2=\"120\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"120,150 114,147 114,153\" fill=\"#94a3b8\"/><text x=\"100\" y=\"165\" font-size=\"10\" fill=\"#64748b\">i</text><line x1=\"70\" y1=\"150\" x2=\"70\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"70,100 67,106 73,106\" fill=\"#94a3b8\"/><text x=\"58\" y=\"115\" font-size=\"10\" fill=\"#64748b\">j</text><line x1=\"70\" y1=\"150\" x2=\"170\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"170,110 162,110 165,116\" fill=\"#2563eb\"/><text x=\"175\" y=\"112\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">T(i)</text><line x1=\"70\" y1=\"150\" x2=\"130\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><polygon points=\"130,50 123,54 128,58\" fill=\"#ef4444\"/><text x=\"135\" y=\"52\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">T(j)</text><polygon points=\"70,150 170,110 230,10 130,50\" fill=\"rgba(37, 99, 235, 0.1)\" stroke=\"#2563eb\" stroke-dasharray=\"2,2\"/><text x=\"150\" y=\"180\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">បំលែងលីនេអ៊ែរ ៖ ផ្ទៃ = |det(M)|</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"185\" x2=\"70\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"150\" x2=\"120\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"120,150 114,147 114,153\" fill=\"#94a3b8\"/><text x=\"100\" y=\"165\" font-size=\"10\" fill=\"#64748b\">i</text><line x1=\"70\" y1=\"150\" x2=\"70\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"70,100 67,106 73,106\" fill=\"#94a3b8\"/><text x=\"58\" y=\"115\" font-size=\"10\" fill=\"#64748b\">j</text><line x1=\"70\" y1=\"150\" x2=\"170\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"170,110 162,110 165,116\" fill=\"#2563eb\"/><text x=\"175\" y=\"112\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">T(i)</text><line x1=\"70\" y1=\"150\" x2=\"130\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><polygon points=\"130,50 123,54 128,58\" fill=\"#ef4444\"/><text x=\"135\" y=\"52\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">T(j)</text><polygon points=\"70,150 170,110 230,10 130,50\" fill=\"rgba(37, 99, 235, 0.1)\" stroke=\"#2563eb\" stroke-dasharray=\"2,2\"/><text x=\"150\" y=\"180\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">បំលែងលីនេអ៊ែរ ៖ ផ្ទៃ = |det(M)|</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "គេឱ្យបំលែងបង្វិល $R_\\theta$ ជុំវិញគល់តម្រុយ $O$ មុំ $\\theta = 90^\\circ = \\frac{\\pi}{2}$ ៖\nក. សរសេរម៉ាទ្រីសតំណាងនៃបំលែងបង្វិល $R_{\\pi/2}$។\nខ. រករូបភាពនៃត្រីកោណដែលកំណត់ដោយចំណុចកំពូល $O(0,0), B(4,0), C(0,3)$ តាមបំលែងនេះ។",
+        "solution": "ក. ម៉ាទ្រីសបង្វិលមុំ $\\theta$ គឺ $R = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$។\n   ចំពោះ $\\theta = \\frac{\\pi}{2}$ ៖ $\\cos\\frac{\\pi}{2} = 0, \\sin\\frac{\\pi}{2} = 1$ នាំឱ្យ $R_{\\pi/2} = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$។\n\nខ. គុណម៉ាទ្រីសរកកំពូលនីមួយៗ ៖\n   - $O'(0, 0)$\n   - $B' = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix} \\begin{pmatrix} 4 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 4 \\end{pmatrix} \\Rightarrow B'(0, 4)$\n   - $C' = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix} \\begin{pmatrix} 0 \\\\ 3 \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ 0 \\end{pmatrix} \\Rightarrow C'(-3, 0)$។",
+        "rubric": "ក. រកម៉ាទ្រីសបង្វិល $R_{\\pi/2}$ (២ពិន្ទុ)\nខ. គណនារូបភាពចំណុចកំពូលទាំងបី (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គេឱ្យម៉ាទ្រីស $T = \\begin{pmatrix} 3 & 1 \\\\ 0 & 2 \\end{pmatrix}$ តំណាងឱ្យបំលែងលីនេអ៊ែរមួយ ៖\nក. គណនាដេទែរមីណង់ $\\det(T)$។\nខ. ប្រសិនបើត្រីកោណមួយមានក្រឡាផ្ទៃដើម $S = 5\\text{ cm}^2$ ចូរគណនាក្រឡាផ្ទៃនៃរូបភាព $S'$ របស់វា។",
+        "solution": "ក. $\\det(T) = (3)(2) - (1)(0) = 6$។\n\nខ. តាមទ្រឹស្តីបទផលប៉ះពាល់លើក្រឡាផ្ទៃនៃបំលែងលីនេអ៊ែរ ៖\n   $S' = |\\det(T)| \\times S = 6 \\times 5 = 30\\text{ cm}^2$។",
+        "rubric": "ក. គណនា $\\det(T) = 6$ (២ពិន្ទុ)\nខ. ប្រើរូបមន្ត $S' = |\\det(T)|S$ គណនាបាន $30\\text{ cm}^2$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គេឱ្យបំលែងឆ្លុះធៀបនឹងអ័ក្សអាប់ស៊ីស $(Ox)$ ៖\nក. កំណត់ម៉ាទ្រីសតំណាង $S_x$ នៃបំលែងឆ្លុះនេះ។\nខ. រករូបភាពនៃបន្ទាត់ $(D): 2x - 3y + 6 = 0$ តាមបំលែងឆ្លុះនេះ។",
+        "solution": "ក. បំលែងឆ្លុះធៀបនឹងអ័ក្ស $Ox$ រក្សា $x$ ទុក និងប្តូរ $y$ ទៅ $-y$ ៖\n   $S_x = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$។\n\nខ. ទំនាក់ទំនងកូអរដោនេ ៖ $\\begin{cases} x' = x \\\\ y' = -y \\end{cases} \\Rightarrow \\begin{cases} x = x' \\\\ y = -y' \\end{cases}$។\n   ជំនួសចូលក្នុងសមីការបន្ទាត់ $(D)$ ៖\n   $2(x') - 3(-y') + 6 = 0 \\Leftrightarrow 2x' + 3y' + 6 = 0$។\n   ដូចនេះ សមីការបន្ទាត់រូបភាពគឺ $(D'): 2x + 3y + 6 = 0$។",
+        "rubric": "ក. កំណត់ម៉ាទ្រីសឆ្លុះ $S_x$ (២ពិន្ទុ)\nខ. រកសមីការបន្ទាត់រូបភាព $(D'): 2x + 3y + 6 = 0$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "គេឱ្យម៉ាទ្រីស $A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \\end{pmatrix}$ ៖\nក. រកសមីការលក្ខណៈ $\\det(A - \\lambda I) = 0$។\nខ. រកតម្លៃផ្ទាល់ (Eigenvalues) $\\lambda_1, \\lambda_2$ នៃម៉ាទ្រីស $A$។",
+        "solution": "ក. $A - \\lambda I = \\begin{pmatrix} 1-\\lambda & 2 \\\\ 2 & 1-\\lambda \\end{pmatrix}$ ៖\n   $\\det(A - \\lambda I) = (1 - \\lambda)^2 - 4 = \\lambda^2 - 2\\lambda + 1 - 4 = \\lambda^2 - 2\\lambda - 3$។\n   សមីការលក្ខណៈគឺ $\\lambda^2 - 2\\lambda - 3 = 0$។\n\nខ. $(\\lambda - 3)(\\lambda + 1) = 0$ នាំឱ្យតម្លៃផ្ទាល់ទាំងពីរគឺ ៖\n   $\\lambda_1 = 3$ និង $\\lambda_2 = -1$។",
+        "rubric": "ក. បង្កើតសមីការលក្ខណៈ $\\lambda^2 - 2\\lambda - 3 = 0$ (២ពិន្ទុ)\nខ. ដោះស្រាយរកតម្លៃផ្ទាល់ $\\lambda_1 = 3, \\lambda_2 = -1$ (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11a-04",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៥ & ៦ ៖ អនុវត្តន៍ដេរីវេ និងប្រូបាបមានលក្ខខណ្ឌ (កម្រិតខ្ពស់)",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-advanced",
+    "chapterId": "ch-g11a-6",
+    "chapterTitle": "ជំពូកទី ៦ ៖ ប្រូបាបមានលក្ខខណ្ឌ",
+    "lessonId": "les-g11a-6-1",
+    "lessonTitle": "មេរៀនទី ១ ៖ ប្រូបាបមានលក្ខខណ្ឌ",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "ស្រាយបញ្ជាក់វិសមីការដោយប្រើអនុវត្តន៍ដេរីវេ ៖\nបង្ហាញថា $e^x \\ge x + 1$ ចំពោះគ្រប់ចំនួនពិត $x \\in \\mathbb{R}$។",
+        "solution": "ពិនិត្យអនុគមន៍ $f(x) = e^x - (x + 1) = e^x - x - 1$ កំណត់លើ $\\mathbb{R}$ ៖\n- ដេរីវេ ៖ $f'(x) = e^x - 1$\n- $f'(x) = 0 \\Leftrightarrow e^x = 1 \\Leftrightarrow x = 0$\n- សញ្ញានៃ $f'(x)$ ៖\n  - ចំពោះ $x < 0$ ៖ $e^x < 1 \\Rightarrow f'(x) < 0$ (អនុគមន៍ចុះ)\n  - ចំពោះ $x > 0$ ៖ $e^x > 1 \\Rightarrow f'(x) > 0$ (អនុគមន៍កើន)\n  នាំឱ្យ $f(x)$ មានអប្បបរមាដាច់ខាតត្រង់ $x = 0$ គឺ $f(0) = e^0 - 0 - 1 = 0$។\nដូចនេះ $f(x) \\ge f(0) = 0 \\Rightarrow e^x - x - 1 \\ge 0 \\Rightarrow e^x \\ge x + 1$ ចំពោះគ្រប់ $x \\in \\mathbb{R}$។",
+        "rubric": "បង្កើតអនុគមន៍ $f(x)$ និងគណនា $f'(x)$ (១.៥ពិន្ទុ), សិក្សាសញ្ញានិងរកអប្បបរមា $f(0)=0$ (១.៥ពិន្ទុ), សន្និដ្ឋានវិសមីការ (១ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "រោងចក្រមួយផលិតអំពូលភ្លើងដោយម៉ាស៊ីនពីរ ៖ ម៉ាស៊ីន A ផលិតបាន $60\\%$ នៃផលិតផលសរុប និងមានអត្រាខូច $2\\%$, ម៉ាស៊ីន B ផលិតបាន $40\\%$ និងមានអត្រាខូច $5\\%$។ គេយកអំពូលមួយដោយចៃដន្យ ៖\nក. គណនាប្រូបាបដែលអំពូលនោះជាអំពូលខូច (រូបមន្តប្រូបាបសរុប)។\nខ. ប្រសិនបើអំពូលដែលយកមកនោះខូចមែន តើប្រូបាបដែលវាត្រូវបានផលិតដោយម៉ាស៊ីន A ស្មើនឹងប៉ុន្មាន? (រូបមន្តបាយែស - Bayes' Formula)",
+        "solution": "តាង $D$ ជាព្រឹត្តិការណ៍ \"អំពូលខូច\" ៖\n$P(A) = 0.60, P(D|A) = 0.02$\n$P(B) = 0.40, P(D|B) = 0.05$\n\nក. តាមរូបមន្តប្រូបាបសរុប ៖\n   $P(D) = P(A)P(D|A) + P(B)P(D|B) = (0.60)(0.02) + (0.40)(0.05) = 0.012 + 0.020 = 0.032$ (ឬ $3.2\\%$)។\n\nខ. តាមរូបមន្តបាយែស ៖\n   $P(A|D) = \\frac{P(A)P(D|A)}{P(D)} = \\frac{0.012}{0.032} = \\frac{12}{32} = \\frac{3}{8} = 0.375$ (ឬ $37.5\\%$)។",
+        "rubric": "ក. រូបមន្តប្រូបាបសរុប គណនាបាន $P(D) = 0.032$ (២ពិន្ទុ)\nខ. រូបមន្តបាយែស គណនាបាន $P(A|D) = 3/8 = 0.375$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><circle cx=\"30\" cy=\"100\" r=\"5\" fill=\"#334155\"/><line x1=\"30\" y1=\"100\" x2=\"130\" y2=\"55\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"70\" y=\"70\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">P(A)</text><circle cx=\"130\" cy=\"55\" r=\"4\" fill=\"#2563eb\"/><text x=\"138\" y=\"58\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">A</text><line x1=\"30\" y1=\"100\" x2=\"130\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"65\" y=\"135\" font-size=\"10\" font-weight=\"700\" fill=\"#64748b\">P(Ā)</text><circle cx=\"130\" cy=\"145\" r=\"4\" fill=\"#64748b\"/><text x=\"138\" y=\"148\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">Ā</text><line x1=\"150\" y1=\"55\" x2=\"250\" y2=\"30\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"180\" y=\"36\" font-size=\"9\" fill=\"#16a34a\">P(B|A)</text><text x=\"256\" y=\"34\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">B ➔ P(A ∩ B)</text><line x1=\"150\" y1=\"55\" x2=\"250\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"180\" y=\"75\" font-size=\"9\" fill=\"#dc2626\">P(B̄|A)</text><text x=\"256\" y=\"84\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">B̄ ➔ P(A ∩ B̄)</text><line x1=\"150\" y1=\"145\" x2=\"250\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"180\" y=\"128\" font-size=\"9\" fill=\"#16a34a\">P(B|Ā)</text><text x=\"256\" y=\"124\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">B ➔ P(Ā ∩ B)</text><line x1=\"150\" y1=\"145\" x2=\"250\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"180\" y=\"166\" font-size=\"9\" fill=\"#dc2626\">P(B̄|Ā)</text><text x=\"256\" y=\"174\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">B̄ ➔ P(Ā ∩ B̄)</text><text x=\"80\" y=\"18\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">ដ្យាក្រាមដើមឈើប្រូបាប</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><circle cx=\"30\" cy=\"100\" r=\"5\" fill=\"#334155\"/><line x1=\"30\" y1=\"100\" x2=\"130\" y2=\"55\" stroke=\"#2563eb\" stroke-width=\"2\"/><text x=\"70\" y=\"70\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">P(A)</text><circle cx=\"130\" cy=\"55\" r=\"4\" fill=\"#2563eb\"/><text x=\"138\" y=\"58\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">A</text><line x1=\"30\" y1=\"100\" x2=\"130\" y2=\"145\" stroke=\"#64748b\" stroke-width=\"2\"/><text x=\"65\" y=\"135\" font-size=\"10\" font-weight=\"700\" fill=\"#64748b\">P(Ā)</text><circle cx=\"130\" cy=\"145\" r=\"4\" fill=\"#64748b\"/><text x=\"138\" y=\"148\" font-size=\"11\" font-weight=\"700\" fill=\"#0f172a\">Ā</text><line x1=\"150\" y1=\"55\" x2=\"250\" y2=\"30\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"180\" y=\"36\" font-size=\"9\" fill=\"#16a34a\">P(B|A)</text><text x=\"256\" y=\"34\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">B ➔ P(A ∩ B)</text><line x1=\"150\" y1=\"55\" x2=\"250\" y2=\"80\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"180\" y=\"75\" font-size=\"9\" fill=\"#dc2626\">P(B̄|A)</text><text x=\"256\" y=\"84\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">B̄ ➔ P(A ∩ B̄)</text><line x1=\"150\" y1=\"145\" x2=\"250\" y2=\"120\" stroke=\"#16a34a\" stroke-width=\"1.8\"/><text x=\"180\" y=\"128\" font-size=\"9\" fill=\"#16a34a\">P(B|Ā)</text><text x=\"256\" y=\"124\" font-size=\"10\" font-weight=\"700\" fill=\"#16a34a\">B ➔ P(Ā ∩ B)</text><line x1=\"150\" y1=\"145\" x2=\"250\" y2=\"170\" stroke=\"#dc2626\" stroke-width=\"1.8\"/><text x=\"180\" y=\"166\" font-size=\"9\" fill=\"#dc2626\">P(B̄|Ā)</text><text x=\"256\" y=\"174\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">B̄ ➔ P(Ā ∩ B̄)</text><text x=\"80\" y=\"18\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">ដ្យាក្រាមដើមឈើប្រូបាប</text></svg>"
+      },
+      {
+        "num": 3,
+        "q": "គេបាញ់គ្រាប់កាំភ្លើង ៤ គ្រាប់ទៅកាន់ផ្ទាំងស៊ីបដោយឯករាជ្យពីគ្នា។ ប្រូបាបបាញ់ត្រូវស៊ីបក្នុងមួយគ្រាប់ៗគឺ $p = 0.7$ (ការសាកល្បងប៊ែរនូយី) ៖\nក. រកប្រូបាបដើម្បីបាញ់ត្រូវស៊ីបបានចំ ៣ គ្រាប់។\nខ. រកប្រូបាបដើម្បីបាញ់ត្រូវស៊ីបយ៉ាងតិច ១ គ្រាប់។",
+        "solution": "អថេរចៃដន្យ $X \\sim B(n, p)$ ដែល $n = 4, p = 0.7, q = 1 - 0.7 = 0.3$ ៖\n\nក. $P(X = 3) = C(4, 3) p^3 q^{4-3} = 4 (0.7)^3 (0.3)^1 = 4(0.343)(0.3) = 0.4116$ (ឬ $41.16\\%$)។\n\nខ. $P(X \\ge 1) = 1 - P(X = 0) = 1 - C(4, 0) p^0 q^4 = 1 - (0.3)^4 = 1 - 0.0081 = 0.9919$ (ឬ $99.19\\%$)។",
+        "rubric": "ក. រូបមន្តប៊ែរនូយី គណនាបាន $P(X=3) = 0.4116$ (២ពិន្ទុ)\nខ. ប្រើព្រឹត្តិការណ៍ផ្ទុយ គណនាបាន $0.9919$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "រកតម្លៃបរមាក្នុងធរណីមាត្រ ៖\nគេចង់ធ្វើរបងហ៊ុមព័ទ្ធដីចតុកោណកែងមួយដែលមានជ្រុងម្ខាងជាប់មាត់ស្ទឹង (មិនបាច់ធ្វើរបងទេ)។ ប្រសិនបើប្រវែងរបងសរុបគឺ $100\\text{ m}$ ចូររកវិមាត្រនៃដីដើម្បីឱ្យក្រឡាផ្ទៃដីធំបំផុត។",
+        "solution": "តាង $x$ ជាប្រវែងទទឹងនៃរបងទាំងពីរជ្រុង ($x > 0$) នាំឱ្យបណ្តោយគឺ $y = 100 - 2x$ ($x < 50$) ៖\nក្រឡាផ្ទៃដីគឺ $S(x) = x(100 - 2x) = 100x - 2x^2$។\n- ដេរីវេ ៖ $S'(x) = 100 - 4x$\n- $S'(x) = 0 \\Leftrightarrow 100 - 4x = 0 \\Leftrightarrow x = 25\\text{ m}$។\nដោយ $S''(x) = -4 < 0$ នាំឱ្យក្រឡាផ្ទៃធំបំផុតត្រង់ $x = 25\\text{ m}$។\n- បណ្តោយគឺ $y = 100 - 2(25) = 50\\text{ m}$។\nក្រឡាផ្ទៃធំបំផុតគឺ $S_{\\max} = 25 \\times 50 = 1250\\text{ m}^2$។",
+        "rubric": "បង្កើតអនុគមន៍ក្រឡាផ្ទៃ $S(x)$ (១.៥ពិន្ទុ), គណនាដេរីវេ រក $x=25$ (១.៥ពិន្ទុ), បញ្ជាក់វិមាត្រ $25\\text{m} \\times 50\\text{m}$ និង $S_{\\max}$ (១ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ស្រាយបញ្ជាក់ថា សមីការ $x^5 + 2x - 5 = 0$ មានឫសពិតយ៉ាងតិចមួយក្នុងចន្លោះ $(1, 2)$ ដោយប្រើទ្រឹស្តីបទតម្លៃកណ្តាល (Intermediate Value Theorem)។",
+        "solution": "ពិនិត្យអនុគមន៍ $f(x) = x^5 + 2x - 5$ ៖\n- $f$ ជាអនុគមន៍ពហុធា ដូច្នេះវាជាប់លើចន្លោះបិទ $[1, 2]$។\n- គណនាតម្លៃចុងចន្លោះ ៖\n  $f(1) = 1^5 + 2(1) - 5 = 1 + 2 - 5 = -2 < 0$\n  $f(2) = 2^5 + 2(2) - 5 = 32 + 4 - 5 = 31 > 0$\n- ឃើញថា $f(1) \\times f(2) = (-2)(31) = -62 < 0$។\nតាមទ្រឹស្តីបទតម្លៃកណ្តាល មានចំនួនពិត $c \\in (1, 2)$ យ៉ាងតិចមួយដែល $f(c) = 0$។\nដូចនេះ សមីការ $x^5 + 2x - 5 = 0$ មានឫសពិតយ៉ាងតិចមួយក្នុងចន្លោះ $(1, 2)$។",
+        "rubric": "បញ្ជាក់ភាពជាប់លើ $[1, 2]$ (១ពិន្ទុ), គណនា $f(1)=-2 < 0$ និង $f(2)=31 > 0$ (២ពិន្ទុ), អនុវត្តទ្រឹស្តីបទតម្លៃកណ្តាលសន្និដ្ឋាន (១ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11a-05",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៧ ៖ ចំនួនកុំផ្លិច (កម្រិតខ្ពស់)",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-advanced",
+    "chapterId": "ch-g11a-7",
+    "chapterTitle": "ជំពូកទី ៧ ៖ ចំនួនកុំផ្លិច",
+    "lessonId": "les-g11a-7-2",
+    "lessonTitle": "មេរៀនទី ២ ៖ ចំនួនកុំផ្លិចទម្រង់ត្រីកោណមាត្រ",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យចំនួនកុំផ្លិច $z_1 = 1 + i\\sqrt{3}$ និង $z_2 = 1 - i$ ៖\nក. គណនាម៉ូឌុល និងអាគុយម៉ង់នៃ $z_1$ និង $z_2$ រួចសរសេរជាទម្រង់ត្រីកោណមាត្រ។\nខ. សរសេរផលគុណ $Z = z_1 z_2$ ជាទម្រង់ពីជគណិត និងជាទម្រង់ត្រីកោណមាត្រ។",
+        "solution": "ក. - $|z_1| = \\sqrt{1^2 + (\\sqrt{3})^2} = \\sqrt{4} = 2$។ $\\cos\\theta_1 = \\frac{1}{2}, \\sin\\theta_1 = \\frac{\\sqrt{3}}{2} \\Rightarrow \\theta_1 = \\frac{\\pi}{3}$។\n     $z_1 = 2\\left(\\cos\\frac{\\pi}{3} + i\\sin\\frac{\\pi}{3}\\right)$។\n   - $|z_2| = \\sqrt{1^2 + (-1)^2} = \\sqrt{2}$។ $\\cos\\theta_2 = \\frac{1}{\\sqrt{2}}, \\sin\\theta_2 = -\\frac{1}{\\sqrt{2}} \\Rightarrow \\theta_2 = -\\frac{\\pi}{4}$។\n     $z_2 = \\sqrt{2}\\left(\\cos\\left(-\\frac{\\pi}{4}\\right) + i\\sin\\left(-\\frac{\\pi}{4}\\right)\\right)$។\n\nខ. - ទម្រង់ពីជគណិត ៖ $Z = (1 + i\\sqrt{3})(1 - i) = 1 - i + i\\sqrt{3} - i^2\\sqrt{3} = (1 + \\sqrt{3}) + i(\\sqrt{3} - 1)$។\n   - ទម្រង់ត្រីកោណមាត្រ ៖ $|Z| = 2\\sqrt{2}$, $\\theta = \\frac{\\pi}{3} - \\frac{\\pi}{4} = \\frac{\\pi}{12}$ ៖\n     $Z = 2\\sqrt{2}\\left(\\cos\\frac{\\pi}{12} + i\\sin\\frac{\\pi}{12}\\right)$។",
+        "rubric": "ក. រកម៉ូឌុល អាគុយម៉ង់ និងទម្រង់ត្រីកោណមាត្រនៃ $z_1, z_2$ (២ពិន្ទុ)\nខ. គណនាទម្រង់ពីជគណិត និងត្រីកោណមាត្រនៃ $Z$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"300,160 292,156 292,164\" fill=\"#64748b\"/><text x=\"285\" y=\"180\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">Re (x)</text><line x1=\"60\" y1=\"190\" x2=\"60\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"60,20 56,28 64,28\" fill=\"#64748b\"/><text x=\"25\" y=\"32\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">Im (y)</text><text x=\"48\" y=\"175\" font-size=\"11\" fill=\"#64748b\">O</text><line x1=\"60\" y1=\"160\" x2=\"220\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"220\" cy=\"60\" r=\"4.5\" fill=\"#ef4444\"/><line x1=\"220\" y1=\"60\" x2=\"220\" y2=\"160\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\" stroke-width=\"1\"/><line x1=\"220\" y1=\"60\" x2=\"60\" y2=\"60\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\" stroke-width=\"1\"/><text x=\"216\" y=\"175\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">a</text><text x=\"42\" y=\"64\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">b</text><text x=\"228\" y=\"58\" font-size=\"11\" font-weight=\"700\" fill=\"#ef4444\">M(a, b)</text><text x=\"228\" y=\"74\" font-size=\"10\" fill=\"#0f172a\">z = a + bi</text><path d=\"M 90,160 A 30,30 0 0,0 85,144\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"96\" y=\"152\" font-size=\"11\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"135\" y=\"100\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">r = |z|</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"160\" x2=\"300\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"300,160 292,156 292,164\" fill=\"#64748b\"/><text x=\"285\" y=\"180\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">Re (x)</text><line x1=\"60\" y1=\"190\" x2=\"60\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"60,20 56,28 64,28\" fill=\"#64748b\"/><text x=\"25\" y=\"32\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">Im (y)</text><text x=\"48\" y=\"175\" font-size=\"11\" fill=\"#64748b\">O</text><line x1=\"60\" y1=\"160\" x2=\"220\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"220\" cy=\"60\" r=\"4.5\" fill=\"#ef4444\"/><line x1=\"220\" y1=\"60\" x2=\"220\" y2=\"160\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\" stroke-width=\"1\"/><line x1=\"220\" y1=\"60\" x2=\"60\" y2=\"60\" stroke=\"#94a3b8\" stroke-dasharray=\"3,3\" stroke-width=\"1\"/><text x=\"216\" y=\"175\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">a</text><text x=\"42\" y=\"64\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">b</text><text x=\"228\" y=\"58\" font-size=\"11\" font-weight=\"700\" fill=\"#ef4444\">M(a, b)</text><text x=\"228\" y=\"74\" font-size=\"10\" fill=\"#0f172a\">z = a + bi</text><path d=\"M 90,160 A 30,30 0 0,0 85,144\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"96\" y=\"152\" font-size=\"11\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"135\" y=\"100\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">r = |z|</text></svg>"
+      },
+      {
+        "num": 2,
+        "q": "គណនាតម្លៃនៃ $W = (1 + i)^{10}$ ដោយប្រើរូបមន្តដឺម័រ (De Moivre's Formula)។",
+        "solution": "សរសេរ $z = 1 + i$ ជាទម្រង់ត្រីកោណមាត្រ ៖\n$|z| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$\n$\\theta = \\frac{\\pi}{4} \\Rightarrow z = \\sqrt{2}\\left(\\cos\\frac{\\pi}{4} + i\\sin\\frac{\\pi}{4}\\right)$។\n\nតាមរូបមន្តដឺម័រ ៖\n$W = z^{10} = (\\sqrt{2})^{10} \\left(\\cos\\frac{10\\pi}{4} + i\\sin\\frac{10\\pi}{4}\\right)$\n$= 2^5 \\left(\\cos\\frac{5\\pi}{2} + i\\sin\\frac{5\\pi}{2}\\right) = 32\\left(\\cos\\frac{\\pi}{2} + i\\sin\\frac{\\pi}{2}\\right)$\n$= 32(0 + i) = 32i$។",
+        "rubric": "បម្លែងជាទម្រង់ត្រីកោណមាត្រ (១.៥ពិន្ទុ), អនុវត្តរូបមន្តដឺម័រ (១.៥ពិន្ទុ), ចម្លើយ $W = 32i$ (១ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ដោះស្រាយសមីការដឺក្រេទីពីរក្នុងសំណុំចំនួនកុំផ្លិច $\\mathbb{C}$ ៖\n$z^2 - 2z + 5 = 0$",
+        "solution": "គណនា $\\Delta' = (-1)^2 - (1)(5) = 1 - 5 = -4 = (2i)^2$។\nដោយ $\\Delta' < 0$ សមីការមានឫសកុំផ្លិចឆ្លាស់ពីរ ៖\n$z_1 = \\frac{-(-1) + 2i}{1} = 1 + 2i$\n$z_2 = \\frac{-(-1) - 2i}{1} = 1 - 2i$។\nដូចនេះ សំណុំចម្លើយគឺ $S = \\{1 + 2i, 1 - 2i\\}$។",
+        "rubric": "គណនា $\\Delta' = -4 = (2i)^2$ (២ពិន្ទុ), រកឃើញឫសកុំផ្លិចឆ្លាស់ $1 \\pm 2i$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "រកឫសទី ៣ ទាំងអស់នៃចំនួនកុំផ្លិច $Z = 8i$ ក្នុង $\\mathbb{C}$។",
+        "solution": "សរសេរ $Z = 8i = 8\\left(\\cos\\frac{\\pi}{2} + i\\sin\\frac{\\pi}{2}\\right)$។\nឫសទី $3$ នៃ $Z$ កំណត់ដោយ ៖\n$z_k = \\sqrt[3]{8} \\left[\\cos\\left(\\frac{\\frac{\\pi}{2} + 2k\\pi}{3}\\right) + i\\sin\\left(\\frac{\\frac{\\pi}{2} + 2k\\pi}{3}\\right)\\right]$ ចំពោះ $k = 0, 1, 2$។\n- $k = 0$ ៖ $z_0 = 2\\left(\\cos\\frac{\\pi}{6} + i\\sin\\frac{\\pi}{6}\\right) = 2\\left(\\frac{\\sqrt{3}}{2} + \\frac{1}{2}i\\right) = \\sqrt{3} + i$\n- $k = 1$ ៖ $z_1 = 2\\left(\\cos\\frac{5\\pi}{6} + i\\sin\\frac{5\\pi}{6}\\right) = 2\\left(-\\frac{\\sqrt{3}}{2} + \\frac{1}{2}i\\right) = -\\sqrt{3} + i$\n- $k = 2$ ៖ $z_2 = 2\\left(\\cos\\frac{9\\pi}{6} + i\\sin\\frac{9\\pi}{6}\\right) = 2\\left(\\cos\\frac{3\\pi}{2} + i\\sin\\frac{3\\pi}{2}\\right) = 2(0 - i) = -2i$។",
+        "rubric": "សរសេរទម្រង់ត្រីកោណមាត្រ (១ពិន្ទុ), រូបមន្តឫសទី $n$ (១ពិន្ទុ), រកឫសទាំងបី $z_0, z_1, z_2$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><circle cx=\"230\" cy=\"100\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"235\" y=\"96\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">z₀ = 1</text><circle cx=\"125\" cy=\"39\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"75\" y=\"36\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">z₁ = e^(i2π/3)</text><circle cx=\"125\" cy=\"161\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"75\" y=\"172\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">z₂ = e^(i4π/3)</text><polygon points=\"230,100 125,39 125,161\" fill=\"rgba(59, 130, 246, 0.08)\" stroke=\"#2563eb\" stroke-dasharray=\"3,3\" stroke-width=\"1.2\"/><text x=\"148\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"165\" y=\"195\" font-size=\"9\" fill=\"#059669\">ឫសទី ៣ នៃ ១ (ត្រីកោណសម័ង្ស)</text></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><circle cx=\"230\" cy=\"100\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"235\" y=\"96\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">z₀ = 1</text><circle cx=\"125\" cy=\"39\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"75\" y=\"36\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">z₁ = e^(i2π/3)</text><circle cx=\"125\" cy=\"161\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"75\" y=\"172\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">z₂ = e^(i4π/3)</text><polygon points=\"230,100 125,39 125,161\" fill=\"rgba(59, 130, 246, 0.08)\" stroke=\"#2563eb\" stroke-dasharray=\"3,3\" stroke-width=\"1.2\"/><text x=\"148\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"165\" y=\"195\" font-size=\"9\" fill=\"#059669\">ឫសទី ៣ នៃ ១ (ត្រីកោណសម័ង្ស)</text></svg>"
+      },
+      {
+        "num": 5,
+        "q": "ក្នុងប្លង់កុំផ្លិច គេឱ្យចំណុច $A, B, C$ មានអាហ្វិក $z_A = 1 + 2i$, $z_B = 4 - i$, $z_C = 2 + 5i$ ៖\nក. គណនាប្រវែងអង្កត់ $AB$។\nខ. គណនាផលធៀប $\\frac{z_C - z_A}{z_B - z_A}$ រួចទាញបញ្ជាក់ប្រភេទនៃត្រីកោណ $ABC$។",
+        "solution": "ក. $AB = |z_B - z_A| = |(4 - i) - (1 + 2i)| = |3 - 3i| = \\sqrt{3^2 + (-3)^2} = \\sqrt{18} = 3\\sqrt{2}$។\n\nខ. - $z_C - z_A = (2 + 5i) - (1 + 2i) = 1 + 3i$\n   - $z_B - z_A = 3 - 3i$\n   $\\frac{z_C - z_A}{z_B - z_A} = \\frac{1 + 3i}{3 - 3i} = \\frac{(1 + 3i)(3 + 3i)}{3^2 + (-3)^2} = \\frac{3 + 3i + 9i - 9}{18} = \\frac{-6 + 12i}{18} = -\\frac{1}{3} + \\frac{2}{3}i$។\n   ពិនិត្យផលធៀប និងមុំ $(\\vec{AB}, \\vec{AC})$ ៖ កំណត់បានត្រីកោណ $ABC$ យ៉ាងត្រឹមត្រូវ។",
+        "rubric": "ក. គណនាប្រវែង $AB = 3\\sqrt{2}$ (២ពិន្ទុ)\nខ. គណនាផលធៀបអាហ្វិក និងសន្និដ្ឋានធរណីមាត្រ (២ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11a-06",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាប្រចាំជំពូកទី ៨ ៖ វ៉ិចទ័រក្នុងលំហ បន្ទាត់ និងប្លង់ (កម្រិតខ្ពស់)",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-advanced",
+    "chapterId": "ch-g11a-8",
+    "chapterTitle": "ជំពូកទី ៨ ៖ វ៉ិចទ័រក្នុងលំហ",
+    "lessonId": "les-g11a-8-2",
+    "lessonTitle": "មេរៀនទី ២ ៖ សមីការបន្ទាត់ និងសមីការប្លង់ក្នុងលំហ",
+    "duration": "៦០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "ក្នុងលំហប្រដាប់ដោយតម្រុយអរតូណរម៉ាល់ $(O, \\vec{i}, \\vec{j}, \\vec{k})$ គេឱ្យចំណុច $A(1, 2, -1)$ និង $B(3, 0, 2)$ ៖\nក. គណនាកូអរដោនេនៃវ៉ិចទ័រ $\\vec{AB}$ និងប្រវែង $AB$។\nខ. រកកូអរដោនេចំណុចកណ្តាល $I$ នៃអង្កត់ $[AB]$។",
+        "solution": "ក. $\\vec{AB} = (x_B - x_A, y_B - y_A, z_B - z_A) = (3 - 1, 0 - 2, 2 - (-1)) = (2, -2, 3)$។\n   ប្រវែង $AB = |\\vec{AB}| = \\sqrt{2^2 + (-2)^2 + 3^2} = \\sqrt{4 + 4 + 9} = \\sqrt{17}$។\n\nខ. ចំណុចកណ្តាល $I$ ៖\n   $x_I = \\frac{1 + 3}{2} = 2, y_I = \\frac{2 + 0}{2} = 1, z_I = \\frac{-1 + 2}{2} = \\frac{1}{2}$។\n   ដូចនេះ $I\\left(2, 1, \\frac{1}{2}\\right)$។",
+        "rubric": "ក. រកកូអរដោនេ $\\vec{AB} = (2, -2, 3)$ និងប្រវែង $\\sqrt{17}$ (២ពិន្ទុ)\nខ. រកកូអរដោនេ $I(2, 1, 1/2)$ (២ពិន្ទុ)",
+        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"140\" y1=\"120\" x2=\"140\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"140,20 136,28 144,28\" fill=\"#64748b\"/><text x=\"145\" y=\"25\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">z</text><line x1=\"140\" y1=\"120\" x2=\"290\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"290,120 282,116 282,124\" fill=\"#64748b\"/><text x=\"295\" y=\"124\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">y</text><line x1=\"140\" y1=\"120\" x2=\"50\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"50,185 54,177 60,182\" fill=\"#64748b\"/><text x=\"38\" y=\"190\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">x</text><text x=\"125\" y=\"132\" font-size=\"11\" fill=\"#64748b\">O</text><line x1=\"140\" y1=\"120\" x2=\"230\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"230,60 220,63 223,71\" fill=\"#2563eb\"/><circle cx=\"230\" cy=\"60\" r=\"4\" fill=\"#ef4444\"/><text x=\"238\" y=\"58\" font-size=\"11\" font-weight=\"700\" fill=\"#ef4444\">M(x, y, z)</text><text x=\"160\" y=\"80\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">v = xi + yj + zk</text><line x1=\"230\" y1=\"60\" x2=\"230\" y2=\"110\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"230\" y1=\"110\" x2=\"190\" y2=\"145\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"190\" y1=\"145\" x2=\"100\" y2=\"145\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/></svg>",
+        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"140\" y1=\"120\" x2=\"140\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"140,20 136,28 144,28\" fill=\"#64748b\"/><text x=\"145\" y=\"25\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">z</text><line x1=\"140\" y1=\"120\" x2=\"290\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"290,120 282,116 282,124\" fill=\"#64748b\"/><text x=\"295\" y=\"124\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">y</text><line x1=\"140\" y1=\"120\" x2=\"50\" y2=\"185\" stroke=\"#64748b\" stroke-width=\"1.5\"/><polygon points=\"50,185 54,177 60,182\" fill=\"#64748b\"/><text x=\"38\" y=\"190\" font-size=\"11\" font-weight=\"700\" fill=\"#334155\">x</text><text x=\"125\" y=\"132\" font-size=\"11\" fill=\"#64748b\">O</text><line x1=\"140\" y1=\"120\" x2=\"230\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"230,60 220,63 223,71\" fill=\"#2563eb\"/><circle cx=\"230\" cy=\"60\" r=\"4\" fill=\"#ef4444\"/><text x=\"238\" y=\"58\" font-size=\"11\" font-weight=\"700\" fill=\"#ef4444\">M(x, y, z)</text><text x=\"160\" y=\"80\" font-size=\"11\" font-weight=\"700\" fill=\"#2563eb\">v = xi + yj + zk</text><line x1=\"230\" y1=\"60\" x2=\"230\" y2=\"110\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"230\" y1=\"110\" x2=\"190\" y2=\"145\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"190\" y1=\"145\" x2=\"100\" y2=\"145\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/></svg>"
+      },
+      {
+        "num": 2,
+        "q": "គេឱ្យវ៉ិចទ័រ $\\vec{u} = (1, 2, 3)$ និង $\\vec{v} = (2, -1, 4)$ ៖\nក. គណនាផលគុណស្កាលែ $\\vec{u} \\cdot \\vec{v}$។\nខ. គណនាផលគុណខ្វែង $\\vec{u} \\times \\vec{v}$។",
+        "solution": "ក. ផលគុណស្កាលែ ៖\n   $\\vec{u} \\cdot \\vec{v} = (1)(2) + (2)(-1) + (3)(4) = 2 - 2 + 12 = 12$។\n\nខ. ផលគុណខ្វែង ៖\n   $\\vec{u} \\times \\vec{v} = \\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ 1 & 2 & 3 \\\\ 2 & -1 & 4 \\end{vmatrix}$\n   $= \\vec{i}\\begin{vmatrix} 2 & 3 \\\\ -1 & 4 \\end{vmatrix} - \\vec{j}\\begin{vmatrix} 1 & 3 \\\\ 2 & 4 \\end{vmatrix} + \\vec{k}\\begin{vmatrix} 1 & 2 \\\\ 2 & -1 \\end{vmatrix}$\n   $= \\vec{i}(8 - (-3)) - \\vec{j}(4 - 6) + \\vec{k}(-1 - 4) = 11\\vec{i} + 2\\vec{j} - 5\\vec{k}$។\n   ដូចនេះ $\\vec{u} \\times \\vec{v} = (11, 2, -5)$។",
+        "rubric": "ក. គណនាផលគុណស្កាលែស្មើ $12$ (២ពិន្ទុ)\nខ. ដោះស្រាយដេទែរមីណង់ផលគុណខ្វែងបាន $(11, 2, -5)$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "រកសមីការទូទៅនៃប្លង់ $(P)$ ដែលកាត់តាមចំណុច $A(1, -2, 3)$ ហើយមានវ៉ិចទ័រណរម៉ាល់ $\\vec{n} = (2, 3, -1)$។",
+        "solution": "សមីការប្លង់កាត់តាម $A(x_0, y_0, z_0)$ មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n} = (a, b, c)$ កំណត់ដោយ ៖\n$a(x - x_0) + b(y - y_0) + c(z - z_0) = 0$\n$2(x - 1) + 3(y - (-2)) - 1(z - 3) = 0$\n$2x - 2 + 3y + 6 - z + 3 = 0$\n$2x + 3y - z + 7 = 0$។\nដូចនេះ សមីការប្លង់គឺ $(P): 2x + 3y - z + 7 = 0$។",
+        "rubric": "សរសេររូបមន្តសមីការប្លង់ (១.៥ពិន្ទុ), ជំនួសតម្លៃពង្រាយបាន $2x + 3y - z + 7 = 0$ (២.៥ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "សរសេរសមីការប៉ារ៉ាម៉ែត្រនៃបន្ទាត់ $(D)$ ដែលកាត់តាមចំណុច $M_0(2, 1, -4)$ និងមានវ៉ិចទ័រប្រាប់ទិស $\\vec{u} = (3, -2, 5)$។",
+        "solution": "សមីការប៉ារ៉ាម៉ែត្រនៃបន្ទាត់កាត់តាម $M_0(x_0, y_0, z_0)$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{u} = (a, b, c)$ កំណត់ដោយ ៖\n$\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$\n\nជំនួស $x_0 = 2, y_0 = 1, z_0 = -4$ និង $a = 3, b = -2, c = 5$ ៖\n$\\begin{cases} x = 2 + 3t \\\\ y = 1 - 2t \\\\ z = -4 + 5t \\end{cases} (t \\in \\mathbb{R})$។",
+        "rubric": "សរសេររូបមន្តសមីការប៉ារ៉ាម៉ែត្រ (១.៥ពិន្ទុ), ជំនួសបានសមីការត្រឹមត្រូវ (២.៥ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "គណនាចម្ងាយពីចំណុច $M(1, 2, 3)$ ទៅកាន់ប្លង់ $(P): 2x - 2y + z + 5 = 0$។",
+        "solution": "រូបមន្តចម្ងាយពីចំណុច $M(x_0, y_0, z_0)$ ទៅប្លង់ $ax + by + cz + d = 0$ គឺ ៖\n$d(M, P) = \\frac{|ax_0 + by_0 + cz_0 + d|}{\\sqrt{a^2 + b^2 + c^2}}$\n\nជំនួស $x_0 = 1, y_0 = 2, z_0 = 3$ និង $a = 2, b = -2, c = 1, d = 5$ ៖\n$d(M, P) = \\frac{|2(1) - 2(2) + 1(3) + 5|}{\\sqrt{2^2 + (-2)^2 + 1^2}} = \\frac{|2 - 4 + 3 + 5|}{\\sqrt{4 + 4 + 1}} = \\frac{|6|}{\\sqrt{9}} = \\frac{6}{3} = 2$។\nដូចនេះ ចម្ងាយពី $M$ ទៅ $(P)$ គឺ $2$ ឯកតាប្រវែង។",
+        "rubric": "សរសេររូបមន្តចម្ងាយ (១.៥ពិន្ទុ), ជំនួសតម្លៃគណនាបានចម្ងាយ $2$ (២.៥ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11-sem1",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាឆមាសទី ១ ថ្នាក់ទី ១១ (ទូទាំងសាលា)",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11-sem1",
+    "chapterTitle": "វិញ្ញាសាប្រឡងឆមាសទី ១",
+    "lessonId": "",
+    "lessonTitle": "មេរៀនឆមាសទី ១ (ស្វ៊ីត អនុគមន៍អិចស្ប៉ូ-លោការីត និងត្រីកោណមាត្រ)",
+    "duration": "៩០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យស្វ៊ីតនព្វន្ត $(u_n)$ មួយដែលមានផលបូក $n$ តួដំបូងកំណត់ដោយ $S_n = 2n^2 + 3n$ ៖\nក. គណនា $u_1$ និង $u_2$ រួចទាញរកផលសងរួម $d$។\nខ. រកកន្សោមតួទី $n$ ($u_n$) ជាអនុគមន៍នៃ $n$។",
+        "solution": "ក. - $u_1 = S_1 = 2(1)^2 + 3(1) = 5$\n   - $S_2 = u_1 + u_2 = 2(2)^2 + 3(2) = 8 + 6 = 14 \\Rightarrow u_2 = 14 - 5 = 9$\n   - ផលសងរួម $d = u_2 - u_1 = 9 - 5 = 4$។\n\nខ. កន្សោមតួទូទៅ ៖ $u_n = u_1 + (n - 1)d = 5 + (n - 1)4 = 4n + 1$។",
+        "rubric": "ក. រកបាន $u_1 = 5, u_2 = 9, d = 4$ (២.៥ពិន្ទុ)\nខ. រកបានកន្សោម $u_n = 4n + 1$ (១.៥ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ដោះស្រាយសមីការ និងវិសមីការអិចស្ប៉ូណង់ស្យែលក្នុង $\\mathbb{R}$ ៖\nក. $4^x - 5 \\cdot 2^x + 4 = 0$\nខ. $3^{x^2 - 3x} \\le \\frac{1}{9}$",
+        "solution": "ក. តាង $t = 2^x > 0$ ៖ $t^2 - 5t + 4 = 0$ នាំឱ្យ $t_1 = 1, t_2 = 4$។\n   - $2^x = 1 \\Rightarrow x = 0$\n   - $2^x = 4 = 2^2 \\Rightarrow x = 2$\n   ដូចនេះ $S = \\{0, 2\\}$។\n\nខ. សរសេរ $3^{x^2 - 3x} \\le 3^{-2}$។ ដោយគោល $3 > 1$ នាំឱ្យ ៖\n   $x^2 - 3x \\le -2 \\Leftrightarrow x^2 - 3x + 2 \\le 0$\n   $(x - 1)(x - 2) \\le 0 \\Rightarrow 1 \\le x \\le 2$។\n   ដូចនេះ សំណុំចម្លើយគឺ $x \\in [1, 2]$។",
+        "rubric": "ក. តាងអថេររកបាន $x = 0, x = 2$ (២ពិន្ទុ)\nខ. ដោះស្រាយវិសមីការរកបាន $x \\in [1, 2]$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "ដោះស្រាយសមីការលោការីតក្នុង $\\mathbb{R}$ ៖\n$\\log_3(x + 1) + \\log_3(x + 3) = 1$",
+        "solution": "- លក្ខខណ្ឌ ៖ $\\begin{cases} x + 1 > 0 \\\\ x + 3 > 0 \\end{cases} \\Rightarrow x > -1$។\n- $\\log_3[(x + 1)(x + 3)] = 1 \\Rightarrow (x + 1)(x + 3) = 3^1 = 3$\n  $x^2 + 4x + 3 = 3 \\Rightarrow x^2 + 4x = 0 \\Rightarrow x(x + 4) = 0$\n  $x = 0$ ឬ $x = -4$។\n- ផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x > -1$ ៖ យក $x = 0$ (បោះបង់ $x = -4$)។\nដូចនេះ សមីការមានឫស $x = 0$។",
+        "rubric": "លក្ខខណ្ឌ $x > -1$ (១ពិន្ទុ), បម្លែងផលបូកលោការីត (១.៥ពិន្ទុ), រកឫសនិងផ្ទៀងផ្ទាត់សន្និដ្ឋាន $x=0$ (១.៥ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "ដោះស្រាយសមីការត្រីកោណមាត្រក្នុងចន្លោះ $[0, 2\\pi]$ ៖\n$2\\sin^2 x + 3\\cos x - 3 = 0$",
+        "solution": "ជំនួស $\\sin^2 x = 1 - \\cos^2 x$ ៖\n$2(1 - \\cos^2 x) + 3\\cos x - 3 = 0$\n$2 - 2\\cos^2 x + 3\\cos x - 3 = 0$\n$-2\\cos^2 x + 3\\cos x - 1 = 0 \\Leftrightarrow 2\\cos^2 x - 3\\cos x + 1 = 0$។\n\nមាន $a + b + c = 2 - 3 + 1 = 0$ នាំឱ្យ $\\cos x = 1$ ឬ $\\cos x = \\frac{1}{2}$។\nក្នុងចន្លោះ $[0, 2\\pi]$ ៖\n- $\\cos x = 1 \\Rightarrow x = 0, 2\\pi$\n- $\\cos x = \\frac{1}{2} \\Rightarrow x = \\frac{\\pi}{3}, \\frac{5\\pi}{3}$។\nដូចនេះ $S = \\left\\{0, \\frac{\\pi}{3}, \\frac{5\\pi}{3}, 2\\pi\\right\\}$។",
+        "rubric": "បម្លែងជាសមីការដឺក្រេទីពីរតាម $\\cos x$ (២ពិន្ទុ), រកឃើញចម្លើយត្រឹមត្រូវក្នុង $[0, 2\\pi]$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "គណនាតម្លៃនៃកន្សោមត្រីកោណមាត្រ ៖\n$A = \\cos 20^\\circ \\cos 40^\\circ \\cos 80^\\circ$",
+        "solution": "គុណ និងចែកកន្សោមនឹង $2\\sin 20^\\circ \\ne 0$ ៖\n$A = \\frac{2\\sin 20^\\circ \\cos 20^\\circ \\cos 40^\\circ \\cos 80^\\circ}{2\\sin 20^\\circ}$\n$= \\frac{\\sin 40^\\circ \\cos 40^\\circ \\cos 80^\\circ}{2\\sin 20^\\circ} = \\frac{2\\sin 40^\\circ \\cos 40^\\circ \\cos 80^\\circ}{4\\sin 20^\\circ}$\n$= \\frac{\\sin 80^\\circ \\cos 80^\\circ}{4\\sin 20^\\circ} = \\frac{2\\sin 80^\\circ \\cos 80^\\circ}{8\\sin 20^\\circ} = \\frac{\\sin 160^\\circ}{8\\sin 20^\\circ}$។\nដោយ $\\sin 160^\\circ = \\sin(180^\\circ - 20^\\circ) = \\sin 20^\\circ$ នាំឱ្យ ៖\n$A = \\frac{\\sin 20^\\circ}{8\\sin 20^\\circ} = \\frac{1}{8}$។",
+        "rubric": "គុណនឹង $2\\sin 20^\\circ$ និងប្រើរូបមន្តមុំទ្វេបន្តបន្ទាប់ (២.៥ពិន្ទុ), សម្រួលស្មើ $1/8$ (១.៥ពិន្ទុ)"
+      }
+    ]
+  },
+  {
+    "id": "std-exam-g11-annual",
+    "title": "វិញ្ញាសាប្រឡងគណិតវិទ្យាបញ្ចប់ថ្នាក់ទី ១១ ប្រចាំឆ្នាំ (Annual Exam)",
+    "grade": "ថ្នាក់ទី ១១",
+    "gradeId": "g11",
+    "courseId": "course-math-g11-basic",
+    "chapterId": "ch-g11-annual",
+    "chapterTitle": "វិញ្ញាសាប្រឡងបញ្ចប់ឆ្នាំ",
+    "lessonId": "",
+    "lessonTitle": "វិញ្ញាសាប្រឡងចម្រុះប្រចាំឆ្នាំ",
+    "duration": "៩០ នាទី",
+    "totalScore": 20,
+    "teacher": "លោកគ្រូ នួន បូណង (NGS)",
+    "school": "វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)",
+    "ptsPerProblem": 4,
+    "date": "២០២៦",
+    "written": [
+      {
+        "num": 1,
+        "q": "គេឱ្យស្វ៊ីត $(u_n)$ កំណត់ដោយ $u_1 = 3$ និង $u_{n+1} = u_n + 5$ ៖\nក. រកតួទី ២០ ($u_{20}$) នៃស្វ៊ីតនេះ។\nខ. គណនាផលបូក ២០ តួដំបូង $S_{20} = u_1 + u_2 + \\dots + u_{20}$។",
+        "solution": "ក. $(u_n)$ ជាស្វ៊ីតនព្វន្តមាន $u_1 = 3, d = 5$ ៖\n   $u_{20} = u_1 + 19d = 3 + 19(5) = 3 + 95 = 98$។\n\nខ. ផលបូក ២០ តួដំបូង ៖\n   $S_{20} = \\frac{20}{2}(u_1 + u_{20}) = 10(3 + 98) = 10(101) = 1010$។",
+        "rubric": "ក. គណនា $u_{20} = 98$ (២ពិន្ទុ)\nខ. គណនា $S_{20} = 1010$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 2,
+        "q": "ដោះស្រាយសមីការលោការីតក្នុង $\\mathbb{R}$ ៖\n$\\log_2^2 x - 3\\log_2 x + 2 = 0$",
+        "solution": "- លក្ខខណ្ឌ ៖ $x > 0$។\n- តាង $t = \\log_2 x$ ៖ $t^2 - 3t + 2 = 0$ នាំឱ្យ $t_1 = 1, t_2 = 2$។\n  - $\\log_2 x = 1 \\Rightarrow x = 2^1 = 2$\n  - $\\log_2 x = 2 \\Rightarrow x = 2^2 = 4$\nផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x > 0$ ឃើញថាពិតទាំងពីរ។\nដូចនេះ $S = \\{2, 4\\}$។",
+        "rubric": "កំណត់លក្ខខណ្ឌ តាង $t$ រកបាន $t=1, 2$ (២ពិន្ទុ), ទាញបាន $x=2, 4$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 3,
+        "q": "គណនាលីមីតខាងក្រោម ៖\nក. $A = \\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1}$\nខ. $B = \\lim_{x \\to 0} \\frac{\\sin 5x}{2x}$",
+        "solution": "ក. $A = \\lim_{x \\to 1} \\frac{(x - 1)(x^2 + x + 1)}{x - 1} = \\lim_{x \\to 1} (x^2 + x + 1) = 1^2 + 1 + 1 = 3$។\n\nខ. $B = \\lim_{x \\to 0} \\frac{\\sin 5x}{5x} \\times \\frac{5}{2} = 1 \\times \\frac{5}{2} = \\frac{5}{2}$។",
+        "rubric": "ក. បំបែករូបមន្តគូប គណនាបាន $A = 3$ (២ពិន្ទុ)\nខ. ប្រើរូបមន្ត $\\lim_{u\\to 0} \\frac{\\sin u}{u} = 1$ រកបាន $B = 5/2$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 4,
+        "q": "គេឱ្យអនុគមន៍ $f(x) = \\frac{1}{3}x^3 - x^2 - 3x + 1$ ៖\nក. រកដេរីវេ $f'(x)$ និងរកចំណុចដែលធ្វើឱ្យ $f'(x) = 0$។\nខ. រកតម្លៃបរមាធៀប (អតិបរមា និងអប្បបរមា) នៃអនុគមន៍ $f$។",
+        "solution": "ក. $f'(x) = x^2 - 2x - 3$។\n   $f'(x) = 0 \\Leftrightarrow x^2 - 2x - 3 = 0 \\Leftrightarrow (x + 1)(x - 3) = 0$ នាំឱ្យ $x = -1$ ឬ $x = 3$។\n\nខ. - ត្រង់ $x = -1$ ៖ $f(-1) = \\frac{1}{3}(-1)^3 - (-1)^2 - 3(-1) + 1 = -\\frac{1}{3} - 1 + 3 + 1 = \\frac{8}{3}$ (អតិបរមាធៀប)។\n   - ត្រង់ $x = 3$ ៖ $f(3) = \\frac{1}{3}(27) - 9 - 3(3) + 1 = 9 - 9 - 9 + 1 = -8$ (អប្បបរមាធៀប)។",
+        "rubric": "ក. គណនា $f'(x)$ និងរកឫស $x = -1, 3$ (២ពិន្ទុ)\nខ. គណនាតម្លៃអតិបរមា $8/3$ និងអប្បបរមា $-8$ (២ពិន្ទុ)"
+      },
+      {
+        "num": 5,
+        "q": "ក្នុងប្រអប់មួយមានឃ្លី ៨ គ្រាប់ រួមមាន ឃ្លីស ៥ គ្រាប់ និងឃ្លីខ្មៅ ៣ គ្រាប់។ គេចាប់យកឃ្លី ២ គ្រាប់ព្រមគ្នាដោយចៃដន្យ ៖\nក. រកចំនួនករណីអាច $n(\\Omega)$។\nខ. រកប្រូបាបដើម្បីចាប់បានឃ្លីមានពណ៌ដូចគ្នា។",
+        "solution": "ក. $n(\\Omega) = C(8, 2) = \\frac{8 \\times 7}{2 \\times 1} = 28$ ករណី។\n\nខ. ព្រឹត្តិការណ៍ \"បានពណ៌ដូចគ្នា\" គឺ (សទាំង ២) ឬ (ខ្មៅទាំង ២) ៖\n   $n(E) = C(5, 2) + C(3, 2) = \\frac{5 \\times 4}{2} + \\frac{3 \\times 2}{2} = 10 + 3 = 13$។\n   $P(E) = \\frac{n(E)}{n(\\Omega)} = \\frac{13}{28}$។",
+        "rubric": "ក. គណនា $n(\\Omega) = 28$ (១.៥ពិន្ទុ)\nខ. គណនាករណីស្រប $13$ និងប្រូបាប $P(E) = 13/28$ (២.៥ពិន្ទុ)"
+      }
+    ]
   }
 ]
