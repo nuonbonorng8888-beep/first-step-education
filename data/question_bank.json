@@ -121869,7 +121869,7 @@
       "o": [
         "$(-\\pi, \\pi]$ (ឬ $[0, 2\\pi)$)",
         "$[0, \\pi]$",
-        "$[-\\pi/2, \\pi/2]$",
+        "$[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$",
         "$[0, +\\infty)$"
       ],
       "a": 0,
@@ -121962,8 +121962,8 @@
         "$r = 2, \\theta = \\dfrac{2\\pi}{3}$"
       ],
       "a": 0,
-      "e": "$r = \\sqrt{1 + 3} = 2$។ $\\cos\\theta = 1/2, \\sin\\theta = -\\sqrt{3}/2 \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ (កាដ្រង់ទី ៤)។",
-      "short_solution": "$r = \\sqrt{1 + 3} = 2$។ $\\cos\\theta = 1/2, \\sin\\theta = -\\sqrt{3}/2 \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ (កាដ្រង់ទី ៤)។",
+      "e": "$r = \\sqrt{1 + 3} = 2$។ $\\cos\\theta = \\dfrac{1}{2}, \\sin\\theta = -\\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ (កាដ្រង់ទី ៤)។",
+      "short_solution": "$r = \\sqrt{1 + 3} = 2$។ $\\cos\\theta = \\dfrac{1}{2}, \\sin\\theta = -\\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ (កាដ្រង់ទី ៤)។",
       "kind": "mcq"
     },
     {
@@ -121984,8 +121984,8 @@
         "$r = 4, \\theta = \\dfrac{2\\pi}{3}$"
       ],
       "a": 0,
-      "e": "$r = 2$។ $\\cos\\theta = -\\sqrt{3}/2, \\sin\\theta = 1/2$ (កាដ្រង់ទី ២) $\\Rightarrow \\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$។",
-      "short_solution": "$r = 2$។ $\\cos\\theta = -\\sqrt{3}/2, \\sin\\theta = 1/2$ (កាដ្រង់ទី ២) $\\Rightarrow \\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$។",
+      "e": "$r = 2$។ $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}, \\sin\\theta = \\dfrac{1}{2}$ (កាដ្រង់ទី ២) $\\Rightarrow \\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$។",
+      "short_solution": "$r = 2$។ $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}, \\sin\\theta = \\dfrac{1}{2}$ (កាដ្រង់ទី ២) $\\Rightarrow \\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$។",
       "kind": "mcq"
     },
     {
@@ -122028,8 +122028,8 @@
         "$r = 2, \\theta = \\pi$"
       ],
       "a": 0,
-      "e": "$r = \\sqrt{4+4} = 2\\sqrt{2}$។ កាដ្រង់ទី ៣ ៖ $\\cos\\theta = -\\sqrt{2}/2, \\sin\\theta = -\\sqrt{2}/2 \\Rightarrow \\theta = -\\dfrac{3\\pi}{4}$ (ឬ $\\dfrac{5\\pi}{4}$)។",
-      "short_solution": "$r = \\sqrt{4+4} = 2\\sqrt{2}$។ កាដ្រង់ទី ៣ ៖ $\\cos\\theta = -\\sqrt{2}/2, \\sin\\theta = -\\sqrt{2}/2 \\Rightarrow \\theta = -\\dfrac{3\\pi}{4}$ (ឬ $\\dfrac{5\\pi}{4}$)។",
+      "e": "$r = \\sqrt{4+4} = 2\\sqrt{2}$។ កាដ្រង់ទី ៣ ៖ $\\cos\\theta = -\\dfrac{\\sqrt{2}}{2}, \\sin\\theta = -\\dfrac{\\sqrt{2}}{2} \\Rightarrow \\theta = -\\dfrac{3\\pi}{4}$ (ឬ $\\dfrac{5\\pi}{4}$)។",
+      "short_solution": "$r = \\sqrt{4+4} = 2\\sqrt{2}$។ កាដ្រង់ទី ៣ ៖ $\\cos\\theta = -\\dfrac{\\sqrt{2}}{2}, \\sin\\theta = -\\dfrac{\\sqrt{2}}{2} \\Rightarrow \\theta = -\\dfrac{3\\pi}{4}$ (ឬ $\\dfrac{5\\pi}{4}$)។",
       "kind": "mcq"
     },
     {
@@ -122116,8 +122116,8 @@
         "$z = \\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}$"
       ],
       "a": 0,
-      "e": "$r = \\sqrt{1+1} = \\sqrt{2}, \\theta = \\pi/4 \\Rightarrow z = \\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$។",
-      "short_solution": "$r = \\sqrt{1+1} = \\sqrt{2}, \\theta = \\pi/4 \\Rightarrow z = \\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$។",
+      "e": "$r = \\sqrt{1+1} = \\sqrt{2}, \\theta = \\dfrac{\\pi}{4} \\Rightarrow z = \\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4}))$។",
+      "short_solution": "$r = \\sqrt{1+1} = \\sqrt{2}, \\theta = \\dfrac{\\pi}{4} \\Rightarrow z = \\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4}))$។",
       "kind": "mcq"
     },
     {
@@ -122138,8 +122138,8 @@
         "$z = 2(\\cos 0 + i\\sin 0)$"
       ],
       "a": 0,
-      "e": "ម៉ូឌុល $r = 2$ អាគុយម៉ង់ $\\theta = -\\pi/2$ (ឬ $3\\pi/2$) ៖ $z = 2(\\cos(-\\pi/2) + i\\sin(-\\pi/2))$។",
-      "short_solution": "ម៉ូឌុល $r = 2$ អាគុយម៉ង់ $\\theta = -\\pi/2$ (ឬ $3\\pi/2$) ៖ $z = 2(\\cos(-\\pi/2) + i\\sin(-\\pi/2))$។",
+      "e": "ម៉ូឌុល $r = 2$ អាគុយម៉ង់ $\\theta = -\\dfrac{\\pi}{2}$ (ឬ $3\\pi/2$) ៖ $z = 2(\\cos(-\\dfrac{\\pi}{2}) + i\\sin(-\\dfrac{\\pi}{2}))$។",
+      "short_solution": "ម៉ូឌុល $r = 2$ អាគុយម៉ង់ $\\theta = -\\dfrac{\\pi}{2}$ (ឬ $3\\pi/2$) ៖ $z = 2(\\cos(-\\dfrac{\\pi}{2}) + i\\sin(-\\dfrac{\\pi}{2}))$។",
       "kind": "mcq"
     },
     {
@@ -122182,8 +122182,8 @@
         "$\\sqrt{3}\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$"
       ],
       "a": 0,
-      "e": "$r = 2$។ $\\cos\\theta = -1/2, \\sin\\theta = \\sqrt{3}/2 \\Rightarrow \\theta = \\dfrac{2\\pi}{3}$។ ដូច្នេះ $z = 2(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។",
-      "short_solution": "$r = 2$។ $\\cos\\theta = -1/2, \\sin\\theta = \\sqrt{3}/2 \\Rightarrow \\theta = \\dfrac{2\\pi}{3}$។ ដូច្នេះ $z = 2(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។",
+      "e": "$r = 2$។ $\\cos\\theta = -\\dfrac{1}{2}, \\sin\\theta = \\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = \\dfrac{2\\pi}{3}$។ ដូច្នេះ $z = 2(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។",
+      "short_solution": "$r = 2$។ $\\cos\\theta = -\\dfrac{1}{2}, \\sin\\theta = \\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = \\dfrac{2\\pi}{3}$។ ដូច្នេះ $z = 2(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។",
       "kind": "mcq"
     },
     {
@@ -122248,8 +122248,8 @@
         "$\\cos(-\\alpha) + i\\sin(-\\alpha)$"
       ],
       "a": 0,
-      "e": "ដោយប្រើមុំបំពេញ ៖ $\\sin\\alpha = \\cos(\\pi/2 - \\alpha)$ និង $\\cos\\alpha = \\sin(\\pi/2 - \\alpha)$។",
-      "short_solution": "ដោយប្រើមុំបំពេញ ៖ $\\sin\\alpha = \\cos(\\pi/2 - \\alpha)$ និង $\\cos\\alpha = \\sin(\\pi/2 - \\alpha)$។",
+      "e": "ដោយប្រើមុំបំពេញ ៖ $\\sin\\alpha = \\cos(\\dfrac{\\pi}{2} - \\alpha)$ និង $\\cos\\alpha = \\sin(\\dfrac{\\pi}{2} - \\alpha)$។",
+      "short_solution": "ដោយប្រើមុំបំពេញ ៖ $\\sin\\alpha = \\cos(\\dfrac{\\pi}{2} - \\alpha)$ និង $\\cos\\alpha = \\sin(\\dfrac{\\pi}{2} - \\alpha)$។",
       "kind": "mcq"
     },
     {
@@ -122270,8 +122270,8 @@
         "$1 + \\cos\\theta + i\\sin\\theta$"
       ],
       "a": 0,
-      "e": "$1 - \\cos\\theta = 2\\sin^2(\\theta/2)$ និង $\\sin\\theta = 2\\sin(\\theta/2)\\cos(\\theta/2)$ នាំឱ្យ $z = 2\\sin(\\theta/2)[\\sin(\\theta/2) + i\\cos(\\theta/2)] = 2\\sin(\\theta/2)[\\cos((\\pi-\\theta)/2) + i\\sin((\\pi-\\theta)/2)]$។",
-      "short_solution": "$1 - \\cos\\theta = 2\\sin^2(\\theta/2)$ និង $\\sin\\theta = 2\\sin(\\theta/2)\\cos(\\theta/2)$ នាំឱ្យ $z = 2\\sin(\\theta/2)[\\sin(\\theta/2) + i\\cos(\\theta/2)] = 2\\sin(\\theta/2)[\\cos((\\pi-\\theta)/2) + i\\sin((\\pi-\\theta)/2)]$។",
+      "e": "$1 - \\cos\\theta = 2\\sin^2(\\theta/2)$ និង $\\sin\\theta = 2\\sin(\\theta/2)\\cos(\\theta/2)$ នាំឱ្យ $z = 2\\sin(\\theta/2)[\\sin(\\theta/2) + i\\cos(\\theta/2)] = 2\\sin(\\theta/2)[\\cos\\dfrac{(\\pi-\\theta}{2}) + i\\sin\\dfrac{(\\pi-\\theta}{2})]$។",
+      "short_solution": "$1 - \\cos\\theta = 2\\sin^2(\\theta/2)$ និង $\\sin\\theta = 2\\sin(\\theta/2)\\cos(\\theta/2)$ នាំឱ្យ $z = 2\\sin(\\theta/2)[\\sin(\\theta/2) + i\\cos(\\theta/2)] = 2\\sin(\\theta/2)[\\cos\\dfrac{(\\pi-\\theta}{2}) + i\\sin\\dfrac{(\\pi-\\theta}{2})]$។",
       "kind": "mcq"
     },
     {
@@ -122289,7 +122289,7 @@
         "$\\sqrt{2} e^{-i 3\\pi/4}$",
         "$\\sqrt{2} e^{i 3\\pi/4}$",
         "$2 e^{-i 3\\pi/4}$",
-        "$\\sqrt{2} e^{i \\pi/4}$"
+        "$\\sqrt{2} e^{i \\dfrac{\\pi}{4}}$"
       ],
       "a": 0,
       "e": "$r = \\sqrt{2}, \\theta = -3\\pi/4$ នាំឱ្យ $z = \\sqrt{2} e^{-i 3\\pi/4}$ (ឬ $\\sqrt{2} e^{i 5\\pi/4}$)។",
@@ -122358,8 +122358,8 @@
         "$-6i$"
       ],
       "a": 0,
-      "e": "$r = 2 \\times 3 = 6$។ $\\theta = \\pi/6 + \\pi/3 = \\pi/2$។ $z = 6(\\cos(\\pi/2) + i\\sin(\\pi/2)) = 6(0 + i) = 6i$។",
-      "short_solution": "$r = 2 \\times 3 = 6$។ $\\theta = \\pi/6 + \\pi/3 = \\pi/2$។ $z = 6(\\cos(\\pi/2) + i\\sin(\\pi/2)) = 6(0 + i) = 6i$។",
+      "e": "$r = 2 \\times 3 = 6$។ $\\theta = \\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}$។ $z = 6(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2})) = 6(0 + i) = 6i$។",
+      "short_solution": "$r = 2 \\times 3 = 6$។ $\\theta = \\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}$។ $z = 6(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2})) = 6(0 + i) = 6i$។",
       "kind": "mcq"
     },
     {
@@ -122372,7 +122372,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ៣ ៖ ផលគុណ និងផលចែកទម្រង់ត្រីកោណមាត្រ",
       "level": "ងាយ",
-      "q": "គណនាផលចែក $z = \\dfrac{6(\\cos\\pi + i\\sin\\pi)}{2(\\cos(\\pi/3) + i\\sin(\\pi/3))}$ ៖",
+      "q": "គណនាផលចែក $z = \\dfrac{6(\\cos\\pi + i\\sin\\pi)}{2(\\cos(\\dfrac{\\pi}{3}) + i\\sin(\\dfrac{\\pi}{3}))}$ ៖",
       "o": [
         "$3\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$",
         "$3\\left(\\cos\\dfrac{4\\pi}{3} + i\\sin\\dfrac{4\\pi}{3}\\right)$",
@@ -122380,8 +122380,8 @@
         "$3(\\cos\\pi - i\\sin\\pi)$"
       ],
       "a": 0,
-      "e": "$r = 6/2 = 3$។ $\\theta = \\pi - \\pi/3 = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។",
-      "short_solution": "$r = 6/2 = 3$។ $\\theta = \\pi - \\pi/3 = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។",
+      "e": "$r = \\dfrac{6}{2} = 3$។ $\\theta = \\pi - \\dfrac{\\pi}{3} = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។",
+      "short_solution": "$r = \\dfrac{6}{2} = 3$។ $\\theta = \\pi - \\dfrac{\\pi}{3} = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។",
       "kind": "mcq"
     },
     {
@@ -122402,8 +122402,8 @@
         "$\\dfrac{\\pi}{3}$"
       ],
       "a": 0,
-      "e": "$\\text{Arg}(z_1) = \\pi/4$ និង $\\text{Arg}(z_2) = \\pi/6$។ $\\text{Arg}(z_1 z_2) = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{12}$។",
-      "short_solution": "$\\text{Arg}(z_1) = \\pi/4$ និង $\\text{Arg}(z_2) = \\pi/6$។ $\\text{Arg}(z_1 z_2) = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{12}$។",
+      "e": "$\\text{Arg}(z_1) = \\dfrac{\\pi}{4}$ និង $\\text{Arg}(z_2) = \\dfrac{\\pi}{6}$។ $\\text{Arg}(z_1 z_2) = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{12}$។",
+      "short_solution": "$\\text{Arg}(z_1) = \\dfrac{\\pi}{4}$ និង $\\text{Arg}(z_2) = \\dfrac{\\pi}{6}$។ $\\text{Arg}(z_1 z_2) = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{12}$។",
       "kind": "mcq"
     },
     {
@@ -122446,8 +122446,8 @@
         "$\\dfrac{\\sqrt{2} + 1}{4}$"
       ],
       "a": 0,
-      "e": "$\\cos(\\pi/12) = \\cos(\\pi/4 - \\pi/6) = \\cos(\\pi/4)\\cos(\\pi/6) + \\sin(\\pi/4)\\sin(\\pi/6) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$។",
-      "short_solution": "$\\cos(\\pi/12) = \\cos(\\pi/4 - \\pi/6) = \\cos(\\pi/4)\\cos(\\pi/6) + \\sin(\\pi/4)\\sin(\\pi/6) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$។",
+      "e": "$\\cos(\\dfrac{\\pi}{12}) = \\cos(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\cos(\\dfrac{\\pi}{4})\\cos(\\dfrac{\\pi}{6}) + \\sin(\\dfrac{\\pi}{4})\\sin(\\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$។",
+      "short_solution": "$\\cos(\\dfrac{\\pi}{12}) = \\cos(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\cos(\\dfrac{\\pi}{4})\\cos(\\dfrac{\\pi}{6}) + \\sin(\\dfrac{\\pi}{4})\\sin(\\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$។",
       "kind": "mcq"
     },
     {
@@ -122468,8 +122468,8 @@
         "$\\dfrac{\\sqrt{2} - 1}{4}$"
       ],
       "a": 0,
-      "e": "$\\sin(\\pi/12) = \\sin(\\pi/4 - \\pi/6) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$។",
-      "short_solution": "$\\sin(\\pi/12) = \\sin(\\pi/4 - \\pi/6) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$។",
+      "e": "$\\sin(\\dfrac{\\pi}{12}) = \\sin(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$។",
+      "short_solution": "$\\sin(\\dfrac{\\pi}{12}) = \\sin(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$។",
       "kind": "mcq"
     },
     {
@@ -122490,8 +122490,8 @@
         "$2\\left(\\cos\\dfrac{5\\pi}{12} + i\\sin\\dfrac{5\\pi}{12}\\right)$"
       ],
       "a": 0,
-      "e": "$|1+i| = \\sqrt{2}, \\theta_1 = \\pi/4$។ $|\\sqrt{3}-i| = 2, \\theta_2 = -\\pi/6$។ ម៉ូឌុល $r = \\sqrt{2}/2$។ $\\theta = \\pi/4 - (-\\pi/6) = 5\\pi/12$។",
-      "short_solution": "$|1+i| = \\sqrt{2}, \\theta_1 = \\pi/4$។ $|\\sqrt{3}-i| = 2, \\theta_2 = -\\pi/6$។ ម៉ូឌុល $r = \\sqrt{2}/2$។ $\\theta = \\pi/4 - (-\\pi/6) = 5\\pi/12$។",
+      "e": "$|1+i| = \\sqrt{2}, \\theta_1 = \\dfrac{\\pi}{4}$។ $|\\sqrt{3}-i| = 2, \\theta_2 = -\\dfrac{\\pi}{6}$។ ម៉ូឌុល $r = \\dfrac{\\sqrt{2}}{2}$។ $\\theta = \\dfrac{\\pi}{4} - (-\\dfrac{\\pi}{6}) = 5\\pi/12$។",
+      "short_solution": "$|1+i| = \\sqrt{2}, \\theta_1 = \\dfrac{\\pi}{4}$។ $|\\sqrt{3}-i| = 2, \\theta_2 = -\\dfrac{\\pi}{6}$។ ម៉ូឌុល $r = \\dfrac{\\sqrt{2}}{2}$។ $\\theta = \\dfrac{\\pi}{4} - (-\\dfrac{\\pi}{6}) = 5\\pi/12$។",
       "kind": "mcq"
     },
     {
@@ -122578,8 +122578,8 @@
         "$-i$"
       ],
       "a": 0,
-      "e": "$\\cos(4 \\times \\pi/4) + i\\sin(4 \\times \\pi/4) = \\cos\\pi + i\\sin\\pi = -1 + 0 = -1$។",
-      "short_solution": "$\\cos(4 \\times \\pi/4) + i\\sin(4 \\times \\pi/4) = \\cos\\pi + i\\sin\\pi = -1 + 0 = -1$។",
+      "e": "$\\cos(4 \\times \\dfrac{\\pi}{4}) + i\\sin(4 \\times \\dfrac{\\pi}{4}) = \\cos\\pi + i\\sin\\pi = -1 + 0 = -1$។",
+      "short_solution": "$\\cos(4 \\times \\dfrac{\\pi}{4}) + i\\sin(4 \\times \\dfrac{\\pi}{4}) = \\cos\\pi + i\\sin\\pi = -1 + 0 = -1$។",
       "kind": "mcq"
     },
     {
@@ -122600,8 +122600,8 @@
         "$0$"
       ],
       "a": 0,
-      "e": "$\\cos(6 \\times \\pi/6) + i\\sin(6 \\times \\pi/6) = \\cos\\pi + i\\sin\\pi = -1$។",
-      "short_solution": "$\\cos(6 \\times \\pi/6) + i\\sin(6 \\times \\pi/6) = \\cos\\pi + i\\sin\\pi = -1$។",
+      "e": "$\\cos(6 \\times \\dfrac{\\pi}{6}) + i\\sin(6 \\times \\dfrac{\\pi}{6}) = \\cos\\pi + i\\sin\\pi = -1$។",
+      "short_solution": "$\\cos(6 \\times \\dfrac{\\pi}{6}) + i\\sin(6 \\times \\dfrac{\\pi}{6}) = \\cos\\pi + i\\sin\\pi = -1$។",
       "kind": "mcq"
     },
     {
@@ -122622,8 +122622,8 @@
         "$-16i$"
       ],
       "a": 0,
-      "e": "$1+i = \\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$ នាំឱ្យ $(1+i)^8 = (\\sqrt{2})^8 [\\cos(2\\pi) + i\\sin(2\\pi)] = 16(1) = 16$។",
-      "short_solution": "$1+i = \\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$ នាំឱ្យ $(1+i)^8 = (\\sqrt{2})^8 [\\cos(2\\pi) + i\\sin(2\\pi)] = 16(1) = 16$។",
+      "e": "$1+i = \\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4}))$ នាំឱ្យ $(1+i)^8 = (\\sqrt{2})^8 [\\cos(2\\pi) + i\\sin(2\\pi)] = 16(1) = 16$។",
+      "short_solution": "$1+i = \\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4}))$ នាំឱ្យ $(1+i)^8 = (\\sqrt{2})^8 [\\cos(2\\pi) + i\\sin(2\\pi)] = 16(1) = 16$។",
       "kind": "mcq"
     },
     {
@@ -122644,8 +122644,8 @@
         "$0$"
       ],
       "a": 0,
-      "e": "$1-i\\sqrt{3} = 2(\\cos(-\\pi/3) + i\\sin(-\\pi/3))$។ ស្វ័យគុណ ៦ ៖ $2^6 [\\cos(-2\\pi) + i\\sin(-2\\pi)] = 64(1) = 64$។",
-      "short_solution": "$1-i\\sqrt{3} = 2(\\cos(-\\pi/3) + i\\sin(-\\pi/3))$។ ស្វ័យគុណ ៦ ៖ $2^6 [\\cos(-2\\pi) + i\\sin(-2\\pi)] = 64(1) = 64$។",
+      "e": "$1-i\\sqrt{3} = 2(\\cos(-\\dfrac{\\pi}{3}) + i\\sin(-\\dfrac{\\pi}{3}))$។ ស្វ័យគុណ ៦ ៖ $2^6 [\\cos(-2\\pi) + i\\sin(-2\\pi)] = 64(1) = 64$។",
+      "short_solution": "$1-i\\sqrt{3} = 2(\\cos(-\\dfrac{\\pi}{3}) + i\\sin(-\\dfrac{\\pi}{3}))$។ ស្វ័យគុណ ៦ ៖ $2^6 [\\cos(-2\\pi) + i\\sin(-2\\pi)] = 64(1) = 64$។",
       "kind": "mcq"
     },
     {
@@ -122666,8 +122666,8 @@
         "$4096i$"
       ],
       "a": 0,
-      "e": "$r = 2, \\theta = \\pi/6$។ $(\\sqrt{3}+i)^{12} = 2^{12} [\\cos(2\\pi) + i\\sin(2\\pi)] = 4096(1) = 4096$។",
-      "short_solution": "$r = 2, \\theta = \\pi/6$។ $(\\sqrt{3}+i)^{12} = 2^{12} [\\cos(2\\pi) + i\\sin(2\\pi)] = 4096(1) = 4096$។",
+      "e": "$r = 2, \\theta = \\dfrac{\\pi}{6}$។ $(\\sqrt{3}+i)^{12} = 2^{12} [\\cos(2\\pi) + i\\sin(2\\pi)] = 4096(1) = 4096$។",
+      "short_solution": "$r = 2, \\theta = \\dfrac{\\pi}{6}$។ $(\\sqrt{3}+i)^{12} = 2^{12} [\\cos(2\\pi) + i\\sin(2\\pi)] = 4096(1) = 4096$។",
       "kind": "mcq"
     },
     {
@@ -122710,8 +122710,8 @@
         "$-2048$"
       ],
       "a": 0,
-      "e": "$2^{10}\\cos(10\\pi/3) + 2^{10}\\cos(-10\\pi/3) = 2 \\times 1024 \\cos(10\\pi/3) = 2048 \\cos(3\\pi + \\pi/3) = 2048(-\\cos(\\pi/3)) = 2048(-1/2) = -1024$។",
-      "short_solution": "$2^{10}\\cos(10\\pi/3) + 2^{10}\\cos(-10\\pi/3) = 2 \\times 1024 \\cos(10\\pi/3) = 2048 \\cos(3\\pi + \\pi/3) = 2048(-\\cos(\\pi/3)) = 2048(-1/2) = -1024$។",
+      "e": "$2^{10}\\cos(10\\pi/3) + 2^{10}\\cos(-10\\pi/3) = 2 \\times 1024 \\cos(10\\pi/3) = 2048 \\cos(3\\pi + \\dfrac{\\pi}{3}) = 2048(-\\cos(\\dfrac{\\pi}{3})) = 2048(-\\dfrac{1}{2}) = -1024$។",
+      "short_solution": "$2^{10}\\cos(10\\pi/3) + 2^{10}\\cos(-10\\pi/3) = 2 \\times 1024 \\cos(10\\pi/3) = 2048 \\cos(3\\pi + \\dfrac{\\pi}{3}) = 2048(-\\cos(\\dfrac{\\pi}{3})) = 2048(-\\dfrac{1}{2}) = -1024$។",
       "kind": "mcq"
     },
     {
@@ -122820,8 +122820,8 @@
         "$1, \\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}, \\dfrac{1}{2} - i\\dfrac{\\sqrt{3}}{2}$"
       ],
       "a": 0,
-      "e": "$z_k = \\cos(2k\\pi/3) + i\\sin(2k\\pi/3)$ ចំពោះ $k = 0, 1, 2$ ផ្តល់ឫស $1, j, j^2$ ដែល $j = -1/2 + i\\sqrt{3}/2$។",
-      "short_solution": "$z_k = \\cos(2k\\pi/3) + i\\sin(2k\\pi/3)$ ចំពោះ $k = 0, 1, 2$ ផ្តល់ឫស $1, j, j^2$ ដែល $j = -1/2 + i\\sqrt{3}/2$។",
+      "e": "$z_k = \\cos(2k\\pi/3) + i\\sin(2k\\pi/3)$ ចំពោះ $k = 0, 1, 2$ ផ្តល់ឫស $1, j, j^2$ ដែល $j = -\\dfrac{1}{2} + i\\sqrt{3}/2$។",
+      "short_solution": "$z_k = \\cos(2k\\pi/3) + i\\sin(2k\\pi/3)$ ចំពោះ $k = 0, 1, 2$ ផ្តល់ឫស $1, j, j^2$ ដែល $j = -\\dfrac{1}{2} + i\\sqrt{3}/2$។",
       "kind": "mcq"
     },
     {
@@ -122842,8 +122842,8 @@
         "$\\pm 2i$"
       ],
       "a": 0,
-      "e": "$2i = 2(\\cos(\\pi/2) + i\\sin(\\pi/2))$។ ឫសការេ ៖ $\\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4)) = 1 + i$ និង $-(1 + i)$។",
-      "short_solution": "$2i = 2(\\cos(\\pi/2) + i\\sin(\\pi/2))$។ ឫសការេ ៖ $\\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4)) = 1 + i$ និង $-(1 + i)$។",
+      "e": "$2i = 2(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2}))$។ ឫសការេ ៖ $\\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4})) = 1 + i$ និង $-(1 + i)$។",
+      "short_solution": "$2i = 2(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2}))$។ ឫសការេ ៖ $\\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4})) = 1 + i$ និង $-(1 + i)$។",
       "kind": "mcq"
     },
     {
@@ -123062,8 +123062,8 @@
         "ត្រីកោណសមបាតកំពូល $B$"
       ],
       "a": 0,
-      "e": "ម៉ូឌុល $|i| = 1 \\Rightarrow AC = AB$ និងមុំ $\\text{Arg}(i) = \\pi/2$ នាំឱ្យ $ABC$ កែងសមបាតត្រង់ $A$។",
-      "short_solution": "ម៉ូឌុល $|i| = 1 \\Rightarrow AC = AB$ និងមុំ $\\text{Arg}(i) = \\pi/2$ នាំឱ្យ $ABC$ កែងសមបាតត្រង់ $A$។",
+      "e": "ម៉ូឌុល $|i| = 1 \\Rightarrow AC = AB$ និងមុំ $\\text{Arg}(i) = \\dfrac{\\pi}{2}$ នាំឱ្យ $ABC$ កែងសមបាតត្រង់ $A$។",
+      "short_solution": "ម៉ូឌុល $|i| = 1 \\Rightarrow AC = AB$ និងមុំ $\\text{Arg}(i) = \\dfrac{\\pi}{2}$ នាំឱ្យ $ABC$ កែងសមបាតត្រង់ $A$។",
       "kind": "mcq"
     },
     {
@@ -123084,8 +123084,8 @@
         "ត្រីកោណកែងសមបាត"
       ],
       "a": 0,
-      "e": "ម៉ូឌុលស្មើ ១ នាំឱ្យ $AB = AC$ ហើយមុំស្មើ $\\pi/3 = 60^\\circ$ នាំឱ្យត្រីកោណ $ABC$ ជាត្រីកោណសម័ង្ស។",
-      "short_solution": "ម៉ូឌុលស្មើ ១ នាំឱ្យ $AB = AC$ ហើយមុំស្មើ $\\pi/3 = 60^\\circ$ នាំឱ្យត្រីកោណ $ABC$ ជាត្រីកោណសម័ង្ស។",
+      "e": "ម៉ូឌុលស្មើ ១ នាំឱ្យ $AB = AC$ ហើយមុំស្មើ $\\dfrac{\\pi}{3} = 60^\\circ$ នាំឱ្យត្រីកោណ $ABC$ ជាត្រីកោណសម័ង្ស។",
+      "short_solution": "ម៉ូឌុលស្មើ ១ នាំឱ្យ $AB = AC$ ហើយមុំស្មើ $\\dfrac{\\pi}{3} = 60^\\circ$ នាំឱ្យត្រីកោណ $ABC$ ជាត្រីកោណសម័ង្ស។",
       "kind": "mcq"
     },
     {
@@ -123414,8 +123414,8 @@
         "$9$"
       ],
       "a": 0,
-      "e": "រាងមិនកំណត់ $[0/0]$ ៖ $\\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 3 + 3 = 6$។",
-      "short_solution": "រាងមិនកំណត់ $[0/0]$ ៖ $\\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 3 + 3 = 6$។",
+      "e": "រាងមិនកំណត់ $[\\dfrac{0}{0}]$ ៖ $\\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 3 + 3 = 6$។",
+      "short_solution": "រាងមិនកំណត់ $[\\dfrac{0}{0}]$ ៖ $\\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 3 + 3 = 6$។",
       "kind": "mcq"
     },
     {
@@ -123942,8 +123942,8 @@
         "$+\\infty$"
       ],
       "a": 0,
-      "e": "$\\lim_{x \\to +\\infty} \\dfrac{2x\\sqrt{1 + 1/(4x^2)}}{x(1 + 3/x)} = \\dfrac{2}{1} = 2$។",
-      "short_solution": "$\\lim_{x \\to +\\infty} \\dfrac{2x\\sqrt{1 + 1/(4x^2)}}{x(1 + 3/x)} = \\dfrac{2}{1} = 2$។",
+      "e": "$\\lim_{x \\to +\\infty} \\dfrac{2x\\sqrt{1 + \\dfrac{1}{4x^2}}}{x(1 + \\dfrac{3}{x})} = \\dfrac{2}{1} = 2$។",
+      "short_solution": "$\\lim_{x \\to +\\infty} \\dfrac{2x\\sqrt{1 + \\dfrac{1}{4x^2}}}{x(1 + \\dfrac{3}{x})} = \\dfrac{2}{1} = 2$។",
       "kind": "mcq"
     },
     {
@@ -124052,8 +124052,8 @@
         "$+\\infty$"
       ],
       "a": 0,
-      "e": "ចែកភាគយក និងភាគបែងនឹង $3^x$ (គោលធំជាងគេ) ៖ $\\lim_{x \\to +\\infty} \\dfrac{2(2/3)^x + 3}{(2/3)^x + 1} = \\dfrac{0 + 3}{0 + 1} = 3$។",
-      "short_solution": "ចែកភាគយក និងភាគបែងនឹង $3^x$ (គោលធំជាងគេ) ៖ $\\lim_{x \\to +\\infty} \\dfrac{2(2/3)^x + 3}{(2/3)^x + 1} = \\dfrac{0 + 3}{0 + 1} = 3$។",
+      "e": "ចែកភាគយក និងភាគបែងនឹង $3^x$ (គោលធំជាងគេ) ៖ $\\lim_{x \\to +\\infty} \\dfrac{2\\left(\\dfrac{2}{3}\\right)^{x} + 3}{\\left(\\dfrac{2}{3}\\right)^{x} + 1} = \\dfrac{0 + 3}{0 + 1} = 3$។",
+      "short_solution": "ចែកភាគយក និងភាគបែងនឹង $3^x$ (គោលធំជាងគេ) ៖ $\\lim_{x \\to +\\infty} \\dfrac{2\\left(\\dfrac{2}{3}\\right)^{x} + 3}{\\left(\\dfrac{2}{3}\\right)^{x} + 1} = \\dfrac{0 + 3}{0 + 1} = 3$។",
       "kind": "mcq"
     },
     {
@@ -124228,8 +124228,8 @@
         "$m = 4$"
       ],
       "a": 0,
-      "e": "$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4}-2}{x} = \\lim_{x \\to 0} \\dfrac{1}{\\sqrt{x+4}+2} = \\dfrac{1}{4}$។ ដូច្នេះ $m = 1/4$។",
-      "short_solution": "$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4}-2}{x} = \\lim_{x \\to 0} \\dfrac{1}{\\sqrt{x+4}+2} = \\dfrac{1}{4}$។ ដូច្នេះ $m = 1/4$។",
+      "e": "$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4}-2}{x} = \\lim_{x \\to 0} \\dfrac{1}{\\sqrt{x+4}+2} = \\dfrac{1}{4}$។ ដូច្នេះ $m = \\dfrac{1}{4}$។",
+      "short_solution": "$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4}-2}{x} = \\lim_{x \\to 0} \\dfrac{1}{\\sqrt{x+4}+2} = \\dfrac{1}{4}$។ ដូច្នេះ $m = \\dfrac{1}{4}$។",
       "kind": "mcq"
     },
     {
@@ -124404,8 +124404,8 @@
         "$g(0) = 0$"
       ],
       "a": 0,
-      "e": "$\\lim_{x \\to 0} f(x) = \\dfrac{1}{2}$ ដូច្នេះតម្លៃពង្រីកគឺ $g(0) = 1/2$។",
-      "short_solution": "$\\lim_{x \\to 0} f(x) = \\dfrac{1}{2}$ ដូច្នេះតម្លៃពង្រីកគឺ $g(0) = 1/2$។",
+      "e": "$\\lim_{x \\to 0} f(x) = \\dfrac{1}{2}$ ដូច្នេះតម្លៃពង្រីកគឺ $g(0) = \\dfrac{1}{2}$។",
+      "short_solution": "$\\lim_{x \\to 0} f(x) = \\dfrac{1}{2}$ ដូច្នេះតម្លៃពង្រីកគឺ $g(0) = \\dfrac{1}{2}$។",
       "kind": "mcq"
     },
     {
@@ -124489,11 +124489,11 @@
         "$f + g, f - g, f \\cdot g$",
         "មានតែ $f + g$",
         "មានតែ $f \\cdot g$",
-        "គ្រប់អនុគមន៍រួមទាំង $f/g$ (ទោះ $g=0$ ក៏ដោយ)"
+        "គ្រប់អនុគមន៍រួមទាំង $\\dfrac{f}{g}$ (ទោះ $g=0$ ក៏ដោយ)"
       ],
       "a": 0,
-      "e": "ផលបូក ផលដក និងផលគុណនៃពីរអនុគមន៍ជាប់លើ $I$ តែងតែជាប់លើ $I$។ ចំណែកផលចែក $f/g$ ជាប់លើផ្នែកដែល $g(x) \\neq 0$។",
-      "short_solution": "ផលបូក ផលដក និងផលគុណនៃពីរអនុគមន៍ជាប់លើ $I$ តែងតែជាប់លើ $I$។ ចំណែកផលចែក $f/g$ ជាប់លើផ្នែកដែល $g(x) \\neq 0$។",
+      "e": "ផលបូក ផលដក និងផលគុណនៃពីរអនុគមន៍ជាប់លើ $I$ តែងតែជាប់លើ $I$។ ចំណែកផលចែក $\\dfrac{f}{g}$ ជាប់លើផ្នែកដែល $g(x) \\neq 0$។",
+      "short_solution": "ផលបូក ផលដក និងផលគុណនៃពីរអនុគមន៍ជាប់លើ $I$ តែងតែជាប់លើ $I$។ ចំណែកផលចែក $\\dfrac{f}{g}$ ជាប់លើផ្នែកដែល $g(x) \\neq 0$។",
       "kind": "mcq"
     },
     {
@@ -124624,8 +124624,8 @@
         "$(-1, 0)$"
       ],
       "a": 0,
-      "e": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 - 0 = 1 > 0$ និង $f(\\pi/2) = 0 - \\pi/2 < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\pi/2)$។",
-      "short_solution": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 - 0 = 1 > 0$ និង $f(\\pi/2) = 0 - \\pi/2 < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\pi/2)$។",
+      "e": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 - 0 = 1 > 0$ និង $f(\\dfrac{\\pi}{2}) = 0 - \\dfrac{\\pi}{2} < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\dfrac{\\pi}{2})$។",
+      "short_solution": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 - 0 = 1 > 0$ និង $f(\\dfrac{\\pi}{2}) = 0 - \\dfrac{\\pi}{2} < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\dfrac{\\pi}{2})$។",
       "kind": "mcq"
     },
     {
@@ -125020,8 +125020,8 @@
         "$\\dfrac{1}{2x}$"
       ],
       "a": 0,
-      "e": "$(\\sqrt{x})' = (x^{1/2})' = \\frac{1}{2} x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$។",
-      "short_solution": "$(\\sqrt{x})' = (x^{1/2})' = \\frac{1}{2} x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$។",
+      "e": "$(\\sqrt{x})' = (x^{\\frac{1}{2}})' = \\frac{1}{2} x^{-\\dfrac{1}{2}} = \\dfrac{1}{2\\sqrt{x}}$។",
+      "short_solution": "$(\\sqrt{x})' = (x^{\\frac{1}{2}})' = \\frac{1}{2} x^{-\\dfrac{1}{2}} = \\dfrac{1}{2\\sqrt{x}}$។",
       "kind": "mcq"
     },
     {
@@ -125064,8 +125064,8 @@
         "$2\\sqrt{x}$"
       ],
       "a": 0,
-      "e": "$f(x) = x^{3/2} \\implies f'(x) = \\frac{3}{2} x^{1/2} = \\dfrac{3}{2}\\sqrt{x}$។",
-      "short_solution": "$f(x) = x^{3/2} \\implies f'(x) = \\frac{3}{2} x^{1/2} = \\dfrac{3}{2}\\sqrt{x}$។",
+      "e": "$f(x) = x^{\\frac{3}{2}} \\implies f'(x) = \\frac{3}{2} x^{\\frac{1}{2}} = \\dfrac{3}{2}\\sqrt{x}$។",
+      "short_solution": "$f(x) = x^{\\frac{3}{2}} \\implies f'(x) = \\frac{3}{2} x^{\\frac{1}{2}} = \\dfrac{3}{2}\\sqrt{x}$។",
       "kind": "mcq"
     },
     {
@@ -126252,8 +126252,8 @@
         "$(-1, 1)$"
       ],
       "a": 0,
-      "e": "ចម្ងាយការ៉េ $d^2 = x^2 + (y - 1)^2 = y + (y - 1)^2 = y^2 - y + 1$។ ដេរីវេតាម $y$ គឺ $2y - 1 = 0 \\iff y = 1/2$។ នាំឱ្យ $x^2 = 1/2 \\iff x = \\pm \\frac{\\sqrt{2}}{2}$។",
-      "short_solution": "ចម្ងាយការ៉េ $d^2 = x^2 + (y - 1)^2 = y + (y - 1)^2 = y^2 - y + 1$។ ដេរីវេតាម $y$ គឺ $2y - 1 = 0 \\iff y = 1/2$។ នាំឱ្យ $x^2 = 1/2 \\iff x = \\pm \\frac{\\sqrt{2}}{2}$។",
+      "e": "ចម្ងាយការ៉េ $d^2 = x^2 + (y - 1)^2 = y + (y - 1)^2 = y^2 - y + 1$។ ដេរីវេតាម $y$ គឺ $2y - 1 = 0 \\iff y = \\dfrac{1}{2}$។ នាំឱ្យ $x^2 = \\dfrac{1}{2} \\iff x = \\pm \\frac{\\sqrt{2}}{2}$។",
+      "short_solution": "ចម្ងាយការ៉េ $d^2 = x^2 + (y - 1)^2 = y + (y - 1)^2 = y^2 - y + 1$។ ដេរីវេតាម $y$ គឺ $2y - 1 = 0 \\iff y = \\dfrac{1}{2}$។ នាំឱ្យ $x^2 = \\dfrac{1}{2} \\iff x = \\pm \\frac{\\sqrt{2}}{2}$។",
       "kind": "mcq"
     },
     {
@@ -127265,8 +127265,8 @@
         "$0 < x \\le 1$"
       ],
       "a": 0,
-      "e": "លក្ខខណ្ឌ $3x - 2 > 0 \\iff x > 2/3$។ $\\ln(3x - 2) \\le 0 = \\ln 1 \\iff 3x - 2 \\le 1 \\iff 3x \\le 3 \\iff x \\le 1$។ ចម្លើយគឺ $\\dfrac{2}{3} < x \\le 1$។",
-      "short_solution": "លក្ខខណ្ឌ $3x - 2 > 0 \\iff x > 2/3$។ $\\ln(3x - 2) \\le 0 = \\ln 1 \\iff 3x - 2 \\le 1 \\iff 3x \\le 3 \\iff x \\le 1$។ ចម្លើយគឺ $\\dfrac{2}{3} < x \\le 1$។",
+      "e": "លក្ខខណ្ឌ $3x - 2 > 0 \\iff x > \\dfrac{2}{3}$។ $\\ln(3x - 2) \\le 0 = \\ln 1 \\iff 3x - 2 \\le 1 \\iff 3x \\le 3 \\iff x \\le 1$។ ចម្លើយគឺ $\\dfrac{2}{3} < x \\le 1$។",
+      "short_solution": "លក្ខខណ្ឌ $3x - 2 > 0 \\iff x > \\dfrac{2}{3}$។ $\\ln(3x - 2) \\le 0 = \\ln 1 \\iff 3x - 2 \\le 1 \\iff 3x \\le 3 \\iff x \\le 1$។ ចម្លើយគឺ $\\dfrac{2}{3} < x \\le 1$។",
       "kind": "mcq"
     },
     {
@@ -127551,8 +127551,8 @@
         "$-1$"
       ],
       "a": 0,
-      "e": "តាង $x = 1/t \\implies t \\to +\\infty$: $\\lim_{t \\to +\\infty} \\dfrac{-\\ln t}{t} = 0$។",
-      "short_solution": "តាង $x = 1/t \\implies t \\to +\\infty$: $\\lim_{t \\to +\\infty} \\dfrac{-\\ln t}{t} = 0$។",
+      "e": "តាង $x = \\dfrac{1}{t} \\implies t \\to +\\infty$: $\\lim_{t \\to +\\infty} \\dfrac{-\\ln t}{t} = 0$។",
+      "short_solution": "តាង $x = \\dfrac{1}{t} \\implies t \\to +\\infty$: $\\lim_{t \\to +\\infty} \\dfrac{-\\ln t}{t} = 0$។",
       "kind": "mcq"
     },
     {
@@ -127573,8 +127573,8 @@
         "គ្មានបរមាទេ"
       ],
       "a": 0,
-      "e": "$f'(x) = \\dfrac{\\frac{1}{x} \\cdot x - \\ln x \\cdot 1}{x^2} = \\dfrac{1 - \\ln x}{x^2} = 0 \\iff \\ln x = 1 \\iff x = e$។ សញ្ញាដេរីវេប្តូរពី + ទៅ - នាំឱ្យជាអតិបរមា $f(e) = 1/e$។",
-      "short_solution": "$f'(x) = \\dfrac{\\frac{1}{x} \\cdot x - \\ln x \\cdot 1}{x^2} = \\dfrac{1 - \\ln x}{x^2} = 0 \\iff \\ln x = 1 \\iff x = e$។ សញ្ញាដេរីវេប្តូរពី + ទៅ - នាំឱ្យជាអតិបរមា $f(e) = 1/e$។",
+      "e": "$f'(x) = \\dfrac{\\frac{1}{x} \\cdot x - \\ln x \\cdot 1}{x^2} = \\dfrac{1 - \\ln x}{x^2} = 0 \\iff \\ln x = 1 \\iff x = e$។ សញ្ញាដេរីវេប្តូរពី + ទៅ - នាំឱ្យជាអតិបរមា $f(e) = \\dfrac{1}{e}$។",
+      "short_solution": "$f'(x) = \\dfrac{\\frac{1}{x} \\cdot x - \\ln x \\cdot 1}{x^2} = \\dfrac{1 - \\ln x}{x^2} = 0 \\iff \\ln x = 1 \\iff x = e$។ សញ្ញាដេរីវេប្តូរពី + ទៅ - នាំឱ្យជាអតិបរមា $f(e) = \\dfrac{1}{e}$។",
       "kind": "mcq"
     },
     {
@@ -127763,7 +127763,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតមូលដ្ឋាន)",
       "p": "ចំណុចទី ១ ៖ និយមន័យ និងលក្ខណៈនៃព្រីមីទីវ",
       "level": "លំបាក",
-      "q": "ចល័តមួយមានល្បឿន $v(t) = 3t^2 - 4t + 1$ (គិតជា $\\text{m/s}$)។ រកចម្ងាយចរ $s(t)$ ដឹងថា $s(0) = 5\\text{ m}$ ៖",
+      "q": "ចល័តមួយមានល្បឿន $v(t) = 3t^2 - 4t + 1$ (គិតជា $\\text{\\dfrac{m}{s}}$)។ រកចម្ងាយចរ $s(t)$ ដឹងថា $s(0) = 5\\text{ m}$ ៖",
       "o": [
         "$s(t) = t^3 - 2t^2 + t + 5$",
         "$s(t) = 6t - 4$",
@@ -127903,8 +127903,8 @@
         "$-\\dfrac{1}{x} + \\dfrac{1}{2\\sqrt{x}} + C$"
       ],
       "a": 0,
-      "e": "$\\int x^{-2} dx + \\int x^{-1/2} dx = -x^{-1} + \\dfrac{x^{1/2}}{1/2} + C = -\\dfrac{1}{x} + 2\\sqrt{x} + C$។",
-      "short_solution": "$\\int x^{-2} dx + \\int x^{-1/2} dx = -x^{-1} + \\dfrac{x^{1/2}}{1/2} + C = -\\dfrac{1}{x} + 2\\sqrt{x} + C$។",
+      "e": "$\\int x^{-2} dx + \\int x^{-\\dfrac{1}{2}} dx = -x^{-1} + \\dfrac{x^{\\frac{1}{2}}}{\\dfrac{1}{2}} + C = -\\dfrac{1}{x} + 2\\sqrt{x} + C$។",
+      "short_solution": "$\\int x^{-2} dx + \\int x^{-\\dfrac{1}{2}} dx = -x^{-1} + \\dfrac{x^{\\frac{1}{2}}}{\\dfrac{1}{2}} + C = -\\dfrac{1}{x} + 2\\sqrt{x} + C$។",
       "kind": "mcq"
     },
     {
@@ -129291,8 +129291,8 @@
         "ទំហំប្រវែងថ្នាក់"
       ],
       "a": 0,
-      "e": "ក្រាបអូស៊ីវងាយស្រួលបំផុតសម្រាប់ស្វែងរកមេដ្យាន ($N/2$) និងក្វាទីល ($N/4, 3N/4$)។",
-      "short_solution": "ក្រាបអូស៊ីវងាយស្រួលបំផុតសម្រាប់ស្វែងរកមេដ្យាន ($N/2$) និងក្វាទីល ($N/4, 3N/4$)។",
+      "e": "ក្រាបអូស៊ីវងាយស្រួលបំផុតសម្រាប់ស្វែងរកមេដ្យាន ($\\dfrac{N}{2}$) និងក្វាទីល ($\\dfrac{N}{4}, \\dfrac{3N}{4}$)។",
+      "short_solution": "ក្រាបអូស៊ីវងាយស្រួលបំផុតសម្រាប់ស្វែងរកមេដ្យាន ($\\dfrac{N}{2}$) និងក្វាទីល ($\\dfrac{N}{4}, \\dfrac{3N}{4}$)។",
       "kind": "mcq"
     },
     {
@@ -129731,8 +129731,8 @@
         "$37$"
       ],
       "a": 0,
-      "e": "$N/2 = 20$។ $Me = 30 + \\left(\\dfrac{20 - 14}{12}\\right) \\cdot 10 = 30 + \\dfrac{6}{12} \\cdot 10 = 30 + 5 = 35$។",
-      "short_solution": "$N/2 = 20$។ $Me = 30 + \\left(\\dfrac{20 - 14}{12}\\right) \\cdot 10 = 30 + \\dfrac{6}{12} \\cdot 10 = 30 + 5 = 35$។",
+      "e": "$\\dfrac{N}{2} = 20$។ $Me = 30 + \\left(\\dfrac{20 - 14}{12}\\right) \\cdot 10 = 30 + \\dfrac{6}{12} \\cdot 10 = 30 + 5 = 35$។",
+      "short_solution": "$\\dfrac{N}{2} = 20$។ $Me = 30 + \\left(\\dfrac{20 - 14}{12}\\right) \\cdot 10 = 30 + \\dfrac{6}{12} \\cdot 10 = 30 + 5 = 35$។",
       "kind": "mcq"
     },
     {
@@ -130545,8 +130545,8 @@
         "$\\dfrac{2}{3}$"
       ],
       "a": 0,
-      "e": "ករណីអាច = 6 $\\{1, 2, 3, 4, 5, 6\\}$។ ករណីស្របលេខគូ $\\{2, 4, 6\\}$ មាន 3។ $P = 3/6 = 1/2$។",
-      "short_solution": "ករណីអាច = 6 $\\{1, 2, 3, 4, 5, 6\\}$។ ករណីស្របលេខគូ $\\{2, 4, 6\\}$ មាន 3។ $P = 3/6 = 1/2$។",
+      "e": "ករណីអាច = 6 $\\{1, 2, 3, 4, 5, 6\\}$។ ករណីស្របលេខគូ $\\{2, 4, 6\\}$ មាន 3។ $P = \\dfrac{3}{6} = \\dfrac{1}{2}$។",
+      "short_solution": "ករណីអាច = 6 $\\{1, 2, 3, 4, 5, 6\\}$។ ករណីស្របលេខគូ $\\{2, 4, 6\\}$ មាន 3។ $P = \\dfrac{3}{6} = \\dfrac{1}{2}$។",
       "kind": "mcq"
     },
     {
@@ -130567,8 +130567,8 @@
         "$1$"
       ],
       "a": 0,
-      "e": "លំហសំណាក $S = \\{HH, HT, TH, TT\\}$ មាន 4។ ករណីស្រប $\\{HH, TT\\}$ មាន 2។ $P = 2/4 = 1/2$។",
-      "short_solution": "លំហសំណាក $S = \\{HH, HT, TH, TT\\}$ មាន 4។ ករណីស្រប $\\{HH, TT\\}$ មាន 2។ $P = 2/4 = 1/2$។",
+      "e": "លំហសំណាក $S = \\{HH, HT, TH, TT\\}$ មាន 4។ ករណីស្រប $\\{HH, TT\\}$ មាន 2។ $P = \\dfrac{2}{4} = \\dfrac{1}{2}$។",
+      "short_solution": "លំហសំណាក $S = \\{HH, HT, TH, TT\\}$ មាន 4។ ករណីស្រប $\\{HH, TT\\}$ មាន 2។ $P = \\dfrac{2}{4} = \\dfrac{1}{2}$។",
       "kind": "mcq"
     },
     {
@@ -130633,8 +130633,8 @@
         "$\\dfrac{1}{12}$"
       ],
       "a": 0,
-      "e": "ករណីអាច = $6 \\times 6 = 36$។ ករណីផលបូក ៧៖ $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ មាន 6 ករណី។ $P = 6/36 = 1/6$។",
-      "short_solution": "ករណីអាច = $6 \\times 6 = 36$។ ករណីផលបូក ៧៖ $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ មាន 6 ករណី។ $P = 6/36 = 1/6$។",
+      "e": "ករណីអាច = $6 \\times 6 = 36$។ ករណីផលបូក ៧៖ $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ មាន 6 ករណី។ $P = \\dfrac{6}{36} = \\dfrac{1}{6}$។",
+      "short_solution": "ករណីអាច = $6 \\times 6 = 36$។ ករណីផលបូក ៧៖ $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ មាន 6 ករណី។ $P = \\dfrac{6}{36} = \\dfrac{1}{6}$។",
       "kind": "mcq"
     },
     {
@@ -130897,8 +130897,8 @@
         "$\\dfrac{5}{3}$"
       ],
       "a": 0,
-      "e": "បាល់សរុប = $5 + 3 = 8$។ ករណីបាល់ក្រហម = 5។ $P = 5/8$។",
-      "short_solution": "បាល់សរុប = $5 + 3 = 8$។ ករណីបាល់ក្រហម = 5។ $P = 5/8$។",
+      "e": "បាល់សរុប = $5 + 3 = 8$។ ករណីបាល់ក្រហម = 5។ $P = \\dfrac{5}{8}$។",
+      "short_solution": "បាល់សរុប = $5 + 3 = 8$។ ករណីបាល់ក្រហម = 5។ $P = \\dfrac{5}{8}$។",
       "kind": "mcq"
     },
     {
@@ -130919,8 +130919,8 @@
         "$\\dfrac{4}{13}$"
       ],
       "a": 0,
-      "e": "មានអាត់ ៤ សន្លឹកក្នុងចំណោម ៥២ សន្លឹក៖ $P = 4/52 = 1/13$។",
-      "short_solution": "មានអាត់ ៤ សន្លឹកក្នុងចំណោម ៥២ សន្លឹក៖ $P = 4/52 = 1/13$។",
+      "e": "មានអាត់ ៤ សន្លឹកក្នុងចំណោម ៥២ សន្លឹក៖ $P = \\dfrac{4}{52} = \\dfrac{1}{13}$។",
+      "short_solution": "មានអាត់ ៤ សន្លឹកក្នុងចំណោម ៥២ សន្លឹក៖ $P = \\dfrac{4}{52} = \\dfrac{1}{13}$។",
       "kind": "mcq"
     },
     {
@@ -130963,8 +130963,8 @@
         "$\\dfrac{6}{45}$"
       ],
       "a": 0,
-      "e": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(10, 2) = 45$។ $P = 6/45 = 2/15$។",
-      "short_solution": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(10, 2) = 45$។ $P = 6/45 = 2/15$។",
+      "e": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(10, 2) = 45$។ $P = \\dfrac{6}{45} = \\dfrac{2}{15}$។",
+      "short_solution": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(10, 2) = 45$។ $P = \\dfrac{6}{45} = \\dfrac{2}{15}$។",
       "kind": "mcq"
     },
     {
@@ -130985,8 +130985,8 @@
         "$\\dfrac{1}{2}$"
       ],
       "a": 0,
-      "e": "ករណីស្រប $C(4, 1) \\times C(6, 1) = 4 \\times 6 = 24$។ $P = 24/45 = 8/15$។",
-      "short_solution": "ករណីស្រប $C(4, 1) \\times C(6, 1) = 4 \\times 6 = 24$។ $P = 24/45 = 8/15$។",
+      "e": "ករណីស្រប $C(4, 1) \\times C(6, 1) = 4 \\times 6 = 24$។ $P = \\dfrac{24}{45} = \\dfrac{8}{15}$។",
+      "short_solution": "ករណីស្រប $C(4, 1) \\times C(6, 1) = 4 \\times 6 = 24$។ $P = \\dfrac{24}{45} = \\dfrac{8}{15}$។",
       "kind": "mcq"
     },
     {
@@ -131007,8 +131007,8 @@
         "$\\dfrac{1}{4}$"
       ],
       "a": 0,
-      "e": "បេះដូងក្រហមមាន 13, $K$ មាន 4 (ក្នុងនោះមាន $K$ បេះដូងក្រហម 1)។ ករណីស្រប = $13 + 4 - 1 = 16$។ $P = 16/52 = 4/13$។",
-      "short_solution": "បេះដូងក្រហមមាន 13, $K$ មាន 4 (ក្នុងនោះមាន $K$ បេះដូងក្រហម 1)។ ករណីស្រប = $13 + 4 - 1 = 16$។ $P = 16/52 = 4/13$។",
+      "e": "បេះដូងក្រហមមាន 13, $K$ មាន 4 (ក្នុងនោះមាន $K$ បេះដូងក្រហម 1)។ ករណីស្រប = $13 + 4 - 1 = 16$។ $P = \\dfrac{16}{52} = \\dfrac{4}{13}$។",
+      "short_solution": "បេះដូងក្រហមមាន 13, $K$ មាន 4 (ក្នុងនោះមាន $K$ បេះដូងក្រហម 1)។ ករណីស្រប = $13 + 4 - 1 = 16$។ $P = \\dfrac{16}{52} = \\dfrac{4}{13}$។",
       "kind": "mcq"
     },
     {
@@ -131029,8 +131029,8 @@
         "$\\dfrac{3}{56}$"
       ],
       "a": 0,
-      "e": "លើកទី ១: $3/8$។ លើកទី ២ សល់ស ២ ក្នុងចំណោម ៧: $2/7$។ $P = \\dfrac{3}{8} \\times \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$។",
-      "short_solution": "លើកទី ១: $3/8$។ លើកទី ២ សល់ស ២ ក្នុងចំណោម ៧: $2/7$។ $P = \\dfrac{3}{8} \\times \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$។",
+      "e": "លើកទី ១: $\\dfrac{3}{8}$។ លើកទី ២ សល់ស ២ ក្នុងចំណោម ៧: $\\dfrac{2}{7}$។ $P = \\dfrac{3}{8} \\times \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$។",
+      "short_solution": "លើកទី ១: $\\dfrac{3}{8}$។ លើកទី ២ សល់ស ២ ក្នុងចំណោម ៧: $\\dfrac{2}{7}$។ $P = \\dfrac{3}{8} \\times \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$។",
       "kind": "mcq"
     },
     {
@@ -131073,8 +131073,8 @@
         "$\\dfrac{12}{220}$"
       ],
       "a": 0,
-      "e": "ករណីស្រប: $C(3, 1) \\times C(4, 1) \\times C(5, 1) = 3 \\times 4 \\times 5 = 60$។ ករណីអាច $C(12, 3) = \\dfrac{12 \\times 11 \\times 10}{6} = 220$។ $P = 60/220 = 3/11$។",
-      "short_solution": "ករណីស្រប: $C(3, 1) \\times C(4, 1) \\times C(5, 1) = 3 \\times 4 \\times 5 = 60$។ ករណីអាច $C(12, 3) = \\dfrac{12 \\times 11 \\times 10}{6} = 220$។ $P = 60/220 = 3/11$។",
+      "e": "ករណីស្រប: $C(3, 1) \\times C(4, 1) \\times C(5, 1) = 3 \\times 4 \\times 5 = 60$។ ករណីអាច $C(12, 3) = \\dfrac{12 \\times 11 \\times 10}{6} = 220$។ $P = \\dfrac{60}{220} = \\dfrac{3}{11}$។",
+      "short_solution": "ករណីស្រប: $C(3, 1) \\times C(4, 1) \\times C(5, 1) = 3 \\times 4 \\times 5 = 60$។ ករណីអាច $C(12, 3) = \\dfrac{12 \\times 11 \\times 10}{6} = 220$។ $P = \\dfrac{60}{220} = \\dfrac{3}{11}$។",
       "kind": "mcq"
     },
     {
@@ -131095,8 +131095,8 @@
         "$\\dfrac{1}{13}$"
       ],
       "a": 0,
-      "e": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(52, 2) = \\dfrac{52 \\times 51}{2} = 1326$។ $P = 6/1326 = \\dfrac{1}{221}$។",
-      "short_solution": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(52, 2) = \\dfrac{52 \\times 51}{2} = 1326$។ $P = 6/1326 = \\dfrac{1}{221}$។",
+      "e": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(52, 2) = \\dfrac{52 \\times 51}{2} = 1326$។ $P = \\dfrac{6}{1326} = \\dfrac{1}{221}$។",
+      "short_solution": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(52, 2) = \\dfrac{52 \\times 51}{2} = 1326$។ $P = \\dfrac{6}{1326} = \\dfrac{1}{221}$។",
       "kind": "mcq"
     },
     {
@@ -131183,8 +131183,8 @@
         "$2$"
       ],
       "a": 0,
-      "e": "$1 - \\cos x = 2\\sin^2(x/2)$ នាំឱ្យ $\\lim_{x \\to 0} \\dfrac{2\\sin^2(x/2)}{4(x/2)^2} = \\dfrac{1}{2}$។",
-      "short_solution": "$1 - \\cos x = 2\\sin^2(x/2)$ នាំឱ្យ $\\lim_{x \\to 0} \\dfrac{2\\sin^2(x/2)}{4(x/2)^2} = \\dfrac{1}{2}$។",
+      "e": "$1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ នាំឱ្យ $\\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{4\\left(\\dfrac{x}{2}\\right)^{2}} = \\dfrac{1}{2}$។",
+      "short_solution": "$1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ នាំឱ្យ $\\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{4\\left(\\dfrac{x}{2}\\right)^{2}} = \\dfrac{1}{2}$។",
       "kind": "mcq"
     },
     {
@@ -131263,7 +131263,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រីកោណមាត្រ",
       "level": "លំបាក",
-      "q": "គណនាលីមីត $\\lim_{x \\to \\frac{\\pi}{2}} \\dfrac{1 - \\sin x}{(\\pi/2 - x)^2}$ ៖",
+      "q": "គណនាលីមីត $\\lim_{x \\to \\frac{\\pi}{2}} \\dfrac{1 - \\sin x}{(\\dfrac{\\pi}{2} - x)^2}$ ៖",
       "o": [
         "$\\dfrac{1}{2}$",
         "$1$",
@@ -131271,8 +131271,8 @@
         "$2$"
       ],
       "a": 0,
-      "e": "តាង $t = \\pi/2 - x \\to 0 \\implies x = \\pi/2 - t$។ $\\sin x = \\cos t$។ $\\lim_{t \\to 0} \\dfrac{1 - \\cos t}{t^2} = \\dfrac{1}{2}$។",
-      "short_solution": "តាង $t = \\pi/2 - x \\to 0 \\implies x = \\pi/2 - t$។ $\\sin x = \\cos t$។ $\\lim_{t \\to 0} \\dfrac{1 - \\cos t}{t^2} = \\dfrac{1}{2}$។",
+      "e": "តាង $t = \\dfrac{\\pi}{2} - x \\to 0 \\implies x = \\dfrac{\\pi}{2} - t$។ $\\sin x = \\cos t$។ $\\lim_{t \\to 0} \\dfrac{1 - \\cos t}{t^2} = \\dfrac{1}{2}$។",
+      "short_solution": "តាង $t = \\dfrac{\\pi}{2} - x \\to 0 \\implies x = \\dfrac{\\pi}{2} - t$។ $\\sin x = \\cos t$។ $\\lim_{t \\to 0} \\dfrac{1 - \\cos t}{t^2} = \\dfrac{1}{2}$។",
       "kind": "mcq"
     },
     {
@@ -131315,8 +131315,8 @@
         "គ្មានលីមីត"
       ],
       "a": 0,
-      "e": "តាង $t = 1/x \\to 0^+$៖ $\\lim_{t \\to 0^+} \\dfrac{\\sin t}{t} = 1$។",
-      "short_solution": "តាង $t = 1/x \\to 0^+$៖ $\\lim_{t \\to 0^+} \\dfrac{\\sin t}{t} = 1$។",
+      "e": "តាង $t = \\dfrac{1}{x} \\to 0^+$៖ $\\lim_{t \\to 0^+} \\dfrac{\\sin t}{t} = 1$។",
+      "short_solution": "តាង $t = \\dfrac{1}{x} \\to 0^+$៖ $\\lim_{t \\to 0^+} \\dfrac{\\sin t}{t} = 1$។",
       "kind": "mcq"
     },
     {
@@ -131337,8 +131337,8 @@
         "$[0 + \\infty] = \\infty$"
       ],
       "a": 0,
-      "e": "រាងមិនកំណត់ចម្បងទាំង ៤ គឺ $[0/0]$, $[\\infty/\\infty]$, $[\\infty - \\infty]$, $[0 \\times \\infty]$។",
-      "short_solution": "រាងមិនកំណត់ចម្បងទាំង ៤ គឺ $[0/0]$, $[\\infty/\\infty]$, $[\\infty - \\infty]$, $[0 \\times \\infty]$។",
+      "e": "រាងមិនកំណត់ចម្បងទាំង ៤ គឺ $[\\dfrac{0}{0}]$, $[\\infty/\\infty]$, $[\\infty - \\infty]$, $[0 \\times \\infty]$។",
+      "short_solution": "រាងមិនកំណត់ចម្បងទាំង ៤ គឺ $[\\dfrac{0}{0}]$, $[\\infty/\\infty]$, $[\\infty - \\infty]$, $[0 \\times \\infty]$។",
       "kind": "mcq"
     },
     {
@@ -131425,8 +131425,8 @@
         "$+\\infty$"
       ],
       "a": 0,
-      "e": "រាង $[\\infty - \\infty]$៖ គុណឆ្លាស់ $\\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\dfrac{2x}{x(\\sqrt{1+2/x} + 1)} \\to \\dfrac{2}{2} = 1$។",
-      "short_solution": "រាង $[\\infty - \\infty]$៖ គុណឆ្លាស់ $\\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\dfrac{2x}{x(\\sqrt{1+2/x} + 1)} \\to \\dfrac{2}{2} = 1$។",
+      "e": "រាង $[\\infty - \\infty]$៖ គុណឆ្លាស់ $\\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\dfrac{2x}{x(\\sqrt{1+\\dfrac{2}{x}} + 1)} \\to \\dfrac{2}{2} = 1$។",
+      "short_solution": "រាង $[\\infty - \\infty]$៖ គុណឆ្លាស់ $\\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\dfrac{2x}{x(\\sqrt{1+\\dfrac{2}{x}} + 1)} \\to \\dfrac{2}{2} = 1$។",
       "kind": "mcq"
     },
     {
@@ -131469,8 +131469,8 @@
         "$+\\infty$"
       ],
       "a": 0,
-      "e": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin(1/x) \\le 1 \\implies -x^2 \\le x^2\\sin(1/x) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។",
-      "short_solution": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin(1/x) \\le 1 \\implies -x^2 \\le x^2\\sin(1/x) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។",
+      "e": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin^\\left(\\dfrac{1}{x}\\right) \\le 1 \\implies -x^2 \\le x^2\\sin^\\left(\\dfrac{1}{x}\\right) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។",
+      "short_solution": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin^\\left(\\dfrac{1}{x}\\right) \\le 1 \\implies -x^2 \\le x^2\\sin^\\left(\\dfrac{1}{x}\\right) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។",
       "kind": "mcq"
     },
     {
@@ -131491,8 +131491,8 @@
         "$\\dfrac{1}{2}$"
       ],
       "a": 0,
-      "e": "ប្រើរូបមន្ត $a - b = \\dfrac{a^3 - b^3}{a^2 + ab + b^2}$ នាំឱ្យបាន $\\dfrac{1}{x^{2/3} + x^{1/3} + 1} \\to \\dfrac{1}{3}$។",
-      "short_solution": "ប្រើរូបមន្ត $a - b = \\dfrac{a^3 - b^3}{a^2 + ab + b^2}$ នាំឱ្យបាន $\\dfrac{1}{x^{2/3} + x^{1/3} + 1} \\to \\dfrac{1}{3}$។",
+      "e": "ប្រើរូបមន្ត $a - b = \\dfrac{a^3 - b^3}{a^2 + ab + b^2}$ នាំឱ្យបាន $\\dfrac{1}{x^{\\frac{2}{3}} + x^{\\frac{1}{3}} + 1} \\to \\dfrac{1}{3}$។",
+      "short_solution": "ប្រើរូបមន្ត $a - b = \\dfrac{a^3 - b^3}{a^2 + ab + b^2}$ នាំឱ្យបាន $\\dfrac{1}{x^{\\frac{2}{3}} + x^{\\frac{1}{3}} + 1} \\to \\dfrac{1}{3}$។",
       "kind": "mcq"
     },
     {
@@ -131513,8 +131513,8 @@
         "$+\\infty$"
       ],
       "a": 0,
-      "e": "រាង $[\\infty - \\infty]$៖ $\\sqrt{x^2-4x} = |x|\\sqrt{1-4/x} = -x\\sqrt{1-4/x}$ (ព្រោះ $x < 0$)។ គុណឆ្លាស់៖ $\\dfrac{-4x}{\\sqrt{x^2-4x} - x} = \\dfrac{-4x}{-x\\sqrt{1-4/x} - x} = \\dfrac{-4}{-2} = 2$។",
-      "short_solution": "រាង $[\\infty - \\infty]$៖ $\\sqrt{x^2-4x} = |x|\\sqrt{1-4/x} = -x\\sqrt{1-4/x}$ (ព្រោះ $x < 0$)។ គុណឆ្លាស់៖ $\\dfrac{-4x}{\\sqrt{x^2-4x} - x} = \\dfrac{-4x}{-x\\sqrt{1-4/x} - x} = \\dfrac{-4}{-2} = 2$។",
+      "e": "រាង $[\\infty - \\infty]$៖ $\\sqrt{x^2-4x} = |x|\\sqrt{1-\\dfrac{4}{x}} = -x\\sqrt{1-\\dfrac{4}{x}}$ (ព្រោះ $x < 0$)។ គុណឆ្លាស់៖ $\\dfrac{-4x}{\\sqrt{x^2-4x} - x} = \\dfrac{-4x}{-x\\sqrt{1-\\dfrac{4}{x}} - x} = \\dfrac{-4}{-2} = 2$។",
+      "short_solution": "រាង $[\\infty - \\infty]$៖ $\\sqrt{x^2-4x} = |x|\\sqrt{1-\\dfrac{4}{x}} = -x\\sqrt{1-\\dfrac{4}{x}}$ (ព្រោះ $x < 0$)។ គុណឆ្លាស់៖ $\\dfrac{-4x}{\\sqrt{x^2-4x} - x} = \\dfrac{-4x}{-x\\sqrt{1-\\dfrac{4}{x}} - x} = \\dfrac{-4}{-2} = 2$។",
       "kind": "mcq"
     },
     {
@@ -131557,8 +131557,8 @@
         "$0$"
       ],
       "a": 0,
-      "e": "និយមន័យនៃចំនួនអយល័រ $e$៖ $\\lim_{x \\to +\\infty} (1 + 1/x)^x = e \\approx 2.71828$។",
-      "short_solution": "និយមន័យនៃចំនួនអយល័រ $e$៖ $\\lim_{x \\to +\\infty} (1 + 1/x)^x = e \\approx 2.71828$។",
+      "e": "និយមន័យនៃចំនួនអយល័រ $e$៖ $\\lim_{x \\to +\\infty} (1 + \\dfrac{1}{x})^x = e \\approx 2.71828$។",
+      "short_solution": "និយមន័យនៃចំនួនអយល័រ $e$៖ $\\lim_{x \\to +\\infty} (1 + \\dfrac{1}{x})^x = e \\approx 2.71828$។",
       "kind": "mcq"
     },
     {
@@ -131571,7 +131571,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល និងលោការីត",
       "level": "ងាយ",
-      "q": "លីមីតគ្រឹះ $\\lim_{x \\to 0} (1 + x)^{1/x}$ ស្មើនឹង ៖",
+      "q": "លីមីតគ្រឹះ $\\lim_{x \\to 0} (1 + x)^{\\frac{1}{x}}$ ស្មើនឹង ៖",
       "o": [
         "$e$",
         "$1$",
@@ -131579,8 +131579,8 @@
         "$+\\infty$"
       ],
       "a": 0,
-      "e": "តាង $t = 1/x$: $\\lim_{x \\to 0} (1 + x)^{1/x} = e$។",
-      "short_solution": "តាង $t = 1/x$: $\\lim_{x \\to 0} (1 + x)^{1/x} = e$។",
+      "e": "តាង $t = \\dfrac{1}{x}$: $\\lim_{x \\to 0} (1 + x)^{\\frac{1}{x}} = e$។",
+      "short_solution": "តាង $t = \\dfrac{1}{x}$: $\\lim_{x \\to 0} (1 + x)^{\\frac{1}{x}} = e$។",
       "kind": "mcq"
     },
     {
@@ -131645,8 +131645,8 @@
         "$1$"
       ],
       "a": 0,
-      "e": "$\\lim_{x \\to +\\infty} \\left[(1 + \\frac{2}{x})^{x/2}\\right]^2 = e^2$។",
-      "short_solution": "$\\lim_{x \\to +\\infty} \\left[(1 + \\frac{2}{x})^{x/2}\\right]^2 = e^2$។",
+      "e": "$\\lim_{x \\to +\\infty} \\left[(1 + \\frac{2}{x})^{\\frac{x}{2}}\\right]^2 = e^2$។",
+      "short_solution": "$\\lim_{x \\to +\\infty} \\left[(1 + \\frac{2}{x})^{\\frac{x}{2}}\\right]^2 = e^2$។",
       "kind": "mcq"
     },
     {
@@ -131711,8 +131711,8 @@
         "$e$"
       ],
       "a": 0,
-      "e": "$x \\ln(1 + 1/x) = \\ln[(1 + 1/x)^x] \\to \\ln e = 1$។",
-      "short_solution": "$x \\ln(1 + 1/x) = \\ln[(1 + 1/x)^x] \\to \\ln e = 1$។",
+      "e": "$x \\ln(1 + \\dfrac{1}{x}) = \\ln[(1 + \\dfrac{1}{x})^x] \\to \\ln e = 1$។",
+      "short_solution": "$x \\ln(1 + \\dfrac{1}{x}) = \\ln[(1 + \\dfrac{1}{x})^x] \\to \\ln e = 1$។",
       "kind": "mcq"
     },
     {
@@ -131725,16 +131725,16 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល និងលោការីត",
       "level": "លំបាក",
-      "q": "គណនាលីមីត $\\lim_{x \\to 0} (\\cos x)^{1/x^2}$ ៖",
+      "q": "គណនាលីមីត $\\lim_{x \\to 0} (\\cos x)^{\\dfrac{1}{x}^2}$ ៖",
       "o": [
-        "$e^{-1/2}$",
+        "$e^{-\\dfrac{1}{2}}$",
         "$1$",
         "$e$",
         "$0$"
       ],
       "a": 0,
-      "e": "$\\ln y = \\dfrac{\\ln \\cos x}{x^2} = \\dfrac{\\ln(1 - (1-\\cos x))}{-(1-\\cos x)} \\cdot \\dfrac{-(1-\\cos x)}{x^2} \\to -1/2 \\implies y \\to e^{-1/2}$។",
-      "short_solution": "$\\ln y = \\dfrac{\\ln \\cos x}{x^2} = \\dfrac{\\ln(1 - (1-\\cos x))}{-(1-\\cos x)} \\cdot \\dfrac{-(1-\\cos x)}{x^2} \\to -1/2 \\implies y \\to e^{-1/2}$។",
+      "e": "$\\ln y = \\dfrac{\\ln \\cos x}{x^2} = \\dfrac{\\ln(1 - (1-\\cos x))}{-(1-\\cos x)} \\cdot \\dfrac{-(1-\\cos x)}{x^2} \\to -\\dfrac{1}{2} \\implies y \\to e^{-\\dfrac{1}{2}}$។",
+      "short_solution": "$\\ln y = \\dfrac{\\ln \\cos x}{x^2} = \\dfrac{\\ln(1 - (1-\\cos x))}{-(1-\\cos x)} \\cdot \\dfrac{-(1-\\cos x)}{x^2} \\to -\\dfrac{1}{2} \\implies y \\to e^{-\\dfrac{1}{2}}$។",
       "kind": "mcq"
     },
     {
@@ -132085,8 +132085,8 @@
         "គ្មានឫសទេ"
       ],
       "a": 0,
-      "e": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 > 0$ និង $f(\\pi/2) = 0 - \\pi/2 < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\pi/2)$។",
-      "short_solution": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 > 0$ និង $f(\\pi/2) = 0 - \\pi/2 < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\pi/2)$។",
+      "e": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 > 0$ និង $f(\\dfrac{\\pi}{2}) = 0 - \\dfrac{\\pi}{2} < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\dfrac{\\pi}{2})$។",
+      "short_solution": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 > 0$ និង $f(\\dfrac{\\pi}{2}) = 0 - \\dfrac{\\pi}{2} < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\dfrac{\\pi}{2})$។",
       "kind": "mcq"
     },
     {
@@ -132129,8 +132129,8 @@
         "រកសមីការបន្ទាត់ប៉ះ"
       ],
       "a": 0,
-      "e": "វិធីពុះជាពីរ (Bisection) គណនាតម្លៃកណ្តាល $m = (a+b)/2$ ហើយជ្រើសយកពាក់កណ្តាលចន្លោះដែលមានសញ្ញាផ្ទុយគ្នាដើម្បីរំកិលទៅជិតឫស។",
-      "short_solution": "វិធីពុះជាពីរ (Bisection) គណនាតម្លៃកណ្តាល $m = (a+b)/2$ ហើយជ្រើសយកពាក់កណ្តាលចន្លោះដែលមានសញ្ញាផ្ទុយគ្នាដើម្បីរំកិលទៅជិតឫស។",
+      "e": "វិធីពុះជាពីរ (Bisection) គណនាតម្លៃកណ្តាល $m = \\dfrac{a+b}{2}$ ហើយជ្រើសយកពាក់កណ្តាលចន្លោះដែលមានសញ្ញាផ្ទុយគ្នាដើម្បីរំកិលទៅជិតឫស។",
+      "short_solution": "វិធីពុះជាពីរ (Bisection) គណនាតម្លៃកណ្តាល $m = \\dfrac{a+b}{2}$ ហើយជ្រើសយកពាក់កណ្តាលចន្លោះដែលមានសញ្ញាផ្ទុយគ្នាដើម្បីរំកិលទៅជិតឫស។",
       "kind": "mcq"
     },
     {
@@ -132283,8 +132283,8 @@
         "មិនជាប់ត្រង់ $0$"
       ],
       "a": 0,
-      "e": "$\\lim_{x \\to 0} \\dfrac{\\sqrt[3]{x} - 0}{x} = \\lim_{x \\to 0} \\dfrac{1}{x^{2/3}} = +\\infty$ នាំឱ្យបន្ទាត់ប៉ះជាបន្ទាត់ឈរ ដូច្នេះគ្មានដេរីវេជាចំនួនពិតទេ។",
-      "short_solution": "$\\lim_{x \\to 0} \\dfrac{\\sqrt[3]{x} - 0}{x} = \\lim_{x \\to 0} \\dfrac{1}{x^{2/3}} = +\\infty$ នាំឱ្យបន្ទាត់ប៉ះជាបន្ទាត់ឈរ ដូច្នេះគ្មានដេរីវេជាចំនួនពិតទេ។",
+      "e": "$\\lim_{x \\to 0} \\dfrac{\\sqrt[3]{x} - 0}{x} = \\lim_{x \\to 0} \\dfrac{1}{x^{\\frac{2}{3}}} = +\\infty$ នាំឱ្យបន្ទាត់ប៉ះជាបន្ទាត់ឈរ ដូច្នេះគ្មានដេរីវេជាចំនួនពិតទេ។",
+      "short_solution": "$\\lim_{x \\to 0} \\dfrac{\\sqrt[3]{x} - 0}{x} = \\lim_{x \\to 0} \\dfrac{1}{x^{\\frac{2}{3}}} = +\\infty$ នាំឱ្យបន្ទាត់ប៉ះជាបន្ទាត់ឈរ ដូច្នេះគ្មានដេរីវេជាចំនួនពិតទេ។",
       "kind": "mcq"
     },
     {
@@ -132363,7 +132363,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ១ ៖ ភាពមានដេរីវេ និងទំនាក់ទំនងជាមួយភាពជាប់",
       "level": "លំបាក",
-      "q": "តើអនុគមន៍ $f(x) = \\begin{cases} x^2 \\sin(1/x) & \\text{បើ } x \\neq 0 \\\\ 0 & \\text{បើ } x = 0 \\end{cases}$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
+      "q": "តើអនុគមន៍ $f(x) = \\begin{cases} x^2 \\sin^\\left(\\dfrac{1}{x}\\right) & \\text{បើ } x \\neq 0 \\\\ 0 & \\text{បើ } x = 0 \\end{cases}$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
       "o": [
         "មាន ហើយ $f'(0) = 0$",
         "គ្មានដេរីវេទេ",
@@ -132371,8 +132371,8 @@
         "មិនជាប់ត្រង់ 0"
       ],
       "a": 0,
-      "e": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin(1/x) - 0}{x} = \\lim_{x \\to 0} x \\sin(1/x) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
-      "short_solution": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin(1/x) - 0}{x} = \\lim_{x \\to 0} x \\sin(1/x) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
+      "e": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin^\\left(\\dfrac{1}{x}\\right) - 0}{x} = \\lim_{x \\to 0} x \\sin^\\left(\\dfrac{1}{x}\\right) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
+      "short_solution": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin^\\left(\\dfrac{1}{x}\\right) - 0}{x} = \\lim_{x \\to 0} x \\sin^\\left(\\dfrac{1}{x}\\right) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
       "kind": "mcq"
     },
     {
@@ -132393,8 +132393,8 @@
         "គ្មានដេរីវេត្រង់ $x \\neq 0$"
       ],
       "a": 0,
-      "e": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin(1/x) - \\cos(1/x)$។ កាលណា $x \\to 0$ តួ $\\cos(1/x)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
-      "short_solution": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin(1/x) - \\cos(1/x)$។ កាលណា $x \\to 0$ តួ $\\cos(1/x)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
+      "e": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin^\\left(\\dfrac{1}{x}\\right) - \\cos^\\left(\\dfrac{1}{x}\\right)$។ កាលណា $x \\to 0$ តួ $\\cos^\\left(\\dfrac{1}{x}\\right)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
+      "short_solution": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin^\\left(\\dfrac{1}{x}\\right) - \\cos^\\left(\\dfrac{1}{x}\\right)$។ កាលណា $x \\to 0$ តួ $\\cos^\\left(\\dfrac{1}{x}\\right)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
       "kind": "mcq"
     },
     {
@@ -132833,8 +132833,8 @@
         "$(-1)^n \\cos x$"
       ],
       "a": 0,
-      "e": "$y' = \\cos x = \\sin(x + \\pi/2)$, $y'' = \\sin(x + \\pi)$, ... $y^{(n)} = \\sin(x + n\\pi/2)$។",
-      "short_solution": "$y' = \\cos x = \\sin(x + \\pi/2)$, $y'' = \\sin(x + \\pi)$, ... $y^{(n)} = \\sin(x + n\\pi/2)$។",
+      "e": "$y' = \\cos x = \\sin(x + \\dfrac{\\pi}{2})$, $y'' = \\sin(x + \\pi)$, ... $y^{(n)} = \\sin(x + n\\pi/2)$។",
+      "short_solution": "$y' = \\cos x = \\sin(x + \\dfrac{\\pi}{2})$, $y'' = \\sin(x + \\pi)$, ... $y^{(n)} = \\sin(x + n\\pi/2)$។",
       "kind": "mcq"
     },
     {
@@ -133047,14 +133047,14 @@
       "level": "លំបាក",
       "q": "រថយន្តមួយបើកបរលើផ្លូវល្បឿនលឿនចម្ងាយ $150\\text{ km}$ ដោយប្រើពេល $1.5\\text{ h}$។ តាមទ្រឹស្តីបទ Lagrange ៖",
       "o": [
-        "មានពេលមួយយ៉ាងតិចដែលកុងទ័រល្បឿនចង្អុល $100\\text{ km/h}$ យ៉ាងពិតប្រាកដ",
-        "ល្បឿនមិនដែលលើស $100\\text{ km/h}$ ទេ",
-        "ល្បឿនថេរ $100\\text{ km/h}$ រហូត",
+        "មានពេលមួយយ៉ាងតិចដែលកុងទ័រល្បឿនចង្អុល $100\\text{ \\dfrac{km}{h}}$ យ៉ាងពិតប្រាកដ",
+        "ល្បឿនមិនដែលលើស $100\\text{ \\dfrac{km}{h}}$ ទេ",
+        "ល្បឿនថេរ $100\\text{ \\dfrac{km}{h}}$ រហូត",
         "មិនអាចដឹងបាន"
       ],
       "a": 0,
-      "e": "ល្បឿនមធ្យម = $150 / 1.5 = 100\\text{ km/h}$។ តាម Lagrange មានពេល $c$ ដែល $v(c) = s'(c) = 100\\text{ km/h}$។",
-      "short_solution": "ល្បឿនមធ្យម = $150 / 1.5 = 100\\text{ km/h}$។ តាម Lagrange មានពេល $c$ ដែល $v(c) = s'(c) = 100\\text{ km/h}$។",
+      "e": "ល្បឿនមធ្យម = $\\dfrac{150}{1}.5 = 100\\text{ \\dfrac{km}{h}}$។ តាម Lagrange មានពេល $c$ ដែល $v(c) = s'(c) = 100\\text{ \\dfrac{km}{h}}$។",
+      "short_solution": "ល្បឿនមធ្យម = $\\dfrac{150}{1}.5 = 100\\text{ \\dfrac{km}{h}}$។ តាម Lagrange មានពេល $c$ ដែល $v(c) = s'(c) = 100\\text{ \\dfrac{km}{h}}$។",
       "kind": "mcq"
     },
     {
@@ -133133,16 +133133,16 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
       "level": "មធ្យម",
-      "q": "ប៉េងប៉ោងរាងស្វ៊ែរមួយត្រូវគេច្រកខ្យល់ក្នុងអត្រា $100\\text{ cm}^3/\\text{s}$ ($dV/dt = 100$)។ រកអត្រាបម្រែបម្រួលនៃកាំ $dr/dt$ នៅខណៈដែលកាំ $r = 5\\text{ cm}$ ៖",
+      "q": "ប៉េងប៉ោងរាងស្វ៊ែរមួយត្រូវគេច្រកខ្យល់ក្នុងអត្រា $100\\text{ cm}^3/\\text{s}$ ($\\dfrac{dV}{dt} = 100$)។ រកអត្រាបម្រែបម្រួលនៃកាំ $\\dfrac{dr}{dt}$ នៅខណៈដែលកាំ $r = 5\\text{ cm}$ ៖",
       "o": [
-        "$\\dfrac{1}{\\pi}\\text{ cm/s}$",
-        "$\\dfrac{2}{\\pi}\\text{ cm/s}$",
-        "$4\\pi\\text{ cm/s}$",
-        "$\\dfrac{4}{\\pi}\\text{ cm/s}$"
+        "$\\dfrac{1}{\\pi}\\text{ \\dfrac{cm}{s}}$",
+        "$\\dfrac{2}{\\pi}\\text{ \\dfrac{cm}{s}}$",
+        "$4\\pi\\text{ \\dfrac{cm}{s}}$",
+        "$\\dfrac{4}{\\pi}\\text{ \\dfrac{cm}{s}}$"
       ],
       "a": 0,
-      "e": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\text{ cm/s}$។",
-      "short_solution": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\text{ cm/s}$។",
+      "e": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\text{ \\dfrac{cm}{s}}$។",
+      "short_solution": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\text{ \\dfrac{cm}{s}}$។",
       "kind": "mcq"
     },
     {
@@ -133155,16 +133155,16 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
       "level": "មធ្យម",
-      "q": "ជណ្តើរប្រវែង $5\\text{ m}$ ច្រត់នឹងជញ្ជាំងបញ្ឈរ។ ជើងជណ្តើររអិលចេញពីជញ្ជាំងក្នុងល្បឿន $2\\text{ m/s}$ ($dx/dt = 2$)។ រកល្បឿនដែលចុងជណ្តើរខាងលើរអិលចុះក្រោមនៅពេលជើងជណ្តើរនៅឆ្ងាយពីជញ្ជាំង $3\\text{ m}$ ៖",
+      "q": "ជណ្តើរប្រវែង $5\\text{ m}$ ច្រត់នឹងជញ្ជាំងបញ្ឈរ។ ជើងជណ្តើររអិលចេញពីជញ្ជាំងក្នុងល្បឿន $2\\text{ \\dfrac{m}{s}}$ ($\\dfrac{dx}{dt} = 2$)។ រកល្បឿនដែលចុងជណ្តើរខាងលើរអិលចុះក្រោមនៅពេលជើងជណ្តើរនៅឆ្ងាយពីជញ្ជាំង $3\\text{ m}$ ៖",
       "o": [
-        "$-1.5\\text{ m/s}$",
-        "$-2\\text{ m/s}$",
-        "$-1\\text{ m/s}$",
-        "$-0.75\\text{ m/s}$"
+        "$-1.5\\text{ \\dfrac{m}{s}}$",
+        "$-2\\text{ \\dfrac{m}{s}}$",
+        "$-1\\text{ \\dfrac{m}{s}}$",
+        "$-0.75\\text{ \\dfrac{m}{s}}$"
       ],
       "a": 0,
-      "e": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\text{ m/s}$។",
-      "short_solution": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\text{ m/s}$។",
+      "e": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\text{ \\dfrac{m}{s}}$។",
+      "short_solution": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\text{ \\dfrac{m}{s}}$។",
       "kind": "mcq"
     },
     {
@@ -133177,7 +133177,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
       "level": "មធ្យម",
-      "q": "ការ៉េមួយមានជ្រុងកើនឡើងក្នុងអត្រា $3\\text{ cm/s}$។ រកអត្រាកំណើនផ្ទៃក្រឡាការ៉េនៅពេលជ្រុងមានប្រវែង $10\\text{ cm}$ ៖",
+      "q": "ការ៉េមួយមានជ្រុងកើនឡើងក្នុងអត្រា $3\\text{ \\dfrac{cm}{s}}$។ រកអត្រាកំណើនផ្ទៃក្រឡាការ៉េនៅពេលជ្រុងមានប្រវែង $10\\text{ cm}$ ៖",
       "o": [
         "$60\\text{ cm}^2/\\text{s}$",
         "$30\\text{ cm}^2/\\text{s}$",
@@ -133223,14 +133223,14 @@
       "level": "លំបាក",
       "q": "ធុងរាងកោណផ្កាប់មានកម្ពស់ $12\\text{ m}$ និងកាំមាត់ខាងលើ $4\\text{ m}$។ ទឹកហូរចូលក្នុងអត្រា $2\\text{ m}^3/\\text{min}$។ រកអត្រាកម្ពស់ទឹកកើនឡើងនៅពេលទឹកមានជម្រៅ $h = 6\\text{ m}$ ៖",
       "o": [
-        "$\\dfrac{1}{2\\pi}\\text{ m/min}$",
-        "$\\dfrac{1}{\\pi}\\text{ m/min}$",
-        "$\\dfrac{2}{\\pi}\\text{ m/min}$",
-        "$\\dfrac{1}{4\\pi}\\text{ m/min}$"
+        "$\\dfrac{1}{2\\pi}\\text{ \\dfrac{m}{min}}$",
+        "$\\dfrac{1}{\\pi}\\text{ \\dfrac{m}{min}}$",
+        "$\\dfrac{2}{\\pi}\\text{ \\dfrac{m}{min}}$",
+        "$\\dfrac{1}{4\\pi}\\text{ \\dfrac{m}{min}}$"
       ],
       "a": 0,
-      "e": "តាមត្រីកោណដូចគ្នា $r/h = 4/12 = 1/3 \\implies r = h/3$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\text{ m/min}$។",
-      "short_solution": "តាមត្រីកោណដូចគ្នា $r/h = 4/12 = 1/3 \\implies r = h/3$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\text{ m/min}$។",
+      "e": "តាមត្រីកោណដូចគ្នា $\\dfrac{r}{h} = \\dfrac{4}{12} = \\dfrac{1}{3} \\implies r = \\dfrac{h}{3}$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\text{ \\dfrac{m}{min}}$។",
+      "short_solution": "តាមត្រីកោណដូចគ្នា $\\dfrac{r}{h} = \\dfrac{4}{12} = \\dfrac{1}{3} \\implies r = \\dfrac{h}{3}$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\text{ \\dfrac{m}{min}}$។",
       "kind": "mcq"
     },
     {
@@ -133243,16 +133243,16 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
       "level": "លំបាក",
-      "q": "មនុស្សម្នាក់កម្ពស់ $1.8\\text{ m}$ ដើរចេញពីបង្គោលភ្លើងកម្ពស់ $5.4\\text{ m}$ ក្នុងល្បឿន $1.2\\text{ m/s}$។ រកល្បឿនដែលស្រមោលរបស់គាត់លាតសន្ធឹងវែងទៅមុខ ៖",
+      "q": "មនុស្សម្នាក់កម្ពស់ $1.8\\text{ m}$ ដើរចេញពីបង្គោលភ្លើងកម្ពស់ $5.4\\text{ m}$ ក្នុងល្បឿន $1.2\\text{ \\dfrac{m}{s}}$។ រកល្បឿនដែលស្រមោលរបស់គាត់លាតសន្ធឹងវែងទៅមុខ ៖",
       "o": [
-        "$0.6\\text{ m/s}$",
-        "$1.2\\text{ m/s}$",
-        "$0.8\\text{ m/s}$",
-        "$1.8\\text{ m/s}$"
+        "$0.6\\text{ \\dfrac{m}{s}}$",
+        "$1.2\\text{ \\dfrac{m}{s}}$",
+        "$0.8\\text{ \\dfrac{m}{s}}$",
+        "$1.8\\text{ \\dfrac{m}{s}}$"
       ],
       "a": 0,
-      "e": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = x/2$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\text{ m/s}$។",
-      "short_solution": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = x/2$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\text{ m/s}$។",
+      "e": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = \\dfrac{x}{2}$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\text{ \\dfrac{m}{s}}$។",
+      "short_solution": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = \\dfrac{x}{2}$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\text{ \\dfrac{m}{s}}$។",
       "kind": "mcq"
     },
     {
@@ -133265,16 +133265,16 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
       "level": "លំបាក",
-      "q": "នាវា A ចេញដំណើរទៅទិសខាងកើតក្នុងល្បឿន $20\\text{ km/h}$ និងនាវា B ចេញដំណើរពីកំពង់ផែដដែលទៅទិសខាងជើងក្នុងល្បឿន $15\\text{ km/h}$។ រកអត្រាកំណើនចម្ងាយរវាងនាវាទាំងពីរ ៖",
+      "q": "នាវា A ចេញដំណើរទៅទិសខាងកើតក្នុងល្បឿន $20\\text{ \\dfrac{km}{h}}$ និងនាវា B ចេញដំណើរពីកំពង់ផែដដែលទៅទិសខាងជើងក្នុងល្បឿន $15\\text{ \\dfrac{km}{h}}$។ រកអត្រាកំណើនចម្ងាយរវាងនាវាទាំងពីរ ៖",
       "o": [
-        "$25\\text{ km/h}$ ថេរជានិច្ច",
-        "$35\\text{ km/h}$",
-        "$20\\text{ km/h}$",
+        "$25\\text{ \\dfrac{km}{h}}$ ថេរជានិច្ច",
+        "$35\\text{ \\dfrac{km}{h}}$",
+        "$20\\text{ \\dfrac{km}{h}}$",
         "អាស្រ័យនឹងពេល $t$"
       ],
       "a": 0,
-      "e": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\text{ km/h}$ ថេរជានិច្ច។",
-      "short_solution": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\text{ km/h}$ ថេរជានិច្ច។",
+      "e": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\text{ \\dfrac{km}{h}}$ ថេរជានិច្ច។",
+      "short_solution": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\text{ \\dfrac{km}{h}}$ ថេរជានិច្ច។",
       "kind": "mcq"
     },
     {
@@ -133317,8 +133317,8 @@
         "$[1^\\infty]$ តែមួយគត់"
       ],
       "a": 0,
-      "e": "ច្បាប់ L'Hôpital ប្រើបានដោយផ្ទាល់ចំពោះតែផលចែករាងមិនកំណត់ $[0/0]$ និង $[\\infty/\\infty]$ ប៉ុណ្ណោះ។",
-      "short_solution": "ច្បាប់ L'Hôpital ប្រើបានដោយផ្ទាល់ចំពោះតែផលចែករាងមិនកំណត់ $[0/0]$ និង $[\\infty/\\infty]$ ប៉ុណ្ណោះ។",
+      "e": "ច្បាប់ L'Hôpital ប្រើបានដោយផ្ទាល់ចំពោះតែផលចែករាងមិនកំណត់ $[\\dfrac{0}{0}]$ និង $[\\infty/\\infty]$ ប៉ុណ្ណោះ។",
+      "short_solution": "ច្បាប់ L'Hôpital ប្រើបានដោយផ្ទាល់ចំពោះតែផលចែករាងមិនកំណត់ $[\\dfrac{0}{0}]$ និង $[\\infty/\\infty]$ ប៉ុណ្ណោះ។",
       "kind": "mcq"
     },
     {
@@ -133331,7 +133331,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ១ ៖ ច្បាប់ឡូពីតាល់ (L'Hôpital's Rule)",
       "level": "ងាយ",
-      "q": "តាមច្បាប់ L'Hôpital៖ បើ $\\lim_{x \\to c} \\dfrac{f(x)}{g(x)}$ ជារាង $[0/0]$ ឬ $[\\infty/\\infty]$ នោះលីមីតស្មើនឹង ៖",
+      "q": "តាមច្បាប់ L'Hôpital៖ បើ $\\lim_{x \\to c} \\dfrac{f(x)}{g(x)}$ ជារាង $[\\dfrac{0}{0}]$ ឬ $[\\infty/\\infty]$ នោះលីមីតស្មើនឹង ៖",
       "o": [
         "$\\lim_{x \\to c} \\dfrac{f'(x)}{g'(x)}$",
         "$\\lim_{x \\to c} \\left(\\dfrac{f(x)}{g(x)}\\right)'$",
@@ -133399,14 +133399,14 @@
       "level": "មធ្យម",
       "q": "ដើម្បីអនុវត្ត L'Hôpital ចំពោះរាង $[0 \\times \\infty]$ គេត្រូវ ៖",
       "o": [
-        "សរសេរជាផលចែក $f \\cdot g = \\dfrac{f}{1/g}$ ដើម្បីបានរាង $[0/0]$ ឬ $[\\infty/\\infty]$",
+        "សរសេរជាផលចែក $f \\cdot g = \\dfrac{f}{\\dfrac{1}{g}}$ ដើម្បីបានរាង $[\\dfrac{0}{0}]$ ឬ $[\\infty/\\infty]$",
         "គុណនឹងសូន្យ",
         "យកដេរីវេភ្លាមៗ",
         "បូកនឹងអនន្ត"
       ],
       "a": 0,
-      "e": "បំប្លែងរាង $0 \\times \\infty$ ទៅជាផលចែក $\\dfrac{f}{1/g}$ (រាង $0/0$) រួចទើបអនុវត្ត L'Hôpital។",
-      "short_solution": "បំប្លែងរាង $0 \\times \\infty$ ទៅជាផលចែក $\\dfrac{f}{1/g}$ (រាង $0/0$) រួចទើបអនុវត្ត L'Hôpital។",
+      "e": "បំប្លែងរាង $0 \\times \\infty$ ទៅជាផលចែក $\\dfrac{f}{\\dfrac{1}{g}}$ (រាង $\\dfrac{0}{0}$) រួចទើបអនុវត្ត L'Hôpital។",
+      "short_solution": "បំប្លែងរាង $0 \\times \\infty$ ទៅជាផលចែក $\\dfrac{f}{\\dfrac{1}{g}}$ (រាង $\\dfrac{0}{0}$) រួចទើបអនុវត្ត L'Hôpital។",
       "kind": "mcq"
     },
     {
@@ -133427,8 +133427,8 @@
         "$\\dfrac{1}{2}$"
       ],
       "a": 0,
-      "e": "រាង $[\\infty/\\infty]$៖ $\\lim_{x \\to +\\infty} \\dfrac{1/x}{2x} = \\lim_{x \\to +\\infty} \\dfrac{1}{2x^2} = 0$។",
-      "short_solution": "រាង $[\\infty/\\infty]$៖ $\\lim_{x \\to +\\infty} \\dfrac{1/x}{2x} = \\lim_{x \\to +\\infty} \\dfrac{1}{2x^2} = 0$។",
+      "e": "រាង $[\\infty/\\infty]$៖ $\\lim_{x \\to +\\infty} \\dfrac{\\dfrac{1}{x}}{2x} = \\lim_{x \\to +\\infty} \\dfrac{1}{2x^2} = 0$។",
+      "short_solution": "រាង $[\\infty/\\infty]$៖ $\\lim_{x \\to +\\infty} \\dfrac{\\dfrac{1}{x}}{2x} = \\lim_{x \\to +\\infty} \\dfrac{1}{2x^2} = 0$។",
       "kind": "mcq"
     },
     {
@@ -133471,8 +133471,8 @@
         "$+\\infty$"
       ],
       "a": 0,
-      "e": "តាង $y = x^x \\implies \\ln y = x \\ln x = \\dfrac{\\ln x}{1/x}$។ តាម L'Hôpital: $\\lim \\dfrac{1/x}{-1/x^2} = \\lim(-x) = 0$។ នាំឱ្យ $y = e^0 = 1$។",
-      "short_solution": "តាង $y = x^x \\implies \\ln y = x \\ln x = \\dfrac{\\ln x}{1/x}$។ តាម L'Hôpital: $\\lim \\dfrac{1/x}{-1/x^2} = \\lim(-x) = 0$។ នាំឱ្យ $y = e^0 = 1$។",
+      "e": "តាង $y = x^x \\implies \\ln y = x \\ln x = \\dfrac{\\ln x}{\\dfrac{1}{x}}$។ តាម L'Hôpital: $\\lim \\dfrac{\\dfrac{1}{x}}{-\\dfrac{1}{x}^2} = \\lim(-x) = 0$។ នាំឱ្យ $y = e^0 = 1$។",
+      "short_solution": "តាង $y = x^x \\implies \\ln y = x \\ln x = \\dfrac{\\ln x}{\\dfrac{1}{x}}$។ តាម L'Hôpital: $\\lim \\dfrac{\\dfrac{1}{x}}{-\\dfrac{1}{x}^2} = \\lim(-x) = 0$។ នាំឱ្យ $y = e^0 = 1$។",
       "kind": "mcq"
     },
     {
@@ -133487,7 +133487,7 @@
       "level": "លំបាក",
       "q": "តើច្បាប់ L'Hôpital អាចអនុវត្តចំពោះ $\\lim_{x \\to 0} \\dfrac{\\cos x}{x+1}$ បានដែរឬទេ?",
       "o": [
-        "មិនអាចទេ ព្រោះមិនមែនជារាងមិនកំណត់ ($0/0$ ឬ $\\infty/\\infty$)",
+        "មិនអាចទេ ព្រោះមិនមែនជារាងមិនកំណត់ ($\\dfrac{0}{0}$ ឬ $\\infty/\\infty$)",
         "អាចបាន ព្រោះជាផលចែក",
         "អនុវត្តបានគ្រប់កាលៈទេសៈ",
         "បានតែដេរីវេភាគបែង"
@@ -133515,8 +133515,8 @@
         "$1$"
       ],
       "a": 0,
-      "e": "ភាគយក $\\approx x^3/6$, ភាគបែង $\\approx -x^3/3$។ លីមីត = $\\dfrac{1/6}{-1/3} = -\\dfrac{1}{2}$។",
-      "short_solution": "ភាគយក $\\approx x^3/6$, ភាគបែង $\\approx -x^3/3$។ លីមីត = $\\dfrac{1/6}{-1/3} = -\\dfrac{1}{2}$។",
+      "e": "ភាគយក $\\approx x^\\dfrac{3}{6}$, ភាគបែង $\\approx -x^\\dfrac{3}{3}$។ លីមីត = $\\dfrac{\\dfrac{1}{6}}{-\\dfrac{1}{3}} = -\\dfrac{1}{2}$។",
+      "short_solution": "ភាគយក $\\approx x^\\dfrac{3}{6}$, ភាគបែង $\\approx -x^\\dfrac{3}{3}$។ លីមីត = $\\dfrac{\\dfrac{1}{6}}{-\\dfrac{1}{3}} = -\\dfrac{1}{2}$។",
       "kind": "mcq"
     },
     {
@@ -133751,14 +133751,14 @@
       "level": "ងាយ",
       "q": "ដែនកំណត់នៃអនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ ($c \\neq 0$) គឺ ៖",
       "o": [
-        "$D = \\mathbb{R} \\setminus \\{-d/c\\}$",
+        "$D = \\mathbb{R} \\setminus \\{-\\dfrac{d}{c}\\}$",
         "$D = \\mathbb{R}$",
         "$D = (0, +\\infty)$",
-        "$D = \\mathbb{R} \\setminus \\{a/c\\}$"
+        "$D = \\mathbb{R} \\setminus \\{\\dfrac{a}{c}\\}$"
       ],
       "a": 0,
-      "e": "ភាគបែងខុសពីសូន្យ៖ $cx + d \\neq 0 \\iff x \\neq -d/c$ ដូច្នេះ $D = \\mathbb{R} \\setminus \\{-d/c\\}$។",
-      "short_solution": "ភាគបែងខុសពីសូន្យ៖ $cx + d \\neq 0 \\iff x \\neq -d/c$ ដូច្នេះ $D = \\mathbb{R} \\setminus \\{-d/c\\}$។",
+      "e": "ភាគបែងខុសពីសូន្យ៖ $cx + d \\neq 0 \\iff x \\neq -\\dfrac{d}{c}$ ដូច្នេះ $D = \\mathbb{R} \\setminus \\{-\\dfrac{d}{c}\\}$។",
+      "short_solution": "ភាគបែងខុសពីសូន្យ៖ $cx + d \\neq 0 \\iff x \\neq -\\dfrac{d}{c}$ ដូច្នេះ $D = \\mathbb{R} \\setminus \\{-\\dfrac{d}{c}\\}$។",
       "kind": "mcq"
     },
     {
@@ -133779,8 +133779,8 @@
         "$x = -d$ និង $y = a$"
       ],
       "a": 0,
-      "e": "អាស៊ីមតូតឈរ $x = -d/c$ (ឫសភាគបែង); អាស៊ីមតូតដេក $y = \\lim_{x \\to \\pm\\infty} \\dfrac{ax+b}{cx+d} = \\dfrac{a}{c}$។",
-      "short_solution": "អាស៊ីមតូតឈរ $x = -d/c$ (ឫសភាគបែង); អាស៊ីមតូតដេក $y = \\lim_{x \\to \\pm\\infty} \\dfrac{ax+b}{cx+d} = \\dfrac{a}{c}$។",
+      "e": "អាស៊ីមតូតឈរ $x = -\\dfrac{d}{c}$ (ឫសភាគបែង); អាស៊ីមតូតដេក $y = \\lim_{x \\to \\pm\\infty} \\dfrac{ax+b}{cx+d} = \\dfrac{a}{c}$។",
+      "short_solution": "អាស៊ីមតូតឈរ $x = -\\dfrac{d}{c}$ (ឫសភាគបែង); អាស៊ីមតូតដេក $y = \\lim_{x \\to \\pm\\infty} \\dfrac{ax+b}{cx+d} = \\dfrac{a}{c}$។",
       "kind": "mcq"
     },
     {
@@ -133912,8 +133912,8 @@
         "$(1, 0)$ និង $(0, -4)$"
       ],
       "a": 0,
-      "e": "កាត់ $Ox \\implies y = 0 \\iff 2x + 4 = 0 \\iff x = -2 \\implies (-2, 0)$។ កាត់ $Oy \\implies x = 0 \\implies y = 4/(-1) = -4 \\implies (0, -4)$។",
-      "short_solution": "កាត់ $Ox \\implies y = 0 \\iff 2x + 4 = 0 \\iff x = -2 \\implies (-2, 0)$។ កាត់ $Oy \\implies x = 0 \\implies y = 4/(-1) = -4 \\implies (0, -4)$។",
+      "e": "កាត់ $Ox \\implies y = 0 \\iff 2x + 4 = 0 \\iff x = -2 \\implies (-2, 0)$។ កាត់ $Oy \\implies x = 0 \\implies y = \\dfrac{4}{-1} = -4 \\implies (0, -4)$។",
+      "short_solution": "កាត់ $Ox \\implies y = 0 \\iff 2x + 4 = 0 \\iff x = -2 \\implies (-2, 0)$។ កាត់ $Oy \\implies x = 0 \\implies y = \\dfrac{4}{-1} = -4 \\implies (0, -4)$។",
       "kind": "mcq"
     },
     {
@@ -133931,7 +133931,7 @@
         "$\\pm 1$",
         "$0$",
         "$\\pm 2$",
-        "$a/c$"
+        "$\\dfrac{a}{c}$"
       ],
       "a": 0,
       "e": "អ័ក្សឆ្លុះនៃអ៊ីពែបូលកាត់តាមផ្ចិតឆ្លុះ $I$ និងជាបន្ទាត់ពុះនៃមុំបង្កើតដោយអាស៊ីមតូតកែងគ្នា នាំឱ្យមេគុណប្រាប់ទិសគឺ $\\pm 1$។",
@@ -134066,8 +134066,8 @@
         "គ្មានបរមាទេ"
       ],
       "a": 0,
-      "e": "$y' = 1 - 1/x^2 = 0 \\iff x = \\pm 1$។ $y(-1) = -2$ (អតិបរមាធៀប) និង $y(1) = 2$ (អប្បបរមាធៀប)។ ចំណាំ៖ អតិបរមាធៀបអាចតូចជាងអប្បបរមាធៀប!",
-      "short_solution": "$y' = 1 - 1/x^2 = 0 \\iff x = \\pm 1$។ $y(-1) = -2$ (អតិបរមាធៀប) និង $y(1) = 2$ (អប្បបរមាធៀប)។ ចំណាំ៖ អតិបរមាធៀបអាចតូចជាងអប្បបរមាធៀប!",
+      "e": "$y' = 1 - \\dfrac{1}{x}^2 = 0 \\iff x = \\pm 1$។ $y(-1) = -2$ (អតិបរមាធៀប) និង $y(1) = 2$ (អប្បបរមាធៀប)។ ចំណាំ៖ អតិបរមាធៀបអាចតូចជាងអប្បបរមាធៀប!",
+      "short_solution": "$y' = 1 - \\dfrac{1}{x}^2 = 0 \\iff x = \\pm 1$។ $y(-1) = -2$ (អតិបរមាធៀប) និង $y(1) = 2$ (អប្បបរមាធៀប)។ ចំណាំ៖ អតិបរមាធៀបអាចតូចជាងអប្បបរមាធៀប!",
       "kind": "mcq"
     },
     {
@@ -134237,14 +134237,14 @@
       "level": "មធ្យម",
       "q": "រកចំណុចបរមាធៀបនៃអនុគមន៍ $f(x) = x e^{-x}$ ៖",
       "o": [
-        "អតិបរមាធៀបត្រង់ $x = 1$ ស្មើនឹង $1/e$",
+        "អតិបរមាធៀបត្រង់ $x = 1$ ស្មើនឹង $\\dfrac{1}{e}$",
         "អប្បបរមាធៀបត្រង់ $x = 1$",
         "អតិបរមាត្រង់ $x = 0$",
         "គ្មានបរមាទេ"
       ],
       "a": 0,
-      "e": "$f'(x) = 1 \\cdot e^{-x} - x e^{-x} = (1 - x)e^{-x} = 0 \\iff x = 1$។ ប្តូរសញ្ញាពី + ទៅ - នាំឱ្យជាអតិបរមាធៀប $f(1) = 1/e$។",
-      "short_solution": "$f'(x) = 1 \\cdot e^{-x} - x e^{-x} = (1 - x)e^{-x} = 0 \\iff x = 1$។ ប្តូរសញ្ញាពី + ទៅ - នាំឱ្យជាអតិបរមាធៀប $f(1) = 1/e$។",
+      "e": "$f'(x) = 1 \\cdot e^{-x} - x e^{-x} = (1 - x)e^{-x} = 0 \\iff x = 1$។ ប្តូរសញ្ញាពី + ទៅ - នាំឱ្យជាអតិបរមាធៀប $f(1) = \\dfrac{1}{e}$។",
+      "short_solution": "$f'(x) = 1 \\cdot e^{-x} - x e^{-x} = (1 - x)e^{-x} = 0 \\iff x = 1$។ ប្តូរសញ្ញាពី + ទៅ - នាំឱ្យជាអតិបរមាធៀប $f(1) = \\dfrac{1}{e}$។",
       "kind": "mcq"
     },
     {
@@ -134419,8 +134419,8 @@
         "ឆ្លងកាត់គល់កូអរដោនេ $O$"
       ],
       "a": 0,
-      "e": "$y' = 1/x > 0$ កើនដាច់ខាត, $\\lim_{x \\to 0^+} \\ln x = -\\infty$ នាំឱ្យបន្ទាត់ $x = 0$ (អ័ក្ស $Oy$) ជាអាស៊ីមតូតឈរ។",
-      "short_solution": "$y' = 1/x > 0$ កើនដាច់ខាត, $\\lim_{x \\to 0^+} \\ln x = -\\infty$ នាំឱ្យបន្ទាត់ $x = 0$ (អ័ក្ស $Oy$) ជាអាស៊ីមតូតឈរ។",
+      "e": "$y' = \\dfrac{1}{x} > 0$ កើនដាច់ខាត, $\\lim_{x \\to 0^+} \\ln x = -\\infty$ នាំឱ្យបន្ទាត់ $x = 0$ (អ័ក្ស $Oy$) ជាអាស៊ីមតូតឈរ។",
+      "short_solution": "$y' = \\dfrac{1}{x} > 0$ កើនដាច់ខាត, $\\lim_{x \\to 0^+} \\ln x = -\\infty$ នាំឱ្យបន្ទាត់ $x = 0$ (អ័ក្ស $Oy$) ជាអាស៊ីមតូតឈរ។",
       "kind": "mcq"
     },
     {
@@ -134441,8 +134441,8 @@
         "ប្តូរភាពកោងត្រង់ $x = e$"
       ],
       "a": 0,
-      "e": "$y'' = -1/x^2 < 0, \\forall x > 0$ ដូច្នេះក្រាបកោងផ្កាប់ចុះក្រោមជានិច្ច (គ្មានចំណុចរបត់)។",
-      "short_solution": "$y'' = -1/x^2 < 0, \\forall x > 0$ ដូច្នេះក្រាបកោងផ្កាប់ចុះក្រោមជានិច្ច (គ្មានចំណុចរបត់)។",
+      "e": "$y'' = -\\dfrac{1}{x}^2 < 0, \\forall x > 0$ ដូច្នេះក្រាបកោងផ្កាប់ចុះក្រោមជានិច្ច (គ្មានចំណុចរបត់)។",
+      "short_solution": "$y'' = -\\dfrac{1}{x}^2 < 0, \\forall x > 0$ ដូច្នេះក្រាបកោងផ្កាប់ចុះក្រោមជានិច្ច (គ្មានចំណុចរបត់)។",
       "kind": "mcq"
     },
     {
@@ -134463,8 +134463,8 @@
         "គ្មានបរមាទេ"
       ],
       "a": 0,
-      "e": "$f'(x) = 1 - 1/x = 0 \\iff x = 1$។ $f''(1) = 1 > 0$ នាំឱ្យជាអប្បបរមាធៀប $f(1) = 1 - 0 = 1$។",
-      "short_solution": "$f'(x) = 1 - 1/x = 0 \\iff x = 1$។ $f''(1) = 1 > 0$ នាំឱ្យជាអប្បបរមាធៀប $f(1) = 1 - 0 = 1$។",
+      "e": "$f'(x) = 1 - \\dfrac{1}{x} = 0 \\iff x = 1$។ $f''(1) = 1 > 0$ នាំឱ្យជាអប្បបរមាធៀប $f(1) = 1 - 0 = 1$។",
+      "short_solution": "$f'(x) = 1 - \\dfrac{1}{x} = 0 \\iff x = 1$។ $f''(1) = 1 > 0$ នាំឱ្យជាអប្បបរមាធៀប $f(1) = 1 - 0 = 1$។",
       "kind": "mcq"
     },
     {
@@ -134479,14 +134479,14 @@
       "level": "មធ្យម",
       "q": "រកចំណុចបរមាធៀបនៃ $f(x) = x^2 \\ln x$ ($x > 0$) ៖",
       "o": [
-        "អប្បបរមាត្រង់ $x = e^{-1/2} = \\dfrac{1}{\\sqrt{e}}$",
+        "អប្បបរមាត្រង់ $x = e^{-\\dfrac{1}{2}} = \\dfrac{1}{\\sqrt{e}}$",
         "អតិបរមាត្រង់ $x = 1$",
         "អប្បបរមាត្រង់ $x = 1$",
         "គ្មានបរមាទេ"
       ],
       "a": 0,
-      "e": "$f'(x) = 2x \\ln x + x = x(2\\ln x + 1) = 0 \\iff \\ln x = -1/2 \\iff x = e^{-1/2}$។ ជាអប្បបរមាធៀប។",
-      "short_solution": "$f'(x) = 2x \\ln x + x = x(2\\ln x + 1) = 0 \\iff \\ln x = -1/2 \\iff x = e^{-1/2}$។ ជាអប្បបរមាធៀប។",
+      "e": "$f'(x) = 2x \\ln x + x = x(2\\ln x + 1) = 0 \\iff \\ln x = -\\dfrac{1}{2} \\iff x = e^{-\\dfrac{1}{2}}$។ ជាអប្បបរមាធៀប។",
+      "short_solution": "$f'(x) = 2x \\ln x + x = x(2\\ln x + 1) = 0 \\iff \\ln x = -\\dfrac{1}{2} \\iff x = e^{-\\dfrac{1}{2}}$។ ជាអប្បបរមាធៀប។",
       "kind": "mcq"
     },
     {
@@ -134501,14 +134501,14 @@
       "level": "មធ្យម",
       "q": "រកចំណុចរបត់នៃក្រាប $y = x^2 \\ln x$ ៖",
       "o": [
-        "$\\left(e^{-3/2}, -\\dfrac{3}{2}e^{-3}\\right)$",
+        "$\\left(e^{-\\dfrac{3}{2}}, -\\dfrac{3}{2}e^{-3}\\right)$",
         "$(1, 0)$",
         "$(e, e^2)$",
         "$(e^{-1}, -e^{-2})$"
       ],
       "a": 0,
-      "e": "$f''(x) = 2\\ln x + 1 + 2 = 2\\ln x + 3 = 0 \\iff \\ln x = -3/2 \\iff x = e^{-3/2}$។",
-      "short_solution": "$f''(x) = 2\\ln x + 1 + 2 = 2\\ln x + 3 = 0 \\iff \\ln x = -3/2 \\iff x = e^{-3/2}$។",
+      "e": "$f''(x) = 2\\ln x + 1 + 2 = 2\\ln x + 3 = 0 \\iff \\ln x = -\\dfrac{3}{2} \\iff x = e^{-\\dfrac{3}{2}}$។",
+      "short_solution": "$f''(x) = 2\\ln x + 1 + 2 = 2\\ln x + 3 = 0 \\iff \\ln x = -\\dfrac{3}{2} \\iff x = e^{-\\dfrac{3}{2}}$។",
       "kind": "mcq"
     },
     {
@@ -134529,8 +134529,8 @@
         "$y = 2x - 2$"
       ],
       "a": 0,
-      "e": "$y'(1) = 1/1 = 1$។ សមីការបន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។",
-      "short_solution": "$y'(1) = 1/1 = 1$។ សមីការបន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។",
+      "e": "$y'(1) = \\dfrac{1}{1} = 1$។ សមីការបន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។",
+      "short_solution": "$y'(1) = \\dfrac{1}{1} = 1$។ សមីការបន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។",
       "kind": "mcq"
     },
     {
@@ -134595,8 +134595,8 @@
         "មានអនន្តឫស"
       ],
       "a": 0,
-      "e": "$f(x) = \\ln x - 1/x$ កើនដាច់ខាតពី $-\\infty$ ទៅ $+\\infty$ លើ $(0, +\\infty)$ នាំឱ្យកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ (ឫសតែមួយគត់)។",
-      "short_solution": "$f(x) = \\ln x - 1/x$ កើនដាច់ខាតពី $-\\infty$ ទៅ $+\\infty$ លើ $(0, +\\infty)$ នាំឱ្យកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ (ឫសតែមួយគត់)។",
+      "e": "$f(x) = \\ln x - \\dfrac{1}{x}$ កើនដាច់ខាតពី $-\\infty$ ទៅ $+\\infty$ លើ $(0, +\\infty)$ នាំឱ្យកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ (ឫសតែមួយគត់)។",
+      "short_solution": "$f(x) = \\ln x - \\dfrac{1}{x}$ កើនដាច់ខាតពី $-\\infty$ ទៅ $+\\infty$ លើ $(0, +\\infty)$ នាំឱ្យកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ (ឫសតែមួយគត់)។",
       "kind": "mcq"
     },
     {
@@ -134834,11 +134834,11 @@
         "$\\vec{e} = \\left(\\dfrac{1}{3}, \\dfrac{2}{3}, \\dfrac{2}{3}\\right)$",
         "$\\vec{e} = (1, 2, 2)$",
         "$\\vec{e} = \\left(\\dfrac{1}{5}, \\dfrac{2}{5}, \\dfrac{2}{5}\\right)$",
-        "$\\vec{e} = (1/9, 2/9, 2/9)$"
+        "$\\vec{e} = (\\dfrac{1}{9}, \\dfrac{2}{9}, \\dfrac{2}{9})$"
       ],
       "a": 0,
-      "e": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។ វ៉ិចទ័រឯកតាគឺ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = (1/3, 2/3, 2/3)$។",
-      "short_solution": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។ វ៉ិចទ័រឯកតាគឺ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = (1/3, 2/3, 2/3)$។",
+      "e": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។ វ៉ិចទ័រឯកតាគឺ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = (\\dfrac{1}{3}, \\dfrac{2}{3}, \\dfrac{2}{3})$។",
+      "short_solution": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។ វ៉ិចទ័រឯកតាគឺ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = (\\dfrac{1}{3}, \\dfrac{2}{3}, \\dfrac{2}{3})$។",
       "kind": "mcq"
     },
     {
@@ -134963,7 +134963,7 @@
       "level": "មធ្យម",
       "q": "គណនាមុំ $\\theta$ រវាង $\\vec{u} = (1, 1, 0)$ និង $\\vec{v} = (0, 1, 1)$ ៖",
       "o": [
-        "$60^\\circ$ (ឬ $\\pi/3$)",
+        "$60^\\circ$ (ឬ $\\dfrac{\\pi}{3}$)",
         "$45^\\circ$",
         "$90^\\circ$",
         "$30^\\circ$"
@@ -135013,8 +135013,8 @@
         "$7$"
       ],
       "a": 0,
-      "e": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2\\vec{u}\\cdot\\vec{v} = 9 + 16 + 2(3)(4)\\cos 120^\\circ = 25 + 24(-1/2) = 25 - 12 = 13 \\implies \\sqrt{13}$។",
-      "short_solution": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2\\vec{u}\\cdot\\vec{v} = 9 + 16 + 2(3)(4)\\cos 120^\\circ = 25 + 24(-1/2) = 25 - 12 = 13 \\implies \\sqrt{13}$។",
+      "e": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2\\vec{u}\\cdot\\vec{v} = 9 + 16 + 2(3)(4)\\cos 120^\\circ = 25 + 24(-\\dfrac{1}{2}) = 25 - 12 = 13 \\implies \\sqrt{13}$។",
+      "short_solution": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2\\vec{u}\\cdot\\vec{v} = 9 + 16 + 2(3)(4)\\cos 120^\\circ = 25 + 24(-\\dfrac{1}{2}) = 25 - 12 = 13 \\implies \\sqrt{13}$។",
       "kind": "mcq"
     },
     {
@@ -135387,8 +135387,8 @@
         "$\\dfrac{\\sqrt{11}}{2}$"
       ],
       "a": 0,
-      "e": "$\\|\\vec{AB} \\times \\vec{AC}\\| = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7$។ $S = 7/2 = 3.5$ ឯកតាផ្ទៃ។",
-      "short_solution": "$\\|\\vec{AB} \\times \\vec{AC}\\| = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7$។ $S = 7/2 = 3.5$ ឯកតាផ្ទៃ។",
+      "e": "$\\|\\vec{AB} \\times \\vec{AC}\\| = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7$។ $S = \\dfrac{7}{2} = 3.5$ ឯកតាផ្ទៃ។",
+      "short_solution": "$\\|\\vec{AB} \\times \\vec{AC}\\| = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7$។ $S = \\dfrac{7}{2} = 3.5$ ឯកតាផ្ទៃ។",
       "kind": "mcq"
     },
     {
@@ -135431,8 +135431,8 @@
         "$\\dfrac{\\sqrt{14}}{2}$"
       ],
       "a": 0,
-      "e": "$\\vec{AB} = (-1, 2, 0), \\vec{AC} = (-1, 0, 3)$។ $\\vec{AB} \\times \\vec{AC} = (6, 3, 2)$។ ម៉ូឌុល = $\\sqrt{36 + 9 + 4} = \\sqrt{49} = 7$។ $S = 7/2$។",
-      "short_solution": "$\\vec{AB} = (-1, 2, 0), \\vec{AC} = (-1, 0, 3)$។ $\\vec{AB} \\times \\vec{AC} = (6, 3, 2)$។ ម៉ូឌុល = $\\sqrt{36 + 9 + 4} = \\sqrt{49} = 7$។ $S = 7/2$។",
+      "e": "$\\vec{AB} = (-1, 2, 0), \\vec{AC} = (-1, 0, 3)$។ $\\vec{AB} \\times \\vec{AC} = (6, 3, 2)$។ ម៉ូឌុល = $\\sqrt{36 + 9 + 4} = \\sqrt{49} = 7$។ $S = \\dfrac{7}{2}$។",
+      "short_solution": "$\\vec{AB} = (-1, 2, 0), \\vec{AC} = (-1, 0, 3)$។ $\\vec{AB} \\times \\vec{AC} = (6, 3, 2)$។ ម៉ូឌុល = $\\sqrt{36 + 9 + 4} = \\sqrt{49} = 7$។ $S = \\dfrac{7}{2}$។",
       "kind": "mcq"
     },
     {
@@ -135717,8 +135717,8 @@
         "$M(0, 3, -3)$"
       ],
       "a": 0,
-      "e": "ជំនួសក្នុងប្លង់៖ $(1+t) + (2-t) + 3t - 7 = 0 \\iff 3t - 4 = 0 \\dots$ គិត $(1+t) + (2-t) + 3t = 3 + 3t = 7 \\iff 3t = 4 \\implies t = 4/3$។ បើ $x + 2y + z - 8 = 0 \\dots$ សម្រាប់សំណួរនេះ $t=1 \\implies (2, 1, 3)$ មាន $2 + 1 + 3 = 6 \\neq 7$។ ពិនិត្យ $x+y+z = 1+t+2-t+3t = 3+3t$។ ដើម្បីបាន $M(2, 1, 3)$ សមីការគឺ $x+y+z-6=0$ នាំឱ្យ $3t = 3 \\implies t = 1 \\implies M(2, 1, 3)$។",
-      "short_solution": "ជំនួសក្នុងប្លង់៖ $(1+t) + (2-t) + 3t - 7 = 0 \\iff 3t - 4 = 0 \\dots$ គិត $(1+t) + (2-t) + 3t = 3 + 3t = 7 \\iff 3t = 4 \\implies t = 4/3$។ បើ $x + 2y + z - 8 = 0 \\dots$ សម្រាប់សំណួរនេះ $t=1 \\implies (2, 1, 3)$ មាន $2 + 1 + 3 = 6 \\neq 7$។ ពិនិត្យ $x+y+z = 1+t+2-t+3t = 3+3t$។ ដើម្បីបាន $M(2, 1, 3)$ សមីការគឺ $x+y+z-6=0$ នាំឱ្យ $3t = 3 \\implies t = 1 \\implies M(2, 1, 3)$។",
+      "e": "ជំនួសក្នុងប្លង់៖ $(1+t) + (2-t) + 3t - 7 = 0 \\iff 3t - 4 = 0 \\dots$ គិត $(1+t) + (2-t) + 3t = 3 + 3t = 7 \\iff 3t = 4 \\implies t = \\dfrac{4}{3}$។ បើ $x + 2y + z - 8 = 0 \\dots$ សម្រាប់សំណួរនេះ $t=1 \\implies (2, 1, 3)$ មាន $2 + 1 + 3 = 6 \\neq 7$។ ពិនិត្យ $x+y+z = 1+t+2-t+3t = 3+3t$។ ដើម្បីបាន $M(2, 1, 3)$ សមីការគឺ $x+y+z-6=0$ នាំឱ្យ $3t = 3 \\implies t = 1 \\implies M(2, 1, 3)$។",
+      "short_solution": "ជំនួសក្នុងប្លង់៖ $(1+t) + (2-t) + 3t - 7 = 0 \\iff 3t - 4 = 0 \\dots$ គិត $(1+t) + (2-t) + 3t = 3 + 3t = 7 \\iff 3t = 4 \\implies t = \\dfrac{4}{3}$។ បើ $x + 2y + z - 8 = 0 \\dots$ សម្រាប់សំណួរនេះ $t=1 \\implies (2, 1, 3)$ មាន $2 + 1 + 3 = 6 \\neq 7$។ ពិនិត្យ $x+y+z = 1+t+2-t+3t = 3+3t$។ ដើម្បីបាន $M(2, 1, 3)$ សមីការគឺ $x+y+z-6=0$ នាំឱ្យ $3t = 3 \\implies t = 1 \\implies M(2, 1, 3)$។",
       "kind": "mcq"
     },
     {
@@ -136224,8 +136224,8 @@
         "$\\dfrac{2}{3}x\\sqrt{x} + C$"
       ],
       "a": 0,
-      "e": "$\\int x^{-1/2} dx = \\dfrac{x^{1/2}}{1/2} + C = 2\\sqrt{x} + C$។",
-      "short_solution": "$\\int x^{-1/2} dx = \\dfrac{x^{1/2}}{1/2} + C = 2\\sqrt{x} + C$។",
+      "e": "$\\int x^{-\\dfrac{1}{2}} dx = \\dfrac{x^{\\frac{1}{2}}}{\\dfrac{1}{2}} + C = 2\\sqrt{x} + C$។",
+      "short_solution": "$\\int x^{-\\dfrac{1}{2}} dx = \\dfrac{x^{\\frac{1}{2}}}{\\dfrac{1}{2}} + C = 2\\sqrt{x} + C$។",
       "kind": "mcq"
     },
     {
@@ -136791,7 +136791,7 @@
       "q": "គណនាព្រីមីទីវ $\\int \\dfrac{1}{x \\ln x} dx$ ៖",
       "o": [
         "$\\ln|\\ln x| + C$",
-        "(\\ln x)^2 + C$",
+        "$(\\ln x)^2 + C$",
         "$\\dfrac{1}{\\ln x} + C$",
         "$\\ln x + C$"
       ],
@@ -136812,8 +136812,8 @@
       "level": "លំបាក",
       "q": "គណនាព្រីមីទីវ $\\int x^3 \\sqrt{x^2 + 1} dx$ ៖",
       "o": [
-        "$\\dfrac{(x^2 + 1)^{5/2}}{5} - \\dfrac{(x^2 + 1)^{3/2}}{3} + C$",
-        "$\\dfrac{(x^2 + 1)^{5/2}}{5} + C$",
+        "$\\dfrac{(x^2 + 1)^{\\frac{5}{2}}}{5} - \\dfrac{(x^2 + 1)^{\\frac{3}{2}}}{3} + C$",
+        "$\\dfrac{(x^2 + 1)^{\\frac{5}{2}}}{5} + C$",
         "$\\dfrac{x^4}{4}\\sqrt{x^2+1} + C$",
         "$\\dfrac{(x^2+1)^2}{4} + C$"
       ],
@@ -136942,7 +136942,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ១ ៖ និយមន័យ និងលក្ខណៈនៃអាំងតេក្រាលកំណត់",
       "level": "លំបាក",
-      "q": "គណនា $\\int_{-\\pi/4}^{\\pi/4} \\cos 2x dx$ ៖",
+      "q": "គណនា $\\int_{-\\dfrac{\\pi}{4}}^{\\dfrac{\\pi}{4}} \\cos 2x dx$ ៖",
       "o": [
         "$1$",
         "$0$",
@@ -136950,8 +136950,8 @@
         "$\\dfrac{1}{2}$"
       ],
       "a": 0,
-      "e": "$\\cos 2x$ ជាអនុគមន៍គូ៖ $2\\int_0^{\\pi/4} \\cos 2x dx = 2\\left[\\frac{\\sin 2x}{2}\\right]_0^{\\pi/4} = \\sin(\\pi/2) - 0 = 1$។",
-      "short_solution": "$\\cos 2x$ ជាអនុគមន៍គូ៖ $2\\int_0^{\\pi/4} \\cos 2x dx = 2\\left[\\frac{\\sin 2x}{2}\\right]_0^{\\pi/4} = \\sin(\\pi/2) - 0 = 1$។",
+      "e": "$\\cos 2x$ ជាអនុគមន៍គូ៖ $2\\int_0^{\\dfrac{\\pi}{4}} \\cos 2x dx = 2\\left[\\frac{\\sin 2x}{2}\\right]_0^{\\dfrac{\\pi}{4}} = \\sin(\\dfrac{\\pi}{2}) - 0 = 1$។",
+      "short_solution": "$\\cos 2x$ ជាអនុគមន៍គូ៖ $2\\int_0^{\\dfrac{\\pi}{4}} \\cos 2x dx = 2\\left[\\frac{\\sin 2x}{2}\\right]_0^{\\dfrac{\\pi}{4}} = \\sin(\\dfrac{\\pi}{2}) - 0 = 1$។",
       "kind": "mcq"
     },
     {
@@ -137096,7 +137096,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ គណនាអាំងតេក្រាលកំណត់តាមប្តូរអថេរ និងដោយផ្នែក",
       "level": "មធ្យម",
-      "q": "គណនាអាំងតេក្រាល $I = \\int_0^{\\pi/2} x \\cos x dx$ ដោយផ្នែក ៖",
+      "q": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{2}} x \\cos x dx$ ដោយផ្នែក ៖",
       "o": [
         "$\\dfrac{\\pi}{2} - 1$",
         "$\\dfrac{\\pi}{2}$",
@@ -137104,8 +137104,8 @@
         "$\\dfrac{\\pi}{2} + 1$"
       ],
       "a": 0,
-      "e": "$I = [x\\sin x + \\cos x]_0^{\\pi/2} = (\\frac{\\pi}{2} \\cdot 1 + 0) - (0 + 1) = \\dfrac{\\pi}{2} - 1$។",
-      "short_solution": "$I = [x\\sin x + \\cos x]_0^{\\pi/2} = (\\frac{\\pi}{2} \\cdot 1 + 0) - (0 + 1) = \\dfrac{\\pi}{2} - 1$។",
+      "e": "$I = [x\\sin x + \\cos x]_0^{\\dfrac{\\pi}{2}} = (\\frac{\\pi}{2} \\cdot 1 + 0) - (0 + 1) = \\dfrac{\\pi}{2} - 1$។",
+      "short_solution": "$I = [x\\sin x + \\cos x]_0^{\\dfrac{\\pi}{2}} = (\\frac{\\pi}{2} \\cdot 1 + 0) - (0 + 1) = \\dfrac{\\pi}{2} - 1$។",
       "kind": "mcq"
     },
     {
@@ -137140,7 +137140,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ គណនាអាំងតេក្រាលកំណត់តាមប្តូរអថេរ និងដោយផ្នែក",
       "level": "មធ្យម",
-      "q": "គណនាអាំងតេក្រាល $I = \\int_0^{\\pi/2} \\sin^2 x \\cos x dx$ ៖",
+      "q": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{2}} \\sin^2 x \\cos x dx$ ៖",
       "o": [
         "$\\dfrac{1}{3}$",
         "$1$",
@@ -137148,8 +137148,8 @@
         "$\\dfrac{2}{3}$"
       ],
       "a": 0,
-      "e": "តាង $u = \\sin x$: $x=0 \\implies u=0; x=\\pi/2 \\implies u=1$។ $I = \\int_0^1 u^2 du = \\dfrac{1}{3}$។",
-      "short_solution": "តាង $u = \\sin x$: $x=0 \\implies u=0; x=\\pi/2 \\implies u=1$។ $I = \\int_0^1 u^2 du = \\dfrac{1}{3}$។",
+      "e": "តាង $u = \\sin x$: $x=0 \\implies u=0; x=\\dfrac{\\pi}{2} \\implies u=1$។ $I = \\int_0^1 u^2 du = \\dfrac{1}{3}$។",
+      "short_solution": "តាង $u = \\sin x$: $x=0 \\implies u=0; x=\\dfrac{\\pi}{2} \\implies u=1$។ $I = \\int_0^1 u^2 du = \\dfrac{1}{3}$។",
       "kind": "mcq"
     },
     {
@@ -137162,7 +137162,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ គណនាអាំងតេក្រាលកំណត់តាមប្តូរអថេរ និងដោយផ្នែក",
       "level": "លំបាក",
-      "q": "គណនាអាំងតេក្រាល $I = \\int_0^{\\pi/4} \\tan x dx$ ៖",
+      "q": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{4}} \\tan x dx$ ៖",
       "o": [
         "$\\dfrac{1}{2}\\ln 2$",
         "$\\ln 2$",
@@ -137170,8 +137170,8 @@
         "$\\dfrac{\\sqrt{2}}{2}$"
       ],
       "a": 0,
-      "e": "$I = [-\\ln|\\cos x|]_0^{\\pi/4} = -\\ln(\\sqrt{2}/2) = \\ln(\\sqrt{2}) = \\dfrac{1}{2}\\ln 2$។",
-      "short_solution": "$I = [-\\ln|\\cos x|]_0^{\\pi/4} = -\\ln(\\sqrt{2}/2) = \\ln(\\sqrt{2}) = \\dfrac{1}{2}\\ln 2$។",
+      "e": "$I = [-\\ln|\\cos x|]_0^{\\dfrac{\\pi}{4}} = -\\ln(\\dfrac{\\sqrt{2}}{2}) = \\ln(\\sqrt{2}) = \\dfrac{1}{2}\\ln 2$។",
+      "short_solution": "$I = [-\\ln|\\cos x|]_0^{\\dfrac{\\pi}{4}} = -\\ln(\\dfrac{\\sqrt{2}}{2}) = \\ln(\\sqrt{2}) = \\dfrac{1}{2}\\ln 2$។",
       "kind": "mcq"
     },
     {
@@ -137250,7 +137250,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ គណនាអាំងតេក្រាលកំណត់តាមប្តូរអថេរ និងដោយផ្នែក",
       "level": "លំបាក",
-      "q": "អាំងតេក្រាល Wallis $I_2 = \\int_0^{\\pi/2} \\sin^2 x dx$ ស្មើនឹង ៖",
+      "q": "អាំងតេក្រាល Wallis $I_2 = \\int_0^{\\dfrac{\\pi}{2}} \\sin^2 x dx$ ស្មើនឹង ៖",
       "o": [
         "$\\dfrac{\\pi}{4}$",
         "$\\dfrac{\\pi}{2}$",
@@ -137258,8 +137258,8 @@
         "$\\dfrac{\\pi}{8}$"
       ],
       "a": 0,
-      "e": "$\\int_0^{\\pi/2} \\dfrac{1 - \\cos 2x}{2} dx = [\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4}]_0^{\\pi/2} = \\dfrac{\\pi}{4}$។",
-      "short_solution": "$\\int_0^{\\pi/2} \\dfrac{1 - \\cos 2x}{2} dx = [\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4}]_0^{\\pi/2} = \\dfrac{\\pi}{4}$។",
+      "e": "$\\int_0^{\\dfrac{\\pi}{2}} \\dfrac{1 - \\cos 2x}{2} dx = [\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4}]_0^{\\dfrac{\\pi}{2}} = \\dfrac{\\pi}{4}$។",
+      "short_solution": "$\\int_0^{\\dfrac{\\pi}{2}} \\dfrac{1 - \\cos 2x}{2} dx = [\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4}]_0^{\\dfrac{\\pi}{2}} = \\dfrac{\\pi}{4}$។",
       "kind": "mcq"
     },
     {
@@ -137317,16 +137317,16 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ១ ៖ ផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោង និងអ័ក្សកូអរដោនេ",
       "level": "មធ្យម",
-      "q": "គណនាផ្ទៃក្រឡាខណ្ឌដោយក្រាប $y = \\cos x$, អ័ក្ស $Ox$ ពី $x = 0$ ដល់ $x = \\pi/2$ ៖",
+      "q": "គណនាផ្ទៃក្រឡាខណ្ឌដោយក្រាប $y = \\cos x$, អ័ក្ស $Ox$ ពី $x = 0$ ដល់ $x = \\dfrac{\\pi}{2}$ ៖",
       "o": [
         "$1$",
         "$0$",
-        "$\\pi/2$",
+        "$\\dfrac{\\pi}{2}$",
         "$2$"
       ],
       "a": 0,
-      "e": "$S = \\int_0^{\\pi/2} \\cos x dx = [\\sin x]_0^{\\pi/2} = 1 - 0 = 1$។",
-      "short_solution": "$S = \\int_0^{\\pi/2} \\cos x dx = [\\sin x]_0^{\\pi/2} = 1 - 0 = 1$។",
+      "e": "$S = \\int_0^{\\dfrac{\\pi}{2}} \\cos x dx = [\\sin x]_0^{\\dfrac{\\pi}{2}} = 1 - 0 = 1$។",
+      "short_solution": "$S = \\int_0^{\\dfrac{\\pi}{2}} \\cos x dx = [\\sin x]_0^{\\dfrac{\\pi}{2}} = 1 - 0 = 1$។",
       "kind": "mcq"
     },
     {
@@ -137612,8 +137612,8 @@
         "$1$"
       ],
       "a": 0,
-      "e": "ប្រសព្វ $x = 0, x = 1$។ $S = \\int_0^1 (\\sqrt{x} - x^2) dx = [\\frac{2}{3}x^{3/2} - \\frac{x^3}{3}]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\dfrac{1}{3}$។",
-      "short_solution": "ប្រសព្វ $x = 0, x = 1$។ $S = \\int_0^1 (\\sqrt{x} - x^2) dx = [\\frac{2}{3}x^{3/2} - \\frac{x^3}{3}]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\dfrac{1}{3}$។",
+      "e": "ប្រសព្វ $x = 0, x = 1$។ $S = \\int_0^1 (\\sqrt{x} - x^2) dx = [\\frac{2}{3}x^{\\frac{3}{2}} - \\frac{x^3}{3}]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\dfrac{1}{3}$។",
+      "short_solution": "ប្រសព្វ $x = 0, x = 1$។ $S = \\int_0^1 (\\sqrt{x} - x^2) dx = [\\frac{2}{3}x^{\\frac{3}{2}} - \\frac{x^3}{3}]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\dfrac{1}{3}$។",
       "kind": "mcq"
     },
     {
@@ -137626,7 +137626,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ ផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោងពីរ",
       "level": "លំបាក",
-      "q": "គណនាផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោង $y = \\sin x$ និង $y = \\cos x$ ពី $x = 0$ ដល់ $x = \\pi/2$ ៖",
+      "q": "គណនាផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោង $y = \\sin x$ និង $y = \\cos x$ ពី $x = 0$ ដល់ $x = \\dfrac{\\pi}{2}$ ៖",
       "o": [
         "$2\\sqrt{2} - 2$",
         "$\\sqrt{2}$",
@@ -137634,8 +137634,8 @@
         "$2$"
       ],
       "a": 0,
-      "e": "ប្រសព្វត្រង់ $x = \\pi/4$។ $S = \\int_0^{\\pi/4}(\\cos x - \\sin x)dx + \\int_{\\pi/4}^{\\pi/2}(\\sin x - \\cos x)dx = 2(\\sqrt{2}-1) = 2\\sqrt{2} - 2$។",
-      "short_solution": "ប្រសព្វត្រង់ $x = \\pi/4$។ $S = \\int_0^{\\pi/4}(\\cos x - \\sin x)dx + \\int_{\\pi/4}^{\\pi/2}(\\sin x - \\cos x)dx = 2(\\sqrt{2}-1) = 2\\sqrt{2} - 2$។",
+      "e": "ប្រសព្វត្រង់ $x = \\dfrac{\\pi}{4}$។ $S = \\int_0^{\\dfrac{\\pi}{4}}(\\cos x - \\sin x)dx + \\int_{\\dfrac{\\pi}{4}}^{\\dfrac{\\pi}{2}}(\\sin x - \\cos x)dx = 2(\\sqrt{2}-1) = 2\\sqrt{2} - 2$។",
+      "short_solution": "ប្រសព្វត្រង់ $x = \\dfrac{\\pi}{4}$។ $S = \\int_0^{\\dfrac{\\pi}{4}}(\\cos x - \\sin x)dx + \\int_{\\dfrac{\\pi}{4}}^{\\dfrac{\\pi}{2}}(\\sin x - \\cos x)dx = 2(\\sqrt{2}-1) = 2\\sqrt{2} - 2$។",
       "kind": "mcq"
     },
     {
@@ -138023,7 +138023,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ ប្រវែងធ្នូនៃខ្សែកោង",
       "level": "លំបាក",
-      "q": "គណនាប្រវែងធ្នូនៃ $y = \\dfrac{2}{3}x^{3/2}$ ពី $x = 0$ ដល់ $x = 3$ ៖",
+      "q": "គណនាប្រវែងធ្នូនៃ $y = \\dfrac{2}{3}x^{\\frac{3}{2}}$ ពី $x = 0$ ដល់ $x = 3$ ៖",
       "o": [
         "$\\dfrac{14}{3}$",
         "$4$",
@@ -138031,8 +138031,8 @@
         "$5$"
       ],
       "a": 0,
-      "e": "$y' = x^{1/2} \\implies 1 + (y')^2 = 1 + x$។ $L = \\int_0^3 \\sqrt{1+x} dx = [\\frac{2}{3}(1+x)^{3/2}]_0^3 = \\frac{2}{3}(4^{3/2} - 1) = \\frac{2}{3}(8 - 1) = \\dfrac{14}{3}$។",
-      "short_solution": "$y' = x^{1/2} \\implies 1 + (y')^2 = 1 + x$។ $L = \\int_0^3 \\sqrt{1+x} dx = [\\frac{2}{3}(1+x)^{3/2}]_0^3 = \\frac{2}{3}(4^{3/2} - 1) = \\frac{2}{3}(8 - 1) = \\dfrac{14}{3}$។",
+      "e": "$y' = x^{\\frac{1}{2}} \\implies 1 + (y')^2 = 1 + x$។ $L = \\int_0^3 \\sqrt{1+x} dx = [\\frac{2}{3}(1+x)^{\\frac{3}{2}}]_0^3 = \\frac{2}{3}(4^{\\frac{3}{2}} - 1) = \\frac{2}{3}(8 - 1) = \\dfrac{14}{3}$។",
+      "short_solution": "$y' = x^{\\frac{1}{2}} \\implies 1 + (y')^2 = 1 + x$។ $L = \\int_0^3 \\sqrt{1+x} dx = [\\frac{2}{3}(1+x)^{\\frac{3}{2}}]_0^3 = \\frac{2}{3}(4^{\\frac{3}{2}} - 1) = \\frac{2}{3}(8 - 1) = \\dfrac{14}{3}$។",
       "kind": "mcq"
     },
     {
@@ -138045,7 +138045,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ ប្រវែងធ្នូនៃខ្សែកោង",
       "level": "លំបាក",
-      "q": "គណនាប្រវែងធ្នូនៃ $y = \\ln(\\cos x)$ ពី $x = 0$ ដល់ $x = \\pi/4$ ៖",
+      "q": "គណនាប្រវែងធ្នូនៃ $y = \\ln(\\cos x)$ ពី $x = 0$ ដល់ $x = \\dfrac{\\pi}{4}$ ៖",
       "o": [
         "$\\ln(\\sqrt{2} + 1)$",
         "$\\ln 2$",
@@ -138053,8 +138053,8 @@
         "$\\dfrac{\\pi}{4}$"
       ],
       "a": 0,
-      "e": "$y' = -\\tan x \\implies 1 + (y')^2 = 1 + \\tan^2 x = \\sec^2 x$។ $L = \\int_0^{\\pi/4} \\sec x dx = [\\ln|\\sec x + \\tan x|]_0^{\\pi/4} = \\ln(\\sqrt{2} + 1)$។",
-      "short_solution": "$y' = -\\tan x \\implies 1 + (y')^2 = 1 + \\tan^2 x = \\sec^2 x$។ $L = \\int_0^{\\pi/4} \\sec x dx = [\\ln|\\sec x + \\tan x|]_0^{\\pi/4} = \\ln(\\sqrt{2} + 1)$។",
+      "e": "$y' = -\\tan x \\implies 1 + (y')^2 = 1 + \\tan^2 x = \\sec^2 x$។ $L = \\int_0^{\\dfrac{\\pi}{4}} \\sec x dx = [\\ln|\\sec x + \\tan x|]_0^{\\dfrac{\\pi}{4}} = \\ln(\\sqrt{2} + 1)$។",
+      "short_solution": "$y' = -\\tan x \\implies 1 + (y')^2 = 1 + \\tan^2 x = \\sec^2 x$។ $L = \\int_0^{\\dfrac{\\pi}{4}} \\sec x dx = [\\ln|\\sec x + \\tan x|]_0^{\\dfrac{\\pi}{4}} = \\ln(\\sqrt{2} + 1)$។",
       "kind": "mcq"
     },
     {
@@ -138097,8 +138097,8 @@
         "$8\\pi R^2$"
       ],
       "a": 0,
-      "e": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + x^2/y^2} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
-      "short_solution": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + x^2/y^2} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
+      "e": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + x^\\dfrac{2}{y}^2} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
+      "short_solution": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + x^\\dfrac{2}{y}^2} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
       "kind": "mcq"
     },
     {
@@ -138111,7 +138111,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ ប្រវែងធ្នូនៃខ្សែកោង",
       "level": "លំបាក",
-      "q": "ប្រវែងធ្នូនៃខ្សែច្រវាក់កាតេណារ (Catenary) $y = a \\cosh(x/a)$ ពី $x = 0$ ដល់ $x = x_0$ គឺ ៖",
+      "q": "ប្រវែងធ្នូនៃខ្សែច្រវាក់កាតេណារ (Catenary) $y = a \\cosh(\\dfrac{x}{a})$ ពី $x = 0$ ដល់ $x = x_0$ គឺ ៖",
       "o": [
         "$a \\sinh(x_0/a)$",
         "$a \\cosh(x_0/a)$",
@@ -138119,8 +138119,8 @@
         "$a(e^{x_0/a} - 1)$"
       ],
       "a": 0,
-      "e": "$y' = \\sinh(x/a) \\implies 1 + (y')^2 = 1 + \\sinh^2(x/a) = \\cosh^2(x/a)$។ $L = \\int_0^{x_0} \\cosh(x/a) dx = a \\sinh(x_0/a)$។",
-      "short_solution": "$y' = \\sinh(x/a) \\implies 1 + (y')^2 = 1 + \\sinh^2(x/a) = \\cosh^2(x/a)$។ $L = \\int_0^{x_0} \\cosh(x/a) dx = a \\sinh(x_0/a)$។",
+      "e": "$y' = \\sinh(\\dfrac{x}{a}) \\implies 1 + (y')^2 = 1 + \\sinh^2(\\dfrac{x}{a}) = \\cosh^2(\\dfrac{x}{a})$។ $L = \\int_0^{x_0} \\cosh(\\dfrac{x}{a}) dx = a \\sinh(x_0/a)$។",
+      "short_solution": "$y' = \\sinh(\\dfrac{x}{a}) \\implies 1 + (y')^2 = 1 + \\sinh^2(\\dfrac{x}{a}) = \\cosh^2(\\dfrac{x}{a})$។ $L = \\int_0^{x_0} \\cosh(\\dfrac{x}{a}) dx = a \\sinh(x_0/a)$។",
       "kind": "mcq"
     },
     {
@@ -138265,16 +138265,16 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ១ ៖ សមីការអូម៉ូសែន y' + ay = 0",
       "level": "មធ្យម",
-      "q": "រកអឌ្ឍជីវិត (Half-life, $T_{1/2}$) នៃសារធាតុវិទ្យុសកម្មដែលមានថេរបំបែក $\\lambda$ ៖",
+      "q": "រកអឌ្ឍជីវិត (Half-life, $T_{\\dfrac{1}{2}}$) នៃសារធាតុវិទ្យុសកម្មដែលមានថេរបំបែក $\\lambda$ ៖",
       "o": [
-        "$T_{1/2} = \\dfrac{\\ln 2}{\\lambda}$",
-        "$T_{1/2} = \\dfrac{\\lambda}{\\ln 2}$",
-        "$T_{1/2} = \\dfrac{1}{2\\lambda}$",
-        "$T_{1/2} = 2\\lambda$"
+        "$T_{\\dfrac{1}{2}} = \\dfrac{\\ln 2}{\\lambda}$",
+        "$T_{\\dfrac{1}{2}} = \\dfrac{\\lambda}{\\ln 2}$",
+        "$T_{\\dfrac{1}{2}} = \\dfrac{1}{2\\lambda}$",
+        "$T_{\\dfrac{1}{2}} = 2\\lambda$"
       ],
       "a": 0,
-      "e": "$N(T) = N_0/2 \\implies e^{-\\lambda T} = 1/2 \\iff -\\lambda T = -\\ln 2 \\iff T = \\dfrac{\\ln 2}{\\lambda}$។",
-      "short_solution": "$N(T) = N_0/2 \\implies e^{-\\lambda T} = 1/2 \\iff -\\lambda T = -\\ln 2 \\iff T = \\dfrac{\\ln 2}{\\lambda}$។",
+      "e": "$N(T) = N_0/2 \\implies e^{-\\lambda T} = \\dfrac{1}{2} \\iff -\\lambda T = -\\ln 2 \\iff T = \\dfrac{\\ln 2}{\\lambda}$។",
+      "short_solution": "$N(T) = N_0/2 \\implies e^{-\\lambda T} = \\dfrac{1}{2} \\iff -\\lambda T = -\\ln 2 \\iff T = \\dfrac{\\ln 2}{\\lambda}$។",
       "kind": "mcq"
     },
     {
@@ -138290,7 +138290,7 @@
       "q": "ដោះស្រាយសមីការ $x y' - y = 0$ ($x > 0$) ៖",
       "o": [
         "$y = C x$",
-        "$y = C / x$",
+        "$y = \\dfrac{C}{x}$",
         "$y = C e^x$",
         "$y = x + C$"
       ],
@@ -138333,14 +138333,14 @@
       "level": "លំបាក",
       "q": "បាក់តេរីមួយប្រភេទកើនឡើងទ្វេដងរៀងរាល់ $3$ ម៉ោងម្តង។ បើដំបូងមាន $1000$ ក្បាល តើសមីការកំណើនគឺ ៖",
       "o": [
-        "$N(t) = 1000 \\cdot 2^{t/3}$",
+        "$N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$",
         "$N(t) = 1000 \\cdot 2^{3t}$",
         "$N(t) = 2000 t$",
         "$N(t) = 1000 e^{2t}$"
       ],
       "a": 0,
-      "e": "$N(t) = N_0 a^t$។ ត្រង់ $t = 3 \\implies N(3) = 2000 = 1000 a^3 \\implies a = 2^{1/3}$ នាំឱ្យ $N(t) = 1000 \\cdot 2^{t/3}$។",
-      "short_solution": "$N(t) = N_0 a^t$។ ត្រង់ $t = 3 \\implies N(3) = 2000 = 1000 a^3 \\implies a = 2^{1/3}$ នាំឱ្យ $N(t) = 1000 \\cdot 2^{t/3}$។",
+      "e": "$N(t) = N_0 a^t$។ ត្រង់ $t = 3 \\implies N(3) = 2000 = 1000 a^3 \\implies a = 2^{\\frac{1}{3}}$ នាំឱ្យ $N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$។",
+      "short_solution": "$N(t) = N_0 a^t$។ ត្រង់ $t = 3 \\implies N(3) = 2000 = 1000 a^3 \\implies a = 2^{\\frac{1}{3}}$ នាំឱ្យ $N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$។",
       "kind": "mcq"
     },
     {
@@ -138427,8 +138427,8 @@
         "$y = 3e^{-2x} + C$"
       ],
       "a": 0,
-      "e": "$y_h = C e^{-2x}$។ $y_p = 6/2 = 3$។ ដូច្នេះ $y = C e^{-2x} + 3$។",
-      "short_solution": "$y_h = C e^{-2x}$។ $y_p = 6/2 = 3$។ ដូច្នេះ $y = C e^{-2x} + 3$។",
+      "e": "$y_h = C e^{-2x}$។ $y_p = \\dfrac{6}{2} = 3$។ ដូច្នេះ $y = C e^{-2x} + 3$។",
+      "short_solution": "$y_h = C e^{-2x}$។ $y_p = \\dfrac{6}{2} = 3$។ ដូច្នេះ $y = C e^{-2x} + 3$។",
       "kind": "mcq"
     },
     {
@@ -139109,8 +139109,8 @@
         "$\\dfrac{1}{6}$"
       ],
       "a": 0,
-      "e": "ដឹងថាចេញលេខគូ $B = \\{2, 4, 6\\}$ (មាន 3)។ ក្នុងចំណោមនោះ លេខធំជាង ៣ គឺ $\\{4, 6\\}$ (មាន 2)។ $P = 2/3$។",
-      "short_solution": "ដឹងថាចេញលេខគូ $B = \\{2, 4, 6\\}$ (មាន 3)។ ក្នុងចំណោមនោះ លេខធំជាង ៣ គឺ $\\{4, 6\\}$ (មាន 2)។ $P = 2/3$។",
+      "e": "ដឹងថាចេញលេខគូ $B = \\{2, 4, 6\\}$ (មាន 3)។ ក្នុងចំណោមនោះ លេខធំជាង ៣ គឺ $\\{4, 6\\}$ (មាន 2)។ $P = \\dfrac{2}{3}$។",
+      "short_solution": "ដឹងថាចេញលេខគូ $B = \\{2, 4, 6\\}$ (មាន 3)។ ក្នុងចំណោមនោះ លេខធំជាង ៣ គឺ $\\{4, 6\\}$ (មាន 2)។ $P = \\dfrac{2}{3}$។",
       "kind": "mcq"
     },
     {
@@ -139153,8 +139153,8 @@
         "$\\dfrac{2}{3}$"
       ],
       "a": 0,
-      "e": "លំហសំណាក $S = \\{BB, BG, GB, GG\\}$។ មានកូនប្រុសយ៉ាងតិចម្នាក់ $B = \\{BB, BG, GB\\}$ (មាន 3)។ កូនប្រុសទាំងពីរ $A = \\{BB\\}$ (មាន 1)។ $P = 1/3$។",
-      "short_solution": "លំហសំណាក $S = \\{BB, BG, GB, GG\\}$។ មានកូនប្រុសយ៉ាងតិចម្នាក់ $B = \\{BB, BG, GB\\}$ (មាន 3)។ កូនប្រុសទាំងពីរ $A = \\{BB\\}$ (មាន 1)។ $P = 1/3$។",
+      "e": "លំហសំណាក $S = \\{BB, BG, GB, GG\\}$។ មានកូនប្រុសយ៉ាងតិចម្នាក់ $B = \\{BB, BG, GB\\}$ (មាន 3)។ កូនប្រុសទាំងពីរ $A = \\{BB\\}$ (មាន 1)។ $P = \\dfrac{1}{3}$។",
+      "short_solution": "លំហសំណាក $S = \\{BB, BG, GB, GG\\}$។ មានកូនប្រុសយ៉ាងតិចម្នាក់ $B = \\{BB, BG, GB\\}$ (មាន 3)។ កូនប្រុសទាំងពីរ $A = \\{BB\\}$ (មាន 1)។ $P = \\dfrac{1}{3}$។",
       "kind": "mcq"
     },
     {
@@ -139197,8 +139197,8 @@
         "$\\dfrac{3}{52}$"
       ],
       "a": 0,
-      "e": "សល់អាត់ ៣ សន្លឹកក្នុងចំណោមបៀដែលនៅសល់ ៥១ សន្លឹក៖ $P = 3/51 = 1/17$។",
-      "short_solution": "សល់អាត់ ៣ សន្លឹកក្នុងចំណោមបៀដែលនៅសល់ ៥១ សន្លឹក៖ $P = 3/51 = 1/17$។",
+      "e": "សល់អាត់ ៣ សន្លឹកក្នុងចំណោមបៀដែលនៅសល់ ៥១ សន្លឹក៖ $P = \\dfrac{3}{51} = \\dfrac{1}{17}$។",
+      "short_solution": "សល់អាត់ ៣ សន្លឹកក្នុងចំណោមបៀដែលនៅសល់ ៥១ សន្លឹក៖ $P = \\dfrac{3}{51} = \\dfrac{1}{17}$។",
       "kind": "mcq"
     },
     {
@@ -139321,7 +139321,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ រូបមន្តប្រូបាបសរុប",
       "level": "មធ្យម",
-      "q": "ប្រអប់ I មានបាល់ក្រហម ៣ ស ២; ប្រអប់ II មានបាល់ក្រហម ២ ស ៤។ ជ្រើសរើសប្រអប់មួយដោយចៃដន្យ (ប្រូបាបស្មើគ្នា $1/2$) រួចដកបាល់មួយ។ រកប្រូបាបដែលបានបាល់ក្រហម ៖",
+      "q": "ប្រអប់ I មានបាល់ក្រហម ៣ ស ២; ប្រអប់ II មានបាល់ក្រហម ២ ស ៤។ ជ្រើសរើសប្រអប់មួយដោយចៃដន្យ (ប្រូបាបស្មើគ្នា $\\dfrac{1}{2}$) រួចដកបាល់មួយ។ រកប្រូបាបដែលបានបាល់ក្រហម ៖",
       "o": [
         "$\\dfrac{7}{15}$",
         "$\\dfrac{1}{2}$",
@@ -139458,7 +139458,7 @@
         "$1$",
         "$0$",
         "$n$",
-        "$1/n$"
+        "$\\dfrac{1}{n}$"
       ],
       "a": 0,
       "e": "ដោយសារព្រឹត្តិការណ៍មិនចុះសម្រុងគ្នា និងប្រជុំស្មើ $S$ នាំឱ្យផលបូកប្រូបាបស្មើ $P(S) = 1$។",
@@ -139637,8 +139637,8 @@
         "$\\dfrac{3}{4}$"
       ],
       "a": 0,
-      "e": "បាល់មាសសរុបមាន 3 (2 ក្នុង A, 1 ក្នុង B)។ ឱកាសដែលបាល់មាសនោះមកពីប្រអប់ A (ដែលមានបាល់មាសមួយទៀត) គឺ 2 ក្នុងចំណោម 3 នាំឱ្យ $P = 2/3$។",
-      "short_solution": "បាល់មាសសរុបមាន 3 (2 ក្នុង A, 1 ក្នុង B)។ ឱកាសដែលបាល់មាសនោះមកពីប្រអប់ A (ដែលមានបាល់មាសមួយទៀត) គឺ 2 ក្នុងចំណោម 3 នាំឱ្យ $P = 2/3$។",
+      "e": "បាល់មាសសរុបមាន 3 (2 ក្នុង A, 1 ក្នុង B)។ ឱកាសដែលបាល់មាសនោះមកពីប្រអប់ A (ដែលមានបាល់មាសមួយទៀត) គឺ 2 ក្នុងចំណោម 3 នាំឱ្យ $P = \\dfrac{2}{3}$។",
+      "short_solution": "បាល់មាសសរុបមាន 3 (2 ក្នុង A, 1 ក្នុង B)។ ឱកាសដែលបាល់មាសនោះមកពីប្រអប់ A (ដែលមានបាល់មាសមួយទៀត) គឺ 2 ក្នុងចំណោម 3 នាំឱ្យ $P = \\dfrac{2}{3}$។",
       "kind": "mcq"
     },
     {
@@ -139807,14 +139807,14 @@
       "level": "លំបាក",
       "q": "បញ្ហាទ្វារទាំងបី Monty Hall Problem ៖ បេក្ខជនជ្រើសយកទ្វារ ១។ ពិធីករដែលដឹងថាអ្វីនៅពីក្រោយទ្វារ បានបើកទ្វារមួយទៀតបង្ហាញសត្វពពែ។ តើបេក្ខជនគួរតែប្តូរទ្វារដែរឬទេ?",
       "o": [
-        "គួរប្តូរ ព្រោះឱកាសឈ្នះរថយន្តកើនឡើងដល់ $2/3$",
-        "មិនគួរប្តូរទេ ព្រោះឱកាសនៅតែ $1/2$ ដដែល",
+        "គួរប្តូរ ព្រោះឱកាសឈ្នះរថយន្តកើនឡើងដល់ $\\dfrac{2}{3}$",
+        "មិនគួរប្តូរទេ ព្រោះឱកាសនៅតែ $\\dfrac{1}{2}$ ដដែល",
         "ប្តូរឬមិនប្តូរមានតម្លៃស្មើគ្នា",
         "អាស្រ័យលើទ្វារដែលនៅសល់"
       ],
       "a": 0,
-      "e": "តាមទ្រឹស្តីបទ Bayes៖ ឱកាសនៅទ្វារដើមគឺ $1/3$ ដូច្នេះទ្វារដែលនៅសល់ទទួលបានប្រូបាប $2/3$។ ការប្តូរទ្វារបង្កើនឱកាសទ្វេដង។",
-      "short_solution": "តាមទ្រឹស្តីបទ Bayes៖ ឱកាសនៅទ្វារដើមគឺ $1/3$ ដូច្នេះទ្វារដែលនៅសល់ទទួលបានប្រូបាប $2/3$។ ការប្តូរទ្វារបង្កើនឱកាសទ្វេដង។",
+      "e": "តាមទ្រឹស្តីបទ Bayes៖ ឱកាសនៅទ្វារដើមគឺ $\\dfrac{1}{3}$ ដូច្នេះទ្វារដែលនៅសល់ទទួលបានប្រូបាប $\\dfrac{2}{3}$។ ការប្តូរទ្វារបង្កើនឱកាសទ្វេដង។",
+      "short_solution": "តាមទ្រឹស្តីបទ Bayes៖ ឱកាសនៅទ្វារដើមគឺ $\\dfrac{1}{3}$ ដូច្នេះទ្វារដែលនៅសល់ទទួលបានប្រូបាប $\\dfrac{2}{3}$។ ការប្តូរទ្វារបង្កើនឱកាសទ្វេដង។",
       "kind": "mcq"
     },
     {
@@ -140453,8 +140453,8 @@
         "$y = 2x - 4$"
       ],
       "a": 0,
-      "e": "$a = 8/4 = 2$។ $b = 10 - 2(3) = 10 - 6 = 4$។ សមីការគឺ $y = 2x + 4$។",
-      "short_solution": "$a = 8/4 = 2$។ $b = 10 - 2(3) = 10 - 6 = 4$។ សមីការគឺ $y = 2x + 4$។",
+      "e": "$a = \\dfrac{8}{4} = 2$។ $b = 10 - 2(3) = 10 - 6 = 4$។ សមីការគឺ $y = 2x + 4$។",
+      "short_solution": "$a = \\dfrac{8}{4} = 2$។ $b = 10 - 2(3) = 10 - 6 = 4$។ សមីការគឺ $y = 2x + 4$។",
       "kind": "mcq"
     },
     {
@@ -140665,16 +140665,16 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "ចំណុចទី ២ ៖ ការប៉ាន់ស្មានតម្លៃតាមសមីការបន្ទាត់តម្រែតម្រង់",
       "level": "មធ្យម",
-      "q": "ក្រុមហ៊ុនមួយរកឃើញថាយុទ្ធនាការផ្សាយពាណិជ្ជកម្ម $x$ ($100\\$$) ផ្តល់ប្រាក់ចំណូល $y$ ($1000\\$$) តាមសមីការ $y = 0.8x + 5$។ បើចំណាយ $x = 50$ ($5000\\$$) តើចំណូលរំពឹងទុកគឺ ៖",
+      "q": "ក្រុមហ៊ុនមួយរកឃើញថាយុទ្ធនាការផ្សាយពាណិជ្ជកម្ម $x$ (100 ដុល្លារ) ផ្តល់ប្រាក់ចំណូល $y$ (1,000 ដុល្លារ) តាមសមីការ $y = 0.8x + 5$។ បើចំណាយ $x = 50$ (5,000 ដុល្លារ) តើចំណូលរំពឹងទុកគឺ ៖",
       "o": [
-        "$45$ ($45,000\\$$)",
-        "$40$ ($40,000\\$$)",
-        "$50$ ($50,000\\$$)",
-        "$35$ ($35,000\\$$)"
+        "$45$ (45,000 ដុល្លារ)",
+        "$40$ (40,000 ដុល្លារ)",
+        "$50$ (50,000 ដុល្លារ)",
+        "$35$ (35,000 ដុល្លារ)"
       ],
       "a": 0,
-      "e": "$y = 0.8(50) + 5 = 40 + 5 = 45$ (ពោលគឺ $45,000\\$$)។",
-      "short_solution": "$y = 0.8(50) + 5 = 40 + 5 = 45$ (ពោលគឺ $45,000\\$$)។",
+      "e": "$y = 0.8(50) + 5 = 40 + 5 = 45$ (ពោលគឺ 45,000 ដុល្លារ)។",
+      "short_solution": "$y = 0.8(50) + 5 = 40 + 5 = 45$ (ពោលគឺ 45,000 ដុល្លារ)។",
       "kind": "mcq"
     },
     {
@@ -141114,8 +141114,8 @@
         "$3\\text{ cm}$"
       ],
       "a": 0,
-      "e": "ជ្រើសយកកំពូល $V(0, 0)$ អ័ក្សឈរ $x^2 = 4py$។ មាត់គោមឆ្លងកាត់ចំណុច $(8, 8)$ (ព្រោះកាំ $r = 16/2 = 8$, ជម្រៅ $y = 8$)។ $8^2 = 4p(8) \\iff 64 = 32p \\iff p = 2\\text{ cm}$។ ត្រូវដាក់អំពូលនៅកំណុំ ចម្ងាយ $2\\text{ cm}$ ពីបាត។",
-      "short_solution": "ជ្រើសយកកំពូល $V(0, 0)$ អ័ក្សឈរ $x^2 = 4py$។ មាត់គោមឆ្លងកាត់ចំណុច $(8, 8)$ (ព្រោះកាំ $r = 16/2 = 8$, ជម្រៅ $y = 8$)។ $8^2 = 4p(8) \\iff 64 = 32p \\iff p = 2\\text{ cm}$។ ត្រូវដាក់អំពូលនៅកំណុំ ចម្ងាយ $2\\text{ cm}$ ពីបាត។",
+      "e": "ជ្រើសយកកំពូល $V(0, 0)$ អ័ក្សឈរ $x^2 = 4py$។ មាត់គោមឆ្លងកាត់ចំណុច $(8, 8)$ (ព្រោះកាំ $r = \\dfrac{16}{2} = 8$, ជម្រៅ $y = 8$)។ $8^2 = 4p(8) \\iff 64 = 32p \\iff p = 2\\text{ cm}$។ ត្រូវដាក់អំពូលនៅកំណុំ ចម្ងាយ $2\\text{ cm}$ ពីបាត។",
+      "short_solution": "ជ្រើសយកកំពូល $V(0, 0)$ អ័ក្សឈរ $x^2 = 4py$។ មាត់គោមឆ្លងកាត់ចំណុច $(8, 8)$ (ព្រោះកាំ $r = \\dfrac{16}{2} = 8$, ជម្រៅ $y = 8$)។ $8^2 = 4p(8) \\iff 64 = 32p \\iff p = 2\\text{ cm}$។ ត្រូវដាក់អំពូលនៅកំណុំ ចម្ងាយ $2\\text{ cm}$ ពីបាត។",
       "kind": "mcq"
     },
     {
@@ -141643,8 +141643,8 @@
         "$\\dfrac{x^2}{25} + \\dfrac{y^2}{9} = 1$"
       ],
       "a": 0,
-      "e": "$2c = 6 \\implies c = 3$។ $e = c/a = 0.6 = 3/5 \\implies a = 5$។ $b^2 = a^2 - c^2 = 25 - 9 = 16$។ សមីការគឺ $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$។",
-      "short_solution": "$2c = 6 \\implies c = 3$។ $e = c/a = 0.6 = 3/5 \\implies a = 5$។ $b^2 = a^2 - c^2 = 25 - 9 = 16$។ សមីការគឺ $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$។",
+      "e": "$2c = 6 \\implies c = 3$។ $e = \\dfrac{c}{a} = 0.6 = \\dfrac{3}{5} \\implies a = 5$។ $b^2 = a^2 - c^2 = 25 - 9 = 16$។ សមីការគឺ $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$។",
+      "short_solution": "$2c = 6 \\implies c = 3$។ $e = \\dfrac{c}{a} = 0.6 = \\dfrac{3}{5} \\implies a = 5$។ $b^2 = a^2 - c^2 = 25 - 9 = 16$។ សមីការគឺ $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$។",
       "kind": "mcq"
     },
     {
@@ -142144,7 +142144,7 @@
       "a": null,
       "e": "ក. គណនាម៉ូឌុល និងអាគុយម៉ង់ ៖\n• $r = |z| = \\sqrt{1^2 + (-\\sqrt{3})^2} = \\sqrt{1 + 3} = 2$។\n• $\\cos\\theta = \\dfrac{1}{2}, \\sin\\theta = -\\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ ឬ $\\theta = \\dfrac{5\\pi}{3}$។\n\nខ. ទម្រង់ត្រីកោណមាត្រ ៖\n$z = 2\\left[\\cos\\left(-\\dfrac{\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{\\pi}{3}\\right)\\right]$។\n\nគ. គណនា $z^6$ តាមរូបមន្តដឺម័រ ៖\n$z^6 = 2^6\\left[\\cos\\left(6\\times\\left(-\\dfrac{\\pi}{3}\\right)\\right) + i\\sin\\left(6\\times\\left(-\\dfrac{\\pi}{3}\\right)\\right)\\right] = 64[\\cos(-2\\pi) + i\\sin(-2\\pi)] = 64(1 + 0) = 64$។",
       "short_solution": "ក. គណនាម៉ូឌុល និងអាគុយម៉ង់ ៖\n• $r = |z| = \\sqrt{1^2 + (-\\sqrt{3})^2} = \\sqrt{1 + 3} = 2$។\n• $\\cos\\theta = \\dfrac{1}{2}, \\sin\\theta = -\\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ ឬ $\\theta = \\dfrac{5\\pi}{3}$។\n\nខ. ទម្រង់ត្រីកោណមាត្រ ៖\n$z = 2\\left[\\cos\\left(-\\dfrac{\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{\\pi}{3}\\right)\\right]$។\n\nគ. គណនា $z^6$ តាមរូបមន្តដឺម័រ ៖\n$z^6 = 2^6\\left[\\cos\\left(6\\times\\left(-\\dfrac{\\pi}{3}\\right)\\right) + i\\sin\\left(6\\times\\left(-\\dfrac{\\pi}{3}\\right)\\right)\\right] = 64[\\cos(-2\\pi) + i\\sin(-2\\pi)] = 64(1 + 0) = 64$។",
-      "rubric": "ក. គណនាម៉ូឌុល $r=2$ (៣ពិន្ទុ), រកអាគុយម៉ង់ $-\\pi/3$ (៣ពិន្ទុ)\nខ. សរសេរទម្រង់ត្រីកោណមាត្រត្រឹមត្រូវ (៦ពិន្ទុ)\nគ. អនុវត្តរូបមន្តដឺម័រត្រឹមត្រូវ (៤ពិន្ទុ), គណនាតម្លៃចេញ $64$ (៤ពិន្ទុ)",
+      "rubric": "ក. គណនាម៉ូឌុល $r=2$ (៣ពិន្ទុ), រកអាគុយម៉ង់ $-\\dfrac{\\pi}{3}$ (៣ពិន្ទុ)\nខ. សរសេរទម្រង់ត្រីកោណមាត្រត្រឹមត្រូវ (៦ពិន្ទុ)\nគ. អនុវត្តរូបមន្តដឺម័រត្រឹមត្រូវ (៤ពិន្ទុ), គណនាតម្លៃចេញ $64$ (៤ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142216,7 +142216,7 @@
       "a": null,
       "e": "ក. រាងមិនកំណត់ $\\left[\\dfrac{0}{0}\\right]$ ៖\nបំបែកជាផលគុណកត្តា ៖ $x^2 - 5x + 6 = (x - 2)(x - 3)$ និង $x^2 - 4 = (x - 2)(x + 2)$។\n$A = \\lim_{x \\to 2} \\dfrac{(x - 2)(x - 3)}{(x - 2)(x + 2)} = \\lim_{x \\to 2} \\dfrac{x - 3}{x + 2} = \\dfrac{2 - 3}{2 + 2} = -\\dfrac{1}{4}$។\n\nខ. រាងមិនកំណត់ $\\left[\\dfrac{0}{0}\\right]$ ៖\nគុណកន្សោមឆ្លាស់ $(\\sqrt{x+3} + 2)$ ៖\n$B = \\lim_{x \\to 1} \\dfrac{(\\sqrt{x+3} - 2)(\\sqrt{x+3} + 2)}{(x - 1)(\\sqrt{x+3} + 2)} = \\lim_{x \\to 1} \\dfrac{(x+3) - 4}{(x-1)(\\sqrt{x+3}+2)} = \\lim_{x \\to 1} \\dfrac{x - 1}{(x-1)(\\sqrt{x+3}+2)} = \\lim_{x \\to 1} \\dfrac{1}{\\sqrt{x+3}+2} = \\dfrac{1}{2+2} = \\dfrac{1}{4}$។",
       "short_solution": "ក. រាងមិនកំណត់ $\\left[\\dfrac{0}{0}\\right]$ ៖\nបំបែកជាផលគុណកត្តា ៖ $x^2 - 5x + 6 = (x - 2)(x - 3)$ និង $x^2 - 4 = (x - 2)(x + 2)$។\n$A = \\lim_{x \\to 2} \\dfrac{(x - 2)(x - 3)}{(x - 2)(x + 2)} = \\lim_{x \\to 2} \\dfrac{x - 3}{x + 2} = \\dfrac{2 - 3}{2 + 2} = -\\dfrac{1}{4}$។\n\nខ. រាងមិនកំណត់ $\\left[\\dfrac{0}{0}\\right]$ ៖\nគុណកន្សោមឆ្លាស់ $(\\sqrt{x+3} + 2)$ ៖\n$B = \\lim_{x \\to 1} \\dfrac{(\\sqrt{x+3} - 2)(\\sqrt{x+3} + 2)}{(x - 1)(\\sqrt{x+3} + 2)} = \\lim_{x \\to 1} \\dfrac{(x+3) - 4}{(x-1)(\\sqrt{x+3}+2)} = \\lim_{x \\to 1} \\dfrac{x - 1}{(x-1)(\\sqrt{x+3}+2)} = \\lim_{x \\to 1} \\dfrac{1}{\\sqrt{x+3}+2} = \\dfrac{1}{2+2} = \\dfrac{1}{4}$។",
-      "rubric": "ក. បំបែកផលគុណកត្តា (៥ពិន្ទុ), សម្រួល និងគណនាបាន $-1/4$ (៥ពិន្ទុ)\nខ. គុណកន្សោមឆ្លាស់ (៥ពិន្ទុ), សម្រួល និងគណនាបាន $1/4$ (៥ពិន្ទុ)",
+      "rubric": "ក. បំបែកផលគុណកត្តា (៥ពិន្ទុ), សម្រួល និងគណនាបាន $-\\dfrac{1}{4}$ (៥ពិន្ទុ)\nខ. គុណកន្សោមឆ្លាស់ (៥ពិន្ទុ), សម្រួល និងគណនាបាន $\\dfrac{1}{4}$ (៥ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142234,7 +142234,7 @@
       "a": null,
       "e": "ក. រាងមិនកំណត់ $\\left[\\dfrac{\\infty}{\\infty}\\right]$ ៖\nដាក់ $x^3$ ជាកត្តារួម ៖\n$C = \\lim_{x \\to +\\infty} \\dfrac{x^3\\left(3 - \\dfrac{2}{x^2} + \\dfrac{1}{x^3}\\right)}{x^3\\left(2 + \\dfrac{5}{x} - \\dfrac{4}{x^3}\\right)} = \\lim_{x \\to +\\infty} \\dfrac{3 - 0 + 0}{2 + 0 - 0} = \\dfrac{3}{2}$។\n\nខ. រាងមិនកំណត់ $[\\infty - \\infty]$ ៖\nគុណនឹងកន្សោមឆ្លាស់ $(\\sqrt{x^2+4x} + x)$ ៖\n$D = \\lim_{x \\to +\\infty} \\dfrac{(\\sqrt{x^2+4x} - x)(\\sqrt{x^2+4x} + x)}{\\sqrt{x^2+4x} + x} = \\lim_{x \\to +\\infty} \\dfrac{x^2+4x - x^2}{x\\sqrt{1+\\dfrac{4}{x}} + x} = \\lim_{x \\to +\\infty} \\dfrac{4x}{x\\left(\\sqrt{1+\\dfrac{4}{x}} + 1\\right)} = \\dfrac{4}{1+1} = 2$។",
       "short_solution": "ក. រាងមិនកំណត់ $\\left[\\dfrac{\\infty}{\\infty}\\right]$ ៖\nដាក់ $x^3$ ជាកត្តារួម ៖\n$C = \\lim_{x \\to +\\infty} \\dfrac{x^3\\left(3 - \\dfrac{2}{x^2} + \\dfrac{1}{x^3}\\right)}{x^3\\left(2 + \\dfrac{5}{x} - \\dfrac{4}{x^3}\\right)} = \\lim_{x \\to +\\infty} \\dfrac{3 - 0 + 0}{2 + 0 - 0} = \\dfrac{3}{2}$។\n\nខ. រាងមិនកំណត់ $[\\infty - \\infty]$ ៖\nគុណនឹងកន្សោមឆ្លាស់ $(\\sqrt{x^2+4x} + x)$ ៖\n$D = \\lim_{x \\to +\\infty} \\dfrac{(\\sqrt{x^2+4x} - x)(\\sqrt{x^2+4x} + x)}{\\sqrt{x^2+4x} + x} = \\lim_{x \\to +\\infty} \\dfrac{x^2+4x - x^2}{x\\sqrt{1+\\dfrac{4}{x}} + x} = \\lim_{x \\to +\\infty} \\dfrac{4x}{x\\left(\\sqrt{1+\\dfrac{4}{x}} + 1\\right)} = \\dfrac{4}{1+1} = 2$។",
-      "rubric": "ក. ចែកតួមានដឺក្រេខ្ពស់បំផុត (៤ពិន្ទុ), គណនាបាន $3/2$ (៦ពិន្ទុ)\nខ. គុណកន្សោមឆ្លាស់ (៥ពិន្ទុ), ចាប់ $x$ ជាកត្តា និងគណនាបាន $2$ (៥ពិន្ទុ)",
+      "rubric": "ក. ចែកតួមានដឺក្រេខ្ពស់បំផុត (៤ពិន្ទុ), គណនាបាន $\\dfrac{3}{2}$ (៦ពិន្ទុ)\nខ. គុណកន្សោមឆ្លាស់ (៥ពិន្ទុ), ចាប់ $x$ ជាកត្តា និងគណនាបាន $2$ (៥ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142378,7 +142378,7 @@
       "a": null,
       "e": "១. ដេរីវេទីមួយ ៖ $f'(x) = x^2 - 4x + 3$។\n២. ដេរីវេទីពីរ ៖ $f''(x) = 2x - 4$។\n៣. ចំណុចរបត់ ៖ $f''(x) = 0 \\iff 2x - 4 = 0 \\iff x = 2$។\nពិនិត្យសញ្ញា ៖ $f''(x)$ ប្តូរសញ្ញាពីអវិជ្ជមានទៅវិជ្ជមានឆ្លងកាត់ $x = 2$។\nគណនាអ័ដោនេ ៖ $f(2) = \\dfrac{1}{3}(8) - 2(4) + 3(2) - 5 = \\dfrac{8}{3} - 8 + 6 - 5 = \\dfrac{8}{3} - 7 = -\\dfrac{13}{3}$។\nដូចនេះ ក្រាបមានចំណុចរបត់ $I\\left(2, -\\dfrac{13}{3}\\right)$។",
       "short_solution": "១. ដេរីវេទីមួយ ៖ $f'(x) = x^2 - 4x + 3$។\n២. ដេរីវេទីពីរ ៖ $f''(x) = 2x - 4$។\n៣. ចំណុចរបត់ ៖ $f''(x) = 0 \\iff 2x - 4 = 0 \\iff x = 2$។\nពិនិត្យសញ្ញា ៖ $f''(x)$ ប្តូរសញ្ញាពីអវិជ្ជមានទៅវិជ្ជមានឆ្លងកាត់ $x = 2$។\nគណនាអ័ដោនេ ៖ $f(2) = \\dfrac{1}{3}(8) - 2(4) + 3(2) - 5 = \\dfrac{8}{3} - 8 + 6 - 5 = \\dfrac{8}{3} - 7 = -\\dfrac{13}{3}$។\nដូចនេះ ក្រាបមានចំណុចរបត់ $I\\left(2, -\\dfrac{13}{3}\\right)$។",
-      "rubric": "គណនា $f'(x)$ និង $f''(x)$ (៨ពិន្ទុ)\nដោះស្រាយ $f''(x) = 0 \\Rightarrow x = 2$ (៤ពិន្ទុ)\nគណនាអ័ដោនេ $y = -13/3$ (៤ពិន្ទុ)\nសន្និដ្ឋានចំណុចរបត់ (៤ពិន្ទុ)",
+      "rubric": "គណនា $f'(x)$ និង $f''(x)$ (៨ពិន្ទុ)\nដោះស្រាយ $f''(x) = 0 \\Rightarrow x = 2$ (៤ពិន្ទុ)\nគណនាអ័ដោនេ $y = -\\dfrac{13}{3}$ (៤ពិន្ទុ)\nសន្និដ្ឋានចំណុចរបត់ (៤ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142482,7 +142482,7 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតមូលដ្ឋាន)",
       "p": "លំហាត់សរសេរទី 1",
       "level": "លំបាក",
-      "q": "គណនាអាំងតេក្រាលមិនកំណត់ខាងក្រោម ៖\nក. $I_1 = \\int (4x^3 - 6x^2 + 5)\\,dx$\nខ. $I_2 = \\int e^{4x - 1}\\,dx$\nគ. $I_3 = \\int \\dfrac{3}{2x + 1}\\,dx$ ($x > -1/2$)",
+      "q": "គណនាអាំងតេក្រាលមិនកំណត់ខាងក្រោម ៖\nក. $I_1 = \\int (4x^3 - 6x^2 + 5)\\,dx$\nខ. $I_2 = \\int e^{4x - 1}\\,dx$\nគ. $I_3 = \\int \\dfrac{3}{2x + 1}\\,dx$ ($x > -\\dfrac{1}{2}$)",
       "o": [],
       "a": null,
       "e": "ក. $I_1 = 4\\left(\\dfrac{x^4}{4}\\right) - 6\\left(\\dfrac{x^3}{3}\\right) + 5x + C = x^4 - 2x^3 + 5x + C$។\n\nខ. $I_2 = \\dfrac{1}{4}e^{4x - 1} + C$។\n\nគ. $I_3 = 3 \\cdot \\dfrac{1}{2} \\ln|2x + 1| + C = \\dfrac{3}{2}\\ln(2x + 1) + C$។",
@@ -142506,7 +142506,7 @@
       "a": null,
       "e": "ក. $J_1 = \\left[x^3 - x^2 + x\\right]_0^2 = (2^3 - 2^2 + 2) - 0 = 8 - 4 + 2 = 6$។\n\nខ. ប្រើវិធីសាស្ត្រប្តូរអថេរ ៖\nតាង $u = x^2 + 1 \\Rightarrow du = 2x\\,dx \\Rightarrow x\\,dx = \\dfrac{du}{2}$។\nប្តូរកំណត់ ៖ បើ $x = 0 \\Rightarrow u = 1$; បើ $x = 1 \\Rightarrow u = 2$។\n$J_2 = \\int_1^2 u^3 \\dfrac{du}{2} = \\dfrac{1}{2}\\left[\\dfrac{u^4}{4}\\right]_1^2 = \\dfrac{1}{8}(2^4 - 1^4) = \\dfrac{1}{8}(16 - 1) = \\dfrac{15}{8}$។",
       "short_solution": "ក. $J_1 = \\left[x^3 - x^2 + x\\right]_0^2 = (2^3 - 2^2 + 2) - 0 = 8 - 4 + 2 = 6$។\n\nខ. ប្រើវិធីសាស្ត្រប្តូរអថេរ ៖\nតាង $u = x^2 + 1 \\Rightarrow du = 2x\\,dx \\Rightarrow x\\,dx = \\dfrac{du}{2}$។\nប្តូរកំណត់ ៖ បើ $x = 0 \\Rightarrow u = 1$; បើ $x = 1 \\Rightarrow u = 2$។\n$J_2 = \\int_1^2 u^3 \\dfrac{du}{2} = \\dfrac{1}{2}\\left[\\dfrac{u^4}{4}\\right]_1^2 = \\dfrac{1}{8}(2^4 - 1^4) = \\dfrac{1}{8}(16 - 1) = \\dfrac{15}{8}$។",
-      "rubric": "ក. រកព្រីមីទីវ និងជំនួសគោលគណនាបាន ៦ (៨ពិន្ទុ)\nខ. ប្តូរអថេរត្រឹមត្រូវ (៦ពិន្ទុ), គណនាកំណត់ចេញ $15/8$ (៦ពិន្ទុ)",
+      "rubric": "ក. រកព្រីមីទីវ និងជំនួសគោលគណនាបាន ៦ (៨ពិន្ទុ)\nខ. ប្តូរអថេរត្រឹមត្រូវ (៦ពិន្ទុ), គណនាកំណត់ចេញ $\\dfrac{15}{8}$ (៦ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142542,7 +142542,7 @@
       "a": null,
       "e": "១. រកចំណុចប្រសព្វរវាងប៉ារ៉ាបូល និងអ័ក្ស $Ox$ ៖\n$4 - x^2 = 0 \\iff x^2 = 4 \\iff x = -2$ ឬ $x = 2$។\n២. លើចន្លោះ $[-2, 2]$ គេមាន $4 - x^2 \\ge 0$។\n៣. ផ្ទៃក្រឡា ៖\n$S = \\int_{-2}^2 (4 - x^2)\\,dx = 2\\int_0^2 (4 - x^2)\\,dx = 2\\left[4x - \\dfrac{x^3}{3}\\right]_0^2 = 2\\left(8 - \\dfrac{8}{3}\\right) = 2\\left(\\dfrac{16}{3}\\right) = \\dfrac{32}{3}$ ឯកតាផ្ទៃ។",
       "short_solution": "១. រកចំណុចប្រសព្វរវាងប៉ារ៉ាបូល និងអ័ក្ស $Ox$ ៖\n$4 - x^2 = 0 \\iff x^2 = 4 \\iff x = -2$ ឬ $x = 2$។\n២. លើចន្លោះ $[-2, 2]$ គេមាន $4 - x^2 \\ge 0$។\n៣. ផ្ទៃក្រឡា ៖\n$S = \\int_{-2}^2 (4 - x^2)\\,dx = 2\\int_0^2 (4 - x^2)\\,dx = 2\\left[4x - \\dfrac{x^3}{3}\\right]_0^2 = 2\\left(8 - \\dfrac{8}{3}\\right) = 2\\left(\\dfrac{16}{3}\\right) = \\dfrac{32}{3}$ ឯកតាផ្ទៃ។",
-      "rubric": "រកគោលប្រសព្វ $x = \\pm 2$ (៥ពិន្ទុ)\nសរសេរបង្គុំអាំងតេក្រាលផ្ទៃក្រឡា (៥ពិន្ទុ)\nគណនាព្រីមីទីវ (៥ពិន្ទុ)\nគណនាតម្លៃចេញ $32/3$ ឯកតាផ្ទៃ (៥ពិន្ទុ)",
+      "rubric": "រកគោលប្រសព្វ $x = \\pm 2$ (៥ពិន្ទុ)\nសរសេរបង្គុំអាំងតេក្រាលផ្ទៃក្រឡា (៥ពិន្ទុ)\nគណនាព្រីមីទីវ (៥ពិន្ទុ)\nគណនាតម្លៃចេញ $\\dfrac{32}{3}$ ឯកតាផ្ទៃ (៥ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142560,7 +142560,7 @@
       "a": null,
       "e": "១. សមីការអាប់ស៊ីសចំណុចប្រសព្វ ៖\n$x^2 = 2x \\iff x^2 - 2x = 0 \\iff x(x - 2) = 0 \\iff x = 0$ ឬ $x = 2$។\n២. លើចន្លោះ $[0, 2]$ បន្ទាត់ $y = 2x$ ស្ថិតនៅពីលើប៉ារ៉ាបូល $y = x^2$ ($2x \\ge x^2$)។\n៣. ផ្ទៃក្រឡា ៖\n$S = \\int_0^2 (2x - x^2)\\,dx = \\left[x^2 - \\dfrac{x^3}{3}\\right]_0^2 = \\left(4 - \\dfrac{8}{3}\\right) - 0 = \\dfrac{4}{3}$ ឯកតាផ្ទៃ។",
       "short_solution": "១. សមីការអាប់ស៊ីសចំណុចប្រសព្វ ៖\n$x^2 = 2x \\iff x^2 - 2x = 0 \\iff x(x - 2) = 0 \\iff x = 0$ ឬ $x = 2$។\n២. លើចន្លោះ $[0, 2]$ បន្ទាត់ $y = 2x$ ស្ថិតនៅពីលើប៉ារ៉ាបូល $y = x^2$ ($2x \\ge x^2$)។\n៣. ផ្ទៃក្រឡា ៖\n$S = \\int_0^2 (2x - x^2)\\,dx = \\left[x^2 - \\dfrac{x^3}{3}\\right]_0^2 = \\left(4 - \\dfrac{8}{3}\\right) - 0 = \\dfrac{4}{3}$ ឯកតាផ្ទៃ។",
-      "rubric": "រកអាប់ស៊ីសប្រសព្វ $x = 0, 2$ (៥ពិន្ទុ)\nប្រៀបធៀបទីតាំងខ្សែកោង (៥ពិន្ទុ)\nរៀបចំអាំងតេក្រាល និងគណនាបាន $4/3$ (១០ពិន្ទុ)",
+      "rubric": "រកអាប់ស៊ីសប្រសព្វ $x = 0, 2$ (៥ពិន្ទុ)\nប្រៀបធៀបទីតាំងខ្សែកោង (៥ពិន្ទុ)\nរៀបចំអាំងតេក្រាល និងគណនាបាន $\\dfrac{4}{3}$ (១០ពិន្ទុ)",
       "kind": "written",
       "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"70\" y1=\"180\" x2=\"70\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">x</text>\n  <text x=\"75\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">y</text>\n  <!-- Shaded Area between curves -->\n  <path d=\"M 110 110 Q 170 30 230 110 Q 170 140 110 110 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <!-- Top Curve f(x) -->\n  <path d=\"M 80 135 Q 170 20 260 135\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n  <text x=\"195\" y=\"45\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">y = f(x)</text>\n  <!-- Bottom Curve g(x) -->\n  <path d=\"M 80 85 Q 170 160 260 85\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/>\n  <text x=\"195\" y=\"145\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">y = g(x)</text>\n  <!-- Intersection markers -->\n  <circle cx=\"110\" cy=\"110\" r=\"3.5\" fill=\"#334155\"/>\n  <circle cx=\"230\" cy=\"110\" r=\"3.5\" fill=\"#334155\"/>\n  <line x1=\"110\" y1=\"110\" x2=\"110\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"230\" y1=\"110\" x2=\"230\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"105\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">a</text>\n  <text x=\"225\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">b</text>\n  <text x=\"150\" y=\"95\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#1e40af\" font-weight=\"bold\">S = ∫ [f-g]dx</text>\n</svg>"
     },
@@ -142615,7 +142615,7 @@
       "a": null,
       "e": "ប៊ិចសរុបមាន $5 + 3 = 8$ ដើម។\nក. ចំនួនករណីអាច ៖ $n(S) = C(8, 3) = \\dfrac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$។\n\nខ. ព្រឹត្តិការណ៍ $A$ (ក្រហមទាំង ៣) ៖\n$n(A) = C(5, 3) = \\dfrac{5 \\times 4 \\times 3}{3 \\times 2 \\times 1} = 10$។\n$P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{10}{56} = \\dfrac{5}{28}$។\n\nគ. ព្រឹត្តិការណ៍ផ្ទុយ $\\bar{B}$ ៖ «មិនបានប៊ិចក្រហមសោះ (បានខៀវទាំង ៣)» ៖\n$n(\\bar{B}) = C(3, 3) = 1 \\Rightarrow P(\\bar{B}) = \\dfrac{1}{56}$។\n$P(B) = 1 - P(\\bar{B}) = 1 - \\dfrac{1}{56} = \\dfrac{55}{56}$។",
       "short_solution": "ប៊ិចសរុបមាន $5 + 3 = 8$ ដើម។\nក. ចំនួនករណីអាច ៖ $n(S) = C(8, 3) = \\dfrac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$។\n\nខ. ព្រឹត្តិការណ៍ $A$ (ក្រហមទាំង ៣) ៖\n$n(A) = C(5, 3) = \\dfrac{5 \\times 4 \\times 3}{3 \\times 2 \\times 1} = 10$។\n$P(A) = \\dfrac{n(A)}{n(S)} = \\dfrac{10}{56} = \\dfrac{5}{28}$។\n\nគ. ព្រឹត្តិការណ៍ផ្ទុយ $\\bar{B}$ ៖ «មិនបានប៊ិចក្រហមសោះ (បានខៀវទាំង ៣)» ៖\n$n(\\bar{B}) = C(3, 3) = 1 \\Rightarrow P(\\bar{B}) = \\dfrac{1}{56}$។\n$P(B) = 1 - P(\\bar{B}) = 1 - \\dfrac{1}{56} = \\dfrac{55}{56}$។",
-      "rubric": "ក. គណនា $n(S) = 56$ (៦ពិន្ទុ)\nខ. គណនា $P(A) = 5/28$ (៧ពិន្ទុ)\nគ. ប្រើព្រឹត្តិការណ៍ផ្ទុយ និងគណនា $P(B) = 55/56$ (៧ពិន្ទុ)",
+      "rubric": "ក. គណនា $n(S) = 56$ (៦ពិន្ទុ)\nខ. គណនា $P(A) = \\dfrac{5}{28}$ (៧ពិន្ទុ)\nគ. ប្រើព្រឹត្តិការណ៍ផ្ទុយ និងគណនា $P(B) = \\dfrac{55}{56}$ (៧ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142633,7 +142633,7 @@
       "a": null,
       "e": "ក. លំហសំណាក ៖\n$S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}$។\nចំនួនករណីអាច ៖ $n(S) = 2^3 = 8$។\n\nខ. តាង $E$ ជាព្រឹត្តិការណ៍ «បានមុខរូបយ៉ាងតិច ២ ដង» (២ ឬ ៣ ដង) ៖\nករណីស្រប ៖ $E = \\{HHH, HHT, HTH, THH\\} \\Rightarrow n(E) = 4$។\nប្រូបាប ៖ $P(E) = \\dfrac{n(E)}{n(S)} = \\dfrac{4}{8} = \\dfrac{1}{2}$។",
       "short_solution": "ក. លំហសំណាក ៖\n$S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}$។\nចំនួនករណីអាច ៖ $n(S) = 2^3 = 8$។\n\nខ. តាង $E$ ជាព្រឹត្តិការណ៍ «បានមុខរូបយ៉ាងតិច ២ ដង» (២ ឬ ៣ ដង) ៖\nករណីស្រប ៖ $E = \\{HHH, HHT, HTH, THH\\} \\Rightarrow n(E) = 4$។\nប្រូបាប ៖ $P(E) = \\dfrac{n(E)}{n(S)} = \\dfrac{4}{8} = \\dfrac{1}{2}$។",
-      "rubric": "ក. សរសេរលំហសំណាក $S$ មាន ៨ ករណី (១០ពិន្ទុ)\nខ. រាប់ករណីស្រប និងគណនា $P(E) = 1/2$ (១០ពិន្ទុ)",
+      "rubric": "ក. សរសេរលំហសំណាក $S$ មាន ៨ ករណី (១០ពិន្ទុ)\nខ. រាប់ករណីស្រប និងគណនា $P(E) = \\dfrac{1}{2}$ (១០ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142651,7 +142651,7 @@
       "a": null,
       "e": "ក. ការជ្រើសរើសមានតួនាទីជាក់លាក់ (ប្រធាន អនុប្រធាន ហេរញ្ញិក) ជាការរៀបតាមលំដាប់ (ចម្លាស់) ៖\nចំនួនវិធី $= A(20, 3) = 20 \\times 19 \\times 18 = 6840$ វិធី។\n\nខ. ចំនួនវិធីជ្រើសរើសសិស្សស្រីទាំង ៣ នាក់ ៖\n$n(F) = A(8, 3) = 8 \\times 7 \\times 6 = 336$ វិធី។\nប្រូបាប ៖ $P = \\dfrac{336}{6840} = \\dfrac{14}{285} \\approx 0.049$ (ឬ $\\approx 4.9\\%$)។",
       "short_solution": "ក. ការជ្រើសរើសមានតួនាទីជាក់លាក់ (ប្រធាន អនុប្រធាន ហេរញ្ញិក) ជាការរៀបតាមលំដាប់ (ចម្លាស់) ៖\nចំនួនវិធី $= A(20, 3) = 20 \\times 19 \\times 18 = 6840$ វិធី។\n\nខ. ចំនួនវិធីជ្រើសរើសសិស្សស្រីទាំង ៣ នាក់ ៖\n$n(F) = A(8, 3) = 8 \\times 7 \\times 6 = 336$ វិធី។\nប្រូបាប ៖ $P = \\dfrac{336}{6840} = \\dfrac{14}{285} \\approx 0.049$ (ឬ $\\approx 4.9\\%$)។",
-      "rubric": "ក. គណនាចម្លាស់ $A(20, 3) = 6840$ (១០ពិន្ទុ)\nខ. គណនា $A(8, 3) = 336$ និងទាញប្រូបាប $14/285$ (១០ពិន្ទុ)",
+      "rubric": "ក. គណនាចម្លាស់ $A(20, 3) = 6840$ (១០ពិន្ទុ)\nខ. គណនា $A(8, 3) = 336$ និងទាញប្រូបាប $\\dfrac{14}{285}$ (១០ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142740,8 +142740,8 @@
       "q": "ក្នុងប្លង់កុំផ្លិច រកសំណុំចំណុច $M(z)$ ដែលផ្ទៀងផ្ទាត់លក្ខខណ្ឌ ៖\nក. $|z - 2 + i| = 3$\nខ. $|z - 1| = |z - i|$",
       "o": [],
       "a": null,
-      "e": "ក. តាង $z_0 = 2 - i$ ជាអាហ្វិកនៃចំណុច $A(2, -1)$។\nសមីការ $|z - (2 - i)| = 3 \\iff |z - z_A| = 3 \\iff AM = 3$។\nដូចនេះ សំណុំចំណុច $M$ គឺជារង្វង់ផ្ចិត $A(2, -1)$ និងកាំ $R = 3$។\n\nខ. តាង $z_B = 1$ (ចំណុច $B(1, 0)$) និង $z_C = i$ (ចំណុច $C(0, 1)$)។\nសមីការ $|z - z_B| = |z - z_C| \\iff BM = CM$។\nដូចនេះ សំណុំចំណុច $M$ គឺជាបន្ទាត់មេដ្យាទ័រនៃអង្កត់ $BC$ (បន្ទាត់កាត់តាមចំណុចកណ្តាល $(1/2, 1/2)$ និងកែងនឹង $BC$ ពោលគឺបន្ទាត់ $y = x$)។",
-      "short_solution": "ក. តាង $z_0 = 2 - i$ ជាអាហ្វិកនៃចំណុច $A(2, -1)$។\nសមីការ $|z - (2 - i)| = 3 \\iff |z - z_A| = 3 \\iff AM = 3$។\nដូចនេះ សំណុំចំណុច $M$ គឺជារង្វង់ផ្ចិត $A(2, -1)$ និងកាំ $R = 3$។\n\nខ. តាង $z_B = 1$ (ចំណុច $B(1, 0)$) និង $z_C = i$ (ចំណុច $C(0, 1)$)។\nសមីការ $|z - z_B| = |z - z_C| \\iff BM = CM$។\nដូចនេះ សំណុំចំណុច $M$ គឺជាបន្ទាត់មេដ្យាទ័រនៃអង្កត់ $BC$ (បន្ទាត់កាត់តាមចំណុចកណ្តាល $(1/2, 1/2)$ និងកែងនឹង $BC$ ពោលគឺបន្ទាត់ $y = x$)។",
+      "e": "ក. តាង $z_0 = 2 - i$ ជាអាហ្វិកនៃចំណុច $A(2, -1)$។\nសមីការ $|z - (2 - i)| = 3 \\iff |z - z_A| = 3 \\iff AM = 3$។\nដូចនេះ សំណុំចំណុច $M$ គឺជារង្វង់ផ្ចិត $A(2, -1)$ និងកាំ $R = 3$។\n\nខ. តាង $z_B = 1$ (ចំណុច $B(1, 0)$) និង $z_C = i$ (ចំណុច $C(0, 1)$)។\nសមីការ $|z - z_B| = |z - z_C| \\iff BM = CM$។\nដូចនេះ សំណុំចំណុច $M$ គឺជាបន្ទាត់មេដ្យាទ័រនៃអង្កត់ $BC$ (បន្ទាត់កាត់តាមចំណុចកណ្តាល $(\\dfrac{1}{2}, \\dfrac{1}{2})$ និងកែងនឹង $BC$ ពោលគឺបន្ទាត់ $y = x$)។",
+      "short_solution": "ក. តាង $z_0 = 2 - i$ ជាអាហ្វិកនៃចំណុច $A(2, -1)$។\nសមីការ $|z - (2 - i)| = 3 \\iff |z - z_A| = 3 \\iff AM = 3$។\nដូចនេះ សំណុំចំណុច $M$ គឺជារង្វង់ផ្ចិត $A(2, -1)$ និងកាំ $R = 3$។\n\nខ. តាង $z_B = 1$ (ចំណុច $B(1, 0)$) និង $z_C = i$ (ចំណុច $C(0, 1)$)។\nសមីការ $|z - z_B| = |z - z_C| \\iff BM = CM$។\nដូចនេះ សំណុំចំណុច $M$ គឺជាបន្ទាត់មេដ្យាទ័រនៃអង្កត់ $BC$ (បន្ទាត់កាត់តាមចំណុចកណ្តាល $(\\dfrac{1}{2}, \\dfrac{1}{2})$ និងកែងនឹង $BC$ ពោលគឺបន្ទាត់ $y = x$)។",
       "rubric": "ក. កំណត់ចំណុច $A$ និងសន្និដ្ឋានរង្វង់ផ្ចិត $A$ កាំ ៣ (១០ពិន្ទុ)\nខ. កំណត់ចំណុច $B, C$ និងសន្និដ្ឋានបន្ទាត់មេដ្យាទ័រនៃ $BC$ (១០ពិន្ទុ)",
       "kind": "written"
     },
@@ -142760,7 +142760,7 @@
       "a": null,
       "e": "ក. ប្រើរូបមន្ត $1 - \\cos(2x) = 2\\sin^2 x$ ៖\n$A = \\lim_{x \\to 0} \\dfrac{2\\sin^2 x}{x^2} = 2\\left(\\lim_{x \\to 0} \\dfrac{\\sin x}{x}\\right)^2 = 2(1)^2 = 2$។\n\nខ. បំបែកតាមលីមីតគ្រឹះ ៖\n$B = \\lim_{x \\to 0} \\dfrac{\\dfrac{\\tan(3x)}{3x} \\times 3x}{\\dfrac{\\sin(5x)}{5x} \\times 5x} = \\dfrac{1 \\times 3}{1 \\times 5} = \\dfrac{3}{5}$។",
       "short_solution": "ក. ប្រើរូបមន្ត $1 - \\cos(2x) = 2\\sin^2 x$ ៖\n$A = \\lim_{x \\to 0} \\dfrac{2\\sin^2 x}{x^2} = 2\\left(\\lim_{x \\to 0} \\dfrac{\\sin x}{x}\\right)^2 = 2(1)^2 = 2$។\n\nខ. បំបែកតាមលីមីតគ្រឹះ ៖\n$B = \\lim_{x \\to 0} \\dfrac{\\dfrac{\\tan(3x)}{3x} \\times 3x}{\\dfrac{\\sin(5x)}{5x} \\times 5x} = \\dfrac{1 \\times 3}{1 \\times 5} = \\dfrac{3}{5}$។",
-      "rubric": "ក. បំប្លែងរូបមន្តត្រីកោណមាត្រ (៥ពិន្ទុ), គណនាបាន ២ (៥ពិន្ទុ)\nខ. បំបែកទម្រង់លីមីតគ្រឹះ (៥ពិន្ទុ), គណនាបាន $3/5$ (៥ពិន្ទុ)",
+      "rubric": "ក. បំប្លែងរូបមន្តត្រីកោណមាត្រ (៥ពិន្ទុ), គណនាបាន ២ (៥ពិន្ទុ)\nខ. បំបែកទម្រង់លីមីតគ្រឹះ (៥ពិន្ទុ), គណនាបាន $\\dfrac{3}{5}$ (៥ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142773,11 +142773,11 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "លំហាត់សរសេរទី 2",
       "level": "លំបាក",
-      "q": "គណនាលីមីតខាងក្រោម ៖\nក. $C = \\lim_{x \\to 0} (1 + 3x)^{1/x}$\nខ. $D = \\lim_{x \\to +\\infty} \\left(\\dfrac{x + 2}{x - 1}\\right)^x$",
+      "q": "គណនាលីមីតខាងក្រោម ៖\nក. $C = \\lim_{x \\to 0} (1 + 3x)^{\\frac{1}{x}}$\nខ. $D = \\lim_{x \\to +\\infty} \\left(\\dfrac{x + 2}{x - 1}\\right)^x$",
       "o": [],
       "a": null,
-      "e": "ក. រាងមិនកំណត់ $[1^\\infty]$ ៖\n$C = \\lim_{x \\to 0} \\left[(1 + 3x)^{\\frac{1}{3x}}\\right]^3 = e^3$ (ព្រោះ $\\lim_{u \\to 0} (1 + u)^{1/u} = e$)។\n\nខ. រាងមិនកំណត់ $[1^\\infty]$ ៖\nសរសេរ $\\dfrac{x + 2}{x - 1} = 1 + \\dfrac{3}{x - 1}$ ៖\n$D = \\lim_{x \\to +\\infty} \\left(1 + \\dfrac{3}{x - 1}\\right)^x = \\lim_{x \\to +\\infty} \\left[\\left(1 + \\dfrac{3}{x - 1}\\right)^{\\frac{x - 1}{3}}\\right]^{\\frac{3x}{x - 1}} = e^{\\lim_{x \\to +\\infty} \\frac{3x}{x - 1}} = e^3$។",
-      "short_solution": "ក. រាងមិនកំណត់ $[1^\\infty]$ ៖\n$C = \\lim_{x \\to 0} \\left[(1 + 3x)^{\\frac{1}{3x}}\\right]^3 = e^3$ (ព្រោះ $\\lim_{u \\to 0} (1 + u)^{1/u} = e$)។\n\nខ. រាងមិនកំណត់ $[1^\\infty]$ ៖\nសរសេរ $\\dfrac{x + 2}{x - 1} = 1 + \\dfrac{3}{x - 1}$ ៖\n$D = \\lim_{x \\to +\\infty} \\left(1 + \\dfrac{3}{x - 1}\\right)^x = \\lim_{x \\to +\\infty} \\left[\\left(1 + \\dfrac{3}{x - 1}\\right)^{\\frac{x - 1}{3}}\\right]^{\\frac{3x}{x - 1}} = e^{\\lim_{x \\to +\\infty} \\frac{3x}{x - 1}} = e^3$។",
+      "e": "ក. រាងមិនកំណត់ $[1^\\infty]$ ៖\n$C = \\lim_{x \\to 0} \\left[(1 + 3x)^{\\frac{1}{3x}}\\right]^3 = e^3$ (ព្រោះ $\\lim_{u \\to 0} (1 + u)^{\\frac{1}{u}} = e$)។\n\nខ. រាងមិនកំណត់ $[1^\\infty]$ ៖\nសរសេរ $\\dfrac{x + 2}{x - 1} = 1 + \\dfrac{3}{x - 1}$ ៖\n$D = \\lim_{x \\to +\\infty} \\left(1 + \\dfrac{3}{x - 1}\\right)^x = \\lim_{x \\to +\\infty} \\left[\\left(1 + \\dfrac{3}{x - 1}\\right)^{\\frac{x - 1}{3}}\\right]^{\\frac{3x}{x - 1}} = e^{\\lim_{x \\to +\\infty} \\frac{3x}{x - 1}} = e^3$។",
+      "short_solution": "ក. រាងមិនកំណត់ $[1^\\infty]$ ៖\n$C = \\lim_{x \\to 0} \\left[(1 + 3x)^{\\frac{1}{3x}}\\right]^3 = e^3$ (ព្រោះ $\\lim_{u \\to 0} (1 + u)^{\\frac{1}{u}} = e$)។\n\nខ. រាងមិនកំណត់ $[1^\\infty]$ ៖\nសរសេរ $\\dfrac{x + 2}{x - 1} = 1 + \\dfrac{3}{x - 1}$ ៖\n$D = \\lim_{x \\to +\\infty} \\left(1 + \\dfrac{3}{x - 1}\\right)^x = \\lim_{x \\to +\\infty} \\left[\\left(1 + \\dfrac{3}{x - 1}\\right)^{\\frac{x - 1}{3}}\\right]^{\\frac{3x}{x - 1}} = e^{\\lim_{x \\to +\\infty} \\frac{3x}{x - 1}} = e^3$។",
       "rubric": "ក. បំប្លែងទៅរាង $e$ (៥ពិន្ទុ), គណនាបាន $e^3$ (៥ពិន្ទុ)\nខ. បំបែកជា $1 + \\dfrac{3}{x-1}$ (៥ពិន្ទុ), គណនាលីមីតស្វ័យគុណបាន $e^3$ (៥ពិន្ទុ)",
       "kind": "written"
     },
@@ -142907,7 +142907,7 @@
       "a": null,
       "e": "ក. គណនាលីមីត ៖\n• $\\lim_{x \\to 0^+} \\dfrac{\\ln x}{x} = \\dfrac{-\\infty}{0^+} = -\\infty \\Rightarrow$ បន្ទាត់ $x = 0$ ជាអាស៊ីមតូតឈរ។\n• $\\lim_{x \\to +\\infty} \\dfrac{\\ln x}{x} = 0 \\Rightarrow$ បន្ទាត់ $y = 0$ ជាអាស៊ីមតូតដេក។\n\nខ. គណនាដេរីវេ ៖\n$f'(x) = \\dfrac{\\frac{1}{x} \\cdot x - \\ln x \\cdot 1}{x^2} = \\dfrac{1 - \\ln x}{x^2}$។\n$f'(x) = 0 \\iff 1 - \\ln x = 0 \\iff \\ln x = 1 \\iff x = e$។\n• $x < e \\Rightarrow f'(x) > 0$ អនុគមន៍កើន។\n• $x > e \\Rightarrow f'(x) < 0$ អនុគមន៍ចុះ។\nតម្លៃអតិបរមាដាច់ខាតគឺ $f(e) = \\dfrac{\\ln e}{e} = \\dfrac{1}{e}$។\n\nគ. ប្រៀបធៀប $e^\\pi$ និង $\\pi^e$ ៖\nដោយសារ $e < \\pi$ ហើយ $f$ ចុះលើ $[e, +\\infty)$ នាំឱ្យ $f(e) > f(\\pi) \\iff \\dfrac{\\ln e}{e} > \\dfrac{\\ln\\pi}{\\pi} \\iff \\pi\\ln e > e\\ln\\pi \\iff \\ln(e^\\pi) > \\ln(\\pi^e) \\iff e^\\pi > \\pi^e$។",
       "short_solution": "ក. គណនាលីមីត ៖\n• $\\lim_{x \\to 0^+} \\dfrac{\\ln x}{x} = \\dfrac{-\\infty}{0^+} = -\\infty \\Rightarrow$ បន្ទាត់ $x = 0$ ជាអាស៊ីមតូតឈរ។\n• $\\lim_{x \\to +\\infty} \\dfrac{\\ln x}{x} = 0 \\Rightarrow$ បន្ទាត់ $y = 0$ ជាអាស៊ីមតូតដេក។\n\nខ. គណនាដេរីវេ ៖\n$f'(x) = \\dfrac{\\frac{1}{x} \\cdot x - \\ln x \\cdot 1}{x^2} = \\dfrac{1 - \\ln x}{x^2}$។\n$f'(x) = 0 \\iff 1 - \\ln x = 0 \\iff \\ln x = 1 \\iff x = e$។\n• $x < e \\Rightarrow f'(x) > 0$ អនុគមន៍កើន។\n• $x > e \\Rightarrow f'(x) < 0$ អនុគមន៍ចុះ។\nតម្លៃអតិបរមាដាច់ខាតគឺ $f(e) = \\dfrac{\\ln e}{e} = \\dfrac{1}{e}$។\n\nគ. ប្រៀបធៀប $e^\\pi$ និង $\\pi^e$ ៖\nដោយសារ $e < \\pi$ ហើយ $f$ ចុះលើ $[e, +\\infty)$ នាំឱ្យ $f(e) > f(\\pi) \\iff \\dfrac{\\ln e}{e} > \\dfrac{\\ln\\pi}{\\pi} \\iff \\pi\\ln e > e\\ln\\pi \\iff \\ln(e^\\pi) > \\ln(\\pi^e) \\iff e^\\pi > \\pi^e$។",
-      "rubric": "ក. គណនាលីមីត និងរកអាស៊ីមតូត (៦ពិន្ទុ)\nខ. គណនាដេរីវេ និងរកអតិបរមា $f(e) = 1/e$ (៧ពិន្ទុ)\nគ. ទាញប្រៀបធៀប $e^\\pi > \\pi^e$ (៧ពិន្ទុ)",
+      "rubric": "ក. គណនាលីមីត និងរកអាស៊ីមតូត (៦ពិន្ទុ)\nខ. គណនាដេរីវេ និងរកអតិបរមា $f(e) = \\dfrac{1}{e}$ (៧ពិន្ទុ)\nគ. ទាញប្រៀបធៀប $e^\\pi > \\pi^e$ (៧ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142943,7 +142943,7 @@
       "a": null,
       "e": "ក. គណនាវ៉ិចទ័រ ៖\n• $\\vec{AB} = (2-1, -1-0, 3-2) = (1, -1, 1)$។\n• $\\vec{AC} = (0-1, 2-0, 4-2) = (-1, 2, 2)$។\nផលគុណវ៉ិចទ័រ ៖\n$\\vec{n} = \\vec{AB} \\times \\vec{AC} = \\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ 1 & -1 & 1 \\\\ -1 & 2 & 2 \\end{vmatrix} = \\vec{i}(-2 - 2) - \\vec{j}(2 - (-1)) + \\vec{k}(2 - 1) = (-4, -3, 1)$។\n\nខ. ផ្ទៃក្រឡាត្រីកោណ $ABC$ ៖\n$S_{ABC} = \\dfrac{1}{2}\\|\\vec{AB} \\times \\vec{AC}\\| = \\dfrac{1}{2}\\sqrt{(-4)^2 + (-3)^2 + 1^2} = \\dfrac{1}{2}\\sqrt{16 + 9 + 1} = \\dfrac{\\sqrt{26}}{2}$ ឯកតាផ្ទៃ។\n\nគ. សមីការប្លង់ $(ABC)$ ៖\nប្លង់កាត់តាម $A(1, 0, 2)$ និងមានវ៉ិចទ័រណរម៉ាល់ $\\vec{n}(-4, -3, 1)$ ៖\n$-4(x - 1) - 3(y - 0) + 1(z - 2) = 0 \\iff -4x + 4 - 3y + z - 2 = 0 \\iff 4x + 3y - z - 2 = 0$។",
       "short_solution": "ក. គណនាវ៉ិចទ័រ ៖\n• $\\vec{AB} = (2-1, -1-0, 3-2) = (1, -1, 1)$។\n• $\\vec{AC} = (0-1, 2-0, 4-2) = (-1, 2, 2)$។\nផលគុណវ៉ិចទ័រ ៖\n$\\vec{n} = \\vec{AB} \\times \\vec{AC} = \\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ 1 & -1 & 1 \\\\ -1 & 2 & 2 \\end{vmatrix} = \\vec{i}(-2 - 2) - \\vec{j}(2 - (-1)) + \\vec{k}(2 - 1) = (-4, -3, 1)$។\n\nខ. ផ្ទៃក្រឡាត្រីកោណ $ABC$ ៖\n$S_{ABC} = \\dfrac{1}{2}\\|\\vec{AB} \\times \\vec{AC}\\| = \\dfrac{1}{2}\\sqrt{(-4)^2 + (-3)^2 + 1^2} = \\dfrac{1}{2}\\sqrt{16 + 9 + 1} = \\dfrac{\\sqrt{26}}{2}$ ឯកតាផ្ទៃ។\n\nគ. សមីការប្លង់ $(ABC)$ ៖\nប្លង់កាត់តាម $A(1, 0, 2)$ និងមានវ៉ិចទ័រណរម៉ាល់ $\\vec{n}(-4, -3, 1)$ ៖\n$-4(x - 1) - 3(y - 0) + 1(z - 2) = 0 \\iff -4x + 4 - 3y + z - 2 = 0 \\iff 4x + 3y - z - 2 = 0$។",
-      "rubric": "ក. គណនា $\\vec{AB}, \\vec{AC}$ និង $\\vec{AB}\\times\\vec{AC} = (-4, -3, 1)$ (៨ពិន្ទុ)\nខ. គណនាផ្ទៃក្រឡា $S = \\sqrt{26}/2$ (៦ពិន្ទុ)\nគ. សរសេរសមីការប្លង់ $4x + 3y - z - 2 = 0$ (៦ពិន្ទុ)",
+      "rubric": "ក. គណនា $\\vec{AB}, \\vec{AC}$ និង $\\vec{AB}\\times\\vec{AC} = (-4, -3, 1)$ (៨ពិន្ទុ)\nខ. គណនាផ្ទៃក្រឡា $S = \\dfrac{\\sqrt{26}}{2}$ (៦ពិន្ទុ)\nគ. សរសេរសមីការប្លង់ $4x + 3y - z - 2 = 0$ (៦ពិន្ទុ)",
       "kind": "written",
       "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n    <marker id=\"arrow-red\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#dc2626\"/>\n    </marker>\n  </defs>\n  <!-- Plane Parallelogram -->\n  <polygon points=\"50,140 180,140 270,70 140,70\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n  <text x=\"245\" y=\"90\" font-family=\"Arial, sans-serif\" font-size=\"13\" fill=\"#475569\" font-weight=\"bold\">(P)</text>\n  <!-- Point M0 on plane -->\n  <circle cx=\"160\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/>\n  <text x=\"135\" y=\"125\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">M₀(x₀, y₀, z₀)</text>\n  <!-- Normal Vector n perpendicular to plane -->\n  <line x1=\"160\" y1=\"110\" x2=\"160\" y2=\"35\" stroke=\"#dc2626\" stroke-width=\"2.5\" marker-end=\"url(#arrow-red)\"/>\n  <text x=\"168\" y=\"45\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">n⃗(A, B, C)</text>\n  <!-- Right angle mark -->\n  <polyline points=\"160,95 172,95 172,110\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n  <!-- Plane equation text -->\n  <text x=\"50\" y=\"180\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#1e293b\" font-weight=\"bold\">(P): A(x-x₀) + B(y-y₀) + C(z-z₀) = 0</text>\n</svg>"
     },
@@ -142960,9 +142960,9 @@
       "q": "គេឱ្យចំណុច $D(2, 3, 1)$ និងប្លង់ $(P): 2x - 2y + z - 5 = 0$។\nក. គណនាចម្ងាយពីចំណុច $D$ ទៅប្លង់ $(P)$។\nខ. រកកូអរដោនេចំណោលកែង $H$ នៃចំណុច $D$ លើប្លង់ $(P)$។",
       "o": [],
       "a": null,
-      "e": "ក. រូបមន្តចម្ងាយពីចំណុចទៅប្លង់ ៖\n$d(D, P) = \\dfrac{|2(2) - 2(3) + 1(1) - 5|}{\\sqrt{2^2 + (-2)^2 + 1^2}} = \\dfrac{|4 - 6 + 1 - 5|}{\\sqrt{4 + 4 + 1}} = \\dfrac{|-6|}{3} = 2$ ឯកតាប្រវែង។\n\nខ. បន្ទាត់ $(\\Delta)$ កាត់តាម $D$ និងកែងនឹង $(P)$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{n}(2, -2, 1)$ ៖\n$\\begin{cases} x = 2 + 2t \\\\ y = 3 - 2t \\\\ z = 1 + t \\end{cases}$\nជំនួសក្នុងសមីការប្លង់ $(P)$ ៖\n$2(2 + 2t) - 2(3 - 2t) + (1 + t) - 5 = 0 \\iff 4 + 4t - 6 + 4t + 1 + t - 5 = 0 \\iff 9t - 6 = 0 \\Rightarrow t = \\dfrac{2}{3}$។\nជំនួស $t = 2/3$ រកកូអរដោនេ $H$ ៖\n• $x_H = 2 + 2(2/3) = 10/3$\n• $y_H = 3 - 2(2/3) = 5/3$\n• $z_H = 1 + 2/3 = 5/3$\nដូចនេះ $H\\left(\\dfrac{10}{3}, \\dfrac{5}{3}, \\dfrac{5}{3}\\right)$។",
-      "short_solution": "ក. រូបមន្តចម្ងាយពីចំណុចទៅប្លង់ ៖\n$d(D, P) = \\dfrac{|2(2) - 2(3) + 1(1) - 5|}{\\sqrt{2^2 + (-2)^2 + 1^2}} = \\dfrac{|4 - 6 + 1 - 5|}{\\sqrt{4 + 4 + 1}} = \\dfrac{|-6|}{3} = 2$ ឯកតាប្រវែង។\n\nខ. បន្ទាត់ $(\\Delta)$ កាត់តាម $D$ និងកែងនឹង $(P)$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{n}(2, -2, 1)$ ៖\n$\\begin{cases} x = 2 + 2t \\\\ y = 3 - 2t \\\\ z = 1 + t \\end{cases}$\nជំនួសក្នុងសមីការប្លង់ $(P)$ ៖\n$2(2 + 2t) - 2(3 - 2t) + (1 + t) - 5 = 0 \\iff 4 + 4t - 6 + 4t + 1 + t - 5 = 0 \\iff 9t - 6 = 0 \\Rightarrow t = \\dfrac{2}{3}$។\nជំនួស $t = 2/3$ រកកូអរដោនេ $H$ ៖\n• $x_H = 2 + 2(2/3) = 10/3$\n• $y_H = 3 - 2(2/3) = 5/3$\n• $z_H = 1 + 2/3 = 5/3$\nដូចនេះ $H\\left(\\dfrac{10}{3}, \\dfrac{5}{3}, \\dfrac{5}{3}\\right)$។",
-      "rubric": "ក. គណនាចម្ងាយ $d = 2$ (៨ពិន្ទុ)\nខ. សរសេរសមីការបន្ទាត់កែង (៤ពិន្ទុ), រកប៉ារ៉ាម៉ែត្រ $t = 2/3$ (៤ពិន្ទុ), ទាញចំណុច $H$ (៤ពិន្ទុ)",
+      "e": "ក. រូបមន្តចម្ងាយពីចំណុចទៅប្លង់ ៖\n$d(D, P) = \\dfrac{|2(2) - 2(3) + 1(1) - 5|}{\\sqrt{2^2 + (-2)^2 + 1^2}} = \\dfrac{|4 - 6 + 1 - 5|}{\\sqrt{4 + 4 + 1}} = \\dfrac{|-6|}{3} = 2$ ឯកតាប្រវែង។\n\nខ. បន្ទាត់ $(\\Delta)$ កាត់តាម $D$ និងកែងនឹង $(P)$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{n}(2, -2, 1)$ ៖\n$\\begin{cases} x = 2 + 2t \\\\ y = 3 - 2t \\\\ z = 1 + t \\end{cases}$\nជំនួសក្នុងសមីការប្លង់ $(P)$ ៖\n$2(2 + 2t) - 2(3 - 2t) + (1 + t) - 5 = 0 \\iff 4 + 4t - 6 + 4t + 1 + t - 5 = 0 \\iff 9t - 6 = 0 \\Rightarrow t = \\dfrac{2}{3}$។\nជំនួស $t = \\dfrac{2}{3}$ រកកូអរដោនេ $H$ ៖\n• $x_H = 2 + 2(\\dfrac{2}{3}) = \\dfrac{10}{3}$\n• $y_H = 3 - 2(\\dfrac{2}{3}) = \\dfrac{5}{3}$\n• $z_H = 1 + \\dfrac{2}{3} = \\dfrac{5}{3}$\nដូចនេះ $H\\left(\\dfrac{10}{3}, \\dfrac{5}{3}, \\dfrac{5}{3}\\right)$។",
+      "short_solution": "ក. រូបមន្តចម្ងាយពីចំណុចទៅប្លង់ ៖\n$d(D, P) = \\dfrac{|2(2) - 2(3) + 1(1) - 5|}{\\sqrt{2^2 + (-2)^2 + 1^2}} = \\dfrac{|4 - 6 + 1 - 5|}{\\sqrt{4 + 4 + 1}} = \\dfrac{|-6|}{3} = 2$ ឯកតាប្រវែង។\n\nខ. បន្ទាត់ $(\\Delta)$ កាត់តាម $D$ និងកែងនឹង $(P)$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{n}(2, -2, 1)$ ៖\n$\\begin{cases} x = 2 + 2t \\\\ y = 3 - 2t \\\\ z = 1 + t \\end{cases}$\nជំនួសក្នុងសមីការប្លង់ $(P)$ ៖\n$2(2 + 2t) - 2(3 - 2t) + (1 + t) - 5 = 0 \\iff 4 + 4t - 6 + 4t + 1 + t - 5 = 0 \\iff 9t - 6 = 0 \\Rightarrow t = \\dfrac{2}{3}$។\nជំនួស $t = \\dfrac{2}{3}$ រកកូអរដោនេ $H$ ៖\n• $x_H = 2 + 2(\\dfrac{2}{3}) = \\dfrac{10}{3}$\n• $y_H = 3 - 2(\\dfrac{2}{3}) = \\dfrac{5}{3}$\n• $z_H = 1 + \\dfrac{2}{3} = \\dfrac{5}{3}$\nដូចនេះ $H\\left(\\dfrac{10}{3}, \\dfrac{5}{3}, \\dfrac{5}{3}\\right)$។",
+      "rubric": "ក. គណនាចម្ងាយ $d = 2$ (៨ពិន្ទុ)\nខ. សរសេរសមីការបន្ទាត់កែង (៤ពិន្ទុ), រកប៉ារ៉ាម៉ែត្រ $t = \\dfrac{2}{3}$ (៤ពិន្ទុ), ទាញចំណុច $H$ (៤ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -142996,9 +142996,9 @@
       "q": "គេឱ្យបួនចំណុច $A(1, 1, 0), B(0, 2, 2), C(1, -2, 3), D(1, -2, 4)$។\nក. គណនាមាឌតេត្រាអែត $ABCD$។\nខ. គណនាកម្ពស់ $h$ គូសចេញពីកំពូល $D$ ចុះមកបាត $ABC$។",
       "o": [],
       "a": null,
-      "e": "ក. គណនាវ៉ិចទ័រ ៖\n• $\\vec{AB} = (-1, 1, 2)$\n• $\\vec{AC} = (0, -3, 3)$\n• $\\vec{AD} = (0, -3, 4)$\nផលគុណវ៉ិចទ័រ ៖ $\\vec{AB} \\times \\vec{AC} = (3 - (-6))\\vec{i} - (-3 - 0)\\vec{j} + (3 - 0)\\vec{k} = (9, 3, 3)$។\nផលគុណចម្រុះ ៖\n$(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD} = 9(0) + 3(-3) + 3(4) = 0 - 9 + 12 = 3$។\nមាឌតេត្រាអែត ៖\n$V = \\dfrac{1}{6} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}| = \\dfrac{1}{6} \\times 3 = \\dfrac{1}{2}$ ឯកតាមាឌ។\n\nខ. កម្ពស់ $h$ ៖\n$S_{ABC} = \\dfrac{1}{2}\\|\\vec{AB} \\times \\vec{AC}\\| = \\dfrac{1}{2}\\sqrt{81 + 9 + 9} = \\dfrac{\\sqrt{99}}{2} = \\dfrac{3\\sqrt{11}}{2}$។\nតាមរូបមន្តមាឌ $V = \\dfrac{1}{3} S_{ABC} \\cdot h \\Rightarrow h = \\dfrac{3V}{S_{ABC}} = \\dfrac{3(1/2)}{\\frac{3\\sqrt{11}}{2}} = \\dfrac{1}{\\sqrt{11}} = \\dfrac{\\sqrt{11}}{11}$។",
-      "short_solution": "ក. គណនាវ៉ិចទ័រ ៖\n• $\\vec{AB} = (-1, 1, 2)$\n• $\\vec{AC} = (0, -3, 3)$\n• $\\vec{AD} = (0, -3, 4)$\nផលគុណវ៉ិចទ័រ ៖ $\\vec{AB} \\times \\vec{AC} = (3 - (-6))\\vec{i} - (-3 - 0)\\vec{j} + (3 - 0)\\vec{k} = (9, 3, 3)$។\nផលគុណចម្រុះ ៖\n$(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD} = 9(0) + 3(-3) + 3(4) = 0 - 9 + 12 = 3$។\nមាឌតេត្រាអែត ៖\n$V = \\dfrac{1}{6} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}| = \\dfrac{1}{6} \\times 3 = \\dfrac{1}{2}$ ឯកតាមាឌ។\n\nខ. កម្ពស់ $h$ ៖\n$S_{ABC} = \\dfrac{1}{2}\\|\\vec{AB} \\times \\vec{AC}\\| = \\dfrac{1}{2}\\sqrt{81 + 9 + 9} = \\dfrac{\\sqrt{99}}{2} = \\dfrac{3\\sqrt{11}}{2}$។\nតាមរូបមន្តមាឌ $V = \\dfrac{1}{3} S_{ABC} \\cdot h \\Rightarrow h = \\dfrac{3V}{S_{ABC}} = \\dfrac{3(1/2)}{\\frac{3\\sqrt{11}}{2}} = \\dfrac{1}{\\sqrt{11}} = \\dfrac{\\sqrt{11}}{11}$។",
-      "rubric": "ក. គណនាផលគុណចម្រុះ និងទាញមាឌ $V = 1/2$ (១០ពិន្ទុ)\nខ. គណនាផ្ទៃបាត និងទាញកម្ពស់ $h = \\sqrt{11}/11$ (១០ពិន្ទុ)",
+      "e": "ក. គណនាវ៉ិចទ័រ ៖\n• $\\vec{AB} = (-1, 1, 2)$\n• $\\vec{AC} = (0, -3, 3)$\n• $\\vec{AD} = (0, -3, 4)$\nផលគុណវ៉ិចទ័រ ៖ $\\vec{AB} \\times \\vec{AC} = (3 - (-6))\\vec{i} - (-3 - 0)\\vec{j} + (3 - 0)\\vec{k} = (9, 3, 3)$។\nផលគុណចម្រុះ ៖\n$(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD} = 9(0) + 3(-3) + 3(4) = 0 - 9 + 12 = 3$។\nមាឌតេត្រាអែត ៖\n$V = \\dfrac{1}{6} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}| = \\dfrac{1}{6} \\times 3 = \\dfrac{1}{2}$ ឯកតាមាឌ។\n\nខ. កម្ពស់ $h$ ៖\n$S_{ABC} = \\dfrac{1}{2}\\|\\vec{AB} \\times \\vec{AC}\\| = \\dfrac{1}{2}\\sqrt{81 + 9 + 9} = \\dfrac{\\sqrt{99}}{2} = \\dfrac{3\\sqrt{11}}{2}$។\nតាមរូបមន្តមាឌ $V = \\dfrac{1}{3} S_{ABC} \\cdot h \\Rightarrow h = \\dfrac{3V}{S_{ABC}} = \\dfrac{3(\\dfrac{1}{2})}{\\frac{3\\sqrt{11}}{2}} = \\dfrac{1}{\\sqrt{11}} = \\dfrac{\\sqrt{11}}{11}$។",
+      "short_solution": "ក. គណនាវ៉ិចទ័រ ៖\n• $\\vec{AB} = (-1, 1, 2)$\n• $\\vec{AC} = (0, -3, 3)$\n• $\\vec{AD} = (0, -3, 4)$\nផលគុណវ៉ិចទ័រ ៖ $\\vec{AB} \\times \\vec{AC} = (3 - (-6))\\vec{i} - (-3 - 0)\\vec{j} + (3 - 0)\\vec{k} = (9, 3, 3)$។\nផលគុណចម្រុះ ៖\n$(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD} = 9(0) + 3(-3) + 3(4) = 0 - 9 + 12 = 3$។\nមាឌតេត្រាអែត ៖\n$V = \\dfrac{1}{6} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}| = \\dfrac{1}{6} \\times 3 = \\dfrac{1}{2}$ ឯកតាមាឌ។\n\nខ. កម្ពស់ $h$ ៖\n$S_{ABC} = \\dfrac{1}{2}\\|\\vec{AB} \\times \\vec{AC}\\| = \\dfrac{1}{2}\\sqrt{81 + 9 + 9} = \\dfrac{\\sqrt{99}}{2} = \\dfrac{3\\sqrt{11}}{2}$។\nតាមរូបមន្តមាឌ $V = \\dfrac{1}{3} S_{ABC} \\cdot h \\Rightarrow h = \\dfrac{3V}{S_{ABC}} = \\dfrac{3(\\dfrac{1}{2})}{\\frac{3\\sqrt{11}}{2}} = \\dfrac{1}{\\sqrt{11}} = \\dfrac{\\sqrt{11}}{11}$។",
+      "rubric": "ក. គណនាផលគុណចម្រុះ និងទាញមាឌ $V = \\dfrac{1}{2}$ (១០ពិន្ទុ)\nខ. គណនាផ្ទៃបាត និងទាញកម្ពស់ $h = \\dfrac{\\sqrt{11}}{11}$ (១០ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -143029,12 +143029,12 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "លំហាត់សរសេរទី 1",
       "level": "លំបាក",
-      "q": "គណនាអាំងតេក្រាលខាងក្រោម ៖\nក. $I = \\int_0^{\\pi/2} x\\cos x\\,dx$\nខ. $J = \\int_1^e x^2 \\ln x\\,dx$",
+      "q": "គណនាអាំងតេក្រាលខាងក្រោម ៖\nក. $I = \\int_0^{\\dfrac{\\pi}{2}} x\\cos x\\,dx$\nខ. $J = \\int_1^e x^2 \\ln x\\,dx$",
       "o": [],
       "a": null,
-      "e": "ក. គណនា $I = \\int_0^{\\pi/2} x\\cos x\\,dx$ តាមអាំងតេក្រាលដោយផ្នែក ៖\nតាង $\\begin{cases} u = x \\\\ dv = \\cos x\\,dx \\end{cases} \\Rightarrow \\begin{cases} du = dx \\\\ v = \\sin x \\end{cases}$\n$I = \\left[x\\sin x\\right]_0^{\\pi/2} - \\int_0^{\\pi/2} \\sin x\\,dx = \\left(\\dfrac{\\pi}{2}\\sin\\dfrac{\\pi}{2} - 0\\right) - \\left[-\\cos x\\right]_0^{\\pi/2} = \\dfrac{\\pi}{2} - (0 - (-1)) = \\dfrac{\\pi}{2} - 1$។\n\nខ. គណនា $J = \\int_1^e x^2 \\ln x\\,dx$ ៖\nតាង $\\begin{cases} u = \\ln x \\\\ dv = x^2\\,dx \\end{cases} \\Rightarrow \\begin{cases} du = \\dfrac{dx}{x} \\\\ v = \\dfrac{x^3}{3} \\end{cases}$\n$J = \\left[\\dfrac{x^3}{3}\\ln x\\right]_1^e - \\int_1^e \\dfrac{x^3}{3} \\cdot \\dfrac{1}{x}\\,dx = \\left(\\dfrac{e^3}{3} - 0\\right) - \\dfrac{1}{3}\\int_1^e x^2\\,dx = \\dfrac{e^3}{3} - \\dfrac{1}{9}\\left[x^3\\right]_1^e = \\dfrac{e^3}{3} - \\dfrac{e^3 - 1}{9} = \\dfrac{2e^3 + 1}{9}$។",
-      "short_solution": "ក. គណនា $I = \\int_0^{\\pi/2} x\\cos x\\,dx$ តាមអាំងតេក្រាលដោយផ្នែក ៖\nតាង $\\begin{cases} u = x \\\\ dv = \\cos x\\,dx \\end{cases} \\Rightarrow \\begin{cases} du = dx \\\\ v = \\sin x \\end{cases}$\n$I = \\left[x\\sin x\\right]_0^{\\pi/2} - \\int_0^{\\pi/2} \\sin x\\,dx = \\left(\\dfrac{\\pi}{2}\\sin\\dfrac{\\pi}{2} - 0\\right) - \\left[-\\cos x\\right]_0^{\\pi/2} = \\dfrac{\\pi}{2} - (0 - (-1)) = \\dfrac{\\pi}{2} - 1$។\n\nខ. គណនា $J = \\int_1^e x^2 \\ln x\\,dx$ ៖\nតាង $\\begin{cases} u = \\ln x \\\\ dv = x^2\\,dx \\end{cases} \\Rightarrow \\begin{cases} du = \\dfrac{dx}{x} \\\\ v = \\dfrac{x^3}{3} \\end{cases}$\n$J = \\left[\\dfrac{x^3}{3}\\ln x\\right]_1^e - \\int_1^e \\dfrac{x^3}{3} \\cdot \\dfrac{1}{x}\\,dx = \\left(\\dfrac{e^3}{3} - 0\\right) - \\dfrac{1}{3}\\int_1^e x^2\\,dx = \\dfrac{e^3}{3} - \\dfrac{1}{9}\\left[x^3\\right]_1^e = \\dfrac{e^3}{3} - \\dfrac{e^3 - 1}{9} = \\dfrac{2e^3 + 1}{9}$។",
-      "rubric": "ក. អាំងតេក្រាលដោយផ្នែក និងគណនាបាន $\\pi/2 - 1$ (១០ពិន្ទុ)\nខ. អាំងតេក្រាលដោយផ្នែក និងគណនាបាន $(2e^3+1)/9$ (១០ពិន្ទុ)",
+      "e": "ក. គណនា $I = \\int_0^{\\dfrac{\\pi}{2}} x\\cos x\\,dx$ តាមអាំងតេក្រាលដោយផ្នែក ៖\nតាង $\\begin{cases} u = x \\\\ dv = \\cos x\\,dx \\end{cases} \\Rightarrow \\begin{cases} du = dx \\\\ v = \\sin x \\end{cases}$\n$I = \\left[x\\sin x\\right]_0^{\\dfrac{\\pi}{2}} - \\int_0^{\\dfrac{\\pi}{2}} \\sin x\\,dx = \\left(\\dfrac{\\pi}{2}\\sin\\dfrac{\\pi}{2} - 0\\right) - \\left[-\\cos x\\right]_0^{\\dfrac{\\pi}{2}} = \\dfrac{\\pi}{2} - (0 - (-1)) = \\dfrac{\\pi}{2} - 1$។\n\nខ. គណនា $J = \\int_1^e x^2 \\ln x\\,dx$ ៖\nតាង $\\begin{cases} u = \\ln x \\\\ dv = x^2\\,dx \\end{cases} \\Rightarrow \\begin{cases} du = \\dfrac{dx}{x} \\\\ v = \\dfrac{x^3}{3} \\end{cases}$\n$J = \\left[\\dfrac{x^3}{3}\\ln x\\right]_1^e - \\int_1^e \\dfrac{x^3}{3} \\cdot \\dfrac{1}{x}\\,dx = \\left(\\dfrac{e^3}{3} - 0\\right) - \\dfrac{1}{3}\\int_1^e x^2\\,dx = \\dfrac{e^3}{3} - \\dfrac{1}{9}\\left[x^3\\right]_1^e = \\dfrac{e^3}{3} - \\dfrac{e^3 - 1}{9} = \\dfrac{2e^3 + 1}{9}$។",
+      "short_solution": "ក. គណនា $I = \\int_0^{\\dfrac{\\pi}{2}} x\\cos x\\,dx$ តាមអាំងតេក្រាលដោយផ្នែក ៖\nតាង $\\begin{cases} u = x \\\\ dv = \\cos x\\,dx \\end{cases} \\Rightarrow \\begin{cases} du = dx \\\\ v = \\sin x \\end{cases}$\n$I = \\left[x\\sin x\\right]_0^{\\dfrac{\\pi}{2}} - \\int_0^{\\dfrac{\\pi}{2}} \\sin x\\,dx = \\left(\\dfrac{\\pi}{2}\\sin\\dfrac{\\pi}{2} - 0\\right) - \\left[-\\cos x\\right]_0^{\\dfrac{\\pi}{2}} = \\dfrac{\\pi}{2} - (0 - (-1)) = \\dfrac{\\pi}{2} - 1$។\n\nខ. គណនា $J = \\int_1^e x^2 \\ln x\\,dx$ ៖\nតាង $\\begin{cases} u = \\ln x \\\\ dv = x^2\\,dx \\end{cases} \\Rightarrow \\begin{cases} du = \\dfrac{dx}{x} \\\\ v = \\dfrac{x^3}{3} \\end{cases}$\n$J = \\left[\\dfrac{x^3}{3}\\ln x\\right]_1^e - \\int_1^e \\dfrac{x^3}{3} \\cdot \\dfrac{1}{x}\\,dx = \\left(\\dfrac{e^3}{3} - 0\\right) - \\dfrac{1}{3}\\int_1^e x^2\\,dx = \\dfrac{e^3}{3} - \\dfrac{1}{9}\\left[x^3\\right]_1^e = \\dfrac{e^3}{3} - \\dfrac{e^3 - 1}{9} = \\dfrac{2e^3 + 1}{9}$។",
+      "rubric": "ក. អាំងតេក្រាលដោយផ្នែក និងគណនាបាន $\\dfrac{\\pi}{2} - 1$ (១០ពិន្ទុ)\nខ. អាំងតេក្រាលដោយផ្នែក និងគណនាបាន $\\dfrac{2e^3+1}{9}$ (១០ពិន្ទុ)",
       "kind": "written",
       "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n    <linearGradient id=\"areaGrad\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#3b82f6\" stop-opacity=\"0.45\"/>\n      <stop offset=\"100%\" stop-color=\"#3b82f6\" stop-opacity=\"0.08\"/>\n    </linearGradient>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"30\" y1=\"160\" x2=\"290\" y2=\"160\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"60\" y1=\"180\" x2=\"60\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">x</text>\n  <text x=\"65\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">y</text>\n  <!-- Shaded Area between a=100 and b=220 -->\n  <path d=\"M 100 160 L 100 105 Q 160 45 220 85 L 220 160 Z\" fill=\"url(#areaGrad)\"/>\n  <!-- Boundary lines -->\n  <line x1=\"100\" y1=\"160\" x2=\"100\" y2=\"105\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"220\" y1=\"160\" x2=\"220\" y2=\"85\" stroke=\"#2563eb\" stroke-width=\"1.5\" stroke-dasharray=\"3,3\"/>\n  <!-- Curve y = f(x) -->\n  <path d=\"M 70 140 Q 160 30 260 110\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n  <text x=\"245\" y=\"60\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">y = f(x)</text>\n  <text x=\"96\" y=\"175\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#334155\" font-weight=\"bold\">a</text>\n  <text x=\"216\" y=\"175\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#334155\" font-weight=\"bold\">b</text>\n  <text x=\"140\" y=\"125\" font-family=\"Arial, sans-serif\" font-size=\"13\" fill=\"#1d4ed8\" font-weight=\"bold\">S = ∫ₐᵇ f(x)dx</text>\n</svg>"
     },
@@ -143071,7 +143071,7 @@
       "a": null,
       "e": "១. សមីការអាប់ស៊ីសចំណុចប្រសព្វ ៖\n$-x^2 + 2x + 3 = x + 1 \\iff -x^2 + x + 2 = 0 \\iff x^2 - x - 2 = 0 \\iff (x + 1)(x - 2) = 0$។\nឫស ៖ $x = -1$ ឬ $x = 2$។\n២. លើចន្លោះ $[-1, 2]$ ប៉ារ៉ាបូលស្ថិតនៅពីលើបន្ទាត់ ($-x^2 + 2x + 3 \\ge x + 1$)។\n៣. ផ្ទៃក្រឡា ៖\n$S = \\int_{-1}^2 [(-x^2 + 2x + 3) - (x + 1)]\\,dx = \\int_{-1}^2 (-x^2 + x + 2)\\,dx$\n$= \\left[-\\dfrac{x^3}{3} + \\dfrac{x^2}{2} + 2x\\right]_{-1}^2 = \\left(-\\dfrac{8}{3} + 2 + 4\\right) - \\left(\\dfrac{1}{3} + \\dfrac{1}{2} - 2\\right) = \\dfrac{10}{3} - \\left(-\\dfrac{7}{6}\\right) = \\dfrac{20 + 7}{6} = \\dfrac{27}{6} = \\dfrac{9}{2}$ ឯកតាផ្ទៃ។",
       "short_solution": "១. សមីការអាប់ស៊ីសចំណុចប្រសព្វ ៖\n$-x^2 + 2x + 3 = x + 1 \\iff -x^2 + x + 2 = 0 \\iff x^2 - x - 2 = 0 \\iff (x + 1)(x - 2) = 0$។\nឫស ៖ $x = -1$ ឬ $x = 2$។\n២. លើចន្លោះ $[-1, 2]$ ប៉ារ៉ាបូលស្ថិតនៅពីលើបន្ទាត់ ($-x^2 + 2x + 3 \\ge x + 1$)។\n៣. ផ្ទៃក្រឡា ៖\n$S = \\int_{-1}^2 [(-x^2 + 2x + 3) - (x + 1)]\\,dx = \\int_{-1}^2 (-x^2 + x + 2)\\,dx$\n$= \\left[-\\dfrac{x^3}{3} + \\dfrac{x^2}{2} + 2x\\right]_{-1}^2 = \\left(-\\dfrac{8}{3} + 2 + 4\\right) - \\left(\\dfrac{1}{3} + \\dfrac{1}{2} - 2\\right) = \\dfrac{10}{3} - \\left(-\\dfrac{7}{6}\\right) = \\dfrac{20 + 7}{6} = \\dfrac{27}{6} = \\dfrac{9}{2}$ ឯកតាផ្ទៃ។",
-      "rubric": "រកអាប់ស៊ីសប្រសព្វ $x = -1, 2$ (៥ពិន្ទុ)\nរៀបចំអាំងតេក្រាលផលដក (៥ពិន្ទុ)\nគណនាព្រីមីទីវ (៥ពិន្ទុ)\nគណនាតម្លៃចេញ $9/2$ (៥ពិន្ទុ)",
+      "rubric": "រកអាប់ស៊ីសប្រសព្វ $x = -1, 2$ (៥ពិន្ទុ)\nរៀបចំអាំងតេក្រាលផលដក (៥ពិន្ទុ)\nគណនាព្រីមីទីវ (៥ពិន្ទុ)\nគណនាតម្លៃចេញ $\\dfrac{9}{2}$ (៥ពិន្ទុ)",
       "kind": "written",
       "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"70\" y1=\"180\" x2=\"70\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">x</text>\n  <text x=\"75\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">y</text>\n  <!-- Shaded Area between curves -->\n  <path d=\"M 110 110 Q 170 30 230 110 Q 170 140 110 110 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <!-- Top Curve f(x) -->\n  <path d=\"M 80 135 Q 170 20 260 135\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n  <text x=\"195\" y=\"45\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">y = f(x)</text>\n  <!-- Bottom Curve g(x) -->\n  <path d=\"M 80 85 Q 170 160 260 85\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/>\n  <text x=\"195\" y=\"145\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">y = g(x)</text>\n  <!-- Intersection markers -->\n  <circle cx=\"110\" cy=\"110\" r=\"3.5\" fill=\"#334155\"/>\n  <circle cx=\"230\" cy=\"110\" r=\"3.5\" fill=\"#334155\"/>\n  <line x1=\"110\" y1=\"110\" x2=\"110\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"230\" y1=\"110\" x2=\"230\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"105\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">a</text>\n  <text x=\"225\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">b</text>\n  <text x=\"150\" y=\"95\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#1e40af\" font-weight=\"bold\">S = ∫ [f-g]dx</text>\n</svg>"
     },
@@ -143104,12 +143104,12 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "លំហាត់សរសេរទី 5",
       "level": "លំបាក",
-      "q": "គណនាប្រវែងធ្នូ $L$ នៃខ្សែកោង $y = \\dfrac{2}{3}x^{3/2}$ ពី $x = 0$ ដល់ $x = 3$ តាមរូបមន្ត $L = \\int_a^b \\sqrt{1 + [y'(x)]^2}\\,dx$។",
+      "q": "គណនាប្រវែងធ្នូ $L$ នៃខ្សែកោង $y = \\dfrac{2}{3}x^{\\frac{3}{2}}$ ពី $x = 0$ ដល់ $x = 3$ តាមរូបមន្ត $L = \\int_a^b \\sqrt{1 + [y'(x)]^2}\\,dx$។",
       "o": [],
       "a": null,
-      "e": "១. គណនាដេរីវេ ៖ $y'(x) = \\dfrac{2}{3} \\cdot \\dfrac{3}{2} x^{1/2} = \\sqrt{x}$។\n២. កន្សោមក្រោមរ៉ាឌីកាល់ ៖ $1 + [y'(x)]^2 = 1 + (\\sqrt{x})^2 = 1 + x$។\n៣. គណនាប្រវែងធ្នូ ៖\n$L = \\int_0^3 \\sqrt{1 + x}\\,dx = \\left[\\dfrac{2}{3}(1 + x)^{3/2}\\right]_0^3 = \\dfrac{2}{3}\\left[(1 + 3)^{3/2} - (1 + 0)^{3/2}\\right] = \\dfrac{2}{3}\\left(4^{3/2} - 1\\right) = \\dfrac{2}{3}(8 - 1) = \\dfrac{14}{3}$ ឯកតាប្រវែង។",
-      "short_solution": "១. គណនាដេរីវេ ៖ $y'(x) = \\dfrac{2}{3} \\cdot \\dfrac{3}{2} x^{1/2} = \\sqrt{x}$។\n២. កន្សោមក្រោមរ៉ាឌីកាល់ ៖ $1 + [y'(x)]^2 = 1 + (\\sqrt{x})^2 = 1 + x$។\n៣. គណនាប្រវែងធ្នូ ៖\n$L = \\int_0^3 \\sqrt{1 + x}\\,dx = \\left[\\dfrac{2}{3}(1 + x)^{3/2}\\right]_0^3 = \\dfrac{2}{3}\\left[(1 + 3)^{3/2} - (1 + 0)^{3/2}\\right] = \\dfrac{2}{3}\\left(4^{3/2} - 1\\right) = \\dfrac{2}{3}(8 - 1) = \\dfrac{14}{3}$ ឯកតាប្រវែង។",
-      "rubric": "គណនាដេរីវេ $y' = \\sqrt{x}$ (៥ពិន្ទុ)\nគណនា $1 + (y')^2 = 1 + x$ (៥ពិន្ទុ)\nគណនាអាំងតេក្រាល និងទាញប្រវែង $L = 14/3$ (១០ពិន្ទុ)",
+      "e": "១. គណនាដេរីវេ ៖ $y'(x) = \\dfrac{2}{3} \\cdot \\dfrac{3}{2} x^{\\frac{1}{2}} = \\sqrt{x}$។\n២. កន្សោមក្រោមរ៉ាឌីកាល់ ៖ $1 + [y'(x)]^2 = 1 + (\\sqrt{x})^2 = 1 + x$។\n៣. គណនាប្រវែងធ្នូ ៖\n$L = \\int_0^3 \\sqrt{1 + x}\\,dx = \\left[\\dfrac{2}{3}(1 + x)^{\\frac{3}{2}}\\right]_0^3 = \\dfrac{2}{3}\\left[(1 + 3)^{\\frac{3}{2}} - (1 + 0)^{\\frac{3}{2}}\\right] = \\dfrac{2}{3}\\left(4^{\\frac{3}{2}} - 1\\right) = \\dfrac{2}{3}(8 - 1) = \\dfrac{14}{3}$ ឯកតាប្រវែង។",
+      "short_solution": "១. គណនាដេរីវេ ៖ $y'(x) = \\dfrac{2}{3} \\cdot \\dfrac{3}{2} x^{\\frac{1}{2}} = \\sqrt{x}$។\n២. កន្សោមក្រោមរ៉ាឌីកាល់ ៖ $1 + [y'(x)]^2 = 1 + (\\sqrt{x})^2 = 1 + x$។\n៣. គណនាប្រវែងធ្នូ ៖\n$L = \\int_0^3 \\sqrt{1 + x}\\,dx = \\left[\\dfrac{2}{3}(1 + x)^{\\frac{3}{2}}\\right]_0^3 = \\dfrac{2}{3}\\left[(1 + 3)^{\\frac{3}{2}} - (1 + 0)^{\\frac{3}{2}}\\right] = \\dfrac{2}{3}\\left(4^{\\frac{3}{2}} - 1\\right) = \\dfrac{2}{3}(8 - 1) = \\dfrac{14}{3}$ ឯកតាប្រវែង។",
+      "rubric": "គណនាដេរីវេ $y' = \\sqrt{x}$ (៥ពិន្ទុ)\nគណនា $1 + (y')^2 = 1 + x$ (៥ពិន្ទុ)\nគណនាអាំងតេក្រាល និងទាញប្រវែង $L = \\dfrac{14}{3}$ (១០ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -143197,9 +143197,9 @@
       "q": "ចលនានៃបន្ទះរំញ័រមួយកំណត់ដោយសមីការឌីផេរ៉ង់ស្យែល $y'' + 16y = 0$។\nក. រកចម្លើយទូទៅនៃចលនា។\nខ. កំណត់សមីការចលនាជាក់លាក់ បើនៅពេលចាប់ផ្តើម $t = 0$ គេដឹងថាទីតាំង $y(0) = 2\\text{ cm}$ និងល្បឿន $y'(0) = 0$។ រកប្រេកង់ និងខួបនៃរំញ័រ។",
       "o": [],
       "a": null,
-      "e": "ក. សមីការសម្គាល់ ៖ $r^2 + 16 = 0 \\iff r = \\pm 4i$ (ព្រោះ $\\omega = 4$)។\nចម្លើយទូទៅ ៖ $y(t) = A\\cos(4t) + B\\sin(4t)$។\n\nខ. ជំនួសលក្ខខណ្ឌដើម ៖\n• $y(0) = A = 2\\text{ cm}$។\n• $y'(t) = -4A\\sin(4t) + 4B\\cos(4t) \\Rightarrow y'(0) = 4B = 0 \\Rightarrow B = 0$។\nសមីការចលនាជាក់លាក់ ៖ $y(t) = 2\\cos(4t)\\text{ (cm)}$។\n• ព្រេកង់មុំ ៖ $\\omega = 4\\text{ rad/s}$។\n• ខួប ៖ $T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{4} = \\dfrac{\\pi}{2}\\text{ s}$។\n• ប្រេកង់ ៖ $f = \\dfrac{1}{T} = \\dfrac{2}{\\pi}\\text{ Hz}$។",
-      "short_solution": "ក. សមីការសម្គាល់ ៖ $r^2 + 16 = 0 \\iff r = \\pm 4i$ (ព្រោះ $\\omega = 4$)។\nចម្លើយទូទៅ ៖ $y(t) = A\\cos(4t) + B\\sin(4t)$។\n\nខ. ជំនួសលក្ខខណ្ឌដើម ៖\n• $y(0) = A = 2\\text{ cm}$។\n• $y'(t) = -4A\\sin(4t) + 4B\\cos(4t) \\Rightarrow y'(0) = 4B = 0 \\Rightarrow B = 0$។\nសមីការចលនាជាក់លាក់ ៖ $y(t) = 2\\cos(4t)\\text{ (cm)}$។\n• ព្រេកង់មុំ ៖ $\\omega = 4\\text{ rad/s}$។\n• ខួប ៖ $T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{4} = \\dfrac{\\pi}{2}\\text{ s}$។\n• ប្រេកង់ ៖ $f = \\dfrac{1}{T} = \\dfrac{2}{\\pi}\\text{ Hz}$។",
-      "rubric": "ក. រកចម្លើយទូទៅ $y(t) = A\\cos(4t) + B\\sin(4t)$ (៨ពិន្ទុ)\nខ. រក $A = 2, B = 0$ (៦ពិន្ទុ), គណនាខួប $T = \\pi/2$ និងប្រេកង់ $f = 2/\\pi$ (៦ពិន្ទុ)",
+      "e": "ក. សមីការសម្គាល់ ៖ $r^2 + 16 = 0 \\iff r = \\pm 4i$ (ព្រោះ $\\omega = 4$)។\nចម្លើយទូទៅ ៖ $y(t) = A\\cos(4t) + B\\sin(4t)$។\n\nខ. ជំនួសលក្ខខណ្ឌដើម ៖\n• $y(0) = A = 2\\text{ cm}$។\n• $y'(t) = -4A\\sin(4t) + 4B\\cos(4t) \\Rightarrow y'(0) = 4B = 0 \\Rightarrow B = 0$។\nសមីការចលនាជាក់លាក់ ៖ $y(t) = 2\\cos(4t)\\text{ (cm)}$។\n• ព្រេកង់មុំ ៖ $\\omega = 4\\text{ \\dfrac{rad}{s}}$។\n• ខួប ៖ $T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{4} = \\dfrac{\\pi}{2}\\text{ s}$។\n• ប្រេកង់ ៖ $f = \\dfrac{1}{T} = \\dfrac{2}{\\pi}\\text{ Hz}$។",
+      "short_solution": "ក. សមីការសម្គាល់ ៖ $r^2 + 16 = 0 \\iff r = \\pm 4i$ (ព្រោះ $\\omega = 4$)។\nចម្លើយទូទៅ ៖ $y(t) = A\\cos(4t) + B\\sin(4t)$។\n\nខ. ជំនួសលក្ខខណ្ឌដើម ៖\n• $y(0) = A = 2\\text{ cm}$។\n• $y'(t) = -4A\\sin(4t) + 4B\\cos(4t) \\Rightarrow y'(0) = 4B = 0 \\Rightarrow B = 0$។\nសមីការចលនាជាក់លាក់ ៖ $y(t) = 2\\cos(4t)\\text{ (cm)}$។\n• ព្រេកង់មុំ ៖ $\\omega = 4\\text{ \\dfrac{rad}{s}}$។\n• ខួប ៖ $T = \\dfrac{2\\pi}{\\omega} = \\dfrac{2\\pi}{4} = \\dfrac{\\pi}{2}\\text{ s}$។\n• ប្រេកង់ ៖ $f = \\dfrac{1}{T} = \\dfrac{2}{\\pi}\\text{ Hz}$។",
+      "rubric": "ក. រកចម្លើយទូទៅ $y(t) = A\\cos(4t) + B\\sin(4t)$ (៨ពិន្ទុ)\nខ. រក $A = 2, B = 0$ (៦ពិន្ទុ), គណនាខួប $T = \\dfrac{\\pi}{2}$ និងប្រេកង់ $f = \\dfrac{2}{\\pi}$ (៦ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -143235,7 +143235,7 @@
       "a": null,
       "e": "តាង $D$ ជាព្រឹត្តិការណ៍ «ផលិតផលខូច»។\nគេមាន ៖ $P(M_1) = 0.60, P(D|M_1) = 0.02$\n$P(M_2) = 0.40, P(D|M_2) = 0.04$។\n\nក. តាមរូបមន្តប្រូបាបសរុប ៖\n$P(D) = P(M_1) \\cdot P(D|M_1) + P(M_2) \\cdot P(D|M_2) = (0.60)(0.02) + (0.40)(0.04) = 0.012 + 0.016 = 0.028$ (ឬ $2.8\\%$)។\n\nខ. តាមទ្រឹស្តីបទបេយេស ៖\n$P(M_1|D) = \\dfrac{P(M_1) \\cdot P(D|M_1)}{P(D)} = \\dfrac{0.012}{0.028} = \\dfrac{12}{28} = \\dfrac{3}{7} \\approx 0.4286$ (ឬប្រហែល $42.86\\%$)។",
       "short_solution": "តាង $D$ ជាព្រឹត្តិការណ៍ «ផលិតផលខូច»។\nគេមាន ៖ $P(M_1) = 0.60, P(D|M_1) = 0.02$\n$P(M_2) = 0.40, P(D|M_2) = 0.04$។\n\nក. តាមរូបមន្តប្រូបាបសរុប ៖\n$P(D) = P(M_1) \\cdot P(D|M_1) + P(M_2) \\cdot P(D|M_2) = (0.60)(0.02) + (0.40)(0.04) = 0.012 + 0.016 = 0.028$ (ឬ $2.8\\%$)។\n\nខ. តាមទ្រឹស្តីបទបេយេស ៖\n$P(M_1|D) = \\dfrac{P(M_1) \\cdot P(D|M_1)}{P(D)} = \\dfrac{0.012}{0.028} = \\dfrac{12}{28} = \\dfrac{3}{7} \\approx 0.4286$ (ឬប្រហែល $42.86\\%$)។",
-      "rubric": "ក. អនុវត្តរូបមន្តប្រូបាបសរុប គណនាបាន $0.028$ (១០ពិន្ទុ)\nខ. អនុវត្តទ្រឹស្តីបទបេយេស គណនាបាន $3/7$ (១០ពិន្ទុ)",
+      "rubric": "ក. អនុវត្តរូបមន្តប្រូបាបសរុប គណនាបាន $0.028$ (១០ពិន្ទុ)\nខ. អនុវត្តទ្រឹស្តីបទបេយេស គណនាបាន $\\dfrac{3}{7}$ (១០ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -143401,7 +143401,7 @@
       "a": null,
       "e": "ក. គណនា ៖\n• $\\dfrac{2 + 3i}{1 - 2i} = \\dfrac{(2 + 3i)(1 + 2i)}{1 + 4} = \\dfrac{2 + 4i + 3i - 6}{5} = \\dfrac{-4 + 7i}{5} = -\\dfrac{4}{5} + \\dfrac{7}{5}i$។\n• $(1 - i)^2 = 1 - 2i + i^2 = -2i$។\n• $z = -\\dfrac{4}{5} + \\dfrac{7}{5}i - 2i = -\\dfrac{4}{5} - \\dfrac{3}{5}i$។\n\nខ. គណនា $Z$ ៖\n• $|Z| = \\sqrt{3 + 1} = 2$។ $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}, \\sin\\theta = \\dfrac{1}{2} \\Rightarrow \\theta = \\dfrac{5\\pi}{6}$។\n• $Z = 2\\left(\\cos\\dfrac{5\\pi}{6} + i\\sin\\dfrac{5\\pi}{6}\\right)$។\n• $Z^{12} = 2^{12} [\\cos(10\\pi) + i\\sin(10\\pi)] = 4096(1 + 0) = 4096$។",
       "short_solution": "ក. គណនា ៖\n• $\\dfrac{2 + 3i}{1 - 2i} = \\dfrac{(2 + 3i)(1 + 2i)}{1 + 4} = \\dfrac{2 + 4i + 3i - 6}{5} = \\dfrac{-4 + 7i}{5} = -\\dfrac{4}{5} + \\dfrac{7}{5}i$។\n• $(1 - i)^2 = 1 - 2i + i^2 = -2i$។\n• $z = -\\dfrac{4}{5} + \\dfrac{7}{5}i - 2i = -\\dfrac{4}{5} - \\dfrac{3}{5}i$។\n\nខ. គណនា $Z$ ៖\n• $|Z| = \\sqrt{3 + 1} = 2$។ $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}, \\sin\\theta = \\dfrac{1}{2} \\Rightarrow \\theta = \\dfrac{5\\pi}{6}$។\n• $Z = 2\\left(\\cos\\dfrac{5\\pi}{6} + i\\sin\\dfrac{5\\pi}{6}\\right)$។\n• $Z^{12} = 2^{12} [\\cos(10\\pi) + i\\sin(10\\pi)] = 4096(1 + 0) = 4096$។",
-      "rubric": "ក. គណនាផលចែក និងការេបាន $z = -4/5 - 3/5i$ (១០ពិន្ទុ)\nខ. សរសេរទម្រង់ត្រីកោណមាត្រ និងគណនា $Z^{12} = 4096$ (១០ពិន្ទុ)",
+      "rubric": "ក. គណនាផលចែក និងការេបាន $z = -\\dfrac{4}{5} - \\dfrac{3}{5i}$ (១០ពិន្ទុ)\nខ. សរសេរទម្រង់ត្រីកោណមាត្រ និងគណនា $Z^{12} = 4096$ (១០ពិន្ទុ)",
       "kind": "written",
       "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n    <marker id=\"arrow-blue\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#2563eb\"/>\n    </marker>\n  </defs>\n  <!-- Grid -->\n  <line x1=\"40\" y1=\"160\" x2=\"280\" y2=\"160\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"80\" x2=\"280\" y2=\"80\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <!-- Axes -->\n  <line x1=\"30\" y1=\"140\" x2=\"290\" y2=\"140\" stroke=\"#334155\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"120\" y1=\"180\" x2=\"120\" y2=\"20\" stroke=\"#334155\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"145\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#334155\" font-weight=\"bold\">Re (x)</text>\n  <text x=\"125\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#334155\" font-weight=\"bold\">Im (y)</text>\n  <text x=\"108\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#64748b\">O</text>\n  <!-- Point M(a, b) -->\n  <line x1=\"120\" y1=\"140\" x2=\"220\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.5\" marker-end=\"url(#arrow-blue)\"/>\n  <line x1=\"220\" y1=\"140\" x2=\"220\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"120\" y1=\"60\" x2=\"220\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <circle cx=\"220\" cy=\"60\" r=\"4.5\" fill=\"#ef4444\"/>\n  <text x=\"228\" y=\"58\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#ef4444\" font-weight=\"bold\">M(z = a + bi)</text>\n  <text x=\"215\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#475569\">a</text>\n  <text x=\"105\" y=\"65\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#475569\">b</text>\n  <!-- Angle theta and modulus r -->\n  <path d=\"M 150 140 A 30 30 0 0 0 145 120\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <text x=\"155\" y=\"128\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#d97706\" font-weight=\"bold\">θ</text>\n  <text x=\"160\" y=\"90\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">r = |z|</text>\n</svg>"
     },
@@ -143415,12 +143415,12 @@
       "courseTitle": "គណិតវិទ្យា ថ្នាក់ទី ១២ (កម្រិតខ្ពស់)",
       "p": "លំហាត់សរសេរទី 2",
       "level": "លំបាក",
-      "q": "គណនាលីមីតខាងក្រោម ៖\nក. $A = \\lim_{x \\to 0} \\dfrac{\\sqrt{1 + 2x} - \\cos x}{x^2}$\nខ. $B = \\lim_{x \\to +\\infty} x\\left(e^{1/x} - 1\\right)$",
+      "q": "គណនាលីមីតខាងក្រោម ៖\nក. $A = \\lim_{x \\to 0} \\dfrac{\\sqrt{1 + 2x} - \\cos x}{x^2}$\nខ. $B = \\lim_{x \\to +\\infty} x\\left(e^{\\frac{1}{x}} - 1\\right)$",
       "o": [],
       "a": null,
-      "e": "ក. ថែមថយ ១ លើភាគយក ៖\n$A = \\lim_{x \\to 0} \\dfrac{(\\sqrt{1 + 2x} - 1) + (1 - \\cos x)}{x^2} = \\lim_{x \\to 0} \\dfrac{2x}{x^2(\\sqrt{1+2x}+1)} + \\lim_{x \\to 0} \\dfrac{2\\sin^2(x/2)}{x^2}$\n... គិតត្រង់ $x \\to 0$ ៖ តួទីមួយ $\\dfrac{2}{x(\\sqrt{1+2x}+1)}$ មានរាង $1/0$។ ដូច្នេះកែតម្រូវប្រើដេរីវេ (L'Hopital) ឬកន្សោមឆ្លាស់ត្រឹមត្រូវ ៖\nយក $A = \\lim_{x \\to 0} \\dfrac{1 - \\cos(3x)}{x^2} = \\dfrac{9}{2}$។\n\nខ. តាង $t = 1/x \\Rightarrow$ ពេល $x \\to +\\infty$ នោះ $t \\to 0^+$ ៖\n$B = \\lim_{t \\to 0^+} \\dfrac{e^t - 1}{t} = 1$។",
-      "short_solution": "ក. ថែមថយ ១ លើភាគយក ៖\n$A = \\lim_{x \\to 0} \\dfrac{(\\sqrt{1 + 2x} - 1) + (1 - \\cos x)}{x^2} = \\lim_{x \\to 0} \\dfrac{2x}{x^2(\\sqrt{1+2x}+1)} + \\lim_{x \\to 0} \\dfrac{2\\sin^2(x/2)}{x^2}$\n... គិតត្រង់ $x \\to 0$ ៖ តួទីមួយ $\\dfrac{2}{x(\\sqrt{1+2x}+1)}$ មានរាង $1/0$។ ដូច្នេះកែតម្រូវប្រើដេរីវេ (L'Hopital) ឬកន្សោមឆ្លាស់ត្រឹមត្រូវ ៖\nយក $A = \\lim_{x \\to 0} \\dfrac{1 - \\cos(3x)}{x^2} = \\dfrac{9}{2}$។\n\nខ. តាង $t = 1/x \\Rightarrow$ ពេល $x \\to +\\infty$ នោះ $t \\to 0^+$ ៖\n$B = \\lim_{t \\to 0^+} \\dfrac{e^t - 1}{t} = 1$។",
-      "rubric": "ក. គណនាលីមីតត្រីកោណមាត្របាន $9/2$ (១០ពិន្ទុ)\nខ. ប្តូរអថេរ $t=1/x$ និងទាញលីមីតស្មើ ១ (១០ពិន្ទុ)",
+      "e": "ក. ថែមថយ ១ លើភាគយក ៖\n$A = \\lim_{x \\to 0} \\dfrac{(\\sqrt{1 + 2x} - 1) + (1 - \\cos x)}{x^2} = \\lim_{x \\to 0} \\dfrac{2x}{x^2(\\sqrt{1+2x}+1)} + \\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{x^2}$\n... គិតត្រង់ $x \\to 0$ ៖ តួទីមួយ $\\dfrac{2}{x(\\sqrt{1+2x}+1)}$ មានរាង $\\dfrac{1}{0}$។ ដូច្នេះកែតម្រូវប្រើដេរីវេ (L'Hopital) ឬកន្សោមឆ្លាស់ត្រឹមត្រូវ ៖\nយក $A = \\lim_{x \\to 0} \\dfrac{1 - \\cos(3x)}{x^2} = \\dfrac{9}{2}$។\n\nខ. តាង $t = \\dfrac{1}{x} \\Rightarrow$ ពេល $x \\to +\\infty$ នោះ $t \\to 0^+$ ៖\n$B = \\lim_{t \\to 0^+} \\dfrac{e^t - 1}{t} = 1$។",
+      "short_solution": "ក. ថែមថយ ១ លើភាគយក ៖\n$A = \\lim_{x \\to 0} \\dfrac{(\\sqrt{1 + 2x} - 1) + (1 - \\cos x)}{x^2} = \\lim_{x \\to 0} \\dfrac{2x}{x^2(\\sqrt{1+2x}+1)} + \\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{x^2}$\n... គិតត្រង់ $x \\to 0$ ៖ តួទីមួយ $\\dfrac{2}{x(\\sqrt{1+2x}+1)}$ មានរាង $\\dfrac{1}{0}$។ ដូច្នេះកែតម្រូវប្រើដេរីវេ (L'Hopital) ឬកន្សោមឆ្លាស់ត្រឹមត្រូវ ៖\nយក $A = \\lim_{x \\to 0} \\dfrac{1 - \\cos(3x)}{x^2} = \\dfrac{9}{2}$។\n\nខ. តាង $t = \\dfrac{1}{x} \\Rightarrow$ ពេល $x \\to +\\infty$ នោះ $t \\to 0^+$ ៖\n$B = \\lim_{t \\to 0^+} \\dfrac{e^t - 1}{t} = 1$។",
+      "rubric": "ក. គណនាលីមីតត្រីកោណមាត្របាន $\\dfrac{9}{2}$ (១០ពិន្ទុ)\nខ. ប្តូរអថេរ $t=\\dfrac{1}{x}$ និងទាញលីមីតស្មើ ១ (១០ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -143456,7 +143456,7 @@
       "a": null,
       "e": "ក. $\\vec{AB} = (1, 2, 2)$ និង $\\vec{AC} = (2, -1, 1)$។\nផលធៀប $\\dfrac{1}{2} \\neq \\dfrac{2}{-1} \\Rightarrow$ វ៉ិចទ័រមិនកូលីនេអ៊ែរគ្នា នាំឱ្យ $A, B, C$ មិនរត់ត្រង់ជួរគ្នា។\n\nខ. $\\vec{n} = \\vec{AB} \\times \\vec{AC} = (2 - (-2))\\vec{i} - (1 - 4)\\vec{j} + (-1 - 4)\\vec{k} = (4, 3, -5)$។\nសមីការប្លង់ $(ABC)$ ៖\n$4(x - 1) + 3(y - 2) - 5(z - 1) = 0 \\iff 4x + 3y - 5z - 5 = 0$។\n\nគ. $d(O, ABC) = \\dfrac{|-5|}{\\sqrt{16 + 9 + 25}} = \\dfrac{5}{\\sqrt{50}} = \\dfrac{5}{5\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$។",
       "short_solution": "ក. $\\vec{AB} = (1, 2, 2)$ និង $\\vec{AC} = (2, -1, 1)$។\nផលធៀប $\\dfrac{1}{2} \\neq \\dfrac{2}{-1} \\Rightarrow$ វ៉ិចទ័រមិនកូលីនេអ៊ែរគ្នា នាំឱ្យ $A, B, C$ មិនរត់ត្រង់ជួរគ្នា។\n\nខ. $\\vec{n} = \\vec{AB} \\times \\vec{AC} = (2 - (-2))\\vec{i} - (1 - 4)\\vec{j} + (-1 - 4)\\vec{k} = (4, 3, -5)$។\nសមីការប្លង់ $(ABC)$ ៖\n$4(x - 1) + 3(y - 2) - 5(z - 1) = 0 \\iff 4x + 3y - 5z - 5 = 0$។\n\nគ. $d(O, ABC) = \\dfrac{|-5|}{\\sqrt{16 + 9 + 25}} = \\dfrac{5}{\\sqrt{50}} = \\dfrac{5}{5\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$។",
-      "rubric": "ក. បញ្ជាក់បីចំណុចមិនរត់ត្រង់ជួរ (៥ពិន្ទុ)\nខ. គណនាផលគុណវ៉ិចទ័រ និងសមីការប្លង់ (១០ពិន្ទុ)\nគ. គណនាចម្ងាយស្មើ $\\sqrt{2}/2$ (៥ពិន្ទុ)",
+      "rubric": "ក. បញ្ជាក់បីចំណុចមិនរត់ត្រង់ជួរ (៥ពិន្ទុ)\nខ. គណនាផលគុណវ៉ិចទ័រ និងសមីការប្លង់ (១០ពិន្ទុ)\nគ. គណនាចម្ងាយស្មើ $\\dfrac{\\sqrt{2}}{2}$ (៥ពិន្ទុ)",
       "kind": "written",
       "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n    <marker id=\"arrow-red\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#dc2626\"/>\n    </marker>\n  </defs>\n  <!-- Plane Parallelogram -->\n  <polygon points=\"50,140 180,140 270,70 140,70\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"2\"/>\n  <text x=\"245\" y=\"90\" font-family=\"Arial, sans-serif\" font-size=\"13\" fill=\"#475569\" font-weight=\"bold\">(P)</text>\n  <!-- Point M0 on plane -->\n  <circle cx=\"160\" cy=\"110\" r=\"4\" fill=\"#2563eb\"/>\n  <text x=\"135\" y=\"125\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">M₀(x₀, y₀, z₀)</text>\n  <!-- Normal Vector n perpendicular to plane -->\n  <line x1=\"160\" y1=\"110\" x2=\"160\" y2=\"35\" stroke=\"#dc2626\" stroke-width=\"2.5\" marker-end=\"url(#arrow-red)\"/>\n  <text x=\"168\" y=\"45\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#dc2626\" font-weight=\"bold\">n⃗(A, B, C)</text>\n  <!-- Right angle mark -->\n  <polyline points=\"160,95 172,95 172,110\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n  <!-- Plane equation text -->\n  <text x=\"50\" y=\"180\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#1e293b\" font-weight=\"bold\">(P): A(x-x₀) + B(y-y₀) + C(z-z₀) = 0</text>\n</svg>"
     },
@@ -143491,9 +143491,9 @@
       "q": "I. គណនាលីមីត (១៥ ពិន្ទុ) ៖\nក. $A = \\lim_{x \\to 1} \\dfrac{x^3 - 1}{x^2 + 2x - 3}$\nខ. $B = \\lim_{x \\to 0} \\dfrac{\\sqrt{1 + 4x} - 1}{\\sin(2x)}$\nគ. $C = \\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 2x} - x\\right)$",
       "o": [],
       "a": null,
-      "e": "ក. រាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$A = \\lim_{x \\to 1} \\dfrac{(x - 1)(x^2 + x + 1)}{(x - 1)(x + 3)} = \\lim_{x \\to 1} \\dfrac{x^2 + x + 1}{x + 3} = \\dfrac{1 + 1 + 1}{1 + 3} = \\dfrac{3}{4}$។\n\nខ. រាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$B = \\lim_{x \\to 0} \\dfrac{4x}{\\sin(2x)(\\sqrt{1+4x}+1)} = \\lim_{x \\to 0} \\left(\\dfrac{2x}{\\sin 2x}\\right) \\cdot \\dfrac{2}{\\sqrt{1+4x}+1} = 1 \\cdot \\dfrac{2}{1+1} = 1$។\n\nគ. រាង $[\\infty - \\infty]$ ៖\n$C = \\lim_{x \\to +\\infty} \\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\lim_{x \\to +\\infty} \\dfrac{2x}{x(\\sqrt{1+2/x}+1)} = \\dfrac{2}{1+1} = 1$។",
-      "short_solution": "ក. រាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$A = \\lim_{x \\to 1} \\dfrac{(x - 1)(x^2 + x + 1)}{(x - 1)(x + 3)} = \\lim_{x \\to 1} \\dfrac{x^2 + x + 1}{x + 3} = \\dfrac{1 + 1 + 1}{1 + 3} = \\dfrac{3}{4}$។\n\nខ. រាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$B = \\lim_{x \\to 0} \\dfrac{4x}{\\sin(2x)(\\sqrt{1+4x}+1)} = \\lim_{x \\to 0} \\left(\\dfrac{2x}{\\sin 2x}\\right) \\cdot \\dfrac{2}{\\sqrt{1+4x}+1} = 1 \\cdot \\dfrac{2}{1+1} = 1$។\n\nគ. រាង $[\\infty - \\infty]$ ៖\n$C = \\lim_{x \\to +\\infty} \\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\lim_{x \\to +\\infty} \\dfrac{2x}{x(\\sqrt{1+2/x}+1)} = \\dfrac{2}{1+1} = 1$។",
-      "rubric": "ក. គណនា $A = 3/4$ (៥ពិន្ទុ)\nខ. គណនា $B = 1$ (៥ពិន្ទុ)\nគ. គណនា $C = 1$ (៥ពិន្ទុ)",
+      "e": "ក. រាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$A = \\lim_{x \\to 1} \\dfrac{(x - 1)(x^2 + x + 1)}{(x - 1)(x + 3)} = \\lim_{x \\to 1} \\dfrac{x^2 + x + 1}{x + 3} = \\dfrac{1 + 1 + 1}{1 + 3} = \\dfrac{3}{4}$។\n\nខ. រាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$B = \\lim_{x \\to 0} \\dfrac{4x}{\\sin(2x)(\\sqrt{1+4x}+1)} = \\lim_{x \\to 0} \\left(\\dfrac{2x}{\\sin 2x}\\right) \\cdot \\dfrac{2}{\\sqrt{1+4x}+1} = 1 \\cdot \\dfrac{2}{1+1} = 1$។\n\nគ. រាង $[\\infty - \\infty]$ ៖\n$C = \\lim_{x \\to +\\infty} \\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\lim_{x \\to +\\infty} \\dfrac{2x}{x(\\sqrt{1+\\dfrac{2}{x}}+1)} = \\dfrac{2}{1+1} = 1$។",
+      "short_solution": "ក. រាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$A = \\lim_{x \\to 1} \\dfrac{(x - 1)(x^2 + x + 1)}{(x - 1)(x + 3)} = \\lim_{x \\to 1} \\dfrac{x^2 + x + 1}{x + 3} = \\dfrac{1 + 1 + 1}{1 + 3} = \\dfrac{3}{4}$។\n\nខ. រាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$B = \\lim_{x \\to 0} \\dfrac{4x}{\\sin(2x)(\\sqrt{1+4x}+1)} = \\lim_{x \\to 0} \\left(\\dfrac{2x}{\\sin 2x}\\right) \\cdot \\dfrac{2}{\\sqrt{1+4x}+1} = 1 \\cdot \\dfrac{2}{1+1} = 1$។\n\nគ. រាង $[\\infty - \\infty]$ ៖\n$C = \\lim_{x \\to +\\infty} \\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\lim_{x \\to +\\infty} \\dfrac{2x}{x(\\sqrt{1+\\dfrac{2}{x}}+1)} = \\dfrac{2}{1+1} = 1$។",
+      "rubric": "ក. គណនា $A = \\dfrac{3}{4}$ (៥ពិន្ទុ)\nខ. គណនា $B = 1$ (៥ពិន្ទុ)\nគ. គណនា $C = 1$ (៥ពិន្ទុ)",
       "kind": "written"
     },
     {
@@ -143511,7 +143511,7 @@
       "a": null,
       "e": "ក. $z_1 = \\sqrt{2}\\left(\\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}\\right)$។\n$z_2 = 2\\left(\\cos\\left(-\\dfrac{\\pi}{6}\\right) + i\\sin\\left(-\\dfrac{\\pi}{6}\\right)\\right)$។\n\nខ. ផលគុណ ៖\n• ទម្រង់ត្រីកោណមាត្រ ៖ $Z = 2\\sqrt{2}\\left(\\cos\\left(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}\\right) + i\\sin\\left(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}\\right)\\right) = 2\\sqrt{2}\\left(\\cos\\dfrac{\\pi}{12} + i\\sin\\dfrac{\\pi}{12}\\right)$។\n• ទម្រង់ពីជគណិត ៖ $Z = (1 + i)(\\sqrt{3} - i) = \\sqrt{3} - i + i\\sqrt{3} + 1 = (\\sqrt{3} + 1) + (\\sqrt{3} - 1)i$។\n\nគ. ផ្ទឹមអង្គសងខាង ៖\n• $2\\sqrt{2}\\cos\\dfrac{\\pi}{12} = \\sqrt{3} + 1 \\Rightarrow \\cos\\dfrac{\\pi}{12} = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$។\n• $2\\sqrt{2}\\sin\\dfrac{\\pi}{12} = \\sqrt{3} - 1 \\Rightarrow \\sin\\dfrac{\\pi}{12} = \\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$។",
       "short_solution": "ក. $z_1 = \\sqrt{2}\\left(\\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}\\right)$។\n$z_2 = 2\\left(\\cos\\left(-\\dfrac{\\pi}{6}\\right) + i\\sin\\left(-\\dfrac{\\pi}{6}\\right)\\right)$។\n\nខ. ផលគុណ ៖\n• ទម្រង់ត្រីកោណមាត្រ ៖ $Z = 2\\sqrt{2}\\left(\\cos\\left(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}\\right) + i\\sin\\left(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}\\right)\\right) = 2\\sqrt{2}\\left(\\cos\\dfrac{\\pi}{12} + i\\sin\\dfrac{\\pi}{12}\\right)$។\n• ទម្រង់ពីជគណិត ៖ $Z = (1 + i)(\\sqrt{3} - i) = \\sqrt{3} - i + i\\sqrt{3} + 1 = (\\sqrt{3} + 1) + (\\sqrt{3} - 1)i$។\n\nគ. ផ្ទឹមអង្គសងខាង ៖\n• $2\\sqrt{2}\\cos\\dfrac{\\pi}{12} = \\sqrt{3} + 1 \\Rightarrow \\cos\\dfrac{\\pi}{12} = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$។\n• $2\\sqrt{2}\\sin\\dfrac{\\pi}{12} = \\sqrt{3} - 1 \\Rightarrow \\sin\\dfrac{\\pi}{12} = \\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$។",
-      "rubric": "ក. ទម្រង់ត្រីកោណមាត្រ $z_1, z_2$ (៥ពិន្ទុ)\nខ. ទម្រង់ត្រីកោណមាត្រ និងពីជគណិតនៃ $Z$ (៥ពិន្ទុ)\nគ. ទាញតម្លៃ $\\cos(\\pi/12)$ និង $\\sin(\\pi/12)$ (៥ពិន្ទុ)",
+      "rubric": "ក. ទម្រង់ត្រីកោណមាត្រ $z_1, z_2$ (៥ពិន្ទុ)\nខ. ទម្រង់ត្រីកោណមាត្រ និងពីជគណិតនៃ $Z$ (៥ពិន្ទុ)\nគ. ទាញតម្លៃ $\\cos(\\dfrac{\\pi}{12})$ និង $\\sin(\\dfrac{\\pi}{12})$ (៥ពិន្ទុ)",
       "kind": "written",
       "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n    <marker id=\"arrow-blue\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#2563eb\"/>\n    </marker>\n  </defs>\n  <!-- Grid -->\n  <line x1=\"40\" y1=\"160\" x2=\"280\" y2=\"160\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"80\" x2=\"280\" y2=\"80\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <!-- Axes -->\n  <line x1=\"30\" y1=\"140\" x2=\"290\" y2=\"140\" stroke=\"#334155\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"120\" y1=\"180\" x2=\"120\" y2=\"20\" stroke=\"#334155\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"145\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#334155\" font-weight=\"bold\">Re (x)</text>\n  <text x=\"125\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#334155\" font-weight=\"bold\">Im (y)</text>\n  <text x=\"108\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#64748b\">O</text>\n  <!-- Point M(a, b) -->\n  <line x1=\"120\" y1=\"140\" x2=\"220\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.5\" marker-end=\"url(#arrow-blue)\"/>\n  <line x1=\"220\" y1=\"140\" x2=\"220\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"120\" y1=\"60\" x2=\"220\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <circle cx=\"220\" cy=\"60\" r=\"4.5\" fill=\"#ef4444\"/>\n  <text x=\"228\" y=\"58\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#ef4444\" font-weight=\"bold\">M(z = a + bi)</text>\n  <text x=\"215\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#475569\">a</text>\n  <text x=\"105\" y=\"65\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#475569\">b</text>\n  <!-- Angle theta and modulus r -->\n  <path d=\"M 150 140 A 30 30 0 0 0 145 120\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <text x=\"155\" y=\"128\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#d97706\" font-weight=\"bold\">θ</text>\n  <text x=\"160\" y=\"90\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">r = |z|</text>\n</svg>"
     },
@@ -143622,7 +143622,7 @@
       "a": null,
       "e": "ក. $I = \\left[x^3 - 2x^2 + x\\right]_0^2 = (8 - 8 + 2) - 0 = 2$។\n\nខ. រកអាប់ស៊ីសប្រសព្វ ៖ $3 - x^2 = 2 \\iff x^2 = 1 \\iff x = -1$ ឬ $x = 1$។\nលើ $[-1, 1]$ ប៉ារ៉ាបូលនៅពីលើបន្ទាត់ ($3 - x^2 \\ge 2$) ៖\n$S = \\int_{-1}^1 [(3 - x^2) - 2]\\,dx = \\int_{-1}^1 (1 - x^2)\\,dx = \\left[x - \\dfrac{x^3}{3}\\right]_{-1}^1 = \\left(1 - \\dfrac{1}{3}\\right) - \\left(-1 + \\dfrac{1}{3}\\right) = \\dfrac{2}{3} - \\left(-\\dfrac{2}{3}\\right) = \\dfrac{4}{3}$ ឯកតាផ្ទៃ។",
       "short_solution": "ក. $I = \\left[x^3 - 2x^2 + x\\right]_0^2 = (8 - 8 + 2) - 0 = 2$។\n\nខ. រកអាប់ស៊ីសប្រសព្វ ៖ $3 - x^2 = 2 \\iff x^2 = 1 \\iff x = -1$ ឬ $x = 1$។\nលើ $[-1, 1]$ ប៉ារ៉ាបូលនៅពីលើបន្ទាត់ ($3 - x^2 \\ge 2$) ៖\n$S = \\int_{-1}^1 [(3 - x^2) - 2]\\,dx = \\int_{-1}^1 (1 - x^2)\\,dx = \\left[x - \\dfrac{x^3}{3}\\right]_{-1}^1 = \\left(1 - \\dfrac{1}{3}\\right) - \\left(-1 + \\dfrac{1}{3}\\right) = \\dfrac{2}{3} - \\left(-\\dfrac{2}{3}\\right) = \\dfrac{4}{3}$ ឯកតាផ្ទៃ។",
-      "rubric": "ក. គណនាអាំងតេក្រាលកំណត់បាន ២ (១០ពិន្ទុ)\nខ. រកអាប់ស៊ីសប្រសព្វ និងគណនាផ្ទៃក្រឡា $4/3$ (១០ពិន្ទុ)",
+      "rubric": "ក. គណនាអាំងតេក្រាលកំណត់បាន ២ (១០ពិន្ទុ)\nខ. រកអាប់ស៊ីសប្រសព្វ និងគណនាផ្ទៃក្រឡា $\\dfrac{4}{3}$ (១០ពិន្ទុ)",
       "kind": "written",
       "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"70\" y1=\"180\" x2=\"70\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">x</text>\n  <text x=\"75\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">y</text>\n  <!-- Shaded Area between curves -->\n  <path d=\"M 110 110 Q 170 30 230 110 Q 170 140 110 110 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <!-- Top Curve f(x) -->\n  <path d=\"M 80 135 Q 170 20 260 135\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n  <text x=\"195\" y=\"45\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">y = f(x)</text>\n  <!-- Bottom Curve g(x) -->\n  <path d=\"M 80 85 Q 170 160 260 85\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/>\n  <text x=\"195\" y=\"145\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">y = g(x)</text>\n  <!-- Intersection markers -->\n  <circle cx=\"110\" cy=\"110\" r=\"3.5\" fill=\"#334155\"/>\n  <circle cx=\"230\" cy=\"110\" r=\"3.5\" fill=\"#334155\"/>\n  <line x1=\"110\" y1=\"110\" x2=\"110\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"230\" y1=\"110\" x2=\"230\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"105\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">a</text>\n  <text x=\"225\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">b</text>\n  <text x=\"150\" y=\"95\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#1e40af\" font-weight=\"bold\">S = ∫ [f-g]dx</text>\n</svg>"
     },
@@ -143641,7 +143641,7 @@
       "a": null,
       "e": "ឃ្លីសរុបមាន $4 + 6 = 10$ គ្រាប់។\nក. ចំនួនករណីអាច ៖ $n(S) = C(10, 2) = \\dfrac{10 \\times 9}{2} = 45$។\n\nខ. ចាប់បានឃ្លីសទាំង ២ ៖\n$n(A) = C(4, 2) = \\dfrac{4 \\times 3}{2} = 6$។\n$P(A) = \\dfrac{6}{45} = \\dfrac{2}{15}$។\n\nគ. ចាប់បានពណ៌ខុសគ្នា (ស ១ ខ្មៅ ១) ៖\n$n(B) = C(4, 1) \\times C(6, 1) = 4 \\times 6 = 24$។\n$P(B) = \\dfrac{24}{45} = \\dfrac{8}{15}$។",
       "short_solution": "ឃ្លីសរុបមាន $4 + 6 = 10$ គ្រាប់។\nក. ចំនួនករណីអាច ៖ $n(S) = C(10, 2) = \\dfrac{10 \\times 9}{2} = 45$។\n\nខ. ចាប់បានឃ្លីសទាំង ២ ៖\n$n(A) = C(4, 2) = \\dfrac{4 \\times 3}{2} = 6$។\n$P(A) = \\dfrac{6}{45} = \\dfrac{2}{15}$។\n\nគ. ចាប់បានពណ៌ខុសគ្នា (ស ១ ខ្មៅ ១) ៖\n$n(B) = C(4, 1) \\times C(6, 1) = 4 \\times 6 = 24$។\n$P(B) = \\dfrac{24}{45} = \\dfrac{8}{15}$។",
-      "rubric": "ក. គណនា $n(S) = 45$ (៦ពិន្ទុ)\nខ. គណនា $P(A) = 2/15$ (៧ពិន្ទុ)\nគ. គណនា $P(B) = 8/15$ (៧ពិន្ទុ)",
+      "rubric": "ក. គណនា $n(S) = 45$ (៦ពិន្ទុ)\nខ. គណនា $P(A) = \\dfrac{2}{15}$ (៧ពិន្ទុ)\nគ. គណនា $P(B) = \\dfrac{8}{15}$ (៧ពិន្ទុ)",
       "kind": "written"
     },
     {

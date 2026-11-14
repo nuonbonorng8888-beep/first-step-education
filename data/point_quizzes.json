@@ -22164,7 +22164,7 @@
         "options": [
           "$(-\\pi, \\pi]$ (ឬ $[0, 2\\pi)$)",
           "$[0, \\pi]$",
-          "$[-\\pi/2, \\pi/2]$",
+          "$[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$",
           "$[0, +\\infty)$"
         ],
         "correct": 0,
@@ -22233,7 +22233,7 @@
           "$r = 2, \\theta = \\dfrac{2\\pi}{3}$"
         ],
         "correct": 0,
-        "explanation": "$r = \\sqrt{1 + 3} = 2$។ $\\cos\\theta = 1/2, \\sin\\theta = -\\sqrt{3}/2 \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ (កាដ្រង់ទី ៤)។"
+        "explanation": "$r = \\sqrt{1 + 3} = 2$។ $\\cos\\theta = \\dfrac{1}{2}, \\sin\\theta = -\\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ (កាដ្រង់ទី ៤)។"
       },
       {
         "id": "g12b_p1_06",
@@ -22249,7 +22249,7 @@
           "$r = 4, \\theta = \\dfrac{2\\pi}{3}$"
         ],
         "correct": 0,
-        "explanation": "$r = 2$។ $\\cos\\theta = -\\sqrt{3}/2, \\sin\\theta = 1/2$ (កាដ្រង់ទី ២) $\\Rightarrow \\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$។"
+        "explanation": "$r = 2$។ $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}, \\sin\\theta = \\dfrac{1}{2}$ (កាដ្រង់ទី ២) $\\Rightarrow \\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$។"
       },
       {
         "id": "g12b_p1_07",
@@ -22281,7 +22281,7 @@
           "$r = 2, \\theta = \\pi$"
         ],
         "correct": 0,
-        "explanation": "$r = \\sqrt{4+4} = 2\\sqrt{2}$។ កាដ្រង់ទី ៣ ៖ $\\cos\\theta = -\\sqrt{2}/2, \\sin\\theta = -\\sqrt{2}/2 \\Rightarrow \\theta = -\\dfrac{3\\pi}{4}$ (ឬ $\\dfrac{5\\pi}{4}$)។"
+        "explanation": "$r = \\sqrt{4+4} = 2\\sqrt{2}$។ កាដ្រង់ទី ៣ ៖ $\\cos\\theta = -\\dfrac{\\sqrt{2}}{2}, \\sin\\theta = -\\dfrac{\\sqrt{2}}{2} \\Rightarrow \\theta = -\\dfrac{3\\pi}{4}$ (ឬ $\\dfrac{5\\pi}{4}$)។"
       },
       {
         "id": "g12b_p1_09",
@@ -22347,7 +22347,7 @@
           "$z = \\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}$"
         ],
         "correct": 0,
-        "explanation": "$r = \\sqrt{1+1} = \\sqrt{2}, \\theta = \\pi/4 \\Rightarrow z = \\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$។"
+        "explanation": "$r = \\sqrt{1+1} = \\sqrt{2}, \\theta = \\dfrac{\\pi}{4} \\Rightarrow z = \\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4}))$។"
       },
       {
         "id": "g12b_p2_03",
@@ -22363,7 +22363,7 @@
           "$z = 2(\\cos 0 + i\\sin 0)$"
         ],
         "correct": 0,
-        "explanation": "ម៉ូឌុល $r = 2$ អាគុយម៉ង់ $\\theta = -\\pi/2$ (ឬ $3\\pi/2$) ៖ $z = 2(\\cos(-\\pi/2) + i\\sin(-\\pi/2))$។"
+        "explanation": "ម៉ូឌុល $r = 2$ អាគុយម៉ង់ $\\theta = -\\dfrac{\\pi}{2}$ (ឬ $3\\pi/2$) ៖ $z = 2(\\cos(-\\dfrac{\\pi}{2}) + i\\sin(-\\dfrac{\\pi}{2}))$។"
       },
       {
         "id": "g12b_p2_04",
@@ -22395,7 +22395,7 @@
           "$\\sqrt{3}\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$"
         ],
         "correct": 0,
-        "explanation": "$r = 2$។ $\\cos\\theta = -1/2, \\sin\\theta = \\sqrt{3}/2 \\Rightarrow \\theta = \\dfrac{2\\pi}{3}$។ ដូច្នេះ $z = 2(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។"
+        "explanation": "$r = 2$។ $\\cos\\theta = -\\dfrac{1}{2}, \\sin\\theta = \\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = \\dfrac{2\\pi}{3}$។ ដូច្នេះ $z = 2(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។"
       },
       {
         "id": "g12b_p2_06",
@@ -22443,7 +22443,7 @@
           "$\\cos(-\\alpha) + i\\sin(-\\alpha)$"
         ],
         "correct": 0,
-        "explanation": "ដោយប្រើមុំបំពេញ ៖ $\\sin\\alpha = \\cos(\\pi/2 - \\alpha)$ និង $\\cos\\alpha = \\sin(\\pi/2 - \\alpha)$។"
+        "explanation": "ដោយប្រើមុំបំពេញ ៖ $\\sin\\alpha = \\cos(\\dfrac{\\pi}{2} - \\alpha)$ និង $\\cos\\alpha = \\sin(\\dfrac{\\pi}{2} - \\alpha)$។"
       },
       {
         "id": "g12b_p2_09",
@@ -22459,7 +22459,7 @@
           "$1 + \\cos\\theta + i\\sin\\theta$"
         ],
         "correct": 0,
-        "explanation": "$1 - \\cos\\theta = 2\\sin^2(\\theta/2)$ និង $\\sin\\theta = 2\\sin(\\theta/2)\\cos(\\theta/2)$ នាំឱ្យ $z = 2\\sin(\\theta/2)[\\sin(\\theta/2) + i\\cos(\\theta/2)] = 2\\sin(\\theta/2)[\\cos((\\pi-\\theta)/2) + i\\sin((\\pi-\\theta)/2)]$។"
+        "explanation": "$1 - \\cos\\theta = 2\\sin^2(\\theta/2)$ និង $\\sin\\theta = 2\\sin(\\theta/2)\\cos(\\theta/2)$ នាំឱ្យ $z = 2\\sin(\\theta/2)[\\sin(\\theta/2) + i\\cos(\\theta/2)] = 2\\sin(\\theta/2)[\\cos\\dfrac{(\\pi-\\theta}{2}) + i\\sin\\dfrac{(\\pi-\\theta}{2})]$។"
       },
       {
         "id": "g12b_p2_10",
@@ -22472,7 +22472,7 @@
           "$\\sqrt{2} e^{-i 3\\pi/4}$",
           "$\\sqrt{2} e^{i 3\\pi/4}$",
           "$2 e^{-i 3\\pi/4}$",
-          "$\\sqrt{2} e^{i \\pi/4}$"
+          "$\\sqrt{2} e^{i \\dfrac{\\pi}{4}}$"
         ],
         "correct": 0,
         "explanation": "$r = \\sqrt{2}, \\theta = -3\\pi/4$ នាំឱ្យ $z = \\sqrt{2} e^{-i 3\\pi/4}$ (ឬ $\\sqrt{2} e^{i 5\\pi/4}$)។"
@@ -22525,7 +22525,7 @@
           "$-6i$"
         ],
         "correct": 0,
-        "explanation": "$r = 2 \\times 3 = 6$។ $\\theta = \\pi/6 + \\pi/3 = \\pi/2$។ $z = 6(\\cos(\\pi/2) + i\\sin(\\pi/2)) = 6(0 + i) = 6i$។"
+        "explanation": "$r = 2 \\times 3 = 6$។ $\\theta = \\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}$។ $z = 6(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2})) = 6(0 + i) = 6i$។"
       },
       {
         "id": "g12b_p3_04",
@@ -22533,7 +22533,7 @@
         "pointNumber": "3",
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណ និងផលចែកទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "គណនាផលចែក $z = \\dfrac{6(\\cos\\pi + i\\sin\\pi)}{2(\\cos(\\pi/3) + i\\sin(\\pi/3))}$ ៖",
+        "question": "គណនាផលចែក $z = \\dfrac{6(\\cos\\pi + i\\sin\\pi)}{2(\\cos(\\dfrac{\\pi}{3}) + i\\sin(\\dfrac{\\pi}{3}))}$ ៖",
         "options": [
           "$3\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$",
           "$3\\left(\\cos\\dfrac{4\\pi}{3} + i\\sin\\dfrac{4\\pi}{3}\\right)$",
@@ -22541,7 +22541,7 @@
           "$3(\\cos\\pi - i\\sin\\pi)$"
         ],
         "correct": 0,
-        "explanation": "$r = 6/2 = 3$។ $\\theta = \\pi - \\pi/3 = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។"
+        "explanation": "$r = \\dfrac{6}{2} = 3$។ $\\theta = \\pi - \\dfrac{\\pi}{3} = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។"
       },
       {
         "id": "g12b_p3_05",
@@ -22557,7 +22557,7 @@
           "$\\dfrac{\\pi}{3}$"
         ],
         "correct": 0,
-        "explanation": "$\\text{Arg}(z_1) = \\pi/4$ និង $\\text{Arg}(z_2) = \\pi/6$។ $\\text{Arg}(z_1 z_2) = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{12}$។"
+        "explanation": "$\\text{Arg}(z_1) = \\dfrac{\\pi}{4}$ និង $\\text{Arg}(z_2) = \\dfrac{\\pi}{6}$។ $\\text{Arg}(z_1 z_2) = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{12}$។"
       },
       {
         "id": "g12b_p3_06",
@@ -22589,7 +22589,7 @@
           "$\\dfrac{\\sqrt{2} + 1}{4}$"
         ],
         "correct": 0,
-        "explanation": "$\\cos(\\pi/12) = \\cos(\\pi/4 - \\pi/6) = \\cos(\\pi/4)\\cos(\\pi/6) + \\sin(\\pi/4)\\sin(\\pi/6) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$។"
+        "explanation": "$\\cos(\\dfrac{\\pi}{12}) = \\cos(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\cos(\\dfrac{\\pi}{4})\\cos(\\dfrac{\\pi}{6}) + \\sin(\\dfrac{\\pi}{4})\\sin(\\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$។"
       },
       {
         "id": "g12b_p3_08",
@@ -22605,7 +22605,7 @@
           "$\\dfrac{\\sqrt{2} - 1}{4}$"
         ],
         "correct": 0,
-        "explanation": "$\\sin(\\pi/12) = \\sin(\\pi/4 - \\pi/6) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$។"
+        "explanation": "$\\sin(\\dfrac{\\pi}{12}) = \\sin(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$។"
       },
       {
         "id": "g12b_p3_09",
@@ -22621,7 +22621,7 @@
           "$2\\left(\\cos\\dfrac{5\\pi}{12} + i\\sin\\dfrac{5\\pi}{12}\\right)$"
         ],
         "correct": 0,
-        "explanation": "$|1+i| = \\sqrt{2}, \\theta_1 = \\pi/4$។ $|\\sqrt{3}-i| = 2, \\theta_2 = -\\pi/6$។ ម៉ូឌុល $r = \\sqrt{2}/2$។ $\\theta = \\pi/4 - (-\\pi/6) = 5\\pi/12$។"
+        "explanation": "$|1+i| = \\sqrt{2}, \\theta_1 = \\dfrac{\\pi}{4}$។ $|\\sqrt{3}-i| = 2, \\theta_2 = -\\dfrac{\\pi}{6}$។ ម៉ូឌុល $r = \\dfrac{\\sqrt{2}}{2}$។ $\\theta = \\dfrac{\\pi}{4} - (-\\dfrac{\\pi}{6}) = 5\\pi/12$។"
       },
       {
         "id": "g12b_p3_10",
@@ -22708,7 +22708,7 @@
           "$2$"
         ],
         "correct": 0,
-        "explanation": "$1 - \\cos x = 2\\sin^2(x/2)$ នាំឱ្យ $\\lim_{x \\to 0} \\dfrac{2\\sin^2(x/2)}{4(x/2)^2} = \\dfrac{1}{2}$។",
+        "explanation": "$1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ នាំឱ្យ $\\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{4\\left(\\dfrac{x}{2}\\right)^{2}} = \\dfrac{1}{2}$។",
         "diagram": ""
       },
       {
@@ -22768,7 +22768,7 @@
         "pointNumber": "1",
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាលីមីត $\\lim_{x \\to \\frac{\\pi}{2}} \\dfrac{1 - \\sin x}{(\\pi/2 - x)^2}$ ៖",
+        "question": "គណនាលីមីត $\\lim_{x \\to \\frac{\\pi}{2}} \\dfrac{1 - \\sin x}{(\\dfrac{\\pi}{2} - x)^2}$ ៖",
         "options": [
           "$\\dfrac{1}{2}$",
           "$1$",
@@ -22776,7 +22776,7 @@
           "$2$"
         ],
         "correct": 0,
-        "explanation": "តាង $t = \\pi/2 - x \\to 0 \\implies x = \\pi/2 - t$។ $\\sin x = \\cos t$។ $\\lim_{t \\to 0} \\dfrac{1 - \\cos t}{t^2} = \\dfrac{1}{2}$។",
+        "explanation": "តាង $t = \\dfrac{\\pi}{2} - x \\to 0 \\implies x = \\dfrac{\\pi}{2} - t$។ $\\sin x = \\cos t$។ $\\lim_{t \\to 0} \\dfrac{1 - \\cos t}{t^2} = \\dfrac{1}{2}$។",
         "diagram": ""
       },
       {
@@ -22810,7 +22810,7 @@
           "គ្មានលីមីត"
         ],
         "correct": 0,
-        "explanation": "តាង $t = 1/x \\to 0^+$៖ $\\lim_{t \\to 0^+} \\dfrac{\\sin t}{t} = 1$។",
+        "explanation": "តាង $t = \\dfrac{1}{x} \\to 0^+$៖ $\\lim_{t \\to 0^+} \\dfrac{\\sin t}{t} = 1$។",
         "diagram": ""
       }
     ],
@@ -22829,7 +22829,7 @@
           "$[0 + \\infty] = \\infty$"
         ],
         "correct": 0,
-        "explanation": "រាងមិនកំណត់ចម្បងទាំង ៤ គឺ $[0/0]$, $[\\infty/\\infty]$, $[\\infty - \\infty]$, $[0 \\times \\infty]$។",
+        "explanation": "រាងមិនកំណត់ចម្បងទាំង ៤ គឺ $[\\dfrac{0}{0}]$, $[\\infty/\\infty]$, $[\\infty - \\infty]$, $[0 \\times \\infty]$។",
         "diagram": ""
       },
       {
@@ -22897,7 +22897,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "រាង $[\\infty - \\infty]$៖ គុណឆ្លាស់ $\\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\dfrac{2x}{x(\\sqrt{1+2/x} + 1)} \\to \\dfrac{2}{2} = 1$។",
+        "explanation": "រាង $[\\infty - \\infty]$៖ គុណឆ្លាស់ $\\dfrac{x^2 + 2x - x^2}{\\sqrt{x^2+2x} + x} = \\dfrac{2x}{x(\\sqrt{1+\\dfrac{2}{x}} + 1)} \\to \\dfrac{2}{2} = 1$។",
         "diagram": ""
       },
       {
@@ -22931,7 +22931,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin(1/x) \\le 1 \\implies -x^2 \\le x^2\\sin(1/x) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។",
+        "explanation": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin^\\left(\\dfrac{1}{x}\\right) \\le 1 \\implies -x^2 \\le x^2\\sin^\\left(\\dfrac{1}{x}\\right) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។",
         "diagram": ""
       },
       {
@@ -22948,7 +22948,7 @@
           "$\\dfrac{1}{2}$"
         ],
         "correct": 0,
-        "explanation": "ប្រើរូបមន្ត $a - b = \\dfrac{a^3 - b^3}{a^2 + ab + b^2}$ នាំឱ្យបាន $\\dfrac{1}{x^{2/3} + x^{1/3} + 1} \\to \\dfrac{1}{3}$។",
+        "explanation": "ប្រើរូបមន្ត $a - b = \\dfrac{a^3 - b^3}{a^2 + ab + b^2}$ នាំឱ្យបាន $\\dfrac{1}{x^{\\frac{2}{3}} + x^{\\frac{1}{3}} + 1} \\to \\dfrac{1}{3}$។",
         "diagram": ""
       },
       {
@@ -22965,7 +22965,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "រាង $[\\infty - \\infty]$៖ $\\sqrt{x^2-4x} = |x|\\sqrt{1-4/x} = -x\\sqrt{1-4/x}$ (ព្រោះ $x < 0$)។ គុណឆ្លាស់៖ $\\dfrac{-4x}{\\sqrt{x^2-4x} - x} = \\dfrac{-4x}{-x\\sqrt{1-4/x} - x} = \\dfrac{-4}{-2} = 2$។",
+        "explanation": "រាង $[\\infty - \\infty]$៖ $\\sqrt{x^2-4x} = |x|\\sqrt{1-\\dfrac{4}{x}} = -x\\sqrt{1-\\dfrac{4}{x}}$ (ព្រោះ $x < 0$)។ គុណឆ្លាស់៖ $\\dfrac{-4x}{\\sqrt{x^2-4x} - x} = \\dfrac{-4x}{-x\\sqrt{1-\\dfrac{4}{x}} - x} = \\dfrac{-4}{-2} = 2$។",
         "diagram": ""
       },
       {
@@ -23001,7 +23001,7 @@
           "$0$"
         ],
         "correct": 0,
-        "explanation": "និយមន័យនៃចំនួនអយល័រ $e$៖ $\\lim_{x \\to +\\infty} (1 + 1/x)^x = e \\approx 2.71828$។",
+        "explanation": "និយមន័យនៃចំនួនអយល័រ $e$៖ $\\lim_{x \\to +\\infty} (1 + \\dfrac{1}{x})^x = e \\approx 2.71828$។",
         "diagram": ""
       },
       {
@@ -23010,7 +23010,7 @@
         "pointNumber": "3",
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល និងលោការីត",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "លីមីតគ្រឹះ $\\lim_{x \\to 0} (1 + x)^{1/x}$ ស្មើនឹង ៖",
+        "question": "លីមីតគ្រឹះ $\\lim_{x \\to 0} (1 + x)^{\\frac{1}{x}}$ ស្មើនឹង ៖",
         "options": [
           "$e$",
           "$1$",
@@ -23018,7 +23018,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "តាង $t = 1/x$: $\\lim_{x \\to 0} (1 + x)^{1/x} = e$។",
+        "explanation": "តាង $t = \\dfrac{1}{x}$: $\\lim_{x \\to 0} (1 + x)^{\\frac{1}{x}} = e$។",
         "diagram": ""
       },
       {
@@ -23069,7 +23069,7 @@
           "$1$"
         ],
         "correct": 0,
-        "explanation": "$\\lim_{x \\to +\\infty} \\left[(1 + \\frac{2}{x})^{x/2}\\right]^2 = e^2$។",
+        "explanation": "$\\lim_{x \\to +\\infty} \\left[(1 + \\frac{2}{x})^{\\frac{x}{2}}\\right]^2 = e^2$។",
         "diagram": ""
       },
       {
@@ -23120,7 +23120,7 @@
           "$e$"
         ],
         "correct": 0,
-        "explanation": "$x \\ln(1 + 1/x) = \\ln[(1 + 1/x)^x] \\to \\ln e = 1$។",
+        "explanation": "$x \\ln(1 + \\dfrac{1}{x}) = \\ln[(1 + \\dfrac{1}{x})^x] \\to \\ln e = 1$។",
         "diagram": ""
       },
       {
@@ -23129,15 +23129,15 @@
         "pointNumber": "3",
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល និងលោការីត",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាលីមីត $\\lim_{x \\to 0} (\\cos x)^{1/x^2}$ ៖",
+        "question": "គណនាលីមីត $\\lim_{x \\to 0} (\\cos x)^{\\dfrac{1}{x}^2}$ ៖",
         "options": [
-          "$e^{-1/2}$",
+          "$e^{-\\dfrac{1}{2}}$",
           "$1$",
           "$e$",
           "$0$"
         ],
         "correct": 0,
-        "explanation": "$\\ln y = \\dfrac{\\ln \\cos x}{x^2} = \\dfrac{\\ln(1 - (1-\\cos x))}{-(1-\\cos x)} \\cdot \\dfrac{-(1-\\cos x)}{x^2} \\to -1/2 \\implies y \\to e^{-1/2}$។",
+        "explanation": "$\\ln y = \\dfrac{\\ln \\cos x}{x^2} = \\dfrac{\\ln(1 - (1-\\cos x))}{-(1-\\cos x)} \\cdot \\dfrac{-(1-\\cos x)}{x^2} \\to -\\dfrac{1}{2} \\implies y \\to e^{-\\dfrac{1}{2}}$។",
         "diagram": ""
       },
       {
@@ -23415,7 +23415,7 @@
           "គ្មានឫសទេ"
         ],
         "correct": 0,
-        "explanation": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 > 0$ និង $f(\\pi/2) = 0 - \\pi/2 < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\pi/2)$។",
+        "explanation": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 > 0$ និង $f(\\dfrac{\\pi}{2}) = 0 - \\dfrac{\\pi}{2} < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\dfrac{\\pi}{2})$។",
         "diagram": ""
       },
       {
@@ -23449,7 +23449,7 @@
           "រកសមីការបន្ទាត់ប៉ះ"
         ],
         "correct": 0,
-        "explanation": "វិធីពុះជាពីរ (Bisection) គណនាតម្លៃកណ្តាល $m = (a+b)/2$ ហើយជ្រើសយកពាក់កណ្តាលចន្លោះដែលមានសញ្ញាផ្ទុយគ្នាដើម្បីរំកិលទៅជិតឫស។",
+        "explanation": "វិធីពុះជាពីរ (Bisection) គណនាតម្លៃកណ្តាល $m = \\dfrac{a+b}{2}$ ហើយជ្រើសយកពាក់កណ្តាលចន្លោះដែលមានសញ្ញាផ្ទុយគ្នាដើម្បីរំកិលទៅជិតឫស។",
         "diagram": ""
       },
       {
@@ -23572,7 +23572,7 @@
           "មិនជាប់ត្រង់ $0$"
         ],
         "correct": 0,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{\\sqrt[3]{x} - 0}{x} = \\lim_{x \\to 0} \\dfrac{1}{x^{2/3}} = +\\infty$ នាំឱ្យបន្ទាត់ប៉ះជាបន្ទាត់ឈរ ដូច្នេះគ្មានដេរីវេជាចំនួនពិតទេ។",
+        "explanation": "$\\lim_{x \\to 0} \\dfrac{\\sqrt[3]{x} - 0}{x} = \\lim_{x \\to 0} \\dfrac{1}{x^{\\frac{2}{3}}} = +\\infty$ នាំឱ្យបន្ទាត់ប៉ះជាបន្ទាត់ឈរ ដូច្នេះគ្មានដេរីវេជាចំនួនពិតទេ។",
         "diagram": ""
       },
       {
@@ -23632,7 +23632,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ១ ៖ ភាពមានដេរីវេ និងទំនាក់ទំនងជាមួយភាពជាប់",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "តើអនុគមន៍ $f(x) = \\begin{cases} x^2 \\sin(1/x) & \\text{បើ } x \\neq 0 \\\\ 0 & \\text{បើ } x = 0 \\end{cases}$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
+        "question": "តើអនុគមន៍ $f(x) = \\begin{cases} x^2 \\sin^\\left(\\dfrac{1}{x}\\right) & \\text{បើ } x \\neq 0 \\\\ 0 & \\text{បើ } x = 0 \\end{cases}$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
         "options": [
           "មាន ហើយ $f'(0) = 0$",
           "គ្មានដេរីវេទេ",
@@ -23640,7 +23640,7 @@
           "មិនជាប់ត្រង់ 0"
         ],
         "correct": 0,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin(1/x) - 0}{x} = \\lim_{x \\to 0} x \\sin(1/x) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
+        "explanation": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin^\\left(\\dfrac{1}{x}\\right) - 0}{x} = \\lim_{x \\to 0} x \\sin^\\left(\\dfrac{1}{x}\\right) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
         "diagram": ""
       },
       {
@@ -23657,7 +23657,7 @@
           "គ្មានដេរីវេត្រង់ $x \\neq 0$"
         ],
         "correct": 0,
-        "explanation": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin(1/x) - \\cos(1/x)$។ កាលណា $x \\to 0$ តួ $\\cos(1/x)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
+        "explanation": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin^\\left(\\dfrac{1}{x}\\right) - \\cos^\\left(\\dfrac{1}{x}\\right)$។ កាលណា $x \\to 0$ តួ $\\cos^\\left(\\dfrac{1}{x}\\right)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
         "diagram": ""
       },
       {
@@ -24001,7 +24001,7 @@
           "$(-1)^n \\cos x$"
         ],
         "correct": 0,
-        "explanation": "$y' = \\cos x = \\sin(x + \\pi/2)$, $y'' = \\sin(x + \\pi)$, ... $y^{(n)} = \\sin(x + n\\pi/2)$។",
+        "explanation": "$y' = \\cos x = \\sin(x + \\dfrac{\\pi}{2})$, $y'' = \\sin(x + \\pi)$, ... $y^{(n)} = \\sin(x + n\\pi/2)$។",
         "diagram": ""
       },
       {
@@ -24169,13 +24169,13 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "រថយន្តមួយបើកបរលើផ្លូវល្បឿនលឿនចម្ងាយ $150\\text{ km}$ ដោយប្រើពេល $1.5\\text{ h}$។ តាមទ្រឹស្តីបទ Lagrange ៖",
         "options": [
-          "មានពេលមួយយ៉ាងតិចដែលកុងទ័រល្បឿនចង្អុល $100\\text{ km/h}$ យ៉ាងពិតប្រាកដ",
-          "ល្បឿនមិនដែលលើស $100\\text{ km/h}$ ទេ",
-          "ល្បឿនថេរ $100\\text{ km/h}$ រហូត",
+          "មានពេលមួយយ៉ាងតិចដែលកុងទ័រល្បឿនចង្អុល $100\\text{ \\dfrac{km}{h}}$ យ៉ាងពិតប្រាកដ",
+          "ល្បឿនមិនដែលលើស $100\\text{ \\dfrac{km}{h}}$ ទេ",
+          "ល្បឿនថេរ $100\\text{ \\dfrac{km}{h}}$ រហូត",
           "មិនអាចដឹងបាន"
         ],
         "correct": 0,
-        "explanation": "ល្បឿនមធ្យម = $150 / 1.5 = 100\\text{ km/h}$។ តាម Lagrange មានពេល $c$ ដែល $v(c) = s'(c) = 100\\text{ km/h}$។",
+        "explanation": "ល្បឿនមធ្យម = $\\dfrac{150}{1}.5 = 100\\text{ \\dfrac{km}{h}}$។ តាម Lagrange មានពេល $c$ ដែល $v(c) = s'(c) = 100\\text{ \\dfrac{km}{h}}$។",
         "diagram": ""
       },
       {
@@ -24237,15 +24237,15 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប៉េងប៉ោងរាងស្វ៊ែរមួយត្រូវគេច្រកខ្យល់ក្នុងអត្រា $100\\text{ cm}^3/\\text{s}$ ($dV/dt = 100$)។ រកអត្រាបម្រែបម្រួលនៃកាំ $dr/dt$ នៅខណៈដែលកាំ $r = 5\\text{ cm}$ ៖",
+        "question": "ប៉េងប៉ោងរាងស្វ៊ែរមួយត្រូវគេច្រកខ្យល់ក្នុងអត្រា $100\\text{ cm}^3/\\text{s}$ ($\\dfrac{dV}{dt} = 100$)។ រកអត្រាបម្រែបម្រួលនៃកាំ $\\dfrac{dr}{dt}$ នៅខណៈដែលកាំ $r = 5\\text{ cm}$ ៖",
         "options": [
-          "$\\dfrac{1}{\\pi}\\text{ cm/s}$",
-          "$\\dfrac{2}{\\pi}\\text{ cm/s}$",
-          "$4\\pi\\text{ cm/s}$",
-          "$\\dfrac{4}{\\pi}\\text{ cm/s}$"
+          "$\\dfrac{1}{\\pi}\\text{ \\dfrac{cm}{s}}$",
+          "$\\dfrac{2}{\\pi}\\text{ \\dfrac{cm}{s}}$",
+          "$4\\pi\\text{ \\dfrac{cm}{s}}$",
+          "$\\dfrac{4}{\\pi}\\text{ \\dfrac{cm}{s}}$"
         ],
         "correct": 0,
-        "explanation": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\text{ cm/s}$។",
+        "explanation": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\text{ \\dfrac{cm}{s}}$។",
         "diagram": ""
       },
       {
@@ -24254,15 +24254,15 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ជណ្តើរប្រវែង $5\\text{ m}$ ច្រត់នឹងជញ្ជាំងបញ្ឈរ។ ជើងជណ្តើររអិលចេញពីជញ្ជាំងក្នុងល្បឿន $2\\text{ m/s}$ ($dx/dt = 2$)។ រកល្បឿនដែលចុងជណ្តើរខាងលើរអិលចុះក្រោមនៅពេលជើងជណ្តើរនៅឆ្ងាយពីជញ្ជាំង $3\\text{ m}$ ៖",
+        "question": "ជណ្តើរប្រវែង $5\\text{ m}$ ច្រត់នឹងជញ្ជាំងបញ្ឈរ។ ជើងជណ្តើររអិលចេញពីជញ្ជាំងក្នុងល្បឿន $2\\text{ \\dfrac{m}{s}}$ ($\\dfrac{dx}{dt} = 2$)។ រកល្បឿនដែលចុងជណ្តើរខាងលើរអិលចុះក្រោមនៅពេលជើងជណ្តើរនៅឆ្ងាយពីជញ្ជាំង $3\\text{ m}$ ៖",
         "options": [
-          "$-1.5\\text{ m/s}$",
-          "$-2\\text{ m/s}$",
-          "$-1\\text{ m/s}$",
-          "$-0.75\\text{ m/s}$"
+          "$-1.5\\text{ \\dfrac{m}{s}}$",
+          "$-2\\text{ \\dfrac{m}{s}}$",
+          "$-1\\text{ \\dfrac{m}{s}}$",
+          "$-0.75\\text{ \\dfrac{m}{s}}$"
         ],
         "correct": 0,
-        "explanation": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\text{ m/s}$។",
+        "explanation": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\text{ \\dfrac{m}{s}}$។",
         "diagram": ""
       },
       {
@@ -24271,7 +24271,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ការ៉េមួយមានជ្រុងកើនឡើងក្នុងអត្រា $3\\text{ cm/s}$។ រកអត្រាកំណើនផ្ទៃក្រឡាការ៉េនៅពេលជ្រុងមានប្រវែង $10\\text{ cm}$ ៖",
+        "question": "ការ៉េមួយមានជ្រុងកើនឡើងក្នុងអត្រា $3\\text{ \\dfrac{cm}{s}}$។ រកអត្រាកំណើនផ្ទៃក្រឡាការ៉េនៅពេលជ្រុងមានប្រវែង $10\\text{ cm}$ ៖",
         "options": [
           "$60\\text{ cm}^2/\\text{s}$",
           "$30\\text{ cm}^2/\\text{s}$",
@@ -24307,13 +24307,13 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "ធុងរាងកោណផ្កាប់មានកម្ពស់ $12\\text{ m}$ និងកាំមាត់ខាងលើ $4\\text{ m}$។ ទឹកហូរចូលក្នុងអត្រា $2\\text{ m}^3/\\text{min}$។ រកអត្រាកម្ពស់ទឹកកើនឡើងនៅពេលទឹកមានជម្រៅ $h = 6\\text{ m}$ ៖",
         "options": [
-          "$\\dfrac{1}{2\\pi}\\text{ m/min}$",
-          "$\\dfrac{1}{\\pi}\\text{ m/min}$",
-          "$\\dfrac{2}{\\pi}\\text{ m/min}$",
-          "$\\dfrac{1}{4\\pi}\\text{ m/min}$"
+          "$\\dfrac{1}{2\\pi}\\text{ \\dfrac{m}{min}}$",
+          "$\\dfrac{1}{\\pi}\\text{ \\dfrac{m}{min}}$",
+          "$\\dfrac{2}{\\pi}\\text{ \\dfrac{m}{min}}$",
+          "$\\dfrac{1}{4\\pi}\\text{ \\dfrac{m}{min}}$"
         ],
         "correct": 0,
-        "explanation": "តាមត្រីកោណដូចគ្នា $r/h = 4/12 = 1/3 \\implies r = h/3$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\text{ m/min}$។",
+        "explanation": "តាមត្រីកោណដូចគ្នា $\\dfrac{r}{h} = \\dfrac{4}{12} = \\dfrac{1}{3} \\implies r = \\dfrac{h}{3}$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\text{ \\dfrac{m}{min}}$។",
         "diagram": ""
       },
       {
@@ -24322,15 +24322,15 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "មនុស្សម្នាក់កម្ពស់ $1.8\\text{ m}$ ដើរចេញពីបង្គោលភ្លើងកម្ពស់ $5.4\\text{ m}$ ក្នុងល្បឿន $1.2\\text{ m/s}$។ រកល្បឿនដែលស្រមោលរបស់គាត់លាតសន្ធឹងវែងទៅមុខ ៖",
+        "question": "មនុស្សម្នាក់កម្ពស់ $1.8\\text{ m}$ ដើរចេញពីបង្គោលភ្លើងកម្ពស់ $5.4\\text{ m}$ ក្នុងល្បឿន $1.2\\text{ \\dfrac{m}{s}}$។ រកល្បឿនដែលស្រមោលរបស់គាត់លាតសន្ធឹងវែងទៅមុខ ៖",
         "options": [
-          "$0.6\\text{ m/s}$",
-          "$1.2\\text{ m/s}$",
-          "$0.8\\text{ m/s}$",
-          "$1.8\\text{ m/s}$"
+          "$0.6\\text{ \\dfrac{m}{s}}$",
+          "$1.2\\text{ \\dfrac{m}{s}}$",
+          "$0.8\\text{ \\dfrac{m}{s}}$",
+          "$1.8\\text{ \\dfrac{m}{s}}$"
         ],
         "correct": 0,
-        "explanation": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = x/2$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\text{ m/s}$។",
+        "explanation": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = \\dfrac{x}{2}$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\text{ \\dfrac{m}{s}}$។",
         "diagram": ""
       },
       {
@@ -24339,15 +24339,15 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "នាវា A ចេញដំណើរទៅទិសខាងកើតក្នុងល្បឿន $20\\text{ km/h}$ និងនាវា B ចេញដំណើរពីកំពង់ផែដដែលទៅទិសខាងជើងក្នុងល្បឿន $15\\text{ km/h}$។ រកអត្រាកំណើនចម្ងាយរវាងនាវាទាំងពីរ ៖",
+        "question": "នាវា A ចេញដំណើរទៅទិសខាងកើតក្នុងល្បឿន $20\\text{ \\dfrac{km}{h}}$ និងនាវា B ចេញដំណើរពីកំពង់ផែដដែលទៅទិសខាងជើងក្នុងល្បឿន $15\\text{ \\dfrac{km}{h}}$។ រកអត្រាកំណើនចម្ងាយរវាងនាវាទាំងពីរ ៖",
         "options": [
-          "$25\\text{ km/h}$ ថេរជានិច្ច",
-          "$35\\text{ km/h}$",
-          "$20\\text{ km/h}$",
+          "$25\\text{ \\dfrac{km}{h}}$ ថេរជានិច្ច",
+          "$35\\text{ \\dfrac{km}{h}}$",
+          "$20\\text{ \\dfrac{km}{h}}$",
           "អាស្រ័យនឹងពេល $t$"
         ],
         "correct": 0,
-        "explanation": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\text{ km/h}$ ថេរជានិច្ច។",
+        "explanation": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\text{ \\dfrac{km}{h}}$ ថេរជានិច្ច។",
         "diagram": ""
       },
       {
@@ -24385,7 +24385,7 @@
           "$[1^\\infty]$ តែមួយគត់"
         ],
         "correct": 0,
-        "explanation": "ច្បាប់ L'Hôpital ប្រើបានដោយផ្ទាល់ចំពោះតែផលចែករាងមិនកំណត់ $[0/0]$ និង $[\\infty/\\infty]$ ប៉ុណ្ណោះ។",
+        "explanation": "ច្បាប់ L'Hôpital ប្រើបានដោយផ្ទាល់ចំពោះតែផលចែករាងមិនកំណត់ $[\\dfrac{0}{0}]$ និង $[\\infty/\\infty]$ ប៉ុណ្ណោះ។",
         "diagram": ""
       },
       {
@@ -24394,7 +24394,7 @@
         "pointNumber": "1",
         "pointTitle": "ចំណុចទី ១ ៖ ច្បាប់ឡូពីតាល់ (L'Hôpital's Rule)",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "តាមច្បាប់ L'Hôpital៖ បើ $\\lim_{x \\to c} \\dfrac{f(x)}{g(x)}$ ជារាង $[0/0]$ ឬ $[\\infty/\\infty]$ នោះលីមីតស្មើនឹង ៖",
+        "question": "តាមច្បាប់ L'Hôpital៖ បើ $\\lim_{x \\to c} \\dfrac{f(x)}{g(x)}$ ជារាង $[\\dfrac{0}{0}]$ ឬ $[\\infty/\\infty]$ នោះលីមីតស្មើនឹង ៖",
         "options": [
           "$\\lim_{x \\to c} \\dfrac{f'(x)}{g'(x)}$",
           "$\\lim_{x \\to c} \\left(\\dfrac{f(x)}{g(x)}\\right)'$",
@@ -24447,13 +24447,13 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដើម្បីអនុវត្ត L'Hôpital ចំពោះរាង $[0 \\times \\infty]$ គេត្រូវ ៖",
         "options": [
-          "សរសេរជាផលចែក $f \\cdot g = \\dfrac{f}{1/g}$ ដើម្បីបានរាង $[0/0]$ ឬ $[\\infty/\\infty]$",
+          "សរសេរជាផលចែក $f \\cdot g = \\dfrac{f}{\\dfrac{1}{g}}$ ដើម្បីបានរាង $[\\dfrac{0}{0}]$ ឬ $[\\infty/\\infty]$",
           "គុណនឹងសូន្យ",
           "យកដេរីវេភ្លាមៗ",
           "បូកនឹងអនន្ត"
         ],
         "correct": 0,
-        "explanation": "បំប្លែងរាង $0 \\times \\infty$ ទៅជាផលចែក $\\dfrac{f}{1/g}$ (រាង $0/0$) រួចទើបអនុវត្ត L'Hôpital។",
+        "explanation": "បំប្លែងរាង $0 \\times \\infty$ ទៅជាផលចែក $\\dfrac{f}{\\dfrac{1}{g}}$ (រាង $\\dfrac{0}{0}$) រួចទើបអនុវត្ត L'Hôpital។",
         "diagram": ""
       },
       {
@@ -24470,7 +24470,7 @@
           "$\\dfrac{1}{2}$"
         ],
         "correct": 0,
-        "explanation": "រាង $[\\infty/\\infty]$៖ $\\lim_{x \\to +\\infty} \\dfrac{1/x}{2x} = \\lim_{x \\to +\\infty} \\dfrac{1}{2x^2} = 0$។",
+        "explanation": "រាង $[\\infty/\\infty]$៖ $\\lim_{x \\to +\\infty} \\dfrac{\\dfrac{1}{x}}{2x} = \\lim_{x \\to +\\infty} \\dfrac{1}{2x^2} = 0$។",
         "diagram": ""
       },
       {
@@ -24504,7 +24504,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "តាង $y = x^x \\implies \\ln y = x \\ln x = \\dfrac{\\ln x}{1/x}$។ តាម L'Hôpital: $\\lim \\dfrac{1/x}{-1/x^2} = \\lim(-x) = 0$។ នាំឱ្យ $y = e^0 = 1$។",
+        "explanation": "តាង $y = x^x \\implies \\ln y = x \\ln x = \\dfrac{\\ln x}{\\dfrac{1}{x}}$។ តាម L'Hôpital: $\\lim \\dfrac{\\dfrac{1}{x}}{-\\dfrac{1}{x}^2} = \\lim(-x) = 0$។ នាំឱ្យ $y = e^0 = 1$។",
         "diagram": ""
       },
       {
@@ -24515,7 +24515,7 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "តើច្បាប់ L'Hôpital អាចអនុវត្តចំពោះ $\\lim_{x \\to 0} \\dfrac{\\cos x}{x+1}$ បានដែរឬទេ?",
         "options": [
-          "មិនអាចទេ ព្រោះមិនមែនជារាងមិនកំណត់ ($0/0$ ឬ $\\infty/\\infty$)",
+          "មិនអាចទេ ព្រោះមិនមែនជារាងមិនកំណត់ ($\\dfrac{0}{0}$ ឬ $\\infty/\\infty$)",
           "អាចបាន ព្រោះជាផលចែក",
           "អនុវត្តបានគ្រប់កាលៈទេសៈ",
           "បានតែដេរីវេភាគបែង"
@@ -24538,7 +24538,7 @@
           "$1$"
         ],
         "correct": 0,
-        "explanation": "ភាគយក $\\approx x^3/6$, ភាគបែង $\\approx -x^3/3$។ លីមីត = $\\dfrac{1/6}{-1/3} = -\\dfrac{1}{2}$។",
+        "explanation": "ភាគយក $\\approx x^\\dfrac{3}{6}$, ភាគបែង $\\approx -x^\\dfrac{3}{3}$។ លីមីត = $\\dfrac{\\dfrac{1}{6}}{-\\dfrac{1}{3}} = -\\dfrac{1}{2}$។",
         "diagram": ""
       }
     ],
@@ -24725,13 +24725,13 @@
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
         "question": "ដែនកំណត់នៃអនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ ($c \\neq 0$) គឺ ៖",
         "options": [
-          "$D = \\mathbb{R} \\setminus \\{-d/c\\}$",
+          "$D = \\mathbb{R} \\setminus \\{-\\dfrac{d}{c}\\}$",
           "$D = \\mathbb{R}$",
           "$D = (0, +\\infty)$",
-          "$D = \\mathbb{R} \\setminus \\{a/c\\}$"
+          "$D = \\mathbb{R} \\setminus \\{\\dfrac{a}{c}\\}$"
         ],
         "correct": 0,
-        "explanation": "ភាគបែងខុសពីសូន្យ៖ $cx + d \\neq 0 \\iff x \\neq -d/c$ ដូច្នេះ $D = \\mathbb{R} \\setminus \\{-d/c\\}$។",
+        "explanation": "ភាគបែងខុសពីសូន្យ៖ $cx + d \\neq 0 \\iff x \\neq -\\dfrac{d}{c}$ ដូច្នេះ $D = \\mathbb{R} \\setminus \\{-\\dfrac{d}{c}\\}$។",
         "diagram": ""
       },
       {
@@ -24748,7 +24748,7 @@
           "$x = -d$ និង $y = a$"
         ],
         "correct": 0,
-        "explanation": "អាស៊ីមតូតឈរ $x = -d/c$ (ឫសភាគបែង); អាស៊ីមតូតដេក $y = \\lim_{x \\to \\pm\\infty} \\dfrac{ax+b}{cx+d} = \\dfrac{a}{c}$។",
+        "explanation": "អាស៊ីមតូតឈរ $x = -\\dfrac{d}{c}$ (ឫសភាគបែង); អាស៊ីមតូតដេក $y = \\lim_{x \\to \\pm\\infty} \\dfrac{ax+b}{cx+d} = \\dfrac{a}{c}$។",
         "diagram": ""
       },
       {
@@ -24850,7 +24850,7 @@
           "$(1, 0)$ និង $(0, -4)$"
         ],
         "correct": 0,
-        "explanation": "កាត់ $Ox \\implies y = 0 \\iff 2x + 4 = 0 \\iff x = -2 \\implies (-2, 0)$។ កាត់ $Oy \\implies x = 0 \\implies y = 4/(-1) = -4 \\implies (0, -4)$។",
+        "explanation": "កាត់ $Ox \\implies y = 0 \\iff 2x + 4 = 0 \\iff x = -2 \\implies (-2, 0)$។ កាត់ $Oy \\implies x = 0 \\implies y = \\dfrac{4}{-1} = -4 \\implies (0, -4)$។",
         "diagram": ""
       },
       {
@@ -24864,7 +24864,7 @@
           "$\\pm 1$",
           "$0$",
           "$\\pm 2$",
-          "$a/c$"
+          "$\\dfrac{a}{c}$"
         ],
         "correct": 0,
         "explanation": "អ័ក្សឆ្លុះនៃអ៊ីពែបូលកាត់តាមផ្ចិតឆ្លុះ $I$ និងជាបន្ទាត់ពុះនៃមុំបង្កើតដោយអាស៊ីមតូតកែងគ្នា នាំឱ្យមេគុណប្រាប់ទិសគឺ $\\pm 1$។",
@@ -24971,7 +24971,7 @@
           "គ្មានបរមាទេ"
         ],
         "correct": 0,
-        "explanation": "$y' = 1 - 1/x^2 = 0 \\iff x = \\pm 1$។ $y(-1) = -2$ (អតិបរមាធៀប) និង $y(1) = 2$ (អប្បបរមាធៀប)។ ចំណាំ៖ អតិបរមាធៀបអាចតូចជាងអប្បបរមាធៀប!",
+        "explanation": "$y' = 1 - \\dfrac{1}{x}^2 = 0 \\iff x = \\pm 1$។ $y(-1) = -2$ (អតិបរមាធៀប) និង $y(1) = 2$ (អប្បបរមាធៀប)។ ចំណាំ៖ អតិបរមាធៀបអាចតូចជាងអប្បបរមាធៀប!",
         "diagram": ""
       },
       {
@@ -25105,13 +25105,13 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចបរមាធៀបនៃអនុគមន៍ $f(x) = x e^{-x}$ ៖",
         "options": [
-          "អតិបរមាធៀបត្រង់ $x = 1$ ស្មើនឹង $1/e$",
+          "អតិបរមាធៀបត្រង់ $x = 1$ ស្មើនឹង $\\dfrac{1}{e}$",
           "អប្បបរមាធៀបត្រង់ $x = 1$",
           "អតិបរមាត្រង់ $x = 0$",
           "គ្មានបរមាទេ"
         ],
         "correct": 0,
-        "explanation": "$f'(x) = 1 \\cdot e^{-x} - x e^{-x} = (1 - x)e^{-x} = 0 \\iff x = 1$។ ប្តូរសញ្ញាពី + ទៅ - នាំឱ្យជាអតិបរមាធៀប $f(1) = 1/e$។",
+        "explanation": "$f'(x) = 1 \\cdot e^{-x} - x e^{-x} = (1 - x)e^{-x} = 0 \\iff x = 1$។ ប្តូរសញ្ញាពី + ទៅ - នាំឱ្យជាអតិបរមាធៀប $f(1) = \\dfrac{1}{e}$។",
         "diagram": ""
       },
       {
@@ -25251,7 +25251,7 @@
           "ឆ្លងកាត់គល់កូអរដោនេ $O$"
         ],
         "correct": 0,
-        "explanation": "$y' = 1/x > 0$ កើនដាច់ខាត, $\\lim_{x \\to 0^+} \\ln x = -\\infty$ នាំឱ្យបន្ទាត់ $x = 0$ (អ័ក្ស $Oy$) ជាអាស៊ីមតូតឈរ។",
+        "explanation": "$y' = \\dfrac{1}{x} > 0$ កើនដាច់ខាត, $\\lim_{x \\to 0^+} \\ln x = -\\infty$ នាំឱ្យបន្ទាត់ $x = 0$ (អ័ក្ស $Oy$) ជាអាស៊ីមតូតឈរ។",
         "diagram": ""
       },
       {
@@ -25268,7 +25268,7 @@
           "ប្តូរភាពកោងត្រង់ $x = e$"
         ],
         "correct": 0,
-        "explanation": "$y'' = -1/x^2 < 0, \\forall x > 0$ ដូច្នេះក្រាបកោងផ្កាប់ចុះក្រោមជានិច្ច (គ្មានចំណុចរបត់)។",
+        "explanation": "$y'' = -\\dfrac{1}{x}^2 < 0, \\forall x > 0$ ដូច្នេះក្រាបកោងផ្កាប់ចុះក្រោមជានិច្ច (គ្មានចំណុចរបត់)។",
         "diagram": ""
       },
       {
@@ -25285,7 +25285,7 @@
           "គ្មានបរមាទេ"
         ],
         "correct": 0,
-        "explanation": "$f'(x) = 1 - 1/x = 0 \\iff x = 1$។ $f''(1) = 1 > 0$ នាំឱ្យជាអប្បបរមាធៀប $f(1) = 1 - 0 = 1$។",
+        "explanation": "$f'(x) = 1 - \\dfrac{1}{x} = 0 \\iff x = 1$។ $f''(1) = 1 > 0$ នាំឱ្យជាអប្បបរមាធៀប $f(1) = 1 - 0 = 1$។",
         "diagram": ""
       },
       {
@@ -25296,13 +25296,13 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចបរមាធៀបនៃ $f(x) = x^2 \\ln x$ ($x > 0$) ៖",
         "options": [
-          "អប្បបរមាត្រង់ $x = e^{-1/2} = \\dfrac{1}{\\sqrt{e}}$",
+          "អប្បបរមាត្រង់ $x = e^{-\\dfrac{1}{2}} = \\dfrac{1}{\\sqrt{e}}$",
           "អតិបរមាត្រង់ $x = 1$",
           "អប្បបរមាត្រង់ $x = 1$",
           "គ្មានបរមាទេ"
         ],
         "correct": 0,
-        "explanation": "$f'(x) = 2x \\ln x + x = x(2\\ln x + 1) = 0 \\iff \\ln x = -1/2 \\iff x = e^{-1/2}$។ ជាអប្បបរមាធៀប។",
+        "explanation": "$f'(x) = 2x \\ln x + x = x(2\\ln x + 1) = 0 \\iff \\ln x = -\\dfrac{1}{2} \\iff x = e^{-\\dfrac{1}{2}}$។ ជាអប្បបរមាធៀប។",
         "diagram": ""
       },
       {
@@ -25313,13 +25313,13 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចរបត់នៃក្រាប $y = x^2 \\ln x$ ៖",
         "options": [
-          "$\\left(e^{-3/2}, -\\dfrac{3}{2}e^{-3}\\right)$",
+          "$\\left(e^{-\\dfrac{3}{2}}, -\\dfrac{3}{2}e^{-3}\\right)$",
           "$(1, 0)$",
           "$(e, e^2)$",
           "$(e^{-1}, -e^{-2})$"
         ],
         "correct": 0,
-        "explanation": "$f''(x) = 2\\ln x + 1 + 2 = 2\\ln x + 3 = 0 \\iff \\ln x = -3/2 \\iff x = e^{-3/2}$។",
+        "explanation": "$f''(x) = 2\\ln x + 1 + 2 = 2\\ln x + 3 = 0 \\iff \\ln x = -\\dfrac{3}{2} \\iff x = e^{-\\dfrac{3}{2}}$។",
         "diagram": ""
       },
       {
@@ -25336,7 +25336,7 @@
           "$y = 2x - 2$"
         ],
         "correct": 0,
-        "explanation": "$y'(1) = 1/1 = 1$។ សមីការបន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។",
+        "explanation": "$y'(1) = \\dfrac{1}{1} = 1$។ សមីការបន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។",
         "diagram": ""
       },
       {
@@ -25387,7 +25387,7 @@
           "មានអនន្តឫស"
         ],
         "correct": 0,
-        "explanation": "$f(x) = \\ln x - 1/x$ កើនដាច់ខាតពី $-\\infty$ ទៅ $+\\infty$ លើ $(0, +\\infty)$ នាំឱ្យកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ (ឫសតែមួយគត់)។",
+        "explanation": "$f(x) = \\ln x - \\dfrac{1}{x}$ កើនដាច់ខាតពី $-\\infty$ ទៅ $+\\infty$ លើ $(0, +\\infty)$ នាំឱ្យកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ (ឫសតែមួយគត់)។",
         "diagram": ""
       },
       {
@@ -25575,10 +25575,10 @@
           "$\\vec{e} = \\left(\\dfrac{1}{3}, \\dfrac{2}{3}, \\dfrac{2}{3}\\right)$",
           "$\\vec{e} = (1, 2, 2)$",
           "$\\vec{e} = \\left(\\dfrac{1}{5}, \\dfrac{2}{5}, \\dfrac{2}{5}\\right)$",
-          "$\\vec{e} = (1/9, 2/9, 2/9)$"
+          "$\\vec{e} = (\\dfrac{1}{9}, \\dfrac{2}{9}, \\dfrac{2}{9})$"
         ],
         "correct": 0,
-        "explanation": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។ វ៉ិចទ័រឯកតាគឺ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = (1/3, 2/3, 2/3)$។",
+        "explanation": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។ វ៉ិចទ័រឯកតាគឺ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = (\\dfrac{1}{3}, \\dfrac{2}{3}, \\dfrac{2}{3})$។",
         "diagram": ""
       }
     ],
@@ -25676,7 +25676,7 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាមុំ $\\theta$ រវាង $\\vec{u} = (1, 1, 0)$ និង $\\vec{v} = (0, 1, 1)$ ៖",
         "options": [
-          "$60^\\circ$ (ឬ $\\pi/3$)",
+          "$60^\\circ$ (ឬ $\\dfrac{\\pi}{3}$)",
           "$45^\\circ$",
           "$90^\\circ$",
           "$30^\\circ$"
@@ -25716,7 +25716,7 @@
           "$7$"
         ],
         "correct": 0,
-        "explanation": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2\\vec{u}\\cdot\\vec{v} = 9 + 16 + 2(3)(4)\\cos 120^\\circ = 25 + 24(-1/2) = 25 - 12 = 13 \\implies \\sqrt{13}$។",
+        "explanation": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2\\vec{u}\\cdot\\vec{v} = 9 + 16 + 2(3)(4)\\cos 120^\\circ = 25 + 24(-\\dfrac{1}{2}) = 25 - 12 = 13 \\implies \\sqrt{13}$។",
         "diagram": ""
       },
       {
@@ -26011,7 +26011,7 @@
           "$\\dfrac{\\sqrt{11}}{2}$"
         ],
         "correct": 0,
-        "explanation": "$\\|\\vec{AB} \\times \\vec{AC}\\| = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7$។ $S = 7/2 = 3.5$ ឯកតាផ្ទៃ។",
+        "explanation": "$\\|\\vec{AB} \\times \\vec{AC}\\| = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7$។ $S = \\dfrac{7}{2} = 3.5$ ឯកតាផ្ទៃ។",
         "diagram": ""
       },
       {
@@ -26045,7 +26045,7 @@
           "$\\dfrac{\\sqrt{14}}{2}$"
         ],
         "correct": 0,
-        "explanation": "$\\vec{AB} = (-1, 2, 0), \\vec{AC} = (-1, 0, 3)$។ $\\vec{AB} \\times \\vec{AC} = (6, 3, 2)$។ ម៉ូឌុល = $\\sqrt{36 + 9 + 4} = \\sqrt{49} = 7$។ $S = 7/2$។",
+        "explanation": "$\\vec{AB} = (-1, 2, 0), \\vec{AC} = (-1, 0, 3)$។ $\\vec{AB} \\times \\vec{AC} = (6, 3, 2)$។ ម៉ូឌុល = $\\sqrt{36 + 9 + 4} = \\sqrt{49} = 7$។ $S = \\dfrac{7}{2}$។",
         "diagram": ""
       },
       {
@@ -26151,7 +26151,7 @@
           "$\\dfrac{2}{3}x\\sqrt{x} + C$"
         ],
         "correct": 0,
-        "explanation": "$\\int x^{-1/2} dx = \\dfrac{x^{1/2}}{1/2} + C = 2\\sqrt{x} + C$។",
+        "explanation": "$\\int x^{-\\dfrac{1}{2}} dx = \\dfrac{x^{\\frac{1}{2}}}{\\dfrac{1}{2}} + C = 2\\sqrt{x} + C$។",
         "diagram": ""
       },
       {
@@ -26592,7 +26592,7 @@
         "question": "គណនាព្រីមីទីវ $\\int \\dfrac{1}{x \\ln x} dx$ ៖",
         "options": [
           "$\\ln|\\ln x| + C$",
-          "(\\ln x)^2 + C$",
+          "$(\\ln x)^2 + C$",
           "$\\dfrac{1}{\\ln x} + C$",
           "$\\ln x + C$"
         ],
@@ -26608,8 +26608,8 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "គណនាព្រីមីទីវ $\\int x^3 \\sqrt{x^2 + 1} dx$ ៖",
         "options": [
-          "$\\dfrac{(x^2 + 1)^{5/2}}{5} - \\dfrac{(x^2 + 1)^{3/2}}{3} + C$",
-          "$\\dfrac{(x^2 + 1)^{5/2}}{5} + C$",
+          "$\\dfrac{(x^2 + 1)^{\\frac{5}{2}}}{5} - \\dfrac{(x^2 + 1)^{\\frac{3}{2}}}{3} + C$",
+          "$\\dfrac{(x^2 + 1)^{\\frac{5}{2}}}{5} + C$",
           "$\\dfrac{x^4}{4}\\sqrt{x^2+1} + C$",
           "$\\dfrac{(x^2+1)^2}{4} + C$"
         ],
@@ -26712,7 +26712,7 @@
         "pointNumber": "1",
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងលក្ខណៈនៃអាំងតេក្រាលកំណត់",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនា $\\int_{-\\pi/4}^{\\pi/4} \\cos 2x dx$ ៖",
+        "question": "គណនា $\\int_{-\\dfrac{\\pi}{4}}^{\\dfrac{\\pi}{4}} \\cos 2x dx$ ៖",
         "options": [
           "$1$",
           "$0$",
@@ -26720,7 +26720,7 @@
           "$\\dfrac{1}{2}$"
         ],
         "correct": 0,
-        "explanation": "$\\cos 2x$ ជាអនុគមន៍គូ៖ $2\\int_0^{\\pi/4} \\cos 2x dx = 2\\left[\\frac{\\sin 2x}{2}\\right]_0^{\\pi/4} = \\sin(\\pi/2) - 0 = 1$។",
+        "explanation": "$\\cos 2x$ ជាអនុគមន៍គូ៖ $2\\int_0^{\\dfrac{\\pi}{4}} \\cos 2x dx = 2\\left[\\frac{\\sin 2x}{2}\\right]_0^{\\dfrac{\\pi}{4}} = \\sin(\\dfrac{\\pi}{2}) - 0 = 1$។",
         "diagram": ""
       },
       {
@@ -26833,7 +26833,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ គណនាអាំងតេក្រាលកំណត់តាមប្តូរអថេរ និងដោយផ្នែក",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\pi/2} x \\cos x dx$ ដោយផ្នែក ៖",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{2}} x \\cos x dx$ ដោយផ្នែក ៖",
         "options": [
           "$\\dfrac{\\pi}{2} - 1$",
           "$\\dfrac{\\pi}{2}$",
@@ -26841,7 +26841,7 @@
           "$\\dfrac{\\pi}{2} + 1$"
         ],
         "correct": 0,
-        "explanation": "$I = [x\\sin x + \\cos x]_0^{\\pi/2} = (\\frac{\\pi}{2} \\cdot 1 + 0) - (0 + 1) = \\dfrac{\\pi}{2} - 1$។",
+        "explanation": "$I = [x\\sin x + \\cos x]_0^{\\dfrac{\\pi}{2}} = (\\frac{\\pi}{2} \\cdot 1 + 0) - (0 + 1) = \\dfrac{\\pi}{2} - 1$។",
         "diagram": ""
       },
       {
@@ -26867,7 +26867,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ គណនាអាំងតេក្រាលកំណត់តាមប្តូរអថេរ និងដោយផ្នែក",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\pi/2} \\sin^2 x \\cos x dx$ ៖",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{2}} \\sin^2 x \\cos x dx$ ៖",
         "options": [
           "$\\dfrac{1}{3}$",
           "$1$",
@@ -26875,7 +26875,7 @@
           "$\\dfrac{2}{3}$"
         ],
         "correct": 0,
-        "explanation": "តាង $u = \\sin x$: $x=0 \\implies u=0; x=\\pi/2 \\implies u=1$។ $I = \\int_0^1 u^2 du = \\dfrac{1}{3}$។",
+        "explanation": "តាង $u = \\sin x$: $x=0 \\implies u=0; x=\\dfrac{\\pi}{2} \\implies u=1$។ $I = \\int_0^1 u^2 du = \\dfrac{1}{3}$។",
         "diagram": ""
       },
       {
@@ -26884,7 +26884,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ គណនាអាំងតេក្រាលកំណត់តាមប្តូរអថេរ និងដោយផ្នែក",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\pi/4} \\tan x dx$ ៖",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{4}} \\tan x dx$ ៖",
         "options": [
           "$\\dfrac{1}{2}\\ln 2$",
           "$\\ln 2$",
@@ -26892,7 +26892,7 @@
           "$\\dfrac{\\sqrt{2}}{2}$"
         ],
         "correct": 0,
-        "explanation": "$I = [-\\ln|\\cos x|]_0^{\\pi/4} = -\\ln(\\sqrt{2}/2) = \\ln(\\sqrt{2}) = \\dfrac{1}{2}\\ln 2$។",
+        "explanation": "$I = [-\\ln|\\cos x|]_0^{\\dfrac{\\pi}{4}} = -\\ln(\\dfrac{\\sqrt{2}}{2}) = \\ln(\\sqrt{2}) = \\dfrac{1}{2}\\ln 2$។",
         "diagram": ""
       },
       {
@@ -26952,7 +26952,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ គណនាអាំងតេក្រាលកំណត់តាមប្តូរអថេរ និងដោយផ្នែក",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "អាំងតេក្រាល Wallis $I_2 = \\int_0^{\\pi/2} \\sin^2 x dx$ ស្មើនឹង ៖",
+        "question": "អាំងតេក្រាល Wallis $I_2 = \\int_0^{\\dfrac{\\pi}{2}} \\sin^2 x dx$ ស្មើនឹង ៖",
         "options": [
           "$\\dfrac{\\pi}{4}$",
           "$\\dfrac{\\pi}{2}$",
@@ -26960,7 +26960,7 @@
           "$\\dfrac{\\pi}{8}$"
         ],
         "correct": 0,
-        "explanation": "$\\int_0^{\\pi/2} \\dfrac{1 - \\cos 2x}{2} dx = [\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4}]_0^{\\pi/2} = \\dfrac{\\pi}{4}$។",
+        "explanation": "$\\int_0^{\\dfrac{\\pi}{2}} \\dfrac{1 - \\cos 2x}{2} dx = [\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4}]_0^{\\dfrac{\\pi}{2}} = \\dfrac{\\pi}{4}$។",
         "diagram": ""
       }
     ]
@@ -27007,15 +27007,15 @@
         "pointNumber": "1",
         "pointTitle": "ចំណុចទី ១ ៖ ផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោង និងអ័ក្សកូអរដោនេ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាផ្ទៃក្រឡាខណ្ឌដោយក្រាប $y = \\cos x$, អ័ក្ស $Ox$ ពី $x = 0$ ដល់ $x = \\pi/2$ ៖",
+        "question": "គណនាផ្ទៃក្រឡាខណ្ឌដោយក្រាប $y = \\cos x$, អ័ក្ស $Ox$ ពី $x = 0$ ដល់ $x = \\dfrac{\\pi}{2}$ ៖",
         "options": [
           "$1$",
           "$0$",
-          "$\\pi/2$",
+          "$\\dfrac{\\pi}{2}$",
           "$2$"
         ],
         "correct": 0,
-        "explanation": "$S = \\int_0^{\\pi/2} \\cos x dx = [\\sin x]_0^{\\pi/2} = 1 - 0 = 1$។",
+        "explanation": "$S = \\int_0^{\\dfrac{\\pi}{2}} \\cos x dx = [\\sin x]_0^{\\dfrac{\\pi}{2}} = 1 - 0 = 1$។",
         "diagram": ""
       },
       {
@@ -27238,7 +27238,7 @@
           "$1$"
         ],
         "correct": 0,
-        "explanation": "ប្រសព្វ $x = 0, x = 1$។ $S = \\int_0^1 (\\sqrt{x} - x^2) dx = [\\frac{2}{3}x^{3/2} - \\frac{x^3}{3}]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\dfrac{1}{3}$។",
+        "explanation": "ប្រសព្វ $x = 0, x = 1$។ $S = \\int_0^1 (\\sqrt{x} - x^2) dx = [\\frac{2}{3}x^{\\frac{3}{2}} - \\frac{x^3}{3}]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\dfrac{1}{3}$។",
         "diagram": ""
       },
       {
@@ -27247,7 +27247,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ ផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោងពីរ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោង $y = \\sin x$ និង $y = \\cos x$ ពី $x = 0$ ដល់ $x = \\pi/2$ ៖",
+        "question": "គណនាផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោង $y = \\sin x$ និង $y = \\cos x$ ពី $x = 0$ ដល់ $x = \\dfrac{\\pi}{2}$ ៖",
         "options": [
           "$2\\sqrt{2} - 2$",
           "$\\sqrt{2}$",
@@ -27255,7 +27255,7 @@
           "$2$"
         ],
         "correct": 0,
-        "explanation": "ប្រសព្វត្រង់ $x = \\pi/4$។ $S = \\int_0^{\\pi/4}(\\cos x - \\sin x)dx + \\int_{\\pi/4}^{\\pi/2}(\\sin x - \\cos x)dx = 2(\\sqrt{2}-1) = 2\\sqrt{2} - 2$។",
+        "explanation": "ប្រសព្វត្រង់ $x = \\dfrac{\\pi}{4}$។ $S = \\int_0^{\\dfrac{\\pi}{4}}(\\cos x - \\sin x)dx + \\int_{\\dfrac{\\pi}{4}}^{\\dfrac{\\pi}{2}}(\\sin x - \\cos x)dx = 2(\\sqrt{2}-1) = 2\\sqrt{2} - 2$។",
         "diagram": ""
       },
       {
@@ -27404,15 +27404,15 @@
         "pointNumber": "1",
         "pointTitle": "ចំណុចទី ១ ៖ សមីការអូម៉ូសែន y' + ay = 0",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកអឌ្ឍជីវិត (Half-life, $T_{1/2}$) នៃសារធាតុវិទ្យុសកម្មដែលមានថេរបំបែក $\\lambda$ ៖",
+        "question": "រកអឌ្ឍជីវិត (Half-life, $T_{\\dfrac{1}{2}}$) នៃសារធាតុវិទ្យុសកម្មដែលមានថេរបំបែក $\\lambda$ ៖",
         "options": [
-          "$T_{1/2} = \\dfrac{\\ln 2}{\\lambda}$",
-          "$T_{1/2} = \\dfrac{\\lambda}{\\ln 2}$",
-          "$T_{1/2} = \\dfrac{1}{2\\lambda}$",
-          "$T_{1/2} = 2\\lambda$"
+          "$T_{\\dfrac{1}{2}} = \\dfrac{\\ln 2}{\\lambda}$",
+          "$T_{\\dfrac{1}{2}} = \\dfrac{\\lambda}{\\ln 2}$",
+          "$T_{\\dfrac{1}{2}} = \\dfrac{1}{2\\lambda}$",
+          "$T_{\\dfrac{1}{2}} = 2\\lambda$"
         ],
         "correct": 0,
-        "explanation": "$N(T) = N_0/2 \\implies e^{-\\lambda T} = 1/2 \\iff -\\lambda T = -\\ln 2 \\iff T = \\dfrac{\\ln 2}{\\lambda}$។",
+        "explanation": "$N(T) = N_0/2 \\implies e^{-\\lambda T} = \\dfrac{1}{2} \\iff -\\lambda T = -\\ln 2 \\iff T = \\dfrac{\\ln 2}{\\lambda}$។",
         "diagram": ""
       },
       {
@@ -27424,7 +27424,7 @@
         "question": "ដោះស្រាយសមីការ $x y' - y = 0$ ($x > 0$) ៖",
         "options": [
           "$y = C x$",
-          "$y = C / x$",
+          "$y = \\dfrac{C}{x}$",
           "$y = C e^x$",
           "$y = x + C$"
         ],
@@ -27457,13 +27457,13 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "បាក់តេរីមួយប្រភេទកើនឡើងទ្វេដងរៀងរាល់ $3$ ម៉ោងម្តង។ បើដំបូងមាន $1000$ ក្បាល តើសមីការកំណើនគឺ ៖",
         "options": [
-          "$N(t) = 1000 \\cdot 2^{t/3}$",
+          "$N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$",
           "$N(t) = 1000 \\cdot 2^{3t}$",
           "$N(t) = 2000 t$",
           "$N(t) = 1000 e^{2t}$"
         ],
         "correct": 0,
-        "explanation": "$N(t) = N_0 a^t$។ ត្រង់ $t = 3 \\implies N(3) = 2000 = 1000 a^3 \\implies a = 2^{1/3}$ នាំឱ្យ $N(t) = 1000 \\cdot 2^{t/3}$។",
+        "explanation": "$N(t) = N_0 a^t$។ ត្រង់ $t = 3 \\implies N(3) = 2000 = 1000 a^3 \\implies a = 2^{\\frac{1}{3}}$ នាំឱ្យ $N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$។",
         "diagram": ""
       },
       {
@@ -27533,7 +27533,7 @@
           "$y = 3e^{-2x} + C$"
         ],
         "correct": 0,
-        "explanation": "$y_h = C e^{-2x}$។ $y_p = 6/2 = 3$។ ដូច្នេះ $y = C e^{-2x} + 3$។",
+        "explanation": "$y_h = C e^{-2x}$។ $y_p = \\dfrac{6}{2} = 3$។ ដូច្នេះ $y = C e^{-2x} + 3$។",
         "diagram": ""
       },
       {
@@ -28181,7 +28181,7 @@
           "$9$"
         ],
         "correct": 0,
-        "explanation": "រាងមិនកំណត់ $[0/0]$ ៖ $\\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 3 + 3 = 6$។"
+        "explanation": "រាងមិនកំណត់ $[\\dfrac{0}{0}]$ ៖ $\\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 3 + 3 = 6$។"
       },
       {
         "id": "g12b_p2_02",
@@ -28569,7 +28569,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "$\\lim_{x \\to +\\infty} \\dfrac{2x\\sqrt{1 + 1/(4x^2)}}{x(1 + 3/x)} = \\dfrac{2}{1} = 2$។"
+        "explanation": "$\\lim_{x \\to +\\infty} \\dfrac{2x\\sqrt{1 + \\dfrac{1}{4x^2}}}{x(1 + \\dfrac{3}{x})} = \\dfrac{2}{1} = 2$។"
       },
       {
         "id": "g12b_p4_06",
@@ -28649,7 +28649,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "ចែកភាគយក និងភាគបែងនឹង $3^x$ (គោលធំជាងគេ) ៖ $\\lim_{x \\to +\\infty} \\dfrac{2(2/3)^x + 3}{(2/3)^x + 1} = \\dfrac{0 + 3}{0 + 1} = 3$។"
+        "explanation": "ចែកភាគយក និងភាគបែងនឹង $3^x$ (គោលធំជាងគេ) ៖ $\\lim_{x \\to +\\infty} \\dfrac{2\\left(\\dfrac{2}{3}\\right)^{x} + 3}{\\left(\\dfrac{2}{3}\\right)^{x} + 1} = \\dfrac{0 + 3}{0 + 1} = 3$។"
       }
     ]
   },
@@ -28781,7 +28781,7 @@
           "$m = 4$"
         ],
         "correct": 0,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4}-2}{x} = \\lim_{x \\to 0} \\dfrac{1}{\\sqrt{x+4}+2} = \\dfrac{1}{4}$។ ដូច្នេះ $m = 1/4$។"
+        "explanation": "$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4}-2}{x} = \\lim_{x \\to 0} \\dfrac{1}{\\sqrt{x+4}+2} = \\dfrac{1}{4}$។ ដូច្នេះ $m = \\dfrac{1}{4}$។"
       },
       {
         "id": "g12b_p1_09",
@@ -28911,7 +28911,7 @@
           "$g(0) = 0$"
         ],
         "correct": 0,
-        "explanation": "$\\lim_{x \\to 0} f(x) = \\dfrac{1}{2}$ ដូច្នេះតម្លៃពង្រីកគឺ $g(0) = 1/2$។"
+        "explanation": "$\\lim_{x \\to 0} f(x) = \\dfrac{1}{2}$ ដូច្នេះតម្លៃពង្រីកគឺ $g(0) = \\dfrac{1}{2}$។"
       },
       {
         "id": "g12b_p2_07",
@@ -28972,10 +28972,10 @@
           "$f + g, f - g, f \\cdot g$",
           "មានតែ $f + g$",
           "មានតែ $f \\cdot g$",
-          "គ្រប់អនុគមន៍រួមទាំង $f/g$ (ទោះ $g=0$ ក៏ដោយ)"
+          "គ្រប់អនុគមន៍រួមទាំង $\\dfrac{f}{g}$ (ទោះ $g=0$ ក៏ដោយ)"
         ],
         "correct": 0,
-        "explanation": "ផលបូក ផលដក និងផលគុណនៃពីរអនុគមន៍ជាប់លើ $I$ តែងតែជាប់លើ $I$។ ចំណែកផលចែក $f/g$ ជាប់លើផ្នែកដែល $g(x) \\neq 0$។"
+        "explanation": "ផលបូក ផលដក និងផលគុណនៃពីរអនុគមន៍ជាប់លើ $I$ តែងតែជាប់លើ $I$។ ចំណែកផលចែក $\\dfrac{f}{g}$ ជាប់លើផ្នែកដែល $g(x) \\neq 0$។"
       }
     ],
     "3": [
@@ -29073,7 +29073,7 @@
           "$(-1, 0)$"
         ],
         "correct": 0,
-        "explanation": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 - 0 = 1 > 0$ និង $f(\\pi/2) = 0 - \\pi/2 < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\pi/2)$។"
+        "explanation": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 - 0 = 1 > 0$ និង $f(\\dfrac{\\pi}{2}) = 0 - \\dfrac{\\pi}{2} < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\dfrac{\\pi}{2})$។"
       },
       {
         "id": "g12b_p3_07",
@@ -29380,7 +29380,7 @@
           "$\\dfrac{1}{2x}$"
         ],
         "correct": 0,
-        "explanation": "$(\\sqrt{x})' = (x^{1/2})' = \\frac{1}{2} x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$។",
+        "explanation": "$(\\sqrt{x})' = (x^{\\frac{1}{2}})' = \\frac{1}{2} x^{-\\dfrac{1}{2}} = \\dfrac{1}{2\\sqrt{x}}$។",
         "diagram": ""
       },
       {
@@ -29414,7 +29414,7 @@
           "$2\\sqrt{x}$"
         ],
         "correct": 0,
-        "explanation": "$f(x) = x^{3/2} \\implies f'(x) = \\frac{3}{2} x^{1/2} = \\dfrac{3}{2}\\sqrt{x}$។",
+        "explanation": "$f(x) = x^{\\frac{3}{2}} \\implies f'(x) = \\frac{3}{2} x^{\\frac{1}{2}} = \\dfrac{3}{2}\\sqrt{x}$។",
         "diagram": ""
       },
       {
@@ -30344,7 +30344,7 @@
           "$(-1, 1)$"
         ],
         "correct": 0,
-        "explanation": "ចម្ងាយការ៉េ $d^2 = x^2 + (y - 1)^2 = y + (y - 1)^2 = y^2 - y + 1$។ ដេរីវេតាម $y$ គឺ $2y - 1 = 0 \\iff y = 1/2$។ នាំឱ្យ $x^2 = 1/2 \\iff x = \\pm \\frac{\\sqrt{2}}{2}$។",
+        "explanation": "ចម្ងាយការ៉េ $d^2 = x^2 + (y - 1)^2 = y + (y - 1)^2 = y^2 - y + 1$។ ដេរីវេតាម $y$ គឺ $2y - 1 = 0 \\iff y = \\dfrac{1}{2}$។ នាំឱ្យ $x^2 = \\dfrac{1}{2} \\iff x = \\pm \\frac{\\sqrt{2}}{2}$។",
         "diagram": ""
       }
     ]
@@ -31140,7 +31140,7 @@
           "$0 < x \\le 1$"
         ],
         "correct": 0,
-        "explanation": "លក្ខខណ្ឌ $3x - 2 > 0 \\iff x > 2/3$។ $\\ln(3x - 2) \\le 0 = \\ln 1 \\iff 3x - 2 \\le 1 \\iff 3x \\le 3 \\iff x \\le 1$។ ចម្លើយគឺ $\\dfrac{2}{3} < x \\le 1$។",
+        "explanation": "លក្ខខណ្ឌ $3x - 2 > 0 \\iff x > \\dfrac{2}{3}$។ $\\ln(3x - 2) \\le 0 = \\ln 1 \\iff 3x - 2 \\le 1 \\iff 3x \\le 3 \\iff x \\le 1$។ ចម្លើយគឺ $\\dfrac{2}{3} < x \\le 1$។",
         "diagram": ""
       },
       {
@@ -31363,7 +31363,7 @@
           "$-1$"
         ],
         "correct": 0,
-        "explanation": "តាង $x = 1/t \\implies t \\to +\\infty$: $\\lim_{t \\to +\\infty} \\dfrac{-\\ln t}{t} = 0$។",
+        "explanation": "តាង $x = \\dfrac{1}{t} \\implies t \\to +\\infty$: $\\lim_{t \\to +\\infty} \\dfrac{-\\ln t}{t} = 0$។",
         "diagram": ""
       },
       {
@@ -31380,7 +31380,7 @@
           "គ្មានបរមាទេ"
         ],
         "correct": 0,
-        "explanation": "$f'(x) = \\dfrac{\\frac{1}{x} \\cdot x - \\ln x \\cdot 1}{x^2} = \\dfrac{1 - \\ln x}{x^2} = 0 \\iff \\ln x = 1 \\iff x = e$។ សញ្ញាដេរីវេប្តូរពី + ទៅ - នាំឱ្យជាអតិបរមា $f(e) = 1/e$។",
+        "explanation": "$f'(x) = \\dfrac{\\frac{1}{x} \\cdot x - \\ln x \\cdot 1}{x^2} = \\dfrac{1 - \\ln x}{x^2} = 0 \\iff \\ln x = 1 \\iff x = e$។ សញ្ញាដេរីវេប្តូរពី + ទៅ - នាំឱ្យជាអតិបរមា $f(e) = \\dfrac{1}{e}$។",
         "diagram": ""
       }
     ]
@@ -31529,7 +31529,7 @@
         "pointNumber": "1",
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងលក្ខណៈនៃព្រីមីទីវ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 3t^2 - 4t + 1$ (គិតជា $\\text{m/s}$)។ រកចម្ងាយចរ $s(t)$ ដឹងថា $s(0) = 5\\text{ m}$ ៖",
+        "question": "ចល័តមួយមានល្បឿន $v(t) = 3t^2 - 4t + 1$ (គិតជា $\\text{\\dfrac{m}{s}}$)។ រកចម្ងាយចរ $s(t)$ ដឹងថា $s(0) = 5\\text{ m}$ ៖",
         "options": [
           "$s(t) = t^3 - 2t^2 + t + 5$",
           "$s(t) = 6t - 4$",
@@ -31641,7 +31641,7 @@
           "$-\\dfrac{1}{x} + \\dfrac{1}{2\\sqrt{x}} + C$"
         ],
         "correct": 0,
-        "explanation": "$\\int x^{-2} dx + \\int x^{-1/2} dx = -x^{-1} + \\dfrac{x^{1/2}}{1/2} + C = -\\dfrac{1}{x} + 2\\sqrt{x} + C$។",
+        "explanation": "$\\int x^{-2} dx + \\int x^{-\\dfrac{1}{2}} dx = -x^{-1} + \\dfrac{x^{\\frac{1}{2}}}{\\dfrac{1}{2}} + C = -\\dfrac{1}{x} + 2\\sqrt{x} + C$។",
         "diagram": ""
       },
       {
@@ -32728,7 +32728,7 @@
           "ទំហំប្រវែងថ្នាក់"
         ],
         "correct": 0,
-        "explanation": "ក្រាបអូស៊ីវងាយស្រួលបំផុតសម្រាប់ស្វែងរកមេដ្យាន ($N/2$) និងក្វាទីល ($N/4, 3N/4$)។",
+        "explanation": "ក្រាបអូស៊ីវងាយស្រួលបំផុតសម្រាប់ស្វែងរកមេដ្យាន ($\\dfrac{N}{2}$) និងក្វាទីល ($\\dfrac{N}{4}, \\dfrac{3N}{4}$)។",
         "diagram": ""
       },
       {
@@ -33074,7 +33074,7 @@
           "$37$"
         ],
         "correct": 0,
-        "explanation": "$N/2 = 20$។ $Me = 30 + \\left(\\dfrac{20 - 14}{12}\\right) \\cdot 10 = 30 + \\dfrac{6}{12} \\cdot 10 = 30 + 5 = 35$។",
+        "explanation": "$\\dfrac{N}{2} = 20$។ $Me = 30 + \\left(\\dfrac{20 - 14}{12}\\right) \\cdot 10 = 30 + \\dfrac{6}{12} \\cdot 10 = 30 + 5 = 35$។",
         "diagram": ""
       },
       {
@@ -33715,7 +33715,7 @@
           "$\\dfrac{2}{3}$"
         ],
         "correct": 0,
-        "explanation": "ករណីអាច = 6 $\\{1, 2, 3, 4, 5, 6\\}$។ ករណីស្របលេខគូ $\\{2, 4, 6\\}$ មាន 3។ $P = 3/6 = 1/2$។",
+        "explanation": "ករណីអាច = 6 $\\{1, 2, 3, 4, 5, 6\\}$។ ករណីស្របលេខគូ $\\{2, 4, 6\\}$ មាន 3។ $P = \\dfrac{3}{6} = \\dfrac{1}{2}$។",
         "diagram": ""
       },
       {
@@ -33732,7 +33732,7 @@
           "$1$"
         ],
         "correct": 0,
-        "explanation": "លំហសំណាក $S = \\{HH, HT, TH, TT\\}$ មាន 4។ ករណីស្រប $\\{HH, TT\\}$ មាន 2។ $P = 2/4 = 1/2$។",
+        "explanation": "លំហសំណាក $S = \\{HH, HT, TH, TT\\}$ មាន 4។ ករណីស្រប $\\{HH, TT\\}$ មាន 2។ $P = \\dfrac{2}{4} = \\dfrac{1}{2}$។",
         "diagram": ""
       },
       {
@@ -33783,7 +33783,7 @@
           "$\\dfrac{1}{12}$"
         ],
         "correct": 0,
-        "explanation": "ករណីអាច = $6 \\times 6 = 36$។ ករណីផលបូក ៧៖ $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ មាន 6 ករណី។ $P = 6/36 = 1/6$។",
+        "explanation": "ករណីអាច = $6 \\times 6 = 36$។ ករណីផលបូក ៧៖ $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$ មាន 6 ករណី។ $P = \\dfrac{6}{36} = \\dfrac{1}{6}$។",
         "diagram": ""
       },
       {
@@ -33991,7 +33991,7 @@
           "$\\dfrac{5}{3}$"
         ],
         "correct": 0,
-        "explanation": "បាល់សរុប = $5 + 3 = 8$។ ករណីបាល់ក្រហម = 5។ $P = 5/8$។",
+        "explanation": "បាល់សរុប = $5 + 3 = 8$។ ករណីបាល់ក្រហម = 5។ $P = \\dfrac{5}{8}$។",
         "diagram": ""
       },
       {
@@ -34008,7 +34008,7 @@
           "$\\dfrac{4}{13}$"
         ],
         "correct": 0,
-        "explanation": "មានអាត់ ៤ សន្លឹកក្នុងចំណោម ៥២ សន្លឹក៖ $P = 4/52 = 1/13$។",
+        "explanation": "មានអាត់ ៤ សន្លឹកក្នុងចំណោម ៥២ សន្លឹក៖ $P = \\dfrac{4}{52} = \\dfrac{1}{13}$។",
         "diagram": ""
       },
       {
@@ -34042,7 +34042,7 @@
           "$\\dfrac{6}{45}$"
         ],
         "correct": 0,
-        "explanation": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(10, 2) = 45$។ $P = 6/45 = 2/15$។",
+        "explanation": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(10, 2) = 45$។ $P = \\dfrac{6}{45} = \\dfrac{2}{15}$។",
         "diagram": ""
       },
       {
@@ -34059,7 +34059,7 @@
           "$\\dfrac{1}{2}$"
         ],
         "correct": 0,
-        "explanation": "ករណីស្រប $C(4, 1) \\times C(6, 1) = 4 \\times 6 = 24$។ $P = 24/45 = 8/15$។",
+        "explanation": "ករណីស្រប $C(4, 1) \\times C(6, 1) = 4 \\times 6 = 24$។ $P = \\dfrac{24}{45} = \\dfrac{8}{15}$។",
         "diagram": ""
       },
       {
@@ -34076,7 +34076,7 @@
           "$\\dfrac{1}{4}$"
         ],
         "correct": 0,
-        "explanation": "បេះដូងក្រហមមាន 13, $K$ មាន 4 (ក្នុងនោះមាន $K$ បេះដូងក្រហម 1)។ ករណីស្រប = $13 + 4 - 1 = 16$។ $P = 16/52 = 4/13$។",
+        "explanation": "បេះដូងក្រហមមាន 13, $K$ មាន 4 (ក្នុងនោះមាន $K$ បេះដូងក្រហម 1)។ ករណីស្រប = $13 + 4 - 1 = 16$។ $P = \\dfrac{16}{52} = \\dfrac{4}{13}$។",
         "diagram": ""
       },
       {
@@ -34093,7 +34093,7 @@
           "$\\dfrac{3}{56}$"
         ],
         "correct": 0,
-        "explanation": "លើកទី ១: $3/8$។ លើកទី ២ សល់ស ២ ក្នុងចំណោម ៧: $2/7$។ $P = \\dfrac{3}{8} \\times \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$។",
+        "explanation": "លើកទី ១: $\\dfrac{3}{8}$។ លើកទី ២ សល់ស ២ ក្នុងចំណោម ៧: $\\dfrac{2}{7}$។ $P = \\dfrac{3}{8} \\times \\dfrac{2}{7} = \\dfrac{6}{56} = \\dfrac{3}{28}$។",
         "diagram": ""
       },
       {
@@ -34127,7 +34127,7 @@
           "$\\dfrac{12}{220}$"
         ],
         "correct": 0,
-        "explanation": "ករណីស្រប: $C(3, 1) \\times C(4, 1) \\times C(5, 1) = 3 \\times 4 \\times 5 = 60$។ ករណីអាច $C(12, 3) = \\dfrac{12 \\times 11 \\times 10}{6} = 220$។ $P = 60/220 = 3/11$។",
+        "explanation": "ករណីស្រប: $C(3, 1) \\times C(4, 1) \\times C(5, 1) = 3 \\times 4 \\times 5 = 60$។ ករណីអាច $C(12, 3) = \\dfrac{12 \\times 11 \\times 10}{6} = 220$។ $P = \\dfrac{60}{220} = \\dfrac{3}{11}$។",
         "diagram": ""
       },
       {
@@ -34144,7 +34144,7 @@
           "$\\dfrac{1}{13}$"
         ],
         "correct": 0,
-        "explanation": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(52, 2) = \\dfrac{52 \\times 51}{2} = 1326$។ $P = 6/1326 = \\dfrac{1}{221}$។",
+        "explanation": "ករណីស្រប $C(4, 2) = 6$។ ករណីអាច $C(52, 2) = \\dfrac{52 \\times 51}{2} = 1326$។ $P = \\dfrac{6}{1326} = \\dfrac{1}{221}$។",
         "diagram": ""
       }
     ]
@@ -73735,7 +73735,7 @@
           "$-i$"
         ],
         "correct": 0,
-        "explanation": "$\\cos(4 \\times \\pi/4) + i\\sin(4 \\times \\pi/4) = \\cos\\pi + i\\sin\\pi = -1 + 0 = -1$។"
+        "explanation": "$\\cos(4 \\times \\dfrac{\\pi}{4}) + i\\sin(4 \\times \\dfrac{\\pi}{4}) = \\cos\\pi + i\\sin\\pi = -1 + 0 = -1$។"
       },
       {
         "id": "g12b_p1_04",
@@ -73751,7 +73751,7 @@
           "$0$"
         ],
         "correct": 0,
-        "explanation": "$\\cos(6 \\times \\pi/6) + i\\sin(6 \\times \\pi/6) = \\cos\\pi + i\\sin\\pi = -1$។"
+        "explanation": "$\\cos(6 \\times \\dfrac{\\pi}{6}) + i\\sin(6 \\times \\dfrac{\\pi}{6}) = \\cos\\pi + i\\sin\\pi = -1$។"
       },
       {
         "id": "g12b_p1_05",
@@ -73767,7 +73767,7 @@
           "$-16i$"
         ],
         "correct": 0,
-        "explanation": "$1+i = \\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4))$ នាំឱ្យ $(1+i)^8 = (\\sqrt{2})^8 [\\cos(2\\pi) + i\\sin(2\\pi)] = 16(1) = 16$។"
+        "explanation": "$1+i = \\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4}))$ នាំឱ្យ $(1+i)^8 = (\\sqrt{2})^8 [\\cos(2\\pi) + i\\sin(2\\pi)] = 16(1) = 16$។"
       },
       {
         "id": "g12b_p1_06",
@@ -73783,7 +73783,7 @@
           "$0$"
         ],
         "correct": 0,
-        "explanation": "$1-i\\sqrt{3} = 2(\\cos(-\\pi/3) + i\\sin(-\\pi/3))$។ ស្វ័យគុណ ៦ ៖ $2^6 [\\cos(-2\\pi) + i\\sin(-2\\pi)] = 64(1) = 64$។"
+        "explanation": "$1-i\\sqrt{3} = 2(\\cos(-\\dfrac{\\pi}{3}) + i\\sin(-\\dfrac{\\pi}{3}))$។ ស្វ័យគុណ ៦ ៖ $2^6 [\\cos(-2\\pi) + i\\sin(-2\\pi)] = 64(1) = 64$។"
       },
       {
         "id": "g12b_p1_07",
@@ -73799,7 +73799,7 @@
           "$4096i$"
         ],
         "correct": 0,
-        "explanation": "$r = 2, \\theta = \\pi/6$។ $(\\sqrt{3}+i)^{12} = 2^{12} [\\cos(2\\pi) + i\\sin(2\\pi)] = 4096(1) = 4096$។"
+        "explanation": "$r = 2, \\theta = \\dfrac{\\pi}{6}$។ $(\\sqrt{3}+i)^{12} = 2^{12} [\\cos(2\\pi) + i\\sin(2\\pi)] = 4096(1) = 4096$។"
       },
       {
         "id": "g12b_p1_08",
@@ -73831,7 +73831,7 @@
           "$-2048$"
         ],
         "correct": 0,
-        "explanation": "$2^{10}\\cos(10\\pi/3) + 2^{10}\\cos(-10\\pi/3) = 2 \\times 1024 \\cos(10\\pi/3) = 2048 \\cos(3\\pi + \\pi/3) = 2048(-\\cos(\\pi/3)) = 2048(-1/2) = -1024$។"
+        "explanation": "$2^{10}\\cos(10\\pi/3) + 2^{10}\\cos(-10\\pi/3) = 2 \\times 1024 \\cos(10\\pi/3) = 2048 \\cos(3\\pi + \\dfrac{\\pi}{3}) = 2048(-\\cos(\\dfrac{\\pi}{3})) = 2048(-\\dfrac{1}{2}) = -1024$។"
       },
       {
         "id": "g12b_p1_10",
@@ -73913,7 +73913,7 @@
           "$1, \\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}, \\dfrac{1}{2} - i\\dfrac{\\sqrt{3}}{2}$"
         ],
         "correct": 0,
-        "explanation": "$z_k = \\cos(2k\\pi/3) + i\\sin(2k\\pi/3)$ ចំពោះ $k = 0, 1, 2$ ផ្តល់ឫស $1, j, j^2$ ដែល $j = -1/2 + i\\sqrt{3}/2$។"
+        "explanation": "$z_k = \\cos(2k\\pi/3) + i\\sin(2k\\pi/3)$ ចំពោះ $k = 0, 1, 2$ ផ្តល់ឫស $1, j, j^2$ ដែល $j = -\\dfrac{1}{2} + i\\sqrt{3}/2$។"
       },
       {
         "id": "g12b_p2_05",
@@ -73929,7 +73929,7 @@
           "$\\pm 2i$"
         ],
         "correct": 0,
-        "explanation": "$2i = 2(\\cos(\\pi/2) + i\\sin(\\pi/2))$។ ឫសការេ ៖ $\\sqrt{2}(\\cos(\\pi/4) + i\\sin(\\pi/4)) = 1 + i$ និង $-(1 + i)$។"
+        "explanation": "$2i = 2(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2}))$។ ឫសការេ ៖ $\\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4})) = 1 + i$ និង $-(1 + i)$។"
       },
       {
         "id": "g12b_p2_06",
@@ -74091,7 +74091,7 @@
           "ត្រីកោណសមបាតកំពូល $B$"
         ],
         "correct": 0,
-        "explanation": "ម៉ូឌុល $|i| = 1 \\Rightarrow AC = AB$ និងមុំ $\\text{Arg}(i) = \\pi/2$ នាំឱ្យ $ABC$ កែងសមបាតត្រង់ $A$។"
+        "explanation": "ម៉ូឌុល $|i| = 1 \\Rightarrow AC = AB$ និងមុំ $\\text{Arg}(i) = \\dfrac{\\pi}{2}$ នាំឱ្យ $ABC$ កែងសមបាតត្រង់ $A$។"
       },
       {
         "id": "g12b_p3_06",
@@ -74107,7 +74107,7 @@
           "ត្រីកោណកែងសមបាត"
         ],
         "correct": 0,
-        "explanation": "ម៉ូឌុលស្មើ ១ នាំឱ្យ $AB = AC$ ហើយមុំស្មើ $\\pi/3 = 60^\\circ$ នាំឱ្យត្រីកោណ $ABC$ ជាត្រីកោណសម័ង្ស។"
+        "explanation": "ម៉ូឌុលស្មើ ១ នាំឱ្យ $AB = AC$ ហើយមុំស្មើ $\\dfrac{\\pi}{3} = 60^\\circ$ នាំឱ្យត្រីកោណ $ABC$ ជាត្រីកោណសម័ង្ស។"
       },
       {
         "id": "g12b_p3_07",
@@ -85266,7 +85266,7 @@
           "$M(0, 3, -3)$"
         ],
         "correct": 0,
-        "explanation": "ជំនួសក្នុងប្លង់៖ $(1+t) + (2-t) + 3t - 7 = 0 \\iff 3t - 4 = 0 \\dots$ គិត $(1+t) + (2-t) + 3t = 3 + 3t = 7 \\iff 3t = 4 \\implies t = 4/3$។ បើ $x + 2y + z - 8 = 0 \\dots$ សម្រាប់សំណួរនេះ $t=1 \\implies (2, 1, 3)$ មាន $2 + 1 + 3 = 6 \\neq 7$។ ពិនិត្យ $x+y+z = 1+t+2-t+3t = 3+3t$។ ដើម្បីបាន $M(2, 1, 3)$ សមីការគឺ $x+y+z-6=0$ នាំឱ្យ $3t = 3 \\implies t = 1 \\implies M(2, 1, 3)$។",
+        "explanation": "ជំនួសក្នុងប្លង់៖ $(1+t) + (2-t) + 3t - 7 = 0 \\iff 3t - 4 = 0 \\dots$ គិត $(1+t) + (2-t) + 3t = 3 + 3t = 7 \\iff 3t = 4 \\implies t = \\dfrac{4}{3}$។ បើ $x + 2y + z - 8 = 0 \\dots$ សម្រាប់សំណួរនេះ $t=1 \\implies (2, 1, 3)$ មាន $2 + 1 + 3 = 6 \\neq 7$។ ពិនិត្យ $x+y+z = 1+t+2-t+3t = 3+3t$។ ដើម្បីបាន $M(2, 1, 3)$ សមីការគឺ $x+y+z-6=0$ នាំឱ្យ $3t = 3 \\implies t = 1 \\implies M(2, 1, 3)$។",
         "diagram": ""
       }
     ],
@@ -85863,7 +85863,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ ប្រវែងធ្នូនៃខ្សែកោង",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាប្រវែងធ្នូនៃ $y = \\dfrac{2}{3}x^{3/2}$ ពី $x = 0$ ដល់ $x = 3$ ៖",
+        "question": "គណនាប្រវែងធ្នូនៃ $y = \\dfrac{2}{3}x^{\\frac{3}{2}}$ ពី $x = 0$ ដល់ $x = 3$ ៖",
         "options": [
           "$\\dfrac{14}{3}$",
           "$4$",
@@ -85871,7 +85871,7 @@
           "$5$"
         ],
         "correct": 0,
-        "explanation": "$y' = x^{1/2} \\implies 1 + (y')^2 = 1 + x$។ $L = \\int_0^3 \\sqrt{1+x} dx = [\\frac{2}{3}(1+x)^{3/2}]_0^3 = \\frac{2}{3}(4^{3/2} - 1) = \\frac{2}{3}(8 - 1) = \\dfrac{14}{3}$។",
+        "explanation": "$y' = x^{\\frac{1}{2}} \\implies 1 + (y')^2 = 1 + x$។ $L = \\int_0^3 \\sqrt{1+x} dx = [\\frac{2}{3}(1+x)^{\\frac{3}{2}}]_0^3 = \\frac{2}{3}(4^{\\frac{3}{2}} - 1) = \\frac{2}{3}(8 - 1) = \\dfrac{14}{3}$។",
         "diagram": ""
       },
       {
@@ -85880,7 +85880,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ ប្រវែងធ្នូនៃខ្សែកោង",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាប្រវែងធ្នូនៃ $y = \\ln(\\cos x)$ ពី $x = 0$ ដល់ $x = \\pi/4$ ៖",
+        "question": "គណនាប្រវែងធ្នូនៃ $y = \\ln(\\cos x)$ ពី $x = 0$ ដល់ $x = \\dfrac{\\pi}{4}$ ៖",
         "options": [
           "$\\ln(\\sqrt{2} + 1)$",
           "$\\ln 2$",
@@ -85888,7 +85888,7 @@
           "$\\dfrac{\\pi}{4}$"
         ],
         "correct": 0,
-        "explanation": "$y' = -\\tan x \\implies 1 + (y')^2 = 1 + \\tan^2 x = \\sec^2 x$។ $L = \\int_0^{\\pi/4} \\sec x dx = [\\ln|\\sec x + \\tan x|]_0^{\\pi/4} = \\ln(\\sqrt{2} + 1)$។",
+        "explanation": "$y' = -\\tan x \\implies 1 + (y')^2 = 1 + \\tan^2 x = \\sec^2 x$។ $L = \\int_0^{\\dfrac{\\pi}{4}} \\sec x dx = [\\ln|\\sec x + \\tan x|]_0^{\\dfrac{\\pi}{4}} = \\ln(\\sqrt{2} + 1)$។",
         "diagram": ""
       },
       {
@@ -85922,7 +85922,7 @@
           "$8\\pi R^2$"
         ],
         "correct": 0,
-        "explanation": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + x^2/y^2} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
+        "explanation": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + x^\\dfrac{2}{y}^2} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
         "diagram": ""
       },
       {
@@ -85931,7 +85931,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ ប្រវែងធ្នូនៃខ្សែកោង",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ប្រវែងធ្នូនៃខ្សែច្រវាក់កាតេណារ (Catenary) $y = a \\cosh(x/a)$ ពី $x = 0$ ដល់ $x = x_0$ គឺ ៖",
+        "question": "ប្រវែងធ្នូនៃខ្សែច្រវាក់កាតេណារ (Catenary) $y = a \\cosh(\\dfrac{x}{a})$ ពី $x = 0$ ដល់ $x = x_0$ គឺ ៖",
         "options": [
           "$a \\sinh(x_0/a)$",
           "$a \\cosh(x_0/a)$",
@@ -85939,7 +85939,7 @@
           "$a(e^{x_0/a} - 1)$"
         ],
         "correct": 0,
-        "explanation": "$y' = \\sinh(x/a) \\implies 1 + (y')^2 = 1 + \\sinh^2(x/a) = \\cosh^2(x/a)$។ $L = \\int_0^{x_0} \\cosh(x/a) dx = a \\sinh(x_0/a)$។",
+        "explanation": "$y' = \\sinh(\\dfrac{x}{a}) \\implies 1 + (y')^2 = 1 + \\sinh^2(\\dfrac{x}{a}) = \\cosh^2(\\dfrac{x}{a})$។ $L = \\int_0^{x_0} \\cosh(\\dfrac{x}{a}) dx = a \\sinh(x_0/a)$។",
         "diagram": ""
       },
       {
@@ -86028,7 +86028,7 @@
           "$\\dfrac{1}{6}$"
         ],
         "correct": 0,
-        "explanation": "ដឹងថាចេញលេខគូ $B = \\{2, 4, 6\\}$ (មាន 3)។ ក្នុងចំណោមនោះ លេខធំជាង ៣ គឺ $\\{4, 6\\}$ (មាន 2)។ $P = 2/3$។",
+        "explanation": "ដឹងថាចេញលេខគូ $B = \\{2, 4, 6\\}$ (មាន 3)។ ក្នុងចំណោមនោះ លេខធំជាង ៣ គឺ $\\{4, 6\\}$ (មាន 2)។ $P = \\dfrac{2}{3}$។",
         "diagram": ""
       },
       {
@@ -86062,7 +86062,7 @@
           "$\\dfrac{2}{3}$"
         ],
         "correct": 0,
-        "explanation": "លំហសំណាក $S = \\{BB, BG, GB, GG\\}$។ មានកូនប្រុសយ៉ាងតិចម្នាក់ $B = \\{BB, BG, GB\\}$ (មាន 3)។ កូនប្រុសទាំងពីរ $A = \\{BB\\}$ (មាន 1)។ $P = 1/3$។",
+        "explanation": "លំហសំណាក $S = \\{BB, BG, GB, GG\\}$។ មានកូនប្រុសយ៉ាងតិចម្នាក់ $B = \\{BB, BG, GB\\}$ (មាន 3)។ កូនប្រុសទាំងពីរ $A = \\{BB\\}$ (មាន 1)។ $P = \\dfrac{1}{3}$។",
         "diagram": ""
       },
       {
@@ -86096,7 +86096,7 @@
           "$\\dfrac{3}{52}$"
         ],
         "correct": 0,
-        "explanation": "សល់អាត់ ៣ សន្លឹកក្នុងចំណោមបៀដែលនៅសល់ ៥១ សន្លឹក៖ $P = 3/51 = 1/17$។",
+        "explanation": "សល់អាត់ ៣ សន្លឹកក្នុងចំណោមបៀដែលនៅសល់ ៥១ សន្លឹក៖ $P = \\dfrac{3}{51} = \\dfrac{1}{17}$។",
         "diagram": ""
       },
       {
@@ -86192,7 +86192,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តប្រូបាបសរុប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រអប់ I មានបាល់ក្រហម ៣ ស ២; ប្រអប់ II មានបាល់ក្រហម ២ ស ៤។ ជ្រើសរើសប្រអប់មួយដោយចៃដន្យ (ប្រូបាបស្មើគ្នា $1/2$) រួចដកបាល់មួយ។ រកប្រូបាបដែលបានបាល់ក្រហម ៖",
+        "question": "ប្រអប់ I មានបាល់ក្រហម ៣ ស ២; ប្រអប់ II មានបាល់ក្រហម ២ ស ៤។ ជ្រើសរើសប្រអប់មួយដោយចៃដន្យ (ប្រូបាបស្មើគ្នា $\\dfrac{1}{2}$) រួចដកបាល់មួយ។ រកប្រូបាបដែលបានបាល់ក្រហម ៖",
         "options": [
           "$\\dfrac{7}{15}$",
           "$\\dfrac{1}{2}$",
@@ -86299,7 +86299,7 @@
           "$1$",
           "$0$",
           "$n$",
-          "$1/n$"
+          "$\\dfrac{1}{n}$"
         ],
         "correct": 0,
         "explanation": "ដោយសារព្រឹត្តិការណ៍មិនចុះសម្រុងគ្នា និងប្រជុំស្មើ $S$ នាំឱ្យផលបូកប្រូបាបស្មើ $P(S) = 1$។",
@@ -86442,7 +86442,7 @@
           "$\\dfrac{3}{4}$"
         ],
         "correct": 0,
-        "explanation": "បាល់មាសសរុបមាន 3 (2 ក្នុង A, 1 ក្នុង B)។ ឱកាសដែលបាល់មាសនោះមកពីប្រអប់ A (ដែលមានបាល់មាសមួយទៀត) គឺ 2 ក្នុងចំណោម 3 នាំឱ្យ $P = 2/3$។",
+        "explanation": "បាល់មាសសរុបមាន 3 (2 ក្នុង A, 1 ក្នុង B)។ ឱកាសដែលបាល់មាសនោះមកពីប្រអប់ A (ដែលមានបាល់មាសមួយទៀត) គឺ 2 ក្នុងចំណោម 3 នាំឱ្យ $P = \\dfrac{2}{3}$។",
         "diagram": ""
       },
       {
@@ -86574,13 +86574,13 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "បញ្ហាទ្វារទាំងបី Monty Hall Problem ៖ បេក្ខជនជ្រើសយកទ្វារ ១។ ពិធីករដែលដឹងថាអ្វីនៅពីក្រោយទ្វារ បានបើកទ្វារមួយទៀតបង្ហាញសត្វពពែ។ តើបេក្ខជនគួរតែប្តូរទ្វារដែរឬទេ?",
         "options": [
-          "គួរប្តូរ ព្រោះឱកាសឈ្នះរថយន្តកើនឡើងដល់ $2/3$",
-          "មិនគួរប្តូរទេ ព្រោះឱកាសនៅតែ $1/2$ ដដែល",
+          "គួរប្តូរ ព្រោះឱកាសឈ្នះរថយន្តកើនឡើងដល់ $\\dfrac{2}{3}$",
+          "មិនគួរប្តូរទេ ព្រោះឱកាសនៅតែ $\\dfrac{1}{2}$ ដដែល",
           "ប្តូរឬមិនប្តូរមានតម្លៃស្មើគ្នា",
           "អាស្រ័យលើទ្វារដែលនៅសល់"
         ],
         "correct": 0,
-        "explanation": "តាមទ្រឹស្តីបទ Bayes៖ ឱកាសនៅទ្វារដើមគឺ $1/3$ ដូច្នេះទ្វារដែលនៅសល់ទទួលបានប្រូបាប $2/3$។ ការប្តូរទ្វារបង្កើនឱកាសទ្វេដង។",
+        "explanation": "តាមទ្រឹស្តីបទ Bayes៖ ឱកាសនៅទ្វារដើមគឺ $\\dfrac{1}{3}$ ដូច្នេះទ្វារដែលនៅសល់ទទួលបានប្រូបាប $\\dfrac{2}{3}$។ ការប្តូរទ្វារបង្កើនឱកាសទ្វេដង។",
         "diagram": ""
       },
       {
@@ -87083,7 +87083,7 @@
           "$y = 2x - 4$"
         ],
         "correct": 0,
-        "explanation": "$a = 8/4 = 2$។ $b = 10 - 2(3) = 10 - 6 = 4$។ សមីការគឺ $y = 2x + 4$។",
+        "explanation": "$a = \\dfrac{8}{4} = 2$។ $b = 10 - 2(3) = 10 - 6 = 4$។ សមីការគឺ $y = 2x + 4$។",
         "diagram": ""
       },
       {
@@ -87247,15 +87247,15 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ ការប៉ាន់ស្មានតម្លៃតាមសមីការបន្ទាត់តម្រែតម្រង់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្រុមហ៊ុនមួយរកឃើញថាយុទ្ធនាការផ្សាយពាណិជ្ជកម្ម $x$ ($100\\$$) ផ្តល់ប្រាក់ចំណូល $y$ ($1000\\$$) តាមសមីការ $y = 0.8x + 5$។ បើចំណាយ $x = 50$ ($5000\\$$) តើចំណូលរំពឹងទុកគឺ ៖",
+        "question": "ក្រុមហ៊ុនមួយរកឃើញថាយុទ្ធនាការផ្សាយពាណិជ្ជកម្ម $x$ (100 ដុល្លារ) ផ្តល់ប្រាក់ចំណូល $y$ (1,000 ដុល្លារ) តាមសមីការ $y = 0.8x + 5$។ បើចំណាយ $x = 50$ (5,000 ដុល្លារ) តើចំណូលរំពឹងទុកគឺ ៖",
         "options": [
-          "$45$ ($45,000\\$$)",
-          "$40$ ($40,000\\$$)",
-          "$50$ ($50,000\\$$)",
-          "$35$ ($35,000\\$$)"
+          "$45$ (45,000 ដុល្លារ)",
+          "$40$ (40,000 ដុល្លារ)",
+          "$50$ (50,000 ដុល្លារ)",
+          "$35$ (35,000 ដុល្លារ)"
         ],
         "correct": 0,
-        "explanation": "$y = 0.8(50) + 5 = 40 + 5 = 45$ (ពោលគឺ $45,000\\$$)។",
+        "explanation": "$y = 0.8(50) + 5 = 40 + 5 = 45$ (ពោលគឺ 45,000 ដុល្លារ)។",
         "diagram": ""
       },
       {
@@ -87601,7 +87601,7 @@
           "$3\\text{ cm}$"
         ],
         "correct": 0,
-        "explanation": "ជ្រើសយកកំពូល $V(0, 0)$ អ័ក្សឈរ $x^2 = 4py$។ មាត់គោមឆ្លងកាត់ចំណុច $(8, 8)$ (ព្រោះកាំ $r = 16/2 = 8$, ជម្រៅ $y = 8$)។ $8^2 = 4p(8) \\iff 64 = 32p \\iff p = 2\\text{ cm}$។ ត្រូវដាក់អំពូលនៅកំណុំ ចម្ងាយ $2\\text{ cm}$ ពីបាត។",
+        "explanation": "ជ្រើសយកកំពូល $V(0, 0)$ អ័ក្សឈរ $x^2 = 4py$។ មាត់គោមឆ្លងកាត់ចំណុច $(8, 8)$ (ព្រោះកាំ $r = \\dfrac{16}{2} = 8$, ជម្រៅ $y = 8$)។ $8^2 = 4p(8) \\iff 64 = 32p \\iff p = 2\\text{ cm}$។ ត្រូវដាក់អំពូលនៅកំណុំ ចម្ងាយ $2\\text{ cm}$ ពីបាត។",
         "diagram": ""
       },
       {
@@ -88015,7 +88015,7 @@
           "$\\dfrac{x^2}{25} + \\dfrac{y^2}{9} = 1$"
         ],
         "correct": 0,
-        "explanation": "$2c = 6 \\implies c = 3$។ $e = c/a = 0.6 = 3/5 \\implies a = 5$។ $b^2 = a^2 - c^2 = 25 - 9 = 16$។ សមីការគឺ $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$។",
+        "explanation": "$2c = 6 \\implies c = 3$។ $e = \\dfrac{c}{a} = 0.6 = \\dfrac{3}{5} \\implies a = 5$។ $b^2 = a^2 - c^2 = 25 - 9 = 16$។ សមីការគឺ $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$។",
         "diagram": ""
       },
       {
