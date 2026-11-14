@@ -963,15 +963,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ផលបូក n តួដំបូងនៃស្វ៊ីតនព្វន្ត",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "កសិករម្នាក់សងបំណុល ៣០ លើកជារៀងរាល់ខែ។ លើកទីមួយសង $100\\$$ ហើយលើកបន្តបន្ទាប់កើន $10\\$$ រាល់ខែ។ តើគាត់សងសរុបប៉ុន្មាន?",
+        "question": "កសិករម្នាក់សងបំណុល ៣០ លើកជារៀងរាល់ខែ។ លើកទីមួយសង $100\\text{ ដុល្លារ}$ ហើយលើកបន្តបន្ទាប់កើន $10\\text{ ដុល្លារ}$ រាល់ខែ។ តើគាត់សងសរុបប៉ុន្មាន?",
         "options": [
-          "$7250\\$$",
-          "$7350\\$$",
-          "$7450\\$$",
-          "$7500\\$$"
+          "$7250\\text{ ដុល្លារ}$",
+          "$7350\\text{ ដុល្លារ}$",
+          "$7450\\text{ ដុល្លារ}$",
+          "$7500\\text{ ដុល្លារ}$"
         ],
         "correct": 1,
-        "explanation": "$n = 30, u_1 = 100, d = 10$ ៖ $S_{30} = \\dfrac{30}{2}[2(100) + 29(10)] = 15[200 + 290] = 15(490) = 7350\\$$។"
+        "explanation": "$n = 30, u_1 = 100, d = 10$ ៖ $S_{30} = \\dfrac{30}{2}[2(100) + 29(10)] = 15[200 + 290] = 15(490) = 7350\\text{ ដុល្លារ}$។"
       }
     ],
     "3": [
@@ -1411,7 +1411,7 @@
           "$\\dfrac{43}{64}$"
         ],
         "correct": 0,
-        "explanation": "$u_1 = 1, q = -\\dfrac{1}{2}, n = 6$ ៖ $S_6 = \\dfrac{1 - (-1/2)^6}{1 - (-1/2)} = \\dfrac{1 - 1/64}{3/2} = \\dfrac{63/64}{3/2} = \\dfrac{21}{32}$។"
+        "explanation": "$u_1 = 1, q = -\\dfrac{1}{2}, n = 6$ ៖ $S_6 = \\dfrac{1 - (-\\dfrac{1}{2})^6}{1 - (-\\dfrac{1}{2})} = \\dfrac{1 - \\dfrac{1}{64}}{\\dfrac{3}{2}} = \\dfrac{\\dfrac{63}{64}}{\\dfrac{3}{2}} = \\dfrac{21}{32}$។"
       },
       {
         "id": "q8",
@@ -1451,15 +1451,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ផលបូក n តួដំបូងនៃស្វ៊ីតធរណីមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "មនុស្សម្នាក់សន្សំប្រាក់ដោយខែទី ១ ដាក់ $10\\$$, ខែទី ២ ដាក់ $20\\$$, ខែទី ៣ ដាក់ $40\\$$ (ទ្វេដងរាល់ខែ)។ តើក្រោយពេល ១ ឆ្នាំ (១២ ខែ) គាត់សន្សំបានសរុបប៉ុន្មាន?",
+        "question": "មនុស្សម្នាក់សន្សំប្រាក់ដោយខែទី ១ ដាក់ $10\\text{ ដុល្លារ}$, ខែទី ២ ដាក់ $20\\text{ ដុល្លារ}$, ខែទី ៣ ដាក់ $40\\text{ ដុល្លារ}$ (ទ្វេដងរាល់ខែ)។ តើក្រោយពេល ១ ឆ្នាំ (១២ ខែ) គាត់សន្សំបានសរុបប៉ុន្មាន?",
         "options": [
-          "$40950\\$$",
-          "$40960\\$$",
-          "$20470\\$$",
-          "$81910\\$$"
+          "$40950\\text{ ដុល្លារ}$",
+          "$40960\\text{ ដុល្លារ}$",
+          "$20470\\text{ ដុល្លារ}$",
+          "$81910\\text{ ដុល្លារ}$"
         ],
         "correct": 0,
-        "explanation": "$u_1 = 10, q = 2, n = 12$ ៖ $S_{12} = 10(2^{12} - 1) = 10(4096 - 1) = 10(4095) = 40950\\$$។"
+        "explanation": "$u_1 = 10, q = 2, n = 12$ ៖ $S_{12} = 10(2^{12} - 1) = 10(4096 - 1) = 10(4095) = 40950\\text{ ដុល្លារ}$។"
       }
     ],
     "3": [
@@ -1671,7 +1671,7 @@
           "$3$"
         ],
         "correct": 1,
-        "explanation": "$u_1 = 1, q = \\dfrac{1}{2}$ ៖ $S = \\dfrac{1}{1 - 1/2} = 2$។"
+        "explanation": "$u_1 = 1, q = \\dfrac{1}{2}$ ៖ $S = \\dfrac{1}{1 - \\dfrac{1}{2}} = 2$។"
       },
       {
         "id": "q4",
@@ -1687,7 +1687,7 @@
           "$\\dfrac{5}{3}$"
         ],
         "correct": 0,
-        "explanation": "$S = \\dfrac{1}{1 - 1/3} = \\dfrac{1}{2/3} = \\dfrac{3}{2}$។"
+        "explanation": "$S = \\dfrac{1}{1 - \\dfrac{1}{3}} = \\dfrac{1}{\\dfrac{2}{3}} = \\dfrac{3}{2}$។"
       },
       {
         "id": "q5",
@@ -1703,7 +1703,7 @@
           "$5$"
         ],
         "correct": 0,
-        "explanation": "$u_1 = 6, q = -\\dfrac{1}{3}$ ៖ $S = \\dfrac{6}{1 - (-1/3)} = \\dfrac{6}{4/3} = \\dfrac{18}{4} = \\dfrac{9}{2} = 4.5$។"
+        "explanation": "$u_1 = 6, q = -\\dfrac{1}{3}$ ៖ $S = \\dfrac{6}{1 - (-\\dfrac{1}{3})} = \\dfrac{6}{\\dfrac{4}{3}} = \\dfrac{18}{4} = \\dfrac{9}{2} = 4.5$។"
       },
       {
         "id": "q6",
@@ -1719,7 +1719,7 @@
           "$\\dfrac{3}{11}$"
         ],
         "correct": 0,
-        "explanation": "$0.333\\dots = \\dfrac{3}{10} + \\dfrac{3}{100} + \\dots = \\dfrac{3/10}{1 - 1/10} = \\dfrac{3/10}{9/10} = \\dfrac{3}{9} = \\dfrac{1}{3}$។"
+        "explanation": "$0.333\\dots = \\dfrac{3}{10} + \\dfrac{3}{100} + \\dots = \\dfrac{\\dfrac{3}{10}}{1 - \\dfrac{1}{10}} = \\dfrac{\\dfrac{3}{10}}{\\dfrac{9}{10}} = \\dfrac{3}{9} = \\dfrac{1}{3}$។"
       },
       {
         "id": "q7",
@@ -1751,7 +1751,7 @@
           "$\\dfrac{12}{90}$"
         ],
         "correct": 0,
-        "explanation": "$0.\\overline{12} = \\dfrac{12}{100} + \\dfrac{12}{10000} + \\dots = \\dfrac{12/100}{1 - 1/100} = \\dfrac{12/100}{99/100} = \\dfrac{12}{99} = \\dfrac{4}{33}$។"
+        "explanation": "$0.\\overline{12} = \\dfrac{12}{100} + \\dfrac{12}{10000} + \\dots = \\dfrac{\\dfrac{12}{100}}{1 - \\dfrac{1}{100}} = \\dfrac{\\dfrac{12}{100}}{\\dfrac{99}{100}} = \\dfrac{12}{99} = \\dfrac{4}{33}$។"
       },
       {
         "id": "q9",
@@ -1767,7 +1767,7 @@
           "$60\\text{ m}$"
         ],
         "correct": 0,
-        "explanation": "$D = 10 + 2\\left[10\\left(\\frac{3}{4}\\right) + 10\\left(\\frac{3}{4}\\right)^2 + \\dots\\right] = 10 + 2\\left[\\frac{7.5}{1 - 3/4}\\right] = 10 + 2(30) = 70\\text{ m}$។"
+        "explanation": "$D = 10 + 2\\left[10\\left(\\frac{3}{4}\\right) + 10\\left(\\frac{3}{4}\\right)^2 + \\dots\\right] = 10 + 2\\left[\\frac{7.5}{1 - \\dfrac{3}{4}}\\right] = 10 + 2(30) = 70\\text{ m}$។"
       },
       {
         "id": "q10",
@@ -1917,7 +1917,7 @@
           "$7$"
         ],
         "correct": 0,
-        "explanation": "$8^{2/3} = (2^3)^{2/3} = 4$។ $16^{3/4} = (2^4)^{3/4} = 8$។ $27^{1/3} = 3$។ $K = 4 + 8 - 3 = 9$។"
+        "explanation": "$8^{\\frac{2}{3}} = (2^3)^{\\frac{2}{3}} = 4$។ $16^{\\frac{3}{4}} = (2^4)^{\\frac{3}{4}} = 8$។ $27^{\\frac{1}{3}} = 3$។ $K = 4 + 8 - 3 = 9$។"
       },
       {
         "id": "q9",
@@ -2079,7 +2079,7 @@
           "$x = 0$ តែមួយគត់"
         ],
         "correct": 0,
-        "explanation": "ចែកនឹង $6^x$ ៖ $3\\left(\\frac{2}{3}\\right)^x + 2\\left(\\frac{3}{2}\\right)^x = 5$។ តាង $t = (2/3)^x$ ៖ $3t + 2/t = 5 \\Rightarrow 3t^2 - 5t + 2 = 0 \\Rightarrow t = 1, 2/3$ នាំឱ្យ $x = 0, 1$។"
+        "explanation": "ចែកនឹង $6^x$ ៖ $3\\left(\\frac{2}{3}\\right)^x + 2\\left(\\frac{3}{2}\\right)^x = 5$។ តាង $t = \\left(\\dfrac{2}{3}\\right)^{x}$ ៖ $3t + \\dfrac{2}{t} = 5 \\Rightarrow 3t^2 - 5t + 2 = 0 \\Rightarrow t = 1, \\dfrac{2}{3}$ នាំឱ្យ $x = 0, 1$។"
       },
       {
         "id": "q9",
@@ -2225,7 +2225,7 @@
           "$x > 2$"
         ],
         "correct": 0,
-        "explanation": "ដោយគោល $1/2 < 1$ នាំឱ្យប្តូរទិស ៖ $2x - 3 < x + 1 \\Rightarrow x < 4$។"
+        "explanation": "ដោយគោល $\\dfrac{1}{2} < 1$ នាំឱ្យប្តូរទិស ៖ $2x - 3 < x + 1 \\Rightarrow x < 4$។"
       },
       {
         "id": "q8",
@@ -2257,7 +2257,7 @@
           "$[-3, 1]$"
         ],
         "correct": 0,
-        "explanation": "ដោយគោល $2/5 < 1$ ៖ $x^2 - 2x \\le 3 \\Rightarrow x^2 - 2x - 3 \\le 0 \\Rightarrow -1 \\le x \\le 3$។"
+        "explanation": "ដោយគោល $\\dfrac{2}{5} < 1$ ៖ $x^2 - 2x \\le 3 \\Rightarrow x^2 - 2x - 3 \\le 0 \\Rightarrow -1 \\le x \\le 3$។"
       },
       {
         "id": "q10",
@@ -2505,7 +2505,7 @@
           "$x = 5$"
         ],
         "correct": 0,
-        "explanation": "$3x - 2 = x + 6 \\Rightarrow 2x = 8 \\Rightarrow x = 4$ (ផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x > 2/3$)។"
+        "explanation": "$3x - 2 = x + 6 \\Rightarrow 2x = 8 \\Rightarrow x = 4$ (ផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x > \\dfrac{2}{3}$)។"
       },
       {
         "id": "q5",
@@ -2569,7 +2569,7 @@
           "$x = 16$"
         ],
         "correct": 0,
-        "explanation": "បំពាក់ $\\log_2$ ទាំងសងខាង ៖ $\\log_2(x^{\\log_2 x}) = \\log_2 16 \\Rightarrow (\\log_2 x)^2 = 4 \\Rightarrow \\log_2 x = \\pm 2 \\Rightarrow x = 4, 1/4$។"
+        "explanation": "បំពាក់ $\\log_2$ ទាំងសងខាង ៖ $\\log_2(x^{\\log_2 x}) = \\log_2 16 \\Rightarrow (\\log_2 x)^2 = 4 \\Rightarrow \\log_2 x = \\pm 2 \\Rightarrow x = 4, \\dfrac{1}{4}$។"
       },
       {
         "id": "q9",
@@ -2635,7 +2635,7 @@
           "$x > 0$"
         ],
         "correct": 0,
-        "explanation": "លក្ខខណ្ឌ $x > 0$។ គោល $1/2 < 1$ នាំឱ្យប្តូរទិស ៖ $x \\le (1/2)^2 = 1/4$។ ប្រសព្វបាន $0 < x \\le 1/4$។"
+        "explanation": "លក្ខខណ្ឌ $x > 0$។ គោល $\\dfrac{1}{2} < 1$ នាំឱ្យប្តូរទិស ៖ $x \\le \\left(\\dfrac{1}{2}\\right)^{2} = \\dfrac{1}{4}$។ ប្រសព្វបាន $0 < x \\le \\dfrac{1}{4}$។"
       },
       {
         "id": "q3",
@@ -2699,7 +2699,7 @@
           "$-1 < x < 3$"
         ],
         "correct": 0,
-        "explanation": "លក្ខខណ្ឌ $x > -1$។ គោល $1/3 < 1$ ៖ $x + 1 < (1/3)^{-1} = 3 \\Rightarrow x < 2$ នាំឱ្យ $-1 < x < 2$។"
+        "explanation": "លក្ខខណ្ឌ $x > -1$។ គោល $\\dfrac{1}{3} < 1$ ៖ $x + 1 < (\\dfrac{1}{3})^{-1} = 3 \\Rightarrow x < 2$ នាំឱ្យ $-1 < x < 2$។"
       },
       {
         "id": "q7",
@@ -2763,7 +2763,7 @@
           "$[1, 2] \\cup [3, 4]$"
         ],
         "correct": 0,
-        "explanation": "លក្ខខណ្ឌ $x < 2$ ឬ $x > 3$។ $x^2 - 5x + 6 \\le (1/2)^{-1} = 2 \\Rightarrow x^2 - 5x + 4 \\le 0 \\Rightarrow 1 \\le x \\le 4$។ ប្រសព្វបាន $[1, 2) \\cup (3, 4]$។"
+        "explanation": "លក្ខខណ្ឌ $x < 2$ ឬ $x > 3$។ $x^2 - 5x + 6 \\le (\\dfrac{1}{2})^{-1} = 2 \\Rightarrow x^2 - 5x + 4 \\le 0 \\Rightarrow 1 \\le x \\le 4$។ ប្រសព្វបាន $[1, 2) \\cup (3, 4]$។"
       }
     ]
   },
@@ -3173,7 +3173,7 @@
           "$\\dfrac{\\pi}{2}$"
         ],
         "correct": 2,
-        "explanation": "$T = \\dfrac{2\\pi}{1/2} = 4\\pi$។"
+        "explanation": "$T = \\dfrac{2\\pi}{\\dfrac{1}{2}} = 4\\pi$។"
       },
       {
         "id": "q6",
@@ -3709,7 +3709,7 @@
           "$\\sqrt{3}$"
         ],
         "correct": 0,
-        "explanation": "$\\tan(45^\\circ + 30^\\circ) = \\dfrac{1 + 1/\\sqrt{3}}{1 - 1/\\sqrt{3}} = \\dfrac{\\sqrt{3}+1}{\\sqrt{3}-1} = \\dfrac{(\\sqrt{3}+1)^2}{2} = 2 + \\sqrt{3}$។"
+        "explanation": "$\\tan(45^\\circ + 30^\\circ) = \\dfrac{1 + \\dfrac{1}{\\sqrt{3}}}{1 - \\dfrac{1}{\\sqrt{3}}} = \\dfrac{\\sqrt{3}+1}{\\sqrt{3}-1} = \\dfrac{(\\sqrt{3}+1)^2}{2} = 2 + \\sqrt{3}$។"
       },
       {
         "id": "q9",
@@ -3741,7 +3741,7 @@
           "$\\dfrac{\\pi}{2}$"
         ],
         "correct": 0,
-        "explanation": "$\\tan(a + b) = \\dfrac{1/2 + 1/3}{1 - (1/2)(1/3)} = \\dfrac{5/6}{5/6} = 1 \\Rightarrow a + b = \\dfrac{\\pi}{4}$។"
+        "explanation": "$\\tan(a + b) = \\dfrac{\\dfrac{1}{2} + \\dfrac{1}{3}}{1 - (\\dfrac{1}{2})(\\dfrac{1}{3})} = \\dfrac{\\dfrac{5}{6}}{\\dfrac{5}{6}} = 1 \\Rightarrow a + b = \\dfrac{\\pi}{4}$។"
       }
     ],
     "2": [
@@ -3823,7 +3823,7 @@
           "$\\dfrac{16}{25}$"
         ],
         "correct": 0,
-        "explanation": "$\\cos x = \\sqrt{1 - 9/25} = \\dfrac{4}{5}$ នាំឱ្យ $\\sin 2x = 2\\left(\\dfrac{3}{5}\\right)\\left(\\dfrac{4}{5}\\right) = \\dfrac{24}{25}$។"
+        "explanation": "$\\cos x = \\sqrt{1 - \\dfrac{9}{25}} = \\dfrac{4}{5}$ នាំឱ្យ $\\sin 2x = 2\\left(\\dfrac{3}{5}\\right)\\left(\\dfrac{4}{5}\\right) = \\dfrac{24}{25}$។"
       },
       {
         "id": "q6",
@@ -3871,7 +3871,7 @@
           "$\\dfrac{1}{2}$"
         ],
         "correct": 0,
-        "explanation": "$\\cos^2 15^\\circ = \\dfrac{1 + \\cos 30^\\circ}{2} = \\dfrac{1 + \\sqrt{3}/2}{2} = \\dfrac{2 + \\sqrt{3}}{4}$។"
+        "explanation": "$\\cos^2 15^\\circ = \\dfrac{1 + \\cos 30^\\circ}{2} = \\dfrac{1 + \\dfrac{\\sqrt{3}}{2}}{2} = \\dfrac{2 + \\sqrt{3}}{4}$។"
       },
       {
         "id": "q9",
@@ -3903,7 +3903,7 @@
           "គ្មានរូបមន្តបែបនេះទេ"
         ],
         "correct": 0,
-        "explanation": "រូបមន្តប្តូរតាម $t = \\tan(x/2)$ ឬ $\\tan x$ ៖ $\\sin 2x = \\dfrac{2t}{1+t^2}, \\cos 2x = \\dfrac{1-t^2}{1+t^2}$។"
+        "explanation": "រូបមន្តប្តូរតាម $t = \\tan(\\dfrac{x}{2})$ ឬ $\\tan x$ ៖ $\\sin 2x = \\dfrac{2t}{1+t^2}, \\cos 2x = \\dfrac{1-t^2}{1+t^2}$។"
       }
     ],
     "3": [
@@ -4033,7 +4033,7 @@
           "$\\dfrac{\\sqrt{3}}{8}$"
         ],
         "correct": 0,
-        "explanation": "គុណនឹង $2\\sin 20^\\circ$ រួចបង្រួមតាមរូបមន្តមុំទ្វេ គណនាបានចម្លើយ $1/8$។"
+        "explanation": "គុណនឹង $2\\sin 20^\\circ$ រួចបង្រួមតាមរូបមន្តមុំទ្វេ គណនាបានចម្លើយ $\\dfrac{1}{8}$។"
       },
       {
         "id": "q9",
@@ -4049,7 +4049,7 @@
           "$\\dfrac{1}{4}$"
         ],
         "correct": 0,
-        "explanation": "ប្រើរូបមន្តផលគុណ $\\sin 50^\\circ \\sin 70^\\circ = \\frac{1}{2}(\\cos 20^\\circ - \\cos 120^\\circ)$ គណនាបាន $A = 1/2$។"
+        "explanation": "ប្រើរូបមន្តផលគុណ $\\sin 50^\\circ \\sin 70^\\circ = \\frac{1}{2}(\\cos 20^\\circ - \\cos 120^\\circ)$ គណនាបាន $A = \\dfrac{1}{2}$។"
       },
       {
         "id": "q10",
@@ -4475,7 +4475,7 @@
           "$x = \\dfrac{2\\pi}{3} + 2k\\pi$"
         ],
         "correct": 0,
-        "explanation": "ចែកនឹង $2$ ៖ $\\sin(x - \\pi/6) = 1/2 = \\sin(\\pi/6) \\Rightarrow x - \\pi/6 = \\pi/6 + 2k\\pi \\Rightarrow x = \\pi/3 + 2k\\pi$ ឬ $x = \\pi + 2k\\pi$។"
+        "explanation": "ចែកនឹង $2$ ៖ $\\sin(x - \\pi/6) = \\dfrac{1}{2} = \\sin(\\pi/6) \\Rightarrow x - \\pi/6 = \\pi/6 + 2k\\pi \\Rightarrow x = \\pi/3 + 2k\\pi$ ឬ $x = \\pi + 2k\\pi$។"
       },
       {
         "id": "q6",
@@ -4507,7 +4507,7 @@
           "$x = \\dfrac{\\pi}{6} + 2k\\pi$"
         ],
         "correct": 0,
-        "explanation": "ចែកនឹង $2$ ៖ $\\cos(x - \\pi/3) = \\sqrt{2}/2 = \\cos(\\pi/4) \\Rightarrow x - \\pi/3 = \\pm \\pi/4 + 2k\\pi \\Rightarrow x = 7\\pi/12 + 2k\\pi$ ឬ $\\pi/12 + 2k\\pi$។"
+        "explanation": "ចែកនឹង $2$ ៖ $\\cos(x - \\pi/3) = \\dfrac{\\sqrt{2}}{2} = \\cos(\\pi/4) \\Rightarrow x - \\pi/3 = \\pm \\pi/4 + 2k\\pi \\Rightarrow x = 7\\pi/12 + 2k\\pi$ ឬ $\\pi/12 + 2k\\pi$។"
       },
       {
         "id": "q8",
@@ -4539,7 +4539,7 @@
           "$x = \\pm \\dfrac{\\pi}{4} + k\\pi$"
         ],
         "correct": 0,
-        "explanation": "$\\sin(2x - \\pi/3) = \\sqrt{2}/2 = \\sin(\\pi/4) \\Rightarrow 2x - \\pi/3 = \\pi/4 + 2k\\pi \\Rightarrow 2x = 7\\pi/12 + 2k\\pi \\Rightarrow x = 7\\pi/24 + k\\pi$។"
+        "explanation": "$\\sin(2x - \\pi/3) = \\dfrac{\\sqrt{2}}{2} = \\sin(\\pi/4) \\Rightarrow 2x - \\pi/3 = \\pi/4 + 2k\\pi \\Rightarrow 2x = 7\\pi/12 + 2k\\pi \\Rightarrow x = 7\\pi/24 + k\\pi$។"
       },
       {
         "id": "q10",
@@ -4573,7 +4573,7 @@
           "$\\cos x = -1$"
         ],
         "correct": 0,
-        "explanation": "ដាក់ $\\cos x$ ជាកត្តា ៖ $\\cos x (2\\cos x - 1) = 0 \\Rightarrow \\cos x = 0$ ឬ $\\cos x = 1/2$។"
+        "explanation": "ដាក់ $\\cos x$ ជាកត្តា ៖ $\\cos x (2\\cos x - 1) = 0 \\Rightarrow \\cos x = 0$ ឬ $\\cos x = \\dfrac{1}{2}$។"
       },
       {
         "id": "q2",
@@ -4589,7 +4589,7 @@
           "$\\sin x = 0$"
         ],
         "correct": 0,
-        "explanation": "$a + b + c = 2 - 3 + 1 = 0 \\Rightarrow \\sin x = 1$ ឬ $\\sin x = 1/2$។"
+        "explanation": "$a + b + c = 2 - 3 + 1 = 0 \\Rightarrow \\sin x = 1$ ឬ $\\sin x = \\dfrac{1}{2}$។"
       },
       {
         "id": "q3",
@@ -4637,7 +4637,7 @@
           "$\\sin x = 2$"
         ],
         "correct": 0,
-        "explanation": "ជំនួស $\\cos^2 x = 1 - \\sin^2 x$ ៖ $2(1 - \\sin^2 x) + 3\\sin x - 3 = 0 \\Rightarrow 2\\sin^2 x - 3\\sin x + 1 = 0$ នាំឱ្យ $\\sin x = 1, 1/2$។"
+        "explanation": "ជំនួស $\\cos^2 x = 1 - \\sin^2 x$ ៖ $2(1 - \\sin^2 x) + 3\\sin x - 3 = 0 \\Rightarrow 2\\sin^2 x - 3\\sin x + 1 = 0$ នាំឱ្យ $\\sin x = 1, \\dfrac{1}{2}$។"
       },
       {
         "id": "q6",
@@ -4669,7 +4669,7 @@
           "$\\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}$"
         ],
         "correct": 0,
-        "explanation": "$\\sin^2 x = 1/4 \\Rightarrow \\sin x = \\pm 1/2$។ ក្នុង $[0, 2\\pi]$ ឫសទាំង ៤ គឺ $\\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$។"
+        "explanation": "$\\sin^2 x = \\dfrac{1}{4} \\Rightarrow \\sin x = \\pm \\dfrac{1}{2}$។ ក្នុង $[0, 2\\pi]$ ឫសទាំង ៤ គឺ $\\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$។"
       },
       {
         "id": "q8",
@@ -4717,7 +4717,7 @@
           "គ្មានឫស"
         ],
         "correct": 0,
-        "explanation": "$(2\\cos x - 1)(\\cos x - 2) = 0$។ ដោយ $\\cos x \\le 1$ នាំឱ្យយកតែ $\\cos x = 1/2 \\Rightarrow x = \\pi/3, 5\\pi/3$ (២ ឫស)។"
+        "explanation": "$(2\\cos x - 1)(\\cos x - 2) = 0$។ ដោយ $\\cos x \\le 1$ នាំឱ្យយកតែ $\\cos x = \\dfrac{1}{2} \\Rightarrow x = \\pi/3, 5\\pi/3$ (២ ឫស)។"
       }
     ],
     "4": [
@@ -4767,7 +4767,7 @@
           "$\\left[\\dfrac{\\pi}{3}, \\dfrac{2\\pi}{3}\\right]$"
         ],
         "correct": 0,
-        "explanation": "នៅលើរង្វង់ត្រីកោណមាត្រ ស៊ីនុសធំជាង ឬស្មើ $1/2$ ចន្លោះ $\\pi/6$ ដល់ $5\\pi/6$។"
+        "explanation": "នៅលើរង្វង់ត្រីកោណមាត្រ ស៊ីនុសធំជាង ឬស្មើ $\\dfrac{1}{2}$ ចន្លោះ $\\pi/6$ ដល់ $5\\pi/6$។"
       },
       {
         "id": "q4",
@@ -4783,7 +4783,7 @@
           "$\\left[\\dfrac{\\pi}{2}, \\dfrac{3\\pi}{2}\\right]$"
         ],
         "correct": 0,
-        "explanation": "កូស៊ីនុសតូចជាង $\\sqrt{2}/2$ ចាប់ពីមុំ $\\pi/4$ ដល់ $7\\pi/4$។"
+        "explanation": "កូស៊ីនុសតូចជាង $\\dfrac{\\sqrt{2}}{2}$ ចាប់ពីមុំ $\\pi/4$ ដល់ $7\\pi/4$។"
       },
       {
         "id": "q5",
@@ -4815,7 +4815,7 @@
           "$[0, 2\\pi]$"
         ],
         "correct": 0,
-        "explanation": "$\\sin x < \\sqrt{3}/2$ នាំឱ្យ $x \\in [0, \\pi/3) \\cup (2\\pi/3, 2\\pi]$។"
+        "explanation": "$\\sin x < \\dfrac{\\sqrt{3}}{2}$ នាំឱ្យ $x \\in [0, \\pi/3) \\cup (2\\pi/3, 2\\pi]$។"
       },
       {
         "id": "q7",
@@ -4831,7 +4831,7 @@
           "$\\cos x \\ge 1$"
         ],
         "correct": 0,
-        "explanation": "$(2\\cos x - 1)(\\cos x - 1) \\le 0 \\Rightarrow 1/2 \\le \\cos x \\le 1$។"
+        "explanation": "$(2\\cos x - 1)(\\cos x - 1) \\le 0 \\Rightarrow \\dfrac{1}{2} \\le \\cos x \\le 1$។"
       },
       {
         "id": "q8",
@@ -4847,7 +4847,7 @@
           "$[0, 2\\pi]$"
         ],
         "correct": 0,
-        "explanation": "$1/2 \\le \\cos x \\le 1 \\Rightarrow x \\in [0, \\pi/3] \\cup [5\\pi/3, 2\\pi]$។"
+        "explanation": "$\\dfrac{1}{2} \\le \\cos x \\le 1 \\Rightarrow x \\in [0, \\pi/3] \\cup [5\\pi/3, 2\\pi]$។"
       },
       {
         "id": "q9",
@@ -4879,7 +4879,7 @@
           "$\\left[0, \\dfrac{\\pi}{6}\\right)$"
         ],
         "correct": 0,
-        "explanation": "$\\tan x < 1/\\sqrt{3} = \\tan(\\pi/6) \\Rightarrow -\\pi/2 < x < \\pi/6$។"
+        "explanation": "$\\tan x < \\dfrac{1}{\\sqrt{3}} = \\tan(\\pi/6) \\Rightarrow -\\pi/2 < x < \\pi/6$។"
       }
     ]
   },
@@ -5575,13 +5575,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាម៉ាទ្រីសច្រាសនៃ $A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$ ៖",
         "options": [
-          "$\\begin{pmatrix} 1/2 & 0 \\\\ 0 & 1/3 \\end{pmatrix}$",
+          "$\\begin{pmatrix} \\dfrac{1}{2} & 0 \\\\ 0 & \\dfrac{1}{3} \\end{pmatrix}$",
           "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix}$",
           "$\\begin{pmatrix} -2 & 0 \\\\ 0 & -3 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1/3 & 0 \\\\ 0 & 1/2 \\end{pmatrix}$"
+          "$\\begin{pmatrix} \\dfrac{1}{3} & 0 \\\\ 0 & \\dfrac{1}{2} \\end{pmatrix}$"
         ],
         "correct": 0,
-        "explanation": "$\\det(A) = 2(3) - 0 = 6$។ $A^{-1} = \\dfrac{1}{6} \\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix} = \\begin{pmatrix} 1/2 & 0 \\\\ 0 & 1/3 \\end{pmatrix}$។"
+        "explanation": "$\\det(A) = 2(3) - 0 = 6$។ $A^{-1} = \\dfrac{1}{6} \\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix} = \\begin{pmatrix} \\dfrac{1}{2} & 0 \\\\ 0 & \\dfrac{1}{3} \\end{pmatrix}$។"
       },
       {
         "id": "q4",
@@ -6263,7 +6263,7 @@
           "$x = 3, y = 2$"
         ],
         "correct": 0,
-        "explanation": "$D = 2(-1) - 3(1) = -5$។ $D_x = 8(-1) - 3(-1) = -5 \\Rightarrow x = -5/(-5) = 1$។ $D_y = 2(-1) - 8(1) = -10 \\Rightarrow y = -10/(-5) = 2$។"
+        "explanation": "$D = 2(-1) - 3(1) = -5$។ $D_x = 8(-1) - 3(-1) = -5 \\Rightarrow x = -\\dfrac{5}{-5} = 1$។ $D_y = 2(-1) - 8(1) = -10 \\Rightarrow y = -\\dfrac{10}{-5} = 2$។"
       },
       {
         "id": "q6",
@@ -6783,7 +6783,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "រាង $[\\infty - \\infty]$។ គុណឆ្លាស់ ៖ $\\dfrac{x^2+4x-x^2}{\\sqrt{x^2+4x}+x} = \\dfrac{4x}{x(\\sqrt{1+4/x}+1)} \\to \\dfrac{4}{2} = 2$។"
+        "explanation": "រាង $[\\infty - \\infty]$។ គុណឆ្លាស់ ៖ $\\dfrac{x^2+4x-x^2}{\\sqrt{x^2+4x}+x} = \\dfrac{4x}{x(\\sqrt{1+\\dfrac{4}{x}}+1)} \\to \\dfrac{4}{2} = 2$។"
       },
       {
         "id": "q8",
@@ -6929,7 +6929,7 @@
           "$2$"
         ],
         "correct": 0,
-        "explanation": "$1 - \\cos x = 2\\sin^2(x/2)$។ $\\lim_{x \\to 0} \\dfrac{2\\sin^2(x/2)}{x^2} = \\dfrac{2}{4}\\left(\\dfrac{\\sin(x/2)}{x/2}\\right)^2 = \\dfrac{1}{2}$។"
+        "explanation": "$1 - \\cos x = 2\\sin^2(\\dfrac{x}{2})$។ $\\lim_{x \\to 0} \\dfrac{2\\sin^2(\\dfrac{x}{2})}{x^2} = \\dfrac{2}{4}\\left(\\dfrac{\\sin(\\dfrac{x}{2})}{\\dfrac{x}{2}}\\right)^2 = \\dfrac{1}{2}$។"
       },
       {
         "id": "q7",
@@ -7147,15 +7147,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ភាពជាប់នៃអនុគមន៍ត្រង់ចំណុចមួយ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "តើអនុគមន៍ $f(x) = \\begin{cases} x \\sin(1/x) & x \\ne 0 \\\\ 0 & x = 0 \\end{cases}$ ជាប់ត្រង់ $x = 0$ ដែរឬទេ?",
+        "question": "តើអនុគមន៍ $f(x) = \\begin{cases} x \\sin(\\dfrac{1}{x}) & x \\ne 0 \\\\ 0 & x = 0 \\end{cases}$ ជាប់ត្រង់ $x = 0$ ដែរឬទេ?",
         "options": [
-          "ជាប់ ព្រោះ $|x \\sin(1/x)| \\le |x| \\to 0 = f(0)$",
-          "មិនជាប់ទេ ព្រោះ $\\sin(1/x)$ គ្មានលីមីត",
+          "ជាប់ ព្រោះ $|x \\sin(\\dfrac{1}{x})| \\le |x| \\to 0 = f(0)$",
+          "មិនជាប់ទេ ព្រោះ $\\sin(\\dfrac{1}{x})$ គ្មានលីមីត",
           "ដាច់ព្រោះមិនកំណត់",
           "មិនអាចសន្និដ្ឋានបាន"
         ],
         "correct": 0,
-        "explanation": "តាមទ្រឹស្តីបទညៀប ដោយ $-|x| \\le x \\sin(1/x) \\le |x|$ នាំឱ្យ $\\lim_{x \\to 0} x \\sin(1/x) = 0 = f(0)$ ដូច្នេះ $f$ ជាប់ត្រង់ $x = 0$។"
+        "explanation": "តាមទ្រឹស្តីបទညៀប ដោយ $-|x| \\le x \\sin(\\dfrac{1}{x}) \\le |x|$ នាំឱ្យ $\\lim_{x \\to 0} x \\sin(\\dfrac{1}{x}) = 0 = f(0)$ ដូច្នេះ $f$ ជាប់ត្រង់ $x = 0$។"
       }
     ]
   },
@@ -7313,7 +7313,7 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យដេរីវេត្រង់ចំណុច x0 តាមលីមីត",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "តើអនុគមន៍ $f(x) = x^{2/3}$ មានបន្ទាត់ប៉ះឈរត្រង់ចំណុចណា?",
+        "question": "តើអនុគមន៍ $f(x) = x^{\\frac{2}{3}}$ មានបន្ទាត់ប៉ះឈរត្រង់ចំណុចណា?",
         "options": [
           "$x = 0$",
           "$x = 1$",
@@ -7321,7 +7321,7 @@
           "គ្មានទេ"
         ],
         "correct": 0,
-        "explanation": "$f'(x) = \\dfrac{2}{3}x^{-1/3} = \\dfrac{2}{3\\sqrt[3]{x}}$។ កាលណា $x \\to 0$ នោះ $f'(x) \\to \\infty$ បង្កើតបានបន្ទាត់ប៉ះឈរត្រង់ $x = 0$។"
+        "explanation": "$f'(x) = \\dfrac{2}{3}x^{-\\dfrac{1}{3}} = \\dfrac{2}{3\\sqrt[3]{x}}$។ កាលណា $x \\to 0$ នោះ $f'(x) \\to \\infty$ បង្កើតបានបន្ទាត់ប៉ះឈរត្រង់ $x = 0$។"
       }
     ],
     "2": [
@@ -8579,7 +8579,7 @@
           "$I\\left(\\dfrac{a}{c},\\; -\\dfrac{d}{c}\\right)$"
         ],
         "correct": 0,
-        "explanation": "ផ្ចិតឆ្លុះគឺជាចំណុចប្រសព្វនៃអាស៊ីមតូតឈរ $x = -d/c$ និងអាស៊ីមតូតដេក $y = a/c$ គឺ $I(-d/c, a/c)$។"
+        "explanation": "ផ្ចិតឆ្លុះគឺជាចំណុចប្រសព្វនៃអាស៊ីមតូតឈរ $x = -\\dfrac{d}{c}$ និងអាស៊ីមតូតដេក $y = \\dfrac{a}{c}$ គឺ $I(-\\dfrac{d}{c}, \\dfrac{a}{c})$។"
       },
       {
         "id": "q8",
@@ -9091,13 +9091,13 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "រកចំណុចប្រសព្វនៃក្រាប $y = \\dfrac{2x + 1}{x - 1}$ ជាមួយអ័ក្សទាំងពីរ ៖",
         "options": [
-          "កាត់ $Ox$ ត្រង់ $(-1/2, 0)$ និងកាត់ $Oy$ ត្រង់ $(0, -1)$",
+          "កាត់ $Ox$ ត្រង់ $(-\\dfrac{1}{2}, 0)$ និងកាត់ $Oy$ ត្រង់ $(0, -1)$",
           "កាត់ $Ox$ ត្រង់ $(1, 0)$ និង $Oy$ ត្រង់ $(0, 2)$",
           "កាត់ $Ox$ ត្រង់ $(2, 0)$",
           "គ្មានចំណុចប្រសព្វ"
         ],
         "correct": 0,
-        "explanation": "កាត់ $Ox$ ៖ $y = 0 \\iff 2x + 1 = 0 \\iff x = -1/2$។ កាត់ $Oy$ ៖ $x = 0 \\iff y = -1$។"
+        "explanation": "កាត់ $Ox$ ៖ $y = 0 \\iff 2x + 1 = 0 \\iff x = -\\dfrac{1}{2}$។ កាត់ $Oy$ ៖ $x = 0 \\iff y = -1$។"
       },
       {
         "id": "q10",
@@ -9439,7 +9439,7 @@
           "$\\dfrac{1}{2}$"
         ],
         "correct": 0,
-        "explanation": "ព្រឹត្តិការណ៍បំពេញគឺមិនចេញក្បាលសោះ ($TTTT$) មានប្រូបាប $(1/2)^4 = 1/16$។ ដូច្នេះ $P = 1 - 1/16 = 15/16$។"
+        "explanation": "ព្រឹត្តិការណ៍បំពេញគឺមិនចេញក្បាលសោះ ($TTTT$) មានប្រូបាប $\\left(\\dfrac{1}{2}\\right)^{4} = \\dfrac{1}{16}$។ ដូច្នេះ $P = 1 - \\dfrac{1}{16} = \\dfrac{15}{16}$។"
       }
     ],
     "3": [
@@ -9521,7 +9521,7 @@
           "$\\dfrac{16}{52}$"
         ],
         "correct": 0,
-        "explanation": "$P(H) = 13/52$, $P(K) = 4/52$, $P(H \\cap K) = 1/52$ (កាឡូបេះដូងក្រហម)។ $P(H \\cup K) = \\dfrac{13+4-1}{52} = \\dfrac{16}{52} = \\dfrac{4}{13}$។"
+        "explanation": "$P(H) = \\dfrac{13}{52}$, $P(K) = \\dfrac{4}{52}$, $P(H \\cap K) = \\dfrac{1}{52}$ (កាឡូបេះដូងក្រហម)។ $P(H \\cup K) = \\dfrac{13+4-1}{52} = \\dfrac{16}{52} = \\dfrac{4}{13}$។"
       },
       {
         "id": "q6",
@@ -9895,7 +9895,7 @@
           "$\\dfrac{1}{4}$"
         ],
         "correct": 0,
-        "explanation": "កាក់សុទ្ធ $C_1$: $P(C_1) = 2/3, P(H|C_1) = 1/2$។ កាក់ក្លែងក្លាយ $C_2$: $P(C_2) = 1/3, P(H|C_2) = 1$។ $P(H) = 2/3(1/2) + 1/3(1) = 2/3$។ តាមបាយែស ៖ $P(C_2|H) = \\dfrac{1/3 \\times 1}{2/3} = \\dfrac{1}{2}$។"
+        "explanation": "កាក់សុទ្ធ $C_1$: $P(C_1) = \\dfrac{2}{3}, P(H|C_1) = \\dfrac{1}{2}$។ កាក់ក្លែងក្លាយ $C_2$: $P(C_2) = \\dfrac{1}{3}, P(H|C_2) = 1$។ $P(H) = \\dfrac{2}{3}(\\dfrac{1}{2}) + \\dfrac{1}{3}(1) = \\dfrac{2}{3}$។ តាមបាយែស ៖ $P(C_2|H) = \\dfrac{\\dfrac{1}{3} \\times 1}{\\dfrac{2}{3}} = \\dfrac{1}{2}$។"
       },
       {
         "id": "q9",
@@ -10011,7 +10011,7 @@
           "$Q_1 = 8, Q_2 = 13, Q_3 = 18$"
         ],
         "correct": 0,
-        "explanation": "រៀបលំដាប់ ៖ $3, 5, 7, 8, 12, 13, 14, 18, 21$ ($n=9$)។ $Q_2 = 12$។ ពាក់កណ្តាលក្រោម ៖ $3, 5, 7, 8 \\Rightarrow Q_1 = (5+7)/2 = 6$។ ពាក់កណ្តាលលើ ៖ $13, 14, 18, 21 \\Rightarrow Q_3 = (14+18)/2 = 16$។"
+        "explanation": "រៀបលំដាប់ ៖ $3, 5, 7, 8, 12, 13, 14, 18, 21$ ($n=9$)។ $Q_2 = 12$។ ពាក់កណ្តាលក្រោម ៖ $3, 5, 7, 8 \\Rightarrow Q_1 = \\dfrac{5+7}{2} = 6$។ ពាក់កណ្តាលលើ ៖ $13, 14, 18, 21 \\Rightarrow Q_3 = \\dfrac{14+18}{2} = 16$។"
       },
       {
         "id": "q6",
@@ -10237,7 +10237,7 @@
           "$14$"
         ],
         "correct": 0,
-        "explanation": "$n=9, Q_2 = 15$។ ពាក់កណ្តាលក្រោម ៖ $5, 8, 12, 14 \\Rightarrow Q_1 = (8+12)/2 = 10$។ ពាក់កណ្តាលលើ ៖ $18, 20, 22, 35 \\Rightarrow Q_3 = (20+22)/2 = 21$។ $IQR = 21 - 10 = 11$។"
+        "explanation": "$n=9, Q_2 = 15$។ ពាក់កណ្តាលក្រោម ៖ $5, 8, 12, 14 \\Rightarrow Q_1 = \\dfrac{8+12}{2} = 10$។ ពាក់កណ្តាលលើ ៖ $18, 20, 22, 35 \\Rightarrow Q_3 = \\dfrac{20+22}{2} = 21$។ $IQR = 21 - 10 = 11$។"
       },
       {
         "id": "q10",
@@ -10831,15 +10831,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ម៉េដ្យាន និងចន្លោះកាទីល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រាក់បៀវត្សបុគ្គលិក ៥ នាក់គឺ ៖ $200\\$, $250\\$, $300\\$, $350\\$, $5000\\$ (ប្រធាន)។ តើរង្វាស់ណាឆ្លុះបញ្ចាំងពីបៀវត្សទូទៅបានល្អជាង?",
+        "question": "ប្រាក់បៀវត្សបុគ្គលិក ៥ នាក់គឺ ៖ $200\\text{ ដុល្លារ}$, $250\\text{ ដុល្លារ}$, $300\\text{ ដុល្លារ}$, $350\\text{ ដុល្លារ}$, $5000\\text{ ដុល្លារ}$ (ប្រធាន)។ តើរង្វាស់ណាឆ្លុះបញ្ចាំងពីបៀវត្សទូទៅបានល្អជាង?",
         "options": [
-          "ម៉េដ្យាន ($300\\$)",
-          "មធ្យមនព្វន្ត ($1220\\$)",
+          "ម៉េដ្យាន ($300\\text{ ដុល្លារ}$)",
+          "មធ្យមនព្វន្ត ($1220\\text{ ដុល្លារ}$)",
           "ម៉ូដ",
           "ផលបូក"
         ],
         "correct": 0,
-        "explanation": "មធ្យម $= 1220\\$$ ត្រូវបានទាញឡើងខ្ពស់ខុសពិតដោយសារបៀវត្សប្រធាន $5000\\$$។ ម៉េដ្យាន $300\\$$ ឆ្លុះបញ្ចាំងជាក់ស្តែងជាង។"
+        "explanation": "មធ្យម $= 1220\\text{ ដុល្លារ}$ ត្រូវបានទាញឡើងខ្ពស់ខុសពិតដោយសារបៀវត្សប្រធាន $5000\\text{ ដុល្លារ}$។ ម៉េដ្យាន $300\\text{ ដុល្លារ}$ ឆ្លុះបញ្ចាំងជាក់ស្តែងជាង។"
       },
       {
         "id": "q7",
@@ -11065,7 +11065,7 @@
           "គ្មានហេតុផល"
         ],
         "correct": 0,
-        "explanation": "វ៉ារ្យង់មានខ្នាតជាការ៉េ (ឧ. $\\text{kg}^2, \\$^2$) ធ្វើឱ្យពិបាកបកស្រាយ រីឯគម្លាតស្តង់ដាមានខ្នាតដូចដើម។"
+        "explanation": "វ៉ារ្យង់មានខ្នាតជាការ៉េ (ឧ. $\\text{kg}^2, \\text{ ដុល្លារ}^2$) ធ្វើឱ្យពិបាកបកស្រាយ រីឯគម្លាតស្តង់ដាមានខ្នាតដូចដើម។"
       }
     ],
     "4": [
@@ -11147,7 +11147,7 @@
           "$\\dfrac{8}{3}$"
         ],
         "correct": 0,
-        "explanation": "$\\bar{x} = 3$។ $\\sigma^2 = \\dfrac{(1-3)^2 + (3-3)^2 + (5-3)^2}{3} = \\dfrac{4+0+4}{3} = \\dfrac{8}{3}$។ $\\sigma = \\sqrt{8/3} \\approx 1.63$។"
+        "explanation": "$\\bar{x} = 3$។ $\\sigma^2 = \\dfrac{(1-3)^2 + (3-3)^2 + (5-3)^2}{3} = \\dfrac{4+0+4}{3} = \\dfrac{8}{3}$។ $\\sigma = \\sqrt{\\dfrac{8}{3}} \\approx 1.63$។"
       },
       {
         "id": "q6",
@@ -12081,7 +12081,7 @@
           "$1$"
         ],
         "correct": 0,
-        "explanation": "$S_n = (1 - 1/2) + (1/2 - 1/3) + \\dots + (1/n - 1/(n+1)) = 1 - \\dfrac{1}{n+1} = \\dfrac{n}{n+1}$។"
+        "explanation": "$S_n = (1 - \\dfrac{1}{2}) + (\\dfrac{1}{2} - \\dfrac{1}{3}) + \\dots + (\\dfrac{1}{n} - \\dfrac{1}{n+1}) = 1 - \\dfrac{1}{n+1} = \\dfrac{n}{n+1}$។"
       },
       {
         "id": "q3",
@@ -12291,7 +12291,7 @@
           "$\\dfrac{2}{3}$"
         ],
         "correct": 0,
-        "explanation": "រូបមន្តផលបូកអនន្ត $\\sum_{n=1}^\\infty n r^n = \\dfrac{r}{(1-r)^2}$។ ជំនួស $r = 1/3$ ៖ $\\dfrac{1/3}{(2/3)^2} = \\dfrac{1/3}{4/9} = \\dfrac{3}{4}$។"
+        "explanation": "រូបមន្តផលបូកអនន្ត $\\sum_{n=1}^\\infty n r^n = \\dfrac{r}{(1-r)^2}$។ ជំនួស $r = \\dfrac{1}{3}$ ៖ $\\dfrac{\\dfrac{1}{3}}{\\left(\\dfrac{2}{3}\\right)^{2}} = \\dfrac{\\dfrac{1}{3}}{\\dfrac{4}{9}} = \\dfrac{3}{4}$។"
       },
       {
         "id": "q6",
@@ -12323,7 +12323,7 @@
           "$8$"
         ],
         "correct": 0,
-        "explanation": "$S = 2\\sum n(1/2)^n + \\sum (1/2)^n = 2(2) + 2 = 6$ (ព្រោះ $\\sum n/2^n = 2$ និង $\\sum (1/2)^n = 2$)។"
+        "explanation": "$S = 2\\sum n\\left(\\dfrac{1}{2}\\right)^{n} + \\sum \\left(\\dfrac{1}{2}\\right)^{n} = 2(2) + 2 = 6$ (ព្រោះ $\\sum \\dfrac{n}{2}^n = 2$ និង $\\sum \\left(\\dfrac{1}{2}\\right)^{n} = 2$)។"
       },
       {
         "id": "q8",
@@ -12339,7 +12339,7 @@
           "$5$"
         ],
         "correct": 0,
-        "explanation": "រូបមន្ត $\\sum_{n=1}^\\infty n^2 r^n = \\dfrac{r(1+r)}{(1-r)^3}$។ ជំនួស $r = 1/2$ ៖ $\\dfrac{(1/2)(3/2)}{(1/2)^3} = \\dfrac{3/4}{1/8} = 6$។"
+        "explanation": "រូបមន្ត $\\sum_{n=1}^\\infty n^2 r^n = \\dfrac{r(1+r)}{(1-r)^3}$។ ជំនួស $r = \\dfrac{1}{2}$ ៖ $\\dfrac{(\\dfrac{1}{2})(\\dfrac{3}{2})}{\\left(\\dfrac{1}{2}\\right)^{3}} = \\dfrac{\\dfrac{3}{4}}{\\dfrac{1}{8}} = 6$។"
       },
       {
         "id": "q9",
@@ -12355,7 +12355,7 @@
           "$\\dfrac{3}{4}$"
         ],
         "correct": 0,
-        "explanation": "$S = 2\\sum k/3^k - \\sum (1/3)^k = 2(3/4) - 1/2 = 3/2 - 1/2 = 1$។"
+        "explanation": "$S = 2\\sum \\dfrac{k}{3}^k - \\sum \\left(\\dfrac{1}{3}\\right)^{k} = 2(\\dfrac{3}{4}) - \\dfrac{1}{2} = \\dfrac{3}{2} - \\dfrac{1}{2} = 1$។"
       },
       {
         "id": "q10",
@@ -12471,7 +12471,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "ដោយ $|a| = 1/2 < 1$ នោះ $\\lim u_n = \\alpha = \\dfrac{3}{1 - 1/2} = 6$។"
+        "explanation": "ដោយ $|a| = \\dfrac{1}{2} < 1$ នោះ $\\lim u_n = \\alpha = \\dfrac{3}{1 - \\dfrac{1}{2}} = 6$។"
       },
       {
         "id": "q7",
@@ -12795,7 +12795,7 @@
           "$q = \\dfrac{1}{2}$"
         ],
         "correct": 0,
-        "explanation": "$v_{n+1} = \\dfrac{\\frac{4u_n-2}{u_n+1} - 2}{\\frac{4u_n-2}{u_n+1} - 1} = \\dfrac{2u_n-4}{3u_n-3} = \\dfrac{2(u_n-2)}{3(u_n-1)} = \\dfrac{2}{3} v_n$។ ផលធៀប $q = 2/3$។"
+        "explanation": "$v_{n+1} = \\dfrac{\\frac{4u_n-2}{u_n+1} - 2}{\\frac{4u_n-2}{u_n+1} - 1} = \\dfrac{2u_n-4}{3u_n-3} = \\dfrac{2(u_n-2)}{3(u_n-1)} = \\dfrac{2}{3} v_n$។ ផលធៀប $q = \\dfrac{2}{3}$។"
       },
       {
         "id": "q7",
@@ -12811,7 +12811,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "ដោយ $|q| = 2/3 < 1$ នោះ $\\lim v_n = 0 \\Rightarrow \\lim \\dfrac{u_n - 2}{u_n - 1} = 0 \\Rightarrow \\lim u_n = 2$។"
+        "explanation": "ដោយ $|q| = \\dfrac{2}{3} < 1$ នោះ $\\lim v_n = 0 \\Rightarrow \\lim \\dfrac{u_n - 2}{u_n - 1} = 0 \\Rightarrow \\lim u_n = 2$។"
       },
       {
         "id": "q8",
@@ -12827,7 +12827,7 @@
           "$u_n = \\dfrac{1}{n+1}$"
         ],
         "correct": 0,
-        "explanation": "ត្រឡប់ប្រភាគ ៖ $\\dfrac{1}{u_{n+1}} = \\dfrac{2u_n+1}{u_n} = \\dfrac{1}{u_n} + 2$។ ស្វ៊ីត $v_n = 1/u_n$ ជាស្វ៊ីតនព្វន្ត ៖ $v_1 = 1/2, d = 2$។ $v_n = 1/2 + 2(n-1) = 2n - 3/2 = \\dfrac{4n-3}{2} \\Rightarrow u_n = \\dfrac{2}{4n-3}$។"
+        "explanation": "ត្រឡប់ប្រភាគ ៖ $\\dfrac{1}{u_{n+1}} = \\dfrac{2u_n+1}{u_n} = \\dfrac{1}{u_n} + 2$។ ស្វ៊ីត $v_n = \\dfrac{1}{u}_n$ ជាស្វ៊ីតនព្វន្ត ៖ $v_1 = \\dfrac{1}{2}, d = 2$។ $v_n = \\dfrac{1}{2} + 2(n-1) = 2n - \\dfrac{3}{2} = \\dfrac{4n-3}{2} \\Rightarrow u_n = \\dfrac{2}{4n-3}$។"
       },
       {
         "id": "q9",
@@ -13704,7 +13704,7 @@
         "question": "ដោះស្រាយសមីការ $2^x = 5$ ៖",
         "options": [
           "$x = \\log_2 5 = \\dfrac{\\ln 5}{\\ln 2}$",
-          "$x = 5/2$",
+          "$x = \\dfrac{5}{2}$",
           "$x = \\sqrt{5}$",
           "$x = 10$"
         ],
@@ -13789,7 +13789,7 @@
           "$x = \\pm 1$"
         ],
         "correct": 0,
-        "explanation": "$t + 1/t = 2 \\iff t^2 - 2t + 1 = 0 \\iff (t-1)^2 = 0 \\Rightarrow t = 1 \\Rightarrow 2^x = 1 \\Rightarrow x = 0$។"
+        "explanation": "$t + \\dfrac{1}{t} = 2 \\iff t^2 - 2t + 1 = 0 \\iff (t-1)^2 = 0 \\Rightarrow t = 1 \\Rightarrow 2^x = 1 \\Rightarrow x = 0$។"
       },
       {
         "id": "q8",
@@ -13799,13 +13799,13 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "ដោះស្រាយសមីការ $4^x + 6^x = 9^x$ តាមការចែកនឹង $9^x$ ៖",
         "options": [
-          "$x = \\dfrac{\\ln\\left(\\frac{\\sqrt{5}-1}{2}\\right)}{\\ln(2/3)}$",
+          "$x = \\dfrac{\\ln\\left(\\frac{\\sqrt{5}-1}{2}\\right)}{\\ln(\\dfrac{2}{3})}$",
           "$x = 1$",
           "$x = \\log_2 3$",
           "$x = 0$"
         ],
         "correct": 0,
-        "explanation": "ចែក $9^x$ ៖ $(2/3)^{2x} + (2/3)^x - 1 = 0$។ តាង $t = (2/3)^x > 0$ ៖ $t^2+t-1 = 0 \\Rightarrow t = \\dfrac{\\sqrt{5}-1}{2}$។ $x = \\log_{2/3}\\left(\\dfrac{\\sqrt{5}-1}{2}\\right)$។"
+        "explanation": "ចែក $9^x$ ៖ $(\\dfrac{2}{3})^{2x} + \\left(\\dfrac{2}{3}\\right)^{x} - 1 = 0$។ តាង $t = \\left(\\dfrac{2}{3}\\right)^{x} > 0$ ៖ $t^2+t-1 = 0 \\Rightarrow t = \\dfrac{\\sqrt{5}-1}{2}$។ $x = \\log_{\\dfrac{2}{3}}\\left(\\dfrac{\\sqrt{5}-1}{2}\\right)$។"
       },
       {
         "id": "q9",
@@ -13821,7 +13821,7 @@
           "$x = 0$"
         ],
         "correct": 0,
-        "explanation": "ដោយសារ $(2+\\sqrt{3})(2-\\sqrt{3}) = 4-3 = 1$ នោះ $(2-\\sqrt{3})^x = \\dfrac{1}{(2+\\sqrt{3})^x}$។ តាង $t$ នាំឱ្យ $t + 1/t = 4 \\iff t^2 - 4t + 1 = 0 \\Rightarrow t = 2 \\pm \\sqrt{3} \\Rightarrow x = \\pm 1$។"
+        "explanation": "ដោយសារ $(2+\\sqrt{3})(2-\\sqrt{3}) = 4-3 = 1$ នោះ $(2-\\sqrt{3})^x = \\dfrac{1}{(2+\\sqrt{3})^x}$។ តាង $t$ នាំឱ្យ $t + \\dfrac{1}{t} = 4 \\iff t^2 - 4t + 1 = 0 \\Rightarrow t = 2 \\pm \\sqrt{3} \\Rightarrow x = \\pm 1$។"
       },
       {
         "id": "q10",
@@ -13903,7 +13903,7 @@
           "$x \\ge 2$"
         ],
         "correct": 0,
-        "explanation": "$\\left(\\dfrac{1}{3}\\right)^x \\ge \\left(\\dfrac{1}{3}\\right)^{-2}$។ ដោយគោល $1/3 < 1$ នាំឱ្យ $x \\le -2$។"
+        "explanation": "$\\left(\\dfrac{1}{3}\\right)^x \\ge \\left(\\dfrac{1}{3}\\right)^{-2}$។ ដោយគោល $\\dfrac{1}{3} < 1$ នាំឱ្យ $x \\le -2$។"
       },
       {
         "id": "q5",
@@ -13951,7 +13951,7 @@
           "$-1 < x < 0$"
         ],
         "correct": 0,
-        "explanation": "$3t^2 - 10t + 3 < 0 \\iff 1/3 < t < 3 \\iff 3^{-1} < 3^x < 3^1 \\iff -1 < x < 1$។"
+        "explanation": "$3t^2 - 10t + 3 < 0 \\iff \\dfrac{1}{3} < t < 3 \\iff 3^{-1} < 3^x < 3^1 \\iff -1 < x < 1$។"
       },
       {
         "id": "q8",
@@ -13983,7 +13983,7 @@
           "គ្មានចម្លើយ"
         ],
         "correct": 0,
-        "explanation": "$\\left(\\dfrac{2}{3}\\right)^x > 1 = \\left(\\dfrac{2}{3}\\right)^0$។ ដោយគោល $2/3 < 1$ នាំឱ្យ $x < 0$។"
+        "explanation": "$\\left(\\dfrac{2}{3}\\right)^x > 1 = \\left(\\dfrac{2}{3}\\right)^0$។ ដោយគោល $\\dfrac{2}{3} < 1$ នាំឱ្យ $x < 0$។"
       },
       {
         "id": "q10",
@@ -14105,15 +14105,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ជាក់ស្តែង៖ កំណើនប្រជាជន និងការរលាយនៃសារធាតុវិទ្យុសកម្ម",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រាក់បញ្ញើ $1000\\$$ ទទួលបានការប្រាក់ផ្សំជាប់ $r = 5\\%$ ក្នុងមួយឆ្នាំតាមរូបមន្ត $A(t) = P e^{rt}$។ រកចំនួនទឹកប្រាក់ក្រោយរយៈពេល ២ ឆ្នាំ (ដឹងថា $e^{0.1} \\approx 1.105$) ៖",
+        "question": "ប្រាក់បញ្ញើ $1000\\text{ ដុល្លារ}$ ទទួលបានការប្រាក់ផ្សំជាប់ $r = 5\\%$ ក្នុងមួយឆ្នាំតាមរូបមន្ត $A(t) = P e^{rt}$។ រកចំនួនទឹកប្រាក់ក្រោយរយៈពេល ២ ឆ្នាំ (ដឹងថា $e^{0.1} \\approx 1.105$) ៖",
         "options": [
-          "$1105\\$$",
-          "$1100\\$$",
-          "$1050\\$$",
-          "$1200\\$$"
+          "$1105\\text{ ដុល្លារ}$",
+          "$1100\\text{ ដុល្លារ}$",
+          "$1050\\text{ ដុល្លារ}$",
+          "$1200\\text{ ដុល្លារ}$"
         ],
         "correct": 0,
-        "explanation": "$A(2) = 1000 e^{0.05 \\times 2} = 1000 e^{0.1} \\approx 1000 \\times 1.105 = 1105\\$$។"
+        "explanation": "$A(2) = 1000 e^{0.05 \\times 2} = 1000 e^{0.1} \\approx 1000 \\times 1.105 = 1105\\text{ ដុល្លារ}$។"
       },
       {
         "id": "q8",
@@ -14327,7 +14327,7 @@
           "$y = 2x - 2$"
         ],
         "correct": 0,
-        "explanation": "$y' = 1/x \\Rightarrow m = 1$។ សមីការបន្ទាត់ប៉ះ ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។"
+        "explanation": "$y' = \\dfrac{1}{x} \\Rightarrow m = 1$។ សមីការបន្ទាត់ប៉ះ ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។"
       }
     ],
     "2": [
@@ -14372,7 +14372,7 @@
         "question": "ដោះស្រាយសមីការ $\\ln(2x - 1) = 0$ ៖",
         "options": [
           "$x = 1$",
-          "$x = 1/2$",
+          "$x = \\dfrac{1}{2}$",
           "$x = 0$",
           "$x = e$"
         ],
@@ -14547,7 +14547,7 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ វិសមភាពលោការីតកម្រិតខ្ពស់",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយវិសមភាព $\\log_{1/2} (x + 2) \\ge -1$ ៖",
+        "question": "ដោះស្រាយវិសមភាព $\\log_{\\dfrac{1}{2}} (x + 2) \\ge -1$ ៖",
         "options": [
           "$-2 < x \\le 0$",
           "$x \\le 0$",
@@ -14555,7 +14555,7 @@
           "$-2 \\le x \\le 0$"
         ],
         "correct": 0,
-        "explanation": "លក្ខខណ្ឌ $x > -2$។ គោល $1/2 < 1$ នាំឱ្យ $x + 2 \\le (1/2)^{-1} = 2 \\iff x \\le 0$។ ប្រជុំបាន $-2 < x \\le 0$។"
+        "explanation": "លក្ខខណ្ឌ $x > -2$។ គោល $\\dfrac{1}{2} < 1$ នាំឱ្យ $x + 2 \\le (\\dfrac{1}{2})^{-1} = 2 \\iff x \\le 0$។ ប្រជុំបាន $-2 < x \\le 0$។"
       },
       {
         "id": "q5",
@@ -14643,7 +14643,7 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ វិសមភាពលោការីតកម្រិតខ្ពស់",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយវិសមភាព $\\log_{1/3}(\\log_2 x) > 0$ ៖",
+        "question": "ដោះស្រាយវិសមភាព $\\log_{\\dfrac{1}{3}}(\\log_2 x) > 0$ ៖",
         "options": [
           "$1 < x < 2$",
           "$x > 2$",
@@ -14651,7 +14651,7 @@
           "$x < 2$"
         ],
         "correct": 0,
-        "explanation": "លក្ខខណ្ឌ $\\log_2 x > 0 \\iff x > 1$។ វិសមភាព ៖ $\\log_2 x < (1/3)^0 = 1 \\iff x < 2$។ ប្រជុំបាន $1 < x < 2$។"
+        "explanation": "លក្ខខណ្ឌ $\\log_2 x > 0 \\iff x > 1$។ វិសមភាព ៖ $\\log_2 x < \\left(\\dfrac{1}{3}\\right)^{0} = 1 \\iff x < 2$។ ប្រជុំបាន $1 < x < 2$។"
       }
     ],
     "4": [
@@ -14669,7 +14669,7 @@
           "$\\beta = 10 \\dfrac{I}{I_0}$"
         ],
         "correct": 0,
-        "explanation": "កម្រិតសំឡេងគិតជា dB ៖ $\\beta = 10 \\log_{10}\\left(\\dfrac{I}{I_0}\\right)$ ដែល $I_0 = 10^{-12}\\text{ W/m}^2$ ជាកម្រិតសំឡេងខ្សោយបំផុតដែលត្រចៀកមនុស្សអាចឮ។"
+        "explanation": "កម្រិតសំឡេងគិតជា dB ៖ $\\beta = 10 \\log_{10}\\left(\\dfrac{I}{I_0}\\right)$ ដែល $I_0 = 10^{-12}\\text{ \\dfrac{W}{m}}^2$ ជាកម្រិតសំឡេងខ្សោយបំផុតដែលត្រចៀកមនុស្សអាចឮ។"
       },
       {
         "id": "q2",
@@ -14685,7 +14685,7 @@
           "$\\text{pH} = 10^{[\\text{H}^+]}$"
         ],
         "correct": 0,
-        "explanation": "រូបមន្ត pH ៖ $\\text{pH} = -\\log_{10}[\\text{H}^+]$ ដែល $[\\text{H}^+]$ ជាកំហាប់អ៊ីយ៉ុងអ៊ីដ្រូសែនគិតជា $\\text{mol/L}$។"
+        "explanation": "រូបមន្ត pH ៖ $\\text{pH} = -\\log_{10}[\\text{H}^+]$ ដែល $[\\text{H}^+]$ ជាកំហាប់អ៊ីយ៉ុងអ៊ីដ្រូសែនគិតជា $\\text{\\dfrac{mol}{L}}$។"
       },
       {
         "id": "q3",
@@ -14899,7 +14899,7 @@
           "$x = 2k\\pi$"
         ],
         "correct": 0,
-        "explanation": "ចែក ២ ៖ $\\sin(x - \\pi/6) = 1/2 \\Rightarrow x - \\pi/6 = \\pi/6 + 2k\\pi \\Rightarrow x = \\pi/3 + 2k\\pi$ ឬ $x - \\pi/6 = 5\\pi/6 + 2k\\pi \\Rightarrow x = \\pi + 2k\\pi$។"
+        "explanation": "ចែក ២ ៖ $\\sin(x - \\pi/6) = \\dfrac{1}{2} \\Rightarrow x - \\pi/6 = \\pi/6 + 2k\\pi \\Rightarrow x = \\pi/3 + 2k\\pi$ ឬ $x - \\pi/6 = 5\\pi/6 + 2k\\pi \\Rightarrow x = \\pi + 2k\\pi$។"
       },
       {
         "id": "q6",
@@ -14963,7 +14963,7 @@
           "៤ ឫស"
         ],
         "correct": 0,
-        "explanation": "$\\sqrt{2}\\sin(x + \\pi/4) = 1 \\iff \\sin(x+\\pi/4) = \\sqrt{2}/2$។ លើ $[0, 2\\pi]$ មាន $x = 0, \\pi/2, 2\\pi$ (សរុប ៣ ឫស)។"
+        "explanation": "$\\sqrt{2}\\sin(x + \\pi/4) = 1 \\iff \\sin(x+\\pi/4) = \\dfrac{\\sqrt{2}}{2}$។ លើ $[0, 2\\pi]$ មាន $x = 0, \\pi/2, 2\\pi$ (សរុប ៣ ឫស)។"
       },
       {
         "id": "q10",
@@ -14971,7 +14971,7 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរ a sin x + b cos x = c",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយសមីការ $a\\sin x + b\\cos x = c$ តាមការជំនួសអថេរ $t = \\tan(x/2)$ ($x \\ne \\pi + 2k\\pi$) នាំឱ្យបានសមីការដឺក្រេទីពីរណា?",
+        "question": "ដោះស្រាយសមីការ $a\\sin x + b\\cos x = c$ តាមការជំនួសអថេរ $t = \\tan(\\dfrac{x}{2})$ ($x \\ne \\pi + 2k\\pi$) នាំឱ្យបានសមីការដឺក្រេទីពីរណា?",
         "options": [
           "$(c + b)t^2 - 2at + (c - b) = 0$",
           "$(c - b)t^2 + 2at + (c + b) = 0$",
@@ -15207,7 +15207,7 @@
           "$x = k\\pi$"
         ],
         "correct": 0,
-        "explanation": "ជំនួស $t$ ៖ $t - (t^2 - 1) - 1 = 0 \\iff -t^2 + t = 0 \\iff t(1-t) = 0 \\Rightarrow t = 0$ ឬ $t = 1$។ $t=1 \\iff \\sin(x+\\pi/4) = \\sqrt{2}/2 \\Rightarrow x = 2k\\pi, \\pi/2 + 2k\\pi$។"
+        "explanation": "ជំនួស $t$ ៖ $t - (t^2 - 1) - 1 = 0 \\iff -t^2 + t = 0 \\iff t(1-t) = 0 \\Rightarrow t = 0$ ឬ $t = 1$។ $t=1 \\iff \\sin(x+\\pi/4) = \\dfrac{\\sqrt{2}}{2} \\Rightarrow x = 2k\\pi, \\pi/2 + 2k\\pi$។"
       },
       {
         "id": "q5",
@@ -15255,7 +15255,7 @@
           "$x = k\\pi$"
         ],
         "correct": 0,
-        "explanation": "$t + 2(1-t^2) = 1 \\iff 2t^2 - t - 1 = 0 \\iff (t-1)(2t+1) = 0 \\Rightarrow t = 1, -1/2$។ ត្រង់ $t=1$ ៖ $\\sin(x-\\pi/4) = \\sqrt{2}/2 \\Rightarrow x = \\pi/2 + 2k\\pi, \\pi + 2k\\pi$។"
+        "explanation": "$t + 2(1-t^2) = 1 \\iff 2t^2 - t - 1 = 0 \\iff (t-1)(2t+1) = 0 \\Rightarrow t = 1, -\\dfrac{1}{2}$។ ត្រង់ $t=1$ ៖ $\\sin(x-\\pi/4) = \\dfrac{\\sqrt{2}}{2} \\Rightarrow x = \\pi/2 + 2k\\pi, \\pi + 2k\\pi$។"
       },
       {
         "id": "q8",
@@ -15287,7 +15287,7 @@
           "$-\\sqrt{2} \\le m \\le \\sqrt{2}$"
         ],
         "correct": 0,
-        "explanation": "$f(t) = t + (t^2 - 1) = t^2 + t - 1$ លើ $[-\\sqrt{2}, \\sqrt{2}]$។ កំពូល $t = -1/2 \\Rightarrow f(-1/2) = -5/4 = -1.25$។ ត្រង់ $t = \\sqrt{2} \\Rightarrow f = 1 + \\sqrt{2}$។ ដូច្នេះ $-5/4 \\le m \\le 1 + \\sqrt{2}$ (ឬ $-9/8$)។"
+        "explanation": "$f(t) = t + (t^2 - 1) = t^2 + t - 1$ លើ $[-\\sqrt{2}, \\sqrt{2}]$។ កំពូល $t = -\\dfrac{1}{2} \\Rightarrow f(-\\dfrac{1}{2}) = -\\dfrac{5}{4} = -1.25$។ ត្រង់ $t = \\sqrt{2} \\Rightarrow f = 1 + \\sqrt{2}$។ ដូច្នេះ $-\\dfrac{5}{4} \\le m \\le 1 + \\sqrt{2}$ (ឬ $-\\dfrac{9}{8}$)។"
       },
       {
         "id": "q10",
@@ -15321,7 +15321,7 @@
           "$\\dfrac{\\pi}{3} < x < \\dfrac{2\\pi}{3}$"
         ],
         "correct": 0,
-        "explanation": "នៅលើរង្វង់ត្រីកោណមាត្រ តម្លៃ $\\sin x > 1/2$ ត្រូវគ្នានឹងធ្នូចន្លោះ $\\pi/6$ និង $5\\pi/6$។",
+        "explanation": "នៅលើរង្វង់ត្រីកោណមាត្រ តម្លៃ $\\sin x > \\dfrac{1}{2}$ ត្រូវគ្នានឹងធ្នូចន្លោះ $\\pi/6$ និង $5\\pi/6$។",
         "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>",
         "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>"
       },
@@ -15339,7 +15339,7 @@
           "$\\dfrac{\\pi}{4} \\le x \\le \\dfrac{3\\pi}{4}$"
         ],
         "correct": 0,
-        "explanation": "ចំណុចដែលមានអាប់ស៊ីស $\\le \\sqrt{2}/2$ ស្ថិតនៅចន្លោះ $\\pi/4$ និង $7\\pi/4$។"
+        "explanation": "ចំណុចដែលមានអាប់ស៊ីស $\\le \\dfrac{\\sqrt{2}}{2}$ ស្ថិតនៅចន្លោះ $\\pi/4$ និង $7\\pi/4$។"
       },
       {
         "id": "q3",
@@ -15387,7 +15387,7 @@
           "$-\\dfrac{\\pi}{3} < x < \\dfrac{\\pi}{3}$"
         ],
         "correct": 0,
-        "explanation": "$(2\\cos x + 1)(\\cos x - 1) > 0$។ ដោយសារ $\\cos x - 1 \\le 0$ ជានិច្ច វិសមភាពក្លាយជា $2\\cos x + 1 < 0 \\iff \\cos x < -1/2 \\iff \\dfrac{2\\pi}{3} < x < \\dfrac{4\\pi}{3}$។"
+        "explanation": "$(2\\cos x + 1)(\\cos x - 1) > 0$។ ដោយសារ $\\cos x - 1 \\le 0$ ជានិច្ច វិសមភាពក្លាយជា $2\\cos x + 1 < 0 \\iff \\cos x < -\\dfrac{1}{2} \\iff \\dfrac{2\\pi}{3} < x < \\dfrac{4\\pi}{3}$។"
       },
       {
         "id": "q6",
@@ -15435,7 +15435,7 @@
           "គ្មានចម្លើយ"
         ],
         "correct": 0,
-        "explanation": "$-1/2 \\le \\sin x \\le 1/2$ ត្រូវគ្នានឹង ៤ ចម្រៀកជិតអ័ក្សដេក ៖ $[0, \\pi/6] \\cup [5\\pi/6, 7\\pi/6] \\cup [11\\pi/6, 2\\pi)$។"
+        "explanation": "$-\\dfrac{1}{2} \\le \\sin x \\le \\dfrac{1}{2}$ ត្រូវគ្នានឹង ៤ ចម្រៀកជិតអ័ក្សដេក ៖ $[0, \\pi/6] \\cup [5\\pi/6, 7\\pi/6] \\cup [11\\pi/6, 2\\pi)$។"
       },
       {
         "id": "q9",
@@ -15459,7 +15459,7 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ វិសមភាពត្រីកោណមាត្រលើរង្វង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយវិសមភាព $\\dfrac{\\cos x - 1/2}{\\sin x} \\ge 0$ លើចន្លោះ $(0, \\pi)$ ៖",
+        "question": "ដោះស្រាយវិសមភាព $\\dfrac{\\cos x - \\dfrac{1}{2}}{\\sin x} \\ge 0$ លើចន្លោះ $(0, \\pi)$ ៖",
         "options": [
           "$\\left(0, \\dfrac{\\pi}{3}\\right]$",
           "$\\left[\\dfrac{\\pi}{3}, \\pi\\right)$",
@@ -15467,7 +15467,7 @@
           "គ្មានឫស"
         ],
         "correct": 0,
-        "explanation": "លើ $(0, \\pi)$ គេមាន $\\sin x > 0$ ជានិច្ច។ វិសមភាពក្លាយជា $\\cos x - 1/2 \\ge 0 \\iff \\cos x \\ge 1/2 \\iff 0 < x \\le \\pi/3$។"
+        "explanation": "លើ $(0, \\pi)$ គេមាន $\\sin x > 0$ ជានិច្ច។ វិសមភាពក្លាយជា $\\cos x - \\dfrac{1}{2} \\ge 0 \\iff \\cos x \\ge \\dfrac{1}{2} \\iff 0 < x \\le \\pi/3$។"
       }
     ]
   },
@@ -16003,7 +16003,7 @@
         "options": [
           "$A'(9, -6)$",
           "$A'(6, -5)$",
-          "$A'(1, -2/3)$",
+          "$A'(1, -\\dfrac{2}{3})$",
           "$A'(0, 0)$"
         ],
         "correct": 0,
@@ -16051,7 +16051,7 @@
         "options": [
           "$H_{km}$ (ផលធៀប $k \\times m$)",
           "$H_{k+m}$",
-          "$H_{k/m}$",
+          "$H_{\\dfrac{k}{m}}$",
           "$I$"
         ],
         "correct": 0,
@@ -16065,13 +16065,13 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើបំលែងចម្រើនច្រាស $H_k^{-1}$ ($k \\ne 0$) ស្មើនឹងអ្វី?",
         "options": [
-          "$H_{1/k}$",
+          "$H_{\\dfrac{1}{k}}$",
           "$H_{-k}$",
           "$H_k$",
           "$I$"
         ],
         "correct": 0,
-        "explanation": "ច្រាសនៃបំលែងចម្រើនផលធៀប $k$ គឺជាបំលែងចម្រើនផលធៀប $1/k$ ៖ $H_k^{-1} = H_{1/k}$។"
+        "explanation": "ច្រាសនៃបំលែងចម្រើនផលធៀប $k$ គឺជាបំលែងចម្រើនផលធៀប $\\dfrac{1}{k}$ ៖ $H_k^{-1} = H_{\\dfrac{1}{k}}$។"
       },
       {
         "id": "q8",
@@ -16087,7 +16087,7 @@
           "$x - 2y + 8 = 0$"
         ],
         "correct": 0,
-        "explanation": "$(x, y) = (2x_0, 2y_0) \\Rightarrow x_0 = x/2, y_0 = y/2$។ ជំនួស ៖ $2(x/2) - (y/2) + 4 = 0 \\iff x - y/2 + 4 = 0 \\iff 2x - y + 8 = 0$។"
+        "explanation": "$(x, y) = (2x_0, 2y_0) \\Rightarrow x_0 = \\dfrac{x}{2}, y_0 = \\dfrac{y}{2}$។ ជំនួស ៖ $2(\\dfrac{x}{2}) - (\\dfrac{y}{2}) + 4 = 0 \\iff x - \\dfrac{y}{2} + 4 = 0 \\iff 2x - y + 8 = 0$។"
       },
       {
         "id": "q9",
@@ -16227,13 +16227,13 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកកូអរដោនេដើមនៃចំណុច $P$ បើរូបភាពរបស់វាគឺ $P'(3, 4)$ តាមបំលែង $T(x, y) = (x + y, 2x - y)$ ៖",
         "options": [
-          "$P(7/3, 2/3)$",
+          "$P(\\dfrac{7}{3}, \\dfrac{2}{3})$",
           "$P(2, 1)$",
           "$P(1, 2)$",
           "$P(3, 1)$"
         ],
         "correct": 0,
-        "explanation": "$x + y = 3$ និង $2x - y = 4$។ បូកបញ្ចូលគ្នា ៖ $3x = 7 \\Rightarrow x = 7/3$។ $y = 3 - 7/3 = 2/3$។"
+        "explanation": "$x + y = 3$ និង $2x - y = 4$។ បូកបញ្ចូលគ្នា ៖ $3x = 7 \\Rightarrow x = \\dfrac{7}{3}$។ $y = 3 - \\dfrac{7}{3} = \\dfrac{2}{3}$។"
       },
       {
         "id": "q8",
@@ -16507,13 +16507,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ឡានមួយបើកបរបានចម្ងាយ $150\\text{ km}$ ក្នុងរយៈពេល $2\\text{ h}$។ តាម MVT តើអាចសន្និដ្ឋានបានយ៉ាងដូចម្តេច?",
         "options": [
-          "មានយ៉ាងហោចខណៈមួយដែលល្បឿនកុងទ័រចង្អុលចំ $75\\text{ km/h}$",
-          "ឡានបើក $75\\text{ km/h}$ ជាប់រហូត",
+          "មានយ៉ាងហោចខណៈមួយដែលល្បឿនកុងទ័រចង្អុលចំ $75\\text{ \\dfrac{km}{h}}$",
+          "ឡានបើក $75\\text{ \\dfrac{km}{h}}$ ជាប់រហូត",
           "ល្បឿនមិនដែលលើស $75$",
           "គ្មានការសន្និដ្ឋាន"
         ],
         "correct": 0,
-        "explanation": "ល្បឿនមធ្យម $= 150/2 = 75\\text{ km/h}$។ តាម MVT មានខណៈពេលដែលល្បឿនខណៈ $v(c) = 75\\text{ km/h}$។"
+        "explanation": "ល្បឿនមធ្យម $= \\dfrac{150}{2} = 75\\text{ \\dfrac{km}{h}}$។ តាម MVT មានខណៈពេលដែលល្បឿនខណៈ $v(c) = 75\\text{ \\dfrac{km}{h}}$។"
       },
       {
         "id": "q5",
@@ -16545,7 +16545,7 @@
           "$c = 3$"
         ],
         "correct": 0,
-        "explanation": "$\\dfrac{1/4 - 1}{4 - 1} = \\dfrac{-3/4}{3} = -\\dfrac{1}{4}$។ $f'(c) = -\\dfrac{1}{c^2} = -\\dfrac{1}{4} \\iff c^2 = 4 \\Rightarrow c = 2 \\in (1, 4)$។"
+        "explanation": "$\\dfrac{\\dfrac{1}{4} - 1}{4 - 1} = \\dfrac{-\\dfrac{3}{4}}{3} = -\\dfrac{1}{4}$។ $f'(c) = -\\dfrac{1}{c^2} = -\\dfrac{1}{4} \\iff c^2 = 4 \\Rightarrow c = 2 \\in (1, 4)$។"
       },
       {
         "id": "q7",
@@ -16659,7 +16659,7 @@
           "$-1$"
         ],
         "correct": 0,
-        "explanation": "រាង $[0/0]$ ៖ $\\lim_{x \\to 0} \\dfrac{(\\sin x)'}{(x)'} = \\lim_{x \\to 0} \\dfrac{\\cos x}{1} = \\cos 0 = 1$។"
+        "explanation": "រាង $[\\dfrac{0}{0}]$ ៖ $\\lim_{x \\to 0} \\dfrac{(\\sin x)'}{(x)'} = \\lim_{x \\to 0} \\dfrac{\\cos x}{1} = \\cos 0 = 1$។"
       },
       {
         "id": "q4",
@@ -16675,7 +16675,7 @@
           "$\\infty$"
         ],
         "correct": 0,
-        "explanation": "រាង $[0/0]$ ៖ $\\lim_{x \\to 0} \\dfrac{(e^x-1)'}{(x)'} = \\lim_{x \\to 0} \\dfrac{e^x}{1} = 1$។"
+        "explanation": "រាង $[\\dfrac{0}{0}]$ ៖ $\\lim_{x \\to 0} \\dfrac{(e^x-1)'}{(x)'} = \\lim_{x \\to 0} \\dfrac{e^x}{1} = 1$។"
       },
       {
         "id": "q5",
@@ -16691,7 +16691,7 @@
           "$2$"
         ],
         "correct": 0,
-        "explanation": "លើកទី ១ ៖ $\\lim \\dfrac{\\sin x}{2x}$ (នៅតែ $[0/0]$)។ លើកទី ២ ៖ $\\lim \\dfrac{\\cos x}{2} = \\dfrac{1}{2}$។"
+        "explanation": "លើកទី ១ ៖ $\\lim \\dfrac{\\sin x}{2x}$ (នៅតែ $[\\dfrac{0}{0}]$)។ លើកទី ២ ៖ $\\lim \\dfrac{\\cos x}{2} = \\dfrac{1}{2}$។"
       },
       {
         "id": "q6",
@@ -16701,13 +16701,13 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{\\ln x}{x}$ តាមឡូពីតាល់ ៖",
         "options": [
-          "$\\lim_{x \\to +\\infty} \\dfrac{1/x}{1} = 0$",
+          "$\\lim_{x \\to +\\infty} \\dfrac{\\dfrac{1}{x}}{1} = 0$",
           "$1$",
           "$+\\infty$",
           "$e$"
         ],
         "correct": 0,
-        "explanation": "រាង $[\\infty/\\infty]$ ៖ $\\lim_{x \\to +\\infty} \\dfrac{1/x}{1} = \\lim_{x \\to +\\infty} \\dfrac{1}{x} = 0$។"
+        "explanation": "រាង $[\\infty/\\infty]$ ៖ $\\lim_{x \\to +\\infty} \\dfrac{\\dfrac{1}{x}}{1} = \\lim_{x \\to +\\infty} \\dfrac{1}{x} = 0$។"
       },
       {
         "id": "q7",
@@ -16739,7 +16739,7 @@
           "$1$"
         ],
         "correct": 0,
-        "explanation": "សរសេរ $\\lim \\dfrac{\\ln x}{1/x}$។ ឡូពីតាល់ ៖ $\\lim \\dfrac{1/x}{-1/x^2} = \\lim (-x) = 0$។"
+        "explanation": "សរសេរ $\\lim \\dfrac{\\ln x}{\\dfrac{1}{x}}$។ ឡូពីតាល់ ៖ $\\lim \\dfrac{\\dfrac{1}{x}}{-\\dfrac{1}{x}^2} = \\lim (-x) = 0$។"
       },
       {
         "id": "q9",
@@ -16747,7 +16747,7 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ វិធានឡូពីតាល់ (L'Hôpital's Rule)",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនា $\\lim_{x \\to 0} (1 + x)^{1/x}$ ដោយប្រើ $\\ln$ និងឡូពីតាល់ ៖",
+        "question": "គណនា $\\lim_{x \\to 0} (1 + x)^{\\dfrac{1}{x}}$ ដោយប្រើ $\\ln$ និងឡូពីតាល់ ៖",
         "options": [
           "$e$",
           "$1$",
@@ -16755,7 +16755,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "$\\ln L = \\lim_{x \\to 0} \\dfrac{\\ln(1+x)}{x} = \\lim \\dfrac{1/(1+x)}{1} = 1 \\Rightarrow L = e^1 = e$។"
+        "explanation": "$\\ln L = \\lim_{x \\to 0} \\dfrac{\\ln(1+x)}{x} = \\lim \\dfrac{\\dfrac{1}{1+x}}{1} = 1 \\Rightarrow L = e^1 = e$។"
       },
       {
         "id": "q10",
@@ -16763,7 +16763,7 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ វិធានឡូពីតាល់ (L'Hôpital's Rule)",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "តើអាចអនុវត្តវិធានឡូពីតាល់បានដែរឬទេបើលីមីតមិនមែនជារាង $[0/0]$ ឬ $[\\infty/\\infty]$?",
+        "question": "តើអាចអនុវត្តវិធានឡូពីតាល់បានដែរឬទេបើលីមីតមិនមែនជារាង $[\\dfrac{0}{0}]$ ឬ $[\\infty/\\infty]$?",
         "options": [
           "មិនអាចទេ នឹងនាំឱ្យចម្លើយខុសទាំងស្រុង",
           "អាចបានគ្រប់លីមីត",
@@ -16771,7 +16771,7 @@
           "មិនកំណត់"
         ],
         "correct": 0,
-        "explanation": "បើមិនមែនជារាង $[0/0]$ ឬ $[\\infty/\\infty]$ ទេ ការប្រើឡូពីតាល់នឹងខុសទាំងស្រុង (ឧ. $\\lim_{x \\to 1} \\dfrac{x+1}{x} = 2$ តែដេរីវេបាន $1/1 = 1$ ខុស)។"
+        "explanation": "បើមិនមែនជារាង $[\\dfrac{0}{0}]$ ឬ $[\\infty/\\infty]$ ទេ ការប្រើឡូពីតាល់នឹងខុសទាំងស្រុង (ឧ. $\\lim_{x \\to 1} \\dfrac{x+1}{x} = 2$ តែដេរីវេបាន $\\dfrac{1}{1} = 1$ ខុស)។"
       }
     ]
   },
@@ -16889,7 +16889,7 @@
           "$\\dfrac{2}{3}$"
         ],
         "correct": 0,
-        "explanation": "$S = \\{BB, BG, GB, GG\\}$។ យ៉ាងហោចប្រុសម្នាក់ $B = \\{BB, BG, GB\\}$ ($n=3$)។ ប្រុសទាំងពីរ $A = \\{BB\\}$ ($n=1$)។ $P(A|B) = 1/3$។"
+        "explanation": "$S = \\{BB, BG, GB, GG\\}$។ យ៉ាងហោចប្រុសម្នាក់ $B = \\{BB, BG, GB\\}$ ($n=3$)។ ប្រុសទាំងពីរ $A = \\{BB\\}$ ($n=1$)។ $P(A|B) = \\dfrac{1}{3}$។"
       },
       {
         "id": "q8",
@@ -17497,7 +17497,7 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អថេរចៃដន្យដាច់ដោយឡែក បំណែងចែកប្រូបាប និងសង្ឃឹមគណិត E(X)",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $E(X)$ សម្រាប់ចំនួនរូបក្បាលខាងលើ ($P(0)=1/4, P(1)=1/2, P(2)=1/4$) ៖",
+        "question": "គណនា $E(X)$ សម្រាប់ចំនួនរូបក្បាលខាងលើ ($P(0)=\\dfrac{1}{4}, P(1)=\\dfrac{1}{2}, P(2)=\\dfrac{1}{4}$) ៖",
         "options": [
           "$1$",
           "$0.5$",
@@ -17505,7 +17505,7 @@
           "$2$"
         ],
         "correct": 0,
-        "explanation": "$E(X) = 0(1/4) + 1(1/2) + 2(1/4) = 0 + 1/2 + 1/2 = 1$។"
+        "explanation": "$E(X) = 0(\\dfrac{1}{4}) + 1(\\dfrac{1}{2}) + 2(\\dfrac{1}{4}) = 0 + \\dfrac{1}{2} + \\dfrac{1}{2} = 1$។"
       },
       {
         "id": "q6",
@@ -17545,15 +17545,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អថេរចៃដន្យដាច់ដោយឡែក បំណែងចែកប្រូបាប និងសង្ឃឹមគណិត E(X)",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "សំបុត្រឆ្នោតមួយថ្លៃ $2\\$$។ រង្វាន់ធំ $1000\\$$ (ប្រូបាប $1/1000$) រង្វាន់តូច $100\\$$ (ប្រូបាប $5/1000$)។ រកសង្ឃឹមគណិតនៃប្រាក់ចំណេញសុទ្ធរបស់អ្នកទិញ ៖",
+        "question": "សំបុត្រឆ្នោតមួយថ្លៃ $2\\text{ ដុល្លារ}$។ រង្វាន់ធំ $1000\\text{ ដុល្លារ}$ (ប្រូបាប $\\dfrac{1}{1000}$) រង្វាន់តូច $100\\text{ ដុល្លារ}$ (ប្រូបាប $\\dfrac{5}{1000}$)។ រកសង្ឃឹមគណិតនៃប្រាក់ចំណេញសុទ្ធរបស់អ្នកទិញ ៖",
         "options": [
-          "$-0.5\\$$ (ខាតជាមធ្យម $0.5\\$$)",
-          "$+0.5\\$$",
-          "$0\\$$",
-          "$-2\\$$"
+          "$-0.5\\text{ ដុល្លារ}$ (ខាតជាមធ្យម $0.5\\text{ ដុល្លារ}$)",
+          "$+0.5\\text{ ដុល្លារ}$",
+          "$0\\text{ ដុល្លារ}$",
+          "$-2\\text{ ដុល្លារ}$"
         ],
         "correct": 0,
-        "explanation": "$E(\\text{រង្វាន់}) = 1000(0.001) + 100(0.005) = 1 + 0.5 = 1.5\\$$។ ចំណេញសុទ្ធ $= 1.5 - 2 = -0.5\\$$។"
+        "explanation": "$E(\\text{រង្វាន់}) = 1000(0.001) + 100(0.005) = 1 + 0.5 = 1.5\\text{ ដុល្លារ}$។ ចំណេញសុទ្ធ $= 1.5 - 2 = -0.5\\text{ ដុល្លារ}$។"
       },
       {
         "id": "q9",
@@ -17580,7 +17580,7 @@
         "question": "បើ $X \\sim B(n, p)$ ជាបំណែងចែកទ្វេធា តើ $E(X)$ និង $V(X)$ ស្មើនឹងអ្វី?",
         "options": [
           "$E(X) = np$ និង $V(X) = np(1-p)$",
-          "$E(X) = n/p$ និង $V(X) = np$",
+          "$E(X) = \\dfrac{n}{p}$ និង $V(X) = np$",
           "$E(X) = p$ និង $V(X) = p(1-p)$",
           "$E(X) = np^2$"
         ],
@@ -18170,10 +18170,10 @@
           "$S = 3, P = \\dfrac{5}{2}$",
           "$S = -3, P = 5$",
           "$S = 6, P = 5$",
-          "$S = 3/2, P = 5/2$"
+          "$S = \\dfrac{3}{2}, P = \\dfrac{5}{2}$"
         ],
         "correct": 0,
-        "explanation": "តាមវីយែត (Viète) ៖ $S = -b/a = 6/2 = 3$ និង $P = c/a = 5/2$។"
+        "explanation": "តាមវីយែត (Viète) ៖ $S = -\\dfrac{b}{a} = \\dfrac{6}{2} = 3$ និង $P = \\dfrac{c}{a} = \\dfrac{5}{2}$។"
       },
       {
         "id": "q7",
@@ -18615,7 +18615,7 @@
           "$r = 1,\\; \\theta = 0$"
         ],
         "correct": 0,
-        "explanation": "$r = \\sqrt{1^2+1^2} = \\sqrt{2}$។ $\\cos\\theta = 1/\\sqrt{2}, \\sin\\theta = 1/\\sqrt{2} \\Rightarrow \\theta = \\pi/4$។"
+        "explanation": "$r = \\sqrt{1^2+1^2} = \\sqrt{2}$។ $\\cos\\theta = \\dfrac{1}{\\sqrt{2}}, \\sin\\theta = \\dfrac{1}{\\sqrt{2}} \\Rightarrow \\theta = \\pi/4$។"
       },
       {
         "id": "q4",
@@ -18663,7 +18663,7 @@
           "$r = 2,\\; \\theta = \\dfrac{5\\pi}{6}$"
         ],
         "correct": 0,
-        "explanation": "$r = \\sqrt{3 + 1} = 2$។ $\\cos\\theta = \\sqrt{3}/2, \\sin\\theta = -1/2 \\Rightarrow \\theta = -\\pi/6$។"
+        "explanation": "$r = \\sqrt{3 + 1} = 2$។ $\\cos\\theta = \\dfrac{\\sqrt{3}}{2}, \\sin\\theta = -\\dfrac{1}{2} \\Rightarrow \\theta = -\\pi/6$។"
       },
       {
         "id": "q7",
@@ -18695,7 +18695,7 @@
           "$\\theta = \\dfrac{5\\pi}{6}$"
         ],
         "correct": 0,
-        "explanation": "$r = 2$។ $\\cos\\theta = -1/2, \\sin\\theta = -\\sqrt{3}/2$ (កាដ្រង់ទី ៣) នាំឱ្យ $\\theta = -\\pi + \\pi/3 = -2\\pi/3$ (ឬ $4\\pi/3$)។"
+        "explanation": "$r = 2$។ $\\cos\\theta = -\\dfrac{1}{2}, \\sin\\theta = -\\dfrac{\\sqrt{3}}{2}$ (កាដ្រង់ទី ៣) នាំឱ្យ $\\theta = -\\pi + \\pi/3 = -2\\pi/3$ (ឬ $4\\pi/3$)។"
       },
       {
         "id": "q9",
@@ -18809,7 +18809,7 @@
           "$z = 2\\left(\\cos\\dfrac{5\\pi}{6} + i\\sin\\dfrac{5\\pi}{6}\\right)$"
         ],
         "correct": 0,
-        "explanation": "$r = \\sqrt{1+3} = 2$។ $\\cos\\theta = 1/2, \\sin\\theta = -\\sqrt{3}/2 \\Rightarrow \\theta = -\\pi/3$។"
+        "explanation": "$r = \\sqrt{1+3} = 2$។ $\\cos\\theta = \\dfrac{1}{2}, \\sin\\theta = -\\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = -\\pi/3$។"
       },
       {
         "id": "q6",
@@ -18955,7 +18955,7 @@
           "$1 + i$"
         ],
         "correct": 0,
-        "explanation": "$r = 4/2 = 2$។ $\\theta = 75^\\circ - 30^\\circ = 45^\\circ$។ $z = 2(\\cos 45^\\circ + i\\sin 45^\\circ) = 2(\\sqrt{2}/2 + i\\sqrt{2}/2) = \\sqrt{2} + i\\sqrt{2}$។"
+        "explanation": "$r = \\dfrac{4}{2} = 2$។ $\\theta = 75^\\circ - 30^\\circ = 45^\\circ$។ $z = 2(\\cos 45^\\circ + i\\sin 45^\\circ) = 2(\\dfrac{\\sqrt{2}}{2} + i\\sqrt{2}/2) = \\sqrt{2} + i\\sqrt{2}$។"
       },
       {
         "id": "q5",
@@ -19035,7 +19035,7 @@
           "មិនកំណត់"
         ],
         "correct": 0,
-        "explanation": "យកកុំផ្លិចឆ្លាស់ ៖ ដោយ $|z_i|=1 \\Rightarrow \\bar{z_i} = 1/z_i$។ ជំនួសចូលឃើញថាកន្សោមស្មើនឹងកុំផ្លិចឆ្លាស់របស់វា ដូច្នេះវាជាចំនួនពិតជានិច្ច។"
+        "explanation": "យកកុំផ្លិចឆ្លាស់ ៖ ដោយ $|z_i|=1 \\Rightarrow \\bar{z_i} = \\dfrac{1}{z}_i$។ ជំនួសចូលឃើញថាកន្សោមស្មើនឹងកុំផ្លិចឆ្លាស់របស់វា ដូច្នេះវាជាចំនួនពិតជានិច្ច។"
       },
       {
         "id": "q10",
@@ -19809,7 +19809,7 @@
           "$y = -\\dfrac{8}{3}$"
         ],
         "correct": 0,
-        "explanation": "ផលគុណស្កាលែ $\\vec{u}\\cdot\\vec{v} = 2(-4) + 3y = 0 \\iff -8 + 3y = 0 \\iff y = 8/3$។"
+        "explanation": "ផលគុណស្កាលែ $\\vec{u}\\cdot\\vec{v} = 2(-4) + 3y = 0 \\iff -8 + 3y = 0 \\iff y = \\dfrac{8}{3}$។"
       },
       {
         "id": "q7",
@@ -20653,7 +20653,7 @@
           "$6$"
         ],
         "correct": 0,
-        "explanation": "$\\vec{u} \\times \\vec{v} = (2-1)\\vec{i} ... = (1, -5, -3)$។ $\\|\\vec{u}\\times\\vec{v}\\| = \\sqrt{1+25+9} = \\sqrt{35}$។"
+        "explanation": "$\\vec{u} \\times \\vec{v} = (2-1)\\vec{i} \\dots  = (1, -5, -3)$។ $\\|\\vec{u}\\times\\vec{v}\\| = \\sqrt{1+25+9} = \\sqrt{35}$។"
       },
       {
         "id": "q9",
