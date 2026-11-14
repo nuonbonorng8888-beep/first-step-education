@@ -1,7 +1,7 @@
 {
-  "version": "v104",
-  "build": 104,
+  "version": "v105",
+  "build": 105,
   "date": "2026-11-14",
   "author": "Nuon Bonong",
-  "changelog": "Completely remove all Competency Test buttons from top header nav for both public and logged in teacher modes."
+  "changelog": "Add A4 / A5 paper size toggle for worksheets with standard page dimensions and enhance right sidebar lesson titles to wrap naturally without truncation."
 }
