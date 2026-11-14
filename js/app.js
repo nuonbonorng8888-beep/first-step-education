@@ -357,7 +357,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v102';
+    this.appVersion = 'v103';
 
     const checkVersion = async () => {
       try {
@@ -460,55 +460,17 @@ function doGet(e) {
   },
 
   initZoomAssistant() {
-    this.checkBrowserZoom();
-    window.addEventListener('resize', () => {
-      this.checkBrowserZoom();
-    });
+    // Disabled per user request (no red banner at top)
+    const banner = document.getElementById('browser-zoom-warning-banner');
+    if (banner) banner.remove();
+    document.body.classList.remove('low-zoom-detected');
   },
 
   checkBrowserZoom() {
-    const outerW = window.outerWidth || window.screen.width;
-    const innerW = window.innerWidth;
-    if (!outerW || !innerW) return;
-
-    // Detect zoom ratio: in Chrome, outerWidth/innerWidth reflects zoom level
-    const zoomRatio = outerW / innerW;
-    const isAbnormallyZoomedOut = zoomRatio < 0.82 || (innerW > 2200 && (window.screen.width || 1920) <= 1920);
-
-    const bannerId = 'browser-zoom-warning-banner';
-    let banner = document.getElementById(bannerId);
-
-    if (isAbnormallyZoomedOut) {
-      document.body.classList.add('low-zoom-detected');
-      const pct = Math.max(25, Math.round(zoomRatio * 100));
-
-      if (!banner) {
-        banner = document.createElement('div');
-        banner.id = bannerId;
-        banner.className = 'browser-zoom-banner';
-        document.body.appendChild(banner);
-      }
-
-      banner.innerHTML = `
-        <div class="zoom-banner-inner">
-          <div class="zoom-banner-icon">🔍</div>
-          <div class="zoom-banner-text">
-            <strong>កម្រិតពង្រីក Browser (Zoom) របស់លោកគ្រូស្ថិតក្នុងកម្រិតតូច (${pct}%) ៖</strong>
-            <span>ធ្វើឱ្យទំព័រវិបសាយ និងផ្ទាំងចូលរួមរួញតូចពិបាកមើល។ សូមចុចគ្រាប់ចុច <strong>[Ctrl + 0]</strong> ដើម្បីស្តារមក <strong>100%</strong> ធម្មតាវិញ។</span>
-          </div>
-          <div class="zoom-banner-actions">
-            <button class="zoom-banner-btn-help" onclick="App.showZoomHelpModal()">📖 របៀបដោះស្រាយ</button>
-            <button class="zoom-banner-btn-close" onclick="document.getElementById('${bannerId}').style.display='none'" title="បិទ">✕</button>
-          </div>
-        </div>
-      `;
-      banner.style.display = 'block';
-    } else {
-      document.body.classList.remove('low-zoom-detected');
-      if (banner) {
-        banner.style.display = 'none';
-      }
-    }
+    // Disabled per user request: no red banner at top
+    const banner = document.getElementById('browser-zoom-warning-banner');
+    if (banner) banner.remove();
+    document.body.classList.remove('low-zoom-detected');
   },
 
   showZoomHelpModal() {
@@ -807,6 +769,17 @@ function doGet(e) {
     const isLocked = isGateLock || document.body.classList.contains('portal-locked');
 
     if (closeBtn) closeBtn.style.display = isLocked ? 'none' : 'inline-flex';
+
+    // Open directly in Fullscreen mode per user request (ពេលបើកមកពេញScreen តែម្តងនិងងាយមើល)
+    const card = document.querySelector('.gate-lock-card');
+    if (card) {
+      card.classList.add('is-maximized');
+      const maxBtn = card.querySelector('.modal-maximize-btn');
+      if (maxBtn) {
+        maxBtn.innerHTML = '🗗';
+        maxBtn.title = 'បង្រួមទំហំដើម (Restore)';
+      }
+    }
 
     this.showGateSelectView();
     if (modal) modal.classList.add('active');

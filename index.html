@@ -65,15 +65,11 @@
         <div class="nav-pills-group">
           <button class="cat-pill active" onclick="App.backToCatalog()" id="nav-link-home">ទំព័រដើម</button>
           <button class="cat-pill" onclick="App.scrollToLessons()" id="nav-link-lessons">មេរៀន</button>
-          <button class="cat-pill" onclick="App.openDiagnosticModal()" id="nav-link-test">តេស្តសមត្ថភាព</button>
           <button class="cat-pill" onclick="window.questionBank.openQuestionBankModal()" id="nav-link-bank" style="background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.4); color: #c084fc; font-weight: 700;">
             📚 ធនាគារសំណួរ
           </button>
           <button class="cat-pill" onclick="window.questionBank.openMultiLessonExamModal()" id="nav-link-exam-main" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700;">
             🎲 បង្កើតវិញ្ញាសា
-          </button>
-          <button class="cat-pill" onclick="App.openTeacherSheetModal()" id="nav-link-scores" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 700;" title="តេស្តសមត្ថភាព & តារាងពិន្ទុ (Google Sheets)">
-            📊 តេស្តសមត្ថភាព
           </button>
         </div>
       </div>
@@ -850,11 +846,11 @@
 
   <!-- ================= TEACHER LOGIN MODAL / GATE LOCK ================= -->
   <div class="modal-overlay" id="login-modal" onclick="App.onLoginModalOverlayClick(event)">
-    <div class="modal-card gate-lock-card view-mode-select">
+    <div class="modal-card gate-lock-card view-mode-select is-maximized">
       <div class="modal-header">
         <h3 class="modal-title" id="login-modal-title">🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)</h3>
         <div style="display: flex; gap: 6px; align-items: center;">
-          <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="ពង្រីកពេញអេក្រង់ / បង្រួម">⛶</button>
+          <button type="button" class="btn-icon modal-maximize-btn" onclick="App.toggleModalMaximize(this)" title="បង្រួមទំហំដើម (Restore)">🗗</button>
           <button class="btn-icon gate-hide-on-lock" id="btn-close-login-modal" onclick="App.closeLoginModal()">✕</button>
         </div>
       </div>

@@ -187,17 +187,26 @@ body {
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 68px;
+  justify-content: flex-start;
+  min-height: 62px;
   height: auto;
-  gap: 16px;
-  padding: 10px 24px;
+  gap: 12px;
+  padding: 8px 18px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.nav-pills-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   flex-shrink: 0;
 }
 
@@ -290,11 +299,11 @@ body {
 
 /* Search Input */
 .nav-search {
-  flex: 1;
-  max-width: 440px;
-  min-width: 180px;
+  flex: 0 1 240px;
+  max-width: 260px;
+  min-width: 150px;
   position: relative;
-  margin: 0 8px;
+  margin: 0 2px;
 }
 
 .search-input {
@@ -340,11 +349,11 @@ body {
   border: 1px solid var(--border-glass);
 }
 
-/* Nav Actions Container */
+/* Nav Actions Container: Shifted comfortably towards the left with compact, snug button boxes */
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   flex-shrink: 0;
 }
 
@@ -355,20 +364,20 @@ body {
   background: var(--bg-secondary);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-full);
-  padding: 3px;
-  gap: 3px;
+  padding: 2px;
+  gap: 2px;
   box-shadow: var(--shadow-sm);
 }
 
 .lang-btn {
-  padding: 6px 12px;
-  min-height: 32px;
+  padding: 4px 8px;
+  min-height: 28px;
   border-radius: var(--radius-full);
   border: none;
   background: transparent;
   color: var(--text-secondary);
   font-family: var(--font-khmer);
-  font-size: 0.82rem;
+  font-size: 0.80rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -395,16 +404,18 @@ body {
 
 .nav-device-btn {
   border-radius: var(--radius-full);
-  font-size: 0.86rem;
-  padding: 8px 16px;
-  min-height: 40px;
+  font-size: 0.82rem;
+  padding: 5px 10px;
+  min-height: 32px;
+  line-height: 1.2;
 }
 
 .nav-auth-btn {
   border-radius: var(--radius-full);
-  font-size: 0.86rem;
-  padding: 8px 16px;
-  min-height: 40px;
+  font-size: 0.82rem;
+  padding: 5px 11px;
+  min-height: 32px;
+  line-height: 1.2;
 }
 
 /* ==========================================================
@@ -7905,20 +7916,13 @@ body.portal-locked .gate-lock-card {
   }
 }
 
-/* Browser Zoom Warning Banner */
+/* Browser Zoom Warning Banner (Disabled per user request: no red banner at top) */
 .browser-zoom-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999999;
-  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
-  color: #ffffff;
-  padding: 12px 20px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
-  font-family: var(--font-khmer);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
-  animation: slideDownZoomBanner 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  pointer-events: none !important;
 }
 
 @keyframes slideDownZoomBanner {
