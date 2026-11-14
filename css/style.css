@@ -3443,111 +3443,15 @@ body.dark-mode .ws-points-count-badge {
 .worksheet-paper {
   background: #ffffff !important;
   color: #1e293b !important;
-  border-radius: 12px;
-  border: 1px solid #cbd5e1;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 36px 42px;
+  max-width: 900px;
   margin: 0 auto;
   font-family: var(--font-khmer);
   position: relative;
-  transition: all 0.25s ease;
-  box-sizing: border-box;
-}
-
-/* A4 Paper Dimensions (Default Standard) */
-.worksheet-paper.size-a4,
-.worksheet-paper:not(.size-a5) {
-  width: 100%;
-  max-width: 860px;
-  min-height: 297mm;
-  padding: 36px 42px;
-}
-
-/* A5 Paper Dimensions (Compact Half-sheet) */
-.worksheet-paper.size-a5 {
-  width: 100%;
-  max-width: 630px;
-  min-height: 210mm;
-  padding: 22px 26px;
-  font-size: 0.94rem;
-}
-
-.worksheet-paper.size-a5 .ws-header-banner {
-  padding: 8px 12px;
-  margin-bottom: 14px;
-}
-
-.worksheet-paper.size-a5 .ws-school-logo {
-  height: 52px;
-  width: 52px;
-}
-
-.worksheet-paper.size-a5 .ws-header-title {
-  font-size: 1.25rem;
-}
-
-.worksheet-paper.size-a5 .ws-header-lesson {
-  font-size: 1.05rem;
-}
-
-.worksheet-paper.size-a5 .ws-objective-card {
-  padding: 10px 14px;
-  margin-bottom: 14px;
-}
-
-.worksheet-paper.size-a5 .ws-summary-card {
-  padding: 12px 14px;
-  margin-bottom: 16px;
-}
-
-.worksheet-paper.size-a5 .ws-exercise-card {
-  padding: 14px 16px;
-  margin-bottom: 16px;
-}
-
-/* Paper Size Selector Pill in Toolbar */
-.ws-size-pill-box {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.06);
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--border-glass);
-}
-
-.ws-size-label {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-.ws-size-btn-group {
-  display: inline-flex;
-  gap: 4px;
-}
-
-.ws-size-btn {
-  padding: 4px 12px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  background: transparent;
-  color: var(--text-secondary);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.ws-size-btn:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.ws-size-btn.active {
-  background: var(--accent-cyan);
-  color: #ffffff !important;
-  border-color: var(--accent-cyan);
-  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
+  transition: all 0.3s ease;
 }
 
 /* Header Banner - Matching user uploaded image media_1792063511095.png */
@@ -4176,27 +4080,10 @@ body.dark-mode .ws-sol-rubric {
    Print & PDF Media Query
    ========================================================================== */
 @media print {
-  /* Set exact A4 page with 8mm 10mm margins (Default) */
+  /* Set exact A4 page with 8mm 10mm margins */
   @page {
     size: A4 portrait;
     margin: 8mm 10mm;
-  }
-
-  @page a5_sheet {
-    size: A5 portrait;
-    margin: 6mm 8mm;
-  }
-
-  body.print-size-a5 {
-    page: a5_sheet;
-  }
-
-  body.print-size-a5 .worksheet-paper {
-    padding: 16px 20px !important;
-    font-size: 0.90rem !important;
-    max-width: 100% !important;
-    box-shadow: none !important;
-    border: none !important;
   }
 
   /* Hide app shell, top navigation, and 3D simulation laboratory elements */

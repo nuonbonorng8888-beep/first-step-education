@@ -1,7 +1,7 @@
 {
-  "version": "v105",
-  "build": 105,
+  "version": "v106",
+  "build": 106,
   "date": "2026-11-14",
   "author": "Nuon Bonong",
-  "changelog": "Add A4 / A5 paper size toggle for worksheets with standard page dimensions and enhance right sidebar lesson titles to wrap naturally without truncation."
+  "changelog": "Restore authentic full-sheet worksheet layout and paper styling matching user exact original design while preserving multi-line sidebar lesson titles."
 }

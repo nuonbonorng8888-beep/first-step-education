@@ -21,7 +21,6 @@ window.App = {
   currentActiveQuizList: [],
   teacherUnlocked: false,
   activeWorksheetPoint: 0,
-  worksheetPaperSize: localStorage.getItem('worksheet_paper_size') || 'a4',
   examTimeLimit: 0,
   examTimerInterval: null,
   examSecondsRemaining: 0,
@@ -358,7 +357,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v105';
+    this.appVersion = 'v106';
 
     const checkVersion = async () => {
       try {
@@ -2741,15 +2740,6 @@ function doGet(e) {
           </div>
 
           <div class="ws-toolbar-actions">
-            <!-- Worksheet Paper Size Selector (A4 / A5) -->
-            <div class="ws-size-pill-box" title="ជ្រើសរើសទំហំសន្លឹកកិច្ចការ A4 ឬ A5">
-              <span class="ws-size-label">ទំហំសន្លឹក ៖</span>
-              <div class="ws-size-btn-group">
-                <button type="button" class="ws-size-btn ${this.worksheetPaperSize !== 'a5' ? 'active' : ''}" id="ws-btn-size-a4" onclick="App.setWorksheetPaperSize('a4')" title="ទំហំ A4 ស្តង់ដា">📄 A4</button>
-                <button type="button" class="ws-size-btn ${this.worksheetPaperSize === 'a5' ? 'active' : ''}" id="ws-btn-size-a5" onclick="App.setWorksheetPaperSize('a5')" title="ទំហំ A5 បង្រួម / កន្លះសន្លឹក A4">📑 A5</button>
-              </div>
-            </div>
-
             <button class="btn btn-primary" onclick="App.printWorksheet(false)" title="បោះពុម្ព ឬទាញយកជា PDF សន្លឹកចំណុចនេះ">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -2808,7 +2798,7 @@ function doGet(e) {
         ` : ''}
 
         <!-- The Official Printable Paper Sheet -->
-        <div class="worksheet-paper ${this.worksheetPaperSize === 'a5' ? 'size-a5' : 'size-a4'}" id="printable-worksheet-paper">
+        <div class="worksheet-paper" id="printable-worksheet-paper">
           <!-- Header Banner (Strictly matching user uploaded screenshot) -->
           <div class="ws-header-banner">
             <div class="ws-school-logo-box">
@@ -3000,31 +2990,6 @@ function doGet(e) {
     this.showToast('បានចាក់សោដំណោះស្រាយឡើងវិញរួចរាល់ 🔒', 'info');
   },
 
-  setWorksheetPaperSize(size) {
-    this.worksheetPaperSize = (size === 'a5') ? 'a5' : 'a4';
-    try {
-      localStorage.setItem('worksheet_paper_size', this.worksheetPaperSize);
-    } catch (e) {}
-
-    const paper = document.getElementById('printable-worksheet-paper');
-    if (paper) {
-      if (this.worksheetPaperSize === 'a5') {
-        paper.classList.add('size-a5');
-        paper.classList.remove('size-a4');
-      } else {
-        paper.classList.add('size-a4');
-        paper.classList.remove('size-a5');
-      }
-    }
-
-    const btnA4 = document.getElementById('ws-btn-size-a4');
-    const btnA5 = document.getElementById('ws-btn-size-a5');
-    if (btnA4) btnA4.classList.toggle('active', this.worksheetPaperSize !== 'a5');
-    if (btnA5) btnA5.classList.toggle('active', this.worksheetPaperSize === 'a5');
-
-    this.showToast(`បានប្តូរទំហំសន្លឹកកិច្ចការជា ${this.worksheetPaperSize === 'a5' ? 'A5 (បង្រួម)' : 'A4 (ស្តង់ដា)'}`, 'success');
-  },
-
   printWorksheet(includeSolutions = false) {
     const teacherSec = document.getElementById('ws-teacher-section');
     if (teacherSec) {
@@ -3034,19 +2999,10 @@ function doGet(e) {
         teacherSec.style.display = 'none';
       }
     }
-
-    if (this.worksheetPaperSize === 'a5') {
-      document.body.classList.add('print-size-a5');
-    } else {
-      document.body.classList.remove('print-size-a5');
-    }
-
     window.print();
-
     // Restore display after print dialog closes
     setTimeout(() => {
       if (teacherSec) teacherSec.style.display = '';
-      document.body.classList.remove('print-size-a5');
     }, 1000);
   },
 
@@ -3057,18 +3013,12 @@ function doGet(e) {
       return;
     }
 
-    if (this.worksheetPaperSize === 'a5') {
-      document.body.classList.add('print-size-a5');
-    } else {
-      document.body.classList.remove('print-size-a5');
-    }
-
     const printContainer = document.createElement('div');
     printContainer.id = 'ws-all-points-print-container';
     printContainer.className = 'ws-all-points-print-container';
 
     printContainer.innerHTML = ws.points.map((pt, ptIdx) => `
-      <div class="worksheet-paper ${this.worksheetPaperSize === 'a5' ? 'size-a5' : 'size-a4'} ${ptIdx < ws.points.length - 1 ? 'ws-page-break' : ''}">
+      <div class="worksheet-paper ${ptIdx < ws.points.length - 1 ? 'ws-page-break' : ''}">
         <div class="ws-header-banner">
           <div class="ws-school-logo-box">
             <img src="assets/school_logo.png" class="ws-school-logo" alt="Preah Sisowath NGS Logo">
@@ -3163,7 +3113,6 @@ function doGet(e) {
     window.print();
 
     setTimeout(() => {
-      document.body.classList.remove('print-size-a5');
       if (printContainer && printContainer.parentNode) {
         printContainer.parentNode.removeChild(printContainer);
       }
