@@ -1,7 +1,8 @@
 {
-  "version": "v116",
-  "build": 116,
+  "version": "v117",
+  "build": 117,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Grade 7 Worksheets & Question Bank complete upgrade: audited all mathematical typesetting (eliminated all raw slash fractions, fixed \\dots/\\ldots and matched KaTeX delimiters); strictly aligned exercises with MoEYS curriculum progression (isolated natural numbers from integers and removed misplaced concepts in Lessons 1-2); updated all 77 points across 22 lessons with 3 distinct difficulty levels (Level 1: ស្រួល / មូលដ្ឋានគ្រឹះ, Level 2: មធ្យម / ការយល់ដឹង និងអនុវត្ត, Level 3: ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា) totaling 231 comprehensive exercises with full teacher solutions, rubrics, and dynamic score calculation (/ ៣)."
+  "changelog": "Grade 8 Worksheets, Quizzes, & Question Bank complete upgrade: audited all mathematical typesetting (eliminated raw slash fractions, standardized \\dfrac, fixed \\ldots and KaTeX math delimiters, converted currency signs to \\text{ ដុល្លារ}); strictly aligned exercises with MoEYS curriculum progression across all 18 lessons (74 points) from Chapter 1 to Chapter 4; created 3 distinct difficulty levels per point (Level 1 Easy, Level 2 Medium, Level 3 Hard) totaling 222 comprehensive exercises with detailed teacher solutions, rubrics, and dynamic score calculation (/ ៣); audited 740 point quiz questions and 805 question bank questions for zero math typography errors.",
+  "lastUpdated": "2026-11-15T02:11:45+07:00"
 }
