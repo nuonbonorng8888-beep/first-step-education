@@ -1,7 +1,7 @@
 {
-  "version": "v108",
-  "build": 108,
+  "version": "v109",
+  "build": 109,
   "date": "2026-11-14",
   "author": "Nuon Bonong",
-  "changelog": "Filter out test and empty student records from Google Sheets scoring, add cleanTestData automated menu in Sheets, and prevent blank submissions."
+  "changelog": "Modernize worksheet view into elegant document and book reader with page turner, interactive zoom, authentic paper frame, and clean typography."
 }

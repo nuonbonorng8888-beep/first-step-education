@@ -1526,7 +1526,7 @@ body.light-theme .grade-pill {
 /* Worksheet Active: Centers the worksheet paper full stage with beautiful dark backdrop matching user screenshot */
 .classroom-layout.worksheet-active {
   display: block !important;
-  max-width: 960px !important;
+  max-width: 1040px !important;
   margin: 0 auto !important;
 }
 
@@ -3288,18 +3288,65 @@ body.light-theme .mobile-glass-dock {
   gap: 24px;
 }
 
-/* Worksheet Screen Toolbar */
-.ws-toolbar {
+/* Worksheet Screen Toolbar & Document Reader Bar */
+.ws-toolbar,
+.ws-reader-toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
   background: var(--bg-card);
-  padding: 14px 20px;
+  padding: 12px 18px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-glass);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.ws-reader-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ws-reader-page-flipper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-secondary);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+}
+
+.ws-page-indicator {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.ws-page-total {
+  opacity: 0.7;
+  font-size: 0.82rem;
+}
+
+.ws-reader-zoom-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-secondary);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+}
+
+.ws-zoom-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+  min-width: 44px;
+  text-align: center;
 }
 
 .ws-toolbar-left {
@@ -3386,22 +3433,16 @@ body.dark-mode .ws-points-count-badge {
   align-items: center;
   gap: 10px;
   overflow-x: auto;
-  padding-bottom: 6px;
-  scrollbar-width: thin;
+  padding: 4px 2px 8px 2px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
 }
 
 .ws-points-track::-webkit-scrollbar {
-  height: 5px;
-}
-
-.ws-points-track::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.ws-points-track::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 999px;
+  display: none;
+  height: 0;
+  width: 0;
 }
 
 .ws-point-pill {
@@ -3482,19 +3523,38 @@ body.dark-mode .ws-points-count-badge {
   break-after: page !important;
 }
 
-/* The Printable / Official Worksheet Paper */
+/* The Printable / Official Worksheet Paper - Authentic Book / Document Page Frame */
 .worksheet-paper {
   background: #ffffff !important;
   color: #1e293b !important;
-  border-radius: 18px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  padding: 36px 42px;
-  max-width: 900px;
+  border-radius: 14px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 38px 46px;
+  max-width: 920px;
   margin: 0 auto;
   font-family: var(--font-khmer);
   position: relative;
-  transition: all 0.3s ease;
+  transition: max-width 0.25s ease, transform 0.25s ease;
+}
+
+/* Document Paper Footer */
+.ws-paper-footer {
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-family: 'Kantumruy Pro', var(--font-khmer);
+}
+
+.ws-pf-center {
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.5px;
 }
 
 /* Header Banner - Matching user uploaded image media_1792063511095.png */

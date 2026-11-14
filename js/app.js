@@ -434,7 +434,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v108';
+    this.appVersion = 'v109';
 
     const checkVersion = async () => {
       try {
@@ -2103,14 +2103,77 @@ function doGet(e) {
     }
   },
 
-  formatSheetTitleHeader(sheetNumber) {
-    if (!sheetNumber) return 'សន្លឹកកិច្ចការ';
-    const s = String(sheetNumber).trim();
-    const m = s.match(/^(សន្លឹកកិច្ចការទី)\s*(.+?)\s*[\(\-]\s*(ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+)\)?$/);
-    if (m) {
-      return `${m[1]}<br><span class="ws-code-num">${m[2].trim()}</span><br><span class="ws-point-num">(${m[3].trim()})</span>`;
+  worksheetZoom: 100,
+  setWorksheetZoom(val) {
+    this.worksheetZoom = Math.min(130, Math.max(70, val));
+    const paper = document.getElementById('printable-worksheet-paper');
+    const zoomEl = document.getElementById('ws-zoom-level');
+    if (paper) {
+      if (this.worksheetZoom === 100) {
+        paper.style.maxWidth = '920px';
+        paper.style.transform = '';
+      } else if (this.worksheetZoom === 115) {
+        paper.style.maxWidth = '1040px';
+        paper.style.transform = '';
+      } else {
+        paper.style.maxWidth = `${Math.round(920 * (this.worksheetZoom / 100))}px`;
+        paper.style.transform = '';
+      }
     }
-    return s;
+    if (zoomEl) zoomEl.textContent = `${this.worksheetZoom}%`;
+  },
+  zoomWorksheet(delta) {
+    this.setWorksheetZoom(this.worksheetZoom + delta);
+  },
+
+  prevWorksheetPoint() {
+    const ws = (this.worksheets || this.worksheetsG11)?.[this.currentLesson?.id];
+    if (!ws || !ws.points || ws.points.length <= 1) return;
+    const currentIdx = this.activeWorksheetPoint || 0;
+    if (currentIdx > 0) {
+      this.selectWorksheetPoint(currentIdx - 1);
+    }
+  },
+
+  nextWorksheetPoint() {
+    const ws = (this.worksheets || this.worksheetsG11)?.[this.currentLesson?.id];
+    if (!ws || !ws.points || ws.points.length <= 1) return;
+    const currentIdx = this.activeWorksheetPoint || 0;
+    if (currentIdx < ws.points.length - 1) {
+      this.selectWorksheetPoint(currentIdx + 1);
+    }
+  },
+
+  formatSheetTitleHeader(sheetNumber, currentPoint, ws) {
+    const raw = String(sheetNumber || currentPoint?.sheetNumber || ws?.sheetNumber || '').trim();
+    const ptNum = currentPoint?.pointNumber || (this.activeWorksheetPoint + 1) || 1;
+    const ptNumKh = String(ptNum).replace(/\d/g, d => '០១២៣៤៥៦៧៨៩'[d]);
+
+    // Pattern 1: Multi-line Code like "សន្លឹកកិច្ចការទី ១១A-០១ (ចំណុចទី ១)"
+    let m = raw.match(/^(សន្លឹកកិច្ចការ(?:ទី)?)\s*(.+?)\s*[\(\-–]\s*(ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+)\)?$/);
+    if (m) {
+      const code = m[2].trim();
+      if (/[A-Za-z]/.test(code) || code.length > 5) {
+        return `${m[1]}<br><span class="ws-code-num">${code}</span><br><span class="ws-point-num">(${m[3].trim()})</span>`;
+      }
+      return `${m[1]} <span class="ws-code-num">${code}</span> - <span class="ws-point-num">${m[3].trim()}</span>`;
+    }
+
+    // Pattern 2: "សន្លឹកកិច្ចការចំណុចទី ១"
+    m = raw.match(/^(សន្លឹកកិច្ចការ(?:ទី)?)\s*(ចំណុចទី\s*[\d១២៣៤៥៦៧៨៩០]+)$/);
+    if (m) {
+      const lesMatch = String(ws?.lessonTitle || '').match(/មេរៀនទី\s*([\d១២៣៤៥៦៧៨៩០]+)/);
+      const lesNum = lesMatch ? lesMatch[1].padStart(2, '0') : String(ptNum).padStart(2, '0');
+      const lesNumKh = lesNum.replace(/\d/g, d => '០១២៣៤៥៦៧៨៩'[d]);
+      return `សន្លឹកកិច្ចការទី <span class="ws-code-num">${lesNumKh}</span> - <span class="ws-point-num">${m[2].trim()}</span>`;
+    }
+
+    // Pattern 3: Standard raw fallback
+    if (raw) {
+      return raw.replace(/^(សន្លឹកកិច្ចការ(?:ទី)?)/, '$1 ');
+    }
+
+    return `សន្លឹកកិច្ចការ - ចំណុចទី ${ptNumKh}`;
   },
 
   renderMaterialsTab() {
@@ -2827,41 +2890,45 @@ function doGet(e) {
 
     container.innerHTML = `
       <div class="ws-container">
-        <!-- Worksheet Screen Toolbar -->
-        <div class="ws-toolbar">
-          <div class="ws-toolbar-left">
-            <span class="ws-badge-tag">
-              <span>🏫</span>
-              <span>វិទ្យាល័យព្រះស៊ីសុវត្ថិ • សាលារៀនជំនាន់ថ្មី (NGS)</span>
-            </span>
-            <span class="ws-badge-tag" style="background: rgba(16, 185, 129, 0.12); color: #059669; border-color: rgba(16, 185, 129, 0.3);">
-              <span>🎯</span>
-              <span>Flipped Classroom Model</span>
-            </span>
-            ${hasPoints && ws.points.length > 1 ? `
-              <span class="ws-badge-tag" style="background: rgba(99, 102, 241, 0.12); color: #4f46e5; border-color: rgba(99, 102, 241, 0.3);">
-                <span>📍</span>
-                <span>ចំណុចទី ${currentPoint.pointNumber || (pointIndex + 1)} នៃ ${ws.points.length}</span>
-              </span>
-            ` : ''}
+        <!-- Worksheet Screen Toolbar & Book Navigation Bar -->
+        <div class="ws-reader-toolbar">
+          <div class="ws-reader-nav-group">
+            <button class="btn btn-outline ws-nav-btn" onclick="App.toggleWorksheetSidebar()" title="បើក/បិទ បញ្ជីមេរៀនទាំងអស់">
+              📖 បញ្ជីមេរៀន
+            </button>
+            <div class="ws-reader-page-flipper">
+              <button class="btn btn-sm btn-outline ws-flip-btn" onclick="App.prevWorksheetPoint()" ${pointIndex === 0 ? 'disabled' : ''} title="ចំណុចមុន (ទំព័រមុន)">
+                ◀ ចំណុចមុន
+              </button>
+              <div class="ws-page-indicator">
+                📖 <strong>ចំណុចទី ${currentPoint.pointNumber || (pointIndex + 1)}</strong> <span class="ws-page-total">នៃ ${hasPoints ? ws.points.length : 1}</span>
+              </div>
+              <button class="btn btn-sm btn-outline ws-flip-btn" onclick="App.nextWorksheetPoint()" ${(!hasPoints || pointIndex >= ws.points.length - 1) ? 'disabled' : ''} title="ចំណុចបន្ទាប់ (ទំព័របន្ទាប់)">
+                ចំណុចបន្ទាប់ ▶
+              </button>
+            </div>
+          </div>
+
+          <div class="ws-reader-zoom-group">
+            <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.zoomWorksheet(-10)" title="បង្រួមទំហំ (Zoom Out)">➖</button>
+            <span class="ws-zoom-badge" id="ws-zoom-level">${this.worksheetZoom}%</span>
+            <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.zoomWorksheet(10)" title="ពង្រីកទំហំ (Zoom In)">➕</button>
+            <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.setWorksheetZoom(100)" title="ទំហំ A4 ស្តង់ដា">📄 A4</button>
+            <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.setWorksheetZoom(115)" title="ពង្រីកពេញទទឹង">🔍 ពេញទទឹង</button>
           </div>
 
           <div class="ws-toolbar-actions">
-            <button class="btn btn-outline" onclick="App.toggleWorksheetSidebar()" title="បើក/បិទ បញ្ជីមេរៀនទាំងអស់">
-              📖 បញ្ជីមេរៀន
-            </button>
-
             <button class="btn btn-primary" onclick="App.printWorksheet(false)" title="បោះពុម្ព ឬទាញយកជា PDF សន្លឹកចំណុចនេះ">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 6 2 18 2 18 9"></polyline>
                 <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
                 <rect x="6" y="14" width="12" height="8"></rect>
               </svg>
-              🖨️ បោះពុម្ពសន្លឹកចំណុចនេះ
+              🖨️ បោះពុម្ពសន្លឹកនេះ
             </button>
 
             ${hasPoints && ws.points.length > 1 ? `
-              <button class="btn btn-outline" style="border-color: #2563eb; color: #2563eb;" onclick="App.printAllWorksheetPoints(false)" title="បោះពុម្ពគ្រប់សន្លឹកកិច្ចការនៃមេរៀននេះ">
+              <button class="btn btn-outline ws-print-all-btn" onclick="App.printAllWorksheetPoints(false)" title="បោះពុម្ពគ្រប់សន្លឹកកិច្ចការនៃមេរៀននេះ">
                 📚 បោះពុម្ពគ្រប់ចំណុច (${ws.points.length} សន្លឹក)
               </button>
             ` : ''}
@@ -2871,7 +2938,7 @@ function doGet(e) {
                 🖨️ បោះពុម្ពដំណោះស្រាយ
               </button>
               <button class="btn btn-secondary" onclick="App.lockTeacherKey()" title="ចាក់សោដំណោះស្រាយឡើងវិញ">
-                🔒 ចាក់សោដំណោះស្រាយ
+                🔒 ចាក់សោ
               </button>
             ` : `
               <button class="btn btn-outline" onclick="App.openWorksheetUnlockModal()" title="សម្រាប់លោកគ្រូ-អ្នកគ្រូ">
@@ -2916,7 +2983,7 @@ function doGet(e) {
               <img src="assets/school_logo.png" class="ws-school-logo" alt="Preah Sisowath NGS Logo">
             </div>
             <div class="ws-header-center">
-              <h1 class="ws-header-title">${this.formatSheetTitleHeader(currentPoint.sheetNumber || ws.sheetNumber)}</h1>
+              <h1 class="ws-header-title">${this.formatSheetTitleHeader(currentPoint.sheetNumber || ws.sheetNumber, currentPoint, ws)}</h1>
               ${currentPoint.pointTitle ? `<div class="ws-header-point-subtitle">${currentPoint.pointTitle}</div>` : ''}
             </div>
             <div class="ws-header-right">
@@ -2991,6 +3058,13 @@ function doGet(e) {
               <p>២. សន្លឹកកិច្ចការខ្លះ ត្រូវនឹងសួរបញ្ជាក់ពេលដល់ម៉ោងជួបគ្នា បើឆ្លើយមិនចេញ នោះនឹងទទួលបានពិន្ទុ ០ លើការងារនេះ</p>
               <p>៣. សូមបញ្ជាក់លេខសន្លឹកកិច្ចការ (ឧ. សន្លឹកទី២០ ឬ ទី២១) ដើម្បីស្រង់ពិន្ទុសកម្មភាព</p>
             </div>
+          </div>
+
+          <!-- Official Document Paper Footer -->
+          <div class="ws-paper-footer">
+            <span class="ws-pf-left">📄 សន្លឹកកិច្ចការស្វ័យសិក្សា (Flipped Classroom)</span>
+            <span class="ws-pf-center">— ទំព័រ ${pointIndex + 1} នៃ ${hasPoints ? ws.points.length : 1} —</span>
+            <span class="ws-pf-right">វិទ្យាល័យព្រះយុគន្ធរ • NGS</span>
           </div>
         </div>
 
@@ -3135,7 +3209,7 @@ function doGet(e) {
             <img src="assets/school_logo.png" class="ws-school-logo" alt="Preah Sisowath NGS Logo">
           </div>
           <div class="ws-header-center">
-            <h1 class="ws-header-title">${this.formatSheetTitleHeader(pt.sheetNumber || ws.sheetNumber)}</h1>
+            <h1 class="ws-header-title">${this.formatSheetTitleHeader(pt.sheetNumber || ws.sheetNumber, pt, ws)}</h1>
             <div class="ws-header-point-subtitle">${pt.pointTitle}</div>
           </div>
           <div class="ws-header-right">
