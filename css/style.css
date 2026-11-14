@@ -350,6 +350,12 @@ body {
 }
 
 /* Nav Actions Container: Shifted comfortably towards the left with compact, snug button boxes */
+#btn-exam-nav,
+.nav-exam-btn {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -2796,7 +2802,13 @@ body.light-theme .quiz-explanation .katex * {
     display: none;
   }
 
-  .nav-actions {
+  #btn-exam-nav,
+.nav-exam-btn {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.nav-actions {
     gap: 8px;
   }
 

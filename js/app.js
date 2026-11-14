@@ -357,7 +357,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v103';
+    this.appVersion = 'v104';
 
     const checkVersion = async () => {
       try {
@@ -678,10 +678,10 @@ function doGet(e) {
       membersNavBtn.style.display = isAdm ? 'inline-flex' : 'none';
     }
 
-    // Teacher Exam Nav Button (Available to both Admin and Member teachers)
+    // Teacher Exam Nav Button disabled per user request (ព្រោះមានខាងក្រោមស្រាប់)
     const examNavBtn = document.getElementById('btn-exam-nav');
     if (examNavBtn) {
-      examNavBtn.style.display = isTeacherLoggedIn ? 'inline-flex' : 'none';
+      examNavBtn.style.display = 'none';
     }
 
     // Teacher Worksheet Extractor Nav Button (Available to both Admin and Member teachers)

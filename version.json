@@ -1,7 +1,7 @@
 {
-  "version": "v102",
-  "build": 102,
+  "version": "v104",
+  "build": 104,
   "date": "2026-11-14",
   "author": "Nuon Bonong",
-  "changelog": "Grade 12 Question Bank expanded with 200 authentic problems: 50 Easy, 50 Medium, 50 Hard (National BacII Exam / Olympiad), and 50 Written Problems with complete step-by-step solutions (6,670 total questions across all grades 7-12) - Build 102!"
+  "changelog": "Completely remove all Competency Test buttons from top header nav for both public and logged in teacher modes."
 }
