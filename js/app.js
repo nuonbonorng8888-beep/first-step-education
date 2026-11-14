@@ -357,7 +357,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v101';
+    this.appVersion = 'v102';
 
     const checkVersion = async () => {
       try {
@@ -734,7 +734,7 @@ function doGet(e) {
       if (isAdm) {
         bankNavBtn.style.display = 'inline-flex';
         bankNavBtn.className = 'btn btn-secondary nav-bank-btn';
-        bankNavBtn.title = 'ធនាគារសំណួរ ៦,៤៧០+ (គ្រប់គ្រងដោយ Admin)';
+        bankNavBtn.title = 'ធនាគារសំណួរ ៦,៦៧០+ (គ្រប់គ្រងដោយ Admin)';
         bankNavBtn.innerHTML = '📚 <span class="desktop-only" style="font-size:0.74rem;">ធនាគារសំណួរ</span>';
       } else if (isTeacherLoggedIn) {
         bankNavBtn.style.display = 'inline-flex';
@@ -825,10 +825,12 @@ function doGet(e) {
     }
     if (viewSelect) {
       viewSelect.classList.remove('is-hidden');
+      viewSelect.removeAttribute('hidden');
       viewSelect.style.setProperty('display', 'block', 'important');
     }
     if (viewPin) {
       viewPin.classList.add('is-hidden');
+      viewPin.setAttribute('hidden', '');
       viewPin.style.setProperty('display', 'none', 'important');
     }
     if (titleEl) titleEl.textContent = isLocked ? '🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)' : '🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)';
@@ -966,10 +968,12 @@ function doGet(e) {
     }
     if (viewSelect) {
       viewSelect.classList.add('is-hidden');
+      viewSelect.setAttribute('hidden', '');
       viewSelect.style.setProperty('display', 'none', 'important');
     }
     if (viewPin) {
       viewPin.classList.remove('is-hidden');
+      viewPin.removeAttribute('hidden');
       viewPin.style.setProperty('display', 'block', 'important');
     }
 
@@ -5190,12 +5194,29 @@ function doGet(e) {
     if (card.classList.contains('gate-lock-card')) {
       const viewSelect = document.getElementById('gate-view-select');
       const viewPin = document.getElementById('gate-view-pin');
-      if (card.classList.contains('view-mode-pin')) {
-        if (viewSelect) { viewSelect.style.setProperty('display', 'none', 'important'); viewSelect.classList.add('is-hidden'); }
-        if (viewPin) { viewPin.style.setProperty('display', 'block', 'important'); viewPin.classList.remove('is-hidden'); }
+      const isPin = card.classList.contains('view-mode-pin');
+      if (isPin) {
+        if (viewSelect) {
+          viewSelect.style.setProperty('display', 'none', 'important');
+          viewSelect.classList.add('is-hidden');
+          viewSelect.setAttribute('hidden', '');
+        }
+        if (viewPin) {
+          viewPin.style.setProperty('display', 'block', 'important');
+          viewPin.classList.remove('is-hidden');
+          viewPin.removeAttribute('hidden');
+        }
       } else {
-        if (viewPin) { viewPin.style.setProperty('display', 'none', 'important'); viewPin.classList.add('is-hidden'); }
-        if (viewSelect) { viewSelect.style.setProperty('display', 'block', 'important'); viewSelect.classList.remove('is-hidden'); }
+        if (viewPin) {
+          viewPin.style.setProperty('display', 'none', 'important');
+          viewPin.classList.add('is-hidden');
+          viewPin.setAttribute('hidden', '');
+        }
+        if (viewSelect) {
+          viewSelect.style.setProperty('display', 'block', 'important');
+          viewSelect.classList.remove('is-hidden');
+          viewSelect.removeAttribute('hidden');
+        }
       }
     }
   },

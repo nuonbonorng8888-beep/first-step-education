@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=101">
+  <link rel="stylesheet" href="css/style.css?v=102">
 </head>
 <body>
 
@@ -113,11 +113,11 @@
           📑 <span class="desktop-only" style="font-size: 0.74rem;">សន្លឹកកិច្ចការ</span>
         </button>
 
-        <button class="btn btn-outline nav-bank-btn" id="btn-bank-nav" onclick="window.questionBank.openQuestionBankModal()" title="ធនាគារសំណួរ ៦,៤៧០+ (សម្រាប់តែ Admin នួន បូណង)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-bank-btn" id="btn-bank-nav" onclick="window.questionBank.openQuestionBankModal()" title="ធនាគារសំណួរ ៦,៦៧០+ (សម្រាប់តែ Admin នួន បូណង)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px;">
           📚 <span class="desktop-only" style="font-size: 0.74rem;">ធនាគារសំណួរ</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v101)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v102)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
           🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
         </button>
 
@@ -205,7 +205,7 @@
             <span class="action-icon">📖</span>
             <div class="action-text">
               <span class="action-title">រុករកមេរៀនទាំងអស់</span>
-              <span class="action-sub">១៥៦ មេរៀន • ៦,៤៧០ សំណួរ</span>
+              <span class="action-sub">១៥៦ មេរៀន • ៦,៦៧០ សំណួរ</span>
             </div>
           </button>
 
@@ -213,7 +213,7 @@
             <span class="action-icon">📚</span>
             <div class="action-text">
               <span class="action-title" style="color: #c084fc;">ធនាគារសំណួរ</span>
-              <span class="action-sub">៦,៤៧០ សំណួរ • ថ្នាក់ទី ៧-១២</span>
+              <span class="action-sub">៦,៦៧០ សំណួរ • ថ្នាក់ទី ៧-១២</span>
             </div>
           </button>
 
@@ -892,7 +892,7 @@
       </div>
 
       <!-- VIEW 2: PIN INPUT FOR SELECTED TEACHER (វាយលេខកូដ PIN គ្រូនោះ) -->
-      <div id="gate-view-pin" class="gate-view-pane gate-view-pin-pane is-hidden" style="display: none;">
+      <div id="gate-view-pin" class="gate-view-pane gate-view-pin-pane is-hidden" style="display: none;" hidden>
         <form onsubmit="App.submitLogin(event)">
           <input type="hidden" id="gate-selected-teacher-id" value="">
           <div class="modal-body" style="text-align: center; gap: 16px;">
@@ -1745,15 +1745,15 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=101"></script>
-  <script src="js/question-bank.js?v=101"></script>
-  <script src="js/app.js?v=101"></script>
-  <script src="js/visits.js?v=101"></script>
+  <script src="js/storage.js?v=102"></script>
+  <script src="js/question-bank.js?v=102"></script>
+  <script src="js/app.js?v=102"></script>
+  <script src="js/visits.js?v=102"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=101').then((reg) => {
+        navigator.serviceWorker.register('./sw.js?v=102').then((reg) => {
           // Check for service worker updates immediately on page load
           reg.update();
         }).catch(err => {
