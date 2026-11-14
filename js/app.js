@@ -67,6 +67,7 @@ function onOpen() {
     .addItem('🏫 ២. បង្កើត Tab តាមបន្ទប់ថ្នាក់ស្តង់ដា (7A..12E)', 'setupClassTabs')
     .addSeparator()
     .addItem('🎨 ៣. រៀបចំក្បាលតារាង & ដាក់ពណ៌ស្អាត', 'formatAllWorksheetSheets')
+    .addItem('🧹 ៤. លុបទិន្នន័យតេស្ត / ជួរទទេ (Clean Test Data)', 'cleanTestData')
     .addToUi();
 }
 
@@ -178,6 +179,50 @@ function formatAllWorksheetSheets() {
   SpreadsheetApp.getUi().alert('✅ បានរៀបចំក្បាលតារាងគ្រប់សន្លឹកទាំងអស់ស្អាតរួចរាល់!');
 }
 
+// មុខងារសម្អាតទិន្នន័យតេស្ត និងជួរទទេ (លុបស្វ័យប្រវត្តិកុំឱ្យរញ៉េរញ៉ៃ)
+function cleanTestData() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheets = ss.getSheets();
+  var totalCleaned = 0;
+  
+  for (var s = 0; s < sheets.length; s++) {
+    var sheet = sheets[s];
+    var sheetName = sheet.getName();
+    // មិនលុបក្នុង Sheet កត់ត្រាសកម្មភាពទេ
+    if (sheetName === "📈 សកម្មភាពសមាជិក") continue;
+    
+    var lastRow = sheet.getLastRow();
+    if (lastRow <= 1) continue;
+    
+    var data = sheet.getRange(2, 1, lastRow - 1, 11).getValues();
+    // លុបពីក្រោមឡើងលើ (Delete bottom-up to preserve row indices)
+    for (var i = data.length - 1; i >= 0; i--) {
+      var row = data[i];
+      var name = String(row[2] || "").trim(); // Column C: ឈ្មោះសិស្ស
+      var cls = String(row[4] || "").trim().toUpperCase(); // Column E: បន្ទប់/ថ្នាក់
+      var score = Number(row[7]); // Column H: ពិន្ទុទទួលបាន
+      var total = Number(row[8]); // Column I: ពិន្ទុសរុប
+      
+      // លក្ខខណ្ឌជួរតេស្ត ឬជួរទទេ៖ គ្មានឈ្មោះសិស្ស ឬជា 'សិស្សតេស្តសាកល្បង' ឬ 0/0 ពិន្ទុគ្មានឈ្មោះ
+      var isJunk = false;
+      if (!name || name === "-" || name === "សិស្សតេស្តសាកល្បង") {
+        isJunk = true;
+      } else if (total === 0 && score === 0 && (!name || name === "-")) {
+        isJunk = true;
+      } else if (cls === "ទូទៅ" && (!name || name === "-")) {
+        isJunk = true;
+      }
+      
+      if (isJunk) {
+        sheet.deleteRow(i + 2);
+        totalCleaned++;
+      }
+    }
+  }
+  
+  SpreadsheetApp.getUi().alert('🧹 បានលុបទិន្នន័យតេស្ត និងជួរទទេចំនួន ' + totalCleaned + ' ជួរ ដោយជោគជ័យ!');
+}
+
 // ទទួលពិន្ទុពីប្រព័ន្ធ Worksheet.Kh (High Concurrency - រង់ចាំរហូតដល់ 30s មិនបាត់សិស្សឡើយ)
 function doPost(e) {
   var lock = LockService.getScriptLock();
@@ -236,6 +281,38 @@ function doPost(e) {
         .setMimeType(ContentService.MimeType.JSON);
     }
     
+    // ត្រួតពិនិត្យទិន្នន័យតេស្ត ឬទិន្នន័យគ្មានឈ្មោះសិស្ស - មិនកត់ត្រាចូលតារាងសិស្សដាច់ខាត!
+    var sName = String(data.studentName || "").trim();
+    var isTestConn = data.type === "test_connection" || data.isTest || data.studentClass === "TEST_CLASS";
+    var totalVal = parseInt(data.total, 10);
+    
+    // ប្រសិនបើគ្មានឈ្មោះសិស្ស ឬជាឈ្មោះ '-' ឬជាតេស្តសាកល្បង ឬគ្មានសំណួរ (total <= 0) -> រំលងមិនកត់ត្រាក្នុងតារាងសរុបឡើយ
+    if (!sName || sName === "-" || sName === "សិស្សតេស្តសាកល្បង" || isNaN(totalVal) || totalVal <= 0 || isTestConn) {
+      if (isTestConn) {
+        var testSheet = ss.getSheetByName("TEST_CLASS");
+        if (!testSheet) {
+          testSheet = ss.insertSheet("TEST_CLASS");
+          formatSheetHeader(testSheet, "TEST_CLASS");
+        }
+        testSheet.appendRow([
+          data.timestamp || Utilities.formatDate(new Date(), "Asia/Phnom_Penh", "yyyy-MM-dd HH:mm:ss"),
+          "00",
+          sName || "សិស្សតេស្ត",
+          data.grade ? ("ថ្នាក់ទី " + data.grade) : "",
+          "TEST_CLASS",
+          data.lessonTitle || "តេស្ត",
+          data.pointTitle || "-",
+          data.score || 0,
+          data.total || 0,
+          data.percentage || "0%",
+          "តេស្តសាកល្បង"
+        ]);
+      }
+      return ContentService
+        .createTextOutput(JSON.stringify({ "status": "ignored", "message": "ទិន្នន័យតេស្ត ឬគ្មានឈ្មោះសិស្ស ត្រូវបានរំលងមិនកត់ត្រាក្នុងតារាងសរុប" }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+
     // គណនានិទ្ទេស (Grade evaluation)
     var pct = parseFloat(data.percentage) || 0;
     var gradeLevel = "ល្អប្រសើរ";
@@ -357,7 +434,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v107';
+    this.appVersion = 'v108';
 
     const checkVersion = async () => {
       try {
@@ -1125,6 +1202,8 @@ function doGet(e) {
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({
             type: 'activity_log',
+            isActivityLog: true,
+            studentName: '',
             timestamp: nowStr,
             teacherName: tName,
             action: action,
@@ -4518,7 +4597,10 @@ function doGet(e) {
 
     const statusCard = document.getElementById('quiz-submission-status');
 
-    if (!studentInfo.name || !studentInfo.classRoom) {
+    const sName = (studentInfo.name || '').trim();
+    const sClass = (studentInfo.classRoom || '').trim();
+
+    if (!sName || sName === '-' || !sClass || sClass === '-' || totalQ <= 0) {
       if (statusCard) {
         statusCard.innerHTML = `
           <div style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 10px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
@@ -5288,6 +5370,8 @@ function doGet(e) {
     this.showToast('⏳ កំពុងផ្ញើទិន្នន័យតេស្តទៅកាន់ Google Sheets...', 'info');
 
     const testPayload = {
+      type: 'test_connection',
+      isTest: true,
       timestamp: new Date().toLocaleString('km-KH'),
       studentName: 'សិស្សតេស្តសាកល្បង',
       studentClass: 'TEST_CLASS',

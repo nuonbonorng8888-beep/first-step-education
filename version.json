@@ -1,7 +1,7 @@
 {
-  "version": "v107",
-  "build": 107,
+  "version": "v108",
+  "build": 108,
   "date": "2026-11-14",
   "author": "Nuon Bonong",
-  "changelog": "Center worksheet paper on dark stage, hide sidebar in worksheet view with toggle button, format header title in 3-line red stack, and match exact reference styling."
+  "changelog": "Filter out test and empty student records from Google Sheets scoring, add cleanTestData automated menu in Sheets, and prevent blank submissions."
 }
