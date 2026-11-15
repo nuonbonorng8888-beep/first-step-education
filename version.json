@@ -1,8 +1,8 @@
 {
-  "version": "v121",
-  "build": 121,
+  "version": "v122",
+  "build": 122,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Grade 12 Worksheets, Quizzes, & Question Bank complete upgrade: audited all mathematical typesetting across Grade 12 Basic (course-math-g12-basic: 7 chapters, 15 lessons, 46 points) and Advanced (course-math-g12-advanced: 10 chapters, 27 lessons, 74 points) covering 39 unique lessons and 110 unique points (zero raw slash fractions, standardized \\dfrac, fixed \\ldots and KaTeX math delimiters, converted currency signs to \\text{ ដុល្លារ}); upgraded all 110 points with 3 distinct difficulty levels (កម្រិត ១: ស្រួល / មូលដ្ឋានគ្រឹះ, កម្រិត ២: មធ្យម / ការយល់ដឹង និងអនុវត្ត, កម្រិត ៣: ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា) totaling 330 comprehensive exercises with step-by-step teacher solutions, rubrics, and dynamic score calculation (/ ៣); audited 39 point quiz lessons and 1045 question bank questions for zero math errors; verified 100% data integrity for all other grades (7, 8, 9, 10, 11); complete coverage across all 6 grades (7-12) with 547 total points and 1641 total exercises.",
-  "lastUpdated": "2026-11-15T03:40:00+07:00"
+  "changelog": "Adaptive choices layout (4-column 1-row, 2-column 2-rows A B / C D, and 1-column 4-rows A / B / C / D) for Question Bank and Interactive Quizzes to completely prevent text collision and overlap in long choices (such as expanded notation, list of numbers, and sentence explanations), specifically tested and verified on Grade 7 questions #10, #11, #12.",
+  "lastUpdated": "2026-11-15T07:48:00+07:00"
 }

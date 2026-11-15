@@ -2043,12 +2043,120 @@ body.light-theme .quiz-card {
   grid-template-columns: 1fr !important;
 }
 
-/* Grid 2-column layout for concise short answers */
+/* Grid 2-column layout for medium/long answers (A B / C D) */
 .quiz-options.options-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.quiz-options:not(.options-grid):not(.options-stack) {
+/* Grid 4-column layout for short answers (A B C D) */
+.quiz-options.options-4col {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 820px) {
+  .quiz-options.options-4col {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-options.options-4col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ========================================================
+   ADAPTIVE CHOICES GRID FOR QUESTION BANK
+   - choices-col-4: 1 row (4 columns: A B C D) for short choices
+   - choices-col-2: 2 rows (2 columns: A B / C D) for medium/long choices
+   - choices-col-1: 4 rows (1 column: A / B / C / D) for very long choices
+   ======================================================== */
+.bank-choices-grid {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.bank-choices-grid.choices-col-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.bank-choices-grid.choices-col-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.bank-choices-grid.choices-col-1 {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 820px) {
+  .bank-choices-grid.choices-col-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .bank-choices-grid.choices-col-4,
+  .bank-choices-grid.choices-col-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.bank-choice-card {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.80rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid transparent;
+  min-width: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+}
+
+.bank-choice-card.is-correct {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.bank-choice-badge {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.74rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.bank-choice-card.is-correct .bank-choice-badge {
+  background: #10b981;
+}
+
+.bank-choice-content {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.45;
+}
+
+.bank-choice-check {
+  flex-shrink: 0;
+  color: #10b981;
+  font-weight: 800;
+  margin-left: auto;
+}
+
+.quiz-options:not(.options-grid):not(.options-stack):not(.options-4col) {
   grid-template-columns: 1fr;
 }
 

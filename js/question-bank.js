@@ -107,6 +107,44 @@ class QuestionBankController {
     });
   }
 
+  getChoicesLayoutClass(options) {
+    if (!Array.isArray(options) || options.length === 0) return 'choices-col-4';
+    let maxCleanLen = 0, maxRawLen = 0, maxKhmerLen = 0, hasMatrix = false, maxCommaCount = 0;
+
+    for (const opt of options) {
+      if (!opt) continue;
+      const s = String(opt).trim();
+      if (s.length > maxRawLen) maxRawLen = s.length;
+
+      const khmerChars = s.match(/[\u1780-\u17ff]/g);
+      const kLen = khmerChars ? khmerChars.length : 0;
+      if (kLen > maxKhmerLen) maxKhmerLen = kLen;
+
+      if (/\\begin\{(?:matrix|pmatrix|bmatrix|cases|aligned)\}/.test(s)) hasMatrix = true;
+
+      const clean = s
+        .replace(/\\(?:dfrac|frac)\{([^}]*)\}\{([^}]*)\}/g, '$1/$2')
+        .replace(/\\(?:text|sqrt|mathbf|mathrm|mathbb)\{([^}]*)\}/g, '$1')
+        .replace(/\\[a-zA-Z]+/g, ' ')
+        .replace(/[\$\{\}\s\\]/g, '');
+
+      if (clean.length > maxCleanLen) maxCleanLen = clean.length;
+      const cCount = (s.match(/,/g) || []).length;
+      if (cCount > maxCommaCount) maxCommaCount = cCount;
+    }
+
+    // 1. Very long (Tier 3) -> 4 rows (1 column: A / B / C / D)
+    if (hasMatrix || maxCleanLen > 38 || maxKhmerLen > 24 || (maxCommaCount >= 3 && maxCleanLen > 34)) {
+      return 'choices-col-1';
+    }
+    // 2. Medium/Long (Tier 2) -> 2 rows (2 columns: A B / C D)
+    if (maxCleanLen > 12 || maxKhmerLen > 6 || maxCommaCount >= 2 || maxRawLen > 20) {
+      return 'choices-col-2';
+    }
+    // 3. Short (Tier 1) -> 1 row (4 columns: A B C D)
+    return 'choices-col-4';
+  }
+
   /* ================== DATABASE INITIALIZATION ================== */
   async init() {
     if (this.isInitialized && this.database && this.database.questions) return;
@@ -1610,20 +1648,24 @@ class QuestionBankController {
               <span>✍️</span>
               <span style="font-weight: 700;">ទម្រង់លំហាត់សរសេរដោះស្រាយ (Written Problem) ៖ សិស្សត្រូវសរសេរដំណោះស្រាយលម្អិតតាមលំដាប់លំដោយ</span>
             </div>
-          ` : `
-          <!-- Choices Grid (For MCQ) -->
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 6px; margin-bottom: 8px;">
-            ${(q.o || []).map((opt, oIdx) => `
-              <div style="padding: 6px 10px; border-radius: 8px; font-size: 0.78rem; display: flex; align-items: center; gap: 8px; background: ${oIdx === q.a ? 'rgba(16, 185, 129, 0.15)' : 'rgba(15, 23, 42, 0.3)'}; border: 1px solid ${oIdx === q.a ? 'rgba(16, 185, 129, 0.4)' : 'transparent'};">
-                <span style="width: 20px; height: 20px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800; background: ${oIdx === q.a ? '#10b981' : 'rgba(255,255,255,0.1)'}; color: white;">
-                  ${String.fromCharCode(65 + oIdx)}
-                </span>
-                <span style="flex: 1;">${this.formatMath(opt)}</span>
-                ${oIdx === q.a ? '<span style="color: #10b981; font-weight: 800;">✓</span>' : ''}
-              </div>
-            `).join('')}
-          </div>
-          `}
+          ` : (() => {
+            const layoutClass = this.getChoicesLayoutClass(q.o);
+            const gridCols = layoutClass === 'choices-col-1' ? '1fr' : (layoutClass === 'choices-col-2' ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))');
+            return `
+            <!-- Choices Grid (MCQ with Adaptive Layout: 4-col, 2-col, 1-col) -->
+            <div class="bank-choices-grid ${layoutClass}" style="display: grid; grid-template-columns: ${gridCols}; gap: 6px; margin-bottom: 8px; width: 100%;">
+              ${(q.o || []).map((opt, oIdx) => `
+                <div class="bank-choice-card ${oIdx === q.a ? 'is-correct' : 'is-normal'}" style="padding: 6px 10px; border-radius: 8px; font-size: 0.78rem; display: flex; align-items: center; gap: 8px; min-width: 0; overflow: hidden; background: ${oIdx === q.a ? 'rgba(16, 185, 129, 0.15)' : 'rgba(15, 23, 42, 0.3)'}; border: 1px solid ${oIdx === q.a ? 'rgba(16, 185, 129, 0.4)' : 'transparent'};">
+                  <span class="bank-choice-badge ${oIdx === q.a ? 'badge-correct' : 'badge-normal'}" style="width: 20px; height: 20px; min-width: 20px; flex-shrink: 0; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 800; background: ${oIdx === q.a ? '#10b981' : 'rgba(255,255,255,0.1)'}; color: white;">
+                    ${String.fromCharCode(65 + oIdx)}
+                  </span>
+                  <span class="bank-choice-content" style="flex: 1; min-width: 0; overflow-wrap: break-word; word-break: break-word;">${this.formatMath(opt)}</span>
+                  ${oIdx === q.a ? '<span class="bank-choice-check" style="color: #10b981; font-weight: 800; flex-shrink: 0;">✓</span>' : ''}
+                </div>
+              `).join('')}
+            </div>
+            `;
+          })()}
 
           <!-- Concise Answer / Solution Toggle (កំណែខ្លីៗ & គន្លឹះ) -->
           <details style="margin-top: 6px; font-size: 0.76rem; color: var(--text-muted);">

@@ -2392,35 +2392,46 @@ function doGet(e) {
     return q;
   },
 
-  isSingleColumnOptions(options) {
-    if (!Array.isArray(options) || options.length === 0) return false;
-    return options.some(opt => {
-      if (opt === null || opt === undefined) return false;
+  getQuizOptionsLayoutClass(options) {
+    if (!Array.isArray(options) || options.length === 0) return 'options-grid';
+    let maxCleanLen = 0, maxRawLen = 0, maxKhmerLen = 0, hasMatrix = false, maxCommaCount = 0;
+
+    for (const opt of options) {
+      if (!opt) continue;
       const s = String(opt).trim();
-      // 1. Contains Khmer words/text
-      if (/[\u1780-\u17ff]/.test(s)) return true;
-      // 2. Contains multiple equals signs (e.g. x = 2, y = 3)
-      if ((s.match(/=/g) || []).length > 1) return true;
-      // 3. Contains equals sign with fraction or square root (e.g. 0.75 = 3/4 or x = \frac{1}{2})
-      if (s.includes('=') && /\\(?:d?frac|sqrt)/.test(s)) return true;
-      // 4. Contains commas separating distinct math parts or formulas
-      if (s.includes(',')) return true;
-      // 5. Contains LaTeX spacing commands (\quad, \qquad) separating multiple formulas
-      if (/\\(?:quad|qquad)/.test(s)) return true;
-      // 6. Contains multiple fractions in one option
-      if ((s.match(/\\(?:d?frac)/g) || []).length > 1) return true;
-      // 7. Contains fraction with negative signs, operators, or variables (e.g. -\frac{-5}{12}, \frac{a+b}{c})
-      if (/\\(?:d?frac)\{[^}]*[-+*/=a-zA-Z]/.test(s) || /[-+*/=]\s*\\(?:d?frac)/.test(s)) return true;
-      // 8. Contains matrices, systems of equations, or multiline environments
-      if (/\\begin\{(?:matrix|pmatrix|bmatrix|cases|aligned)\}/.test(s)) return true;
-      // 9. Text length check: strip basic LaTeX commands and symbols
-      const cleanMath = s
-        .replace(/\\(?:dfrac|frac|sqrt|cdot|times|pm|approx|ne|le|ge|in|mathbb|mathbf|mathrm|text)\b/g, '')
+      if (s.length > maxRawLen) maxRawLen = s.length;
+
+      const khmerChars = s.match(/[\u1780-\u17ff]/g);
+      const kLen = khmerChars ? khmerChars.length : 0;
+      if (kLen > maxKhmerLen) maxKhmerLen = kLen;
+
+      if (/\\begin\{(?:matrix|pmatrix|bmatrix|cases|aligned)\}/.test(s)) hasMatrix = true;
+
+      const clean = s
+        .replace(/\\(?:dfrac|frac)\{([^}]*)\}\{([^}]*)\}/g, '$1/$2')
+        .replace(/\\(?:text|sqrt|mathbf|mathrm|mathbb)\{([^}]*)\}/g, '$1')
+        .replace(/\\[a-zA-Z]+/g, ' ')
         .replace(/[\$\{\}\s\\]/g, '');
-      if (cleanMath.length > 8) return true;
-      if (s.length > 16) return true;
-      return false;
-    });
+
+      if (clean.length > maxCleanLen) maxCleanLen = clean.length;
+      const cCount = (s.match(/,/g) || []).length;
+      if (cCount > maxCommaCount) maxCommaCount = cCount;
+    }
+
+    // 1. Very long / multiline -> 1 column (4 rows: A / B / C / D)
+    if (hasMatrix || maxCleanLen > 38 || maxKhmerLen > 24 || (maxCommaCount >= 3 && maxCleanLen > 34)) {
+      return 'options-stack';
+    }
+    // 2. Short concise options -> 4 columns (1 row: A B C D)
+    if (maxCleanLen <= 12 && maxKhmerLen <= 6 && maxCommaCount < 2 && maxRawLen <= 20) {
+      return 'options-4col';
+    }
+    // 3. Medium/Long options -> 2 columns (2 rows: A B / C D)
+    return 'options-grid';
+  },
+
+  isSingleColumnOptions(options) {
+    return this.getQuizOptionsLayoutClass(options) === 'options-stack';
   },
 
   formatExplanationText(text) {
@@ -3606,7 +3617,7 @@ function doGet(e) {
                 ${(q.diagram && !(q.question || '').includes('<svg')) ? `<div class="quiz-diagram-box" style="margin: 10px auto; text-align: center;">${q.diagram}</div>` : ''}
               </div>
 
-              <div class="quiz-options ${this.isSingleColumnOptions(q.options) ? 'options-stack' : 'options-grid'}">
+              <div class="quiz-options ${this.getQuizOptionsLayoutClass(q.options)}">
                 ${q.options.map((opt, optIndex) => `
                   <div class="quiz-opt" onclick="App.checkQuizAnswer(${qIndex}, ${optIndex}, this)" role="button" tabindex="0">
                     <div class="opt-badge">${String.fromCharCode(65 + optIndex)}</div>
@@ -4359,7 +4370,7 @@ function doGet(e) {
                 <h4 class="quiz-question">${this.formatQuestionText(q.question)}</h4>
                 ${(q.diagram && !(q.question || '').includes('<svg')) ? `<div class="quiz-diagram-box" style="margin: 10px auto; text-align: center;">${q.diagram}</div>` : ''}
               </div>
-              <div class="quiz-options ${this.isSingleColumnOptions(q.options) ? 'options-stack' : 'options-grid'}">
+              <div class="quiz-options ${this.getQuizOptionsLayoutClass(q.options)}">
                 ${q.options.map((opt, optIndex) => {
                   let optClass = '';
                   if (optIndex === correctIdx) optClass = 'correct';
