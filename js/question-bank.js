@@ -84,8 +84,18 @@ class QuestionBankController {
     return f;
   }
 
+  sanitizeKhmerText(text) {
+    if (!text || typeof text !== 'string') return '';
+    return text
+      .replace(/ม/g, 'ម')
+      .replace(/น/g, 'ន')
+      .replace(/ได้/g, 'បាន')
+      .replace(/[\u0e00-\u0e7f]/g, '');
+  }
+
   formatMath(text) {
     if (!text || typeof text !== 'string') return '';
+    text = this.sanitizeKhmerText(text);
     if (typeof katex === 'undefined') return text;
 
     if (!this._mathCache) this._mathCache = new Map();

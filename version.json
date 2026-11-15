@@ -1,8 +1,8 @@
 {
-  "version": "v128",
-  "build": 128,
+  "version": "v129",
+  "build": 129,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Comprehensive Diagrams and Images Audit across all grades (especially Grades 7, 8, and 9): verified all 386 SVG diagrams across question_bank.json, point_quizzes.json, and worksheets; confirmed 100% valid XML structure with proper viewBox, responsive max-width, and explicit high-contrast container backgrounds; enhanced Grade 8 linear inequality Q1193 with dedicated crisp SVG number line diagram for solution set interval -3 < x <= 5; verified visual rendering in Headless Chrome CDP across Grade 7 geometry, Grade 8 number lines and graphs, and Grade 9 parabola and trigonometry right-triangle diagrams with zero display issues.",
-  "lastUpdated": "2026-11-15T08:28:00+07:00"
+  "changelog": "Purged all Thai Unicode characters (0 Thai characters remaining): corrected all instances of Thai characters in Arithmetic Means (មធ្យมนព្វន្ត -> មធ្យមនព្វន្ត with Khmer ម \u1798 and ន \u1793) and Thai word dai (ได้ -> បាន) across question_bank.json, point_quizzes.json, and standard_exams.json; implemented frontend automated sanitizer sanitizeKhmerText() in app.js and question-bank.js as a permanent safeguard against future accidental Thai character injections.",
+  "lastUpdated": "2026-11-15T09:02:00+07:00"
 }

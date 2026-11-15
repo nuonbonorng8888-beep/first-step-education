@@ -2378,9 +2378,18 @@ function doGet(e) {
     return q;
   },
 
+  sanitizeKhmerText(text) {
+    if (!text || typeof text !== 'string') return '';
+    return text
+      .replace(/ม/g, 'ម')
+      .replace(/น/g, 'ន')
+      .replace(/ได้/g, 'បាន')
+      .replace(/[\u0e00-\u0e7f]/g, '');
+  },
+
   formatQuestionText(text) {
     if (!text) return '';
-    let q = String(text).trim();
+    let q = this.sanitizeKhmerText(String(text).trim());
     // Prevent duplicate trailing colons when prompt already has introducing colon
     if ((q.includes('៖') || q.includes(':')) && /[:៖]\s*$/.test(q)) {
       const firstColonIdx = q.search(/[:៖]/);
@@ -2436,6 +2445,7 @@ function doGet(e) {
 
   formatExplanationText(text) {
     if (!text) return 'ចម្លើយត្រឹមត្រូវ!';
+    text = this.sanitizeKhmerText(text);
     // Replace leading dashes/hyphens on any line with clean bullet (•) to avoid confusion with minus signs
     let formatted = String(text).replace(/(?:^|\n)\s*[-–—]\s*(?=[$0-9a-zA-Z\u1780-\u17ff\(\[\{])/g, '\n• ');
     if (formatted.startsWith('\n• ')) formatted = formatted.slice(1);
