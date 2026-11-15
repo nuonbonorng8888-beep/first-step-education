@@ -2446,12 +2446,101 @@ function doGet(e) {
   formatExplanationText(text) {
     if (!text) return 'ចម្លើយត្រឹមត្រូវ!';
     text = this.sanitizeKhmerText(text);
+
+    // 1. Break after Khmer full stop (។) if followed by space and then math or Khmer explanation
+    text = String(text).replace(/([។])\s+(?=[$0-9a-zA-Z\u1780-\u17ff])/g, '$1\n');
+
+    // 2. Break after colon ៖ or : when introducing a long formula
+    text = text.replace(/([:៖])\s*(?=\$(?:[^\$\n]{20,})\$)/g, '$1\n');
+
+    // 3. Break at Khmer "នាំឱ្យ" or "នាំឲ្យ"
+    text = text.replace(/(\$|[\u1780-\u17ff0-9a-zA-Z\)])\s+(នាំ(?:ឱ្យ|ឲ្យ))\s*/g, '$1\n$2 ');
+
+    // 4. Split long formulas containing arrows (\Rightarrow, \implies, \Leftrightarrow, \iff, ➔)
+    text = text.replace(/\$([^\$]+)\$/g, (match, formula) => {
+      const f = formula.trim();
+      if (f.includes('\\begin{matrix}') || f.includes('\\begin{pmatrix}') || f.includes('\\begin{aligned}')) {
+        return match;
+      }
+      
+      const arrowRegex = /(\\Rightarrow|\\implies|\\Leftrightarrow|\\iff|➔)/g;
+      if (arrowRegex.test(f) && (f.length > 28 || (f.match(arrowRegex) || []).length >= 2)) {
+        if (f.includes('\\begin{cases}')) {
+          const endCasesIdx = f.indexOf('\\end{cases}');
+          if (endCasesIdx !== -1) {
+            const casesPart = f.substring(0, endCasesIdx + 11);
+            const rest = f.substring(endCasesIdx + 11).trim();
+            if (rest) {
+              const restParts = rest.split(/(\\Rightarrow|\\implies|\\Leftrightarrow|\\iff|➔)/g).map(s => s.trim()).filter(Boolean);
+              const restLines = [];
+              for (let i = 0; i < restParts.length; i += 2) {
+                const arr = restParts[i];
+                const content = restParts[i+1] || '';
+                restLines.push(`$${arr} ${content}$`);
+              }
+              return `$${casesPart}$\n` + restLines.join('\n');
+            }
+          }
+        }
+
+        const parts = f.split(/(\\Rightarrow|\\implies|\\Leftrightarrow|\\iff|➔)/g).map(s => s.trim()).filter(Boolean);
+        if (parts.length >= 3) {
+          const lines = [];
+          if (parts[0] && !/^(\\Rightarrow|\\implies|\\Leftrightarrow|\\iff|➔)$/.test(parts[0])) {
+            lines.push(`$${parts[0]}$`);
+            for (let i = 1; i < parts.length; i += 2) {
+              const arrow = parts[i];
+              const rest = parts[i+1] || '';
+              lines.push(`$${arrow} ${rest}$`);
+            }
+          } else {
+            for (let i = 0; i < parts.length; i += 2) {
+              const arrow = parts[i];
+              const rest = parts[i+1] || '';
+              lines.push(`$${arrow} ${rest}$`);
+            }
+          }
+          return lines.join('\n');
+        }
+      }
+
+      // Chained equality split on '=' if very long (> 45 chars) and no commas
+      if (f.length > 45 && !f.includes(',') && !f.includes('\\begin') && (f.match(/=/g) || []).length >= 2) {
+        const parts = [];
+        let depth = 0;
+        let buf = '';
+        for (let j = 0; j < f.length; j++) {
+          const c = f[j];
+          if (c === '{' || c === '[' || c === '(') depth++;
+          else if (c === '}' || c === ']' || c === ')') depth = Math.max(0, depth - 1);
+
+          if (c === '=' && depth === 0) {
+            parts.push(buf.trim());
+            buf = '';
+          } else {
+            buf += c;
+          }
+        }
+        if (buf.trim()) parts.push(buf.trim());
+
+        if (parts.length >= 3) {
+          const lines = [`$${parts[0]} = ${parts[1]}$`];
+          for (let k = 2; k < parts.length; k++) {
+            lines.push(`$= ${parts[k]}$`);
+          }
+          return lines.join('\n');
+        }
+      }
+
+      return match;
+    });
+
     // Replace leading dashes/hyphens on any line with clean bullet (•) to avoid confusion with minus signs
     let formatted = String(text).replace(/(?:^|\n)\s*[-–—]\s*(?=[$0-9a-zA-Z\u1780-\u17ff\(\[\{])/g, '\n• ');
     if (formatted.startsWith('\n• ')) formatted = formatted.slice(1);
     // Convert newlines to <br> for HTML rendering if not wrapped in tags
     if (!formatted.includes('<p>') && !formatted.includes('<div') && !formatted.includes('<ul>')) {
-      formatted = formatted.replace(/\n/g, '<br>');
+      formatted = formatted.replace(/\n+/g, '<br>');
     }
     return formatted;
   },

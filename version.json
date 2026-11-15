@@ -1,8 +1,8 @@
 {
-  "version": "v130",
-  "build": 130,
+  "version": "v131",
+  "build": 131,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Standardized Khmer sequence terminology: updated arithmetic and geometric mean insertion questions from 'រវាង' to 'នៅចន្លោះ' (e.g., 'បើបញ្ចូល ៣ មធ្យមនព្វន្តនៅចន្លោះ 2 និង 14') across question_bank.json and point_quizzes.json to perfectly match MoEYS curriculum standards.",
-  "lastUpdated": "2026-11-15T09:17:00+07:00"
+  "changelog": "Smart line-breaking for math solutions and formulas: prevented horizontal overflows by automatically breaking lines at logical transitions ('\\Rightarrow', '=', colons '៖', full stops '។', and Khmer 'នាំឱ្យ/នាំឲ្យ'), allowing KaTeX to wrap cleanly and adding responsive overflow controls across quiz explanations and question bank solutions.",
+  "lastUpdated": "2026-11-15T09:26:00+07:00"
 }

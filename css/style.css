@@ -2289,6 +2289,10 @@ body.light-theme .opt-content {
   border-left: 5px solid #10b981;
   display: none;
   animation: fadeInDown 0.3s ease;
+  overflow-x: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 @keyframes fadeInDown {
@@ -2317,6 +2321,8 @@ body.light-theme .opt-content {
   font-size: 1.08rem;
   line-height: 1.85;
   color: var(--text-primary);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* KaTeX Educational Math Typography */
@@ -2344,10 +2350,21 @@ body.light-theme .opt-content {
 
 .quiz-explanation .katex {
   font-size: 1.12em !important;
-  line-height: 1.4;
-  white-space: nowrap !important;
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 1.55;
+  white-space: normal !important;
+  display: inline;
+  vertical-align: baseline;
+}
+
+.quiz-explanation .katex-html {
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.quiz-explanation .katex-html .base {
+  white-space: normal !important;
+  display: inline;
 }
 
 /* Fractions */

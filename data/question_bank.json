@@ -92038,8 +92038,8 @@
         "$90^\\circ$"
       ],
       "a": 1,
-      "e": "តាងមុំ $A - d, A, A + d$។ ផលបូកមុំត្រីកោណ ៖ $(A-d) + A + (A+d) = 180^\\circ \\Rightarrow 3A = 180^\\circ \\Rightarrow A = 60^\\circ$។",
-      "short_solution": "តាងមុំ $A - d, A, A + d$។ ផលបូកមុំត្រីកោណ ៖ $(A-d) + A + (A+d) = 180^\\circ \\Rightarrow 3A = 180^\\circ \\Rightarrow A = 60^\\circ$។",
+      "e": "តាងមុំ $A - d, A, A + d$។\nផលបូកមុំត្រីកោណ ៖\n$(A-d) + A + (A+d) = 180^\\circ$\n$\\Rightarrow 3A = 180^\\circ$\n$\\Rightarrow A = 60^\\circ$។",
+      "short_solution": "តាងមុំ $A - d, A, A + d$។\nផលបូកមុំត្រីកោណ ៖\n$(A-d) + A + (A+d) = 180^\\circ$\n$\\Rightarrow 3A = 180^\\circ$\n$\\Rightarrow A = 60^\\circ$។",
       "kind": "mcq"
     },
     {
