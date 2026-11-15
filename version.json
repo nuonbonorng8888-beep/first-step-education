@@ -1,8 +1,8 @@
 {
-  "version": "v123",
-  "build": 123,
+  "version": "v124",
+  "build": 124,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Grade 8 Question Bank, Quizzes & Worksheets complete layout and mathematical typesetting upgrade: verified adaptive choices layout (4-col, 2-col A B / C D, and 1-col A / B / C / D) across all 805 questions in Grade 8 Question Bank; resolved all 275+ math syntax anomalies in Grade 8 (standardized \\$ currency to \\text{ ដុល្លារ}, fixed missing $ on fractions \\dfrac, cleaned raw slash exponents to KaTeX exponents, balanced all dollar math delimiters to 0 odd dollars across question_bank.json, point_quizzes.json, and worksheets.json); verified zero text collision and perfect responsive layout in headless Chrome CDP.",
-  "lastUpdated": "2026-11-15T07:58:00+07:00"
+  "changelog": "Grade 9 Question Bank, Quizzes & Worksheets complete layout and mathematical typesetting upgrade: verified adaptive choices layout (4-col, 2-col A B / C D, and 1-col A / B / C / D) across all 845 questions in Grade 9 Question Bank; resolved all 200+ math syntax anomalies in Grade 9 (standardized \\$ currency to \\text{ ដុល្លារ}, fixed raw slash fractions like 22/7, fixed nested fractions, balanced all dollar math delimiters to 0 odd dollars across question_bank.json, point_quizzes.json, and worksheets.json); verified zero text collision and perfect responsive layout in headless Chrome CDP.",
+  "lastUpdated": "2026-11-15T08:01:00+07:00"
 }
