@@ -1,8 +1,8 @@
 {
-  "version": "v129",
-  "build": 129,
+  "version": "v130",
+  "build": 130,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Purged all Thai Unicode characters (0 Thai characters remaining): corrected all instances of Thai characters in Arithmetic Means (មធ្យมนព្វន្ត -> មធ្យមនព្វន្ត with Khmer ម \u1798 and ន \u1793) and Thai word dai (ได้ -> បាន) across question_bank.json, point_quizzes.json, and standard_exams.json; implemented frontend automated sanitizer sanitizeKhmerText() in app.js and question-bank.js as a permanent safeguard against future accidental Thai character injections.",
-  "lastUpdated": "2026-11-15T09:02:00+07:00"
+  "changelog": "Standardized Khmer sequence terminology: updated arithmetic and geometric mean insertion questions from 'រវាង' to 'នៅចន្លោះ' (e.g., 'បើបញ្ចូល ៣ មធ្យមនព្វន្តនៅចន្លោះ 2 និង 14') across question_bank.json and point_quizzes.json to perfectly match MoEYS curriculum standards.",
+  "lastUpdated": "2026-11-15T09:17:00+07:00"
 }
