@@ -1,8 +1,8 @@
 {
-  "version": "v122",
-  "build": 122,
+  "version": "v123",
+  "build": 123,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Adaptive choices layout (4-column 1-row, 2-column 2-rows A B / C D, and 1-column 4-rows A / B / C / D) for Question Bank and Interactive Quizzes to completely prevent text collision and overlap in long choices (such as expanded notation, list of numbers, and sentence explanations), specifically tested and verified on Grade 7 questions #10, #11, #12.",
-  "lastUpdated": "2026-11-15T07:48:00+07:00"
+  "changelog": "Grade 8 Question Bank, Quizzes & Worksheets complete layout and mathematical typesetting upgrade: verified adaptive choices layout (4-col, 2-col A B / C D, and 1-col A / B / C / D) across all 805 questions in Grade 8 Question Bank; resolved all 275+ math syntax anomalies in Grade 8 (standardized \\$ currency to \\text{ ដុល្លារ}, fixed missing $ on fractions \\dfrac, cleaned raw slash exponents to KaTeX exponents, balanced all dollar math delimiters to 0 odd dollars across question_bank.json, point_quizzes.json, and worksheets.json); verified zero text collision and perfect responsive layout in headless Chrome CDP.",
+  "lastUpdated": "2026-11-15T07:58:00+07:00"
 }
