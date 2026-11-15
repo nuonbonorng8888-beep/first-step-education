@@ -1,8 +1,8 @@
 {
-  "version": "v127",
-  "build": 127,
+  "version": "v128",
+  "build": 128,
   "date": "2026-11-15",
   "author": "Nuon Bonong",
-  "changelog": "Grade 12 Question Bank, Quizzes & Worksheets complete layout and mathematical typesetting audit: verified adaptive choices layout (4-col, 2-col A B / C D, and 1-col A / B / C / D) across all 1045 questions in Grade 12 Question Bank (504 4-col, 433 2-col, 108 1-col); confirmed zero math errors, zero raw slashes, and zero unbalanced dollars across question_bank.json, point_quizzes.json, and worksheets.json; verified flawless rendering and zero text collisions in Headless Chrome CDP.",
-  "lastUpdated": "2026-11-15T08:06:00+07:00"
+  "changelog": "Comprehensive Diagrams and Images Audit across all grades (especially Grades 7, 8, and 9): verified all 386 SVG diagrams across question_bank.json, point_quizzes.json, and worksheets; confirmed 100% valid XML structure with proper viewBox, responsive max-width, and explicit high-contrast container backgrounds; enhanced Grade 8 linear inequality Q1193 with dedicated crisp SVG number line diagram for solution set interval -3 < x <= 5; verified visual rendering in Headless Chrome CDP across Grade 7 geometry, Grade 8 number lines and graphs, and Grade 9 parabola and trigonometry right-triangle diagrams with zero display issues.",
+  "lastUpdated": "2026-11-15T08:28:00+07:00"
 }
