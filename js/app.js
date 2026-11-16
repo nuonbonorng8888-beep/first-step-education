@@ -889,7 +889,10 @@ function doGet(e) {
       viewPin.setAttribute('hidden', '');
       viewPin.style.setProperty('display', 'none', 'important');
     }
-    if (titleEl) titleEl.textContent = isLocked ? '🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)' : '🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)';
+    const hasStudentLogin = !!(window.Cloud && Cloud.enabled);
+    if (titleEl) titleEl.textContent = isLocked
+      ? (hasStudentLogin ? '🔐 ចូលប្រព័ន្ធ Worksheet.Kh' : '🔐 ច្រកសុវត្ថិភាពគ្រូបង្រៀន (Private Gate)')
+      : '🔐 ចូលគណនីគ្រូបង្រៀន (Teacher Portal)';
 
     this.renderGateTeacherList();
   },
@@ -1947,7 +1950,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=138" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=139" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">

@@ -1,8 +1,8 @@
 {
-  "version": "v138",
-  "build": 138,
+  "version": "v139",
+  "build": 139,
   "date": "2026-11-16",
   "author": "Nuon Bonong",
-  "changelog": "Student mode: when a student logs in, the app shows only Box Calculation (full screen, with their name and a logout button). Teachers still see everything. Vercel config prepared for the shorter link worksheet-kh.vercel.app.",
-  "lastUpdated": "2026-11-17T00:30:00+07:00"
+  "changelog": "Login screen title now reads \"ចូលប្រព័ន្ធ Worksheet.Kh\" since students log in there too. App available at worksheet-kh.vercel.app.",
+  "lastUpdated": "2026-11-17T00:50:00+07:00"
 }
