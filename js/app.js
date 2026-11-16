@@ -774,12 +774,12 @@ function doGet(e) {
         bankNavBtn.style.display = 'inline-flex';
         bankNavBtn.className = 'btn btn-secondary nav-bank-btn';
         bankNavBtn.title = 'ធនាគារសំណួរ ៦,៦៧០+ (គ្រប់គ្រងដោយ Admin)';
-        bankNavBtn.innerHTML = '📚 <span class="desktop-only" style="font-size:0.74rem;">ធនាគារសំណួរ</span>';
+        bankNavBtn.innerHTML = '📚 <span class="nav-auth-text">ធនាគារសំណួរ</span>';
       } else if (isTeacherLoggedIn) {
         bankNavBtn.style.display = 'inline-flex';
         bankNavBtn.className = 'btn btn-outline nav-bank-btn';
         bankNavBtn.title = '🔒 ធនាគារសំណួរ (សម្រាប់តែ Admin នួន បូណង)';
-        bankNavBtn.innerHTML = '🔒 <span class="desktop-only" style="font-size:0.74rem; opacity:0.85;">ធនាគារសំណួរ</span>';
+        bankNavBtn.innerHTML = '🔒 <span class="nav-auth-text">ធនាគារសំណួរ</span>';
       } else {
         bankNavBtn.style.display = 'none';
       }
@@ -799,10 +799,12 @@ function doGet(e) {
         authBtn.className = 'btn btn-secondary nav-auth-btn';
         authBtn.title = `គណនីគ្រូ ៖ ${displayName} (ចុចលើ ✕ ដើម្បីចាកចេញ)`;
         authBtn.innerHTML = `
-          <span style="color: ${isAdm ? 'var(--accent-emerald)' : '#38bdf8'}; font-weight:700;">
-            👨‍🏫 <span class="nav-auth-text">${displayName} (${isAdm ? 'Admin' : 'សមាជិក'})</span>
+          <span class="nav-user ${isAdm ? 'is-admin' : ''}">
+            <span class="nav-user-dot"></span>
+            <span class="nav-auth-text">${displayName}</span>
+            <span class="nav-user-role">${isAdm ? 'Admin' : 'សមាជិក'}</span>
           </span>
-          <span onclick="event.stopPropagation(); App.logoutTeacher()" style="margin-left:8px; opacity:0.7; cursor:pointer; font-weight:bold;" title="ចាកចេញ (Logout)">✕</span>
+          <span class="nav-user-out" onclick="event.stopPropagation(); App.logoutTeacher()" title="ចាកចេញ (Logout)">✕</span>
         `;
       } else {
         authBtn.className = 'btn btn-outline nav-auth-btn';
@@ -1758,6 +1760,8 @@ function doGet(e) {
       const themeBtn = document.getElementById('theme-toggle-btn');
       if (themeBtn) themeBtn.innerHTML = '🌙';
     }
+    const dockIcon = document.getElementById('dock-theme-icon');
+    if (dockIcon) dockIcon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
   },
 
   toggleTheme() {
@@ -1765,6 +1769,8 @@ function doGet(e) {
     localStorage.setItem('ngs_theme', isLight ? 'light' : 'dark');
     const themeBtn = document.getElementById('theme-toggle-btn');
     if (themeBtn) themeBtn.innerHTML = isLight ? '🌙' : '☀️';
+    const dockIcon = document.getElementById('dock-theme-icon');
+    if (dockIcon) dockIcon.textContent = isLight ? '🌙' : '☀️';
   },
 
   initPlayer() {
@@ -1804,6 +1810,64 @@ function doGet(e) {
     if (statProgress) {
       const pct = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
       statProgress.textContent = `${pct}%`;
+    }
+    try { this.renderHomeDashboard(totalLessons, completedCount); } catch (e) { console.warn(e); }
+  },
+
+  // Home dashboard: progress ring, bar, and per-grade cards
+  renderHomeDashboard(totalLessons, completedCount) {
+    const toKh = (n) => String(n).replace(/[0-9]/g, d => '០១២៣៤៥៦៧៨៩'[d]);
+    const pct = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
+
+    const ring = document.getElementById('hm-ring-fill');
+    if (ring) {
+      const c = 2 * Math.PI * 50;
+      ring.style.strokeDasharray = `${c}`;
+      ring.style.strokeDashoffset = `${c * (1 - pct / 100)}`;
+    }
+    const bar = document.getElementById('hm-bar-fill');
+    if (bar) bar.style.width = `${pct}%`;
+    const done = document.getElementById('hm-done-count');
+    if (done) done.textContent = completedCount;
+
+    const perGrade = {};
+    this.courses.forEach(c => {
+      const m = String(c.id || '').match(/-g(7|8|9|10|11|12)(?:-|$)/);
+      if (!m) return;
+      const g = m[1];
+      perGrade[g] = perGrade[g] || { total: 0, done: 0 };
+      c.chapters?.forEach(ch => ch.lessons?.forEach(l => {
+        perGrade[g].total++;
+        if (StorageService.isCompleted(l.id)) perGrade[g].done++;
+      }));
+    });
+    Object.keys(perGrade).forEach(g => {
+      const { total, done: d } = perGrade[g];
+      const p = total > 0 ? Math.round((d / total) * 100) : 0;
+      const meta = document.querySelector(`[data-meta="${g}"]`);
+      const b = document.querySelector(`[data-bar="${g}"]`);
+      const t = document.querySelector(`[data-pct="${g}"]`);
+      if (meta) meta.textContent = `${toKh(total)} មេរៀន`;
+      if (b) b.style.width = `${p}%`;
+      if (t) t.textContent = `${p}%`;
+    });
+  },
+
+  homeContinue() {
+    if (localStorage.getItem('ngs_last_course_id') && localStorage.getItem('ngs_last_lesson_id')) {
+      this.resumeLastLesson();
+    } else {
+      this.scrollToLessons();
+    }
+  },
+
+  homeFocusSearch() {
+    const input = document.getElementById('mobile-search-input');
+    const visible = input && input.offsetParent !== null;
+    const target = visible ? input : document.getElementById('search-input');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => target.focus({ preventScroll: true }), 350);
     }
   },
 
@@ -1855,47 +1919,60 @@ function doGet(e) {
         sum + ch.lessons?.reduce((qSum, l) => qSum + (l.quiz?.length || 0), 0)
       , 0) || 0;
 
-      let gradeLabel = course.grade || 'NGS';
-      let specialBadge = '🇰🇭 កម្មវិធីសិក្សាជាតិ MoEYS';
-      if (course.id.includes('g12-advanced')) {
-        specialBadge = '⭐ ត្រៀមបាក់ឌុប • វិទ្យាសាស្ត្រពិត';
-      } else if (course.id.includes('g12-basic')) {
-        specialBadge = '🌟 ត្រៀមបាក់ឌុប • វិទ្យាសាស្ត្រសង្គម';
-      } else if (course.id.includes('g9')) {
-        specialBadge = '🎯 ថ្នាក់ត្រៀមប្រឡងឌីប្លូម';
-      }
+      const gMatch = String(course.id || '').match(/-g(7|8|9|10|11|12)(?:-|$)/);
+      const gNum = gMatch ? gMatch[1] : '';
+      const toKh = (n) => String(n).replace(/[0-9]/g, d => '០១២៣៤៥៦៧៨៩'[d]);
+      const gradeShort = gNum ? `ថ្នាក់ទី ${toKh(gNum)}` : (course.grade || 'NGS');
+
+      // Split "គណិតវិទ្យា ថ្នាក់ទី ៧ (កម្រិតអនុវិទ្យាល័យ)" into title + level line
+      const rawTitle = String(course.title || '');
+      const pIdx = rawTitle.indexOf(' (');
+      const mainTitle = pIdx > 0 ? rawTitle.slice(0, pIdx) : rawTitle;
+      const levelLine = pIdx > 0 ? rawTitle.slice(pIdx + 2).replace(/\)\s*$/, '') : '';
+
+      let starTag = '';
+      if (course.id.includes('g12-advanced')) starTag = '⭐ បាក់ឌុប • វិទ្យាសាស្ត្រពិត';
+      else if (course.id.includes('g12-basic')) starTag = '⭐ បាក់ឌុប • វិទ្យាសាស្ត្រសង្គម';
+
+      let doneLessons = 0;
+      course.chapters?.forEach(ch => ch.lessons?.forEach(l => {
+        if (StorageService.isCompleted(l.id)) doneLessons++;
+      }));
+      const coursePct = totalLessons > 0 ? Math.round((doneLessons / totalLessons) * 100) : 0;
 
       return `
-        <div class="course-card ${course.id}" data-course-id="${course.id}">
-          <div class="card-thumb-wrap">
-            <img src="${course.coverImage}" alt="${course.title}" class="card-thumb" onerror="this.src='assets/moeys_grade12.jpg'">
-            <div class="card-thumb-overlay"></div>
-            <span class="card-grade-badge">${gradeLabel}</span>
-            <span class="card-category-badge">${course.categoryLabel || 'គណិតវិទ្យា'}</span>
-            <span class="card-moeys-badge">${specialBadge}</span>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">${course.title}</h3>
-            <p class="card-desc">${course.description || 'គ្មានសេចក្តីពិពណ៌នា'}</p>
-            
-            <div class="card-chips">
-              <span class="card-chip lessons">🎬 ${totalLessons} មេរៀន</span>
-              <span class="card-chip quiz">📝 ${totalQuiz} MCQ</span>
-              <span class="card-chip pdf">📑 ${totalFiles} PDF</span>
+        <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
+          <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
+            <img src="${course.coverImage}" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+          </button>
+          <div class="cc-body">
+            <div class="cc-tags">
+              <span class="cc-grade">${gradeShort}</span>
+              <span class="cc-cat">${course.categoryLabel || 'គណិតវិទ្យា'}</span>
+              ${starTag ? `<span class="cc-cat cc-star">${starTag}</span>` : ''}
+            </div>
+            <h3 class="cc-title">${mainTitle}</h3>
+            ${levelLine ? `<p class="cc-level">${levelLine}</p>` : ''}
+            <p class="cc-desc">${course.description || ''}</p>
+
+            <div class="cc-stats">
+              <div><b>${totalLessons}</b><span>មេរៀន</span></div>
+              <div><b>${totalQuiz}</b><span>MCQ</span></div>
+              <div><b>${totalFiles}</b><span>PDF</span></div>
             </div>
 
-            <div class="card-teacher-line">
-              <span>👨‍🏫 ដឹកនាំដោយលោកគ្រូជំនាញ NGS</span>
-            </div>
-
-            <div class="card-footer" style="margin-top: 14px;">
-              <button class="btn btn-primary card-btn" onclick="App.openCourse('${course.id}')" style="width: 100%;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                ចូលរៀនមេរៀនឥឡូវនេះ
+            <div class="cc-foot">
+              <div class="cc-progress" title="បានបញ្ចប់ ${doneLessons} នៃ ${totalLessons} មេរៀន">
+                <span class="cc-progress-bar"><i style="width:${coursePct}%"></i></span>
+                <span class="cc-progress-txt">${doneLessons}/${totalLessons}</span>
+              </div>
+              <button class="cc-btn" onclick="App.openCourse('${course.id}')">
+                <span>ចូលរៀន</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
               </button>
             </div>
           </div>
-        </div>
+        </article>
       `;
     }).join('');
   },
@@ -6028,12 +6105,11 @@ function doGet(e) {
   },
   filterByGrade(grade) {
     this.backToCatalog();
-    if (typeof this.filterGrade === 'function') {
-      this.filterGrade(grade);
-    } else {
-      this.currentGrade = grade;
-      this.renderCatalog();
-    }
+    this.currentGrade = grade;
+    document.querySelectorAll('[data-grade]').forEach(el => {
+      el.classList.toggle('active', el.dataset.grade === String(grade));
+    });
+    this.renderCourses();
     this.scrollToLessons();
   },
 

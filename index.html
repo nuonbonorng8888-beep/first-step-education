@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=102">
+  <link rel="stylesheet" href="css/style.css?v=133">
 </head>
 <body>
 
@@ -65,10 +65,10 @@
         <div class="nav-pills-group">
           <button class="cat-pill active" onclick="App.backToCatalog()" id="nav-link-home">ទំព័រដើម</button>
           <button class="cat-pill" onclick="App.scrollToLessons()" id="nav-link-lessons">មេរៀន</button>
-          <button class="cat-pill" onclick="window.questionBank.openQuestionBankModal()" id="nav-link-bank" style="background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.4); color: #c084fc; font-weight: 700;">
+          <button class="cat-pill" onclick="window.questionBank.openQuestionBankModal()" id="nav-link-bank">
             📚 ធនាគារសំណួរ
           </button>
-          <button class="cat-pill" onclick="window.questionBank.openMultiLessonExamModal()" id="nav-link-exam-main" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-weight: 700;">
+          <button class="cat-pill" onclick="window.questionBank.openMultiLessonExamModal()" id="nav-link-exam-main">
             🎲 បង្កើតវិញ្ញាសា
           </button>
         </div>
@@ -93,7 +93,7 @@
         </div>
 
         <button class="btn btn-secondary nav-device-btn desktop-only" onclick="App.openWebShareModal()" title="អាសយដ្ឋាន Web សម្រាប់ចូលរៀន និងចែករំលែក">
-          🌐 អាសយដ្ឋាន Web
+          🌐 <span class="nav-auth-text">អាសយដ្ឋាន Web</span>
         </button>
 
         <button class="btn btn-outline nav-auth-btn" id="btn-admin-auth" onclick="App.openLoginModal()" title="ចូលគណនីគ្រូបង្រៀន">
@@ -102,16 +102,16 @@
 
 
 
-        <button class="btn btn-outline nav-ws-btn" id="btn-ws-nav" onclick="window.questionBank.openWorksheetExtractorModal()" title="ស្រង់សន្លឹកកិច្ចការគ្រប់កម្រិតថ្នាក់" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px; border-color: rgba(16, 185, 129, 0.4); color: #34d399;">
-          📑 <span class="desktop-only" style="font-size: 0.74rem;">សន្លឹកកិច្ចការ</span>
+        <button class="btn btn-outline nav-ws-btn" id="btn-ws-nav" onclick="window.questionBank.openWorksheetExtractorModal()" title="ស្រង់សន្លឹកកិច្ចការគ្រប់កម្រិតថ្នាក់" style="display: none;">
+          📑 <span class="nav-auth-text">សន្លឹកកិច្ចការ</span>
         </button>
 
-        <button class="btn btn-outline nav-bank-btn" id="btn-bank-nav" onclick="window.questionBank.openQuestionBankModal()" title="ធនាគារសំណួរ ៦,៦៧០+ (សម្រាប់តែ Admin នួន បូណង)" style="display: none; padding: 6px 10px; font-size: 0.78rem; align-items: center; gap: 4px; border-radius: 8px;">
-          📚 <span class="desktop-only" style="font-size: 0.74rem;">ធនាគារសំណួរ</span>
+        <button class="btn btn-outline nav-bank-btn" id="btn-bank-nav" onclick="window.questionBank.openQuestionBankModal()" title="ធនាគារសំណួរ ៦,៦៧០+ (សម្រាប់តែ Admin នួន បូណង)" style="display: none;">
+          📚 <span class="nav-auth-text">ធនាគារសំណួរ</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ (v102)" style="padding: 6px 10px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; border-radius: 8px;">
-          🔄 <span class="desktop-only" style="font-size: 0.74rem;">Update</span>
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ">
+          🔄 <span class="nav-auth-text">Update</span>
         </button>
 
         <button class="btn btn-secondary nav-members-btn admin-only" onclick="App.openMemberDashboardModal()" id="btn-members-nav" style="display: none;" title="គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព">
@@ -123,7 +123,7 @@
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
-          + បញ្ចូលមេរៀនថ្មី
+          <span class="nav-auth-text">បញ្ចូលមេរៀនថ្មី</span>
         </button>
 
         <button class="btn-icon" id="theme-toggle-btn" onclick="App.toggleTheme()" title="ប្តូរពន្លឺ / ងងឹត">
@@ -139,159 +139,159 @@
     <!-- ================= CATALOG VIEW (ទំព័រដើម) ================= -->
     <section id="catalog-view">
       
-      <!-- Creative Human-Crafted Hero Studio -->
-      <div class="creative-hero">
-        <div class="hero-top-row">
-          <!-- Mascot & Welcoming Educator Persona -->
-          <div class="hero-mascot-badge" onclick="App.cycleMascotMessage()" title="ចុចដើម្បីស្តាប់ការលើកទឹកចិត្ត">
-            <div class="mascot-avatar-wrap">
-              <img src="assets/mascot.jpg" alt="1st Step Mascot" class="hero-mascot-img">
-              <span class="mascot-online-dot"></span>
-            </div>
-            <div class="mascot-speech-bubble" id="mascot-speech">
-              <span class="mascot-greeting" id="mascot-greeting-text">🌅 អរុណសួស្តីប្អូនៗ!</span>
-              <span class="mascot-quote" id="mascot-quote-text">តោះចាប់ផ្តើមពង្រឹងចំណេះដឹងគណិតវិទ្យាថ្ងៃនេះទាំងអស់គ្នា 🐾✨</span>
-            </div>
-          </div>
+      <!-- ===== Home Dashboard (flat, no gradients) ===== -->
+      <div class="hm">
 
-          <!-- Quick Resume Last Lesson Card (Dynamic) -->
-          <div class="hero-resume-card" id="hero-resume-card" style="display: none;" onclick="App.resumeLastLesson()">
-            <div class="resume-icon">▶</div>
-            <div class="resume-info">
-              <span class="resume-label">បន្តការរៀនសូត្រពីកន្លែងចាស់</span>
-              <span class="resume-title" id="resume-lesson-title">មេរៀន...</span>
+        <div class="hm-top">
+        <!-- Header band: greeting -->
+        <header class="hm-band">
+          <div class="hm-hello">
+            <button class="hm-avatar" onclick="App.cycleMascotMessage()" title="ចុចដើម្បីស្តាប់ការលើកទឹកចិត្ត">
+              <img src="assets/mascot.jpg" alt="1st Step Mascot">
+              <span class="hm-online"></span>
+            </button>
+            <div class="hm-hello-text">
+              <h1 class="hm-greet" id="mascot-greeting-text">🌅 អរុណសួស្តីប្អូនៗ!</h1>
+              <p class="hm-sub" id="mascot-quote-text" onclick="App.cycleMascotMessage()">តោះចាប់ផ្តើមពង្រឹងចំណេះដឹងគណិតវិទ្យាថ្ងៃនេះទាំងអស់គ្នា 🐾✨</p>
             </div>
+            <button class="hm-square-btn" onclick="App.homeFocusSearch()" title="ស្វែងរកមេរៀន">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="20" y1="20" x2="16.2" y2="16.2"></line></svg>
+            </button>
           </div>
-        </div>
+        </header>
 
-        <div class="hero-main-content">
-          <div class="hero-title-group">
-            <span class="hero-kicker">✨ ស្ទូឌីយោសិក្សាគណិតវិទ្យាឌីជីថលកម្ពុជា • ថ្នាក់ទី ៧ ដល់ ទី ១២</span>
-            <h1 class="hero-art-title">1ˢᵗ Step <span class="hero-highlight">Education</span></h1>
-            <p class="hero-human-desc">
-              កម្រងមេរៀន វីដេអូបង្រៀន និងលំហាត់ពហុជ្រើសរើស (MCQ) ស្តង់ដារ PISA ស្របតាមកម្មវិធីសិក្សារបស់ក្រសួងអប់រំ យុវជន និងកីឡា
+        <!-- Progress card -->
+        <div class="hm-progress">
+          <div class="hm-ring" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <circle class="hm-ring-track" cx="60" cy="60" r="50"></circle>
+              <circle class="hm-ring-fill" id="hm-ring-fill" cx="60" cy="60" r="50"></circle>
+            </svg>
+            <span class="hm-ring-num" id="stat-total-progress">0%</span>
+          </div>
+          <div class="hm-progress-info">
+            <span class="hm-progress-label">វឌ្ឍនភាពសិក្សារបស់អ្នក</span>
+            <p class="hm-progress-big"><b id="hm-done-count">0</b> នៃ <span id="stat-total-lessons">0</span> មេរៀន <em>បានបញ្ចប់</em></p>
+            <div class="hm-bar"><span id="hm-bar-fill"></span></div>
+            <p class="hm-mini-stats">
+              <span><b id="stat-total-courses">0</b> វគ្គសិក្សា</span>
+              <span><b id="stat-total-files">0</b> ឯកសារ PDF</span>
             </p>
+            <div class="hm-resume" id="hero-resume-card" style="display: none;" onclick="App.resumeLastLesson()">
+              <span class="hm-resume-dot">▶</span>
+              <span class="hm-resume-title" id="resume-lesson-title">មេរៀន...</span>
+            </div>
           </div>
-
-          <!-- Daily Wisdom Card -->
-          <div class="daily-wisdom-card">
-            <div class="wisdom-icon">💡</div>
-            <div class="wisdom-content">
-              <span class="wisdom-quote" id="daily-quote-text">« គណិតវិទ្យាគឺជាសិល្បៈនៃការផ្តល់ឈ្មោះដូចគ្នាដល់រឿងខុសៗគ្នា។ »</span>
-              <span class="wisdom-author" id="daily-quote-author">— Henri Poincaré</span>
-            </div>
-            <button class="btn-icon wisdom-cycle-btn" onclick="App.cycleDailyQuote()" title="ប្តូរពាក្យស្លោកថ្មី">🔄</button>
-          </div>
-        </div>
-
-        <!-- Student & Teacher Action Strip (Real Features) -->
-        <div class="student-action-strip">
-          <button class="action-strip-btn primary" onclick="App.openDiagnosticModal()">
-            <span class="action-icon">🎯</span>
-            <div class="action-text">
-              <span class="action-title">តេស្តសមត្ថភាពរហ័ស</span>
-              <span class="action-sub">វាយតម្លៃចំណេះដឹងរបស់អ្នក</span>
-            </div>
-          </button>
-
-          <button class="action-strip-btn secondary" onclick="App.scrollToLessons()">
-            <span class="action-icon">📖</span>
-            <div class="action-text">
-              <span class="action-title">រុករកមេរៀនទាំងអស់</span>
-              <span class="action-sub">១៥៦ មេរៀន • ៦,៦៧០ សំណួរ</span>
-            </div>
-          </button>
-
-          <button class="action-strip-btn" onclick="window.questionBank.openQuestionBankModal()" style="border: 1px solid rgba(168, 85, 247, 0.4); background: rgba(168, 85, 247, 0.1);">
-            <span class="action-icon">📚</span>
-            <div class="action-text">
-              <span class="action-title" style="color: #c084fc;">ធនាគារសំណួរ</span>
-              <span class="action-sub">៦,៦៧០ សំណួរ • ថ្នាក់ទី ៧-១២</span>
-            </div>
-          </button>
-
-          <button class="action-strip-btn" onclick="window.questionBank.openMultiLessonExamModal()" style="border: 1px solid rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.1);">
-            <span class="action-icon">🎲</span>
-            <div class="action-text">
-              <span class="action-title" style="color: #38bdf8;">បង្កើតវិញ្ញាសាចម្រុះ</span>
-              <span class="action-sub">១០ MCQ + ៥ សរសេរ & អត្រាកំណែ</span>
-            </div>
-          </button>
-
-          <button class="action-strip-btn" onclick="App.openTeacherSheetModal()" style="border: 1px solid rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1);">
-            <span class="action-icon">📊</span>
-            <div class="action-text">
-              <span class="action-title" style="color: #34d399;">តេស្តសមត្ថភាព</span>
-              <span class="action-sub">Google Sheets • ទទួលពិន្ទុតេស្ត</span>
-            </div>
-          </button>
-
-          <button class="action-strip-btn tertiary" onclick="App.openWebShareModal()">
-            <span class="action-icon">🌐</span>
-            <div class="action-text">
-              <span class="action-title">ចូលរៀនតាម Web</span>
-              <span class="action-sub">លើ PC, Laptop & Mobile</span>
-            </div>
-          </button>
-        </div>
-
-        <!-- Grade Selector Track (Vibrant Hand-Crafted Badges 7-12) -->
-        <div class="grade-track-wrap">
-          <div class="grade-track-label">
-            <span>កម្រិតថ្នាក់សិក្សា ៖</span>
-          </div>
-          <div class="grade-pills-row">
-            <button class="grade-pill active" data-grade="all" onclick="App.filterByGrade('all', this)">
-              <span class="grade-pill-dot"></span> ទាំងអស់ (All)
-            </button>
-            <button class="grade-pill grade-7" data-grade="7" onclick="App.filterByGrade('7', this)">ថ្នាក់ទី ៧</button>
-            <button class="grade-pill grade-8" data-grade="8" onclick="App.filterByGrade('8', this)">ថ្នាក់ទី ៨</button>
-            <button class="grade-pill grade-9" data-grade="9" onclick="App.filterByGrade('9', this)">
-              ថ្នាក់ទី ៩ <span class="grade-mini-tag">ឌីប្លូម</span>
-            </button>
-            <button class="grade-pill grade-10" data-grade="10" onclick="App.filterByGrade('10', this)">ថ្នាក់ទី ១០</button>
-            <button class="grade-pill grade-11" data-grade="11" onclick="App.filterByGrade('11', this)">ថ្នាក់ទី ១១</button>
-            <button class="grade-pill grade-12" data-grade="12" onclick="App.filterByGrade('12', this)">
-              ថ្នាក់ទី ១២ <span class="grade-mini-tag gold">បាក់ឌុប ⭐</span>
+          <div class="hm-socket">
+            <button class="hm-continue" onclick="App.homeContinue()">
+              <span>បន្តការរៀន</span>
+              <i aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="13 6 19 12 13 18"></polyline></svg>
+              </i>
             </button>
           </div>
         </div>
 
-      </div>
-
-      <!-- Quick Stats Strip -->
-      <div class="hero-stats" style="justify-content: center; margin-bottom: 24px;">
-        <div class="stat-item">
-          <div class="stat-icon blue">📚</div>
-          <div class="stat-details">
-            <span class="stat-number" id="stat-total-courses">0</span>
-            <span class="stat-label">វគ្គសិក្សា</span>
-          </div>
         </div>
 
-        <div class="stat-item">
-          <div class="stat-icon purple">🔬</div>
-          <div class="stat-details">
-            <span class="stat-number" id="stat-total-lessons">0</span>
-            <span class="stat-label">ពិសោធន៍ 3D</span>
-          </div>
+        <!-- Main menu grid -->
+        <section class="hm-menu-wrap">
+        <h2 class="hm-title">ម៉ឺនុយសំខាន់</h2>
+        <div class="hm-menu">
+          <button class="hm-tile is-dark" onclick="App.scrollToLessons()">
+            <span class="hm-tile-ico">📖</span>
+            <span class="hm-tile-txt">មេរៀនទាំងអស់</span>
+          </button>
+          <button class="hm-tile" onclick="App.openDiagnosticModal()">
+            <span class="hm-tile-ico">🎯</span>
+            <span class="hm-tile-txt">តេស្តរហ័ស</span>
+          </button>
+          <button class="hm-tile" onclick="window.questionBank.openQuestionBankModal()">
+            <span class="hm-tile-ico">📚</span>
+            <span class="hm-tile-txt">ធនាគារសំណួរ</span>
+            <span class="hm-badge red">៦៦៧០</span>
+          </button>
+          <button class="hm-tile" onclick="window.questionBank.openMultiLessonExamModal()">
+            <span class="hm-tile-ico">🎲</span>
+            <span class="hm-tile-txt">បង្កើតវិញ្ញាសា</span>
+            <span class="hm-badge green">NEW</span>
+          </button>
+          <button class="hm-tile" onclick="App.openTeacherSheetModal()">
+            <span class="hm-tile-ico">📊</span>
+            <span class="hm-tile-txt">តារាងពិន្ទុ</span>
+          </button>
+          <button class="hm-tile" onclick="App.openWebShareModal()">
+            <span class="hm-tile-ico">🌐</span>
+            <span class="hm-tile-txt">ចូលតាម Web</span>
+          </button>
+          <button class="hm-tile" onclick="App.checkUpdateManual()">
+            <span class="hm-tile-ico">🔄</span>
+            <span class="hm-tile-txt">ពិនិត្យ Update</span>
+          </button>
+          <button class="hm-tile" onclick="App.openLoginModal()">
+            <span class="hm-tile-ico">🔐</span>
+            <span class="hm-tile-txt">គ្រូបង្រៀន</span>
+          </button>
         </div>
 
-        <div class="stat-item">
-          <div class="stat-icon green">📑</div>
-          <div class="stat-details">
-            <span class="stat-number" id="stat-total-files">0</span>
-            <span class="stat-label">ឯកសារ PDF</span>
-          </div>
+        </section>
+
+        <!-- Grade cards (horizontal scroll) -->
+        <section class="hm-grades-wrap">
+        <div class="hm-title-row">
+          <h2 class="hm-title">កម្រិតថ្នាក់សិក្សា</h2>
+          <button class="hm-link" data-grade="all" onclick="App.filterByGrade('all')">មើលទាំងអស់</button>
+        </div>
+        <div class="hm-grades" id="hm-grades">
+          <button class="hm-grade c7" data-grade="7" data-num="៧" onclick="App.filterByGrade('7')">
+            <span class="hm-grade-name">ថ្នាក់ទី ៧</span>
+            <span class="hm-grade-meta" data-meta="7">* មេរៀន</span>
+            <span class="hm-grade-foot"><span class="hm-grade-bar"><i data-bar="7"></i></span><b data-pct="7">0%</b></span>
+          </button>
+          <button class="hm-grade c8" data-grade="8" data-num="៨" onclick="App.filterByGrade('8')">
+            <span class="hm-grade-name">ថ្នាក់ទី ៨</span>
+            <span class="hm-grade-meta" data-meta="8">* មេរៀន</span>
+            <span class="hm-grade-foot"><span class="hm-grade-bar"><i data-bar="8"></i></span><b data-pct="8">0%</b></span>
+          </button>
+          <button class="hm-grade c9" data-grade="9" data-num="៩" onclick="App.filterByGrade('9')">
+            <span class="hm-grade-tag">ឌីប្លូម</span>
+            <span class="hm-grade-name">ថ្នាក់ទី ៩</span>
+            <span class="hm-grade-meta" data-meta="9">* មេរៀន</span>
+            <span class="hm-grade-foot"><span class="hm-grade-bar"><i data-bar="9"></i></span><b data-pct="9">0%</b></span>
+          </button>
+          <button class="hm-grade c10" data-grade="10" data-num="១០" onclick="App.filterByGrade('10')">
+            <span class="hm-grade-name">ថ្នាក់ទី ១០</span>
+            <span class="hm-grade-meta" data-meta="10">* មេរៀន</span>
+            <span class="hm-grade-foot"><span class="hm-grade-bar"><i data-bar="10"></i></span><b data-pct="10">0%</b></span>
+          </button>
+          <button class="hm-grade c11" data-grade="11" data-num="១១" onclick="App.filterByGrade('11')">
+            <span class="hm-grade-name">ថ្នាក់ទី ១១</span>
+            <span class="hm-grade-meta" data-meta="11">* មេរៀន</span>
+            <span class="hm-grade-foot"><span class="hm-grade-bar"><i data-bar="11"></i></span><b data-pct="11">0%</b></span>
+          </button>
+          <button class="hm-grade c12" data-grade="12" data-num="១២" onclick="App.filterByGrade('12')">
+            <span class="hm-grade-tag gold">បាក់ឌុប ⭐</span>
+            <span class="hm-grade-name">ថ្នាក់ទី ១២</span>
+            <span class="hm-grade-meta" data-meta="12">* មេរៀន</span>
+            <span class="hm-grade-foot"><span class="hm-grade-bar"><i data-bar="12"></i></span><b data-pct="12">0%</b></span>
+          </button>
         </div>
 
-        <div class="stat-item">
-          <div class="stat-icon blue">🏆</div>
-          <div class="stat-details">
-            <span class="stat-number" id="stat-total-progress">0%</span>
-            <span class="stat-label">វឌ្ឍនភាព</span>
+        </section>
+
+        <!-- Daily wisdom -->
+        <section class="hm-wisdom-wrap">
+        <h2 class="hm-title">ពាក្យស្លោកប្រចាំថ្ងៃ</h2>
+        <div class="hm-wisdom">
+          <span class="hm-wisdom-ico">💡</span>
+          <div class="hm-wisdom-body">
+            <span class="hm-wisdom-quote" id="daily-quote-text">« គណិតវិទ្យាគឺជាសិល្បៈនៃការផ្តល់ឈ្មោះដូចគ្នាដល់រឿងខុសៗគ្នា។ »</span>
+            <span class="hm-wisdom-author" id="daily-quote-author">— Henri Poincaré</span>
           </div>
+          <button class="hm-wisdom-next" onclick="App.cycleDailyQuote()" title="ប្តូរពាក្យស្លោកថ្មី">ថ្មី ↻</button>
         </div>
+        </section>
+
       </div>
 
       <!-- Toolbar & Category Filter (Math Disciplines) -->
@@ -303,7 +303,7 @@
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <input type="text" id="mobile-search-input" class="search-input" placeholder="🔍 ស្វែងរកវគ្គសិក្សា ឬមេរៀន...">
+            <input type="text" id="mobile-search-input" class="search-input" placeholder="ស្វែងរកវគ្គសិក្សា ឬមេរៀន...">
           </div>
         </div>
 
@@ -1703,10 +1703,10 @@
       <span class="dock-label">ទំព័រដើម</span>
     </button>
     <button class="dock-btn" id="dock-btn-courses" onclick="App.scrollToLessons(); App.setDockActive(this);">
-      <span class="dock-icon">📚</span>
+      <span class="dock-icon">📖</span>
       <span class="dock-label">មេរៀន</span>
     </button>
-    <button class="dock-btn" id="dock-btn-quiz" onclick="App.openDiagnosticModal(); App.setDockActive(this);">
+    <button class="dock-btn dock-fab" id="dock-btn-quiz" onclick="App.openDiagnosticModal();" title="តេស្តសមត្ថភាពរហ័ស">
       <span class="dock-icon">🎯</span>
       <span class="dock-label">តេស្ត</span>
     </button>
@@ -1714,20 +1714,8 @@
       <span class="dock-icon">📚</span>
       <span class="dock-label">ធនាគារ</span>
     </button>
-    <button class="dock-btn" id="dock-btn-exam" onclick="window.questionBank.openMultiLessonExamModal(); App.setDockActive(this);" title="ការប្រឡង & វិញ្ញាសា">
-      <span class="dock-icon">🎲</span>
-      <span class="dock-label">វិញ្ញាសា</span>
-    </button>
-    <button class="dock-btn" id="dock-btn-scores" onclick="App.openTeacherSheetModal(); App.setDockActive(this);" title="តេស្តសមត្ថភាព & តារាងពិន្ទុ (Google Sheets)">
-      <span class="dock-icon">📊</span>
-      <span class="dock-label">ពិន្ទុ</span>
-    </button>
-    <button class="dock-btn" id="dock-btn-mobile" onclick="App.openWebShareModal(); App.setDockActive(this);">
-      <span class="dock-icon">🌐</span>
-      <span class="dock-label">Link Web</span>
-    </button>
-    <button class="dock-btn" id="dock-btn-theme" onclick="App.toggleTheme();">
-      <span class="dock-icon" id="dock-theme-icon">☀️</span>
+    <button class="dock-btn" id="dock-btn-theme" onclick="App.toggleTheme();" title="ប្តូរពន្លឺ / ងងឹត">
+      <span class="dock-icon" id="dock-theme-icon">🌙</span>
       <span class="dock-label">ពន្លឺ</span>
     </button>
   </nav>

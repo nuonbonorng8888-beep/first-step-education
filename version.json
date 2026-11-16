@@ -1,8 +1,8 @@
 {
-  "version": "v131",
-  "build": 131,
-  "date": "2026-11-15",
+  "version": "v133",
+  "build": 133,
+  "date": "2026-11-16",
   "author": "Nuon Bonong",
-  "changelog": "Smart line-breaking for math solutions and formulas: prevented horizontal overflows by automatically breaking lines at logical transitions ('\\Rightarrow', '=', colons '៖', full stops '។', and Khmer 'នាំឱ្យ/នាំឲ្យ'), allowing KaTeX to wrap cleanly and adding responsive overflow controls across quiz explanations and question bank solutions.",
-  "lastUpdated": "2026-11-15T09:26:00+07:00"
+  "changelog": "Flat redesign of the rest of the home screen (no gradients): quieter top bar with icon-only actions when crowded, flat subject filters and buttons, and new course cards that show the whole book cover on a grade-coloured shelf with title, stats, progress and a 'ចូលរៀន' button beside it (no text over the cover). Includes the v132 home dashboard.",
+  "lastUpdated": "2026-11-16T18:30:00+07:00"
 }
