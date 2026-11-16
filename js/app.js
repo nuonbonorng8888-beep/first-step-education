@@ -1947,7 +1947,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=136" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">
@@ -2369,10 +2369,10 @@ function doGet(e) {
   // =========================================================================
   async loadWorksheets(forceRefresh = false) {
     try {
-      const cacheBust = `?v=${Date.now()}`;
-      let res = await fetch(`data/worksheets.json${cacheBust}`, { cache: 'no-store' });
+      // 'no-cache' = ask the server if the file changed (cheap 304 when not)
+      let res = await fetch('data/worksheets.json', { cache: 'no-cache' });
       if (!res.ok) {
-        res = await fetch(`data/worksheets_g11.json${cacheBust}`, { cache: 'no-store' });
+        res = await fetch('data/worksheets_g11.json', { cache: 'no-cache' });
       }
       if (res.ok) {
         this.worksheets = await res.json();
@@ -2394,8 +2394,7 @@ function doGet(e) {
 
   async loadPointQuizzes(forceRefresh = false) {
     try {
-      const cacheBust = `?v=${Date.now()}`;
-      const res = await fetch(`data/point_quizzes.json${cacheBust}`, { cache: 'no-store' });
+      const res = await fetch('data/point_quizzes.json', { cache: 'no-cache' });
       if (res.ok) {
         this.pointQuizzes = await res.json();
       }

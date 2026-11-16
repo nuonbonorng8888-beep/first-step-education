@@ -6,7 +6,7 @@ const StorageService = {
   async getCourses() {
     // Try fetching freshest data from data/courses.json first
     try {
-      const response = await fetch(`data/courses.json?v=${Date.now()}`, { cache: 'no-store' });
+      const response = await fetch('data/courses.json', { cache: 'no-cache' });
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem('ngs_courses_cache', JSON.stringify(data));
@@ -139,8 +139,8 @@ const StorageService = {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 2500);
-      const res = await fetch(`data/teachers.json?v=${Date.now()}`, { 
-        cache: 'no-store',
+      const res = await fetch('data/teachers.json', { 
+        cache: 'no-cache',
         signal: controller.signal
       });
       clearTimeout(timeoutId);

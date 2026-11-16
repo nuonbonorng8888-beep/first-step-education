@@ -1,8 +1,8 @@
 {
-  "version": "v135",
-  "build": 135,
+  "version": "v136",
+  "build": 136,
   "date": "2026-11-16",
   "author": "Nuon Bonong",
-  "changelog": "New: student accounts with Firebase (dormant until js/firebase-config.js is filled). Students log in with ID + password on the gate; teachers get '🎓 សិស្ស & លទ្ធផល' to create classes, bulk-create student IDs/passwords, print ID slips, enable/disable accounts, and view Box Calculation results by date range with per-student details and CSV export. Box Calculation saves results to the student's account automatically. Includes firestore.rules and FIREBASE_SETUP.md. Resilience: students stay signed in when Firebase is offline or over the free daily quota; results are queued on the device and sent automatically later (no duplicates); the teacher dashboard caches downloaded results and only fetches new ones, with a refresh button.",
-  "lastUpdated": "2026-11-16T22:00:00+07:00"
+  "changelog": "Faster loading: book covers and mascot resized (19.9 MB -> 0.5 MB, still sharp on high-resolution phones); the offline cache no longer pre-downloads ~23 MB of data on the first visit; code, styles and covers load instantly from the phone cache on return visits; data files are only re-downloaded when they change; the question bank preloads after the home screen instead of competing with it.",
+  "lastUpdated": "2026-11-16T23:00:00+07:00"
 }

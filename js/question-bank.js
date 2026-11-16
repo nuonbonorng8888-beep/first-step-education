@@ -2024,8 +2024,10 @@ class QuestionBankController {
 // Global instance
 window.questionBank = new QuestionBankController();
 
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.questionBank) {
-    window.questionBank.init();
-  }
+// Preload the question bank after the home screen has finished loading so it
+// does not compete with it. Every feature that needs it awaits init() itself.
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    if (window.questionBank) window.questionBank.init();
+  }, 3000);
 });
