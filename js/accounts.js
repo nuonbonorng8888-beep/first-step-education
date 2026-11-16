@@ -9,8 +9,9 @@
   const KH = '០១២៣៤៥៦៧៨៩';
   const kh = (v) => String(v).replace(/[0-9]/g, (d) => KH[d]);
   const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  const OPS = { add: '+', sub: '−', mul: '×', div: '÷' };
-  const OPN = { add: 'បូក', sub: 'ដក', mul: 'គុណ', div: 'ចែក' };
+  const OPS = { add: '+', sub: '−', mul: '×', div: '÷', mix: '±' };
+  const OPN = { add: 'បូក', sub: 'ដក', mul: 'គុណ', div: 'ចែក', mix: 'ចម្រុះ' };
+  const sizeOf = (r) => (r.boxes ? `${r.boxes} ប្រអប់` : `${r.size}×${r.size}`);
   const MEDAL = { gold: '🥇', silver: '🥈', bronze: '🥉', none: '—' };
   const pad2 = (n) => String(n).padStart(2, '0');
   const fmtDate = (ms) => { if (!ms) return '—'; const d = new Date(ms); return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())} ${pad2(d.getHours())}:${pad2(d.getMinutes())}`; };
@@ -240,7 +241,7 @@
         <form class="acc-card acc-login">
           <h3>ចូលគណនីគ្រូ</h3>
           <p class="acc-muted">ប្រើ ID និងលេខសម្ងាត់គ្រូ ដែល Admin បានបង្កើតឲ្យ</p>
-          <label class="acc-field"><span>ID គ្រូ</span><input id="acc-tid" autocomplete="username" placeholder="ឧ. bonorng" required></label>
+          <label class="acc-field"><span>ID គ្រូ</span><input id="acc-tid" autocomplete="username" placeholder="ឧ. sokha" required></label>
           <label class="acc-field"><span>លេខសម្ងាត់</span><input id="acc-tpw" type="password" autocomplete="current-password" required></label>
           <p class="acc-err"></p>
           <button class="acc-btn wide" type="submit">ចូល</button>
@@ -572,8 +573,8 @@
       const detail = open ? `
         <tr class="detail"><td colspan="6">
           <table class="acc-sub">
-            <thead><tr><th>ពេលវេលា</th><th>ប្រមាណវិធី</th><th>កម្រិត</th><th>ទំហំ</th><th>ត្រឹមត្រូវ</th><th>ពេល</th><th>មេដាយ</th></tr></thead>
-            <tbody>${L.map((r) => `<tr><td>${fmtDate(r.playedAt || r.createdAt)}</td><td><span class="acc-op op-${r.op}">${OPS[r.op] || '?'}</span> ${OPN[r.op] || ''}</td><td>${kh(r.level)}</td><td>${r.size}×${r.size}</td><td>${r.acc}% <small>(${r.correct}/${r.total})</small></td><td>${Number(r.sec).toFixed(1)}s</td><td>${MEDAL[r.medal] || '—'}</td></tr>`).join('')}</tbody>
+            <thead><tr><th>ពេលវេលា</th><th>ប្រមាណវិធី</th><th>កម្រិត</th><th>ប្រអប់</th><th>ត្រឹមត្រូវ</th><th>ពេល</th><th>មេដាយ</th></tr></thead>
+            <tbody>${L.map((r) => `<tr><td>${fmtDate(r.playedAt || r.createdAt)}</td><td><span class="acc-op op-${r.op}">${OPS[r.op] || '?'}</span> ${OPN[r.op] || ''}</td><td>${kh(r.level)}</td><td>${sizeOf(r)}</td><td>${r.acc}% <small>(${r.correct}/${r.total})</small></td><td>${Number(r.sec).toFixed(1)}s</td><td>${MEDAL[r.medal] || '—'}</td></tr>`).join('')}</tbody>
           </table>
         </td></tr>` : '';
       return `
@@ -655,7 +656,7 @@
     const medalName = { gold: 'មាស', silver: 'ប្រាក់', bronze: 'សំរិទ្ធ', none: '-' };
     const q = (v) => `"${String(v == null ? '' : v).replace(/"/g, '""')}"`;
     const lines = [head.map(q).join(',')].concat(A.results.map((r) => [
-      fmtDate(r.playedAt || r.createdAt), r.name, r.loginId, r.className, OPN[r.op] || r.op, r.level, `${r.size}x${r.size}`,
+      fmtDate(r.playedAt || r.createdAt), r.name, r.loginId, r.className, OPN[r.op] || r.op, r.level, r.boxes ? `${r.boxes}` : `${r.size}x${r.size}`,
       r.correct, r.total, r.acc, Number(r.sec).toFixed(1), medalName[r.medal] || '-'
     ].map(q).join(',')));
     const blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' });

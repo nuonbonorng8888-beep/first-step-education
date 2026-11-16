@@ -1,9 +1,10 @@
 /* ==========================================================================
    Box Calculation (ប្រអប់គណនា) — mental arithmetic for speed & accuracy
-   - 4 operations (+ − × ÷), 5 levels for grades 7–12, 5×5 or 10×10 grid
+   - 5 operations: + − × ÷ and mixed (ចម្រុះ), each with levels 1–10
+   - 10 / 20 / 50 / 100 boxes (2×5, 4×5, 5×10, 10×10)
    - Own number pad (no phone keyboard), timer, progress, medals
-   - Records stay on the device; results can be sent to the teacher's
-     Google Sheet through the existing Apps Script (App.getTeacherSheetUrl)
+   - Records on the device; logged-in students also save to their account
+     (window.Cloud); others can send to the teacher's Google Sheet
    ========================================================================== */
 (function () {
   'use strict';
@@ -17,92 +18,143 @@
     add: { sym: '+', name: 'បូក', color: 'op-add' },
     sub: { sym: MINUS, name: 'ដក', color: 'op-sub' },
     mul: { sym: '×', name: 'គុណ', color: 'op-mul' },
-    div: { sym: '÷', name: 'ចែក', color: 'op-div' }
+    div: { sym: '÷', name: 'ចែក', color: 'op-div' },
+    mix: { sym: '±', name: 'ចម្រុះ', color: 'op-mix', long: '+ − × ÷ ចម្រុះ' }
+  };
+  const CELL_OP_SYM = { add: '+', sub: MINUS, mul: '×', div: '÷' };
+
+  const BOXES = {
+    10: { rows: 2, cols: 5 },
+    20: { rows: 4, cols: 5 },
+    50: { rows: 5, cols: 10 },
+    100: { rows: 10, cols: 10 }
+  };
+  const BOX_LIST = [10, 20, 50, 100];
+
+  /* ---------- number pools ---------- */
+  const range = (a, b) => { const r = []; for (let i = a; i <= b; i++) r.push(i); return r; };
+  const tenths = (a, b) => range(a, b).map((k) => k / 10);
+  const hundredths = (a, b) => range(a, b).map((k) => k / 100);
+  const nz = (a) => range(-a, a).filter((x) => x !== 0);
+  const nzTenths = (a) => nz(a).map((k) => k / 10);
+
+  /* Levels 1–10 per operation.
+     add/sub/mul: top & side pools, cell = side ⊕ top
+     div:         divisor (top) & quotient pools, cell shows top×q, answer q
+     mix:         ops per cell; ÷ cells work like div; noNeg avoids negative − */
+  const LV = {
+    add: [null,
+      { name: 'លេខ ១ ខ្ទង់', ex: '7 + 5', top: range(1, 9), side: range(1, 9) },
+      { name: 'ដប់ជាង + ១ ខ្ទង់', ex: '14 + 8', top: range(1, 9), side: range(10, 20) },
+      { name: '២ ខ្ទង់ + ១ ខ្ទង់', ex: '46 + 7', top: range(1, 9), side: range(21, 99) },
+      { name: '២ ខ្ទង់ + ២ ខ្ទង់', ex: '47 + 38', top: range(11, 99), side: range(11, 99) },
+      { name: '៣ ខ្ទង់ + ២ ខ្ទង់', ex: '356 + 47', top: range(11, 99), side: range(100, 999) },
+      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−3) + 7', top: nz(10), side: nz(10) },
+      { name: 'អវិជ្ជមាន ២ ខ្ទង់', ex: '(−24) + 37', top: nz(50), side: nz(50) },
+      { name: 'ទសភាគ ១ ខ្ទង់', ex: '2.5 + 0.4', top: tenths(1, 9), side: tenths(11, 99) },
+      { name: 'ទសភាគ ២ ខ្ទង់', ex: '3.4 + 0.25', top: hundredths(1, 99), side: tenths(10, 99) },
+      { name: 'ទសភាគអវិជ្ជមាន', ex: '(−2.5) + 1.7', top: nzTenths(99), side: nzTenths(99) }
+    ],
+    sub: [null,
+      { name: 'ដកក្នុង ២០', ex: '12 − 5', top: range(1, 9), side: range(9, 18) },
+      { name: '២ ខ្ទង់ − ១ ខ្ទង់', ex: '34 − 8', top: range(1, 9), side: range(20, 50) },
+      { name: '២ ខ្ទង់ − ២ ខ្ទង់', ex: '73 − 28', top: range(10, 49), side: range(50, 99) },
+      { name: '៣ ខ្ទង់ − ២ ខ្ទង់', ex: '352 − 47', top: range(11, 99), side: range(100, 999) },
+      { name: 'លទ្ធផលអវិជ្ជមាន', ex: '4 − 12', top: range(10, 20), side: range(1, 9) },
+      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−3) − 5', top: nz(10), side: nz(10) },
+      { name: 'អវិជ្ជមាន ២ ខ្ទង់', ex: '(−24) − (−37)', top: nz(50), side: nz(50) },
+      { name: 'ទសភាគ ១ ខ្ទង់', ex: '5.2 − 0.7', top: tenths(1, 9), side: tenths(10, 99) },
+      { name: 'ទសភាគ ២ ខ្ទង់', ex: '4.5 − 0.25', top: hundredths(1, 99), side: tenths(10, 99) },
+      { name: 'ទសភាគអវិជ្ជមាន', ex: '(−2.5) − 1.7', top: nzTenths(99), side: nzTenths(99) }
+    ],
+    mul: [null,
+      { name: 'តារាងគុណ ១–៥', ex: '4 × 7', top: range(1, 5), side: range(1, 9) },
+      { name: 'តារាងគុណ ៦–៩', ex: '8 × 7', top: range(6, 9), side: range(1, 9) },
+      { name: 'តារាងគុណ ២–១២', ex: '11 × 12', top: range(2, 12), side: range(2, 12) },
+      { name: 'ដប់ជាង × ១ ខ្ទង់', ex: '15 × 6', top: range(2, 9), side: range(11, 20) },
+      { name: '២ ខ្ទង់ × ១ ខ្ទង់', ex: '47 × 6', top: range(2, 9), side: range(21, 99) },
+      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−6) × 7', top: nz(10), side: nz(10) },
+      { name: '២ ខ្ទង់ × ២ ខ្ទង់', ex: '17 × 23', top: range(11, 25), side: range(11, 25) },
+      { name: 'ទសភាគ × ចំនួនគត់', ex: '0.4 × 7', top: tenths(1, 9), side: range(2, 9) },
+      { name: 'ទសភាគ × ទសភាគ', ex: '0.3 × 0.6', top: tenths(1, 9), side: tenths(1, 9) },
+      { name: 'ទសភាគអវិជ្ជមាន', ex: '(−0.4) × 7', top: nzTenths(9), side: nz(9) }
+    ],
+    div: [null,
+      { name: 'ចែកនឹង ១–៥', ex: '28 ÷ 4', d: range(1, 5), q: range(1, 9) },
+      { name: 'ចែកនឹង ៦–៩', ex: '56 ÷ 8', d: range(6, 9), q: range(1, 9) },
+      { name: 'ចែកនឹង ២–១២', ex: '132 ÷ 12', d: range(2, 12), q: range(2, 12) },
+      { name: 'លទ្ធផល ២ ខ្ទង់', ex: '84 ÷ 6', d: range(2, 9), q: range(11, 30) },
+      { name: 'ចែកនឹង ២ ខ្ទង់', ex: '105 ÷ 15', d: range(11, 20), q: range(2, 9) },
+      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−42) ÷ 7', d: nz(10), q: nz(10) },
+      { name: '២ ខ្ទង់ ÷ ២ ខ្ទង់', ex: '391 ÷ 17', d: range(11, 25), q: range(11, 25) },
+      { name: 'លទ្ធផលទសភាគ', ex: '4.2 ÷ 6', d: range(2, 9), q: tenths(1, 20) },
+      { name: 'ចែកនឹងទសភាគ', ex: '2.1 ÷ 0.3', d: tenths(1, 9), q: range(1, 9) },
+      { name: 'ទសភាគអវិជ្ជមាន', ex: '(−4.2) ÷ 6', d: nz(9), q: nzTenths(20) }
+    ],
+    mix: [null,
+      { name: 'បូក ដក ១ ខ្ទង់', ex: '7 + 5 · 9 − 4', ops: ['add', 'sub'], top: range(1, 9), side: range(1, 9), noNeg: true },
+      { name: 'បូក ដក គុណ', ex: '6 × 4 · 9 − 2', ops: ['add', 'sub', 'mul'], top: range(1, 9), side: range(1, 9), noNeg: true },
+      { name: '+ − × ÷ ១ ខ្ទង់', ex: '35 ÷ 5 · 8 × 3', ops: ['add', 'sub', 'mul', 'div'], top: range(1, 9), side: range(1, 9), q: range(1, 9), noNeg: true },
+      { name: '+ − × ÷ ដល់ ១២', ex: '11 × 12 · 96 ÷ 8', ops: ['add', 'sub', 'mul', 'div'], top: range(2, 12), side: range(2, 12), q: range(2, 12), noNeg: true },
+      { name: '២ ខ្ទង់ និង ១ ខ្ទង់', ex: '47 × 6 · 84 ÷ 7', ops: ['add', 'sub', 'mul', 'div'], top: range(2, 9), side: range(11, 99), q: range(2, 12), noNeg: true },
+      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−6) × 7 · (−3) − 5', ops: ['add', 'sub', 'mul', 'div'], top: nz(10), side: nz(10), q: nz(10) },
+      { name: '២ ខ្ទង់ និង ២ ខ្ទង់', ex: '17 × 23 · 64 − 38', ops: ['add', 'sub', 'mul', 'div'], top: range(11, 25), side: range(11, 25), q: range(2, 12), noNeg: true },
+      { name: 'ទសភាគ និងចំនួនគត់', ex: '0.4 × 7 · 2.1 ÷ 0.3', ops: ['add', 'sub', 'mul', 'div'], top: tenths(1, 9), side: range(2, 9), q: range(1, 9), noNeg: true },
+      { name: 'ទសភាគ ១ ខ្ទង់', ex: '5.2 − 3 · 4.2 ÷ 6', ops: ['add', 'sub', 'mul', 'div'], top: range(2, 9), side: tenths(10, 99), q: tenths(1, 20), noNeg: true },
+      { name: 'ទសភាគអវិជ្ជមាន', ex: '(−2.5) × 4 · (−4.2) ÷ 6', ops: ['add', 'sub', 'mul', 'div'], top: nz(9), side: nzTenths(99), q: nzTenths(20) }
+    ]
   };
 
-  const LEVELS = [
-    { id: 1, name: 'មូលដ្ឋាន', hint: '៧ + ៥', note: 'លេខ ១ ខ្ទង់' },
-    { id: 2, name: 'ពីរខ្ទង់', hint: '៤៦ + ៨', note: 'ពីរខ្ទង់ និង ១ ខ្ទង់' },
-    { id: 3, name: 'ចំនួនអវិជ្ជមាន', hint: '(−៣) + ៧', note: 'ចំនួនគត់វិជ្ជមាន និងអវិជ្ជមាន' },
-    { id: 4, name: 'ទសភាគ', hint: '២.៥ + ០.៤', note: 'ទសភាគ ១ ខ្ទង់' },
-    { id: 5, name: 'ប្រកួត', hint: '៤៧ + ៣៨', note: 'ពីរខ្ទង់ និង ពីរខ្ទង់' }
-  ];
+  // Seconds allowed per box for a gold medal (base × level factor)
+  const SEC_BASE = { add: 1.6, sub: 1.9, mul: 2.0, div: 2.4, mix: 2.3 };
+  const SEC_LEVEL = [0, 1, 1.2, 1.5, 2, 2.4, 1.8, 2.4, 2.4, 3, 3.2];
 
-  // Seconds allowed per cell for a gold medal (base × level factor)
-  const SEC_BASE = { add: 1.6, sub: 1.9, mul: 2.0, div: 2.4 };
-  const SEC_LEVEL = [0, 1, 1.8, 1.7, 2.2, 3.2];
-
-  /* ---------- number helpers ---------- */
-  const range = (a, b) => { const r = []; for (let i = a; i <= b; i++) r.push(i); return r; };
+  /* ---------- helpers ---------- */
   const shuffle = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-  const pick = (pool, n) => shuffle(pool).slice(0, n);
+  /* n values from pool, all different when the pool is big enough */
+  const pick = (pool, n) => { let out = []; while (out.length < n) out = out.concat(shuffle(pool)); return out.slice(0, n); };
   const rnd = (pool) => pool[Math.floor(Math.random() * pool.length)];
   const round4 = (v) => Math.round(v * 10000) / 10000;
-  const tenths = (a, b) => range(a, b).map((k) => k / 10);
   const fmt = (v) => {
     const s = String(round4(v));
     return s.startsWith('-') ? MINUS + s.slice(1) : s;
   };
   const fmtHead = (v) => (v < 0 ? `(${fmt(v)})` : fmt(v));
+  const fmtEx = (s) => kh(s).replace(/-/g, MINUS);
+  const calc = (op, s, t) => (op === 'add' ? s + t : op === 'sub' ? s - t : s * t);
 
   /* ---------- puzzle generator ---------- */
-  function generate(op, level, n) {
-    const nonZero = range(-10, 10).filter((x) => x !== 0);
-    let top, side, divisorPool, quotientPool;
+  function generate(op, level, boxes) {
+    const { rows, cols } = BOXES[boxes] || BOXES[100];
+    const spec = LV[op][level];
 
     if (op === 'div') {
-      if (level === 1) { divisorPool = range(1, 10); quotientPool = range(1, 10); }
-      else if (level === 2) { divisorPool = range(2, 11); quotientPool = range(2, 15); }
-      else if (level === 3) { divisorPool = nonZero; quotientPool = nonZero; }
-      else if (level === 4) { divisorPool = range(2, 11); quotientPool = tenths(1, 20); }
-      else { divisorPool = range(11, 20); quotientPool = range(2, 12); }
-      top = pick(divisorPool, n);
+      const top = pick(spec.d, cols);
       const cells = [];
-      for (let r = 0; r < n; r++) {
-        const row = [];
-        for (let c = 0; c < n; c++) {
-          const q = rnd(quotientPool);
-          row.push({ ans: round4(q), given: round4(top[c] * q) });
-        }
-        cells.push(row);
+      for (let r = 0; r < rows; r++) {
+        cells.push(top.map((t) => { const q = rnd(spec.q); return { op: 'div', ans: round4(q), given: round4(t * q) }; }));
       }
-      return { top, side: range(1, n), cells, isDiv: true };
+      return { top, side: range(1, rows), cells, rows, cols, kind: 'div' };
     }
 
-    const L = {
-      add: [
-        null,
-        [range(1, 10), range(1, 10)],
-        [range(1, 10), range(11, 99)],
-        [nonZero, nonZero],
-        [tenths(1, 10), tenths(11, 99)],
-        [range(11, 99), range(11, 99)]
-      ],
-      sub: [
-        null,
-        [range(1, 10), range(11, 20)],
-        [range(1, 10), range(20, 99)],
-        [nonZero, nonZero],
-        [tenths(1, 10), tenths(11, 99)],
-        [range(11, 49), range(50, 99)]
-      ],
-      mul: [
-        null,
-        [range(1, 10), range(1, 10)],
-        [range(2, 11), range(11, 30)],
-        [nonZero, nonZero],
-        [tenths(1, 10), range(2, 11)],
-        [range(11, 20), range(11, 25)]
-      ]
-    }[op][level];
+    const top = pick(spec.top, cols);
+    const side = pick(spec.side, rows);
 
-    top = pick(L[0], n);
-    side = pick(L[1], n);
-    const cells = side.map((s) => top.map((t) => {
-      let ans = op === 'add' ? s + t : op === 'sub' ? s - t : s * t;
-      return { ans: round4(ans) };
-    }));
-    return { top, side, cells, isDiv: false };
+    if (op === 'mix') {
+      const cells = side.map((s) => top.map((t) => {
+        let o = rnd(spec.ops);
+        if (o === 'sub' && spec.noNeg && s < t) o = 'add';
+        if (o === 'div') {
+          const q = rnd(spec.q);
+          return { op: 'div', ans: round4(q), given: round4(t * q) };
+        }
+        return { op: o, ans: round4(calc(o, s, t)) };
+      }));
+      return { top, side, cells, rows, cols, kind: 'mix' };
+    }
+
+    const cells = side.map((s) => top.map((t) => ({ op, ans: round4(calc(op, s, t)) })));
+    return { top, side, cells, rows, cols, kind: 'plain' };
   }
 
   /* ---------- storage ---------- */
@@ -119,7 +171,8 @@
   function saveStore(s) {
     try { localStorage.setItem(STORE_KEY, JSON.stringify(s)); } catch (e) {}
   }
-  const bestKey = (op, level, size) => `${op}|${level}|${size}`;
+  const bestKey = (op, level, boxes) => `${op}|${level}|b${boxes}`;
+  const sizeLabel = (a) => (a.boxes ? `${kh(a.boxes)} ប្រអប់` : `${a.size}×${a.size}`);
 
   function medalFor(acc, sec, target) {
     if (acc >= 100 && sec <= target) return 'gold';
@@ -133,6 +186,7 @@
     bronze: { ico: '🥉', name: 'មេដាយសំរិទ្ធ' },
     none: { ico: '💪', name: 'ព្យាយាមម្តងទៀត' }
   };
+  const MEDAL_RANK = { gold: 3, silver: 2, bronze: 1, none: 0 };
 
   const fmtTime = (sec) => {
     if (sec < 60) return `${sec.toFixed(1)} វិនាទី`;
@@ -148,9 +202,10 @@
 
   /* ---------- state ---------- */
   const S = {
+    op: 'add',
     level: 1,
-    size: 10,
-    op: null,
+    boxes: 20,
+    prefs: {},          // per operation: { level, boxes }
     puzzle: null,
     answers: [],
     active: 0,
@@ -159,15 +214,17 @@
     timer: null,
     running: false,
     finished: false,
-    lastResult: null
+    lastResult: null,
+    cloudSave: null
   };
+  const total = () => S.puzzle.rows * S.puzzle.cols;
 
   let root = null;
   const $ = (sel) => root.querySelector(sel);
 
   /* Student mode: a logged-in student sees only Box Calculation.
      It cannot be closed; the header shows the student and a logout button. */
-  let student = null;      // { name, className } while in student mode
+  let student = null;
   let onLogout = null;
 
   function setStudentMode(profile, logoutFn) {
@@ -197,13 +254,20 @@
     document.addEventListener('keydown', onKey);
   }
 
+  function loadPrefs() {
+    try {
+      const p = JSON.parse(localStorage.getItem(STORE_KEY + '_pref2') || '{}');
+      if (p && typeof p === 'object') S.prefs = p;
+    } catch (e) {}
+  }
+  function savePrefs() {
+    S.prefs[S.op] = { level: S.level, boxes: S.boxes };
+    try { localStorage.setItem(STORE_KEY + '_pref2', JSON.stringify(S.prefs)); } catch (e) {}
+  }
+
   function open() {
     ensureRoot();
-    try {
-      const pref = JSON.parse(localStorage.getItem(STORE_KEY + '_pref') || '{}');
-      if (pref.level) S.level = pref.level;
-      if (pref.size) S.size = pref.size;
-    } catch (e) {}
+    loadPrefs();
     const alreadyOpen = root.classList.contains('open');
     root.classList.add('open');
     document.body.classList.add('bx-lock');
@@ -219,11 +283,43 @@
     document.body.classList.remove('bx-lock');
   }
 
-  function savePref() {
-    try { localStorage.setItem(STORE_KEY + '_pref', JSON.stringify({ level: S.level, size: S.size })); } catch (e) {}
+  const backIcon = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+
+  function headerHtml(sub) {
+    if (student) {
+      return `
+      <header class="bx-top">
+        <img src="assets/mascot.jpg" alt="" class="bx-brand-img">
+        <div class="bx-top-title"><b>🧮 ប្រអប់គណនា</b><small>👋 ${escapeAttr(student.name)} · ថ្នាក់ ${escapeAttr(student.className || '')}</small></div>
+        <button class="bx-logout" data-act="logout" title="ចាកចេញពីគណនី">ចាកចេញ</button>
+      </header>`;
+    }
+    return `
+      <header class="bx-top">
+        <button class="bx-icon-btn" data-act="close" title="ត្រឡប់ទៅទំព័រដើម">${backIcon}</button>
+        <div class="bx-top-title"><b>🧮 ប្រអប់គណនា</b><small>${sub || 'ពង្រឹងល្បឿន និងភាពត្រឹមត្រូវ'}</small></div>
+      </header>`;
+  }
+  function bindHeader() {
+    const closeBtn = $('[data-act="close"]');
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    const logoutBtn = $('[data-act="logout"]');
+    if (logoutBtn) logoutBtn.addEventListener('click', () => {
+      if (confirm('តើប្អូនចង់ចាកចេញពីគណនីមែនទេ?') && onLogout) onLogout();
+    });
   }
 
-  /* ---------- lobby ---------- */
+  /* ---------- lobby: choose an operation ---------- */
+  function bestLevel(store, op) {
+    // highest level with a gold medal (any box count)
+    let lvl = 0;
+    Object.keys(store.best).forEach((k) => {
+      const [o, l] = k.split('|');
+      if (o === op && store.best[k].medal === 'gold') lvl = Math.max(lvl, Number(l));
+    });
+    return lvl;
+  }
+
   function renderLobby() {
     stopTimer();
     S.running = false;
@@ -233,46 +329,32 @@
     store.attempts.forEach((a) => { if (counts[a.medal] !== undefined) counts[a.medal]++; });
 
     const opTiles = Object.keys(OPS).map((k) => {
-      const b = store.best[bestKey(k, S.level, S.size)];
-      const bestTxt = b ? `${MEDAL[b.medal] ? MEDAL[b.medal].ico : ''} ${b.acc}% · ${b.sec.toFixed(1)}s` : 'មិនទាន់លេង';
+      const gl = bestLevel(store, k);
+      const tag = gl ? `🥇 ដល់កម្រិត ${kh(gl)}` : 'កម្រិត ១–១០';
       return `
-        <button class="bx-op ${OPS[k].color}" data-op="${k}">
-          <span class="bx-op-sym">${OPS[k].sym}</span>
+        <button class="bx-op ${OPS[k].color} ${k === 'mix' ? 'is-mix' : ''}" data-op="${k}">
+          <span class="bx-op-sym">${k === 'mix' ? '<i>+</i><i>−</i><i>×</i><i>÷</i>' : OPS[k].sym}</span>
           <span class="bx-op-name">${OPS[k].name}</span>
-          <span class="bx-op-best">${bestTxt}</span>
+          <span class="bx-op-best">${tag}</span>
         </button>`;
     }).join('');
-
-    const levelChips = LEVELS.map((l) => `
-      <button class="bx-level ${S.level === l.id ? 'active' : ''}" data-level="${l.id}">
-        <span class="bx-level-num">${kh(l.id)}</span>
-        <span class="bx-level-txt"><b>${l.name}</b><small>${l.hint}</small></span>
-      </button>`).join('');
 
     const pending = (window.Cloud && Cloud.isStudent() && Cloud.pendingCount) ? Cloud.pendingCount() : 0;
     const pendingNote = pending
       ? `<p class="bx-pending">⏳ មានលទ្ធផល ${kh(pending)} កំពុងរង់ចាំផ្ញើទៅលោកគ្រូ — នឹងផ្ញើដោយស្វ័យប្រវត្តិពេលមានអ៊ីនធឺណិត</p>`
       : '';
-    const recent = store.attempts.slice(0, 6).map((a) => `
+    const recent = store.attempts.slice(0, 6).map((a) => {
+      const o = OPS[a.op] || OPS.add;
+      return `
       <li>
-        <span class="bx-rec-op ${OPS[a.op].color}">${OPS[a.op].sym}</span>
-        <span class="bx-rec-main">កម្រិត ${kh(a.level)} · ${a.size}×${a.size}<small>${a.date}</small></span>
+        <span class="bx-rec-op ${o.color}">${o.sym}</span>
+        <span class="bx-rec-main">${o.name} · កម្រិត ${kh(a.level)} · ${sizeLabel(a)}<small>${a.date}</small></span>
         <span class="bx-rec-score">${a.acc}%<small>${a.sec.toFixed(1)}s</small></span>
         <span class="bx-rec-medal">${MEDAL[a.medal].ico}</span>
-      </li>`).join('');
+      </li>`;
+    }).join('');
 
-    root.innerHTML = `
-      <header class="bx-top">
-        ${student ? `
-        <img src="assets/mascot.jpg" alt="" class="bx-brand-img">
-        <div class="bx-top-title"><b>🧮 ប្រអប់គណនា</b><small>👋 ${escapeAttr(student.name)} · ថ្នាក់ ${escapeAttr(student.className || '')}</small></div>
-        <button class="bx-logout" data-act="logout" title="ចាកចេញពីគណនី">ចាកចេញ</button>` : `
-        <button class="bx-icon-btn" data-act="close" title="ត្រឡប់ទៅទំព័រដើម">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-        <div class="bx-top-title"><b>🧮 ប្រអប់គណនា</b><small>ពង្រឹងល្បឿន និងភាពត្រឹមត្រូវ</small></div>`}
-      </header>
-
+    root.innerHTML = headerHtml() + `
       <main class="bx-lobby">
         <section class="bx-intro">
           <div class="bx-intro-grid" aria-hidden="true">
@@ -283,23 +365,14 @@
           <p>យកលេខ <b>ខាងឆ្វេង</b> គណនាជាមួយលេខ <b>ខាងលើ</b> ហើយបំពេញប្រអប់ពីឆ្វេងទៅស្តាំ ពីលើចុះក្រោម។ ព្យាយាមឲ្យ <b>ត្រូវទាំងអស់</b> និង <b>លឿនបំផុត</b>!</p>
         </section>
 
-        <h3 class="bx-h">១. ជ្រើសកម្រិត</h3>
-        <div class="bx-levels">${levelChips}</div>
-
-        <h3 class="bx-h">២. ទំហំប្រអប់</h3>
-        <div class="bx-sizes">
-          <button class="bx-size ${S.size === 5 ? 'active' : ''}" data-size="5"><b>5 × 5</b><small>២៥ ប្រអប់ · លឿន</small></button>
-          <button class="bx-size ${S.size === 10 ? 'active' : ''}" data-size="10"><b>10 × 10</b><small>១០០ ប្រអប់ · ពេញ</small></button>
-        </div>
-
-        <h3 class="bx-h">៣. ចុចប្រមាណវិធី ដើម្បីចាប់ផ្តើម</h3>
+        <h3 class="bx-h">ជ្រើសប្រមាណវិធី</h3>
         <div class="bx-ops">${opTiles}</div>
 
         <section class="bx-record">
           <h3 class="bx-h">📒 កំណត់ត្រាសិក្សារបស់ខ្ញុំ</h3>
           <div class="bx-record-stats">
             <div><b>${kh(Math.round(store.totalSec / 60))}</b><span>នាទីហ្វឹកហាត់</span></div>
-            <div><b>${kh(store.attempts.length)}</b><span>ប្រអប់បានធ្វើ</span></div>
+            <div><b>${kh(store.attempts.length)}</b><span>ដងបានលេង</span></div>
             <div class="bx-medals"><span>🥇 ${kh(counts.gold)}</span><span>🥈 ${kh(counts.silver)}</span><span>🥉 ${kh(counts.bronze)}</span></div>
           </div>
           ${pendingNote}
@@ -308,27 +381,75 @@
         </section>
       </main>`;
 
-    root.querySelectorAll('[data-level]').forEach((b) => b.addEventListener('click', () => {
-      S.level = Number(b.dataset.level); savePref(); renderLobby();
-    }));
-    root.querySelectorAll('[data-size]').forEach((b) => b.addEventListener('click', () => {
-      S.size = Number(b.dataset.size); savePref(); renderLobby();
-    }));
-    root.querySelectorAll('[data-op]').forEach((b) => b.addEventListener('click', () => start(b.dataset.op)));
-    const closeBtn = $('[data-act="close"]');
-    if (closeBtn) closeBtn.addEventListener('click', close);
-    const logoutBtn = $('[data-act="logout"]');
-    if (logoutBtn) logoutBtn.addEventListener('click', () => {
-      if (confirm('តើប្អូនចង់ចាកចេញពីគណនីមែនទេ?') && onLogout) onLogout();
-    });
+    bindHeader();
+    root.querySelectorAll('[data-op]').forEach((b) => b.addEventListener('click', () => renderSetup(b.dataset.op)));
     root.scrollTop = 0;
   }
 
-  /* ---------- play ---------- */
-  function start(op) {
+  /* ---------- setup: boxes + level ---------- */
+  function renderSetup(op) {
+    stopTimer();
+    S.running = false;
+    S.finished = false;
     S.op = op;
-    S.puzzle = generate(op, S.level, S.size);
-    S.answers = new Array(S.size * S.size).fill('');
+    const pref = S.prefs[op] || {};
+    S.level = pref.level || S.level || 1;
+    S.boxes = BOXES[pref.boxes] ? pref.boxes : (BOXES[S.boxes] ? S.boxes : 20);
+    const store = loadStore();
+    const o = OPS[op];
+
+    const boxChips = BOX_LIST.map((b) => `
+      <button class="bx-box ${S.boxes === b ? 'active' : ''}" data-boxes="${b}">
+        <b>${kh(b)}</b><small>ប្រអប់ · ${BOXES[b].rows}×${BOXES[b].cols}</small>
+      </button>`).join('');
+
+    const levelCards = LV[op].slice(1).map((l, i) => {
+      const n = i + 1;
+      const b = store.best[bestKey(op, n, S.boxes)];
+      const badge = b ? `<span class="bx-lv-best">${MEDAL[b.medal].ico} ${b.acc}%</span>` : '';
+      return `
+        <button class="bx-lv ${S.level === n ? 'active' : ''}" data-level="${n}">
+          <span class="bx-lv-num">${kh(n)}</span>
+          <span class="bx-lv-txt"><b>${l.name}</b><small>${fmtEx(l.ex)}</small></span>
+          ${badge}
+        </button>`;
+    }).join('');
+
+    root.innerHTML = `
+      <header class="bx-top">
+        <button class="bx-icon-btn" data-act="lobby" title="ត្រឡប់">${backIcon}</button>
+        <div class="bx-top-title"><b><span class="bx-op-chip ${o.color}">${o.sym}</span> ${o.long || o.name}</b><small>ជ្រើសចំនួនប្រអប់ និងកម្រិត</small></div>
+      </header>
+      <main class="bx-lobby bx-setup">
+        <h3 class="bx-h">១. ចំនួនប្រអប់</h3>
+        <div class="bx-boxes">${boxChips}</div>
+
+        <h3 class="bx-h">២. កម្រិត</h3>
+        <div class="bx-lvs">${levelCards}</div>
+
+        <div class="bx-start-bar">
+          <div class="bx-start-sum"><b>${o.name} · កម្រិត ${kh(S.level)}</b><small>${LV[op][S.level].name} · ${kh(S.boxes)} ប្រអប់</small></div>
+          <button class="bx-start ${o.color}" data-act="start">ចាប់ផ្តើម ▶</button>
+        </div>
+      </main>`;
+
+    $('[data-act="lobby"]').addEventListener('click', renderLobby);
+    root.querySelectorAll('[data-boxes]').forEach((b) => b.addEventListener('click', () => {
+      S.boxes = Number(b.dataset.boxes); savePrefs(); renderSetup(op);
+    }));
+    root.querySelectorAll('[data-level]').forEach((b) => b.addEventListener('click', () => {
+      S.level = Number(b.dataset.level); savePrefs(); renderSetup(op);
+    }));
+    $('[data-act="start"]').addEventListener('click', () => { savePrefs(); start(); });
+    const active = $('.bx-lv.active');
+    if (active && active.scrollIntoView && S.level > 4) active.scrollIntoView({ block: 'center' });
+    else root.scrollTop = 0;
+  }
+
+  /* ---------- play ---------- */
+  function start() {
+    S.puzzle = generate(S.op, S.level, S.boxes);
+    S.answers = new Array(total()).fill('');
     S.active = 0;
     S.elapsed = 0;
     S.finished = false;
@@ -369,40 +490,41 @@
   }
 
   function renderPlay() {
-    const { top, side, cells, isDiv } = S.puzzle;
-    const n = S.size;
-    const opInfo = OPS[S.op];
-    const lvl = LEVELS[S.level - 1];
+    const P = S.puzzle;
+    const o = OPS[S.op];
+    const lvl = LV[S.op][S.level];
 
-    let grid = `<div class="bx-grid ${isDiv ? 'is-div' : ''}" style="--n:${n}">`;
-    grid += `<div class="bx-corner ${opInfo.color}">${opInfo.sym}</div>`;
-    top.forEach((t) => { grid += `<div class="bx-head bx-head-top">${fmtHead(t)}</div>`; });
-    for (let r = 0; r < n; r++) {
-      grid += `<div class="bx-head bx-head-side">${isDiv ? r + 1 : fmtHead(side[r])}</div>`;
-      for (let c = 0; c < n; c++) {
-        const i = r * n + c;
-        const given = isDiv ? `<i class="bx-given">${fmt(cells[r][c].given)}</i>` : '';
-        grid += `<button class="bx-cell" data-i="${i}">${given}<span class="bx-val"></span></button>`;
+    let grid = `<div class="bx-grid bx-${P.kind}" style="--cols:${P.cols};--rows:${P.rows}">`;
+    grid += `<div class="bx-corner ${o.color}">${o.sym}</div>`;
+    P.top.forEach((t) => { grid += `<div class="bx-head bx-head-top">${fmtHead(t)}</div>`; });
+    for (let r = 0; r < P.rows; r++) {
+      grid += `<div class="bx-head bx-head-side">${P.kind === 'div' ? r + 1 : fmtHead(P.side[r])}</div>`;
+      for (let c = 0; c < P.cols; c++) {
+        const i = r * P.cols + c;
+        const cell = P.cells[r][c];
+        const given = cell.op === 'div' ? `<i class="bx-given">${fmt(cell.given)}</i>` : '';
+        const badge = P.kind === 'mix' ? `<i class="bx-cell-op op-${cell.op}">${CELL_OP_SYM[cell.op]}</i>` : '';
+        grid += `<button class="bx-cell ${cell.op === 'div' ? 'has-given' : ''}" data-i="${i}">${badge}${given}<span class="bx-val"></span></button>`;
       }
     }
     grid += '</div>';
 
-    const instr = isDiv
+    const instr = P.kind === 'div'
       ? 'យកលេខតូចក្នុងប្រអប់ ចែកនឹងលេខខាងលើ'
-      : `យកលេខខាងឆ្វេង ${opInfo.sym} លេខខាងលើ`;
+      : P.kind === 'mix'
+        ? 'មើលសញ្ញាក្នុងប្រអប់នីមួយៗ៖ លេខខាងឆ្វេង (សញ្ញា) លេខខាងលើ · ប្រអប់ ÷ យកលេខតូច ចែកនឹងលេខខាងលើ'
+        : `យកលេខខាងឆ្វេង ${o.sym} លេខខាងលើ`;
 
     root.innerHTML = `
       <header class="bx-top">
-        <button class="bx-icon-btn" data-act="back" title="ត្រឡប់">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-        <div class="bx-top-title"><b><span class="bx-op-chip ${opInfo.color}">${opInfo.sym}</span> ${opInfo.name} · កម្រិត ${kh(S.level)}</b><small>${lvl.name} · ${n}×${n}</small></div>
+        <button class="bx-icon-btn" data-act="back" title="ត្រឡប់">${backIcon}</button>
+        <div class="bx-top-title"><b><span class="bx-op-chip ${o.color}">${o.sym}</span> ${o.name} · កម្រិត ${kh(S.level)}</b><small>${lvl.name} · ${kh(total())} ប្រអប់</small></div>
         <div class="bx-clock-wrap"><span class="bx-clock">0.0</span><small>វិនាទី</small></div>
       </header>
 
       <div class="bx-play">
         <div class="bx-board">
-          <div class="bx-progress"><span class="bx-progress-fill"></span><b class="bx-progress-txt">0 / ${n * n}</b></div>
+          <div class="bx-progress"><span class="bx-progress-fill"></span><b class="bx-progress-txt">0 / ${total()}</b></div>
           <p class="bx-instr">${instr}</p>
           <div class="bx-grid-scroll">${grid}</div>
         </div>
@@ -426,18 +548,17 @@
       setActive(Number(cell.dataset.i));
     }));
     root.querySelectorAll('[data-k]').forEach((b) => b.addEventListener('click', () => press(b.dataset.k)));
-    $('[data-act="finish"]').addEventListener('click', () => finish(false));
+    $('[data-act="finish"]').addEventListener('click', () => finish());
     $('[data-act="back"]').addEventListener('click', () => {
       if (S.running && !confirm('កំពុងគណនា! តើចង់ឈប់ ហើយត្រឡប់ក្រោយមែនទេ?')) return;
-      renderLobby();
+      renderSetup(S.op);
     });
     setActive(0);
     root.scrollTop = 0;
   }
 
   function setActive(i) {
-    const n2 = S.size * S.size;
-    if (i < 0 || i >= n2) return;
+    if (i < 0 || i >= total()) return;
     const prev = root.querySelector('.bx-cell.active');
     if (prev) prev.classList.remove('active');
     S.active = i;
@@ -465,17 +586,17 @@
     if (k === 'back') v = v.slice(0, -1);
     else if (k === '-') v = v.startsWith('-') ? v.slice(1) : '-' + v;
     else if (k === '.') { if (!v.includes('.')) v = (v === '' || v === '-' ? v + '0' : v) + '.'; }
-    else if (/^[0-9]$/.test(k)) { if (v.replace(/[-.]/g, '').length < 6) v += k; }
+    else if (/^[0-9]$/.test(k)) { if (v.replace(/[-.]/g, '').length < 7) v += k; }
     S.answers[i] = v;
     paintCell(i);
     updateProgress();
   }
 
   function advance() {
-    const n2 = S.size * S.size;
-    // Jump to the next empty cell (left→right, top→down, wrapping)
-    for (let step = 1; step < n2; step++) {
-      const j = (S.active + step) % n2;
+    const n = total();
+    // Jump to the next empty box (left→right, top→down, wrapping)
+    for (let step = 1; step < n; step++) {
+      const j = (S.active + step) % n;
       if (S.answers[j] === '' || S.answers[j] === '-') { setActive(j); return; }
     }
   }
@@ -489,13 +610,13 @@
   }
 
   function updateProgress() {
-    const total = S.size * S.size;
+    const n = total();
     const filled = S.answers.filter((v) => v !== '' && v !== '-').length;
     const fill = $('.bx-progress-fill');
     const txt = $('.bx-progress-txt');
-    if (fill) fill.style.width = `${(filled / total) * 100}%`;
-    if (txt) txt.textContent = `${filled} / ${total}`;
-    if (filled === total) {
+    if (fill) fill.style.width = `${(filled / n) * 100}%`;
+    if (txt) txt.textContent = `${filled} / ${n}`;
+    if (filled === n) {
       const fin = $('.bx-finish');
       if (fin) fin.classList.add('ready');
     }
@@ -506,22 +627,22 @@
     return Number(v);
   };
 
-  function finish(fromKey) {
+  function finish() {
     if (!S.running || S.finished) return;
-    const total = S.size * S.size;
+    const P = S.puzzle;
+    const n = total();
     const filled = S.answers.filter((v) => v !== '' && v !== '-').length;
-    if (filled < total && !confirm(`នៅសល់ ${total - filled} ប្រអប់ទទេ។ តើចង់បញ្ចប់ឥឡូវនេះមែនទេ?`)) return;
+    if (filled < n && !confirm(`នៅសល់ ${n - filled} ប្រអប់ទទេ។ តើចង់បញ្ចប់ឥឡូវនេះមែនទេ?`)) return;
 
     tick();
     stopTimer();
     S.running = false;
     S.finished = true;
 
-    const n = S.size;
     let correct = 0;
-    for (let i = 0; i < total; i++) {
-      const r = Math.floor(i / n), c = i % n;
-      const ans = S.puzzle.cells[r][c].ans;
+    for (let i = 0; i < n; i++) {
+      const r = Math.floor(i / P.cols), c = i % P.cols;
+      const ans = P.cells[r][c].ans;
       const got = parse(S.answers[i]);
       const ok = !isNaN(got) && Math.abs(got - ans) < 1e-6;
       if (ok) correct++;
@@ -532,29 +653,30 @@
     }
 
     const sec = Math.round(S.elapsed * 10) / 10;
-    const acc = Math.round((correct / total) * 100);
-    const target = SEC_BASE[S.op] * SEC_LEVEL[S.level] * total;
+    const acc = Math.round((correct / n) * 100);
+    const target = SEC_BASE[S.op] * SEC_LEVEL[S.level] * n;
     const medal = medalFor(acc, sec, target);
 
     const now = new Date();
     const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-    const attempt = { op: S.op, level: S.level, size: n, correct, total, acc, sec, medal, date };
+    const attempt = { op: S.op, level: S.level, boxes: S.boxes, rows: P.rows, cols: P.cols, correct, total: n, acc, sec, medal, date };
 
     const store = loadStore();
     store.attempts.unshift(attempt);
     if (store.attempts.length > 200) store.attempts.length = 200;
     store.totalSec = (store.totalSec || 0) + sec;
-    const key = bestKey(S.op, S.level, n);
+    const key = bestKey(S.op, S.level, S.boxes);
     const prevBest = store.best[key];
     const isBest = !prevBest || acc > prevBest.acc || (acc === prevBest.acc && sec < prevBest.sec);
-    if (isBest) store.best[key] = { acc, sec, medal };
+    if (isBest) store.best[key] = { acc, sec, medal: MEDAL_RANK[medal] >= MEDAL_RANK[(prevBest && prevBest.medal) || 'none'] ? medal : prevBest.medal };
     saveStore(store);
 
     S.lastResult = Object.assign({ isBest, target }, attempt);
     S.cloudSave = null;
     if (window.Cloud && Cloud.isStudent()) {
       S.cloudSave = Cloud.saveResult('boxcalc', {
-        op: attempt.op, level: attempt.level, size: attempt.size,
+        op: attempt.op, level: attempt.level, boxes: attempt.boxes,
+        rows: attempt.rows, cols: attempt.cols,
         correct: attempt.correct, total: attempt.total, acc: attempt.acc,
         sec: attempt.sec, medal: attempt.medal
       });
@@ -567,7 +689,8 @@
     const m = MEDAL[R.medal];
     const sheetUrl = (window.App && typeof App.getTeacherSheetUrl === 'function') ? App.getTeacherSheetUrl() : '';
     const info = (window.App && typeof App.getStudentInfo === 'function') ? App.getStudentInfo() : {};
-    const opInfo = OPS[R.op];
+    const o = OPS[R.op];
+    const canNext = R.acc >= 90 && R.level < 10;
 
     const isCloud = !!S.cloudSave;
     const sendBlock = isCloud ? `
@@ -582,13 +705,14 @@
         <button class="bx-btn bx-btn-send" data-act="send">ផ្ញើទៅ Google Sheet</button>
         <p class="bx-send-status"></p>
       </div>` : `
-      <p class="bx-saved">💾 លទ្ធផលបានរក្សាទុកក្នុងឧបករណ៍នេះរួចហើយ។ ដើម្បីផ្ញើទៅលោកគ្រូ សូមបើកតាម Link ដែលលោកគ្រូផ្ញើឲ្យ។</p>`;
+      <p class="bx-saved">💾 លទ្ធផលបានរក្សាទុកក្នុងឧបករណ៍នេះរួចហើយ។</p>`;
 
     $('.bx-result-layer').innerHTML = `
       <div class="bx-result medal-${R.medal}">
         <button class="bx-result-min" data-act="peek" title="មើលប្រអប់">មើលចម្លើយ ▾</button>
         <div class="bx-result-medal">${m.ico}</div>
         <h3>${m.name}</h3>
+        <p class="bx-result-sub">${o.name} · កម្រិត ${kh(R.level)} · ${kh(R.total)} ប្រអប់</p>
         ${R.isBest ? '<span class="bx-best-tag">🏆 កំណត់ត្រាថ្មី!</span>' : ''}
         <div class="bx-result-stats">
           <div><b>${R.acc}%</b><span>ត្រឹមត្រូវ</span></div>
@@ -597,16 +721,19 @@
         </div>
         <p class="bx-target">⏱️ ពេលកំណត់សម្រាប់មេដាយមាស៖ ${fmtTime(R.target)}</p>
         ${sendBlock}
-        <div class="bx-result-actions">
-          <button class="bx-btn bx-btn-ghost" data-act="lobby">← ម៉ឺនុយ</button>
-          <button class="bx-btn ${opInfo.color}" data-act="again">🔁 លេងម្តងទៀត</button>
+        <div class="bx-result-actions ${canNext ? 'three' : ''}">
+          <button class="bx-btn bx-btn-ghost" data-act="setup">← ជ្រើសកម្រិត</button>
+          <button class="bx-btn ${canNext ? 'bx-btn-ghost' : o.color}" data-act="again">🔁 ម្តងទៀត</button>
+          ${canNext ? `<button class="bx-btn ${o.color}" data-act="next">កម្រិត ${kh(R.level + 1)} →</button>` : ''}
         </div>
       </div>`;
 
     const layer = $('.bx-result-layer');
     layer.classList.add('show');
-    layer.querySelector('[data-act="lobby"]').addEventListener('click', renderLobby);
-    layer.querySelector('[data-act="again"]').addEventListener('click', () => start(S.op));
+    layer.querySelector('[data-act="setup"]').addEventListener('click', () => renderSetup(S.op));
+    layer.querySelector('[data-act="again"]').addEventListener('click', start);
+    const nextBtn = layer.querySelector('[data-act="next"]');
+    if (nextBtn) nextBtn.addEventListener('click', () => { S.level += 1; savePrefs(); start(); });
     layer.querySelector('[data-act="peek"]').addEventListener('click', () => {
       layer.classList.remove('show');
       const fin = $('.bx-finish');
@@ -654,14 +781,14 @@
     const info = Object.assign({}, prev, { name, classRoom, rollNo });
     if (window.App && App.saveStudentInfo) App.saveStudentInfo(info);
 
-    const opInfo = OPS[R.op];
+    const o = OPS[R.op];
     const payload = {
       timestamp: R.date,
       studentName: name,
       studentClass: classRoom,
       rollNumber: rollNo || '-',
       grade: info.grade || '7',
-      lessonTitle: `🧮 ប្រអប់គណនា (${opInfo.sym} ${opInfo.name}) · កម្រិត ${R.level} ${LEVELS[R.level - 1].name} · ${R.size}×${R.size}`,
+      lessonTitle: `🧮 ប្រអប់គណនា (${o.sym} ${o.name}) · កម្រិត ${R.level} ${LV[R.op][R.level].name} · ${R.total} ប្រអប់`,
       pointTitle: `⏱️ ${R.sec.toFixed(1)} វិនាទី · ${MEDAL[R.medal].ico} ${MEDAL[R.medal].name}`,
       score: R.correct,
       total: R.total,
@@ -696,19 +823,21 @@
     if (e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
     if (e.key === 'Escape') { if (!student) { e.preventDefault(); close(); } return; }
     if (!S.running) return;
-    const n = S.size;
+    const cols = S.puzzle.cols;
+    const n = total();
     const k = e.key;
     if (/^[0-9]$/.test(k)) press(k);
     else if (k === '.' || k === ',') press('.');
     else if (k === '-' || k === '−') press('-');
     else if (k === 'Backspace') press('back');
-    else if (k === 'Enter' || k === 'Tab' || k === 'ArrowRight') { if (k === 'ArrowRight') setActive(Math.min(S.active + 1, n * n - 1)); else advance(); }
+    else if (k === 'Enter' || k === 'Tab') advance();
+    else if (k === 'ArrowRight') setActive(Math.min(S.active + 1, n - 1));
     else if (k === 'ArrowLeft') setActive(Math.max(S.active - 1, 0));
-    else if (k === 'ArrowDown') setActive(Math.min(S.active + n, n * n - 1));
-    else if (k === 'ArrowUp') setActive(Math.max(S.active - n, 0));
+    else if (k === 'ArrowDown') setActive(Math.min(S.active + cols, n - 1));
+    else if (k === 'ArrowUp') setActive(Math.max(S.active - cols, 0));
     else return;
     e.preventDefault();
   }
 
-  window.BoxCalc = { open, close, setStudentMode, _generate: generate };
+  window.BoxCalc = { open, close, setStudentMode, _generate: generate, _levels: LV };
 })();

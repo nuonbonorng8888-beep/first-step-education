@@ -1,8 +1,8 @@
 {
-  "version": "v139",
-  "build": 139,
-  "date": "2026-11-16",
+  "version": "v140",
+  "build": 140,
+  "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Login screen title now reads \"ចូលប្រព័ន្ធ Worksheet.Kh\" since students log in there too. App available at worksheet-kh.vercel.app.",
-  "lastUpdated": "2026-11-17T00:50:00+07:00"
+  "changelog": "Box Calculation: choose 10 / 20 / 50 / 100 boxes and levels 1–10 for every operation; new mixed operation (+ − × ÷ ចម្រុះ) with its own 10 levels; Next-level button after a good result. Teacher dashboard text is now a readable fixed size at normal zoom (no need to zoom out).",
+  "lastUpdated": "2026-11-17T01:30:00+07:00"
 }
