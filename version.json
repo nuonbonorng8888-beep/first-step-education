@@ -1,8 +1,8 @@
 {
-  "version": "v136",
-  "build": 136,
+  "version": "v137",
+  "build": 137,
   "date": "2026-11-16",
   "author": "Nuon Bonong",
-  "changelog": "Faster loading: book covers and mascot resized (19.9 MB -> 0.5 MB, still sharp on high-resolution phones); the offline cache no longer pre-downloads ~23 MB of data on the first visit; code, styles and covers load instantly from the phone cache on return visits; data files are only re-downloaded when they change; the question bank preloads after the home screen instead of competing with it.",
-  "lastUpdated": "2026-11-16T23:00:00+07:00"
+  "changelog": "Student accounts are now connected to Firebase (project worksheet-kh): students can log in with the ID and password from their slip, Box Calculation results are saved for the teacher, and teachers manage classes and results in 🎓 សិស្ស & លទ្ធផល.",
+  "lastUpdated": "2026-11-16T23:45:00+07:00"
 }
