@@ -47,9 +47,44 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=144">
-  <link rel="stylesheet" href="css/box-calc.css?v=144">
-  <link rel="stylesheet" href="css/accounts.css?v=144">
+  <link rel="stylesheet" href="css/style.css?v=145">
+  <link rel="stylesheet" href="css/box-calc.css?v=145">
+  <link rel="stylesheet" href="css/accounts.css?v=145">
+  <!-- Keep the app at its normal size when the browser is zoomed out
+       (Chrome/Edge remember zoom per site). Zooming in is respected. -->
+  <script>
+    (function () {
+      function fix() {
+        try {
+          var forced = Number(window.__forceZoomRatio || sessionStorage.getItem('ws_force_zoom')) || 0;
+          if (!forced && window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
+          var z = forced || (window.outerWidth / window.innerWidth);
+          var el = document.documentElement;
+          if (!('zoom' in el.style)) return;
+          if (z && isFinite(z) && z < 0.95) {
+            var c = Math.round(100 / z) / 100;
+            // Real screen width in normal (100%) pixels decides the text size,
+            // exactly like the CSS breakpoints would at 100% zoom
+            var w = window.innerWidth * z;
+            el.style.zoom = String(c);
+            el.style.setProperty('--zc', String(c));
+            var fs = w >= 3200 ? 32 : w >= 2200 ? 26 : w >= 1800 ? 22 : w >= 1440 ? 21 : w >= 1024 ? 20 : w >= 640 ? 19 : 18;
+            el.style.setProperty('font-size', fs + 'px', 'important');
+            // the 2200px+ / 3200px+ layout rules must follow the real screen too
+            el.classList.toggle('zc-normal', w < 2200);
+          } else {
+            el.style.zoom = '';
+            el.style.removeProperty('--zc');
+            el.style.removeProperty('font-size');
+            el.classList.remove('zc-normal');
+          }
+        } catch (e) {}
+      }
+      fix();
+      var t;
+      window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fix, 150); });
+    })();
+  </script>
 </head>
 <body>
 
@@ -949,7 +984,7 @@
 
   <!-- ================= MEMBER TEACHERS & ACTIVITY MONITORING DASHBOARD ================= -->
   <div class="modal-overlay" id="member-dashboard-modal" onclick="if(event.target === this) App.closeMemberDashboardModal()">
-    <div class="modal-card modal-xl-desktop" style="max-height: 90vh;">
+    <div class="modal-card modal-xl-desktop" style="max-height: calc(90vh / var(--zc, 1));">
       <div class="modal-header">
         <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
           <h3 class="modal-title">👥 គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព</h3>
@@ -1463,7 +1498,7 @@
           <button class="btn-icon" onclick="App.closeTeacherSheetModal()">✕</button>
         </div>
       </div>
-      <div class="modal-body" style="gap: 16px; max-height: 82vh; overflow-y: auto;">
+      <div class="modal-body" style="gap: 16px; max-height: calc(82vh / var(--zc, 1)); overflow-y: auto;">
         <div class="desktop-two-col-grid" style="display: flex; flex-direction: column; gap: 16px;">
           <!-- COLUMN 1: Profile, Generator Banner, Webhook & Status -->
           <div style="display: flex; flex-direction: column; gap: 14px;">
@@ -1734,14 +1769,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/firebase-config.js?v=144"></script>
-  <script src="js/cloud.js?v=144"></script>
-  <script src="js/storage.js?v=144"></script>
-  <script src="js/question-bank.js?v=144"></script>
-  <script src="js/app.js?v=144"></script>
-  <script src="js/visits.js?v=144"></script>
-  <script src="js/box-calc.js?v=144"></script>
-  <script src="js/accounts.js?v=144"></script>
+  <script src="js/firebase-config.js?v=145"></script>
+  <script src="js/cloud.js?v=145"></script>
+  <script src="js/storage.js?v=145"></script>
+  <script src="js/question-bank.js?v=145"></script>
+  <script src="js/app.js?v=145"></script>
+  <script src="js/visits.js?v=145"></script>
+  <script src="js/box-calc.js?v=145"></script>
+  <script src="js/accounts.js?v=145"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {

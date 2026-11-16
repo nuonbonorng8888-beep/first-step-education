@@ -1,8 +1,8 @@
 {
-  "version": "14.4",
-  "build": 144,
+  "version": "14.5",
+  "build": 145,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Teacher dashboard now scales itself to normal size automatically when the browser is zoomed out - no need to press Ctrl+0.",
-  "lastUpdated": "2026-11-17T13:00:00+07:00"
+  "changelog": "The whole app now keeps its normal size when the browser (Chrome/Edge) is zoomed out - no need to press Ctrl+0 on any computer. Top bar shows icons only so it always fits.",
+  "lastUpdated": "2026-11-17T14:00:00+07:00"
 }

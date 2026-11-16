@@ -644,7 +644,7 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card modal-lg-desktop" style="max-width: 1100px; width: 95%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card modal-lg-desktop" style="max-width: 1100px; width: 95%; max-height: calc(90vh / var(--zc, 1)); overflow-y: auto;">
         <!-- Header -->
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
@@ -1492,7 +1492,7 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card modal-xl-desktop" style="max-width: 1250px; width: 96%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card modal-xl-desktop" style="max-width: 1250px; width: 96%; max-height: calc(90vh / var(--zc, 1)); overflow-y: auto;">
         <!-- Header -->
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
@@ -1895,7 +1895,7 @@ class QuestionBankController {
     };
 
     modalBack.innerHTML = `
-      <div class="modal-card modal-lg-desktop" style="max-width: 950px; width: 95%; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-card modal-lg-desktop" style="max-width: 950px; width: 95%; max-height: calc(90vh / var(--zc, 1)); overflow-y: auto;">
         <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 12px; margin-bottom: 16px;">
           <div>
             <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">

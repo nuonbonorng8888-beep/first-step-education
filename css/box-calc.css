@@ -323,7 +323,7 @@ body.bx-lock { overflow: hidden; }
 .bx-instr { margin: 10px 2px; font-size: 0.86rem; color: var(--bx-text-2); }
 .bx-grid-scroll { overflow-x: auto; padding-bottom: 4px; }
 .bx-grid {
-  --cell: clamp(36px, min(calc((100vw - 420px) / (var(--cols) + 1)), calc((100vh - 250px) / (var(--rows) + 1))), 76px);
+  --cell: clamp(36px, min(calc((calc(100vw / var(--zc, 1)) - 420px) / (var(--cols) + 1)), calc((calc(100vh / var(--zc, 1)) - 250px) / (var(--rows) + 1))), 76px);
   display: grid;
   grid-template-columns: repeat(calc(var(--cols) + 1), var(--cell));
   grid-auto-rows: var(--cell);
@@ -644,7 +644,7 @@ body:not(.light-theme) .bx-box.active b { color: #7aa7ff; }
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 12px max(16px, calc((100vw - 980px) / 2 + 16px)) calc(12px + env(safe-area-inset-bottom, 0px));
+  padding: 12px max(16px, calc((calc(100vw / var(--zc, 1)) - 980px) / 2 + 16px)) calc(12px + env(safe-area-inset-bottom, 0px));
   background: var(--bx-surface);
   border-top: 1px solid var(--bx-line);
 }
@@ -677,7 +677,7 @@ body:not(.light-theme) .bx-box.active b { color: #7aa7ff; }
   .bx-op { min-height: 128px; }
   .bx-play { grid-template-columns: minmax(0, 1fr); padding: 10px 10px 0; gap: 10px; }
   .bx-board { padding: 10px; border-radius: 18px; margin-bottom: 250px; }
-  .bx-grid { --cell: clamp(34px, calc((100vw - 40px) / (var(--cols) + 1) - 3px), 64px); gap: 3px; }
+  .bx-grid { --cell: clamp(34px, calc((calc(100vw / var(--zc, 1)) - 40px) / (var(--cols) + 1) - 3px), 64px); gap: 3px; }
   .bx-corner, .bx-head, .bx-cell { border-radius: 7px; }
   .bx-head, .bx-cell { font-size: calc(var(--cell) * 0.4); }
   .bx-board { padding: 8px; }

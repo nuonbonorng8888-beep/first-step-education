@@ -208,9 +208,8 @@
   const cssZoomSupported = typeof document !== 'undefined' && 'zoom' in document.documentElement.style;
 
   function applyZoomFix() {
-    if (!A.root) return;
-    const z = browserZoom();
-    A.root.style.zoom = cssZoomSupported && z < 0.8 ? String(Math.round((1 / z) * 100) / 100) : '';
+    // The whole page is now zoom-corrected in index.html; nothing extra here
+    if (A.root) A.root.style.zoom = '';
   }
 
   function zoomHint() {

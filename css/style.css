@@ -118,7 +118,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
-  min-height: 100vh;
+  min-height: calc(100vh / var(--zc, 1));
   max-width: 100%;
   overflow-x: hidden;
   position: relative;
@@ -153,8 +153,8 @@ body {
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 95vw;
-    width: 95vw;
+    max-width: calc(95vw / var(--zc, 1));
+    width: calc(95vw / var(--zc, 1));
     max-width: 1650px;
     padding: 0 32px;
   }
@@ -162,8 +162,8 @@ body {
 
 @media (min-width: 1440px) {
   .container {
-    max-width: 95vw;
-    width: 95vw;
+    max-width: calc(95vw / var(--zc, 1));
+    width: calc(95vw / var(--zc, 1));
     max-width: 1780px;
     padding: 0 40px;
   }
@@ -2565,7 +2565,7 @@ body.light-theme .quiz-explanation .katex * {
   gap: 16px;
   position: sticky;
   top: 80px;
-  max-height: calc(100vh - 95px);
+  max-height: calc(calc(100vh / var(--zc, 1)) - 95px);
   overflow-y: auto;
   scrollbar-width: thin;
 }
@@ -2736,7 +2736,7 @@ body.light-theme .quiz-explanation .katex * {
 .modal-card {
   width: 100%;
   max-width: 680px;
-  max-height: 90vh;
+  max-height: calc(90vh / var(--zc, 1));
   background: var(--bg-secondary);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
@@ -2751,29 +2751,29 @@ body.light-theme .quiz-explanation .katex * {
 /* Responsive Desktop Modal Proportions */
 @media (min-width: 1024px) {
   .modal-card.modal-lg-desktop {
-    max-width: min(94vw, 1180px);
-    width: 94vw;
+    max-width: min(calc(94vw / var(--zc, 1)), 1180px);
+    width: calc(94vw / var(--zc, 1));
   }
   .modal-card.modal-xl-desktop {
-    max-width: min(96vw, 1340px);
-    width: 96vw;
+    max-width: min(calc(96vw / var(--zc, 1)), 1340px);
+    width: calc(96vw / var(--zc, 1));
   }
   .modal-card.modal-full-desktop {
-    max-width: 98vw;
-    width: 98vw;
+    max-width: calc(98vw / var(--zc, 1));
+    width: calc(98vw / var(--zc, 1));
   }
 }
 
 /* Maximized / Fullscreen Modal Mode */
 .modal-card.is-maximized {
-  max-width: 98vw !important;
-  width: 98vw !important;
-  max-height: 96vh !important;
-  height: 96vh !important;
+  max-width: calc(98vw / var(--zc, 1)) !important;
+  width: calc(98vw / var(--zc, 1)) !important;
+  max-height: calc(96vh / var(--zc, 1)) !important;
+  height: calc(96vh / var(--zc, 1)) !important;
   border-radius: 14px !important;
 }
 .modal-card.is-maximized .modal-body {
-  max-height: calc(96vh - 75px) !important;
+  max-height: calc(calc(96vh / var(--zc, 1)) - 75px) !important;
   height: 100% !important;
 }
 
@@ -2919,9 +2919,9 @@ body.light-theme .quiz-explanation .katex * {
 
 /* PDF Modal (Large) */
 .pdf-modal-card {
-  max-width: 95vw;
+  max-width: calc(95vw / var(--zc, 1));
   width: 1100px;
-  height: 90vh;
+  height: calc(90vh / var(--zc, 1));
 }
 
 .pdf-viewer-frame {
@@ -5123,8 +5123,8 @@ body.dark-mode .ws-sol-rubric {
 
 /* Fullscreen Mode Styling */
 #math-3d-stage:fullscreen {
-  width: 100vw !important;
-  height: 100vh !important;
+  width: calc(100vw / var(--zc, 1)) !important;
+  height: calc(100vh / var(--zc, 1)) !important;
   display: flex !important;
   flex-direction: column !important;
   background: #060913 !important;
@@ -5142,7 +5142,7 @@ body.dark-mode .ws-sol-rubric {
 
 #math-3d-stage:fullscreen .math-3d-laboratory-deck {
   flex: 0 0 auto !important;
-  max-height: 38vh !important;
+  max-height: calc(38vh / var(--zc, 1)) !important;
   overflow-y: auto !important;
   padding: 10px 18px 14px !important;
   background: rgba(10, 15, 29, 0.96) !important;
@@ -7446,7 +7446,7 @@ body.portal-locked .gate-hide-on-lock {
   width: 100%;
   max-width: 540px;
   height: auto !important;
-  max-height: 94vh;
+  max-height: calc(94vh / var(--zc, 1));
   overflow-y: auto;
   transition: max-width 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateZ(0);
@@ -7496,7 +7496,7 @@ body.portal-locked .gate-lock-card {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-height: min(72vh, 560px);
+  max-height: min(calc(72vh / var(--zc, 1)), 560px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   padding: 4px 2px;
@@ -7609,9 +7609,9 @@ body.portal-locked .gate-lock-card {
 @media (min-width: 768px) {
   .gate-lock-card {
     max-width: 980px !important;
-    width: 94vw !important;
+    width: calc(94vw / var(--zc, 1)) !important;
     height: auto !important;
-    max-height: 94vh !important;
+    max-height: calc(94vh / var(--zc, 1)) !important;
     margin: auto !important;
     border-radius: 26px !important;
     padding: 24px 30px !important;
@@ -7652,7 +7652,7 @@ body.portal-locked .gate-lock-card {
   /* PIN View on Tablets & Scaled Screens */
   .gate-lock-card.view-mode-pin {
     max-width: 660px !important;
-    width: min(660px, 92vw) !important;
+    width: min(660px, calc(92vw / var(--zc, 1))) !important;
     padding: 24px 28px !important;
   }
   #gate-view-pin > form {
@@ -7672,9 +7672,9 @@ body.portal-locked .gate-lock-card {
 @media (min-width: 1024px) {
   .gate-lock-card {
     max-width: 1060px !important;
-    width: 94vw !important;
+    width: calc(94vw / var(--zc, 1)) !important;
     height: auto !important;
-    max-height: 94vh !important;
+    max-height: calc(94vh / var(--zc, 1)) !important;
     border-radius: 28px !important;
     padding: 28px 36px !important;
   }
@@ -7708,7 +7708,7 @@ body.portal-locked .gate-lock-card {
   /* Desktop PIN View: Spacious, Luxurious & Prominent */
   .gate-lock-card.view-mode-pin {
     max-width: 700px !important;
-    width: min(700px, 92vw) !important;
+    width: min(700px, calc(92vw / var(--zc, 1))) !important;
   }
   #gate-view-pin > form {
     max-width: 640px !important;
@@ -7796,17 +7796,17 @@ body.portal-locked .gate-lock-card {
   }
   .gate-lock-card.view-mode-pin {
     max-width: 740px !important;
-    width: min(740px, 92vw) !important;
+    width: min(740px, calc(92vw / var(--zc, 1))) !important;
   }
 }
 
-/* Maximized Mode for Gate Lock Modal: Clean, Centered & Beautifully Proportioned Kiosk (Never Distorted 100vw, Zero Overlap, No Empty Void) */
+/* Maximized Mode for Gate Lock Modal: Clean, Centered & Beautifully Proportioned Kiosk (Never Distorted calc(100vw / var(--zc, 1)), Zero Overlap, No Empty Void) */
 .gate-lock-card.is-maximized {
-  max-width: min(1180px, 95vw) !important;
-  width: min(1180px, 95vw) !important;
+  max-width: min(1180px, calc(95vw / var(--zc, 1))) !important;
+  width: min(1180px, calc(95vw / var(--zc, 1))) !important;
   height: auto !important;
   min-height: auto !important;
-  max-height: 94vh !important;
+  max-height: calc(94vh / var(--zc, 1)) !important;
   margin: auto !important;
   border-radius: 28px !important;
   padding: 26px 36px !important;
@@ -7865,7 +7865,7 @@ body.portal-locked .gate-lock-card {
 /* Maximized PIN Input View */
 .gate-lock-card.is-maximized.view-mode-pin {
   max-width: 720px !important;
-  width: min(720px, 92vw) !important;
+  width: min(720px, calc(92vw / var(--zc, 1))) !important;
   padding: 28px 36px !important;
 }
 .gate-lock-card.is-maximized.view-mode-pin #gate-view-pin {
@@ -7998,7 +7998,7 @@ body.portal-locked .gate-lock-card {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  max-width: 90vw;
+  max-width: calc(90vw / var(--zc, 1));
   animation: slideUpBanner 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -8043,7 +8043,7 @@ body.portal-locked .gate-lock-card {
   background: #0b1120;
   padding: 30px 14px;
   overflow-y: auto;
-  max-height: calc(92vh - 65px);
+  max-height: calc(calc(92vh / var(--zc, 1)) - 65px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8187,10 +8187,10 @@ body.portal-locked .gate-lock-card {
     font-size: 26px !important;
   }
   .container {
-    max-width: min(2000px, 92vw) !important;
+    max-width: min(2000px, calc(92vw / var(--zc, 1))) !important;
   }
   .gate-lock-card {
-    max-width: min(1300px, 90vw) !important;
+    max-width: min(1300px, calc(90vw / var(--zc, 1))) !important;
   }
 }
 
@@ -8199,10 +8199,10 @@ body.portal-locked .gate-lock-card {
     font-size: 32px !important;
   }
   .container {
-    max-width: min(2800px, 94vw) !important;
+    max-width: min(2800px, calc(94vw / var(--zc, 1))) !important;
   }
   .gate-lock-card {
-    max-width: min(1600px, 92vw) !important;
+    max-width: min(1600px, calc(92vw / var(--zc, 1))) !important;
   }
 }
 
@@ -8280,13 +8280,13 @@ body.portal-locked .gate-lock-card {
 
 /* Low-zoom automatic responsiveness boost */
 body.low-zoom-detected .container {
-  max-width: 95vw !important;
-  width: 95vw !important;
+  max-width: calc(95vw / var(--zc, 1)) !important;
+  width: calc(95vw / var(--zc, 1)) !important;
 }
 
 body.low-zoom-detected .gate-lock-card {
-  max-width: min(1360px, 94vw) !important;
-  width: min(1360px, 94vw) !important;
+  max-width: min(1360px, calc(94vw / var(--zc, 1))) !important;
+  width: min(1360px, calc(94vw / var(--zc, 1))) !important;
 }
 
 /* Zoom Help Modal Styling */
@@ -9096,10 +9096,11 @@ body:not(.light-theme) .nav-user.is-admin .nav-user-role { color: #4ade80; }
 }
 .nav-user-out:hover { opacity: 1; background: rgba(229, 72, 77, 0.15); color: #e5484d; }
 
-/* Crowded bar (teacher/admin): icons only, labels stay in the tooltip */
+/* Crowded bar (teacher/admin): icons only on every screen, labels stay in
+   the tooltip (with labels the admin bar overflows even on 1920px screens) */
+.nav-actions .nav-auth-text { display: none; }
+.nav-actions .btn { padding: 6px 10px; }
 @media (max-width: 1700px) {
-  .nav-actions .nav-auth-text { display: none; }
-  .nav-actions .btn { padding: 6px 10px; }
   .brand-sub { display: none; }
   #nav-link-bank, #nav-link-exam-main { display: none; }
   .nav-search { max-width: 220px; min-width: 120px; }
@@ -9330,3 +9331,9 @@ body:not(.light-theme) .course-card.cc-g12 { --cc: #24365c; --cc-soft: rgba(140,
 .app-update-banner strong { color: var(--fx-text) !important; }
 
 .mobile-search-box.nav-search { flex: 1 1 auto; width: 100%; max-width: none; margin: 0; }
+
+/* Browser zoomed out + compensated (see index.html): the real screen is below
+   2200px, so use the normal desktop container instead of the huge-screen one */
+html.zc-normal .container:not(.nav-container) {
+  max-width: 1650px !important;
+}
