@@ -1,8 +1,8 @@
 {
-  "version": "v141",
-  "build": 141,
+  "version": "v142",
+  "build": 142,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Box Calculation: division is now top ÷ left with the answer typed into the empty box, and always divides exactly; every operation reads the same way (top sign left); mixed mode has exact ÷ boxes at every level from 3 up. Google: sitemap, robots and canonical now point to worksheet-kh.vercel.app.",
-  "lastUpdated": "2026-11-17T02:30:00+07:00"
+  "changelog": "Fix: the Update banner no longer reappears after updating (the app now reads its real version). Teacher dashboard shows a hint when the browser is zoomed out (press Ctrl+0).",
+  "lastUpdated": "2026-11-17T03:00:00+07:00"
 }

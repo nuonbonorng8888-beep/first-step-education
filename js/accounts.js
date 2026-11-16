@@ -190,6 +190,17 @@
     document.body.classList.remove('bx-lock');
   }
 
+  /* Browser zoom (desktop): window outer/inner width ratio. Chrome remembers
+     zoom per site, so a teacher who zoomed out once keeps seeing tiny text. */
+  function zoomHint() {
+    try {
+      if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return '';
+      const z = window.outerWidth / window.innerWidth;
+      if (!z || z > 0.85) return '';
+      return `<span class="acc-zoom" title="Chrome ចងចាំ Zoom សម្រាប់គេហទំព័រនេះ">🔍 Zoom ${Math.round(z * 100)}% · ចុច <kbd>Ctrl</kbd> + <kbd>0</kbd> ដើម្បីឲ្យធំធម្មតា</span>`;
+    } catch (e) { return ''; }
+  }
+
   function header(extra) {
     const p = Cloud.profile();
     return `
@@ -198,6 +209,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
         <div class="acc-title"><b>🎓 សិស្ស & លទ្ធផល</b><small>${p && Cloud.isTeacher() ? esc(p.name) + (Cloud.isAdmin() ? ' · Admin' : '') : 'គ្រប់គ្រងគណនីសិស្ស'}</small></div>
+        ${zoomHint()}
         ${extra || ''}
         ${p && Cloud.isTeacher() ? '<button class="acc-btn ghost sm" data-a="logout">ចាកចេញ</button>' : ''}
       </header>`;

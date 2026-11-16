@@ -433,15 +433,32 @@ function doGet(e) {
     }, 60000);
   },
 
+  /* The running build is the ?v= number of the loaded app.js (bumped with
+     every release together with version.json "build"). */
+  getRunningBuild() {
+    try {
+      const el = document.querySelector('script[src*="js/app.js"]');
+      const m = el && el.getAttribute('src').match(/[?&]v=(\d+)/);
+      return m ? Number(m[1]) : 0;
+    } catch (e) { return 0; }
+  },
+
+  isNewerVersion(data) {
+    if (!data) return false;
+    const running = this.getRunningBuild();
+    if (running && data.build) return Number(data.build) > running;
+    return !!(data.version && data.version !== this.appVersion);
+  },
+
   initAutoUpdateChecker() {
-    this.appVersion = 'v109';
+    this.appVersion = 'v' + (this.getRunningBuild() || '');
 
     const checkVersion = async () => {
       try {
         const res = await fetch(`version.json?_t=${Date.now()}`, { cache: 'no-store' });
         if (res.ok) {
           const data = await res.json();
-          if (data && data.version && data.version !== this.appVersion) {
+          if (this.isNewerVersion(data)) {
             console.log(`[Auto-Update] New version detected: ${data.version} (running: ${this.appVersion})`);
             this.notifyAppUpdate(data.version);
           }
@@ -525,7 +542,7 @@ function doGet(e) {
     fetch(`version.json?_t=${Date.now()}`, { cache: 'no-store' })
       .then(res => res.json())
       .then(data => {
-        if (data && data.version && data.version !== this.appVersion) {
+        if (this.isNewerVersion(data)) {
           this.applyUpdateNow();
         } else {
           this.showToast(`✅ លោកអ្នកកំពុងប្រើប្រាស់កំណែថ្មីបំផុតហើយ (${data?.version || this.appVersion})`, 'success');
@@ -1950,7 +1967,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=141" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=142" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">
