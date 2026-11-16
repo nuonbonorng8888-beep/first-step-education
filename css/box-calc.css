@@ -40,6 +40,22 @@ body.light-theme .bx {
   --bx-shadow: 0 5px 0 rgba(19, 33, 59, 0.10);
 }
 .bx.open { display: block; }
+.bx-brand-img { width: 42px; height: 42px; flex: 0 0 auto; border-radius: 12px; object-fit: cover; }
+.bx-logout {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--bx-line);
+  border-radius: 12px;
+  background: var(--bx-surface-2);
+  color: var(--bx-text);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+.bx-logout:hover { border-color: #e5484d; color: #e5484d; }
+/* Student mode: Box Calculation is the whole app */
+body.bx-student-mode .mobile-glass-dock,
+body.bx-student-mode .navbar { display: none !important; }
 body.bx-lock { overflow: hidden; }
 .bx button { font-family: inherit; cursor: pointer; }
 

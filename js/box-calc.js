@@ -165,6 +165,26 @@
   let root = null;
   const $ = (sel) => root.querySelector(sel);
 
+  /* Student mode: a logged-in student sees only Box Calculation.
+     It cannot be closed; the header shows the student and a logout button. */
+  let student = null;      // { name, className } while in student mode
+  let onLogout = null;
+
+  function setStudentMode(profile, logoutFn) {
+    student = profile || null;
+    onLogout = logoutFn || null;
+    if (student) {
+      open();
+      document.body.classList.add('bx-student-mode');
+    } else {
+      document.body.classList.remove('bx-student-mode');
+      stopTimer();
+      S.running = false;
+      if (root) root.classList.remove('open');
+      document.body.classList.remove('bx-lock');
+    }
+  }
+
   /* ---------- shell ---------- */
   function ensureRoot() {
     if (root) return;
@@ -184,12 +204,14 @@
       if (pref.level) S.level = pref.level;
       if (pref.size) S.size = pref.size;
     } catch (e) {}
+    const alreadyOpen = root.classList.contains('open');
     root.classList.add('open');
     document.body.classList.add('bx-lock');
-    renderLobby();
+    if (!alreadyOpen || !root.innerHTML) renderLobby();
   }
 
   function close() {
+    if (student) return; // students stay in Box Calculation
     if (S.running && !confirm('កំពុងគណនា! តើចង់ចាកចេញមែនទេ?')) return;
     stopTimer();
     S.running = false;
@@ -241,10 +263,14 @@
 
     root.innerHTML = `
       <header class="bx-top">
+        ${student ? `
+        <img src="assets/mascot.jpg" alt="" class="bx-brand-img">
+        <div class="bx-top-title"><b>🧮 ប្រអប់គណនា</b><small>👋 ${escapeAttr(student.name)} · ថ្នាក់ ${escapeAttr(student.className || '')}</small></div>
+        <button class="bx-logout" data-act="logout" title="ចាកចេញពីគណនី">ចាកចេញ</button>` : `
         <button class="bx-icon-btn" data-act="close" title="ត្រឡប់ទៅទំព័រដើម">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
-        <div class="bx-top-title"><b>🧮 ប្រអប់គណនា</b><small>ពង្រឹងល្បឿន និងភាពត្រឹមត្រូវ</small></div>
+        <div class="bx-top-title"><b>🧮 ប្រអប់គណនា</b><small>ពង្រឹងល្បឿន និងភាពត្រឹមត្រូវ</small></div>`}
       </header>
 
       <main class="bx-lobby">
@@ -289,7 +315,12 @@
       S.size = Number(b.dataset.size); savePref(); renderLobby();
     }));
     root.querySelectorAll('[data-op]').forEach((b) => b.addEventListener('click', () => start(b.dataset.op)));
-    $('[data-act="close"]').addEventListener('click', close);
+    const closeBtn = $('[data-act="close"]');
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    const logoutBtn = $('[data-act="logout"]');
+    if (logoutBtn) logoutBtn.addEventListener('click', () => {
+      if (confirm('តើប្អូនចង់ចាកចេញពីគណនីមែនទេ?') && onLogout) onLogout();
+    });
     root.scrollTop = 0;
   }
 
@@ -663,7 +694,7 @@
   function onKey(e) {
     if (!root || !root.classList.contains('open')) return;
     if (e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
-    if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+    if (e.key === 'Escape') { if (!student) { e.preventDefault(); close(); } return; }
     if (!S.running) return;
     const n = S.size;
     const k = e.key;
@@ -679,5 +710,5 @@
     e.preventDefault();
   }
 
-  window.BoxCalc = { open, close, _generate: generate };
+  window.BoxCalc = { open, close, setStudentMode, _generate: generate };
 })();

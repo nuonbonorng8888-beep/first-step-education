@@ -112,8 +112,13 @@
       } catch (e) {}
       document.body.classList.remove('portal-locked');
       if (app.closeLoginModal) app.closeLoginModal(true);
+      // Students see only Box Calculation
+      if (window.BoxCalc && BoxCalc.setStudentMode) {
+        BoxCalc.setStudentMode(profile, () => Cloud.signOut());
+      }
     } else {
       app.currentStudent = null;
+      if (window.BoxCalc && BoxCalc.setStudentMode) BoxCalc.setStudentMode(null);
       if (!app.isTeacher && !app.isExamMode && !(profile && profile.role !== 'student')) {
         document.body.classList.add('portal-locked');
         if (app.openLoginModal) app.openLoginModal(true);
