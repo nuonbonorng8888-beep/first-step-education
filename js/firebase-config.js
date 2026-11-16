@@ -7,8 +7,15 @@
    This config is NOT a secret — data is protected by firestore.rules.
    While it is null, student login is hidden and the app works as before.
    ========================================================================== */
-window.FIREBASE_CONFIG = null;
-/* Example:
+window.FIREBASE_CONFIG = {
+  apiKey: "AIzaSyB0FQdTlFi-0WlHtlr4PXz6wLj-i08sEPg",
+  authDomain: "worksheet-kh.firebaseapp.com",
+  projectId: "worksheet-kh",
+  storageBucket: "worksheet-kh.firebasestorage.app",
+  messagingSenderId: "804654765966",
+  appId: "1:804654765966:web:24d5656ec7b466762536df"
+};
+/* Format reference:
 window.FIREBASE_CONFIG = {
   apiKey: "AIza...",
   authDomain: "your-project.firebaseapp.com",
