@@ -1,8 +1,8 @@
 {
-  "version": "v133",
-  "build": 133,
+  "version": "v135",
+  "build": 135,
   "date": "2026-11-16",
   "author": "Nuon Bonong",
-  "changelog": "Flat redesign of the rest of the home screen (no gradients): quieter top bar with icon-only actions when crowded, flat subject filters and buttons, and new course cards that show the whole book cover on a grade-coloured shelf with title, stats, progress and a 'ចូលរៀន' button beside it (no text over the cover). Includes the v132 home dashboard.",
-  "lastUpdated": "2026-11-16T18:30:00+07:00"
+  "changelog": "New: student accounts with Firebase (dormant until js/firebase-config.js is filled). Students log in with ID + password on the gate; teachers get '🎓 សិស្ស & លទ្ធផល' to create classes, bulk-create student IDs/passwords, print ID slips, enable/disable accounts, and view Box Calculation results by date range with per-student details and CSV export. Box Calculation saves results to the student's account automatically. Includes firestore.rules and FIREBASE_SETUP.md. Resilience: students stay signed in when Firebase is offline or over the free daily quota; results are queued on the device and sent automatically later (no duplicates); the teacher dashboard caches downloaded results and only fetches new ones, with a refresh button.",
+  "lastUpdated": "2026-11-16T22:00:00+07:00"
 }

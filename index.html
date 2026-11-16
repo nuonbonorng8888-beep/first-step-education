@@ -45,7 +45,9 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=133">
+  <link rel="stylesheet" href="css/style.css?v=135">
+  <link rel="stylesheet" href="css/box-calc.css?v=135">
+  <link rel="stylesheet" href="css/accounts.css?v=135">
 </head>
 <body>
 
@@ -112,6 +114,10 @@
 
         <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ">
           🔄 <span class="nav-auth-text">Update</span>
+        </button>
+
+        <button class="btn btn-secondary" id="btn-students-nav" onclick="Accounts.openDashboard()" style="display: none;" title="គ្រប់គ្រងគណនីសិស្ស & មើលលទ្ធផល">
+          🎓 <span class="nav-auth-text">សិស្ស & លទ្ធផល</span>
         </button>
 
         <button class="btn btn-secondary nav-members-btn admin-only" onclick="App.openMemberDashboardModal()" id="btn-members-nav" style="display: none;" title="គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព">
@@ -214,7 +220,6 @@
           <button class="hm-tile" onclick="window.questionBank.openMultiLessonExamModal()">
             <span class="hm-tile-ico">🎲</span>
             <span class="hm-tile-txt">បង្កើតវិញ្ញាសា</span>
-            <span class="hm-badge green">NEW</span>
           </button>
           <button class="hm-tile" onclick="App.openTeacherSheetModal()">
             <span class="hm-tile-ico">📊</span>
@@ -224,9 +229,10 @@
             <span class="hm-tile-ico">🌐</span>
             <span class="hm-tile-txt">ចូលតាម Web</span>
           </button>
-          <button class="hm-tile" onclick="App.checkUpdateManual()">
-            <span class="hm-tile-ico">🔄</span>
-            <span class="hm-tile-txt">ពិនិត្យ Update</span>
+          <button class="hm-tile" onclick="BoxCalc.open()">
+            <span class="hm-tile-ico">🧮</span>
+            <span class="hm-tile-txt">ប្រអប់គណនា</span>
+            <span class="hm-badge green">NEW</span>
           </button>
           <button class="hm-tile" onclick="App.openLoginModal()">
             <span class="hm-tile-ico">🔐</span>
@@ -1726,10 +1732,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/storage.js?v=102"></script>
-  <script src="js/question-bank.js?v=102"></script>
-  <script src="js/app.js?v=102"></script>
-  <script src="js/visits.js?v=102"></script>
+  <script src="js/firebase-config.js?v=135"></script>
+  <script src="js/cloud.js?v=135"></script>
+  <script src="js/storage.js?v=135"></script>
+  <script src="js/question-bank.js?v=135"></script>
+  <script src="js/app.js?v=135"></script>
+  <script src="js/visits.js?v=135"></script>
+  <script src="js/box-calc.js?v=135"></script>
+  <script src="js/accounts.js?v=135"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {

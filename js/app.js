@@ -733,6 +733,10 @@ function doGet(e) {
     } else if (this.isExamMode) {
       document.body.classList.remove('portal-locked');
       this.closeLoginModal(true);
+    } else if (this.currentStudent || (window.Cloud && Cloud.enabled && (Cloud.profile() || Cloud.cachedProfile()))) {
+      // Signed in with a Firebase student/teacher account (js/accounts.js verifies it)
+      document.body.classList.remove('portal-locked');
+      this.closeLoginModal(true);
     } else {
       document.body.classList.add('portal-locked');
       this.openLoginModal(true);
