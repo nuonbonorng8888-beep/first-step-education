@@ -443,6 +443,16 @@ function doGet(e) {
     } catch (e) { return 0; }
   },
 
+  /* Display name for a build number: 143 -> "14.3", 150 -> "15.0" */
+  formatVersion(build) {
+    const n = Number(build);
+    return n ? (n / 10).toFixed(1) : String(build || '');
+  },
+
+  versionLabel(data) {
+    return data && data.build ? this.formatVersion(data.build) : (data && data.version) || this.appVersion;
+  },
+
   isNewerVersion(data) {
     if (!data) return false;
     const running = this.getRunningBuild();
@@ -451,7 +461,7 @@ function doGet(e) {
   },
 
   initAutoUpdateChecker() {
-    this.appVersion = 'v' + (this.getRunningBuild() || '');
+    this.appVersion = this.formatVersion(this.getRunningBuild());
 
     const checkVersion = async () => {
       try {
@@ -460,7 +470,7 @@ function doGet(e) {
           const data = await res.json();
           if (this.isNewerVersion(data)) {
             console.log(`[Auto-Update] New version detected: ${data.version} (running: ${this.appVersion})`);
-            this.notifyAppUpdate(data.version);
+            this.notifyAppUpdate(this.versionLabel(data));
           }
         }
       } catch (e) {}
@@ -497,7 +507,7 @@ function doGet(e) {
       <div style="display: flex; align-items: center; gap: 10px;">
         <span style="font-size: 1.3rem;">⚡</span>
         <div>
-          <strong style="color: #38bdf8;">មានការ Update កំណែថ្មី (${newVersion})!</strong>
+          <strong style="color: #38bdf8;">មានការ Update កំណែថ្មី ${newVersion}!</strong>
           <div style="font-size: 0.74rem; color: var(--text-secondary);">ចុចប៊ូតុងខាងស្តាំដើម្បីទទួលបានទិន្នន័យចុងក្រោយ</div>
         </div>
       </div>
@@ -545,7 +555,7 @@ function doGet(e) {
         if (this.isNewerVersion(data)) {
           this.applyUpdateNow();
         } else {
-          this.showToast(`✅ លោកអ្នកកំពុងប្រើប្រាស់កំណែថ្មីបំផុតហើយ (${data?.version || this.appVersion})`, 'success');
+          this.showToast(`✅ លោកអ្នកកំពុងប្រើប្រាស់កំណែថ្មីបំផុតហើយ (${this.versionLabel(data)})`, 'success');
         }
       })
       .catch(() => {
@@ -1967,7 +1977,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=142" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=143" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">
