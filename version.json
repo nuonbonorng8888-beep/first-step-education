@@ -1,8 +1,8 @@
 {
-  "version": "14.3",
-  "build": 143,
+  "version": "14.4",
+  "build": 144,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Version names are now shorter: 14.3 instead of v143.",
-  "lastUpdated": "2026-11-17T12:00:00+07:00"
+  "changelog": "Teacher dashboard now scales itself to normal size automatically when the browser is zoomed out - no need to press Ctrl+0.",
+  "lastUpdated": "2026-11-17T13:00:00+07:00"
 }

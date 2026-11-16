@@ -164,6 +164,8 @@
      ====================================================================== */
   function ensureRoot() {
     if (A.root) return;
+    let zt = null;
+    window.addEventListener('resize', () => { clearTimeout(zt); zt = setTimeout(applyZoomFix, 150); });
     A.root = document.createElement('div');
     A.root.className = 'acc';
     A.root.id = 'accounts-dashboard';
@@ -175,6 +177,7 @@
 
   function openDashboard() {
     ensureRoot();
+    applyZoomFix();
     A.root.classList.add('open');
     document.body.classList.add('bx-lock');
     if (!Cloud.enabled) return renderSetupNeeded();
@@ -190,15 +193,31 @@
     document.body.classList.remove('bx-lock');
   }
 
-  /* Browser zoom (desktop): window outer/inner width ratio. Chrome remembers
-     zoom per site, so a teacher who zoomed out once keeps seeing tiny text. */
-  function zoomHint() {
+  /* Browser zoom (desktop) = window outer/inner width ratio. Chrome remembers
+     zoom per site, so a teacher who once zoomed out keeps seeing tiny text.
+     The dashboard scales itself back up (CSS zoom) so it always looks like
+     100% without pressing Ctrl+0. Zooming IN (for bigger text) is respected. */
+  function browserZoom() {
     try {
-      if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return '';
+      if (window.__forceZoomRatio) return window.__forceZoomRatio; // tests
+      if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return 1;
       const z = window.outerWidth / window.innerWidth;
-      if (!z || z > 0.85) return '';
-      return `<span class="acc-zoom" title="Chrome ចងចាំ Zoom សម្រាប់គេហទំព័រនេះ">🔍 Zoom ${Math.round(z * 100)}% · ចុច <kbd>Ctrl</kbd> + <kbd>0</kbd> ដើម្បីឲ្យធំធម្មតា</span>`;
-    } catch (e) { return ''; }
+      return z && isFinite(z) ? z : 1;
+    } catch (e) { return 1; }
+  }
+  const cssZoomSupported = typeof document !== 'undefined' && 'zoom' in document.documentElement.style;
+
+  function applyZoomFix() {
+    if (!A.root) return;
+    const z = browserZoom();
+    A.root.style.zoom = cssZoomSupported && z < 0.8 ? String(Math.round((1 / z) * 100) / 100) : '';
+  }
+
+  function zoomHint() {
+    // Fallback only for browsers without CSS zoom support
+    const z = browserZoom();
+    if (cssZoomSupported || z > 0.85) return '';
+    return `<span class="acc-zoom">🔍 Zoom ${Math.round(z * 100)}% · ចុច <kbd>Ctrl</kbd> + <kbd>0</kbd> ដើម្បីឲ្យធំធម្មតា</span>`;
   }
 
   function header(extra) {
