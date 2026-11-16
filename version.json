@@ -1,8 +1,8 @@
 {
-  "version": "v140",
-  "build": 140,
+  "version": "v141",
+  "build": 141,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Box Calculation: choose 10 / 20 / 50 / 100 boxes and levels 1–10 for every operation; new mixed operation (+ − × ÷ ចម្រុះ) with its own 10 levels; Next-level button after a good result. Teacher dashboard text is now a readable fixed size at normal zoom (no need to zoom out).",
-  "lastUpdated": "2026-11-17T01:30:00+07:00"
+  "changelog": "Box Calculation: division is now top ÷ left with the answer typed into the empty box, and always divides exactly; every operation reads the same way (top sign left); mixed mode has exact ÷ boxes at every level from 3 up. Google: sitemap, robots and canonical now point to worksheet-kh.vercel.app.",
+  "lastUpdated": "2026-11-17T02:30:00+07:00"
 }

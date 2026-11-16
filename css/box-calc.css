@@ -342,7 +342,7 @@ body.bx-lock { overflow: hidden; }
 }
 .bx-corner { background: var(--c); color: #fff; font-size: calc(var(--cell) * 0.55); }
 .bx-head { background: var(--bx-head); color: var(--bx-head-ink); }
-.bx-grid.bx-div .bx-head-side { background: transparent; color: var(--bx-text-2); opacity: 0.6; font-size: calc(var(--cell) * 0.28); }
+.bx-instr b { color: var(--bx-text); }
 .bx-cell {
   position: relative;
   display: grid;

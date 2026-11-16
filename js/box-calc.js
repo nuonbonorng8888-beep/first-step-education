@@ -42,66 +42,73 @@
      add/sub/mul: top & side pools, cell = side ⊕ top
      div:         divisor (top) & quotient pools, cell shows top×q, answer q
      mix:         ops per cell; ÷ cells work like div; noNeg avoids negative − */
+  /* Levels 1–10 per operation. Every box reads: TOP (sign) LEFT.
+     add/sub/mul: top & side pools
+     div:         see below (always exact)
+     mix:         sign per box; ÷ only where it divides exactly (divDec allows
+                  answers with up to 2 decimals); noNeg keeps − answers ≥ 0 */
   const LV = {
     add: [null,
       { name: 'លេខ ១ ខ្ទង់', ex: '7 + 5', top: range(1, 9), side: range(1, 9) },
-      { name: 'ដប់ជាង + ១ ខ្ទង់', ex: '14 + 8', top: range(1, 9), side: range(10, 20) },
-      { name: '២ ខ្ទង់ + ១ ខ្ទង់', ex: '46 + 7', top: range(1, 9), side: range(21, 99) },
+      { name: 'ដប់ជាង + ១ ខ្ទង់', ex: '14 + 8', top: range(10, 20), side: range(1, 9) },
+      { name: '២ ខ្ទង់ + ១ ខ្ទង់', ex: '46 + 7', top: range(21, 99), side: range(1, 9) },
       { name: '២ ខ្ទង់ + ២ ខ្ទង់', ex: '47 + 38', top: range(11, 99), side: range(11, 99) },
-      { name: '៣ ខ្ទង់ + ២ ខ្ទង់', ex: '356 + 47', top: range(11, 99), side: range(100, 999) },
+      { name: '៣ ខ្ទង់ + ២ ខ្ទង់', ex: '356 + 47', top: range(100, 999), side: range(11, 99) },
       { name: 'ចំនួនអវិជ្ជមាន', ex: '(−3) + 7', top: nz(10), side: nz(10) },
       { name: 'អវិជ្ជមាន ២ ខ្ទង់', ex: '(−24) + 37', top: nz(50), side: nz(50) },
-      { name: 'ទសភាគ ១ ខ្ទង់', ex: '2.5 + 0.4', top: tenths(1, 9), side: tenths(11, 99) },
-      { name: 'ទសភាគ ២ ខ្ទង់', ex: '3.4 + 0.25', top: hundredths(1, 99), side: tenths(10, 99) },
+      { name: 'ទសភាគ ១ ខ្ទង់', ex: '2.5 + 0.4', top: tenths(11, 99), side: tenths(1, 9) },
+      { name: 'ទសភាគ ២ ខ្ទង់', ex: '3.4 + 0.25', top: tenths(10, 99), side: hundredths(1, 99) },
       { name: 'ទសភាគអវិជ្ជមាន', ex: '(−2.5) + 1.7', top: nzTenths(99), side: nzTenths(99) }
     ],
     sub: [null,
-      { name: 'ដកក្នុង ២០', ex: '12 − 5', top: range(1, 9), side: range(9, 18) },
-      { name: '២ ខ្ទង់ − ១ ខ្ទង់', ex: '34 − 8', top: range(1, 9), side: range(20, 50) },
-      { name: '២ ខ្ទង់ − ២ ខ្ទង់', ex: '73 − 28', top: range(10, 49), side: range(50, 99) },
-      { name: '៣ ខ្ទង់ − ២ ខ្ទង់', ex: '352 − 47', top: range(11, 99), side: range(100, 999) },
-      { name: 'លទ្ធផលអវិជ្ជមាន', ex: '4 − 12', top: range(10, 20), side: range(1, 9) },
+      { name: 'ដកក្នុង ២០', ex: '12 − 5', top: range(9, 18), side: range(1, 9) },
+      { name: '២ ខ្ទង់ − ១ ខ្ទង់', ex: '34 − 8', top: range(20, 50), side: range(1, 9) },
+      { name: '២ ខ្ទង់ − ២ ខ្ទង់', ex: '73 − 28', top: range(50, 99), side: range(10, 49) },
+      { name: '៣ ខ្ទង់ − ២ ខ្ទង់', ex: '352 − 47', top: range(100, 999), side: range(11, 99) },
+      { name: 'លទ្ធផលអវិជ្ជមាន', ex: '4 − 12', top: range(1, 9), side: range(10, 20) },
       { name: 'ចំនួនអវិជ្ជមាន', ex: '(−3) − 5', top: nz(10), side: nz(10) },
       { name: 'អវិជ្ជមាន ២ ខ្ទង់', ex: '(−24) − (−37)', top: nz(50), side: nz(50) },
-      { name: 'ទសភាគ ១ ខ្ទង់', ex: '5.2 − 0.7', top: tenths(1, 9), side: tenths(10, 99) },
-      { name: 'ទសភាគ ២ ខ្ទង់', ex: '4.5 − 0.25', top: hundredths(1, 99), side: tenths(10, 99) },
+      { name: 'ទសភាគ ១ ខ្ទង់', ex: '5.2 − 0.7', top: tenths(10, 99), side: tenths(1, 9) },
+      { name: 'ទសភាគ ២ ខ្ទង់', ex: '4.5 − 0.25', top: tenths(10, 99), side: hundredths(1, 99) },
       { name: 'ទសភាគអវិជ្ជមាន', ex: '(−2.5) − 1.7', top: nzTenths(99), side: nzTenths(99) }
     ],
     mul: [null,
       { name: 'តារាងគុណ ១–៥', ex: '4 × 7', top: range(1, 5), side: range(1, 9) },
       { name: 'តារាងគុណ ៦–៩', ex: '8 × 7', top: range(6, 9), side: range(1, 9) },
       { name: 'តារាងគុណ ២–១២', ex: '11 × 12', top: range(2, 12), side: range(2, 12) },
-      { name: 'ដប់ជាង × ១ ខ្ទង់', ex: '15 × 6', top: range(2, 9), side: range(11, 20) },
-      { name: '២ ខ្ទង់ × ១ ខ្ទង់', ex: '47 × 6', top: range(2, 9), side: range(21, 99) },
+      { name: 'ដប់ជាង × ១ ខ្ទង់', ex: '15 × 6', top: range(11, 20), side: range(2, 9) },
+      { name: '២ ខ្ទង់ × ១ ខ្ទង់', ex: '47 × 6', top: range(21, 99), side: range(2, 9) },
       { name: 'ចំនួនអវិជ្ជមាន', ex: '(−6) × 7', top: nz(10), side: nz(10) },
       { name: '២ ខ្ទង់ × ២ ខ្ទង់', ex: '17 × 23', top: range(11, 25), side: range(11, 25) },
       { name: 'ទសភាគ × ចំនួនគត់', ex: '0.4 × 7', top: tenths(1, 9), side: range(2, 9) },
       { name: 'ទសភាគ × ទសភាគ', ex: '0.3 × 0.6', top: tenths(1, 9), side: tenths(1, 9) },
       { name: 'ទសភាគអវិជ្ជមាន', ex: '(−0.4) × 7', top: nzTenths(9), side: nz(9) }
     ],
+    // Division: top ÷ left, always exact. Left numbers (d) come from a small
+    // set (they may repeat); top numbers are LCM(left) × k, so every box divides.
     div: [null,
-      { name: 'ចែកនឹង ១–៥', ex: '28 ÷ 4', d: range(1, 5), q: range(1, 9) },
-      { name: 'ចែកនឹង ៦–៩', ex: '56 ÷ 8', d: range(6, 9), q: range(1, 9) },
-      { name: 'ចែកនឹង ២–១២', ex: '132 ÷ 12', d: range(2, 12), q: range(2, 12) },
-      { name: 'លទ្ធផល ២ ខ្ទង់', ex: '84 ÷ 6', d: range(2, 9), q: range(11, 30) },
-      { name: 'ចែកនឹង ២ ខ្ទង់', ex: '105 ÷ 15', d: range(11, 20), q: range(2, 9) },
-      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−42) ÷ 7', d: nz(10), q: nz(10) },
-      { name: '២ ខ្ទង់ ÷ ២ ខ្ទង់', ex: '391 ÷ 17', d: range(11, 25), q: range(11, 25) },
-      { name: 'លទ្ធផលទសភាគ', ex: '4.2 ÷ 6', d: range(2, 9), q: tenths(1, 20) },
-      { name: 'ចែកនឹងទសភាគ', ex: '2.1 ÷ 0.3', d: tenths(1, 9), q: range(1, 9) },
-      { name: 'ទសភាគអវិជ្ជមាន', ex: '(−4.2) ÷ 6', d: nz(9), q: nzTenths(20) }
+      { name: 'ចែកនឹង ១ និង ២', ex: '16 ÷ 2', d: [1, 2], k: range(1, 10) },
+      { name: 'ចែកនឹង ២ និង ៣', ex: '42 ÷ 3', d: [2, 3], k: range(1, 10) },
+      { name: 'ចែកនឹង ២ និង ៤', ex: '36 ÷ 4', d: [2, 4], k: range(1, 10) },
+      { name: 'ចែកនឹង ២ ៣ ៦', ex: '54 ÷ 6', d: [2, 3, 6], k: range(1, 12) },
+      { name: 'ចែកនឹង ២ ៤ ៨', ex: '72 ÷ 8', d: [2, 4, 8], k: range(1, 12) },
+      { name: 'ចែកនឹង ៣ ៦ ៩', ex: '126 ÷ 9', d: [3, 6, 9], k: range(1, 10) },
+      { name: 'ចែកនឹង ២ ដល់ ១២', ex: '132 ÷ 12', d: [2, 3, 4, 6, 12], k: range(1, 12) },
+      { name: 'ចែកនឹង ៥ និង ១០', ex: '170 ÷ 5', d: [5, 10], k: range(2, 20) },
+      { name: 'ចែកនឹង ២ ដល់ ២០', ex: '240 ÷ 20', d: [2, 4, 5, 10, 20], k: range(1, 12) },
+      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−42) ÷ 6', d: [-6, -3, -2, 2, 3, 6], k: nz(10) }
     ],
     mix: [null,
       { name: 'បូក ដក ១ ខ្ទង់', ex: '7 + 5 · 9 − 4', ops: ['add', 'sub'], top: range(1, 9), side: range(1, 9), noNeg: true },
       { name: 'បូក ដក គុណ', ex: '6 × 4 · 9 − 2', ops: ['add', 'sub', 'mul'], top: range(1, 9), side: range(1, 9), noNeg: true },
-      { name: '+ − × ÷ ១ ខ្ទង់', ex: '35 ÷ 5 · 8 × 3', ops: ['add', 'sub', 'mul', 'div'], top: range(1, 9), side: range(1, 9), q: range(1, 9), noNeg: true },
-      { name: '+ − × ÷ ដល់ ១២', ex: '11 × 12 · 96 ÷ 8', ops: ['add', 'sub', 'mul', 'div'], top: range(2, 12), side: range(2, 12), q: range(2, 12), noNeg: true },
-      { name: '២ ខ្ទង់ និង ១ ខ្ទង់', ex: '47 × 6 · 84 ÷ 7', ops: ['add', 'sub', 'mul', 'div'], top: range(2, 9), side: range(11, 99), q: range(2, 12), noNeg: true },
-      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−6) × 7 · (−3) − 5', ops: ['add', 'sub', 'mul', 'div'], top: nz(10), side: nz(10), q: nz(10) },
-      { name: '២ ខ្ទង់ និង ២ ខ្ទង់', ex: '17 × 23 · 64 − 38', ops: ['add', 'sub', 'mul', 'div'], top: range(11, 25), side: range(11, 25), q: range(2, 12), noNeg: true },
-      { name: 'ទសភាគ និងចំនួនគត់', ex: '0.4 × 7 · 2.1 ÷ 0.3', ops: ['add', 'sub', 'mul', 'div'], top: tenths(1, 9), side: range(2, 9), q: range(1, 9), noNeg: true },
-      { name: 'ទសភាគ ១ ខ្ទង់', ex: '5.2 − 3 · 4.2 ÷ 6', ops: ['add', 'sub', 'mul', 'div'], top: range(2, 9), side: tenths(10, 99), q: tenths(1, 20), noNeg: true },
-      { name: 'ទសភាគអវិជ្ជមាន', ex: '(−2.5) × 4 · (−4.2) ÷ 6', ops: ['add', 'sub', 'mul', 'div'], top: nz(9), side: nzTenths(99), q: nzTenths(20) }
+      { name: '+ − × ÷ ១ ខ្ទង់', ex: '8 ÷ 2 · 7 × 3', ops: ['add', 'sub', 'mul', 'div'], top: range(1, 9), side: range(1, 9), noNeg: true },
+      { name: '+ − × ÷ ដល់ ១២', ex: '96 ÷ 8 · 11 × 12', ops: ['add', 'sub', 'mul', 'div'], top: range(12, 99), side: range(2, 12), noNeg: true },
+      { name: '២ ខ្ទង់ និង ១ ខ្ទង់', ex: '84 ÷ 7 · 47 − 6', ops: ['add', 'sub', 'mul', 'div'], top: range(11, 99), side: range(2, 9), noNeg: true },
+      { name: 'ចំនួនអវិជ្ជមាន', ex: '(−6) × 7 · (−42) ÷ 6', ops: ['add', 'sub', 'mul', 'div'], top: nz(50), side: nz(9) },
+      { name: '២ ខ្ទង់ និង ២ ខ្ទង់', ex: '78 ÷ 13 · 64 − 38', ops: ['add', 'sub', 'mul', 'div'], top: range(26, 99), side: range(11, 15), noNeg: true, divChance: 1 },
+      { name: 'ទសភាគ និងចំនួនគត់', ex: '4.2 ÷ 6 · 2.5 × 4', ops: ['add', 'sub', 'mul', 'div'], top: tenths(10, 99), side: range(2, 9), noNeg: true, divDec: true },
+      { name: 'ទសភាគ និងទសភាគ', ex: '2.4 ÷ 0.3 · 5.2 − 0.7', ops: ['add', 'sub', 'mul', 'div'], top: tenths(10, 99), side: tenths(1, 9), noNeg: true, divDec: true },
+      { name: 'ទសភាគអវិជ្ជមាន', ex: '(−4.2) ÷ 6 · (−2.5) × 4', ops: ['add', 'sub', 'mul', 'div'], top: nzTenths(99), side: nz(9), divDec: true }
     ]
   };
 
@@ -121,7 +128,16 @@
   };
   const fmtHead = (v) => (v < 0 ? `(${fmt(v)})` : fmt(v));
   const fmtEx = (s) => kh(s).replace(/-/g, MINUS);
-  const calc = (op, s, t) => (op === 'add' ? s + t : op === 'sub' ? s - t : s * t);
+  const calc = (op, t, s) => (op === 'add' ? t + s : op === 'sub' ? t - s : t * s); // top (op) left
+  const gcd = (a, b) => (b ? gcd(b, a % b) : Math.abs(a));
+  const lcm = (list) => list.reduce((acc, x) => { const v = Math.abs(x); return v ? (acc * v) / gcd(acc, v) : acc; }, 1);
+  /* exact top ÷ left: whole number, or up to 2 decimals when allowed */
+  const divides = (t, s, allowDec) => {
+    if (s === 0) return false;
+    const q = t / s;
+    const scaled = allowDec ? q * 100 : q;
+    return Math.abs(scaled - Math.round(scaled)) < 1e-6;
+  };
 
   /* ---------- puzzle generator ---------- */
   function generate(op, level, boxes) {
@@ -129,12 +145,11 @@
     const spec = LV[op][level];
 
     if (op === 'div') {
-      const top = pick(spec.d, cols);
-      const cells = [];
-      for (let r = 0; r < rows; r++) {
-        cells.push(top.map((t) => { const q = rnd(spec.q); return { op: 'div', ans: round4(q), given: round4(t * q) }; }));
-      }
-      return { top, side: range(1, rows), cells, rows, cols, kind: 'div' };
+      const side = pick(spec.d, rows);
+      const L = lcm(side);
+      const top = pick(spec.k, cols).map((k) => L * k);
+      const cells = side.map((s) => top.map((t) => ({ op: 'div', ans: round4(t / s) })));
+      return { top, side, cells, rows, cols, kind: 'div' };
     }
 
     const top = pick(spec.top, cols);
@@ -142,18 +157,17 @@
 
     if (op === 'mix') {
       const cells = side.map((s) => top.map((t) => {
-        let o = rnd(spec.ops);
-        if (o === 'sub' && spec.noNeg && s < t) o = 'add';
-        if (o === 'div') {
-          const q = rnd(spec.q);
-          return { op: 'div', ans: round4(q), given: round4(t * q) };
-        }
-        return { op: o, ans: round4(calc(o, s, t)) };
+        const canDiv = spec.ops.includes('div') && divides(t, s, spec.divDec);
+        // when a box divides exactly, make it ÷ half of the time
+        let o = canDiv && Math.random() < (spec.divChance || 0.5) ? 'div' : rnd(spec.ops.filter((x) => x !== 'div'));
+        if (o === 'div') return { op: 'div', ans: round4(t / s) };
+        if (o === 'sub' && spec.noNeg && t < s) o = 'add';
+        return { op: o, ans: round4(calc(o, t, s)) };
       }));
       return { top, side, cells, rows, cols, kind: 'mix' };
     }
 
-    const cells = side.map((s) => top.map((t) => ({ op, ans: round4(calc(op, s, t)) })));
+    const cells = side.map((s) => top.map((t) => ({ op, ans: round4(calc(op, t, s)) })));
     return { top, side, cells, rows, cols, kind: 'plain' };
   }
 
@@ -362,7 +376,7 @@
             <span>៥</span><span class="on">៨</span><span>១២</span>
             <span>៩</span><span>១២</span><span class="cur"></span>
           </div>
-          <p>យកលេខ <b>ខាងឆ្វេង</b> គណនាជាមួយលេខ <b>ខាងលើ</b> ហើយបំពេញប្រអប់ពីឆ្វេងទៅស្តាំ ពីលើចុះក្រោម។ ព្យាយាមឲ្យ <b>ត្រូវទាំងអស់</b> និង <b>លឿនបំផុត</b>!</p>
+          <p>យកលេខ <b>ខាងលើ</b> គណនាជាមួយលេខ <b>ខាងឆ្វេង</b> ហើយដាក់ចម្លើយក្នុងប្រអប់ ពីឆ្វេងទៅស្តាំ ពីលើចុះក្រោម។ ព្យាយាមឲ្យ <b>ត្រូវទាំងអស់</b> និង <b>លឿនបំផុត</b>!</p>
         </section>
 
         <h3 class="bx-h">ជ្រើសប្រមាណវិធី</h3>
@@ -498,22 +512,22 @@
     grid += `<div class="bx-corner ${o.color}">${o.sym}</div>`;
     P.top.forEach((t) => { grid += `<div class="bx-head bx-head-top">${fmtHead(t)}</div>`; });
     for (let r = 0; r < P.rows; r++) {
-      grid += `<div class="bx-head bx-head-side">${P.kind === 'div' ? r + 1 : fmtHead(P.side[r])}</div>`;
+      grid += `<div class="bx-head bx-head-side">${fmtHead(P.side[r])}</div>`;
       for (let c = 0; c < P.cols; c++) {
         const i = r * P.cols + c;
         const cell = P.cells[r][c];
-        const given = cell.op === 'div' ? `<i class="bx-given">${fmt(cell.given)}</i>` : '';
+        const given = cell.given !== undefined ? `<i class="bx-given">${fmt(cell.given)}</i>` : '';
         const badge = P.kind === 'mix' ? `<i class="bx-cell-op op-${cell.op}">${CELL_OP_SYM[cell.op]}</i>` : '';
-        grid += `<button class="bx-cell ${cell.op === 'div' ? 'has-given' : ''}" data-i="${i}">${badge}${given}<span class="bx-val"></span></button>`;
+        grid += `<button class="bx-cell ${cell.given !== undefined ? 'has-given' : ''}" data-i="${i}">${badge}${given}<span class="bx-val"></span></button>`;
       }
     }
     grid += '</div>';
 
     const instr = P.kind === 'div'
-      ? 'យកលេខតូចក្នុងប្រអប់ ចែកនឹងលេខខាងលើ'
+      ? 'យកលេខ <b>ខាងលើ</b> ÷ លេខ <b>ខាងឆ្វេង</b> ហើយដាក់ចម្លើយក្នុងប្រអប់'
       : P.kind === 'mix'
-        ? 'មើលសញ្ញាក្នុងប្រអប់នីមួយៗ៖ លេខខាងឆ្វេង (សញ្ញា) លេខខាងលើ · ប្រអប់ ÷ យកលេខតូច ចែកនឹងលេខខាងលើ'
-        : `យកលេខខាងឆ្វេង ${o.sym} លេខខាងលើ`;
+        ? 'យកលេខ <b>ខាងលើ</b> (សញ្ញាក្នុងប្រអប់) លេខ <b>ខាងឆ្វេង</b> ហើយដាក់ចម្លើយក្នុងប្រអប់'
+        : `យកលេខ <b>ខាងលើ</b> ${o.sym} លេខ <b>ខាងឆ្វេង</b> ហើយដាក់ចម្លើយក្នុងប្រអប់`;
 
     root.innerHTML = `
       <header class="bx-top">
