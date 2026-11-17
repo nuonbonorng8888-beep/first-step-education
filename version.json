@@ -1,8 +1,8 @@
 {
-  "version": "15.13",
-  "build": 163,
+  "version": "15.14",
+  "build": 164,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Grade 12 volume 1 chapters 1-3 follow the 2023 science textbook: complex numbers (conjugate, vector picture, modulus, quotient, rotation, De Moivre in trigonometry), limits (irrational, composite and comparison, non-algebraic), continuity (properties, intervals, composite, continuous extension) and derivatives (inverse trig, higher order, motion, differential, economics); lesson titles carry textbook pages; chapter exams fixed.",
-  "lastUpdated": "2026-11-19T04:00:00+07:00"
+  "changelog": "Grade 12 volume 1 chapters 4-5 follow the 2023 science textbook: rational functions (oblique asymptote, quadratic over quadratic, applications), the number e, exponential derivatives and applications, natural logarithm properties, equations and systems, ln-function study and applications, vector operations in space, distance and direction cosines, moment of a force, triple product and the sphere; chapter exams are chapter-level.",
+  "lastUpdated": "2026-11-19T05:00:00+07:00"
 }
