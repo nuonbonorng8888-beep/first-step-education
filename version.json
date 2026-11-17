@@ -1,8 +1,8 @@
 {
-  "version": "15.16",
-  "build": 166,
+  "version": "15.17",
+  "build": 167,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Phase 3 starts: 87 Grade 12 level-3 worksheet exercises that showed an empty question and empty teacher key now display their questions and full solutions; markdown bold in worksheet exercises renders correctly; worked solutions added for the 20 Grade 10 lesson 1 workbook exercises.",
-  "lastUpdated": "2026-11-18T08:00:00+07:00"
+  "changelog": "Worked solutions for 181 more Grade 10 workbook exercises: sets and logic (lesson 1.2), real numbers and radicals (chapter 2), complex numbers and quadratic equations, polynomials and systems, and inequalities (chapter 3). These exercises now show a full answer key.",
+  "lastUpdated": "2026-11-18T12:00:00+07:00"
 }
