@@ -422,6 +422,94 @@ function doGet(e) {
       console.warn('initTeachers error:', e);
       this.teachersList = [];
     }
+    this.syncCloudRoster();
+  },
+
+  /* Shared teacher list in Firebase (roster). Every device merges it so a
+     teacher added by Admin appears on all login screens automatically.
+     On the Admin's device (Firebase admin login) local-only teachers are
+     uploaded, so teachers added before this existed are shared too. */
+  async syncCloudRoster(opts) {
+    if (!(window.Cloud && Cloud.enabled) || this._rosterSyncing) return;
+    this._rosterSyncing = true;
+    try {
+      const roster = await Cloud.listRoster();
+      const byId = {};
+      roster.forEach((r) => { byId[r.id] = r; });
+      const official = (StorageService.getOfficialTeachers() || []).map((t) => t.id);
+      let list = (this.teachersList || []).slice();
+
+      // 1) Admin device: upload teachers that only exist here (or changed)
+      if (Cloud.isAdmin()) {
+        for (const t of list) {
+          if (t.role === 'admin' || String(t.pin) === '95511' || !t.pin) continue;
+          const r = byId[t.id];
+          const changed = !r || ['name', 'role', 'school', 'subject', 'status', 'sheetUrl'].some((k) => (r[k] || '') !== (t[k] || '')) || (r.pin && String(r.pin) !== String(t.pin));
+          if (changed) {
+            try {
+              const pinHash = await Cloud.saveRosterTeacher(t);
+              byId[t.id] = Object.assign({}, t, { pinHash });
+            } catch (e) { console.warn('roster upload', t.name, e); }
+          }
+        }
+      }
+
+      // 2) Every device: add/update from the shared list, drop ones Admin deleted
+      Object.keys(byId).forEach((id) => {
+        const r = byId[id];
+        const idx = list.findIndex((t) => t.id === id);
+        const merged = Object.assign({}, idx !== -1 ? list[idx] : {}, {
+          id, name: r.name, role: r.role || 'member', school: r.school || '', subject: r.subject || '',
+          status: r.status || 'active', sheetUrl: r.sheetUrl || '', pinHash: r.pinHash, _src: 'roster'
+        });
+        if (r.pin) merged.pin = r.pin;
+        if (idx !== -1) list[idx] = merged; else list.push(merged);
+      });
+      list = list.filter((t) => t._src !== 'roster' || byId[t.id] || official.includes(t.id));
+
+      this.teachersList = list;
+      StorageService.saveTeachers(list);
+      this.renderGateTeacherList();
+      const dash = document.getElementById('member-dashboard-modal');
+      if (dash && dash.classList.contains('active')) this.renderMemberList();
+      if (opts && opts.toast) this.showToast(`✅ បញ្ជីគ្រូ (សរុប ${list.length} រូប) បានធ្វើបច្ចុប្បន្នភាពពី Firebase`, 'success');
+    } catch (e) {
+      console.warn('syncCloudRoster', e);
+    } finally {
+      this._rosterSyncing = false;
+    }
+  },
+
+  /* Push one change to the shared list; tells Admin if it could not be shared */
+  async pushRosterChange(kind, t) {
+    if (!(window.Cloud && Cloud.enabled)) return;
+    try {
+      await Cloud.ready();
+      if (!Cloud.isAdmin()) {
+        this.showToast('⚠️ បានរក្សាទុកលើឧបករណ៍នេះ។ ដើម្បីឲ្យឈ្មោះបង្ហាញលើគ្រប់ឧបករណ៍ សូមចូល «🎓 សិស្ស & លទ្ធផល» ជា Admin ម្តង រួចបើក App ឡើងវិញ', 'warning');
+        return;
+      }
+      if (kind === 'delete') await Cloud.deleteRosterTeacher(t.id);
+      else {
+        const pinHash = await Cloud.saveRosterTeacher(t);
+        t.pinHash = pinHash;
+        t._src = 'roster';
+        StorageService.saveTeachers(this.teachersList);
+      }
+      this.showToast(kind === 'delete' ? '☁️ បានលុបចេញពីបញ្ជីគ្រប់ឧបករណ៍' : `☁️ «${t.name}» នឹងបង្ហាញលើគ្រប់ឧបករណ៍`, 'success');
+    } catch (e) {
+      this.showToast('⚠️ ផ្ញើទៅ Firebase មិនបាន (' + (e.message || 'error') + ') — នឹងព្យាយាមម្តងទៀតពេលបើក App', 'warning');
+    }
+  },
+
+  /* PIN check: plain PIN (built-in teachers) or hashed PIN (shared roster) */
+  async pinMatches(t, pin) {
+    if (!t || t.status === 'blocked') return false;
+    if (t.pin) return String(t.pin) === String(pin);
+    if (t.pinHash && window.Cloud && Cloud.hashPin) {
+      try { return (await Cloud.hashPin(t.id, pin)) === t.pinHash; } catch (e) { return false; }
+    }
+    return false;
   },
 
   initTeacherDurationTracking() {
@@ -1002,6 +1090,7 @@ function doGet(e) {
         this.teachersList = await StorageService.getTeachers(true);
         this.renderGateTeacherList();
         this.showToast(`✅ បានធ្វើបច្ចុប្បន្នភាពបញ្ជីគ្រូ (សរុប ${this.teachersList.length} រូប)`, 'success');
+        this.syncCloudRoster({ toast: true });
       }
     } catch (e) {
       if (window.StorageService) {
@@ -1121,10 +1210,9 @@ function doGet(e) {
 
     try {
       let matched = null;
-      if (selectedId) {
-        matched = (this.teachersList || []).find(t => t.id === selectedId && String(t.pin) === String(pin) && t.status !== 'blocked');
-      } else {
-        matched = (this.teachersList || []).find(t => String(t.pin) === String(pin) && t.status !== 'blocked');
+      const candidates = (this.teachersList || []).filter(t => !selectedId || t.id === selectedId);
+      for (const t of candidates) {
+        if (await this.pinMatches(t, pin)) { matched = t; break; }
       }
 
       if (!matched && String(pin) === '95511') {
@@ -1697,6 +1785,8 @@ function doGet(e) {
     this.closeMemberFormModal();
     this.renderMemberList();
     this.renderGateTeacherList();
+    const savedTeacher = id ? this.teachersList.find(t => t.id === id) : this.teachersList.find(t => t._isJustAdded && t.name === name);
+    if (savedTeacher) this.pushRosterChange('save', savedTeacher);
 
     // Auto-scroll to highlight the new teacher card if added
     if (!id) {
@@ -1714,6 +1804,7 @@ function doGet(e) {
     if (!t) return;
     t.status = t.status === 'blocked' ? 'active' : 'blocked';
     StorageService.saveTeachers(this.teachersList);
+    this.pushRosterChange('save', t);
     this.showToast(t.status === 'blocked' ? `បានផ្អាកសិទ្ធិ «${t.name}»` : `បានបើកសិទ្ធិ «${t.name}» ឡើងវិញ`, 'info');
     this.logTeacherActivity('Admin', t.status === 'blocked' ? 'បានផ្អាកសិទ្ធិគ្រូ' : 'បានបើកសិទ្ធិគ្រូឡើងវិញ', t.name);
     this.renderMemberList();
@@ -1740,6 +1831,7 @@ function doGet(e) {
 
     this.teachersList = this.teachersList.filter(x => x.id !== memberId);
     StorageService.saveTeachers(this.teachersList);
+    this.pushRosterChange('delete', t);
     this.showToast(`បានលុបគ្រូសមាជិក «${t.name}» រួចរាល់`, 'info');
     this.logTeacherActivity('Admin', 'បានលុបគ្រូសមាជិក', t.name);
     this.renderMemberList();
@@ -2033,7 +2125,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=147" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=148" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">

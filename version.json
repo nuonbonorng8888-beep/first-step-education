@@ -1,8 +1,8 @@
 {
-  "version": "14.7",
-  "build": 147,
+  "version": "14.8",
+  "build": 148,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Admin member panel now shows teacher usage (times used, minutes, exams, last active) from every device via Firebase, not only this computer.",
-  "lastUpdated": "2026-11-17T16:00:00+07:00"
+  "changelog": "Teachers added by Admin now appear on the login screen of every device automatically (shared list in Firebase). Login screen fits phones (Android and iPhone): one teacher per row.",
+  "lastUpdated": "2026-11-17T17:00:00+07:00"
 }

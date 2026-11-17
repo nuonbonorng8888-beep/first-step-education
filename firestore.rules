@@ -49,6 +49,17 @@ service cloud.firestore {
       }
     }
 
+    // ---------- teacher roster (login screen list) ----------
+    // Public read: the login screen needs the names before anyone logs in.
+    // PINs are stored only as a hash here; the plain PIN is admin-only.
+    match /roster/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    match /rosterPins/{id} {
+      allow read, write: if isAdmin();
+    }
+
     // ---------- teacher usage summaries ----------
     // Written by PIN-teacher devices (no Firebase login), so writes are only
     // allowed in a strict shape: one doc per teacher per day, small increases.

@@ -9391,3 +9391,50 @@ html.zc-normal .container:not(.nav-container) {
   .brand-title { display: none; }
   .nav-left { flex-shrink: 0; }
 }
+
+/* Login screen on phones: one teacher per row, sized for a small screen
+   (the maximized gate otherwise forces 2 wide columns that overflow) */
+@media screen and (max-width: 767px) {
+  .gate-lock-card,
+  .gate-lock-card.is-maximized,
+  .gate-lock-card.is-maximized.view-mode-pin {
+    width: calc(100vw / var(--zc, 1) - 20px) !important;
+    max-width: none !important;
+    padding: 16px 12px !important;
+    border-radius: 22px !important;
+  }
+  .gate-lock-card .modal-body,
+  .gate-lock-card.is-maximized.view-mode-select .modal-body {
+    padding: 6px 2px !important;
+    gap: 12px !important;
+  }
+  .gate-lock-card .gate-teacher-list,
+  .gate-lock-card.view-mode-select .gate-teacher-list,
+  .gate-lock-card.is-maximized.view-mode-select .gate-teacher-list {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    margin: 10px 0 !important;
+  }
+  .gate-lock-card .gate-teacher-card,
+  .gate-lock-card.is-maximized.view-mode-select .gate-teacher-card {
+    padding: 12px 14px !important;
+    min-height: 72px !important;
+    border-radius: 16px !important;
+    gap: 12px !important;
+  }
+  .gate-teacher-card > * { min-width: 0; }
+  .gate-lock-card .gate-t-avatar,
+  .gate-lock-card.is-maximized.view-mode-select .gate-t-avatar {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.6rem !important;
+    flex: 0 0 auto;
+  }
+  .gate-lock-card .gate-t-name,
+  .gate-lock-card.is-maximized.view-mode-select .gate-t-name { font-size: 1.05rem !important; }
+  .gate-lock-card .gate-t-meta,
+  .gate-lock-card.is-maximized.view-mode-select .gate-t-meta { font-size: 0.82rem !important; }
+  .gate-lock-card .gate-t-arrow,
+  .gate-lock-card.is-maximized.view-mode-select .gate-t-arrow { font-size: 1.2rem !important; flex: 0 0 auto; }
+}

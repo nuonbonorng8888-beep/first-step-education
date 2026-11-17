@@ -53,6 +53,10 @@
     recordTeacherUsage,
     flushTeacherUsage,
     listTeacherUsage,
+    listRoster,
+    saveRosterTeacher,
+    deleteRosterTeacher,
+    hashPin,
     normalizeId
   };
 
@@ -598,6 +602,60 @@
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushTeacherUsage(); });
     window.addEventListener('online', () => flushTeacherUsage());
     if (Cloud.enabled) setTimeout(() => { if (Object.keys(readUsageQ()).length) flushTeacherUsage(); }, 8000);
+  }
+
+  /* ---------- teacher roster (PIN teachers) ----------
+     roster/{id}      public: name, role, school, subject, status, sheetUrl, pinHash
+     rosterPins/{id}  admin only: pin (so the Admin panel can show it)
+     The login screen checks a typed PIN against pinHash, so new teachers'
+     PINs are never published as readable text. */
+  async function hashPin(id, pin) {
+    const data = new TextEncoder().encode(`ws|${id}|${String(pin).trim()}`);
+    const buf = await crypto.subtle.digest('SHA-256', data);
+    return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  const ROSTER_FIELDS = ['name', 'role', 'school', 'subject', 'status', 'sheetUrl', 'pinHash', 'createdAt'];
+
+  async function listRoster() {
+    await ready();
+    if (!db) throw new Error('offline');
+    const snap = await withTimeout(db.collection('roster').get(), 8000);
+    const list = snap.docs.map((d) => Object.assign({ id: d.id }, d.data()));
+    if (Cloud.isAdmin()) {
+      try {
+        const pins = await db.collection('rosterPins').get();
+        const map = {};
+        pins.docs.forEach((d) => { map[d.id] = d.data().pin; });
+        list.forEach((t) => { if (map[t.id]) t.pin = map[t.id]; });
+      } catch (e) { console.warn('rosterPins', e); }
+    }
+    return list;
+  }
+
+  /* Admin only. t = app teacher object (with plain pin). */
+  async function saveRosterTeacher(t) {
+    await ready();
+    if (!Cloud.isAdmin()) throw Object.assign(new Error('not-admin'), { code: 'not-admin' });
+    const doc = {};
+    ROSTER_FIELDS.forEach((k) => { if (t[k] !== undefined && k !== 'pinHash') doc[k] = t[k]; });
+    doc.status = t.status || 'active';
+    if (t.pin) doc.pinHash = await hashPin(t.id, t.pin);
+    doc.updatedAt = ts();
+    const batch = db.batch();
+    batch.set(db.collection('roster').doc(t.id), doc, { merge: true });
+    if (t.pin) batch.set(db.collection('rosterPins').doc(t.id), { pin: String(t.pin) });
+    await withTimeout(batch.commit(), 12000);
+    return doc.pinHash;
+  }
+
+  async function deleteRosterTeacher(id) {
+    await ready();
+    if (!Cloud.isAdmin()) throw Object.assign(new Error('not-admin'), { code: 'not-admin' });
+    const batch = db.batch();
+    batch.delete(db.collection('roster').doc(id));
+    batch.delete(db.collection('rosterPins').doc(id));
+    await withTimeout(batch.commit(), 12000);
   }
 
   /* Admin only: totals per teacher name across all devices. */
