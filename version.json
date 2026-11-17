@@ -1,8 +1,8 @@
 {
-  "version": "15.19",
-  "build": 169,
+  "version": "15.20",
+  "build": 170,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Multiple-choice answers are now spread evenly across A, B, C and D in the question bank, point quizzes and lesson quizzes (before, most correct answers were A). The correct answers themselves are unchanged; image questions whose choices are printed in the picture keep their order.",
-  "lastUpdated": "2026-11-18T17:00:00+07:00"
+  "changelog": "Worked solutions for 95 more Grade 10 workbook exercises: sine and cosine rules, functions and inverse functions, graphs of rational and square-root functions, and statistics (frequency tables, mean, median, mode). These exercises now show a full answer key.",
+  "lastUpdated": "2026-11-18T19:00:00+07:00"
 }
