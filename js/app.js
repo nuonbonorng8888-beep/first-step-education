@@ -442,7 +442,7 @@ function doGet(e) {
       // 1) Admin device: upload teachers that only exist here (or changed)
       if (Cloud.isAdmin()) {
         for (const t of list) {
-          if (t.role === 'admin' || String(t.pin) === '95511' || !t.pin) continue;
+          if (!t.pin && !t.pinHash) continue;
           const r = byId[t.id];
           const changed = !r || ['name', 'role', 'school', 'subject', 'status', 'sheetUrl'].some((k) => (r[k] || '') !== (t[k] || '')) || (r.pin && String(r.pin) !== String(t.pin));
           if (changed) {
@@ -463,6 +463,7 @@ function doGet(e) {
           status: r.status || 'active', sheetUrl: r.sheetUrl || '', pinHash: r.pinHash, _src: 'roster'
         });
         if (r.pin) merged.pin = r.pin;
+        else if (r.pinHash) delete merged.pin;
         if (idx !== -1) list[idx] = merged; else list.push(merged);
       });
       list = list.filter((t) => t._src !== 'roster' || byId[t.id] || official.includes(t.id));
@@ -504,12 +505,18 @@ function doGet(e) {
 
   /* PIN check: plain PIN (built-in teachers) or hashed PIN (shared roster) */
   async pinMatches(t, pin) {
-    if (!t || t.status === 'blocked') return false;
-    if (t.pin) return String(t.pin) === String(pin);
-    if (t.pinHash && window.Cloud && Cloud.hashPin) {
-      try { return (await Cloud.hashPin(t.id, pin)) === t.pinHash; } catch (e) { return false; }
+    if (!t || t.status === 'blocked' || !String(pin || '').trim()) return false;
+    if (t.pinHash) {
+      try { return (await this.hashPin(t.id, pin)) === t.pinHash; } catch (e) { return false; }
     }
+    if (t.pin) return String(t.pin) === String(pin).trim();
     return false;
+  },
+
+  async hashPin(id, pin) {
+    const data = new TextEncoder().encode(`ws|${id}|${String(pin).trim()}`);
+    const buf = await crypto.subtle.digest('SHA-256', data);
+    return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
   },
 
   initTeacherDurationTracking() {
@@ -818,10 +825,11 @@ function doGet(e) {
     if (storedSession) {
       try {
         const t = JSON.parse(storedSession);
-        const matched = this.teachersList.find(x => x.id === t.id || String(x.pin) === String(t.pin));
+        const matched = this.teachersList.find(x => x.id === t.id) ||
+          (t.pin ? this.teachersList.find(x => x.pin && String(x.pin) === String(t.pin)) : null);
         if (matched && matched.status !== 'blocked') {
           this.currentTeacher = matched;
-          this.isAdmin = (matched.role === 'admin' || String(matched.pin) === '95511');
+          this.isAdmin = matched.role === 'admin';
           this.isTeacher = true;
           // Ensure both storage locations have latest valid session
           sessionStorage.setItem('teacher_session', JSON.stringify(matched));
@@ -1038,8 +1046,8 @@ function doGet(e) {
     // 2. Newly added teacher (_isJustAdded) is next!
     // 3. Khmer alphabetical order
     list.sort((a, b) => {
-      const aIsAdm = a.role === 'admin' || String(a.pin) === '95511';
-      const bIsAdm = b.role === 'admin' || String(b.pin) === '95511';
+      const aIsAdm = a.role === 'admin';
+      const bIsAdm = b.role === 'admin';
       if (aIsAdm && !bIsAdm) return -1;
       if (!aIsAdm && bIsAdm) return 1;
       if (a._isJustAdded && !b._isJustAdded) return -1;
@@ -1059,7 +1067,7 @@ function doGet(e) {
     }
 
     container.innerHTML = activeList.map(t => {
-      const isAdm = t.role === 'admin' || String(t.pin) === '95511';
+      const isAdm = t.role === 'admin';
       const avatar = isAdm ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫');
       const badgeClass = isAdm ? 'member-badge-admin' : 'member-badge-member';
       const badgeLabel = isAdm ? 'Admin' : 'គ្រូសមាជិក';
@@ -1118,7 +1126,7 @@ function doGet(e) {
 
     if (idInp) idInp.value = t.id;
     if (nameEl) nameEl.textContent = t.name;
-    const isAdm = t.role === 'admin' || String(t.pin) === '95511';
+    const isAdm = t.role === 'admin';
     if (avatarEl) avatarEl.textContent = isAdm ? '👑' : ((t.name && t.name.includes('អ្នកគ្រូ')) ? '👩‍🏫' : '👨‍🏫');
     if (badgeEl) {
       badgeEl.className = isAdm ? 'member-badge-admin' : 'member-badge-member';
@@ -1215,27 +1223,18 @@ function doGet(e) {
         if (await this.pinMatches(t, pin)) { matched = t; break; }
       }
 
-      if (!matched && String(pin) === '95511') {
-        matched = {
-          id: 't-admin',
-          name: 'លោកគ្រូ នួន បូណង',
-          role: 'admin',
-          pin: '95511',
-          sheetUrl: this.defaultTeacherSheetUrl
-        };
-      }
 
       if (matched) {
         const teacher = matched;
         this.currentTeacher = teacher;
-        this.isAdmin = (teacher.role === 'admin' || String(teacher.pin) === '95511');
+        this.isAdmin = teacher.role === 'admin';
         this.isTeacher = true;
 
         sessionStorage.setItem('teacher_session', JSON.stringify(teacher));
         localStorage.setItem('teacher_session', JSON.stringify(teacher));
         if (this.isAdmin) {
-          sessionStorage.setItem('admin_pin', '95511');
-          localStorage.setItem('admin_pin', '95511');
+          sessionStorage.setItem('admin_pin', String(pin));
+          localStorage.setItem('admin_pin', String(pin));
         }
 
         // If member teacher has personal sheet, activate it
@@ -1463,7 +1462,7 @@ function doGet(e) {
     // Filter by search
     const filtered = teachers.filter(t => {
       if (!searchVal) return true;
-      const haystack = `${t.name} ${t.pin} ${t.school || ''} ${t.subject || ''} ${t.role || ''}`.toLowerCase();
+      const haystack = `${t.name} ${t.pin || ''} ${t.school || ''} ${t.subject || ''} ${t.role || ''}`.toLowerCase();
       return haystack.includes(searchVal);
     });
 
@@ -1481,7 +1480,7 @@ function doGet(e) {
     }
 
     container.innerHTML = cloudNote + filtered.map(t => {
-      const isAdmin = t.role === 'admin' || String(t.pin) === '95511';
+      const isAdmin = t.role === 'admin';
       const isBlocked = t.status === 'blocked';
       const hasSheet = !!t.sheetUrl;
       const isNewlyAdded = !!t._isJustAdded;
@@ -1513,7 +1512,7 @@ function doGet(e) {
                 🏫 ${t.school || 'មិនទាន់បញ្ជាក់សាលា'} • 📚 ${t.subject || 'គណិតវិទ្យា'}
               </div>
               <div style="margin-top: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                <span class="member-pin-badge" title="លេខកូដសម្ងាត់សម្រាប់ Login">🔑 PIN: <strong>${t.pin}</strong></span>
+                <span class="member-pin-badge" title="លេខកូដសម្ងាត់សម្រាប់ Login">🔑 PIN: <strong>${t.pin || '••••'}</strong></span>
                 <span class="${hasSheet ? 'member-badge-sheet-ok' : 'member-badge-sheet-none'}">
                   ${hasSheet ? '✓ បានភ្ជាប់ Google Sheet' : '⚠️ មិនទាន់ភ្ជាប់ Google Sheet'}
                 </span>
@@ -1629,7 +1628,10 @@ function doGet(e) {
         if (title) title.textContent = '✏️ កែប្រែព័ត៌មានគ្រូសមាជិក';
         if (idInp) idInp.value = t.id;
         if (nameInp) nameInp.value = t.name || '';
-        if (pinInp) pinInp.value = t.pin || '';
+        if (pinInp) {
+          pinInp.value = t.pin || '';
+          pinInp.placeholder = t.pin ? '' : 'ទុកទទេ = រក្សា PIN ចាស់';
+        }
         if (roleInp) roleInp.value = t.role || 'member';
         if (schoolInp) schoolInp.value = t.school || '';
         if (subjectInp) subjectInp.value = t.subject || 'គណិតវិទ្យា';
@@ -1726,13 +1728,14 @@ function doGet(e) {
     const subject = document.getElementById('member-subject-inp')?.value.trim() || 'គណិតវិទ្យា';
     const sheetUrl = document.getElementById('member-sheet-inp')?.value.trim() || '';
 
-    if (!name || !pin) {
+    // Editing: an empty PIN keeps the current one (it may be known here only as a hash)
+    if (!name || (!pin && !id)) {
       this.showToast('សូមបំពេញឈ្មោះគ្រូ និងលេខកូដ PIN!', 'warning');
       return;
     }
 
     // Check duplicate PIN with another member
-    const dup = this.teachersList.find(t => String(t.pin) === String(pin) && t.id !== id);
+    const dup = pin ? this.teachersList.find(t => t.pin && String(t.pin) === String(pin) && t.id !== id) : null;
     if (dup) {
       this.showToast(`លេខកូដ PIN ${pin} ត្រូវបានប្រើប្រាស់ដោយ «${dup.name}» រួចហើយ! សូមប្តូរលេខ PIN ផ្សេង`, 'error');
       return;
@@ -1742,17 +1745,15 @@ function doGet(e) {
       // Edit existing member
       const idx = this.teachersList.findIndex(t => t.id === id);
       if (idx !== -1) {
-        this.teachersList[idx] = {
-          ...this.teachersList[idx],
-          name,
-          pin,
-          role,
-          school,
-          subject,
-          sheetUrl
-        };
+        const prev = this.teachersList[idx];
+        const updated = { ...prev, name, role, school, subject, sheetUrl };
+        if (pin && String(pin) !== String(prev.pin || '')) {
+          updated.pin = pin;
+          delete updated.pinHash; // the new hash is made when it is shared
+        }
+        this.teachersList[idx] = updated;
         this.showToast(`បានកែប្រែព័ត៌មាន «${name}» រួចរាល់!`, 'success');
-        this.logTeacherActivity('Admin', 'បានកែប្រែព័ត៌មានសមាជិក', `កែប្រែទិន្នន័យ ${name} (PIN: ${pin})`);
+        this.logTeacherActivity('Admin', 'បានកែប្រែព័ត៌មានសមាជិក', `កែប្រែទិន្នន័យ ${name}`);
       }
     } else {
       // Add new member
@@ -1770,7 +1771,7 @@ function doGet(e) {
       };
 
       // Place right after admin so it's directly visible at the top!
-      const adminIdx = this.teachersList.findIndex(t => t.role === 'admin' || String(t.pin) === '95511');
+      const adminIdx = this.teachersList.findIndex(t => t.role === 'admin');
       if (adminIdx !== -1) {
         this.teachersList.splice(adminIdx + 1, 0, newTeacher);
       } else {
@@ -1778,7 +1779,7 @@ function doGet(e) {
       }
 
       this.showToast(`🎉 បានបន្ថែមគ្រូសមាជិក «${name}» (PIN: ${pin}) ដោយជោគជ័យ!`, 'success');
-      this.logTeacherActivity('Admin', 'បានបន្ថែមគ្រូសមាជិកថ្មី', `បន្ថែម ${name} (PIN: ${pin}, សាលា: ${school || '-'})`);
+      this.logTeacherActivity('Admin', 'បានបន្ថែមគ្រូសមាជិកថ្មី', `បន្ថែម ${name} (សាលា: ${school || '-'})`);
     }
 
     StorageService.saveTeachers(this.teachersList);
@@ -1814,11 +1815,11 @@ function doGet(e) {
   deleteMember(memberId) {
     const t = this.teachersList.find(x => x.id === memberId);
     if (!t) return;
-    if (t.role === 'admin' || String(t.pin) === '95511') {
+    if (t.role === 'admin') {
       this.showToast('មិនអាចលុប Admin បានឡើយ!', 'error');
       return;
     }
-    if (!confirm(`តើលោកអ្នកពិតជាចង់លុបគ្រូសមាជិក «${t.name}» (PIN: ${t.pin}) ដែរឬទេ?`)) {
+    if (!confirm(`តើលោកអ្នកពិតជាចង់លុបគ្រូសមាជិក «${t.name}» ដែរឬទេ?`)) {
       return;
     }
 
@@ -2125,7 +2126,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=148" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=149" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">
@@ -3521,12 +3522,16 @@ function doGet(e) {
     if (modal) modal.classList.remove('active');
   },
 
-  submitWorksheetPin() {
+  async submitWorksheetPin() {
     const input = document.getElementById('worksheet-pin-input');
     const err = document.getElementById('worksheet-pin-error');
     const pin = input ? input.value.trim() : '';
+    let pinOk = false;
+    for (const t of (this.teachersList || [])) {
+      if (await this.pinMatches(t, pin)) { pinOk = true; break; }
+    }
 
-    if (pin === '1234' || pin === '95511') {
+    if (pinOk) {
       this.teacherUnlocked = true;
       this.closeWorksheetUnlockModal();
       this.renderWorksheetTab();

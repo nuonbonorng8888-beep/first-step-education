@@ -21,7 +21,9 @@ import datetime
 import webbrowser
 
 PORT = int(os.environ.get('PORT', 8000))
-ADMIN_PIN = "95511"
+# Set ADMIN_PIN in the hosting dashboard (Render: Environment). No default:
+# without it the admin API (upload / edit lessons) stays locked.
+ADMIN_PIN = os.environ.get("ADMIN_PIN", "").strip()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, 'data', 'courses.json')
 STATS_FILE = os.path.join(BASE_DIR, 'data', 'stats.json')
@@ -106,7 +108,7 @@ class EducationAppHandler(SimpleHTTPRequestHandler):
 
     def check_admin(self):
         pin = self.headers.get('X-Admin-Pin') or self.headers.get('Admin-Pin')
-        if pin == ADMIN_PIN:
+        if ADMIN_PIN and pin == ADMIN_PIN:
             return True
         self.send_json({"error": "លេខកូដសម្ងាត់មិនត្រឹមត្រូវ (Unauthorized: Invalid Admin PIN)"}, status=401)
         return False
@@ -219,7 +221,7 @@ class EducationAppHandler(SimpleHTTPRequestHandler):
             payload = json.loads(body.decode('utf-8'))
             pin = payload.get('pin', '').strip()
 
-            if pin == ADMIN_PIN:
+            if ADMIN_PIN and pin == ADMIN_PIN:
                 self.send_json({"success": True, "token": ADMIN_PIN, "role": "admin"})
             else:
                 self.send_json({"success": False, "message": "លេខកូដសម្ងាត់មិនត្រឹមត្រូវទេ!"}, status=401)

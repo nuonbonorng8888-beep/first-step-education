@@ -42,7 +42,7 @@ const StorageService = {
         id: "t-admin",
         name: "លោកគ្រូ នួន បូណង",
         role: "admin",
-        pin: "95511",
+        pinHash: "07fa6a53edfc979e9fd80349d63127663309b7850f8cc22d3b5bd6d9a84d8c20",
         school: "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)",
         subject: "គណិតវិទ្យា",
         sheetUrl: "https://script.google.com/macros/s/AKfycbxtsUQk52-Jh_k7VLgVFl66BvT9C2pn44--tZG6CgfRIAHN7Igw8wYrQ6uDbn-4B8uF/exec",
@@ -53,7 +53,7 @@ const StorageService = {
         id: "t-1111",
         name: "លោកគ្រូ ទូច សំណាង",
         role: "member",
-        pin: "1111",
+        pinHash: "b0365d2e2fdd63d39f891bc6340e4523fc63ee2ec866b9932ff87c102f7983c5",
         school: "វិទ្យាល័យព្រះយុគន្ធរ",
         subject: "គណិតវិទ្យា",
         sheetUrl: "",
@@ -64,7 +64,7 @@ const StorageService = {
         id: "t-40404",
         name: "អ្នកគ្រូ អេង សុជាតិ",
         role: "member",
-        pin: "40404",
+        pinHash: "329632238fa7b4bee90cac7329884f6adcbc38f1969cdbca2de6d2e1132c465a",
         school: "សាលារៀនជំនាន់ថ្មី",
         subject: "គណិតវិទ្យា",
         sheetUrl: "",
@@ -75,7 +75,7 @@ const StorageService = {
         id: "t-30303",
         name: "លោកគ្រូ ចាន់ ពិសិដ្ឋ",
         role: "member",
-        pin: "30303",
+        pinHash: "790b4ed94a07c1ea70d8886eb85314ae037a455101b8d33415e12015cddf5a67",
         school: "វិទ្យាល័យ ២៤​ កញ្ញា",
         subject: "គណិតវិទ្យា",
         sheetUrl: "",
@@ -86,7 +86,7 @@ const StorageService = {
         id: "t-20202",
         name: "លោកគ្រូ ឈន ឈុន្នី",
         role: "member",
-        pin: "20202",
+        pinHash: "7acdfc3db981dc5760c6b8b710d0e1989e5fbf16860860609275f56fc8dd6fa9",
         school: "សាលារៀនជំនាន់ថ្មី",
         subject: "គណិតវិទ្យា",
         sheetUrl: "",
@@ -97,7 +97,7 @@ const StorageService = {
         id: "t-10101",
         name: "អ្នកគ្រូ ថោង សុភាវី",
         role: "member",
-        pin: "10101",
+        pinHash: "1db3694bae07f9afb6a3537a6395e4b04460f2f535efdeebc9d6027b97bf18c0",
         school: "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)",
         subject: "គណិតវិទ្យា",
         sheetUrl: "",
@@ -157,9 +157,9 @@ const StorageService = {
       : baseTeachers;
 
     // Filter incoming list (Official faculty members are never suppressed by stale deletedIds)
-    const officialPins = ['95511', '10101', '20202', '30303', '40404', '1111'];
+    const officialIds = baseTeachers.map(bt => bt.id);
     const validIncoming = incomingTeachers.filter(jt => {
-      const isOfficial = jt.role === 'admin' || officialPins.includes(String(jt.pin)) || baseTeachers.some(bt => bt.id === jt.id || String(bt.pin) === String(jt.pin));
+      const isOfficial = jt.role === 'admin' || officialIds.includes(jt.id);
       if (!isOfficial && deletedIds.includes(jt.id)) return false;
       if (jt.name === 'លោកគ្រូ សុខា' || jt.name === 'អ្នកគ្រូ ចិន្តា') return false;
       return true;
@@ -174,7 +174,7 @@ const StorageService = {
       const cleanName = (t.name || '').trim();
       return list.findIndex(item => {
         if (item.id && t.id && String(item.id).trim() === String(t.id).trim()) return true;
-        if (cleanPin && String(item.pin || '').trim() === cleanPin) return true;
+        if (cleanPin && item.pin && String(item.pin).trim() === cleanPin) return true;
         if (cleanName && (item.name || '').trim() === cleanName) return true;
         // Match both spellings of ឈុន្នី / ឈុននី
         if (cleanName.includes('ឈុន') && (item.name || '').includes('ឈុន')) return true;
@@ -352,12 +352,12 @@ const StorageService = {
     // 1. Check local/file teachers first for multi-member support
     try {
       const teachers = await this.getTeachers();
-      const matched = teachers.find(t => String(t.pin).trim() === String(pin).trim() && t.status !== 'blocked');
+      const matched = teachers.find(t => t.pin && String(t.pin).trim() === String(pin).trim() && t.status !== 'blocked');
       if (matched) {
         return {
           success: true,
-          token: matched.pin,
-          role: matched.role || (matched.pin === '95511' ? 'admin' : 'member'),
+          token: String(pin),
+          role: matched.role || 'member',
           teacher: matched
         };
       }
@@ -373,7 +373,6 @@ const StorageService = {
       });
       return await response.json();
     } catch (err) {
-      if (pin === '95511') return { success: true, token: '95511', role: 'admin' };
       return { success: false, message: 'Server connection error' };
     }
   },
