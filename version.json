@@ -1,8 +1,8 @@
 {
-  "version": "15.0",
-  "build": 150,
+  "version": "15.1",
+  "build": 151,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Students see their own Box Calculation record (time, games, medals, best levels, recent games) from their account on any device. The app version is shown on the student screen.",
-  "lastUpdated": "2026-11-17T19:00:00+07:00"
+  "changelog": "Login screen shows each teacher once (no more duplicate names). Member teachers type their PIN every time they open the app; Admin stays logged in.",
+  "lastUpdated": "2026-11-17T20:00:00+07:00"
 }

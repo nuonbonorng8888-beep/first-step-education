@@ -443,6 +443,8 @@ function doGet(e) {
       if (Cloud.isAdmin()) {
         for (const t of list) {
           if (!t.pin && !t.pinHash) continue;
+          const sameName = Object.keys(byId).find((id) => id !== t.id && this.teacherNameKey(byId[id].name) === this.teacherNameKey(t.name));
+          if (sameName) continue;
           const r = byId[t.id];
           const changed = !r || ['name', 'role', 'school', 'subject', 'status', 'sheetUrl'].some((k) => (r[k] || '') !== (t[k] || '')) || (r.pin && String(r.pin) !== String(t.pin));
           if (changed) {
@@ -468,6 +470,15 @@ function doGet(e) {
       });
       list = list.filter((t) => t._src !== 'roster' || byId[t.id] || official.includes(t.id));
 
+      // Same teacher under another id (built-in list vs shared list): keep the shared one
+      const rosterNames = {};
+      Object.keys(byId).forEach((id) => { rosterNames[this.teacherNameKey(byId[id].name)] = id; });
+      list = list.filter((t) => {
+        if (byId[t.id]) return true;
+        const twin = rosterNames[this.teacherNameKey(t.name)];
+        return !twin || twin === t.id;
+      });
+
       this.teachersList = list;
       StorageService.saveTeachers(list);
       this.renderGateTeacherList();
@@ -479,6 +490,17 @@ function doGet(e) {
     } finally {
       this._rosterSyncing = false;
     }
+  },
+
+  /* Name key that ignores spaces, titles and known spelling variants,
+     so the same teacher typed slightly differently is one teacher */
+  teacherNameKey(name) {
+    return String(name || '')
+      .replace(/[\s\u200b\u200c\u200d\u00a0]/g, '')
+      .replace(/^(លោកគ្រូ|អ្នកគ្រូ|គ្រូ)/, '')
+      .replace(/ឈុននី/g, 'ឈុន្នី')
+      .replace(/^ឈន/, 'ឈុន')
+      .replace(/សុភាវី/g, 'សុភារី');
   },
 
   /* Push one change to the shared list; tells Admin if it could not be shared */
@@ -818,8 +840,10 @@ function doGet(e) {
 
     // Read stored teacher session (supports both sessionStorage and persistent localStorage)
     let storedSession = sessionStorage.getItem('teacher_session');
+    let fromLocal = false;
     if (!storedSession) {
       storedSession = localStorage.getItem('teacher_session');
+      fromLocal = !!storedSession;
     }
 
     if (storedSession) {
@@ -827,13 +851,20 @@ function doGet(e) {
         const t = JSON.parse(storedSession);
         const matched = this.teachersList.find(x => x.id === t.id) ||
           (t.pin ? this.teachersList.find(x => x.pin && String(x.pin) === String(t.pin)) : null);
-        if (matched && matched.status !== 'blocked') {
+        if (matched && matched.status !== 'blocked' && fromLocal && matched.role !== 'admin') {
+          // Member teachers type their PIN each time the app is opened
+          localStorage.removeItem('teacher_session');
+          this.isAdmin = false;
+          this.isTeacher = false;
+          this.currentTeacher = null;
+        } else if (matched && matched.status !== 'blocked') {
           this.currentTeacher = matched;
           this.isAdmin = matched.role === 'admin';
           this.isTeacher = true;
-          // Ensure both storage locations have latest valid session
+          // Remember across restarts only for Admin; members only for this visit
           sessionStorage.setItem('teacher_session', JSON.stringify(matched));
-          localStorage.setItem('teacher_session', JSON.stringify(matched));
+          if (this.isAdmin) localStorage.setItem('teacher_session', JSON.stringify(matched));
+          else localStorage.removeItem('teacher_session');
           // Apply teacher's personal sheet URL
           if (matched.sheetUrl && !this.examTargetSheetUrl) {
             this.setTeacherSheetUrl(matched.sheetUrl);
@@ -1231,7 +1262,8 @@ function doGet(e) {
         this.isTeacher = true;
 
         sessionStorage.setItem('teacher_session', JSON.stringify(teacher));
-        localStorage.setItem('teacher_session', JSON.stringify(teacher));
+        if (teacher.role === 'admin') localStorage.setItem('teacher_session', JSON.stringify(teacher));
+        else localStorage.removeItem('teacher_session');
         if (this.isAdmin) {
           sessionStorage.setItem('admin_pin', String(pin));
           localStorage.setItem('admin_pin', String(pin));
@@ -2126,7 +2158,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=150" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=151" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">

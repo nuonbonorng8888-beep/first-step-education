@@ -42,7 +42,6 @@ const StorageService = {
         id: "t-admin",
         name: "លោកគ្រូ នួន បូណង",
         role: "admin",
-        pinHash: "07fa6a53edfc979e9fd80349d63127663309b7850f8cc22d3b5bd6d9a84d8c20",
         school: "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)",
         subject: "គណិតវិទ្យា",
         sheetUrl: "https://script.google.com/macros/s/AKfycbxtsUQk52-Jh_k7VLgVFl66BvT9C2pn44--tZG6CgfRIAHN7Igw8wYrQ6uDbn-4B8uF/exec",
