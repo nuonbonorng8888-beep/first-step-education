@@ -1,8 +1,8 @@
 {
-  "version": "14.6",
-  "build": 146,
+  "version": "14.7",
+  "build": 147,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Phones and iPads: lesson pages (materials, worksheet, quiz, notes, overview) now fit the screen - nothing is cut off on the right any more.",
-  "lastUpdated": "2026-11-17T15:00:00+07:00"
+  "changelog": "Admin member panel now shows teacher usage (times used, minutes, exams, last active) from every device via Firebase, not only this computer.",
+  "lastUpdated": "2026-11-17T16:00:00+07:00"
 }

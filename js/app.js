@@ -429,6 +429,7 @@ function doGet(e) {
     this._durationInterval = setInterval(() => {
       if (this.currentTeacher && !document.hidden && !document.body.classList.contains('portal-locked')) {
         StorageService.incrementTeacherDuration(this.currentTeacher.name, 1);
+        if (window.Cloud && Cloud.enabled) Cloud.recordTeacherUsage(this.currentTeacher.name, { minutes: 1 });
       }
     }, 60000);
   },
@@ -1229,6 +1230,14 @@ function doGet(e) {
     // 1. Save locally via StorageService
     StorageService.addActivityLog(logEntry);
 
+    // 1b. Daily usage summary in Firebase so the Admin panel sees every device
+    try {
+      if (window.Cloud && Cloud.enabled && tName && tName !== 'Admin') {
+        const isExam = /Link|ប្រឡង/.test(String(action));
+        Cloud.recordTeacherUsage(tName, { uses: 1, exams: isExam ? 1 : 0 });
+      }
+    } catch (e) {}
+
     // 2. Send webhook to Admin's Google Sheet in background
     try {
       if (this.defaultTeacherSheetUrl) {
@@ -1259,6 +1268,43 @@ function doGet(e) {
     const modal = document.getElementById('member-dashboard-modal');
     if (modal) modal.classList.add('active');
     this.switchMemberDashTab('members');
+    this.loadCloudTeacherUsage();
+  },
+
+  /* Usage from all devices (Firebase). Needs the Admin's Firebase login
+     (🎓 សិស្ស & លទ្ធផល); otherwise the panel shows this device only. */
+  async loadCloudTeacherUsage() {
+    if (!(window.Cloud && Cloud.enabled)) return;
+    this._cloudUsageNote = '☁️ កំពុងទាញទិន្នន័យពីគ្រប់ឧបករណ៍...';
+    this.renderMemberList();
+    try {
+      await Cloud.ready();
+      if (!Cloud.isAdmin()) {
+        this._cloudUsage = null;
+        this._cloudUsageNote = 'ⓘ លេខខាងក្រោមជាទិន្នន័យលើឧបករណ៍នេះប៉ុណ្ណោះ។ ដើម្បីឃើញការប្រើប្រាស់ពីគ្រប់ឧបករណ៍ សូមចូល «🎓 សិស្ស & លទ្ធផល» ជា Admin ម្តង (វាចងចាំ)។';
+      } else {
+        await Cloud.flushTeacherUsage();
+        this._cloudUsage = await Cloud.listTeacherUsage();
+        this._cloudUsageNote = '';
+      }
+    } catch (e) {
+      this._cloudUsageNote = '⚠️ ទាញទិន្នន័យពី Firebase មិនបាន (' + (e.message || 'error') + ') — បង្ហាញទិន្នន័យលើឧបករណ៍នេះ';
+    }
+    this.renderMemberList();
+  },
+
+  /* This device's numbers merged with the all-devices totals from Firebase */
+  getMergedTeacherStats(name) {
+    const local = StorageService.getTeacherStats(name);
+    const c = this._cloudUsage && this._cloudUsage[name];
+    if (!c) return local;
+    const fmt = (ms) => new Date(ms).toLocaleString('km-KH', { dateStyle: 'short', timeStyle: 'short' });
+    return Object.assign({}, local, {
+      useCount: Math.max(local.useCount || 0, c.uses || 0),
+      examCount: Math.max(local.examCount || 0, c.exams || 0),
+      durationMinutes: Math.max(local.durationMinutes || 0, c.minutes || 0),
+      lastActive: c.lastAt ? fmt(c.lastAt) : local.lastActive
+    });
   },
 
   closeMemberDashboardModal() {
@@ -1299,6 +1345,12 @@ function doGet(e) {
     const teachers = this.teachersList || [];
     const activeCount = teachers.filter(t => t.status !== 'blocked').length;
     const sysStats = StorageService.getTotalSystemUsageStats(teachers);
+    if (this._cloudUsage) {
+      let u = 0, m = 0;
+      teachers.forEach((t) => { const s = this.getMergedTeacherStats(t.name); u += s.useCount || 0; m += s.durationMinutes || 0; });
+      sysStats.totalUses = Math.max(sysStats.totalUses, u);
+      sysStats.totalDurationMinutes = Math.max(sysStats.totalDurationMinutes, m);
+    }
 
     // Update 4 dashboard stats boxes
     const statTotal = document.getElementById('stat-total-teachers');
@@ -1327,8 +1379,12 @@ function doGet(e) {
       return haystack.includes(searchVal);
     });
 
+    const cloudNote = this._cloudUsageNote
+      ? `<div class="member-cloud-note">${this._cloudUsageNote}</div>`
+      : (this._cloudUsage ? '<div class="member-cloud-note ok">☁️ ទិន្នន័យពីគ្រប់ឧបករណ៍ (Firebase)</div>' : '');
+
     if (filtered.length === 0) {
-      container.innerHTML = `
+      container.innerHTML = cloudNote + `
         <div style="text-align: center; padding: 30px; color: var(--text-muted); font-size: 0.9rem;">
           មិនមានគ្រូសមាជិកដែលត្រូវនឹងការស្វែងរកឡើយ
         </div>
@@ -1336,12 +1392,12 @@ function doGet(e) {
       return;
     }
 
-    container.innerHTML = filtered.map(t => {
+    container.innerHTML = cloudNote + filtered.map(t => {
       const isAdmin = t.role === 'admin' || String(t.pin) === '95511';
       const isBlocked = t.status === 'blocked';
       const hasSheet = !!t.sheetUrl;
       const isNewlyAdded = !!t._isJustAdded;
-      const stats = StorageService.getTeacherStats(t.name);
+      const stats = this.getMergedTeacherStats(t.name);
 
       let durationText = '0 នាទី';
       if (stats.durationMinutes >= 60) {
@@ -1977,7 +2033,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=146" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=147" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">

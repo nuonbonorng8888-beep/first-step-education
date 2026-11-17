@@ -49,6 +49,33 @@ service cloud.firestore {
       }
     }
 
+    // ---------- teacher usage summaries ----------
+    // Written by PIN-teacher devices (no Firebase login), so writes are only
+    // allowed in a strict shape: one doc per teacher per day, small increases.
+    match /teacherUsage/{docId} {
+      allow read: if isAdmin();
+
+      allow create: if request.resource.data.keys().hasOnly(['teacherId', 'teacherName', 'date', 'uses', 'minutes', 'exams', 'lastAt'])
+        && request.resource.data.teacherId is string && request.resource.data.teacherId.size() <= 40
+        && request.resource.data.date is string && request.resource.data.date.size() == 10
+        && docId == request.resource.data.teacherId + '_' + request.resource.data.date
+        && request.resource.data.teacherName is string
+        && request.resource.data.teacherName.size() > 0 && request.resource.data.teacherName.size() <= 80
+        && request.resource.data.uses is int && request.resource.data.uses >= 0 && request.resource.data.uses <= 5
+        && request.resource.data.minutes is int && request.resource.data.minutes >= 0 && request.resource.data.minutes <= 10
+        && request.resource.data.exams is int && request.resource.data.exams >= 0 && request.resource.data.exams <= 5
+        && request.resource.data.lastAt == request.time;
+
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['uses', 'minutes', 'exams', 'lastAt'])
+        && request.resource.data.uses is int
+        && request.resource.data.uses >= resource.data.uses && request.resource.data.uses <= resource.data.uses + 5
+        && request.resource.data.minutes is int
+        && request.resource.data.minutes >= resource.data.minutes && request.resource.data.minutes <= resource.data.minutes + 10
+        && request.resource.data.exams is int
+        && request.resource.data.exams >= resource.data.exams && request.resource.data.exams <= resource.data.exams + 5
+        && request.resource.data.lastAt == request.time;
+    }
+
     // ---------- classes ----------
     match /classes/{cid} {
       allow read: if isAdmin() ||

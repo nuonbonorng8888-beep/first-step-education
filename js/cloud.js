@@ -50,6 +50,9 @@
     classResults,
     pendingCount,
     flushOutbox,
+    recordTeacherUsage,
+    flushTeacherUsage,
+    listTeacherUsage,
     normalizeId
   };
 
@@ -488,6 +491,132 @@
     return Object.keys(c.docs).map((id) => c.docs[id])
       .filter((r) => r.createdAt >= f && r.createdAt < to.getTime())
       .sort((a, b) => b.createdAt - a.createdAt);
+  }
+
+  /* ---------- teacher usage (PIN teachers, no Firebase login) ----------
+     One document per teacher per day: teacherUsage/{key}_{YYYY-MM-DD}
+     { teacherId, teacherName, date, uses, minutes, exams, lastAt }.
+     Counts are queued on the device and written in small increments
+     (firestore.rules only allows +5 uses / +10 minutes / +5 exams per write). */
+  const USAGE_Q = 'ws_usage_pending';
+  const LIMIT = { uses: 5, minutes: 10, exams: 5 };
+  let usageTimer = null;
+
+  function nameKey(name) {
+    let h = 0x811c9dc5;
+    const s = String(name || '');
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+    return 'n' + h.toString(16);
+  }
+  function today() {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  }
+  function readUsageQ() { try { return JSON.parse(localStorage.getItem(USAGE_Q) || '{}'); } catch (e) { return {}; } }
+  function writeUsageQ(q) { try { localStorage.setItem(USAGE_Q, JSON.stringify(q)); } catch (e) {} }
+
+  function scheduleUsageFlush(ms) {
+    clearTimeout(usageTimer);
+    usageTimer = setTimeout(() => { flushTeacherUsage(); }, ms);
+  }
+
+  /* add = { uses, minutes, exams } */
+  function recordTeacherUsage(teacherName, add) {
+    if (!Cloud.enabled || !teacherName) return;
+    const q = readUsageQ();
+    const k = `${teacherName}|${today()}`;
+    const row = q[k] || { uses: 0, minutes: 0, exams: 0 };
+    row.uses += add.uses || 0;
+    row.minutes += add.minutes || 0;
+    row.exams += add.exams || 0;
+    q[k] = row;
+    writeUsageQ(q);
+    // activities go out within seconds; minutes are sent every 5 minutes
+    if (row.uses || row.exams || row.minutes >= 5) scheduleUsageFlush(4000);
+  }
+
+  let usageFlushing = false;
+  let usageRetryMs = 60000;
+  async function flushTeacherUsage() {
+    if (usageFlushing || !Cloud.enabled) return;
+    if (typeof navigator !== 'undefined' && navigator.onLine === false) return;
+    const q = readUsageQ();
+    const keys = Object.keys(q);
+    if (!keys.length) return;
+    usageFlushing = true;
+    let more = false;
+    try {
+      await ready();
+      if (!db) return;
+      for (const k of keys) {
+        const [name, date] = k.split('|');
+        const row = q[k];
+        const send = {
+          uses: Math.min(row.uses, LIMIT.uses),
+          minutes: Math.min(row.minutes, LIMIT.minutes),
+          exams: Math.min(row.exams, LIMIT.exams)
+        };
+        if (!send.uses && !send.minutes && !send.exams) { delete q[k]; continue; }
+        const id = nameKey(name);
+        const inc = firebase.firestore.FieldValue.increment;
+        try {
+          await withTimeout(db.collection('teacherUsage').doc(`${id}_${date}`).set({
+            teacherId: id,
+            teacherName: name,
+            date,
+            uses: inc(send.uses),
+            minutes: inc(send.minutes),
+            exams: inc(send.exams),
+            lastAt: ts()
+          }, { merge: true }), 12000);
+          const cur = readUsageQ();
+          const r = cur[k];
+          if (r) {
+            r.uses -= send.uses; r.minutes -= send.minutes; r.exams -= send.exams;
+            if (r.uses <= 0 && r.minutes <= 0 && r.exams <= 0) delete cur[k];
+            else more = true;
+            writeUsageQ(cur);
+          }
+        } catch (e) {
+          // Keep the counts on any error. A rules refusal (e.g. the new
+          // firestore.rules not published yet) is retried every 10 minutes.
+          usageRetryMs = String((e && e.code) || '').includes('permission-denied') ? 600000 : 60000;
+          more = true;
+          break;
+        }
+      }
+    } catch (e) {
+      more = true;
+    } finally {
+      usageFlushing = false;
+    }
+    if (more) scheduleUsageFlush(usageRetryMs);
+  }
+
+  if (typeof window !== 'undefined') {
+    // Send leftover minutes when the teacher leaves or switches tab
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushTeacherUsage(); });
+    window.addEventListener('online', () => flushTeacherUsage());
+    if (Cloud.enabled) setTimeout(() => { if (Object.keys(readUsageQ()).length) flushTeacherUsage(); }, 8000);
+  }
+
+  /* Admin only: totals per teacher name across all devices. */
+  async function listTeacherUsage() {
+    await ready();
+    if (!Cloud.isAdmin()) throw Object.assign(new Error('not-admin'), { code: 'not-admin' });
+    const snap = await db.collection('teacherUsage').get();
+    const by = {};
+    snap.docs.forEach((d) => {
+      const x = d.data();
+      const name = x.teacherName || '?';
+      const t = by[name] || (by[name] = { uses: 0, minutes: 0, exams: 0, lastAt: 0, days: 0 });
+      t.uses += x.uses || 0;
+      t.minutes += x.minutes || 0;
+      t.exams += x.exams || 0;
+      t.days += 1;
+      t.lastAt = Math.max(t.lastAt, toMillis(x.lastAt));
+    });
+    return by;
   }
 
   window.Cloud = Cloud;
