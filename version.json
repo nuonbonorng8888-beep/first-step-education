@@ -1,8 +1,8 @@
 {
-  "version": "15.11",
-  "build": 161,
+  "version": "15.12",
+  "build": 162,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Grade 11 volume 1 (chapters 1-4) follows the 2023 science textbook: every lesson's points, point quizzes, worksheets and bank match the textbook sections; lesson titles carry textbook lesson numbers and pages; new advanced lesson on inverse trigonometric functions; chapter exams for the basic course are now chapter-level; advanced lesson exams keep only problems from their lesson.",
-  "lastUpdated": "2026-11-19T02:00:00+07:00"
+  "changelog": "Grade 11 volume 2 (chapters 5-8) follows the 2023 science textbook: limits and derivatives split by textbook sections; new advanced lessons on permutations, combinations and three space-geometry lessons; probability and statistics points match the textbook; off-textbook lessons (complex numbers, space vectors, conditional probability, normal distribution) are marked as extra G12 content; G12 topics moved to G12 lessons; chapter exams fixed.",
+  "lastUpdated": "2026-11-19T03:00:00+07:00"
 }
