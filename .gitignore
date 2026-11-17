@@ -34,3 +34,4 @@ Desktop.ini
 
 # Teacher question-bank source PDFs (imported into data/question_bank.json)
 /QB[0-9]*/
+/Workbook/

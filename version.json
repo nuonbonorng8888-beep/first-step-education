@@ -1,8 +1,8 @@
 {
-  "version": "15.3",
-  "build": 153,
+  "version": "15.4",
+  "build": 154,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Question bank grows to 11,418: the teacher's QB for Grade 7 (1,100) and Grade 11 (1,314) are imported with answer keys, plus 1,314 new computed questions for Grades 7, 8, 9 and 12 at all 3 levels. Exams never mix lessons and follow lesson order.",
-  "lastUpdated": "2026-11-17T23:00:00+07:00"
+  "changelog": "Question bank: 1,425 homework-book exercises added for Grades 10, 11 and 12, each in its own lesson (Grade 12 chapter-review sets). Exams use problems with answer keys first.",
+  "lastUpdated": "2026-11-17T23:45:00+07:00"
 }

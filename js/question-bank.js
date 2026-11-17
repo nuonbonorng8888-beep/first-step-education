@@ -1145,9 +1145,11 @@ class QuestionBankController {
       }
 
       // Pick strictly Written Problems for this lesson (prioritize authentic written problems)
-      const authenticWritten = combinedPool.filter(q => q.kind === 'written');
+      // Written problems with an answer key first; workbook problems (no key) only if needed
+      const authenticWritten = combinedPool.filter(q => q.kind === 'written' && !q.noKey);
+      const noKeyWritten = combinedPool.filter(q => q.kind === 'written' && q.noKey);
       const otherQuestions = combinedPool.filter(q => q.kind !== 'written');
-      const prioritizedPool = [...authenticWritten, ...otherQuestions];
+      const prioritizedPool = [...authenticWritten, ...noKeyWritten, ...otherQuestions];
 
       let writtenAdded = 0;
       for (const q of prioritizedPool) {
