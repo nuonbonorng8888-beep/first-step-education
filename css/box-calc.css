@@ -722,3 +722,8 @@ body:not(.light-theme) .bx-box.active b { color: #7aa7ff; }
   .bx-send-form { grid-template-columns: 1fr 1fr; }
   .bx-send-form .bx-in:first-child { grid-column: span 2; }
 }
+
+/* where the records come from + app version (students can tell the teacher) */
+.bx-rec-src { margin: 8px 2px 0; font-size: 0.8rem; color: #16a34a; font-weight: 600; }
+body:not(.light-theme) .bx-rec-src { color: #4ade80; }
+.bx-version { margin: 6px 2px 0; font-size: 0.74rem; color: var(--bx-text-2); text-align: right; }

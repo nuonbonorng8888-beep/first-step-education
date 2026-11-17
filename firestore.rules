@@ -37,6 +37,16 @@ service cloud.firestore {
 
       allow delete: if isAdmin() || (isTeacher() && resource.data.teacherUid == request.auth.uid);
 
+      // Student's own Box Calculation summary (totals, medals, best levels)
+      match /meta/{docId} {
+        allow read: if signedIn() && (
+          request.auth.uid == uid ||
+          isAdmin() ||
+          (isTeacher() && get(/databases/$(database)/documents/users/$(uid)).data.teacherUid == request.auth.uid)
+        );
+        allow write: if request.auth.uid == uid && isActiveStudent();
+      }
+
       // Student's own copy of results
       match /results/{rid} {
         allow create: if request.auth.uid == uid && isActiveStudent() &&

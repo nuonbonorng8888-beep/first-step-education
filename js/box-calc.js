@@ -242,11 +242,14 @@
   let onLogout = null;
 
   function setStudentMode(profile, logoutFn) {
+    const changed = (student && student.uid) !== (profile && profile.uid);
     student = profile || null;
     onLogout = logoutFn || null;
+    if (changed) { S.cloudSum = null; S.sumState = ''; S.sumQueue = []; }
     if (student) {
       open();
       document.body.classList.add('bx-student-mode');
+      if (!S.sumState) loadCloudSummary();
     } else {
       document.body.classList.remove('bx-student-mode');
       stopTimer();
@@ -323,6 +326,90 @@
     });
   }
 
+  /* ---------- student's record across devices (Firebase summary) ---------- */
+  const emptySum = () => ({ v: 1, count: 0, totalSec: 0, medals: { gold: 0, silver: 0, bronze: 0 }, best: {}, recent: [] });
+
+  function addToSummary(sum, a) {
+    const s = sum ? JSON.parse(JSON.stringify(sum)) : emptySum();
+    s.count = (s.count || 0) + 1;
+    s.totalSec = Math.round(((s.totalSec || 0) + (Number(a.sec) || 0)) * 10) / 10;
+    s.medals = s.medals || { gold: 0, silver: 0, bronze: 0 };
+    if (s.medals[a.medal] !== undefined) s.medals[a.medal] += 1;
+    s.best = s.best || {};
+    const key = bestKey(a.op, a.level, a.boxes);
+    const prev = s.best[key];
+    if (!prev || a.acc > prev.acc || (a.acc === prev.acc && a.sec < prev.sec)) {
+      s.best[key] = { acc: a.acc, sec: a.sec, medal: prev && MEDAL_RANK[prev.medal] > MEDAL_RANK[a.medal] ? prev.medal : a.medal };
+    } else if (MEDAL_RANK[a.medal] > MEDAL_RANK[prev.medal]) {
+      prev.medal = a.medal;
+    }
+    s.recent = [{ op: a.op, level: a.level, boxes: a.boxes, acc: a.acc, sec: a.sec, medal: a.medal, date: a.date }]
+      .concat(s.recent || []).slice(0, 8);
+    return s;
+  }
+
+  function fromResult(r) {
+    const ms = r.playedAt || r.createdAt || 0;
+    const d = new Date(ms);
+    const p2 = (n) => String(n).padStart(2, '0');
+    return {
+      op: r.op, level: r.level, boxes: r.boxes || (r.size ? r.size * r.size : 100),
+      acc: r.acc, sec: Number(r.sec) || 0, medal: r.medal || 'none',
+      date: ms ? `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())} ${p2(d.getHours())}:${p2(d.getMinutes())}` : ''
+    };
+  }
+
+  async function loadCloudSummary() {
+    if (!(window.Cloud && Cloud.getMySummary)) return;
+    S.sumState = 'loading';
+    try {
+      const r = await Cloud.getMySummary();
+      if (!r) { S.sumState = 'offline'; return; }
+      let sum = r.doc;
+      if (!r.exists) {
+        // first time: build it once from the results already saved
+        const rs = (await Cloud.myResults(300)).filter((x) => x.type === 'boxcalc').reverse();
+        sum = rs.reduce((acc, x) => addToSummary(acc, fromResult(x)), emptySum());
+      }
+      (S.sumQueue || []).forEach((a) => { sum = addToSummary(sum, a); });
+      const needSave = !r.exists || (S.sumQueue || []).length;
+      S.sumQueue = [];
+      S.cloudSum = sum;
+      S.sumState = 'ready';
+      if (needSave) Cloud.saveMySummary(sum).catch(() => {});
+    } catch (e) {
+      console.warn('summary', e);
+      S.sumState = 'offline';
+    }
+    if (S.view === 'lobby' && !S.running) renderLobby();
+    else if (S.view === 'setup' && !S.running) renderSetup(S.op);
+  }
+
+  /* Records to show: the account summary for a student (all devices),
+     this device's records otherwise. */
+  function recordView() {
+    const store = loadStore();
+    if (student) {
+      if (S.cloudSum) {
+        const c = S.cloudSum;
+        return { totalSec: c.totalSec || 0, count: c.count || 0, counts: c.medals || {}, recent: c.recent || [], best: c.best || {}, source: 'cloud' };
+      }
+      // not loaded yet: only this student's games on this (maybe shared) device
+      const mine = store.attempts.filter((a) => a.uid === student.uid);
+      const counts = { gold: 0, silver: 0, bronze: 0 };
+      const best = {};
+      mine.forEach((a) => {
+        if (counts[a.medal] !== undefined) counts[a.medal]++;
+        const k = bestKey(a.op, a.level, a.boxes);
+        if (!best[k] || a.acc > best[k].acc || (a.acc === best[k].acc && a.sec < best[k].sec)) best[k] = { acc: a.acc, sec: a.sec, medal: a.medal };
+      });
+      return { totalSec: mine.reduce((t, a) => t + (a.sec || 0), 0), count: mine.length, counts, recent: mine.slice(0, 8), best, source: S.sumState === 'loading' ? 'loading' : 'local' };
+    }
+    const counts = { gold: 0, silver: 0, bronze: 0 };
+    store.attempts.forEach((a) => { if (counts[a.medal] !== undefined) counts[a.medal]++; });
+    return { totalSec: store.totalSec || 0, count: store.attempts.length, counts, recent: store.attempts.slice(0, 6), best: store.best, source: 'device' };
+  }
+
   /* ---------- lobby: choose an operation ---------- */
   function bestLevel(store, op) {
     // highest level with a gold medal (any box count)
@@ -338,9 +425,9 @@
     stopTimer();
     S.running = false;
     S.finished = false;
-    const store = loadStore();
-    const counts = { gold: 0, silver: 0, bronze: 0 };
-    store.attempts.forEach((a) => { if (counts[a.medal] !== undefined) counts[a.medal]++; });
+    S.view = 'lobby';
+    const store = recordView();
+    const counts = store.counts;
 
     const opTiles = Object.keys(OPS).map((k) => {
       const gl = bestLevel(store, k);
@@ -357,7 +444,7 @@
     const pendingNote = pending
       ? `<p class="bx-pending">⏳ មានលទ្ធផល ${kh(pending)} កំពុងរង់ចាំផ្ញើទៅលោកគ្រូ — នឹងផ្ញើដោយស្វ័យប្រវត្តិពេលមានអ៊ីនធឺណិត</p>`
       : '';
-    const recent = store.attempts.slice(0, 6).map((a) => {
+    const recent = store.recent.slice(0, 6).map((a) => {
       const o = OPS[a.op] || OPS.add;
       return `
       <li>
@@ -386,12 +473,14 @@
           <h3 class="bx-h">📒 កំណត់ត្រាសិក្សារបស់ខ្ញុំ</h3>
           <div class="bx-record-stats">
             <div><b>${kh(Math.round(store.totalSec / 60))}</b><span>នាទីហ្វឹកហាត់</span></div>
-            <div><b>${kh(store.attempts.length)}</b><span>ដងបានលេង</span></div>
+            <div><b>${kh(store.count)}</b><span>ដងបានលេង</span></div>
             <div class="bx-medals"><span>🥇 ${kh(counts.gold)}</span><span>🥈 ${kh(counts.silver)}</span><span>🥉 ${kh(counts.bronze)}</span></div>
           </div>
           ${pendingNote}
           ${recent ? `<ul class="bx-recent">${recent}</ul>` : '<p class="bx-empty">មិនទាន់មានកំណត់ត្រា។ តោះចាប់ផ្តើមប្រអប់ដំបូង! 🚀</p>'}
           <p class="bx-medal-rule">🥇 ត្រូវ ១០០% ក្នុងពេលកំណត់ · 🥈 ត្រូវ ៩០% ឡើង · 🥉 ត្រូវ ៧០% ឡើង</p>
+          ${store.source === 'cloud' ? '<p class="bx-rec-src">☁️ កំណត់ត្រាពីគណនីរបស់ប្អូន (គ្រប់ឧបករណ៍)</p>' : store.source === 'loading' ? '<p class="bx-rec-src">☁️ កំពុងទាញកំណត់ត្រាពីគណនី...</p>' : ''}
+          <p class="bx-version">កំណែ ${(window.App && App.formatVersion && App.getRunningBuild) ? App.formatVersion(App.getRunningBuild()) : ''}</p>
         </section>
       </main>`;
 
@@ -409,7 +498,8 @@
     const pref = S.prefs[op] || {};
     S.level = pref.level || S.level || 1;
     S.boxes = BOXES[pref.boxes] ? pref.boxes : (BOXES[S.boxes] ? S.boxes : 20);
-    const store = loadStore();
+    S.view = 'setup';
+    const store = recordView();
     const o = OPS[op];
 
     const boxChips = BOX_LIST.map((b) => `
@@ -674,6 +764,7 @@
     const now = new Date();
     const date = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
     const attempt = { op: S.op, level: S.level, boxes: S.boxes, rows: P.rows, cols: P.cols, correct, total: n, acc, sec, medal, date };
+    if (student) attempt.uid = student.uid;
 
     const store = loadStore();
     store.attempts.unshift(attempt);
@@ -687,6 +778,16 @@
 
     S.lastResult = Object.assign({ isBest, target }, attempt);
     S.cloudSave = null;
+    if (student && window.Cloud && Cloud.saveMySummary) {
+      if (S.sumState === 'ready') {
+        S.cloudSum = addToSummary(S.cloudSum, attempt);
+        Cloud.saveMySummary(S.cloudSum).catch(() => {});
+      } else {
+        // summary not loaded yet: add it once loaded (never overwrite the account)
+        S.sumQueue = (S.sumQueue || []).concat([attempt]);
+        if (S.sumState !== 'loading') loadCloudSummary();
+      }
+    }
     if (window.Cloud && Cloud.isStudent()) {
       S.cloudSave = Cloud.saveResult('boxcalc', {
         op: attempt.op, level: attempt.level, boxes: attempt.boxes,

@@ -1,8 +1,8 @@
 {
-  "version": "14.9",
-  "build": 149,
+  "version": "15.0",
+  "build": 150,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Security: teacher PINs are no longer readable in the app files (stored as hashes), the built-in Admin PIN and the 1234 worksheet PIN were removed, and a saved login can no longer match the wrong teacher.",
-  "lastUpdated": "2026-11-17T18:00:00+07:00"
+  "changelog": "Students see their own Box Calculation record (time, games, medals, best levels, recent games) from their account on any device. The app version is shown on the student screen.",
+  "lastUpdated": "2026-11-17T19:00:00+07:00"
 }

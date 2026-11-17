@@ -53,6 +53,8 @@
     recordTeacherUsage,
     flushTeacherUsage,
     listTeacherUsage,
+    getMySummary,
+    saveMySummary,
     listRoster,
     saveRosterTeacher,
     deleteRosterTeacher,
@@ -424,6 +426,41 @@
     const snap = await db.collection('users').doc(profile.uid).collection('results')
       .orderBy('createdAt', 'desc').limit(limit || 50).get();
     return snap.docs.map((d) => Object.assign({ id: d.id }, d.data(), { createdAt: toMillis(d.data().createdAt) }));
+  }
+
+  /* ---------- student's own Box Calculation summary ----------
+     users/{uid}/meta/boxcalc: one small doc (totals, medals, best per level,
+     last games) so a student sees their record on any device for 1 read.
+     Returns { doc, exists } or null when offline; a summary that could not
+     be saved is kept locally (dirty) and sent first next time. */
+  const sumKey = () => 'ws_sum_' + (profile && profile.uid);
+  function readLocalSum() { try { return JSON.parse(localStorage.getItem(sumKey()) || 'null'); } catch (e) { return null; } }
+  function writeLocalSum(s, dirty) { try { localStorage.setItem(sumKey(), JSON.stringify({ data: s, dirty: !!dirty })); } catch (e) {} }
+
+  async function getMySummary() {
+    await ready();
+    if (!Cloud.isStudent()) return null;
+    const local = readLocalSum();
+    if (local && local.dirty && local.data) {
+      try { await saveMySummary(local.data); } catch (e) { return { doc: local.data, exists: true, offline: true }; }
+    }
+    try {
+      if (!db) throw new Error('offline');
+      const snap = await withTimeout(db.collection('users').doc(profile.uid).collection('meta').doc('boxcalc').get(), 10000);
+      if (snap.exists) { writeLocalSum(snap.data(), false); return { doc: snap.data(), exists: true }; }
+      return { doc: null, exists: false };
+    } catch (e) {
+      return local && local.data ? { doc: local.data, exists: true, offline: true } : null;
+    }
+  }
+
+  async function saveMySummary(s) {
+    if (!Cloud.isStudent()) return;
+    writeLocalSum(s, true);
+    await ready();
+    if (!db) throw new Error('offline');
+    await withTimeout(db.collection('users').doc(profile.uid).collection('meta').doc('boxcalc').set(s), 12000);
+    writeLocalSum(s, false);
   }
 
   /* ---------- class results with a local cache ----------
