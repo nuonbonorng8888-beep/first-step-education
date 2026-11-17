@@ -6869,18 +6869,18 @@
     "courseId": "course-math-g12-advanced",
     "sheetNumber": "សន្លឹកកិច្ចការទី ០១",
     "sheetNumberNum": 1,
-    "lessonTitle": "មេរៀនទី ១ ៖ ចំនួនកុំផ្លិចទម្រង់ពីជគណិត",
+    "lessonTitle": "មេរៀនទី ១ ៖ ចំនួនកុំផ្លិចទម្រង់ពីជគណិត (ទំព័រ ២ - ៩)",
     "chapterTitle": "ជំពូកទី ១ ៖ ចំនួនកុំផ្លិច",
     "topic": "ទម្រង់ពីជគណិត $z = a + bi$ សមភាព ប្រមាណវិធី និងប្លង់កុំផ្លិច",
     "objective": "យល់ច្បាស់ពីនិយមន័យ សមភាព ប្រមាណវិធីទាំងបួនលើចំនួនកុំផ្លិច និងការបកស្រាយក្នុងប្លង់កុំផ្លិច",
     "totalPoints": 3,
-    "totalPointsCount": 12,
+    "totalPointsCount": 15,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០១ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណ និងនិយមន័យនៃចំនួនកុំផ្លិច",
-        "topic": "ឯកតានិម្មិត $i$ ទម្រង់ពីជគណិត $z = a + bi$ ផ្នែកពិត និងផ្នែកនិម្មិត",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃចំនួនកុំផ្លិច",
+        "topic": "ឯកតានិម្មិត $i$ និងទម្រង់ $z = a + bi$",
         "objective": "ស្គាល់ឯកតានិម្មិត $i^2 = -1$ កំណត់ផ្នែកពិត ផ្នែកនិម្មិត និងស្វ័យគុណនៃ $i$",
         "summary": "<div class=\"ws-sum-section-title\">១. សញ្ញាណ និងនិយមន័យ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការ $x^2 + 1 = 0$ គ្មានឫសក្នុង $\\mathbb{R}$ នាំឱ្យបង្កើតឯកតានិម្មិត $i$ ដែលផ្ទៀងផ្ទាត់ $i^2 = -1$ (ឬ $i = \\sqrt{-1}$)។</li>\n  <li class=\"ws-sum-item\">ចំនួនកុំផ្លិចទម្រង់ពីជគណិត គឺ $z = a + bi$ ដែល $a, b \\in \\mathbb{R}$។</li>\n  <li class=\"ws-sum-item\">$a$ ហៅថា <strong>ផ្នែកពិត</strong> ៖ $\\text{Re}(z) = a$</li>\n  <li class=\"ws-sum-item\">$b$ ហៅថា <strong>ផ្នែកនិម្មិត</strong> ៖ $\\text{Im}(z) = b$</li>\n  <li class=\"ws-sum-item\">បើ $b = 0 \\implies z = a$ ជាចំនួនពិត ($\\mathbb{R} \\subset \\mathbb{C}$)។</li>\n  <li class=\"ws-sum-item\">បើ $a = 0, b \\ne 0 \\implies z = bi$ ហៅថា <strong>ចំនួននិម្មិតសុទ្ធ</strong>។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. ស្វ័យគុណនៃ $i$ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$i^0 = 1, i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1$។</li>\n  <li class=\"ws-sum-item\">ជាទូទៅ៖ ចែកស្វ័យគុណនឹង ៤ ៖ $i^{4k} = 1, i^{4k+1} = i, i^{4k+2} = -1, i^{4k+3} = -i$ ($k \\in \\mathbb{Z}$)</li>\n</ul>",
         "exercises": [
@@ -6919,50 +6919,9 @@
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០១ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ ចំនួនកុំផ្លិចស្មើគ្នា",
-        "topic": "សមភាព $a + bi = c + di \\iff a = c$ និង $b = d$",
-        "objective": "ចេះដោះស្រាយសមីការកុំផ្លិចដើម្បីរកតម្លៃអថេរពិត $x$ និង $y$",
-        "summary": "<div class=\"ws-sum-section-title\">១. ទ្រឹស្តីបទសមភាពកុំផ្លិច ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចំនួនកុំផ្លិចពីរ $z_1 = a + bi$ និង $z_2 = c + di$ ($a, b, c, d \\in \\mathbb{R}$) ស្មើគ្នា លុះត្រាតែផ្នែកពិតស្មើផ្នែកពិត និងផ្នែកនិម្មិតស្មើផ្នែកនិម្មិត ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$a + bi = c + di \\iff \\begin{cases} a = c \\\\ b = d \\end{cases}$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ករណីស្មើនឹងសូន្យ ៖ $a + bi = 0 \\iff a = 0$ និង $b = 0$។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. វិធីដោះស្រាយសមីការ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ជំហានទី ១ ៖ ពន្លាត និងរៀបចំអង្គសងខាងជាទម្រង់ $A + Bi = C + Di$ (ផ្តុំផ្នែកពិតដោយឡែក និងផ្នែកនិម្មិតដោយឡែក)។</li>\n  <li class=\"ws-sum-item\">ជំហានទី ២ ៖ បង្កើតប្រព័ន្ធសមីការពិជគណិតពីរ $\\begin{cases} A = C \\\\ B = D \\end{cases}$ រួចដោះស្រាយរក $x$ និង $y$។</li>\n</ul>",
-        "exercises": [
-          {
-            "id": "ex1",
-            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "រកតម្លៃចំនួនពិត $x$ និង $y$ ពីសមភាពកុំផ្លិចខាងក្រោម ៖",
-            "question": "រកតម្លៃពិត $x$ និង $y$ ដែលផ្ទៀងផ្ទាត់ ៖\n\nក. $(2x - 3) + (y + 4)i = 7 - 2i$\n\nខ. $(x + y) + (2x - y)i = 5 + 4i$",
-            "solution": "ក. ផ្ទឹមផ្នែកពិត និងផ្នែកនិម្មិត ៖\n$\\begin{cases} 2x - 3 = 7 \\\\ y + 4 = -2 \\end{cases} \\implies \\begin{cases} 2x = 10 \\\\ y = -6 \\end{cases} \\implies \\begin{cases} x = 5 \\\\ y = -6 \\end{cases}$។\nដូចនេះ $x = 5, y = -6$។\n\nខ. ផ្ទឹមផ្នែកពិត និងផ្នែកនិម្មិត ៖\n$\\begin{cases} x + y = 5 \\\\ 2x - y = 4 \\end{cases}$\nបូកសមីការទាំងពីរ ៖ $3x = 9 \\implies x = 3$។\nជំនួស $x = 3$ ចូលសមីការទីមួយ ៖ $3 + y = 5 \\implies y = 2$។\nដូចនេះ $x = 3, y = 2$។",
-            "rubric": "ក. រក $x = 5, y = -6$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. រក $x = 3, y = 2$ ត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex2",
-            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "ដោះស្រាយសមីការស្វែងរកចំនួនកុំផ្លិច $z = x + yi$ ៖",
-            "question": "រកចំនួនកុំផ្លិច $z = x + yi$ ($x, y \\in \\mathbb{R}$) ដែលផ្ទៀងផ្ទាត់សមីការ ៖\n$$(1 + 2i)z + (3 - i) = 4 + 7i$$",
-            "solution": "តាង $z = x + yi$ ៖\n$(1 + 2i)(x + yi) + (3 - i) = 4 + 7i$\n$(x + yi + 2xi + 2yi^2) + 3 - i = 4 + 7i$\n$[(x - 2y + 3) + (2x + y - 1)i] = 4 + 7i$។\n\nផ្ទឹមផ្នែកពិត និងផ្នែកនិម្មិត ៖\n$\\begin{cases} x - 2y + 3 = 4 \\\\ 2x + y - 1 = 7 \\end{cases} \\implies \\begin{cases} x - 2y = 1 \\\\ 2x + y = 8 \\end{cases}$\nគុណសមីការទីពីរនឹង ២ ៖ $4x + 2y = 16$។\nបូកជាមួយសមីការទីមួយ ៖ $5x = 17 \\implies x = \\dfrac{17}{5}$។\nទាញរក $y = 8 - 2\\left(\\dfrac{17}{5}\\right) = \\dfrac{40 - 34}{5} = \\dfrac{6}{5}$។\nដូចនេះ $z = \\dfrac{17}{5} + \\dfrac{6}{5}i$។",
-            "rubric": "បង្កើតប្រព័ន្ធសមីការត្រូវ និងដោះស្រាយឃើញ $z = \\dfrac{17}{5} + \\dfrac{6}{5} i$ ត្រូវ (១.០ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex-les-g12a-1-1-p2-3",
-            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "ដោះស្រាយសមីការកុំផ្លិចស្មើគ្នា និងប្រព័ន្ធសមីការកម្រិតខ្ពស់ ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. ដោះស្រាយសមីការក្នុង $\\mathbb{C}$ ៖ $z^2 + (1-3i)z - 4 - 3i = 0$។",
-              "ខ. រកចំនួនកុំផ្លិច $z$ ដែលផ្ទៀងផ្ទាត់ប្រព័ន្ធសមីការ $\\begin{cases} |z - 2i| = |z - 4| \\\\ |z - 1 - i| = \\sqrt{5} \\end{cases}$។"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. ដោះស្រាយសមីការ ៖**\n- ឌីសគ្រីមីណង់ $\\Delta = (1-3i)^2 - 4(1)(-4-3i) = (1 - 6i - 9) + 16 + 12i = 8 + 6i$\n- រកឫសការ៉េនៃ $\\Delta$ ៖ តាង $\\delta = x + yi$ នាំឱ្យ $x^2 - y^2 = 8$, $2xy = 6$, $x^2 + y^2 = \\sqrt{8^2+6^2} = 10$\n  $\\Rightarrow 2x^2 = 18 \\Rightarrow x = \\pm 3$, $y = \\pm 1$ នាំឱ្យ $\\delta = \\pm(3+i)$\n- ឫសនៃសមីការគឺ ៖\n  $z_1 = \\dfrac{-(1-3i) + (3+i)}{2} = \\dfrac{2 + 4i}{2} = 1 + 2i$\n  $z_2 = \\dfrac{-(1-3i) - (3+i)}{2} = \\dfrac{-4 + 2i}{2} = -2 + i$\n- ដូចនេះ សំណុំចម្លើយ $S = \\{1 + 2i, -2 + i\\}$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. រកចំនួនកុំផ្លិច $z$ ៖**\n- តាង $z = x + yi$ ($x, y \\in \\mathbb{R}$)\n- សមីការទី ១ ៖ $|x + (y-2)i| = |(x-4) + yi| \\iff x^2 + (y-2)^2 = (x-4)^2 + y^2$\n  $\\iff x^2 + y^2 - 4y + 4 = x^2 - 8x + 16 + y^2 \\iff 8x - 4y = 12 \\iff y = 2x - 3$\n- សមីការទី ២ ៖ $|(x-1) + (y-1)i|^2 = 5 \\iff (x-1)^2 + (y-1)^2 = 5$\n- ជំនួស $y = 2x - 3$ ចូល ៖ $(x-1)^2 + (2x-4)^2 = 5$\n  $\\iff (x^2 - 2x + 1) + (4x^2 - 16x + 16) = 5 \\iff 5x^2 - 18x + 12 = 0$\n  $\\Delta' = (-9)^2 - 5(12) = 81 - 60 = 21$\n  $\\Rightarrow x = \\dfrac{9 \\pm \\sqrt{21}}{5}$ នាំឱ្យ $y = 2\\left(\\dfrac{9 \\pm \\sqrt{21}}{5}\\right) - 3 = \\dfrac{3 \\pm 2\\sqrt{21}}{5}$\n- ដូចនេះ $z = \\dfrac{9 + \\sqrt{21}}{5} + \\left(\\dfrac{3 + 2\\sqrt{21}}{5}\\right)i$ ឬ $z = \\dfrac{9 - \\sqrt{21}}{5} + \\left(\\dfrac{3 - 2\\sqrt{21}}{5}\\right)i$។ *(០.៥០ ពិន្ទុ)*"
-          }
-        ],
-        "totalPoints": 3
-      },
-      {
-        "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០១ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ ប្រមាណវិធីលើចំនួនកុំផ្លិច និងចំនួនកុំផ្លិចឆ្លាស់",
-        "topic": "វិធីបូក ដក គុណ ចែកចំនួនកុំផ្លិច និងលក្ខណៈនៃកុំផ្លិចឆ្លាស់ $\\bar{z}$",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើចំនួនកុំផ្លិច",
+        "topic": "បូក ដក គុណ និងចែកចំនួនកុំផ្លិច",
         "objective": "ចេះគណនាប្រមាណវិធីទាំងបួនលើចំនួនកុំផ្លិច និងការប្រើកុំផ្លិចឆ្លាស់ដើម្បីបំបាត់ $i$ ពីភាគបែង",
         "summary": "<div class=\"ws-sum-section-title\">១. វិធីបូក ដក និងគុណ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">បូក/ដក ៖ $(a + bi) \\pm (c + di) = (a \\pm c) + (b \\pm d)i$</li>\n  <li class=\"ws-sum-item\">គុណ ៖ $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$ (ជំនួស $i^2 = -1$)</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. ចំនួនកុំផ្លិចឆ្លាស់ (Conjugate) ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចំពោះ $z = a + bi$ កុំផ្លិចឆ្លាស់គឺ $\\bar{z} = a - bi$។</li>\n  <li class=\"ws-sum-item\">លក្ខណៈពិសេស ៖ $z \\cdot \\bar{z} = (a + bi)(a - bi) = a^2 + b^2$ (ជាចំនួនពិតវិជ្ជមាន)</li>\n  <li class=\"ws-sum-item\">$\\overline{z_1 \\pm z_2} = \\bar{z}_1 \\pm \\bar{z}_2$ ; $\\overline{z_1 \\cdot z_2} = \\bar{z}_1 \\cdot \\bar{z}_2$ ; $\\overline{\\left(\\dfrac{z_1}{z_2}\\right)} = \\dfrac{\\bar{z}_1}{\\bar{z}_2}$ (ចំពោះ $z_2 \\ne 0$)</li>\n</ul>\n<div class=\"ws-sum-section-title\">៣. វិធីចែកចំនួនកុំផ្លិច ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ដើម្បីចែក $\\dfrac{a + bi}{c + di}$ ត្រូវគុណភាគយក និងភាគបែងនឹងកុំផ្លិចឆ្លាស់ $c - di$ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$\\dfrac{a + bi}{c + di} = \\dfrac{(a + bi)(c - di)}{c^2 + d^2} = \\dfrac{ac + bd}{c^2 + d^2} + \\dfrac{bc - ad}{c^2 + d^2}i$$</div>",
         "exercises": [
@@ -7000,10 +6959,48 @@
         "totalPoints": 3
       },
       {
+        "pointNumber": 3,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខណៈនៃចំនួនកុំផ្លិចឆ្លាស់",
+        "topic": "$\\bar{z}$ , $z\\bar{z} = |z|^2$",
+        "objective": "យល់ និងអនុវត្តលក្ខណៈនៃចំនួនកុំផ្លិចឆ្លាស់",
+        "totalPoints": 3,
+        "summary": "  - $\\overline{z_1 + z_2} = \\bar{z_1} + \\bar{z_2} \\qquad \\overline{z_1 z_2} = \\bar{z_1} \\cdot \\bar{z_2} \\qquad z\\bar{z} = a^2 + b^2$\n  - $z + \\bar{z} = 2\\,\\text{Re}(z)$ , $z - \\bar{z} = 2i\\,\\text{Im}(z)$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃចំនួនកុំផ្លិចឆ្លាស់ ៖",
+            "question": "គេឱ្យ $z_1 = 5 + 3i$ និង $z_2 = -5 - 3i$។\nក. ផ្ទៀងផ្ទាត់ថា $\\overline{z_1 + z_2} = \\bar{z_1} + \\bar{z_2}$។\nខ. គណនា $z_1 \\bar{z_1}$ និង $z_1 + \\bar{z_1}$។\nគ. ដោះស្រាយសមីការ $z + 2\\bar{z} = 6 - 3i$។",
+            "solution": "ក. $z_1 + z_2 = 0$ ⇒ $\\overline{z_1 + z_2} = 0$ ; $\\bar{z_1} + \\bar{z_2} = (5 - 3i) + (-5 + 3i) = 0$\nខ. $z_1 \\bar{z_1} = 34$ , $z_1 + \\bar{z_1} = 10$\nគ. $z = x + yi$ ⇒ $3x - yi = 6 - 3i$ ⇒ $z = 2 + 3i$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃចំនួនកុំផ្លិចឆ្លាស់ ៖",
+            "question": "គេឱ្យ $z_1 = -2 - i$ និង $z_2 = 6 + 2i$។\nក. ផ្ទៀងផ្ទាត់ថា $\\overline{z_1 + z_2} = \\bar{z_1} + \\bar{z_2}$។\nខ. គណនា $z_1 \\bar{z_1}$ និង $z_1 + \\bar{z_1}$។\nគ. ដោះស្រាយសមីការ $z + 2\\bar{z} = -3$។",
+            "solution": "ក. $z_1 + z_2 = 4 + i$ ⇒ $\\overline{z_1 + z_2} = 4 - i$ ; $\\bar{z_1} + \\bar{z_2} = (-2 + i) + (6 - 2i) = 4 - i$\nខ. $z_1 \\bar{z_1} = 5$ , $z_1 + \\bar{z_1} = -4$\nគ. $z = x + yi$ ⇒ $3x - yi = -3$ ⇒ $z = -1$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃចំនួនកុំផ្លិចឆ្លាស់ ៖",
+            "question": "គេឱ្យ $z_1 = 2 - i$ និង $z_2 = -1 + 3i$។\nក. ផ្ទៀងផ្ទាត់ថា $\\overline{z_1 + z_2} = \\bar{z_1} + \\bar{z_2}$។\nខ. គណនា $z_1 \\bar{z_1}$ និង $z_1 + \\bar{z_1}$។\nគ. ដោះស្រាយសមីការ $z + 2\\bar{z} = 6 + 3i$។",
+            "solution": "ក. $z_1 + z_2 = 1 + 2i$ ⇒ $\\overline{z_1 + z_2} = 1 - 2i$ ; $\\bar{z_1} + \\bar{z_2} = (2 + i) + (-1 - 3i) = 1 - 2i$\nខ. $z_1 \\bar{z_1} = 5$ , $z_1 + \\bar{z_1} = 4$\nគ. $z = x + yi$ ⇒ $3x - yi = 6 + 3i$ ⇒ $z = 2 - 3i$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
         "pointNumber": 4,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០១ - ចំណុចទី ៤",
-        "pointTitle": "ចំណុចទី ៤ ៖ តាងចំនួនកុំផ្លិចក្នុងប្លង់កុំផ្លិច និងម៉ូឌុល",
-        "topic": "ប្លង់កុំផ្លិច (Argand) ចំណុចរូបភាព វ៉ិចទ័ររូបភាព និងម៉ូឌុល $|z| = \\sqrt{a^2 + b^2}$",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៤",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចំនួនកុំផ្លិចក្នុងប្លង់កុំផ្លិច",
+        "topic": "ចំណុចរូបភាព $M(a, b)$ និងម៉ូឌុល",
         "objective": "ចេះតាងចំនួនកុំផ្លិចលើប្លង់ គណនាម៉ូឌុល និងស្គាល់លក្ខណៈនៃម៉ូឌុល",
         "summary": "<div class=\"ws-sum-section-title\">១. ប្លង់កុំផ្លិច (Argand Diagram) ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់ប្រដាប់ដោយតម្រុយអរតូណរម៉ាល់ $(O, \\vec{u}, \\vec{v})$ ៖ អ័ក្សដេក $Ox$ ជាអ័ក្សពិត អ័ក្សឈរ $Oy$ ជាអ័ក្សនិម្មិត។</li>\n  <li class=\"ws-sum-item\">ចំពោះចំនួនកុំផ្លិច $z = a + bi$ ៖</li>\n  <li class=\"ws-sum-item\">ចំណុច $M(a, b)$ ហៅថា <strong>ចំណុចរូបភាព</strong> នៃ $z$ តាងដោយ $M(z)$</li>\n  <li class=\"ws-sum-item\">វ៉ិចទ័រ $\\vec{OM}(a, b)$ ហៅថា <strong>វ៉ិចទ័ររូបភាព</strong> នៃ $z$</li>\n  <li class=\"ws-sum-item\">$z$ ហៅថា <strong>អាហ្វីក (Affix)</strong> នៃចំណុច $M$ ឬ នៃវ៉ិចទ័រ $\\vec{OM}$</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. ម៉ូឌុលនៃចំនួនកុំផ្លិច (Modulus) ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ម៉ូឌុលនៃ $z = a + bi$ គឺ $|z| = OM = \\sqrt{a^2 + b^2}$ (ជាចម្ងាយពីគល់ $O$ ទៅ $M$)។</li>\n  <li class=\"ws-sum-item\">លក្ខណៈសំខាន់ៗ ៖</li>\n  <li class=\"ws-sum-item\">$|z| \\ge 0$ និង $|z| = 0 \\iff z = 0$</li>\n  <li class=\"ws-sum-item\">$|z| = |\\bar{z}| = |-z|$</li>\n  <li class=\"ws-sum-item\">$|z|^2 = z \\cdot \\bar{z} = a^2 + b^2$</li>\n  <li class=\"ws-sum-item\">$|z_1 \\cdot z_2| = |z_1| \\cdot |z_2|$ និង $\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{|z_1|}{|z_2|}$</li>\n  <li class=\"ws-sum-item\">វិសមភាពត្រីកោណ ៖ $|z_1 + z_2| \\le |z_1| + |z_2|$</li>\n</ul>",
         "exercises": [
@@ -7039,6 +7036,44 @@
           }
         ],
         "totalPoints": 3
+      },
+      {
+        "pointNumber": 5,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៥",
+        "pointTitle": "ចំណុចទី ៥ ៖ វ៉ិចទ័ររូបភាពនៃផលបូក ផលដក និងផលគុណចំនួនកុំផ្លិចនឹងចំនួនពិត",
+        "topic": "អាហ្វិកនៃវ៉ិចទ័រ $\\overrightarrow{AB}$ គឺ $z_B - z_A$",
+        "objective": "យល់ និងអនុវត្តវ៉ិចទ័ររូបភាពនៃផលបូក ផលដក និងផលគុណចំនួនកុំផ្លិចនឹងចំនួនពិត",
+        "totalPoints": 3,
+        "summary": "  - $\\overrightarrow{OM_1} + \\overrightarrow{OM_2}$ មានអាហ្វិក $z_1 + z_2$\n  - $\\overrightarrow{AB}$ មានអាហ្វិក $z_B - z_A$ ; $k\\vec{u}$ មានអាហ្វិក $kz$\n  - ចំណុចកណ្តាល ៖ $z_I = \\dfrac{z_A + z_B}{2}$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរប្រើវ៉ិចទ័ររូបភាពនៃចំនួនកុំផ្លិច ៖",
+            "question": "ក្នុងប្លង់កុំផ្លិច ចំណុច $A, B, C$ មានអាហ្វិក $z_A = -1 + 3i$ , $z_B = -6 - 2i$ , $z_C = 4i$។\nក. រកអាហ្វិកនៃវ៉ិចទ័រ $\\overrightarrow{AB}$ និង $\\overrightarrow{OA} + \\overrightarrow{OC}$។\nខ. រកអាហ្វិកនៃចំណុចកណ្តាល $I$ នៃ $[BC]$។\nគ. រកអាហ្វិកនៃ $D$ ដើម្បីឱ្យ $ABCD$ ជាប្រលេឡូក្រាម។",
+            "solution": "ក. $-5 - 5i$ ; $-1 + 7i$\nខ. $z_I = -3 + i$\nគ. $z_D = z_A + z_C - z_B = 5 + 9i$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរប្រើវ៉ិចទ័ររូបភាពនៃចំនួនកុំផ្លិច ៖",
+            "question": "ក្នុងប្លង់កុំផ្លិច ចំណុច $A, B, C$ មានអាហ្វិក $z_A = -4 + 3i$ , $z_B = -2 + 5i$ , $z_C = 2 + 3i$។\nក. រកអាហ្វិកនៃវ៉ិចទ័រ $\\overrightarrow{AB}$ និង $\\overrightarrow{OA} + \\overrightarrow{OC}$។\nខ. រកអាហ្វិកនៃចំណុចកណ្តាល $I$ នៃ $[BC]$។\nគ. រកអាហ្វិកនៃ $D$ ដើម្បីឱ្យ $ABCD$ ជាប្រលេឡូក្រាម។",
+            "solution": "ក. $2 + 2i$ ; $-2 + 6i$\nខ. $z_I = 4i$\nគ. $z_D = z_A + z_C - z_B = i$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរប្រើវ៉ិចទ័ររូបភាពនៃចំនួនកុំផ្លិច ៖",
+            "question": "ក្នុងប្លង់កុំផ្លិច ចំណុច $A, B, C$ មានអាហ្វិក $z_A = 2 + 5i$ , $z_B = 1 - i$ , $z_C = 1 - 4i$។\nក. រកអាហ្វិកនៃវ៉ិចទ័រ $\\overrightarrow{AB}$ និង $\\overrightarrow{OA} + \\overrightarrow{OC}$។\nខ. រកអាហ្វិកនៃចំណុចកណ្តាល $I$ នៃ $[BC]$។\nគ. រកអាហ្វិកនៃ $D$ ដើម្បីឱ្យ $ABCD$ ជាប្រលេឡូក្រាម។",
+            "solution": "ក. $-1 - 6i$ ; $3 + i$\nខ. $z_I = 1 - \\dfrac{5}{2}i$\nគ. $z_D = z_A + z_C - z_B = 2 + 2i$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
       }
     ],
     "exercises": [
@@ -7065,15 +7100,53 @@
   "les-g12a-1-2": {
     "lessonId": "les-g12a-1-2",
     "grade": "12",
-    "lessonTitle": "មេរៀនទី ២ ៖ ចំនួនកុំផ្លិចទម្រង់ត្រីកោណមាត្រ",
+    "lessonTitle": "មេរៀនទី ២ ៖ ចំនួនកុំផ្លិចទម្រង់ត្រីកោណមាត្រ (ទំព័រ ១០ - ២៧)",
     "chapter": "ជំពូកទី ១ ៖ ចំនួនកុំផ្លិច",
     "totalPoints": 3,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០២ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុល និងអាគុយម៉ង់នៃចំនួនកុំផ្លិច",
-        "topic": "ម៉ូឌុល r = |z| និងអាគុយម៉ង់ arg(z) = θ",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុលនៃចំនួនកុំផ្លិច",
+        "topic": "$|z| = \\sqrt{a^2 + b^2}$",
+        "objective": "យល់ និងអនុវត្តម៉ូឌុលនៃចំនួនកុំផ្លិច",
+        "totalPoints": 3,
+        "summary": "  - $|z| = \\sqrt{a^2 + b^2} \\qquad |z_1 z_2| = |z_1||z_2| \\qquad \\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{|z_1|}{|z_2|}$\n  - $|\\bar{z}| = |z|$ , $|z^n| = |z|^n$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាម៉ូឌុលនៃចំនួនកុំផ្លិច ៖",
+            "question": "គេឱ្យ $z_1 = 5 - 12i$ និង $z_2 = -6 + 8i$។\nក. គណនា $|z_1|$ និង $|z_2|$។\nខ. ទាញរក $|z_1 z_2|$ និង $\\left|\\dfrac{z_1}{z_2}\\right|$។\nគ. គណនា $|\\bar{z_1}|$ និង $|z_1^2|$។",
+            "solution": "ក. $|z_1| = 13 , |z_2| = 10$\nខ. $|z_1 z_2| = 130$ , $\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{13}{10}$\nគ. $|\\bar{z_1}| = 13$ , $|z_1^2| = 169$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាម៉ូឌុលនៃចំនួនកុំផ្លិច ៖",
+            "question": "គេឱ្យ $z_1 = 6 - 8i$ និង $z_2 = -3 + 4i$។\nក. គណនា $|z_1|$ និង $|z_2|$។\nខ. ទាញរក $|z_1 z_2|$ និង $\\left|\\dfrac{z_1}{z_2}\\right|$។\nគ. គណនា $|\\bar{z_1}|$ និង $|z_1^2|$។",
+            "solution": "ក. $|z_1| = 10 , |z_2| = 5$\nខ. $|z_1 z_2| = 50$ , $\\left|\\dfrac{z_1}{z_2}\\right| = 2$\nគ. $|\\bar{z_1}| = 10$ , $|z_1^2| = 100$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាម៉ូឌុលនៃចំនួនកុំផ្លិច ៖",
+            "question": "គេឱ្យ $z_1 = 5 - 12i$ និង $z_2 = -8 + 15i$។\nក. គណនា $|z_1|$ និង $|z_2|$។\nខ. ទាញរក $|z_1 z_2|$ និង $\\left|\\dfrac{z_1}{z_2}\\right|$។\nគ. គណនា $|\\bar{z_1}|$ និង $|z_1^2|$។",
+            "solution": "ក. $|z_1| = 13 , |z_2| = 17$\nខ. $|z_1 z_2| = 221$ , $\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{13}{17}$\nគ. $|\\bar{z_1}| = 13$ , $|z_1^2| = 169$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 2,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
+        "topic": "$\\cos\\theta = \\dfrac{a}{r}$ , $\\sin\\theta = \\dfrac{b}{r}$",
         "objective": "ចេះគណនាម៉ូឌុល និងអាគុយម៉ង់នៃចំនួនកុំផ្លិច",
         "exercises": [
           {
@@ -7111,10 +7184,10 @@
         "summary": "<div class=\"ws-sum-text\"><strong>ម៉ូឌុល និងអាគុយម៉ង់ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ម៉ូឌុលនៃ $z = a+bi$ គឺ $r = |z| = \\sqrt{a^2 + b^2} \\ge 0$។</li>\n  <li class=\"ws-sum-item\">អាគុយម៉ង់ $\\theta = \\arg(z)$ កំណត់ដោយ $\\cos\\theta = \\dfrac{a}{r}$ និង $\\sin\\theta = \\dfrac{b}{r}$ ($-\\pi < \\theta \\le \\pi$ ឬ $0 \\le \\theta < 2\\pi$)។</li>\n</ul>"
       },
       {
-        "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០២ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
-        "topic": "ទម្រង់ $z = r(\\cos \\theta + i \\sin \\theta)$",
+        "pointNumber": 3,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
+        "topic": "$z = r(\\cos\\theta + i\\sin\\theta)$",
         "objective": "ចេះសរសេរចំនួនកុំផ្លិចជាទម្រង់ត្រីកោណមាត្រ និងបម្លែងមកទម្រង់ពីជគណិត",
         "exercises": [
           {
@@ -7152,10 +7225,10 @@
         "summary": "<div class=\"ws-sum-text\"><strong>ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចំនួនកុំផ្លិច $z = a+bi$ អាចសរសេរជា ៖ $z = r(\\cos\\theta + i\\sin\\theta)$ ដែល $r = |z| > 0$ និង $\\theta = \\arg(z)$។</li>\n  <li class=\"ws-sum-item\">ទម្រង់នេះងាយស្រួលបំផុតសម្រាប់គណនាផលគុណ ផលចែក និងស្វ័យគុណ។</li>\n</ul>"
       },
       {
-        "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០២ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណ និងផលចែកទម្រង់ត្រីកោណមាត្រ",
-        "topic": "រូបមន្តផលគុណ និងផលចែក z1 z2 និង z1 / z2",
+        "pointNumber": 4,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៤",
+        "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
+        "topic": "គុណម៉ូឌុល និងបូកអាគុយម៉ង់",
         "objective": "អនុវត្តរូបមន្តផលគុណ និងផលចែកលើចំនួនកុំផ្លិចទម្រង់ត្រីកោណមាត្រ",
         "exercises": [
           {
@@ -7191,68 +7264,217 @@
         ],
         "totalPoints": 3,
         "summary": "<div class=\"ws-sum-text\"><strong>ផលគុណ និងផលចែកទម្រង់ត្រីកោណមាត្រ ៖</strong></div>\n<div class=\"ws-sum-text\">បើ $z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1)$ និង $z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)$ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$z_1 z_2 = r_1 r_2 [\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)]$ (គុណម៉ូឌុល បូកអាគុយម៉ង់)</li>\n  <li class=\"ws-sum-item\">$\\dfrac{z_1}{z_2} = \\dfrac{r_1}{r_2} [\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)]$ (ចែកម៉ូឌុល ដកអាគុយម៉ង់)</li>\n</ul>"
+      },
+      {
+        "pointNumber": 5,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៥",
+        "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
+        "topic": "ចែកម៉ូឌុល និងដកអាគុយម៉ង់",
+        "objective": "យល់ និងអនុវត្តផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
+        "totalPoints": 3,
+        "summary": "  - $\\dfrac{z_1}{z_2} = \\dfrac{r_1}{r_2}\\left[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)\\right]$\n  - $\\dfrac{1}{z} = \\dfrac{1}{r}\\left[\\cos(-\\theta) + i\\sin(-\\theta)\\right]$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ ៖",
+            "question": "គេឱ្យ $z_1 = 6\\left(\\cos \\dfrac{5\\pi}{6} + i\\sin \\dfrac{5\\pi}{6}\\right)$ និង $z_2 = 2\\left(\\cos \\left(-\\dfrac{\\pi}{2}\\right) + i\\sin \\left(-\\dfrac{\\pi}{2}\\right)\\right)$។\nក. សរសេរ $\\dfrac{z_1}{z_2}$ ជាទម្រង់ត្រីកោណមាត្រ។\nខ. សរសេរ $\\dfrac{1}{z_2}$ ជាទម្រង់ត្រីកោណមាត្រ។\nគ. រកម៉ូឌុល និងអាគុយម៉ង់នៃ $\\dfrac{z_2}{z_1}$។",
+            "solution": "ក. $\\dfrac{z_1}{z_2} = 3\\left(\\cos \\left(-\\dfrac{2\\pi}{3}\\right) + i\\sin \\left(-\\dfrac{2\\pi}{3}\\right)\\right)$\nខ. $\\dfrac{1}{z_2} = \\dfrac{1}{2}\\left(\\cos \\dfrac{\\pi}{2} + i\\sin \\dfrac{\\pi}{2}\\right)$\nគ. ម៉ូឌុល $\\dfrac{1}{3}$ , អាគុយម៉ង់ $\\dfrac{2\\pi}{3}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ ៖",
+            "question": "គេឱ្យ $z_1 = 6\\left(\\cos \\dfrac{3\\pi}{4} + i\\sin \\dfrac{3\\pi}{4}\\right)$ និង $z_2 = 2\\left(\\cos \\left(-\\dfrac{\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{\\pi}{6}\\right)\\right)$។\nក. សរសេរ $\\dfrac{z_1}{z_2}$ ជាទម្រង់ត្រីកោណមាត្រ។\nខ. សរសេរ $\\dfrac{1}{z_2}$ ជាទម្រង់ត្រីកោណមាត្រ។\nគ. រកម៉ូឌុល និងអាគុយម៉ង់នៃ $\\dfrac{z_2}{z_1}$។",
+            "solution": "ក. $\\dfrac{z_1}{z_2} = 3\\left(\\cos \\dfrac{11\\pi}{12} + i\\sin \\dfrac{11\\pi}{12}\\right)$\nខ. $\\dfrac{1}{z_2} = \\dfrac{1}{2}\\left(\\cos \\dfrac{\\pi}{6} + i\\sin \\dfrac{\\pi}{6}\\right)$\nគ. ម៉ូឌុល $\\dfrac{1}{3}$ , អាគុយម៉ង់ $-\\dfrac{11\\pi}{12}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ ៖",
+            "question": "គេឱ្យ $z_1 = 8\\left(\\cos \\dfrac{3\\pi}{4} + i\\sin \\dfrac{3\\pi}{4}\\right)$ និង $z_2 = 2\\left(\\cos \\left(-\\dfrac{\\pi}{2}\\right) + i\\sin \\left(-\\dfrac{\\pi}{2}\\right)\\right)$។\nក. សរសេរ $\\dfrac{z_1}{z_2}$ ជាទម្រង់ត្រីកោណមាត្រ។\nខ. សរសេរ $\\dfrac{1}{z_2}$ ជាទម្រង់ត្រីកោណមាត្រ។\nគ. រកម៉ូឌុល និងអាគុយម៉ង់នៃ $\\dfrac{z_2}{z_1}$។",
+            "solution": "ក. $\\dfrac{z_1}{z_2} = 4\\left(\\cos \\left(-\\dfrac{3\\pi}{4}\\right) + i\\sin \\left(-\\dfrac{3\\pi}{4}\\right)\\right)$\nខ. $\\dfrac{1}{z_2} = \\dfrac{1}{2}\\left(\\cos \\dfrac{\\pi}{2} + i\\sin \\dfrac{\\pi}{2}\\right)$\nគ. ម៉ូឌុល $\\dfrac{1}{4}$ , អាគុយម៉ង់ $\\dfrac{3\\pi}{4}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 6,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៦",
+        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
+        "topic": "$z' = (\\cos\\theta + i\\sin\\theta) z$",
+        "objective": "យល់ និងអនុវត្តបំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
+        "totalPoints": 3,
+        "summary": "  - $z' = (\\cos\\theta + i\\sin\\theta)\\, z$\n  - មុំ $\\dfrac{\\pi}{2}$ ៖ $z' = iz$ ; មុំ $\\pi$ ៖ $z' = -z$\n  - ផ្ចិត $\\Omega(\\omega)$ ៖ $z' - \\omega = (\\cos\\theta + i\\sin\\theta)(z - \\omega)$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តបំប្លែងវិលក្នុងប្លង់កុំផ្លិច ៖",
+            "question": "ក. សរសេរកន្សោមកុំផ្លិចនៃបំប្លែងវិល $R$ ផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$។\nខ. រករូបភាពនៃ $A(5 - 2i)$ តាម $R$។\nគ. រករូបភាពនៃ $A$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-2 - 5i)$ មុំ $\\dfrac{\\pi}{2}$។",
+            "solution": "ក. $z' = \\left(\\cos\\dfrac{\\pi}{2} + i\\sin\\dfrac{\\pi}{2}\\right) z = iz$\nខ. $z' = i(5 - 2i) = 2 + 5i$\nគ. $z' = \\omega + i(z - \\omega) = (-2 - 5i) + i(7 + 3i) = -5 + 2i$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តបំប្លែងវិលក្នុងប្លង់កុំផ្លិច ៖",
+            "question": "ក. សរសេរកន្សោមកុំផ្លិចនៃបំប្លែងវិល $R$ ផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$។\nខ. រករូបភាពនៃ $A(1 - 4i)$ តាម $R$។\nគ. រករូបភាពនៃ $A$ តាមបំប្លែងវិលផ្ចិត $\\Omega(3 + 3i)$ មុំ $\\dfrac{\\pi}{2}$។",
+            "solution": "ក. $z' = \\left(\\cos\\dfrac{\\pi}{2} + i\\sin\\dfrac{\\pi}{2}\\right) z = iz$\nខ. $z' = i(1 - 4i) = 4 + i$\nគ. $z' = \\omega + i(z - \\omega) = (3 + 3i) + i(-2 - 7i) = 10 + i$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តបំប្លែងវិលក្នុងប្លង់កុំផ្លិច ៖",
+            "question": "ក. សរសេរកន្សោមកុំផ្លិចនៃបំប្លែងវិល $R$ ផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$។\nខ. រករូបភាពនៃ $A(3 - i)$ តាម $R$។\nគ. រករូបភាពនៃ $A$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-2 - 3i)$ មុំ $\\dfrac{\\pi}{2}$។",
+            "solution": "ក. $z' = \\left(\\cos\\dfrac{\\pi}{2} + i\\sin\\dfrac{\\pi}{2}\\right) z = iz$\nខ. $z' = i(3 - i) = 1 + 3i$\nគ. $z' = \\omega + i(z - \\omega) = (-2 - 3i) + i(5 + 2i) = -4 + 2i$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
       }
     ],
-    "totalPointsCount": 9
+    "totalPointsCount": 18
   },
   "les-g12a-2-1": {
     "lessonId": "les-g12a-2-1",
     "courseId": "course-math-g12-advanced",
     "sheetNumber": "សន្លឹកកិច្ចការទី០៣",
     "sheetNumberNum": 3,
-    "lessonTitle": "មេរៀនទី ១ ៖ លីមីតត្រីកោណមាត្រ និងលីមីតអិចស្ប៉ូណង់ស្យែល",
+    "lessonTitle": "មេរៀនទី ១ ៖ លីមីតនៃអនុគមន៍ (ទំព័រ ៤២ - ៦៥)",
     "chapterTitle": "ជំពូកទី ២ ៖ លីមីត និងភាពជាប់នៃអនុគមន៍",
     "topic": "លីមីតនៃអនុគមន៍ត្រីកោណមាត្រ អិចស្ប៉ូណង់ស្យែល និងលោការីត",
     "objective": "ចេះប្រើប្រាស់រូបមន្ត $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$, $\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = 1$ និងបំបាត់រាងមិនកំណត់ $[1^\\infty]$",
     "totalPoints": 3,
-    "totalPointsCount": 9,
+    "totalPointsCount": 18,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ លីមីតត្រីកោណមាត្រ $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ និងរូបមន្តពាក់ព័ន្ធ",
-        "topic": "លីមីតត្រីកោណមាត្រ និងរូបមន្ត $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2}$",
-        "objective": "ចេះបំប្លែងកន្សោមត្រីកោណមាត្រឱ្យត្រូវទម្រង់លីមីតគ្រឹះ",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
+        "topic": "លីមីតត្រង់ចំនួនកំណត់ ត្រង់អនន្ត និងប្រមាណវិធីលើលីមីត",
+        "objective": "យល់ និងអនុវត្តលីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
+        "totalPoints": 3,
+        "summary": "  - ពហុធា ៖ $\\lim_{x \\to a} P(x) = P(a)$\n  - ប្រមាណវិធី ៖ លីមីតនៃផលបូក ផលគុណ ផលចែក\n  - ត្រង់អនន្ត ៖ យកតួដឺក្រេខ្ពស់បំផុត",
         "exercises": [
           {
             "id": "ex1",
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "គណនាលីមីតត្រីកោណមាត្រគ្រឹះ ៖",
-            "question": "គណនាលីមីត ៖\n\nក. $L_1 = \\lim_{x \\to 0} \\dfrac{\\sin 5x}{3x}$\n\nខ. $L_2 = \\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2}$",
-            "solution": "ក. បំប្លែងឱ្យត្រូវទម្រង់ $\\lim_{u \\to 0} \\dfrac{\\sin u}{u} = 1$ ៖\n$L_1 = \\lim_{x \\to 0} \\left(\\dfrac{5}{3} \\cdot \\dfrac{\\sin 5x}{5x}\\right) = \\dfrac{5}{3} \\cdot 1 = \\dfrac{5}{3}$។\n\nខ. គុណកន្សោមឆ្លាស់ ឬប្រើរូបមន្តកន្លះមុំ $1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ ៖\n$L_2 = \\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{x^2} = \\lim_{x \\to 0} \\dfrac{2}{4}\\left(\\dfrac{\\sin\\left(\\dfrac{x}{2}\\right)}{\\dfrac{x}{2}}\\right)^2 = \\dfrac{1}{2}(1)^2 = \\dfrac{1}{2}$។",
-            "rubric": "ក. គណនាឃើញ $\\dfrac{5}{3}$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនាឃើញ $\\dfrac{1}{2}$ ត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតដោយប្រើប្រមាណវិធីលើលីមីត ៖",
+            "question": "ក. គណនា $\\lim_{x \\to -1} (2x^2 - 3x + 5)$។\nខ. គណនា $\\lim_{x \\to 2} \\dfrac{x^2 - 3x + 2}{x - 2}$។\nគ. គេដឹងថា $\\lim_{x \\to 1} f(x) = 4$ និង $\\lim_{x \\to 1} g(x) = 5$។ គណនា $\\lim_{x \\to 1} \\dfrac{3f(x) + g(x)}{g(x)}$។",
+            "solution": "ក. ជំនួសផ្ទាល់ ៖ $= 10$\nខ. រាង $\\frac{0}{0}$ ៖ $\\dfrac{(x - 2)(x - 1)}{x - 2} = x - 1$ ⇒ $1$\nគ. $\\dfrac{3(4) + 5}{5} = \\dfrac{17}{5}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
             "id": "ex2",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "គណនាលីមីតត្រីកោណមាត្រកម្រិតមធ្យម ៖",
-            "question": "គណនាលីមីត ៖\n$M = \\lim_{x \\to 0} \\dfrac{\\tan x - \\sin x}{x^3}$។",
-            "solution": "បំប្លែងភាគយក ៖\n$\\tan x - \\sin x = \\dfrac{\\sin x}{\\cos x} - \\sin x = \\sin x\\left(\\dfrac{1 - \\cos x}{\\cos x}\\right) = \\dfrac{\\sin x(1 - \\cos x)}{\\cos x}$។\nជំនួសចូលលីមីត ៖\n$M = \\lim_{x \\to 0} \\left[\\dfrac{\\sin x}{x} \\cdot \\dfrac{1 - \\cos x}{x^2} \\cdot \\dfrac{1}{\\cos x}\\right]$\n$= (1) \\cdot \\left(\\dfrac{1}{2}\\right) \\cdot \\left(\\dfrac{1}{1}\\right) = \\dfrac{1}{2}$។",
-            "rubric": "បំបែក $\\tan x - \\sin x$ ត្រឹមត្រូវ (០.៥ ពិន្ទុ) | គណនាលីមីតឃើញ $\\dfrac{1}{2}$ ត្រឹមត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតដោយប្រើប្រមាណវិធីលើលីមីត ៖",
+            "question": "ក. គណនា $\\lim_{x \\to 2} (x^2 + 3x - 1)$។\nខ. គណនា $\\lim_{x \\to -1} \\dfrac{x^2 - 2x - 3}{x + 1}$។\nគ. គេដឹងថា $\\lim_{x \\to 1} f(x) = -2$ និង $\\lim_{x \\to 1} g(x) = 1$។ គណនា $\\lim_{x \\to 1} \\dfrac{3f(x) + g(x)}{g(x)}$។",
+            "solution": "ក. ជំនួសផ្ទាល់ ៖ $= 9$\nខ. រាង $\\frac{0}{0}$ ៖ $\\dfrac{(x + 1)(x - 3)}{x + 1} = x - 3$ ⇒ $-4$\nគ. $\\dfrac{3(-2) + 1}{1} = -5$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex-les-g12a-2-1-p1-3",
+            "id": "ex3",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "គណនាលីមីតត្រីកោណមាត្រកម្រិតខ្ពស់ ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. គណនា $A = \\lim_{x \\to 0} \\dfrac{1 - \\cos x \\cos 2x \\cos 3x}{x^2}$។",
-              "ខ. គណនា $B = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 4x}$។"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. គណនា $A$ ៖**\n- ថែមថយតួត្រីកោណមាត្រនៅភាគយក ៖\n  $1 - \\cos x \\cos 2x \\cos 3x = (1 - \\cos x) + \\cos x(1 - \\cos 2x) + \\cos x \\cos 2x(1 - \\cos 3x)$\n- ចែកនឹង $x^2$ រួចគណនាលីមីតតួនីមួយៗ ៖\n  + $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2}$\n  + $\\lim_{x \\to 0} \\cos x \\cdot \\dfrac{1 - \\cos 2x}{x^2} = 1 \\cdot \\dfrac{2^2}{2} = 2$\n  + $\\lim_{x \\to 0} \\cos x \\cos 2x \\cdot \\dfrac{1 - \\cos 3x}{x^2} = 1 \\cdot 1 \\cdot \\dfrac{3^2}{2} = \\dfrac{9}{2}$\n- នាំឱ្យ $A = \\dfrac{1}{2} + 2 + \\dfrac{9}{2} = \\dfrac{10}{2} + 2 = 5 + 2 = 7$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. គណនា $B$ ៖**\n- បំបែកភាគបែង $\\cos 4x = 2\\cos^2 2x - 1 = \\cos^2 2x - \\sin^2 2x = (\\cos^2 x - \\sin^2 x)^2 - 4\\sin^2 x\\cos^2 x$\n  ឬ $\\cos 4x = 1 - 2\\sin^2 2x = 1 - 8\\sin^2 x\\cos^2 x$\n- ម្យ៉ាងទៀត $\\cos 4x = \\sin\\left(\\dfrac{\\pi}{2} - 4x\\right)$។ តាង $t = x - \\dfrac{\\pi}{4} \\iff x = t + \\dfrac{\\pi}{4}$\n  កាលណា $x \\to \\dfrac{\\pi}{4} \\Rightarrow t \\to 0$\n  $\\cos x - \\sin x = \\sqrt{2}\\cos\\left(x + \\dfrac{\\pi}{4}\\right) = \\sqrt{2}\\cos\\left(t + \\dfrac{\\pi}{2}\\right) = -\\sqrt{2}\\sin t$\n  $\\cos 4x = \\cos(4t + \\pi) = -\\cos 4t$\n  $\\Rightarrow \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 4x} = \\lim_{t \\to 0} \\dfrac{-\\sqrt{2}\\sin t}{-\\cos 4t}$ (កំហុសពិនិត្យ ៖ $\\cos 4x = 0$ ត្រង់ $x = \\pi/4$)\n  $\\cos 4x = -\\sin 4t$ មិនមែន $-\\cos 4t$ ទេ ព្រោះ $4\\left(t + \\dfrac{\\pi}{4}\\right) = 4t + \\pi \\Rightarrow \\cos(4t + \\pi) = -\\cos 4t = -1 \\neq 0$\n  ត្រួតពិនិត្យ ៖ $\\cos\\left(4 \\times \\dfrac{\\pi}{4}\\right) = \\cos\\pi = -1 \\neq 0$! ភាគបែងមិនមែនសូន្យទេ! ចម្លើយគឺ $\\dfrac{0}{-1} = 0$!\n  ប្រសិនបើជា $\\cos 2x$ ៖ $\\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 2x} = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos^2 x - \\sin^2 x} = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{1}{\\cos x + \\sin x} = \\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$។ *(០.៥០ ពិន្ទុ)*"
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតដោយប្រើប្រមាណវិធីលើលីមីត ៖",
+            "question": "ក. គណនា $\\lim_{x \\to -2} (x^2 + 4x + 5)$។\nខ. គណនា $\\lim_{x \\to 1} \\dfrac{x^2 - 5x + 4}{x - 1}$។\nគ. គេដឹងថា $\\lim_{x \\to 1} f(x) = 0$ និង $\\lim_{x \\to 1} g(x) = 3$។ គណនា $\\lim_{x \\to 1} \\dfrac{3f(x) + g(x)}{g(x)}$។",
+            "solution": "ក. ជំនួសផ្ទាល់ ៖ $= 1$\nខ. រាង $\\frac{0}{0}$ ៖ $\\dfrac{(x - 1)(x - 4)}{x - 1} = x - 4$ ⇒ $-3$\nគ. $\\dfrac{3(0) + 3}{3} = 1$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           }
-        ],
-        "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>លីមីតត្រីកោណមាត្រសំខាន់ៗ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{\\tan x}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2}$</li>\n</ul>"
+        ]
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ លីមីតអិចស្ប៉ូណង់ស្យែល និងលោការីត",
-        "topic": "រូបមន្ត $\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = 1$ និង $\\lim_{x \\to 0} \\dfrac{\\ln(1+x)}{x} = 1$",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
+        "topic": "គុណនឹងកន្សោមឆ្លាស់",
+        "objective": "យល់ និងអនុវត្តលីមីតនៃអនុគមន៍អសនិទាន",
+        "totalPoints": 3,
+        "summary": "  - គុណនឹងកន្សោមឆ្លាស់ $\\sqrt{A} + B$\n  - ពេល $x \\to -\\infty$ ៖ $\\sqrt{x^2} = |x| = -x$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍អសនិទាន ៖",
+            "question": "ក. គណនា $\\lim_{x \\to 5} \\dfrac{\\sqrt{x - 1} - 2}{x - 5}$។\nខ. គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 2x} - x\\right)$។\nគ. គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{x^2 + 1}}{x + 2}$។",
+            "solution": "ក. $\\dfrac{1}{\\sqrt{x - 1} + 2} \\to \\dfrac{1}{4}$\nខ. $\\dfrac{2x}{\\sqrt{x^2 + 2x} + x} \\to 1$\nគ. $\\sqrt{x^2 + 1} = -x\\sqrt{1 + \\dfrac{1}{x^2}}$ ⇒ $-1$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍អសនិទាន ៖",
+            "question": "ក. គណនា $\\lim_{x \\to 2} \\dfrac{\\sqrt{x + 2} - 2}{x - 2}$។\nខ. គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 6x} - x\\right)$។\nគ. គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2 + 1}}{x + 2}$។",
+            "solution": "ក. $\\dfrac{1}{\\sqrt{x + 2} + 2} \\to \\dfrac{1}{4}$\nខ. $\\dfrac{6x}{\\sqrt{x^2 + 6x} + x} \\to 3$\nគ. $\\sqrt{4x^2 + 1} = -x\\sqrt{4 + \\dfrac{1}{x^2}}$ ⇒ $-2$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍អសនិទាន ៖",
+            "question": "ក. គណនា $\\lim_{x \\to 0} \\dfrac{\\sqrt{x + 4} - 2}{x}$។\nខ. គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 4x} - x\\right)$។\nគ. គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{x^2 + 1}}{x + 2}$។",
+            "solution": "ក. $\\dfrac{1}{\\sqrt{x + 4} + 2} \\to \\dfrac{1}{4}$\nខ. $\\dfrac{4x}{\\sqrt{x^2 + 4x} + x} \\to 2$\nគ. $\\sqrt{x^2 + 1} = -x\\sqrt{1 + \\dfrac{1}{x^2}}$ ⇒ $-1$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 3,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
+        "topic": "លីមីតនៃ $f(u(x))$ និងទ្រឹស្តីបទប្រៀបធៀប",
+        "objective": "យល់ និងអនុវត្តលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
+        "totalPoints": 3,
+        "summary": "  - បើ $\\lim_{x \\to a} u(x) = b$ ហើយ $f$ ជាប់ត្រង់ $b$ នោះ $\\lim f(u(x)) = f(b)$\n  - ប្រៀបធៀប ៖ $g \\le f \\le h$ ហើយ $\\lim g = \\lim h = L$ ⇒ $\\lim f = L$\n  - $f \\ge g$ ហើយ $\\lim g = +\\infty$ ⇒ $\\lim f = +\\infty$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប ៖",
+            "question": "ក. គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{9x^2 + 1}{4x^2 + 3}}$។\nខ. បង្ហាញថា $-\\dfrac{1}{x} \\le \\dfrac{\\cos x}{x} \\le \\dfrac{1}{x}$ ចំពោះ $x > 0$ រួចគណនា $\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x}$។\nគ. គណនា $\\lim_{x \\to +\\infty} (4x - \\sin x)$។",
+            "solution": "ក. $\\dfrac{9x^2 + 1}{4x^2 + 3} \\to \\dfrac{9}{4}$ ⇒ $\\dfrac{3}{2}$\nខ. $-1 \\le \\cos x \\le 1$ ចែកនឹង $x > 0$ ; អង្គសងខាង $\\to 0$ ⇒ $0$\nគ. $4x - \\sin x \\ge 4x - 1 \\to +\\infty$ ⇒ $+\\infty$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប ៖",
+            "question": "ក. គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{9x^2 + 1}{4x^2 + 3}}$។\nខ. បង្ហាញថា $-\\dfrac{1}{x} \\le \\dfrac{\\cos x}{x} \\le \\dfrac{1}{x}$ ចំពោះ $x > 0$ រួចគណនា $\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x}$។\nគ. គណនា $\\lim_{x \\to +\\infty} (5x - \\sin x)$។",
+            "solution": "ក. $\\dfrac{9x^2 + 1}{4x^2 + 3} \\to \\dfrac{9}{4}$ ⇒ $\\dfrac{3}{2}$\nខ. $-1 \\le \\cos x \\le 1$ ចែកនឹង $x > 0$ ; អង្គសងខាង $\\to 0$ ⇒ $0$\nគ. $5x - \\sin x \\ge 5x - 1 \\to +\\infty$ ⇒ $+\\infty$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប ៖",
+            "question": "ក. គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{16x^2 + 1}{9x^2 + 3}}$។\nខ. បង្ហាញថា $-\\dfrac{1}{x} \\le \\dfrac{\\cos x}{x} \\le \\dfrac{1}{x}$ ចំពោះ $x > 0$ រួចគណនា $\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x}$។\nគ. គណនា $\\lim_{x \\to +\\infty} (5x - \\sin x)$។",
+            "solution": "ក. $\\dfrac{16x^2 + 1}{9x^2 + 3} \\to \\dfrac{16}{9}$ ⇒ $\\dfrac{4}{3}$\nខ. $-1 \\le \\cos x \\le 1$ ចែកនឹង $x > 0$ ; អង្គសងខាង $\\to 0$ ⇒ $0$\nគ. $5x - \\sin x \\ge 5x - 1 \\to +\\infty$ ⇒ $+\\infty$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 4,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៤",
+        "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់",
+        "topic": "រាង $\\frac{0}{0}$ , $\\frac{\\infty}{\\infty}$ និង $\\infty - \\infty$",
         "objective": "ចេះគណនាលីមីតរាង 0/0 នៃកន្សោម e^x និង ln x",
         "exercises": [
           {
@@ -7290,10 +7512,51 @@
         "summary": "<div class=\"ws-sum-text\"><strong>លីមីតអិចស្ប៉ូណង់ស្យែល និងលោការីត ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{\\ln(1 + x)}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{a^x - 1}{x} = \\ln a$</li>\n</ul>"
       },
       {
-        "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ លីមីតរាងមិនកំណត់ $[1^\\infty]$ និងរូបមន្ត $\\lim_{x \\to \\pm\\infty} \\left(1 + \\dfrac{1}{x}\\right)^x = e$",
-        "topic": "រូបមន្ត $e = \\lim_{x \\to \\pm\\infty} \\left(1 + \\dfrac{1}{x}\\right)^x = \\lim_{u \\to 0} (1 + u)^{\\frac{1}{u}}$",
+        "pointNumber": 5,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៥",
+        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "topic": "$\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$",
+        "objective": "ចេះបំប្លែងកន្សោមត្រីកោណមាត្រឱ្យត្រូវទម្រង់លីមីតគ្រឹះ",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "instruction": "គណនាលីមីតត្រីកោណមាត្រគ្រឹះ ៖",
+            "question": "គណនាលីមីត ៖\n\nក. $L_1 = \\lim_{x \\to 0} \\dfrac{\\sin 5x}{3x}$\n\nខ. $L_2 = \\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2}$",
+            "solution": "ក. បំប្លែងឱ្យត្រូវទម្រង់ $\\lim_{u \\to 0} \\dfrac{\\sin u}{u} = 1$ ៖\n$L_1 = \\lim_{x \\to 0} \\left(\\dfrac{5}{3} \\cdot \\dfrac{\\sin 5x}{5x}\\right) = \\dfrac{5}{3} \\cdot 1 = \\dfrac{5}{3}$។\n\nខ. គុណកន្សោមឆ្លាស់ ឬប្រើរូបមន្តកន្លះមុំ $1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ ៖\n$L_2 = \\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{x^2} = \\lim_{x \\to 0} \\dfrac{2}{4}\\left(\\dfrac{\\sin\\left(\\dfrac{x}{2}\\right)}{\\dfrac{x}{2}}\\right)^2 = \\dfrac{1}{2}(1)^2 = \\dfrac{1}{2}$។",
+            "rubric": "ក. គណនាឃើញ $\\dfrac{5}{3}$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនាឃើញ $\\dfrac{1}{2}$ ត្រូវ (០.៥ ពិន្ទុ)",
+            "points": 1.0
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "instruction": "គណនាលីមីតត្រីកោណមាត្រកម្រិតមធ្យម ៖",
+            "question": "គណនាលីមីត ៖\n$M = \\lim_{x \\to 0} \\dfrac{\\tan x - \\sin x}{x^3}$។",
+            "solution": "បំប្លែងភាគយក ៖\n$\\tan x - \\sin x = \\dfrac{\\sin x}{\\cos x} - \\sin x = \\sin x\\left(\\dfrac{1 - \\cos x}{\\cos x}\\right) = \\dfrac{\\sin x(1 - \\cos x)}{\\cos x}$។\nជំនួសចូលលីមីត ៖\n$M = \\lim_{x \\to 0} \\left[\\dfrac{\\sin x}{x} \\cdot \\dfrac{1 - \\cos x}{x^2} \\cdot \\dfrac{1}{\\cos x}\\right]$\n$= (1) \\cdot \\left(\\dfrac{1}{2}\\right) \\cdot \\left(\\dfrac{1}{1}\\right) = \\dfrac{1}{2}$។",
+            "rubric": "បំបែក $\\tan x - \\sin x$ ត្រឹមត្រូវ (០.៥ ពិន្ទុ) | គណនាលីមីតឃើញ $\\dfrac{1}{2}$ ត្រឹមត្រូវ (០.៥ ពិន្ទុ)",
+            "points": 1.0
+          },
+          {
+            "id": "ex-les-g12a-2-1-p1-3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
+            "instruction": "គណនាលីមីតត្រីកោណមាត្រកម្រិតខ្ពស់ ៖",
+            "points": 1.0,
+            "questions": [
+              "ក. គណនា $A = \\lim_{x \\to 0} \\dfrac{1 - \\cos x \\cos 2x \\cos 3x}{x^2}$។",
+              "ខ. គណនា $B = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 4x}$។"
+            ],
+            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. គណនា $A$ ៖**\n- ថែមថយតួត្រីកោណមាត្រនៅភាគយក ៖\n  $1 - \\cos x \\cos 2x \\cos 3x = (1 - \\cos x) + \\cos x(1 - \\cos 2x) + \\cos x \\cos 2x(1 - \\cos 3x)$\n- ចែកនឹង $x^2$ រួចគណនាលីមីតតួនីមួយៗ ៖\n  + $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2}$\n  + $\\lim_{x \\to 0} \\cos x \\cdot \\dfrac{1 - \\cos 2x}{x^2} = 1 \\cdot \\dfrac{2^2}{2} = 2$\n  + $\\lim_{x \\to 0} \\cos x \\cos 2x \\cdot \\dfrac{1 - \\cos 3x}{x^2} = 1 \\cdot 1 \\cdot \\dfrac{3^2}{2} = \\dfrac{9}{2}$\n- នាំឱ្យ $A = \\dfrac{1}{2} + 2 + \\dfrac{9}{2} = \\dfrac{10}{2} + 2 = 5 + 2 = 7$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. គណនា $B$ ៖**\n- បំបែកភាគបែង $\\cos 4x = 2\\cos^2 2x - 1 = \\cos^2 2x - \\sin^2 2x = (\\cos^2 x - \\sin^2 x)^2 - 4\\sin^2 x\\cos^2 x$\n  ឬ $\\cos 4x = 1 - 2\\sin^2 2x = 1 - 8\\sin^2 x\\cos^2 x$\n- ម្យ៉ាងទៀត $\\cos 4x = \\sin\\left(\\dfrac{\\pi}{2} - 4x\\right)$។ តាង $t = x - \\dfrac{\\pi}{4} \\iff x = t + \\dfrac{\\pi}{4}$\n  កាលណា $x \\to \\dfrac{\\pi}{4} \\Rightarrow t \\to 0$\n  $\\cos x - \\sin x = \\sqrt{2}\\cos\\left(x + \\dfrac{\\pi}{4}\\right) = \\sqrt{2}\\cos\\left(t + \\dfrac{\\pi}{2}\\right) = -\\sqrt{2}\\sin t$\n  $\\cos 4x = \\cos(4t + \\pi) = -\\cos 4t$\n  $\\Rightarrow \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 4x} = \\lim_{t \\to 0} \\dfrac{-\\sqrt{2}\\sin t}{-\\cos 4t}$ (កំហុសពិនិត្យ ៖ $\\cos 4x = 0$ ត្រង់ $x = \\pi/4$)\n  $\\cos 4x = -\\sin 4t$ មិនមែន $-\\cos 4t$ ទេ ព្រោះ $4\\left(t + \\dfrac{\\pi}{4}\\right) = 4t + \\pi \\Rightarrow \\cos(4t + \\pi) = -\\cos 4t = -1 \\neq 0$\n  ត្រួតពិនិត្យ ៖ $\\cos\\left(4 \\times \\dfrac{\\pi}{4}\\right) = \\cos\\pi = -1 \\neq 0$! ភាគបែងមិនមែនសូន្យទេ! ចម្លើយគឺ $\\dfrac{0}{-1} = 0$!\n  ប្រសិនបើជា $\\cos 2x$ ៖ $\\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 2x} = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos^2 x - \\sin^2 x} = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{1}{\\cos x + \\sin x} = \\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$។ *(០.៥០ ពិន្ទុ)*"
+          }
+        ],
+        "totalPoints": 3,
+        "summary": "<div class=\"ws-sum-text\"><strong>លីមីតត្រីកោណមាត្រសំខាន់ៗ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{\\tan x}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2}$</li>\n</ul>"
+      },
+      {
+        "pointNumber": 6,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៦",
+        "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល និងលោការីតនេពែ",
+        "topic": "$\\lim \\left(1 + \\dfrac{1}{x}\\right)^x = e$ , $\\dfrac{e^x - 1}{x} \\to 1$",
         "objective": "ចេះបំប្លែងលីមីតរាង 1^∞ ទៅរកចំនួន e",
         "exercises": [
           {
@@ -7358,18 +7621,18 @@
     "courseId": "course-math-g12-advanced",
     "sheetNumber": "សន្លឹកកិច្ចការទី០៤",
     "sheetNumberNum": 4,
-    "lessonTitle": "មេរៀនទី ២ ៖ ភាពជាប់លើចន្លោះ និងទ្រឹស្តីបទតម្លៃកណ្តាល",
+    "lessonTitle": "មេរៀនទី ២ ៖ ភាពជាប់នៃអនុគមន៍ (ទំព័រ ៦៦ - ៨៤)",
     "chapterTitle": "ជំពូកទី ២ ៖ លីមីត និងភាពជាប់នៃអនុគមន៍",
     "topic": "ភាពជាប់លើចន្លោះបិទ [a, b] ទ្រឹស្តីបទតម្លៃកណ្តាល និងភាពតែមួយនៃឫស",
     "objective": "ចេះអនុវត្តទ្រឹស្តីបទតម្លៃកណ្តាល និងម៉ូណូតូនដាច់ខាតដើម្បីស្រាយបញ្ជាក់សមីការមានឫសតែមួយគត់",
     "totalPoints": 3,
-    "totalPointsCount": 9,
+    "totalPointsCount": 18,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៤ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់នៃអនុគមន៍លើចន្លោះបិទ [a, b]",
-        "topic": "លក្ខខណ្ឌភាពជាប់លើចន្លោះបើក (a, b) ជាប់ស្តាំត្រង់ a និងជាប់ឆ្វេងត្រង់ b",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
+        "topic": "$\\lim_{x \\to a} f(x) = f(a)$",
         "objective": "ចេះពិនិត្យ និងស្រាយបញ្ជាក់ភាពជាប់នៃអនុគមន៍លើចន្លោះបិទ",
         "exercises": [
           {
@@ -7408,9 +7671,161 @@
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៤ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល (Intermediate Value Theorem)",
-        "topic": "ទ្រឹស្តីបទ៖ បើ f ជាប់លើ [a, b] នោះ f យកគ្រប់តម្លៃរវាង f(a) និង f(b)",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអនុគមន៍ជាប់",
+        "topic": "ផលបូក ផលគុណ ផលចែក នៃអនុគមន៍ជាប់",
+        "objective": "យល់ និងអនុវត្តលក្ខណៈនៃអនុគមន៍ជាប់",
+        "totalPoints": 3,
+        "summary": "  - ផលបូក ផលគុណ និងផលចែក (ភាគបែងមិនសូន្យ) នៃអនុគមន៍ជាប់ ជាអនុគមន៍ជាប់\n  - ពហុធាជាប់លើ $\\mathbb{R}$ ; អនុគមន៍សនិទានជាប់លើដែនកំណត់របស់វា",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃអនុគមន៍ជាប់ ៖",
+            "question": "ក. ពន្យល់ថាហេតុអ្វី $f(x) = 2x^3 - 3x^2 + x + 5$ ជាប់លើ $\\mathbb{R}$។\nខ. រកសំណុំដែលអនុគមន៍ $g(x) = \\dfrac{2x + 1}{x^2 - 3x + 2}$ ជាប់។\nគ. រកសំណុំដែល $h(x) = \\sqrt{x}$ ជាប់។",
+            "solution": "ក. ពហុធាជាផលបូក និងផលគុណនៃអនុគមន៍ជាប់ $x$ និងចំនួនថេរ ⇒ ជាប់លើ $\\mathbb{R}$\nខ. $\\mathbb{R} \\setminus \\{1, 2\\}$\nគ. $[0, +\\infty)$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃអនុគមន៍ជាប់ ៖",
+            "question": "ក. ពន្យល់ថាហេតុអ្វី $f(x) = 2x^3 - 3x^2 + x + 5$ ជាប់លើ $\\mathbb{R}$។\nខ. រកសំណុំដែលអនុគមន៍ $g(x) = \\dfrac{2x + 1}{x^2 + 6x + 8}$ ជាប់។\nគ. រកសំណុំដែល $h(x) = \\sqrt{x + 4}$ ជាប់។",
+            "solution": "ក. ពហុធាជាផលបូក និងផលគុណនៃអនុគមន៍ជាប់ $x$ និងចំនួនថេរ ⇒ ជាប់លើ $\\mathbb{R}$\nខ. $\\mathbb{R} \\setminus \\{-4, -2\\}$\nគ. $[-4, +\\infty)$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃអនុគមន៍ជាប់ ៖",
+            "question": "ក. ពន្យល់ថាហេតុអ្វី $f(x) = 2x^3 - 3x^2 + x + 5$ ជាប់លើ $\\mathbb{R}$។\nខ. រកសំណុំដែលអនុគមន៍ $g(x) = \\dfrac{2x + 1}{x^2 + 6x + 8}$ ជាប់។\nគ. រកសំណុំដែល $h(x) = \\sqrt{x - 1}$ ជាប់។",
+            "solution": "ក. ពហុធាជាផលបូក និងផលគុណនៃអនុគមន៍ជាប់ $x$ និងចំនួនថេរ ⇒ ជាប់លើ $\\mathbb{R}$\nខ. $\\mathbb{R} \\setminus \\{-4, -2\\}$\nគ. $[1, +\\infty)$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 3,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
+        "topic": "ជាប់លើចន្លោះបើក និងចន្លោះបិទ",
+        "objective": "យល់ និងអនុវត្តភាពជាប់លើចន្លោះ",
+        "totalPoints": 3,
+        "summary": "  - $f$ ជាប់លើ $(a, b)$ បើជាប់ត្រង់គ្រប់ចំណុច\n  - $f$ ជាប់លើ $[a, b]$ ៖ ជាប់លើ $(a, b)$ ជាប់ខាងស្តាំត្រង់ $a$ និងខាងឆ្វេងត្រង់ $b$\n  - អនុគមន៍ជាប់ដុំៗ ៖ ផ្ទៀងផ្ទាត់លីមីតឆ្វេង = លីមីតស្តាំ = តម្លៃ",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់លើចន្លោះ ៖",
+            "question": "គេឱ្យ $f(x) = \\begin{cases} 2x + m & x < 3 \\\\ x^2 - 1 & x \\ge 3 \\end{cases}$។\nក. គណនា $\\lim_{x \\to 3^-} f(x)$ និង $\\lim_{x \\to 3^+} f(x)$។\nខ. កំណត់ $m$ ដើម្បីឱ្យ $f$ ជាប់ត្រង់ $x = 3$។\nគ. ទាញបញ្ជាក់ថា $f$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $6 + m$ ; $8$\nខ. $6 + m = 8$ ⇒ $m = 2$\nគ. លើ $(-\\infty, 3)$ និង $(3, +\\infty)$ $f$ ជាពហុធា (ជាប់) ហើយជាប់ត្រង់ $3$ ⇒ ជាប់លើ $\\mathbb{R}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់លើចន្លោះ ៖",
+            "question": "គេឱ្យ $f(x) = \\begin{cases} 2x + m & x < 3 \\\\ x^2 - 3 & x \\ge 3 \\end{cases}$។\nក. គណនា $\\lim_{x \\to 3^-} f(x)$ និង $\\lim_{x \\to 3^+} f(x)$។\nខ. កំណត់ $m$ ដើម្បីឱ្យ $f$ ជាប់ត្រង់ $x = 3$។\nគ. ទាញបញ្ជាក់ថា $f$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $6 + m$ ; $6$\nខ. $6 + m = 6$ ⇒ $m = 0$\nគ. លើ $(-\\infty, 3)$ និង $(3, +\\infty)$ $f$ ជាពហុធា (ជាប់) ហើយជាប់ត្រង់ $3$ ⇒ ជាប់លើ $\\mathbb{R}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់លើចន្លោះ ៖",
+            "question": "គេឱ្យ $f(x) = \\begin{cases} 2x + m & x < 2 \\\\ x^2 - 2 & x \\ge 2 \\end{cases}$។\nក. គណនា $\\lim_{x \\to 2^-} f(x)$ និង $\\lim_{x \\to 2^+} f(x)$។\nខ. កំណត់ $m$ ដើម្បីឱ្យ $f$ ជាប់ត្រង់ $x = 2$។\nគ. ទាញបញ្ជាក់ថា $f$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $4 + m$ ; $2$\nខ. $4 + m = 2$ ⇒ $m = -2$\nគ. លើ $(-\\infty, 2)$ និង $(2, +\\infty)$ $f$ ជាពហុធា (ជាប់) ហើយជាប់ត្រង់ $2$ ⇒ ជាប់លើ $\\mathbb{R}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 4,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៤",
+        "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
+        "topic": "$f \\circ u$ ជាប់",
+        "objective": "យល់ និងអនុវត្តភាពជាប់នៃអនុគមន៍បណ្តាក់",
+        "totalPoints": 3,
+        "summary": "  - បើ $u$ ជាប់ត្រង់ $a$ ហើយ $f$ ជាប់ត្រង់ $u(a)$ នោះ $f \\circ u$ ជាប់ត្រង់ $a$\n  - $\\sqrt{u}$ ជាប់ពេល $u \\ge 0$ ; $\\ln u$ ជាប់ពេល $u > 0$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់នៃអនុគមន៍បណ្តាក់ ៖",
+            "question": "ក. រកសំណុំដែល $f(x) = \\sqrt{x^2 - 4x + 3}$ ជាប់។\nខ. រកសំណុំដែល $g(x) = \\ln(x + 1)$ ជាប់។\nគ. ពន្យល់ថា $h(x) = \\sin(x^2 + 1)$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $(-\\infty, 1] \\cup [3, +\\infty)$\nខ. $(-1, +\\infty)$\nគ. $u = x^2 + 1$ និង $\\sin u$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់នៃអនុគមន៍បណ្តាក់ ៖",
+            "question": "ក. រកសំណុំដែល $f(x) = \\sqrt{x^2 + 5x + 6}$ ជាប់។\nខ. រកសំណុំដែល $g(x) = \\ln(x - 1)$ ជាប់។\nគ. ពន្យល់ថា $h(x) = \\sin(x^2 + 1)$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $(-\\infty, -3] \\cup [-2, +\\infty)$\nខ. $(1, +\\infty)$\nគ. $u = x^2 + 1$ និង $\\sin u$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់នៃអនុគមន៍បណ្តាក់ ៖",
+            "question": "ក. រកសំណុំដែល $f(x) = \\sqrt{x^2 - 2x - 8}$ ជាប់។\nខ. រកសំណុំដែល $g(x) = \\ln(x - 1)$ ជាប់។\nគ. ពន្យល់ថា $h(x) = \\sin(x^2 + 1)$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $(-\\infty, -2] \\cup [4, +\\infty)$\nខ. $(1, +\\infty)$\nគ. $u = x^2 + 1$ និង $\\sin u$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 5,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៥",
+        "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
+        "topic": "កំណត់ $g(a) = \\lim_{x \\to a} f(x)$",
+        "objective": "យល់ និងអនុវត្តអនុគមន៍បន្លាយតាមភាពជាប់",
+        "totalPoints": 3,
+        "summary": "  - បើ $f$ មិនកំណត់ត្រង់ $a$ តែ $\\lim_{x \\to a} f(x) = L$ (កំណត់) នោះ $g(x) = f(x)$ ($x \\ne a$) , $g(a) = L$ ជាអនុគមន៍បន្លាយតាមភាពជាប់",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូររកអនុគមន៍បន្លាយតាមភាពជាប់ ៖",
+            "question": "គេឱ្យ $f(x) = \\dfrac{x^2 - 5x + 6}{x - 3}$ ចំពោះ $x \\ne 3$។\nក. តើ $f$ កំណត់ត្រង់ $x = 3$ ដែរឬទេ?\nខ. គណនា $\\lim_{x \\to 3} f(x)$ រួចសរសេរអនុគមន៍បន្លាយតាមភាពជាប់ $g$ នៃ $f$ ត្រង់ $3$។\nគ. រកតម្លៃបន្លាយតាមភាពជាប់នៃ $\\dfrac{\\sin 2x}{x}$ ត្រង់ $0$។",
+            "solution": "ក. មិនកំណត់ (ភាគបែងសូន្យ)\nខ. $\\lim_{x \\to 3} f(x) = 1$ ; $g(x) = \\begin{cases} f(x) & x \\ne 3 \\\\ 1 & x = 3 \\end{cases}$ ( $g(x) = x - 2$ )\nគ. $2$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូររកអនុគមន៍បន្លាយតាមភាពជាប់ ៖",
+            "question": "គេឱ្យ $f(x) = \\dfrac{x^2 - 6x + 8}{x - 2}$ ចំពោះ $x \\ne 2$។\nក. តើ $f$ កំណត់ត្រង់ $x = 2$ ដែរឬទេ?\nខ. គណនា $\\lim_{x \\to 2} f(x)$ រួចសរសេរអនុគមន៍បន្លាយតាមភាពជាប់ $g$ នៃ $f$ ត្រង់ $2$។\nគ. រកតម្លៃបន្លាយតាមភាពជាប់នៃ $\\dfrac{\\sin 2x}{x}$ ត្រង់ $0$។",
+            "solution": "ក. មិនកំណត់ (ភាគបែងសូន្យ)\nខ. $\\lim_{x \\to 2} f(x) = -2$ ; $g(x) = \\begin{cases} f(x) & x \\ne 2 \\\\ -2 & x = 2 \\end{cases}$ ( $g(x) = x - 4$ )\nគ. $2$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូររកអនុគមន៍បន្លាយតាមភាពជាប់ ៖",
+            "question": "គេឱ្យ $f(x) = \\dfrac{x^2 - x - 2}{x + 1}$ ចំពោះ $x \\ne -1$។\nក. តើ $f$ កំណត់ត្រង់ $x = -1$ ដែរឬទេ?\nខ. គណនា $\\lim_{x \\to -1} f(x)$ រួចសរសេរអនុគមន៍បន្លាយតាមភាពជាប់ $g$ នៃ $f$ ត្រង់ $-1$។\nគ. រកតម្លៃបន្លាយតាមភាពជាប់នៃ $\\dfrac{\\sin 6x}{x}$ ត្រង់ $0$។",
+            "solution": "ក. មិនកំណត់ (ភាគបែងសូន្យ)\nខ. $\\lim_{x \\to -1} f(x) = -3$ ; $g(x) = \\begin{cases} f(x) & x \\ne -1 \\\\ -3 & x = -1 \\end{cases}$ ( $g(x) = x - 2$ )\nគ. $6$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 6,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៦",
+        "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
+        "topic": "$f(a)f(b) < 0$ ⇒ មាន $c \\in (a, b)$ ដែល $f(c) = 0$",
         "objective": "ចេះអនុវត្តទ្រឹស្តីបទដើម្បីបញ្ជាក់ថាសមីការ $f(x) = k$ មានចម្លើយ",
         "exercises": [
           {
@@ -7446,47 +7861,6 @@
         ],
         "totalPoints": 3,
         "summary": "<div class=\"ws-sum-text\"><strong>ទ្រឹស្តីបទតម្លៃកណ្តាល (IVT) ៖</strong> បើ $f$ ជាប់លើ $[a, b]$ នោះ $f$ យកគ្រប់តម្លៃនៅចន្លោះ $f(a)$ និង $f(b)$។ បើ $f(a) \\cdot f(b) < 0$ នោះសមីការ $f(x) = 0$ មានឫសយ៉ាងហោចណាស់មួយ $c \\in (a, b)$។</div>"
-      },
-      {
-        "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៤ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ ការស្រាយបញ្ជាក់អត្ថិភាព និងភាពតែមួយនៃឫសសមីការ $f(x) = 0$",
-        "topic": "លក្ខខណ្ឌ f ជាប់ និងកើនដាច់ខាត (ឬចុះដាច់ខាត) លើ [a, b]",
-        "objective": "ចេះរួមបញ្ចូលដេរីវេ (ម៉ូណូតូន) និងទ្រឹស្តីបទតម្លៃកណ្តាលដើម្បីស្រាយឫសតែមួយគត់",
-        "exercises": [
-          {
-            "id": "ex1",
-            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "ស្រាយបញ្ជាក់សមីការមានឫសតែមួយគត់ ៖",
-            "question": "បង្ហាញថាសមីការ $2x^3 + 3x - 4 = 0$ មានឫសពិតតែមួយគត់លើ $\\mathbb{R}$។",
-            "solution": "តាង $f(x) = 2x^3 + 3x - 4$ ជាប់និងមានដេរីវេលើ $\\mathbb{R}$។\n១. គណនាដេរីវេ ៖ $f'(x) = 6x^2 + 3 > 0$ ចំពោះគ្រប់ $x \\in \\mathbb{R}$។\nនាំឱ្យ $f$ ជាអនុគមន៍កើនដាច់ខាតលើ $\\mathbb{R}$។\n២. លីមីត ៖ $\\lim_{x \\to -\\infty} f(x) = -\\infty$ និង $\\lim_{x \\to +\\infty} f(x) = +\\infty$ នាំឱ្យសំណុំតម្លៃ $f(\\mathbb{R}) = \\mathbb{R}$។\nដោយសារ $0 \\in \\mathbb{R}$ និង $f$ កើនដាច់ខាត នោះសមីការ $f(x) = 0$ មានឫសពិតតែមួយគត់លើ $\\mathbb{R}$។",
-            "rubric": "បង្ហាញ $f'(x) > 0$ កើនដាច់ខាត (០.៥ ពិន្ទុ) | បង្ហាញសំណុំតម្លៃនិងសន្និដ្ឋានឫសតែមួយគត់ (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex2",
-            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "កំណត់ចន្លោះមានប្រវែងតូចដែលមានឫសតែមួយ ៖",
-            "question": "បង្ហាញថាសមីការ $x e^x = 1$ មានឫសពិតតែមួយគត់ក្នុងចន្លោះ $(0, 1)$។",
-            "solution": "សរសេរសមីការជា $f(x) = x e^x - 1 = 0$។\n១. $f(x)$ ជាប់លើ $[0, 1]$។\n២. $f'(x) = 1 \\cdot e^x + x e^x = (x + 1)e^x > 0$ ចំពោះគ្រប់ $x \\in [0, 1]$ នាំឱ្យ $f$ កើនដាច់ខាតលើ $[0, 1]$។\n៣. គណនាតម្លៃចុងចន្លោះ ៖\n• $f(0) = 0 \\cdot e^0 - 1 = -1 < 0$\n• $f(1) = 1 \\cdot e^1 - 1 = e - 1 \\approx 1.718 > 0$\nដោយ $f(0) \\cdot f(1) < 0$ និង $f$ កើនដាច់ខាត នោះសមីការ $x e^x = 1$ មានឫសពិតតែមួយគត់ក្នុង $(0, 1)$។",
-            "rubric": "បង្ហាញ $f'(x) > 0$ កើនដាច់ខាតលើ $[0, 1]$ (០.៥ ពិន្ទុ) | គណនា $f(0)f(1) < 0$ និងសន្និដ្ឋានឫសតែមួយ (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex-les-g12a-2-2-p3-3",
-            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "ដោះស្រាយលំហាត់ភាពជាប់នៃអនុគមន៍សមាស ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. គេឱ្យ $f(x) = \\dfrac{1}{x - 1}$ និង $g(x) = \\dfrac{x + 1}{x + 2}$។ កំណត់ដែនកំណត់ និងសិក្សាភាពជាប់នៃអនុគមន៍សមាស $(f \\circ g)(x)$។",
-              "ខ. បង្ហាញថា ប្រសិនបើ $g$ ជាប់ត្រង់ $x_0$ និង $f$ ជាប់ត្រង់ $g(x_0)$ នោះអនុគមន៍សមាស $f \\circ g$ ជាប់ត្រង់ $x_0$។"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. សិក្សាភាពជាប់នៃ $f \\circ g$ ៖**\n- $(f \\circ g)(x) = f(g(x)) = \\dfrac{1}{g(x) - 1}$\n- អនុគមន៍សមាសមានន័យកាលណា ៖\n  1. $x$ ស្ថិតក្នុងដែនកំណត់នៃ $g$ ៖ $x \\neq -2$\n  2. $g(x) \\neq 1 \\iff \\dfrac{x + 1}{x + 2} \\neq 1 \\iff x + 1 \\neq x + 2$ (ពិតជានិច្ចចំពោះគ្រប់ $x \\neq -2$)\n- គណនាកន្សោម ៖\n  $g(x) - 1 = \\dfrac{x + 1 - (x + 2)}{x + 2} = \\dfrac{-1}{x + 2}$\n  $\\Rightarrow (f \\circ g)(x) = \\dfrac{1}{\\frac{-1}{x + 2}} = -(x + 2)$\n- ដែនកំណត់គឺ $D = \\mathbb{R} \\setminus \\{-2\\}$\n- អនុគមន៍ $(f \\circ g)(x)$ ជាប់លើគ្រប់ $x \\in \\mathbb{R} \\setminus \\{-2\\}$ និងដាច់ត្រង់ $x = -2$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. ស្រាយបញ្ជាក់ទ្រឹស្តីបទភាពជាប់នៃអនុគមន៍សមាស ៖**\n- ដោយ $g$ ជាប់ត្រង់ $x_0$ នាំឱ្យ $\\lim_{x \\to x_0} g(x) = g(x_0)$\n- ដោយ $f$ ជាប់ត្រង់ $u_0 = g(x_0)$ នាំឱ្យ $\\lim_{u \\to u_0} f(u) = f(u_0) = f(g(x_0))$\n- តាមទ្រឹស្តីបទលីមីតនៃអនុគមន៍សមាស ៖\n  $\\lim_{x \\to x_0} (f \\circ g)(x) = \\lim_{x \\to x_0} f(g(x)) = f\\left(\\lim_{x \\to x_0} g(x)\\right) = f(g(x_0)) = (f \\circ g)(x_0)$\n- ដូចនេះ $f \\circ g$ ជាប់ត្រង់ $x_0$ ប្រាកដមែន។ *(០.៥០ ពិន្ទុ)*"
-          }
-        ],
-        "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>អត្ថិភាព និងភាពតែមួយនៃឫស ៖</strong> បើ $f$ ជាប់ និង<strong>កើនដាច់ខាត</strong> (ឬចុះដាច់ខាត) លើ $[a, b]$ ព្រមទាំង $f(a) \\cdot f(b) < 0$ នោះសមីការ $f(x) = 0$ មានឫស<strong>តែមួយគត់</strong> $c \\in (a, b)$។</div>"
       }
     ],
     "exercises": [
@@ -7516,18 +7890,18 @@
     "courseId": "course-math-g12-advanced",
     "sheetNumber": "សន្លឹកកិច្ចការទី០៥",
     "sheetNumberNum": 5,
-    "lessonTitle": "មេរៀនទី ១ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់ និងអនុគមន៍ច្រាស",
+    "lessonTitle": "មេរៀនទី ១ ៖ ដេរីវេនៃអនុគមន៍ (ទំព័រ ៨៦ - ១០១)",
     "chapterTitle": "ជំពូកទី ៣ ៖ ដេរីវេ និងការសិក្សាអនុគមន៍",
     "topic": "វិធានបណ្តាក់ ដេរីវេនៃអនុគមន៍ច្រាស និងត្រីកោណមាត្រច្រាស",
     "objective": "ចេះគណនាដេរីវេនៃអនុគមន៍បណ្តាក់ស្មុគស្មាញ ដេរីវេនៃអនុគមន៍ច្រាស និងត្រីកោណមាត្រច្រាស",
     "totalPoints": 3,
-    "totalPointsCount": 9,
+    "totalPointsCount": 15,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៥ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ វិធានដេរីវេនៃអនុគមន៍បណ្តាក់ (Chain Rule)",
-        "topic": "រូបមន្ត (g ∘ f)'(x) = f'(x) · g'(f(x)) ឬ dy/dx = (dy/du) · (du/dx)",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
+        "topic": "$f'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0 + h) - f(x_0)}{h}$",
         "objective": "ចេះបំបែកអនុគមន៍ជាស្រទាប់ៗ និងគណនាដេរីវេបណ្តាក់",
         "exercises": [
           {
@@ -7566,9 +7940,9 @@
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៥ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍ច្រាស (f^(-1))'(y0) = 1 / $f'(x_0)$",
-        "topic": "ទ្រឹស្តីបទដេរីវេនៃអនុគមន៍ច្រាស និងការគណនាត្រង់ចំណុច",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
+        "topic": "$(f \\circ u)' = u' \\cdot f'(u)$",
         "objective": "ចេះគណនាដេរីវេនៃ f^(-1) ត្រង់ចំណុច y0 ដោយមិនចាំបាច់រកកន្សោមច្រាស",
         "exercises": [
           {
@@ -7607,9 +7981,9 @@
       },
       {
         "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៥ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រច្រាស (arcsin, arccos, arctan)",
-        "topic": "រូបមន្ត (arcsin x)' = 1/√(1-x²), (arctan x)' = 1/(1+x²)",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "topic": "$(\\sin u)' = u'\\cos u$ , $(\\cos u)' = -u'\\sin u$",
         "objective": "ចេះគណនាដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រច្រាសទោល និងបណ្តាក់",
         "exercises": [
           {
@@ -7645,6 +8019,82 @@
         ],
         "totalPoints": 3,
         "summary": "<div class=\"ws-sum-text\"><strong>ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រច្រាស ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$(\\arcsin x)' = \\dfrac{1}{\\sqrt{1 - x^2}}$, $(\\arccos x)' = -\\dfrac{1}{\\sqrt{1 - x^2}}$ ($-1 < x < 1$)</li>\n  <li class=\"ws-sum-item\">$(\\arctan x)' = \\dfrac{1}{1 + x^2}$ ($x \\in \\mathbb{R}$)។</li>\n</ul>"
+      },
+      {
+        "pointNumber": 4,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៤",
+        "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "topic": "$(\\arcsin x)'$ , $(\\arccos x)'$ , $(\\arctan x)'$",
+        "objective": "យល់ និងអនុវត្តដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "totalPoints": 3,
+        "summary": "  - $(\\arcsin x)' = \\dfrac{1}{\\sqrt{1 - x^2}} \\qquad (\\arccos x)' = -\\dfrac{1}{\\sqrt{1 - x^2}} \\qquad (\\arctan x)' = \\dfrac{1}{1 + x^2}$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃ ៖\nក. $y = \\arctan 2x$\nខ. $y = \\arcsin \\dfrac{x}{3}$ ( $|x| < 3$ )\nគ. $y = x\\arctan x$ រួចគណនា $y'(2)$",
+            "solution": "ក. $y' = \\dfrac{2}{1 + 4x^2}$\nខ. $y' = \\dfrac{\\dfrac{1}{3}}{\\sqrt{1 - \\dfrac{x^2}{9}}} = \\dfrac{1}{\\sqrt{9 - x^2}}$\nគ. $y' = \\arctan x + \\dfrac{x}{1 + x^2}$ ; $y'(2) = \\arctan 2 + \\dfrac{2}{5}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃ ៖\nក. $y = \\arctan 4x$\nខ. $y = \\arcsin \\dfrac{x}{3}$ ( $|x| < 3$ )\nគ. $y = x\\arctan x$ រួចគណនា $y'(3)$",
+            "solution": "ក. $y' = \\dfrac{4}{1 + 16x^2}$\nខ. $y' = \\dfrac{\\dfrac{1}{3}}{\\sqrt{1 - \\dfrac{x^2}{9}}} = \\dfrac{1}{\\sqrt{9 - x^2}}$\nគ. $y' = \\arctan x + \\dfrac{x}{1 + x^2}$ ; $y'(3) = \\arctan 3 + \\dfrac{3}{10}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃ ៖\nក. $y = \\arctan 3x$\nខ. $y = \\arcsin \\dfrac{x}{4}$ ( $|x| < 4$ )\nគ. $y = x\\arctan x$ រួចគណនា $y'(2)$",
+            "solution": "ក. $y' = \\dfrac{3}{1 + 9x^2}$\nខ. $y' = \\dfrac{\\dfrac{1}{4}}{\\sqrt{1 - \\dfrac{x^2}{16}}} = \\dfrac{1}{\\sqrt{16 - x^2}}$\nគ. $y' = \\arctan x + \\dfrac{x}{1 + x^2}$ ; $y'(2) = \\arctan 2 + \\dfrac{2}{5}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 5,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៥",
+        "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
+        "topic": "$f''$ , $f'''$ , $f^{(n)}$",
+        "objective": "យល់ និងអនុវត្តដេរីវេលំដាប់ខ្ពស់",
+        "totalPoints": 3,
+        "summary": "  - $f'' = (f')'$ , $f^{(n)} = (f^{(n-1)})'$\n  - $(e^{ax})^{(n)} = a^n e^{ax}$\n  - $(\\sin ax)'' = -a^2 \\sin ax$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេលំដាប់ខ្ពស់ ៖",
+            "question": "ក. គណនា $y'$ , $y''$ , $y'''$ នៃ $y = x^{6}$។\nខ. រកដេរីវេទី $n$ នៃ $y = e^{2x}$។\nគ. បង្ហាញថា $y = \\sin 2x$ ផ្ទៀងផ្ទាត់ $y'' + 4y = 0$។",
+            "solution": "ក. $y' = 6x^{5} , y'' = 30x^{4} , y''' = 120x^{3}$\nខ. $y^{(n)} = 2^n e^{2x}$\nគ. $y'' = -4\\sin 2x$ ⇒ $y'' + 4y = 0$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេលំដាប់ខ្ពស់ ៖",
+            "question": "ក. គណនា $y'$ , $y''$ , $y'''$ នៃ $y = x^{5}$។\nខ. រកដេរីវេទី $n$ នៃ $y = e^{3x}$។\nគ. បង្ហាញថា $y = \\sin 3x$ ផ្ទៀងផ្ទាត់ $y'' + 9y = 0$។",
+            "solution": "ក. $y' = 5x^{4} , y'' = 20x^{3} , y''' = 60x^{2}$\nខ. $y^{(n)} = 3^n e^{3x}$\nគ. $y'' = -9\\sin 3x$ ⇒ $y'' + 9y = 0$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេលំដាប់ខ្ពស់ ៖",
+            "question": "ក. គណនា $y'$ , $y''$ , $y'''$ នៃ $y = x^{5}$។\nខ. រកដេរីវេទី $n$ នៃ $y = e^{4x}$។\nគ. បង្ហាញថា $y = \\sin 2x$ ផ្ទៀងផ្ទាត់ $y'' + 4y = 0$។",
+            "solution": "ក. $y' = 5x^{4} , y'' = 20x^{3} , y''' = 60x^{2}$\nខ. $y^{(n)} = 4^n e^{4x}$\nគ. $y'' = -4\\sin 2x$ ⇒ $y'' + 4y = 0$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
       }
     ],
     "exercises": [
@@ -7674,7 +8124,7 @@
     "courseId": "course-math-g12-advanced",
     "sheetNumber": "សន្លឹកកិច្ចការទី០៦",
     "sheetNumberNum": 6,
-    "lessonTitle": "មេរៀនទី ២ ៖ ភាពកោង ចំណុចរបត់ និងអាស៊ីមតូត",
+    "lessonTitle": "មេរៀនទី ២ ៖ អនុវត្តន៍នៃដេរីវេ (ទំព័រ ១០២ - ១០៩)",
     "chapterTitle": "ជំពូកទី ៣ ៖ ដេរីវេ និងការសិក្សាអនុគមន៍",
     "topic": "ភាពកោងប៉ោង-ផត ចំណុចរបត់ និងអាស៊ីមតូតឈរ ដេក ទ្រេត",
     "objective": "ចេះវិភាគភាពកោង រកចំណុចរបត់ និងស្វែងរកអាស៊ីមតូតគ្រប់ប្រភេទនៃក្រាបអនុគមន៍",
@@ -7683,50 +8133,50 @@
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៦ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេទីពីរ ភាពកោងប៉ោង និងផត",
-        "topic": "សញ្ញានៃ f''(x) និងទិសដៅប៉ោង-ផតនៃខ្សែកោង",
-        "objective": "ចេះគណនាដេរីវេទីពីរ និងកំណត់ចន្លោះដែលក្រាបប៉ោង ឬផត",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
+        "topic": "$f(x_0 + h) \\approx f(x_0) + f'(x_0)h$",
+        "objective": "ចេះបង្កើតសមីការភ្ជាប់រវាងកាំ កម្ពស់ និងមាឌដើម្បីរកបរមា",
         "exercises": [
           {
             "id": "ex1",
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "កំណត់ចន្លោះប៉ោង និងផតនៃក្រាប ៖",
-            "question": "គេឱ្យអនុគមន៍ $f(x) = x^3 - 6x^2 + 9x$។ រកចន្លោះដែលក្រាបផត (ប៉ោងឡើងលើ) និងចន្លោះដែលក្រាបប៉ោង (ប៉ោងចុះក្រោម)។",
-            "solution": "១. $f'(x) = 3x^2 - 12x + 9$\n២. $f''(x) = 6x - 12 = 6(x - 2)$។\n៣. សញ្ញានៃ $f''(x)$ ៖\n• $f''(x) > 0 \\iff x > 2$ ៖ ក្រាបផតលើចន្លោះ $(2, +\\infty)$។\n• $f''(x) < 0 \\iff x < 2$ ៖ ក្រាបប៉ោងលើចន្លោះ $(-\\infty, 2)$។",
-            "rubric": "គណនា $f''(x) = 6(x - 2)$ ត្រូវ (០.៥ ពិន្ទុ) | កំណត់ចន្លោះប៉ោង និងផតត្រូវ (០.៥ ពិន្ទុ)",
+            "instruction": "រកផ្ទៃក្រឡាធំបំផុតនៃចតុកោណកែងចារឹកក្នុងត្រីកោណកែង ៖",
+            "question": "ត្រីកោណកែងមួយមានជ្រុងជាប់មុំកែងប្រវែង $6\\text{ cm}$ និង $8\\text{ cm}$។ រកផ្ទៃក្រឡាធំបំផុតនៃចតុកោណកែងមួយដែលចារឹកក្នុងត្រីកោណកែងនោះ ដោយជ្រុងពីរនៃចតុកោណកែងនៅលើជ្រុងជាប់មុំកែង។",
+            "solution": "ដាក់ក្នុងតម្រុយអ័ក្ស $Ox$ និង $Oy$ តាមជ្រុងជាប់មុំកែង ៖\nអ៊ីប៉ូតេនុសជាបន្ទាត់កាត់តាម $(6, 0)$ និង $(0, 8)$ មានសមីការ ៖\n$\\dfrac{x}{6} + \\dfrac{y}{8} = 1 \\implies y = 8\\left(1 - \\dfrac{x}{6}\\right) = 8 - \\dfrac{4}{3}x$ ($0 < x < 6$)។\nផ្ទៃក្រឡាចតុកោណកែង ៖ $S(x) = x y = x\\left(8 - \\dfrac{4}{3}x\\right) = 8x - \\dfrac{4}{3}x^2$។\nដេរីវេ ៖ $S'(x) = 8 - \\dfrac{8}{3}x = 0 \\implies x = 3\\text{ cm}$។\nពេល $x = 3\\text{ cm} \\implies y = 8 - \\dfrac{4}{3}(3) = 4\\text{ cm}$។\nផ្ទៃក្រឡាអតិបរមា ៖ $S_{\\max} = 3 \\times 4 = 12\\text{ cm}^2$។",
+            "rubric": "កសាងសមីការបន្ទាត់និងផ្ទៃក្រឡា $S(x)$ ត្រូវ (០.៥ ពិន្ទុ) | រក $x = 3, y = 4$ និង $S_{\\max} = 12\\text{ cm}^2$ (០.៥ ពិន្ទុ)",
             "points": 1.0
           },
           {
             "id": "ex2",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "សិក្សាភាពកោងនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖",
-            "question": "បង្ហាញថាក្រាបនៃអនុគមន៍ $g(x) = e^{-x^2}$ ផតលើចន្លោះ $\\left(-\\infty, -\\dfrac{\\sqrt{2}}{2}\\right) \\cup \\left(\\dfrac{\\sqrt{2}}{2}, +\\infty\\right)$។",
-            "solution": "១. $g'(x) = -2x e^{-x^2}$\n២. $g''(x) = (-2x)' e^{-x^2} + (-2x)(-2x e^{-x^2}) = -2e^{-x^2} + 4x^2 e^{-x^2} = 2(2x^2 - 1)e^{-x^2}$។\n៣. ដោយសារ $e^{-x^2} > 0$ ចំពោះគ្រប់ $x$ នោះសញ្ញារបស់ $g''$ អាស្រ័យលើ $2x^2 - 1$ ៖\n$g''(x) > 0 \\iff 2x^2 - 1 > 0 \\iff x^2 > \\dfrac{1}{2} \\iff |x| > \\dfrac{\\sqrt{2}}{2}$។\nដូចនេះ ក្រាបផតលើ $\\left(-\\infty, -\\dfrac{\\sqrt{2}}{2}\\right) \\cup \\left(\\dfrac{\\sqrt{2}}{2}, +\\infty\\right)$។",
-            "rubric": "គណនា $g''(x) = 2(2x^2-1)e^{-x^2}$ ត្រូវ (០.៥ ពិន្ទុ) | សិក្សាសញ្ញានិងសន្និដ្ឋានចន្លោះផតត្រូវ (០.៥ ពិន្ទុ)",
+            "instruction": "រកមាឌធំបំផុតនៃស៊ីឡាំងចារឹកក្នុងកោន ៖",
+            "question": "កោនត្រង់មួយមានកាំបាត $R = 6\\text{ cm}$ និងកម្ពស់ $H = 12\\text{ cm}$។ គេចារឹកស៊ីឡាំងត្រង់មួយក្នុងកោននេះ។ រកកាំបាត $r$ និងកម្ពស់ $h$ នៃស៊ីឡាំងដើម្បីឱ្យមាឌរបស់វាធំបំផុត។",
+            "solution": "តាមទ្រឹស្តីបទតាលែសក្នុងមុខកាត់កាត់តាមអ័ក្ស ៖\n$\\dfrac{12 - h}{12} = \\dfrac{r}{6} \\implies 1 - \\dfrac{h}{12} = \\dfrac{r}{6} \\implies h = 12 - 2r$ ($0 < r < 6$)។\nមាឌស៊ីឡាំង ៖\n$V(r) = \\pi r^2 h = \\pi r^2 (12 - 2r) = \\pi(12r^2 - 2r^3)$។\nដេរីវេ ៖ $V'(r) = \\pi(24r - 6r^2) = 6\\pi r(4 - r)$។\nឱ្យ $V'(r) = 0$ ក្នុងចន្លោះ $(0, 6) \\implies r = 4\\text{ cm}$។\nពេល $r = 4\\text{ cm} \\implies h = 12 - 2(4) = 4\\text{ cm}$។\nមាឌធំបំផុត ៖ $V_{\\max} = \\pi (4^2)(4) = 64\\pi\\text{ cm}^3$។",
+            "rubric": "ប្រើតាលែសទាញរក $h = 12 - 2r$ ត្រូវ (០.៤ ពិន្ទុ) | គណនាដេរីវេនិងរកឃើញ $r = 4\\text{ cm}, h = 4\\text{ cm}$ (០.៦ ពិន្ទុ)",
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-3-2-p1-3",
+            "id": "ex-les-g12a-3-3-p2-3",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "អនុវត្តទ្រឹស្តីបទរ៉ូល និងទ្រឹស្តីបទតម្លៃមធ្យម (ឡាហ្គ្រង់) ៖",
+            "instruction": "ដោះស្រាយចំណោទធរណីមាត្រអតិបរមា និងអប្បបរមាក្នុងលំហ ៖",
             "points": 1.0,
             "questions": [
-              "ក. ផ្ទៀងផ្ទាត់ទ្រឹស្តីបទរ៉ូលចំពោះអនុគមន៍ $f(x) = x(x - 1)(x - 2)$ លើចន្លោះ $[0, 2]$។",
-              "ខ. អនុវត្តទ្រឹស្តីបទតម្លៃមធ្យមដើម្បីបង្ហាញវិសមភាព $\\dfrac{b - a}{b} < \\ln\\left(\\dfrac{b}{a}\\right) < \\dfrac{b - a}{a}$ ចំពោះគ្រប់ $0 < a < b$។"
+              "ក. រកកម្ពស់ $h$ និងកាំបាត $r$ នៃស៊ីឡាំងចារឹកក្នុងស្វ៊ែរកាំ $R$ ដើម្បីឱ្យស៊ីឡាំងមានមាឌធំបំផុត។",
+              "ខ. រកផលធៀបរវាងមាឌអតិបរមានៃស៊ីឡាំង និងមាឌនៃស្វ៊ែរ។"
             ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. ផ្ទៀងផ្ទាត់ទ្រឹស្តីបទរ៉ូល ៖**\n- $f(x) = x^3 - 3x^2 + 2x$ ជាអនុគមន៍ពហុធា ជាប់លើ $[0, 2]$ និងមានដេរីវេលើ $(0, 2)$\n- $f(0) = 0$ និង $f(2) = 2(1)(0) = 0 \\Rightarrow f(0) = f(2)$\n- តាមទ្រឹស្តីបទរ៉ូល មាន $c \\in (0, 2)$ យ៉ាងតិចមួយដែល $f'(c) = 0$\n- គណនាដេរីវេ ៖ $f'(x) = 3x^2 - 6x + 2 = 0$\n  $\\Delta' = 9 - 6 = 3 \\Rightarrow c = \\dfrac{3 \\pm \\sqrt{3}}{3} = 1 \\pm \\dfrac{\\sqrt{3}}{3}$\n- ដោយ $\\dfrac{\\sqrt{3}}{3} \\approx 0.577$ នាំឱ្យ $c_1 = 1 - 0.577 = 0.423 \\in (0, 2)$ និង $c_2 = 1 + 0.577 = 1.577 \\in (0, 2)$\n- ដូចនេះ ទ្រឹស្តីបទរ៉ូលត្រូវបានផ្ទៀងផ្ទាត់ជាមួយតម្លៃ $c = 1 \\pm \\dfrac{\\sqrt{3}}{3}$ ទាំងពីរ។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. បង្ហាញវិសមភាពលោការីត ៖**\n- ពិចារណាអនុគមន៍ $g(x) = \\ln x$ លើចន្លោះ $[a, b]$ ($0 < a < b$)\n- $g(x)$ ជាប់លើ $[a, b]$ និងមានដេរីវេ $g'(x) = \\dfrac{1}{x}$ លើ $(a, b)$\n- តាមទ្រឹស្តីបទតម្លៃមធ្យម មាន $c \\in (a, b)$ ដែល ៖\n  $\\dfrac{\\ln b - \\ln a}{b - a} = g'(c) = \\dfrac{1}{c}$\n- ដោយ $a < c < b$ នាំឱ្យ $\\dfrac{1}{b} < \\dfrac{1}{c} < \\dfrac{1}{a}$\n- នាំឱ្យ $\\dfrac{1}{b} < \\dfrac{\\ln(b/a)}{b - a} < \\dfrac{1}{a}$\n- គុណនឹង $b - a > 0$ គេបាន $\\dfrac{b - a}{b} < \\ln\\left(\\dfrac{b}{a}\\right) < \\dfrac{b - a}{a}$ (ពិត)។ *(០.៥០ ពិន្ទុ)*"
+            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. រក $h$ និង $r$ នៃស៊ីឡាំង ៖**\n- តាមទ្រឹស្តីបទពីតាករក្នុងត្រីកោណកែងកាត់តាមផ្ចិតស្វ៊ែរ ៖\n  $r^2 + \\left(\\dfrac{h}{2}\\right)^2 = R^2 \\iff r^2 = R^2 - \\dfrac{h^2}{4}$\n- មាឌស៊ីឡាំង ៖ $V = \\pi r^2 h = \\pi\\left(R^2 - \\dfrac{h^2}{4}\\right)h = \\pi\\left(R^2 h - \\dfrac{h^3}{4}\\right)$ ជាមួយ $0 < h < 2R$\n- រកដេរីវេធៀបនឹង $h$ ៖ $V'(h) = \\pi\\left(R^2 - \\dfrac{3h^2}{4}\\right)$\n- $V'(h) = 0 \\iff \\dfrac{3h^2}{4} = R^2 \\iff h^2 = \\dfrac{4R^2}{3} \\Rightarrow h = \\dfrac{2R}{\\sqrt{3}} = \\dfrac{2R\\sqrt{3}}{3}$\n- រកកាំបាត ៖ $r^2 = R^2 - \\dfrac{1}{4}\\left(\\dfrac{4R^2}{3}\\right) = R^2 - \\dfrac{R^2}{3} = \\dfrac{2R^2}{3} \\Rightarrow r = R\\sqrt{\\dfrac{2}{3}} = \\dfrac{R\\sqrt{6}}{3}$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. រកផលធៀបមាឌ ៖**\n- មាឌអតិបរមានៃស៊ីឡាំង ៖\n  $V_{\\text{cyl}} = \\pi\\left(\\dfrac{2R^2}{3}\\right)\\left(\\dfrac{2R\\sqrt{3}}{3}\\right) = \\dfrac{4\\pi R^3\\sqrt{3}}{9}$\n- មាឌស្វ៊ែរ ៖ $V_{\\text{sph}} = \\dfrac{4}{3}\\pi R^3$\n- ផលធៀបមាឌ ៖\n  $\\dfrac{V_{\\text{cyl}}}{V_{\\text{sph}}} = \\dfrac{\\dfrac{4\\pi R^3\\sqrt{3}}{9}}{\\dfrac{4}{3}\\pi R^3} = \\dfrac{\\sqrt{3}}{3} = \\dfrac{1}{\\sqrt{3}} \\approx 57.7\\%$។ *(០.៥០ ពិន្ទុ)*"
           }
         ],
         "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>ភាពកោង ប៉ោង-ផតនៃខ្សែកោង ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$f''(x) > 0, \\forall x \\in I \\implies$ ក្រាបផតឡើងលើ (Convex)</li>\n  <li class=\"ws-sum-item\">$f''(x) < 0, \\forall x \\in I \\implies$ ក្រាបប៉ោងចុះក្រោម (Concave)។</li>\n</ul>"
+        "summary": "<div class=\"ws-sum-text\"><strong>ការអនុវត្តក្នុងធរណីមាត្រ ៖</strong> រកវិមាត្រដើម្បីឱ្យផ្ទៃក្រឡា ឬមាឌធំបំផុត (ឬផ្ទៃសម្ភារប្រើប្រាស់តិចបំផុត)។</div>"
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៦ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ ចំណុចរបត់នៃក្រាបតំណាងអនុគមន៍ (Inflection Points)",
-        "topic": "លក្ខខណ្ឌដេរីវេទីពីរប្តូរសញ្ញាត្រង់ $x_0$",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
+        "topic": "អត្រាបម្រែបម្រួលខណៈ និងអត្រាទាក់ទងគ្នា",
         "objective": "ចេះស្វែងរកកូអរដោនេចំណុចរបត់ និងសរសេរសមីការបន្ទាត់ប៉ះត្រង់ចំណុចរបត់",
         "exercises": [
           {
@@ -7765,44 +8215,41 @@
       },
       {
         "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៦ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ អាស៊ីមតូតឈរ អាស៊ីមតូតដេក និងអាស៊ីមតូតទ្រេត",
-        "topic": "លក្ខខណ្ឌ $\\lim_{x \\to x_0} f(x) = \\pm\\infty$ (ឈរ), $\\lim_{x \\to \\pm\\infty} f(x) = b$ (ដេក), $\\lim_{x \\to \\pm\\infty} [f(x) - (ax+b)] = 0$ (ទ្រេត)",
-        "objective": "ចេះស្វែងរកសមីការអាស៊ីមតូតគ្រប់ប្រភេទនៃអនុគមន៍សនិទាន",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
+        "topic": "$v = x'(t)$ , $a = v'(t) = x''(t)$",
+        "objective": "យល់ និងអនុវត្តល្បឿន និងសំទុះនៃចលនា",
+        "totalPoints": 3,
+        "summary": "  - $v(t) = x'(t) \\qquad a(t) = v'(t) = x''(t)$\n  - ចលនាលំយោល $x = A\\sin\\omega t$ ៖ $a = -\\omega^2 x$",
         "exercises": [
           {
             "id": "ex1",
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "រកអាស៊ីមតូតឈរ និងអាស៊ីមតូតដេក ៖",
-            "question": "រកសមីការអាស៊ីមតូតឈរ និងអាស៊ីមតូតដេកនៃក្រាបតំណាងអនុគមន៍ $f(x) = \\dfrac{3x - 1}{x + 2}$។",
-            "solution": "១. អាស៊ីមតូតឈរ ៖\nលក្ខខណ្ឌភាគបែង ៖ $x + 2 = 0 \\implies x = -2$។\nដោយ $\\lim_{x \\to -2^-} f(x) = +\\infty$ និង $\\lim_{x \\to -2^+} f(x) = -\\infty$ នាំឱ្យបន្ទាត់ឈរ $x = -2$ ជាអាស៊ីមតូតឈរ។\n\n២. អាស៊ីមតូតដេក ៖\n$\\lim_{x \\to \\pm\\infty} f(x) = \\lim_{x \\to \\pm\\infty} \\dfrac{3x - 1}{x + 2} = \\lim_{x \\to \\pm\\infty} \\dfrac{3 - \\dfrac{1}{x}}{1 + \\dfrac{2}{x}} = 3$។\nដូចនេះ បន្ទាត់ដេក $y = 3$ ជាអាស៊ីមតូតដេកនៃក្រាប។",
-            "rubric": "រកឃើញអាស៊ីមតូតឈរ $x = -2$ (០.៥ ពិន្ទុ) | រកឃើញអាស៊ីមតូតដេក $y = 3$ (០.៥ ពិន្ទុ)",
-            "points": 1.0
+            "points": 1,
+            "instruction": "ចូរគណនាល្បឿន និងសំទុះនៃចលនា ៖",
+            "question": "ក. ចល័តមួយមានទីតាំង $x(t) = t^3 - 2t^2$ (m)។ រកល្បឿន និងសំទុះ ជាអនុគមន៍នៃ $t$។\nខ. នៅខណៈណាដែលល្បឿនស្មើសូន្យ ( $t > 0$ )?\nគ. ចលនាលំយោល $y(t) = 5\\sin 3t$ ៖ បង្ហាញថា $y'' = -9y$។",
+            "solution": "ក. $v(t) = 3t^2 - 4t$ , $a(t) = 6t - 4$\nខ. $t(3t - 4) = 0$ ⇒ $t = \\dfrac{4}{3}$ s\nគ. $y' = 15\\cos 3t , \\ y'' = -45\\sin 3t = -9y$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
             "id": "ex2",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "រកសមីការអាស៊ីមតូតទ្រេត ៖",
-            "question": "រកសមីការអាស៊ីមតូតទ្រេត $(d)$ នៃក្រាបតំណាងអនុគមន៍ $g(x) = \\dfrac{2x^2 + 3x - 1}{x - 1}$ ខាង $\\pm\\infty$។",
-            "solution": "វិធីសាស្ត្រចែកពហុធា ៖\n$\\dfrac{2x^2 + 3x - 1}{x - 1} = \\dfrac{2x(x - 1) + 5x - 1}{x - 1} = 2x + \\dfrac{5(x - 1) + 4}{x - 1} = 2x + 5 + \\dfrac{4}{x - 1}$។\nពិនិត្យលីមីត ៖\n$\\lim_{x \\to \\pm\\infty} [g(x) - (2x + 5)] = \\lim_{x \\to \\pm\\infty} \\dfrac{4}{x - 1} = 0$។\nដូចនេះ បន្ទាត់ដែលមានសមីការ $y = 2x + 5$ ជាអាស៊ីមតូតទ្រេតនៃក្រាបតំណាងអនុគមន៍ $g$ ខាង $\\pm\\infty$។",
-            "rubric": "ចែកពហុធាបានទម្រង់ $2x + 5 + \\dfrac{4}{x-1}$ (០.៥ ពិន្ទុ) | គណនាលីមីតនិងសន្និដ្ឋាន $y = 2x + 5$ ត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
+            "points": 1,
+            "instruction": "ចូរគណនាល្បឿន និងសំទុះនៃចលនា ៖",
+            "question": "ក. ចល័តមួយមានទីតាំង $x(t) = t^3 - t^2$ (m)។ រកល្បឿន និងសំទុះ ជាអនុគមន៍នៃ $t$។\nខ. នៅខណៈណាដែលល្បឿនស្មើសូន្យ ( $t > 0$ )?\nគ. ចលនាលំយោល $y(t) = 3\\sin 3t$ ៖ បង្ហាញថា $y'' = -9y$។",
+            "solution": "ក. $v(t) = 3t^2 - 2t$ , $a(t) = 6t - 2$\nខ. $t(3t - 2) = 0$ ⇒ $t = \\dfrac{2}{3}$ s\nគ. $y' = 9\\cos 3t , \\ y'' = -27\\sin 3t = -9y$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex-les-g12a-3-2-p3-3",
+            "id": "ex3",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "ដោះស្រាយវិសមភាពដោយប្រើវិធីដេរីវេ និងតារាងអថេរភាព ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. បង្ហាញថា $\\sin x > x - \\dfrac{x^3}{6}$ ចំពោះគ្រប់ $x > 0$។",
-              "ខ. បង្ហាញថា $e^x > 1 + x + \\dfrac{x^2}{2}$ ចំពោះគ្រប់ $x > 0$។"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. បង្ហាញវិសមភាព $\\sin x > x - \\dfrac{x^3}{6}$ ៖**\n- ពិចារណា $f(x) = \\sin x - x + \\dfrac{x^3}{6}$ ចំពោះ $x \\ge 0$\n- $f'(x) = \\cos x - 1 + \\dfrac{x^2}{2}$\n- $f''(x) = -\\sin x + x$\n- $f'''(x) = -\\cos x + 1 = 1 - \\cos x \\ge 0$ ចំពោះគ្រប់ $x$\n- ដោយ $f'''(x) > 0$ ចំពោះ $x > 0$ នាំឱ្យ $f''(x)$ កើនដាច់ខាតលើ $[0, +\\infty)$\n- $f''(0) = 0 \\Rightarrow f''(x) > f''(0) = 0$ ចំពោះ $x > 0$\n- ដោយ $f''(x) > 0$ នាំឱ្យ $f'(x)$ កើនដាច់ខាតលើ $[0, +\\infty)$\n- $f'(0) = 0 \\Rightarrow f'(x) > f'(0) = 0$ ចំពោះ $x > 0$\n- ដោយ $f'(x) > 0$ នាំឱ្យ $f(x)$ កើនដាច់ខាតលើ $[0, +\\infty)$\n- $f(0) = 0 \\Rightarrow f(x) > f(0) = 0$ ចំពោះគ្រប់ $x > 0$\n- ដូចនេះ $\\sin x > x - \\dfrac{x^3}{6}$ ចំពោះគ្រប់ $x > 0$ (ពិត)។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. បង្ហាញវិសមភាពអិចស្ប៉ូណង់ស្យែល ៖**\n- ពិចារណា $g(x) = e^x - 1 - x - \\dfrac{x^2}{2}$ ចំពោះ $x \\ge 0$\n- $g'(x) = e^x - 1 - x$\n- $g''(x) = e^x - 1$\n- ចំពោះ $x > 0$ យើងមាន $e^x > 1 \\Rightarrow g''(x) > 0$\n- នាំឱ្យ $g'(x)$ ជាអនុគមន៍កើនដាច់ខាតលើ $[0, +\\infty)$\n- $g'(0) = e^0 - 1 - 0 = 0 \\Rightarrow g'(x) > g'(0) = 0$ ចំពោះគ្រប់ $x > 0$\n- នាំឱ្យ $g(x)$ ជាអនុគមន៍កើនដាច់ខាតលើ $[0, +\\infty)$\n- $g(0) = 0 \\Rightarrow g(x) > g(0) = 0$ ចំពោះគ្រប់ $x > 0$\n- ដូចនេះ $e^x > 1 + x + \\dfrac{x^2}{2}$ ចំពោះគ្រប់ $x > 0$ (ពិត)។ *(០.៥០ ពិន្ទុ)*"
+            "points": 1,
+            "instruction": "ចូរគណនាល្បឿន និងសំទុះនៃចលនា ៖",
+            "question": "ក. ចល័តមួយមានទីតាំង $x(t) = 2t^3 - 4t^2$ (m)។ រកល្បឿន និងសំទុះ ជាអនុគមន៍នៃ $t$។\nខ. នៅខណៈណាដែលល្បឿនស្មើសូន្យ ( $t > 0$ )?\nគ. ចលនាលំយោល $y(t) = 5\\sin 3t$ ៖ បង្ហាញថា $y'' = -9y$។",
+            "solution": "ក. $v(t) = 6t^2 - 8t$ , $a(t) = 12t - 8$\nខ. $t(6t - 8) = 0$ ⇒ $t = \\dfrac{4}{3}$ s\nគ. $y' = 15\\cos 3t , \\ y'' = -45\\sin 3t = -9y$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           }
-        ],
-        "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>អាស៊ីមតូតនៃក្រាបតំណាងអនុគមន៍ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ឈរ ៖ $\\lim_{x \\to x_0} f(x) = \\pm\\infty \\implies x = x_0$</li>\n  <li class=\"ws-sum-item\">ដេក ៖ $\\lim_{x \\to \\pm\\infty} f(x) = b \\implies y = b$</li>\n  <li class=\"ws-sum-item\">ទ្រេត ៖ $y = ax + b$ ដែល $a = \\lim_{x \\to \\pm\\infty} \\dfrac{f(x)}{x}$ និង $b = \\lim_{x \\to \\pm\\infty} [f(x) - ax]$។</li>\n</ul>"
+        ]
       }
     ],
     "exercises": [
@@ -7832,7 +8279,7 @@
     "courseId": "course-math-g12-advanced",
     "sheetNumber": "សន្លឹកកិច្ចការទី០៧",
     "sheetNumberNum": 7,
-    "lessonTitle": "មេរៀនទី ៣ ៖ ចំណោទបរមាធៀប និងការអនុវត្តដេរីវេ",
+    "lessonTitle": "មេរៀនទី ៣ ៖ អនុវត្តន៍ផ្សេងទៀតនៃដេរីវេ (ទំព័រ ១១០ - ១៣០)",
     "chapterTitle": "ជំពូកទី ៣ ៖ ដេរីវេ និងការសិក្សាអនុគមន៍",
     "topic": "ការដោះស្រាយបញ្ហាអតិបរមា និងអប្បបរមាក្នុងធរណីមាត្រ រូបវិទ្យា និងសេដ្ឋកិច្ច",
     "objective": "ចេះកសាងគំរូគណិតវិទ្យា ដោះស្រាយចំណោទបរមាធៀប និងវិភាគលទ្ធផលជាក់ស្តែង",
@@ -7841,126 +8288,120 @@
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៧ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ វិធីសាស្ត្រដោះស្រាយចំណោទអតិបរមា និងអប្បបរមាជាក់ស្តែង",
-        "topic": "ជំហានទាំង ៤៖ កំណត់អថេរ សរសេរអនុគមន៍ គណនាដេរីវេ និងសន្និដ្ឋាន",
-        "objective": "ចេះអនុវត្តជំហានជាប្រព័ន្ធក្នុងការដោះស្រាយចំណោទបរមាធៀប",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ ឌីផេរ៉ង់ស្យែល",
+        "topic": "$dy = f'(x)\\,dx$",
+        "objective": "យល់ និងអនុវត្តឌីផេរ៉ង់ស្យែល",
+        "totalPoints": 3,
+        "summary": "  - $dy = f'(x)\\,dx \\qquad \\Delta y \\approx dy$\n  - $\\sqrt{x_0 + h} \\approx \\sqrt{x_0} + \\dfrac{h}{2\\sqrt{x_0}}$\n  - $(1 + h)^n \\approx 1 + nh$ ពេល $h$ តូច",
         "exercises": [
           {
             "id": "ex1",
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "ដោះស្រាយចំណោទផលបូក និងផលគុណ ៖",
-            "question": "រកចំនួនពិតវិជ្ជមានពីរ $x$ និង $y$ ដែលមានផលបូក $x + y = 20$ ហើយផលគុណ $P = x y$ មានតម្លៃធំបំផុត។",
-            "solution": "ពី $x + y = 20 \\implies y = 20 - x$ (លក្ខខណ្ឌ $0 < x < 20$)។\nផលគុណ ៖ $P(x) = x(20 - x) = 20x - x^2$។\nដេរីវេ ៖ $P'(x) = 20 - 2x = 0 \\implies x = 10$។\nដោយសារ $P''(x) = -2 < 0$ នាំឱ្យ $P$ មានអតិបរមាត្រង់ $x = 10$។\nពេល $x = 10 \\implies y = 20 - 10 = 10$។\nដូចនេះ ចំនួនទាំងពីរគឺ $x = 10$ និង $y = 10$ (ផលគុណអតិបរមា $P_{\\max} = 100$)។",
-            "rubric": "បង្កើតអនុគមន៍ $P(x)$ ត្រូវ (០.៤ ពិន្ទុ) | រកឃើញ $x = 10, y = 10$ និងបញ្ជាក់អតិបរមា (០.៦ ពិន្ទុ)",
-            "points": 1.0
+            "points": 1,
+            "instruction": "ចូរគណនាឌីផេរ៉ង់ស្យែល និងតម្លៃប្រហែល ៖",
+            "question": "ក. រកឌីផេរ៉ង់ស្យែល $dy$ នៃ $y = x^3 - 2x + \\sqrt{x}$។\nខ. ប្រើឌីផេរ៉ង់ស្យែល ប៉ាន់ស្មាន $\\sqrt{25.01}$។\nគ. ប៉ាន់ស្មាន $(1.01)^{5}$។",
+            "solution": "ក. $dy = \\left(3x^2 - 2 + \\dfrac{1}{2\\sqrt{x}}\\right)dx$\nខ. $\\approx 5 + \\dfrac{0.01}{10} = 5.001$\nគ. $\\approx 1 + 5(0.01) = 1.05$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
             "id": "ex2",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "ដោះស្រាយចំណោទផលបូកការេអប្បបរមា ៖",
-            "question": "រកចំនួនពិតពីរដែលមានផលដក $x - y = 12$ ហើយផលបូកការេ $S = x^2 + y^2$ មានតម្លៃតូចបំផុត។",
-            "solution": "ពី $x - y = 12 \\implies x = y + 12$។\nផលបូកការេ ៖ $S(y) = (y + 12)^2 + y^2 = y^2 + 24y + 144 + y^2 = 2y^2 + 24y + 144$។\nដេរីវេ ៖ $S'(y) = 4y + 24 = 0 \\implies 4y = -24 \\implies y = -6$។\nដេរីវេទីពីរ ៖ $S''(y) = 4 > 0$ នាំឱ្យ $S$ មានតម្លៃអប្បបរមាត្រង់ $y = -6$។\nពេល $y = -6 \\implies x = -6 + 12 = 6$។\nដូចនេះ ចំនួនទាំងពីរគឺ $x = 6$ និង $y = -6$ (តម្លៃអប្បបរមា $S_{\\min} = 36 + 36 = 72$)។",
-            "rubric": "បង្កើតអនុគមន៍ $S(y)$ ត្រូវ (០.៥ ពិន្ទុ) | គណនាដេរីវេនិងរកឃើញ $x = 6, y = -6$ (០.៥ ពិន្ទុ)",
-            "points": 1.0
+            "points": 1,
+            "instruction": "ចូរគណនាឌីផេរ៉ង់ស្យែល និងតម្លៃប្រហែល ៖",
+            "question": "ក. រកឌីផេរ៉ង់ស្យែល $dy$ នៃ $y = x^3 - 2x + \\sqrt{x}$។\nខ. ប្រើឌីផេរ៉ង់ស្យែល ប៉ាន់ស្មាន $\\sqrt{9.01}$។\nគ. ប៉ាន់ស្មាន $(1.01)^{3}$។",
+            "solution": "ក. $dy = \\left(3x^2 - 2 + \\dfrac{1}{2\\sqrt{x}}\\right)dx$\nខ. $\\approx 3 + \\dfrac{0.01}{6} = 3.00167$\nគ. $\\approx 1 + 3(0.01) = 1.03$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex-les-g12a-3-3-p1-3",
+            "id": "ex3",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "ដោះស្រាយចំណោទអត្រាបម្រែបម្រួលទាក់ទងគ្នា (Related Rates) ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. ជណ្តើរមួយមានប្រវែង $5\\text{ m}$ ផ្អែកនឹងជញ្ជាំងឈរត្រង់មួយ។ បាតជណ្តើរកំពុងរអិលចេញពីជញ្ជាំងក្នុងល្បឿន $0.5\\text{ m/s}$។ តើចុងលើនៃជណ្តើរកំពុងរអិលចុះក្រោមក្នុងល្បឿនប៉ុន្មាន នៅខណៈដែលបាតជណ្តើរនៅចម្ងាយ $3\\text{ m}$ ពីជញ្ជាំង?",
-              "ខ. តើផ្ទៃក្រឡានៃត្រីកោណកែងដែលបង្កើតដោយជណ្តើរ ជញ្ជាំង និងដីប្រែប្រួលក្នុងអត្រាប៉ុន្មាននៅខណៈនោះ?"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. រកល្បឿនរអិលចុះនៃចុងលើជណ្តើរ ៖**\n- តាង $x$ ជាចម្ងាយពីបាតជណ្តើរទៅជញ្ជាំង និង $y$ ជាកម្ពស់ចុងលើពីដី ($x, y > 0$)\n- តាមទ្រឹស្តីបទពីតាករ ៖ $x^2 + y^2 = 5^2 = 25$\n- នៅខណៈ $x = 3\\text{ m}$ នាំឱ្យ $y = \\sqrt{25 - 3^2} = \\sqrt{16} = 4\\text{ m}$\n- បម្រាប់ ៖ $\\dfrac{dx}{dt} = 0.5\\text{ m/s}$\n- ធ្វើដេរីវេធៀបនឹងពេល $t$ ៖ $2x\\dfrac{dx}{dt} + 2y\\dfrac{dy}{dt} = 0 \\iff x\\dfrac{dx}{dt} + y\\dfrac{dy}{dt} = 0$\n- ជំនួសតម្លៃ ៖ $3(0.5) + 4\\dfrac{dy}{dt} = 0 \\iff 1.5 + 4\\dfrac{dy}{dt} = 0$\n  $\\Rightarrow \\dfrac{dy}{dt} = -\\dfrac{1.5}{4} = -0.375\\text{ m/s}$\n- សញ្ញាដកបញ្ជាក់ថាចុងលើរអិលចុះក្រោមក្នុងល្បឿន $0.375\\text{ m/s}$ (ឬ $\\dfrac{3}{8}\\text{ m/s}$)។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. រកអត្រាបម្រែបម្រួលផ្ទៃក្រឡា ៖**\n- ផ្ទៃក្រឡាត្រីកោណកែង ៖ $A = \\dfrac{1}{2}xy$\n- ធ្វើដេរីវេធៀបនឹង $t$ ៖\n  $\\dfrac{dA}{dt} = \\dfrac{1}{2}\\left(\\dfrac{dx}{dt} y + x\\dfrac{dy}{dt}\\right)$\n- ជំនួសតម្លៃ ៖\n  $\\dfrac{dA}{dt} = \\dfrac{1}{2}\\left((0.5)(4) + 3(-0.375)\\right) = \\dfrac{1}{2}(2 - 1.125) = \\dfrac{1}{2}(0.875) = 0.4375\\text{ m}^2\\text{/s}$\n- ដូចនេះ ផ្ទៃក្រឡាកំពុងកើនឡើងក្នុងអត្រា $0.4375\\text{ m}^2\\text{/s}$ (ឬ $\\dfrac{7}{16}\\text{ m}^2\\text{/s}$)។ *(០.៥០ ពិន្ទុ)*"
+            "points": 1,
+            "instruction": "ចូរគណនាឌីផេរ៉ង់ស្យែល និងតម្លៃប្រហែល ៖",
+            "question": "ក. រកឌីផេរ៉ង់ស្យែល $dy$ នៃ $y = x^3 - 2x + \\sqrt{x}$។\nខ. ប្រើឌីផេរ៉ង់ស្យែល ប៉ាន់ស្មាន $\\sqrt{16.02}$។\nគ. ប៉ាន់ស្មាន $(1.02)^{4}$។",
+            "solution": "ក. $dy = \\left(3x^2 - 2 + \\dfrac{1}{2\\sqrt{x}}\\right)dx$\nខ. $\\approx 4 + \\dfrac{0.02}{8} = 4.0025$\nគ. $\\approx 1 + 4(0.02) = 1.08$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           }
-        ],
-        "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>វិធីសាស្ត្រដោះស្រាយចំណោទបរមា (Optimization) ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ជំហានទី ១ ៖ តាងអថេរ និងកំណត់ដែនលក្ខខណ្ឌ</li>\n  <li class=\"ws-sum-item\">ជំហានទី ២ ៖ បង្កើតអនុគមន៍ $f(x)$ ត្រូវរកបរមា</li>\n  <li class=\"ws-sum-item\">ជំហានទី ៣ ៖ គណនា $f'(x) = 0$ សិក្សាសញ្ញារកតម្លៃអតិបរមា ឬអប្បបរមា។</li>\n</ul>"
+        ]
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៧ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ ការអនុវត្តដេរីវេក្នុងធរណីមាត្រ (ផ្ទៃក្រឡា និងមាឌធំបំផុត)",
-        "topic": "ការគណនាវិមាត្រនៃស៊ីឡាំង ឬប្រអប់ដើម្បីឱ្យមាឌធំបំផុត",
-        "objective": "ចេះបង្កើតសមីការភ្ជាប់រវាងកាំ កម្ពស់ និងមាឌដើម្បីរកបរមា",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ វិសមភាពកំណើនមានកំណត់",
+        "topic": "ទ្រឹស្តីបទតម្លៃមធ្យម និង $m \\le f'(x) \\le M$ ⇒ $m(b - a) \\le f(b) - f(a) \\le M(b - a)$",
+        "objective": "ចេះគណនាដេរីវេទីពីរ និងកំណត់ចន្លោះដែលក្រាបប៉ោង ឬផត",
         "exercises": [
           {
             "id": "ex1",
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "រកផ្ទៃក្រឡាធំបំផុតនៃចតុកោណកែងចារឹកក្នុងត្រីកោណកែង ៖",
-            "question": "ត្រីកោណកែងមួយមានជ្រុងជាប់មុំកែងប្រវែង $6\\text{ cm}$ និង $8\\text{ cm}$។ រកផ្ទៃក្រឡាធំបំផុតនៃចតុកោណកែងមួយដែលចារឹកក្នុងត្រីកោណកែងនោះ ដោយជ្រុងពីរនៃចតុកោណកែងនៅលើជ្រុងជាប់មុំកែង។",
-            "solution": "ដាក់ក្នុងតម្រុយអ័ក្ស $Ox$ និង $Oy$ តាមជ្រុងជាប់មុំកែង ៖\nអ៊ីប៉ូតេនុសជាបន្ទាត់កាត់តាម $(6, 0)$ និង $(0, 8)$ មានសមីការ ៖\n$\\dfrac{x}{6} + \\dfrac{y}{8} = 1 \\implies y = 8\\left(1 - \\dfrac{x}{6}\\right) = 8 - \\dfrac{4}{3}x$ ($0 < x < 6$)។\nផ្ទៃក្រឡាចតុកោណកែង ៖ $S(x) = x y = x\\left(8 - \\dfrac{4}{3}x\\right) = 8x - \\dfrac{4}{3}x^2$។\nដេរីវេ ៖ $S'(x) = 8 - \\dfrac{8}{3}x = 0 \\implies x = 3\\text{ cm}$។\nពេល $x = 3\\text{ cm} \\implies y = 8 - \\dfrac{4}{3}(3) = 4\\text{ cm}$។\nផ្ទៃក្រឡាអតិបរមា ៖ $S_{\\max} = 3 \\times 4 = 12\\text{ cm}^2$។",
-            "rubric": "កសាងសមីការបន្ទាត់និងផ្ទៃក្រឡា $S(x)$ ត្រូវ (០.៥ ពិន្ទុ) | រក $x = 3, y = 4$ និង $S_{\\max} = 12\\text{ cm}^2$ (០.៥ ពិន្ទុ)",
+            "instruction": "កំណត់ចន្លោះប៉ោង និងផតនៃក្រាប ៖",
+            "question": "គេឱ្យអនុគមន៍ $f(x) = x^3 - 6x^2 + 9x$។ រកចន្លោះដែលក្រាបផត (ប៉ោងឡើងលើ) និងចន្លោះដែលក្រាបប៉ោង (ប៉ោងចុះក្រោម)។",
+            "solution": "១. $f'(x) = 3x^2 - 12x + 9$\n២. $f''(x) = 6x - 12 = 6(x - 2)$។\n៣. សញ្ញានៃ $f''(x)$ ៖\n• $f''(x) > 0 \\iff x > 2$ ៖ ក្រាបផតលើចន្លោះ $(2, +\\infty)$។\n• $f''(x) < 0 \\iff x < 2$ ៖ ក្រាបប៉ោងលើចន្លោះ $(-\\infty, 2)$។",
+            "rubric": "គណនា $f''(x) = 6(x - 2)$ ត្រូវ (០.៥ ពិន្ទុ) | កំណត់ចន្លោះប៉ោង និងផតត្រូវ (០.៥ ពិន្ទុ)",
             "points": 1.0
           },
           {
             "id": "ex2",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "រកមាឌធំបំផុតនៃស៊ីឡាំងចារឹកក្នុងកោន ៖",
-            "question": "កោនត្រង់មួយមានកាំបាត $R = 6\\text{ cm}$ និងកម្ពស់ $H = 12\\text{ cm}$។ គេចារឹកស៊ីឡាំងត្រង់មួយក្នុងកោននេះ។ រកកាំបាត $r$ និងកម្ពស់ $h$ នៃស៊ីឡាំងដើម្បីឱ្យមាឌរបស់វាធំបំផុត។",
-            "solution": "តាមទ្រឹស្តីបទតាលែសក្នុងមុខកាត់កាត់តាមអ័ក្ស ៖\n$\\dfrac{12 - h}{12} = \\dfrac{r}{6} \\implies 1 - \\dfrac{h}{12} = \\dfrac{r}{6} \\implies h = 12 - 2r$ ($0 < r < 6$)។\nមាឌស៊ីឡាំង ៖\n$V(r) = \\pi r^2 h = \\pi r^2 (12 - 2r) = \\pi(12r^2 - 2r^3)$។\nដេរីវេ ៖ $V'(r) = \\pi(24r - 6r^2) = 6\\pi r(4 - r)$។\nឱ្យ $V'(r) = 0$ ក្នុងចន្លោះ $(0, 6) \\implies r = 4\\text{ cm}$។\nពេល $r = 4\\text{ cm} \\implies h = 12 - 2(4) = 4\\text{ cm}$។\nមាឌធំបំផុត ៖ $V_{\\max} = \\pi (4^2)(4) = 64\\pi\\text{ cm}^3$។",
-            "rubric": "ប្រើតាលែសទាញរក $h = 12 - 2r$ ត្រូវ (០.៤ ពិន្ទុ) | គណនាដេរីវេនិងរកឃើញ $r = 4\\text{ cm}, h = 4\\text{ cm}$ (០.៦ ពិន្ទុ)",
+            "instruction": "សិក្សាភាពកោងនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖",
+            "question": "បង្ហាញថាក្រាបនៃអនុគមន៍ $g(x) = e^{-x^2}$ ផតលើចន្លោះ $\\left(-\\infty, -\\dfrac{\\sqrt{2}}{2}\\right) \\cup \\left(\\dfrac{\\sqrt{2}}{2}, +\\infty\\right)$។",
+            "solution": "១. $g'(x) = -2x e^{-x^2}$\n២. $g''(x) = (-2x)' e^{-x^2} + (-2x)(-2x e^{-x^2}) = -2e^{-x^2} + 4x^2 e^{-x^2} = 2(2x^2 - 1)e^{-x^2}$។\n៣. ដោយសារ $e^{-x^2} > 0$ ចំពោះគ្រប់ $x$ នោះសញ្ញារបស់ $g''$ អាស្រ័យលើ $2x^2 - 1$ ៖\n$g''(x) > 0 \\iff 2x^2 - 1 > 0 \\iff x^2 > \\dfrac{1}{2} \\iff |x| > \\dfrac{\\sqrt{2}}{2}$។\nដូចនេះ ក្រាបផតលើ $\\left(-\\infty, -\\dfrac{\\sqrt{2}}{2}\\right) \\cup \\left(\\dfrac{\\sqrt{2}}{2}, +\\infty\\right)$។",
+            "rubric": "គណនា $g''(x) = 2(2x^2-1)e^{-x^2}$ ត្រូវ (០.៥ ពិន្ទុ) | សិក្សាសញ្ញានិងសន្និដ្ឋានចន្លោះផតត្រូវ (០.៥ ពិន្ទុ)",
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-3-3-p2-3",
+            "id": "ex-les-g12a-3-2-p1-3",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "ដោះស្រាយចំណោទធរណីមាត្រអតិបរមា និងអប្បបរមាក្នុងលំហ ៖",
+            "instruction": "អនុវត្តទ្រឹស្តីបទរ៉ូល និងទ្រឹស្តីបទតម្លៃមធ្យម (ឡាហ្គ្រង់) ៖",
             "points": 1.0,
             "questions": [
-              "ក. រកកម្ពស់ $h$ និងកាំបាត $r$ នៃស៊ីឡាំងចារឹកក្នុងស្វ៊ែរកាំ $R$ ដើម្បីឱ្យស៊ីឡាំងមានមាឌធំបំផុត។",
-              "ខ. រកផលធៀបរវាងមាឌអតិបរមានៃស៊ីឡាំង និងមាឌនៃស្វ៊ែរ។"
+              "ក. ផ្ទៀងផ្ទាត់ទ្រឹស្តីបទរ៉ូលចំពោះអនុគមន៍ $f(x) = x(x - 1)(x - 2)$ លើចន្លោះ $[0, 2]$។",
+              "ខ. អនុវត្តទ្រឹស្តីបទតម្លៃមធ្យមដើម្បីបង្ហាញវិសមភាព $\\dfrac{b - a}{b} < \\ln\\left(\\dfrac{b}{a}\\right) < \\dfrac{b - a}{a}$ ចំពោះគ្រប់ $0 < a < b$។"
             ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. រក $h$ និង $r$ នៃស៊ីឡាំង ៖**\n- តាមទ្រឹស្តីបទពីតាករក្នុងត្រីកោណកែងកាត់តាមផ្ចិតស្វ៊ែរ ៖\n  $r^2 + \\left(\\dfrac{h}{2}\\right)^2 = R^2 \\iff r^2 = R^2 - \\dfrac{h^2}{4}$\n- មាឌស៊ីឡាំង ៖ $V = \\pi r^2 h = \\pi\\left(R^2 - \\dfrac{h^2}{4}\\right)h = \\pi\\left(R^2 h - \\dfrac{h^3}{4}\\right)$ ជាមួយ $0 < h < 2R$\n- រកដេរីវេធៀបនឹង $h$ ៖ $V'(h) = \\pi\\left(R^2 - \\dfrac{3h^2}{4}\\right)$\n- $V'(h) = 0 \\iff \\dfrac{3h^2}{4} = R^2 \\iff h^2 = \\dfrac{4R^2}{3} \\Rightarrow h = \\dfrac{2R}{\\sqrt{3}} = \\dfrac{2R\\sqrt{3}}{3}$\n- រកកាំបាត ៖ $r^2 = R^2 - \\dfrac{1}{4}\\left(\\dfrac{4R^2}{3}\\right) = R^2 - \\dfrac{R^2}{3} = \\dfrac{2R^2}{3} \\Rightarrow r = R\\sqrt{\\dfrac{2}{3}} = \\dfrac{R\\sqrt{6}}{3}$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. រកផលធៀបមាឌ ៖**\n- មាឌអតិបរមានៃស៊ីឡាំង ៖\n  $V_{\\text{cyl}} = \\pi\\left(\\dfrac{2R^2}{3}\\right)\\left(\\dfrac{2R\\sqrt{3}}{3}\\right) = \\dfrac{4\\pi R^3\\sqrt{3}}{9}$\n- មាឌស្វ៊ែរ ៖ $V_{\\text{sph}} = \\dfrac{4}{3}\\pi R^3$\n- ផលធៀបមាឌ ៖\n  $\\dfrac{V_{\\text{cyl}}}{V_{\\text{sph}}} = \\dfrac{\\dfrac{4\\pi R^3\\sqrt{3}}{9}}{\\dfrac{4}{3}\\pi R^3} = \\dfrac{\\sqrt{3}}{3} = \\dfrac{1}{\\sqrt{3}} \\approx 57.7\\%$។ *(០.៥០ ពិន្ទុ)*"
+            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. ផ្ទៀងផ្ទាត់ទ្រឹស្តីបទរ៉ូល ៖**\n- $f(x) = x^3 - 3x^2 + 2x$ ជាអនុគមន៍ពហុធា ជាប់លើ $[0, 2]$ និងមានដេរីវេលើ $(0, 2)$\n- $f(0) = 0$ និង $f(2) = 2(1)(0) = 0 \\Rightarrow f(0) = f(2)$\n- តាមទ្រឹស្តីបទរ៉ូល មាន $c \\in (0, 2)$ យ៉ាងតិចមួយដែល $f'(c) = 0$\n- គណនាដេរីវេ ៖ $f'(x) = 3x^2 - 6x + 2 = 0$\n  $\\Delta' = 9 - 6 = 3 \\Rightarrow c = \\dfrac{3 \\pm \\sqrt{3}}{3} = 1 \\pm \\dfrac{\\sqrt{3}}{3}$\n- ដោយ $\\dfrac{\\sqrt{3}}{3} \\approx 0.577$ នាំឱ្យ $c_1 = 1 - 0.577 = 0.423 \\in (0, 2)$ និង $c_2 = 1 + 0.577 = 1.577 \\in (0, 2)$\n- ដូចនេះ ទ្រឹស្តីបទរ៉ូលត្រូវបានផ្ទៀងផ្ទាត់ជាមួយតម្លៃ $c = 1 \\pm \\dfrac{\\sqrt{3}}{3}$ ទាំងពីរ។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. បង្ហាញវិសមភាពលោការីត ៖**\n- ពិចារណាអនុគមន៍ $g(x) = \\ln x$ លើចន្លោះ $[a, b]$ ($0 < a < b$)\n- $g(x)$ ជាប់លើ $[a, b]$ និងមានដេរីវេ $g'(x) = \\dfrac{1}{x}$ លើ $(a, b)$\n- តាមទ្រឹស្តីបទតម្លៃមធ្យម មាន $c \\in (a, b)$ ដែល ៖\n  $\\dfrac{\\ln b - \\ln a}{b - a} = g'(c) = \\dfrac{1}{c}$\n- ដោយ $a < c < b$ នាំឱ្យ $\\dfrac{1}{b} < \\dfrac{1}{c} < \\dfrac{1}{a}$\n- នាំឱ្យ $\\dfrac{1}{b} < \\dfrac{\\ln(b/a)}{b - a} < \\dfrac{1}{a}$\n- គុណនឹង $b - a > 0$ គេបាន $\\dfrac{b - a}{b} < \\ln\\left(\\dfrac{b}{a}\\right) < \\dfrac{b - a}{a}$ (ពិត)។ *(០.៥០ ពិន្ទុ)*"
           }
         ],
         "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>ការអនុវត្តក្នុងធរណីមាត្រ ៖</strong> រកវិមាត្រដើម្បីឱ្យផ្ទៃក្រឡា ឬមាឌធំបំផុត (ឬផ្ទៃសម្ភារប្រើប្រាស់តិចបំផុត)។</div>"
+        "summary": "<div class=\"ws-sum-text\"><strong>ភាពកោង ប៉ោង-ផតនៃខ្សែកោង ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$f''(x) > 0, \\forall x \\in I \\implies$ ក្រាបផតឡើងលើ (Convex)</li>\n  <li class=\"ws-sum-item\">$f''(x) < 0, \\forall x \\in I \\implies$ ក្រាបប៉ោងចុះក្រោម (Concave)។</li>\n</ul>"
       },
       {
         "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៧ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ ការអនុវត្តដេរីវេក្នុងរូបវិទ្យា និងសេដ្ឋកិច្ច (ល្បឿន សំទុះ ចំណាយទាបបំផុត)",
-        "topic": "ល្បឿន v(t) = s'(t), សំទុះ a(t) = v'(t) និងអនុគមន៍ចំណាយប្រាក់ចំណេញ",
-        "objective": "ចេះបកស្រាយដេរីវេជាអត្រាបម្រែបម្រួលខណៈក្នុងរូបវិទ្យា និងសេដ្ឋកិច្ច",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុវត្តន៍ក្នុងសេដ្ឋកិច្ច",
+        "topic": "ថ្លៃដើមរឹម ចំណូលរឹម និងប្រាក់ចំណេញអតិបរមា",
+        "objective": "យល់ និងអនុវត្តអនុវត្តន៍ក្នុងសេដ្ឋកិច្ច",
+        "totalPoints": 3,
+        "summary": "  - ថ្លៃដើមរឹម ៖ $C'(x)$ ; ចំណូលរឹម ៖ $R'(x)$\n  - ប្រាក់ចំណេញ ៖ $P(x) = R(x) - C(x)$ ; អតិបរមាពេល $P'(x) = 0$\n  - ថ្លៃដើមមធ្យម ៖ $\\bar{C}(x) = \\dfrac{C(x)}{x}$",
         "exercises": [
           {
             "id": "ex1",
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "គណនាល្បឿន និងសំទុះខណៈ ៖",
-            "question": "ចលនានៃវត្ថុមួយលើបន្ទាត់ត្រង់កំណត់ដោយច្បាប់ចលនា $s(t) = 2t^3 - 9t^2 + 12t + 5$ ($t \\ge 0$, $s$ គិតជាម៉ែត្រ, $t$ គិតជាវិនាទី)។\n\nក. គណនាល្បឿន $v(t)$ និងសំទុះ $a(t)$ នៃវត្ថុ។\n\nខ. តើវត្ថុឈប់នៅខណៈណាខ្លះ? រកសំទុះត្រង់ខណៈនោះ។",
-            "solution": "ក. ល្បឿន និងសំទុះ ៖\n• $v(t) = s'(t) = 6t^2 - 18t + 12 = 6(t^2 - 3t + 2) = 6(t - 1)(t - 2)$ (m/s)។\n• $a(t) = v'(t) = 12t - 18$ (m/s²)។\n\nខ. វត្ថុឈប់នៅពេល $v(t) = 0$ ៖\n$6(t - 1)(t - 2) = 0 \\implies t = 1\\text{ s}$ ឬ $t = 2\\text{ s}$។\n• ត្រង់ $t = 1\\text{ s}$ ៖ $a(1) = 12(1) - 18 = -6\\,\\dfrac{\\text{m}}{\\text{s}}^2$។\n• ត្រង់ $t = 2\\text{ s}$ ៖ $a(2) = 12(2) - 18 = 6\\,\\dfrac{\\text{m}}{\\text{s}}^2$។",
-            "rubric": "ក. គណនា $v(t)$ និង $a(t)$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. រកខណៈឈប់ $t = 1\\text{ s}, 2\\text{ s}$ និងសំទុះត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
+            "points": 1,
+            "instruction": "ចូរអនុវត្តដេរីវេក្នុងសេដ្ឋកិច្ច ៖",
+            "question": "សហគ្រាសមួយមានចំណូល $R(x) = -x^2 + 58x$ និងថ្លៃដើម $C(x) = 20x + 324$ (ដុល្លារ) ចំពោះ $x$ គ្រឿង។\nក. រកចំណូលរឹម $R'(x)$ និងថ្លៃដើមរឹម $C'(x)$។\nខ. សរសេរអនុគមន៍ប្រាក់ចំណេញ $P(x)$។\nគ. រក $x$ ដែលធ្វើឱ្យប្រាក់ចំណេញធំបំផុត និងប្រាក់ចំណេញអតិបរមា។",
+            "solution": "ក. $R'(x) = -2x + 58$ , $C'(x) = 20$\nខ. $P(x) = -x^2 + 38x - 324$\nគ. $P'(x) = 0$ ⇒ $x = 19$ ; $P(19) = 37$ ដុល្លារ",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
             "id": "ex2",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "ដោះស្រាយចំណោទសេដ្ឋកិច្ច (ចំណេញអតិបរមា) ៖",
-            "question": "រោងចក្រមួយផលិតទំនិញ $x$ គ្រឿង ($x > 0$) ដោយមានអនុគមន៍ថ្លៃដើមសរុប $C(x) = 2x^2 + 40x + 500$ និងអនុគមន៍ចំណូលសរុប $R(x) = 200x - x^2$ (គិតជាដុល្លារ)។\n\nក. កំណត់អនុគមន៍ប្រាក់ចំណេញ $P(x) = R(x) - C(x)$។\n\nខ. តើរោងចក្រត្រូវផលិត និងលក់ទំនិញប៉ុន្មានគ្រឿងដើម្បីទទួលបានប្រាក់ចំណេញធំបំផុត? គណនាប្រាក់ចំណេញអតិបរមានោះ។",
-            "solution": "ក. អនុគមន៍ប្រាក់ចំណេញ ៖\n$P(x) = R(x) - C(x) = (200x - x^2) - (2x^2 + 40x + 500) = -3x^2 + 160x - 500$។\n\nខ. រកចំណេញធំបំផុត ៖\nដេរីវេ ៖ $P'(x) = -6x + 160 = 0 \\implies 6x = 160 \\implies x = \\dfrac{160}{6} = \\dfrac{80}{3} \\approx 26.67$ (ឬបើ $C(x) = x^2 + 40x + 500$ នោះ $P'(x) = -4x + 160 = 0 \\implies x = 40$)។\nចំពោះ $C(x) = x^2 + 40x + 500$ ៖ $P(x) = -2x^2 + 160x - 500$ នាំឱ្យ $P'(x) = -4x + 160 = 0 \\implies x = 40$ គ្រឿង។\nដោយ $P''(40) = -4 < 0$ នាំឱ្យប្រាក់ចំណេញធំបំផុតពេលផលិត $40$ គ្រឿង។\nប្រាក់ចំណេញអតិបរមា ៖ $P(40) = -2(40^2) + 160(40) - 500 = -3200 + 6400 - 500 = 2700$ ដុល្លារ។",
-            "rubric": "ក. សរសេរ $P(x)$ ត្រូវ (០.៤ ពិន្ទុ) | ខ. ដោះស្រាយដេរីវេនិងរកឃើញ $x = 40$, $P_{\\max} = 2700$ ដុល្លារ (០.៦ ពិន្ទុ)",
-            "points": 1.0
+            "points": 1,
+            "instruction": "ចូរអនុវត្តដេរីវេក្នុងសេដ្ឋកិច្ច ៖",
+            "question": "សហគ្រាសមួយមានចំណូល $R(x) = -2x^2 + 128x$ និងថ្លៃដើម $C(x) = 56x + 217$ (ដុល្លារ) ចំពោះ $x$ គ្រឿង។\nក. រកចំណូលរឹម $R'(x)$ និងថ្លៃដើមរឹម $C'(x)$។\nខ. សរសេរអនុគមន៍ប្រាក់ចំណេញ $P(x)$។\nគ. រក $x$ ដែលធ្វើឱ្យប្រាក់ចំណេញធំបំផុត និងប្រាក់ចំណេញអតិបរមា។",
+            "solution": "ក. $R'(x) = -4x + 128$ , $C'(x) = 56$\nខ. $P(x) = -2x^2 + 72x - 217$\nគ. $P'(x) = 0$ ⇒ $x = 18$ ; $P(18) = 431$ ដុល្លារ",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex-les-g12a-3-3-p3-3",
+            "id": "ex3",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "ដោះស្រាយចំណោទចម្ងាយអប្បបរមាក្នុងប្លង់កូអរដោនេ ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. រកកូអរដោនេចំណុច $M$ លើប៉ារ៉ាបូល $y = x^2$ ដែលនៅជិតចំណុច $A(0, 1)$ បំផុត។",
-              "ខ. គណនាចម្ងាយអប្បបរមាពីចំណុច $A$ ទៅប៉ារ៉ាបូលនោះ។"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. រកចំណុច $M$ ៖**\n- ចំណុច $M$ លើប៉ារ៉ាបូលមានកូអរដោនេ $M(x, x^2)$\n- ការ៉េនៃចម្ងាយពី $A(0, 1)$ ទៅ $M$ គឺ ៖\n  $d^2(x) = (x - 0)^2 + (x^2 - 1)^2 = x^2 + x^4 - 2x^2 + 1 = x^4 - x^2 + 1$\n- តាង $f(x) = x^4 - x^2 + 1$\n- រកដេរីវេ ៖ $f'(x) = 4x^3 - 2x = 2x(2x^2 - 1)$\n- $f'(x) = 0 \\iff x = 0$ ឬ $x = \\pm \\dfrac{1}{\\sqrt{2}} = \\pm \\dfrac{\\sqrt{2}}{2}$\n- ពិនិត្យតម្លៃ ៖\n  + $f(0) = 1$\n  + $f\\left(\\pm\\dfrac{\\sqrt{2}}{2}\\right) = \\left(\\dfrac{1}{2}\\right)^2 - \\dfrac{1}{2} + 1 = \\dfrac{1}{4} - \\dfrac{1}{2} + 1 = \\dfrac{3}{4} < 1$\n- ដូចនេះ $f(x)$ អប្បបរមាត្រង់ $x = \\pm \\dfrac{\\sqrt{2}}{2}$\n- អរដោនេ ៖ $y = x^2 = \\dfrac{1}{2}$\n- មានចំណុចពីរគឺ $M_1\\left(-\\dfrac{\\sqrt{2}}{2}, \\dfrac{1}{2}\\right)$ និង $M_2\\left(\\dfrac{\\sqrt{2}}{2}, \\dfrac{1}{2}\\right)$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. គណនាចម្ងាយអប្បបរមា ៖**\n- $d_{\\min} = \\sqrt{f_{\\min}} = \\sqrt{\\dfrac{3}{4}} = \\dfrac{\\sqrt{3}}{2}$ ឯកតាប្រវែង។ *(០.៥០ ពិន្ទុ)*"
+            "points": 1,
+            "instruction": "ចូរអនុវត្តដេរីវេក្នុងសេដ្ឋកិច្ច ៖",
+            "question": "សហគ្រាសមួយមានចំណូល $R(x) = -2x^2 + 94x$ និងថ្លៃដើម $C(x) = 38x + 241$ (ដុល្លារ) ចំពោះ $x$ គ្រឿង។\nក. រកចំណូលរឹម $R'(x)$ និងថ្លៃដើមរឹម $C'(x)$។\nខ. សរសេរអនុគមន៍ប្រាក់ចំណេញ $P(x)$។\nគ. រក $x$ ដែលធ្វើឱ្យប្រាក់ចំណេញធំបំផុត និងប្រាក់ចំណេញអតិបរមា។",
+            "solution": "ក. $R'(x) = -4x + 94$ , $C'(x) = 38$\nខ. $P(x) = -2x^2 + 56x - 241$\nគ. $P'(x) = 0$ ⇒ $x = 14$ ; $P(14) = 151$ ដុល្លារ",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           }
-        ],
-        "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>ការអនុវត្តក្នុងរូបវិទ្យា និងសេដ្ឋកិច្ច ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចលនាត្រង់ ៖ ល្បឿន $v(t) = s'(t)$, សំទុះ $a(t) = v'(t) = s''(t)$</li>\n  <li class=\"ws-sum-item\">សេដ្ឋកិច្ច ៖ ចំណាយរឹម $C'(x)$, ប្រាក់ចំណេញអតិបរមាត្រង់ $R'(x) = C'(x)$។</li>\n</ul>"
+        ]
       }
     ],
     "exercises": [
@@ -9570,18 +10011,18 @@
     "courseId": "course-math-g12-basic",
     "sheetNumber": "សន្លឹកកិច្ចការទី០១",
     "sheetNumberNum": 1,
-    "lessonTitle": "មេរៀនទី ១ ៖ លីមីតនៃអនុគមន៍",
-    "chapterTitle": "ជំពូកទី ១ ៖ លីមីត និងភាពជាប់នៃអនុគមន៍",
+    "lessonTitle": "មេរៀនទី ១ ៖ លីមីតនៃអនុគមន៍ (ទំព័រ ៤២ - ៦៥)",
+    "chapterTitle": "ជំពូកទី ២ ៖ លីមីត",
     "topic": "លីមីតនៃអនុគមន៍ត្រង់ចំណុច និងត្រង់អនន្ត",
     "objective": "យល់ច្បាស់ពីនិយមន័យលីមីត និងចេះគណនាលីមីតរាងកំណត់ និងមិនកំណត់",
     "totalPoints": 3,
-    "totalPointsCount": 12,
+    "totalPointsCount": 18,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០១ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងលីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់",
-        "topic": "ការគណនាលីមីតដោយជំនួសផ្ទាល់ និងលក្ខណៈលីនេអ៊ែរ",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
+        "topic": "លីមីតត្រង់ចំនួនកំណត់ ត្រង់អនន្ត និងប្រមាណវិធីលើលីមីត",
         "objective": "ចេះគណនាលីមីតនៃអនុគមន៍ពហុធា និងអនុគមន៍សនិទានដោយជំនួសផ្ទាល់",
         "exercises": [
           {
@@ -9620,50 +10061,9 @@
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០១ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ រាងមិនកំណត់ [0/0] ដោយបំបែកជាផលគុណកត្តា",
-        "topic": "ការបំបាត់រាងមិនកំណត់ 0/0 ចំពោះអនុគមន៍សនិទាន",
-        "objective": "ចេះបំបែកពហុធាភាគយក និងភាគបែងជាផលគុណកត្តាដើម្បីសម្រួលកត្តាស្មើសូន្យ",
-        "exercises": [
-          {
-            "id": "ex1",
-            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "គណនាលីមីតរាងមិនកំណត់ $\\dfrac{0}{0}$ ៖",
-            "question": "គណនាលីមីត ៖\n\nក. $L_1 = \\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}$\n\nខ. $L_2 = \\lim_{x \\to -2} \\dfrac{x^2 + 5x + 6}{x + 2}$",
-            "solution": "ក. ពេល $x \\to 3$ មានរាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$L_1 = \\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 6$។\n\nខ. ពេល $x \\to -2$ មានរាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$L_2 = \\lim_{x \\to -2} \\dfrac{(x + 2)(x + 3)}{x + 2} = \\lim_{x \\to -2} (x + 3) = 1$។",
-            "rubric": "ក. បំបែកផលគុណកត្តានិងគណនាឃើញ 6 (០.៥ ពិន្ទុ) | ខ. សម្រួលនិងគណនាឃើញ 1 (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex2",
-            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "គណនាលីមីតដោយបំបែកដឺក្រេខ្ពស់ ៖",
-            "question": "គណនាលីមីត ៖\n$L = \\lim_{x \\to 1} \\dfrac{x^3 - 1}{x^2 + 2x - 3}$។",
-            "solution": "ពេល $x \\to 1$ ជារាងមិនកំណត់ $\\left[\\dfrac{0}{0}\\right]$ ៖\n$x^3 - 1 = (x - 1)(x^2 + x + 1)$\n$x^2 + 2x - 3 = (x - 1)(x + 3)$\n$L = \\lim_{x \\to 1} \\dfrac{(x - 1)(x^2 + x + 1)}{(x - 1)(x + 3)} = \\lim_{x \\to 1} \\dfrac{x^2 + x + 1}{x + 3} = \\dfrac{1 + 1 + 1}{1 + 3} = \\dfrac{3}{4}$។",
-            "rubric": "បំបែករូបមន្ត $a^3 - b^3$ ត្រូវ (០.៥ ពិន្ទុ) | សម្រួលកត្តានិងគណនាបាន $\\dfrac{3}{4}$ (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex-les-g12b-1-1-p2-3",
-            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "គណនាលីមីតរាងមិនកំណត់ $\\dfrac{0}{0}$ ដឺក្រេខ្ពស់ដោយប្រើវិធីកាត់កត្តា ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. គណនា $L_1 = \\lim_{x \\to 1} \\dfrac{x^{2026} - 2026x + 2025}{(x - 1)^2}$។",
-              "ខ. គណនា $L_2 = \\lim_{x \\to 2} \\dfrac{x^3 - 3x^2 + 4}{x^4 - 4x^3 + 16x - 16}$។"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. គណនា $L_1$ ៖**\n- រាងមិនកំណត់ $\\dfrac{0}{0}$ ត្រង់ $x = 1$\n- វិធីទី ១ (បំបែកកត្តា) ៖\n  $x^{2026} - 2026x + 2025 = (x^{2026} - 1) - 2025(x - 1)$\n  $= (x - 1)(x^{2025} + x^{2024} + \\dots + x + 1) - 2025(x - 1)$\n  $= (x - 1)[(x^{2025} - 1) + (x^{2024} - 1) + \\dots + (x - 1)]$\n  $= (x - 1)^2 [(x^{2024} + \\dots + 1) + (x^{2023} + \\dots + 1) + \\dots + 1]$\n- ឬប្រើដេរីវេ (ឡូពីតាល់) ២ ដង ៖\n  $\\lim_{x \\to 1} \\dfrac{2026x^{2025} - 2026}{2(x - 1)} = \\lim_{x \\to 1} \\dfrac{2026 \\times 2025 x^{2024}}{2} = \\dfrac{2026 \\times 2025}{2} = 1013 \\times 2025 = 2051325$\n- ដូចនេះ $L_1 = 2051325$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. គណនា $L_2$ ៖**\n- រាងមិនកំណត់ $\\dfrac{0}{0}$ ត្រង់ $x = 2$\n- បំបែកភាគយក ៖ $x^3 - 3x^2 + 4 = (x - 2)^2(x + 1)$\n- បំបែកភាគបែង ៖ $x^4 - 4x^3 + 16x - 16 = x^3(x - 4) + 16(x - 1)$ ពិនិត្យឃើញ $x = 2$ ជាឫសទ្វេ ៖\n  $x^4 - 4x^3 + 16x - 16 = (x - 2)^2(x^2 - 4) = (x - 2)^3(x + 2)$ (កំហុសពិនិត្យ) ៖\n  តាង $P(x) = x^4 - 4x^3 + 16x - 16$ ៖ $P(2) = 16 - 32 + 32 - 16 = 0$\n  $P'(x) = 4x^3 - 12x^2 + 16 \\Rightarrow P'(2) = 32 - 48 + 16 = 0$\n  $P''(x) = 12x^2 - 24x \\Rightarrow P''(2) = 48 - 48 = 0$\n  $P'''(x) = 24x - 24 \\Rightarrow P'''(2) = 24$\n  ដូច្នេះ $P(x) = (x - 2)^3(x + 2)$ នាំឱ្យ ៖\n  $\\lim_{x \\to 2} \\dfrac{(x - 2)^2(x + 1)}{(x - 2)^3(x + 2)} = \\lim_{x \\to 2} \\dfrac{x + 1}{(x - 2)(x + 2)}$ មិនមានលីមីតកំណត់ (ស្មើ $\\infty$)\n- ចំពោះសមីការត្រឹមត្រូវក្នុងបាក់ឌុប ៖ $(x^2 - 4)(x - 2) = (x-2)^2(x+2)$ នាំឱ្យលីមីតស្មើ $\\dfrac{2+1}{2+2} = \\dfrac{3}{4}$។ *(០.៥០ ពិន្ទុ)*"
-          }
-        ],
-        "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>រាងមិនកំណត់ $[\\dfrac{0}{0}]$ ចំពោះអនុគមន៍សនិទាន ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">វិធាន ៖ បំបែកភាគយក និងភាគបែងជាផលគុណកត្តាដែលមានកត្តា $(x - a)$ រួចសម្រួលចោលមុននឹងជំនួស $x = a$។</li>\n</ul>"
-      },
-      {
-        "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០១ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍អសនិទាន និងការគុណកន្សោមឆ្លាស់",
-        "topic": "ការបំបាត់រាងមិនកំណត់ 0/0 ដោយប្រើកន្សោមឆ្លាស់",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
+        "topic": "គុណនឹងកន្សោមឆ្លាស់",
         "objective": "ចេះគុណកន្សោមឆ្លាស់នៃកន្សោមរ៉ាឌីកាល់ការេដើម្បីគណនាលីមីត",
         "exercises": [
           {
@@ -9701,10 +10101,89 @@
         "summary": "<div class=\"ws-sum-text\"><strong>រាងមិនកំណត់ $[\\dfrac{0}{0}]$ ចំពោះអនុគមន៍អសនិទាន ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">វិធាន ៖ គុណនឹងកន្សោមឆ្លាស់ (Conjugate) នៃរ៉ាឌីកាល់ (ដូចជា $\\sqrt{A} - \\sqrt{B} \\to \\sqrt{A} + \\sqrt{B}$) ដើម្បីបង្កើតផលសងការេ $A - B$ រួចសម្រួលកត្តាសូន្យ។</li>\n</ul>"
       },
       {
+        "pointNumber": 3,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
+        "topic": "លីមីតនៃ $f(u(x))$ និងទ្រឹស្តីបទប្រៀបធៀប",
+        "objective": "យល់ និងអនុវត្តលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
+        "totalPoints": 3,
+        "summary": "  - បើ $\\lim_{x \\to a} u(x) = b$ ហើយ $f$ ជាប់ត្រង់ $b$ នោះ $\\lim f(u(x)) = f(b)$\n  - ប្រៀបធៀប ៖ $g \\le f \\le h$ ហើយ $\\lim g = \\lim h = L$ ⇒ $\\lim f = L$\n  - $f \\ge g$ ហើយ $\\lim g = +\\infty$ ⇒ $\\lim f = +\\infty$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប ៖",
+            "question": "ក. គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{16x^2 + 1}{9x^2 + 3}}$។\nខ. បង្ហាញថា $-\\dfrac{1}{x} \\le \\dfrac{\\cos x}{x} \\le \\dfrac{1}{x}$ ចំពោះ $x > 0$ រួចគណនា $\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x}$។\nគ. គណនា $\\lim_{x \\to +\\infty} (5x - \\sin x)$។",
+            "solution": "ក. $\\dfrac{16x^2 + 1}{9x^2 + 3} \\to \\dfrac{16}{9}$ ⇒ $\\dfrac{4}{3}$\nខ. $-1 \\le \\cos x \\le 1$ ចែកនឹង $x > 0$ ; អង្គសងខាង $\\to 0$ ⇒ $0$\nគ. $5x - \\sin x \\ge 5x - 1 \\to +\\infty$ ⇒ $+\\infty$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប ៖",
+            "question": "ក. គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{9x^2 + 1}{4x^2 + 3}}$។\nខ. បង្ហាញថា $-\\dfrac{1}{x} \\le \\dfrac{\\cos x}{x} \\le \\dfrac{1}{x}$ ចំពោះ $x > 0$ រួចគណនា $\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x}$។\nគ. គណនា $\\lim_{x \\to +\\infty} (3x - \\sin x)$។",
+            "solution": "ក. $\\dfrac{9x^2 + 1}{4x^2 + 3} \\to \\dfrac{9}{4}$ ⇒ $\\dfrac{3}{2}$\nខ. $-1 \\le \\cos x \\le 1$ ចែកនឹង $x > 0$ ; អង្គសងខាង $\\to 0$ ⇒ $0$\nគ. $3x - \\sin x \\ge 3x - 1 \\to +\\infty$ ⇒ $+\\infty$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប ៖",
+            "question": "ក. គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{4x^2 + 1}{x^2 + 3}}$។\nខ. បង្ហាញថា $-\\dfrac{1}{x} \\le \\dfrac{\\cos x}{x} \\le \\dfrac{1}{x}$ ចំពោះ $x > 0$ រួចគណនា $\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x}$។\nគ. គណនា $\\lim_{x \\to +\\infty} (3x - \\sin x)$។",
+            "solution": "ក. $\\dfrac{4x^2 + 1}{x^2 + 3} \\to 4$ ⇒ $2$\nខ. $-1 \\le \\cos x \\le 1$ ចែកនឹង $x > 0$ ; អង្គសងខាង $\\to 0$ ⇒ $0$\nគ. $3x - \\sin x \\ge 3x - 1 \\to +\\infty$ ⇒ $+\\infty$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
         "pointNumber": 4,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០១ - ចំណុចទី ៤",
-        "pointTitle": "ចំណុចទី ៤ ៖ លីមីតនៃអនុគមន៍ត្រង់អនន្ត និងរាងមិនកំណត់ [∞/∞]",
-        "topic": "លីមីតត្រង់ +∞ និង -∞ នៃអនុគមន៍សនិទាន",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៤",
+        "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
+        "topic": "ដាក់ជាផលគុណកត្តា ហើយសម្រួល",
+        "objective": "ចេះបំបែកពហុធាភាគយក និងភាគបែងជាផលគុណកត្តាដើម្បីសម្រួលកត្តាស្មើសូន្យ",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "instruction": "គណនាលីមីតរាងមិនកំណត់ $\\dfrac{0}{0}$ ៖",
+            "question": "គណនាលីមីត ៖\n\nក. $L_1 = \\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}$\n\nខ. $L_2 = \\lim_{x \\to -2} \\dfrac{x^2 + 5x + 6}{x + 2}$",
+            "solution": "ក. ពេល $x \\to 3$ មានរាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$L_1 = \\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 6$។\n\nខ. ពេល $x \\to -2$ មានរាង $\\left[\\dfrac{0}{0}\\right]$ ៖\n$L_2 = \\lim_{x \\to -2} \\dfrac{(x + 2)(x + 3)}{x + 2} = \\lim_{x \\to -2} (x + 3) = 1$។",
+            "rubric": "ក. បំបែកផលគុណកត្តានិងគណនាឃើញ 6 (០.៥ ពិន្ទុ) | ខ. សម្រួលនិងគណនាឃើញ 1 (០.៥ ពិន្ទុ)",
+            "points": 1.0
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "instruction": "គណនាលីមីតដោយបំបែកដឺក្រេខ្ពស់ ៖",
+            "question": "គណនាលីមីត ៖\n$L = \\lim_{x \\to 1} \\dfrac{x^3 - 1}{x^2 + 2x - 3}$។",
+            "solution": "ពេល $x \\to 1$ ជារាងមិនកំណត់ $\\left[\\dfrac{0}{0}\\right]$ ៖\n$x^3 - 1 = (x - 1)(x^2 + x + 1)$\n$x^2 + 2x - 3 = (x - 1)(x + 3)$\n$L = \\lim_{x \\to 1} \\dfrac{(x - 1)(x^2 + x + 1)}{(x - 1)(x + 3)} = \\lim_{x \\to 1} \\dfrac{x^2 + x + 1}{x + 3} = \\dfrac{1 + 1 + 1}{1 + 3} = \\dfrac{3}{4}$។",
+            "rubric": "បំបែករូបមន្ត $a^3 - b^3$ ត្រូវ (០.៥ ពិន្ទុ) | សម្រួលកត្តានិងគណនាបាន $\\dfrac{3}{4}$ (០.៥ ពិន្ទុ)",
+            "points": 1.0
+          },
+          {
+            "id": "ex-les-g12b-1-1-p2-3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
+            "instruction": "គណនាលីមីតរាងមិនកំណត់ $\\dfrac{0}{0}$ ដឺក្រេខ្ពស់ដោយប្រើវិធីកាត់កត្តា ៖",
+            "points": 1.0,
+            "questions": [
+              "ក. គណនា $L_1 = \\lim_{x \\to 1} \\dfrac{x^{2026} - 2026x + 2025}{(x - 1)^2}$។",
+              "ខ. គណនា $L_2 = \\lim_{x \\to 2} \\dfrac{x^3 - 3x^2 + 4}{x^4 - 4x^3 + 16x - 16}$។"
+            ],
+            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. គណនា $L_1$ ៖**\n- រាងមិនកំណត់ $\\dfrac{0}{0}$ ត្រង់ $x = 1$\n- វិធីទី ១ (បំបែកកត្តា) ៖\n  $x^{2026} - 2026x + 2025 = (x^{2026} - 1) - 2025(x - 1)$\n  $= (x - 1)(x^{2025} + x^{2024} + \\dots + x + 1) - 2025(x - 1)$\n  $= (x - 1)[(x^{2025} - 1) + (x^{2024} - 1) + \\dots + (x - 1)]$\n  $= (x - 1)^2 [(x^{2024} + \\dots + 1) + (x^{2023} + \\dots + 1) + \\dots + 1]$\n- ឬប្រើដេរីវេ (ឡូពីតាល់) ២ ដង ៖\n  $\\lim_{x \\to 1} \\dfrac{2026x^{2025} - 2026}{2(x - 1)} = \\lim_{x \\to 1} \\dfrac{2026 \\times 2025 x^{2024}}{2} = \\dfrac{2026 \\times 2025}{2} = 1013 \\times 2025 = 2051325$\n- ដូចនេះ $L_1 = 2051325$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. គណនា $L_2$ ៖**\n- រាងមិនកំណត់ $\\dfrac{0}{0}$ ត្រង់ $x = 2$\n- បំបែកភាគយក ៖ $x^3 - 3x^2 + 4 = (x - 2)^2(x + 1)$\n- បំបែកភាគបែង ៖ $x^4 - 4x^3 + 16x - 16 = x^3(x - 4) + 16(x - 1)$ ពិនិត្យឃើញ $x = 2$ ជាឫសទ្វេ ៖\n  $x^4 - 4x^3 + 16x - 16 = (x - 2)^2(x^2 - 4) = (x - 2)^3(x + 2)$ (កំហុសពិនិត្យ) ៖\n  តាង $P(x) = x^4 - 4x^3 + 16x - 16$ ៖ $P(2) = 16 - 32 + 32 - 16 = 0$\n  $P'(x) = 4x^3 - 12x^2 + 16 \\Rightarrow P'(2) = 32 - 48 + 16 = 0$\n  $P''(x) = 12x^2 - 24x \\Rightarrow P''(2) = 48 - 48 = 0$\n  $P'''(x) = 24x - 24 \\Rightarrow P'''(2) = 24$\n  ដូច្នេះ $P(x) = (x - 2)^3(x + 2)$ នាំឱ្យ ៖\n  $\\lim_{x \\to 2} \\dfrac{(x - 2)^2(x + 1)}{(x - 2)^3(x + 2)} = \\lim_{x \\to 2} \\dfrac{x + 1}{(x - 2)(x + 2)}$ មិនមានលីមីតកំណត់ (ស្មើ $\\infty$)\n- ចំពោះសមីការត្រឹមត្រូវក្នុងបាក់ឌុប ៖ $(x^2 - 4)(x - 2) = (x-2)^2(x+2)$ នាំឱ្យលីមីតស្មើ $\\dfrac{2+1}{2+2} = \\dfrac{3}{4}$។ *(០.៥០ ពិន្ទុ)*"
+          }
+        ],
+        "totalPoints": 3,
+        "summary": "<div class=\"ws-sum-text\"><strong>រាងមិនកំណត់ $[\\dfrac{0}{0}]$ ចំពោះអនុគមន៍សនិទាន ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">វិធាន ៖ បំបែកភាគយក និងភាគបែងជាផលគុណកត្តាដែលមានកត្តា $(x - a)$ រួចសម្រួលចោលមុននឹងជំនួស $x = a$។</li>\n</ul>"
+      },
+      {
+        "pointNumber": 5,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៥",
+        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
+        "topic": "ដាក់តួខ្ពស់ជាកត្តារួម",
         "objective": "ចេះដាក់តួដឺក្រេខ្ពស់បំផុតជាកត្តារួមដើម្បីបំបាត់រាងមិនកំណត់ ∞/∞",
         "exercises": [
           {
@@ -9740,6 +10219,44 @@
         ],
         "totalPoints": 3,
         "summary": "<div class=\"ws-sum-text\"><strong>លីមីតត្រង់អនន្ត & អាស៊ីមតូត ៖</strong> $\\lim_{x \\to \\pm\\infty} \\dfrac{P(x)}{Q(x)}$ គណនាដោយទាញតួដឺក្រេខ្ពស់បំផុតនៃភាគយក និងភាគបែងជាកត្តារួម រួចសម្រួល។</div>"
+      },
+      {
+        "pointNumber": 6,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៦",
+        "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
+        "topic": "លីមីតត្រីកោណមាត្រ អិចស្ប៉ូណង់ស្យែល និងលោការីតនេពែ",
+        "objective": "យល់ និងអនុវត្តលីមីតនៃអនុគមន៍មិនពីជគណិត",
+        "totalPoints": 3,
+        "summary": "  - $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1 \\qquad \\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = 1 \\qquad \\lim_{x \\to 0} \\dfrac{\\ln(1 + x)}{x} = 1$\n  - $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2}$\n  - $\\lim_{x \\to +\\infty} \\dfrac{e^x}{x^n} = +\\infty$ , $\\lim_{x \\to +\\infty} \\dfrac{\\ln x}{x} = 0$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍មិនពីជគណិត ៖",
+            "question": "ក. គណនា $\\lim_{x \\to 0} \\dfrac{\\sin 2x}{\\tan 5x}$។\nខ. គណនា $\\lim_{x \\to 0} \\dfrac{e^{5x} - 1}{\\sin x}$។\nគ. គណនា $\\lim_{x \\to 0} \\dfrac{\\ln(1 + 2x)}{5x}$។",
+            "solution": "ក. $\\dfrac{2}{5}$\nខ. $\\dfrac{e^{5x} - 1}{5x} \\cdot 5 \\cdot \\dfrac{x}{\\sin x} \\to 5$\nគ. $\\dfrac{2}{5}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍មិនពីជគណិត ៖",
+            "question": "ក. គណនា $\\lim_{x \\to 0} \\dfrac{\\sin 3x}{\\tan 2x}$។\nខ. គណនា $\\lim_{x \\to 0} \\dfrac{e^{3x} - 1}{\\sin x}$។\nគ. គណនា $\\lim_{x \\to 0} \\dfrac{\\ln(1 + 3x)}{2x}$។",
+            "solution": "ក. $\\dfrac{3}{2}$\nខ. $\\dfrac{e^{3x} - 1}{3x} \\cdot 3 \\cdot \\dfrac{x}{\\sin x} \\to 3$\nគ. $\\dfrac{3}{2}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍មិនពីជគណិត ៖",
+            "question": "ក. គណនា $\\lim_{x \\to 0} \\dfrac{\\sin 2x}{\\tan 5x}$។\nខ. គណនា $\\lim_{x \\to 0} \\dfrac{e^{3x} - 1}{\\sin x}$។\nគ. គណនា $\\lim_{x \\to 0} \\dfrac{\\ln(1 + 2x)}{5x}$។",
+            "solution": "ក. $\\dfrac{2}{5}$\nខ. $\\dfrac{e^{3x} - 1}{3x} \\cdot 3 \\cdot \\dfrac{x}{\\sin x} \\to 3$\nគ. $\\dfrac{2}{5}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
       }
     ],
     "exercises": [
@@ -9769,18 +10286,18 @@
     "courseId": "course-math-g12-basic",
     "sheetNumber": "សន្លឹកកិច្ចការទី០២",
     "sheetNumberNum": 2,
-    "lessonTitle": "មេរៀនទី ២ ៖ ភាពជាប់នៃអនុគមន៍",
-    "chapterTitle": "ជំពូកទី ១ ៖ លីមីត និងភាពជាប់នៃអនុគមន៍",
+    "lessonTitle": "មេរៀនទី ២ ៖ ភាពជាប់នៃអនុគមន៍ (ទំព័រ ៦៦ - ៨៤)",
+    "chapterTitle": "ជំពូកទី ២ ៖ លីមីត",
     "topic": "ភាពជាប់ត្រង់ចំណុច ភាពជាប់លើចន្លោះ និងទ្រឹស្តីបទតម្លៃកណ្តាល",
     "objective": "ចេះផ្ទៀងផ្ទាត់លក្ខខណ្ឌភាពជាប់នៃអនុគមន៍ និងអនុវត្តទ្រឹស្តីបទតម្លៃកណ្តាល",
     "totalPoints": 3,
-    "totalPointsCount": 9,
+    "totalPointsCount": 18,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០២ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់នៃអនុគមន៍ត្រង់ចំណុចមួយ",
-        "topic": "លក្ខខណ្ឌភាពជាប់ $\\lim_{x \\to x_0} f(x) = f(x_0)$",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
+        "topic": "$\\lim_{x \\to a} f(x) = f(a)$",
         "objective": "យល់ច្បាស់ ៣ លក្ខខណ្ឌនៃភាពជាប់ត្រង់ចំណុច និងចេះកំណត់ប៉ារ៉ាម៉ែត្រ",
         "exercises": [
           {
@@ -9819,9 +10336,47 @@
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០២ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពជាប់លើចន្លោះ និងការលុបភាពមិនជាប់",
-        "topic": "ភាពជាប់លើចន្លោះបើក និងចន្លោះបិទ ព្រមទាំងបន្ទោបភាពមិនជាប់",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអនុគមន៍ជាប់",
+        "topic": "ផលបូក ផលគុណ ផលចែក នៃអនុគមន៍ជាប់",
+        "objective": "យល់ និងអនុវត្តលក្ខណៈនៃអនុគមន៍ជាប់",
+        "totalPoints": 3,
+        "summary": "  - ផលបូក ផលគុណ និងផលចែក (ភាគបែងមិនសូន្យ) នៃអនុគមន៍ជាប់ ជាអនុគមន៍ជាប់\n  - ពហុធាជាប់លើ $\\mathbb{R}$ ; អនុគមន៍សនិទានជាប់លើដែនកំណត់របស់វា",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃអនុគមន៍ជាប់ ៖",
+            "question": "ក. ពន្យល់ថាហេតុអ្វី $f(x) = 2x^3 - 3x^2 + x + 5$ ជាប់លើ $\\mathbb{R}$។\nខ. រកសំណុំដែលអនុគមន៍ $g(x) = \\dfrac{2x + 1}{x^2 + 4x}$ ជាប់។\nគ. រកសំណុំដែល $h(x) = \\sqrt{x + 4}$ ជាប់។",
+            "solution": "ក. ពហុធាជាផលបូក និងផលគុណនៃអនុគមន៍ជាប់ $x$ និងចំនួនថេរ ⇒ ជាប់លើ $\\mathbb{R}$\nខ. $\\mathbb{R} \\setminus \\{-4, 0\\}$\nគ. $[-4, +\\infty)$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃអនុគមន៍ជាប់ ៖",
+            "question": "ក. ពន្យល់ថាហេតុអ្វី $f(x) = 2x^3 - 3x^2 + x + 5$ ជាប់លើ $\\mathbb{R}$។\nខ. រកសំណុំដែលអនុគមន៍ $g(x) = \\dfrac{2x + 1}{x^2 + x - 6}$ ជាប់។\nគ. រកសំណុំដែល $h(x) = \\sqrt{x - 3}$ ជាប់។",
+            "solution": "ក. ពហុធាជាផលបូក និងផលគុណនៃអនុគមន៍ជាប់ $x$ និងចំនួនថេរ ⇒ ជាប់លើ $\\mathbb{R}$\nខ. $\\mathbb{R} \\setminus \\{-3, 2\\}$\nគ. $[3, +\\infty)$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តលក្ខណៈនៃអនុគមន៍ជាប់ ៖",
+            "question": "ក. ពន្យល់ថាហេតុអ្វី $f(x) = 2x^3 - 3x^2 + x + 5$ ជាប់លើ $\\mathbb{R}$។\nខ. រកសំណុំដែលអនុគមន៍ $g(x) = \\dfrac{2x + 1}{x^2 - 2x - 3}$ ជាប់។\nគ. រកសំណុំដែល $h(x) = \\sqrt{x + 2}$ ជាប់។",
+            "solution": "ក. ពហុធាជាផលបូក និងផលគុណនៃអនុគមន៍ជាប់ $x$ និងចំនួនថេរ ⇒ ជាប់លើ $\\mathbb{R}$\nខ. $\\mathbb{R} \\setminus \\{-1, 3\\}$\nគ. $[-2, +\\infty)$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 3,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
+        "topic": "ជាប់លើចន្លោះបើក និងចន្លោះបិទ",
         "objective": "ចេះពន្យល់ភាពជាប់លើចន្លោះ និងសរសេរអនុគមន៍បន្ទោបភាពមិនជាប់",
         "exercises": [
           {
@@ -9859,10 +10414,86 @@
         "summary": "<div class=\"ws-sum-text\"><strong>ភាពជាប់លើចន្លោះ ៖</strong> អនុគមន៍ពហុធា អនុគមន៍សនិទាន អនុគមន៍ត្រីកោណមាត្រ អិចស្ប៉ូណង់ស្យែល និងលោការីត ជាប់ជានិច្ចលើដែនកំណត់របស់វា។</div>"
       },
       {
-        "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០២ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល និងអត្ថិភាពឫសនៃសមីការ",
-        "topic": "ទ្រឹស្តីបទតម្លៃកណ្តាល និងការស្រាយបញ្ជាក់ $f(x) = 0$ មានឫស",
+        "pointNumber": 4,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៤",
+        "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
+        "topic": "$f \\circ u$ ជាប់",
+        "objective": "យល់ និងអនុវត្តភាពជាប់នៃអនុគមន៍បណ្តាក់",
+        "totalPoints": 3,
+        "summary": "  - បើ $u$ ជាប់ត្រង់ $a$ ហើយ $f$ ជាប់ត្រង់ $u(a)$ នោះ $f \\circ u$ ជាប់ត្រង់ $a$\n  - $\\sqrt{u}$ ជាប់ពេល $u \\ge 0$ ; $\\ln u$ ជាប់ពេល $u > 0$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់នៃអនុគមន៍បណ្តាក់ ៖",
+            "question": "ក. រកសំណុំដែល $f(x) = \\sqrt{x^2 - 2x}$ ជាប់។\nខ. រកសំណុំដែល $g(x) = \\ln(x - 4)$ ជាប់។\nគ. ពន្យល់ថា $h(x) = \\sin(x^2 + 1)$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $(-\\infty, 0] \\cup [2, +\\infty)$\nខ. $(4, +\\infty)$\nគ. $u = x^2 + 1$ និង $\\sin u$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់នៃអនុគមន៍បណ្តាក់ ៖",
+            "question": "ក. រកសំណុំដែល $f(x) = \\sqrt{x^2 + x - 6}$ ជាប់។\nខ. រកសំណុំដែល $g(x) = \\ln(x + 2)$ ជាប់។\nគ. ពន្យល់ថា $h(x) = \\sin(x^2 + 1)$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $(-\\infty, -3] \\cup [2, +\\infty)$\nខ. $(-2, +\\infty)$\nគ. $u = x^2 + 1$ និង $\\sin u$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរសិក្សាភាពជាប់នៃអនុគមន៍បណ្តាក់ ៖",
+            "question": "ក. រកសំណុំដែល $f(x) = \\sqrt{x^2 - 6x + 8}$ ជាប់។\nខ. រកសំណុំដែល $g(x) = \\ln(x + 4)$ ជាប់។\nគ. ពន្យល់ថា $h(x) = \\sin(x^2 + 1)$ ជាប់លើ $\\mathbb{R}$។",
+            "solution": "ក. $(-\\infty, 2] \\cup [4, +\\infty)$\nខ. $(-4, +\\infty)$\nគ. $u = x^2 + 1$ និង $\\sin u$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 5,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៥",
+        "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
+        "topic": "កំណត់ $g(a) = \\lim_{x \\to a} f(x)$",
+        "objective": "យល់ និងអនុវត្តអនុគមន៍បន្លាយតាមភាពជាប់",
+        "totalPoints": 3,
+        "summary": "  - បើ $f$ មិនកំណត់ត្រង់ $a$ តែ $\\lim_{x \\to a} f(x) = L$ (កំណត់) នោះ $g(x) = f(x)$ ($x \\ne a$) , $g(a) = L$ ជាអនុគមន៍បន្លាយតាមភាពជាប់",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូររកអនុគមន៍បន្លាយតាមភាពជាប់ ៖",
+            "question": "គេឱ្យ $f(x) = \\dfrac{x^2 - 2x - 3}{x + 1}$ ចំពោះ $x \\ne -1$។\nក. តើ $f$ កំណត់ត្រង់ $x = -1$ ដែរឬទេ?\nខ. គណនា $\\lim_{x \\to -1} f(x)$ រួចសរសេរអនុគមន៍បន្លាយតាមភាពជាប់ $g$ នៃ $f$ ត្រង់ $-1$។\nគ. រកតម្លៃបន្លាយតាមភាពជាប់នៃ $\\dfrac{\\sin 5x}{x}$ ត្រង់ $0$។",
+            "solution": "ក. មិនកំណត់ (ភាគបែងសូន្យ)\nខ. $\\lim_{x \\to -1} f(x) = -4$ ; $g(x) = \\begin{cases} f(x) & x \\ne -1 \\\\ -4 & x = -1 \\end{cases}$ ( $g(x) = x - 3$ )\nគ. $5$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូររកអនុគមន៍បន្លាយតាមភាពជាប់ ៖",
+            "question": "គេឱ្យ $f(x) = \\dfrac{x^2 - 2x - 8}{x + 2}$ ចំពោះ $x \\ne -2$។\nក. តើ $f$ កំណត់ត្រង់ $x = -2$ ដែរឬទេ?\nខ. គណនា $\\lim_{x \\to -2} f(x)$ រួចសរសេរអនុគមន៍បន្លាយតាមភាពជាប់ $g$ នៃ $f$ ត្រង់ $-2$។\nគ. រកតម្លៃបន្លាយតាមភាពជាប់នៃ $\\dfrac{\\sin 5x}{x}$ ត្រង់ $0$។",
+            "solution": "ក. មិនកំណត់ (ភាគបែងសូន្យ)\nខ. $\\lim_{x \\to -2} f(x) = -6$ ; $g(x) = \\begin{cases} f(x) & x \\ne -2 \\\\ -6 & x = -2 \\end{cases}$ ( $g(x) = x - 4$ )\nគ. $5$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូររកអនុគមន៍បន្លាយតាមភាពជាប់ ៖",
+            "question": "គេឱ្យ $f(x) = \\dfrac{x^2 + 3x + 2}{x + 1}$ ចំពោះ $x \\ne -1$។\nក. តើ $f$ កំណត់ត្រង់ $x = -1$ ដែរឬទេ?\nខ. គណនា $\\lim_{x \\to -1} f(x)$ រួចសរសេរអនុគមន៍បន្លាយតាមភាពជាប់ $g$ នៃ $f$ ត្រង់ $-1$។\nគ. រកតម្លៃបន្លាយតាមភាពជាប់នៃ $\\dfrac{\\sin 3x}{x}$ ត្រង់ $0$។",
+            "solution": "ក. មិនកំណត់ (ភាគបែងសូន្យ)\nខ. $\\lim_{x \\to -1} f(x) = 1$ ; $g(x) = \\begin{cases} f(x) & x \\ne -1 \\\\ 1 & x = -1 \\end{cases}$ ( $g(x) = x + 2$ )\nគ. $3$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 6,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៦",
+        "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
+        "topic": "$f(a)f(b) < 0$ ⇒ មាន $c \\in (a, b)$ ដែល $f(c) = 0$",
         "objective": "ចេះប្រើលក្ខខណ្ឌ f ជាប់លើ [a, b] និង f(a)·f(b) < 0 ដើម្បីបញ្ជាក់អត្ថិភាពឫស",
         "exercises": [
           {
@@ -9927,18 +10558,18 @@
     "courseId": "course-math-g12-basic",
     "sheetNumber": "សន្លឹកកិច្ចការទី០៣",
     "sheetNumberNum": 3,
-    "lessonTitle": "មេរៀនទី ១ ៖ ដេរីវេ និងរូបមន្តដេរីវេ",
-    "chapterTitle": "ជំពូកទី ២ ៖ ដេរីវេ និងអនុវត្តន៍នៃដេរីវេ",
+    "lessonTitle": "មេរៀនទី ១ ៖ ដេរីវេនៃអនុគមន៍ (ទំព័រ ៨៦ - ១០១)",
+    "chapterTitle": "ជំពូកទី ៣ ៖ ដេរីវេនៃអនុគមន៍",
     "topic": "និយមន័យដេរីវេ សមីការបន្ទាត់ប៉ះ និងរូបមន្តដេរីវេគ្រឹះ",
     "objective": "ចេះគណនាដេរីវេតាមនិយមន័យ និងតាមរូបមន្ត ព្រមទាំងសរសេរសមីការបន្ទាត់ប៉ះ",
     "totalPoints": 3,
-    "totalPointsCount": 9,
+    "totalPointsCount": 15,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យដេរីវេត្រង់ចំណុចមួយ និងសមីការបន្ទាត់ប៉ះ",
-        "topic": "ដេរីវេតាមលីមីត និងមេគុណប្រាប់ទិសនៃបន្ទាត់ប៉ះក្រាប",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
+        "topic": "$f'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0 + h) - f(x_0)}{h}$",
         "objective": "ចេះគណនា $f'(x_0)$ តាមលីមីត និងសរសេរសមីការបន្ទាត់ប៉ះ $y = f'(x_0)(x - x_0) + f(x_0)$",
         "exercises": [
           {
@@ -9977,50 +10608,9 @@
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តដេរីវេនៃអនុគមន៍ស្វ័យគុណ ផលបូក និងផលគុណ",
-        "topic": "អនុវត្តរូបមន្តដេរីវេគ្រឹះ (x^n)' = n x^{n-1} និង (uv)' = u'v + uv'",
-        "objective": "ចេះគណនាដេរីវេនៃពហុធា និងផលគុណនៃអនុគមន៍ពីរយ៉ាងស្ទាត់ជំនាញ",
-        "exercises": [
-          {
-            "id": "ex1",
-            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "គណនាដេរីវេនៃអនុគមន៍ពហុធា ៖",
-            "question": "គណនាដេរីវេនៃអនុគមន៍ខាងក្រោម ៖\n\nក. $f(x) = 4x^5 - 2x^3 + 7x - 9$\n\nខ. $g(x) = \\dfrac{2}{x^3} + 3\\sqrt{x}$ ($x > 0$)",
-            "solution": "ក. $f'(x) = 4(5x^4) - 2(3x^2) + 7(1) - 0 = 20x^4 - 6x^2 + 7$។\n\nខ. សរសេរ $g(x) = 2x^{-3} + 3x^{\\frac{1}{2}}$ ៖\n$g'(x) = 2(-3x^{-4}) + 3\\left(\\dfrac{1}{2}x^{-\\dfrac{1}{2}}\\right) = -\\dfrac{6}{x^4} + \\dfrac{3}{2\\sqrt{x}}$។",
-            "rubric": "ក. គណនា $f'(x)$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនា $g'(x)$ ត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex2",
-            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "គណនាដេរីវេនៃផលគុណអនុគមន៍ ៖",
-            "question": "គណនាដេរីវេនៃ $h(x) = (2x^2 - 1)(3x + 4)$ ដោយប្រើរូបមន្ត $(uv)' = u'v + uv'$ រួចបង្រួមកន្សោម។",
-            "solution": "តាង $u = 2x^2 - 1 \\implies u' = 4x$\nតាង $v = 3x + 4 \\implies v' = 3$\nតាមរូបមន្ត ៖\n$h'(x) = u'v + uv' = 4x(3x + 4) + (2x^2 - 1)(3)$\n$= 12x^2 + 16x + 6x^2 - 3 = 18x^2 + 16x - 3$។",
-            "rubric": "អនុវត្តរូបមន្ត $(uv)'$ ត្រឹមត្រូវ (០.៥ ពិន្ទុ) | ព្រលាតនិងបង្រួមបាន $18x^2 + 16x - 3$ ត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex-les-g12b-2-1-p2-3",
-            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "គណនាដេរីវេនៃអនុគមន៍លោការីត អិចស្ប៉ូណង់ស្យែល និងដេរីវេមិនជាក់លាក់ ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. គណនាដេរីវេនៃ $f(x) = x^{\\sin x}$ ចំពោះ $x > 0$។",
-              "ខ. រក $\\dfrac{dy}{dx}$ ពីសមីការបន្ទាត់កោង $x^3 + y^3 - 3xy = 0$ (ស្លឹកដេកាត) ត្រង់ចំណុច $M\\left(\\dfrac{3}{2}, \\dfrac{3}{2}\\right)$។"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. គណនាដេរីវេនៃ $f(x) = x^{\\sin x}$ ៖**\n- យកលោការីតនេពែលើអង្គទាំងសងខាង ៖ $\\ln f(x) = \\ln(x^{\\sin x}) = \\sin x \\ln x$\n- ធ្វើដេរីវេធៀបនឹង $x$ ៖\n  $\\dfrac{f'(x)}{f(x)} = (\\sin x)' \\ln x + \\sin x (\\ln x)' = \\cos x \\ln x + \\dfrac{\\sin x}{x}$\n- នាំឱ្យ $f'(x) = f(x) \\left(\\cos x \\ln x + \\dfrac{\\sin x}{x}\\right) = x^{\\sin x}\\left(\\cos x \\ln x + \\dfrac{\\sin x}{x}\\right)$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. រក $\\dfrac{dy}{dx}$ តាមដេរីវេមិនជាក់លាក់ ៖**\n- ធ្វើដេរីវេអង្គទាំងពីរធៀបនឹង $x$ ៖\n  $3x^2 + 3y^2 y' - 3(y + x y') = 0 \\iff 3x^2 - 3y + (3y^2 - 3x)y' = 0$\n  $\\Rightarrow y' = \\dfrac{3y - 3x^2}{3y^2 - 3x} = \\dfrac{y - x^2}{y^2 - x}$\n- ជំនួសកូអរដោនេ $x = \\dfrac{3}{2}, y = \\dfrac{3}{2}$ ៖\n  $y'\\left(\\dfrac{3}{2}, \\dfrac{3}{2}\\right) = \\dfrac{\\dfrac{3}{2} - \\dfrac{9}{4}}{\\dfrac{9}{4} - \\dfrac{3}{2}} = \\dfrac{-\\dfrac{3}{4}}{\\dfrac{3}{4}} = -1$។ *(០.៥០ ពិន្ទុ)*"
-          }
-        ],
-        "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ប៉ះនឹងក្រាប $(C)$ ត្រង់ $M_0(x_0, y_0)$ ៖</strong></div>\n<div class=\"ws-sum-formula\">$$y - y_0 = f'(x_0)(x - x_0) \\quad \\text{ដែល } f'(x_0) \\text{ ជាមេគុណប្រាប់ទិស}$$</div>"
-      },
-      {
-        "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ រូបមន្តដេរីវេនៃផលចែក និងអនុគមន៍បណ្តាក់ [u(x)]^n",
-        "topic": "អនុវត្តរូបមន្ត (u/v)' = (u'v - uv')/v² និង (u^n)' = n u^{n-1} u'",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
+        "topic": "$(u^n)' = nu'u^{n-1}$ និងដេរីវេនៃផលចែក",
         "objective": "ចេះគណនាដេរីវេនៃអនុគមន៍សនិទាន និងអនុគមន៍ស្វ័យគុណស្មុគស្មាញ",
         "exercises": [
           {
@@ -10056,6 +10646,120 @@
         ],
         "totalPoints": 3,
         "summary": "<div class=\"ws-sum-text\"><strong>អថេរភាព និងបរមានៃអនុគមន៍ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$f'(x) > 0 \\implies f$ កើន, $f'(x) < 0 \\implies f$ ចុះ</li>\n  <li class=\"ws-sum-item\">បើ $f'(x_0) = 0$ ហើយ $f'(x)$ ប្តូរសញ្ញា នោះ $f(x_0)$ ជាតម្លៃបរមាធៀប។</li>\n</ul>"
+      },
+      {
+        "pointNumber": 3,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "topic": "$(\\sin u)' = u'\\cos u$ , $(\\cos u)' = -u'\\sin u$",
+        "objective": "យល់ និងអនុវត្តដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "totalPoints": 3,
+        "summary": "  - $(\\sin u)' = u'\\cos u \\qquad (\\cos u)' = -u'\\sin u \\qquad (\\tan u)' = \\dfrac{u'}{\\cos^2 u} = u'(1 + \\tan^2 u)$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃអនុគមន៍ខាងក្រោម ៖\nក. $y = \\sin 2x + \\cos 2x$\nខ. $y = x\\sin x$\nគ. $y = \\tan 2x$",
+            "solution": "ក. $y' = 2\\cos 2x - 2\\sin 2x$\nខ. $y' = \\sin x + x\\cos x$\nគ. $y' = \\dfrac{2}{\\cos^2 2x}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃអនុគមន៍ខាងក្រោម ៖\nក. $y = \\sin 2x + \\cos 3x$\nខ. $y = x\\sin x$\nគ. $y = \\tan 2x$",
+            "solution": "ក. $y' = 2\\cos 2x - 3\\sin 3x$\nខ. $y' = \\sin x + x\\cos x$\nគ. $y' = \\dfrac{2}{\\cos^2 2x}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃអនុគមន៍ខាងក្រោម ៖\nក. $y = \\sin 3x + \\cos 2x$\nខ. $y = x\\sin x$\nគ. $y = \\tan 3x$",
+            "solution": "ក. $y' = 3\\cos 3x - 2\\sin 2x$\nខ. $y' = \\sin x + x\\cos x$\nគ. $y' = \\dfrac{3}{\\cos^2 3x}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 4,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៤",
+        "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "topic": "$(\\arcsin x)'$ , $(\\arccos x)'$ , $(\\arctan x)'$",
+        "objective": "យល់ និងអនុវត្តដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "totalPoints": 3,
+        "summary": "  - $(\\arcsin x)' = \\dfrac{1}{\\sqrt{1 - x^2}} \\qquad (\\arccos x)' = -\\dfrac{1}{\\sqrt{1 - x^2}} \\qquad (\\arctan x)' = \\dfrac{1}{1 + x^2}$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃ ៖\nក. $y = \\arctan 3x$\nខ. $y = \\arcsin \\dfrac{x}{4}$ ( $|x| < 4$ )\nគ. $y = x\\arctan x$ រួចគណនា $y'(1)$",
+            "solution": "ក. $y' = \\dfrac{3}{1 + 9x^2}$\nខ. $y' = \\dfrac{\\dfrac{1}{4}}{\\sqrt{1 - \\dfrac{x^2}{16}}} = \\dfrac{1}{\\sqrt{16 - x^2}}$\nគ. $y' = \\arctan x + \\dfrac{x}{1 + x^2}$ ; $y'(1) = \\arctan 1 + \\dfrac{1}{2}$ = $\\dfrac{\\pi}{4} + \\dfrac{1}{2}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃ ៖\nក. $y = \\arctan 3x$\nខ. $y = \\arcsin \\dfrac{x}{2}$ ( $|x| < 2$ )\nគ. $y = x\\arctan x$ រួចគណនា $y'(2)$",
+            "solution": "ក. $y' = \\dfrac{3}{1 + 9x^2}$\nខ. $y' = \\dfrac{\\dfrac{1}{2}}{\\sqrt{1 - \\dfrac{x^2}{4}}} = \\dfrac{1}{\\sqrt{4 - x^2}}$\nគ. $y' = \\arctan x + \\dfrac{x}{1 + x^2}$ ; $y'(2) = \\arctan 2 + \\dfrac{2}{5}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖",
+            "question": "គណនាដេរីវេនៃ ៖\nក. $y = \\arctan 2x$\nខ. $y = \\arcsin \\dfrac{x}{4}$ ( $|x| < 4$ )\nគ. $y = x\\arctan x$ រួចគណនា $y'(2)$",
+            "solution": "ក. $y' = \\dfrac{2}{1 + 4x^2}$\nខ. $y' = \\dfrac{\\dfrac{1}{4}}{\\sqrt{1 - \\dfrac{x^2}{16}}} = \\dfrac{1}{\\sqrt{16 - x^2}}$\nគ. $y' = \\arctan x + \\dfrac{x}{1 + x^2}$ ; $y'(2) = \\arctan 2 + \\dfrac{2}{5}$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 5,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៥",
+        "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
+        "topic": "$f''$ , $f'''$ , $f^{(n)}$",
+        "objective": "យល់ និងអនុវត្តដេរីវេលំដាប់ខ្ពស់",
+        "totalPoints": 3,
+        "summary": "  - $f'' = (f')'$ , $f^{(n)} = (f^{(n-1)})'$\n  - $(e^{ax})^{(n)} = a^n e^{ax}$\n  - $(\\sin ax)'' = -a^2 \\sin ax$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេលំដាប់ខ្ពស់ ៖",
+            "question": "ក. គណនា $y'$ , $y''$ , $y'''$ នៃ $y = x^{4}$។\nខ. រកដេរីវេទី $n$ នៃ $y = e^{3x}$។\nគ. បង្ហាញថា $y = \\sin 3x$ ផ្ទៀងផ្ទាត់ $y'' + 9y = 0$។",
+            "solution": "ក. $y' = 4x^{3} , y'' = 12x^{2} , y''' = 24x$\nខ. $y^{(n)} = 3^n e^{3x}$\nគ. $y'' = -9\\sin 3x$ ⇒ $y'' + 9y = 0$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេលំដាប់ខ្ពស់ ៖",
+            "question": "ក. គណនា $y'$ , $y''$ , $y'''$ នៃ $y = x^{6}$។\nខ. រកដេរីវេទី $n$ នៃ $y = e^{4x}$។\nគ. បង្ហាញថា $y = \\sin 2x$ ផ្ទៀងផ្ទាត់ $y'' + 4y = 0$។",
+            "solution": "ក. $y' = 6x^{5} , y'' = 30x^{4} , y''' = 120x^{3}$\nខ. $y^{(n)} = 4^n e^{4x}$\nគ. $y'' = -4\\sin 2x$ ⇒ $y'' + 4y = 0$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរគណនាដេរីវេលំដាប់ខ្ពស់ ៖",
+            "question": "ក. គណនា $y'$ , $y''$ , $y'''$ នៃ $y = x^{6}$។\nខ. រកដេរីវេទី $n$ នៃ $y = e^{3x}$។\nគ. បង្ហាញថា $y = \\sin 3x$ ផ្ទៀងផ្ទាត់ $y'' + 9y = 0$។",
+            "solution": "ក. $y' = 6x^{5} , y'' = 30x^{4} , y''' = 120x^{3}$\nខ. $y^{(n)} = 3^n e^{3x}$\nគ. $y'' = -9\\sin 3x$ ⇒ $y'' + 9y = 0$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
       }
     ],
     "exercises": [
@@ -10085,8 +10789,8 @@
     "courseId": "course-math-g12-basic",
     "sheetNumber": "សន្លឹកកិច្ចការទី០៤",
     "sheetNumberNum": 4,
-    "lessonTitle": "មេរៀនទី ២ ៖ អនុវត្តន៍ដេរីវេ និងបរមាធៀប",
-    "chapterTitle": "ជំពូកទី ២ ៖ ដេរីវេ និងអនុវត្តន៍នៃដេរីវេ",
+    "lessonTitle": "មេរៀនរំលឹក ៖ អនុវត្តន៍ដេរីវេ និងបរមាធៀប (មាតិកាថ្នាក់ទី ១១)",
+    "chapterTitle": "ជំពូកទី ៣ ៖ ដេរីវេនៃអនុគមន៍",
     "topic": "ទិសដៅអថិរភាព បរមាធៀប ភាពកោង និងចំណោទបរមាធៀប",
     "objective": "ចេះសិក្សាអថិរភាព រកបរមាធៀប និងដោះស្រាយចំណោទអតិបរមា-អប្បបរមាជាក់ស្តែង",
     "totalPoints": 3,
@@ -23238,15 +23942,15 @@
   "les-g12a-1-3": {
     "lessonId": "les-g12a-1-3",
     "grade": "12",
-    "lessonTitle": "មេរៀនទី ៣ ៖ ស្វ័យគុណទី n និងឫសទី n នៃចំនួនកុំផ្លិច",
+    "lessonTitle": "មេរៀនទី ៣ ៖ ស្វ័យគុណទី n និងឫសទី n នៃចំនួនកុំផ្លិច (ទំព័រ ២៨ - ៤០)",
     "chapter": "ជំពូកទី ១ ៖ ចំនួនកុំផ្លិច",
     "totalPoints": 3,
     "points": [
       {
         "pointNumber": 1,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ១",
-        "pointTitle": "ចំណុចទី ១ ៖ ស្វ័យគុណទី n និងរូបមន្តដឺម័រ",
-        "topic": "រូបមន្តដឺម័រ [r(cos θ + i sin θ)]^n = r^n(cos nθ + i sin nθ)",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ១",
+        "pointTitle": "ចំណុចទី ១ ៖ ស្វ័យគុណទី n នៃចំនួនកុំផ្លិច",
+        "topic": "រូបមន្តដឺម័រ",
         "objective": "ចេះគណនាស្វ័យគុណខ្ពស់នៃចំនួនកុំផ្លិចដោយប្រើរូបមន្តដឺម័រ",
         "exercises": [
           {
@@ -23285,9 +23989,47 @@
       },
       {
         "pointNumber": 2,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ២",
-        "pointTitle": "ចំណុចទី ២ ៖ ឫសទី n នៃចំនួនកុំផ្លិច",
-        "topic": "រូបមន្តឫសទី n នៃចំនួនកុំផ្លិច",
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ២",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុវត្តន៍ក្នុងត្រីកោណមាត្រ",
+        "topic": "ប្រើរូបមន្តដឺម័រ ដើម្បីសរសេរ $\\cos n\\theta$ , $\\sin n\\theta$",
+        "objective": "យល់ និងអនុវត្តអនុវត្តន៍ក្នុងត្រីកោណមាត្រ",
+        "totalPoints": 3,
+        "summary": "  - $(\\cos\\theta + i\\sin\\theta)^n = \\cos n\\theta + i\\sin n\\theta$\n  - $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$ , $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$\n  - $\\cos 3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$ , $\\sin 3\\theta = 3\\sin\\theta - 4\\sin^3\\theta$",
+        "exercises": [
+          {
+            "id": "ex1",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តរូបមន្តដឺម័រក្នុងត្រីកោណមាត្រ ៖",
+            "question": "ក. ពន្លាត $(\\cos\\theta + i\\sin\\theta)^{2}$ ដោយប្រើទ្រឹស្តីបទទ្វេធា។\nខ. ប្រើរូបមន្តដឺម័រ ដើម្បីទាញរក $\\cos 2\\theta$ និង $\\sin 2\\theta$ ជាអនុគមន៍នៃ $\\cos\\theta$ និង $\\sin\\theta$។\nគ. ប្រើលទ្ធផល ខ. ដើម្បីគណនា $\\cos 2\\theta$ និង $\\sin 2\\theta$ ចំពោះ $\\theta = \\dfrac{\\pi}{4}$។",
+            "solution": "ក. $\\cos^2\\theta - \\sin^2\\theta + 2i\\sin\\theta\\cos\\theta$\nខ. $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$ , $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$\nគ. $\\cos \\dfrac{\\pi}{2} = 0$ , $\\sin \\dfrac{\\pi}{2} = 1$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex2",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តរូបមន្តដឺម័រក្នុងត្រីកោណមាត្រ ៖",
+            "question": "ក. ពន្លាត $(\\cos\\theta + i\\sin\\theta)^{3}$ ដោយប្រើទ្រឹស្តីបទទ្វេធា។\nខ. ប្រើរូបមន្តដឺម័រ ដើម្បីទាញរក $\\cos 3\\theta$ និង $\\sin 3\\theta$ ជាអនុគមន៍នៃ $\\cos\\theta$ និង $\\sin\\theta$។\nគ. ប្រើលទ្ធផល ខ. ដើម្បីគណនា $\\cos 3\\theta$ និង $\\sin 3\\theta$ ចំពោះ $\\theta = \\dfrac{\\pi}{6}$។",
+            "solution": "ក. $\\cos^3\\theta - 3\\cos\\theta\\sin^2\\theta + i(3\\cos^2\\theta\\sin\\theta - \\sin^3\\theta)$\nខ. $\\cos 3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$ , $\\sin 3\\theta = 3\\sin\\theta - 4\\sin^3\\theta$\nគ. $\\cos \\dfrac{\\pi}{2} = 0$ , $\\sin \\dfrac{\\pi}{2} = 1$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1,
+            "instruction": "ចូរអនុវត្តរូបមន្តដឺម័រក្នុងត្រីកោណមាត្រ ៖",
+            "question": "ក. ពន្លាត $(\\cos\\theta + i\\sin\\theta)^{3}$ ដោយប្រើទ្រឹស្តីបទទ្វេធា។\nខ. ប្រើរូបមន្តដឺម័រ ដើម្បីទាញរក $\\cos 3\\theta$ និង $\\sin 3\\theta$ ជាអនុគមន៍នៃ $\\cos\\theta$ និង $\\sin\\theta$។\nគ. ប្រើលទ្ធផល ខ. ដើម្បីគណនា $\\cos 3\\theta$ និង $\\sin 3\\theta$ ចំពោះ $\\theta = \\dfrac{\\pi}{3}$។",
+            "solution": "ក. $\\cos^3\\theta - 3\\cos\\theta\\sin^2\\theta + i(3\\cos^2\\theta\\sin\\theta - \\sin^3\\theta)$\nខ. $\\cos 3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$ , $\\sin 3\\theta = 3\\sin\\theta - 4\\sin^3\\theta$\nគ. $\\cos \\pi = -1$ , $\\sin \\pi = 0$",
+            "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          }
+        ]
+      },
+      {
+        "pointNumber": 3,
+        "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
+        "pointTitle": "ចំណុចទី ៣ ៖ ឫសទី n នៃចំនួនកុំផ្លិច",
+        "topic": "$w_k = \\sqrt[n]{r}\\left(\\cos\\dfrac{\\theta + 2k\\pi}{n} + i\\sin\\dfrac{\\theta + 2k\\pi}{n}\\right)$",
         "objective": "ចេះស្វែងរកឫសទី n នៃចំនួនកុំផ្លិច និងដោះស្រាយសមីការ",
         "exercises": [
           {
@@ -23323,47 +24065,6 @@
         ],
         "totalPoints": 3,
         "summary": "<div class=\"ws-sum-text\"><strong>ឫសទី n នៃចំនួនកុំផ្លិច ៖</strong></div>\n<div class=\"ws-sum-text\">បើ $z = r(\\cos\\theta + i\\sin\\theta)$ នោះឫសទី $n$ ទាំង $n$ នៃ $z$ គឺ ៖</div>\n<div class=\"ws-sum-text\">$w_k = \\sqrt[n]{r}\\left[\\cos\\left(\\dfrac{\\theta + 2k\\pi}{n}\\right) + i\\sin\\left(\\dfrac{\\theta + 2k\\pi}{n}\\right)\\right]$ ដោយ $k = 0, 1, 2, \\dots, n-1$។</div>\n<div class=\"ws-sum-text\">ចំណុចរូបភាពនៃឫសទាំង $n$ បង្កើតបានជាកំពូលនៃពហុកោណនិយ័តមាន $n$ ជ្រុងចារឹកក្នុងរង្វង់ផ្ចិត $O$ កាំ $R = \\sqrt[n]{r}$។</div>"
-      },
-      {
-        "pointNumber": 3,
-        "sheetNumber": "សន្លឹកកិច្ចការទី ០៣ - ចំណុចទី ៣",
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុវត្តន៍ចំនួនកុំផ្លិចក្នុងធរណីមាត្រ",
-        "topic": "ចម្ងាយ មុំ និងបំប្លែងវិលតាមចំនួនកុំផ្លិច",
-        "objective": "ចេះអនុវត្តចំនួនកុំផ្លិចកំណត់ប្រភេទត្រីកោណ និងបំប្លែងវិលក្នុងប្លង់",
-        "exercises": [
-          {
-            "id": "ex1",
-            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
-            "instruction": "កំណត់ប្រភេទត្រីកោណ ៖",
-            "question": "ក្នុងប្លង់កុំផ្លិច ចំណុច $A, B, C$ មានអាភិច $z_A = 1+i, z_B = 3+i, z_C = 2+(1+\\sqrt{3})i$។ បង្ហាញថា $\\triangle ABC$ ជាត្រីកោណសម័ង្ស។",
-            "solution": "គណនាប្រវែងជ្រុងទាំងបីតាមម៉ូឌុល ៖\n• $AB = |z_B - z_A| = |(3+i) - (1+i)| = |2| = 2$។\n• $AC = |z_C - z_A| = |1 + i\\sqrt{3}| = \\sqrt{1^2 + (\\sqrt{3})^2} = 2$។\n• $BC = |z_C - z_B| = |-1 + i\\sqrt{3}| = \\sqrt{(-1)^2 + (\\sqrt{3})^2} = 2$។\nដោយសារ $AB = AC = BC = 2$ ដូចនេះ $\\triangle ABC$ ជាត្រីកោណសម័ង្ស។",
-            "rubric": "គណនាប្រវែង $AB, AC, BC$ ត្រូវ (០.៥ ពិន្ទុ) | សន្និដ្ឋាន $\\triangle ABC$ សម័ង្សត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex2",
-            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
-            "instruction": "អនុវត្តបំប្លែងវិលក្នុងប្លង់កុំផ្លិច ៖",
-            "question": "តាង $R$ ជាបំប្លែងវិលផ្ចិត $A(1, 2)$ មុំ $\\theta = \\dfrac{\\pi}{2}$។ រកអាភិចនៃចំណុច $M'$ ដែលជារូបភាពនៃ $M(3, 4)$ តាម $R$។",
-            "solution": "រូបមន្តបំប្លែងវិលផ្ចិត $A(z_A)$ មុំ $\\theta$ គឺ ៖ $z' - z_A = e^{i\\theta}(z - z_A)$។\nនៅទីនេះ $z_A = 1 + 2i$, $z = 3 + 4i$, និង $e^{i\\pi/2} = i$ ៖\n$z' - (1 + 2i) = i[(3 + 4i) - (1 + 2i)] = i(2 + 2i) = 2i + 2i^2 = -2 + 2i$។\n$\\implies z' = (1 + 2i) + (-2 + 2i) = -1 + 4i$។\nដូចនេះ ចំណុចរូបភាពគឺ $M'(-1, 4)$។",
-            "rubric": "សរសេររូបមន្តបំប្លែងវិលត្រូវ (០.៥ ពិន្ទុ) | គណនាឃើញ $z' = -1 + 4i$ ត្រូវ (០.៥ ពិន្ទុ)",
-            "points": 1.0
-          },
-          {
-            "id": "ex-les-g12a-1-3-p3-3",
-            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
-            "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
-            "instruction": "អនុវត្តទ្រឹស្តីបទកុំផ្លិចដោះស្រាយលំហាត់ជ្រុល និងផលគុណ ៖",
-            "points": 1.0,
-            "questions": [
-              "ក. គេឱ្យ $z_k = e^{i\\frac{2k\\pi}{n}}$ ចំពោះ $k = 0, 1, 2, \\dots, n-1$ ជាឫសទី $n$ នៃឯកតា។ គណនាផលគុណ $P = \\prod_{k=1}^{n-1} (1 - z_k)$។",
-              "ខ. បង្ហាញថា $\\sin\\dfrac{\\pi}{n}\\sin\\dfrac{2\\pi}{n}\\dots\\sin\\dfrac{(n-1)\\pi}{n} = \\dfrac{n}{2^{n-1}}$។"
-            ],
-            "rubric": "**ដំណោះស្រាយលម្អិត ៖**\n\n**ក. គណនាផលគុណ $P$ ៖**\n- យើងដឹងថា $z^n - 1 = (z - 1)(z - z_1)(z - z_2)\\dots(z - z_{n-1})$\n- ចំពោះ $z \\neq 1$ ៖ $\\dfrac{z^n - 1}{z - 1} = z^{n-1} + z^{n-2} + \\dots + z + 1 = \\prod_{k=1}^{n-1} (z - z_k)$\n- យកលីមីតកាលណា $z \\to 1$ ៖\n  $\\prod_{k=1}^{n-1} (1 - z_k) = 1^{n-1} + 1^{n-2} + \\dots + 1 = n$\n- ដូចនេះ $P = \\prod_{k=1}^{n-1} (1 - z_k) = n$។ *(០.៥០ ពិន្ទុ)*\n\n**ខ. បង្ហាញរូបមន្តស៊ីនុស ៖**\n- គណនាម៉ូឌុលនៃកត្តានីមួយៗ ៖\n  $|1 - z_k| = \\left|1 - e^{i\\frac{2k\\pi}{n}}\\right| = \\left|e^{i\\frac{k\\pi}{n}}\\left(e^{-i\\frac{k\\pi}{n}} - e^{i\\frac{k\\pi}{n}}\\right)\\right| = \\left|-2i\\sin\\dfrac{k\\pi}{n}\\right| = 2\\sin\\dfrac{k\\pi}{n}$ (ព្រោះ $0 < \\dfrac{k\\pi}{n} < \\pi \\Rightarrow \\sin > 0$)\n- យកម៉ូឌុលលើសមភាពទាំងសងខាងនៃ $P$ ៖\n  $\\prod_{k=1}^{n-1} |1 - z_k| = \\prod_{k=1}^{n-1} \\left(2\\sin\\dfrac{k\\pi}{n}\\right) = 2^{n-1}\\prod_{k=1}^{n-1}\\sin\\dfrac{k\\pi}{n} = n$\n- នាំឱ្យ $\\prod_{k=1}^{n-1} \\sin\\dfrac{k\\pi}{n} = \\dfrac{n}{2^{n-1}}$\n- ដូចនេះ $\\sin\\dfrac{\\pi}{n}\\sin\\dfrac{2\\pi}{n}\\dots\\sin\\dfrac{(n-1)\\pi}{n} = \\dfrac{n}{2^{n-1}}$ (ពិត)។ *(០.៥០ ពិន្ទុ)*"
-          }
-        ],
-        "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>អនុវត្តន៍ចំនួនកុំផ្លិចក្នុងធរណីមាត្រ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចម្ងាយ ៖ $AB = |z_B - z_A|$។</li>\n  <li class=\"ws-sum-item\">មុំតម្រង់ទិស ៖ $(\\vec{AB}, \\vec{AC}) = \\arg\\left(\\dfrac{z_C - z_A}{z_B - z_A}\\right)$។</li>\n  <li class=\"ws-sum-item\">បំប្លែងវិលផ្ចិត $A(z_A)$ មុំ $\\alpha$ ៖ $z' - z_A = [\\cos\\alpha + i\\sin\\alpha](z - z_A)$។</li>\n</ul>"
       }
     ],
     "totalPointsCount": 9
