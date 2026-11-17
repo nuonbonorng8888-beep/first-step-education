@@ -1,8 +1,8 @@
 {
-  "version": "15.5",
-  "build": 155,
+  "version": "15.6",
+  "build": 156,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Grade 9 now follows the textbook lesson by lesson: questions, point quizzes, lesson exams and worksheets of lessons 6-14 corrected; off-syllabus topics moved to Grade 10.",
-  "lastUpdated": "2026-11-18T09:00:00+07:00"
+  "changelog": "Grade 7 follows the textbook sections: 12 missing points added (rounding, profit and loss, imperial units, products and factorising, rate and average speed, angles with parallel sides, polygons, special lines in triangles, arc and sector, cylinder, double bar graph) with summaries, exercises with solutions and 10-question point quizzes; higher-grade content removed from Grade 7.",
+  "lastUpdated": "2026-11-18T15:00:00+07:00"
 }
