@@ -94,7 +94,7 @@ const StorageService = {
       },
       {
         id: "t-10101",
-        name: "អ្នកគ្រូ ថោង សុភាវី",
+        name: "អ្នកគ្រូ ថោង សុភារី",
         role: "member",
         pinHash: "1db3694bae07f9afb6a3537a6395e4b04460f2f535efdeebc9d6027b97bf18c0",
         school: "វិទ្យាល័យព្រះស៊ីសុវត្ថិ (NGS)",
