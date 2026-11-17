@@ -1,8 +1,8 @@
 {
-  "version": "15.6",
-  "build": 156,
+  "version": "15.7",
+  "build": 157,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Grade 7 follows the textbook sections: 12 missing points added (rounding, profit and loss, imperial units, products and factorising, rate and average speed, angles with parallel sides, polygons, special lines in triangles, arc and sector, cylinder, double bar graph) with summaries, exercises with solutions and 10-question point quizzes; higher-grade content removed from Grade 7.",
-  "lastUpdated": "2026-11-18T15:00:00+07:00"
+  "changelog": "Grade 8 follows the textbook sections: lessons 9, 14, 15 and 17 rebuilt point by point (data graphs, line graphs, parallelogram/rhombus/trapezoid areas, circle arcs and symmetry, area and volume of prism/pyramid/cone), lesson 16 in textbook order; Grade 9 topics (tangents, slope, spheres, surds, systems) moved to Grade 9; lesson exams 9 and 17 corrected.",
+  "lastUpdated": "2026-11-18T18:00:00+07:00"
 }
