@@ -1,8 +1,8 @@
 {
-  "version": "15.15",
-  "build": 165,
-  "date": "2026-11-19",
+  "version": "15.16",
+  "build": 166,
+  "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Grade 12 volume 2 (chapters 6-10) follows the 2023 science textbook: integrals (basic formulas, trigonometric, rational, applications, definite integrals by parts, mean value, Riemann sums, areas, volumes about Oy), differential equations (notion, separable, applications, characteristic equation, oscillation), probability (independent events, Bayes), two-variable statistics (Mayer line, linear correlation) and conics (standard and shifted parabola, ellipse, hyperbola). Basic-course statistics and counting lessons are marked as review. Grades 7-12 now follow the textbooks.",
-  "lastUpdated": "2026-11-19T06:00:00+07:00"
+  "changelog": "Phase 3 starts: 87 Grade 12 level-3 worksheet exercises that showed an empty question and empty teacher key now display their questions and full solutions; markdown bold in worksheet exercises renders correctly; worked solutions added for the 20 Grade 10 lesson 1 workbook exercises.",
+  "lastUpdated": "2026-11-18T08:00:00+07:00"
 }
