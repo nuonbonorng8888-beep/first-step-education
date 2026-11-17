@@ -1,8 +1,8 @@
 {
-  "version": "15.18",
-  "build": 168,
+  "version": "15.19",
+  "build": 169,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Worked solutions for 149 more Grade 10 workbook exercises: points on a line and in the plane, lines, circles and graphical inequalities (chapter 4), quadratic functions and parabolas, vectors and dot product, and trigonometric ratios. These exercises now show a full answer key.",
-  "lastUpdated": "2026-11-18T15:00:00+07:00"
+  "changelog": "Multiple-choice answers are now spread evenly across A, B, C and D in the question bank, point quizzes and lesson quizzes (before, most correct answers were A). The correct answers themselves are unchanged; image questions whose choices are printed in the picture keep their order.",
+  "lastUpdated": "2026-11-18T17:00:00+07:00"
 }
