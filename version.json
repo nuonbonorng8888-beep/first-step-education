@@ -1,8 +1,8 @@
 {
-  "version": "15.22",
-  "build": 172,
-  "date": "2026-11-18",
+  "version": "15.23",
+  "build": 173,
+  "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Worked solutions for 105 Grade 11 advanced-course workbook exercises: sigma notation and sums, recurrence relations, mathematical induction and the binomial theorem, and space geometry (vectors, lines, planes, spheres and distances). These exercises now show a full answer key.",
-  "lastUpdated": "2026-11-18T23:00:00+07:00"
+  "changelog": "Worked solutions for 103 Grade 11 basic-course workbook exercises on sequences: general terms, monotonic and bounded sequences, arithmetic sequences and geometric sequences (including infinite sums). These exercises now show a full answer key.",
+  "lastUpdated": "2026-11-19T01:00:00+07:00"
 }
