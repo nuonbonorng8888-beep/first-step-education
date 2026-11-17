@@ -1,8 +1,8 @@
 {
-  "version": "15.14",
-  "build": 164,
+  "version": "15.15",
+  "build": 165,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Grade 12 volume 1 chapters 4-5 follow the 2023 science textbook: rational functions (oblique asymptote, quadratic over quadratic, applications), the number e, exponential derivatives and applications, natural logarithm properties, equations and systems, ln-function study and applications, vector operations in space, distance and direction cosines, moment of a force, triple product and the sphere; chapter exams are chapter-level.",
-  "lastUpdated": "2026-11-19T05:00:00+07:00"
+  "changelog": "Grade 12 volume 2 (chapters 6-10) follows the 2023 science textbook: integrals (basic formulas, trigonometric, rational, applications, definite integrals by parts, mean value, Riemann sums, areas, volumes about Oy), differential equations (notion, separable, applications, characteristic equation, oscillation), probability (independent events, Bayes), two-variable statistics (Mayer line, linear correlation) and conics (standard and shifted parabola, ellipse, hyperbola). Basic-course statistics and counting lessons are marked as review. Grades 7-12 now follow the textbooks.",
+  "lastUpdated": "2026-11-19T06:00:00+07:00"
 }
