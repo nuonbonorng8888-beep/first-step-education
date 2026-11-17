@@ -1,8 +1,8 @@
 {
-  "version": "15.20",
-  "build": 170,
+  "version": "15.21",
+  "build": 171,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Worked solutions for 95 more Grade 10 workbook exercises: sine and cosine rules, functions and inverse functions, graphs of rational and square-root functions, and statistics (frequency tables, mean, median, mode). These exercises now show a full answer key.",
-  "lastUpdated": "2026-11-18T19:00:00+07:00"
+  "changelog": "Grade 10 workbook complete: worked solutions for the last 96 exercises (vectors in geometry, translations, reflections, rotations, dilations, counting, permutations, combinations and the binomial theorem). Every Grade 10 workbook exercise now has an answer key.",
+  "lastUpdated": "2026-11-18T21:00:00+07:00"
 }
