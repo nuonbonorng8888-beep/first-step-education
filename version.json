@@ -1,8 +1,8 @@
 {
-  "version": "14.5",
-  "build": 145,
+  "version": "14.6",
+  "build": 146,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "The whole app now keeps its normal size when the browser (Chrome/Edge) is zoomed out - no need to press Ctrl+0 on any computer. Top bar shows icons only so it always fits.",
-  "lastUpdated": "2026-11-17T14:00:00+07:00"
+  "changelog": "Phones and iPads: lesson pages (materials, worksheet, quiz, notes, overview) now fit the screen - nothing is cut off on the right any more.",
+  "lastUpdated": "2026-11-17T15:00:00+07:00"
 }

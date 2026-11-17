@@ -1505,9 +1505,10 @@ body.light-theme .grade-pill {
 
 .classroom-layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr); /* never wider than the screen */
   gap: 24px;
 }
+.classroom-layout > * { min-width: 0; }
 
 @media (min-width: 1080px) {
   .classroom-layout {
@@ -9336,4 +9337,57 @@ body:not(.light-theme) .course-card.cc-g12 { --cc: #24365c; --cc-soft: rgba(140,
    2200px, so use the normal desktop container instead of the huge-screen one */
 html.zc-normal .container:not(.nav-container) {
   max-width: 1650px !important;
+}
+
+/* ==========================================================================
+   Phones & small tablets: nothing may be wider than the screen
+   (iOS Safari lets the whole page slide sideways if anything sticks out)
+   ========================================================================== */
+@media screen and (max-width: 900px) {
+  /* Top bar: teacher buttons scroll inside the bar instead of widening the page */
+  .nav-container { flex-wrap: nowrap; min-width: 0; }
+  .nav-left { flex-shrink: 1; min-width: 0; }
+  .nav-actions {
+    flex: 1 1 auto;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+  }
+  .nav-actions::-webkit-scrollbar { display: none; }
+  .nav-actions > * { flex-shrink: 0; }
+
+  /* Worksheet reader toolbar wraps instead of sticking out */
+  .ws-reader-toolbar { flex-wrap: wrap; min-width: 0; }
+  .ws-reader-toolbar > * { min-width: 0; max-width: 100%; flex-wrap: wrap; }
+}
+
+@media screen and (max-width: 640px) {
+  /* Long formulas scroll inside their own box on small screens */
+  .worksheet-paper .katex-display,
+  .ws-summary-card .katex-display,
+  .ws-exercise-block .katex-display,
+  .katex-display {
+    max-width: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+  img, video, iframe, table { max-width: 100%; }
+
+  /* Button rows wrap onto a new line instead of sticking out */
+  .file-card { flex-wrap: wrap; }
+  .file-actions { flex-wrap: wrap; max-width: 100%; }
+  .ws-reader-page-flipper { flex-wrap: wrap; max-width: 100%; }
+  .ws-unlocked-header { flex-wrap: wrap; }
+  .ws-unlocked-header > * { max-width: 100%; flex-wrap: wrap; }
+
+  /* Lesson header: title on its own line, teacher button underneath */
+  .current-lesson-header { flex-direction: column; align-items: stretch; gap: 10px; }
+  .current-lesson-header > * { max-width: 100%; }
+
+  /* Top bar: keep the logo, drop the long app name to make room */
+  .brand-title { display: none; }
+  .nav-left { flex-shrink: 0; }
 }
