@@ -1,4 +1,4 @@
-# Binaries and local tools
+﻿# Binaries and local tools
 cloudflared.exe
 
 # Local scratch and temporary scripts
@@ -17,9 +17,9 @@ js/*.bak
 
 # Large raw textbooks in root
 Ma.G10.pdf
-ថ្នាក់ទី*.pdf
-សៀវភៅ*.pdf
-សៀវភៅគណិតវិទ្យាថ្នាក់ទី_១២*.pdf
+ážáŸ’áž“áž¶áž€áŸ‹áž‘áž¸*.pdf
+ážŸáŸ€ážœáž—áŸ…*.pdf
+ážŸáŸ€ážœáž—áŸ…áž‚ážŽáž·ážážœáž·áž‘áŸ’áž™áž¶ážáŸ’áž“áž¶áž€áŸ‹áž‘áž¸_áŸ¡áŸ¢*.pdf
 
 # Python bytecode and caches
 __pycache__/
@@ -31,3 +31,6 @@ __pycache__/
 .vscode/
 Thumbs.db
 Desktop.ini
+
+# Teacher question-bank source PDFs (imported into data/question_bank.json)
+/QB[0-9]*/

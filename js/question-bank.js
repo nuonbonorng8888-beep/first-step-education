@@ -1122,13 +1122,9 @@ class QuestionBankController {
         pool = allQuestions.filter(q => q.l === slot.lessonTitle);
       }
 
-      // If still 0, find lesson in this grade matching slot index
+      // Never borrow questions from another lesson: an empty lesson is simply skipped
       if (pool.length === 0) {
-        const gradeLessons = this.getLessonsForGrade(this.examConfig.grade);
-        if (gradeLessons.length > sIdx) {
-          slot.lesId = gradeLessons[sIdx].id;
-          pool = allQuestions.filter(q => q.lesId === slot.lesId);
-        }
+        continue;
       }
 
       const lessonTitle = pool[0]?.l || `មេរៀនទី ${sIdx + 1}`;
@@ -1168,6 +1164,18 @@ class QuestionBankController {
       alert('សូមជ្រើសរើសមេរៀនដែលមានសំណួរក្នុងធនាគារសំណួរ!');
       return;
     }
+
+    // Exam follows lesson order (lesson 1 first), and inside a lesson goes easy -> hard
+    const lessonOrder = new Map(this.getLessonsForGrade(this.examConfig.grade).map((l, i) => [l.id, i]));
+    const levelRank = { 'ងាយ': 0, 'មធ្យម': 1, 'ពិបាក': 2 };
+    selectedWritten.sort((a, b) =>
+      (lessonOrder.has(a.lesId) ? lessonOrder.get(a.lesId) : 999) - (lessonOrder.has(b.lesId) ? lessonOrder.get(b.lesId) : 999) ||
+      (levelRank[a.level] ?? 1) - (levelRank[b.level] ?? 1));
+    chosenLessonTitles.sort((x, y) => {
+      const ix = selectedWritten.findIndex(q => q.originLesson === x);
+      const iy = selectedWritten.findIndex(q => q.originLesson === y);
+      return ix - iy;
+    });
 
     // Close config modal
     const configModal = document.getElementById('multiLessonExamModal');
