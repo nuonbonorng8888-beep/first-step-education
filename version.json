@@ -1,8 +1,8 @@
 {
-  "version": "15.7",
-  "build": 157,
+  "version": "15.8",
+  "build": 158,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Grade 8 follows the textbook sections: lessons 9, 14, 15 and 17 rebuilt point by point (data graphs, line graphs, parallelogram/rhombus/trapezoid areas, circle arcs and symmetry, area and volume of prism/pyramid/cone), lesson 16 in textbook order; Grade 9 topics (tangents, slope, spheres, surds, systems) moved to Grade 9; lesson exams 9 and 17 corrected.",
-  "lastUpdated": "2026-11-18T18:00:00+07:00"
+  "changelog": "Grade 10 chapters 1-3 follow the textbook sections: new points for GCD/LCM and rational fractions, types of proof, set properties, radicals, number systems, complex numbers, factor-theorem equations, 3-unknown systems, inequality properties, linear inequalities, absolute value, proving inequalities and AM-GM; remainder theorem moved to its textbook lesson; lesson exams corrected.",
+  "lastUpdated": "2026-11-18T21:00:00+07:00"
 }
