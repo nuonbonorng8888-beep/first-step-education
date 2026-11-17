@@ -876,8 +876,8 @@
         "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
         "points": 1.0,
         "instruction": "ដោះស្រាយចំណោទចលនារង្វង់ និងល្បឿនមុំ ៖",
-        "question": "កង់រថយន្តមួយមានអង្កត់ផ្ចិត $60\\text{ cm}$ កំពុងវិលដោយល្បឿនមុំ $\\omega = 40\\pi\\text{ \\dfrac{rad}{s}}$។\n\nក. គណនាចំនួនជុំដែលកង់វិលបានក្នុងរយៈពេល $1\\text{ នាទី}$ ($60\\text{ វិនាទី}$)។\n\nខ. គណនាល្បឿនរេខារបស់រថយន្តជា $\\text{\\dfrac{km}{h}}$ (យក $\\pi \\approx 3.1416$)។",
-        "solution": "ក. មុំដែលវិលបានក្នុង ១ វិនាទីគឺ $40\\pi\\text{ rad}$។\nមួយជុំស្មើ $2\\pi\\text{ rad}$ នាំឱ្យក្នុង ១ វិនាទីវិលបាន ៖\n$N_1 = \\dfrac{40\\pi}{2\\pi} = 20\\text{ ជុំ/s}$។\nក្នុងរយៈពេល ១ នាទី ($60\\text{ វិនាទី}$) កង់វិលបាន ៖\n$N = 20 \\times 60 = 1200\\text{ ជុំ}$។\n\nខ. កាំនៃកង់ ៖ $R = \\dfrac{60}{2} = 30\\text{ cm} = 0.3\\text{ m}$។\nល្បឿនរេខា $v = R \\omega = 0.3 \\times 40\\pi = 12\\pi\\text{ \\dfrac{m}{s}}$។\nប្តូរទៅជា $\\text{\\dfrac{km}{h}}$ ៖\n$v = 12\\pi \\times 3.6 = 43.2\\pi \\approx 43.2 \\times 3.1416 \\approx 135.72\\text{ \\dfrac{km}{h}}$។",
+        "question": "កង់រថយន្តមួយមានអង្កត់ផ្ចិត $60\\text{ cm}$ កំពុងវិលដោយល្បឿនមុំ $\\omega = 40\\pi\\,\\dfrac{\\text{rad}}{\\text{s}}$។\n\nក. គណនាចំនួនជុំដែលកង់វិលបានក្នុងរយៈពេល $1\\text{ នាទី}$ ($60\\text{ វិនាទី}$)។\n\nខ. គណនាល្បឿនរេខារបស់រថយន្តជា $\\,\\dfrac{\\text{km}}{\\text{h}}$ (យក $\\pi \\approx 3.1416$)។",
+        "solution": "ក. មុំដែលវិលបានក្នុង ១ វិនាទីគឺ $40\\pi\\text{ rad}$។\nមួយជុំស្មើ $2\\pi\\text{ rad}$ នាំឱ្យក្នុង ១ វិនាទីវិលបាន ៖\n$N_1 = \\dfrac{40\\pi}{2\\pi} = 20\\text{ ជុំ/s}$។\nក្នុងរយៈពេល ១ នាទី ($60\\text{ វិនាទី}$) កង់វិលបាន ៖\n$N = 20 \\times 60 = 1200\\text{ ជុំ}$។\n\nខ. កាំនៃកង់ ៖ $R = \\dfrac{60}{2} = 30\\text{ cm} = 0.3\\text{ m}$។\nល្បឿនរេខា $v = R \\omega = 0.3 \\times 40\\pi = 12\\pi\\,\\dfrac{\\text{m}}{\\text{s}}$។\nប្តូរទៅជា $\\,\\dfrac{\\text{km}}{\\text{h}}$ ៖\n$v = 12\\pi \\times 3.6 = 43.2\\pi \\approx 43.2 \\times 3.1416 \\approx 135.72\\,\\dfrac{\\text{km}}{\\text{h}}$។",
         "rubric": "ក. គណនាចំនួនជុំក្នុង ១ នាទីឃើញ ១២០០ ជុំ (០.៥ ពិន្ទុ) | ខ. គណនាល្បឿនរេខា និងប្តូរខ្នាតជា km/h ត្រឹមត្រូវ (០.៥ ពិន្ទុ)"
       }
     ],
@@ -913,8 +913,8 @@
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1.0,
             "instruction": "ដោះស្រាយចំណោទចលនារង្វង់ និងល្បឿនមុំ ៖",
-            "question": "កង់រថយន្តមួយមានអង្កត់ផ្ចិត $60\\text{ cm}$ កំពុងវិលដោយល្បឿនមុំ $\\omega = 40\\pi\\text{ \\dfrac{rad}{s}}$។\n\nក. គណនាចំនួនជុំដែលកង់វិលបានក្នុងរយៈពេល $1\\text{ នាទី}$ ($60\\text{ វិនាទី}$)។\n\nខ. គណនាល្បឿនរេខារបស់រថយន្តជា $\\text{\\dfrac{km}{h}}$ (យក $\\pi \\approx 3.1416$)។",
-            "solution": "ក. មុំដែលវិលបានក្នុង ១ វិនាទីគឺ $40\\pi\\text{ rad}$។\nមួយជុំស្មើ $2\\pi\\text{ rad}$ នាំឱ្យក្នុង ១ វិនាទីវិលបាន ៖\n$N_1 = \\dfrac{40\\pi}{2\\pi} = 20\\text{ ជុំ/s}$។\nក្នុងរយៈពេល ១ នាទី ($60\\text{ វិនាទី}$) កង់វិលបាន ៖\n$N = 20 \\times 60 = 1200\\text{ ជុំ}$។\n\nខ. កាំនៃកង់ ៖ $R = \\dfrac{60}{2} = 30\\text{ cm} = 0.3\\text{ m}$។\nល្បឿនរេខា $v = R \\omega = 0.3 \\times 40\\pi = 12\\pi\\text{ \\dfrac{m}{s}}$។\nប្តូរទៅជា $\\text{\\dfrac{km}{h}}$ ៖\n$v = 12\\pi \\times 3.6 = 43.2\\pi \\approx 43.2 \\times 3.1416 \\approx 135.72\\text{ \\dfrac{km}{h}}$។",
+            "question": "កង់រថយន្តមួយមានអង្កត់ផ្ចិត $60\\text{ cm}$ កំពុងវិលដោយល្បឿនមុំ $\\omega = 40\\pi\\,\\dfrac{\\text{rad}}{\\text{s}}$។\n\nក. គណនាចំនួនជុំដែលកង់វិលបានក្នុងរយៈពេល $1\\text{ នាទី}$ ($60\\text{ វិនាទី}$)។\n\nខ. គណនាល្បឿនរេខារបស់រថយន្តជា $\\,\\dfrac{\\text{km}}{\\text{h}}$ (យក $\\pi \\approx 3.1416$)។",
+            "solution": "ក. មុំដែលវិលបានក្នុង ១ វិនាទីគឺ $40\\pi\\text{ rad}$។\nមួយជុំស្មើ $2\\pi\\text{ rad}$ នាំឱ្យក្នុង ១ វិនាទីវិលបាន ៖\n$N_1 = \\dfrac{40\\pi}{2\\pi} = 20\\text{ ជុំ/s}$។\nក្នុងរយៈពេល ១ នាទី ($60\\text{ វិនាទី}$) កង់វិលបាន ៖\n$N = 20 \\times 60 = 1200\\text{ ជុំ}$។\n\nខ. កាំនៃកង់ ៖ $R = \\dfrac{60}{2} = 30\\text{ cm} = 0.3\\text{ m}$។\nល្បឿនរេខា $v = R \\omega = 0.3 \\times 40\\pi = 12\\pi\\,\\dfrac{\\text{m}}{\\text{s}}$។\nប្តូរទៅជា $\\,\\dfrac{\\text{km}}{\\text{h}}$ ៖\n$v = 12\\pi \\times 3.6 = 43.2\\pi \\approx 43.2 \\times 3.1416 \\approx 135.72\\,\\dfrac{\\text{km}}{\\text{h}}$។",
             "rubric": "ក. គណនាចំនួនជុំក្នុង ១ នាទីឃើញ ១២០០ ជុំ (០.៥ ពិន្ទុ) | ខ. គណនាល្បឿនរេខា និងប្តូរខ្នាតជា km/h ត្រឹមត្រូវ (០.៥ ពិន្ទុ)"
           }
         ],
@@ -1486,8 +1486,8 @@
         "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
         "points": 1.0,
         "instruction": "កំណត់វិមាត្រ និងបង្កើតម៉ាទ្រីសតាមលក្ខខណ្ឌចម្រុះ ៖",
-        "question": "គេឱ្យម៉ាទ្រីស $A$ មានវិមាត្រ $m \\times n$ និង $B$ មានវិមាត្រ $p \\times q$។ ផលគុណ $AB$ មានវិមាត្រ $3 \\times 4$ ហើយផលគុណ $BA$ មានវិមាត្រ $4 \\times 3$។\n\nក. កំណត់តម្លៃនៃ $m, n, p, q$។\n\nខ. គេឱ្យធាតុនៃម៉ាទ្រីស $C$ វិមាត្រ $3 \\times 3$ កំណត់ដោយ $c_{ij} = \\min(i, j)$។ ចូរសរសេរម៉ាទ្រីស $C$ ជាតារាងលេខ។",
-        "solution": "ក. លក្ខខណ្ឌគុណម៉ាទ្រីស ៖\n• $AB$ អាចគុណបានកាលណា $n = p$ ហើយវិមាត្រនៃ $AB$ គឺ $m \\times q = 3 \\times 4 \\implies m = 3, q = 4$។\n• $BA$ អាចគុណបានកាលណា $q = m$ ($4 = 4$ ផ្ទៀងផ្ទាត់) ហើយវិមាត្រនៃ $BA$ គឺ $p \\times n = 4 \\times 3 \\implies p = 4, n = 3$។\nដូចនេះ $m = 3, n = 3, p = 3$... ចាំមើល ៖ $n = p = 4$ និង $m = q = 3$ (ឬ $m = 3, n = 4, p = 4, q = 3$) ៖\nបើ $A$ មានវិមាត្រ $3 \\times 4$ និង $B$ មានវិមាត្រ $4 \\times 3$ នោះ $AB$ មានវិមាត្រ $3 \\times 3$ (មិនមែន $3 \\times 4$)។\nដើម្បីឱ្យ $AB$ មានវិមាត្រ $3 \\times 4$ នោះ $m = 3, q = 4$ និង $n = p$។\nដើម្បីឱ្យ $BA$ មានវិមាត្រ $4 \\times 3$ នោះ $p = 4, n = 3$ ដែលនាំឱ្យ $n = 3, p = 4$ ផ្ទុយនឹង $n = p$!\nដូចនេះ $AB$ និង $BA$ អាចមានវិមាត្រខុសគ្នាកាលណា $A$ មានវិមាត្រ $3 \\times 4$ និង $B$ មានវិមាត្រ $4 \\times 3$ នោះ $AB$ គឺ $3 \\times 3$ និង $BA$ គឺ $4 \\times 4$។ ដូចនេះ $m = 3, n = 4, p = 4, q = 3$។\n\nខ. សរសេរម៉ាទ្រីស $C = (c_{ij})_{3 \\times 3}$ ដោយ $c_{ij} = \\min(i, j)$ ៖\n• ជួរ ១ ($i=1$) ៖ $c_{11} = 1, c_{12} = 1, c_{13} = 1$\n• ជួរ ២ ($i=2$) ៖ $c_{21} = 1, c_{22} = 2, c_{23} = 2$\n• ជួរ ៣ ($i=3$) ៖ $c_{31} = 1, c_{32} = 2, c_{33} = 3$។\nដូចនេះ $C = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 2 \\\\ 1 & 2 & 3 \\end{pmatrix}$។",
+        "question": "គេឱ្យម៉ាទ្រីស $A$ មានវិមាត្រ $m \\times n$ និង $B$ មានវិមាត្រ $p \\times q$។ ផលគុណ $AB$ មានវិមាត្រ $3 \\times 3$ ហើយផលគុណ $BA$ មានវិមាត្រ $4 \\times 4$។\n\nក. កំណត់តម្លៃនៃ $m, n, p, q$។\n\nខ. គេឱ្យធាតុនៃម៉ាទ្រីស $C$ វិមាត្រ $3 \\times 3$ កំណត់ដោយ $c_{ij} = \\min(i, j)$។ ចូរសរសេរម៉ាទ្រីស $C$ ជាតារាងលេខ។",
+        "solution": "ក. លក្ខខណ្ឌគុណម៉ាទ្រីស ៖\n• $AB$ គុណបានលុះត្រាតែ $n = p$ ហើយ $AB$ មានវិមាត្រ $m \\times q = 3 \\times 3 \\implies m = 3, q = 3$។\n• $BA$ គុណបានលុះត្រាតែ $q = m$ ($3 = 3$ ផ្ទៀងផ្ទាត់) ហើយ $BA$ មានវិមាត្រ $p \\times n = 4 \\times 4 \\implies p = 4, n = 4$ ($n = p$ ផ្ទៀងផ្ទាត់)។\nដូចនេះ $m = 3, n = 4, p = 4, q = 3$ គឺ $A$ ជាម៉ាទ្រីស $3 \\times 4$ និង $B$ ជាម៉ាទ្រីស $4 \\times 3$។\n\nខ. សរសេរម៉ាទ្រីស $C = (c_{ij})_{3 \\times 3}$ ដោយ $c_{ij} = \\min(i, j)$ ៖\n• ជួរ ១ ($i=1$) ៖ $c_{11} = 1, c_{12} = 1, c_{13} = 1$\n• ជួរ ២ ($i=2$) ៖ $c_{21} = 1, c_{22} = 2, c_{23} = 2$\n• ជួរ ៣ ($i=3$) ៖ $c_{31} = 1, c_{32} = 2, c_{33} = 3$។\nដូចនេះ $C = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 2 \\\\ 1 & 2 & 3 \\end{pmatrix}$។",
         "rubric": "ក. វិភាគវិមាត្រនៃម៉ាទ្រីសត្រឹមត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនាធាតុ និងសរសេរម៉ាទ្រីស $C$ ត្រឹមត្រូវ (០.៥ ពិន្ទុ)"
       }
     ],
@@ -1523,8 +1523,8 @@
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1.0,
             "instruction": "កំណត់វិមាត្រ និងបង្កើតម៉ាទ្រីសតាមលក្ខខណ្ឌចម្រុះ ៖",
-            "question": "គេឱ្យម៉ាទ្រីស $A$ មានវិមាត្រ $m \\times n$ និង $B$ មានវិមាត្រ $p \\times q$។ ផលគុណ $AB$ មានវិមាត្រ $3 \\times 4$ ហើយផលគុណ $BA$ មានវិមាត្រ $4 \\times 3$។\n\nក. កំណត់តម្លៃនៃ $m, n, p, q$។\n\nខ. គេឱ្យធាតុនៃម៉ាទ្រីស $C$ វិមាត្រ $3 \\times 3$ កំណត់ដោយ $c_{ij} = \\min(i, j)$។ ចូរសរសេរម៉ាទ្រីស $C$ ជាតារាងលេខ។",
-            "solution": "ក. លក្ខខណ្ឌគុណម៉ាទ្រីស ៖\n• $AB$ អាចគុណបានកាលណា $n = p$ ហើយវិមាត្រនៃ $AB$ គឺ $m \\times q = 3 \\times 4 \\implies m = 3, q = 4$។\n• $BA$ អាចគុណបានកាលណា $q = m$ ($4 = 4$ ផ្ទៀងផ្ទាត់) ហើយវិមាត្រនៃ $BA$ គឺ $p \\times n = 4 \\times 3 \\implies p = 4, n = 3$។\nដូចនេះ $m = 3, n = 3, p = 3$... ចាំមើល ៖ $n = p = 4$ និង $m = q = 3$ (ឬ $m = 3, n = 4, p = 4, q = 3$) ៖\nបើ $A$ មានវិមាត្រ $3 \\times 4$ និង $B$ មានវិមាត្រ $4 \\times 3$ នោះ $AB$ មានវិមាត្រ $3 \\times 3$ (មិនមែន $3 \\times 4$)។\nដើម្បីឱ្យ $AB$ មានវិមាត្រ $3 \\times 4$ នោះ $m = 3, q = 4$ និង $n = p$។\nដើម្បីឱ្យ $BA$ មានវិមាត្រ $4 \\times 3$ នោះ $p = 4, n = 3$ ដែលនាំឱ្យ $n = 3, p = 4$ ផ្ទុយនឹង $n = p$!\nដូចនេះ $AB$ និង $BA$ អាចមានវិមាត្រខុសគ្នាកាលណា $A$ មានវិមាត្រ $3 \\times 4$ និង $B$ មានវិមាត្រ $4 \\times 3$ នោះ $AB$ គឺ $3 \\times 3$ និង $BA$ គឺ $4 \\times 4$។ ដូចនេះ $m = 3, n = 4, p = 4, q = 3$។\n\nខ. សរសេរម៉ាទ្រីស $C = (c_{ij})_{3 \\times 3}$ ដោយ $c_{ij} = \\min(i, j)$ ៖\n• ជួរ ១ ($i=1$) ៖ $c_{11} = 1, c_{12} = 1, c_{13} = 1$\n• ជួរ ២ ($i=2$) ៖ $c_{21} = 1, c_{22} = 2, c_{23} = 2$\n• ជួរ ៣ ($i=3$) ៖ $c_{31} = 1, c_{32} = 2, c_{33} = 3$។\nដូចនេះ $C = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 2 \\\\ 1 & 2 & 3 \\end{pmatrix}$។",
+            "question": "គេឱ្យម៉ាទ្រីស $A$ មានវិមាត្រ $m \\times n$ និង $B$ មានវិមាត្រ $p \\times q$។ ផលគុណ $AB$ មានវិមាត្រ $3 \\times 3$ ហើយផលគុណ $BA$ មានវិមាត្រ $4 \\times 4$។\n\nក. កំណត់តម្លៃនៃ $m, n, p, q$។\n\nខ. គេឱ្យធាតុនៃម៉ាទ្រីស $C$ វិមាត្រ $3 \\times 3$ កំណត់ដោយ $c_{ij} = \\min(i, j)$។ ចូរសរសេរម៉ាទ្រីស $C$ ជាតារាងលេខ។",
+            "solution": "ក. លក្ខខណ្ឌគុណម៉ាទ្រីស ៖\n• $AB$ គុណបានលុះត្រាតែ $n = p$ ហើយ $AB$ មានវិមាត្រ $m \\times q = 3 \\times 3 \\implies m = 3, q = 3$។\n• $BA$ គុណបានលុះត្រាតែ $q = m$ ($3 = 3$ ផ្ទៀងផ្ទាត់) ហើយ $BA$ មានវិមាត្រ $p \\times n = 4 \\times 4 \\implies p = 4, n = 4$ ($n = p$ ផ្ទៀងផ្ទាត់)។\nដូចនេះ $m = 3, n = 4, p = 4, q = 3$ គឺ $A$ ជាម៉ាទ្រីស $3 \\times 4$ និង $B$ ជាម៉ាទ្រីស $4 \\times 3$។\n\nខ. សរសេរម៉ាទ្រីស $C = (c_{ij})_{3 \\times 3}$ ដោយ $c_{ij} = \\min(i, j)$ ៖\n• ជួរ ១ ($i=1$) ៖ $c_{11} = 1, c_{12} = 1, c_{13} = 1$\n• ជួរ ២ ($i=2$) ៖ $c_{21} = 1, c_{22} = 2, c_{23} = 2$\n• ជួរ ៣ ($i=3$) ៖ $c_{31} = 1, c_{32} = 2, c_{33} = 3$។\nដូចនេះ $C = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 2 \\\\ 1 & 2 & 3 \\end{pmatrix}$។",
             "rubric": "ក. វិភាគវិមាត្រនៃម៉ាទ្រីសត្រឹមត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនាធាតុ និងសរសេរម៉ាទ្រីស $C$ ត្រឹមត្រូវ (០.៥ ពិន្ទុ)"
           }
         ],
@@ -1725,7 +1725,7 @@
         "pointNumber": 1,
         "sheetNumber": "សន្លឹកកិច្ចការទី ១០ - ចំណុចទី ១",
         "pointTitle": "ចំណុចទី ១ ៖ ដេទែរមីណង់លំដាប់ ២",
-        "topic": "រូបមន្ត $\\$\\det A = ad - bc$$",
+        "topic": "រូបមន្ត $\\det A = ad - bc$",
         "objective": "ចេះគណនាដេទែរមីណង់លំដាប់ ២ និងដោះស្រាយសមីការដេទែរមីណង់",
         "totalPoints": 3,
         "exercises": [
@@ -7685,7 +7685,7 @@
           }
         ],
         "totalPoints": 2,
-        "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $$M_0(x_0, y_0, z_0)$$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
+        "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $M_0(x_0, y_0, z_0)$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
       },
       {
         "pointNumber": 2,
@@ -7714,7 +7714,7 @@
           }
         ],
         "totalPoints": 2,
-        "summary": "<div class=\"ws-sum-text\"><strong>សមីការប្លង់ & គម្លាត ៖</strong> ប្លង់ $(P): Ax + By + Cz + D = 0$ (ន័រម៉ាល់ $\\vec{n} = (A, B, C)$) ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">គម្លាតពី $$M_0(x_0, y_0, z_0)$$ ទៅប្លង់ $(P)$ ៖ $d(M_0, P) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$។</li>\n</ul>"
+        "summary": "<div class=\"ws-sum-text\"><strong>សមីការប្លង់ & គម្លាត ៖</strong> ប្លង់ $(P): Ax + By + Cz + D = 0$ (ន័រម៉ាល់ $\\vec{n} = (A, B, C)$) ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">គម្លាតពី $M_0(x_0, y_0, z_0)$ ទៅប្លង់ $(P)$ ៖ $d(M_0, P) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$។</li>\n</ul>"
       },
       {
         "pointNumber": 3,
@@ -7766,7 +7766,7 @@
         "points": 1
       }
     ],
-    "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $$M_0(x_0, y_0, z_0)$$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
+    "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $M_0(x_0, y_0, z_0)$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
   },
   "les-g12a-6-1": {
     "lessonId": "les-g12a-6-1",
@@ -10178,10 +10178,10 @@
         "pointNumber": 3,
         "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "topic": "$\\sin^2 x + \\cos^2 x = 1$, $1 + \tan^2 x = \\dfrac{1}{\\cos^2 x}$, $\\tan x \\cot x = 1$",
+        "topic": "$\\sin^2 x + \\cos^2 x = 1$, $1 + \\tan^2 x = \\dfrac{1}{\\cos^2 x}$, $\\tan x \\cot x = 1$",
         "objective": "យល់ដឹងច្បាស់ពីខ្លឹមសារ ទំនាក់ទំនងគ្រឹះ និងចេះអនុវត្តរូបមន្តក្នុងការគណនា និងដោះស្រាយលំហាត់បានត្រឹមត្រូវ",
         "totalPoints": "២.០ ពិន្ទុ (Level 1: ១.០ ពិន្ទុ, Level 2: ១.០ ពិន្ទុ)",
-        "summary": "<div class=\"ws-sum-section-title\">១. ទ្រឹស្តី និងនិយមន័យគ្រឹះ</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\"><strong>ខ្លឹមសារគោល ៖</strong> ទំនាក់ទំនងគ្រឹះ</li>\n  <li class=\"ws-sum-item\"><strong>រូបមន្ត និងនិយមន័យសំខាន់ ៖</strong> $\\sin^2 x + \\cos^2 x = 1$, $1 + \tan^2 x = \\dfrac{1}{\\cos^2 x}$, $\\tan x \\cot x = 1$</li>\n  <li class=\"ws-sum-item\">សិស្សត្រូវចងចាំ និងយល់ច្បាស់ពីលក្ខណៈគ្រឹះ ដើម្បីយកទៅអនុវត្តក្នុងការដោះស្រាយលំហាត់ និងចំណោទជាក់ស្តែង។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. វិធាន និងវិធីសាស្ត្រគណនា</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ពិនិត្យលក្ខខណ្ឌកំណត់ និងសម្មតិកម្មនៃប្រធានលំហាត់</li>\n  <li class=\"ws-sum-item\">អនុវត្តតាមរូបមន្ត និងលំដាប់លំដោយនៃប្រមាណវិធី</li>\n  <li class=\"ws-sum-item\">ផ្ទៀងផ្ទាត់ចម្លើយ និងសម្រួលលទ្ធផលចុងក្រោយឱ្យបានសាមញ្ញ និងត្រឹមត្រូវបំផុត។</li>\n</ul>",
+        "summary": "<div class=\"ws-sum-section-title\">១. ទ្រឹស្តី និងនិយមន័យគ្រឹះ</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\"><strong>ខ្លឹមសារគោល ៖</strong> ទំនាក់ទំនងគ្រឹះ</li>\n  <li class=\"ws-sum-item\"><strong>រូបមន្ត និងនិយមន័យសំខាន់ ៖</strong> $\\sin^2 x + \\cos^2 x = 1$, $1 + \\tan^2 x = \\dfrac{1}{\\cos^2 x}$, $\\tan x \\cot x = 1$</li>\n  <li class=\"ws-sum-item\">សិស្សត្រូវចងចាំ និងយល់ច្បាស់ពីលក្ខណៈគ្រឹះ ដើម្បីយកទៅអនុវត្តក្នុងការដោះស្រាយលំហាត់ និងចំណោទជាក់ស្តែង។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. វិធាន និងវិធីសាស្ត្រគណនា</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ពិនិត្យលក្ខខណ្ឌកំណត់ និងសម្មតិកម្មនៃប្រធានលំហាត់</li>\n  <li class=\"ws-sum-item\">អនុវត្តតាមរូបមន្ត និងលំដាប់លំដោយនៃប្រមាណវិធី</li>\n  <li class=\"ws-sum-item\">ផ្ទៀងផ្ទាត់ចម្លើយ និងសម្រួលលទ្ធផលចុងក្រោយឱ្យបានសាមញ្ញ និងត្រឹមត្រូវបំផុត។</li>\n</ul>",
         "exercises": [
           {
             "id": "ex-les-g10-03-p3-1",
@@ -10198,7 +10198,7 @@
             "points": 1,
             "instruction": "ចូរដោះស្រាយលំហាត់អនុវត្តកម្រិតមធ្យមលើខ្លឹមសារ ទំនាក់ទំនងគ្រឹះ ៖",
             "question": "ក. ដោះស្រាយ និងអនុវត្តលើកន្សោម ឬចំណោទកម្រិតមធ្យមទាក់ទងនឹង ៖ ទំនាក់ទំនងគ្រឹះ។\n\nខ. ផ្ទៀងផ្ទាត់ចម្លើយ និងទាញសេចក្តីសន្និដ្ឋាន។",
-            "solution": "ក. ដំណោះស្រាយ ៖\n• អនុវត្តតាមរូបមន្ត $\\sin^2 x + \\cos^2 x = 1$, $1 + \tan^2 x = \\dfrac{1}{\\cos^2 x}$, $\\tan x \\cot x = 1$\n• គណនានិងដោះស្រាយបានចម្លើយពិតប្រាកដ។\n\nខ. ផ្ទៀងផ្ទាត់ចម្លើយឃើញថាត្រឹមត្រូវ។",
+            "solution": "ក. ដំណោះស្រាយ ៖\n• អនុវត្តតាមរូបមន្ត $\\sin^2 x + \\cos^2 x = 1$, $1 + \\tan^2 x = \\dfrac{1}{\\cos^2 x}$, $\\tan x \\cot x = 1$\n• គណនានិងដោះស្រាយបានចម្លើយពិតប្រាកដ។\n\nខ. ផ្ទៀងផ្ទាត់ចម្លើយឃើញថាត្រឹមត្រូវ។",
             "rubric": "• ដោះស្រាយសំណួរ ក បានត្រឹមត្រូវតាមវិធីសាស្ត្រ ៖ ០.៥ ពិន្ទុ\n• រកឃើញចម្លើយសំណួរ ខ និងផ្ទៀងផ្ទាត់ត្រឹមត្រូវ ៖ ០.៥ ពិន្ទុ"
           }
         ]
@@ -12520,7 +12520,7 @@
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
             "points": 1,
             "instruction": "ចូរគណនាប្រវែងធ្នូរង្វង់ ៖",
-            "question": "គេឱ្យរង្វង់ផ្ចិត $O$ មានកាំ $R = 9\\text{ cm}$ និងមុំផ្ចិត $\\widehat{AOB} = 60^\\circ$ (យក $\\pi \\approx 3.14$)។\n\nក. គណនាប្រវែងធ្នូ $\\wideparen{AB}$ តាមរូបមន្ត $l = \\dfrac{\\pi R n}{180}$។\n\nខ. គណនាផ្ទៃក្រឡាចម្រៀករង្វង់ $OAB$ តាមរូបមន្ត $S = \\dfrac{\\pi R^2 n}{360}$។",
+            "question": "គេឱ្យរង្វង់ផ្ចិត $O$ មានកាំ $R = 9\\text{ cm}$ និងមុំផ្ចិត $\\widehat{AOB} = 60^\\circ$ (យក $\\pi \\approx 3.14$)។\n\nក. គណនាប្រវែងធ្នូ $\\overgroup{AB}$ តាមរូបមន្ត $l = \\dfrac{\\pi R n}{180}$។\n\nខ. គណនាផ្ទៃក្រឡាចម្រៀករង្វង់ $OAB$ តាមរូបមន្ត $S = \\dfrac{\\pi R^2 n}{360}$។",
             "solution": "ក. ប្រវែងធ្នូ ៖ $l = \\dfrac{3.14 \\times 9 \\times 60}{180} = \\dfrac{3.14 \\times 9}{3} = 3.14 \\times 3 = 9.42\\text{ cm}$។\n\nខ. ផ្ទៃចម្រៀក ៖ $S = \\dfrac{3.14 \\times 9^2 \\times 60}{360} = \\dfrac{3.14 \\times 81}{6} = 3.14 \\times 13.5 = 42.39\\text{ cm}^2$។",
             "rubric": "ក. គណនាប្រវែងធ្នូត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនាផ្ទៃចម្រៀកត្រូវ (០.៥ ពិន្ទុ)"
           },
@@ -13613,7 +13613,7 @@
         "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
         "points": 1,
         "instruction": "ចូរគណនាមុំចារឹកក្នុង និងមុំផ្ចិត ៖",
-        "question": "ក្នុងរង្វង់ផ្ចិត $O$ មុំចារឹកក្នុង $\\widehat{AMB}$ និងមុំផ្ចិត $\\widehat{AOB}$ ស្ទាក់ធ្នូ $\\wideparen{AB}$ តែមួយ។\nក. បើមុំផ្ចិត $\\widehat{AOB} = 84^\\circ$ គណនារង្វាស់មុំចារឹកក្នុង $\\widehat{AMB}$។\nខ. បើមុំចារឹកក្នុង $\\widehat{ANB} = 35^\\circ$ គណនារង្វាស់មុំផ្ចិត $\\widehat{AOB}$។ ប្រៀបធៀបរង្វាស់មុំ $\\widehat{AMB}$ និង $\\widehat{ANB}$។",
+        "question": "ក្នុងរង្វង់ផ្ចិត $O$ មុំចារឹកក្នុង $\\widehat{AMB}$ និងមុំផ្ចិត $\\widehat{AOB}$ ស្ទាក់ធ្នូ $\\overgroup{AB}$ តែមួយ។\nក. បើមុំផ្ចិត $\\widehat{AOB} = 84^\\circ$ គណនារង្វាស់មុំចារឹកក្នុង $\\widehat{AMB}$។\nខ. បើមុំចារឹកក្នុង $\\widehat{ANB} = 35^\\circ$ គណនារង្វាស់មុំផ្ចិត $\\widehat{AOB}$។ ប្រៀបធៀបរង្វាស់មុំ $\\widehat{AMB}$ និង $\\widehat{ANB}$។",
         "solution": "ក. តាមទ្រឹស្តីបទ ៖ $\\widehat{AMB} = \\dfrac{1}{2} \\widehat{AOB} = \\dfrac{84^\\circ}{2} = 42^\\circ$។\n\nខ. $\\widehat{AOB} = 2 \\times \\widehat{ANB} = 2 \\times 35^\\circ = 70^\\circ$។\nមុំចារឹកក្នុងទាំងឡាយណាដែលស្ទាក់ធ្នូតែមួយ គឺមានរង្វាស់ស្មើគ្នា ($\\widehat{AMB} = \\widehat{ANB}$ បើស្ទាក់ធ្នូដូចគ្នា)។",
         "rubric": "ក. គណនា ៤២° ត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនា ៧០° និងប្រៀបធៀបត្រូវ (០.៥ ពិន្ទុ)"
       },
@@ -13623,7 +13623,7 @@
         "points": 1,
         "instruction": "ចូរគណនាមុំក្នុងត្រីកោណចារឹកក្នុងរង្វង់ ៖",
         "question": "ត្រីកោណសម័ង្ស $ABC$ មួយចារឹកក្នុងរង្វង់ផ្ចិត $O$។\nក. បញ្ជាក់រង្វាស់មុំក្នុង $\\widehat{BAC}$ នៃត្រីកោណសម័ង្ស។\nខ. គណនារង្វាស់មុំផ្ចិត $\\widehat{BOC}$។",
-        "solution": "ក. ត្រីកោណសម័ង្សមានមុំក្នុងទាំងបីស្មើគ្នា ៖ $\\widehat{BAC} = 60^\\circ$។\n\nខ. មុំផ្ចិត $\\widehat{BOC}$ ស្ទាក់ធ្នូ $\\wideparen{BC}$ ដូចមុំចារឹកក្នុង $\\widehat{BAC}$ ៖\n$\\widehat{BOC} = 2 \\times \\widehat{BAC} = 2 \\times 60^\\circ = 120^\\circ$។",
+        "solution": "ក. ត្រីកោណសម័ង្សមានមុំក្នុងទាំងបីស្មើគ្នា ៖ $\\widehat{BAC} = 60^\\circ$។\n\nខ. មុំផ្ចិត $\\widehat{BOC}$ ស្ទាក់ធ្នូ $\\overgroup{BC}$ ដូចមុំចារឹកក្នុង $\\widehat{BAC}$ ៖\n$\\widehat{BOC} = 2 \\times \\widehat{BAC} = 2 \\times 60^\\circ = 120^\\circ$។",
         "rubric": "ក. បញ្ជាក់ ៦០° ត្រូវ (០.៤ ពិន្ទុ) | ខ. គណនា BOC=120° ត្រូវ (០.៦ ពិន្ទុ)"
       }
     ],
@@ -13641,7 +13641,7 @@
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
             "points": 1,
             "instruction": "ចូរគណនាមុំចារឹកក្នុង និងមុំផ្ចិត ៖",
-            "question": "ក្នុងរង្វង់ផ្ចិត $O$ មុំចារឹកក្នុង $\\widehat{AMB}$ និងមុំផ្ចិត $\\widehat{AOB}$ ស្ទាក់ធ្នូ $\\wideparen{AB}$ តែមួយ។\n\nក. បើមុំផ្ចិត $\\widehat{AOB} = 84^\\circ$ គណនារង្វាស់មុំចារឹកក្នុង $\\widehat{AMB}$។\n\nខ. បើមុំចារឹកក្នុង $\\widehat{ANB} = 35^\\circ$ គណនារង្វាស់មុំផ្ចិត $\\widehat{AOB}$។ ប្រៀបធៀបរង្វាស់មុំ $\\widehat{AMB}$ និង $\\widehat{ANB}$។",
+            "question": "ក្នុងរង្វង់ផ្ចិត $O$ មុំចារឹកក្នុង $\\widehat{AMB}$ និងមុំផ្ចិត $\\widehat{AOB}$ ស្ទាក់ធ្នូ $\\overgroup{AB}$ តែមួយ។\n\nក. បើមុំផ្ចិត $\\widehat{AOB} = 84^\\circ$ គណនារង្វាស់មុំចារឹកក្នុង $\\widehat{AMB}$។\n\nខ. បើមុំចារឹកក្នុង $\\widehat{ANB} = 35^\\circ$ គណនារង្វាស់មុំផ្ចិត $\\widehat{AOB}$។ ប្រៀបធៀបរង្វាស់មុំ $\\widehat{AMB}$ និង $\\widehat{ANB}$។",
             "solution": "ក. តាមទ្រឹស្តីបទ ៖ $\\widehat{AMB} = \\dfrac{1}{2} \\widehat{AOB} = \\dfrac{84^\\circ}{2} = 42^\\circ$។\n\nខ. $\\widehat{AOB} = 2 \\times \\widehat{ANB} = 2 \\times 35^\\circ = 70^\\circ$។\nមុំចារឹកក្នុងទាំងឡាយណាដែលស្ទាក់ធ្នូតែមួយ គឺមានរង្វាស់ស្មើគ្នា ($\\widehat{AMB} = \\widehat{ANB}$ បើស្ទាក់ធ្នូដូចគ្នា)។",
             "rubric": "ក. គណនា ៤២° ត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនា ៧០° និងប្រៀបធៀបត្រូវ (០.៥ ពិន្ទុ)"
           },
@@ -13651,11 +13651,11 @@
             "points": 1,
             "instruction": "ចូរគណនាមុំក្នុងត្រីកោណចារឹកក្នុងរង្វង់ ៖",
             "question": "ត្រីកោណសម័ង្ស $ABC$ មួយចារឹកក្នុងរង្វង់ផ្ចិត $O$។\n\nក. បញ្ជាក់រង្វាស់មុំក្នុង $\\widehat{BAC}$ នៃត្រីកោណសម័ង្ស។\n\nខ. គណនារង្វាស់មុំផ្ចិត $\\widehat{BOC}$។",
-            "solution": "ក. ត្រីកោណសម័ង្សមានមុំក្នុងទាំងបីស្មើគ្នា ៖ $\\widehat{BAC} = 60^\\circ$។\n\nខ. មុំផ្ចិត $\\widehat{BOC}$ ស្ទាក់ធ្នូ $\\wideparen{BC}$ ដូចមុំចារឹកក្នុង $\\widehat{BAC}$ ៖\n$\\widehat{BOC} = 2 \\times \\widehat{BAC} = 2 \\times 60^\\circ = 120^\\circ$។",
+            "solution": "ក. ត្រីកោណសម័ង្សមានមុំក្នុងទាំងបីស្មើគ្នា ៖ $\\widehat{BAC} = 60^\\circ$។\n\nខ. មុំផ្ចិត $\\widehat{BOC}$ ស្ទាក់ធ្នូ $\\overgroup{BC}$ ដូចមុំចារឹកក្នុង $\\widehat{BAC}$ ៖\n$\\widehat{BOC} = 2 \\times \\widehat{BAC} = 2 \\times 60^\\circ = 120^\\circ$។",
             "rubric": "ក. បញ្ជាក់ ៦០° ត្រូវ (០.៤ ពិន្ទុ) | ខ. គណនា BOC=120° ត្រូវ (០.៦ ពិន្ទុ)"
           }
         ],
-        "summary": "<div class=\"ws-sum-text\"><strong>មុំផ្ចិត & មុំចារឹកក្នុងរង្វង់ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">រង្វាស់មុំផ្ចិតស្មើនឹងរង្វាស់ធ្នូស្ទាក់ ៖ $\\angle AOB = \\text{រង្វាស់ធ្នូ } \\overparen{AB}$</li>\n  <li class=\"ws-sum-item\">មុំចារឹកក្នុងស្មើកន្លះមុំផ្ចិតស្ទាក់ធ្នូតែមួយ ៖ $\\angle AMB = \\dfrac{1}{2} \\angle AOB = \\dfrac{1}{2} \\overparen{AB}$</li>\n</ul>"
+        "summary": "<div class=\"ws-sum-text\"><strong>មុំផ្ចិត & មុំចារឹកក្នុងរង្វង់ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">រង្វាស់មុំផ្ចិតស្មើនឹងរង្វាស់ធ្នូស្ទាក់ ៖ $\\angle AOB = \\text{រង្វាស់ធ្នូ } \\overgroup{AB}$</li>\n  <li class=\"ws-sum-item\">មុំចារឹកក្នុងស្មើកន្លះមុំផ្ចិតស្ទាក់ធ្នូតែមួយ ៖ $\\angle AMB = \\dfrac{1}{2} \\angle AOB = \\dfrac{1}{2} \\overgroup{AB}$</li>\n</ul>"
       },
       {
         "pointNumber": 2,
@@ -13803,7 +13803,7 @@
         ]
       }
     ],
-    "summary": "<div class=\"ws-sum-text\"><strong>មុំផ្ចិត & មុំចារឹកក្នុងរង្វង់ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">រង្វាស់មុំផ្ចិតស្មើនឹងរង្វាស់ធ្នូស្ទាក់ ៖ $\\angle AOB = \\text{រង្វាស់ធ្នូ } \\overparen{AB}$</li>\n  <li class=\"ws-sum-item\">មុំចារឹកក្នុងស្មើកន្លះមុំផ្ចិតស្ទាក់ធ្នូតែមួយ ៖ $\\angle AMB = \\dfrac{1}{2} \\angle AOB = \\dfrac{1}{2} \\overparen{AB}$</li>\n</ul>"
+    "summary": "<div class=\"ws-sum-text\"><strong>មុំផ្ចិត & មុំចារឹកក្នុងរង្វង់ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">រង្វាស់មុំផ្ចិតស្មើនឹងរង្វាស់ធ្នូស្ទាក់ ៖ $\\angle AOB = \\text{រង្វាស់ធ្នូ } \\overgroup{AB}$</li>\n  <li class=\"ws-sum-item\">មុំចារឹកក្នុងស្មើកន្លះមុំផ្ចិតស្ទាក់ធ្នូតែមួយ ៖ $\\angle AMB = \\dfrac{1}{2} \\angle AOB = \\dfrac{1}{2} \\overgroup{AB}$</li>\n</ul>"
   },
   "les-g9-15": {
     "lessonId": "les-g9-15",
@@ -19251,10 +19251,10 @@
         "pointNumber": 3,
         "sheetNumber": "សន្លឹកកិច្ចការចំណុចទី ៣",
         "pointTitle": "ចំណុចទី ៣ ៖ បរិមាណករ និងសំណើបើក",
-        "topic": "បរិមាណករគ្រប់ ($\forall$) និងមានយ៉ាងហោចមួយ ($\\exists$)",
+        "topic": "បរិមាណករគ្រប់ ($\\forall$) និងមានយ៉ាងហោចមួយ ($\\exists$)",
         "objective": "យល់ដឹងច្បាស់ពីខ្លឹមសារ បរិមាណករ និងសំណើបើក និងចេះអនុវត្តរូបមន្តក្នុងការគណនា និងដោះស្រាយលំហាត់បានត្រឹមត្រូវ",
         "totalPoints": "២.០ ពិន្ទុ (Level 1: ១.០ ពិន្ទុ, Level 2: ១.០ ពិន្ទុ)",
-        "summary": "<div class=\"ws-sum-section-title\">១. ទ្រឹស្តី និងនិយមន័យគ្រឹះ</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\"><strong>ខ្លឹមសារគោល ៖</strong> បរិមាណករ និងសំណើបើក</li>\n  <li class=\"ws-sum-item\"><strong>រូបមន្ត និងនិយមន័យសំខាន់ ៖</strong> បរិមាណករគ្រប់ ($\forall$) និងមានយ៉ាងហោចមួយ ($\\exists$)</li>\n  <li class=\"ws-sum-item\">សិស្សត្រូវចងចាំ និងយល់ច្បាស់ពីលក្ខណៈគ្រឹះ ដើម្បីយកទៅអនុវត្តក្នុងការដោះស្រាយលំហាត់ និងចំណោទជាក់ស្តែង។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. វិធាន និងវិធីសាស្ត្រគណនា</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ពិនិត្យលក្ខខណ្ឌកំណត់ និងសម្មតិកម្មនៃប្រធានលំហាត់</li>\n  <li class=\"ws-sum-item\">អនុវត្តតាមរូបមន្ត និងលំដាប់លំដោយនៃប្រមាណវិធី</li>\n  <li class=\"ws-sum-item\">ផ្ទៀងផ្ទាត់ចម្លើយ និងសម្រួលលទ្ធផលចុងក្រោយឱ្យបានសាមញ្ញ និងត្រឹមត្រូវបំផុត។</li>\n</ul>",
+        "summary": "<div class=\"ws-sum-section-title\">១. ទ្រឹស្តី និងនិយមន័យគ្រឹះ</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\"><strong>ខ្លឹមសារគោល ៖</strong> បរិមាណករ និងសំណើបើក</li>\n  <li class=\"ws-sum-item\"><strong>រូបមន្ត និងនិយមន័យសំខាន់ ៖</strong> បរិមាណករគ្រប់ ($\\forall$) និងមានយ៉ាងហោចមួយ ($\\exists$)</li>\n  <li class=\"ws-sum-item\">សិស្សត្រូវចងចាំ និងយល់ច្បាស់ពីលក្ខណៈគ្រឹះ ដើម្បីយកទៅអនុវត្តក្នុងការដោះស្រាយលំហាត់ និងចំណោទជាក់ស្តែង។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. វិធាន និងវិធីសាស្ត្រគណនា</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ពិនិត្យលក្ខខណ្ឌកំណត់ និងសម្មតិកម្មនៃប្រធានលំហាត់</li>\n  <li class=\"ws-sum-item\">អនុវត្តតាមរូបមន្ត និងលំដាប់លំដោយនៃប្រមាណវិធី</li>\n  <li class=\"ws-sum-item\">ផ្ទៀងផ្ទាត់ចម្លើយ និងសម្រួលលទ្ធផលចុងក្រោយឱ្យបានសាមញ្ញ និងត្រឹមត្រូវបំផុត។</li>\n</ul>",
         "exercises": [
           {
             "id": "ex-les-g10-2-1-p3-1",
@@ -19271,7 +19271,7 @@
             "points": 1,
             "instruction": "ចូរដោះស្រាយលំហាត់អនុវត្តកម្រិតមធ្យមលើខ្លឹមសារ បរិមាណករ និងសំណើបើក ៖",
             "question": "ក. ដោះស្រាយ និងអនុវត្តលើកន្សោម ឬចំណោទកម្រិតមធ្យមទាក់ទងនឹង ៖ បរិមាណករ និងសំណើបើក។\n\nខ. ផ្ទៀងផ្ទាត់ចម្លើយ និងទាញសេចក្តីសន្និដ្ឋាន។",
-            "solution": "ក. ដំណោះស្រាយ ៖\n• អនុវត្តតាមរូបមន្ត បរិមាណករគ្រប់ ($\forall$) និងមានយ៉ាងហោចមួយ ($\\exists$)\n• គណនានិងដោះស្រាយបានចម្លើយពិតប្រាកដ។\n\nខ. ផ្ទៀងផ្ទាត់ចម្លើយឃើញថាត្រឹមត្រូវ។",
+            "solution": "ក. ដំណោះស្រាយ ៖\n• អនុវត្តតាមរូបមន្ត បរិមាណករគ្រប់ ($\\forall$) និងមានយ៉ាងហោចមួយ ($\\exists$)\n• គណនានិងដោះស្រាយបានចម្លើយពិតប្រាកដ។\n\nខ. ផ្ទៀងផ្ទាត់ចម្លើយឃើញថាត្រឹមត្រូវ។",
             "rubric": "• ដោះស្រាយសំណួរ ក បានត្រឹមត្រូវតាមវិធីសាស្ត្រ ៖ ០.៥ ពិន្ទុ\n• រកឃើញចម្លើយសំណួរ ខ និងផ្ទៀងផ្ទាត់ត្រឹមត្រូវ ៖ ០.៥ ពិន្ទុ"
           }
         ]
@@ -21258,7 +21258,7 @@
         "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់ និងសមីការប្លង់ក្នុងលំហ",
         "topic": "សមីការប្លង់ $A(x-x_0) + B(y-y_0) + C(z-z_0) = 0$ និងសមីការប៉ារ៉ាមែត្របន្ទាត់",
         "objective": "ចេះបង្កើតសមីការប្លង់កាត់តាម ៣ ចំណុច និងសមីការបន្ទាត់ក្នុងលំហ",
-        "summary": "<div class=\"ws-sum-section-title\">១. សមីការប្លង់ក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់ $(P)$ កាត់តាម $$M_0(x_0, y_0, z_0)$$ មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n}(A, B, C)$ មានសមីការ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$$A(x - x_0) + B(y - y_0) + C(z - z_0) = 0$ \\iff Ax + By + Cz + D = 0$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់កាត់តាម ៣ ចំណុច $A, B, C$ មិនរត់ត្រង់ជួរគ្នា មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n} = \\vec{AB} \\times \\vec{AC}$។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. សមីការបន្ទាត់ក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">បន្ទាត់ $(L)$ កាត់តាម $$M_0(x_0, y_0, z_0)$$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{u}(a, b, c)$ មានសមីការប៉ារ៉ាមែត្រ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} \\quad (t \\in \\mathbb{R})$$</div>",
+        "summary": "<div class=\"ws-sum-section-title\">១. សមីការប្លង់ក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់ $(P)$ កាត់តាម $M_0(x_0, y_0, z_0)$ មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n}(A, B, C)$ មានសមីការ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$A(x - x_0) + B(y - y_0) + C(z - z_0) = 0 \\iff Ax + By + Cz + D = 0$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់កាត់តាម ៣ ចំណុច $A, B, C$ មិនរត់ត្រង់ជួរគ្នា មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n} = \\vec{AB} \\times \\vec{AC}$។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. សមីការបន្ទាត់ក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">បន្ទាត់ $(L)$ កាត់តាម $M_0(x_0, y_0, z_0)$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{u}(a, b, c)$ មានសមីការប៉ារ៉ាមែត្រ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} \\quad (t \\in \\mathbb{R})$$</div>",
         "totalPoints": 2,
         "exercises": [
           {
@@ -21287,7 +21287,7 @@
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការស្វ៊ែរ និងចម្ងាយក្នុងលំហ",
         "topic": "សមីការស្វ៊ែរ $(x-a)^2 + (y-b)^2 + (z-c)^2 = R^2$ និងចម្ងាយពីចំណុចទៅប្លង់",
         "objective": "ចេះកំណត់ផ្ចិតនិងកាំនៃស្វ៊ែរ និងគណនាចម្ងាយពីចំណុចមួយទៅប្លង់",
-        "summary": "<div class=\"ws-sum-section-title\">១. សមីការស្វ៊ែរក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ស្វ៊ែរ $(S)$ មានផ្ចិត $I(a, b, c)$ និងកាំ $R$ មានសមីការស្តង់ដា ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការទូទៅ ៖ $x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$ ដែល $R = \\sqrt{a^2 + b^2 + c^2 - d}$ ($a^2+b^2+c^2-d > 0$)។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. ចម្ងាយពីចំណុចទៅប្លង់ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចម្ងាយពីចំណុច $$M_0(x_0, y_0, z_0)$$ ទៅប្លង់ $(P): Ax + By + Cz + D = 0$ គឺ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$d(M_0, (P)) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$$</div>",
+        "summary": "<div class=\"ws-sum-section-title\">១. សមីការស្វ៊ែរក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ស្វ៊ែរ $(S)$ មានផ្ចិត $I(a, b, c)$ និងកាំ $R$ មានសមីការស្តង់ដា ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការទូទៅ ៖ $x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$ ដែល $R = \\sqrt{a^2 + b^2 + c^2 - d}$ ($a^2+b^2+c^2-d > 0$)។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. ចម្ងាយពីចំណុចទៅប្លង់ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចម្ងាយពីចំណុច $M_0(x_0, y_0, z_0)$ ទៅប្លង់ $(P): Ax + By + Cz + D = 0$ គឺ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$d(M_0, (P)) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$$</div>",
         "totalPoints": 2,
         "exercises": [
           {

@@ -354,7 +354,7 @@
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
             "instruction": "គណនាលីមីតត្រីកោណមាត្រគ្រឹះ ៖",
             "question": "គណនាលីមីត ៖\n\nក. $L_1 = \\lim_{x \\to 0} \\dfrac{\\sin 5x}{3x}$\n\nខ. $L_2 = \\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2}$",
-            "solution": "ក. បំប្លែងឱ្យត្រូវទម្រង់ $\\lim_{u \\to 0} \\dfrac{\\sin u}{u} = 1$ ៖\n$L_1 = \\lim_{x \\to 0} \\left(\\dfrac{5}{3} \\cdot \\dfrac{\\sin 5x}{5x}\\right) = \\dfrac{5}{3} \\cdot 1 = \\dfrac{5}{3}$។\n\nខ. គុណកន្សោមឆ្លាស់ ឬប្រើរូបមន្តកន្លះមុំ $1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ ៖\n$L_2 = \\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{x^2} = \\lim_{x \\to 0} \\dfrac{2}{4}\\left(\\dfrac{\\sin^\\left(\\dfrac{x}{2}\\right)}{\\dfrac{x}{2}}\\right)^2 = \\dfrac{1}{2}(1)^2 = \\dfrac{1}{2}$។",
+            "solution": "ក. បំប្លែងឱ្យត្រូវទម្រង់ $\\lim_{u \\to 0} \\dfrac{\\sin u}{u} = 1$ ៖\n$L_1 = \\lim_{x \\to 0} \\left(\\dfrac{5}{3} \\cdot \\dfrac{\\sin 5x}{5x}\\right) = \\dfrac{5}{3} \\cdot 1 = \\dfrac{5}{3}$។\n\nខ. គុណកន្សោមឆ្លាស់ ឬប្រើរូបមន្តកន្លះមុំ $1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ ៖\n$L_2 = \\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{x^2} = \\lim_{x \\to 0} \\dfrac{2}{4}\\left(\\dfrac{\\sin\\left(\\dfrac{x}{2}\\right)}{\\dfrac{x}{2}}\\right)^2 = \\dfrac{1}{2}(1)^2 = \\dfrac{1}{2}$។",
             "rubric": "ក. គណនាឃើញ $\\dfrac{5}{3}$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនាឃើញ $\\dfrac{1}{2}$ ត្រូវ (០.៥ ពិន្ទុ)",
             "points": 1.0
           },
@@ -472,7 +472,7 @@
         "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
         "instruction": "គណនាលីមីតត្រីកោណមាត្រគ្រឹះ ៖",
         "question": "គណនាលីមីត ៖\nក. $L_1 = \\lim_{x \\to 0} \\dfrac{\\sin 5x}{3x}$\nខ. $L_2 = \\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2}$",
-        "solution": "ក. បំប្លែងឱ្យត្រូវទម្រង់ $\\lim_{u \\to 0} \\dfrac{\\sin u}{u} = 1$ ៖\n$L_1 = \\lim_{x \\to 0} \\left(\\dfrac{5}{3} \\cdot \\dfrac{\\sin 5x}{5x}\\right) = \\dfrac{5}{3} \\cdot 1 = \\dfrac{5}{3}$។\n\nខ. គុណកន្សោមឆ្លាស់ ឬប្រើរូបមន្តកន្លះមុំ $1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ ៖\n$L_2 = \\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{x^2} = \\lim_{x \\to 0} \\dfrac{2}{4}\\left(\\dfrac{\\sin^\\left(\\dfrac{x}{2}\\right)}{\\dfrac{x}{2}}\\right)^2 = \\dfrac{1}{2}(1)^2 = \\dfrac{1}{2}$។",
+        "solution": "ក. បំប្លែងឱ្យត្រូវទម្រង់ $\\lim_{u \\to 0} \\dfrac{\\sin u}{u} = 1$ ៖\n$L_1 = \\lim_{x \\to 0} \\left(\\dfrac{5}{3} \\cdot \\dfrac{\\sin 5x}{5x}\\right) = \\dfrac{5}{3} \\cdot 1 = \\dfrac{5}{3}$។\n\nខ. គុណកន្សោមឆ្លាស់ ឬប្រើរូបមន្តកន្លះមុំ $1 - \\cos x = 2\\sin^2\\left(\\dfrac{x}{2}\\right)$ ៖\n$L_2 = \\lim_{x \\to 0} \\dfrac{2\\sin^2\\left(\\dfrac{x}{2}\\right)}{x^2} = \\lim_{x \\to 0} \\dfrac{2}{4}\\left(\\dfrac{\\sin\\left(\\dfrac{x}{2}\\right)}{\\dfrac{x}{2}}\\right)^2 = \\dfrac{1}{2}(1)^2 = \\dfrac{1}{2}$។",
         "rubric": "ក. គណនាឃើញ $\\dfrac{5}{3}$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. គណនាឃើញ $\\dfrac{1}{2}$ ត្រូវ (០.៥ ពិន្ទុ)",
         "points": 1
       },
@@ -1068,7 +1068,7 @@
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
             "instruction": "គណនាល្បឿន និងសំទុះខណៈ ៖",
             "question": "ចលនានៃវត្ថុមួយលើបន្ទាត់ត្រង់កំណត់ដោយច្បាប់ចលនា $s(t) = 2t^3 - 9t^2 + 12t + 5$ ($t \\ge 0$, $s$ គិតជាម៉ែត្រ, $t$ គិតជាវិនាទី)។\n\nក. គណនាល្បឿន $v(t)$ និងសំទុះ $a(t)$ នៃវត្ថុ។\n\nខ. តើវត្ថុឈប់នៅខណៈណាខ្លះ? រកសំទុះត្រង់ខណៈនោះ។",
-            "solution": "ក. ល្បឿន និងសំទុះ ៖\n• $v(t) = s'(t) = 6t^2 - 18t + 12 = 6(t^2 - 3t + 2) = 6(t - 1)(t - 2)$ (m/s)។\n• $a(t) = v'(t) = 12t - 18$ (m/s²)។\n\nខ. វត្ថុឈប់នៅពេល $v(t) = 0$ ៖\n$6(t - 1)(t - 2) = 0 \\implies t = 1\\text{ s}$ ឬ $t = 2\\text{ s}$។\n• ត្រង់ $t = 1\\text{ s}$ ៖ $a(1) = 12(1) - 18 = -6\\text{ \\dfrac{m}{s}}^2$។\n• ត្រង់ $t = 2\\text{ s}$ ៖ $a(2) = 12(2) - 18 = 6\\text{ \\dfrac{m}{s}}^2$។",
+            "solution": "ក. ល្បឿន និងសំទុះ ៖\n• $v(t) = s'(t) = 6t^2 - 18t + 12 = 6(t^2 - 3t + 2) = 6(t - 1)(t - 2)$ (m/s)។\n• $a(t) = v'(t) = 12t - 18$ (m/s²)។\n\nខ. វត្ថុឈប់នៅពេល $v(t) = 0$ ៖\n$6(t - 1)(t - 2) = 0 \\implies t = 1\\text{ s}$ ឬ $t = 2\\text{ s}$។\n• ត្រង់ $t = 1\\text{ s}$ ៖ $a(1) = 12(1) - 18 = -6\\,\\dfrac{\\text{m}}{\\text{s}}^2$។\n• ត្រង់ $t = 2\\text{ s}$ ៖ $a(2) = 12(2) - 18 = 6\\,\\dfrac{\\text{m}}{\\text{s}}^2$។",
             "rubric": "ក. គណនា $v(t)$ និង $a(t)$ ត្រូវ (០.៥ ពិន្ទុ) | ខ. រកខណៈឈប់ $t = 1\\text{ s}, 2\\text{ s}$ និងសំទុះត្រូវ (០.៥ ពិន្ទុ)",
             "points": 1.0
           },
@@ -1803,7 +1803,7 @@
           }
         ],
         "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $$M_0(x_0, y_0, z_0)$$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
+        "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $M_0(x_0, y_0, z_0)$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
       },
       {
         "pointNumber": 2,
@@ -1844,7 +1844,7 @@
           }
         ],
         "totalPoints": 3,
-        "summary": "<div class=\"ws-sum-text\"><strong>សមីការប្លង់ & គម្លាត ៖</strong> ប្លង់ $(P): Ax + By + Cz + D = 0$ (ន័រម៉ាល់ $\\vec{n} = (A, B, C)$) ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">គម្លាតពី $$M_0(x_0, y_0, z_0)$$ ទៅប្លង់ $(P)$ ៖ $d(M_0, P) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$។</li>\n</ul>"
+        "summary": "<div class=\"ws-sum-text\"><strong>សមីការប្លង់ & គម្លាត ៖</strong> ប្លង់ $(P): Ax + By + Cz + D = 0$ (ន័រម៉ាល់ $\\vec{n} = (A, B, C)$) ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">គម្លាតពី $M_0(x_0, y_0, z_0)$ ទៅប្លង់ $(P)$ ៖ $d(M_0, P) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$។</li>\n</ul>"
       },
       {
         "pointNumber": 3,
@@ -1908,7 +1908,7 @@
         "points": 1
       }
     ],
-    "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $$M_0(x_0, y_0, z_0)$$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
+    "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $M_0(x_0, y_0, z_0)$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
   },
   "les-g12a-6-1": {
     "lessonId": "les-g12a-6-1",
@@ -4788,7 +4788,7 @@
         "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់ និងសមីការប្លង់ក្នុងលំហ",
         "topic": "សមីការប្លង់ $A(x-x_0) + B(y-y_0) + C(z-z_0) = 0$ និងសមីការប៉ារ៉ាមែត្របន្ទាត់",
         "objective": "ចេះបង្កើតសមីការប្លង់កាត់តាម ៣ ចំណុច និងសមីការបន្ទាត់ក្នុងលំហ",
-        "summary": "<div class=\"ws-sum-section-title\">១. សមីការប្លង់ក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់ $(P)$ កាត់តាម $$M_0(x_0, y_0, z_0)$$ មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n}(A, B, C)$ មានសមីការ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$$A(x - x_0) + B(y - y_0) + C(z - z_0) = 0$ \\iff Ax + By + Cz + D = 0$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់កាត់តាម ៣ ចំណុច $A, B, C$ មិនរត់ត្រង់ជួរគ្នា មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n} = \\vec{AB} \\times \\vec{AC}$។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. សមីការបន្ទាត់ក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">បន្ទាត់ $(L)$ កាត់តាម $$M_0(x_0, y_0, z_0)$$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{u}(a, b, c)$ មានសមីការប៉ារ៉ាមែត្រ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} \\quad (t \\in \\mathbb{R})$$</div>",
+        "summary": "<div class=\"ws-sum-section-title\">១. សមីការប្លង់ក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់ $(P)$ កាត់តាម $M_0(x_0, y_0, z_0)$ មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n}(A, B, C)$ មានសមីការ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$A(x - x_0) + B(y - y_0) + C(z - z_0) = 0 \\iff Ax + By + Cz + D = 0$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ប្លង់កាត់តាម ៣ ចំណុច $A, B, C$ មិនរត់ត្រង់ជួរគ្នា មានវ៉ិចទ័រណរម៉ាល់ $\\vec{n} = \\vec{AB} \\times \\vec{AC}$។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. សមីការបន្ទាត់ក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">បន្ទាត់ $(L)$ កាត់តាម $M_0(x_0, y_0, z_0)$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{u}(a, b, c)$ មានសមីការប៉ារ៉ាមែត្រ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} \\quad (t \\in \\mathbb{R})$$</div>",
         "totalPoints": 3,
         "exercises": [
           {
@@ -4829,7 +4829,7 @@
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការស្វ៊ែរ និងចម្ងាយក្នុងលំហ",
         "topic": "សមីការស្វ៊ែរ $(x-a)^2 + (y-b)^2 + (z-c)^2 = R^2$ និងចម្ងាយពីចំណុចទៅប្លង់",
         "objective": "ចេះកំណត់ផ្ចិតនិងកាំនៃស្វ៊ែរ និងគណនាចម្ងាយពីចំណុចមួយទៅប្លង់",
-        "summary": "<div class=\"ws-sum-section-title\">១. សមីការស្វ៊ែរក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ស្វ៊ែរ $(S)$ មានផ្ចិត $I(a, b, c)$ និងកាំ $R$ មានសមីការស្តង់ដា ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការទូទៅ ៖ $x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$ ដែល $R = \\sqrt{a^2 + b^2 + c^2 - d}$ ($a^2+b^2+c^2-d > 0$)។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. ចម្ងាយពីចំណុចទៅប្លង់ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចម្ងាយពីចំណុច $$M_0(x_0, y_0, z_0)$$ ទៅប្លង់ $(P): Ax + By + Cz + D = 0$ គឺ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$d(M_0, (P)) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$$</div>",
+        "summary": "<div class=\"ws-sum-section-title\">១. សមីការស្វ៊ែរក្នុងលំហ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ស្វ៊ែរ $(S)$ មានផ្ចិត $I(a, b, c)$ និងកាំ $R$ មានសមីការស្តង់ដា ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការទូទៅ ៖ $x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$ ដែល $R = \\sqrt{a^2 + b^2 + c^2 - d}$ ($a^2+b^2+c^2-d > 0$)។</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. ចម្ងាយពីចំណុចទៅប្លង់ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចម្ងាយពីចំណុច $M_0(x_0, y_0, z_0)$ ទៅប្លង់ $(P): Ax + By + Cz + D = 0$ គឺ ៖</li>\n</ul>\n<div class=\"ws-sum-formula\">$$d(M_0, (P)) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$$</div>",
         "totalPoints": 3,
         "exercises": [
           {

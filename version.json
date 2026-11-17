@@ -1,8 +1,8 @@
 {
-  "version": "15.1",
-  "build": 151,
+  "version": "15.2",
+  "build": 152,
   "date": "2026-11-17",
   "author": "Nuon Bonong",
-  "changelog": "Login screen shows each teacher once (no more duplicate names). Member teachers type their PIN every time they open the app; Admin stays logged in.",
-  "lastUpdated": "2026-11-17T20:00:00+07:00"
+  "changelog": "Maths shows correctly everywhere (fixed about 300 broken formulas, Khmer font inside formulas, no more equations split mid-term). Question bank: 3 clear levels (ងាយ / មធ្យម / ពិបាក), about 2,000 more written exercises with answer keys, and an MCQ/written filter. Worksheets and exams can print on A4 or A5.",
+  "lastUpdated": "2026-11-17T21:00:00+07:00"
 }

@@ -64,7 +64,7 @@ class QuestionBankController {
     f = f.replace(/\/(pm|times|div|le|ge|ne|approx|sim|alpha|beta|theta|pi|Delta|lim|sum|int|infty|dots)\b/g, '\\$1');
 
     // 3. Standalone keywords without backslash
-    f = f.replace(/(?:^|[^\\])\bdfrac(?=\{|\b)/g, '\\dfrac');
+    f = f.replace(/(^|[^\\a-zA-Z])dfrac(?=\{|\b)/g, '$1\\dfrac');
     f = f.replace(/(?:^|[^\\a-zA-Z])\bfrac(?=\{|\b)/g, '$1\\frac');
 
     const commonMacros = [
@@ -79,7 +79,10 @@ class QuestionBankController {
 
     // 4. Clean up corrupted combinations and multiple backslashes
     f = f.replace(/\\?d\\frac/g, '\\dfrac');
-    f = f.replace(/\\{2,}/g, '\\');
+    // "\\frac" typed by mistake -> "\frac". A bare "\\" is a row break in
+    // cases/matrices and must be kept, otherwise rows collapse into one line.
+    f = f.replace(/\\{2,}(?=[a-zA-Z])/g, '\\');
+    f = f.replace(/\\{3,}/g, '\\\\');
 
     return f;
   }
@@ -100,15 +103,23 @@ class QuestionBankController {
 
     if (!this._mathCache) this._mathCache = new Map();
 
-    return text.replace(/\$([^\$]+)\$/g, (match, formula) => {
-      if (this._mathCache.has(formula)) {
-        return this._mathCache.get(formula);
+    // $$...$$ = display formula, $...$ = inline; "\$" is a real dollar sign
+    return text.replace(/\$\$([\s\S]+?)\$\$|\$((?:\\\$|[^$])+?)\$/g, (match, display, inline) => {
+      const formula = display !== undefined ? display : inline;
+      const key = (display !== undefined ? 'D:' : 'I:') + formula;
+      if (this._mathCache.has(key)) {
+        return this._mathCache.get(key);
       }
       try {
         const clean = this.cleanLatexFormula(formula);
-        const rendered = katex.renderToString(clean, { throwOnError: false, displayMode: false });
+        const rendered = katex.renderToString(clean, {
+          throwOnError: false,
+          displayMode: display !== undefined,
+          strict: 'ignore',
+          macros: { '\\lim': '\\mathop{\\mathrm{lim}}\\limits', '\\bar': '\\overline' }
+        });
         if (this._mathCache.size < 5000) {
-          this._mathCache.set(formula, rendered);
+          this._mathCache.set(key, rendered);
         }
         return rendered;
       } catch (e) {
@@ -131,7 +142,8 @@ class QuestionBankController {
     text = text.replace(/(\$|[\u1780-\u17ff0-9a-zA-Z\)])\s+(នាំ(?:ឱ្យ|ឲ្យ))\s*/g, '$1\n$2 ');
 
     // 4. Split long formulas containing arrows (\Rightarrow, \implies, \Leftrightarrow, \iff, ➔)
-    text = text.replace(/\$([^\$]+)\$/g, (match, formula) => {
+    text = text.replace(/\$\$[\s\S]+?\$\$|\$((?:\\\$|[^$])+?)\$/g, (match, formula) => {
+      if (formula === undefined) return match; // $$display$$ stays whole
       const f = formula.trim();
       if (f.includes('\\begin{matrix}') || f.includes('\\begin{pmatrix}') || f.includes('\\begin{aligned}')) {
         return match;
@@ -1208,6 +1220,7 @@ class QuestionBankController {
 
         <!-- Action Buttons -->
         <div class="flex flex-wrap items-center gap-2">
+          ${window.App && App.paperSizeToggleHTML ? App.paperSizeToggleHTML() : ''}
           <button onclick="window.questionBank.printBothPages()" class="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs shadow flex items-center gap-1.5 transition">
             <span>🖨️ បោះពុម្ព / សន្សំ PDF (ទាំង២ទំព័រ)</span>
           </button>
@@ -1424,6 +1437,7 @@ class QuestionBankController {
     window.onafterprint = () => {
       document.body.classList.remove('printing-exam-active', 'print-only-p1', 'print-only-p2');
     };
+    if (window.App && App.applyPaperSize) App.applyPaperSize();
     setTimeout(() => window.print(), 100);
   }
 
@@ -1433,6 +1447,7 @@ class QuestionBankController {
     window.onafterprint = () => {
       document.body.classList.remove('printing-exam-active', 'print-only-p1', 'print-only-p2');
     };
+    if (window.App && App.applyPaperSize) App.applyPaperSize();
     setTimeout(() => window.print(), 100);
   }
 
@@ -1442,6 +1457,7 @@ class QuestionBankController {
     window.onafterprint = () => {
       document.body.classList.remove('printing-exam-active', 'print-only-p1', 'print-only-p2');
     };
+    if (window.App && App.applyPaperSize) App.applyPaperSize();
     setTimeout(() => window.print(), 100);
   }
 
@@ -1540,6 +1556,17 @@ class QuestionBankController {
               <option value="ងាយ">ងាយ (Easy)</option>
               <option value="មធ្យម">មធ្យម (Medium)</option>
               <option value="ពិបាក">ពិបាក (Hard)</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="display: block; font-size: 0.72rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px;">
+              ប្រភេទសំណួរ
+            </label>
+            <select id="bankSelectKind" class="form-input" style="font-size: 0.78rem;" onchange="window.questionBank.onKindFilterChange(this.value)">
+              <option value="all">ទាំងអស់ (MCQ + សរសេរ)</option>
+              <option value="mcq">🔘 ពហុជ្រើសរើស (MCQ)</option>
+              <option value="written">✍️ លំហាត់សរសេរ + អត្រាកំណែ</option>
             </select>
           </div>
 
@@ -1649,6 +1676,18 @@ class QuestionBankController {
     this.renderBankQuestions();
   }
 
+  onKindFilterChange(val) {
+    this.selectedKind = val;
+    this.currentPage = 1;
+    this.renderBankQuestions();
+  }
+
+  levelBadgeStyle(level) {
+    if (level === 'ពិបាក') return 'background: rgba(244, 63, 94, 0.15); color: #fb7185;';
+    if (level === 'ងាយ') return 'background: rgba(16, 185, 129, 0.15); color: #34d399;';
+    return 'background: rgba(245, 158, 11, 0.15); color: #fbbf24;';
+  }
+
   onSearchInput(val) {
     this.searchQuery = val.trim().toLowerCase();
     this.currentPage = 1;
@@ -1669,6 +1708,10 @@ class QuestionBankController {
 
     if (this.selectedLevel !== 'all') {
       list = list.filter(q => q.level === this.selectedLevel);
+    }
+
+    if (this.selectedKind && this.selectedKind !== 'all') {
+      list = list.filter(q => (q.kind === 'written' ? 'written' : 'mcq') === this.selectedKind);
     }
 
     if (this.searchQuery) {
@@ -1730,7 +1773,7 @@ class QuestionBankController {
               <span style="font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8;">${q.l}</span>
             </div>
             <div style="display: flex; align-items: center; gap: 6px;">
-              <span style="font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: rgba(16, 185, 129, 0.15); color: #34d399;">
+              <span style="font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; ${this.levelBadgeStyle(q.level || 'មធ្យម')}">
                 ${q.level || 'មធ្យម'}
               </span>
               ${q.kind === 'written' ? `
@@ -1743,8 +1786,8 @@ class QuestionBankController {
           </div>
 
           <!-- Question Text -->
-          <div style="font-size: 0.88rem; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; line-height: 1.6;">
-            ${this.formatMath(q.q)}
+          <div style="font-size: 0.88rem; font-weight: 600; color: var(--text-primary); margin-bottom: 10px; line-height: 1.6; white-space: pre-line;">
+            ${this.formatMath(String(q.q || '').trim())}
           </div>
 
           <!-- Choices Grid or Written Banner -->
@@ -1777,9 +1820,11 @@ class QuestionBankController {
             <summary style="cursor: pointer; font-weight: 700; color: #f59e0b;">
               💡 ${q.kind === 'written' ? 'បង្ហាញអត្រាកំណែ & ដំណោះស្រាយលម្អិត (Full Solution & Answer Key)' : 'បង្ហាញកំណែខ្លីៗ & ដំណោះស្រាយ (Short Solution)'}
             </summary>
-            <div style="margin-top: 6px; padding: 8px 12px; border-radius: 8px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap; overflow-x: auto;">
-              ${this.formatSolutionText(q.e || q.short_solution || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។')}
-            </div>
+            <div style="margin-top: 6px; padding: 8px 12px; border-radius: 8px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.2); color: var(--text-secondary); line-height: 1.6; white-space: pre-wrap; overflow-x: auto;">${this.formatSolutionText(String(q.e || q.short_solution || 'ជំនួសតម្លៃ និងគណនាតាមរូបមន្តស្តង់ដា។').trim())}</div>
+            ${q.rubric ? `
+            <div style="margin-top: 6px; padding: 8px 12px; border-radius: 8px; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); color: var(--text-secondary); line-height: 1.6;">
+              🎯 <strong>អត្រាកំណែ (ការបែងចែកពិន្ទុ) ៖</strong> ${this.formatMath(q.rubric)}
+            </div>` : ''}
           </details>
         </div>
       `;
@@ -2017,6 +2062,7 @@ class QuestionBankController {
   }
 
   printCurrentWorksheet() {
+    if (window.App && App.applyPaperSize) App.applyPaperSize();
     window.print();
   }
 }

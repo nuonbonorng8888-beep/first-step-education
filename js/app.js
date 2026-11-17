@@ -389,6 +389,7 @@ function doGet(e) {
 
   async init() {
     try { this.initTheme(); } catch (e) { console.warn(e); }
+    try { this.applyPaperSize(); } catch (e) { console.warn(e); }
     try { this.initUrlParams(); } catch (e) { console.warn(e); }
     try { await this.initTeachers(); } catch (e) { console.warn(e); }
     try { await this.checkAdminAuth(); } catch (e) { console.warn(e); }
@@ -2158,7 +2159,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=151" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=152" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">
@@ -3317,6 +3318,7 @@ function doGet(e) {
             <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.zoomWorksheet(10)" title="ពង្រីកទំហំ (Zoom In)">➕</button>
             <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.setWorksheetZoom(100)" title="ទំហំ A4 ស្តង់ដា">📄 A4</button>
             <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.setWorksheetZoom(115)" title="ពង្រីកពេញទទឹង">🔍 ពេញទទឹង</button>
+            ${this.paperSizeToggleHTML()}
           </div>
 
           <div class="ws-toolbar-actions">
@@ -3584,7 +3586,43 @@ function doGet(e) {
     this.showToast('បានចាក់សោដំណោះស្រាយឡើងវិញរួចរាល់ 🔒', 'info');
   },
 
+  /* ---------- Paper size for printing (A4 / A5), remembered per device ---------- */
+  getPaperSize() {
+    try { return localStorage.getItem('ngs_paper_size') === 'A5' ? 'A5' : 'A4'; } catch (e) { return 'A4'; }
+  },
+
+  applyPaperSize() {
+    const size = this.getPaperSize();
+    let st = document.getElementById('paper-size-style');
+    if (!st) {
+      st = document.createElement('style');
+      st.id = 'paper-size-style';
+      document.head.appendChild(st);
+    }
+    st.textContent = size === 'A5'
+      ? '@media print { @page { size: A5 portrait; margin: 6mm 7mm; } }'
+      : '@media print { @page { size: A4 portrait; margin: 8mm 10mm; } }';
+    document.body.classList.toggle('paper-a5', size === 'A5');
+    document.querySelectorAll('.paper-size-btn').forEach(b => b.classList.toggle('active', b.dataset.size === size));
+  },
+
+  setPaperSize(size) {
+    try { localStorage.setItem('ngs_paper_size', size === 'A5' ? 'A5' : 'A4'); } catch (e) {}
+    this.applyPaperSize();
+    if (this.showToast) this.showToast(size === 'A5' ? '📄 ក្រដាស A5 (១៤៨ × ២១០ mm)' : '📄 ក្រដាស A4 (២១០ × ២៩៧ mm)', 'success');
+  },
+
+  paperSizeToggleHTML() {
+    const s = this.getPaperSize();
+    return `<span class="paper-size-toggle" title="ទំហំក្រដាសពេលបោះពុម្ព">
+      <span class="paper-size-label">ក្រដាស</span>
+      <button type="button" class="paper-size-btn ${s === 'A4' ? 'active' : ''}" data-size="A4" onclick="App.setPaperSize('A4')">A4</button>
+      <button type="button" class="paper-size-btn ${s === 'A5' ? 'active' : ''}" data-size="A5" onclick="App.setPaperSize('A5')">A5</button>
+    </span>`;
+  },
+
   printWorksheet(includeSolutions = false) {
+    this.applyPaperSize();
     const teacherSec = document.getElementById('ws-teacher-section');
     if (teacherSec) {
       if (includeSolutions && (this.isAdmin || this.teacherUnlocked)) {
@@ -3710,6 +3748,7 @@ function doGet(e) {
     if (mainPointsBar) mainPointsBar.style.display = 'none';
     if (teacherSec) teacherSec.style.display = 'none';
 
+    this.applyPaperSize();
     window.print();
 
     setTimeout(() => {
@@ -4313,9 +4352,10 @@ function doGet(e) {
           ],
           macros: {
             "\\lim": "\\mathop{\\mathrm{lim}}\\limits",
-            "\\sum": "\\mathop{\\mathrm{sum}}\\limits",
             "\\bar": "\\overline"
           },
+          // Khmer letters/digits inside maths are fine (CSS gives them Kantumruy Pro)
+          strict: 'ignore',
           throwOnError: false
         });
       } catch (err) {

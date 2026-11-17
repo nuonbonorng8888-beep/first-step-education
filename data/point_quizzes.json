@@ -771,13 +771,13 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ស្វ៊ីតនព្វន្តមួយមាន $u_4 + u_8 = 30$ និង $u_6 + u_{10} = 38$។ រកតួទីមួយ $u_1$ និង $d$ ៖",
         "options": [
-          "$u_1 = 3, d = 2$",
+          "$u_1 = 5, d = 2$",
           "$u_1 = 1, d = 3$",
           "$u_1 = 2, d = 2$",
           "$u_1 = 4, d = 2$"
         ],
         "correct": 0,
-        "explanation": "$\\begin{cases} 2u_1 + 10d = 30 \\\\ 2u_1 + 14d = 38 \\end{cases} \\Rightarrow 4d = 8 \\Rightarrow d = 2$។ ជំនួស ៖ $2u_1 + 20 = 30 \\Rightarrow u_1 = 5$។ (កែសម្រួល $u_1=3$ តាមប្រព័ន្ធត្រឹមត្រូវ)។"
+        "explanation": "$u_4 + u_8 = 2u_1 + 10d$ និង $u_6 + u_{10} = 2u_1 + 14d$ ៖ $\\begin{cases} 2u_1 + 10d = 30 \\\\ 2u_1 + 14d = 38 \\end{cases} \\Rightarrow 4d = 8 \\Rightarrow d = 2$។ ជំនួស ៖ $2u_1 + 20 = 30 \\Rightarrow u_1 = 5$។"
       },
       {
         "id": "q9",
@@ -4695,13 +4695,13 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការ $2\\sin^2 x + \\sin x \\cos x - \\cos^2 x = 1$ ៖",
         "options": [
-          "$\\tan x = 2$ ឬ $\\tan x = -1$",
+          "$\\tan x = 1$ ឬ $\\tan x = -2$",
           "$\\tan x = 1$",
           "$\\tan x = -2$",
           "គ្មានឫស"
         ],
         "correct": 0,
-        "explanation": "ជំនួស $1 = \\sin^2 x + \\cos^2 x$ ៖ $\\sin^2 x + \\sin x \\cos x - 2\\cos^2 x = 0 \\Rightarrow \\tan^2 x + \\tan x - 2 = 0 \\Rightarrow \\tan x = 1, -2$ (កែសម្រួល $1, -2$)។"
+        "explanation": "ជំនួស $1 = \\sin^2 x + \\cos^2 x$ ៖ $\\sin^2 x + \\sin x \\cos x - 2\\cos^2 x = 0$។ $\\cos x = 0$ មិនផ្ទៀងផ្ទាត់ ដូចនេះចែកនឹង $\\cos^2 x$ ៖ $\\tan^2 x + \\tan x - 2 = 0 \\iff (\\tan x - 1)(\\tan x + 2) = 0 \\Rightarrow \\tan x = 1$ ឬ $\\tan x = -2$។"
       },
       {
         "id": "q10",
@@ -14081,7 +14081,7 @@
           "$1600$"
         ],
         "correct": 0,
-        "explanation": "១ ម៉ោងមាន ៣ វដ្ត (៦០ \\div ២០ = ៣)។ ចំនួនបាក់តេរី $= 100 \\times 2^3 = 100 \\times 8 = 800$។"
+        "explanation": "១ ម៉ោងមាន ៣ វដ្ត ($៦០ \\div ២០ = ៣$)។ ចំនួនបាក់តេរី $= 100 \\times 2^3 = 100 \\times 8 = 800$។"
       },
       {
         "id": "q6",
@@ -14669,7 +14669,7 @@
           "$\\beta = 10 \\dfrac{I}{I_0}$"
         ],
         "correct": 0,
-        "explanation": "កម្រិតសំឡេងគិតជា dB ៖ $\\beta = 10 \\log_{10}\\left(\\dfrac{I}{I_0}\\right)$ ដែល $I_0 = 10^{-12}\\text{ \\dfrac{W}{m}}^2$ ជាកម្រិតសំឡេងខ្សោយបំផុតដែលត្រចៀកមនុស្សអាចឮ។"
+        "explanation": "កម្រិតសំឡេងគិតជា dB ៖ $\\beta = 10 \\log_{10}\\left(\\dfrac{I}{I_0}\\right)$ ដែល $I_0 = 10^{-12}\\,\\dfrac{\\text{W}}{\\text{m}}^2$ ជាកម្រិតសំឡេងខ្សោយបំផុតដែលត្រចៀកមនុស្សអាចឮ។"
       },
       {
         "id": "q2",
@@ -14685,7 +14685,7 @@
           "$\\text{pH} = 10^{[\\text{H}^+]}$"
         ],
         "correct": 0,
-        "explanation": "រូបមន្ត pH ៖ $\\text{pH} = -\\log_{10}[\\text{H}^+]$ ដែល $[\\text{H}^+]$ ជាកំហាប់អ៊ីយ៉ុងអ៊ីដ្រូសែនគិតជា $\\text{\\dfrac{mol}{L}}$។"
+        "explanation": "រូបមន្ត pH ៖ $\\text{pH} = -\\log_{10}[\\text{H}^+]$ ដែល $[\\text{H}^+]$ ជាកំហាប់អ៊ីយ៉ុងអ៊ីដ្រូសែនគិតជា $\\,\\dfrac{\\text{mol}}{\\text{L}}$។"
       },
       {
         "id": "q3",
@@ -16507,13 +16507,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ឡានមួយបើកបរបានចម្ងាយ $150\\text{ km}$ ក្នុងរយៈពេល $2\\text{ h}$។ តាម MVT តើអាចសន្និដ្ឋានបានយ៉ាងដូចម្តេច?",
         "options": [
-          "មានយ៉ាងហោចខណៈមួយដែលល្បឿនកុងទ័រចង្អុលចំ $75\\text{ \\dfrac{km}{h}}$",
-          "ឡានបើក $75\\text{ \\dfrac{km}{h}}$ ជាប់រហូត",
+          "មានយ៉ាងហោចខណៈមួយដែលល្បឿនកុងទ័រចង្អុលចំ $75\\,\\dfrac{\\text{km}}{\\text{h}}$",
+          "ឡានបើក $75\\,\\dfrac{\\text{km}}{\\text{h}}$ ជាប់រហូត",
           "ល្បឿនមិនដែលលើស $75$",
           "គ្មានការសន្និដ្ឋាន"
         ],
         "correct": 0,
-        "explanation": "ល្បឿនមធ្យម $= \\dfrac{150}{2} = 75\\text{ \\dfrac{km}{h}}$។ តាម MVT មានខណៈពេលដែលល្បឿនខណៈ $v(c) = 75\\text{ \\dfrac{km}{h}}$។"
+        "explanation": "ល្បឿនមធ្យម $= \\dfrac{150}{2} = 75\\,\\dfrac{\\text{km}}{\\text{h}}$។ តាម MVT មានខណៈពេលដែលល្បឿនខណៈ $v(c) = 75\\,\\dfrac{\\text{km}}{\\text{h}}$។"
       },
       {
         "id": "q5",
@@ -22931,7 +22931,7 @@
           "$+\\infty$"
         ],
         "correct": 0,
-        "explanation": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin^\\left(\\dfrac{1}{x}\\right) \\le 1 \\implies -x^2 \\le x^2\\sin^\\left(\\dfrac{1}{x}\\right) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។",
+        "explanation": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin\\left(\\dfrac{1}{x}\\right) \\le 1 \\implies -x^2 \\le x^2\\sin\\left(\\dfrac{1}{x}\\right) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។",
         "diagram": ""
       },
       {
@@ -23632,7 +23632,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ១ ៖ ភាពមានដេរីវេ និងទំនាក់ទំនងជាមួយភាពជាប់",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "តើអនុគមន៍ $f(x) = \\begin{cases} x^2 \\sin^\\left(\\dfrac{1}{x}\\right) & \\text{បើ } x \\neq 0 \\\\ 0 & \\text{បើ } x = 0 \\end{cases}$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
+        "question": "តើអនុគមន៍ $f(x) = \\begin{cases} x^2 \\sin\\left(\\dfrac{1}{x}\\right) & \\text{បើ } x \\neq 0 \\\\ 0 & \\text{បើ } x = 0 \\end{cases}$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
         "options": [
           "មាន ហើយ $f'(0) = 0$",
           "គ្មានដេរីវេទេ",
@@ -23640,7 +23640,7 @@
           "មិនជាប់ត្រង់ 0"
         ],
         "correct": 0,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin^\\left(\\dfrac{1}{x}\\right) - 0}{x} = \\lim_{x \\to 0} x \\sin^\\left(\\dfrac{1}{x}\\right) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
+        "explanation": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin\\left(\\dfrac{1}{x}\\right) - 0}{x} = \\lim_{x \\to 0} x \\sin\\left(\\dfrac{1}{x}\\right) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
         "diagram": ""
       },
       {
@@ -23657,7 +23657,7 @@
           "គ្មានដេរីវេត្រង់ $x \\neq 0$"
         ],
         "correct": 0,
-        "explanation": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin^\\left(\\dfrac{1}{x}\\right) - \\cos^\\left(\\dfrac{1}{x}\\right)$។ កាលណា $x \\to 0$ តួ $\\cos^\\left(\\dfrac{1}{x}\\right)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
+        "explanation": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin\\left(\\dfrac{1}{x}\\right) - \\cos\\left(\\dfrac{1}{x}\\right)$។ កាលណា $x \\to 0$ តួ $\\cos\\left(\\dfrac{1}{x}\\right)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
         "diagram": ""
       },
       {
@@ -24169,13 +24169,13 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "រថយន្តមួយបើកបរលើផ្លូវល្បឿនលឿនចម្ងាយ $150\\text{ km}$ ដោយប្រើពេល $1.5\\text{ h}$។ តាមទ្រឹស្តីបទ Lagrange ៖",
         "options": [
-          "មានពេលមួយយ៉ាងតិចដែលកុងទ័រល្បឿនចង្អុល $100\\text{ \\dfrac{km}{h}}$ យ៉ាងពិតប្រាកដ",
-          "ល្បឿនមិនដែលលើស $100\\text{ \\dfrac{km}{h}}$ ទេ",
-          "ល្បឿនថេរ $100\\text{ \\dfrac{km}{h}}$ រហូត",
+          "មានពេលមួយយ៉ាងតិចដែលកុងទ័រល្បឿនចង្អុល $100\\,\\dfrac{\\text{km}}{\\text{h}}$ យ៉ាងពិតប្រាកដ",
+          "ល្បឿនមិនដែលលើស $100\\,\\dfrac{\\text{km}}{\\text{h}}$ ទេ",
+          "ល្បឿនថេរ $100\\,\\dfrac{\\text{km}}{\\text{h}}$ រហូត",
           "មិនអាចដឹងបាន"
         ],
         "correct": 0,
-        "explanation": "ល្បឿនមធ្យម = $\\dfrac{150}{1}.5 = 100\\text{ \\dfrac{km}{h}}$។ តាម Lagrange មានពេល $c$ ដែល $v(c) = s'(c) = 100\\text{ \\dfrac{km}{h}}$។",
+        "explanation": "ល្បឿនមធ្យម = $\\dfrac{150}{1}.5 = 100\\,\\dfrac{\\text{km}}{\\text{h}}$។ តាម Lagrange មានពេល $c$ ដែល $v(c) = s'(c) = 100\\,\\dfrac{\\text{km}}{\\text{h}}$។",
         "diagram": ""
       },
       {
@@ -24239,13 +24239,13 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ប៉េងប៉ោងរាងស្វ៊ែរមួយត្រូវគេច្រកខ្យល់ក្នុងអត្រា $100\\text{ cm}^3/\\text{s}$ ($\\dfrac{dV}{dt} = 100$)។ រកអត្រាបម្រែបម្រួលនៃកាំ $\\dfrac{dr}{dt}$ នៅខណៈដែលកាំ $r = 5\\text{ cm}$ ៖",
         "options": [
-          "$\\dfrac{1}{\\pi}\\text{ \\dfrac{cm}{s}}$",
-          "$\\dfrac{2}{\\pi}\\text{ \\dfrac{cm}{s}}$",
-          "$4\\pi\\text{ \\dfrac{cm}{s}}$",
-          "$\\dfrac{4}{\\pi}\\text{ \\dfrac{cm}{s}}$"
+          "$\\dfrac{1}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$",
+          "$\\dfrac{2}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$",
+          "$4\\pi\\,\\dfrac{\\text{cm}}{\\text{s}}$",
+          "$\\dfrac{4}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$"
         ],
         "correct": 0,
-        "explanation": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\text{ \\dfrac{cm}{s}}$។",
+        "explanation": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$។",
         "diagram": ""
       },
       {
@@ -24254,15 +24254,15 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ជណ្តើរប្រវែង $5\\text{ m}$ ច្រត់នឹងជញ្ជាំងបញ្ឈរ។ ជើងជណ្តើររអិលចេញពីជញ្ជាំងក្នុងល្បឿន $2\\text{ \\dfrac{m}{s}}$ ($\\dfrac{dx}{dt} = 2$)។ រកល្បឿនដែលចុងជណ្តើរខាងលើរអិលចុះក្រោមនៅពេលជើងជណ្តើរនៅឆ្ងាយពីជញ្ជាំង $3\\text{ m}$ ៖",
+        "question": "ជណ្តើរប្រវែង $5\\text{ m}$ ច្រត់នឹងជញ្ជាំងបញ្ឈរ។ ជើងជណ្តើររអិលចេញពីជញ្ជាំងក្នុងល្បឿន $2\\,\\dfrac{\\text{m}}{\\text{s}}$ ($\\dfrac{dx}{dt} = 2$)។ រកល្បឿនដែលចុងជណ្តើរខាងលើរអិលចុះក្រោមនៅពេលជើងជណ្តើរនៅឆ្ងាយពីជញ្ជាំង $3\\text{ m}$ ៖",
         "options": [
-          "$-1.5\\text{ \\dfrac{m}{s}}$",
-          "$-2\\text{ \\dfrac{m}{s}}$",
-          "$-1\\text{ \\dfrac{m}{s}}$",
-          "$-0.75\\text{ \\dfrac{m}{s}}$"
+          "$-1.5\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$-2\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$-1\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$-0.75\\,\\dfrac{\\text{m}}{\\text{s}}$"
         ],
         "correct": 0,
-        "explanation": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\text{ \\dfrac{m}{s}}$។",
+        "explanation": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\,\\dfrac{\\text{m}}{\\text{s}}$។",
         "diagram": ""
       },
       {
@@ -24271,7 +24271,7 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ការ៉េមួយមានជ្រុងកើនឡើងក្នុងអត្រា $3\\text{ \\dfrac{cm}{s}}$។ រកអត្រាកំណើនផ្ទៃក្រឡាការ៉េនៅពេលជ្រុងមានប្រវែង $10\\text{ cm}$ ៖",
+        "question": "ការ៉េមួយមានជ្រុងកើនឡើងក្នុងអត្រា $3\\,\\dfrac{\\text{cm}}{\\text{s}}$។ រកអត្រាកំណើនផ្ទៃក្រឡាការ៉េនៅពេលជ្រុងមានប្រវែង $10\\text{ cm}$ ៖",
         "options": [
           "$60\\text{ cm}^2/\\text{s}$",
           "$30\\text{ cm}^2/\\text{s}$",
@@ -24307,13 +24307,13 @@
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
         "question": "ធុងរាងកោណផ្កាប់មានកម្ពស់ $12\\text{ m}$ និងកាំមាត់ខាងលើ $4\\text{ m}$។ ទឹកហូរចូលក្នុងអត្រា $2\\text{ m}^3/\\text{min}$។ រកអត្រាកម្ពស់ទឹកកើនឡើងនៅពេលទឹកមានជម្រៅ $h = 6\\text{ m}$ ៖",
         "options": [
-          "$\\dfrac{1}{2\\pi}\\text{ \\dfrac{m}{min}}$",
-          "$\\dfrac{1}{\\pi}\\text{ \\dfrac{m}{min}}$",
-          "$\\dfrac{2}{\\pi}\\text{ \\dfrac{m}{min}}$",
-          "$\\dfrac{1}{4\\pi}\\text{ \\dfrac{m}{min}}$"
+          "$\\dfrac{1}{2\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
+          "$\\dfrac{1}{\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
+          "$\\dfrac{2}{\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
+          "$\\dfrac{1}{4\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$"
         ],
         "correct": 0,
-        "explanation": "តាមត្រីកោណដូចគ្នា $\\dfrac{r}{h} = \\dfrac{4}{12} = \\dfrac{1}{3} \\implies r = \\dfrac{h}{3}$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\text{ \\dfrac{m}{min}}$។",
+        "explanation": "តាមត្រីកោណដូចគ្នា $\\dfrac{r}{h} = \\dfrac{4}{12} = \\dfrac{1}{3} \\implies r = \\dfrac{h}{3}$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$។",
         "diagram": ""
       },
       {
@@ -24322,15 +24322,15 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "មនុស្សម្នាក់កម្ពស់ $1.8\\text{ m}$ ដើរចេញពីបង្គោលភ្លើងកម្ពស់ $5.4\\text{ m}$ ក្នុងល្បឿន $1.2\\text{ \\dfrac{m}{s}}$។ រកល្បឿនដែលស្រមោលរបស់គាត់លាតសន្ធឹងវែងទៅមុខ ៖",
+        "question": "មនុស្សម្នាក់កម្ពស់ $1.8\\text{ m}$ ដើរចេញពីបង្គោលភ្លើងកម្ពស់ $5.4\\text{ m}$ ក្នុងល្បឿន $1.2\\,\\dfrac{\\text{m}}{\\text{s}}$។ រកល្បឿនដែលស្រមោលរបស់គាត់លាតសន្ធឹងវែងទៅមុខ ៖",
         "options": [
-          "$0.6\\text{ \\dfrac{m}{s}}$",
-          "$1.2\\text{ \\dfrac{m}{s}}$",
-          "$0.8\\text{ \\dfrac{m}{s}}$",
-          "$1.8\\text{ \\dfrac{m}{s}}$"
+          "$0.6\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$1.2\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$0.8\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$1.8\\,\\dfrac{\\text{m}}{\\text{s}}$"
         ],
         "correct": 0,
-        "explanation": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = \\dfrac{x}{2}$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\text{ \\dfrac{m}{s}}$។",
+        "explanation": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = \\dfrac{x}{2}$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\,\\dfrac{\\text{m}}{\\text{s}}$។",
         "diagram": ""
       },
       {
@@ -24339,15 +24339,15 @@
         "pointNumber": "2",
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួលធៀប និងចំណោទជាក់ស្តែង",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "នាវា A ចេញដំណើរទៅទិសខាងកើតក្នុងល្បឿន $20\\text{ \\dfrac{km}{h}}$ និងនាវា B ចេញដំណើរពីកំពង់ផែដដែលទៅទិសខាងជើងក្នុងល្បឿន $15\\text{ \\dfrac{km}{h}}$។ រកអត្រាកំណើនចម្ងាយរវាងនាវាទាំងពីរ ៖",
+        "question": "នាវា A ចេញដំណើរទៅទិសខាងកើតក្នុងល្បឿន $20\\,\\dfrac{\\text{km}}{\\text{h}}$ និងនាវា B ចេញដំណើរពីកំពង់ផែដដែលទៅទិសខាងជើងក្នុងល្បឿន $15\\,\\dfrac{\\text{km}}{\\text{h}}$។ រកអត្រាកំណើនចម្ងាយរវាងនាវាទាំងពីរ ៖",
         "options": [
-          "$25\\text{ \\dfrac{km}{h}}$ ថេរជានិច្ច",
-          "$35\\text{ \\dfrac{km}{h}}$",
-          "$20\\text{ \\dfrac{km}{h}}$",
+          "$25\\,\\dfrac{\\text{km}}{\\text{h}}$ ថេរជានិច្ច",
+          "$35\\,\\dfrac{\\text{km}}{\\text{h}}$",
+          "$20\\,\\dfrac{\\text{km}}{\\text{h}}$",
           "អាស្រ័យនឹងពេល $t$"
         ],
         "correct": 0,
-        "explanation": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\text{ \\dfrac{km}{h}}$ ថេរជានិច្ច។",
+        "explanation": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\,\\dfrac{\\text{km}}{\\text{h}}$ ថេរជានិច្ច។",
         "diagram": ""
       },
       {
@@ -24538,7 +24538,7 @@
           "$1$"
         ],
         "correct": 0,
-        "explanation": "ភាគយក $\\approx x^\\dfrac{3}{6}$, ភាគបែង $\\approx -x^\\dfrac{3}{3}$។ លីមីត = $\\dfrac{\\dfrac{1}{6}}{-\\dfrac{1}{3}} = -\\dfrac{1}{2}$។",
+        "explanation": "ភាគយក $\\approx \\dfrac{x^3}{6}$, ភាគបែង $\\approx -\\dfrac{x^3}{3}$។ លីមីត = $\\dfrac{\\dfrac{1}{6}}{-\\dfrac{1}{3}} = -\\dfrac{1}{2}$។",
         "diagram": ""
       }
     ],
@@ -31529,7 +31529,7 @@
         "pointNumber": "1",
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងលក្ខណៈនៃព្រីមីទីវ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 3t^2 - 4t + 1$ (គិតជា $\\text{\\dfrac{m}{s}}$)។ រកចម្ងាយចរ $s(t)$ ដឹងថា $s(0) = 5\\text{ m}$ ៖",
+        "question": "ចល័តមួយមានល្បឿន $v(t) = 3t^2 - 4t + 1$ (គិតជា $\\,\\dfrac{\\text{m}}{\\text{s}}$)។ រកចម្ងាយចរ $s(t)$ ដឹងថា $s(0) = 5\\text{ m}$ ៖",
         "options": [
           "$s(t) = t^3 - 2t^2 + t + 5$",
           "$s(t) = 6t - 4$",
@@ -42217,10 +42217,10 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តារាងប្រាក់បៀវត្សរ៍បុគ្គលិក 5 នាក់ ៖ 200 ដុល្លារ, 220 ដុល្លារ, 210 ដុល្លារ, 230 ដុល្លារ, 3000 ដុល្លារ (ប្រាក់ខែប្រធាន)។ តើមធ្យមភាគ និងមេដ្យានស្មើប៉ុន្មាន?",
         "options": [
-          "មធ្យមភាគ \\text{ ដុល្លារ}$ និងមេដ្យាន \\text{ ដុល្លារ}$",
-          "មធ្យមភាគ \\text{ ដុល្លារ}$ និងមេដ្យាន \\text{ ដុល្លារ}$",
+          "មធ្យមភាគ $772\\text{ ដុល្លារ}$ និងមេដ្យាន $220\\text{ ដុល្លារ}$",
+          "មធ្យមភាគ $220\\text{ ដុល្លារ}$ និងមេដ្យាន $772\\text{ ដុល្លារ}$",
           "ទាំងពីរស្មើ $500\\text{ ដុល្លារ}$",
-          "មធ្យមភាគ \\text{ ដុល្លារ}$ និងមេដ្យាន \\text{ ដុល្លារ}$"
+          "មធ្យមភាគ $772\\text{ ដុល្លារ}$ និងមេដ្យាន $210\\text{ ដុល្លារ}$"
         ],
         "correct": 0,
         "explanation": "មធ្យមភាគ ៖ $\\dfrac{3860}{5} = 772\\text{ ដុល្លារ}$។ មេដ្យាន (តួទី៣) ៖ $220\\text{ ដុល្លារ}$ (ឆ្លុះបញ្ចាំងជាក់ស្តែងជាង)។"
@@ -71209,13 +71209,13 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយប្រព័ន្ធសមីការ $\\begin{cases} 3x - 2y = 8 \\\\ x = 2y - 4 \\end{cases}$ ៖",
         "options": [
-          "$(x, y) = (2, 3)$",
+          "$(x, y) = (6, 5)$",
           "$(x, y) = (4, 4)$",
           "$(x, y) = (0, 2)$",
-          "$(x, y) = (6, 5)$"
+          "$(x, y) = (2, 3)$"
         ],
         "correct": 0,
-        "explanation": "ជំនួស $x$ ចូល ៖ $3(2y - 4) - 2y = 8 \\iff 4y - 12 = 8 \\iff 4y = 20 \\implies y = 5$... ចាំបន្តិច ៖ $3(2y-4)-2y = 6y-12-2y = 4y-12=8 \\implies 4y=20 \\implies y=5, x=6$។ កែជម្រើសឱ្យ $(6, 5)$ ជាចម្លើយ!"
+        "explanation": "ជំនួស $x = 2y - 4$ ចូលសមីការទី១ ៖ $3(2y - 4) - 2y = 8 \\iff 6y - 12 - 2y = 8 \\iff 4y = 20 \\implies y = 5$។ នាំឱ្យ $x = 2(5) - 4 = 6$។ ដូចនេះ $(x, y) = (6, 5)$។"
       },
       {
         "id": "q9",
@@ -71273,7 +71273,7 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ការធ្វើតារាងបំណែងចែកប្រេកង់កើននិងថយ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយប្រព័ន្ធសមីការ $\\begin{cases} 2x + 3y = 13 \\\\ 2x - y = 5 \\end{cases}$ តាមវិធីបូកបំបាត់ ៖",
+        "question": "ដោះស្រាយប្រព័ន្ធសមីការ $\\begin{cases} 2x + 3y = 12 \\\\ 2x - y = 4 \\end{cases}$ តាមវិធីបូកបំបាត់ ៖",
         "options": [
           "$(x, y) = (3, 2)$",
           "$(x, y) = (2, 3)$",
@@ -71281,7 +71281,7 @@
           "$(x, y) = (1, 4)$"
         ],
         "correct": 0,
-        "explanation": "ដកសមីការទី២ពីទី១ ៖ $4y = 8 \\implies y = 2$ នាំឱ្យ $2x = 5 + 2 = 7$... ចាំបន្តិច $2x - 2 = 5 \\implies 2x = 7$ មិនមែនចំនួនគត់។\nកែសម្រួល ៖ $\\begin{cases} 2x + 3y = 12 \\\\ 2x - y = 4 \\end{cases} \\implies 4y = 8 \\implies y = 2, 2x = 6 \\implies x = 3$។"
+        "explanation": "ដកសមីការទី២ពីសមីការទី១ ៖ $(2x + 3y) - (2x - y) = 12 - 4 \\iff 4y = 8 \\implies y = 2$។ ជំនួសចូលសមីការទី២ ៖ $2x - 2 = 4 \\iff 2x = 6 \\implies x = 3$។ ដូចនេះ $(x, y) = (3, 2)$។"
       },
       {
         "id": "q3",
@@ -71369,15 +71369,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ការធ្វើតារាងបំណែងចែកប្រេកង់កើននិងថយ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធសមីការ $\\begin{cases} 7x - 2y = 20 \\\\ 3x + 4y = 18 \\end{cases}$ ៖",
+        "question": "ដោះស្រាយប្រព័ន្ធសមីការ $\\begin{cases} 7x - 2y = 8 \\\\ 3x + 4y = 18 \\end{cases}$ ៖",
         "options": [
-          "$(x, y) = (3, 1)$",
           "$(x, y) = (2, 3)$",
+          "$(x, y) = (3, 1)$",
           "$(x, y) = (4, 4)$",
           "$(x, y) = (1, 2)$"
         ],
         "correct": 0,
-        "explanation": "គុណសមីការទី១នឹង 2 ៖ $14x - 4y = 40$។ បូកនឹងទី២ ៖ $17x = 58$... មិនដាច់។\nកែ ៖ $\\begin{cases} 7x - 2y = 19 \\\\ 3x + 4y = 18 \\end{cases} \\implies 14x - 4y = 38 + 18 = 56$ (មិនដាច់នឹង 17)។\nជ្រើសរើសលេខស្អាត ៖ $(x, y) = (2, 3)$ នាំឱ្យ $7(2) - 2(3) = 8$ និង $3(2) + 4(3) = 18$ ៖\n$\\begin{cases} 7x - 2y = 8 \\\\ 3x + 4y = 18 \\end{cases} \\implies 14x - 4y = 16 \\implies 17x = 34 \\implies x = 2, y = 3$។"
+        "explanation": "គុណសមីការទី១នឹង $2$ ៖ $14x - 4y = 16$។ បូកនឹងសមីការទី២ ៖ $17x = 34 \\implies x = 2$។ ជំនួសចូលសមីការទី២ ៖ $3(2) + 4y = 18 \\implies y = 3$។ ដូចនេះ $(x, y) = (2, 3)$។"
       },
       {
         "id": "q9",
@@ -77374,15 +77374,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ចំណោទអនុវត្តសមីការដឺក្រេទី២",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រថយន្តមួយបើកបរលើចម្ងាយ $120\\text{ km}$។ បើវាបង្កើនល្បឿន $10\\text{ \\dfrac{km}{h}}$ នោះវានឹងចំណាយពេលតិចជាងមុន $1\\text{ h}$។ រកល្បឿនដើមនៃរថយន្ត ៖",
+        "question": "រថយន្តមួយបើកបរលើចម្ងាយ $120\\text{ km}$។ បើវាបង្កើនល្បឿន $10\\,\\dfrac{\\text{km}}{\\text{h}}$ នោះវានឹងចំណាយពេលតិចជាងមុន $1\\text{ h}$។ រកល្បឿនដើមនៃរថយន្ត ៖",
         "options": [
-          "$30\\text{ \\dfrac{km}{h}}$",
-          "$40\\text{ \\dfrac{km}{h}}$",
-          "$50\\text{ \\dfrac{km}{h}}$",
-          "$60\\text{ \\dfrac{km}{h}}$"
+          "$30\\,\\dfrac{\\text{km}}{\\text{h}}$",
+          "$40\\,\\dfrac{\\text{km}}{\\text{h}}$",
+          "$50\\,\\dfrac{\\text{km}}{\\text{h}}$",
+          "$60\\,\\dfrac{\\text{km}}{\\text{h}}$"
         ],
         "correct": 0,
-        "explanation": "$\\dfrac{120}{v} - \\dfrac{120}{v + 10} = 1 \\iff 1200 = v(v + 10) \\iff v^2 + 10v - 1200 = 0 \\implies (v - 30)(v + 40) = 0 \\implies v = 30\\text{ \\dfrac{km}{h}}$។"
+        "explanation": "$\\dfrac{120}{v} - \\dfrac{120}{v + 10} = 1 \\iff 1200 = v(v + 10) \\iff v^2 + 10v - 1200 = 0 \\implies (v - 30)(v + 40) = 0 \\implies v = 30\\,\\dfrac{\\text{km}}{\\text{h}}$។"
       },
       {
         "id": "q8",
@@ -84452,7 +84452,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ការបំប្លែងវិល $r(O, \\alpha)$ បម្លែងចំណុច $M$ ($M \\neq O$) ទៅជា $M'$ លុះត្រាតែ ៖",
         "options": [
@@ -84468,7 +84468,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ទិសដៅវិជ្ជមាននៃមុំវិល $\\alpha$ គឺជាទិសដៅ ៖",
         "options": [
@@ -84484,7 +84484,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តបំប្លែងវិលមុំ $90^\\circ$ បញ្ច្រាសទ្រនិចនាឡិកាជុំវិញគល់ $O$ បម្លែង $(x, y)$ ទៅ ៖",
         "options": [
@@ -84500,7 +84500,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រូបមន្តបំប្លែងវិលមុំ $-90^\\circ$ (ស្របទ្រនិចនាឡិកា) ជុំវិញគល់ $O$ បម្លែង $(x, y)$ ទៅ ៖",
         "options": [
@@ -84516,7 +84516,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រូបមន្តបំប្លែងវិលមុំ $180^\\circ$ ជុំវិញគល់ $O$ បម្លែង $(x, y)$ ទៅ ៖",
         "options": [
@@ -84532,7 +84532,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រករូបភាពនៃចំណុច $A(3, 4)$ តាមការបំប្លែងវិល $r(O, 90^\\circ)$ ៖",
         "options": [
@@ -84548,7 +84548,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រករូបភាពនៃចំណុច $B(-2, 5)$ តាមការបំប្លែងវិល $r(O, 180^\\circ)$ ៖",
         "options": [
@@ -84564,7 +84564,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "តើចំណុចណាជាចំណុចមិនប្រែប្រួលតែមួយគត់នៃការបំប្លែងវិល $r(O, \\alpha)$ ($0 < \\alpha < 360^\\circ$)?",
         "options": [
@@ -84580,7 +84580,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ការបំប្លែងច្រាសនៃ $r(O, \\alpha)$ គឺ ៖",
         "options": [
@@ -84596,7 +84596,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\u0007lpha$",
+        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យការបំប្លែងវិលជុំវិញផ្ចិត $O$ មុំ $\\alpha$",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ផលបណ្តាក់នៃពីរការបំប្លែងវិលរួមផ្ចិត $r(O, \\alpha) \\circ r(O, \\beta)$ ស្មើនឹង ៖",
         "options": [
@@ -84990,7 +84990,7 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈ និងផលធៀបនៃបំប្លែងដូច",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ផលធៀបនៃផ្ទៃក្រឡារវាងរូបភាព និងរូបដើម $\\dfrac{S\\'}{S}$ តាមអូម៉ូតេទីផលធៀប $k$ ស្មើនឹង ៖",
+        "question": "ផលធៀបនៃផ្ទៃក្រឡារវាងរូបភាព និងរូបដើម $\\dfrac{S'}{S}$ តាមអូម៉ូតេទីផលធៀប $k$ ស្មើនឹង ៖",
         "options": [
           "$k^2$",
           "$|k|$",
@@ -85022,7 +85022,7 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈ និងផលធៀបនៃបំប្លែងដូច",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ផលធៀបនៃបរិមាត្រ $\\dfrac{P\\'}{P}$ តាមអូម៉ូតេទីផលធៀប $k$ ស្មើនឹង ៖",
+        "question": "ផលធៀបនៃបរិមាត្រ $\\dfrac{P'}{P}$ តាមអូម៉ូតេទីផលធៀប $k$ ស្មើនឹង ៖",
         "options": [
           "$|k|$",
           "$k^2$",
@@ -85070,7 +85070,7 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈ និងផលធៀបនៃបំប្លែងដូច",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "ផលធៀបនៃមាឌ $\\dfrac{V\\'}{V}$ នៃរូបសូលីតតាមការបំប្លែងដូចផលធៀប $k$ ស្មើនឹង ៖",
+        "question": "ផលធៀបនៃមាឌ $\\dfrac{V'}{V}$ នៃរូបសូលីតតាមការបំប្លែងដូចផលធៀប $k$ ស្មើនឹង ៖",
         "options": [
           "$|k|^3$",
           "$k^2$",
@@ -85923,7 +85923,7 @@
           "$8\\pi R^2$"
         ],
         "correct": 0,
-        "explanation": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + x^\\dfrac{2}{y}^2} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
+        "explanation": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + \\dfrac{x^2}{y^2}} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
         "diagram": ""
       },
       {
@@ -87222,7 +87222,7 @@
           "Mean ; Median"
         ],
         "correct": 0,
-        "explanation": "Interpolation ប៉ាន់ស្មានក្នុងចន្លោះ $[x_\\min, x_\\max]$ (គួរឱ្យទុកចិត្តខ្ពស់) ឯ Extrapolation ប៉ាន់ស្មានក្រៅចន្លោះ (ប្រឈមនឹងហានិភ័យ)។",
+        "explanation": "Interpolation ប៉ាន់ស្មានក្នុងចន្លោះ $[x_{\\min}, x_{\\max}]$ (គួរឱ្យទុកចិត្តខ្ពស់) ឯ Extrapolation ប៉ាន់ស្មានក្រៅចន្លោះ (ប្រឈមនឹងហានិភ័យ)។",
         "diagram": ""
       },
       {

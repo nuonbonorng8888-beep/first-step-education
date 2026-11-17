@@ -2357,15 +2357,30 @@ body.light-theme .opt-content {
   vertical-align: baseline;
 }
 
+/* Long formulas may wrap only BETWEEN KaTeX groups (after =, +, −, ⇒ …).
+   Each group (.base) stays whole so "2x", fractions, brackets never split. */
 .quiz-explanation .katex-html {
   white-space: normal !important;
-  overflow-wrap: break-word;
-  word-break: break-word;
 }
 
-.quiz-explanation .katex-html .base {
-  white-space: normal !important;
-  display: inline;
+.katex .base {
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* Khmer letters/digits inside maths use the app's Khmer font, not a system fallback */
+.katex {
+  font-family: KaTeX_Main, 'Kantumruy Pro', 'Times New Roman', serif;
+}
+.katex .mathnormal,
+.katex .boldsymbol {
+  font-family: KaTeX_Math, 'Kantumruy Pro', serif;
+}
+.katex .mathit,
+.katex .mathbf,
+.katex .textrm,
+.katex .mainrm {
+  font-family: KaTeX_Main, 'Kantumruy Pro', serif;
 }
 
 /* Fractions */
@@ -9437,4 +9452,62 @@ html.zc-normal .container:not(.nav-container) {
   .gate-lock-card.is-maximized.view-mode-select .gate-t-meta { font-size: 0.82rem !important; }
   .gate-lock-card .gate-t-arrow,
   .gate-lock-card.is-maximized.view-mode-select .gate-t-arrow { font-size: 1.2rem !important; flex: 0 0 auto; }
+}
+
+/* ==========================================================================
+   Paper size switch (A4 / A5) for worksheets and exams
+   ========================================================================== */
+.paper-size-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 8px;
+  border: 1px solid var(--border-glass, #cbd5e1);
+  background: rgba(148, 163, 184, 0.12);
+  vertical-align: middle;
+}
+.paper-size-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0 6px;
+  color: var(--text-muted, #64748b);
+}
+.paper-size-btn {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.paper-size-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* A5 preview on screen: the sheet is drawn at real A5 width */
+@media screen {
+  body.paper-a5 .a4-sheet {
+    width: 148mm;
+    min-height: 210mm;
+    padding: 9mm 10mm;
+    font-size: 0.86em;
+  }
+}
+@media screen and (max-width: 768px) {
+  body.paper-a5 .a4-sheet { width: 98%; min-height: auto; padding: 12px 10px; }
+}
+
+/* A5 print: same layout, scaled to the smaller page */
+@media print {
+  body.paper-a5 .worksheet-paper,
+  body.paper-a5 .ws-all-points-print-container,
+  body.paper-a5.printing-exam-active .a4-sheet {
+    zoom: 0.84;
+  }
+  .paper-size-toggle { display: none !important; }
 }
