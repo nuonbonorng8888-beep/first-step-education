@@ -1,8 +1,8 @@
 {
-  "version": "15.8",
-  "build": 158,
+  "version": "15.9",
+  "build": 159,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Grade 10 chapters 1-3 follow the textbook sections: new points for GCD/LCM and rational fractions, types of proof, set properties, radicals, number systems, complex numbers, factor-theorem equations, 3-unknown systems, inequality properties, linear inequalities, absolute value, proving inequalities and AM-GM; remainder theorem moved to its textbook lesson; lesson exams corrected.",
-  "lastUpdated": "2026-11-18T21:00:00+07:00"
+  "changelog": "Grade 10 chapters 4-6 follow the textbook sections: coordinates on a line, coordinate proofs, loci, special-angle values, increasing/decreasing functions, inverse functions and their graphs, y = ax^2 and y = a(x-p)^2 + q; lesson exams of chapter 4 and 5 corrected.",
+  "lastUpdated": "2026-11-18T23:00:00+07:00"
 }

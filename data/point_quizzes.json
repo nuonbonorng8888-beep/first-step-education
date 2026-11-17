@@ -34155,7 +34155,351 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំណុច $(3, -9)$ នៅលើក្រាប $y = -x^2$។ ចំណុចណាទៀតនៅលើក្រាប (ឆ្លុះធៀបអ័ក្ស $Oy$)?",
+        "options": [
+          "$(-3, 9)$",
+          "$(3, 9)$",
+          "$(-9, 3)$",
+          "$(-3, -9)$"
+        ],
+        "correct": 3,
+        "explanation": "ក្រាប $y = ax^2$ ឆ្លុះធៀបអ័ក្ស $Oy$ ⇒ $(-3, -9)$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x) = \\dfrac{1}{2}x^2$។ គណនា $f(3)$ ៖",
+        "options": [
+          "$3$",
+          "$\\dfrac{9}{2}$",
+          "$\\dfrac{3}{2}$",
+          "$-\\dfrac{9}{2}$"
+        ],
+        "correct": 1,
+        "explanation": "$f(3) = \\dfrac{1}{2} \\times (3)^2 = \\dfrac{9}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ក្រាបនៃ $y = x^2$ ៖",
+        "options": [
+          "បើកទៅលើ ហើយ $O$ ជាចំណុចទាបបំផុត",
+          "បើកទៅក្រោម ហើយ $O$ ជាចំណុចខ្ពស់បំផុត",
+          "ជាបន្ទាត់ត្រង់កាត់តាម $O$",
+          "បើកទៅលើ ហើយកំពូលនៅ $(0, 1)$"
+        ],
+        "correct": 0,
+        "explanation": "$a = 1$ > 0 ; កំពូល $O(0, 0)$ អ័ក្សឆ្លុះ $x = 0$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ប៉ារ៉ាបូល $y = ax^2$ កាត់តាមចំណុច $(-2, -2)$។ រក $a$ ៖",
+        "options": [
+          "$1$",
+          "$\\dfrac{1}{2}$",
+          "$-\\dfrac{1}{2}$",
+          "$-1$"
+        ],
+        "correct": 2,
+        "explanation": "$-2 = a(-2)^2$ ⇒ $a = -\\dfrac{1}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំណុច $(3, 9)$ នៅលើក្រាប $y = x^2$។ ចំណុចណាទៀតនៅលើក្រាប (ឆ្លុះធៀបអ័ក្ស $Oy$)?",
+        "options": [
+          "$(9, 3)$",
+          "$(-3, -9)$",
+          "$(3, -9)$",
+          "$(-3, 9)$"
+        ],
+        "correct": 3,
+        "explanation": "ក្រាប $y = ax^2$ ឆ្លុះធៀបអ័ក្ស $Oy$ ⇒ $(-3, 9)$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x) = 3x^2$។ គណនា $f(2)$ ៖",
+        "options": [
+          "$6$",
+          "$-12$",
+          "$13$",
+          "$12$"
+        ],
+        "correct": 3,
+        "explanation": "$f(2) = 3 \\times (2)^2 = 12$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ក្រាបនៃ $y = -x^2$ ៖",
+        "options": [
+          "បើកទៅលើ ហើយកំពូលនៅ $(0, 1)$",
+          "បើកទៅក្រោម ហើយ $O$ ជាចំណុចខ្ពស់បំផុត",
+          "ជាបន្ទាត់ត្រង់កាត់តាម $O$",
+          "បើកទៅលើ ហើយ $O$ ជាចំណុចទាបបំផុត"
+        ],
+        "correct": 1,
+        "explanation": "$a = -1$ < 0 ; កំពូល $O(0, 0)$ អ័ក្សឆ្លុះ $x = 0$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ប៉ារ៉ាបូល $y = ax^2$ កាត់តាមចំណុច $(2, -12)$។ រក $a$ ៖",
+        "options": [
+          "$-6$",
+          "$3$",
+          "$-3$",
+          "$-2$"
+        ],
+        "correct": 2,
+        "explanation": "$-12 = a(2)^2$ ⇒ $a = -3$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ប៉ារ៉ាបូល $y = ax^2$ កាត់តាមចំណុច $(2, 4)$។ រក $a$ ៖",
+        "options": [
+          "$1$",
+          "$-1$",
+          "$0$",
+          "$2$"
+        ],
+        "correct": 0,
+        "explanation": "$4 = a(2)^2$ ⇒ $a = 1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = ax^2$",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំណុច $(1, 2)$ នៅលើក្រាប $y = 2x^2$។ ចំណុចណាទៀតនៅលើក្រាប (ឆ្លុះធៀបអ័ក្ស $Oy$)?",
+        "options": [
+          "$(-1, 2)$",
+          "$(2, 1)$",
+          "$(-1, -2)$",
+          "$(1, -2)$"
+        ],
+        "correct": 0,
+        "explanation": "ក្រាប $y = ax^2$ ឆ្លុះធៀបអ័ក្ស $Oy$ ⇒ $(-1, 2)$។",
+        "src": "genpq-g10b_points"
+      }
+    ],
+    "2": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សមីការអ័ក្សឆ្លុះនៃ $y = -(x - 1)^2 + 4$ គឺ ៖",
+        "options": [
+          "$x = 1$",
+          "$x = -1$",
+          "$y = 1$",
+          "$y = 4$"
+        ],
+        "correct": 0,
+        "explanation": "អ័ក្សឆ្លុះកាត់តាមកំពូល ⇒ $x = 1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "កំពូលនៃប៉ារ៉ាបូល $y = -(x - 2)^2 + 5$ គឺ ៖",
+        "options": [
+          "$(5, 2)$",
+          "$(2, -5)$",
+          "$(2, 5)$",
+          "$(-2, 5)$"
+        ],
+        "correct": 2,
+        "explanation": "$y = a(x - p)^2 + q$ មានកំពូល $(p, q) = (2, 5)$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សមីការអ័ក្សឆ្លុះនៃ $y = -(x - 4)^2 - 5$ គឺ ៖",
+        "options": [
+          "$x = 4$",
+          "$y = 4$",
+          "$x = -4$",
+          "$y = -5$"
+        ],
+        "correct": 0,
+        "explanation": "អ័ក្សឆ្លុះកាត់តាមកំពូល ⇒ $x = 4$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សមីការអ័ក្សឆ្លុះនៃ $y = 3(x + 1)^2 - 5$ គឺ ៖",
+        "options": [
+          "$y = -1$",
+          "$y = -5$",
+          "$x = 1$",
+          "$x = -1$"
+        ],
+        "correct": 3,
+        "explanation": "អ័ក្សឆ្លុះកាត់តាមកំពូល ⇒ $x = -1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ក្រាបនៃ $y = 3(x + 4)^2 + 4$ ទទួលបានពីក្រាប $y = 3x^2$ ដោយ ៖",
+        "options": [
+          "កិល ៤ ឯកតាទៅឆ្វេង និង ៤ ឯកតាទៅក្រោម",
+          "កិល ៤ ឯកតាទៅស្តាំ និង ៤ ឯកតាទៅលើ",
+          "កិល ៤ ឯកតាទៅឆ្វេង និង ៤ ឯកតាទៅលើ",
+          "កិល ៤ ឯកតាទៅស្តាំ និង ៤ ឯកតាទៅក្រោម"
+        ],
+        "correct": 2,
+        "explanation": "កំពូលផ្លាស់ពី $O(0, 0)$ ទៅ $(-4, 4)$ ⇒ កិល ៤ ឯកតាទៅឆ្វេង និង ៤ ឯកតាទៅលើ។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ប៉ារ៉ាបូលមួយមានកំពូល $(2, -5)$ និងកាត់តាមចំណុច $(3, -7)$។ សមីការរបស់វាគឺ ៖",
+        "options": [
+          "$y = -2(x - 2)^2 + 5$",
+          "$y = 2(x - 2)^2 - 5$",
+          "$y = -2(x - 2)^2 - 5$",
+          "$y = -2(x + 2)^2 - 5$"
+        ],
+        "correct": 2,
+        "explanation": "$y = a(x - 2)^2 - 5$ ; ជំនួស $(3, -7)$ ⇒ $a = -2$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ប៉ារ៉ាបូលមួយមានកំពូល $(2, 4)$ និងកាត់តាមចំណុច $(1, 5)$។ សមីការរបស់វាគឺ ៖",
+        "options": [
+          "$y = -(x - 2)^2 + 4$",
+          "$y = (x + 2)^2 + 4$",
+          "$y = (x - 2)^2 + 4$",
+          "$y = (x - 2)^2 - 4$"
+        ],
+        "correct": 2,
+        "explanation": "$y = a(x - 2)^2 + 4$ ; ជំនួស $(1, 5)$ ⇒ $a = 1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ប៉ារ៉ាបូលមួយមានកំពូល $(1, 1)$ និងកាត់តាមចំណុច $(2, 3)$។ សមីការរបស់វាគឺ ៖",
+        "options": [
+          "$y = 2(x - 1)^2 - 1$",
+          "$y = -2(x - 1)^2 + 1$",
+          "$y = 2(x - 1)^2 + 1$",
+          "$y = 2(x + 1)^2 + 1$"
+        ],
+        "correct": 2,
+        "explanation": "$y = a(x - 1)^2 + 1$ ; ជំនួស $(2, 3)$ ⇒ $a = 2$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សមីការអ័ក្សឆ្លុះនៃ $y = -(x - 2)^2 - 5$ គឺ ៖",
+        "options": [
+          "$y = 2$",
+          "$x = -2$",
+          "$x = 2$",
+          "$y = -5$"
+        ],
+        "correct": 2,
+        "explanation": "អ័ក្សឆ្លុះកាត់តាមកំពូល ⇒ $x = 2$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ក្រាបនៃអនុគមន៍ $y = a(x - p)^2 + q$",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ក្រាបនៃ $y = 2(x - 4)^2 + 5$ ទទួលបានពីក្រាប $y = 2x^2$ ដោយ ៖",
+        "options": [
+          "កិល ៤ ឯកតាទៅឆ្វេង និង ៥ ឯកតាទៅលើ",
+          "កិល ៤ ឯកតាទៅស្តាំ និង ៥ ឯកតាទៅលើ",
+          "កិល ៤ ឯកតាទៅស្តាំ និង ៥ ឯកតាទៅក្រោម",
+          "កិល ៥ ឯកតាទៅស្តាំ និង ៤ ឯកតាទៅលើ"
+        ],
+        "correct": 1,
+        "explanation": "កំពូលផ្លាស់ពី $O(0, 0)$ ទៅ $(4, 5)$ ⇒ កិល ៤ ឯកតាទៅស្តាំ និង ៥ ឯកតាទៅលើ។",
+        "src": "genpq-g10b_points"
+      }
+    ],
+    "3": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ទម្រង់កាណូនិចនៃអនុគមន៍ដឺក្រេទីពីរ $y = ax^2 + bx + c$ ($a \\neq 0$) គឺ ៖",
         "options": [
@@ -34172,8 +34516,8 @@
       {
         "id": "q2",
         "questionNumber": 2,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តគណនាអាប់ស៊ីសកំពូល $h$ ពីទម្រង់ទូទៅគឺ ៖",
         "options": [
@@ -34188,8 +34532,8 @@
       {
         "id": "q3",
         "questionNumber": 3,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "សរសេរ $y = x^2 - 4x + 7$ ជាទម្រង់កាណូនិច ៖",
         "options": [
@@ -34204,8 +34548,8 @@
       {
         "id": "q4",
         "questionNumber": 4,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សរសេរ $y = 2x^2 + 8x + 5$ ជាទម្រង់កាណូនិច ៖",
         "options": [
@@ -34220,8 +34564,8 @@
       {
         "id": "q5",
         "questionNumber": 5,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សរសេរ $y = -x^2 + 6x - 5$ ជាទម្រង់កាណូនិច ៖",
         "options": [
@@ -34236,8 +34580,8 @@
       {
         "id": "q6",
         "questionNumber": 6,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "កូអរដោនេកំពូលនៃប៉ារ៉ាបូល $y = 3(x - 5)^2 + 2$ គឺ ៖",
         "options": [
@@ -34252,8 +34596,8 @@
       {
         "id": "q7",
         "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រូបមន្តគណនាអរដោនេកំពូល $k$ តាមឌីស្គ្រីមីណង់ $\\Delta$ គឺ ៖",
         "options": [
@@ -34268,8 +34612,8 @@
       {
         "id": "q8",
         "questionNumber": 8,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "សរសេរ $y = -2x^2 + 4x + 1$ ជាទម្រង់កាណូនិច ៖",
         "options": [
@@ -34284,8 +34628,8 @@
       {
         "id": "q9",
         "questionNumber": 9,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "កំណត់សមីការប៉ារ៉ាបូលដែលមានកំពូល $S(1, -4)$ ហើយកាត់តាមចំណុច $A(0, -3)$ ៖",
         "options": [
@@ -34300,8 +34644,8 @@
       {
         "id": "q10",
         "questionNumber": 10,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ទម្រង់ទូទៅ $y = ax^2+bx+c$ និងទម្រង់កាណូនិច",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ $y = ax^2 + bx + c$ ៖ កំពូល និងអ័ក្សឆ្លុះ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "បើប៉ារ៉ាបូល $y = ax^2 + bx + c$ កាត់អ័ក្ស $Ox$ ត្រង់ $x_1$ និង $x_2$ នោះវាអាចសរសេរជា ៖",
         "options": [
@@ -34314,12 +34658,12 @@
         "explanation": "ទម្រង់ផលគុណកត្តា ៖ $y = a(x - x_1)(x - x_2)$។"
       }
     ],
-    "2": [
+    "4": [
       {
         "id": "q1",
         "questionNumber": 1,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "សមីការអ័ក្សឆ្លុះនៃប៉ារ៉ាបូល $y = ax^2 + bx + c$ គឺ ៖",
         "options": [
@@ -34334,8 +34678,8 @@
       {
         "id": "q2",
         "questionNumber": 2,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $a > 0$ ប៉ារ៉ាបូលបែរភាពប៉ោងទៅណា ហើយកំពូលជាចំណុចអ្វី?",
         "options": [
@@ -34350,8 +34694,8 @@
       {
         "id": "q3",
         "questionNumber": 3,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $a < 0$ ប៉ារ៉ាបូលបែរភាពប៉ោងទៅណា ហើយកំពូលជាចំណុចអ្វី?",
         "options": [
@@ -34366,8 +34710,8 @@
       {
         "id": "q4",
         "questionNumber": 4,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកសមីការអ័ក្សឆ្លុះនៃប៉ារ៉ាបូល $y = 2x^2 - 8x + 3$ ៖",
         "options": [
@@ -34382,8 +34726,8 @@
       {
         "id": "q5",
         "questionNumber": 5,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃអប្បបរមានៃអនុគមន៍ $y = x^2 - 6x + 10$ ៖",
         "options": [
@@ -34398,8 +34742,8 @@
       {
         "id": "q6",
         "questionNumber": 6,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃអតិបរមានៃអនុគមន៍ $y = -2x^2 + 4x + 5$ ៖",
         "options": [
@@ -34414,8 +34758,8 @@
       {
         "id": "q7",
         "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ចំពោះ $y = x^2 - 4x + 3$ តារាងអថិរភាពបង្ហាញថាអនុគមន៍ ៖",
         "options": [
@@ -34430,8 +34774,8 @@
       {
         "id": "q8",
         "questionNumber": 8,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "កំណត់តម្លៃ $m$ ដើម្បីឱ្យកំពូលនៃប៉ារ៉ាបូល $y = x^2 - 2mx + m + 2$ ស្ថិតនៅលើអ័ក្ស $Ox$ ៖",
         "options": [
@@ -34446,8 +34790,8 @@
       {
         "id": "q9",
         "questionNumber": 9,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "កំណត់ $m$ ដើម្បីឱ្យប៉ារ៉ាបូល $y = mx^2 - 4x + 1$ មានអ័ក្សឆ្លុះ $x = 1$ ៖",
         "options": [
@@ -34462,8 +34806,8 @@
       {
         "id": "q10",
         "questionNumber": 10,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កំពូល អ័ក្សឆ្លុះ និងតារាងអថិរភាព",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងតម្លៃអប្បបរមានៃអនុគមន៍ដឺក្រេទី២",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃអតិបរមានៃ $f(x) = -x^2 + 2x + 3$ លើចន្លោះបិទ $[2, 5]$ ៖",
         "options": [
@@ -34476,12 +34820,12 @@
         "explanation": "កំពូល $x = 1 \\notin [2, 5]$។ លើ $[2, 5]$ អនុគមន៍ចុះដាច់ខាត នាំឱ្យតម្លៃធំបំផុតគឺ $f(2) = -(2)^2 + 2(2) + 3 = 3$។"
       }
     ],
-    "3": [
+    "5": [
       {
         "id": "q1",
         "questionNumber": 1,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដើម្បីសង់ប៉ារ៉ាបូលមួយបានត្រឹមត្រូវ ចំណុចសំខាន់ៗដែលត្រូវកំណត់រួមមាន ៖",
         "options": [
@@ -34496,8 +34840,8 @@
       {
         "id": "q2",
         "questionNumber": 2,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ប៉ារ៉ាបូល $y = ax^2 + bx + c$ កាត់អ័ក្ស $Ox$ ត្រង់ពីរចំណុចផ្សេងគ្នា លុះត្រាតែ ៖",
         "options": [
@@ -34512,8 +34856,8 @@
       {
         "id": "q3",
         "questionNumber": 3,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ប៉ារ៉ាបូល $y = ax^2 + bx + c$ ប៉ះនឹងអ័ក្ស $Ox$ លុះត្រាតែ ៖",
         "options": [
@@ -34528,8 +34872,8 @@
       {
         "id": "q4",
         "questionNumber": 4,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកកូអរដោនេចំណុចប្រសព្វរវាងប៉ារ៉ាបូល $y = x^2 - 4x + 3$ និងអ័ក្ស $Ox$ ៖",
         "options": [
@@ -34544,8 +34888,8 @@
       {
         "id": "q5",
         "questionNumber": 5,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកកូអរដោនេចំណុចប្រសព្វរវាងប៉ារ៉ាបូល $y = x^2 - 2x - 3$ និងបន្ទាត់ $y = x + 1$ ៖",
         "options": [
@@ -34560,8 +34904,8 @@
       {
         "id": "q6",
         "questionNumber": 6,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃអតិបរមានៃផលគុណពីរចំនួនវិជ្ជមាន $x$ និង $y$ ដោយដឹងថា $x + y = 20$ ៖",
         "options": [
@@ -34576,8 +34920,8 @@
       {
         "id": "q7",
         "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គ្រាប់បាល់មួយត្រូវបានទាត់ឡើងលើ មានកម្ពស់កំណត់ដោយ $h(t) = -5t^2 + 20t$ (គិតជាម៉ែត្រ, $t$ ជាវិនាទី)។ រកកម្ពស់អតិបរមានៃគ្រាប់បាល់ ៖",
         "options": [
@@ -34592,8 +34936,8 @@
       {
         "id": "q8",
         "questionNumber": 8,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "តាមសំណួរទី ៧ តើរយៈពេលប៉ុន្មានវិនាទីក្រោយទាត់ ទើបគ្រាប់បាល់ធ្លាក់មកដល់ដីវិញ?",
         "options": [
@@ -34608,8 +34952,8 @@
       {
         "id": "q9",
         "questionNumber": 9,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "កំណត់ $m$ ដើម្បីឱ្យបន្ទាត់ $y = x + m$ ប៉ះនឹងប៉ារ៉ាបូល $y = x^2 - 3x + 2$ ៖",
         "options": [
@@ -34624,8 +34968,8 @@
       {
         "id": "q10",
         "questionNumber": 10,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ប៉ារ៉ាបូល និងការរកតម្លៃបរមា",
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការដោះស្រាយសមីការ និងវិសមីការដឺក្រេទី២តាមក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដីចតុកោណកែងមួយមានបរិមាត្រ $40\\text{ m}$។ រកផ្ទៃក្រឡាអតិបរមាដែលអាចមាននៃដីនោះ ៖",
         "options": [
@@ -35137,7 +35481,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងរង្វង់ត្រីកោណមាត្រ (កាំ $R = 1$) ចំណុច $M$ ត្រូវគ្នានឹងមុំ $\\alpha$ មានកូអរដោនេគឺ ៖",
         "options": [
@@ -35155,7 +35499,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាតម្លៃនៃ $\\sin 90^\\circ$ និង $\\cos 0^\\circ$ ៖",
         "options": [
@@ -35171,7 +35515,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាតម្លៃនៃ $\\tan 45^\\circ$ ៖",
         "options": [
@@ -35187,7 +35531,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាតម្លៃនៃ $\\cos 120^\\circ$ ៖",
         "options": [
@@ -35203,7 +35547,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាតម្លៃនៃ $\\sin 150^\\circ$ ៖",
         "options": [
@@ -35219,7 +35563,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើតម្លៃ $\\tan 90^\\circ$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
@@ -35235,7 +35579,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាតម្លៃនៃ $\\tan 135^\\circ$ ៖",
         "options": [
@@ -35251,7 +35595,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាតម្លៃនៃ $A = \\sin^2 30^\\circ + \\sin^2 60^\\circ + \\cos 180^\\circ$ ៖",
         "options": [
@@ -35267,7 +35611,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "បំប្លែងមុំ $\\dfrac{2\\pi}{3}\\text{ rad}$ ជាដឺក្រេ ៖",
         "options": [
@@ -35283,7 +35627,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យស៊ីនុស កូស៊ីនុស តង់សង់ កូតង់សង់ ក្នុងរង្វង់ត្រីកោណមាត្រ",
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "បំប្លែងមុំ $225^\\circ$ ជារ៉ាដ្យង់ ៖",
         "options": [
@@ -35301,7 +35645,341 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តម្លៃនៃ $\\cos 45^\\circ$ គឺ ៖",
+        "options": [
+          "$1$",
+          "$\\dfrac{\\sqrt{3}}{2}$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{\\sqrt{2}}{2}$"
+        ],
+        "correct": 3,
+        "explanation": "ពីត្រីកោណកែងសមបាត ៖ $\\cos 45^\\circ = \\dfrac{\\sqrt{2}}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ត្រីកោណកែងសមបាតមានជ្រុងមុំកែង $8$។ គណនាអ៊ីប៉ូតេនុស ៖",
+        "options": [
+          "$8\\sqrt{2}$",
+          "$16$",
+          "$\\dfrac{8\\sqrt{2}}{2}$",
+          "$8\\sqrt{3}$"
+        ],
+        "correct": 0,
+        "explanation": "$\\cos 45^\\circ = \\dfrac{8}{c}$ ⇒ $c = 8\\sqrt{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ត្រីកោណ $ABC$ កែងត្រង់ $C$ មាន $\\angle A = 30^\\circ$ និងអ៊ីប៉ូតេនុស $AB = 6$។ គណនា $BC$ ៖",
+        "options": [
+          "$3$",
+          "$12$",
+          "$6$",
+          "$4$"
+        ],
+        "correct": 0,
+        "explanation": "$BC = AB \\sin 30^\\circ = 6 \\times \\dfrac{1}{2} = 3$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តម្លៃនៃ $\\tan 45^\\circ$ គឺ ៖",
+        "options": [
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$\\dfrac{1}{2}$",
+          "$1$",
+          "$\\dfrac{\\sqrt{3}}{2}$"
+        ],
+        "correct": 2,
+        "explanation": "ពីត្រីកោណកែងសមបាត ៖ $\\tan 45^\\circ = 1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ត្រីកោណកែងសមបាតមានជ្រុងមុំកែង $3$។ គណនាអ៊ីប៉ូតេនុស ៖",
+        "options": [
+          "$6$",
+          "$3\\sqrt{2}$",
+          "$3\\sqrt{3}$",
+          "$\\dfrac{3\\sqrt{2}}{2}$"
+        ],
+        "correct": 1,
+        "explanation": "$\\cos 45^\\circ = \\dfrac{3}{c}$ ⇒ $c = 3\\sqrt{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\sin^2 60^\\circ + \\cos^2 60^\\circ$ ៖",
+        "options": [
+          "$2$",
+          "$0$",
+          "$1$",
+          "$3$"
+        ],
+        "correct": 2,
+        "explanation": "ជំនួសតម្លៃពិសេស ៖ $\\sin^2 60^\\circ + \\cos^2 60^\\circ = 1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តម្លៃនៃ $\\tan 30^\\circ$ គឺ ៖",
+        "options": [
+          "$1$",
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{\\sqrt{3}}{3}$"
+        ],
+        "correct": 3,
+        "explanation": "ពីត្រីកោណសម័ង្សពុះពាក់កណ្តាល ៖ $\\tan 30^\\circ = \\dfrac{\\sqrt{3}}{3}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តម្លៃនៃ $\\sin 60^\\circ$ គឺ ៖",
+        "options": [
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$1$",
+          "$\\dfrac{\\sqrt{3}}{2}$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "correct": 2,
+        "explanation": "ពីត្រីកោណសម័ង្សពុះពាក់កណ្តាល ៖ $\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ត្រីកោណ $ABC$ កែងត្រង់ $C$ មាន $\\angle A = 30^\\circ$ និងអ៊ីប៉ូតេនុស $AB = 20$។ គណនា $BC$ ៖",
+        "options": [
+          "$10$",
+          "$20$",
+          "$11$",
+          "$40$"
+        ],
+        "correct": 0,
+        "explanation": "$BC = AB \\sin 30^\\circ = 20 \\times \\dfrac{1}{2} = 10$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $2\\sin 45^\\circ \\cos 45^\\circ$ ៖",
+        "options": [
+          "$3$",
+          "$1$",
+          "$0$",
+          "$2$"
+        ],
+        "correct": 1,
+        "explanation": "ជំនួសតម្លៃពិសេស ៖ $2\\sin 45^\\circ \\cos 45^\\circ = 1$។",
+        "src": "genpq-g10b_points"
+      }
+    ],
+    "3": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រូបមន្តគ្រឹះត្រីកោណមាត្រ $\\sin^2 \\alpha + \\cos^2 \\alpha$ ស្មើនឹង ៖",
+        "options": [
+          "$1$",
+          "$0$",
+          "$-1$",
+          "$2$"
+        ],
+        "correct": 0,
+        "explanation": "ចំពោះគ្រប់មុំ $\\alpha$, $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$ ជានិច្ច។"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ទំនាក់ទំនងរវាង $\\tan \\alpha$ និង $\\cos \\alpha$ គឺ ៖",
+        "options": [
+          "$1 + \\tan^2 \\alpha = \\dfrac{1}{\\cos^2 \\alpha}$",
+          "$1 + \\tan^2 \\alpha = \\cos^2 \\alpha$",
+          "$\\tan^2 \\alpha - 1 = \\dfrac{1}{\\cos^2 \\alpha}$",
+          "$1 + \\tan^2 \\alpha = \\sin^2 \\alpha$"
+        ],
+        "correct": 0,
+        "explanation": "$1 + \\tan^2 \\alpha = 1 + \\dfrac{\\sin^2 \\alpha}{\\cos^2 \\alpha} = \\dfrac{\\cos^2 \\alpha + \\sin^2 \\alpha}{\\cos^2 \\alpha} = \\dfrac{1}{\\cos^2 \\alpha}$។"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ផលគុណ $\\tan \\alpha \\times \\cot \\alpha$ ស្មើនឹង ៖",
+        "options": [
+          "$1$",
+          "$0$",
+          "$-1$",
+          "$\\sin \\alpha$"
+        ],
+        "correct": 0,
+        "explanation": "$\\cot \\alpha = \\dfrac{1}{\\tan \\alpha} \\implies \\tan \\alpha \\cot \\alpha = 1$។"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "បើ $\\cos \\alpha = \\dfrac{3}{5}$ និង $0 < \\alpha < \\dfrac{\\pi}{2}$ (កាដ្រង់ទី ១) គណនា $\\sin \\alpha$ ៖",
+        "options": [
+          "$\\dfrac{4}{5}$",
+          "$-\\dfrac{4}{5}$",
+          "$\\dfrac{2}{5}$",
+          "$\\dfrac{16}{25}$"
+        ],
+        "correct": 0,
+        "explanation": "$\\sin^2 \\alpha = 1 - \\left(\\dfrac{3}{5}\\right)^2 = \\dfrac{16}{25}$។ ដោយ $\\alpha \\in \\text{I} \\implies \\sin \\alpha = \\dfrac{4}{5}$។"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\tan \\alpha$ តាមទិន្នន័យសំណួរទី ៤ ៖",
+        "options": [
+          "$\\dfrac{4}{3}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{5}{3}$",
+          "$1$"
+        ],
+        "correct": 0,
+        "explanation": "$\\tan \\alpha = \\dfrac{\\sin \\alpha}{\\cos \\alpha} = \\dfrac{\\dfrac{4}{5}}{\\dfrac{3}{5}} = \\dfrac{4}{3}$។"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "បើ $\\tan \\alpha = 2$ គណនាតម្លៃនៃ $\\dfrac{1}{\\cos^2 \\alpha}$ ៖",
+        "options": [
+          "$5$",
+          "$4$",
+          "$3$",
+          "$\\sqrt{5}$"
+        ],
+        "correct": 0,
+        "explanation": "$\\dfrac{1}{\\cos^2 \\alpha} = 1 + \\tan^2 \\alpha = 1 + 2^2 = 5$។"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សម្រួលកន្សោម $A = (1 - \\cos \\alpha)(1 + \\cos \\alpha)$ ៖",
+        "options": [
+          "$\\sin^2 \\alpha$",
+          "$\\cos^2 \\alpha$",
+          "$1$",
+          "$\\tan^2 \\alpha$"
+        ],
+        "correct": 0,
+        "explanation": "$(1 - \\cos \\alpha)(1 + \\cos \\alpha) = 1 - \\cos^2 \\alpha = \\sin^2 \\alpha$។"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សម្រួលកន្សោម $B = \\dfrac{\\sin x}{1 + \\cos x} + \\dfrac{1 + \\cos x}{\\sin x}$ ៖",
+        "options": [
+          "$\\dfrac{2}{\\sin x}$",
+          "$\\dfrac{2}{\\cos x}$",
+          "$2$",
+          "$\\dfrac{1}{\\sin x}$"
+        ],
+        "correct": 0,
+        "explanation": "$B = \\dfrac{\\sin^2 x + (1 + \\cos x)^2}{\\sin x(1 + \\cos x)} = \\dfrac{\\sin^2 x + 1 + 2\\cos x + \\cos^2 x}{\\sin x(1 + \\cos x)} = \\dfrac{2 + 2\\cos x}{\\sin x(1 + \\cos x)} = \\dfrac{2}{\\sin x}$។"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $\\sin x + \\cos x = \\dfrac{1}{2}$ គណនាផលគុណ $\\sin x \\cos x$ ៖",
+        "options": [
+          "$-\\dfrac{3}{8}$",
+          "$\\dfrac{3}{8}$",
+          "$-\\dfrac{1}{4}$",
+          "$\\dfrac{1}{8}$"
+        ],
+        "correct": 0,
+        "explanation": "លើកជាការេ ៖ $(\\sin x + \\cos x)^2 = 1 + 2\\sin x \\cos x = \\dfrac{1}{4} \\implies 2\\sin x \\cos x = \\dfrac{1}{4} - 1 = -\\dfrac{3}{4} \\implies \\sin x \\cos x = -\\dfrac{3}{8}$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សម្រួល $C = \\sin^4 x - \\cos^4 x + 2\\cos^2 x$ ៖",
+        "options": [
+          "$1$",
+          "$0$",
+          "$2$",
+          "$\\sin^2 x$"
+        ],
+        "correct": 0,
+        "explanation": "$\\sin^4 x - \\cos^4 x = (\\sin^2 x - \\cos^2 x)(\\sin^2 x + \\cos^2 x) = \\sin^2 x - \\cos^2 x$។ នាំឱ្យ $C = \\sin^2 x - \\cos^2 x + 2\\cos^2 x = \\sin^2 x + \\cos^2 x = 1$។"
+      }
+    ],
+    "4": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងកាដ្រង់ទី ១ ($0 < \\alpha < 90^\\circ$) តើអនុគមន៍ត្រីកោណមាត្រណាខ្លះមានសញ្ញាវិជ្ជមាន?",
         "options": [
@@ -35318,8 +35996,8 @@
       {
         "id": "q2",
         "questionNumber": 2,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងកាដ្រង់ទី ២ ($90^\\circ < \\alpha < 180^\\circ$) តើអនុគមន៍ណាមានសញ្ញាវិជ្ជមាន?",
         "options": [
@@ -35334,8 +36012,8 @@
       {
         "id": "q3",
         "questionNumber": 3,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងកាដ្រង់ទី ៣ ($180^\\circ < \\alpha < 270^\\circ$) តើអនុគមន៍ណាមានសញ្ញាវិជ្ជមាន?",
         "options": [
@@ -35350,8 +36028,8 @@
       {
         "id": "q4",
         "questionNumber": 4,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ក្នុងកាដ្រង់ទី ៤ ($270^\\circ < \\alpha < 360^\\circ$) តើអនុគមន៍ណាមានសញ្ញាវិជ្ជមាន?",
         "options": [
@@ -35366,8 +36044,8 @@
       {
         "id": "q5",
         "questionNumber": 5,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បើ $\\sin \\alpha > 0$ និង $\\cos \\alpha < 0$ តើមុំ $\\alpha$ ស្ថិតក្នុងកាដ្រង់ណា?",
         "options": [
@@ -35382,8 +36060,8 @@
       {
         "id": "q6",
         "questionNumber": 6,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បើ $\\sin \\alpha < 0$ និង $\\tan \\alpha > 0$ តើមុំ $\\alpha$ ស្ថិតក្នុងកាដ្រង់ណា?",
         "options": [
@@ -35398,8 +36076,8 @@
       {
         "id": "q7",
         "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "កំណត់សញ្ញានៃកន្សោម $A = \\sin 140^\\circ \\cdot \\cos 210^\\circ$ ៖",
         "options": [
@@ -35414,8 +36092,8 @@
       {
         "id": "q8",
         "questionNumber": 8,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "កំណត់សញ្ញានៃ $B = \\tan 310^\\circ \\cdot \\sin 290^\\circ$ ៖",
         "options": [
@@ -35430,8 +36108,8 @@
       {
         "id": "q9",
         "questionNumber": 9,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $\\cos x = -0.6$ និង $\\pi < x < 2\\pi$ រកកាដ្រង់នៃ $x$ ៖",
         "options": [
@@ -35446,8 +36124,8 @@
       {
         "id": "q10",
         "questionNumber": 10,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សញ្ញានៃអនុគមន៍ត្រីកោណមាត្រតាមកាដ្រង់",
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "សញ្ញានៃ $\\sin(-\\alpha)$ និង $\\cos(-\\alpha)$ ធៀបនឹង $\\sin \\alpha$ និង $\\cos \\alpha$ គឺ ៖",
         "options": [
@@ -35458,168 +36136,6 @@
         ],
         "correct": 0,
         "explanation": "ស៊ីនុសជាអនុគមន៍សេស $\\sin(-\\alpha) = -\\sin \\alpha$ និងកូស៊ីនុសជាអនុគមន៍គូ $\\cos(-\\alpha) = \\cos \\alpha$។"
-      }
-    ],
-    "3": [
-      {
-        "id": "q1",
-        "questionNumber": 1,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "រូបមន្តគ្រឹះត្រីកោណមាត្រ $\\sin^2 \\alpha + \\cos^2 \\alpha$ ស្មើនឹង ៖",
-        "options": [
-          "$1$",
-          "$0$",
-          "$-1$",
-          "$2$"
-        ],
-        "correct": 0,
-        "explanation": "ចំពោះគ្រប់មុំ $\\alpha$, $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$ ជានិច្ច។"
-      },
-      {
-        "id": "q2",
-        "questionNumber": 2,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ទំនាក់ទំនងរវាង $\\tan \\alpha$ និង $\\cos \\alpha$ គឺ ៖",
-        "options": [
-          "$1 + \\tan^2 \\alpha = \\dfrac{1}{\\cos^2 \\alpha}$",
-          "$1 + \\tan^2 \\alpha = \\cos^2 \\alpha$",
-          "$\\tan^2 \\alpha - 1 = \\dfrac{1}{\\cos^2 \\alpha}$",
-          "$1 + \\tan^2 \\alpha = \\sin^2 \\alpha$"
-        ],
-        "correct": 0,
-        "explanation": "$1 + \\tan^2 \\alpha = 1 + \\dfrac{\\sin^2 \\alpha}{\\cos^2 \\alpha} = \\dfrac{\\cos^2 \\alpha + \\sin^2 \\alpha}{\\cos^2 \\alpha} = \\dfrac{1}{\\cos^2 \\alpha}$។"
-      },
-      {
-        "id": "q3",
-        "questionNumber": 3,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ផលគុណ $\\tan \\alpha \\times \\cot \\alpha$ ស្មើនឹង ៖",
-        "options": [
-          "$1$",
-          "$0$",
-          "$-1$",
-          "$\\sin \\alpha$"
-        ],
-        "correct": 0,
-        "explanation": "$\\cot \\alpha = \\dfrac{1}{\\tan \\alpha} \\implies \\tan \\alpha \\cot \\alpha = 1$។"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\cos \\alpha = \\dfrac{3}{5}$ និង $0 < \\alpha < \\dfrac{\\pi}{2}$ (កាដ្រង់ទី ១) គណនា $\\sin \\alpha$ ៖",
-        "options": [
-          "$\\dfrac{4}{5}$",
-          "$-\\dfrac{4}{5}$",
-          "$\\dfrac{2}{5}$",
-          "$\\dfrac{16}{25}$"
-        ],
-        "correct": 0,
-        "explanation": "$\\sin^2 \\alpha = 1 - \\left(\\dfrac{3}{5}\\right)^2 = \\dfrac{16}{25}$។ ដោយ $\\alpha \\in \\text{I} \\implies \\sin \\alpha = \\dfrac{4}{5}$។"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\tan \\alpha$ តាមទិន្នន័យសំណួរទី ៤ ៖",
-        "options": [
-          "$\\dfrac{4}{3}$",
-          "$\\dfrac{3}{4}$",
-          "$\\dfrac{5}{3}$",
-          "$1$"
-        ],
-        "correct": 0,
-        "explanation": "$\\tan \\alpha = \\dfrac{\\sin \\alpha}{\\cos \\alpha} = \\dfrac{\\dfrac{4}{5}}{\\dfrac{3}{5}} = \\dfrac{4}{3}$។"
-      },
-      {
-        "id": "q6",
-        "questionNumber": 6,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\tan \\alpha = 2$ គណនាតម្លៃនៃ $\\dfrac{1}{\\cos^2 \\alpha}$ ៖",
-        "options": [
-          "$5$",
-          "$4$",
-          "$3$",
-          "$\\sqrt{5}$"
-        ],
-        "correct": 0,
-        "explanation": "$\\dfrac{1}{\\cos^2 \\alpha} = 1 + \\tan^2 \\alpha = 1 + 2^2 = 5$។"
-      },
-      {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលកន្សោម $A = (1 - \\cos \\alpha)(1 + \\cos \\alpha)$ ៖",
-        "options": [
-          "$\\sin^2 \\alpha$",
-          "$\\cos^2 \\alpha$",
-          "$1$",
-          "$\\tan^2 \\alpha$"
-        ],
-        "correct": 0,
-        "explanation": "$(1 - \\cos \\alpha)(1 + \\cos \\alpha) = 1 - \\cos^2 \\alpha = \\sin^2 \\alpha$។"
-      },
-      {
-        "id": "q8",
-        "questionNumber": 8,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "សម្រួលកន្សោម $B = \\dfrac{\\sin x}{1 + \\cos x} + \\dfrac{1 + \\cos x}{\\sin x}$ ៖",
-        "options": [
-          "$\\dfrac{2}{\\sin x}$",
-          "$\\dfrac{2}{\\cos x}$",
-          "$2$",
-          "$\\dfrac{1}{\\sin x}$"
-        ],
-        "correct": 0,
-        "explanation": "$B = \\dfrac{\\sin^2 x + (1 + \\cos x)^2}{\\sin x(1 + \\cos x)} = \\dfrac{\\sin^2 x + 1 + 2\\cos x + \\cos^2 x}{\\sin x(1 + \\cos x)} = \\dfrac{2 + 2\\cos x}{\\sin x(1 + \\cos x)} = \\dfrac{2}{\\sin x}$។"
-      },
-      {
-        "id": "q9",
-        "questionNumber": 9,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "បើ $\\sin x + \\cos x = \\dfrac{1}{2}$ គណនាផលគុណ $\\sin x \\cos x$ ៖",
-        "options": [
-          "$-\\dfrac{3}{8}$",
-          "$\\dfrac{3}{8}$",
-          "$-\\dfrac{1}{4}$",
-          "$\\dfrac{1}{8}$"
-        ],
-        "correct": 0,
-        "explanation": "លើកជាការេ ៖ $(\\sin x + \\cos x)^2 = 1 + 2\\sin x \\cos x = \\dfrac{1}{4} \\implies 2\\sin x \\cos x = \\dfrac{1}{4} - 1 = -\\dfrac{3}{4} \\implies \\sin x \\cos x = -\\dfrac{3}{8}$។"
-      },
-      {
-        "id": "q10",
-        "questionNumber": 10,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងគ្រឹះ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "សម្រួល $C = \\sin^4 x - \\cos^4 x + 2\\cos^2 x$ ៖",
-        "options": [
-          "$1$",
-          "$0$",
-          "$2$",
-          "$\\sin^2 x$"
-        ],
-        "correct": 0,
-        "explanation": "$\\sin^4 x - \\cos^4 x = (\\sin^2 x - \\cos^2 x)(\\sin^2 x + \\cos^2 x) = \\sin^2 x - \\cos^2 x$។ នាំឱ្យ $C = \\sin^2 x - \\cos^2 x + 2\\cos^2 x = \\sin^2 x + \\cos^2 x = 1$។"
       }
     ]
   },
@@ -82057,7 +82573,179 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(12)$ និង $B(11)$។ រកកូអរដោនេចំណុចកណ្តាល $M$ នៃ $[AB]$ ៖",
+        "options": [
+          "$\\dfrac{1}{2}$",
+          "$-\\dfrac{1}{2}$",
+          "$\\dfrac{23}{2}$",
+          "$23$"
+        ],
+        "correct": 2,
+        "explanation": "$x_M = \\dfrac{12 + 11}{2} = \\dfrac{23}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន ចំណុច $A$ និង $B$ មានកូអរដោនេ $-7$ និង $-6$។ គណនាចម្ងាយ $AB$ ៖",
+        "options": [
+          "$2$",
+          "$13$",
+          "$-1$",
+          "$1$"
+        ],
+        "correct": 3,
+        "explanation": "$AB = |x_B - x_A| = |-6 - (-7)| = 1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(-8)$ និង $B(6)$។ រកកូអរដោនេចំណុចកណ្តាល $M$ នៃ $[AB]$ ៖",
+        "options": [
+          "$-7$",
+          "$-2$",
+          "$7$",
+          "$-1$"
+        ],
+        "correct": 3,
+        "explanation": "$x_M = \\dfrac{-8 + 6}{2} = -1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(7)$ និង $B(6)$។ រកកូអរដោនេចំណុច $Q$ ដែលចែក $[AB]$ ខាងក្រៅតាមផលធៀប $3 : 1$ ៖",
+        "options": [
+          "$\\dfrac{13}{2}$",
+          "$\\dfrac{15}{2}$",
+          "$\\dfrac{11}{2}$",
+          "$\\dfrac{25}{4}$"
+        ],
+        "correct": 2,
+        "explanation": "$x_Q = \\dfrac{-n x_A + m x_B}{m - n} = \\dfrac{-1(7) + 3(6)}{2} = \\dfrac{11}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(7)$ និង $B(-5)$។ រកកូអរដោនេចំណុចកណ្តាល $M$ នៃ $[AB]$ ៖",
+        "options": [
+          "$2$",
+          "$6$",
+          "$-6$",
+          "$1$"
+        ],
+        "correct": 3,
+        "explanation": "$x_M = \\dfrac{7 + -5}{2} = 1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(-4)$ និង $B(-8)$។ រកកូអរដោនេចំណុច $Q$ ដែលចែក $[AB]$ ខាងក្រៅតាមផលធៀប $2 : 3$ ៖",
+        "options": [
+          "$-\\dfrac{28}{5}$",
+          "$-6$",
+          "$-16$",
+          "$4$"
+        ],
+        "correct": 3,
+        "explanation": "$x_Q = \\dfrac{-n x_A + m x_B}{m - n} = \\dfrac{-3(-4) + 2(-8)}{-1} = 4$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(11)$ និង $B(-6)$។ រកកូអរដោនេចំណុច $P$ ដែលចែក $[AB]$ ខាងក្នុងតាមផលធៀប $3 : 1$ ៖",
+        "options": [
+          "$-\\dfrac{29}{2}$",
+          "$\\dfrac{27}{4}$",
+          "$\\dfrac{5}{2}$",
+          "$-\\dfrac{7}{4}$"
+        ],
+        "correct": 3,
+        "explanation": "$x_P = \\dfrac{n x_A + m x_B}{m + n} = \\dfrac{1(11) + 3(-6)}{4} = -\\dfrac{7}{4}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(-9)$ និង $B(10)$។ រកកូអរដោនេចំណុច $Q$ ដែលចែក $[AB]$ ខាងក្រៅតាមផលធៀប $3 : 1$ ៖",
+        "options": [
+          "$\\dfrac{39}{2}$",
+          "$-\\dfrac{37}{2}$",
+          "$\\dfrac{21}{4}$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "correct": 0,
+        "explanation": "$x_Q = \\dfrac{-n x_A + m x_B}{m - n} = \\dfrac{-1(-9) + 3(10)}{2} = \\dfrac{39}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(0)$ និង $B(2)$។ រកកូអរដោនេចំណុច $P$ ដែលចែក $[AB]$ ខាងក្នុងតាមផលធៀប $2 : 3$ ៖",
+        "options": [
+          "$\\dfrac{6}{5}$",
+          "$\\dfrac{4}{5}$",
+          "$-4$",
+          "$1$"
+        ],
+        "correct": 1,
+        "explanation": "$x_P = \\dfrac{n x_A + m x_B}{m + n} = \\dfrac{3(0) + 2(2)}{5} = \\dfrac{4}{5}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ កូអរដោនេនៃចំណុចនៅលើបន្ទាត់",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "លើបន្ទាត់ចំនួន $A(-5)$ និង $B(9)$។ រកកូអរដោនេចំណុច $Q$ ដែលចែក $[AB]$ ខាងក្រៅតាមផលធៀប $2 : 1$ ៖",
+        "options": [
+          "$2$",
+          "$23$",
+          "$-19$",
+          "$\\dfrac{13}{3}$"
+        ],
+        "correct": 1,
+        "explanation": "$x_Q = \\dfrac{-n x_A + m x_B}{m - n} = \\dfrac{-1(-5) + 2(9)}{1} = 23$។",
+        "src": "genpq-g10b_points"
+      }
+    ],
+    "2": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តចម្ងាយរវាងពីរចំណុច $A(x_A, y_A)$ និង $B(x_B, y_B)$ ក្នុងប្លង់កូអរដោនេគឺ ៖",
         "options": [
@@ -82074,8 +82762,8 @@
       {
         "id": "q2",
         "questionNumber": 2,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាចម្ងាយរវាងចំណុច $A(1, 2)$ និង $B(4, 6)$ ៖",
         "options": [
@@ -82090,8 +82778,8 @@
       {
         "id": "q3",
         "questionNumber": 3,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាចម្ងាយពីគល់កូអរដោនេ $O(0, 0)$ ទៅចំណុច $M(6, -8)$ ៖",
         "options": [
@@ -82106,8 +82794,8 @@
       {
         "id": "q4",
         "questionNumber": 4,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាចម្ងាយរវាងចំណុច $P(-2, 3)$ និង $Q(3, -9)$ ៖",
         "options": [
@@ -82122,8 +82810,8 @@
       {
         "id": "q5",
         "questionNumber": 5,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ត្រីកោណ $ABC$ មានកំពូល $A(0, 0), B(3, 0), C(0, 4)$។ គណនាបរិមាត្រនៃត្រីកោណនេះ ៖",
         "options": [
@@ -82138,8 +82826,8 @@
       {
         "id": "q6",
         "questionNumber": 6,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកកូអរដោនេចំណុចកណ្តាល $I$ នៃអង្កត់ $AB$ ដែល $A(2, -4)$ និង $B(6, 8)$ ៖",
         "options": [
@@ -82154,8 +82842,8 @@
       {
         "id": "q7",
         "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $y$ ដោយដឹងថាចម្ងាយរវាង $A(2, -1)$ និង $B(5, y)$ ស្មើនឹង $5$ ៖",
         "options": [
@@ -82170,8 +82858,8 @@
       {
         "id": "q8",
         "questionNumber": 8,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "បង្ហាញថាបីចំណុច $A(1, 2), B(3, 6), C(4, 8)$ រត់ត្រង់ជួរគ្នាដោយពិនិត្យចម្ងាយ ៖",
         "options": [
@@ -82186,8 +82874,8 @@
       {
         "id": "q9",
         "questionNumber": 9,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកចំណុច $M$ លើអ័ក្ស $Ox$ ដែលនៅស្មើចម្ងាយពី $A(1, 2)$ និង $B(3, 4)$ ៖",
         "options": [
@@ -82202,8 +82890,8 @@
       {
         "id": "q10",
         "questionNumber": 10,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ចម្ងាយរវាងពីរចំណុច",
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ចម្ងាយរវាងពីរចំណុចក្នុងប្លង់កូអរដោនេ",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ត្រីកោណ $ABC$ មាន $A(1, 1), B(4, 5), C(0, 8)$។ ត្រីកោណនេះជាត្រីកោណអ្វី?",
         "options": [
@@ -82216,12 +82904,12 @@
         "explanation": "$AB^2 = 9 + 16 = 25$។ $BC^2 = 16 + 9 = 25$។ $AC^2 = 1 + 49 = 50$។ ដោយ $AB = BC = 5$ និង $AB^2 + BC^2 = AC^2$ នាំឱ្យជាត្រីកោណកែងសមបាតត្រង់ $B$។"
       }
     ],
-    "2": [
+    "3": [
       {
         "id": "q1",
         "questionNumber": 1,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តកូអរដោនេចំណុចកណ្តាលនៃអង្កត់ $AB$ គឺ ៖",
         "options": [
@@ -82236,8 +82924,8 @@
       {
         "id": "q2",
         "questionNumber": 2,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ចំណុច $M$ ចែកអង្កត់ $AB$ តាមផលធៀប $k$ (ពោលគឺ $\\vec{AM} = k\\vec{MB}$)។ កូអរដោនេនៃ $M$ គឺ ៖",
         "options": [
@@ -82252,8 +82940,8 @@
       {
         "id": "q3",
         "questionNumber": 3,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកកូអរដោនេទម្ងន់ $G$ នៃត្រីកោណ $ABC$ ដែល $A(1, 2), B(3, 4), C(5, 6)$ ៖",
         "options": [
@@ -82268,8 +82956,8 @@
       {
         "id": "q4",
         "questionNumber": 4,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុច $P$ ចែកអង្កត់ $AB$ ក្នុងផលធៀប $\\dfrac{AP}{PB} = 2$ ដោយ $A(1, 2)$ និង $B(4, 8)$ ៖",
         "options": [
@@ -82284,8 +82972,8 @@
       {
         "id": "q5",
         "questionNumber": 5,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បើ $M(2, 3)$ ជាចំណុចកណ្តាលនៃ $AB$ ហើយ $A(-1, 5)$ រកកូអរដោនេនៃ $B$ ៖",
         "options": [
@@ -82300,8 +82988,8 @@
       {
         "id": "q6",
         "questionNumber": 6,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកកូអរដោនេចំណុច $C$ នៅលើអង្កត់ $AB$ ដែល $AC = \\dfrac{1}{3} AB$ ដោយ $A(0, 3)$ និង $B(6, 9)$ ៖",
         "options": [
@@ -82316,8 +83004,8 @@
       {
         "id": "q7",
         "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ចតុកោណ $ABCD$ ជាប្រលេឡូក្រាម។ បើ $A(1, 2), B(4, 3), C(6, 6)$ រកកូអរដោនេនៃ $D$ ៖",
         "options": [
@@ -82332,8 +83020,8 @@
       {
         "id": "q8",
         "questionNumber": 8,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកផលធៀប $k = \\dfrac{AP}{PB}$ ដែលចំណុច $P$ ចែកអង្កត់ $AB$ ដោយដឹងថា $A(2, -3), B(6, 5)$ និង $P$ ស្ថិតនៅលើអ័ក្ស $Ox$ ($y_P = 0$) ៖",
         "options": [
@@ -82348,8 +83036,8 @@
       {
         "id": "q9",
         "questionNumber": 9,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកកូអរដោនេចំណុច $P$ នៅសំណួរទី ៨ ៖",
         "options": [
@@ -82364,8 +83052,8 @@
       {
         "id": "q10",
         "questionNumber": 10,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ កូអរដោនេចំណុចចែកអង្កត់ជាសមាមាត្រ",
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ចំណុចចែកខាងក្នុង និងចំណុចចែកខាងក្រៅក្នុងប្លង់",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកកូអរដោនេចំណុចចែកក្រៅ $M$ នៃអង្កត់ $AB$ ដែល $\\vec{MA} = -2\\vec{MB}$ ដោយ $A(1, 2)$ និង $B(3, 4)$ ៖",
         "options": [
@@ -82377,168 +83065,6 @@
         "correct": 0,
         "explanation": "$\\vec{AM} = 2\\vec{AB} = 2(2, 2) = (4, 4) \\implies M(1 + 4, 2 + 4) = M(5, 6)$។"
       }
-    ],
-    "3": [
-      {
-        "id": "q1",
-        "questionNumber": 1,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "រូបមន្តផ្ទៃក្រឡាត្រីកោណ $ABC$ តាមកូអរដោនេកំពូលទាំងបីគឺ ៖",
-        "options": [
-          "$S = \\dfrac{1}{2} |x_A(y_B - y_C) + x_B(y_C - y_A) + x_C(y_A - y_B)|$",
-          "$S = x_A y_B + x_B y_C + x_C y_A$",
-          "$S = \\dfrac{1}{2}(x_A + x_B + x_C)(y_A + y_B + y_C)$",
-          "$S = \\sqrt{p(p-a)(p-b)(p-c)}$"
-        ],
-        "correct": 0,
-        "explanation": "រូបមន្តដេទែរមីណង់ផ្ទៃក្រឡា ៖ $S = \\dfrac{1}{2} |x_A(y_B - y_C) + x_B(y_C - y_A) + x_C(y_A - y_B)|$។"
-      },
-      {
-        "id": "q2",
-        "questionNumber": 2,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនាផ្ទៃក្រឡាត្រីកោណ $OAB$ ដែល $O(0, 0), A(4, 0), B(0, 3)$ ៖",
-        "options": [
-          "$6$",
-          "$12$",
-          "$5$",
-          "$7$"
-        ],
-        "correct": 0,
-        "explanation": "ត្រីកោណកែងត្រង់ $O$ ៖ $S = \\dfrac{1}{2} \\times 4 \\times 3 = 6$ ឯកតាផ្ទៃ។"
-      },
-      {
-        "id": "q3",
-        "questionNumber": 3,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "បើផ្ទៃក្រឡាគណនាតាមរូបមន្តកូអរដោនេស្មើនឹង $0$ នោះមានន័យថា ៖",
-        "options": [
-          "បីចំណុចរត់ត្រង់ជួរគ្នា",
-          "ត្រីកោណជាត្រីកោណកែង",
-          "ត្រីកោណជាត្រីកោណសម័ង្ស",
-          "គណនាខុស"
-        ],
-        "correct": 0,
-        "explanation": "កាលណាផ្ទៃក្រឡាស្មើ 0 នោះចំណុចទាំងបីស្ថិតនៅលើបន្ទាត់តែមួយ (រត់ត្រង់ជួរគ្នា)។"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាផ្ទៃក្រឡាត្រីកោណ $ABC$ ដែល $A(1, 2), B(4, 6), C(1, 6)$ ៖",
-        "options": [
-          "$6$",
-          "$12$",
-          "$8$",
-          "$4$"
-        ],
-        "correct": 0,
-        "explanation": "$S = \\dfrac{1}{2} |1(6 - 6) + 4(6 - 2) + 1(2 - 6)| = \\dfrac{1}{2} |0 + 16 - 4| = \\dfrac{1}{2}(12) = 6$ ឯកតាផ្ទៃ។"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាផ្ទៃក្រឡាត្រីកោណ $ABC$ ដែល $A(0, 0), B(3, 1), C(1, 4)$ ៖",
-        "options": [
-          "$5.5$",
-          "$11$",
-          "$6$",
-          "$5$"
-        ],
-        "correct": 0,
-        "explanation": "$S = \\dfrac{1}{2} |3(4) - 1(1)| = \\dfrac{1}{2} |12 - 1| = \\dfrac{11}{2} = 5.5$ ឯកតាផ្ទៃ។"
-      },
-      {
-        "id": "q6",
-        "questionNumber": 6,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាផ្ទៃក្រឡាប្រលេឡូក្រាម $ABCD$ ដោយដឹងថា $S_{ABC} = 8$ ឯកតាផ្ទៃ ៖",
-        "options": [
-          "$16$",
-          "$8$",
-          "$24$",
-          "$32$"
-        ],
-        "correct": 0,
-        "explanation": "ផ្ទៃក្រឡាប្រលេឡូក្រាមស្មើពីរដងផ្ទៃក្រឡាត្រីកោណពាក់កណ្តាល ៖ $S = 2 \\times 8 = 16$ ឯកតាផ្ទៃ។"
-      },
-      {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកតម្លៃ $m$ ដើម្បីឱ្យបីចំណុច $A(1, 2), B(3, m), C(5, 6)$ រត់ត្រង់ជួរគ្នា ៖",
-        "options": [
-          "$m = 4$",
-          "$m = 3$",
-          "$m = 5$",
-          "$m = 2$"
-        ],
-        "correct": 0,
-        "explanation": "$B$ ជាចំណុចកណ្តាល $AC$ ៖ $m = \\dfrac{2 + 6}{2} = 4$ (ឬប្រើ $S = 0$)។"
-      },
-      {
-        "id": "q8",
-        "questionNumber": 8,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនាផ្ទៃក្រឡាចតុកោណ $ABCD$ ដែលមានកំពូល $A(1, 1), B(5, 1), C(4, 4), D(2, 4)$ ៖",
-        "options": [
-          "$9$",
-          "$12$",
-          "$15$",
-          "$6$"
-        ],
-        "correct": 0,
-        "explanation": "នេះជាចតុកោណព្នាយសមបាត បាតធំ $b_1 = 4$, បាតតូច $b_2 = 2$, កម្ពស់ $h = 3$ នាំឱ្យ $S = \\dfrac{4 + 2}{2} \\times 3 = 9$ ឯកតាផ្ទៃ។"
-      },
-      {
-        "id": "q9",
-        "questionNumber": 9,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "រកតម្លៃ $k$ ដើម្បីឱ្យត្រីកោណ $A(0, 0), B(k, 2), C(2, k)$ មានផ្ទៃក្រឡាស្មើនឹង $6$ ៖",
-        "options": [
-          "$k = 4$ ឬ $k = -4$",
-          "$k = 4$",
-          "$k = \\pm 2\\sqrt{3}$",
-          "$k = 6$"
-        ],
-        "correct": 0,
-        "explanation": "$S = \\dfrac{1}{2} |k^2 - 4| = 6 \\iff |k^2 - 4| = 12 \\implies k^2 - 4 = 12 \\iff k^2 = 16 \\implies k = \\pm 4$ (បើ $k^2-4=-12 \\implies k^2=-8$ គ្មានឫស)។"
-      },
-      {
-        "id": "q10",
-        "questionNumber": 10,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាត្រីកោណតាមកូអរដោនេ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "ត្រីកោណ $ABC$ មាន $A(2, 3), B(-1, 0), C(3, -2)$។ គណនាប្រវែងកម្ពស់គូសចេញពីកំពូល $A$ ៖",
-        "options": [
-          "$4\\dfrac{\\sqrt{5}}{5}$",
-          "$4$",
-          "$3\\sqrt{2}$",
-          "$\\dfrac{16}{\\sqrt{5}}$"
-        ],
-        "correct": 0,
-        "explanation": "គណនាផ្ទៃក្រឡា $S = 8$ ឯកតា។ បាត $BC = \\sqrt{4^2 + (-2)^2} = \\sqrt{20} = 2\\sqrt{5}$។ កម្ពស់ $h_A = \\dfrac{2S}{BC} = \\dfrac{16}{2\\sqrt{5}} = \\dfrac{8}{\\sqrt{5}} = \\dfrac{8\\sqrt{5}}{5}$។"
-      }
     ]
   },
   "les-g10-4-2": {
@@ -82547,7 +83073,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ទម្រង់ទូទៅនៃសមីការបន្ទាត់ក្នុងប្លង់កូអរដោនេគឺ ៖",
         "options": [
@@ -82563,7 +83089,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ទម្រង់ស្តង់ដារ (ឬទម្រង់ជម្រាល-កាត់អ័ក្ស) នៃសមីការបន្ទាត់គឺ ៖",
         "options": [
@@ -82579,7 +83105,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "សរសេរសមីការបន្ទាត់ $2x - 3y + 6 = 0$ ជាទម្រង់ស្តង់ដារ $y = mx + b$ ៖",
         "options": [
@@ -82595,7 +83121,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សមីការបន្ទាត់កាត់តាមចំណុច $A(x_0, y_0)$ មានមេគុណប្រាប់ទិស $m$ គឺ ៖",
         "options": [
@@ -82611,7 +83137,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សរសេរសមីការបន្ទាត់កាត់តាមចំណុច $A(2, 3)$ មានមេគុណប្រាប់ទិស $m = 4$ ៖",
         "options": [
@@ -82627,7 +83153,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សរសេរសមីការបន្ទាត់កាត់តាមពីរចំណុច $A(1, 2)$ និង $B(3, 6)$ ៖",
         "options": [
@@ -82643,7 +83169,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សមីការបន្ទាត់ដេកស្របនឹងអ័ក្ស $Ox$ កាត់តាមចំណុច $(2, 5)$ គឺ ៖",
         "options": [
@@ -82659,7 +83185,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "សមីការបន្ទាត់ឈរស្របនឹងអ័ក្ស $Oy$ កាត់តាមចំណុច $(-3, 4)$ គឺ ៖",
         "options": [
@@ -82675,7 +83201,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "សរសេរសមីការបន្ទាត់តាមកំណាត់កាត់អ័ក្ស $\\dfrac{x}{a} + \\dfrac{y}{b} = 1$ កាត់តាម $(3, 0)$ និង $(0, -2)$ ៖",
         "options": [
@@ -82691,7 +83217,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការទូទៅ និងសមីការស្តង់ដារ",
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការបន្ទាត់កាត់តាមចំណុចមួយ និងស្គាល់មេគុណប្រាប់ទិស",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកចំណុចប្រសព្វរវាងបន្ទាត់ $(D) : 3x - 2y + 6 = 0$ ជាមួយអ័ក្សកូអរដោនេទាំងពីរ ៖",
         "options": [
@@ -82709,7 +83235,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តមេគុណប្រាប់ទិស $m$ នៃបន្ទាត់កាត់តាមពីរចំណុច $A(x_1, y_1)$ និង $B(x_2, y_2)$ ($x_1 \\neq x_2$) គឺ ៖",
         "options": [
@@ -82725,7 +83251,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកមេគុណប្រាប់ទិសនៃបន្ទាត់កាត់តាម $A(1, 3)$ និង $B(4, 9)$ ៖",
         "options": [
@@ -82741,7 +83267,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកមេគុណប្រាប់ទិសនៃបន្ទាត់ $4x - 2y + 5 = 0$ ៖",
         "options": [
@@ -82757,7 +83283,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើមេគុណប្រាប់ទិសនៃបន្ទាត់ដេក (ស្របនឹងអ័ក្ស $Ox$) ស្មើនឹងប៉ុន្មាន?",
         "options": [
@@ -82773,7 +83299,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើមេគុណប្រាប់ទិសនៃបន្ទាត់ឈរ (ស្របនឹងអ័ក្ស $Oy$) ស្មើនឹងប៉ុន្មាន?",
         "options": [
@@ -82789,7 +83315,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បើបន្ទាត់មួយបង្កើតបានមុំលំអៀង $\\alpha = 45^\\circ$ ជាមួយអ័ក្ស $Ox$ វិជ្ជមាន រកមេគុណប្រាប់ទិស $m$ ៖",
         "options": [
@@ -82805,7 +83331,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បើបន្ទាត់មួយបង្កើតបានមុំលំអៀង $\\alpha = 135^\\circ$ រកមេគុណប្រាប់ទិស $m$ ៖",
         "options": [
@@ -82821,7 +83347,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃ $k$ ដើម្បីឱ្យបន្ទាត់កាត់តាម $A(2, k)$ និង $B(5, 7)$ មានមេគុណប្រាប់ទិស $m = 3$ ៖",
         "options": [
@@ -82837,7 +83363,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "បន្ទាត់ដែលមានមេគុណប្រាប់ទិស $m > 0$ ជាបន្ទាត់ដែល ៖",
         "options": [
@@ -82853,7 +83379,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ មេគុណប្រាប់ទិសនៃបន្ទាត់",
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់កាត់តាមពីរចំណុច",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "បន្ទាត់ដែលមានមេគុណប្រាប់ទិស $m < 0$ ជាបន្ទាត់ដែល ៖",
         "options": [
@@ -82871,7 +83397,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "បន្ទាត់ពីរ $(D_1) : y = m_1 x + b_1$ និង $(D_2) : y = m_2 x + b_2$ ស្របគ្នា លុះត្រាតែ ៖",
         "options": [
@@ -82887,7 +83413,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "បន្ទាត់ពីរ $(D_1)$ និង $(D_2)$ កែងគ្នា លុះត្រាតែ ៖",
         "options": [
@@ -82903,7 +83429,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "បន្ទាត់ណាស្របនឹងបន្ទាត់ $y = 3x - 5$?",
         "options": [
@@ -82919,7 +83445,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បន្ទាត់ណាកែងនឹងបន្ទាត់ $y = 2x + 1$?",
         "options": [
@@ -82935,7 +83461,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សរសេរសមីការបន្ទាត់កាត់តាមចំណុច $A(1, 4)$ ហើយស្របនឹងបន្ទាត់ $(D) : y = 2x - 3$ ៖",
         "options": [
@@ -82951,7 +83477,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សរសេរសមីការបន្ទាត់កាត់តាមចំណុច $P(2, -1)$ ហើយកែងនឹងបន្ទាត់ $(D) : 3x - y + 4 = 0$ ៖",
         "options": [
@@ -82967,7 +83493,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "កំណត់តម្លៃ $a$ ដើម្បីឱ្យបន្ទាត់ $ax + 2y - 5 = 0$ ស្របនឹងបន្ទាត់ $3x - y + 1 = 0$ ៖",
         "options": [
@@ -82983,7 +83509,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "កំណត់តម្លៃ $m$ ដើម្បីឱ្យពីរន្ទាត់ $2x - my + 3 = 0$ និង $mx + 8y - 1 = 0$ កែងគ្នា ៖",
         "options": [
@@ -82999,7 +83525,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "សរសេរសមីការមេឌ្យាទ័រនៃអង្កត់ $AB$ ដោយ $A(1, 3)$ និង $B(5, 7)$ ៖",
         "options": [
@@ -83015,7 +83541,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ លក្ខខណ្ឌស្របគ្នា និងកែងគ្នា",
+        "pointTitle": "ចំណុចទី ៣ ៖ បន្ទាត់ស្រប និងបន្ទាត់កែង",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "តើបន្ទាត់ពីរ $x = 3$ និង $y = -2$ មានទំនាក់ទំនងយ៉ាងដូចម្តេច?",
         "options": [
@@ -83033,7 +83559,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តចម្ងាយពីចំណុច $M(x_0, y_0)$ ទៅបន្ទាត់ $(D) : ax + by + c = 0$ គឺ ៖",
         "options": [
@@ -83049,7 +83575,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាចម្ងាយពីគល់កូអរដោនេ $O(0, 0)$ ទៅបន្ទាត់ $3x + 4y - 10 = 0$ ៖",
         "options": [
@@ -83065,7 +83591,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "បើចំណុច $P(x_0, y_0)$ ស្ថិតនៅលើបន្ទាត់ $(D)$ នោះចម្ងាយ $d(P, D)$ ស្មើនឹង ៖",
         "options": [
@@ -83081,7 +83607,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាចម្ងាយពីចំណុច $A(1, 2)$ ទៅបន្ទាត់ $4x - 3y + 12 = 0$ ៖",
         "options": [
@@ -83097,7 +83623,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាចម្ងាយពីចំណុច $B(-2, 3)$ ទៅបន្ទាត់ $5x + 12y - 13 = 0$ ៖",
         "options": [
@@ -83113,7 +83639,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ចម្ងាយរវាងបន្ទាត់ស្របគ្នាពីរ $(D_1) : 3x - 4y + 5 = 0$ និង $(D_2) : 3x - 4y - 15 = 0$ គឺ ៖",
         "options": [
@@ -83129,7 +83655,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាចម្ងាយពីចំណុច $M(3, 4)$ ទៅអ័ក្ស $Ox$ (បន្ទាត់ $y = 0$) ៖",
         "options": [
@@ -83145,7 +83671,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃ $c$ ដើម្បីឱ្យចម្ងាយពី $A(2, -1)$ ទៅបន្ទាត់ $3x + 4y + c = 0$ ស្មើនឹង $3$ ៖",
         "options": [
@@ -83161,7 +83687,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកកាំ $R$ នៃរង្វង់ដែលមានផ្ចិត $I(1, 2)$ ហើយប៉ះនឹងបន្ទាត់ $3x - 4y - 5 = 0$ ៖",
         "options": [
@@ -83177,7 +83703,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយពីចំណុចមួយទៅបន្ទាត់",
+        "pointTitle": "ចំណុចទី ៤ ៖ ចម្ងាយរវាងចំណុច និងបន្ទាត់",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកសមីការបន្ទាត់ពុះមុំរវាងបន្ទាត់ $x = 0$ និង $y = 0$ ក្នុងកាដ្រង់ទី ១ ៖",
         "options": [
@@ -83188,6 +83714,350 @@
         ],
         "correct": 0,
         "explanation": "ចំណុច $M(x, y)$ នៅស្មើចម្ងាយពីអ័ក្សទាំងពីរ $|x| = |y|$។ ក្នុងកាដ្រង់ទី ១ ($x>0, y>0$) នាំឱ្យ $y = x$។"
+      }
+    ],
+    "5": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ត្រីកោណ $OAB$ មាន $O(0, 0), A(12, 0), B(0, 16)$។ $M$ ជាចំណុចកណ្តាលនៃ $[AB]$។ គណនា $OM$ ៖",
+        "options": [
+          "$14$",
+          "$10$",
+          "$20$",
+          "$5$"
+        ],
+        "correct": 1,
+        "explanation": "$M(6, 8)$ ⇒ $OM = 10 = \\dfrac{AB}{2}$ (មេដ្យានទៅអ៊ីប៉ូតេនុសស្មើពាក់កណ្តាលអ៊ីប៉ូតេនុស)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ដើម្បីឱ្យ $ABCD$ ជាប្រលេឡូក្រាម ដែល $A(4, 4), B(2, 2), D(6, 7)$ តើ $C$ មានកូអរដោនេប៉ុន្មាន?",
+        "options": [
+          "$(0, 1)$",
+          "$(8, 9)$",
+          "$(0, -1)$",
+          "$(4, 5)$"
+        ],
+        "correct": 3,
+        "explanation": "ប្រលេឡូក្រាម ⇔ អង្កត់ទ្រូងកាត់គ្នាត្រង់ចំណុចកណ្តាលរួម ⇒ $x_A + x_C = x_B + x_D$ , $y_A + y_C = y_B + y_D$ ⇒ $(4, 5)$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $A(-3, 3), B(-2, 3), C(-3, 8)$។ តើត្រីកោណ $ABC$ ជាត្រីកោណប្រភេទអ្វី?",
+        "options": [
+          "ត្រីកោណកែងត្រង់ $B$",
+          "ត្រីកោណកែងត្រង់ $C$",
+          "ត្រីកោណសម័ង្ស",
+          "ត្រីកោណកែងត្រង់ $A$"
+        ],
+        "correct": 3,
+        "explanation": "$AB^2 = 1 , AC^2 = 25 , BC^2 = 26$ ⇒ $BC^2 = AB^2 + AC^2$ ⇒ កែងត្រង់ $A$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $A(-3, 2), B(-5, -2), C(-1, -2)$។ គណនា $AB$ និង $AC$ ហើយសន្និដ្ឋាន ៖",
+        "options": [
+          "$AB \\ne AC$ ⇒ ត្រីកោណធម្មតា",
+          "ត្រីកោណកែងត្រង់ $A$",
+          "$AB = BC$ ⇒ ត្រីកោណសមបាតត្រង់ $B$",
+          "$AB = AC$ ⇒ ត្រីកោណសមបាតត្រង់ $A$"
+        ],
+        "correct": 3,
+        "explanation": "$AB = AC = 2\\sqrt{5}$ ⇒ សមបាតត្រង់ $A$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $A(-1, 2), B(2, 2), C(-1, 3)$។ តើត្រីកោណ $ABC$ ជាត្រីកោណប្រភេទអ្វី?",
+        "options": [
+          "ត្រីកោណកែងត្រង់ $B$",
+          "ត្រីកោណកែងត្រង់ $A$",
+          "ត្រីកោណសម័ង្ស",
+          "ត្រីកោណកែងត្រង់ $C$"
+        ],
+        "correct": 1,
+        "explanation": "$AB^2 = 9 , AC^2 = 1 , BC^2 = 10$ ⇒ $BC^2 = AB^2 + AC^2$ ⇒ កែងត្រង់ $A$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ដើម្បីឱ្យ $ABCD$ ជាប្រលេឡូក្រាម ដែល $A(1, -3), B(2, -2), D(5, -3)$ តើ $C$ មានកូអរដោនេប៉ុន្មាន?",
+        "options": [
+          "$(5, 1)$",
+          "$(6, -2)$",
+          "$(-2, -2)$",
+          "$(4, -4)$"
+        ],
+        "correct": 1,
+        "explanation": "ប្រលេឡូក្រាម ⇔ អង្កត់ទ្រូងកាត់គ្នាត្រង់ចំណុចកណ្តាលរួម ⇒ $x_A + x_C = x_B + x_D$ , $y_A + y_C = y_B + y_D$ ⇒ $(6, -2)$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $A(0, 0), B(5, 0), C(0, 1)$។ តើត្រីកោណ $ABC$ ជាត្រីកោណប្រភេទអ្វី?",
+        "options": [
+          "ត្រីកោណសម័ង្ស",
+          "ត្រីកោណកែងត្រង់ $C$",
+          "ត្រីកោណកែងត្រង់ $A$",
+          "ត្រីកោណកែងត្រង់ $B$"
+        ],
+        "correct": 2,
+        "explanation": "$AB^2 = 25 , AC^2 = 1 , BC^2 = 26$ ⇒ $BC^2 = AB^2 + AC^2$ ⇒ កែងត្រង់ $A$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $A(1, 3), B(0, -3), C(2, -3)$។ គណនា $AB$ និង $AC$ ហើយសន្និដ្ឋាន ៖",
+        "options": [
+          "ត្រីកោណកែងត្រង់ $A$",
+          "$AB = BC$ ⇒ ត្រីកោណសមបាតត្រង់ $B$",
+          "$AB \\ne AC$ ⇒ ត្រីកោណធម្មតា",
+          "$AB = AC$ ⇒ ត្រីកោណសមបាតត្រង់ $A$"
+        ],
+        "correct": 3,
+        "explanation": "$AB = AC = \\sqrt{37}$ ⇒ សមបាតត្រង់ $A$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $A(3, -2), B(8, -2), C(3, 2)$។ តើត្រីកោណ $ABC$ ជាត្រីកោណប្រភេទអ្វី?",
+        "options": [
+          "ត្រីកោណកែងត្រង់ $C$",
+          "ត្រីកោណកែងត្រង់ $A$",
+          "ត្រីកោណកែងត្រង់ $B$",
+          "ត្រីកោណសម័ង្ស"
+        ],
+        "correct": 1,
+        "explanation": "$AB^2 = 25 , AC^2 = 16 , BC^2 = 41$ ⇒ $BC^2 = AB^2 + AC^2$ ⇒ កែងត្រង់ $A$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការប្រើកូអរដោនេដើម្បីបង្ហាញលក្ខណៈនៃរូប",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ដើម្បីឱ្យ $ABCD$ ជាប្រលេឡូក្រាម ដែល $A(-1, -1), B(2, 2), D(2, 0)$ តើ $C$ មានកូអរដោនេប៉ុន្មាន?",
+        "options": [
+          "$(6, 4)$",
+          "$(5, 3)$",
+          "$(-1, -3)$",
+          "$(-1, 1)$"
+        ],
+        "correct": 1,
+        "explanation": "ប្រលេឡូក្រាម ⇔ អង្កត់ទ្រូងកាត់គ្នាត្រង់ចំណុចកណ្តាលរួម ⇒ $x_A + x_C = x_B + x_D$ , $y_A + y_C = y_B + y_D$ ⇒ $(5, 3)$។",
+        "src": "genpq-g10b_points"
+      }
+    ],
+    "6": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុចដែលស្មើចម្ងាយពីបន្ទាត់ $y = -2$ និង $y = 4$ មានសមីការ ៖",
+        "options": [
+          "$x = 1$",
+          "$y = 1$",
+          "$y = 2$",
+          "$y = 6$"
+        ],
+        "correct": 1,
+        "explanation": "បន្ទាត់ស្របនៅកណ្តាល ៖ $y = \\dfrac{-2 + 4}{2} = 1$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុច $M(x, y)$ ដែលស្ថិតនៅចម្ងាយ $4$ ពីចំណុច $I(2, -2)$ មានសមីការ ៖",
+        "options": [
+          "$(x - 2)^2 + (y + 2)^2 = 16$",
+          "$(x - 2) + (y + 2) = 4$",
+          "$(x + 2)^2 + (y - 2)^2 = 16$",
+          "$(x - 2)^2 + (y + 2)^2 = 4$"
+        ],
+        "correct": 0,
+        "explanation": "$MI = 4 \\iff MI^2 = 16$ ⇒ $(x - 2)^2 + (y + 2)^2 = 16$ (រង្វង់ផ្ចិត $I$ កាំ $4$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុច $M(x, y)$ ដែលស្ថិតនៅចម្ងាយ $6$ ពីចំណុច $I(3, 4)$ មានសមីការ ៖",
+        "options": [
+          "$(x + 3)^2 + (y + 4)^2 = 36$",
+          "$(x - 3) + (y - 4) = 6$",
+          "$(x - 3)^2 + (y - 4)^2 = 6$",
+          "$(x - 3)^2 + (y - 4)^2 = 36$"
+        ],
+        "correct": 3,
+        "explanation": "$MI = 6 \\iff MI^2 = 36$ ⇒ $(x - 3)^2 + (y - 4)^2 = 36$ (រង្វង់ផ្ចិត $I$ កាំ $6$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុច $M(x, y)$ ដែលស្ថិតនៅចម្ងាយ $3$ ពីចំណុច $I(3, 4)$ មានសមីការ ៖",
+        "options": [
+          "$(x + 3)^2 + (y + 4)^2 = 9$",
+          "$(x - 3)^2 + (y - 4)^2 = 3$",
+          "$(x - 3) + (y - 4) = 3$",
+          "$(x - 3)^2 + (y - 4)^2 = 9$"
+        ],
+        "correct": 3,
+        "explanation": "$MI = 3 \\iff MI^2 = 9$ ⇒ $(x - 3)^2 + (y - 4)^2 = 9$ (រង្វង់ផ្ចិត $I$ កាំ $3$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុច $M(x, y)$ ដែលស្ថិតនៅចម្ងាយ $2$ ពីចំណុច $I(-4, 1)$ មានសមីការ ៖",
+        "options": [
+          "$(x + 4)^2 + (y - 1)^2 = 4$",
+          "$(x + 4)^2 + (y - 1)^2 = 2$",
+          "$(x + 4) + (y - 1) = 2$",
+          "$(x - 4)^2 + (y + 1)^2 = 4$"
+        ],
+        "correct": 0,
+        "explanation": "$MI = 2 \\iff MI^2 = 4$ ⇒ $(x + 4)^2 + (y - 1)^2 = 4$ (រង្វង់ផ្ចិត $I$ កាំ $2$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុចដែលស្មើចម្ងាយពីបន្ទាត់ $y = -1$ និង $y = 5$ មានសមីការ ៖",
+        "options": [
+          "$x = 2$",
+          "$y = 4$",
+          "$y = 6$",
+          "$y = 2$"
+        ],
+        "correct": 3,
+        "explanation": "បន្ទាត់ស្របនៅកណ្តាល ៖ $y = \\dfrac{-1 + 5}{2} = 2$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុច $M(x, y)$ ដែលស្ថិតនៅចម្ងាយ $4$ ពីចំណុច $I(4, -1)$ មានសមីការ ៖",
+        "options": [
+          "$(x - 4)^2 + (y + 1)^2 = 4$",
+          "$(x - 4) + (y + 1) = 4$",
+          "$(x + 4)^2 + (y - 1)^2 = 16$",
+          "$(x - 4)^2 + (y + 1)^2 = 16$"
+        ],
+        "correct": 3,
+        "explanation": "$MI = 4 \\iff MI^2 = 16$ ⇒ $(x - 4)^2 + (y + 1)^2 = 16$ (រង្វង់ផ្ចិត $I$ កាំ $4$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុច $M(x, y)$ ដែលស្ថិតនៅចម្ងាយ $5$ ពីចំណុច $I(4, 0)$ មានសមីការ ៖",
+        "options": [
+          "$(x + 4)^2 + y^2 = 25$",
+          "$(x - 4)^2 + y^2 = 5$",
+          "$(x - 4) + y = 5$",
+          "$(x - 4)^2 + y^2 = 25$"
+        ],
+        "correct": 3,
+        "explanation": "$MI = 5 \\iff MI^2 = 25$ ⇒ $(x - 4)^2 + y^2 = 25$ (រង្វង់ផ្ចិត $I$ កាំ $5$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុច $M$ ដែលស្មើចម្ងាយពី $A(-1, 3)$ និង $B(1, 3)$ មានសមីការ ៖",
+        "options": [
+          "$x = 0$",
+          "$x = 2$",
+          "$y = 0$",
+          "$x = 1$"
+        ],
+        "correct": 0,
+        "explanation": "$MA^2 = MB^2$ ⇒ $x = 0$ (មេដ្យាទ័រនៃ $[AB]$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ សមីការនៃសំណុំចំណុច",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំចំណុចដែលស្មើចម្ងាយពីបន្ទាត់ $y = -7$ និង $y = -3$ មានសមីការ ៖",
+        "options": [
+          "$x = -5$",
+          "$y = -5$",
+          "$y = -10$",
+          "$y = 4$"
+        ],
+        "correct": 1,
+        "explanation": "បន្ទាត់ស្របនៅកណ្តាល ៖ $y = \\dfrac{-7 + -3}{2} = -5$។",
+        "src": "genpq-g10b_points"
       }
     ]
   },
@@ -84505,7 +85375,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដែនកំណត់នៃអនុគមន៍ពហុធា $f(x) = a_n x^n + \\dots + a_0$ គឺ ៖",
         "options": [
@@ -84521,7 +85391,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $f(x) = \\dfrac{1}{x - 3}$ ៖",
         "options": [
@@ -84537,7 +85407,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $f(x) = \\sqrt{x - 4}$ ៖",
         "options": [
@@ -84553,7 +85423,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $g(x) = \\dfrac{2x + 1}{x^2 - 4}$ ៖",
         "options": [
@@ -84569,7 +85439,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $h(x) = \\dfrac{1}{\\sqrt{5 - x}}$ ៖",
         "options": [
@@ -84585,7 +85455,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $y = \\sqrt{9 - x^2}$ ៖",
         "options": [
@@ -84601,7 +85471,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនារូបភាពនៃ $x = -2$ តាមអនុគមន៍ $f(x) = 2x^2 - 3x + 1$ ៖",
         "options": [
@@ -84617,7 +85487,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $f(x) = \\sqrt{\\dfrac{x - 1}{x + 2}}$ ៖",
         "options": [
@@ -84633,7 +85503,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $f(x) = \\dfrac{\\sqrt{x + 3}}{x - 1}$ ៖",
         "options": [
@@ -84649,7 +85519,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងដែនកំណត់នៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណនៃអនុគមន៍ ដែនកំណត់ និងសំណុំរូបភាព",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកសំណុំតម្លៃ (Range) នៃអនុគមន៍ $f(x) = x^2 + 3$ ៖",
         "options": [
@@ -84667,161 +85537,171 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $f(x)$ ជាអនុគមន៍គូ (Even function) លុះត្រាតែ ៖",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តារាងអថេរភាព ៖ អនុគមន៍ $f$ ចុះលើ $(-\\infty, 3]$ និងកើនលើ $[3, +\\infty)$ ហើយ $f(3) = 5$។ សន្និដ្ឋាន ៖",
         "options": [
-          "$f(-x) = f(x)$ ចំពោះគ្រប់ $x \\in D$",
-          "$f(-x) = -f(x)$",
-          "$f(x) = -f(x)$",
-          "$f(x) > 0$"
+          "អតិបរមា $5$ ត្រង់ $x = 3$",
+          "គ្មានតម្លៃបរមា",
+          "អប្បបរមា $5$ ត្រង់ $x = 3$",
+          "អប្បបរមា $3$ ត្រង់ $x = 5$"
         ],
-        "correct": 0,
-        "explanation": "និយមន័យអនុគមន៍គូ ៖ $f(-x) = f(x)$ គ្រប់ $x$ ក្នុងដែនកំណត់ដែលមានស៊ីមេទ្រីធៀបនឹង 0។"
+        "correct": 2,
+        "explanation": "ចុះ រួចកើន ⇒ អប្បបរមា $f(3) = 5$។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $f(x)$ ជាអនុគមន៍សេស (Odd function) លុះត្រាតែ ៖",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f$ កើនលើ $\\mathbb{R}$។ ប្រៀបធៀប $f(-3)$ និង $f(-2)$ ៖",
         "options": [
-          "$f(-x) = -f(x)$ ចំពោះគ្រប់ $x \\in D$",
-          "$f(-x) = f(x)$",
-          "$f(x) = 0$",
-          "$f(x) < 0$"
+          "មិនអាចប្រៀបធៀបបាន",
+          "$f(-3) = f(-2)$",
+          "$f(-3) < f(-2)$",
+          "$f(-3) > f(-2)$"
         ],
-        "correct": 0,
-        "explanation": "និយមន័យអនុគមន៍សេស ៖ $f(-x) = -f(x)$។"
+        "correct": 2,
+        "explanation": "$-3 < -2$ ហើយ $f$ កើន ⇒ រក្សាទិស ⇒ $f(-3) < f(-2)$។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្រាបនៃអនុគមន៍គូមានស៊ីមេទ្រីធៀបនឹង ៖",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f$ កើនលើ $\\mathbb{R}$។ ប្រៀបធៀប $f(-3)$ និង $f(3)$ ៖",
         "options": [
-          "អ័ក្សអរដោនេ $Oy$",
-          "គល់កូអរដោនេ $O$",
-          "អ័ក្សអាប់ស៊ីស $Ox$",
-          "បន្ទាត់ $y = x$"
+          "$f(-3) > f(3)$",
+          "មិនអាចប្រៀបធៀបបាន",
+          "$f(-3) < f(3)$",
+          "$f(-3) = f(3)$"
         ],
-        "correct": 0,
-        "explanation": "ក្រាបនៃអនុគមន៍គូមានអ័ក្ស $Oy$ ជាអ័ក្សឆ្លុះ។"
+        "correct": 2,
+        "explanation": "$-3 < 3$ ហើយ $f$ កើន ⇒ រក្សាទិស ⇒ $f(-3) < f(3)$។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្រាបនៃអនុគមន៍សេសមានស៊ីមេទ្រីធៀបនឹង ៖",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តារាងអថេរភាព ៖ អនុគមន៍ $f$ ចុះលើ $(-\\infty, -1]$ និងកើនលើ $[-1, +\\infty)$ ហើយ $f(-1) = 1$។ សន្និដ្ឋាន ៖",
         "options": [
-          "គល់កូអរដោនេ $O$",
-          "អ័ក្សអរដោនេ $Oy$",
-          "អ័ក្សអាប់ស៊ីស $Ox$",
-          "បន្ទាត់ $y = -x$"
+          "អប្បបរមា $1$ ត្រង់ $x = -1$",
+          "អតិបរមា $1$ ត្រង់ $x = -1$",
+          "អប្បបរមា $-1$ ត្រង់ $x = 1$",
+          "គ្មានតម្លៃបរមា"
         ],
         "correct": 0,
-        "explanation": "ក្រាបនៃអនុគមន៍សេសមានគល់ $O(0, 0)$ ជាផ្ចិតឆ្លុះ។"
+        "explanation": "ចុះ រួចកើន ⇒ អប្បបរមា $f(-1) = 1$។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តើអនុគមន៍ណាខាងក្រោមជា «អនុគមន៍គូ»?",
+        "question": "អនុគមន៍ $f$ កើនលើ $\\mathbb{R}$។ ប្រៀបធៀប $f(-1)$ និង $f(2)$ ៖",
         "options": [
-          "$f(x) = x^4 - 2x^2 + 5$",
-          "$f(x) = x^3 - 3x$",
-          "$f(x) = 2x + 1$",
-          "$f(x) = x^5$"
+          "មិនអាចប្រៀបធៀបបាន",
+          "$f(-1) = f(2)$",
+          "$f(-1) < f(2)$",
+          "$f(-1) > f(2)$"
         ],
-        "correct": 0,
-        "explanation": "$f(-x) = (-x)^4 - 2(-x)^2 + 5 = x^4 - 2x^2 + 5 = f(x)$ ដូច្នេះជាអនុគមន៍គូ។"
+        "correct": 2,
+        "explanation": "$-1 < 2$ ហើយ $f$ កើន ⇒ រក្សាទិស ⇒ $f(-1) < f(2)$។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តើអនុគមន៍ណាខាងក្រោមជា «អនុគមន៍សេស»?",
+        "question": "អនុគមន៍ $f(x) = 3x + 5$ ជាអនុគមន៍ ៖",
         "options": [
-          "$g(x) = x^3 - 5x$",
-          "$g(x) = x^2 + 4$",
-          "$g(x) = x^3 + 1$",
-          "$g(x) = |x|$"
+          "កើនលើ $\\mathbb{R}$",
+          "ចុះលើ $\\mathbb{R}$",
+          "ថេរ",
+          "កើនលើ $(0, +\\infty)$ តែប៉ុណ្ណោះ"
         ],
         "correct": 0,
-        "explanation": "$g(-x) = (-x)^3 - 5(-x) = -x^3 + 5x = -(x^3 - 5x) = -g(x)$ ដូច្នេះជាអនុគមន៍សេស។"
+        "explanation": "មេគុណ $a = 3$ > 0 ⇒ កើន។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x)$ កើនលើចន្លោះ $I$ លុះត្រាតែចំពោះគ្រប់ $x_1 < x_2$ ក្នុង $I$ ៖",
+        "question": "អនុគមន៍ $f(x) = 4x + 4$ ជាអនុគមន៍ ៖",
         "options": [
-          "$f(x_1) < f(x_2)$",
-          "$f(x_1) > f(x_2)$",
-          "$f(x_1) = f(x_2)$",
-          "$f(x_1) \\le 0$"
+          "ចុះលើ $\\mathbb{R}$",
+          "កើនលើ $(0, +\\infty)$ តែប៉ុណ្ណោះ",
+          "ថេរ",
+          "កើនលើ $\\mathbb{R}$"
         ],
-        "correct": 0,
-        "explanation": "អនុគមន៍កើនរក្សាទិសដៅវិសមភាព ៖ $x_1 < x_2 \\implies f(x_1) < f(x_2)$។"
+        "correct": 3,
+        "explanation": "មេគុណ $a = 4$ > 0 ⇒ កើន។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "ពិនិត្យភាពគូ-សេសនៃអនុគមន៍ $h(x) = x^2 + 2x$ ៖",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តារាងអថេរភាព ៖ អនុគមន៍ $f$ កើនលើ $(-\\infty, -1]$ និងចុះលើ $[-1, +\\infty)$ ហើយ $f(-1) = -3$។ សន្និដ្ឋាន ៖",
         "options": [
-          "មិនគូ មិនសេស",
-          "ជាអនុគមន៍គូ",
-          "ជាអនុគមន៍សេស",
-          "ជាអនុគមន៍ថេរ"
+          "គ្មានតម្លៃបរមា",
+          "អប្បបរមា $-3$ ត្រង់ $x = -1$",
+          "អប្បបរមា $-1$ ត្រង់ $x = -3$",
+          "អតិបរមា $-3$ ត្រង់ $x = -1$"
         ],
-        "correct": 0,
-        "explanation": "$h(-x) = x^2 - 2x \\neq h(x)$ និង $\\neq -h(x)$ នាំឱ្យមិនគូ មិនសេស។"
+        "correct": 3,
+        "explanation": "កើន រួចចុះ ⇒ អតិបរមា $f(-1) = -3$។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "អថិរភាពនៃអនុគមន៍ $f(x) = -2x + 5$ លើ $\\mathbb{R}$ គឺ ៖",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f$ កើនលើ $\\mathbb{R}$។ ប្រៀបធៀប $f(-5)$ និង $f(-2)$ ៖",
         "options": [
-          "ចុះជានិច្ចលើ $\\mathbb{R}$",
-          "កើនជានិច្ចលើ $\\mathbb{R}$",
-          "ថេរ",
-          "កើនផងចុះផង"
+          "$f(-5) > f(-2)$",
+          "មិនអាចប្រៀបធៀបបាន",
+          "$f(-5) < f(-2)$",
+          "$f(-5) = f(-2)$"
         ],
-        "correct": 0,
-        "explanation": "មេគុណប្រាប់ទិស $a = -2 < 0$ នាំឱ្យអនុគមន៍ចុះដាច់ខាតលើ $\\mathbb{R}$។"
+        "correct": 2,
+        "explanation": "$-5 < -2$ ហើយ $f$ កើន ⇒ រក្សាទិស ⇒ $f(-5) < f(-2)$។",
+        "src": "genpq-g10b_points"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ភាពគូ-សេស និងអថិរភាពនៃអនុគមន៍",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "បើ $f$ ជាអនុគមន៍សេស និងកំណត់ត្រង់ $x = 0$ តើតម្លៃ $f(0)$ ស្មើនឹងប៉ុន្មាន?",
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍កើន និងអនុគមន៍ចុះ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f$ កើនលើ $\\mathbb{R}$។ ប្រៀបធៀប $f(-3)$ និង $f(-1)$ ៖",
         "options": [
-          "$f(0) = 0$",
-          "$f(0) = 1$",
-          "$f(0) = -1$",
-          "មិនកំណត់"
+          "$f(-3) > f(-1)$",
+          "$f(-3) = f(-1)$",
+          "មិនអាចប្រៀបធៀបបាន",
+          "$f(-3) < f(-1)$"
         ],
-        "correct": 0,
-        "explanation": "$f(-0) = -f(0) \\iff f(0) = -f(0) \\iff 2f(0) = 0 \\implies f(0) = 0$។"
+        "correct": 3,
+        "explanation": "$-3 < -1$ ហើយ $f$ កើន ⇒ រក្សាទិស ⇒ $f(-3) < f(-1)$។",
+        "src": "genpq-g10b_points"
       }
     ],
     "3": [
@@ -84829,7 +85709,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្រាបនៃអនុគមន៍ $y = f(x) + c$ ($c > 0$) ទទួលបានដោយកិលក្រាបនៃ $y = f(x)$ ៖",
         "options": [
@@ -84845,7 +85725,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្រាបនៃអនុគមន៍ $y = f(x - c)$ ($c > 0$) ទទួលបានដោយកិលក្រាបនៃ $y = f(x)$ ៖",
         "options": [
@@ -84861,7 +85741,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្រាបនៃ $y = -f(x)$ ទទួលបានដោយយកឆ្លុះនៃក្រាប $y = f(x)$ ធៀបនឹង ៖",
         "options": [
@@ -84877,7 +85757,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ក្រាបនៃ $y = f(-x)$ ទទួលបានដោយយកឆ្លុះនៃក្រាប $y = f(x)$ ធៀបនឹង ៖",
         "options": [
@@ -84893,7 +85773,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដើម្បីទទួលបានក្រាប $y = (x - 2)^2 + 3$ ពីក្រាប $y = x^2$ គេត្រូវកិល ៖",
         "options": [
@@ -84909,7 +85789,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចកាត់អ័ក្ស $Oy$ នៃក្រាប $y = 2x^2 - 5x + 4$ ៖",
         "options": [
@@ -84925,7 +85805,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចកាត់អ័ក្ស $Ox$ នៃក្រាប $y = x^2 - 9$ ៖",
         "options": [
@@ -84941,7 +85821,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ក្រាបនៃអនុគមន៍ $y = |f(x)|$ ទទួលបានពីក្រាប $y = f(x)$ ដោយ ៖",
         "options": [
@@ -84957,7 +85837,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ចំនួនឫសនៃសមីការ $f(x) = g(x)$ ស្មើនឹង ៖",
         "options": [
@@ -84973,7 +85853,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការសង់ក្រាប និងការបកប្រែក្រាប",
+        "pointTitle": "ចំណុចទី ៣ ៖ ក្រាបនៃអនុគមន៍",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ក្រាបនៃ $y = af(x)$ ($a > 1$) គឺជាការ ៖",
         "options": [
@@ -84985,6 +85865,178 @@
         "correct": 0,
         "explanation": "គុណនឹង $a > 1$ ខាងក្រៅអនុគមន៍ គឺជាការពន្លាតក្រាបតាមទិសឈរ។"
       }
+    ],
+    "4": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "រកអនុគមន៍ច្រាសនៃ $f(x) = 3x - 1$ ៖",
+        "options": [
+          "$f^{-1}(x) = \\dfrac{x - 1}{3}$",
+          "$f^{-1}(x) = \\dfrac{1}{3x - 1}$",
+          "$f^{-1}(x) = 3x + 1$",
+          "$f^{-1}(x) = \\dfrac{x + 1}{3}$"
+        ],
+        "correct": 3,
+        "explanation": "$y = 3x - 1 \\Rightarrow x = \\dfrac{y + 1}{3}$ ⇒ $f^{-1}(x) = \\dfrac{x + 1}{3}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "រកអនុគមន៍ច្រាសនៃ $f(x) = -2x + 2$ ៖",
+        "options": [
+          "$f^{-1}(x) = -2x - 2$",
+          "$f^{-1}(x) = \\dfrac{-x - 2}{2}$",
+          "$f^{-1}(x) = \\dfrac{1}{-2x + 2}$",
+          "$f^{-1}(x) = \\dfrac{-x + 2}{2}$"
+        ],
+        "correct": 3,
+        "explanation": "$y = -2x + 2 \\Rightarrow x = \\dfrac{-y + 2}{2}$ ⇒ $f^{-1}(x) = \\dfrac{-x + 2}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ចំណុច $(0, -1)$ ស្ថិតនៅលើក្រាបនៃ $f$។ តើចំណុចណាស្ថិតនៅលើក្រាបនៃ $f^{-1}$?",
+        "options": [
+          "$(1, 0)$",
+          "$(-1, 0)$",
+          "$(0, 1)$",
+          "$(0, -1)$"
+        ],
+        "correct": 1,
+        "explanation": "$f(0) = -1 \\iff f^{-1}(-1) = 0$ ⇒ $(-1, 0)$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ក្រាបនៃ $f$ និងក្រាបនៃ $f^{-1}$ ឆ្លុះគ្នាធៀបនឹង ៖",
+        "options": [
+          "បន្ទាត់ $y = x$",
+          "អ័ក្ស $Ox$",
+          "អ័ក្ស $Oy$",
+          "គល់ $O$"
+        ],
+        "correct": 0,
+        "explanation": "បើ $(a, b)$ នៅលើក្រាប $f$ នោះ $(b, a)$ នៅលើក្រាប $f^{-1}$ ⇒ ឆ្លុះធៀបនឹង $y = x$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ចំណុច $(-4, -3)$ ស្ថិតនៅលើក្រាបនៃ $f$។ តើចំណុចណាស្ថិតនៅលើក្រាបនៃ $f^{-1}$?",
+        "options": [
+          "$(-4, -3)$",
+          "$(3, 4)$",
+          "$(4, 3)$",
+          "$(-3, -4)$"
+        ],
+        "correct": 3,
+        "explanation": "$f(-4) = -3 \\iff f^{-1}(-3) = -4$ ⇒ $(-3, -4)$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "រកអនុគមន៍ច្រាសនៃ $f(x) = 4x + 5$ ៖",
+        "options": [
+          "$f^{-1}(x) = \\dfrac{1}{4x + 5}$",
+          "$f^{-1}(x) = 4x - 5$",
+          "$f^{-1}(x) = \\dfrac{x + 5}{4}$",
+          "$f^{-1}(x) = \\dfrac{x - 5}{4}$"
+        ],
+        "correct": 3,
+        "explanation": "$y = 4x + 5 \\Rightarrow x = \\dfrac{y - 5}{4}$ ⇒ $f^{-1}(x) = \\dfrac{x - 5}{4}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "រកអនុគមន៍ច្រាសនៃ $f(x) = -3x + 3$ ៖",
+        "options": [
+          "$f^{-1}(x) = \\dfrac{-x - 3}{3}$",
+          "$f^{-1}(x) = \\dfrac{1}{-3x + 3}$",
+          "$f^{-1}(x) = \\dfrac{-x + 3}{3}$",
+          "$f^{-1}(x) = -3x - 3$"
+        ],
+        "correct": 2,
+        "explanation": "$y = -3x + 3 \\Rightarrow x = \\dfrac{-y + 3}{3}$ ⇒ $f^{-1}(x) = \\dfrac{-x + 3}{3}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "រកអនុគមន៍ច្រាសនៃ $f(x) = 4x + 2$ ៖",
+        "options": [
+          "$f^{-1}(x) = \\dfrac{1}{4x + 2}$",
+          "$f^{-1}(x) = 4x - 2$",
+          "$f^{-1}(x) = \\dfrac{x - 2}{4}$",
+          "$f^{-1}(x) = \\dfrac{x + 2}{4}$"
+        ],
+        "correct": 2,
+        "explanation": "$y = 4x + 2 \\Rightarrow x = \\dfrac{y - 2}{4}$ ⇒ $f^{-1}(x) = \\dfrac{x - 2}{4}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "រកអនុគមន៍ច្រាសនៃ $f(x) = -2x - 7$ ៖",
+        "options": [
+          "$f^{-1}(x) = \\dfrac{-x - 7}{2}$",
+          "$f^{-1}(x) = -2x + 7$",
+          "$f^{-1}(x) = \\dfrac{-x + 7}{2}$",
+          "$f^{-1}(x) = \\dfrac{1}{-2x - 7}$"
+        ],
+        "correct": 0,
+        "explanation": "$y = -2x - 7 \\Rightarrow x = \\dfrac{-y - 7}{2}$ ⇒ $f^{-1}(x) = \\dfrac{-x - 7}{2}$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $f(x) = 5x - 7$។ គណនា $f^{-1}(-17)$ ៖",
+        "options": [
+          "$-2$",
+          "$2$",
+          "$-92$",
+          "$-1$"
+        ],
+        "correct": 0,
+        "explanation": "$f^{-1}(-17) = x \\iff f(x) = -17 \\iff 5x - 7 = -17$ ⇒ $x = -2$។",
+        "src": "genpq-g10b_points"
+      }
     ]
   },
   "les-g10-6-3": {
@@ -84993,7 +86045,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្រាបនៃអនុគមន៍សនិទាន $y = \\dfrac{ax+b}{cx+d}$ ($c \\neq 0, ad - bc \\neq 0$) មានរាងជាអ្វី?",
         "options": [
@@ -85011,7 +86063,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដែនកំណត់នៃអនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ គឺ ៖",
         "options": [
@@ -85027,7 +86079,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $y = \\dfrac{2x + 3}{x - 1}$ ៖",
         "options": [
@@ -85043,7 +86095,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ផ្ចិតឆ្លុះ $I$ នៃហ៊ីពែរបូល $y = \\dfrac{ax+b}{cx+d}$ គឺជាប្រសព្វនៃអាស៊ីមតូតទាំងពីរ មានកូអរដោនេគឺ ៖",
         "options": [
@@ -85059,7 +86111,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកកូអរដោនេផ្ចិតឆ្លុះ $I$ នៃហ៊ីពែរបូល $y = \\dfrac{3x - 1}{x + 2}$ ៖",
         "options": [
@@ -85075,7 +86127,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សរសេរ $y = \\dfrac{2x + 1}{x - 1}$ ជាទម្រង់កាណូនិច $y = \\beta + \\dfrac{k}{x - \\alpha}$ ៖",
         "options": [
@@ -85091,7 +86143,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចកាត់អ័ក្ស $Oy$ នៃក្រាប $y = \\dfrac{4x - 6}{2x + 3}$ ៖",
         "options": [
@@ -85107,7 +86159,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកចំណុចកាត់អ័ក្ស $Ox$ នៃក្រាប $y = \\dfrac{2x - 5}{x + 1}$ ៖",
         "options": [
@@ -85123,7 +86175,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "តើហ៊ីពែរបូល $y = \\beta + \\dfrac{k}{x - \\alpha}$ ស្ថិតក្នុងក្វាដ្រង់ណាធៀបនឹងអាស៊ីមតូត បើ $k > 0$?",
         "options": [
@@ -85139,7 +86191,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ (ហ៊ីពែរបូល)",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍សនិទាន និងក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $ad - bc = 0$ តើអនុគមន៍ $y = \\dfrac{ax+b}{cx+d}$ ក្លាយជាអ្វី?",
         "options": [
@@ -85319,7 +86371,7 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដែនកំណត់នៃអនុគមន៍ $y = \\sqrt{ax + b}$ ($a > 0$) គឺ ៖",
         "options": [
@@ -85335,7 +86387,7 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $y = \\sqrt{2x - 6}$ ៖",
         "options": [
@@ -85351,7 +86403,7 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $y = \\sqrt{4 - x}$ ៖",
         "options": [
@@ -85367,7 +86419,7 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សំណុំតម្លៃ (Range) នៃអនុគមន៍ $y = \\sqrt{x - 1}$ គឺ ៖",
         "options": [
@@ -85383,7 +86435,7 @@
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សំណុំតម្លៃនៃអនុគមន៍ $y = \\sqrt{x} + 3$ គឺ ៖",
         "options": [
@@ -85399,7 +86451,7 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "អថិរភាពនៃអនុគមន៍ $y = \\sqrt{x}$ លើ $[0, +\\infty)$ គឺ ៖",
         "options": [
@@ -85415,7 +86467,7 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "អថិរភាពនៃអនុគមន៍ $y = -\\sqrt{x}$ លើ $[0, +\\infty)$ គឺ ៖",
         "options": [
@@ -85431,7 +86483,7 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ក្រាបនៃអនុគមន៍ $y = \\sqrt{x}$ ជាផ្នែកពាក់កណ្តាលខាងលើនៃ ៖",
         "options": [
@@ -85447,7 +86499,7 @@
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកចំណុចប្រសព្វរវាងក្រាប $y = \\sqrt{x}$ និងបន្ទាត់ $y = x - 2$ ៖",
         "options": [
@@ -85463,7 +86515,7 @@
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទាន $y = \\sqrt{ax+b}$",
+        "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍អសនិទានងាយ និងក្រាប",
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $y = \\sqrt{x^2 - 4x + 4}$ ៖",
         "options": [
@@ -85474,6 +86526,178 @@
         ],
         "correct": 0,
         "explanation": "$x^2 - 4x + 4 = (x - 2)^2 \\ge 0$ ពិតចំពោះគ្រប់ $x \\in \\mathbb{R}$ នាំឱ្យ $D = \\mathbb{R}$ (ហើយ $y = |x - 2|$)។"
+      }
+    ],
+    "4": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ច្រាសនៃ $f(x) = \\sqrt{x - 3}$ ($x \\ge 3$) គឺ ៖",
+        "options": [
+          "$f^{-1}(x) = x^2 - 3 , \\ x \\ge 0$",
+          "$f^{-1}(x) = x^2 + 3 , \\ x \\ge 0$",
+          "$f^{-1}(x) = \\sqrt{x + 3}$",
+          "$f^{-1}(x) = \\dfrac{1}{\\sqrt{x - 3}}$"
+        ],
+        "correct": 1,
+        "explanation": "$y = \\sqrt{x - 3} \\Rightarrow y^2 = x - 3 \\Rightarrow x = y^2 + 3$ (ជាមួយ $y \\ge 0$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ក្រាបនៃ $y = 2x$ និងក្រាបនៃអនុគមន៍ច្រាសរបស់វា ប្រសព្វគ្នាត្រង់ចំណុចណា?",
+        "options": [
+          "$(2, 1)$",
+          "$(0, 0)$",
+          "$(1, 2)$",
+          "$(1, 1)$"
+        ],
+        "correct": 1,
+        "explanation": "ចំណុចប្រសព្វនៃក្រាប $f$ និង $f^{-1}$ (ពេល $f$ កើន) ស្ថិតនៅលើ $y = x$ ៖ $2x = x \\Rightarrow x = 0$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f(x) = x^2 - 2$ ដែល $x \\ge 0$ មានអនុគមន៍ច្រាស ៖",
+        "options": [
+          "$f^{-1}(x) = x^2 + 2$",
+          "$f^{-1}(x) = \\sqrt{x - 2}$",
+          "$f^{-1}(x) = \\sqrt{x + 2}$",
+          "$f^{-1}(x) = \\dfrac{1}{x^2}$"
+        ],
+        "correct": 2,
+        "explanation": "$y = x^2 - 2 \\Rightarrow x = \\sqrt{y + 2}$ (ព្រោះ $x \\ge 0$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ចំណុច $(5, 25)$ នៅលើក្រាប $y = x^2 , \\ x \\ge 0$។ ចំណុចត្រូវគ្នាលើក្រាប $y = \\sqrt{x}$ គឺ ៖",
+        "options": [
+          "$(-5, 25)$",
+          "$(5, 25)$",
+          "$(25, 5)$",
+          "$(25, -5)$"
+        ],
+        "correct": 2,
+        "explanation": "ក្រាបច្រាសគ្នាឆ្លុះធៀប $y = x$ ⇒ $(25, 5)$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f(x) = x^2 + 1$ ដែល $x \\ge 0$ មានអនុគមន៍ច្រាស ៖",
+        "options": [
+          "$f^{-1}(x) = \\sqrt{x + 1}$",
+          "$f^{-1}(x) = \\dfrac{1}{x^2}$",
+          "$f^{-1}(x) = x^2 - 1$",
+          "$f^{-1}(x) = \\sqrt{x - 1}$"
+        ],
+        "correct": 3,
+        "explanation": "$y = x^2 + 1 \\Rightarrow x = \\sqrt{y - 1}$ (ព្រោះ $x \\ge 0$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f(x) = x^2 - 4$ ដែល $x \\ge 0$ មានអនុគមន៍ច្រាស ៖",
+        "options": [
+          "$f^{-1}(x) = \\dfrac{1}{x^2}$",
+          "$f^{-1}(x) = x^2 + 4$",
+          "$f^{-1}(x) = \\sqrt{x + 4}$",
+          "$f^{-1}(x) = \\sqrt{x - 4}$"
+        ],
+        "correct": 2,
+        "explanation": "$y = x^2 - 4 \\Rightarrow x = \\sqrt{y + 4}$ (ព្រោះ $x \\ge 0$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ក្រាបនៃ $y = 3x$ និងក្រាបនៃអនុគមន៍ច្រាសរបស់វា ប្រសព្វគ្នាត្រង់ចំណុចណា?",
+        "options": [
+          "$(3, 1)$",
+          "$(1, 1)$",
+          "$(0, 0)$",
+          "$(1, 3)$"
+        ],
+        "correct": 2,
+        "explanation": "ចំណុចប្រសព្វនៃក្រាប $f$ និង $f^{-1}$ (ពេល $f$ កើន) ស្ថិតនៅលើ $y = x$ ៖ $3x = x \\Rightarrow x = 0$។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f(x) = x^2 - 1$ ដែល $x \\ge 0$ មានអនុគមន៍ច្រាស ៖",
+        "options": [
+          "$f^{-1}(x) = \\dfrac{1}{x^2}$",
+          "$f^{-1}(x) = x^2 + 1$",
+          "$f^{-1}(x) = \\sqrt{x + 1}$",
+          "$f^{-1}(x) = \\sqrt{x - 1}$"
+        ],
+        "correct": 2,
+        "explanation": "$y = x^2 - 1 \\Rightarrow x = \\sqrt{y + 1}$ (ព្រោះ $x \\ge 0$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ច្រាសនៃ $f(x) = \\sqrt{x + 4}$ ($x \\ge -4$) គឺ ៖",
+        "options": [
+          "$f^{-1}(x) = \\sqrt{x - 4}$",
+          "$f^{-1}(x) = x^2 + 4 , \\ x \\ge 0$",
+          "$f^{-1}(x) = \\dfrac{1}{\\sqrt{x + 4}}$",
+          "$f^{-1}(x) = x^2 - 4 , \\ x \\ge 0$"
+        ],
+        "correct": 3,
+        "explanation": "$y = \\sqrt{x + 4} \\Rightarrow y^2 = x + 4 \\Rightarrow x = y^2 - 4$ (ជាមួយ $y \\ge 0$)។",
+        "src": "genpq-g10b_points"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ក្រាបនៃអនុគមន៍ច្រាស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ក្រាបនៃ $y = \\dfrac{1}{2}x$ និងក្រាបនៃអនុគមន៍ច្រាសរបស់វា ប្រសព្វគ្នាត្រង់ចំណុចណា?",
+        "options": [
+          "$(\\dfrac{1}{2}, 1)$",
+          "$(1, \\dfrac{1}{2})$",
+          "$(0, 0)$",
+          "$(1, 1)$"
+        ],
+        "correct": 2,
+        "explanation": "ចំណុចប្រសព្វនៃក្រាប $f$ និង $f^{-1}$ (ពេល $f$ កើន) ស្ថិតនៅលើ $y = x$ ៖ $\\dfrac{1}{2}x = x \\Rightarrow x = 0$។",
+        "src": "genpq-g10b_points"
       }
     ]
   },
