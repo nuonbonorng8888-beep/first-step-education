@@ -1,8 +1,8 @@
 {
-  "version": "15.9",
-  "build": 159,
-  "date": "2026-11-18",
+  "version": "15.10",
+  "build": 160,
+  "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Grade 10 chapters 4-6 follow the textbook sections: coordinates on a line, coordinate proofs, loci, special-angle values, increasing/decreasing functions, inverse functions and their graphs, y = ax^2 and y = a(x-p)^2 + q; lesson exams of chapter 4 and 5 corrected.",
-  "lastUpdated": "2026-11-18T23:00:00+07:00"
+  "changelog": "Grade 10 chapters 7-9 follow the textbook sections: variable types and ungrouped frequency; vector coordinates and dot product moved to vectors lesson 1; new lesson 2 (position vectors, lines, circles, geometry, forces); every transformation lesson gains a coordinates point; homothety lesson renamed to the textbook title. Grade 10 now matches the textbook.",
+  "lastUpdated": "2026-11-19T01:00:00+07:00"
 }
