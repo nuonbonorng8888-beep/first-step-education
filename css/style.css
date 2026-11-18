@@ -2543,6 +2543,19 @@ body.light-theme .katex .mfrac .frac-line {
   opacity: 1 !important;
 }
 
+/* Light theme: plain Khmer question text must be dark too (was white on white) */
+body.light-theme .quiz-question {
+  color: #0f172a;
+}
+body.light-theme .q-pill-text {
+  color: #0f172a;
+}
+body.light-theme .quiz-status-pill:not(.correct):not(.wrong) {
+  color: #334155;
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
 body.light-theme .quiz-question .katex,
 body.light-theme .quiz-question .katex *,
 body.light-theme .quiz-opt .katex,

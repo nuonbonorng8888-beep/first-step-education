@@ -1,8 +1,8 @@
 {
-  "version": "15.31",
-  "build": 181,
+  "version": "15.32",
+  "build": 182,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Workbook answer keys complete: worked solutions for the last 66 Grade 12 exercises (first- and second-order differential equations). Every workbook exercise in Grades 10, 11 and 12 now has a full answer key.",
-  "lastUpdated": "2026-11-19T17:00:00+07:00"
+  "changelog": "Quiz readability: in light mode the Khmer question text, question number and status label are now dark instead of white. The abbreviation deg is written in Khmer as ដឺក្រេ in all questions, choices and explanations.",
+  "lastUpdated": "2026-11-19T18:00:00+07:00"
 }
