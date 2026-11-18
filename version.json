@@ -1,8 +1,8 @@
 {
-  "version": "15.32",
-  "build": 182,
+  "version": "15.33",
+  "build": 183,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Quiz readability: in light mode the Khmer question text, question number and status label are now dark instead of white. The abbreviation deg is written in Khmer as ដឺក្រេ in all questions, choices and explanations.",
-  "lastUpdated": "2026-11-19T18:00:00+07:00"
+  "changelog": "The 36 counting and permutation workbook exercises that were filed under an unlisted Grade 10 lesson now appear in Grade 11 advanced chapter 6: lesson 1 (permutations) and lesson 2 (combinations).",
+  "lastUpdated": "2026-11-19T18:30:00+07:00"
 }
