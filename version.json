@@ -1,8 +1,8 @@
 {
-  "version": "15.27",
-  "build": 177,
+  "version": "15.28",
+  "build": 178,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Worked solutions for the first 65 Grade 12 workbook exercises: complex numbers (algebraic and trigonometric forms, powers, equations) and limits and continuity. These exercises now show a full answer key.",
-  "lastUpdated": "2026-11-19T09:00:00+07:00"
+  "changelog": "Worked solutions for 80 more Grade 12 workbook exercises: derivatives (definition, rules, implicit and higher derivatives, optimisation, linear approximation) and studies of rational, exponential and logarithmic functions. These exercises now show a full answer key.",
+  "lastUpdated": "2026-11-19T11:00:00+07:00"
 }
