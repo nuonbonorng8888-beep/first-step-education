@@ -9638,3 +9638,27 @@ body.light-theme .quiz-point-pill.active .quiz-pill-badge {
   .hm-continue { width: 100%; justify-content: space-between; height: 50px; padding: 0 7px 0 20px; }
   .hm-continue > i { width: 36px; height: 36px; }
 }
+
+/* Worksheet tab with lesson list (v15.36): two columns only on wide screens;
+   on tablets/phones the list stacks below the worksheet instead of squeezing it. */
+@media (max-width: 1079px) {
+  .classroom-layout.worksheet-active.worksheet-sidebar-open {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+@media (min-width: 1440px) {
+  .classroom-layout.worksheet-active.worksheet-sidebar-open {
+    grid-template-columns: minmax(0, 1fr) 430px !important;
+    gap: 28px;
+  }
+}
+@media print {
+  .classroom-layout.worksheet-active.worksheet-sidebar-open {
+    display: block !important;
+    grid-template-columns: none !important;
+    max-width: 100% !important;
+  }
+  .classroom-layout.worksheet-active.worksheet-sidebar-open .playlist-sidebar {
+    display: none !important;
+  }
+}

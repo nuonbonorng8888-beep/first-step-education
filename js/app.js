@@ -2161,7 +2161,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=185" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=186" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">
@@ -2379,7 +2379,9 @@ function doGet(e) {
     if (layout) {
       if (tabName === 'worksheet') {
         layout.classList.add('worksheet-active');
-        layout.classList.remove('worksheet-sidebar-open');
+        // Keep the chapter/lesson list visible so another lesson can be picked
+        // straight away; the "បញ្ជីមេរៀន" button can still hide it.
+        layout.classList.add('worksheet-sidebar-open');
       } else {
         layout.classList.remove('worksheet-active');
         layout.classList.remove('worksheet-sidebar-open');

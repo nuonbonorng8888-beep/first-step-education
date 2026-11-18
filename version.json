@@ -1,8 +1,8 @@
 {
-  "version": "15.35",
-  "build": 185,
+  "version": "15.36",
+  "build": 186,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "New design for the Continue learning button on the home page: a flat blue button inside the progress card with the arrow in a white circle (full width on phones), replacing the notched corner that showed jagged edges.",
-  "lastUpdated": "2026-11-19T20:30:00+07:00"
+  "changelog": "The chapter and lesson list now stays visible on the Worksheet tab, so another lesson can be chosen without refreshing (the Lesson list button still hides it for more space). On phones and tablets the list appears below the worksheet, and it is never printed.",
+  "lastUpdated": "2026-11-19T21:00:00+07:00"
 }
