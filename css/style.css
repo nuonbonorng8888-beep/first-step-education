@@ -9593,3 +9593,48 @@ body.light-theme .quiz-point-pill.active .quiz-pill-badge {
   background: rgba(255, 255, 255, 0.22);
   color: #ffffff;
 }
+
+/* ===== "Continue learning" button redesign (v15.35) =====
+   The notched socket (page-coloured cut-out made of pseudo-element shadows)
+   left jagged corners. Now a flat button sitting inside the card. */
+.hm-progress { flex-wrap: wrap; padding-bottom: 22px; }
+.hm-socket {
+  position: static;
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0 0;
+  background: none;
+  border-radius: 0;
+}
+.hm-socket::before,
+.hm-socket::after { content: none; display: none; }
+.hm-continue {
+  align-items: center;
+  gap: 14px;
+  height: 52px;
+  padding: 0 8px 0 24px;
+  border-radius: 14px;
+  background: var(--hm-blue);
+  box-shadow: none;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.hm-continue > span { padding: 0; }
+.hm-continue > i {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--hm-blue);
+}
+.hm-continue:hover { background: var(--hm-blue-dark); transform: none; }
+.hm-continue:hover > i { transform: translateX(2px); }
+.hm-continue > i { transition: transform var(--transition-fast); }
+.hm-continue:active { transform: scale(0.98); box-shadow: none; }
+.hm-continue:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
+@media (max-width: 640px) {
+  .hm-progress { padding-bottom: 18px; }
+  .hm-socket { justify-content: stretch; }
+  .hm-continue { width: 100%; justify-content: space-between; height: 50px; padding: 0 7px 0 20px; }
+  .hm-continue > i { width: 36px; height: 36px; }
+}

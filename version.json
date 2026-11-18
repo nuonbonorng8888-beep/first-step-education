@@ -1,8 +1,8 @@
 {
-  "version": "15.34",
-  "build": 184,
+  "version": "15.35",
+  "build": 185,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Quality check fixes: the quick diagnostic test now highlights the real correct answer instead of always A; in light mode all pale blue, cyan, grey, green and orange text is darker and readable, and the selected point button in the quiz tab is no longer white on white; three Grade 11 bank questions with two identical choices (lost exponents) now show the correct formulas.",
-  "lastUpdated": "2026-11-19T20:00:00+07:00"
+  "changelog": "New design for the Continue learning button on the home page: a flat blue button inside the progress card with the arrow in a white circle (full width on phones), replacing the notched corner that showed jagged edges.",
+  "lastUpdated": "2026-11-19T20:30:00+07:00"
 }
