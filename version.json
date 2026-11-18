@@ -1,8 +1,8 @@
 {
-  "version": "15.38",
-  "build": 188,
+  "version": "15.39",
+  "build": 189,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Grade 12 (both books): worksheet exercises and MCQs no longer use content from later points. About 110 MCQs were rewritten (complex numbers, limits, integrals, volumes, differential equations, statistics, and the conic lessons where point 1 now covers only the definition) and about 30 more worksheet exercises were replaced.",
-  "lastUpdated": "2026-11-18T23:00:00+07:00"
+  "changelog": "Grades 9 and 10: worksheet exercises and MCQs no longer use content from later points. 66 worksheet exercises were replaced (vectors before coordinates, trig ratios, systems of equations, inequalities, circle angles, polygons, statistics, transformations) and 60 MCQs rewritten.",
+  "lastUpdated": "2026-11-19T01:00:00+07:00"
 }
