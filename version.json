@@ -1,8 +1,8 @@
 {
-  "version": "15.30",
-  "build": 180,
+  "version": "15.31",
+  "build": 181,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Worked solutions for 115 more Grade 12 workbook exercises: conic sections (parabolas, ellipses, hyperbolas) and space geometry (cross product, areas and volumes, lines, planes and spheres). These exercises now show a full answer key.",
-  "lastUpdated": "2026-11-19T15:00:00+07:00"
+  "changelog": "Workbook answer keys complete: worked solutions for the last 66 Grade 12 exercises (first- and second-order differential equations). Every workbook exercise in Grades 10, 11 and 12 now has a full answer key.",
+  "lastUpdated": "2026-11-19T17:00:00+07:00"
 }
