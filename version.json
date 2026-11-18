@@ -1,8 +1,8 @@
 {
-  "version": "15.37",
-  "build": 187,
+  "version": "15.38",
+  "build": 188,
   "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "Worksheets now print on A5 by default and nothing runs off the paper (wide formulas shrink to fit, long sheets continue on the next page, and the screen zoom no longer enlarges the print). New Download PDF buttons work on every device. Worksheet exercises and MCQs no longer use content from later points (Grades 11 and 12A), and off-topic exercises in Grade 12A were replaced.",
-  "lastUpdated": "2026-11-18T21:00:00+07:00"
+  "changelog": "Grade 12 (both books): worksheet exercises and MCQs no longer use content from later points. About 110 MCQs were rewritten (complex numbers, limits, integrals, volumes, differential equations, statistics, and the conic lessons where point 1 now covers only the definition) and about 30 more worksheet exercises were replaced.",
+  "lastUpdated": "2026-11-18T23:00:00+07:00"
 }

@@ -25331,15 +25331,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1)$ និង $z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)$ តើ $\\text{Arg}(z_1 z_2)$ ស្មើអ្វី?",
+        "question": "អាគុយម៉ង់ចម្បងនៃ $z = -1 - i$ គឺ ៖",
         "options": [
-          "$\\theta_1 + \\theta_2$",
-          "$\\theta_1 \\theta_2$",
-          "$\\dfrac{\\theta_1}{\\theta_2}$",
-          "$\\theta_1 - \\theta_2$"
+          "$\\dfrac{\\pi}{4}$",
+          "$-\\dfrac{3\\pi}{4}$",
+          "$\\dfrac{3\\pi}{4}$",
+          "$-\\dfrac{\\pi}{4}$"
         ],
-        "correct": 0,
-        "explanation": "អាគុយម៉ង់នៃផលគុណស្មើផលបូកនៃអាគុយម៉ង់ ៖ $\\text{Arg}(z_1 z_2) = \\theta_1 + \\theta_2$ (ម៉ូឌុលូ $2\\pi$)។"
+        "correct": 1,
+        "explanation": "$z$ នៅកាដ្រង់ទី ៣ ៖ $\\cos\\theta = \\sin\\theta = -\\dfrac{\\sqrt{2}}{2}$ នាំឱ្យ $\\theta = -\\dfrac{3\\pi}{4}$។"
       }
     ],
     "3": [
@@ -25527,15 +25527,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "ផលចែក $\\dfrac{z_1}{z_2}$ ($z_2 \\neq 0$) កំណត់ដោយ ៖",
+        "question": "គណនាផលគុណ $z_1 z_2$ ដែល $z_1 = 3\\left(\\cos\\dfrac{\\pi}{5} + i\\sin\\dfrac{\\pi}{5}\\right)$ និង $z_2 = 2\\left(\\cos\\dfrac{\\pi}{10} + i\\sin\\dfrac{\\pi}{10}\\right)$ ៖",
         "options": [
-          "$\\dfrac{r_1}{r_2}\\left(\\dfrac{\\cos\\theta_1}{\\cos\\theta_2} + i\\dfrac{\\sin\\theta_1}{\\sin\\theta_2}\\right)$",
-          "$(r_1 - r_2)[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)]$",
-          "$\\dfrac{r_1}{r_2}[\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)]$",
-          "$\\dfrac{r_1}{r_2}[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)]$"
+          "$5\\left(\\cos\\dfrac{3\\pi}{10} + i\\sin\\dfrac{3\\pi}{10}\\right)$",
+          "$6\\left(\\cos\\dfrac{\\pi}{50} + i\\sin\\dfrac{\\pi}{50}\\right)$",
+          "$6\\left(\\cos\\dfrac{3\\pi}{10} + i\\sin\\dfrac{3\\pi}{10}\\right)$",
+          "$6\\left(\\cos\\dfrac{\\pi}{10} + i\\sin\\dfrac{\\pi}{10}\\right)$"
         ],
-        "correct": 3,
-        "explanation": "ពេលចែកពីរចំនួនកុំផ្លិចទម្រង់ត្រីកោណមាត្រ គេចែកម៉ូឌុល និងដកអាគុយម៉ង់។"
+        "correct": 2,
+        "explanation": "គុណម៉ូឌុល $3 \\times 2 = 6$ និងបូកអាគុយម៉ង់ $\\dfrac{\\pi}{5} + \\dfrac{\\pi}{10} = \\dfrac{3\\pi}{10}$។"
       },
       {
         "id": "g12b_p3_03",
@@ -25559,15 +25559,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "គណនាផលចែក $z = \\dfrac{6(\\cos\\pi + i\\sin\\pi)}{2(\\cos(\\dfrac{\\pi}{3}) + i\\sin(\\dfrac{\\pi}{3}))}$ ៖",
+        "question": "គណនា $z^2$ ដែល $z = 2\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$ ៖",
         "options": [
-          "$4\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$",
-          "$3(\\cos\\pi - i\\sin\\pi)$",
-          "$3\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$",
-          "$3\\left(\\cos\\dfrac{4\\pi}{3} + i\\sin\\dfrac{4\\pi}{3}\\right)$"
+          "$-2 + 2\\sqrt{3}i$",
+          "$2 + 2\\sqrt{3}i$",
+          "$4i$",
+          "$-4$"
         ],
-        "correct": 2,
-        "explanation": "$r = \\dfrac{6}{2} = 3$។ $\\theta = \\pi - \\dfrac{\\pi}{3} = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។"
+        "correct": 0,
+        "explanation": "$z^2 = z \\cdot z = 4\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right) = 4\\left(-\\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}\\right) = -2 + 2\\sqrt{3}i$។"
       },
       {
         "id": "g12b_p3_05",
@@ -25591,15 +25591,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តាមទិន្នន័យសំណួរទី ៥ រកអាគុយម៉ង់នៃផលចែក $\\dfrac{z_1}{z_2}$ ៖",
+        "question": "បើ $\\arg(z_1) = \\dfrac{\\pi}{6}$ និង $\\arg(z_2) = \\dfrac{\\pi}{3}$ នោះ $\\arg(z_1 z_2)$ ស្មើ ៖",
         "options": [
+          "$\\dfrac{\\pi}{18}$",
           "$\\dfrac{\\pi}{6}$",
-          "$\\dfrac{\\pi}{12}$",
-          "$\\dfrac{5\\pi}{12}$",
-          "$-\\dfrac{\\pi}{12}$"
+          "$-\\dfrac{\\pi}{6}$",
+          "$\\dfrac{\\pi}{2}$"
         ],
-        "correct": 1,
-        "explanation": "$\\text{Arg}\\left(\\dfrac{z_1}{z_2}\\right) = \\text{Arg}(z_1) - \\text{Arg}(z_2) = \\dfrac{\\pi}{4} - \\dfrac{\\pi}{6} = \\dfrac{\\pi}{12}$។"
+        "correct": 3,
+        "explanation": "$\\arg(z_1 z_2) = \\arg(z_1) + \\arg(z_2) = \\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}$។"
       },
       {
         "id": "g12b_p3_07",
@@ -26019,15 +26019,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\lim_{x \\to 2} \\dfrac{\\sqrt{x + 2} - 2}{x - 2}$ ៖",
+        "question": "គណនា $\\lim_{x \\to 3} \\dfrac{x^2 + 1}{x - 1}$ ៖",
         "options": [
-          "$4$",
-          "$\\dfrac{1}{2}$",
-          "$\\dfrac{1}{4}$",
-          "$\\dfrac{1}{8}$"
+          "$5$",
+          "$\\dfrac{10}{3}$",
+          "$+\\infty$",
+          "$4$"
         ],
-        "correct": 2,
-        "explanation": "គុណនឹងកន្សោមឆ្លាស់ $\\sqrt{x + 2} + 2$ ៖ $\\dfrac{1}{\\sqrt{x + 2} + 2} \\to \\dfrac{1}{4}$។",
+        "correct": 0,
+        "explanation": "អនុគមន៍កំណត់ត្រង់ $3$ ៖ ជំនួសផ្ទាល់ $\\dfrac{9 + 1}{3 - 1} = 5$។",
         "src": "genpq-g12a_plan"
       },
       {
@@ -27172,16 +27172,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $f$ ជាប់លើចន្លោះបិទ $[a, b]$ នោះ $f$ ៖",
+        "question": "បើ $\\lim_{x \\to 2} f(x) = 5$ និង $f(2) = 5$ នោះ ៖",
         "options": [
-          "មានដេរីវេលើ $[a, b]$ ជានិច្ច",
-          "កើនដាច់ខាតលើ $[a, b]$",
-          "មានតម្លៃអតិបរមាដាច់ខាត និងអប្បបរមាដាច់ខាតលើ $[a, b]$ (ទ្រឹស្តីបទ Weierstrass)",
-          "កាត់អ័ក្សអាប់ស៊ីសជានិច្ច"
+          "$f$ ដាច់ត្រង់ $2$",
+          "$f$ ជាប់ត្រង់ $2$",
+          "$f$ មិនកំណត់ត្រង់ $2$",
+          "មិនអាចសន្និដ្ឋានបាន"
         ],
-        "correct": 2,
-        "explanation": "ទ្រឹស្តីបទតម្លៃខ្ពស់បំផុត និងទាបបំផុត (Extreme Value Theorem / Weierstrass)៖ អនុគមន៍ជាប់លើចន្លោះបិទតែងតែមានអតិបរមា និងអប្បបរមាដាច់ខាត។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\lim_{x \\to 2} f(x) = f(2)$ ជាលក្ខខណ្ឌនៃភាពជាប់ត្រង់ $2$។"
       },
       {
         "id": "g12a_p1_09",
@@ -28567,16 +28566,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដេរីវេទី $n$ នៃ $y = \\sin x$ កំណត់ដោយរូបមន្ត ៖",
+        "question": "ដេរីវេនៃ $y = \\sin x\\cos x$ គឺ ៖",
         "options": [
-          "$(-1)^n \\sin x$",
-          "$(-1)^n \\cos x$",
-          "$\\sin\\left(x + \\dfrac{n\\pi}{2}\\right)$",
-          "$\\cos\\left(x + \\dfrac{n\\pi}{2}\\right)$"
+          "$\\sin 2x$",
+          "$-\\sin 2x$",
+          "$1$",
+          "$\\cos 2x$"
         ],
-        "correct": 2,
-        "explanation": "$y' = \\cos x = \\sin(x + \\dfrac{\\pi}{2})$, $y'' = \\sin(x + \\pi)$, ... $y^{(n)} = \\sin(x + n\\pi/2)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$y' = \\cos x \\cdot \\cos x + \\sin x \\cdot (-\\sin x) = \\cos^2 x - \\sin^2 x = \\cos 2x$។"
       },
       {
         "id": "g12a_p3_10",
@@ -30881,16 +30879,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកចំណុចបរមាធៀបនៃអនុគមន៍ $f(x) = x e^{-x}$ ៖",
+        "question": "ក្រាបនៃ $y = e^{x} + 1$ មានអាស៊ីមតូតដេក ៖",
         "options": [
-          "អតិបរមាធៀបត្រង់ $x = 1$ ស្មើនឹង $\\dfrac{1}{e}$",
-          "គ្មានបរមាទេ",
-          "អប្បបរមាធៀបត្រង់ $x = 1$",
-          "អតិបរមាត្រង់ $x = 0$"
+          "$y = 0$",
+          "$y = 1$",
+          "$x = 1$",
+          "គ្មានអាស៊ីមតូត"
         ],
-        "correct": 0,
-        "explanation": "$f'(x) = 1 \\cdot e^{-x} - x e^{-x} = (1 - x)e^{-x} = 0 \\iff x = 1$។ ប្តូរសញ្ញាពី + ទៅ - នាំឱ្យជាអតិបរមាធៀប $f(1) = \\dfrac{1}{e}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\lim_{x \\to -\\infty} e^x = 0$ នាំឱ្យ $\\lim_{x \\to -\\infty} (e^x + 1) = 1$ ៖ អាស៊ីមតូតដេក $y = 1$។"
       },
       {
         "id": "g12a_p1_04",
@@ -33225,16 +33222,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងលក្ខណៈផលគុណនៃពីរវ៉ិចទ័រ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ផលគុណចម្រុះបីវ៉ិចទ័រ $\\vec{u} \\cdot (\\vec{v} \\times \\vec{w})$ ស្មើនឹង ៖",
+        "question": "បើ $\\vec{u}$ និង $\\vec{v}$ រួមទិសគ្នា នោះ $\\vec{u} \\times \\vec{v}$ ស្មើនឹង ៖",
         "options": [
-          "$\\vec{0}$ ជានិច្ច",
+          "$\\vec{0}$",
           "$1$",
-          "ដេទែមីណង់នៃកូអរដោនេទាំងបីវ៉ិចទ័រ $\\det(\\vec{u}, \\vec{v}, \\vec{w})$",
-          "$\\|\\vec{u}\\| \\|\\vec{v}\\| \\|\\vec{w}\\|$"
+          "$\\vec{u} + \\vec{v}$",
+          "$\\|\\vec{u}\\| \\|\\vec{v}\\|$"
         ],
-        "correct": 2,
-        "explanation": "ផលគុណចម្រុះ (Scalar triple product) ស្មើនឹងដេទែមីណង់លំដាប់ ៣ នៃវ៉ិចទ័រទាំងបី។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$\\|\\vec{u} \\times \\vec{v}\\| = \\|\\vec{u}\\|\\|\\vec{v}\\|\\sin\\theta$ ហើយ $\\sin\\theta = 0$ ពេលរួមទិស ៖ $\\vec{u} \\times \\vec{v} = \\vec{0}$។"
       },
       {
         "id": "g12a_p1_10",
@@ -33898,16 +33894,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាព្រីមីទីវ $\\int \\dfrac{1}{x^2 - 1} dx$ ៖",
+        "question": "ព្រីមីទីវមួយនៃ $f(x) = 3x^2 + 2x$ គឺ ៖",
         "options": [
-          "$\\ln|x^2 - 1| + C$",
-          "$\\arctan x + C$",
-          "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x-1}{x+1}\\right| + C$",
-          "$\\dfrac{1}{2}\\ln|x^2 - 1| + C$"
+          "$6x + 2$",
+          "$x^3 + x^2 + 7$",
+          "$3x^3 + 2x^2$",
+          "$x^3 + 2x^2$"
         ],
-        "correct": 2,
-        "explanation": "បំបែកប្រភាគងាយ៖ $\\dfrac{1}{x^2 - 1} = \\dfrac{1}{2}\\left(\\dfrac{1}{x-1} - \\dfrac{1}{x+1}\\right) \\implies \\dfrac{1}{2}\\ln\\left|\\dfrac{x-1}{x+1}\\right| + C$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$(x^3 + x^2 + 7)' = 3x^2 + 2x$។"
       },
       {
         "id": "g12a_p1_09",
@@ -34208,16 +34203,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាព្រីមីទីវ $\\int \\tan x dx$ ៖",
+        "question": "គណនា $\\int (\\sin x + \\cos x)\\,dx$ ៖",
         "options": [
-          "$\\ln|\\sin x| + C$",
-          "$-\\ln|\\cos x| + C = \\ln|\\sec x| + C$",
-          "$\\dfrac{\\tan^2 x}{2} + C$",
-          "$\\dfrac{1}{\\cos^2 x} + C$"
+          "$\\sin x - \\cos x + C$",
+          "$\\cos x - \\sin x + C$",
+          "$-\\sin x - \\cos x + C$",
+          "$\\sin x + \\cos x + C$"
         ],
-        "correct": 1,
-        "explanation": "$\\int \\dfrac{\\sin x}{\\cos x} dx = -\\int \\dfrac{(\\cos x)'}{\\cos x} dx = -\\ln|\\cos x| + C$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$\\int \\sin x\\,dx = -\\cos x$ និង $\\int \\cos x\\,dx = \\sin x$ ៖ ចម្លើយ $\\sin x - \\cos x + C$។"
       },
       {
         "id": "g12a_p2_07",
@@ -34242,16 +34236,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាព្រីមីទីវ $\\int \\dfrac{2x + 3}{x^2 + 3x + 5} dx$ ៖",
+        "question": "គណនា $\\int 2\\cos 2x\\,dx$ ៖",
         "options": [
-          "$\\dfrac{1}{x^2 + 3x + 5} + C$",
-          "$\\ln|2x + 3| + C$",
-          "$\\dfrac{(2x+3)^2}{2} + C$",
-          "$\\ln(x^2 + 3x + 5) + C$"
+          "$4\\sin 2x + C$",
+          "$-\\sin 2x + C$",
+          "$\\sin 2x + C$",
+          "$2\\sin x + C$"
         ],
-        "correct": 3,
-        "explanation": "រាង $\\int \\dfrac{u'}{u} dx = \\ln|u| + C$។ ដោយ $x^2 + 3x + 5 > 0$ នាំឱ្យបាន $\\ln(x^2 + 3x + 5) + C$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$\\int \\cos 2x\\,dx = \\dfrac{1}{2}\\sin 2x$ នាំឱ្យ $\\int 2\\cos 2x\\,dx = \\sin 2x + C$។"
       },
       {
         "id": "g12a_p2_09",
@@ -34259,16 +34252,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាព្រីមីទីវ $\\int \\dfrac{x^2}{x^2 + 1} dx$ ៖",
+        "question": "គណនា $\\int \\dfrac{1}{\\sin^2 x}\\,dx$ ៖",
         "options": [
-          "$\\arctan x + C$",
-          "$x - \\arctan x + C$",
-          "$x + \\arctan x + C$",
-          "$\\ln(x^2 + 1) + C$"
+          "$\\cot x + C$",
+          "$\\tan x + C$",
+          "$-\\tan x + C$",
+          "$-\\cot x + C$"
         ],
-        "correct": 1,
-        "explanation": "$\\int \\dfrac{x^2+1-1}{x^2+1} dx = \\int \\left(1 - \\dfrac{1}{x^2+1}\\right) dx = x - \\arctan x + C$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$(\\cot x)' = -\\dfrac{1}{\\sin^2 x}$ នាំឱ្យ $\\int \\dfrac{dx}{\\sin^2 x} = -\\cot x + C$។"
       },
       {
         "id": "g12a_p2_10",
@@ -34985,16 +34977,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "ទ្រឹស្តីបទតម្លៃមធ្យមសម្រាប់អាំងតេក្រាលកំណត់៖ បើ $f$ ជាប់លើ $[a, b]$ នោះ ៖",
+        "question": "បើ $\\int_0^3 f(x)\\,dx = 6$ នោះ $\\int_0^3 [f(x) + 1]\\,dx$ ស្មើ ៖",
         "options": [
-          "$\\int_a^b f(x) dx = f'(c)(b - a)$",
-          "$\\int_a^b f(x) dx = \\dfrac{f(a) + f(b)}{2}$",
-          "$f(c) = 0$",
-          "មាន $c \\in [a, b]$ ដែល $\\int_a^b f(x) dx = f(c)(b - a)$"
+          "$7$",
+          "$9$",
+          "$6$",
+          "$12$"
         ],
-        "correct": 3,
-        "explanation": "Mean Value Theorem for Integrals៖ មាន $c \\in [a, b]$ ដែល $\\int_a^b f(x) dx = f(c)(b - a)$ (តម្លៃមធ្យម $\\mu = f(c)$)។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\int_0^3 f(x)\\,dx + \\int_0^3 1\\,dx = 6 + 3 = 9$។"
       },
       {
         "id": "g12a_p1_02",
@@ -35191,16 +35182,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{2}} x \\cos x dx$ ដោយផ្នែក ៖",
+        "question": "គណនា $\\int_0^1 2x(x^2 + 1)\\,dx$ (តាង $u = x^2 + 1$) ៖",
         "options": [
-          "$\\dfrac{\\pi}{2} - 1$",
-          "$\\dfrac{\\pi}{2} + 1$",
-          "$1$",
-          "$\\dfrac{\\pi}{2}$"
+          "$\\dfrac{3}{2}$",
+          "$2$",
+          "$\\dfrac{1}{2}$",
+          "$3$"
         ],
         "correct": 0,
-        "explanation": "$I = [x\\sin x + \\cos x]_0^{\\dfrac{\\pi}{2}} = (\\frac{\\pi}{2} \\cdot 1 + 0) - (0 + 1) = \\dfrac{\\pi}{2} - 1$។",
-        "diagram": ""
+        "explanation": "$u$ ពី $1$ ដល់ $2$ ៖ $\\int_1^2 u\\,du = \\dfrac{4 - 1}{2} = \\dfrac{3}{2}$។"
       },
       {
         "id": "g12a_p2_04",
@@ -35208,16 +35198,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^1 x e^{-x} dx$ ៖",
+        "question": "គណនា $\\int_0^1 e^{2x}\\,dx$ ៖",
         "options": [
-          "$2 - \\dfrac{1}{e}$",
-          "$1 - \\dfrac{1}{e}$",
-          "$\\dfrac{1}{e}$",
-          "$1 - \\dfrac{2}{e}$"
+          "$e^2 - 1$",
+          "$\\dfrac{e^2}{2}$",
+          "$2(e^2 - 1)$",
+          "$\\dfrac{e^2 - 1}{2}$"
         ],
         "correct": 3,
-        "explanation": "$I = [-(x + 1)e^{-x}]_0^1 = -2e^{-1} - (-1) = 1 - \\dfrac{2}{e}$។",
-        "diagram": ""
+        "explanation": "$\\left[\\dfrac{e^{2x}}{2}\\right]_0^1 = \\dfrac{e^2 - 1}{2}$។"
       },
       {
         "id": "g12a_p2_05",
@@ -35276,16 +35265,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_1^e (\\ln x)^2 dx$ ៖",
+        "question": "គណនា $\\int_1^e \\dfrac{\\ln x}{x}\\,dx$ (តាង $u = \\ln x$) ៖",
         "options": [
+          "$1$",
+          "$\\dfrac{1}{2}$",
           "$e$",
-          "$e - 1$",
-          "$e - 2$",
-          "$2$"
+          "$\\dfrac{e}{2}$"
         ],
-        "correct": 2,
-        "explanation": "ដោយផ្នែកពីរដង៖ $[x(\\ln x)^2 - 2x\\ln x + 2x]_1^e = (e - 2e + 2e) - (0 - 0 + 2) = e - 2$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$u$ ពី $0$ ដល់ $1$ ៖ $\\int_0^1 u\\,du = \\dfrac{1}{2}$។"
       },
       {
         "id": "g12a_p2_09",
@@ -35293,16 +35281,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\pi} x \\sin x dx$ ៖",
+        "question": "គណនា $\\int_0^{\\pi} \\sin x\\cos x\\,dx$ (តាង $u = \\sin x$) ៖",
         "options": [
+          "$1$",
+          "$\\dfrac{1}{2}$",
           "$0$",
-          "$2\\pi$",
-          "$2$",
-          "$\\pi$"
+          "$2$"
         ],
-        "correct": 3,
-        "explanation": "$I = [-x\\cos x + \\sin x]_0^\\pi = (-\\pi(-1) + 0) - (0) = \\pi$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$u$ ពី $0$ ដល់ $0$ ៖ $\\int_0^0 u\\,du = 0$។"
       },
       {
         "id": "g12a_p2_10",
@@ -36845,16 +36832,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បាក់តេរីមួយប្រភេទកើនឡើងទ្វេដងរៀងរាល់ $3$ ម៉ោងម្តង។ បើដំបូងមាន $1000$ ក្បាល តើសមីការកំណើនគឺ ៖",
+        "question": "ចម្លើយនៃ $y' = 5y$ ដែល $y(0) = 2$ គឺ ៖",
         "options": [
-          "$N(t) = 1000 e^{2t}$",
-          "$N(t) = 1000 \\cdot 2^{3t}$",
-          "$N(t) = 2000 t$",
-          "$N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$"
+          "$5e^{2x}$",
+          "$2e^{5x}$",
+          "$e^{5x} + 1$",
+          "$2e^{-5x}$"
         ],
-        "correct": 3,
-        "explanation": "$N(t) = N_0 a^t$។ ត្រង់ $t = 3 \\implies N(3) = 2000 = 1000 a^3 \\implies a = 2^{\\frac{1}{3}}$ នាំឱ្យ $N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$y = Ce^{5x}$ ហើយ $y(0) = C = 2$ ៖ $y = 2e^{5x}$។"
       },
       {
         "id": "g12a_p1_10",
@@ -37227,15 +37213,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' + 6y' + 8y = 0$ គឺ ៖",
+        "question": "សមីការសម្គាល់នៃ $y'' - 5y' + 6y = 0$ គឺ ៖",
         "options": [
-          "$y = C_1\\cos 2x + C_2\\sin 2x$",
-          "$y = C_1e^{-4x} + C_2e^{-2x}$",
-          "$y = C_1e^{4x} + C_2e^{2x}$",
-          "$y = (C_1 + C_2x)e^{-4x}$"
+          "$r^2 + 5r + 6 = 0$",
+          "$r^2 - 5r + 6 = 0$",
+          "$r^2 - 5r = 0$",
+          "$r - 5 + 6 = 0$"
         ],
         "correct": 1,
-        "explanation": "សមីការសម្គាល់ $r^2 + 6r + 8 = 0$ មានឫស $r = -4 , r = -2$។",
+        "explanation": "ជំនួស $y'' \\to r^2$, $y' \\to r$, $y \\to 1$ ៖ $r^2 - 5r + 6 = 0$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37244,15 +37230,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' - 7y' + 12y = 0$ គឺ ៖",
+        "question": "សមីការសម្គាល់នៃ $y'' + 4y = 0$ គឺ ៖",
         "options": [
-          "$y = C_1e^{3x} + C_2e^{4x}$",
-          "$y = (C_1 + C_2x)e^{4x}$",
-          "$y = C_1e^{-3x} + C_2e^{-4x}$",
-          "$y = C_1\\cos x + C_2\\sin x$"
+          "$r^2 + 4r = 0$",
+          "$r + 4 = 0$",
+          "$r^2 + 4 = 0$",
+          "$r^2 - 4 = 0$"
         ],
-        "correct": 0,
-        "explanation": "សមីការសម្គាល់ $r^2 - 7r + 12 = 0$ មានឫស $r = 4 , r = 3$។",
+        "correct": 2,
+        "explanation": "គ្មានតួ $y'$ ៖ $r^2 + 4 = 0$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37261,15 +37247,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' - 4y' + 20y = 0$ គឺ ៖",
+        "question": "សមីការសម្គាល់នៃ $2y'' - 3y' + y = 0$ គឺ ៖",
         "options": [
-          "$y = e^{2x}(C_1\\cos 16x + C_2\\sin 16x)$",
-          "$y = (C_1 + C_2x)e^{4x}$",
-          "$y = e^{2x}(C_1\\cos 4x + C_2\\sin 4x)$",
-          "$y = C_1e^{4x} + C_2e^{-4x}$"
+          "$2r^2 - 3r + 1 = 0$",
+          "$r^2 - 3r + 2 = 0$",
+          "$2r^2 + 3r + 1 = 0$",
+          "$2r - 3 + 1 = 0$"
         ],
-        "correct": 2,
-        "explanation": "សមីការសម្គាល់មានឫសកុំផ្លិច $r = 2 \\pm 4i$។",
+        "correct": 0,
+        "explanation": "មេគុណដដែល ៖ $2r^2 - 3r + 1 = 0$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37278,15 +37264,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' + 6y' + 9y = 0$ គឺ ៖",
+        "question": "ឫសនៃសមីការសម្គាល់នៃ $y'' - 3y' + 2y = 0$ គឺ ៖",
         "options": [
-          "$y = C_1e^{-3x} + C_2e^{3x}$",
-          "$y = (C_1 + C_2x)e^{3x}$",
-          "$y = C_1\\cos 3x + C_2\\sin 3x$",
-          "$y = (C_1 + C_2x)e^{-3x}$"
+          "$r = -1, r = -2$",
+          "$r = 3, r = 2$",
+          "$r = 1$ (ឌុប)",
+          "$r = 1, r = 2$"
         ],
         "correct": 3,
-        "explanation": "សមីការសម្គាល់មានឫសឌុប $r = -3$។",
+        "explanation": "$r^2 - 3r + 2 = (r - 1)(r - 2) = 0$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37295,15 +37281,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' - 2y' + y = 0$ គឺ ៖",
+        "question": "ឫសនៃសមីការសម្គាល់នៃ $y'' + 6y' + 9y = 0$ គឺ ៖",
         "options": [
-          "$y = (C_1 + C_2x)e^{-x}$",
-          "$y = C_1e^{x} + C_2e^{-x}$",
-          "$y = C_1\\cos x + C_2\\sin x$",
-          "$y = (C_1 + C_2x)e^{x}$"
+          "$r = 3$ (ឌុប)",
+          "$r = -3$ (ឌុប)",
+          "$r = \\pm 3$",
+          "$r = \\pm 3i$"
         ],
-        "correct": 3,
-        "explanation": "សមីការសម្គាល់មានឫសឌុប $r = 1$។",
+        "correct": 1,
+        "explanation": "$r^2 + 6r + 9 = (r + 3)^2 = 0$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37312,15 +37298,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' + 2y' + y = 0$ គឺ ៖",
+        "question": "ឫសនៃសមីការសម្គាល់នៃ $y'' + 9y = 0$ គឺ ៖",
         "options": [
-          "$y = C_1\\cos x + C_2\\sin x$",
-          "$y = C_1e^{-x} + C_2e^{x}$",
-          "$y = (C_1 + C_2x)e^{-x}$",
-          "$y = (C_1 + C_2x)e^{x}$"
+          "$r = \\pm 3$",
+          "$r = 9$",
+          "$r = \\pm 3i$",
+          "$r = -9$"
         ],
         "correct": 2,
-        "explanation": "សមីការសម្គាល់មានឫសឌុប $r = -1$។",
+        "explanation": "$r^2 = -9 \\iff r = \\pm 3i$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37329,15 +37315,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' - 3y' + 2y = 0$ គឺ ៖",
+        "question": "ឌីសគ្រីមីណង់នៃសមីការសម្គាល់របស់ $y'' - 2y' + 5y = 0$ គឺ ៖",
         "options": [
-          "$y = C_1\\cos x + C_2\\sin x$",
-          "$y = C_1e^{x} + C_2e^{2x}$",
-          "$y = (C_1 + C_2x)e^{x}$",
-          "$y = C_1e^{-x} + C_2e^{-2x}$"
+          "$\\Delta = -16 < 0$",
+          "$\\Delta = 24 > 0$",
+          "$\\Delta = 0$",
+          "$\\Delta = 16 > 0$"
         ],
-        "correct": 1,
-        "explanation": "សមីការសម្គាល់ $r^2 - 3r + 2 = 0$ មានឫស $r = 1 , r = 2$។",
+        "correct": 0,
+        "explanation": "$r^2 - 2r + 5 = 0$ ៖ $\\Delta = 4 - 20 = -16 < 0$ (ឫសកុំផ្លិច)។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37346,15 +37332,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' + y' - 12y = 0$ គឺ ៖",
+        "question": "ឫសនៃសមីការសម្គាល់នៃ $y'' - 2y' + 5y = 0$ គឺ ៖",
         "options": [
-          "$y = C_1e^{-4x} + C_2e^{3x}$",
-          "$y = C_1e^{4x} + C_2e^{-3x}$",
-          "$y = (C_1 + C_2x)e^{3x}$",
-          "$y = C_1\\cos 7x + C_2\\sin 7x$"
+          "$-1 \\pm 2i$",
+          "$1 \\pm 4i$",
+          "$2 \\pm i$",
+          "$1 \\pm 2i$"
         ],
-        "correct": 0,
-        "explanation": "សមីការសម្គាល់ $r^2 + 1r - 12 = 0$ មានឫស $r = 3 , r = -4$។",
+        "correct": 3,
+        "explanation": "$r = \\dfrac{2 \\pm \\sqrt{-16}}{2} = 1 \\pm 2i$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37363,15 +37349,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' + 2y' - 3y = 0$ គឺ ៖",
+        "question": "សមីការ $y'' + 3y' - 4y = 0$ ជាសមីការឌីផេរ៉ង់ស្យែល ៖",
         "options": [
-          "$y = C_1\\cos 4x + C_2\\sin 4x$",
-          "$y = (C_1 + C_2x)e^{-3x}$",
-          "$y = C_1e^{-3x} + C_2e^{x}$",
-          "$y = C_1e^{3x} + C_2e^{-x}$"
+          "លីនេអ៊ែរលំដាប់ទី ២ អូម៉ូសែន មេគុណថេរ",
+          "លំដាប់ទី ១",
+          "មិនលីនេអ៊ែរ",
+          "លំដាប់ទី ៣"
         ],
-        "correct": 2,
-        "explanation": "សមីការសម្គាល់ $r^2 + 2r - 3 = 0$ មានឫស $r = -3 , r = 1$។",
+        "correct": 0,
+        "explanation": "ដេរីវេខ្ពស់បំផុតគឺ $y''$ អង្គទីពីរស្មើ $0$ ហើយមេគុណថេរ។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -37380,15 +37366,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y'' - 4y' + 4y = 0$ គឺ ៖",
+        "question": "សមីការសម្គាល់ $r^2 + r - 6 = 0$ ត្រូវគ្នានឹងសមីការឌីផេរ៉ង់ស្យែល ៖",
         "options": [
-          "$y = C_1e^{2x} + C_2e^{-2x}$",
-          "$y = (C_1 + C_2x)e^{-2x}$",
-          "$y = C_1\\cos 2x + C_2\\sin 2x$",
-          "$y = (C_1 + C_2x)e^{2x}$"
+          "$y'' - y' + 6y = 0$",
+          "$y'' + y' - 6y = 0$",
+          "$y' + y - 6 = 0$",
+          "$y'' + 6y' - y = 0$"
         ],
-        "correct": 3,
-        "explanation": "សមីការសម្គាល់មានឫសឌុប $r = 2$។",
+        "correct": 1,
+        "explanation": "$r^2 \\to y''$, $r \\to y'$, $1 \\to y$ ៖ $y'' + y' - 6y = 0$។",
         "src": "genpq-g12c_plan"
       }
     ],
@@ -37690,16 +37676,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "សមីការលំយោលបង្ខំ (Forced oscillation) កើតឡើងកាលណា ៖",
+        "question": "ចម្លើយពិសេសថេរនៃ $y'' + 4y = 8$ គឺ ៖",
         "options": [
-          "អង្គទីពីរ $f(t) = F_0 \\cos(\\omega t) \\neq 0$",
-          "$y'' = 0$",
-          "$f(t) = 0$",
-          "គ្មានកម្លាំងកកិត"
+          "$y_p = 8$",
+          "$y_p = 4$",
+          "$y_p = 2$",
+          "$y_p = \\dfrac{1}{2}$"
         ],
-        "correct": 0,
-        "explanation": "កាលណាមានកម្លាំងខាងក្រៅជួយជម្រុញតាមខួប $F(t) = F_0 \\cos(\\omega t)$ សមីការក្លាយជាសមីការមិនអូម៉ូសែននៃលំយោលបង្ខំ។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$y_p = k$ ៖ $0 + 4k = 8 \\iff k = 2$។"
       },
       {
         "id": "g12a_p2_09",
@@ -39325,15 +39310,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកអនុគមន៍ពង្រីកតាមភាពជាប់នៃ $f(x) = \\dfrac{\\sqrt{x + 1} - 1}{x}$ ត្រង់ $x = 0$ ៖",
+        "question": "អនុគមន៍ $f(x) = \\dfrac{1}{x - 2}$ ជាប់លើ ៖",
         "options": [
-          "$g(0) = 2$",
-          "$g(0) = 1$",
-          "$g(0) = 0$",
-          "$g(0) = \\dfrac{1}{2}$"
+          "$\\mathbb{R}$",
+          "$(2, +\\infty)$ តែប៉ុណ្ណោះ",
+          "$(-\\infty, 2) \\cup (2, +\\infty)$",
+          "$[2, +\\infty)$"
         ],
-        "correct": 3,
-        "explanation": "$\\lim_{x \\to 0} f(x) = \\dfrac{1}{2}$ ដូច្នេះតម្លៃពង្រីកគឺ $g(0) = \\dfrac{1}{2}$។"
+        "correct": 2,
+        "explanation": "អនុគមន៍សនិទានជាប់លើដែនកំណត់ $\\mathbb{R} \\setminus \\{2\\}$។"
       },
       {
         "id": "g12b_p2_07",
@@ -43155,16 +43140,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 3t^2 - 4t + 1$ (គិតជា $\\,\\dfrac{\\text{m}}{\\text{s}}$)។ រកចម្ងាយចរ $s(t)$ ដឹងថា $s(0) = 5\\text{ m}$ ៖",
+        "question": "ព្រីមីទីវទូទៅនៃ $f(x) = 2x - 3$ គឺ ៖",
         "options": [
-          "$s(t) = 6t - 4$",
-          "$s(t) = t^3 - 2t^2 + t + 5$",
-          "$s(t) = t^3 - 2t^2 + t$",
-          "$s(t) = 3t^3 - 4t^2 + t + 5$"
+          "$x^2 - 3x + C$",
+          "$2 + C$",
+          "$x^2 + C$",
+          "$2x^2 - 3x + C$"
         ],
-        "correct": 1,
-        "explanation": "$s(t) = \\int v(t) dt = t^3 - 2t^2 + t + C$។ $s(0) = 5 \\implies C = 5$។ ដូច្នេះ $s(t) = t^3 - 2t^2 + t + 5$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$(x^2 - 3x)' = 2x - 3$។"
       },
       {
         "id": "g12b_p1_10",
@@ -44431,16 +44415,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផ្ទៃក្រឡាខណ្ឌដោយក្រាប អ័ក្សអាប់ស៊ីស និងបន្ទាត់ឈរ",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "ផ្ទៃក្រឡាខណ្ឌដោយខ្សែកោងពីរ $y = f(x)$ និង $y = g(x)$ (ដែល $f(x) \\ge g(x)$) ពី $x = a$ ដល់ $x = b$ គឺ ៖",
+        "question": "ផ្ទៃក្រឡាខណ្ឌដោយ $y = x^2$ អ័ក្ស $Ox$ និងបន្ទាត់ $x = 0$, $x = 3$ គឺ ៖",
         "options": [
-          "$S = \\int_a^b [f(x) + g(x)] dx$",
-          "$S = \\int_a^b [f(x) - g(x)] dx$",
-          "$S = \\pi \\int_a^b [f(x) - g(x)]^2 dx$",
-          "$S = \\int_a^b f(x)g(x) dx$"
+          "$27$",
+          "$3$",
+          "$6$",
+          "$9$"
         ],
-        "correct": 1,
-        "explanation": "រូបមន្តផ្ទៃរវាងខ្សែកោងពីរ៖ $S = \\int_a^b (y_\\text{លើ} - y_\\text{ក្រោម}) dx = \\int_a^b [f(x) - g(x)] dx$។",
-        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"30\" y1=\"150\" x2=\"290\" y2=\"150\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"70\" y1=\"180\" x2=\"70\" y2=\"20\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">x</text>\n  <text x=\"75\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">y</text>\n  <!-- Shaded Area between curves -->\n  <path d=\"M 110 110 Q 170 30 230 110 Q 170 140 110 110 Z\" fill=\"#dbeafe\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <!-- Top Curve f(x) -->\n  <path d=\"M 80 135 Q 170 20 260 135\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n  <text x=\"195\" y=\"45\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">y = f(x)</text>\n  <!-- Bottom Curve g(x) -->\n  <path d=\"M 80 85 Q 170 160 260 85\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2.5\"/>\n  <text x=\"195\" y=\"145\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#dc2626\" font-weight=\"bold\">y = g(x)</text>\n  <!-- Intersection markers -->\n  <circle cx=\"110\" cy=\"110\" r=\"3.5\" fill=\"#334155\"/>\n  <circle cx=\"230\" cy=\"110\" r=\"3.5\" fill=\"#334155\"/>\n  <line x1=\"110\" y1=\"110\" x2=\"110\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"230\" y1=\"110\" x2=\"230\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"105\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">a</text>\n  <text x=\"225\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">b</text>\n  <text x=\"150\" y=\"95\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#1e40af\" font-weight=\"bold\">S = ∫ [f-g]dx</text>\n</svg>"
+        "correct": 3,
+        "explanation": "$S = \\int_0^3 x^2\\,dx = \\left[\\dfrac{x^3}{3}\\right]_0^3 = 9$។"
       },
       {
         "id": "g12b_p3_04",
@@ -103775,16 +103758,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ បន្ទាត់ក្នុងលំហ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចម្ងាយពីចំណុច $M_1$ ទៅបន្ទាត់ $(d)$ កាត់តាម $M_0$ មានវ៉ិចទ័រប្រាប់ទិស $\\vec{u}$ គឺ ៖",
+        "question": "បន្ទាត់ $\\dfrac{x - 1}{2} = \\dfrac{y + 3}{-1} = \\dfrac{z}{4}$ កាត់តាមចំណុច ៖",
         "options": [
-          "$d(M_1, (d)) = \\|\\vec{M_0 M_1}\\|$",
-          "$d(M_1, (d)) = \\dfrac{\\|\\vec{M_0 M_1} \\times \\vec{u}\\|}{\\|\\vec{u}\\|}$",
-          "$d(M_1, (d)) = \\|\\vec{M_0 M_1} \\times \\vec{u}\\|$",
-          "$d(M_1, (d)) = \\dfrac{|\\vec{M_0 M_1} \\cdot \\vec{u}|}{\\|\\vec{u}\\|}$"
+          "$(2, -1, 4)$",
+          "$(-1, 3, 0)$",
+          "$(1, -3, 0)$",
+          "$(1, 3, 0)$"
         ],
-        "correct": 1,
-        "explanation": "រូបមន្តចម្ងាយពីចំណុចទៅបន្ទាត់ក្នុងលំហ៖ $d = \\dfrac{\\|\\vec{M_0 M_1} \\times \\vec{u}\\|}{\\|\\vec{u}\\|}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ពីសមីការឆ្លុះ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ៖ $M_0(1, -3, 0)$។"
       },
       {
         "id": "g12a_p1_08",
@@ -103792,16 +103774,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ បន្ទាត់ក្នុងលំហ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចម្ងាយរវាងបន្ទាត់ទ្រេតគ្នាពីរ $(d_1)$ (កាត់ $A$, ទិស $\\vec{u}$) និង $(d_2)$ (កាត់ $B$, ទិស $\\vec{v}$) គឺ ៖",
+        "question": "បន្ទាត់ពីរមានវ៉ិចទ័រប្រាប់ទិស $\\vec{u}_1 = (1, 2, -1)$ និង $\\vec{u}_2 = (-2, -4, 2)$។ បន្ទាត់ទាំងពីរ ៖",
         "options": [
-          "$d = \\dfrac{\\|\\vec{u} \\times \\vec{v}\\|}{\\|\\vec{AB}\\|}$",
-          "$d = \\|\\vec{AB}\\|$",
-          "$d = \\dfrac{|\\vec{u} \\cdot \\vec{v}|}{\\|\\vec{AB}\\|}$",
-          "$d = \\dfrac{|\\vec{AB} \\cdot (\\vec{u} \\times \\vec{v})|}{\\|\\vec{u} \\times \\vec{v}\\|}$"
+          "កែងគ្នា",
+          "ស្របគ្នា ឬត្រួតគ្នា",
+          "ទ្រេតគ្នាជានិច្ច",
+          "ប្រសព្វគ្នាជានិច្ច"
         ],
-        "correct": 3,
-        "explanation": "ចម្ងាយរវាងបន្ទាត់ទ្រេតគ្នា (Skew lines) ស្មើនឹងកម្ពស់ប្រលេពីប៉ែត៖ $d = \\dfrac{|\\vec{AB} \\cdot (\\vec{u} \\times \\vec{v})|}{\\|\\vec{u} \\times \\vec{v}\\|}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\vec{u}_2 = -2\\vec{u}_1$ (រួមទិស) នាំឱ្យបន្ទាត់ទាំងពីរស្របគ្នា ឬត្រួតគ្នា។"
       },
       {
         "id": "g12a_p1_09",
@@ -104380,16 +104361,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "មាឌសូលីតបដិវត្តន៍ដែលបានមកពីរង្វិលជុំវិញអ័ក្ស $Oy$ នៃផ្ទៃខណ្ឌដោយ $x = g(y)$, $y = c, y = d$ គឺ ៖",
+        "question": "មាឌសូលីតបដិវត្តន៍ជុំវិញ $Ox$ នៃផ្ទៃក្រោមក្រាប $y = \\sqrt{x}$ លើ $[0, 4]$ គឺ ៖",
         "options": [
-          "$V = \\int_c^d [g(y)]^2 dy$",
-          "$V = 2\\pi \\int_c^d [g(y)]^2 dy$",
-          "$V = \\pi \\int_c^d [g(y)]^2 dy$",
-          "$V = \\pi \\int_c^d g(y) dy$"
+          "$4\\pi$",
+          "$16\\pi$",
+          "$8\\pi$",
+          "$\\dfrac{16\\pi}{3}$"
         ],
         "correct": 2,
-        "explanation": "វិធីបន្ទះមូលជុំវិញអ័ក្ស $Oy$៖ $V = \\pi \\int_c^d [g(y)]^2 dy$។",
-        "diagram": ""
+        "explanation": "$V = \\pi\\int_0^4 (\\sqrt{x})^2\\,dx = \\pi\\left[\\dfrac{x^2}{2}\\right]_0^4 = 8\\pi$។"
       },
       {
         "id": "g12a_p1_03",
@@ -104482,16 +104462,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាមាឌសូលីតបដិវត្តន៍រង្វិលជុំវិញ $Oy$ នៃផ្ទៃខណ្ឌដោយ $y = x^2$ និង $y = 4$ ៖",
+        "question": "មាឌសូលីតបដិវត្តន៍ជុំវិញ $Ox$ នៃផ្ទៃក្រោមបន្ទាត់ $y = 2$ លើ $[0, 3]$ គឺ ៖",
         "options": [
+          "$12\\pi$",
+          "$6\\pi$",
           "$4\\pi$",
-          "$8\\pi$",
-          "$16\\pi$",
-          "$32\\pi$"
+          "$18\\pi$"
         ],
-        "correct": 1,
-        "explanation": "$y = x^2 \\implies x = \\sqrt{y}$។ $V = \\pi \\int_0^4 (\\sqrt{y})^2 dy = \\pi \\int_0^4 y dy = \\pi [\\frac{y^2}{2}]_0^4 = 8\\pi$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$V = \\pi\\int_0^3 2^2\\,dx = 12\\pi$ (ស៊ីឡាំងកាំ $2$ កម្ពស់ $3$)។"
       },
       {
         "id": "g12a_p1_09",
@@ -104499,16 +104478,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "វិធីសំបកស៊ីឡាំង (Cylindrical shells) សម្រាប់រង្វិលជុំវិញអ័ក្ស $Oy$ គឺ ៖",
+        "question": "មាឌសូលីតបដិវត្តន៍ជុំវិញ $Ox$ នៃផ្ទៃក្រោមបន្ទាត់ $y = x$ លើ $[0, 3]$ គឺ ៖",
         "options": [
-          "$V = 2\\pi \\int_a^b [f(x)]^2 dx$",
-          "$V = \\pi \\int_a^b x^2 dx$",
-          "$V = 2\\pi \\int_a^b x f(x) dx$",
-          "$V = \\pi \\int_a^b [f(x)]^2 dx$"
+          "$3\\pi$",
+          "$27\\pi$",
+          "$\\dfrac{9\\pi}{2}$",
+          "$9\\pi$"
         ],
-        "correct": 2,
-        "explanation": "Cylindrical shells method: $V = 2\\pi \\int_a^b (\\text{កាំ})(\\text{កម្ពស់}) dx = 2\\pi \\int_a^b x f(x) dx$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$V = \\pi\\int_0^3 x^2\\,dx = \\pi\\left[\\dfrac{x^3}{3}\\right]_0^3 = 9\\pi$ (កោន)។"
       },
       {
         "id": "g12a_p1_10",
@@ -105070,16 +105048,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ប្រូបាបមានលក្ខខណ្ឌ",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "ព្រឹត្តិការណ៍ពីរ $A$ និង $B$ ឯករាជ្យគ្នា លុះត្រាតែ ៖",
+        "question": "គេឱ្យ $P(A \\cap B) = 0.12$ និង $P(B) = 0.4$។ គណនា $P(A|B)$ ៖",
         "options": [
-          "$P(A|B) = P(A)$ (ឬ $P(A \\cap B) = P(A)P(B)$)",
-          "$P(A|B) = P(B)$",
-          "$P(A \\cap B) = 0$",
-          "$P(A \\cup B) = 1$"
+          "$0.048$",
+          "$0.52$",
+          "$0.28$",
+          "$0.3$"
         ],
-        "correct": 0,
-        "explanation": "ព្រឹត្តិការណ៍ឯករាជ្យគ្នាកាលណាការកើតឡើងនៃ $B$ មិនប៉ះពាល់ដល់ប្រូបាបនៃ $A$ ឡើយ៖ $P(A|B) = P(A)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$P(A|B) = \\dfrac{0.12}{0.4} = 0.3$។"
       },
       {
         "id": "g12a_p1_03",
@@ -105189,16 +105166,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ប្រូបាបមានលក្ខខណ្ឌ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $A$ និង $B$ ឯករាជ្យគ្នា តើ $\\bar{A}$ និង $\\bar{B}$ ឯករាជ្យគ្នាដែរឬទេ?",
+        "question": "បោះគ្រាប់ឡុកឡាក់មួយគ្រាប់ ហើយដឹងថាចេញលេខគូ។ ប្រូបាបដែលចេញលេខ ៦ គឺ ៖",
         "options": [
-          "ឯករាជ្យលុះត្រាតែ $P(A) = P(B)$",
-          "មិនអាចសន្និដ្ឋានបាន",
-          "មិនឯករាជ្យទេ",
-          "ឯករាជ្យគ្នាជានិច្ច"
+          "$\\dfrac{1}{6}$",
+          "$\\dfrac{1}{3}$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{2}{3}$"
         ],
-        "correct": 3,
-        "explanation": "ទ្រឹស្តីបទ៖ បើ $A$ និង $B$ ឯករាជ្យគ្នា នោះ $\\bar{A}$ និង $\\bar{B}$ ក៏ឯករាជ្យគ្នាដែរ។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "លេខគូមាន $\\{2, 4, 6\\}$ ៖ $P(6 \\mid \\text{គូ}) = \\dfrac{1}{3}$។"
       },
       {
         "id": "g12a_p1_10",
@@ -105830,16 +105806,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណស្ថិតិមានពីរអថេរ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បន្ទាត់តម្រែតម្រង់លីនេអ៊ែរនៃ $y$ លើ $x$ ៖",
+        "question": "ក្នុងពពកចំណុច បើចំណុចទាំងអស់ស្ថិតជិតបន្ទាត់មួយដែលឡើងពីឆ្វេងទៅស្តាំ នោះអថេរទាំងពីរមាន ៖",
         "options": [
-          "កាត់គល់ $O$ ជានិច្ច",
-          "តែងតែកាត់តាមចំណុចមធ្យម $G(\\bar{x}, \\bar{y})$ ជានិច្ច",
-          "ស្របនឹងអ័ក្ស $Ox$ ជានិច្ច",
-          "មិនដែលកាត់ $G$ ទេ"
+          "ទំនាក់ទំនងលីនេអ៊ែរវិជ្ជមាន",
+          "ទំនាក់ទំនងលីនេអ៊ែរអវិជ្ជមាន",
+          "គ្មានទំនាក់ទំនង",
+          "ទំនាក់ទំនងមិនលីនេអ៊ែរ"
         ],
-        "correct": 1,
-        "explanation": "លក្ខណៈគ្រឹះ៖ បន្ទាត់តម្រែតម្រង់ការ៉េតូចបំផុតតែងតែកាត់តាមចំណុចមធ្យម $G(\\bar{x}, \\bar{y})$ ជានិច្ច។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ពេល $x$ កើន $y$ ក៏កើនតាមបន្ទាត់ ៖ ទំនាក់ទំនងលីនេអ៊ែរវិជ្ជមាន។"
       },
       {
         "id": "g12a_p1_07",
@@ -105847,16 +105822,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណស្ថិតិមានពីរអថេរ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ក្នុងវិធីសាស្ត្រចំណុចមធ្យម Mayer (Mayer line) គេត្រូវ ៖",
+        "question": "ចំណុចមធ្យមនៃទិន្នន័យ $(1, 3), (3, 5), (5, 10)$ គឺ ៖",
         "options": [
-          "គូសបន្ទាត់កាត់ចំណុចដំបូង និងចុងក្រោយ",
-          "គូសបន្ទាត់កាត់គល់ $O$",
-          "យកមធ្យមទាំងអស់បូកបញ្ចូលគ្នា",
-          "ចែកពពកចំណុចជាពីរក្រុមស្មើគ្នា រកចំណុចមធ្យម $G_1, G_2$ នៃក្រុមនីមួយៗ រួចគូសបន្ទាត់កាត់ $G_1 G_2$"
+          "$G(3, 5)$",
+          "$G(9, 18)$",
+          "$G(3, 6)$",
+          "$G(2, 6)$"
         ],
-        "correct": 3,
-        "explanation": "វិធី Mayer បែងចែកទិន្នន័យតម្រៀបរួចជាពីរក្រុមស្មើៗគ្នា គណនា $G_1, G_2$ ហើយបន្ទាត់ Mayer គឺជាបន្ទាត់ $(G_1 G_2)$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$\\bar{x} = \\dfrac{9}{3} = 3$ និង $\\bar{y} = \\dfrac{18}{3} = 6$។"
       },
       {
         "id": "g12a_p1_08",
@@ -105881,16 +105855,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណស្ថិតិមានពីរអថេរ",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គេឱ្យ $G_1(2, 4)$ និង $G_2(6, 12)$ ជាចំណុចមធ្យមពីរក្រុមតាមវិធី Mayer។ សមីការបន្ទាត់ Mayer គឺ ៖",
+        "question": "ពពកចំណុចមួយមាន $n = 5$ ចំណុច ដែល $\\sum x_i = 20$ និង $\\sum y_i = 35$។ ចំណុចមធ្យម $G$ គឺ ៖",
         "options": [
-          "$y = x + 2$",
-          "$y = 3x - 2$",
-          "$y = 2x + 1$",
-          "$y = 2x$"
+          "$G(20, 35)$",
+          "$G(7, 4)$",
+          "$G(5, 5)$",
+          "$G(4, 7)$"
         ],
         "correct": 3,
-        "explanation": "មេគុណប្រាប់ទិស $a = \\dfrac{12 - 4}{6 - 2} = \\dfrac{8}{4} = 2$។ សមីការ៖ $y - 4 = 2(x - 2) \\iff y = 2x$។",
-        "diagram": ""
+        "explanation": "$\\bar{x} = \\dfrac{20}{5} = 4$ និង $\\bar{y} = \\dfrac{35}{5} = 7$។"
       },
       {
         "id": "g12a_p1_10",
@@ -106091,15 +106064,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ទំនាក់ទំនងលីនេអ៊ែរ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មេគុណទំនាក់ទំនង $r = 0.05$ បង្ហាញថា ៖",
+        "question": "កូវ៉ារ្យង់ $\\text{Cov}(x, y) > 0$ បង្ហាញថា ៖",
         "options": [
-          "ទំនាក់ទំនងលីនេអ៊ែរវិជ្ជមានខ្លាំង",
-          "ស្ទើរគ្មានទំនាក់ទំនងលីនេអ៊ែរ",
-          "ទំនាក់ទំនងលីនេអ៊ែរអវិជ្ជមានខ្សោយ",
-          "ទំនាក់ទំនងលីនេអ៊ែរអវិជ្ជមានខ្លាំង"
+          "$y$ មានទំនោរកើនពេល $x$ កើន",
+          "$y$ មានទំនោរថយពេល $x$ កើន",
+          "គ្មានទំនាក់ទំនង",
+          "$x = y$"
         ],
-        "correct": 1,
-        "explanation": "$|r|$ ជិត ១ ⇒ ខ្លាំង ; ជិត ០ ⇒ ខ្សោយ ; សញ្ញាប្រាប់ទិសដៅ។",
+        "correct": 0,
+        "explanation": "$\\text{Cov} > 0$ ៖ គម្លាត $x_i - \\bar{x}$ និង $y_i - \\bar{y}$ ច្រើនតែមានសញ្ញាដូចគ្នា។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -106108,15 +106081,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ទំនាក់ទំនងលីនេអ៊ែរ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មេគុណទំនាក់ទំនង $r = 0.95$ បង្ហាញថា ៖",
+        "question": "កូវ៉ារ្យង់ $\\text{Cov}(x, y) < 0$ បង្ហាញថា ៖",
         "options": [
-          "ទំនាក់ទំនងលីនេអ៊ែរវិជ្ជមានខ្លាំង",
-          "ទំនាក់ទំនងលីនេអ៊ែរអវិជ្ជមានខ្សោយ",
-          "ស្ទើរគ្មានទំនាក់ទំនងលីនេអ៊ែរ",
-          "ទំនាក់ទំនងលីនេអ៊ែរអវិជ្ជមានខ្លាំង"
+          "$y$ កើនពេល $x$ កើន",
+          "$y$ មានទំនោរថយពេល $x$ កើន",
+          "$x$ និង $y$ ស្មើគ្នា",
+          "គ្មានទំនាក់ទំនង"
         ],
-        "correct": 0,
-        "explanation": "$|r|$ ជិត ១ ⇒ ខ្លាំង ; ជិត ០ ⇒ ខ្សោយ ; សញ្ញាប្រាប់ទិសដៅ។",
+        "correct": 1,
+        "explanation": "$\\text{Cov} < 0$ ៖ គម្លាតច្រើនតែមានសញ្ញាផ្ទុយគ្នា។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -106142,15 +106115,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ទំនាក់ទំនងលីនេអ៊ែរ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ទិន្នន័យ $\\begin{array}{|c|c|c|c|c|c|} \\hline x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & 2 & 0 & -2 & -4 & -6 \\\\ \\hline \\end{array}$ មានទំនាក់ទំនងលីនេអ៊ែរ ៖",
+        "question": "ទិន្នន័យ $(1, 2), (2, 4), (3, 6)$ មាន $\\bar{x} = 2, \\bar{y} = 4$។ គណនា $\\text{Cov}(x, y) = \\dfrac{1}{n}\\sum (x_i - \\bar{x})(y_i - \\bar{y})$ ៖",
         "options": [
-          "គ្មានទំនាក់ទំនង ( $r = 0$ )",
-          "វិជ្ជមានខ្សោយ ( $r = 0.3$ )",
-          "វិជ្ជមាន ( $r = 1$ )",
-          "អវិជ្ជមាន ( $r = -1$ )"
+          "$4$",
+          "$2$",
+          "$0$",
+          "$\\dfrac{4}{3}$"
         ],
         "correct": 3,
-        "explanation": "ចំណុចទាំងអស់នៅលើបន្ទាត់ $y = -2x + 4$ ⇒ $r = -1$។",
+        "explanation": "$\\dfrac{(-1)(-2) + 0 + (1)(2)}{3} = \\dfrac{4}{3}$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -106176,15 +106149,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ទំនាក់ទំនងលីនេអ៊ែរ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ទិន្នន័យ $\\begin{array}{|c|c|c|c|c|c|} \\hline x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & 1 & 0 & -1 & -2 & -3 \\\\ \\hline \\end{array}$ មានទំនាក់ទំនងលីនេអ៊ែរ ៖",
+        "question": "ពពកចំណុចដែលចំណុចទាំងអស់ស្ថិតលើបន្ទាត់មួយចុះពីឆ្វេងទៅស្តាំ បង្ហាញពីទំនាក់ទំនង ៖",
         "options": [
-          "វិជ្ជមានខ្សោយ ( $r = 0.3$ )",
-          "វិជ្ជមាន ( $r = 1$ )",
-          "អវិជ្ជមាន ( $r = -1$ )",
-          "គ្មានទំនាក់ទំនង ( $r = 0$ )"
+          "លីនេអ៊ែរវិជ្ជមាន",
+          "គ្មានទំនាក់ទំនង",
+          "លីនេអ៊ែរអវិជ្ជមាន",
+          "មិនលីនេអ៊ែរ"
         ],
         "correct": 2,
-        "explanation": "ចំណុចទាំងអស់នៅលើបន្ទាត់ $y = -x + 2$ ⇒ $r = -1$។",
+        "explanation": "ពេល $x$ កើន $y$ ថយតាមបន្ទាត់ ៖ ទំនាក់ទំនងលីនេអ៊ែរអវិជ្ជមាន។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -106210,15 +106183,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ទំនាក់ទំនងលីនេអ៊ែរ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មេគុណទំនាក់ទំនង $r = -0.92$ បង្ហាញថា ៖",
+        "question": "បើ $\\text{Cov}(x, y) = 0$ នោះ ៖",
         "options": [
-          "ទំនាក់ទំនងលីនេអ៊ែរអវិជ្ជមានខ្សោយ",
-          "ទំនាក់ទំនងលីនេអ៊ែរអវិជ្ជមានខ្លាំង",
-          "ស្ទើរគ្មានទំនាក់ទំនងលីនេអ៊ែរ",
-          "ទំនាក់ទំនងលីនេអ៊ែរវិជ្ជមានខ្លាំង"
+          "គ្មានទំនាក់ទំនងលីនេអ៊ែររវាង $x$ និង $y$",
+          "$x = y$",
+          "ទំនាក់ទំនងវិជ្ជមានខ្លាំង",
+          "ទំនាក់ទំនងអវិជ្ជមានខ្លាំង"
         ],
-        "correct": 1,
-        "explanation": "$|r|$ ជិត ១ ⇒ ខ្លាំង ; ជិត ០ ⇒ ខ្សោយ ; សញ្ញាប្រាប់ទិសដៅ។",
+        "correct": 0,
+        "explanation": "កូវ៉ារ្យង់សូន្យ ៖ គ្មានទំនោរលីនេអ៊ែរ។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -106348,16 +106321,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់តម្រែតម្រង់ (វិធីការេតូចបំផុត)",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ទំនាក់ទំនងរវាងមេគុណប្រាប់ទិស $a$ និងមេគុណទំនាក់ទំនង Pearson $r$ គឺ ៖",
+        "question": "បន្ទាត់តម្រែតម្រង់ $y = ax + b$ តែងកាត់តាមចំណុច ៖",
         "options": [
-          "$a = r \\dfrac{\\sigma_y}{\\sigma_x}$",
-          "$a = r \\dfrac{\\sigma_x}{\\sigma_y}$",
-          "$a = \\dfrac{r}{\\sigma_x \\sigma_y}$",
-          "$a = r^2$"
+          "គល់ $O$",
+          "ចំណុចមធ្យម $G(\\bar{x}, \\bar{y})$",
+          "ចំណុចទីមួយនៃទិន្នន័យ",
+          "$(1, 1)$"
         ],
-        "correct": 0,
-        "explanation": "$a = \\dfrac{\\text{Cov}(X, Y)}{\\sigma_x^2} = \\dfrac{r \\sigma_x \\sigma_y}{\\sigma_x^2} = r \\dfrac{\\sigma_y}{\\sigma_x}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$b = \\bar{y} - a\\bar{x}$ នាំឱ្យ $\\bar{y} = a\\bar{x} + b$ ៖ បន្ទាត់កាត់តាម $G$។"
       },
       {
         "id": "g12a_p2_07",
@@ -106399,16 +106371,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់តម្រែតម្រង់ (វិធីការេតូចបំផុត)",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បន្ទាត់តម្រែតម្រង់ទាំងពីរ ($y$ លើ $x$ និង $x$ លើ $y$) ត្រួតស៊ីគ្នាជាបន្ទាត់តែមួយកាលណា ៖",
+        "question": "បើ $\\text{Cov}(x, y) = 6$ និង $V(x) = 3$ នោះមេគុណប្រាប់ទិស $a$ នៃបន្ទាត់តម្រែតម្រង់ $y$ លើ $x$ គឺ ៖",
         "options": [
-          "$|r| = 1$ (ទំនាក់ទំនងលីនេអ៊ែរឥតខ្ចោះ)",
-          "$r = 0$",
-          "$\\bar{x} = \\bar{y}$",
-          "$a = 1$"
+          "$18$",
+          "$\\dfrac{1}{2}$",
+          "$3$",
+          "$2$"
         ],
-        "correct": 0,
-        "explanation": "កាលណា $r = \\pm 1$ គ្រប់ចំណុចស្ថិតនៅលើបន្ទាត់ត្រង់តែមួយ នាំឱ្យបន្ទាត់ទាំងពីរត្រួតស៊ីគ្នា។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$a = \\dfrac{\\text{Cov}(x, y)}{V(x)} = \\dfrac{6}{3} = 2$។"
       },
       {
         "id": "g12a_p2_10",
@@ -106416,16 +106387,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការបន្ទាត់តម្រែតម្រង់ (វិធីការេតូចបំផុត)",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $r = 0$ នោះបន្ទាត់តម្រែតម្រង់នៃ $y$ លើ $x$ ក្លាយជា ៖",
+        "question": "បើ $a = 2$, $\\bar{x} = 3$ និង $\\bar{y} = 10$ នោះ $b$ នៃបន្ទាត់ $y = ax + b$ គឺ ៖",
         "options": [
-          "$x = \\bar{x}$",
-          "$y = x$",
-          "$y = \\bar{y}$ (បន្ទាត់ដេក)",
-          "$y = 0$"
+          "$4$",
+          "$16$",
+          "$7$",
+          "$-4$"
         ],
-        "correct": 2,
-        "explanation": "ពេល $r = 0 \\implies a = 0$ នាំឱ្យ $y = 0x + \\bar{y} \\iff y = \\bar{y}$ (ការទស្សន៍ទាយល្អបំផុតគឺតម្លៃមធ្យម)។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$b = \\bar{y} - a\\bar{x} = 10 - 6 = 4$។"
       }
     ],
     "3": [
@@ -106626,16 +106596,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យប៉ារ៉ាបូល",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "សមីការស្តង់ដានៃប៉ារ៉ាបូលកំពូល $V(0, 0)$ អ័ក្សស៊ីមេទ្រីជាអ័ក្សឈរ $Oy$ គឺ ៖",
+        "question": "ក្នុងនិយមន័យប៉ារ៉ាបូល ចំណុចថេរ $F$ ហៅថា ៖",
         "options": [
-          "$x^2 = -4py$",
-          "$y^2 = 4px$",
-          "$x^2 = 4py$",
-          "$y = ax + b$"
+          "កំពូល",
+          "កំណុំ",
+          "ផ្ចិត",
+          "អ័ក្ស"
         ],
-        "correct": 2,
-        "explanation": "អ័ក្សស៊ីមេទ្រីឈរ៖ $x^2 = 4py$ (បើ $p > 0$ បែរឡើងលើ, $p < 0$ បែរចុះក្រោម)។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "ចំណុចថេរ $F$ ហៅថាកំណុំនៃប៉ារ៉ាបូល។"
       },
       {
         "id": "g12a_p1_03",
@@ -106643,16 +106612,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យប៉ារ៉ាបូល",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "សមីការស្តង់ដានៃប៉ារ៉ាបូលកំពូល $V(0, 0)$ អ័ក្សស៊ីមេទ្រីជាអ័ក្សដេក $Ox$ គឺ ៖",
+        "question": "ក្នុងនិយមន័យប៉ារ៉ាបូល បន្ទាត់ថេរ $(d)$ ហៅថា ៖",
         "options": [
-          "$y^2 = 4px$",
-          "$x^2 = 4py$",
-          "$x^2 + y^2 = 4p$",
-          "$y^2 = -4px$"
+          "អ័ក្សស៊ីមេទ្រី",
+          "បន្ទាត់ប៉ះ",
+          "បន្ទាត់ប្រាប់ទិស",
+          "អាស៊ីមតូត"
         ],
-        "correct": 0,
-        "explanation": "អ័ក្សស៊ីមេទ្រីដេក៖ $y^2 = 4px$ (បើ $p > 0$ បែរទៅស្តាំ, $p < 0$ បែរទៅឆ្វេង)។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "បន្ទាត់ថេរ $(d)$ ហៅថាបន្ទាត់ប្រាប់ទិស។"
       },
       {
         "id": "g12a_p1_04",
@@ -106660,16 +106628,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យប៉ារ៉ាបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកកូអរដោនេកំណុំ $F$ និងសមីការបន្ទាត់ប្រាប់ទិសនៃប៉ារ៉ាបូល $y^2 = 12x$ ៖",
+        "question": "ចំណុច $M$ ស្ថិតនៅលើប៉ារ៉ាបូលដែលមានកំណុំ $F$ និងបន្ទាត់ប្រាប់ទិស $(d)$។ បើ $MF = 7$ នោះចម្ងាយពី $M$ ទៅ $(d)$ ស្មើ ៖",
         "options": [
-          "កំណុំ $F(-3, 0)$ និង $x = 3$",
-          "កំណុំ $F(0, 3)$ និង $y = -3$",
-          "កំណុំ $F(12, 0)$ និង $x = -12$",
-          "កំណុំ $F(3, 0)$ និងបន្ទាត់ប្រាប់ទិស $x = -3$"
+          "$7$",
+          "$14$",
+          "$\\dfrac{7}{2}$",
+          "$49$"
         ],
-        "correct": 3,
-        "explanation": "$4p = 12 \\iff p = 3$។ អ័ក្សដេក នាំឱ្យកំណុំគឺ $F(p, 0) = F(3, 0)$ និងបន្ទាត់ប្រាប់ទិសគឺ $x = -p = -3$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "តាមនិយមន័យ ចំណុច $M$ នៃប៉ារ៉ាបូលផ្ទៀងផ្ទាត់ $MF = d(M, (d))$។ ដូចនេះចម្ងាយស្មើ $7$។"
       },
       {
         "id": "g12a_p1_05",
@@ -106677,16 +106644,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យប៉ារ៉ាបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកកូអរដោនេកំណុំ និងបន្ទាត់ប្រាប់ទិសនៃ $x^2 = -8y$ ៖",
+        "question": "កំពូលនៃប៉ារ៉ាបូលជា ៖",
         "options": [
-          "កំណុំ $F(0, -2)$ និងបន្ទាត់ប្រាប់ទិស $y = 2$",
-          "កំណុំ $F(0, 2)$ និង $y = -2$",
-          "កំណុំ $F(-2, 0)$ និង $x = 2$",
-          "កំណុំ $F(0, -8)$ និង $y = 8$"
+          "កំណុំ",
+          "ចំណុចកណ្តាលនៃ $F$ និងចំណោលកែងរបស់ $F$ លើ $(d)$",
+          "ចំណុចប្រសព្វនៃ $(d)$ និងអ័ក្ស $Ox$",
+          "គល់ $O$ ជានិច្ច"
         ],
-        "correct": 0,
-        "explanation": "$4p = -8 \\iff p = -2$។ អ័ក្សឈរ នាំឱ្យកំណុំគឺ $F(0, p) = F(0, -2)$ និងបន្ទាត់ប្រាប់ទិសគឺ $y = -p = 2$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "កំពូលស្ថិតលើអ័ក្សស៊ីមេទ្រី ហើយស្មើចម្ងាយពី $F$ និងពី $(d)$ ៖ ជាចំណុចកណ្តាល។"
       },
       {
         "id": "g12a_p1_06",
@@ -106694,16 +106660,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យប៉ារ៉ាបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការស្តង់ដានៃប៉ារ៉ាបូលកំពូល $V(h, k)$ អ័ក្សស៊ីមេទ្រីឈរគឺ ៖",
+        "question": "ប៉ារ៉ាបូលមានកំណុំ $F(0, 2)$ និងបន្ទាត់ប្រាប់ទិស $y = -2$។ កំពូលរបស់វាគឺ ៖",
         "options": [
-          "$(y - k)^2 = 4p(x - h)$",
-          "$(x + h)^2 = 4p(y + k)$",
-          "$(x - h)^2 + (y - k)^2 = 4p$",
-          "$(x - h)^2 = 4p(y - k)$"
+          "$(0, 2)$",
+          "$(0, -2)$",
+          "$(2, 0)$",
+          "$(0, 0)$"
         ],
         "correct": 3,
-        "explanation": "កំពូល $V(h, k)$ អ័ក្សឈរ៖ $(x - h)^2 = 4p(y - k)$។",
-        "diagram": ""
+        "explanation": "កំពូលជាចំណុចកណ្តាលនៃ $F(0, 2)$ និង $(0, -2)$ ៖ $(0, 0)$។"
       },
       {
         "id": "g12a_p1_07",
@@ -106711,16 +106676,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យប៉ារ៉ាបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រវែងអង្កត់កាត់កំណុំកែងនឹងអ័ក្ស (Latus rectum) នៃប៉ារ៉ាបូលស្មើនឹង ៖",
+        "question": "ប៉ារ៉ាបូលមានកំណុំ $F(3, 0)$ និងបន្ទាត់ប្រាប់ទិស $x = -1$។ កំពូលរបស់វាគឺ ៖",
         "options": [
-          "$4p^2$",
-          "$|4p|$",
-          "$|2p|$",
-          "$|p|$"
+          "$(1, 0)$",
+          "$(2, 0)$",
+          "$(0, 0)$",
+          "$(-1, 0)$"
         ],
-        "correct": 1,
-        "explanation": "ប្រវែង Latus rectum (អង្កត់ផ្ចិតកាត់កំណុំ) ស្មើនឹង $|4p|$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ចំណុចកណ្តាលនៃ $F(3, 0)$ និង $(-1, 0)$ គឺ $(1, 0)$។"
       },
       {
         "id": "g12a_p1_08",
@@ -106728,16 +106692,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យប៉ារ៉ាបូល",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកសមីការប៉ារ៉ាបូលដែលមានកំណុំ $F(2, 3)$ និងបន្ទាត់ប្រាប់ទិស $y = -1$ ៖",
+        "question": "អ័ក្សស៊ីមេទ្រីនៃប៉ារ៉ាបូល ៖",
         "options": [
-          "$(x - 2)^2 = 16(y - 1)$",
-          "$(x - 2)^2 = 4(y - 1)$",
-          "$(x - 2)^2 = 8(y - 1)$",
-          "$(y - 1)^2 = 8(x - 2)$"
+          "ស្របនឹងបន្ទាត់ប្រាប់ទិស",
+          "កាត់តាមកំណុំ ហើយកែងនឹងបន្ទាត់ប្រាប់ទិស",
+          "កាត់តាមគល់ $O$ ជានិច្ច",
+          "មិនកាត់តាមកំពូល"
         ],
-        "correct": 2,
-        "explanation": "បន្ទាត់ប្រាប់ទិសដេក $y = -1$ នាំឱ្យអ័ក្សស៊ីមេទ្រីឈរ $x = 2$។ កំពូល $V$ នៅកណ្តាលកំណុំនិងបន្ទាត់ប្រាប់ទិស៖ $k = \\dfrac{3 + (-1)}{2} = 1 \\implies V(2, 1)$។ $p = 3 - 1 = 2 \\implies 4p = 8$។ សមីការ៖ $(x - 2)^2 = 8(y - 1)$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "អ័ក្សស៊ីមេទ្រីជាបន្ទាត់កាត់តាម $F$ ហើយកែងនឹង $(d)$ (វាកាត់តាមកំពូលដែរ)។"
       },
       {
         "id": "g12a_p1_09",
@@ -106762,16 +106725,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យប៉ារ៉ាបូល",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "សមីការបន្ទាត់ប៉ះនឹងប៉ារ៉ាបូល $y^2 = 4px$ ត្រង់ចំណុច $(x_0, y_0)$ គឺ ៖",
+        "question": "ប៉ារ៉ាបូលមានកំណុំ $F(0, 1)$ និងបន្ទាត់ប្រាប់ទិស $y = -1$។ ចំណុចណាខាងក្រោមស្ថិតនៅលើប៉ារ៉ាបូល?",
         "options": [
-          "$y y_0 = 4p(x + x_0)$",
-          "$2y y_0 = 4p(x - x_0)$",
-          "$y y_0 = 2p(x + x_0)$",
-          "$y = 4px_0$"
+          "$(1, 1)$",
+          "$(2, 2)$",
+          "$(0, 1)$",
+          "$(2, 1)$"
         ],
-        "correct": 2,
-        "explanation": "បំបែកកូអរដោនេ៖ $y^2 \\to y y_0$ និង $2x \\to x + x_0$ នាំឱ្យសមីការបន្ទាត់ប៉ះគឺ $y y_0 = 2p(x + x_0)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ចំពោះ $(2, 1)$ ៖ $MF = 2$ និងចម្ងាយទៅ $y = -1$ គឺ $2$ ស្មើគ្នា។"
       }
     ],
     "2": [
@@ -107144,16 +107106,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអេលីប",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "សមីការស្តង់ដានៃអេលីបផ្ចិត $O(0, 0)$ ដែលមានអ័ក្សធំដេកលើអ័ក្ស $Ox$ គឺ ៖",
+        "question": "ក្នុងនិយមន័យអេលីប ចំណុចថេរ $F_1$ និង $F_2$ ហៅថា ៖",
         "options": [
-          "$\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$",
-          "$\\dfrac{x^2}{b^2} + \\dfrac{y^2}{a^2} = 1$",
-          "$x^2 + y^2 = a^2$",
-          "$\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ ($a > b > 0$)"
+          "កំពូល",
+          "កំណុំ",
+          "ផ្ចិត",
+          "អាស៊ីមតូត"
         ],
-        "correct": 3,
-        "explanation": "អ័ក្សធំដេក៖ $\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$ ដែល $a > b$ និង $c^2 = a^2 - b^2$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "ចំណុចថេរទាំងពីរហៅថាកំណុំនៃអេលីប។"
       },
       {
         "id": "g12a_p1_03",
@@ -107178,16 +107139,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអេលីប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកប្រវែងអ័ក្សធំ អ័ក្សតូច និងកូអរដោនេកំណុំនៃអេលីប $\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$ ៖",
+        "question": "ចំណុច $M$ ស្ថិតលើអេលីបដែល $MF_1 + MF_2 = 10$។ បើ $MF_1 = 3$ នោះ $MF_2$ ស្មើ ៖",
         "options": [
-          "អ័ក្សធំ $25$, អ័ក្សតូច $16$, កំណុំ $(\\pm 9, 0)$",
-          "អ័ក្សធំ $2a = 10$, អ័ក្សតូច $2b = 8$, កំណុំ $F(\\pm 3, 0)$",
-          "អ័ក្សធំ $10$, អ័ក្សតូច $8$, កំណុំ $(0, \\pm 3)$",
-          "អ័ក្សធំ $5$, អ័ក្សតូច $4$, កំណុំ $(0, \\pm 3)$"
+          "$13$",
+          "$3$",
+          "$7$",
+          "$\\dfrac{10}{3}$"
         ],
-        "correct": 1,
-        "explanation": "$a^2 = 25 \\implies a = 5 \\implies 2a = 10$។ $b^2 = 16 \\implies b = 4 \\implies 2b = 8$។ $c = \\sqrt{25 - 16} = \\sqrt{9} = 3$ នាំឱ្យកំណុំគឺ $F(\\pm 3, 0)$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$MF_2 = 10 - 3 = 7$។"
       },
       {
         "id": "g12a_p1_05",
@@ -107195,16 +107155,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអេលីប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការស្តង់ដានៃអេលីបផ្ចិត $O(0, 0)$ ដែលមានអ័ក្សធំឈរលើអ័ក្ស $Oy$ គឺ ៖",
+        "question": "អេលីបមានកំណុំ $F_1(-3, 0)$ និង $F_2(3, 0)$។ ផ្ចិតរបស់អេលីបគឺ ៖",
         "options": [
-          "$\\dfrac{x^2}{b^2} + \\dfrac{y^2}{a^2} = 1$ ($a > b > 0$)",
-          "$x^2 + y^2 = b^2$",
-          "$\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$",
-          "$\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$"
+          "$(0, 0)$",
+          "$(3, 0)$",
+          "$(0, 3)$",
+          "$(-3, 0)$"
         ],
         "correct": 0,
-        "explanation": "អ័ក្សធំឈរមានភាគបែងធំជាងនៅក្រោម $y^2$៖ $\\dfrac{x^2}{b^2} + \\dfrac{y^2}{a^2} = 1$។",
-        "diagram": ""
+        "explanation": "ផ្ចិតជាចំណុចកណ្តាលនៃ $[F_1F_2]$ ៖ $(0, 0)$។"
       },
       {
         "id": "g12a_p1_06",
@@ -107212,16 +107171,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអេលីប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការស្តង់ដានៃអេលីបផ្ចិត $I(h, k)$ អ័ក្សធំដេកគឺ ៖",
+        "question": "អេលីបមាន $2a = 10$ និងចម្ងាយរវាងកំណុំ $2c = 8$។ តម្លៃ $b$ គឺ ៖",
         "options": [
-          "$\\dfrac{(x - h)^2}{b^2} + \\dfrac{(y - k)^2}{a^2} = 1$",
-          "$\\dfrac{(x - h)^2}{a^2} - \\dfrac{(y - k)^2}{b^2} = 1$",
-          "$\\dfrac{(x - h)^2}{a^2} + \\dfrac{(y - k)^2}{b^2} = 1$",
-          "$\\dfrac{(x + h)^2}{a^2} + \\dfrac{(y + k)^2}{b^2} = 1$"
+          "$4$",
+          "$6$",
+          "$\\sqrt{41}$",
+          "$3$"
         ],
-        "correct": 2,
-        "explanation": "ផ្ចិត $I(h, k)$ អ័ក្សធំដេក៖ $\\dfrac{(x - h)^2}{a^2} + \\dfrac{(y - k)^2}{b^2} = 1$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$b^2 = a^2 - c^2 = 25 - 16 = 9$ នាំឱ្យ $b = 3$។"
       },
       {
         "id": "g12a_p1_07",
@@ -107229,16 +107187,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអេលីប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកផ្ចិត និងកំពូលនៃអេលីប $\\dfrac{(x - 1)^2}{9} + \\dfrac{(y + 2)^2}{4} = 1$ ៖",
+        "question": "ក្នុងអេលីប (ដែល $a > b$) ទំហំណាខាងក្រោមធំជាងគេ?",
         "options": [
-          "ផ្ចិត $I(-1, 2)$, កំពូល $(2, 2)$",
-          "ផ្ចិត $I(1, -2)$, កំពូល $(4, -2)$ និង $(-2, -2)$",
-          "ផ្ចិត $I(0, 0)$",
-          "ផ្ចិត $I(1, -2)$, កំពូល $(1, 0)$ និង $(1, -4)$"
+          "$c$",
+          "$a$",
+          "$b$",
+          "$b - c$"
         ],
         "correct": 1,
-        "explanation": "ផ្ចិត $I(1, -2)$។ $a^2 = 9 \\implies a = 3$។ កំពូលអ័ក្សធំដេក៖ $(h \\pm a, k) = (1 \\pm 3, -2) \\implies (4, -2)$ និង $(-2, -2)$។",
-        "diagram": ""
+        "explanation": "$a^2 = b^2 + c^2$ នាំឱ្យ $a > b$ និង $a > c$។"
       },
       {
         "id": "g12a_p1_08",
@@ -107246,16 +107203,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអេលីប",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកសមីការអេលីបដែលមានកំណុំ $F(0, \\pm 4)$ និងប្រវែងអ័ក្សធំ $2a = 10$ ៖",
+        "question": "អេលីបមាន $a = 13$ និង $b = 5$។ ពាក់កណ្តាលចម្ងាយរវាងកំណុំ $c$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{x^2}{25} + \\dfrac{y^2}{16} = 1$",
-          "$\\dfrac{x^2}{25} + \\dfrac{y^2}{9} = 1$",
-          "$\\dfrac{x^2}{16} + \\dfrac{y^2}{25} = 1$",
-          "$\\dfrac{x^2}{9} + \\dfrac{y^2}{25} = 1$"
+          "$8$",
+          "$18$",
+          "$12$",
+          "$\\sqrt{194}$"
         ],
-        "correct": 3,
-        "explanation": "កំណុំលើអ័ក្ស $Oy$ នាំឱ្យអ័ក្សធំឈរ។ $c = 4, a = 5 \\implies b^2 = a^2 - c^2 = 25 - 16 = 9$។ សមីការគឺ $\\dfrac{x^2}{9} + \\dfrac{y^2}{25} = 1$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$c^2 = a^2 - b^2 = 169 - 25 = 144$ នាំឱ្យ $c = 12$។"
       },
       {
         "id": "g12a_p1_09",
@@ -107280,16 +107236,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអេលីប",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ប្រវែង Latus rectum នៃអេលីបស្មើនឹង ៖",
+        "question": "ចំណុច $M$ ស្ថិតលើអេលីបដែលមាន $2a = 12$។ ផលបូក $MF_1 + MF_2$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{b^2}{a}$",
-          "$\\dfrac{4b^2}{a}$",
-          "$\\dfrac{2a^2}{b}$",
-          "$\\dfrac{2b^2}{a}$"
+          "$6$",
+          "$24$",
+          "$144$",
+          "$12$"
         ],
         "correct": 3,
-        "explanation": "អង្កត់កាត់កំណុំកែងនឹងអ័ក្សធំនៃអេលីបមានប្រវែងស្មើ $\\dfrac{2b^2}{a}$។",
-        "diagram": ""
+        "explanation": "តាមនិយមន័យ $MF_1 + MF_2 = 2a = 12$។"
       }
     ],
     "2": [
@@ -107367,15 +107322,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការស្តង់ដានៃអេលីបមានផ្ចិតត្រង់គល់",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "អិចសង់ទ្រិស៊ីតេនៃអេលីប $\\dfrac{x^2}{169} + \\dfrac{y^2}{25} = 1$ គឺ ៖",
+        "question": "ប្រវែងអ័ក្សតូចនៃអេលីប $\\dfrac{x^2}{169} + \\dfrac{y^2}{25} = 1$ គឺ ៖",
         "options": [
-          "$\\dfrac{5}{13}$",
-          "$\\dfrac{12}{5}$",
-          "$\\dfrac{13}{12}$",
-          "$\\dfrac{12}{13}$"
+          "$5$",
+          "$10$",
+          "$26$",
+          "$13$"
         ],
-        "correct": 3,
-        "explanation": "$e = \\dfrac{c}{a} = \\dfrac{12}{13}$។",
+        "correct": 1,
+        "explanation": "$b^2 = 25 \\Rightarrow b = 5$ ៖ ប្រវែងអ័ក្សតូច $2b = 10$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -107834,16 +107789,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអ៊ីពែបូល",
         "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "សមីការស្តង់ដានៃអ៊ីពែបូលផ្ចិត $O(0, 0)$ ដែលមានអ័ក្សទទឹងដេកលើអ័ក្ស $Ox$ គឺ ៖",
+        "question": "ក្នុងនិយមន័យអ៊ីពែបូល ចំណុចថេរ $F_1$ និង $F_2$ ហៅថា ៖",
         "options": [
-          "$\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$",
-          "$\\dfrac{x^2}{a^2} + \\dfrac{y^2}{b^2} = 1$",
-          "$\\dfrac{y^2}{a^2} - \\dfrac{x^2}{b^2} = 1$",
-          "$x^2 - y^2 = a^2$"
+          "កំណុំ",
+          "កំពូល",
+          "ផ្ចិត",
+          "អាស៊ីមតូត"
         ],
         "correct": 0,
-        "explanation": "អ័ក្សទទឹងដេកលើ $Ox$៖ $\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$។",
-        "diagram": ""
+        "explanation": "ចំណុចថេរទាំងពីរហៅថាកំណុំនៃអ៊ីពែបូល។"
       },
       {
         "id": "g12a_p1_03",
@@ -107868,16 +107822,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអ៊ីពែបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកកូអរដោនេកំពូល និងកំណុំនៃអ៊ីពែបូល $\\dfrac{x^2}{16} - \\dfrac{y^2}{9} = 1$ ៖",
+        "question": "ចំណុច $M$ ស្ថិតលើអ៊ីពែបូលដែល $|MF_1 - MF_2| = 6$។ បើ $MF_1 = 10$ នោះ $MF_2$ អាចស្មើ ៖",
         "options": [
-          "កំពូល $(\\pm 4, 0)$ និងកំណុំ $(\\pm \\sqrt{7}, 0)$",
-          "កំពូល $(\\pm 4, 0)$ និងកំណុំ $(\\pm 5, 0)$",
-          "កំពូល $(\\pm 16, 0)$",
-          "កំពូល $(0, \\pm 4)$ និងកំណុំ $(0, \\pm 5)$"
+          "$16$ តែមួយ",
+          "$4$ តែមួយ",
+          "$4$ ឬ $16$",
+          "$60$"
         ],
-        "correct": 1,
-        "explanation": "$a^2 = 16 \\implies a = 4$។ $c = \\sqrt{16 + 9} = \\sqrt{25} = 5$ នាំឱ្យកំពូល $(\\pm 4, 0)$ និងកំណុំ $(\\pm 5, 0)$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$|10 - MF_2| = 6 \\iff MF_2 = 4$ ឬ $MF_2 = 16$។"
       },
       {
         "id": "g12a_p1_05",
@@ -107885,16 +107838,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអ៊ីពែបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការស្តង់ដានៃអ៊ីពែបូលផ្ចិត $O(0, 0)$ ដែលមានអ័ក្សទទឹងឈរលើអ័ក្ស $Oy$ គឺ ៖",
+        "question": "អ៊ីពែបូលមានកំណុំ $F_1(0, -5)$ និង $F_2(0, 5)$។ ផ្ចិតរបស់វាគឺ ៖",
         "options": [
-          "$\\dfrac{y^2}{b^2} - \\dfrac{x^2}{a^2} = 1$",
-          "$y^2 - x^2 = 1$",
-          "$\\dfrac{x^2}{a^2} - \\dfrac{y^2}{b^2} = 1$",
-          "$\\dfrac{y^2}{a^2} - \\dfrac{x^2}{b^2} = 1$"
+          "$(0, 5)$",
+          "$(5, 0)$",
+          "$(0, -5)$",
+          "$(0, 0)$"
         ],
         "correct": 3,
-        "explanation": "អ័ក្សទទឹងឈរលើ $Oy$ មានតួវិជ្ជមាននៅខាងមុខ $y^2$៖ $\\dfrac{y^2}{a^2} - \\dfrac{x^2}{b^2} = 1$។",
-        "diagram": ""
+        "explanation": "ផ្ចិតជាចំណុចកណ្តាលនៃ $[F_1F_2]$ ៖ $(0, 0)$។"
       },
       {
         "id": "g12a_p1_06",
@@ -107902,16 +107854,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអ៊ីពែបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការស្តង់ដានៃអ៊ីពែបូលផ្ចិត $I(h, k)$ អ័ក្សទទឹងដេកគឺ ៖",
+        "question": "អ៊ីពែបូលមាន $a = 3$ និង $c = 5$។ តម្លៃ $b$ គឺ ៖",
         "options": [
-          "$(x - h)(y - k) = a^2$",
-          "$\\dfrac{(x - h)^2}{a^2} - \\dfrac{(y - k)^2}{b^2} = 1$",
-          "$\\dfrac{(y - k)^2}{a^2} - \\dfrac{(x - h)^2}{b^2} = 1$",
-          "$\\dfrac{(x - h)^2}{a^2} + \\dfrac{(y - k)^2}{b^2} = 1$"
+          "$4$",
+          "$2$",
+          "$\\sqrt{34}$",
+          "$8$"
         ],
-        "correct": 1,
-        "explanation": "ផ្ចិត $I(h, k)$ អ័ក្សទទឹងដេក៖ $\\dfrac{(x - h)^2}{a^2} - \\dfrac{(y - k)^2}{b^2} = 1$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$b^2 = c^2 - a^2 = 25 - 9 = 16$ នាំឱ្យ $b = 4$។"
       },
       {
         "id": "g12a_p1_07",
@@ -107919,16 +107870,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអ៊ីពែបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកផ្ចិត និងកំពូលនៃអ៊ីពែបូល $\\dfrac{(y - 1)^2}{25} - \\dfrac{(x + 3)^2}{16} = 1$ ៖",
+        "question": "ក្នុងអ៊ីពែបូល ទំនាក់ទំនងណាត្រឹមត្រូវ?",
         "options": [
-          "ផ្ចិត $I(3, -1)$, កំពូល $(3, 4)$",
-          "ផ្ចិត $I(-3, 1)$, កំពូល $(2, 1)$ និង $(-8, 1)$",
-          "ផ្ចិត $I(-3, 1)$, កំពូល $(-3, 6)$ និង $(-3, -4)$",
-          "ផ្ចិត $I(0, 0)$"
+          "$c < a$",
+          "$c > a$",
+          "$c = a$",
+          "$c = b$"
         ],
-        "correct": 2,
-        "explanation": "ផ្ចិត $I(-3, 1)$។ អ័ក្សទទឹងឈរ $a = 5$។ កំពូល៖ $(h, k \\pm a) = (-3, 1 \\pm 5) \\implies (-3, 6)$ និង $(-3, -4)$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$c^2 = a^2 + b^2$ នាំឱ្យ $c > a$។"
       },
       {
         "id": "g12a_p1_08",
@@ -107953,16 +107903,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអ៊ីពែបូល",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកសមីការអ៊ីពែបូលដែលមានកំពូល $(\\pm 2, 0)$ និងកំណុំ $(\\pm 3, 0)$ ៖",
+        "question": "អ៊ីពែបូលមាន $2a = 8$ និង $2c = 10$។ តម្លៃ $b^2$ គឺ ៖",
         "options": [
-          "$\\dfrac{y^2}{4} - \\dfrac{x^2}{5} = 1$",
-          "$\\dfrac{x^2}{5} - \\dfrac{y^2}{4} = 1$",
-          "$\\dfrac{x^2}{4} - \\dfrac{y^2}{5} = 1$",
-          "$\\dfrac{x^2}{4} - \\dfrac{y^2}{9} = 1$"
+          "$41$",
+          "$3$",
+          "$9$",
+          "$81$"
         ],
         "correct": 2,
-        "explanation": "អ័ក្សដេក $a = 2, c = 3 \\implies b^2 = c^2 - a^2 = 9 - 4 = 5$។ សមីការគឺ $\\dfrac{x^2}{4} - \\dfrac{y^2}{5} = 1$។",
-        "diagram": ""
+        "explanation": "$b^2 = c^2 - a^2 = 25 - 16 = 9$។"
       },
       {
         "id": "g12a_p1_10",
@@ -107970,16 +107919,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអ៊ីពែបូល",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ប្រវែង Latus rectum នៃអ៊ីពែបូលស្មើនឹង ៖",
+        "question": "ចំណុច $M$ លើអ៊ីពែបូលមាន $MF_1 = 9$ និង $MF_2 = 3$។ តម្លៃ $2a$ គឺ ៖",
         "options": [
-          "$\\dfrac{2b^2}{a}$",
-          "$\\dfrac{2a^2}{b}$",
-          "$4p$",
-          "$\\dfrac{b^2}{a}$"
+          "$12$",
+          "$3$",
+          "$27$",
+          "$6$"
         ],
-        "correct": 0,
-        "explanation": "ដូចគ្នានឹងអេលីបដែរ អង្កត់កាត់កំណុំកែងនឹងអ័ក្សទទឹងមានប្រវែង $\\dfrac{2b^2}{a}$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "តាមនិយមន័យ $|MF_1 - MF_2| = 2a = 6$។"
       }
     ],
     "2": [
@@ -108023,15 +107971,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការស្តង់ដានៃអ៊ីពែបូលមានផ្ចិតត្រង់គល់",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "អិចសង់ទ្រិស៊ីតេនៃអ៊ីពែបូល $\\dfrac{x^2}{16} - \\dfrac{y^2}{9} = 1$ គឺ ៖",
+        "question": "កំណុំនៃអ៊ីពែបូល $\\dfrac{x^2}{16} - \\dfrac{y^2}{9} = 1$ គឺ ៖",
         "options": [
-          "$\\dfrac{5}{3}$",
-          "$\\dfrac{3}{4}$",
-          "$\\dfrac{5}{4}$",
-          "$\\dfrac{4}{5}$"
+          "$(\\pm 4, 0)$",
+          "$(\\pm 5, 0)$",
+          "$(0, \\pm 5)$",
+          "$(\\pm 3, 0)$"
         ],
-        "correct": 2,
-        "explanation": "$e = \\dfrac{c}{a} = \\dfrac{5}{4}$ ( $e > 1$ )។",
+        "correct": 1,
+        "explanation": "$c^2 = 16 + 9 = 25 \\Rightarrow c = 5$ ៖ $F(\\pm 5, 0)$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -108040,15 +107988,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការស្តង់ដានៃអ៊ីពែបូលមានផ្ចិតត្រង់គល់",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "អិចសង់ទ្រិស៊ីតេនៃអ៊ីពែបូល $\\dfrac{x^2}{144} - \\dfrac{y^2}{25} = 1$ គឺ ៖",
+        "question": "កំណុំនៃអ៊ីពែបូល $\\dfrac{x^2}{144} - \\dfrac{y^2}{25} = 1$ គឺ ៖",
         "options": [
-          "$\\dfrac{5}{12}$",
-          "$\\dfrac{13}{5}$",
-          "$\\dfrac{12}{13}$",
-          "$\\dfrac{13}{12}$"
+          "$(\\pm 12, 0)$",
+          "$(0, \\pm 13)$",
+          "$(\\pm 13, 0)$",
+          "$(\\pm \\sqrt{119}, 0)$"
         ],
-        "correct": 3,
-        "explanation": "$e = \\dfrac{c}{a} = \\dfrac{13}{12}$ ( $e > 1$ )។",
+        "correct": 2,
+        "explanation": "$c^2 = 144 + 25 = 169 \\Rightarrow c = 13$ ៖ $F(\\pm 13, 0)$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -108057,15 +108005,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការស្តង់ដានៃអ៊ីពែបូលមានផ្ចិតត្រង់គល់",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "អិចសង់ទ្រិស៊ីតេនៃអ៊ីពែបូល $\\dfrac{x^2}{225} - \\dfrac{y^2}{64} = 1$ គឺ ៖",
+        "question": "ចម្ងាយរវាងកំពូលទាំងពីរនៃ $\\dfrac{x^2}{225} - \\dfrac{y^2}{64} = 1$ គឺ ៖",
         "options": [
-          "$\\dfrac{8}{15}$",
-          "$\\dfrac{17}{8}$",
-          "$\\dfrac{15}{17}$",
-          "$\\dfrac{17}{15}$"
+          "$15$",
+          "$16$",
+          "$34$",
+          "$30$"
         ],
         "correct": 3,
-        "explanation": "$e = \\dfrac{c}{a} = \\dfrac{17}{15}$ ( $e > 1$ )។",
+        "explanation": "$a = 15$ ៖ $2a = 30$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -108091,15 +108039,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការស្តង់ដានៃអ៊ីពែបូលមានផ្ចិតត្រង់គល់",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "អាស៊ីមតូតនៃអ៊ីពែបូល $\\dfrac{x^2}{16} - \\dfrac{y^2}{9} = 1$ គឺ ៖",
+        "question": "សមីការអ៊ីពែបូលផ្ចិត $O$ ដែលមានកំពូល $(\\pm 3, 0)$ និងកំណុំ $(\\pm 5, 0)$ គឺ ៖",
         "options": [
-          "$y = \\pm \\dfrac{3}{4}x$",
-          "$y = \\pm \\dfrac{4}{3}x$",
-          "$y = \\pm \\dfrac{5}{4}x$",
-          "$y = \\pm \\dfrac{9}{16}x$"
+          "$\\dfrac{x^2}{9} - \\dfrac{y^2}{16} = 1$",
+          "$\\dfrac{x^2}{9} + \\dfrac{y^2}{16} = 1$",
+          "$\\dfrac{x^2}{25} - \\dfrac{y^2}{9} = 1$",
+          "$\\dfrac{x^2}{16} - \\dfrac{y^2}{9} = 1$"
         ],
         "correct": 0,
-        "explanation": "$y = \\pm\\dfrac{b}{a}x$។",
+        "explanation": "$a = 3$, $c = 5$ ៖ $b^2 = 25 - 9 = 16$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -108108,15 +108056,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការស្តង់ដានៃអ៊ីពែបូលមានផ្ចិតត្រង់គល់",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "អិចសង់ទ្រិស៊ីតេនៃអ៊ីពែបូល $\\dfrac{x^2}{9} - \\dfrac{y^2}{16} = 1$ គឺ ៖",
+        "question": "កំពូលនៃអ៊ីពែបូល $\\dfrac{y^2}{9} - \\dfrac{x^2}{16} = 1$ គឺ ៖",
         "options": [
-          "$\\dfrac{3}{5}$",
-          "$\\dfrac{5}{3}$",
-          "$\\dfrac{5}{4}$",
-          "$\\dfrac{4}{3}$"
+          "$(\\pm 3, 0)$",
+          "$(0, \\pm 3)$",
+          "$(0, \\pm 4)$",
+          "$(0, \\pm 5)$"
         ],
         "correct": 1,
-        "explanation": "$e = \\dfrac{c}{a} = \\dfrac{5}{3}$ ( $e > 1$ )។",
+        "explanation": "អ័ក្សទទឹងឈរ ហើយ $a = 3$ ៖ កំពូល $(0, \\pm 3)$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -108125,15 +108073,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការស្តង់ដានៃអ៊ីពែបូលមានផ្ចិតត្រង់គល់",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "អិចសង់ទ្រិស៊ីតេនៃអ៊ីពែបូល $\\dfrac{x^2}{64} - \\dfrac{y^2}{225} = 1$ គឺ ៖",
+        "question": "កំណុំនៃអ៊ីពែបូល $\\dfrac{x^2}{64} - \\dfrac{y^2}{225} = 1$ គឺ ៖",
         "options": [
-          "$\\dfrac{15}{8}$",
-          "$\\dfrac{8}{17}$",
-          "$\\dfrac{17}{15}$",
-          "$\\dfrac{17}{8}$"
+          "$(\\pm 8, 0)$",
+          "$(\\pm 15, 0)$",
+          "$(\\pm 17, 0)$",
+          "$(0, \\pm 17)$"
         ],
-        "correct": 3,
-        "explanation": "$e = \\dfrac{c}{a} = \\dfrac{17}{8}$ ( $e > 1$ )។",
+        "correct": 2,
+        "explanation": "$c^2 = 64 + 225 = 289 \\Rightarrow c = 17$ ៖ $F(\\pm 17, 0)$។",
         "src": "genpq-g12c_plan"
       },
       {
@@ -108263,16 +108211,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាស៊ីមតូត និងអិចសង់ទ្រិស៊ីតេនៃអ៊ីពែបូល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បំប្លែងសមីការ $9x^2 - 4y^2 - 36x + 8y - 4 = 0$ ទៅជាសមីការស្តង់ដា ៖",
+        "question": "អាស៊ីមតូតនៃអ៊ីពែបូល $\\dfrac{x^2}{9} - \\dfrac{y^2}{4} = 1$ គឺ ៖",
         "options": [
-          "$\\dfrac{(x - 2)^2}{4} - \\dfrac{(y - 1)^2}{9} = 1$",
-          "$\\dfrac{(x + 2)^2}{4} - \\dfrac{(y + 1)^2}{9} = 1$",
-          "$\\dfrac{(y - 1)^2}{9} - \\dfrac{(x - 2)^2}{4} = 1$",
-          "$(x - 2)^2 - (y - 1)^2 = 36$"
+          "$y = \\pm \\dfrac{3}{2}x$",
+          "$y = \\pm \\dfrac{4}{9}x$",
+          "$y = \\pm \\dfrac{2}{3}x$",
+          "$y = \\pm 2x$"
         ],
-        "correct": 0,
-        "explanation": "$9(x^2 - 4x + 4) - 4(y^2 - 2y + 1) = 4 + 36 - 4 = 36 \\iff \\dfrac{(x - 2)^2}{4} - \\dfrac{(y - 1)^2}{9} = 1$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$y = \\pm \\dfrac{b}{a}x = \\pm \\dfrac{2}{3}x$។"
       },
       {
         "id": "g12a_p2_08",
@@ -108280,16 +108227,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាស៊ីមតូត និងអិចសង់ទ្រិស៊ីតេនៃអ៊ីពែបូល",
         "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "សមីការអាស៊ីមតូតនៃអ៊ីពែបូល $\\dfrac{(x - h)^2}{a^2} - \\dfrac{(y - k)^2}{b^2} = 1$ គឺ ៖",
+        "question": "អិចសង់ទ្រិស៊ីតេនៃអ៊ីពែបូល $\\dfrac{x^2}{9} - \\dfrac{y^2}{16} = 1$ គឺ ៖",
         "options": [
-          "$y - h = \\pm \\dfrac{b}{a} (x - k)$",
-          "$y - k = \\pm \\dfrac{b}{a} (x - h)$",
-          "$y = \\pm \\dfrac{b}{a} x$",
-          "$y - k = \\pm \\dfrac{a}{b} (x - h)$"
+          "$\\dfrac{5}{4}$",
+          "$\\dfrac{3}{5}$",
+          "$\\dfrac{4}{3}$",
+          "$\\dfrac{5}{3}$"
         ],
-        "correct": 1,
-        "explanation": "អាស៊ីមតូតកាត់តាមផ្ចិត $I(h, k)$៖ $y - k = \\pm \\dfrac{b}{a}(x - h)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$c = \\sqrt{9 + 16} = 5$ ៖ $e = \\dfrac{c}{a} = \\dfrac{5}{3}$។"
       },
       {
         "id": "g12a_p2_09",
