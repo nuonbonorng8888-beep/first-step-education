@@ -47,15 +47,20 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=186">
-  <link rel="stylesheet" href="css/box-calc.css?v=186">
-  <link rel="stylesheet" href="css/accounts.css?v=186">
+  <link rel="stylesheet" href="css/style.css?v=187">
+  <link rel="stylesheet" href="css/box-calc.css?v=187">
+  <link rel="stylesheet" href="css/accounts.css?v=187">
   <!-- Keep the app at its normal size when the browser is zoomed out
        (Chrome/Edge remember zoom per site). Zooming in is respected. -->
   <script>
     (function () {
       function fix() {
         try {
+          if (window.__zcPrinting || (window.matchMedia && window.matchMedia('print').matches)) {
+            var de = document.documentElement;
+            de.style.zoom = ''; de.style.removeProperty('--zc'); de.style.removeProperty('font-size'); de.classList.remove('zc-normal');
+            return;
+          }
           var forced = Number(window.__forceZoomRatio || sessionStorage.getItem('ws_force_zoom')) || 0;
           if (!forced && window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
           var z = forced || (window.outerWidth / window.innerWidth);
@@ -83,6 +88,15 @@
       fix();
       var t;
       window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fix, 150); });
+      // Printing must use the real page size: drop the screen zoom while the print runs
+      window.__zcPrintOff = function () {
+        window.__zcPrinting = true;
+        var el = document.documentElement;
+        el.style.zoom = ''; el.style.removeProperty('--zc'); el.style.removeProperty('font-size'); el.classList.remove('zc-normal');
+      };
+      window.__zcPrintOn = function () { window.__zcPrinting = false; fix(); };
+      window.addEventListener('beforeprint', window.__zcPrintOff);
+      window.addEventListener('afterprint', window.__zcPrintOn);
     })();
   </script>
 </head>
@@ -1769,14 +1783,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/firebase-config.js?v=186"></script>
-  <script src="js/cloud.js?v=186"></script>
-  <script src="js/storage.js?v=186"></script>
-  <script src="js/question-bank.js?v=186"></script>
-  <script src="js/app.js?v=186"></script>
-  <script src="js/visits.js?v=186"></script>
-  <script src="js/box-calc.js?v=186"></script>
-  <script src="js/accounts.js?v=186"></script>
+  <script src="js/firebase-config.js?v=187"></script>
+  <script src="js/cloud.js?v=187"></script>
+  <script src="js/storage.js?v=187"></script>
+  <script src="js/question-bank.js?v=187"></script>
+  <script src="js/app.js?v=187"></script>
+  <script src="js/visits.js?v=187"></script>
+  <script src="js/box-calc.js?v=187"></script>
+  <script src="js/accounts.js?v=187"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {

@@ -9662,3 +9662,84 @@ body.light-theme .quiz-point-pill.active .quiz-pill-badge {
     display: none !important;
   }
 }
+
+/* ===== v15.37 Print / PDF: nothing may run off the paper (A5 default) ===== */
+@media print {
+  /* A long sheet may continue on the next page; only keep each exercise in one piece */
+  .worksheet-paper {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+    overflow: visible !important;
+  }
+  .ws-exercise-block,
+  .ws-sum-formula,
+  .katex-display {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  .worksheet-paper,
+  .worksheet-paper p,
+  .worksheet-paper div,
+  .worksheet-paper li {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .worksheet-paper .katex,
+  .worksheet-paper .katex * { overflow-wrap: normal; }
+  .worksheet-paper .katex-display {
+    overflow: visible !important;
+    max-width: 100% !important;
+    margin: 4px 0 !important;
+  }
+  .worksheet-paper img,
+  .worksheet-paper svg,
+  .worksheet-paper table {
+    max-width: 100% !important;
+    height: auto;
+  }
+  .worksheet-paper .ws-header-banner { flex-wrap: wrap !important; gap: 4px !important; }
+  .worksheet-paper .ws-header-right { max-width: 100% !important; }
+  .worksheet-paper .ws-info-row { flex-wrap: wrap !important; }
+  #ws-teacher-section { overflow: visible !important; }
+  /* A5: tighter header so the content gets the room */
+  body.paper-a5 .ws-school-logo { height: 40px !important; width: 40px !important; }
+  body.paper-a5 .ws-header-title { font-size: 1.1rem !important; }
+}
+
+/* Off-screen sheet used to build the downloadable PDF */
+.ws-pdf-render { color: #0f172a; font-size: 15px; }
+.ws-pdf-render .worksheet-paper {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+.ws-pdf-render .katex,
+.ws-pdf-render .ws-ex-question,
+.ws-pdf-render .ws-ex-instruction { color: #0f172a !important; }
+.ws-pdf-render .katex-display { overflow: visible !important; }
+.ws-pdf-render * { overflow-wrap: anywhere; }
+.ws-pdf-render .katex, .ws-pdf-render .katex * { overflow-wrap: normal; }
+.ws-pdf-render .ws-teacher-card { background: #ffffff !important; color: #0f172a !important; border: 1px solid #cbd5e1 !important; }
+@media print {
+  #zoom-help-modal,
+  .ws-reader-toolbar,
+  .ws-pdf-render,
+  #app-update-banner { display: none !important; }
+}
+.ws-pdf-render, .ws-pdf-render * { box-sizing: border-box; max-width: 100%; }
+.ws-pdf-render .katex, .ws-pdf-render .katex * { max-width: none; }
+.ws-pdf-render .worksheet-paper { font-size: 14px !important; }
+.ws-pdf-render .ws-header-banner { flex-wrap: wrap; gap: 4px; padding: 6px 8px !important; }
+.ws-pdf-render .ws-header-title { font-size: 19px !important; }
+.ws-pdf-render .ws-header-right { max-width: 100% !important; flex: 1 1 100%; text-align: center !important; }
+.ws-pdf-render .ws-info-row { flex-wrap: wrap; }
+.ws-pdf-render .ws-exercise-block, .ws-pdf-render .ws-summary-card, .ws-pdf-render .ws-objective-card { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; }
+.ws-pdf-render .vlist-s { display: none !important; }

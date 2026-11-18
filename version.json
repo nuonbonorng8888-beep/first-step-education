@@ -1,8 +1,8 @@
 {
-  "version": "15.36",
-  "build": 186,
-  "date": "2026-11-19",
+  "version": "15.37",
+  "build": 187,
+  "date": "2026-11-18",
   "author": "Nuon Bonong",
-  "changelog": "The chapter and lesson list now stays visible on the Worksheet tab, so another lesson can be chosen without refreshing (the Lesson list button still hides it for more space). On phones and tablets the list appears below the worksheet, and it is never printed.",
-  "lastUpdated": "2026-11-19T21:00:00+07:00"
+  "changelog": "Worksheets now print on A5 by default and nothing runs off the paper (wide formulas shrink to fit, long sheets continue on the next page, and the screen zoom no longer enlarges the print). New Download PDF buttons work on every device. Worksheet exercises and MCQs no longer use content from later points (Grades 11 and 12A), and off-topic exercises in Grade 12A were replaced.",
+  "lastUpdated": "2026-11-18T21:00:00+07:00"
 }

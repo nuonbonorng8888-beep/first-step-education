@@ -2161,7 +2161,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=186" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=187" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">
@@ -3320,7 +3320,7 @@ function doGet(e) {
             <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.zoomWorksheet(-10)" title="បង្រួមទំហំ (Zoom Out)">➖</button>
             <span class="ws-zoom-badge" id="ws-zoom-level">${this.worksheetZoom}%</span>
             <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.zoomWorksheet(10)" title="ពង្រីកទំហំ (Zoom In)">➕</button>
-            <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.setWorksheetZoom(100)" title="ទំហំ A4 ស្តង់ដា">📄 A4</button>
+            <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.setWorksheetZoom(100)" title="ទំហំស្តង់ដា ១០០%">📄 100%</button>
             <button class="btn btn-xs btn-outline ws-zoom-btn" onclick="App.setWorksheetZoom(115)" title="ពង្រីកពេញទទឹង">🔍 ពេញទទឹង</button>
             ${this.paperSizeToggleHTML()}
           </div>
@@ -3335,15 +3335,25 @@ function doGet(e) {
               🖨️ បោះពុម្ពសន្លឹកនេះ
             </button>
 
+            <button class="btn btn-outline ws-pdf-btn" onclick="App.downloadWorksheetPdf(false)" title="ទាញយកសន្លឹកចំណុចនេះជាឯកសារ PDF (គ្រប់ឧបករណ៍)">
+              ⬇️ ទាញយក PDF
+            </button>
+
             ${hasPoints && ws.points.length > 1 ? `
               <button class="btn btn-outline ws-print-all-btn" onclick="App.printAllWorksheetPoints(false)" title="បោះពុម្ពគ្រប់សន្លឹកកិច្ចការនៃមេរៀននេះ">
                 📚 បោះពុម្ពគ្រប់ចំណុច (${ws.points.length} សន្លឹក)
+              </button>
+              <button class="btn btn-outline ws-pdf-btn" onclick="App.downloadWorksheetPdf(true)" title="ទាញយកគ្រប់សន្លឹកកិច្ចការនៃមេរៀននេះជា PDF">
+                ⬇️ PDF គ្រប់ចំណុច
               </button>
             ` : ''}
 
             ${isUnlocked ? `
               <button class="btn btn-outline" style="border-color: #10b981; color: #10b981;" onclick="App.printWorksheet(true)" title="បោះពុម្ពរួមទាំងដំណោះស្រាយគ្រូ">
                 🖨️ បោះពុម្ពដំណោះស្រាយ
+              </button>
+              <button class="btn btn-outline" style="border-color: #10b981; color: #10b981;" onclick="App.downloadWorksheetPdf(false, true)" title="ទាញយក PDF រួមទាំងដំណោះស្រាយ">
+                ⬇️ PDF ដំណោះស្រាយ
               </button>
               <button class="btn btn-secondary" onclick="App.lockTeacherKey()" title="ចាក់សោដំណោះស្រាយឡើងវិញ">
                 🔒 ចាក់សោ
@@ -3591,8 +3601,60 @@ function doGet(e) {
   },
 
   /* ---------- Paper size for printing (A4 / A5), remembered per device ---------- */
+  // A5 is the default for everyone (v15.37); A4 only when the user picks it again.
   getPaperSize() {
-    try { return localStorage.getItem('ngs_paper_size') === 'A5' ? 'A5' : 'A4'; } catch (e) { return 'A4'; }
+    try { return localStorage.getItem('ngs_paper_size_v2') === 'A4' ? 'A4' : 'A5'; } catch (e) { return 'A5'; }
+  },
+
+  /* Printable width of the sheet in CSS px (page width minus margins, divided by the A5 print zoom). */
+  printContentWidthPx() {
+    return this.getPaperSize() === 'A5' ? Math.round((148 - 14) * 96 / 25.4 / 0.84) : Math.round((210 - 20) * 96 / 25.4);
+  },
+
+  /* Shrink formulas, tables, images that are wider than their box so nothing runs off the paper. */
+  fitWideContent(root) {
+    if (!root) return;
+    const sel = '.katex-display, .katex, table, img, svg, pre, .ws-sum-formula';
+    root.querySelectorAll(sel).forEach(el => { el.style.zoom = ''; });
+    root.querySelectorAll(sel).forEach(el => {
+      if (el.closest('.ws-header-banner')) return;
+      if (el.classList.contains('katex') && el.closest('.katex-display')) return;
+      const box = el.parentElement;
+      if (!box) return;
+      const avail = box.clientWidth;
+      const need = el.scrollWidth;
+      if (avail > 40 && need > avail + 1) {
+        el.style.zoom = String(Math.max(0.45, (avail - 4) / need).toFixed(3));
+        el.dataset.fitZoom = '1';
+      }
+    });
+  },
+
+  /* Lay the papers out at real printable width, fit wide items, then restore screen width. */
+  prepareForPrint(papers) {
+    if (window.__zcPrintOff) window.__zcPrintOff();
+    const w = this.printContentWidthPx();
+    const saved = [];
+    papers.forEach(p => {
+      if (!p) return;
+      saved.push([p, p.style.width, p.style.maxWidth, p.style.transform]);
+      p.style.width = w + 'px'; p.style.maxWidth = 'none'; p.style.transform = 'none';
+    });
+    papers.forEach(p => p && this.fitWideContent(p));
+    saved.forEach(([p, a, b, c]) => { p.style.width = a; p.style.maxWidth = b; p.style.transform = c; });
+  },
+
+  clearFitZoom(root) {
+    (root || document).querySelectorAll('[data-fit-zoom]').forEach(el => { el.style.zoom = ''; delete el.dataset.fitZoom; });
+  },
+
+  /* Mobile browsers return from window.print() immediately, so clean up only after printing ends. */
+  printThen(cleanup) {
+    let done = false;
+    const finish = () => { if (done) return; done = true; window.removeEventListener('afterprint', finish); try { cleanup(); } catch (e) {} if (window.__zcPrintOn) window.__zcPrintOn(); };
+    window.addEventListener('afterprint', finish);
+    try { window.print(); } catch (e) { finish(); return; }
+    setTimeout(finish, 60000);
   },
 
   applyPaperSize() {
@@ -3611,7 +3673,7 @@ function doGet(e) {
   },
 
   setPaperSize(size) {
-    try { localStorage.setItem('ngs_paper_size', size === 'A5' ? 'A5' : 'A4'); } catch (e) {}
+    try { localStorage.setItem('ngs_paper_size_v2', size === 'A4' ? 'A4' : 'A5'); } catch (e) {}
     this.applyPaperSize();
     if (this.showToast) this.showToast(size === 'A5' ? '📄 ក្រដាស A5 (១៤៨ × ២១០ mm)' : '📄 ក្រដាស A4 (២១០ × ២៩៧ mm)', 'success');
   },
@@ -3635,11 +3697,12 @@ function doGet(e) {
         teacherSec.style.display = 'none';
       }
     }
-    window.print();
-    // Restore display after print dialog closes
-    setTimeout(() => {
+    const paper = document.getElementById('printable-worksheet-paper');
+    this.prepareForPrint([paper, includeSolutions ? teacherSec : null]);
+    this.printThen(() => {
       if (teacherSec) teacherSec.style.display = '';
-    }, 1000);
+      this.clearFitZoom();
+    });
   },
 
   printAllWorksheetPoints(includeSolutions = false) {
@@ -3652,8 +3715,35 @@ function doGet(e) {
     const printContainer = document.createElement('div');
     printContainer.id = 'ws-all-points-print-container';
     printContainer.className = 'ws-all-points-print-container';
+    printContainer.innerHTML = this.buildAllPointsPapersHTML(ws);
+    // Lay out off-screen at print width so wide formulas can be measured and fitted
+    printContainer.style.cssText = 'display:block;position:absolute;left:-10000px;top:0;';
+    document.body.appendChild(printContainer);
+    this.renderMath(printContainer);
+    this.prepareForPrint(Array.from(printContainer.querySelectorAll('.worksheet-paper')));
+    printContainer.style.cssText = '';
 
-    printContainer.innerHTML = ws.points.map((pt, ptIdx) => {
+    const mainWsPaper = document.getElementById('printable-worksheet-paper');
+    const mainToolbar = document.querySelector('.ws-toolbar');
+    const mainPointsBar = document.querySelector('.ws-points-selector-bar');
+    const teacherSec = document.getElementById('ws-teacher-section');
+    if (mainWsPaper) mainWsPaper.style.display = 'none';
+    if (mainToolbar) mainToolbar.style.display = 'none';
+    if (mainPointsBar) mainPointsBar.style.display = 'none';
+    if (teacherSec) teacherSec.style.display = 'none';
+
+    this.applyPaperSize();
+    this.printThen(() => {
+      if (printContainer.parentNode) printContainer.parentNode.removeChild(printContainer);
+      if (mainWsPaper) mainWsPaper.style.display = '';
+      if (mainToolbar) mainToolbar.style.display = '';
+      if (mainPointsBar) mainPointsBar.style.display = '';
+      if (teacherSec) teacherSec.style.display = '';
+    });
+  },
+
+  buildAllPointsPapersHTML(ws) {
+    return ws.points.map((pt, ptIdx) => {
       const ptTotalScore = (pt.exercises || []).reduce((sum, ex) => sum + (Number(ex.points) || 1), 0) || 3;
       return `
       <div class="worksheet-paper ${ptIdx < ws.points.length - 1 ? 'ws-page-break' : ''}">
@@ -3739,31 +3829,119 @@ function doGet(e) {
       </div>
     `;
     }).join('');
+  },
 
-    document.body.appendChild(printContainer);
-    this.renderMath(printContainer);
+  /* ---------- Direct PDF download (works on phones and in-app browsers without a print dialog) ---------- */
+  loadPdfLib() {
+    if (window.html2pdf) return Promise.resolve();
+    if (this._pdfLibPromise) return this._pdfLibPromise;
+    this._pdfLibPromise = new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+      s.onload = () => resolve();
+      s.onerror = () => { this._pdfLibPromise = null; reject(new Error('pdf lib')); };
+      document.head.appendChild(s);
+    });
+    return this._pdfLibPromise;
+  },
 
-    const mainWsPaper = document.getElementById('printable-worksheet-paper');
-    const mainToolbar = document.querySelector('.ws-toolbar');
-    const mainPointsBar = document.querySelector('.ws-points-selector-bar');
-    const teacherSec = document.getElementById('ws-teacher-section');
-    if (mainWsPaper) mainWsPaper.style.display = 'none';
-    if (mainToolbar) mainToolbar.style.display = 'none';
-    if (mainPointsBar) mainPointsBar.style.display = 'none';
-    if (teacherSec) teacherSec.style.display = 'none';
+  /* Browsers that cannot open a print dialog: in-app webviews and iPhone/iPad home-screen apps */
+  canNativePrint() {
+    const ua = navigator.userAgent || '';
+    if (/FBAN|FBAV|FB_IAB|Instagram|Line\/|Telegram|Zalo|MicroMessenger|; wv\)|TikTok|Snapchat/i.test(ua)) return false;
+    const iOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform));
+    const standalone = navigator.standalone === true || (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+    if (iOS && standalone) return false;
+    return typeof window.print === 'function';
+  },
 
-    this.applyPaperSize();
-    window.print();
-
-    setTimeout(() => {
-      if (printContainer && printContainer.parentNode) {
-        printContainer.parentNode.removeChild(printContainer);
+  async downloadWorksheetPdf(allPoints = false, includeSolutions = false, forceFile = false) {
+    const ws = (this.worksheets || this.worksheetsG11)?.[this.currentLesson?.id];
+    if (!ws) return;
+    // Best quality: the browser's own "Save as PDF" (vector text and formulas)
+    if (!forceFile && this.canNativePrint()) {
+      this.showToast && this.showToast('📄 ក្នុងផ្ទាំងបោះពុម្ព ជ្រើស «Save as PDF / រក្សាទុកជា PDF» (ក្រដាស ' + this.getPaperSize() + ')', 'info');
+      setTimeout(() => {
+        if (allPoints && ws.points && ws.points.length > 1) this.printAllWorksheetPoints(includeSolutions);
+        else this.printWorksheet(includeSolutions);
+      }, 350);
+      return;
+    }
+    this.showToast && this.showToast('⏳ កំពុងរៀបចំឯកសារ PDF ...', 'info');
+    try { await this.loadPdfLib(); } catch (e) {
+      this.showToast && this.showToast('មិនអាចទាញយក PDF បានទេ (ត្រូវការអ៊ីនធឺណិត)។ សូមប្រើប៊ូតុងបោះពុម្ព → Save as PDF', 'error');
+      return;
+    }
+    const size = this.getPaperSize();
+    const width = this.printContentWidthPx();
+    if (window.__zcPrintOff) window.__zcPrintOff();
+    // holder sits off-screen; html2pdf copies only the inner sheet (so the copy is not off-screen)
+    const holder = document.createElement('div');
+    holder.style.cssText = 'position:absolute;left:-12000px;top:0;';
+    const wrap = document.createElement('div');
+    wrap.className = 'ws-pdf-render';
+    wrap.style.cssText = `width:${width}px;background:#fff;`;
+    holder.appendChild(wrap);
+    if (allPoints && ws.points && ws.points.length > 1) {
+      wrap.innerHTML = this.buildAllPointsPapersHTML(ws);
+    } else {
+      const paper = document.getElementById('printable-worksheet-paper');
+      if (!paper) { if (window.__zcPrintOn) window.__zcPrintOn(); return; }
+      const clone = paper.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.style.cssText = '';
+      wrap.appendChild(clone);
+      const teacherSec = document.getElementById('ws-teacher-section');
+      if (includeSolutions && teacherSec && (this.isAdmin || this.teacherUnlocked)) {
+        const t = teacherSec.cloneNode(true);
+        t.removeAttribute('id');
+        t.classList.add('ws-pdf-pagebreak');
+        wrap.appendChild(t);
       }
-      if (mainWsPaper) mainWsPaper.style.display = '';
-      if (mainToolbar) mainToolbar.style.display = '';
-      if (mainPointsBar) mainPointsBar.style.display = '';
-      if (teacherSec) teacherSec.style.display = '';
-    }, 1000);
+    }
+    wrap.querySelectorAll('.btn, button, .no-print').forEach(b => b.remove());
+    wrap.querySelectorAll('.worksheet-paper').forEach((p, i) => { if (i > 0) p.classList.add('ws-pdf-pagebreak'); });
+    document.body.appendChild(holder);
+    if (allPoints) this.renderMath(wrap);
+    this.fitWideContent(wrap);
+    const lessonNo = (this.currentLesson.id || 'worksheet').replace(/^les-/, '');
+    const pt = !allPoints && ws.points ? ws.points[this.activeWorksheetPoint || 0] : null;
+    const fileName = `សន្លឹកកិច្ចការ_${lessonNo}${pt ? '_ចំណុច' + (pt.pointNumber || '') : '_គ្រប់ចំណុច'}${includeSolutions ? '_ដំណោះស្រាយ' : ''}.pdf`;
+    const opt = {
+      margin: size === 'A5' ? [6, 7, 6, 7] : [8, 10, 8, 10],
+      filename: fileName,
+      image: { type: 'jpeg', quality: 0.95 },
+      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', windowWidth: 1100 },
+      jsPDF: { unit: 'mm', format: size === 'A5' ? 'a5' : 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['css', 'legacy'], before: '.ws-pdf-pagebreak', avoid: ['.ws-exercise-block', '.ws-header-banner', '.ws-student-info', '.ws-summary-card', '.ws-objective-card', '.katex-display', 'tr', 'img', 'svg'] }
+    };
+    try {
+      const blob = await window.html2pdf().set(opt).from(wrap).outputPdf('blob');
+      const file = (typeof File === 'function') ? new File([blob], fileName, { type: 'application/pdf' }) : null;
+      const isTouch = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform));
+      if (isTouch && file && navigator.canShare && navigator.canShare({ files: [file] })) {
+        try { await navigator.share({ files: [file], title: fileName }); } catch (e) { if (e && e.name !== 'AbortError') this.savePdfBlob(blob, fileName); }
+      } else {
+        this.savePdfBlob(blob, fileName);
+      }
+      this.showToast && this.showToast('✅ បានរៀបចំ PDF រួចរាល់ (' + size + ')', 'success');
+    } catch (e) {
+      console.error(e);
+      this.showToast && this.showToast('មានបញ្ហាក្នុងការបង្កើត PDF។ សូមសាកល្បងម្តងទៀត', 'error');
+    } finally {
+      holder.remove();
+      if (window.__zcPrintOn) window.__zcPrintOn();
+    }
+  },
+
+  savePdfBlob(blob, fileName) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = fileName; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    // Some in-app browsers ignore the download attribute: open the PDF so it can be saved from the viewer
+    setTimeout(() => { if (/FBAN|FBAV|Line|Telegram|Instagram|wv\)/i.test(navigator.userAgent)) window.open(url, '_blank'); }, 300);
+    setTimeout(() => URL.revokeObjectURL(url), 120000);
   },
 
   renderQuizTab() {
