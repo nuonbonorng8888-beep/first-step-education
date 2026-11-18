@@ -9524,3 +9524,72 @@ html.zc-normal .container:not(.nav-container) {
   }
   .paper-size-toggle { display: none !important; }
 }
+
+/* ===== Light theme readability (v15.34) =====
+   Pale accent text (sky/cyan/slate/emerald/amber) designed for the dark theme
+   was nearly invisible on white. Darker shades are used in light mode only. */
+body.light-theme {
+  --text-muted: #64748b;
+  --accent-cyan: #0e7490;
+  --accent-emerald: #047857;
+  --accent-amber: #b45309;
+}
+body.light-theme .chapter-title,
+body.light-theme .lesson-item.active .lesson-item-title,
+body.light-theme .lesson-item-title.active,
+body.light-theme .nav-user-role,
+body.light-theme .current-lesson-ch,
+body.light-theme .playlist-progress {
+  color: #0369a1;
+}
+body.light-theme .search-badge,
+body.light-theme .paper-size-label {
+  color: #475569;
+}
+/* Inline colours written into generated HTML */
+body.light-theme [style*="color: #f8fafc"],
+body.light-theme [style*="color:#f8fafc"],
+body.light-theme [style*="color: #e2e8f0"],
+body.light-theme [style*="color: #cbd5e1"] {
+  color: #0f172a !important;
+}
+body.light-theme [style*="color: #94a3b8"],
+body.light-theme [style*="color:#94a3b8"] {
+  color: #475569 !important;
+}
+body.light-theme [style*="color: #38bdf8"],
+body.light-theme [style*="color:#38bdf8"],
+body.light-theme [style*="color: #7dd3fc"],
+body.light-theme [style*="color: #06b6d4"],
+body.light-theme [style*="color: #22d3ee"] {
+  color: #0369a1 !important;
+}
+body.light-theme [style*="color: #34d399"],
+body.light-theme [style*="color: #10b981"],
+body.light-theme [style*="color: #6ee7b7"],
+body.light-theme [style*="color: #4ade80"] {
+  color: #047857 !important;
+}
+body.light-theme [style*="color: #f59e0b"],
+body.light-theme [style*="color: #fbbf24"],
+body.light-theme [style*="color: #fcd34d"] {
+  color: #b45309 !important;
+}
+body.light-theme [style*="color: #fb7185"],
+body.light-theme [style*="color: #f87171"] {
+  color: #be123c !important;
+}
+body.light-theme .student-bar-item.warning,
+body.light-theme .student-bar-item.warning span {
+  color: #b45309;
+}
+/* Selected point pill: light-theme base rule was overriding the active colours (white text on pale grey) */
+body.light-theme .quiz-point-pill.active {
+  background: #0369a1;
+  border-color: #0369a1;
+  color: #ffffff !important;
+}
+body.light-theme .quiz-point-pill.active .quiz-pill-badge {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}

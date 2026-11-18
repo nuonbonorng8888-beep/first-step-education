@@ -1,8 +1,8 @@
 {
-  "version": "15.33",
-  "build": 183,
+  "version": "15.34",
+  "build": 184,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "The 36 counting and permutation workbook exercises that were filed under an unlisted Grade 10 lesson now appear in Grade 11 advanced chapter 6: lesson 1 (permutations) and lesson 2 (combinations).",
-  "lastUpdated": "2026-11-19T18:30:00+07:00"
+  "changelog": "Quality check fixes: the quick diagnostic test now highlights the real correct answer instead of always A; in light mode all pale blue, cyan, grey, green and orange text is darker and readable, and the selected point button in the quiz tab is no longer white on white; three Grade 11 bank questions with two identical choices (lost exponents) now show the correct formulas.",
+  "lastUpdated": "2026-11-19T20:00:00+07:00"
 }

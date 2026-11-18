@@ -1963,7 +1963,9 @@ function doGet(e) {
       this.showToast('ចម្លើយត្រឹមត្រូវ! ល្អណាស់ 🎉', 'success');
     } else {
       element.classList.add('wrong');
-      allOptions[0].classList.add('correct');
+      // Highlight the option that is actually correct (not always the first one)
+      const rightOpt = Array.from(allOptions).find(opt => /,\s*true\)/.test(opt.getAttribute('onclick') || ''));
+      if (rightOpt) rightOpt.classList.add('correct');
       if (expBox) expBox.style.display = 'block';
       this.showToast('មិនទាន់ត្រឹមត្រូវទេ! សូមមើលការពន្យល់', 'error');
     }
@@ -2159,7 +2161,7 @@ function doGet(e) {
       return `
         <article class="course-card cc cc-g${gNum} ${course.id}" data-course-id="${course.id}">
           <button class="cc-shelf" onclick="App.openCourse('${course.id}')" title="${rawTitle}">
-            <img src="${course.coverImage}?v=183" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
+            <img src="${course.coverImage}?v=184" alt="${rawTitle}" class="cc-book" loading="lazy" onerror="this.src='assets/moeys_grade12.jpg'">
           </button>
           <div class="cc-body">
             <div class="cc-tags">
