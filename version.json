@@ -1,8 +1,8 @@
 {
-  "version": "15.26",
-  "build": 176,
+  "version": "15.27",
+  "build": 177,
   "date": "2026-11-19",
   "author": "Nuon Bonong",
-  "changelog": "Grade 11 workbook complete: worked solutions for the last 103 exercises (limits, derivatives, tangent lines, monotonicity and extrema, function studies and graphs, probability). Every Grade 11 workbook exercise now has an answer key.",
-  "lastUpdated": "2026-11-19T07:00:00+07:00"
+  "changelog": "Worked solutions for the first 65 Grade 12 workbook exercises: complex numbers (algebraic and trigonometric forms, powers, equations) and limits and continuity. These exercises now show a full answer key.",
+  "lastUpdated": "2026-11-19T09:00:00+07:00"
 }
