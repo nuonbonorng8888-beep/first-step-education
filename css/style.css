@@ -187,11 +187,11 @@ body {
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  min-height: 62px;
+  justify-content: space-between;
+  min-height: 60px;
   height: auto;
-  gap: 12px;
-  padding: 8px 18px;
+  gap: 8px;
+  padding: 8px 12px;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -8984,9 +8984,9 @@ body.light-theme {
 }
 .nav-container {
   max-width: none;
-  min-height: 64px;
-  gap: 10px;
-  padding: 8px 20px;
+  min-height: 60px;
+  gap: 8px;
+  padding: 8px 14px;
 }
 .brand-mascot-img {
   width: 42px;
@@ -9125,18 +9125,45 @@ body:not(.light-theme) .nav-user.is-admin .nav-user-role { color: #4ade80; }
 }
 .nav-user-out:hover { opacity: 1; background: rgba(229, 72, 77, 0.15); color: #e5484d; }
 
-/* Crowded bar (teacher/admin): icons only on every screen, labels stay in
-   the tooltip (with labels the admin bar overflows even on 1920px screens) */
-.nav-actions .nav-auth-text { display: none; }
-.nav-actions .btn { padding: 6px 10px; }
-@media (max-width: 1700px) {
+/* Clean desktop bar: show labels on screens >= 1100px, compact icons on smaller screens */
+.nav-actions .nav-auth-text { display: inline; }
+.nav-actions .btn { padding: 6px 11px; }
+
+@media (max-width: 1360px) {
+  .nav-container { padding: 6px 10px; gap: 6px; }
   .brand-sub { display: none; }
-  #nav-link-bank, #nav-link-exam-main { display: none; }
-  .nav-search { max-width: 220px; min-width: 120px; }
+  .brand-mascot-img { width: 38px; height: 38px; border-radius: 10px; }
+  .brand-name { font-size: 1.05rem; }
+  .brand-logo { gap: 8px; }
+  .nav-pills-group { gap: 3px; margin-left: 4px; }
+  .nav-pills-group .cat-pill { padding: 5px 9px; font-size: 0.8rem; min-height: 34px; }
+  .nav-actions { gap: 4px; }
+  .lang-switcher .lang-btn { padding: 3px 6px; font-size: 0.74rem; }
+  .nav-search { flex: 0 1 120px; max-width: 140px; min-width: 80px; }
+  .nav-search .search-badge { display: none; }
+  .nav-device-btn .nav-auth-text,
+  #btn-ws-nav .nav-auth-text,
+  #btn-students-nav .nav-auth-text,
+  #btn-members-nav .nav-auth-text,
+  #btn-upload-nav .nav-auth-text,
+  .nav-update-btn .nav-auth-text {
+    display: none;
+  }
+  .nav-device-btn,
+  #btn-ws-nav,
+  #btn-students-nav,
+  #btn-members-nav,
+  #btn-upload-nav,
+  .nav-update-btn {
+    padding: 5px 9px;
+    min-height: 34px;
+  }
 }
-@media (max-width: 1280px) {
-  .brand-sub { display: none; }
-  .nav-search { max-width: 200px; }
+
+@media (max-width: 1100px) {
+  .nav-actions .nav-auth-text { display: none; }
+  .nav-actions .btn { padding: 6px 9px; }
+  .nav-search { max-width: 160px; min-width: 100px; }
 }
 
 /* ---------- Shared buttons ---------- */

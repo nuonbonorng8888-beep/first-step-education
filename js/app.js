@@ -927,22 +927,10 @@ function doGet(e) {
       wsNavBtn.style.display = isTeacherLoggedIn ? 'inline-flex' : 'none';
     }
 
-    // Question Bank Nav Button (Accessible to Admin; locked with badge for Member teachers)
+    // Question Bank top nav button hidden per user request (មានក្នុង Bottom Dock & Dashboard ស្រាប់)
     const bankNavBtn = document.getElementById('btn-bank-nav');
     if (bankNavBtn) {
-      if (isAdm) {
-        bankNavBtn.style.display = 'inline-flex';
-        bankNavBtn.className = 'btn btn-secondary nav-bank-btn';
-        bankNavBtn.title = 'ធនាគារសំណួរ ៦,៦៧០+ (គ្រប់គ្រងដោយ Admin)';
-        bankNavBtn.innerHTML = '📚 <span class="nav-auth-text">ធនាគារសំណួរ</span>';
-      } else if (isTeacherLoggedIn) {
-        bankNavBtn.style.display = 'inline-flex';
-        bankNavBtn.className = 'btn btn-outline nav-bank-btn';
-        bankNavBtn.title = '🔒 ធនាគារសំណួរ (សម្រាប់តែ Admin នួន បូណង)';
-        bankNavBtn.innerHTML = '🔒 <span class="nav-auth-text">ធនាគារសំណួរ</span>';
-      } else {
-        bankNavBtn.style.display = 'none';
-      }
+      bankNavBtn.style.display = 'none';
     }
 
     // Dock Exam Button for mobile/tablet
@@ -958,11 +946,12 @@ function doGet(e) {
         const displayName = this.currentTeacher.name || (isAdm ? 'Admin' : 'គ្រូសមាជិក');
         authBtn.className = 'btn btn-secondary nav-auth-btn';
         authBtn.title = `គណនីគ្រូ ៖ ${displayName} (ចុចលើ ✕ ដើម្បីចាកចេញ)`;
+        const showRole = displayName.toLowerCase() !== (isAdm ? 'admin' : 'សមាជិក').toLowerCase();
         authBtn.innerHTML = `
           <span class="nav-user ${isAdm ? 'is-admin' : ''}">
             <span class="nav-user-dot"></span>
             <span class="nav-auth-text">${displayName}</span>
-            <span class="nav-user-role">${isAdm ? 'Admin' : 'សមាជិក'}</span>
+            ${showRole ? `<span class="nav-user-role">${isAdm ? 'Admin' : 'សមាជិក'}</span>` : ''}
           </span>
           <span class="nav-user-out" onclick="event.stopPropagation(); App.logoutTeacher()" title="ចាកចេញ (Logout)">✕</span>
         `;
@@ -1905,14 +1894,14 @@ function doGet(e) {
     const tagline = document.getElementById('hero-tagline');
     const slogan = document.getElementById('hero-slogan');
     const navHome = document.getElementById('nav-link-home');
-    const navLessons = document.getElementById('nav-link-lessons');
     const navTest = document.getElementById('nav-link-test');
+    const navScores = document.getElementById('nav-link-scores');
 
     if (tagline) tagline.textContent = isEn ? "Empowering Students of All Levels" : "កម្មវិធីពង្រឹងសមត្ថភាពសិស្សគ្រប់កម្រិត";
     if (slogan) slogan.textContent = isEn ? "✨ You Can Learn Anything! • Every Step Towards Success!" : "✨ អ្វីក៏យើងអាចរៀនបានដែរ! • You Can Learn Anything!";
     if (navHome) navHome.textContent = isEn ? "Home" : "ទំព័រដើម";
-    if (navLessons) navLessons.textContent = isEn ? "Lessons" : "មេរៀន";
-    if (navTest) navTest.textContent = isEn ? "Diagnostic Test" : "តេស្តសមត្ថភាព";
+    if (navTest) navTest.innerHTML = isEn ? "🎯 Diagnostic Test" : "🎯 តេស្តសមត្ថភាព";
+    if (navScores) navScores.innerHTML = isEn ? "📊 Score Sheet" : "📊 តារាងពិន្ទុ";
 
     this.renderCourses();
   },

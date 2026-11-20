@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=189">
+  <link rel="stylesheet" href="css/style.css?v=194">
   <link rel="stylesheet" href="css/box-calc.css?v=189">
   <link rel="stylesheet" href="css/accounts.css?v=189">
   <!-- Keep the app at its normal size when the browser is zoomed out
@@ -114,15 +114,14 @@
           </div>
         </a>
 
-        <!-- Main Nav Links (Tesdopi Style) -->
+        <!-- Main Nav Links (Clean & Essential) -->
         <div class="nav-pills-group">
           <button class="cat-pill active" onclick="App.backToCatalog()" id="nav-link-home">ទំព័រដើម</button>
-          <button class="cat-pill" onclick="App.scrollToLessons()" id="nav-link-lessons">មេរៀន</button>
-          <button class="cat-pill" onclick="window.questionBank.openQuestionBankModal()" id="nav-link-bank">
-            📚 ធនាគារសំណួរ
+          <button class="cat-pill" onclick="App.openDiagnosticModal()" id="nav-link-test" title="តេស្តសមត្ថភាពរហ័ស">
+            🎯 តេស្តសមត្ថភាព
           </button>
-          <button class="cat-pill" onclick="window.questionBank.openMultiLessonExamModal()" id="nav-link-exam-main">
-            🎲 បង្កើតវិញ្ញាសា
+          <button class="cat-pill" onclick="App.openTeacherSheetModal()" id="nav-link-scores" title="តារាងពិន្ទុ & ភ្ជាប់ Google Sheets">
+            📊 តារាងពិន្ទុ
           </button>
         </div>
       </div>
@@ -1783,14 +1782,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/firebase-config.js?v=189"></script>
-  <script src="js/cloud.js?v=189"></script>
-  <script src="js/storage.js?v=189"></script>
-  <script src="js/question-bank.js?v=189"></script>
-  <script src="js/app.js?v=189"></script>
-  <script src="js/visits.js?v=189"></script>
-  <script src="js/box-calc.js?v=189"></script>
-  <script src="js/accounts.js?v=189"></script>
+  <script src="js/firebase-config.js?v=192"></script>
+  <script src="js/cloud.js?v=192"></script>
+  <script src="js/storage.js?v=192"></script>
+  <script src="js/question-bank.js?v=192"></script>
+  <script src="js/app.js?v=192"></script>
+  <script src="js/visits.js?v=192"></script>
+  <script src="js/box-calc.js?v=192"></script>
+  <script src="js/accounts.js?v=192"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
