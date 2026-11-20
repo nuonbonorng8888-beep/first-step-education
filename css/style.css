@@ -9110,6 +9110,14 @@ body.light-theme {
   background: rgba(56, 189, 248, 0.16);
   color: #38bdf8;
 }
+.nav-user .nav-auth-text {
+  max-width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+}
 .nav-user.is-admin .nav-user-role { background: rgba(34, 197, 94, 0.16); color: #16a34a; }
 body:not(.light-theme) .nav-user.is-admin .nav-user-role { color: #4ade80; }
 .nav-user-out {
@@ -9125,13 +9133,17 @@ body:not(.light-theme) .nav-user.is-admin .nav-user-role { color: #4ade80; }
 }
 .nav-user-out:hover { opacity: 1; background: rgba(229, 72, 77, 0.15); color: #e5484d; }
 
-/* Clean desktop bar: show labels on screens >= 1100px, compact icons on smaller screens */
+/* Clean desktop bar: show labels, compact styling */
+.brand-sub { display: none; }
 .nav-actions .nav-auth-text { display: inline; }
-.nav-actions .btn { padding: 6px 11px; }
+.nav-actions .btn { padding: 5px 9px; min-height: 34px; font-size: 0.78rem; gap: 4px; }
+.nav-search .search-badge { display: none; }
+.nav-search { flex: 0 1 150px; max-width: 180px; min-width: 90px; }
+.nav-search .search-input { min-height: 34px; padding: 6px 20px 6px 30px; font-size: 0.8rem; }
+.nav-search .search-icon { left: 8px; width: 15px; height: 15px; }
 
-@media (max-width: 1360px) {
-  .nav-container { padding: 6px 12px; gap: 6px; }
-  .brand-sub { display: none; }
+@media (max-width: 1500px) {
+  .nav-container { padding: 6px 12px; gap: 5px; }
   .brand-mascot-img { width: 36px; height: 36px; border-radius: 9px; }
   .brand-name { font-size: 1.02rem; }
   .brand-logo { gap: 6px; }
@@ -9139,22 +9151,28 @@ body:not(.light-theme) .nav-user.is-admin .nav-user-role { color: #4ade80; }
   .nav-pills-group .cat-pill { padding: 5px 10px; font-size: 0.82rem; min-height: 32px; }
   .nav-actions { gap: 4px; }
   .lang-switcher .lang-btn { padding: 2px 5px; font-size: 0.72rem; }
-  .nav-search { flex: 0 1 140px; max-width: 160px; min-width: 100px; }
-  .nav-search .search-input { min-height: 34px; padding: 6px 24px 6px 32px; font-size: 0.78rem; }
-  .nav-search .search-icon { left: 8px; width: 15px; height: 15px; }
-  .nav-search .search-badge { display: none; }
-  .nav-actions .btn {
+  .nav-user .nav-auth-text { max-width: 95px; }
+  .nav-device-btn .nav-auth-text,
+  #btn-ws-nav .nav-auth-text,
+  #btn-students-nav .nav-auth-text,
+  #btn-upload-nav .nav-auth-text,
+  .nav-update-btn .nav-auth-text {
+    display: none;
+  }
+  .nav-device-btn,
+  #btn-ws-nav,
+  #btn-students-nav,
+  #btn-upload-nav,
+  .nav-update-btn {
     padding: 5px 8px;
     min-height: 32px;
-    font-size: 0.76rem;
-    gap: 4px;
   }
 }
 
 @media (max-width: 1100px) {
   .nav-actions .nav-auth-text { display: none; }
-  .nav-actions .btn { padding: 6px 9px; }
-  .nav-search { max-width: 160px; min-width: 100px; }
+  .nav-actions .btn { padding: 5px 7px; }
+  .nav-search { max-width: 140px; min-width: 80px; }
 }
 
 /* ---------- Shared buttons ---------- */
