@@ -943,14 +943,15 @@ function doGet(e) {
     if (authBtn) {
       if (this.currentTeacher) {
         const isAdm = this.isAdmin;
-        const displayName = this.currentTeacher.name || (isAdm ? 'Admin' : 'គ្រូសមាជិក');
+        const rawName = this.currentTeacher.name || (isAdm ? 'Admin' : 'គ្រូសមាជិក');
+        const compactName = rawName.replace(/^(?:លោកគ្រូ|អ្នកគ្រូ)\s*/, '').trim();
         authBtn.className = 'btn btn-secondary nav-auth-btn';
-        authBtn.title = `គណនីគ្រូ ៖ ${displayName} (ចុចលើ ✕ ដើម្បីចាកចេញ)`;
-        const showRole = displayName.toLowerCase() !== (isAdm ? 'admin' : 'សមាជិក').toLowerCase();
+        authBtn.title = `គណនីគ្រូ ៖ ${rawName} (ចុចលើ ✕ ដើម្បីចាកចេញ)`;
+        const showRole = compactName.toLowerCase() !== (isAdm ? 'admin' : 'សមាជិក').toLowerCase();
         authBtn.innerHTML = `
           <span class="nav-user ${isAdm ? 'is-admin' : ''}">
             <span class="nav-user-dot"></span>
-            <span class="nav-auth-text">${displayName}</span>
+            <span class="nav-auth-text">${compactName}</span>
             ${showRole ? `<span class="nav-user-role">${isAdm ? 'Admin' : 'សមាជិក'}</span>` : ''}
           </span>
           <span class="nav-user-out" onclick="event.stopPropagation(); App.logoutTeacher()" title="ចាកចេញ (Logout)">✕</span>

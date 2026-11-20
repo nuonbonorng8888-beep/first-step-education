@@ -9134,45 +9134,70 @@ body:not(.light-theme) .nav-user.is-admin .nav-user-role { color: #4ade80; }
 .nav-user-out:hover { opacity: 1; background: rgba(229, 72, 77, 0.15); color: #e5484d; }
 
 /* Clean desktop bar: show labels, compact styling */
-.brand-sub { display: none; }
+.brand-sub { display: none !important; }
+.nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+}
 .nav-actions .nav-auth-text { display: inline; }
-.nav-actions .btn { padding: 5px 9px; min-height: 34px; font-size: 0.78rem; gap: 4px; }
-.nav-search .search-badge { display: none; }
-.nav-search { flex: 0 1 150px; max-width: 180px; min-width: 90px; }
-.nav-search .search-input { min-height: 34px; padding: 6px 20px 6px 30px; font-size: 0.8rem; }
-.nav-search .search-icon { left: 8px; width: 15px; height: 15px; }
+.nav-actions .btn {
+  padding: 4px 7px !important;
+  min-height: 32px !important;
+  font-size: 0.76rem !important;
+  gap: 3px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+.nav-actions .nav-user .nav-auth-text {
+  display: inline-block !important;
+  max-width: 85px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  vertical-align: middle !important;
+}
+.lang-switcher {
+  padding: 2px !important;
+  gap: 1px !important;
+}
+.lang-switcher .lang-btn {
+  padding: 2px 4px !important;
+  font-size: 0.7rem !important;
+}
+.nav-search {
+  flex: 0 1 120px !important;
+  max-width: 140px !important;
+  min-width: 70px !important;
+}
+.nav-search .search-badge { display: none !important; }
+.nav-search .search-input {
+  min-height: 32px !important;
+  padding: 5px 12px 5px 28px !important;
+  font-size: 0.78rem !important;
+}
+.nav-search .search-icon {
+  left: 8px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
 
-@media (max-width: 1500px) {
-  .nav-container { padding: 6px 12px; gap: 5px; }
-  .brand-mascot-img { width: 36px; height: 36px; border-radius: 9px; }
-  .brand-name { font-size: 1.02rem; }
-  .brand-logo { gap: 6px; }
-  .nav-pills-group { gap: 2px; margin-left: 2px; }
-  .nav-pills-group .cat-pill { padding: 5px 10px; font-size: 0.82rem; min-height: 32px; }
-  .nav-actions { gap: 4px; }
-  .lang-switcher .lang-btn { padding: 2px 5px; font-size: 0.72rem; }
-  .nav-user .nav-auth-text { max-width: 95px; }
+@media (max-width: 1600px) {
   .nav-device-btn .nav-auth-text,
   #btn-ws-nav .nav-auth-text,
   #btn-students-nav .nav-auth-text,
   #btn-upload-nav .nav-auth-text,
   .nav-update-btn .nav-auth-text {
-    display: none;
-  }
-  .nav-device-btn,
-  #btn-ws-nav,
-  #btn-students-nav,
-  #btn-upload-nav,
-  .nav-update-btn {
-    padding: 5px 8px;
-    min-height: 32px;
+    display: none !important;
   }
 }
 
 @media (max-width: 1100px) {
-  .nav-actions .nav-auth-text { display: none; }
-  .nav-actions .btn { padding: 5px 7px; }
-  .nav-search { max-width: 140px; min-width: 80px; }
+  .nav-actions .nav-auth-text { display: none !important; }
+  .nav-actions .btn { padding: 4px 6px !important; }
+  .nav-search { max-width: 110px !important; min-width: 60px !important; }
 }
 
 /* ---------- Shared buttons ---------- */
