@@ -912,7 +912,7 @@ function doGet(e) {
 
     const membersNavBtn = document.getElementById('btn-members-nav');
     if (membersNavBtn) {
-      membersNavBtn.style.display = isAdm ? 'inline-flex' : 'none';
+      membersNavBtn.style.display = 'inline-flex';
     }
 
     // Teacher Exam Nav Button disabled per user request (ព្រោះមានខាងក្រោមស្រាប់)
@@ -1371,7 +1371,8 @@ function doGet(e) {
 
   openMemberDashboardModal() {
     if (!this.isAdmin) {
-      this.showToast('មុខងារនេះសម្រាប់តែ Admin (លោកគ្រូ នួន បូណង) ប៉ុណ្ណោះ!', 'warning');
+      this.showToast('មុខងារគ្រប់គ្រងសមាជិក សម្រាប់តែ Admin (លោកគ្រូ នួន បូណង) ប៉ុណ្ណោះ! សូមចូលគណនី Admin។', 'warning');
+      this.openLoginModal();
       return;
     }
     const modal = document.getElementById('member-dashboard-modal');
@@ -1962,20 +1963,21 @@ function doGet(e) {
 
   initTheme() {
     const savedTheme = localStorage.getItem('ngs_theme') || 'dark';
-    if (savedTheme === 'light') {
+    const isLight = savedTheme === 'light';
+    if (isLight) {
       document.body.classList.add('light-theme');
-      const themeBtn = document.getElementById('theme-toggle-btn');
-      if (themeBtn) themeBtn.innerHTML = '🌙';
     }
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) themeBtn.innerHTML = isLight ? '🌙 <span class="nav-auth-text">ងងឹត</span>' : '☀️ <span class="nav-auth-text">ពន្លឺ</span>';
     const dockIcon = document.getElementById('dock-theme-icon');
-    if (dockIcon) dockIcon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+    if (dockIcon) dockIcon.textContent = isLight ? '🌙' : '☀️';
   },
 
   toggleTheme() {
     const isLight = document.body.classList.toggle('light-theme');
     localStorage.setItem('ngs_theme', isLight ? 'light' : 'dark');
     const themeBtn = document.getElementById('theme-toggle-btn');
-    if (themeBtn) themeBtn.innerHTML = isLight ? '🌙' : '☀️';
+    if (themeBtn) themeBtn.innerHTML = isLight ? '🌙 <span class="nav-auth-text">ងងឹត</span>' : '☀️ <span class="nav-auth-text">ពន្លឺ</span>';
     const dockIcon = document.getElementById('dock-theme-icon');
     if (dockIcon) dockIcon.textContent = isLight ? '🌙' : '☀️';
   },

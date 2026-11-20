@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="lib/katex/katex.min.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=194">
+  <link rel="stylesheet" href="css/style.css?v=197">
   <link rel="stylesheet" href="css/box-calc.css?v=189">
   <link rel="stylesheet" href="css/accounts.css?v=189">
   <!-- Keep the app at its normal size when the browser is zoomed out
@@ -117,12 +117,6 @@
         <!-- Main Nav Links (Clean & Essential) -->
         <div class="nav-pills-group">
           <button class="cat-pill active" onclick="App.backToCatalog()" id="nav-link-home">ទំព័រដើម</button>
-          <button class="cat-pill" onclick="App.openDiagnosticModal()" id="nav-link-test" title="តេស្តសមត្ថភាពរហ័ស">
-            🎯 តេស្តសមត្ថភាព
-          </button>
-          <button class="cat-pill" onclick="App.openTeacherSheetModal()" id="nav-link-scores" title="តារាងពិន្ទុ & ភ្ជាប់ Google Sheets">
-            📊 តារាងពិន្ទុ
-          </button>
         </div>
       </div>
 
@@ -144,15 +138,23 @@
           <button class="lang-btn" id="btn-lang-en" onclick="App.setLanguage('en')">🇺🇸 EN</button>
         </div>
 
+        <!-- Brightness / Theme Toggle (កន្លែងសារ៉េពន្លឺ) -->
+        <button class="btn btn-outline nav-theme-btn" id="theme-toggle-btn" onclick="App.toggleTheme()" title="ប្តូរពន្លឺ / ងងឹត (Theme)">
+          ☀️ <span class="nav-auth-text">ពន្លឺ</span>
+        </button>
+
         <button class="btn btn-secondary nav-device-btn desktop-only" onclick="App.openWebShareModal()" title="អាសយដ្ឋាន Web សម្រាប់ចូលរៀន និងចែករំលែក">
-          🌐 <span class="nav-auth-text">អាសយដ្ឋាន Web</span>
+          🌐 <span class="nav-auth-text">Web</span>
+        </button>
+
+        <!-- Member Management (កន្លែងបន្ថែមសមាជិក) -->
+        <button class="btn btn-secondary nav-members-btn" onclick="App.openMemberDashboardModal()" id="btn-members-nav" title="គ្រប់គ្រង & បន្ថែមគ្រូសមាជិក">
+          👥 <span class="nav-auth-text">សមាជិក</span>
         </button>
 
         <button class="btn btn-outline nav-auth-btn" id="btn-admin-auth" onclick="App.openLoginModal()" title="ចូលគណនីគ្រូបង្រៀន">
           🔐 <span class="nav-auth-text">គ្រូបង្រៀន</span>
         </button>
-
-
 
         <button class="btn btn-outline nav-ws-btn" id="btn-ws-nav" onclick="window.questionBank.openWorksheetExtractorModal()" title="ស្រង់សន្លឹកកិច្ចការគ្រប់កម្រិតថ្នាក់" style="display: none;">
           📑 <span class="nav-auth-text">សន្លឹកកិច្ចការ</span>
@@ -162,28 +164,20 @@
           📚 <span class="nav-auth-text">ធនាគារសំណួរ</span>
         </button>
 
-        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ">
-          🔄 <span class="nav-auth-text">Update</span>
+        <button class="btn btn-secondary admin-only" id="btn-students-nav" onclick="Accounts.openDashboard()" style="display: none;" title="គ្រប់គ្រងគណនីសិស្ស & មើលលទ្ធផល">
+          🎓 <span class="nav-auth-text">សិស្ស</span>
         </button>
 
-        <button class="btn btn-secondary" id="btn-students-nav" onclick="Accounts.openDashboard()" style="display: none;" title="គ្រប់គ្រងគណនីសិស្ស & មើលលទ្ធផល">
-          🎓 <span class="nav-auth-text">សិស្ស & លទ្ធផល</span>
-        </button>
-
-        <button class="btn btn-secondary nav-members-btn admin-only" onclick="App.openMemberDashboardModal()" id="btn-members-nav" style="display: none;" title="គ្រប់គ្រងគ្រូសមាជិក & តាមដានសកម្មភាព">
-          👥 <span class="nav-auth-text">សមាជិក & សកម្មភាព</span>
-        </button>
-
-        <button class="btn btn-primary admin-only" onclick="App.openUploadModal()" id="btn-upload-nav" style="display: none;">
+        <button class="btn btn-primary admin-only" onclick="App.openUploadModal()" id="btn-upload-nav" style="display: none;" title="បញ្ចូលមេរៀនថ្មី">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
-          <span class="nav-auth-text">បញ្ចូលមេរៀនថ្មី</span>
+          <span class="nav-auth-text">មេរៀន</span>
         </button>
 
-        <button class="btn-icon" id="theme-toggle-btn" onclick="App.toggleTheme()" title="ប្តូរពន្លឺ / ងងឹត">
-          ☀️
+        <button class="btn btn-outline nav-update-btn" onclick="App.checkUpdateManual()" title="ពិនិត្យមើលកំណែ Update ចុងក្រោយ">
+          🔄 <span class="nav-auth-text">Update</span>
         </button>
       </div>
     </div>
@@ -1782,14 +1776,14 @@
   <!-- Mathematical Typography Engine (KaTeX) & Application Controllers -->
   <script src="lib/katex/katex.min.js"></script>
   <script src="lib/katex/contrib/auto-render.min.js"></script>
-  <script src="js/firebase-config.js?v=192"></script>
-  <script src="js/cloud.js?v=192"></script>
-  <script src="js/storage.js?v=192"></script>
-  <script src="js/question-bank.js?v=192"></script>
-  <script src="js/app.js?v=192"></script>
-  <script src="js/visits.js?v=192"></script>
-  <script src="js/box-calc.js?v=192"></script>
-  <script src="js/accounts.js?v=192"></script>
+  <script src="js/firebase-config.js?v=197"></script>
+  <script src="js/cloud.js?v=197"></script>
+  <script src="js/storage.js?v=197"></script>
+  <script src="js/question-bank.js?v=197"></script>
+  <script src="js/app.js?v=197"></script>
+  <script src="js/visits.js?v=197"></script>
+  <script src="js/box-calc.js?v=197"></script>
+  <script src="js/accounts.js?v=197"></script>
   <script>
     // Register Service Worker with Auto-Update for mobile & cross-device sync
     if ('serviceWorker' in navigator) {
