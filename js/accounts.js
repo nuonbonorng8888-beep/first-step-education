@@ -229,18 +229,50 @@
         <div class="acc-title"><b>🎓 សិស្ស & លទ្ធផល</b><small>${p && Cloud.isTeacher() ? esc(p.name) + (Cloud.isAdmin() ? ' · Admin' : '') : 'គ្រប់គ្រងគណនីសិស្ស'}</small></div>
         ${zoomHint()}
         ${extra || ''}
-        ${p && Cloud.isTeacher() ? '<button class="acc-btn ghost sm" data-a="logout">ចាកចេញ</button>' : ''}
+        ${p && Cloud.isTeacher() ? '<button class="acc-btn ghost sm" data-a="chpw">🔑 ប្តូរលេខសម្ងាត់</button><button class="acc-btn ghost sm" data-a="logout">ចាកចេញ</button>' : ''}
       </header>`;
   }
 
   function bindHeader() {
     const c = A.root.querySelector('[data-a="close"]');
     if (c) c.addEventListener('click', closeDashboard);
+    const cp = A.root.querySelector('[data-a="chpw"]');
+    if (cp) cp.addEventListener('click', changePasswordDialog);
     const l = A.root.querySelector('[data-a="logout"]');
     if (l) l.addEventListener('click', async () => {
       if (!confirm('ចាកចេញពីគណនីគ្រូ (Firebase)?')) return;
       await Cloud.signOut();
       renderTeacherLogin();
+    });
+  }
+
+  function changePasswordDialog() {
+    const m = modal(`
+      <h3>🔑 ប្តូរលេខសម្ងាត់</h3>
+      <label class="acc-field"><span>លេខសម្ងាត់បច្ចុប្បន្ន</span><input id="acc-op" type="password" autocomplete="current-password"></label>
+      <label class="acc-field"><span>លេខសម្ងាត់ថ្មី (យ៉ាងតិច ៦ តួ)</span><input id="acc-np" type="password" autocomplete="new-password"></label>
+      <label class="acc-field"><span>វាយលេខសម្ងាត់ថ្មីម្តងទៀត</span><input id="acc-np2" type="password" autocomplete="new-password"></label>
+      <p class="acc-err"></p>
+      <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>ប្តូរ</button></div>`);
+    const err = m.querySelector('.acc-err');
+    m.querySelector('#acc-op').focus();
+    m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+    m.querySelector('[data-ok]').addEventListener('click', async () => {
+      const op = m.querySelector('#acc-op').value;
+      const np = m.querySelector('#acc-np').value;
+      if (np.length < 6) { err.textContent = 'លេខសម្ងាត់ថ្មីត្រូវមានយ៉ាងតិច ៦ តួ'; return; }
+      if (np !== m.querySelector('#acc-np2').value) { err.textContent = 'លេខសម្ងាត់ថ្មីទាំងពីរមិនដូចគ្នា'; return; }
+      m.dataset.busy = '1';
+      m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+      try {
+        await Cloud.changeMyPassword(op, np);
+        m.remove();
+        if (window.App && App.showToast) App.showToast('✅ បានប្តូរលេខសម្ងាត់ (ប្រើលេខថ្មីពេលចូលលើកក្រោយ)', 'success');
+      } catch (e) {
+        delete m.dataset.busy;
+        err.textContent = e.message;
+        m.querySelectorAll('button').forEach((b) => { b.disabled = false; });
+      }
     });
   }
 
@@ -722,9 +754,17 @@
       <div class="acc-table-wrap">
         <table class="acc-table">
           <thead><tr><th>ឈ្មោះ</th><th>ID ចូល</th><th>ស្ថានភាព</th></tr></thead>
-          <tbody>${list.map((t) => `<tr><td class="nm">${esc(t.name)}</td><td><code>${esc(t.loginId)}</code></td><td>${t.active === false ? 'ផ្អាក' : 'សកម្ម'}</td></tr>`).join('') || '<tr><td colspan="3" class="acc-muted">មិនទាន់មានគ្រូ</td></tr>'}</tbody>
+          <tbody>${list.map((t) => `<tr class="${t.active === false ? 'off' : ''}"><td class="nm">${esc(t.name)}</td><td><code>${esc(t.loginId)}</code></td><td><button class="acc-pill ${t.active === false ? 'off' : 'on'}" data-tuid="${esc(t.uid)}" title="ចុចដើម្បីផ្អាក ឬបើកគណនី">${t.active === false ? 'ផ្អាក' : 'សកម្ម'}</button></td></tr>`).join('') || '<tr><td colspan="3" class="acc-muted">មិនទាន់មានគ្រូ</td></tr>'}</tbody>
         </table>
       </div>`;
+    main.querySelectorAll('[data-tuid]').forEach((b) => b.addEventListener('click', async () => {
+      const t = list.find((x) => x.uid === b.dataset.tuid);
+      const next = t.active === false;
+      if (!next && !confirm(`ផ្អាកគណនីគ្រូ «${t.name}»? គាត់នឹងមិនអាចចូលបានទៀតទេ (ទិន្នន័យនៅដដែល)។`)) return;
+      b.disabled = true;
+      try { await Cloud.setTeacherActive(t.uid, next); t.active = next; renderTeachers(); }
+      catch (e) { alert(e.message); b.disabled = false; }
+    }));
     const f = main.querySelector('.acc-teacher-form');
     f.addEventListener('submit', async (e) => {
       e.preventDefault();

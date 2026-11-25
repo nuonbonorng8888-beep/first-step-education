@@ -45,6 +45,8 @@
     setStudentActive,
     listTeachers,
     createTeacher,
+    setTeacherActive,
+    changeMyPassword,
     saveResult,
     myResults,
     classResults,
@@ -335,6 +337,29 @@
     catch (e) { throw new Error(friendlyError(e)); }
     await db.collection('users').doc(uid).set({ role: 'teacher', name, loginId: id, active: true, createdAt: ts() });
     return uid;
+  }
+
+  /* Admin: suspend / re-enable a teacher account (blocks the next sign-in) */
+  async function setTeacherActive(uid, active) {
+    await ready();
+    if (!Cloud.isAdmin()) throw new Error('សម្រាប់ Admin ប៉ុណ្ណោះ');
+    await db.collection('users').doc(uid).update({ active: !!active });
+  }
+
+  /* The signed-in teacher/admin changes their own password (needs the current one) */
+  async function changeMyPassword(oldPw, newPw) {
+    await ready();
+    const u = auth && auth.currentUser;
+    if (!u || !u.email) throw new Error('សូមចូលគណនីសិន');
+    if (String(newPw || '').length < 6) throw new Error('លេខសម្ងាត់ថ្មីត្រូវមានយ៉ាងតិច ៦ តួ');
+    try {
+      await u.reauthenticateWithCredential(firebase.auth.EmailAuthProvider.credential(u.email, String(oldPw || '')));
+      await u.updatePassword(String(newPw));
+    } catch (e) {
+      const c = String((e && e.code) || '');
+      if (/wrong-password|invalid-credential|invalid-login/.test(c)) throw new Error('លេខសម្ងាត់បច្ចុប្បន្នមិនត្រឹមត្រូវ');
+      throw new Error(friendlyError(e));
+    }
   }
 
   /* ---------- results ---------- */
