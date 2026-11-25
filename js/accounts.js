@@ -496,7 +496,7 @@
       <p class="acc-err"></p>
       <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>បង្កើតគណនី</button></div>`);
     const ta = m.querySelector('#acc-names');
-    const parse = () => ta.value.split(/\r?\n/).map((s) => s.replace(/^\s*\d+[.)\-\s]+/, '').replace(/\t.*$/, '').trim()).filter(Boolean);
+    const parse = () => (window.Scores && Scores.parseNames ? Scores.parseNames(ta.value) : ta.value.split(/\r?\n/).map((s) => s.replace(/^\s*\d+[.)\-\s]+/, '').replace(/\t.*$/, '').trim()).filter(Boolean));
     ta.focus();
     ta.addEventListener('input', () => { m.querySelector('.acc-count').textContent = `${kh(parse().length)} នាក់`; });
     m.querySelector('[data-x]').addEventListener('click', () => m.remove());

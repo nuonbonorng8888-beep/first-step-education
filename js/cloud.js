@@ -789,6 +789,26 @@
       await db.collection('users').doc(st.uid).update({ editorOn: false });
     },
 
+    /* ----- teacher: rename students (keeps ID and password) ----- */
+    async renameStudents(cid, mids, pairs) {
+      await ready();
+      for (let i = 0; i < pairs.length; i += 200) {
+        const b = db.batch();
+        pairs.slice(i, i + 200).forEach((x) => b.update(db.collection('users').doc(x.uid), { name: x.name }));
+        await b.commit();
+      }
+      for (const mid of mids) {
+        const snap = await mref(cid, mid).collection('rows').get();
+        const nm = new Map(pairs.map((x) => [x.uid, x.name]));
+        const docs = snap.docs.filter((d) => nm.has(d.id));
+        for (let i = 0; i < docs.length; i += 200) {
+          const b = db.batch();
+          docs.slice(i, i + 200).forEach((d) => b.update(d.ref, { name: nm.get(d.id) }));
+          await b.commit();
+        }
+      }
+    },
+
     /* ----- months / rows ----- */
     async listMonths(cid) {
       await ready();

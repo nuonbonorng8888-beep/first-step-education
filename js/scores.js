@@ -35,6 +35,14 @@
     const p = String(mid).split('-');
     return new Date(+p[0], +p[1] - 1 + 1 + keep, 1);
   };
+  /* Names pasted from Excel: drop the row-number cell (Latin or Khmer digits) and keep the name */
+  const NUM_CELL = /^[\s0-9\u17E0-\u17E9]+[.)]?\s*$/;
+  const parseNames = (text) => String(text || '').split(/\r?\n/).map((line) => {
+    const cells = line.split('\t').map((c) => c.trim()).filter((c) => c && !NUM_CELL.test(c));
+    let n = cells.length ? cells[0] : '';
+    if (!n && !line.includes('\t')) n = line.trim();
+    return n.replace(/^[\s0-9\u17E0-\u17E9]+[.)\-]\s*/, '').trim();
+  }).filter(Boolean);
   const BLANK_COLS = 5;
   const colName = (c, i) => (c.label && c.label.trim()) || `សកម្មភាព ${kh(i + 1)}`;
   const newColId = () => 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
@@ -113,6 +121,16 @@
     }
 
     /* ---------- painting ---------- */
+    /* footer: how many students have a score + the average of each column */
+    function footHtml() {
+      const cs = cols();
+      if (!S.rows.length) return '';
+      const stat = (vals) => (vals.length ? `${fmt(vals.reduce((a, v) => a + v, 0) / vals.length)}<small>${kh(vals.length)}/${kh(S.rows.length)}</small>` : '—');
+      const cells = cs.map((c) => `<td>${stat(S.rows.map((r) => (r.s && r.s[c.id] != null ? Number(r.s[c.id]) : null)).filter((v) => v !== null))}</td>`).join('');
+      const tot = S.rows.map((r) => rowTotal(r, cs));
+      return `<tr class="sc-foot"><td class="sc-n"></td><td class="sc-nm">មធ្យមភាគ <small>(ដាក់រួច/សរុប)</small></td>${cells}<td class="sc-tot">${fmt(tot.reduce((a, v) => a + v, 0) / tot.length)}</td>${S.mode === 'teacher' ? '<td class="sc-addcol"></td>' : ''}</tr>`;
+    }
+
     function hintHtml() {
       const cap = capOf(S.cls);
       const maxSum = colMaxSum(cols());
@@ -161,9 +179,10 @@
             ${S.mode === 'teacher' ? '<button class="acc-btn sm" data-a="new-month">➕ ខែថ្មី</button>' : ''}
             ${S.mode === 'teacher' && m ? `<button class="acc-btn sm" data-a="add-col">➕ ជួរសកម្មភាព</button>
               <button class="acc-btn ghost sm" data-a="lock">${locked() ? '🔓 បើកខែ' : '🔒 បិទខែ'}</button>` : ''}
+            ${m && S.mode !== 'member' ? '<input class="sc-search" type="search" placeholder="🔍 ស្វែងរកឈ្មោះ" aria-label="ស្វែងរកឈ្មោះ">' : ''}
             ${m ? '<button class="acc-btn ghost sm" data-a="csv">⬇️ Excel</button>' : ''}
             ${S.months.length ? '<button class="acc-btn ghost sm" data-a="summary">∑ សរុបគ្រប់ខែ</button>' : ''}
-            ${S.mode === 'teacher' && m ? '<button class="acc-btn ghost sm" data-a="log">🕘 ប្រវត្តិកែ</button><button class="acc-btn ghost sm" data-a="del-month">🗑️</button>' : ''}
+            ${S.mode === 'teacher' && m ? '<button class="acc-btn ghost sm" data-a="rename" title="កែឈ្មោះសិស្សទាំងថ្នាក់ម្តងដោយបិទភ្ជាប់ពី Excel">✏️ កែឈ្មោះ</button><button class="acc-btn ghost sm" data-a="log">🕘 ប្រវត្តិកែ</button><button class="acc-btn ghost sm" data-a="del-month">🗑️</button>' : ''}
           </div>
           ${S.mode === 'teacher' ? `
           <div class="sc-cfg">
@@ -179,6 +198,7 @@
             <table class="acc-table sc-table">
               <thead><tr><th class="sc-n">ល.រ</th><th class="sc-nm">ឈ្មោះ</th>${head}<th class="sc-tot">សរុប</th>${S.mode === 'teacher' ? '<th class="sc-addcol"><button class="sc-plus" data-a="add-col2" title="បន្ថែមជួរសកម្មភាព">＋</button></th>' : ''}</tr></thead>
               <tbody>${body || `<tr><td colspan="${cs.length + 4}" class="acc-muted">មិនទាន់មានសិស្ស</td></tr>`}</tbody>
+              <tfoot>${footHtml()}</tfoot>
             </table>
           </div>` : `<div class="acc-center small"><p class="acc-muted">${S.mode === 'teacher' ? 'ចុច «➕ ជួរសកម្មភាព» ដើម្បីបន្ថែមជួរ' : 'លោកគ្រូមិនទាន់បន្ថែមសកម្មភាពក្នុងខែនេះទេ'}</p></div>`)
           : `<div class="acc-center small"><p class="acc-muted">${S.mode === 'teacher' ? 'មិនទាន់មានខែណាមួយទេ។ ចុច «➕ ខែថ្មី» ដើម្បីចាប់ផ្តើម។' : 'មិនទាន់មានពិន្ទុ'}</p></div>`}
@@ -200,6 +220,12 @@
       on('[data-a="log"]', showLog);
       on('[data-a="del-month"]', deleteMonth);
       on('[data-a="cfg"]', saveCfg);
+      on('[data-a="rename"]', renameDialog);
+      const srch = q('.sc-search');
+      if (srch) srch.addEventListener('input', () => {
+        const t = srch.value.trim().toLowerCase();
+        host.querySelectorAll('tbody tr[data-row]').forEach((tr) => { tr.style.display = !t || tr.querySelector('.sc-nm').textContent.toLowerCase().includes(t) ? '' : 'none'; });
+      });
       host.querySelectorAll('input.sc-h').forEach((inp) => {
         inp.addEventListener('change', () => onHeader(inp));
         inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); inp.blur(); } });
@@ -243,6 +269,8 @@
         if (val === null) delete row.s[col.id]; else row.s[col.id] = val;
         const t = host.querySelector(`[data-tot="${CSS.escape(row.uid)}"]`);
         if (t) t.textContent = fmt(rowTotal(row, cols()));
+        const tf = host.querySelector('.sc-table tfoot');
+        if (tf) tf.innerHTML = footHtml();
         inp.classList.remove('saving');
         inp.classList.add('saved');
         setTimeout(() => inp.classList.remove('saved'), 900);
@@ -398,6 +426,38 @@
         busy(true);
         try { await api().removeEditor(st); st.editorOn = false; m.remove(); paint(); }
         catch (e) { busy(false); err.textContent = e.message; }
+      });
+    }
+
+    function renameDialog() {
+      const list = S.students.slice().sort((a, b) => (a.seq || 0) - (b.seq || 0));
+      const m = modal(`
+        <h3>✏️ កែឈ្មោះសិស្សទាំងថ្នាក់</h3>
+        <p class="acc-muted">បិទភ្ជាប់ឈ្មោះពី Excel <b>តាមលំដាប់ដូចក្នុងតារាង</b> (ជួរលេខរៀង និងឈ្មោះក៏បាន ប្រព័ន្ធលុបលេខរៀងចេញ)។ ID និងលេខសម្ងាត់មិនប្តូរទេ។ ចំនួនឈ្មោះត្រូវស្មើចំនួនសិស្ស <b>${kh(list.length)}</b> នាក់។</p>
+        <textarea id="sc-rn" rows="9" placeholder="កែវ មុនីសត្រា&#10;ជា ប្រសិទ្ធិ"></textarea>
+        <p class="sc-rn-count acc-muted">០ ឈ្មោះ</p>
+        <p class="acc-err"></p>
+        <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>កែឈ្មោះ</button></div>`);
+      const ta = m.querySelector('#sc-rn');
+      const err = m.querySelector('.acc-err');
+      ta.focus();
+      ta.addEventListener('input', () => { m.querySelector('.sc-rn-count').textContent = `${kh(parseNames(ta.value).length)} ឈ្មោះ`; });
+      m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+      m.querySelector('[data-ok]').addEventListener('click', async () => {
+        const names = parseNames(ta.value);
+        if (names.length !== list.length) { err.textContent = `ចំនួនមិនស្មើ ៖ មាន ${kh(names.length)} ឈ្មោះ ប៉ុន្តែមានសិស្ស ${kh(list.length)} នាក់`; return; }
+        if (!confirm(`ប្តូរឈ្មោះសិស្ស ${kh(list.length)} នាក់ តាមលំដាប់ក្នុងបញ្ជី? (សិស្សទី ១ = «${names[0]}»)`)) return;
+        const pairs = list.map((s, i) => ({ uid: s.uid, name: names[i] }));
+        m.dataset.busy = '1';
+        m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+        try {
+          await api().renameStudents(S.cls.id, S.months.map((x) => x.id), pairs);
+          pairs.forEach((p) => { const st = S.students.find((x) => x.uid === p.uid); if (st) st.name = p.name; });
+          S.rows.forEach((r) => { const p = pairs.find((x) => x.uid === r.uid); if (p) r.name = p.name; });
+          m.remove();
+          toast('✅ បានកែឈ្មោះរួចរាល់', 'success');
+          paint();
+        } catch (e) { delete m.dataset.busy; err.textContent = e.message || e.code; m.querySelectorAll('button').forEach((b) => { b.disabled = false; }); }
       });
     }
 
@@ -599,5 +659,5 @@
     }
   }
 
-  window.Scores = { mountTeacher, openStudent };
+  window.Scores = { mountTeacher, openStudent, parseNames };
 })();
