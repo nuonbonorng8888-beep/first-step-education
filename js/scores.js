@@ -173,6 +173,13 @@
       paint();
     }
 
+    /* most students are named like "១", "2" (row numbers pasted by mistake) */
+    function namesLookBroken() {
+      if (!S.students.length) return false;
+      const bad = S.students.filter((x) => /^[\s0-9០-៩.]*$/.test(String(x.name || ''))).length;
+      return bad >= Math.max(1, Math.ceil(S.students.length / 2));
+    }
+
     function hintHtml() {
       const cap = capOf(S.cls);
       const maxSum = colMaxSum(cols());
@@ -241,6 +248,7 @@
             <button class="acc-btn ghost sm" data-a="cfg">រក្សាទុក</button>
           </div>` : ''}
           ${m ? hintHtml() : ''}
+          ${S.mode === 'teacher' && namesLookBroken() ? '<div class="sc-warn"><span>⚠️ ឈ្មោះសិស្សជាលេខ (១, ២, ៣…) មិនមែនឈ្មោះពិតទេ</span><button class="acc-btn sm" data-a="rename2">✏️ កែឈ្មោះឥឡូវ</button></div>' : ''}
           ${m ? (cs.length ? `
           <div class="acc-table-wrap sc-wrap">
             <table class="acc-table sc-table">
@@ -269,6 +277,7 @@
       on('[data-a="del-month"]', deleteMonth);
       on('[data-a="cfg"]', saveCfg);
       on('[data-a="rename"]', renameDialog);
+      on('[data-a="rename2"]', renameDialog);
       on('[data-a="print"]', printSheet);
       on('[data-a="sort-reset"]', () => toggleSort('seq'));
       host.querySelectorAll('[data-sort]').forEach((b) => b.addEventListener('click', () => toggleSort(b.dataset.sort)));

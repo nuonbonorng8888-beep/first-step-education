@@ -497,3 +497,5 @@ body:not(.light-theme) .member-cloud-note.ok { color: #4ade80; }
   .sc-cell input { width: 58px; }
   .sc-table td.sc-tot, .sc-table th.sc-tot { min-width: 54px; }
 }
+
+.sc-warn { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 10px 14px; border-radius: 12px; background: rgba(245, 179, 1, 0.18); color: var(--a-text); font-weight: 700; }
