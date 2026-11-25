@@ -60,7 +60,8 @@
   function modalIn(root, htmlStr, wide) {
     const m = document.createElement('div');
     m.className = 'acc-modal';
-    m.innerHTML = `<div class="acc-modal-card ${wide ? 'acc-modal-wide' : ''}">${htmlStr}</div>`;
+    m.innerHTML = `<div class="acc-modal-card ${wide ? 'acc-modal-wide' : ''}"><button class="acc-modal-x" data-closex title="បិទ (Esc)">✕</button>${htmlStr}</div>`;
+    m.querySelector('[data-closex]').addEventListener('click', () => { if (!m.dataset.busy) m.remove(); });
     root.appendChild(m);
     m.addEventListener('click', (e) => { if (e.target === m && !m.dataset.busy) m.remove(); });
     return m;

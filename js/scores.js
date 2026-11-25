@@ -89,7 +89,8 @@
     function modal(html) {
       const m = document.createElement('div');
       m.className = 'acc-modal';
-      m.innerHTML = `<div class="acc-modal-card">${html}</div>`;
+      m.innerHTML = `<div class="acc-modal-card"><button class="acc-modal-x" data-closex title="បិទ (Esc)">✕</button>${html}</div>`;
+      m.querySelector('[data-closex]').addEventListener('click', () => { if (!m.dataset.busy) m.remove(); });
       (S.onModal ? S.onModal() : host.closest('.acc') || document.body).appendChild(m);
       m.addEventListener('click', (e) => { if (e.target === m && !m.dataset.busy) m.remove(); });
       return m;
@@ -267,6 +268,7 @@
             <label title="សិស្សដែលបានពិន្ទុ ចាប់ពី % នេះនៃពិន្ទុសកម្មភាពសរុបដែលមាន ទទួលសារកម្រិត A">A ≥ <input type="number" id="sc-ta" min="1" max="100" value="${levelA(S.cls)}">%</label>
             <label title="ចាប់ពី % នេះទទួលសារកម្រិត B ក្រោមនេះទទួលសារកម្រិត C">B ≥ <input type="number" id="sc-tb" min="1" max="100" value="${levelB(S.cls)}">%</label>
             <label title="បន្ទាប់ពីផុតរយៈពេលនេះ ទិន្នន័យនឹងត្រូវលុបដោយស្វ័យប្រវត្តិ (បើបានបើក TTL ក្នុង Firebase)។ ០ = មិនលុប">រក្សាទុក <input type="number" id="sc-keep" min="0" max="120" value="${keepOf(S.cls)}"> ខែក្រោយខែនោះ</label>
+            <label class="sc-share" title="បើកដើម្បីឱ្យសិស្សក្នុងថ្នាក់នេះចុចមើលពិន្ទុមិត្តរួមថ្នាក់ (មើលតែប៉ុណ្ណោះ)។ បិទ = ម្នាក់ៗឃើញតែពិន្ទុខ្លួន"><input type="checkbox" id="sc-share" ${S.cls.scoreShare ? 'checked' : ''}> 👥 ឱ្យសិស្សមើលពិន្ទុមិត្តរួមថ្នាក់</label>
             <button class="acc-btn ghost sm" data-a="cfg">រក្សាទុក</button>
           </div>` : ''}
           ${m ? hintHtml() : ''}
@@ -468,9 +470,10 @@
       const tb = Number(host.querySelector('#sc-tb').value);
       if (!(t > 0) || !(p > 0 && p <= 100) || !(k >= 0 && k <= 120) || !(ta > 0 && ta <= 100) || !(tb > 0 && tb < ta)) { toast('តម្លៃមិនត្រឹមត្រូវ (B ត្រូវតូចជាង A)', 'warning'); return; }
       try {
-        await api().setClassScoreConfig(S.cls.id, t, p, k, ta, tb);
+        const share = host.querySelector('#sc-share').checked;
+        await api().setClassScoreConfig(S.cls.id, t, p, k, ta, tb, share);
         const keepChanged = k !== keepOf(S.cls);
-        S.cls.scoreTotal = t; S.cls.scorePct = p; S.cls.scoreKeep = k; S.cls.scoreA = ta; S.cls.scoreB = tb;
+        S.cls.scoreTotal = t; S.cls.scorePct = p; S.cls.scoreKeep = k; S.cls.scoreA = ta; S.cls.scoreB = tb; S.cls.scoreShare = share;
         if (keepChanged && S.months.length) await api().restampExpiry(S.cls.id, S.months, (id) => expiryFor(S.cls, id));
         toast('✅ បានរក្សាទុក', 'success');
         paint();
@@ -735,10 +738,27 @@
           <div class="sc-me">
             <div><b>${esc(me.name || '')}</b><small>ថ្នាក់ ${esc(me.className || S.cls.name || '')}</small></div>
             ${lv ? `<button class="sc-msg-btn lv-${lv}" data-a="msg">${LEVELS[lv].icon} សារសម្រាប់អ្នក</button>` : ''}
+            <div class="sc-me-btns">
+              <button class="acc-btn ghost sm" data-a="acts">📌 សកម្មភាពខែនេះ</button>
+              <button class="acc-btn ghost sm" data-a="mates">👥 មិត្តរួមថ្នាក់</button>
+            </div>
           </div>
           <div class="sc-grand"><span>ពិន្ទុសកម្មភាពសរុប</span><b>${fmt(Math.min(grand, cap))}</b><small>អតិបរមា ${fmt(cap)} (${kh(pctOf(S.cls))}% នៃ ${fmt(totalOf(S.cls))})</small></div>
           ${cards || '<div class="acc-center small"><p class="acc-muted">មិនទាន់មានពិន្ទុ</p></div>'}
         </div>`;
+        host.querySelector('[data-a="acts"]').addEventListener('click', () => {
+          const now = new Date();
+          const cur = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+          const m = S.months.find((x) => x.id === cur) || S.months[S.months.length - 1];
+          const list = m ? (m.cols || []).filter((c) => c.label && c.label.trim()) : [];
+          const dlg = modal(`
+            <h3>📌 សកម្មភាពដែលលោកគ្រូយកក្នុង${m ? esc(m.label || monthLabel(m.id)) : 'ខែនេះ'}</h3>
+            ${list.length ? `<ul class="sc-acts">${list.map((c) => `<li><b>${esc(c.label)}</b><span>${c.day ? esc(c.day) + ' · ' : ''}ពិន្ទុអតិបរមា ${fmt(c.max)}${c.exam ? ' · 🎯 តេស្ត MCQ' : ''}</span></li>`).join('')}</ul>
+            <p class="acc-muted">សរុបអតិបរមាក្នុងខែនេះ ៖ <b>${fmt(colMaxSum(list))}</b> ពិន្ទុ។ លោកគ្រូអាចបន្ថែមសកម្មភាពថ្មីនៅពេលក្រោយ។</p>` : '<p class="acc-muted">លោកគ្រូមិនទាន់កំណត់សកម្មភាពក្នុងខែនេះទេ។</p>'}
+            <div class="acc-modal-actions"><button class="acc-btn" data-x>យល់ហើយ</button></div>`);
+          dlg.querySelector('[data-x]').addEventListener('click', () => dlg.remove());
+        });
+        host.querySelector('[data-a="mates"]').addEventListener('click', () => openClassmates());
         const mb = host.querySelector('[data-a="msg"]');
         if (mb) mb.addEventListener('click', () => {
           const L = LEVELS[lv];
@@ -824,6 +844,47 @@
     load();
     return { reload: load };
   }
+
+  /* ----- student: look at classmates (read-only; only when the teacher allowed it) ----- */
+  let matesOverlay = null;
+  async function openClassmates() {
+    const p = Cloud.profile();
+    if (!p || p.role !== 'student') return;
+    if (!matesOverlay) {
+      matesOverlay = document.createElement('div');
+      matesOverlay.className = 'acc sc-overlay sc-mates';
+      matesOverlay.id = 'scores-mates';
+      document.body.appendChild(matesOverlay);
+    }
+    matesOverlay.classList.add('open');
+    matesOverlay.innerHTML = `
+      <header class="acc-top">
+        <button class="acc-icon" data-a="close" title="ត្រឡប់"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+        <div class="acc-title"><b>👥 មិត្តរួមថ្នាក់</b><small>ថ្នាក់ ${esc(p.className || '')} · មើលតែប៉ុណ្ណោះ</small></div>
+      </header>
+      <main class="acc-main sc-body"><div class="acc-center small"><div class="acc-spin"></div></div></main>`;
+    matesOverlay.querySelector('[data-a="close"]').addEventListener('click', () => matesOverlay.classList.remove('open'));
+    const body = matesOverlay.querySelector('.sc-body');
+    try {
+      const cls = await api().myClass();
+      if (!cls) throw new Error('រកមិនឃើញថ្នាក់');
+      if (!cls.scoreShare) {
+        body.innerHTML = '<div class="acc-center small"><p class="acc-muted">លោកគ្រូមិនទាន់បើកឱ្យមើលពិន្ទុមិត្តរួមថ្នាក់ទេ។<br>អ្នកអាចមើលបានតែពិន្ទុខ្លួនឯង។</p></div>';
+        return;
+      }
+      Sheet(body, { cls, mode: 'viewer', students: [], modal: () => matesOverlay });
+    } catch (e) {
+      body.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code)}</p>`;
+    }
+  }
+
+  /* Esc closes the top-most dialog (when it is not busy saving) */
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const ms = document.querySelectorAll('.acc-modal');
+    const top = ms[ms.length - 1];
+    if (top && !top.dataset.busy) { top.remove(); e.stopPropagation(); }
+  }, true);
 
   /* ----- teacher: mounted in the dashboard tab ----- */
   function mountTeacher(host, cls, students) {

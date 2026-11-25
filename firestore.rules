@@ -129,7 +129,8 @@ service cloud.firestore {
 
         match /rows/{rid} {
           allow read: if classTeacher(cid) || classEditor(cid) ||
-            (classMember(cid) && request.auth.uid == rid);
+            (classMember(cid) && (request.auth.uid == rid ||
+              get(/databases/$(database)/documents/classes/$(cid)).data.get('scoreShare', false) == true));
           allow create, delete: if classTeacher(cid);
           allow update: if classTeacher(cid) || (
             classEditor(cid) &&

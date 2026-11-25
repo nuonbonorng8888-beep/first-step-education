@@ -559,3 +559,16 @@ body.ex-running { overscroll-behavior: none; }
 .acc-field input, .acc-field select, .acc-field textarea, .acc-modal textarea { box-sizing: border-box; max-width: 100%; }
 .acc-row2 > .acc-field { min-width: 0; flex: 1 1 0; }
 .acc-modal-card { box-sizing: border-box; }
+
+/* dialogs taller than the screen: scroll inside, keep the buttons visible, always a close button */
+.acc-modal-card { position: relative; max-height: 92vh; max-height: 92dvh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.acc-modal-card .acc-modal-actions { position: sticky; bottom: -22px; margin: 0 -22px -22px; padding: 12px 22px; background: var(--a-surface); border-top: 1px solid var(--a-line); z-index: 3; }
+.acc-modal-x { position: absolute; top: 10px; right: 12px; z-index: 4; width: 34px; height: 34px; border: none; border-radius: 10px; background: var(--a-surface-2); color: var(--a-text-2); font-size: 1rem; }
+.acc-modal-x:hover { color: #e5484d; }
+.acc-modal-card h3 { padding-right: 40px; }
+.sc-me-btns { display: flex; gap: 8px; flex-wrap: wrap; width: 100%; }
+.sc-acts { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.sc-acts li { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--a-surface-2); }
+.sc-acts li span { color: var(--a-text-2); font-size: calc(0.86 * var(--a-fs)); }
+.sc-share { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
+.sc-share input { width: 18px; height: 18px; min-height: 0; }
