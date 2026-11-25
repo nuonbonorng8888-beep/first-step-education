@@ -544,3 +544,18 @@ body:not(.light-theme) .member-cloud-note.ok { color: #4ade80; }
 .ex-expl { margin-top: 8px; color: var(--a-text-2); font-size: calc(0.9 * var(--a-fs)); }
 .ex-h { margin: 6px 0; }
 body.ex-running { overscroll-behavior: none; }
+
+/* lesson checklist: normal-size checkboxes, one tidy row each */
+.ex-lessons { display: flex; flex-direction: column; gap: 2px; max-height: 190px; padding: 6px; }
+.ex-les { display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 9px; cursor: pointer; font-weight: 500; font-size: calc(0.9 * var(--a-fs)); color: var(--a-text); text-align: left; }
+.ex-les:hover { background: var(--a-surface); }
+.ex-les input[type="checkbox"] { flex: 0 0 20px; width: 20px; height: 20px; min-height: 0; padding: 0; margin: 0; accent-color: var(--a-blue); }
+.ex-les span { flex: 1 1 auto; line-height: 1.5; }
+.ex-les em { font-style: normal; font-weight: 800; font-size: 0.78em; margin-right: 8px; padding: 1px 6px; border-radius: 6px; background: var(--a-surface); color: var(--a-text-2); }
+.ex-les small { flex: 0 0 auto; color: var(--a-text-2); }
+.sc-check input[type="checkbox"] { width: 18px; height: 18px; min-height: 0; flex: 0 0 18px; }
+
+/* two-column dialogs: inputs must not overflow their column */
+.acc-field input, .acc-field select, .acc-field textarea, .acc-modal textarea { box-sizing: border-box; max-width: 100%; }
+.acc-row2 > .acc-field { min-width: 0; flex: 1 1 0; }
+.acc-modal-card { box-sizing: border-box; }

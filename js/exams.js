@@ -160,7 +160,15 @@
       s.n++; seen.set(q.lesId, s);
     });
     seen.forEach((v) => lessons.push(v));
-    lessons.sort((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true }));
+    const lessonKey = (id) => { const p = id.split('-'); return { book: p[1] || '', nums: p.slice(2).map((x) => parseInt(x, 10) || 0) }; };
+    lessons.sort((a, b) => {
+      const x = lessonKey(a.id), y = lessonKey(b.id);
+      if (x.book !== y.book) return x.book.localeCompare(y.book, 'en', { numeric: true });
+      for (let i = 0; i < Math.max(x.nums.length, y.nums.length); i++) { const d = (x.nums[i] || 0) - (y.nums[i] || 0); if (d) return d; }
+      return 0;
+    });
+    const books = new Set(lessons.map((l) => lessonKey(l.id).book));
+    const bookTag = (id) => { const b = lessonKey(id).book; return books.size > 1 ? `<em>${esc(b.replace(/^g/, '').toUpperCase())}</em>` : ''; };
     const nowD = new Date(now() + 10 * 60000);
     nowD.setSeconds(0, 0);
     const local = `${nowD.getFullYear()}-${pad(nowD.getMonth() + 1)}-${pad(nowD.getDate())}T${pad(nowD.getHours())}:${pad(nowD.getMinutes())}`;
@@ -169,7 +177,7 @@
       <h3>➕ បង្កើតការប្រឡង MCQ</h3>
       <label class="acc-field"><span>ឈ្មោះការប្រឡង</span><input id="ex-t" maxlength="60" placeholder="ឧ. តេស្តខ្លី មេរៀនទី ១"></label>
       <div class="acc-field"><span>ជ្រើសមេរៀន (${lessons.length ? 'សំណួរត្រូវបានបែងចែកស្មើគ្នា' : 'គ្មានសំណួរសម្រាប់ថ្នាក់នេះ'})</span>
-        <div class="ex-lessons">${lessons.map((l) => `<label class="sc-check"><input type="checkbox" value="${esc(l.id)}"> ${esc(l.label)} <small>(${l.n})</small></label>`).join('')}</div></div>
+        <div class="ex-lessons">${lessons.map((l) => `<label class="ex-les"><input type="checkbox" value="${esc(l.id)}"><span>${bookTag(l.id)}${esc(l.label)}</span><small>${l.n}</small></label>`).join('')}</div></div>
       <div class="acc-row2">
         <label class="acc-field"><span>ចំនួនសំណួរ</span><input id="ex-n" type="number" min="3" max="40" value="10"></label>
         <label class="acc-field"><span>កម្រិត</span><select id="ex-lv"><option value="all">ចម្រុះ</option>${LEVELS.map((l) => `<option>${l}</option>`).join('')}</select></label>
