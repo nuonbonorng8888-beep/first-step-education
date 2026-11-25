@@ -890,6 +890,27 @@
       if (expireAt) log.expireAt = expireAt;
       mref(cid, mid).collection('log').add(log).catch(() => {});
     },
+    /* same value in one column for many students (value null clears the column) */
+    async setColumnAll(cid, mid, colId, value, uids, colLabel, expireAt) {
+      await ready();
+      const FV = firebase.firestore.FieldValue;
+      const who = profile.name + (editorDb ? ' (ប្រធានថ្នាក់)' : '');
+      for (let i = 0; i < uids.length; i += 200) {
+        const b = dbx().batch();
+        uids.slice(i, i + 200).forEach((uid) => {
+          const upd = { byName: who, at: ts() };
+          upd['s.' + colId] = value == null ? FV.delete() : Number(value);
+          b.update(mref(cid, mid).collection('rows').doc(uid), upd);
+        });
+        await b.commit();
+      }
+      const log = {
+        by: profile.uid, byName: who, row: '*', rowName: `ទាំងថ្នាក់ (${uids.length} នាក់)`, col: colId, colLabel: colLabel || '',
+        from: null, to: value == null ? null : Number(value), at: ts()
+      };
+      if (expireAt) log.expireAt = expireAt;
+      mref(cid, mid).collection('log').add(log).catch(() => {});
+    },
     async listLog(cid, mid, limit) {
       await ready();
       const snap = await mref(cid, mid).collection('log').orderBy('at', 'desc').limit(limit || 100).get();

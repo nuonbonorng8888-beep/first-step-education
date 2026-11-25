@@ -59,6 +59,7 @@
       rows: [],
       view: 'month', // 'month' | 'summary'
       summary: null,
+      sort: { key: 'seq', dir: 1 },
       onModal: init.modal,
       onActivity: init.onActivity
     };
@@ -131,6 +132,33 @@
       return `<tr class="sc-foot"><td class="sc-n"></td><td class="sc-nm">មធ្យមភាគ <small>(ដាក់រួច/សរុប)</small></td>${cells}<td class="sc-tot">${fmt(tot.reduce((a, v) => a + v, 0) / tot.length)}</td>${S.mode === 'teacher' ? '<td class="sc-addcol"></td>' : ''}</tr>`;
     }
 
+    /* rows in the order shown on screen (original order = seq; sorting is only a view) */
+    function viewRows() {
+      const rs = S.rows.slice();
+      const { key, dir } = S.sort;
+      if (key === 'seq') return rs;
+      const cs = cols();
+      const val = (r) => {
+        if (key === 'total') return rowTotal(r, cs);
+        if (key === 'name') return String(r.name || '');
+        const id = key.slice(2);
+        return r.s && r.s[id] != null ? Number(r.s[id]) : -1;
+      };
+      rs.sort((a, b) => {
+        const x = val(a), y = val(b);
+        const c = typeof x === 'string' ? x.localeCompare(y, 'km') : x - y;
+        return c * dir || (S.rows.indexOf(a) - S.rows.indexOf(b));
+      });
+      return rs;
+    }
+    const mark = (key) => (S.sort.key === key ? (S.sort.dir === 1 ? ' ▲' : ' ▼') : '');
+    function toggleSort(key) {
+      if (key === 'seq') S.sort = { key: 'seq', dir: 1 };
+      else if (S.sort.key === key) S.sort = { key, dir: -S.sort.dir };
+      else S.sort = { key, dir: key === 'name' ? 1 : -1 };
+      paint();
+    }
+
     function hintHtml() {
       const cap = capOf(S.cls);
       const maxSum = colMaxSum(cols());
@@ -156,14 +184,17 @@
             <span>/</span>
             <input class="sc-h sc-h-max" data-hc="${esc(c.id)}" data-f="max" type="number" min="0.25" step="0.25" value="${c.max}" title="ពិន្ទុអតិបរមា">
           </div>
+          <div class="sc-h-tools"><button data-fill="${esc(c.id)}" title="ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់">⚡ ទាំងថ្នាក់</button><button data-sort="c:${esc(c.id)}" title="តម្រៀបតាមជួរនេះ">↕${mark('c:' + c.id)}</button></div>
           <button class="sc-h-del" data-dc="${esc(c.id)}" title="លុបជួរនេះ">✕</button>
         </th>` : `
         <th class="sc-col">
           <div class="sc-col-name">${esc(colName(c, i))}</div>
           <small>${c.day ? esc(c.day) + ' · ' : ''}/${fmt(c.max)}</small>
+          <div class="sc-h-tools">${ed ? `<button data-fill="${esc(c.id)}" title="ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់">⚡ ទាំងថ្នាក់</button>` : ''}<button data-sort="c:${esc(c.id)}" title="តម្រៀបតាមជួរនេះ">↕${mark('c:' + c.id)}</button></div>
         </th>`).join('');
 
-      const body = S.rows.map((r, i) => {
+      const body = viewRows().map((r) => {
+        const i = S.rows.indexOf(r);
         const cells = cs.map((c) => {
           const v = r.s && r.s[c.id] != null ? r.s[c.id] : '';
           return `<td class="sc-cell"><input type="number" inputmode="decimal" step="0.25" min="0" max="${c.max}" value="${v}" data-uid="${esc(r.uid)}" data-col="${esc(c.id)}" ${ed ? '' : 'disabled'}></td>`;
@@ -180,7 +211,8 @@
             ${S.mode === 'teacher' && m ? `<button class="acc-btn sm" data-a="add-col">➕ ជួរសកម្មភាព</button>
               <button class="acc-btn ghost sm" data-a="lock">${locked() ? '🔓 បើកខែ' : '🔒 បិទខែ'}</button>` : ''}
             ${m && S.mode !== 'member' ? '<input class="sc-search" type="search" placeholder="🔍 ស្វែងរកឈ្មោះ" aria-label="ស្វែងរកឈ្មោះ">' : ''}
-            ${m ? '<button class="acc-btn ghost sm" data-a="csv">⬇️ Excel</button>' : ''}
+            ${S.sort.key !== 'seq' ? '<button class="acc-btn sm" data-a="sort-reset">↺ លំដាប់ដើម</button>' : ''}
+            ${m ? '<button class="acc-btn ghost sm" data-a="print">🖨️ បោះពុម្ព</button><button class="acc-btn ghost sm" data-a="csv">⬇️ Excel</button>' : ''}
             ${S.months.length ? '<button class="acc-btn ghost sm" data-a="summary">∑ សរុបគ្រប់ខែ</button>' : ''}
             ${S.mode === 'teacher' && m ? '<button class="acc-btn ghost sm" data-a="rename" title="កែឈ្មោះសិស្សទាំងថ្នាក់ម្តងដោយបិទភ្ជាប់ពី Excel">✏️ កែឈ្មោះ</button><button class="acc-btn ghost sm" data-a="log">🕘 ប្រវត្តិកែ</button><button class="acc-btn ghost sm" data-a="del-month">🗑️</button>' : ''}
           </div>
@@ -196,7 +228,7 @@
           ${m ? (cs.length ? `
           <div class="acc-table-wrap sc-wrap">
             <table class="acc-table sc-table">
-              <thead><tr><th class="sc-n">ល.រ</th><th class="sc-nm">ឈ្មោះ</th>${head}<th class="sc-tot">សរុប</th>${S.mode === 'teacher' ? '<th class="sc-addcol"><button class="sc-plus" data-a="add-col2" title="បន្ថែមជួរសកម្មភាព">＋</button></th>' : ''}</tr></thead>
+              <thead><tr><th class="sc-n sc-sort" data-sort="seq" title="តាមលំដាប់ដើម">ល.រ${S.sort.key === 'seq' ? '' : ' ↺'}</th><th class="sc-nm sc-sort" data-sort="name" title="តម្រៀបតាមឈ្មោះ">ឈ្មោះ${mark('name')}</th>${head}<th class="sc-tot sc-sort" data-sort="total" title="តម្រៀបតាមពិន្ទុសរុប">សរុប${mark('total')}</th>${S.mode === 'teacher' ? '<th class="sc-addcol"><button class="sc-plus" data-a="add-col2" title="បន្ថែមជួរសកម្មភាព">＋</button></th>' : ''}</tr></thead>
               <tbody>${body || `<tr><td colspan="${cs.length + 4}" class="acc-muted">មិនទាន់មានសិស្ស</td></tr>`}</tbody>
               <tfoot>${footHtml()}</tfoot>
             </table>
@@ -221,6 +253,10 @@
       on('[data-a="del-month"]', deleteMonth);
       on('[data-a="cfg"]', saveCfg);
       on('[data-a="rename"]', renameDialog);
+      on('[data-a="print"]', printSheet);
+      on('[data-a="sort-reset"]', () => toggleSort('seq'));
+      host.querySelectorAll('[data-sort]').forEach((b) => b.addEventListener('click', () => toggleSort(b.dataset.sort)));
+      host.querySelectorAll('[data-fill]').forEach((b) => b.addEventListener('click', () => fillDialog(b.dataset.fill)));
       const srch = q('.sc-search');
       if (srch) srch.addEventListener('input', () => {
         const t = srch.value.trim().toLowerCase();
@@ -429,6 +465,83 @@
       });
     }
 
+    function fillDialog(colId) {
+      const c = cols().find((x) => x.id === colId);
+      if (!c || !editableNow()) return;
+      const m = modal(`
+        <h3>⚡ ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់</h3>
+        <p class="acc-muted">សកម្មភាព ៖ <b>${esc(colName(c, cols().indexOf(c)))}</b> (អតិបរមា ${fmt(c.max)}) — ${kh(S.rows.length)} នាក់។ ពិន្ទុដែលមានរួចក្នុងជួរនេះនឹងត្រូវជំនួស។</p>
+        <label class="acc-field"><span>ពិន្ទុ (ទុកទទេ = សម្អាតទាំងជួរ)</span><input id="sc-fv" type="number" min="0" max="${c.max}" step="0.25" value="${c.max}"></label>
+        <p class="acc-err"></p>
+        <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>អនុវត្ត</button></div>`);
+      const inp = m.querySelector('#sc-fv');
+      inp.focus(); inp.select();
+      const err = m.querySelector('.acc-err');
+      m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+      m.querySelector('[data-ok]').addEventListener('click', async () => {
+        const raw = inp.value.trim();
+        const v = raw === '' ? null : r2(Number(raw));
+        if (v !== null && (!isFinite(v) || v < 0 || v > Number(c.max))) { err.textContent = `ពិន្ទុត្រូវនៅចន្លោះ ០ ដល់ ${fmt(c.max)}`; return; }
+        if (!confirm(v === null ? 'សម្អាតពិន្ទុទាំងជួរនេះ?' : `ដាក់ ${fmt(v)} ឱ្យសិស្ស ${kh(S.rows.length)} នាក់?`)) return;
+        m.dataset.busy = '1';
+        m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+        try {
+          if (S.onActivity) S.onActivity();
+          await api().setColumnAll(S.cls.id, S.mid, c.id, v, S.rows.map((r) => r.uid), c.label, expiryFor(S.cls, S.mid));
+          S.rows.forEach((r) => { r.s = r.s || {}; if (v === null) delete r.s[c.id]; else r.s[c.id] = v; });
+          m.remove();
+          paint();
+        } catch (e) {
+          delete m.dataset.busy;
+          err.textContent = e.code === 'permission-denied' ? 'គ្មានសិទ្ធិកែ (ខែអាចត្រូវបានបិទ)' : (e.message || 'រក្សាទុកមិនបាន');
+          m.querySelectorAll('button').forEach((b) => { b.disabled = false; });
+        }
+      });
+    }
+
+    /* ---------- print (A5 / A4 from the app's paper setting) ---------- */
+    function printSheet() {
+      const paper = (window.App && App.getPaperSize && App.getPaperSize()) || 'A5';
+      let head, rowsHtml, title;
+      if (S.view === 'summary') {
+        const data = summaryData();
+        head = `<th>ល.រ</th><th class="nm">ឈ្មោះ</th>${S.months.map((m) => `<th>${esc(m.label || monthLabel(m.id))}<br><small>/${fmt(colMaxSum(m.cols || []))}</small></th>`).join('')}<th>សរុប</th><th>គិតយក</th>`;
+        rowsHtml = data.map((d, i) => `<tr><td>${kh(i + 1)}</td><td class="nm">${esc(d.e.name)}</td>${S.months.map((m) => `<td>${d.e.t[m.id] == null ? '' : fmt(d.e.t[m.id])}</td>`).join('')}<td><b>${fmt(d.sum)}</b></td><td><b>${fmt(d.used)}</b></td></tr>`).join('');
+        title = `សរុបពិន្ទុសកម្មភាពគ្រប់ខែ · ថ្នាក់ ${esc(S.cls.name)}`;
+      } else {
+        const cs = cols();
+        head = `<th>ល.រ</th><th class="nm">ឈ្មោះ</th>${cs.map((c, i) => `<th>${esc(colName(c, i))}<br><small>${c.day ? esc(c.day) + ' · ' : ''}/${fmt(c.max)}</small></th>`).join('')}<th>សរុប</th>`;
+        rowsHtml = viewRows().map((r) => `<tr><td>${kh(S.rows.indexOf(r) + 1)}</td><td class="nm">${esc(r.name)}</td>${cs.map((c) => `<td>${r.s && r.s[c.id] != null ? fmt(r.s[c.id]) : ''}</td>`).join('')}<td><b>${fmt(rowTotal(r, cs))}</b></td></tr>`).join('');
+        const mm = month();
+        title = `ពិន្ទុសកម្មភាព · ថ្នាក់ ${esc(S.cls.name)} · ${esc((mm && mm.label) || monthLabel(S.mid))}`;
+      }
+      const wide = (S.view === 'summary' ? S.months.length + 4 : cols().length + 3) > 6;
+      let box = document.getElementById('sc-print');
+      if (!box) { box = document.createElement('div'); box.id = 'sc-print'; document.body.appendChild(box); }
+      let st = document.getElementById('sc-print-style');
+      if (!st) { st = document.createElement('style'); st.id = 'sc-print-style'; document.head.appendChild(st); }
+      st.textContent = `
+        #sc-print { display: none; }
+        @media print {
+          @page { size: ${paper} ${wide ? 'landscape' : 'portrait'}; margin: 8mm; }
+          body.printing-scores > *:not(#sc-print) { display: none !important; }
+          body.printing-scores { background: #fff !important; padding: 0 !important; zoom: 1 !important; }
+          body.printing-scores #sc-print { display: block !important; color: #000; font-family: var(--font-khmer, 'Khmer OS', sans-serif); }
+          #sc-print h2 { margin: 0 0 4mm; font-size: 12pt; }
+          #sc-print table { width: 100%; border-collapse: collapse; table-layout: auto; font-size: ${paper === 'A5' ? '8.5' : '10'}pt; }
+          #sc-print th, #sc-print td { border: 0.4mm solid #000; padding: 1mm 1.5mm; text-align: center; overflow-wrap: anywhere; }
+          #sc-print th.nm, #sc-print td.nm { text-align: left; }
+          #sc-print thead { display: table-header-group; }
+          #sc-print tr { break-inside: avoid; }
+          #sc-print small { font-weight: 400; font-size: 0.85em; }
+        }`;
+      box.innerHTML = `<h2>${title}</h2><table><thead><tr>${head}</tr></thead><tbody>${rowsHtml}</tbody></table>`;
+      document.body.classList.add('printing-scores');
+      const done = () => { document.body.classList.remove('printing-scores'); window.removeEventListener('afterprint', done); };
+      window.addEventListener('afterprint', done);
+      setTimeout(() => { window.print(); setTimeout(done, 60000); }, 60);
+    }
+
     function renameDialog() {
       const list = S.students.slice().sort((a, b) => (a.seq || 0) - (b.seq || 0));
       const m = modal(`
@@ -526,7 +639,7 @@
       const cap = capOf(S.cls);
       const data = summaryData();
       host.innerHTML = `<div class="sc">
-        <div class="sc-bar"><button class="acc-btn ghost sm" data-a="back">← ត្រឡប់</button><button class="acc-btn ghost sm" data-a="csv">⬇️ Excel</button></div>
+        <div class="sc-bar"><button class="acc-btn ghost sm" data-a="back">← ត្រឡប់</button><button class="acc-btn ghost sm" data-a="print">🖨️ បោះពុម្ព</button><button class="acc-btn ghost sm" data-a="csv">⬇️ Excel</button></div>
         <p class="sc-hint">ពិន្ទុសកម្មភាពអតិបរមា <b>${fmt(cap)}</b> (${kh(pctOf(S.cls))}% នៃ ${fmt(totalOf(S.cls))})។ «គិតយក» មិនលើសកម្រិតនេះទេ។</p>
         <div class="acc-table-wrap sc-wrap"><table class="acc-table sc-table">
           <thead><tr><th class="sc-n">ល.រ</th><th class="sc-nm">ឈ្មោះ</th>${S.months.map((m) => `<th>${esc(m.label || monthLabel(m.id))}<small>/${fmt(colMaxSum(m.cols || []))}</small></th>`).join('')}<th class="sc-tot">សរុប</th><th class="sc-tot">គិតយក</th></tr></thead>
@@ -534,6 +647,7 @@
         </table></div></div>`;
       host.querySelector('[data-a="back"]').addEventListener('click', () => { S.view = 'month'; paint(); });
       host.querySelector('[data-a="csv"]').addEventListener('click', exportCsv);
+      host.querySelector('[data-a="print"]').addEventListener('click', printSheet);
     }
 
     /* ---------- CSV (opens in Excel, Khmer-safe with BOM) ---------- */
@@ -548,7 +662,7 @@
       } else {
         const cs = cols();
         lines.push(['ល.រ', 'ឈ្មោះ'].concat(cs.map((c, i) => `${colName(c, i)} (/${c.max})`), ['សរុប']).map(q).join(','));
-        S.rows.forEach((r, i) => lines.push([i + 1, r.name].concat(cs.map((c) => r.s && r.s[c.id] != null ? r.s[c.id] : ''), [rowTotal(r, cs)]).map(q).join(',')));
+        viewRows().forEach((r, i) => lines.push([i + 1, r.name].concat(cs.map((c) => r.s && r.s[c.id] != null ? r.s[c.id] : ''), [rowTotal(r, cs)]).map(q).join(',')));
         name = `${S.cls.name}_${S.mid}`;
       }
       const blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' });

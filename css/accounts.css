@@ -443,3 +443,13 @@ body:not(.light-theme) .member-cloud-note.ok { color: #4ade80; }
 }
 .sc-search:focus { outline: none; border-color: var(--a-blue); }
 .sc-lead { margin-left: 4px; }
+
+/* sortable headers + per-column tools */
+.sc-sort { cursor: pointer; user-select: none; }
+.sc-sort:hover { color: var(--a-blue); }
+.sc-h-tools { display: flex; justify-content: center; gap: 4px; margin-top: 5px; }
+.sc-h-tools button {
+  border: none; border-radius: 8px; padding: 3px 8px; background: var(--a-surface); color: var(--a-text-2);
+  font-family: inherit; font-size: calc(0.74 * var(--a-fs)); font-weight: 700; border: 1px solid var(--a-line);
+}
+.sc-h-tools button:hover { color: var(--a-blue); border-color: var(--a-blue); }
