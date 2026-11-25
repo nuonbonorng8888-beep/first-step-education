@@ -572,3 +572,10 @@ body.ex-running { overscroll-behavior: none; }
 .sc-acts li span { color: var(--a-text-2); font-size: calc(0.86 * var(--a-fs)); }
 .sc-share { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
 .sc-share input { width: 18px; height: 18px; min-height: 0; }
+
+/* role column */
+.sc-table th.sc-role, .sc-table td.sc-role { min-width: 118px; width: 118px; white-space: nowrap; }
+.sc-role .sc-lead { opacity: 1; margin: 0; padding: 6px 10px; border-radius: 9px; border: 1px dashed var(--a-line); background: var(--a-surface-2); color: var(--a-text); font-family: inherit; font-size: calc(0.8 * var(--a-fs)); font-weight: 700; }
+.sc-role .sc-lead:hover { border-color: var(--a-blue); color: var(--a-blue); }
+.sc-role .sc-lead.on { border-style: solid; border-color: #f5b301; background: rgba(245, 179, 1, 0.22); color: var(--a-text); }
+.sc-tip { margin: 0; padding: 8px 12px; border-radius: 10px; background: rgba(47, 111, 237, 0.10); color: var(--a-text); font-size: calc(0.86 * var(--a-fs)); }

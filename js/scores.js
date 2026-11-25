@@ -166,7 +166,7 @@
       const stat = (vals) => (vals.length ? `${fmt(vals.reduce((a, v) => a + v, 0) / vals.length)}<small>${kh(vals.length)}/${kh(S.rows.length)}</small>` : '—');
       const cells = cs.map((c) => `<td>${stat(S.rows.map((r) => (r.s && r.s[c.id] != null ? Number(r.s[c.id]) : null)).filter((v) => v !== null))}</td>`).join('');
       const tot = S.rows.map((r) => rowTotal(r, cs));
-      return `<tr class="sc-foot"><td class="sc-n"></td><td class="sc-nm">មធ្យមភាគ <small>(ដាក់រួច/សរុប)</small></td>${cells}<td class="sc-tot">${fmt(tot.reduce((a, v) => a + v, 0) / tot.length)}</td>${S.mode === 'teacher' ? '<td class="sc-addcol"></td>' : ''}</tr>`;
+      return `<tr class="sc-foot"><td class="sc-n"></td><td class="sc-nm">មធ្យមភាគ <small>(ដាក់រួច/សរុប)</small></td>${S.mode === 'teacher' ? '<td class="sc-role"></td>' : ''}${cells}<td class="sc-tot">${fmt(tot.reduce((a, v) => a + v, 0) / tot.length)}</td>${S.mode === 'teacher' ? '<td class="sc-addcol"></td>' : ''}</tr>`;
     }
 
     /* rows in the order shown on screen (original order = seq; sorting is only a view) */
@@ -243,8 +243,8 @@
           const v = r.s && r.s[c.id] != null ? r.s[c.id] : '';
           return `<td class="sc-cell"><input type="number" inputmode="decimal" step="0.25" min="0" max="${c.max}" value="${v}" data-uid="${esc(r.uid)}" data-col="${esc(c.id)}" ${ed ? '' : 'disabled'}></td>`;
         }).join('');
-        const lead = S.mode === 'teacher' ? `<button class="sc-lead ${leaderIds.has(r.uid) ? 'on' : ''}" data-lead="${esc(r.uid)}" title="កំណត់ពាក្យសម្ងាត់កែពិន្ទុ (ប្រធាន/អនុប្រធាន)">🔑</button>` : '';
-        return `<tr data-row="${esc(r.uid)}"><td class="sc-n">${kh(i + 1)}</td><td class="sc-nm">${esc(r.name)} ${lead}</td>${cells}<td class="sc-tot" data-tot="${esc(r.uid)}">${fmt(rowTotal(r, cs))}</td>${S.mode === 'teacher' ? '<td class="sc-addcol"></td>' : ''}</tr>`;
+        const lead = S.mode === 'teacher' ? `<button class="sc-lead ${leaderIds.has(r.uid) ? 'on' : ''}" data-lead="${esc(r.uid)}" title="ផ្តល់សិទ្ធិកែពិន្ទុដល់ប្រធាន/អនុប្រធាន ដោយកំណត់ពាក្យសម្ងាត់កែពិន្ទុ">${leaderIds.has(r.uid) ? '👑 មានសិទ្ធិកែ' : '🔑 ផ្តល់សិទ្ធិ'}</button>` : '';
+        return `<tr data-row="${esc(r.uid)}"><td class="sc-n">${kh(i + 1)}</td><td class="sc-nm">${esc(r.name)}</td>${S.mode === 'teacher' ? `<td class="sc-role">${lead}</td>` : ''}${cells}<td class="sc-tot" data-tot="${esc(r.uid)}">${fmt(rowTotal(r, cs))}</td>${S.mode === 'teacher' ? '<td class="sc-addcol"></td>' : ''}</tr>`;
       }).join('');
 
       host.innerHTML = `
@@ -272,12 +272,13 @@
             <button class="acc-btn ghost sm" data-a="cfg">រក្សាទុក</button>
           </div>` : ''}
           ${m ? hintHtml() : ''}
+          ${S.mode === 'teacher' && m ? '<p class="sc-tip">💡 ផ្តល់សិទ្ធិឱ្យប្រធាន/អនុប្រធាន ៖ ចុចប៊ូតុង <b>🔑 ផ្តល់សិទ្ធិ</b> ក្នុងជួរ «សិទ្ធិកែពិន្ទុ» ក្បែរឈ្មោះគាត់ រួចកំណត់ពាក្យសម្ងាត់កែពិន្ទុ។</p>' : ''}
           ${S.mode === 'teacher' && namesLookBroken() ? '<div class="sc-warn"><span>⚠️ ឈ្មោះសិស្សជាលេខ (១, ២, ៣…) មិនមែនឈ្មោះពិតទេ</span><button class="acc-btn sm" data-a="rename2">✏️ កែឈ្មោះឥឡូវ</button></div>' : ''}
           ${m ? (cs.length ? `
           <div class="acc-table-wrap sc-wrap">
             <table class="acc-table sc-table">
-              <thead><tr><th class="sc-n sc-sort" data-sort="seq" title="តាមលំដាប់ដើម">ល.រ${S.sort.key === 'seq' ? '' : ' ↺'}</th><th class="sc-nm sc-sort" data-sort="name" title="តម្រៀបតាមឈ្មោះ">ឈ្មោះ${mark('name')}</th>${head}<th class="sc-tot sc-sort" data-sort="total" title="តម្រៀបតាមពិន្ទុសរុប">សរុប${mark('total')}</th>${S.mode === 'teacher' ? '<th class="sc-addcol"><button class="sc-plus" data-a="add-col2" title="បន្ថែមជួរសកម្មភាព">＋</button></th>' : ''}</tr></thead>
-              <tbody>${body || `<tr><td colspan="${cs.length + 4}" class="acc-muted">មិនទាន់មានសិស្ស</td></tr>`}</tbody>
+              <thead><tr><th class="sc-n sc-sort" data-sort="seq" title="តាមលំដាប់ដើម">ល.រ${S.sort.key === 'seq' ? '' : ' ↺'}</th><th class="sc-nm sc-sort" data-sort="name" title="តម្រៀបតាមឈ្មោះ">ឈ្មោះ${mark('name')}</th>${S.mode === 'teacher' ? '<th class="sc-role" title="ប្រធាន/អនុប្រធានថ្នាក់ដែលអាចដាក់ពិន្ទុជំនួសគ្រូ">សិទ្ធិកែពិន្ទុ</th>' : ''}${head}<th class="sc-tot sc-sort" data-sort="total" title="តម្រៀបតាមពិន្ទុសរុប">សរុប${mark('total')}</th>${S.mode === 'teacher' ? '<th class="sc-addcol"><button class="sc-plus" data-a="add-col2" title="បន្ថែមជួរសកម្មភាព">＋</button></th>' : ''}</tr></thead>
+              <tbody>${body || `<tr><td colspan="${cs.length + 5}" class="acc-muted">មិនទាន់មានសិស្ស</td></tr>`}</tbody>
               <tfoot>${footHtml()}</tfoot>
             </table>
           </div>` : `<div class="acc-center small"><p class="acc-muted">${S.mode === 'teacher' ? 'ចុច «➕ ជួរសកម្មភាព» ដើម្បីបន្ថែមជួរ' : 'លោកគ្រូមិនទាន់បន្ថែមសកម្មភាពក្នុងខែនេះទេ'}</p></div>`)
