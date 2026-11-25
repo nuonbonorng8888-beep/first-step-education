@@ -19,7 +19,7 @@
   const DOMAIN = window.WS_ID_DOMAIN || {};
   const PROFILE_CACHE = 'ws_cloud_profile';
 
-  let app = null, auth = null, db = null, secondary = null;
+  let app = null, auth = null, db = null, secondary = null, editorDb = null;
   let profile = null;
   let readyPromise = null;
   const listeners = [];
@@ -59,7 +59,8 @@
     saveRosterTeacher,
     deleteRosterTeacher,
     hashPin,
-    normalizeId
+    normalizeId,
+    scoresApi: () => scoresApi
   };
 
   function loadScript(src) {
@@ -154,6 +155,8 @@
       classId: d.classId || '',
       className: d.className || '',
       grade: d.grade || '',
+      editorOn: d.editorOn === true,
+      editorVer: d.editorVer || 0,
       active: d.active !== false
     };
   }
@@ -199,6 +202,7 @@
       catch (e) { await auth.signOut(); throw e; }
       if (!p) { await auth.signOut(); throw new Error('គណនីនេះមិនទាន់មានព័ត៌មានក្នុងប្រព័ន្ធ'); }
       if (p.active === false) { await auth.signOut(); throw new Error('គណនីនេះត្រូវបានផ្អាក។ សូមទាក់ទងលោកគ្រូ'); }
+      if (p.role === 'scoreeditor') { await auth.signOut(); throw new Error('ID ឬលេខសម្ងាត់មិនត្រឹមត្រូវ'); }
       profile = p;
       cacheProfile(p);
       emit();
@@ -209,6 +213,8 @@
   }
 
   async function signOut() {
+    editorDb = null;
+    try { if (secondary) await secondary.auth().signOut(); } catch (e) {}
     cacheProfile(null);
     profile = null;
     if (auth) await auth.signOut();
@@ -713,6 +719,169 @@
     });
     return by;
   }
+
+  /* ---------- activity scores (ពិន្ទុសកម្មភាព) ----------
+     classes/{cid}                      scoreTotal, scorePct, scoreKeep (months kept)
+     classes/{cid}/months/{mid}         { label, cols:[{id,label,max,day}], locked, expireAt }
+     classes/{cid}/months/{mid}/rows/{uid}  { uid, name, seq, s:{colId:number}, byName, at, expireAt }
+     classes/{cid}/months/{mid}/log/{id}    audit trail (teacher/admin read only)
+     The total is always computed from cells, never stored.
+
+     Class leaders edit through a SEPARATE login ("editor account", role
+     'scoreeditor') whose password only the teacher sets. It lives on the
+     secondary Firebase app, so the student stays signed in as themself and
+     the editor session ends when the page is closed. */
+  const dbx = () => (editorDb && profile && profile.role === 'student' ? editorDb : db);
+  const mref = (cid, mid) => dbx().collection('classes').doc(cid).collection('months').doc(mid);
+  const editorEmail = (p) => `ed${normalizeId(p.loginId)}v${p.editorVer || 1}@${DOMAIN.teacher}`;
+
+  const scoresApi = {
+    /* ----- editor session (student/leader side) ----- */
+    editorActive: () => !!editorDb,
+    async editorSignIn(password) {
+      await ready();
+      if (!profile || profile.role !== 'student' || !profile.editorOn) throw new Error('គណនីនេះមិនទាន់មានសិទ្ធិកែពិន្ទុទេ');
+      const a = secondaryAuth();
+      let cred;
+      try { cred = await a.signInWithEmailAndPassword(editorEmail(profile), String(password || '')); }
+      catch (e) {
+        const c = String((e && e.code) || '');
+        if (/invalid|wrong|not-found|credential/.test(c)) throw new Error('ពាក្យសម្ងាត់កែពិន្ទុមិនត្រឹមត្រូវ');
+        throw new Error(friendlyError(e));
+      }
+      const edb = secondary.firestore();
+      let d;
+      try { d = await edb.collection('users').doc(cred.user.uid).get(); }
+      catch (e) { await a.signOut(); throw new Error(friendlyError(e)); }
+      const x = d.exists ? d.data() : null;
+      if (!x || x.role !== 'scoreeditor' || x.active === false || x.studentUid !== profile.uid || x.editClassId !== profile.classId) {
+        await a.signOut();
+        throw new Error('ពាក្យសម្ងាត់កែពិន្ទុនេះលែងប្រើបានហើយ។ សូមសួរលោកគ្រូ');
+      }
+      editorDb = edb;
+    },
+    async editorSignOut() {
+      editorDb = null;
+      try { if (secondary) await secondary.auth().signOut(); } catch (e) {}
+    },
+
+    /* ----- teacher: set / replace / remove the leader's edit password ----- */
+    async setEditorPassword(st, password) {
+      await ready();
+      if (!Cloud.isTeacher()) throw new Error('សម្រាប់គ្រូប៉ុណ្ណោះ');
+      if (String(password || '').length < 6) throw new Error('ពាក្យសម្ងាត់ត្រូវមានយ៉ាងតិច ៦ តួ');
+      const ver = (st.editorVer || 0) + 1;
+      let euid;
+      try { euid = await createAuthUser(editorEmail({ loginId: st.loginId, editorVer: ver }), password); }
+      catch (e) { throw new Error(friendlyError(e)); }
+      await db.collection('users').doc(euid).set({
+        role: 'scoreeditor', name: st.name, studentUid: st.uid, editClassId: st.classId,
+        teacherUid: st.teacherUid || profile.uid, active: true, createdAt: ts()
+      });
+      const prev = st.editorUid;
+      await db.collection('users').doc(st.uid).update({ editorOn: true, editorVer: ver, editorUid: euid });
+      if (prev) { try { await db.collection('users').doc(prev).update({ active: false }); } catch (e) {} }
+      return { editorOn: true, editorVer: ver, editorUid: euid };
+    },
+    async removeEditor(st) {
+      await ready();
+      if (st.editorUid) { try { await db.collection('users').doc(st.editorUid).update({ active: false }); } catch (e) {} }
+      await db.collection('users').doc(st.uid).update({ editorOn: false });
+    },
+
+    /* ----- months / rows ----- */
+    async listMonths(cid) {
+      await ready();
+      const snap = await dbx().collection('classes').doc(cid).collection('months').get();
+      return snap.docs.map((d) => Object.assign({ id: d.id }, d.data())).sort((a, b) => String(a.id).localeCompare(String(b.id)));
+    },
+    async saveMonth(cid, mid, data) {
+      await ready();
+      await mref(cid, mid).set(data, { merge: true });
+    },
+    async deleteMonth(cid, mid) {
+      await ready();
+      for (const sub of ['rows', 'log']) {
+        const snap = await mref(cid, mid).collection(sub).get();
+        for (let i = 0; i < snap.docs.length; i += 400) {
+          const b = db.batch();
+          snap.docs.slice(i, i + 400).forEach((d) => b.delete(d.ref));
+          await b.commit();
+        }
+      }
+      await mref(cid, mid).delete();
+    },
+    async setClassScoreConfig(cid, total, pct, keep) {
+      await ready();
+      await db.collection('classes').doc(cid).update({ scoreTotal: Number(total), scorePct: Number(pct), scoreKeep: Number(keep) });
+    },
+    /* re-stamp expireAt on every month and row when the retention changes */
+    async restampExpiry(cid, months, expiryFn) {
+      await ready();
+      for (const m of months) {
+        const exp = expiryFn(m.id);
+        await mref(cid, m.id).set({ expireAt: exp }, { merge: true });
+        const rows = await mref(cid, m.id).collection('rows').get();
+        for (let i = 0; i < rows.docs.length; i += 400) {
+          const b = db.batch();
+          rows.docs.slice(i, i + 400).forEach((d) => b.update(d.ref, { expireAt: exp }));
+          await b.commit();
+        }
+      }
+    },
+    async listRows(cid, mid) {
+      await ready();
+      const snap = await mref(cid, mid).collection('rows').get();
+      return snap.docs.map((d) => Object.assign({ uid: d.id }, d.data()))
+        .sort((a, b) => (a.seq || 0) - (b.seq || 0) || String(a.name).localeCompare(String(b.name), 'km'));
+    },
+    async myRow(cid, mid) {
+      await ready();
+      const d = await db.collection('classes').doc(cid).collection('months').doc(mid).collection('rows').doc(profile.uid).get();
+      return d.exists ? Object.assign({ uid: d.id }, d.data()) : null;
+    },
+    /* create blank rows for these students (teacher/admin only) */
+    async createRows(cid, mid, students, expireAt) {
+      await ready();
+      const out = [];
+      for (let i = 0; i < students.length; i += 400) {
+        const b = db.batch();
+        students.slice(i, i + 400).forEach((s) => {
+          const row = { uid: s.uid, name: s.name, seq: s.seq || 0, s: {} };
+          b.set(mref(cid, mid).collection('rows').doc(s.uid), expireAt ? Object.assign({ expireAt }, row) : row);
+          out.push(row);
+        });
+        await b.commit();
+      }
+      return out;
+    },
+    /* one cell; value null clears it. Uses a field path so two editors never overwrite each other. */
+    async setCell(cid, mid, uid, colId, value, oldValue, colLabel, rowName, expireAt) {
+      await ready();
+      const FV = firebase.firestore.FieldValue;
+      const who = profile.name + (editorDb ? ' (ប្រធានថ្នាក់)' : '');
+      const upd = { byName: who, at: ts() };
+      upd['s.' + colId] = value == null ? FV.delete() : Number(value);
+      await mref(cid, mid).collection('rows').doc(uid).update(upd);
+      const log = {
+        by: profile.uid, byName: who, row: uid, rowName: rowName || '', col: colId, colLabel: colLabel || '',
+        from: oldValue == null ? null : Number(oldValue), to: value == null ? null : Number(value), at: ts()
+      };
+      if (expireAt) log.expireAt = expireAt;
+      mref(cid, mid).collection('log').add(log).catch(() => {});
+    },
+    async listLog(cid, mid, limit) {
+      await ready();
+      const snap = await mref(cid, mid).collection('log').orderBy('at', 'desc').limit(limit || 100).get();
+      return snap.docs.map((d) => Object.assign({ id: d.id }, d.data(), { at: toMillis(d.data().at) }));
+    },
+    /* student: the class settings */
+    async myClass() {
+      await ready();
+      const d = await db.collection('classes').doc(profile.classId).get();
+      return d.exists ? Object.assign({ id: d.id }, d.data()) : null;
+    }
+  };
 
   window.Cloud = Cloud;
 })();

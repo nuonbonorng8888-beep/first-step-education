@@ -382,6 +382,7 @@
         <div class="acc-tabs">
           <button class="acc-tab ${A.tab === 'students' ? 'active' : ''}" data-tab="students">👩‍🎓 សិស្ស</button>
           <button class="acc-tab ${A.tab === 'results' ? 'active' : ''}" data-tab="results">🧮 លទ្ធផលប្រអប់គណនា</button>
+          <button class="acc-tab ${A.tab === 'scores' ? 'active' : ''}" data-tab="scores">📊 ពិន្ទុសកម្មភាព</button>
         </div>
       </div>
       <div class="acc-pane"></div>`;
@@ -399,6 +400,7 @@
 
   function paintPane() {
     if (A.tab === 'results') paintResults();
+    else if (A.tab === 'scores' && window.Scores) Scores.mountTeacher(A.root.querySelector('.acc-pane'), A.cls, A.students);
     else paintStudents();
   }
 

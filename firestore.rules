@@ -24,14 +24,17 @@ service cloud.firestore {
       // Admin creates teachers; teachers create students in their own classes
       allow create: if isAdmin() || (
         isTeacher() &&
-        request.resource.data.role == 'student' &&
-        request.resource.data.teacherUid == request.auth.uid
+        request.resource.data.role in ['student', 'scoreeditor'] &&
+        request.resource.data.teacherUid == request.auth.uid &&
+        (request.resource.data.role == 'student' ||
+          get(/databases/$(database)/documents/classes/$(request.resource.data.editClassId)).data.teacherUid == request.auth.uid)
       );
 
       allow update: if isAdmin() || (
         isTeacher() &&
         resource.data.teacherUid == request.auth.uid &&
-        request.resource.data.role == 'student' &&
+        request.resource.data.role == resource.data.role &&
+        request.resource.data.role in ['student', 'scoreeditor'] &&
         request.resource.data.teacherUid == request.auth.uid
       );
 
@@ -105,6 +108,42 @@ service cloud.firestore {
 
       allow create: if isTeacher() && request.resource.data.teacherUid == request.auth.uid;
       allow update, delete: if isAdmin() || (isTeacher() && resource.data.teacherUid == request.auth.uid);
+
+      // ---------- activity scores (ពិន្ទុសកម្មភាព) ----------
+      // Teacher/admin: full control. Class leader: edits only after signing in with
+      // the separate edit password (an account with role 'scoreeditor' that the
+      // teacher created); allowed while the month is not locked.
+      // Other students: read only their own row.
+      function classTeacher(cid) {
+        return isAdmin() || (isTeacher() &&
+          get(/databases/$(database)/documents/classes/$(cid)).data.teacherUid == request.auth.uid);
+      }
+      function classMember(cid) { return isActiveStudent() && me().classId == cid; }
+      function classEditor(cid) {
+        return hasProfile() && me().role == 'scoreeditor' && me().active == true && me().editClassId == cid;
+      }
+
+      match /months/{mid} {
+        allow read: if classTeacher(cid) || classMember(cid) || classEditor(cid);
+        allow create, update, delete: if classTeacher(cid);
+
+        match /rows/{rid} {
+          allow read: if classTeacher(cid) || classEditor(cid) ||
+            (classMember(cid) && request.auth.uid == rid);
+          allow create, delete: if classTeacher(cid);
+          allow update: if classTeacher(cid) || (
+            classEditor(cid) &&
+            get(/databases/$(database)/documents/classes/$(cid)/months/$(mid)).data.locked != true &&
+            request.resource.data.diff(resource.data).affectedKeys().hasOnly(['s', 'byName', 'at'])
+          );
+        }
+
+        // audit trail: teacher/leader may add entries, only teacher/admin may read
+        match /log/{lid} {
+          allow read: if classTeacher(cid);
+          allow create: if classTeacher(cid) || classEditor(cid);
+        }
+      }
 
       // Class copy of results, read by the class teacher
       match /results/{rid} {

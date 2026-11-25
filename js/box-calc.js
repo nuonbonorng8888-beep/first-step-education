@@ -308,6 +308,7 @@
       <header class="bx-top">
         <img src="assets/mascot.jpg" alt="" class="bx-brand-img">
         <div class="bx-top-title"><b>🧮 ប្រអប់គណនា</b><small>👋 ${escapeAttr(student.name)} · ថ្នាក់ ${escapeAttr(student.className || '')}</small></div>
+        <button class="bx-logout" data-act="scores" title="ពិន្ទុសកម្មភាព">📊 ពិន្ទុ</button>
         <button class="bx-logout" data-act="logout" title="ចាកចេញពីគណនី">ចាកចេញ</button>
       </header>`;
     }
@@ -320,6 +321,8 @@
   function bindHeader() {
     const closeBtn = $('[data-act="close"]');
     if (closeBtn) closeBtn.addEventListener('click', close);
+    const scoresBtn = $('[data-act="scores"]');
+    if (scoresBtn) scoresBtn.addEventListener('click', () => { if (window.Scores) Scores.openStudent(); });
     const logoutBtn = $('[data-act="logout"]');
     if (logoutBtn) logoutBtn.addEventListener('click', () => {
       if (confirm('តើប្អូនចង់ចាកចេញពីគណនីមែនទេ?') && onLogout) onLogout();

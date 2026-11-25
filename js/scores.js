@@ -1,0 +1,571 @@
+/* ==========================================================================
+   Scores — ពិន្ទុសកម្មភាព (activity scores)
+   - Teacher/admin: full sheet per month (add/edit/delete activity columns,
+     enter scores, lock a month, choose class leaders, export, audit log).
+   - Class leader: after typing a SEPARATE edit password (set by the teacher, not
+     printed on the ID slip) may enter scores in own class; session ends on close.
+   - Other students: see only their own scores.
+   Data lives in Firestore (see Cloud.scoresApi and firestore.rules).
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  const KH = '០១២៣៤៥៦៧៨៩';
+  const kh = (v) => String(v).replace(/[0-9]/g, (d) => KH[d]);
+  const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const MONTHS = ['មករា', 'កុម្ភៈ', 'មីនា', 'មេសា', 'ឧសភា', 'មិថុនា', 'កក្កដា', 'សីហា', 'កញ្ញា', 'តុលា', 'វិច្ឆិកា', 'ធ្នូ'];
+  const r2 = (v) => Math.round(v * 100) / 100;
+  const fmt = (v) => kh(r2(v));
+  const monthLabel = (id) => { const p = String(id).split('-'); return `ខែ${MONTHS[+p[1] - 1] || p[1]} ${kh(p[0])}`; };
+  const toast = (m, t) => { if (window.App && App.showToast) App.showToast(m, t || 'info'); else alert(m); };
+  const api = () => Cloud.scoresApi();
+
+  /* total score of a class: G7-9 = 100, G10 = 150, G11-12 = 125; activity share defaults to 60% */
+  const defaultTotal = (grade) => { const g = parseInt(grade, 10) || 0; return g === 10 ? 150 : (g >= 11 ? 125 : 100); };
+  const totalOf = (cls) => Number(cls.scoreTotal) > 0 ? Number(cls.scoreTotal) : defaultTotal(cls.grade);
+  const pctOf = (cls) => Number(cls.scorePct) > 0 ? Number(cls.scorePct) : 60;
+  const capOf = (cls) => r2(totalOf(cls) * pctOf(cls) / 100);
+  const rowTotal = (row, cols) => r2(cols.reduce((a, c) => a + (Number(row && row.s && row.s[c.id]) || 0), 0));
+  const colMaxSum = (cols) => r2(cols.reduce((a, c) => a + (Number(c.max) || 0), 0));
+  const keepOf = (cls) => (cls.scoreKeep === 0 ? 0 : (Number(cls.scoreKeep) > 0 ? Number(cls.scoreKeep) : 14));
+  /* Firestore TTL deletes documents once expireAt has passed: end of the month + keep months */
+  const expiryFor = (cls, mid) => {
+    const keep = keepOf(cls);
+    if (!keep) return null;
+    const p = String(mid).split('-');
+    return new Date(+p[0], +p[1] - 1 + 1 + keep, 1);
+  };
+  const newColId = () => 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+
+  /* ----- a sheet (one class) rendered into a host element ----- */
+  function Sheet(host, init) {
+    const S = {
+      cls: init.cls,
+      mode: init.mode, // 'teacher' | 'leader' | 'member'
+      students: init.students || [],
+      months: [],
+      mid: '',
+      rows: [],
+      view: 'month', // 'month' | 'summary'
+      summary: null,
+      onModal: init.modal,
+      onActivity: init.onActivity
+    };
+    const canEdit = () => S.mode === 'teacher' || S.mode === 'leader';
+    const month = () => S.months.find((m) => m.id === S.mid) || null;
+    const cols = () => (month() && month().cols) || [];
+    const locked = () => !!(month() && month().locked);
+    const editableNow = () => S.mode === 'teacher' || (S.mode === 'leader' && !locked());
+
+    function modal(html) {
+      const m = document.createElement('div');
+      m.className = 'acc-modal';
+      m.innerHTML = `<div class="acc-modal-card">${html}</div>`;
+      (S.onModal ? S.onModal() : host.closest('.acc') || document.body).appendChild(m);
+      m.addEventListener('click', (e) => { if (e.target === m && !m.dataset.busy) m.remove(); });
+      return m;
+    }
+
+    /* ---------- loading ---------- */
+    async function load(keepMid) {
+      host.innerHTML = '<div class="acc-center small"><div class="acc-spin"></div></div>';
+      try {
+        S.months = await api().listMonths(S.cls.id);
+        const now = new Date();
+        const cur = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+        if (!(keepMid && S.months.some((m) => m.id === keepMid))) {
+          S.mid = S.months.some((m) => m.id === cur) ? cur : (S.months.length ? S.months[S.months.length - 1].id : '');
+        } else S.mid = keepMid;
+        await loadRows();
+        paint();
+      } catch (e) {
+        host.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code || e)}</p>`;
+      }
+    }
+
+    async function loadRows() {
+      S.rows = [];
+      if (!S.mid) return;
+      if (S.mode === 'member') {
+        const r = await api().myRow(S.cls.id, S.mid);
+        S.rows = r ? [r] : [];
+        return;
+      }
+      S.rows = await api().listRows(S.cls.id, S.mid);
+      if (S.mode === 'teacher') {
+        const have = new Set(S.rows.map((r) => r.uid));
+        const missing = S.students.filter((s) => !have.has(s.uid) && s.active !== false);
+        if (missing.length) {
+          S.rows = S.rows.concat(await api().createRows(S.cls.id, S.mid, missing, expiryFor(S.cls, S.mid)));
+          S.rows.sort((a, b) => (a.seq || 0) - (b.seq || 0));
+        }
+      }
+    }
+
+    /* ---------- painting ---------- */
+    function paint() {
+      if (S.view === 'summary') return paintSummary();
+      if (S.mode === 'member') return paintMember();
+      const m = month();
+      const cs = cols();
+      const cap = capOf(S.cls);
+      const maxSum = colMaxSum(cs);
+      const allMax = r2(S.months.reduce((a, x) => a + colMaxSum(x.cols || []), 0));
+      const over = allMax > cap;
+      const leaderIds = new Set(S.students.filter((s) => s.editorOn === true).map((s) => s.uid));
+      const opts = S.months.map((x) => `<option value="${esc(x.id)}" ${x.id === S.mid ? 'selected' : ''}>${esc(x.label || monthLabel(x.id))}</option>`).join('');
+      const ed = editableNow();
+
+      const head = cs.map((c) => `
+        <th class="sc-col">
+          <div class="sc-col-name">${esc(c.label)}</div>
+          <small>${c.day ? esc(c.day) + ' · ' : ''}/${fmt(c.max)}</small>
+          ${S.mode === 'teacher' ? `<div class="sc-col-act"><button data-ec="${esc(c.id)}" title="កែ">✏️</button><button data-dc="${esc(c.id)}" title="លុប">✕</button></div>` : ''}
+        </th>`).join('');
+
+      const body = S.rows.map((r, i) => {
+        const cells = cs.map((c) => {
+          const v = r.s && r.s[c.id] != null ? r.s[c.id] : '';
+          return `<td class="sc-cell"><input type="number" inputmode="decimal" step="0.25" min="0" max="${c.max}" value="${v}" data-uid="${esc(r.uid)}" data-col="${esc(c.id)}" ${ed ? '' : 'disabled'}></td>`;
+        }).join('');
+        const lead = S.mode === 'teacher' ? `<button class="sc-lead ${leaderIds.has(r.uid) ? 'on' : ''}" data-lead="${esc(r.uid)}" title="កំណត់ពាក្យសម្ងាត់កែពិន្ទុ (ប្រធាន/អនុប្រធាន)">🔑</button>` : '';
+        return `<tr data-row="${esc(r.uid)}"><td class="sc-n">${kh(i + 1)}</td><td class="sc-nm">${esc(r.name)} ${lead}</td>${cells}<td class="sc-tot" data-tot="${esc(r.uid)}">${fmt(rowTotal(r, cs))}</td></tr>`;
+      }).join('');
+
+      host.innerHTML = `
+        <div class="sc">
+          <div class="sc-bar">
+            <select class="sc-month" ${S.months.length ? '' : 'disabled'}>${opts || '<option>មិនទាន់មានខែ</option>'}</select>
+            ${S.mode === 'teacher' ? '<button class="acc-btn sm" data-a="new-month">➕ ខែថ្មី</button>' : ''}
+            ${S.mode === 'teacher' && m ? `<button class="acc-btn sm" data-a="add-col">➕ សកម្មភាព</button>
+              <button class="acc-btn ghost sm" data-a="lock">${locked() ? '🔓 បើកខែ' : '🔒 បិទខែ'}</button>` : ''}
+            ${m ? '<button class="acc-btn ghost sm" data-a="csv">⬇️ Excel</button>' : ''}
+            ${S.months.length ? '<button class="acc-btn ghost sm" data-a="summary">∑ សរុបគ្រប់ខែ</button>' : ''}
+            ${S.mode === 'teacher' && m ? '<button class="acc-btn ghost sm" data-a="log">🕘 ប្រវត្តិកែ</button><button class="acc-btn ghost sm" data-a="del-month">🗑️</button>' : ''}
+          </div>
+          ${S.mode === 'teacher' ? `
+          <div class="sc-cfg">
+            <label>ពិន្ទុសរុបថ្នាក់ <input type="number" id="sc-total" min="1" value="${totalOf(S.cls)}"></label>
+            <label>ពិន្ទុសកម្មភាព <input type="number" id="sc-pct" min="1" max="100" value="${pctOf(S.cls)}">%</label>
+            <b>អតិបរមា ${fmt(cap)}</b>
+            <label title="បន្ទាប់ពីផុតរយៈពេលនេះ ទិន្នន័យនឹងត្រូវលុបដោយស្វ័យប្រវត្តិ (បើបានបើក TTL ក្នុង Firebase)។ ០ = មិនលុប">រក្សាទុក <input type="number" id="sc-keep" min="0" max="120" value="${keepOf(S.cls)}"> ខែក្រោយខែនោះ</label>
+            <button class="acc-btn ghost sm" data-a="cfg">រក្សាទុក</button>
+          </div>` : ''}
+          ${m ? `<p class="sc-hint ${over ? 'warn' : ''}">${locked() ? '🔒 ខែនេះត្រូវបានបិទ ' : ''}ខែនេះអតិបរមា <b>${fmt(maxSum)}</b> · គ្រប់ខែ <b>${fmt(allMax)}</b>${over ? ` — លើសកម្រិត ${fmt(cap)} (សិស្សម្នាក់បានតែ ${fmt(cap)} ជាអតិបរមា)` : ` · កម្រិតអតិបរមាសិស្សម្នាក់ ${fmt(cap)}`}</p>` : ''}
+          ${m ? (cs.length ? `
+          <div class="acc-table-wrap sc-wrap">
+            <table class="acc-table sc-table">
+              <thead><tr><th class="sc-n">ល.រ</th><th class="sc-nm">ឈ្មោះ</th>${head}<th class="sc-tot">សរុប</th></tr></thead>
+              <tbody>${body || `<tr><td colspan="${cs.length + 3}" class="acc-muted">មិនទាន់មានសិស្ស</td></tr>`}</tbody>
+            </table>
+          </div>` : `<div class="acc-center small"><p class="acc-muted">${S.mode === 'teacher' ? 'ចុច «➕ សកម្មភាព» ដើម្បីបន្ថែមជួរឈរទីមួយ (ឧ. ការចូលរៀន, លំហាត់, ...)' : 'លោកគ្រូមិនទាន់បន្ថែមសកម្មភាពក្នុងខែនេះទេ'}</p></div>`)
+          : `<div class="acc-center small"><p class="acc-muted">${S.mode === 'teacher' ? 'មិនទាន់មានខែណាមួយទេ។ ចុច «➕ ខែថ្មី» ដើម្បីចាប់ផ្តើម។' : 'មិនទាន់មានពិន្ទុ'}</p></div>`}
+        </div>`;
+      bind();
+    }
+
+    function bind() {
+      const q = (s) => host.querySelector(s);
+      const on = (sel, fn) => { const el = q(sel); if (el) el.addEventListener('click', fn); };
+      const sel = q('.sc-month');
+      if (sel) sel.addEventListener('change', async () => { S.mid = sel.value; host.innerHTML = '<div class="acc-center small"><div class="acc-spin"></div></div>'; try { await loadRows(); } catch (e) { toast(e.message, 'error'); } paint(); });
+      on('[data-a="new-month"]', newMonthDialog);
+      on('[data-a="add-col"]', () => colDialog(null));
+      on('[data-a="lock"]', toggleLock);
+      on('[data-a="csv"]', exportCsv);
+      on('[data-a="summary"]', openSummary);
+      on('[data-a="log"]', showLog);
+      on('[data-a="del-month"]', deleteMonth);
+      on('[data-a="cfg"]', saveCfg);
+      host.querySelectorAll('[data-ec]').forEach((b) => b.addEventListener('click', () => colDialog(cols().find((c) => c.id === b.dataset.ec))));
+      host.querySelectorAll('[data-dc]').forEach((b) => b.addEventListener('click', () => deleteCol(b.dataset.dc)));
+      host.querySelectorAll('[data-lead]').forEach((b) => b.addEventListener('click', () => editorDialog(b.dataset.lead)));
+      host.querySelectorAll('.sc-cell input').forEach((inp) => {
+        inp.addEventListener('change', () => onCell(inp));
+        inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); focusBelow(inp); } });
+        inp.addEventListener('focus', () => inp.select());
+      });
+    }
+
+    function focusBelow(inp) {
+      const tr = inp.closest('tr').nextElementSibling;
+      if (!tr) return;
+      const n = tr.querySelector(`input[data-col="${inp.dataset.col}"]`);
+      if (n) n.focus();
+    }
+
+    /* ---------- editing a cell ---------- */
+    async function onCell(inp) {
+      if (S.onActivity) S.onActivity();
+      const row = S.rows.find((r) => r.uid === inp.dataset.uid);
+      const col = cols().find((c) => c.id === inp.dataset.col);
+      if (!row || !col) return;
+      const old = row.s && row.s[col.id] != null ? row.s[col.id] : null;
+      const raw = inp.value.trim();
+      let val = raw === '' ? null : Number(raw);
+      if (val !== null && (!isFinite(val) || val < 0 || val > Number(col.max))) {
+        toast(`ពិន្ទុត្រូវនៅចន្លោះ ០ ដល់ ${fmt(col.max)}`, 'warning');
+        inp.value = old == null ? '' : old;
+        return;
+      }
+      if (val !== null) val = r2(val);
+      if (val === old) return;
+      inp.classList.add('saving');
+      try {
+        await api().setCell(S.cls.id, S.mid, row.uid, col.id, val, old, col.label, row.name, expiryFor(S.cls, S.mid));
+        row.s = row.s || {};
+        if (val === null) delete row.s[col.id]; else row.s[col.id] = val;
+        const t = host.querySelector(`[data-tot="${CSS.escape(row.uid)}"]`);
+        if (t) t.textContent = fmt(rowTotal(row, cols()));
+        inp.classList.remove('saving');
+        inp.classList.add('saved');
+        setTimeout(() => inp.classList.remove('saved'), 900);
+      } catch (e) {
+        inp.classList.remove('saving');
+        inp.value = old == null ? '' : old;
+        toast(e.code === 'permission-denied' ? 'គ្មានសិទ្ធិកែ (ខែអាចត្រូវបានបិទ)' : (e.message || 'រក្សាទុកមិនបាន'), 'error');
+      }
+    }
+
+    /* ---------- teacher actions ---------- */
+    function newMonthDialog() {
+      const now = new Date();
+      const cur = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+      const last = S.months.length ? S.months[S.months.length - 1] : null;
+      const m = modal(`
+        <h3>ខែថ្មី</h3>
+        <label class="acc-field"><span>ជ្រើសខែ</span><input type="month" id="sc-m" value="${cur}"></label>
+        ${last && (last.cols || []).length ? `<label class="sc-check"><input type="checkbox" id="sc-copy" checked> ចម្លងសកម្មភាពពី ${esc(last.label || monthLabel(last.id))} (កែបន្ថែម/ដកចេញបានក្រោយ)</label>` : ''}
+        <p class="acc-err"></p>
+        <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>បង្កើត</button></div>`);
+      m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+      m.querySelector('[data-ok]').addEventListener('click', async () => {
+        const id = m.querySelector('#sc-m').value;
+        const err = m.querySelector('.acc-err');
+        if (!/^\d{4}-\d{2}$/.test(id)) { err.textContent = 'សូមជ្រើសខែ'; return; }
+        if (S.months.some((x) => x.id === id)) { err.textContent = 'ខែនេះមានរួចហើយ'; return; }
+        const copy = m.querySelector('#sc-copy');
+        const data = { label: monthLabel(id), cols: copy && copy.checked ? (last.cols || []).map((c) => Object.assign({}, c)) : [], locked: false };
+        const exp = expiryFor(S.cls, id);
+        if (exp) data.expireAt = exp;
+        m.dataset.busy = '1';
+        m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+        try {
+          await api().saveMonth(S.cls.id, id, data);
+          m.remove();
+          await load(id);
+        } catch (e) { delete m.dataset.busy; err.textContent = e.message; m.querySelectorAll('button').forEach((b) => { b.disabled = false; }); }
+      });
+    }
+
+    function colDialog(col) {
+      const m = modal(`
+        <h3>${col ? 'កែសកម្មភាព' : 'បន្ថែមសកម្មភាព'}</h3>
+        <label class="acc-field"><span>ឈ្មោះសកម្មភាព</span><input id="sc-l" maxlength="40" value="${esc(col ? col.label : '')}" placeholder="ឧ. ការចូលរៀន, លំហាត់, សកម្មភាពក្រុម"></label>
+        <div class="acc-row2">
+          <label class="acc-field"><span>ពិន្ទុអតិបរមា</span><input id="sc-x" type="number" min="0.25" step="0.25" value="${col ? col.max : 5}"></label>
+          <label class="acc-field"><span>ថ្ងៃ/ផ្នែក (ស្រេចចិត្ត)</span><input id="sc-d" maxlength="20" value="${esc(col ? col.day || '' : '')}" placeholder="ឧ. ១៥/១១"></label>
+        </div>
+        <p class="acc-err"></p>
+        <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>រក្សាទុក</button></div>`);
+      m.querySelector('#sc-l').focus();
+      m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+      m.querySelector('[data-ok]').addEventListener('click', async () => {
+        const label = m.querySelector('#sc-l').value.trim();
+        const max = Number(m.querySelector('#sc-x').value);
+        const err = m.querySelector('.acc-err');
+        if (!label) { err.textContent = 'សូមបញ្ចូលឈ្មោះសកម្មភាព'; return; }
+        if (!(max > 0) || max > 1000) { err.textContent = 'ពិន្ទុអតិបរមាមិនត្រឹមត្រូវ'; return; }
+        const day = m.querySelector('#sc-d').value.trim();
+        const next = cols().map((c) => Object.assign({}, c));
+        if (col) { const t = next.find((c) => c.id === col.id); t.label = label; t.max = max; t.day = day; }
+        else next.push({ id: newColId(), label, max, day });
+        const others = S.months.filter((x) => x.id !== S.mid).reduce((a, x) => a + colMaxSum(x.cols || []), 0);
+        if (r2(others + colMaxSum(next)) > capOf(S.cls) && !confirm(`ពិន្ទុអតិបរមាសរុបគ្រប់ខែនឹងលើសកម្រិត ${fmt(capOf(S.cls))}។ សិស្សនឹងបានតែ ${fmt(capOf(S.cls))} ជាអតិបរមា។ បន្តទេ?`)) return;
+        m.dataset.busy = '1';
+        m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+        try {
+          await api().saveMonth(S.cls.id, S.mid, { cols: next });
+          month().cols = next;
+          m.remove();
+          paint();
+        } catch (e) { delete m.dataset.busy; err.textContent = e.message; m.querySelectorAll('button').forEach((b) => { b.disabled = false; }); }
+      });
+    }
+
+    async function deleteCol(id) {
+      const c = cols().find((x) => x.id === id);
+      if (!c || !confirm(`លុបសកម្មភាព «${c.label}»? ពិន្ទុដែលបានដាក់ក្នុងជួរនេះនឹងលែងរាប់។`)) return;
+      const next = cols().filter((x) => x.id !== id);
+      try { await api().saveMonth(S.cls.id, S.mid, { cols: next }); month().cols = next; paint(); }
+      catch (e) { toast(e.message, 'error'); }
+    }
+
+    async function toggleLock() {
+      const next = !locked();
+      if (next && !confirm('បិទខែនេះ? ប្រធាន/អនុប្រធានថ្នាក់នឹងមិនអាចកែពិន្ទុបានទៀតទេ។')) return;
+      try { await api().saveMonth(S.cls.id, S.mid, { locked: next }); month().locked = next; paint(); }
+      catch (e) { toast(e.message, 'error'); }
+    }
+
+    async function deleteMonth() {
+      const m = month();
+      if (!m || !confirm(`លុប «${m.label || monthLabel(m.id)}» ព្រមទាំងពិន្ទុទាំងអស់ក្នុងខែនេះ? មិនអាចយកមកវិញបានទេ។`)) return;
+      try { await api().deleteMonth(S.cls.id, S.mid); await load(); }
+      catch (e) { toast(e.message, 'error'); }
+    }
+
+    async function saveCfg() {
+      const t = Number(host.querySelector('#sc-total').value);
+      const p = Number(host.querySelector('#sc-pct').value);
+      const k = Math.round(Number(host.querySelector('#sc-keep').value));
+      if (!(t > 0) || !(p > 0 && p <= 100) || !(k >= 0 && k <= 120)) { toast('តម្លៃមិនត្រឹមត្រូវ', 'warning'); return; }
+      try {
+        await api().setClassScoreConfig(S.cls.id, t, p, k);
+        const keepChanged = k !== keepOf(S.cls);
+        S.cls.scoreTotal = t; S.cls.scorePct = p; S.cls.scoreKeep = k;
+        if (keepChanged && S.months.length) await api().restampExpiry(S.cls.id, S.months, (id) => expiryFor(S.cls, id));
+        toast('✅ បានរក្សាទុក', 'success');
+        paint();
+      } catch (e) { toast(e.message, 'error'); }
+    }
+
+    function editorDialog(uid) {
+      const st = S.students.find((x) => x.uid === uid);
+      if (!st) return;
+      const on = st.editorOn === true;
+      const m = modal(`
+        <h3>🔑 ពាក្យសម្ងាត់កែពិន្ទុ</h3>
+        <p class="acc-muted"><b>${esc(st.name)}</b> ${on ? '— មានសិទ្ធិកែពិន្ទុរួចហើយ' : '— មិនទាន់មានសិទ្ធិកែពិន្ទុ'}</p>
+        <p class="acc-muted">ពាក្យសម្ងាត់នេះ<b>ខុសពី ID/លេខសម្ងាត់ចូលប្រើ</b> មិនមានលើសន្លឹក ID ទេ។ ប្រធាន/អនុប្រធានវាយវារាល់ពេលចង់កែពិន្ទុ ហើយអាចកែបានតែក្នុងថ្នាក់នេះ។ សូមប្រាប់គាត់ដោយផ្ទាល់។</p>
+        <label class="acc-field"><span>${on ? 'ពាក្យសម្ងាត់ថ្មី (ជំនួសរបស់ចាស់)' : 'កំណត់ពាក្យសម្ងាត់ (យ៉ាងតិច ៦ តួ)'}</span><input id="sc-ep" type="text" autocomplete="off" maxlength="30"></label>
+        <p class="acc-err"></p>
+        <div class="acc-modal-actions">
+          <button class="acc-btn ghost" data-x>បិទ</button>
+          ${on ? '<button class="acc-btn ghost" data-rm>ដកសិទ្ធិ</button>' : ''}
+          <button class="acc-btn" data-ok>${on ? 'ប្តូរពាក្យសម្ងាត់' : 'បើកសិទ្ធិ'}</button>
+        </div>`);
+      const err = m.querySelector('.acc-err');
+      const busy = (v) => { if (v) m.dataset.busy = '1'; else delete m.dataset.busy; m.querySelectorAll('button').forEach((x) => { x.disabled = v; }); };
+      m.querySelector('#sc-ep').focus();
+      m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+      m.querySelector('[data-ok]').addEventListener('click', async () => {
+        const pw = m.querySelector('#sc-ep').value.trim();
+        if (pw.length < 6) { err.textContent = 'យ៉ាងតិច ៦ តួ'; return; }
+        busy(true);
+        try {
+          Object.assign(st, await api().setEditorPassword(st, pw));
+          m.remove();
+          toast(`✅ បានកំណត់ពាក្យសម្ងាត់កែពិន្ទុឱ្យ ${st.name}`, 'success');
+          paint();
+        } catch (e) { busy(false); err.textContent = e.message; }
+      });
+      const rm = m.querySelector('[data-rm]');
+      if (rm) rm.addEventListener('click', async () => {
+        if (!confirm(`ដកសិទ្ធិកែពិន្ទុរបស់ ${st.name}?`)) return;
+        busy(true);
+        try { await api().removeEditor(st); st.editorOn = false; m.remove(); paint(); }
+        catch (e) { busy(false); err.textContent = e.message; }
+      });
+    }
+
+    async function showLog() {
+      const m = modal('<h3>🕘 ប្រវត្តិកែពិន្ទុ</h3><div class="sc-log"><div class="acc-spin"></div></div><div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បិទ</button></div>');
+      m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+      try {
+        const list = await api().listLog(S.cls.id, S.mid, 100);
+        const d = (ms) => { if (!ms) return ''; const t = new Date(ms); return `${kh(t.getDate())}/${kh(t.getMonth() + 1)} ${kh(String(t.getHours()).padStart(2, '0'))}:${kh(String(t.getMinutes()).padStart(2, '0'))}`; };
+        m.querySelector('.sc-log').innerHTML = list.length ? `<table class="acc-table"><thead><tr><th>ពេល</th><th>អ្នកកែ</th><th>សិស្ស</th><th>សកម្មភាព</th><th>ពី → ទៅ</th></tr></thead><tbody>${list.map((x) => `<tr><td>${d(x.at)}</td><td>${esc(x.byName)}</td><td>${esc(x.rowName)}</td><td>${esc(x.colLabel)}</td><td>${x.from == null ? '—' : fmt(x.from)} → ${x.to == null ? '—' : fmt(x.to)}</td></tr>`).join('')}</tbody></table>` : '<p class="acc-muted">មិនទាន់មានការកែ</p>';
+      } catch (e) { m.querySelector('.sc-log').innerHTML = `<p class="acc-err">${esc(e.message)}</p>`; }
+    }
+
+    /* ---------- member (own scores) ---------- */
+    async function paintMember() {
+      host.innerHTML = '<div class="acc-center small"><div class="acc-spin"></div></div>';
+      try {
+        const rows = await Promise.all(S.months.map((m) => api().myRow(S.cls.id, m.id)));
+        const cap = capOf(S.cls);
+        let grand = 0;
+        const cards = S.months.map((m, i) => {
+          const r = rows[i];
+          const cs = m.cols || [];
+          const tot = rowTotal(r, cs);
+          grand += tot;
+          return `<section class="sc-card">
+            <h4>${esc(m.label || monthLabel(m.id))}</h4>
+            ${cs.length ? `<ul>${cs.map((c) => { const v = r && r.s ? r.s[c.id] : null; return `<li><span>${esc(c.label)}${c.day ? ` <small>${esc(c.day)}</small>` : ''}</span><b>${v == null ? '—' : fmt(v)} <small>/ ${fmt(c.max)}</small></b></li>`; }).join('')}</ul>` : '<p class="acc-muted">មិនទាន់មានសកម្មភាព</p>'}
+            <div class="sc-card-tot"><span>សរុបខែនេះ</span><b>${fmt(tot)} <small>/ ${fmt(colMaxSum(cs))}</small></b></div>
+          </section>`;
+        }).join('');
+        host.innerHTML = `<div class="sc sc-member">
+          <div class="sc-grand"><span>ពិន្ទុសកម្មភាពសរុប</span><b>${fmt(Math.min(grand, cap))}</b><small>អតិបរមា ${fmt(cap)} (${kh(pctOf(S.cls))}% នៃ ${fmt(totalOf(S.cls))})</small></div>
+          ${cards || '<div class="acc-center small"><p class="acc-muted">មិនទាន់មានពិន្ទុ</p></div>'}
+        </div>`;
+      } catch (e) { host.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code)}</p>`; }
+    }
+
+    /* ---------- summary over all months ---------- */
+    async function openSummary() {
+      S.view = 'summary';
+      host.innerHTML = '<div class="acc-center small"><div class="acc-spin"></div></div>';
+      try {
+        const per = [];
+        for (const m of S.months) per.push(S.mode === 'member' ? [await api().myRow(S.cls.id, m.id)].filter(Boolean) : await api().listRows(S.cls.id, m.id));
+        const by = new Map();
+        S.months.forEach((m, mi) => per[mi].forEach((r) => {
+          const e = by.get(r.uid) || { uid: r.uid, name: r.name, seq: r.seq || 0, t: {} };
+          e.t[m.id] = rowTotal(r, m.cols || []);
+          by.set(r.uid, e);
+        }));
+        S.summary = Array.from(by.values()).sort((a, b) => a.seq - b.seq || String(a.name).localeCompare(String(b.name), 'km'));
+        paintSummary();
+      } catch (e) { S.view = 'month'; host.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code)}</p>`; }
+    }
+
+    function summaryData() {
+      const cap = capOf(S.cls);
+      return S.summary.map((e) => {
+        const sum = r2(S.months.reduce((a, m) => a + (e.t[m.id] || 0), 0));
+        return { e, sum, used: Math.min(sum, cap) };
+      });
+    }
+
+    function paintSummary() {
+      const cap = capOf(S.cls);
+      const data = summaryData();
+      host.innerHTML = `<div class="sc">
+        <div class="sc-bar"><button class="acc-btn ghost sm" data-a="back">← ត្រឡប់</button><button class="acc-btn ghost sm" data-a="csv">⬇️ Excel</button></div>
+        <p class="sc-hint">ពិន្ទុសកម្មភាពអតិបរមា <b>${fmt(cap)}</b> (${kh(pctOf(S.cls))}% នៃ ${fmt(totalOf(S.cls))})។ «គិតយក» មិនលើសកម្រិតនេះទេ។</p>
+        <div class="acc-table-wrap sc-wrap"><table class="acc-table sc-table">
+          <thead><tr><th class="sc-n">ល.រ</th><th class="sc-nm">ឈ្មោះ</th>${S.months.map((m) => `<th>${esc(m.label || monthLabel(m.id))}<small>/${fmt(colMaxSum(m.cols || []))}</small></th>`).join('')}<th class="sc-tot">សរុប</th><th class="sc-tot">គិតយក</th></tr></thead>
+          <tbody>${data.map((d, i) => `<tr><td class="sc-n">${kh(i + 1)}</td><td class="sc-nm">${esc(d.e.name)}</td>${S.months.map((m) => `<td>${d.e.t[m.id] == null ? '—' : fmt(d.e.t[m.id])}</td>`).join('')}<td class="sc-tot">${fmt(d.sum)}</td><td class="sc-tot">${fmt(d.used)}</td></tr>`).join('')}</tbody>
+        </table></div></div>`;
+      host.querySelector('[data-a="back"]').addEventListener('click', () => { S.view = 'month'; paint(); });
+      host.querySelector('[data-a="csv"]').addEventListener('click', exportCsv);
+    }
+
+    /* ---------- CSV (opens in Excel, Khmer-safe with BOM) ---------- */
+    function exportCsv() {
+      const q = (v) => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+      const lines = [];
+      let name;
+      if (S.view === 'summary') {
+        lines.push(['ល.រ', 'ឈ្មោះ'].concat(S.months.map((m) => m.label || monthLabel(m.id)), ['សរុប', 'គិតយក']).map(q).join(','));
+        summaryData().forEach((d, i) => lines.push([i + 1, d.e.name].concat(S.months.map((m) => d.e.t[m.id] == null ? '' : d.e.t[m.id]), [d.sum, d.used]).map(q).join(',')));
+        name = `${S.cls.name}_សរុបគ្រប់ខែ`;
+      } else {
+        const cs = cols();
+        lines.push(['ល.រ', 'ឈ្មោះ'].concat(cs.map((c) => `${c.label} (/${c.max})`), ['សរុប']).map(q).join(','));
+        S.rows.forEach((r, i) => lines.push([i + 1, r.name].concat(cs.map((c) => r.s && r.s[c.id] != null ? r.s[c.id] : ''), [rowTotal(r, cs)]).map(q).join(',')));
+        name = `${S.cls.name}_${S.mid}`;
+      }
+      const blob = new Blob(['﻿' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `ពិន្ទុសកម្មភាព_${name}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    }
+
+    load();
+    return { reload: load };
+  }
+
+  /* ----- teacher: mounted in the dashboard tab ----- */
+  function mountTeacher(host, cls, students) {
+    return Sheet(host, { cls, mode: 'teacher', students });
+  }
+
+  /* ----- student / class leader: full-screen page ----- */
+  let overlay = null;
+  let idleTimer = null;
+  const IDLE_MS = 20 * 60 * 1000;
+
+  function lockEditing() {
+    clearTimeout(idleTimer);
+    if (window.Cloud && Cloud.scoresApi) Cloud.scoresApi().editorSignOut();
+  }
+
+  async function openStudent() {
+    const p = Cloud.profile();
+    if (!p || p.role !== 'student') return;
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.className = 'acc sc-overlay';
+      overlay.id = 'scores-overlay';
+      document.body.appendChild(overlay);
+    }
+    overlay.classList.add('open');
+    lockEditing(); // always start read-only: the edit password is asked every time
+    let cls = null;
+
+    const close = () => { lockEditing(); overlay.classList.remove('open'); };
+
+    function paintShell(editing) {
+      overlay.innerHTML = `
+        <header class="acc-top">
+          <button class="acc-icon" data-a="close" title="ត្រឡប់"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+          <div class="acc-title"><b>📊 ពិន្ទុសកម្មភាព${editing ? ' · កំពុងកែ' : ''}</b><small>${esc(p.name)} · ថ្នាក់ ${esc(p.className || '')}</small></div>
+          ${p.editorOn ? (editing ? '<button class="acc-btn ghost sm" data-a="lock">🔒 ចាក់សោ</button>' : '<button class="acc-btn sm" data-a="edit">🔑 កែពិន្ទុថ្នាក់</button>') : ''}
+        </header>
+        <main class="acc-main sc-body"><div class="acc-center small"><div class="acc-spin"></div></div></main>`;
+      overlay.querySelector('[data-a="close"]').addEventListener('click', close);
+      const lk = overlay.querySelector('[data-a="lock"]');
+      if (lk) lk.addEventListener('click', () => { lockEditing(); show(false); });
+      const ed = overlay.querySelector('[data-a="edit"]');
+      if (ed) ed.addEventListener('click', askPassword);
+      return overlay.querySelector('.sc-body');
+    }
+
+    function show(editing) {
+      const body = paintShell(editing);
+      if (editing) {
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(() => { lockEditing(); toast('🔒 ចាក់សោការកែដោយស្វ័យប្រវត្តិ (អស់ ២០ នាទី)', 'info'); show(false); }, IDLE_MS);
+      }
+      Sheet(body, { cls, mode: editing ? 'leader' : 'member', students: [], modal: () => overlay, onActivity: editing ? () => { clearTimeout(idleTimer); idleTimer = setTimeout(() => { lockEditing(); show(false); }, IDLE_MS); } : null });
+    }
+
+    function askPassword() {
+      const m = document.createElement('div');
+      m.className = 'acc-modal';
+      m.innerHTML = `<div class="acc-modal-card">
+        <h3>🔑 ពាក្យសម្ងាត់កែពិន្ទុ</h3>
+        <p class="acc-muted">វាយពាក្យសម្ងាត់ដែលលោកគ្រូបានផ្តល់ឱ្យ (មិនមែនលេខសម្ងាត់ចូលប្រើទេ)</p>
+        <label class="acc-field"><span>ពាក្យសម្ងាត់កែពិន្ទុ</span><input id="sc-pw" type="password" autocomplete="off"></label>
+        <p class="acc-err"></p>
+        <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>បើកការកែ</button></div></div>`;
+      overlay.appendChild(m);
+      const inp = m.querySelector('#sc-pw');
+      inp.focus();
+      m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+      const go = async () => {
+        const err = m.querySelector('.acc-err');
+        err.textContent = '';
+        m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+        try {
+          await api().editorSignIn(inp.value);
+          m.remove();
+          show(true);
+        } catch (e) {
+          err.textContent = e.message;
+          m.querySelectorAll('button').forEach((b) => { b.disabled = false; });
+        }
+      };
+      m.querySelector('[data-ok]').addEventListener('click', go);
+      inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') go(); });
+    }
+
+    const body = paintShell(false);
+    try {
+      cls = await api().myClass();
+      if (!cls) throw new Error('រកមិនឃើញថ្នាក់');
+      Sheet(body, { cls, mode: 'member', students: [], modal: () => overlay });
+    } catch (e) {
+      body.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code)}</p>`;
+    }
+  }
+
+  window.Scores = { mountTeacher, openStudent };
+})();
