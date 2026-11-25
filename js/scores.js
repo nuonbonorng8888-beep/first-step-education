@@ -198,13 +198,13 @@
             <span>/</span>
             <input class="sc-h sc-h-max" data-hc="${esc(c.id)}" data-f="max" type="number" min="0.25" step="0.25" value="${c.max}" title="ពិន្ទុអតិបរមា">
           </div>
-          <div class="sc-h-tools"><button data-fill="${esc(c.id)}" title="ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់">⚡ ទាំងថ្នាក់</button><button data-sort="c:${esc(c.id)}" title="តម្រៀបតាមជួរនេះ">↕${mark('c:' + c.id)}</button></div>
+          <div class="sc-h-tools"><button data-fill="${esc(c.id)}" title="ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់">⚡<span class="sc-fill-txt"> ទាំងថ្នាក់</span></button><button data-sort="c:${esc(c.id)}" title="តម្រៀបតាមជួរនេះ">↕${mark('c:' + c.id)}</button></div>
           <button class="sc-h-del" data-dc="${esc(c.id)}" title="លុបជួរនេះ">✕</button>
         </th>` : `
         <th class="sc-col">
           <div class="sc-col-name">${esc(colName(c, i))}</div>
           <small>${c.day ? esc(c.day) + ' · ' : ''}/${fmt(c.max)}</small>
-          <div class="sc-h-tools">${ed ? `<button data-fill="${esc(c.id)}" title="ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់">⚡ ទាំងថ្នាក់</button>` : ''}<button data-sort="c:${esc(c.id)}" title="តម្រៀបតាមជួរនេះ">↕${mark('c:' + c.id)}</button></div>
+          <div class="sc-h-tools">${ed ? `<button data-fill="${esc(c.id)}" title="ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់">⚡<span class="sc-fill-txt"> ទាំងថ្នាក់</span></button>` : ''}<button data-sort="c:${esc(c.id)}" title="តម្រៀបតាមជួរនេះ">↕${mark('c:' + c.id)}</button></div>
         </th>`).join('');
 
       const body = viewRows().map((r) => {

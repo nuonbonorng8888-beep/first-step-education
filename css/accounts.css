@@ -467,3 +467,33 @@ body:not(.light-theme) .member-cloud-note.ok { color: #4ade80; }
 .sc-msg h3 { margin: 4px 0 0; }
 .sc-msg p { margin: 0; font-size: calc(1.05 * var(--a-fs)); line-height: 1.7; }
 .sc-msg small { color: var(--a-text-2); }
+
+/* ---------- phones: no auto-zoom on focus (iOS needs >= 16px), 44px targets, easy scrolling ---------- */
+@media (max-width: 820px) {
+  .acc input, .acc select, .acc textarea { font-size: 16px; }
+  .acc-main { padding: 12px 12px calc(32px + env(safe-area-inset-bottom, 0px)); -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+  .sc-bar { gap: 6px; }
+  .sc-search { flex: 1 1 100%; min-width: 0; }
+  .sc-cfg { gap: 8px; }
+  .sc-cfg input { width: 64px; }
+  .sc-wrap { max-height: calc(100vh - 230px); max-height: calc(100dvh - 230px); -webkit-overflow-scrolling: touch; overscroll-behavior: contain; }
+  .sc-table th, .sc-table td { padding: 6px 5px; }
+  .sc-table th.sc-n, .sc-table td.sc-n { min-width: 30px; width: 30px; padding: 6px 3px; }
+  .sc-table th.sc-nm, .sc-table td.sc-nm { min-width: 118px; width: 118px; left: 30px; font-size: 0.9rem; white-space: normal; }
+  .sc-table th.sc-col { width: 104px; min-width: 104px; }
+  .sc-table th.sc-col-ed { width: 148px; min-width: 148px; }
+  .sc-cell input { width: 62px; min-height: 44px; }
+  .sc-h { min-height: 38px; }
+  .sc-h-tools button { padding: 6px 10px; }
+  .sc-member { gap: 10px; }
+  .sc-grand b { font-size: 2.1rem; }
+  .sc-msg-btn { min-height: 44px; }
+}
+
+@media (max-width: 820px) {
+  .sc-fill-txt { display: none; }
+  .sc-table th.sc-nm, .sc-table td.sc-nm { min-width: 100px; width: 100px; }
+  .sc-table th.sc-col { width: 86px; min-width: 86px; }
+  .sc-cell input { width: 58px; }
+  .sc-table td.sc-tot, .sc-table th.sc-tot { min-width: 54px; }
+}
