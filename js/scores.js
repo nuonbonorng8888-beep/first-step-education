@@ -43,6 +43,20 @@
     if (!n && !line.includes('\t')) n = line.trim();
     return n.replace(/^[\s0-9\u17E0-\u17E9]+[.)\-]\s*/, '').trim();
   }).filter(Boolean);
+  /* Encouragement level of a student: share of the activity points available so far.
+     A student only ever sees the message box of their OWN level. */
+  const levelA = (cls) => (Number(cls.scoreA) > 0 ? Number(cls.scoreA) : 80);
+  const levelB = (cls) => (Number(cls.scoreB) > 0 ? Number(cls.scoreB) : 60);
+  const LEVELS = {
+    A: { icon: '🌟', title: 'កម្រិត A', msg: 'អ្នកធ្វើបានល្អណាស់! សូមរក្សាភាពល្អនេះជាបន្តទៀត។' },
+    B: { icon: '💪', title: 'កម្រិត B', msg: 'ប្រឹងទៀតយក A! អ្នកជិតដល់ហើយ ចូលរួមសកម្មភាពឱ្យបានច្រើនទៀត។' },
+    C: { icon: '🌱', title: 'កម្រិត C', msg: 'ខំប្រឹងចូលរួម! រាល់សកម្មភាពតូចៗរាប់ជាពិន្ទុ ហើយអ្នកអាចធ្វើបាន។' }
+  };
+  const levelOf = (cls, num, den) => {
+    if (!(den > 0)) return null;
+    const p = (num / den) * 100;
+    return p >= levelA(cls) ? 'A' : (p >= levelB(cls) ? 'B' : 'C');
+  };
   const BLANK_COLS = 5;
   const colName = (c, i) => (c.label && c.label.trim()) || `សកម្មភាព ${kh(i + 1)}`;
   const newColId = () => 'c' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
@@ -221,6 +235,8 @@
             <label>ពិន្ទុសរុបថ្នាក់ <input type="number" id="sc-total" min="1" value="${totalOf(S.cls)}"></label>
             <label>ពិន្ទុសកម្មភាព <input type="number" id="sc-pct" min="1" max="100" value="${pctOf(S.cls)}">%</label>
             <b>អតិបរមា ${fmt(cap)}</b>
+            <label title="សិស្សដែលបានពិន្ទុ ចាប់ពី % នេះនៃពិន្ទុសកម្មភាពសរុបដែលមាន ទទួលសារកម្រិត A">A ≥ <input type="number" id="sc-ta" min="1" max="100" value="${levelA(S.cls)}">%</label>
+            <label title="ចាប់ពី % នេះទទួលសារកម្រិត B ក្រោមនេះទទួលសារកម្រិត C">B ≥ <input type="number" id="sc-tb" min="1" max="100" value="${levelB(S.cls)}">%</label>
             <label title="បន្ទាប់ពីផុតរយៈពេលនេះ ទិន្នន័យនឹងត្រូវលុបដោយស្វ័យប្រវត្តិ (បើបានបើក TTL ក្នុង Firebase)។ ០ = មិនលុប">រក្សាទុក <input type="number" id="sc-keep" min="0" max="120" value="${keepOf(S.cls)}"> ខែក្រោយខែនោះ</label>
             <button class="acc-btn ghost sm" data-a="cfg">រក្សាទុក</button>
           </div>` : ''}
@@ -415,11 +431,13 @@
       const t = Number(host.querySelector('#sc-total').value);
       const p = Number(host.querySelector('#sc-pct').value);
       const k = Math.round(Number(host.querySelector('#sc-keep').value));
-      if (!(t > 0) || !(p > 0 && p <= 100) || !(k >= 0 && k <= 120)) { toast('តម្លៃមិនត្រឹមត្រូវ', 'warning'); return; }
+      const ta = Number(host.querySelector('#sc-ta').value);
+      const tb = Number(host.querySelector('#sc-tb').value);
+      if (!(t > 0) || !(p > 0 && p <= 100) || !(k >= 0 && k <= 120) || !(ta > 0 && ta <= 100) || !(tb > 0 && tb < ta)) { toast('តម្លៃមិនត្រឹមត្រូវ (B ត្រូវតូចជាង A)', 'warning'); return; }
       try {
-        await api().setClassScoreConfig(S.cls.id, t, p, k);
+        await api().setClassScoreConfig(S.cls.id, t, p, k, ta, tb);
         const keepChanged = k !== keepOf(S.cls);
-        S.cls.scoreTotal = t; S.cls.scorePct = p; S.cls.scoreKeep = k;
+        S.cls.scoreTotal = t; S.cls.scorePct = p; S.cls.scoreKeep = k; S.cls.scoreA = ta; S.cls.scoreB = tb;
         if (keepChanged && S.months.length) await api().restampExpiry(S.cls.id, S.months, (id) => expiryFor(S.cls, id));
         toast('✅ បានរក្សាទុក', 'success');
         paint();
@@ -591,21 +609,43 @@
         const rows = await Promise.all(S.months.map((m) => api().myRow(S.cls.id, m.id)));
         const cap = capOf(S.cls);
         let grand = 0;
+        let den = 0;
         const cards = S.months.map((m, i) => {
           const r = rows[i];
           const cs = (m.cols || []).filter((c) => (c.label && c.label.trim()) || (r && r.s && r.s[c.id] != null));
           const tot = rowTotal(r, m.cols || []);
           grand += tot;
+          den += colMaxSum(cs);
           return `<section class="sc-card">
             <h4>${esc(m.label || monthLabel(m.id))}</h4>
             ${cs.length ? `<ul>${cs.map((c) => { const v = r && r.s ? r.s[c.id] : null; return `<li><span>${esc(colName(c, 0))}${c.day ? ` <small>${esc(c.day)}</small>` : ''}</span><b>${v == null ? '—' : fmt(v)} <small>/ ${fmt(c.max)}</small></b></li>`; }).join('')}</ul>` : '<p class="acc-muted">មិនទាន់មានសកម្មភាព</p>'}
             <div class="sc-card-tot"><span>សរុបខែនេះ</span><b>${fmt(tot)} <small>/ ${fmt(colMaxSum(cs))}</small></b></div>
           </section>`;
         }).join('');
+        const lv = levelOf(S.cls, grand, den);
+        const me = (window.Cloud && Cloud.profile && Cloud.profile()) || {};
         host.innerHTML = `<div class="sc sc-member">
+          <div class="sc-me">
+            <div><b>${esc(me.name || '')}</b><small>ថ្នាក់ ${esc(me.className || S.cls.name || '')}</small></div>
+            ${lv ? `<button class="sc-msg-btn lv-${lv}" data-a="msg">${LEVELS[lv].icon} សារសម្រាប់អ្នក</button>` : ''}
+          </div>
           <div class="sc-grand"><span>ពិន្ទុសកម្មភាពសរុប</span><b>${fmt(Math.min(grand, cap))}</b><small>អតិបរមា ${fmt(cap)} (${kh(pctOf(S.cls))}% នៃ ${fmt(totalOf(S.cls))})</small></div>
           ${cards || '<div class="acc-center small"><p class="acc-muted">មិនទាន់មានពិន្ទុ</p></div>'}
         </div>`;
+        const mb = host.querySelector('[data-a="msg"]');
+        if (mb) mb.addEventListener('click', () => {
+          const L = LEVELS[lv];
+          const pct = Math.round((grand / den) * 100);
+          const m = modal(`
+            <div class="sc-msg lv-${lv}">
+              <div class="sc-msg-ico">${L.icon}</div>
+              <h3>${L.title}</h3>
+              <p>${L.msg}</p>
+              <small>ពិន្ទុរបស់អ្នក ${fmt(grand)} / ${fmt(den)} (${kh(pct)}%)</small>
+            </div>
+            <div class="acc-modal-actions"><button class="acc-btn" data-x>យល់ហើយ</button></div>`);
+          m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+        });
       } catch (e) { host.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code)}</p>`; }
     }
 

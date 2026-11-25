@@ -831,9 +831,9 @@
       }
       await mref(cid, mid).delete();
     },
-    async setClassScoreConfig(cid, total, pct, keep) {
+    async setClassScoreConfig(cid, total, pct, keep, levelA, levelB) {
       await ready();
-      await db.collection('classes').doc(cid).update({ scoreTotal: Number(total), scorePct: Number(pct), scoreKeep: Number(keep) });
+      await db.collection('classes').doc(cid).update({ scoreTotal: Number(total), scorePct: Number(pct), scoreKeep: Number(keep), scoreA: Number(levelA), scoreB: Number(levelB) });
     },
     /* re-stamp expireAt on every month and row when the retention changes */
     async restampExpiry(cid, months, expiryFn) {
