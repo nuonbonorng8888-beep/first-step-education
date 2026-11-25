@@ -11,7 +11,10 @@
   'use strict';
 
   const KH = '០១២៣៤៥៦៧៨៩';
-  const kh = (v) => String(v).replace(/[0-9]/g, (d) => KH[d]);
+  /* Numbers on the score pages use universal (Latin) digits so they match the input boxes.
+     Set to true to show Khmer digits again. */
+  const KHMER_DIGITS = false;
+  const kh = (v) => (KHMER_DIGITS ? String(v).replace(/[0-9]/g, (d) => KH[d]) : String(v));
   const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   const MONTHS = ['មករា', 'កុម្ភៈ', 'មីនា', 'មេសា', 'ឧសភា', 'មិថុនា', 'កក្កដា', 'សីហា', 'កញ្ញា', 'តុលា', 'វិច្ឆិកា', 'ធ្នូ'];
   const r2 = (v) => Math.round(v * 100) / 100;
