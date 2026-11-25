@@ -984,6 +984,60 @@
       const snap = await mref(cid, mid).collection('log').orderBy('at', 'desc').limit(limit || 100).get();
       return snap.docs.map((d) => Object.assign({ id: d.id }, d.data(), { at: toMillis(d.data().at) }));
     },
+    /* ----- MCQ exams (classes/{cid}/exams/{eid}, /key/k, /results/{uid}) ----- */
+    async listExams(cid) {
+      await ready();
+      const snap = await db.collection('classes').doc(cid).collection('exams').get();
+      return snap.docs.map((d) => Object.assign({ id: d.id }, d.data()))
+        .sort((x, y) => toMillis(y.startAt) - toMillis(x.startAt));
+    },
+    async createExam(cid, eid, exam, key) {
+      await ready();
+      const ref = db.collection('classes').doc(cid).collection('exams').doc(eid);
+      const b = db.batch();
+      b.set(ref, Object.assign({}, exam, { createdBy: profile.uid, createdAt: ts() }));
+      b.set(ref.collection('key').doc('k'), key);
+      await b.commit();
+    },
+    async updateExam(cid, eid, data) {
+      await ready();
+      await db.collection('classes').doc(cid).collection('exams').doc(eid).update(data);
+    },
+    async deleteExam(cid, eid) {
+      await ready();
+      const ref = db.collection('classes').doc(cid).collection('exams').doc(eid);
+      const rs = await ref.collection('results').get();
+      for (let i = 0; i < rs.docs.length; i += 400) {
+        const b = db.batch();
+        rs.docs.slice(i, i + 400).forEach((d) => b.delete(d.ref));
+        await b.commit();
+      }
+      const b2 = db.batch();
+      b2.delete(ref.collection('key').doc('k'));
+      b2.delete(ref);
+      await b2.commit();
+    },
+    async getExamKey(cid, eid) {
+      await ready();
+      const d = await db.collection('classes').doc(cid).collection('exams').doc(eid).collection('key').doc('k').get();
+      return d.exists ? d.data() : { correct: [], expl: [] };
+    },
+    async getMyExamResult(cid, eid) {
+      await ready();
+      const d = await db.collection('classes').doc(cid).collection('exams').doc(eid).collection('results').doc(profile.uid).get();
+      return d.exists ? d.data() : null;
+    },
+    async listExamResults(cid, eid) {
+      await ready();
+      const snap = await db.collection('classes').doc(cid).collection('exams').doc(eid).collection('results').get();
+      return snap.docs.map((d) => Object.assign({ uid: d.id }, d.data()));
+    },
+    async submitExamResult(cid, eid, result) {
+      await ready();
+      await db.collection('classes').doc(cid).collection('exams').doc(eid).collection('results').doc(profile.uid)
+        .set(Object.assign({}, result, { submittedAt: ts() }));
+    },
+
     /* student: the class settings */
     async myClass() {
       await ready();

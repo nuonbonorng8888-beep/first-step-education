@@ -145,6 +145,33 @@ service cloud.firestore {
         }
       }
 
+      // ---------- MCQ exams ----------
+      // Questions carry only a hash of the right answer. The key (answers) is
+      // readable by students only after the exam ended. A student can create
+      // their result once, only inside the exam window; teachers may adjust it.
+      match /exams/{eid} {
+        function ex() { return get(/databases/$(database)/documents/classes/$(cid)/exams/$(eid)).data; }
+        allow read: if classTeacher(cid) || classMember(cid);
+        allow create, update, delete: if classTeacher(cid);
+
+        match /key/{kid} {
+          allow read: if classTeacher(cid) || (classMember(cid) && request.time > ex().endAt);
+          allow write: if classTeacher(cid);
+        }
+
+        match /results/{uid} {
+          allow read: if classTeacher(cid) || (classMember(cid) && request.auth.uid == uid);
+          allow create: if classMember(cid) && request.auth.uid == uid
+            && request.resource.data.uid == uid
+            && request.time >= ex().startAt
+            && request.time <= ex().endAt + duration.value(45, 's')
+            && request.resource.data.score is number
+            && request.resource.data.score >= 0
+            && request.resource.data.score <= ex().total;
+          allow update, delete: if classTeacher(cid);
+        }
+      }
+
       // Class copy of results, read by the class teacher
       match /results/{rid} {
         allow create: if isActiveStudent() &&

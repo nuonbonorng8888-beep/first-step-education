@@ -95,6 +95,22 @@
       return m;
     }
 
+    /* context handed to the exam manager */
+    function examCtx() {
+      return {
+        cls: S.cls,
+        students: S.students,
+        root: () => (S.onModal ? S.onModal() : host.closest('.acc') || document.body),
+        mid: () => S.mid,
+        cols: () => cols(),
+        allCols: () => S.months.reduce((a, m) => a.concat(m.cols || []), []),
+        newColId,
+        expiry: (mid) => expiryFor(S.cls, mid),
+        saveCols: async (next) => { await api().saveMonth(S.cls.id, S.mid, { cols: next }); month().cols = next; },
+        onSynced: async (mid) => { if (mid === S.mid) { try { await loadRows(); } catch (e) {} paint(); } else { paint(); } }
+      };
+    }
+
     /* ---------- loading ---------- */
     async function load(keepMid) {
       host.innerHTML = '<div class="acc-center small"><div class="acc-spin"></div></div>';
@@ -113,6 +129,9 @@
           S.mid = S.months.some((m) => m.id === cur) ? cur : (S.months.length ? S.months[S.months.length - 1].id : '');
         } else S.mid = keepMid;
         await loadRows();
+        if (S.mode === 'teacher' && window.Exams && S.mid) {
+          try { if (await Exams.autoSync(examCtx())) await loadRows(); } catch (e) {}
+        }
         paint();
       } catch (e) {
         host.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code || e)}</p>`;
@@ -231,7 +250,7 @@
         <div class="sc">
           <div class="sc-bar">
             <select class="sc-month" ${S.months.length ? '' : 'disabled'}>${opts || '<option>មិនទាន់មានខែ</option>'}</select>
-            ${S.mode === 'teacher' ? '<button class="acc-btn sm" data-a="new-month">➕ ខែថ្មី</button><button class="acc-btn sm mcq" data-a="mcq" title="ទៅកន្លែងតេស្ត MCQ (ពិន្ទុតេស្តចូល Google Sheets) រួចត្រឡប់មកបិទភ្ជាប់ពិន្ទុក្នុងជួរសកម្មភាព">🎯 តេស្ត MCQ</button>' : ''}
+            ${S.mode === 'teacher' ? '<button class="acc-btn sm" data-a="new-month">➕ ខែថ្មី</button><button class="acc-btn sm mcq" data-a="mcq" title="បង្កើតការប្រឡង MCQ កំណត់ម៉ោង ពិន្ទុនឹងចូលជួរសកម្មភាពដោយស្វ័យប្រវត្តិ">🎯 ប្រឡង MCQ</button>' : ''}
             ${S.mode === 'teacher' && m ? `<button class="acc-btn sm" data-a="add-col">➕ ជួរសកម្មភាព</button>
               <button class="acc-btn ghost sm" data-a="lock">${locked() ? '🔓 បើកខែ' : '🔒 បិទខែ'}</button>` : ''}
             ${m && S.mode !== 'member' ? '<input class="sc-search" type="search" placeholder="🔍 ស្វែងរកឈ្មោះ" aria-label="ស្វែងរកឈ្មោះ">' : ''}
@@ -280,10 +299,7 @@
       on('[data-a="del-month"]', deleteMonth);
       on('[data-a="cfg"]', saveCfg);
       on('[data-a="rename"]', renameDialog);
-      on('[data-a="mcq"]', () => {
-        if (window.Accounts && Accounts.closeDashboard) Accounts.closeDashboard();
-        if (window.App && App.openTeacherSheetModal) App.openTeacherSheetModal();
-      });
+      on('[data-a="mcq"]', () => { if (window.Exams) Exams.openManager(examCtx()); else toast('ផ្ទុកម៉ូឌុលប្រឡងមិនបាន', 'error'); });
       host.querySelectorAll('[data-paste]').forEach((b) => b.addEventListener('click', () => pasteDialog(b.dataset.paste)));
       on('[data-a="rename2"]', renameDialog);
       on('[data-a="print"]', printSheet);
@@ -680,6 +696,24 @@
       host.innerHTML = '<div class="acc-center small"><div class="acc-spin"></div></div>';
       try {
         const rows = await Promise.all(S.months.map((m) => api().myRow(S.cls.id, m.id)));
+        try {
+          const linked = new Set();
+          S.months.forEach((m) => (m.cols || []).forEach((c) => { if (c.exam) linked.add(c.exam); }));
+          if (linked.size) {
+            const exams = new Map((await api().listExams(S.cls.id)).map((e) => [e.id, e]));
+            const mine = new Map();
+            await Promise.all([...linked].map(async (id) => { try { mine.set(id, await api().getMyExamResult(S.cls.id, id)); } catch (e) {} }));
+            S.months.forEach((m, i) => (m.cols || []).forEach((c) => {
+              const ex = c.exam && exams.get(c.exam);
+              const res = c.exam && mine.get(c.exam);
+              if (!ex || !res || !(ex.total > 0)) return;
+              const r = rows[i] || { s: {} };
+              if (r.s && r.s[c.id] != null) return;
+              r.s = Object.assign({}, r.s, { [c.id]: r2(Number(c.max) * res.score / ex.total) });
+              rows[i] = r;
+            }));
+          }
+        } catch (e) { /* exam scores are an extra; the sheet still shows */ }
         const cap = capOf(S.cls);
         let grand = 0;
         let den = 0;
