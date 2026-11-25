@@ -40,6 +40,7 @@
     listClasses,
     createClass,
     deleteClass,
+    deleteClassFull,
     listStudents,
     createStudents,
     setStudentActive,
@@ -259,6 +260,28 @@
       createdAt: ts()
     });
     return ref.id;
+  }
+
+  /* Delete a class together with its score sheets and its students' profiles.
+     Order matters: sub-collections first (rules read the class document). Firebase
+     sign-in accounts cannot be removed from the browser, but without a profile
+     document they can no longer sign in. */
+  async function deleteClassFull(cls, students, onProgress) {
+    await ready();
+    const step = (m) => { if (onProgress) onProgress(m); };
+    step('កំពុងលុបពិន្ទុសកម្មភាព...');
+    const months = await scoresApi.listMonths(cls.id);
+    for (const m of months) await scoresApi.deleteMonth(cls.id, m.id);
+    step('កំពុងលុបគណនីសិស្ស...');
+    const ids = [];
+    (students || []).forEach((s) => { ids.push(s.uid); if (s.editorUid) ids.push(s.editorUid); });
+    for (let i = 0; i < ids.length; i += 400) {
+      const b = db.batch();
+      ids.slice(i, i + 400).forEach((uid) => b.delete(db.collection('users').doc(uid)));
+      await b.commit();
+    }
+    step('កំពុងលុបថ្នាក់...');
+    await db.collection('classes').doc(cls.id).delete();
   }
 
   async function deleteClass(cid) {
@@ -932,6 +955,26 @@
       const log = {
         by: profile.uid, byName: who, row: '*', rowName: `ទាំងថ្នាក់ (${uids.length} នាក់)`, col: colId, colLabel: colLabel || '',
         from: null, to: value == null ? null : Number(value), at: ts()
+      };
+      if (expireAt) log.expireAt = expireAt;
+      mref(cid, mid).collection('log').add(log).catch(() => {});
+    },
+    /* different value per student in one column (entries: [{uid, value}]) */
+    async setColumnValues(cid, mid, colId, entries, colLabel, expireAt) {
+      await ready();
+      const who = profile.name + (editorDb ? ' (ប្រធានថ្នាក់)' : '');
+      for (let i = 0; i < entries.length; i += 200) {
+        const b = dbx().batch();
+        entries.slice(i, i + 200).forEach((e) => {
+          const upd = { byName: who, at: ts() };
+          upd['s.' + colId] = Number(e.value);
+          b.update(mref(cid, mid).collection('rows').doc(e.uid), upd);
+        });
+        await b.commit();
+      }
+      const log = {
+        by: profile.uid, byName: who, row: '*', rowName: `បិទភ្ជាប់ពិន្ទុ (${entries.length} នាក់)`, col: colId, colLabel: colLabel || '',
+        from: null, to: null, at: ts()
       };
       if (expireAt) log.expireAt = expireAt;
       mref(cid, mid).collection('log').add(log).catch(() => {});

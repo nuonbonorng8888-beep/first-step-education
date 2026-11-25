@@ -208,7 +208,7 @@
             <span>/</span>
             <input class="sc-h sc-h-max" data-hc="${esc(c.id)}" data-f="max" type="number" min="0.25" step="0.25" value="${c.max}" title="ពិន្ទុអតិបរមា">
           </div>
-          <div class="sc-h-tools"><button data-fill="${esc(c.id)}" title="ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់">⚡<span class="sc-fill-txt"> ទាំងថ្នាក់</span></button><button data-sort="c:${esc(c.id)}" title="តម្រៀបតាមជួរនេះ">↕${mark('c:' + c.id)}</button></div>
+          <div class="sc-h-tools"><button data-paste="${esc(c.id)}" title="បិទភ្ជាប់ពិន្ទុទាំងជួរ (ពី Excel/Google Sheets ឧ. ពិន្ទុតេស្ត MCQ)">📋</button><button data-fill="${esc(c.id)}" title="ដាក់ពិន្ទុដូចគ្នាឱ្យទាំងថ្នាក់">⚡<span class="sc-fill-txt"> ទាំងថ្នាក់</span></button><button data-sort="c:${esc(c.id)}" title="តម្រៀបតាមជួរនេះ">↕${mark('c:' + c.id)}</button></div>
           <button class="sc-h-del" data-dc="${esc(c.id)}" title="លុបជួរនេះ">✕</button>
         </th>` : `
         <th class="sc-col">
@@ -231,7 +231,7 @@
         <div class="sc">
           <div class="sc-bar">
             <select class="sc-month" ${S.months.length ? '' : 'disabled'}>${opts || '<option>មិនទាន់មានខែ</option>'}</select>
-            ${S.mode === 'teacher' ? '<button class="acc-btn sm" data-a="new-month">➕ ខែថ្មី</button>' : ''}
+            ${S.mode === 'teacher' ? '<button class="acc-btn sm" data-a="new-month">➕ ខែថ្មី</button><button class="acc-btn sm mcq" data-a="mcq" title="ទៅកន្លែងតេស្ត MCQ (ពិន្ទុតេស្តចូល Google Sheets) រួចត្រឡប់មកបិទភ្ជាប់ពិន្ទុក្នុងជួរសកម្មភាព">🎯 តេស្ត MCQ</button>' : ''}
             ${S.mode === 'teacher' && m ? `<button class="acc-btn sm" data-a="add-col">➕ ជួរសកម្មភាព</button>
               <button class="acc-btn ghost sm" data-a="lock">${locked() ? '🔓 បើកខែ' : '🔒 បិទខែ'}</button>` : ''}
             ${m && S.mode !== 'member' ? '<input class="sc-search" type="search" placeholder="🔍 ស្វែងរកឈ្មោះ" aria-label="ស្វែងរកឈ្មោះ">' : ''}
@@ -280,6 +280,11 @@
       on('[data-a="del-month"]', deleteMonth);
       on('[data-a="cfg"]', saveCfg);
       on('[data-a="rename"]', renameDialog);
+      on('[data-a="mcq"]', () => {
+        if (window.Accounts && Accounts.closeDashboard) Accounts.closeDashboard();
+        if (window.App && App.openTeacherSheetModal) App.openTeacherSheetModal();
+      });
+      host.querySelectorAll('[data-paste]').forEach((b) => b.addEventListener('click', () => pasteDialog(b.dataset.paste)));
       on('[data-a="rename2"]', renameDialog);
       on('[data-a="print"]', printSheet);
       on('[data-a="sort-reset"]', () => toggleSort('seq'));
@@ -492,6 +497,62 @@
         busy(true);
         try { await api().removeEditor(st); st.editorOn = false; m.remove(); paint(); }
         catch (e) { busy(false); err.textContent = e.message; }
+      });
+    }
+
+    /* paste one column of scores (e.g. MCQ test results copied from Excel / Google Sheets) */
+    const toLatin = (t) => String(t).replace(/[០-៩]/g, (d) => String(d.charCodeAt(0) - 0x17E0));
+    function parseScores(text) {
+      return String(text || '').split(/\r?\n/).map((l) => l.trim()).filter((l) => l !== '').map((line) => {
+        const cells = toLatin(line).split('\t').map((c) => c.trim().replace(',', '.')).filter((c) => c !== '');
+        for (let i = cells.length - 1; i >= 0; i--) { if (/^-?\d+(\.\d+)?$/.test(cells[i])) return Number(cells[i]); }
+        return null;
+      });
+    }
+    function pasteDialog(colId) {
+      const c = cols().find((x) => x.id === colId);
+      if (!c || !editableNow()) return;
+      const m = modal(`
+        <h3>📋 បិទភ្ជាប់ពិន្ទុទាំងជួរ</h3>
+        <p class="acc-muted">សកម្មភាព ៖ <b>${esc(colName(c, cols().indexOf(c)))}</b> (អតិបរមា ${fmt(c.max)})។ ចម្លងជួរពិន្ទុពី Excel ឬ Google Sheets <b>តាមលំដាប់ដូចក្នុងតារាងនេះ</b> (${kh(S.rows.length)} នាក់)។ បើមានជួរឈ្មោះ និងពិន្ទុ ក៏បាន (ប្រើពិន្ទុចុងជួរ)។ ទុកជួរទទេ/អក្សរ = រំលង។</p>
+        <textarea id="sc-pv" rows="8" placeholder="18&#10;15&#10;20"></textarea>
+        <label class="acc-field"><span>ពិន្ទុពេញរបស់តេស្តនោះ (ទុកទទេ = មិនកែតម្លៃ។ ឧ. 20 → ត្រូវបំលែងជា /${fmt(c.max)})</span><input id="sc-pf" type="number" min="1" step="0.5" placeholder="ឧ. 20"></label>
+        <p class="sc-pv-info acc-muted">០ ជួរ</p>
+        <p class="acc-err"></p>
+        <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>បិទភ្ជាប់</button></div>`);
+      const ta = m.querySelector('#sc-pv');
+      const info = m.querySelector('.sc-pv-info');
+      const err = m.querySelector('.acc-err');
+      ta.focus();
+      ta.addEventListener('input', () => { const v = parseScores(ta.value); info.textContent = `${kh(v.length)} ជួរ · ${kh(v.filter((x) => x !== null).length)} ពិន្ទុ`; });
+      m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+      m.querySelector('[data-ok]').addEventListener('click', async () => {
+        const vals = parseScores(ta.value);
+        if (vals.length !== S.rows.length) { err.textContent = `ចំនួនជួរមិនស្មើ ៖ មាន ${kh(vals.length)} ជួរ ប៉ុន្តែមានសិស្ស ${kh(S.rows.length)} នាក់`; return; }
+        const full = Number(m.querySelector('#sc-pf').value);
+        const scale = full > 0 ? Number(c.max) / full : 1;
+        const entries = [];
+        for (let i = 0; i < vals.length; i++) {
+          if (vals[i] === null) continue;
+          const v = r2(vals[i] * scale);
+          if (v < 0 || v > Number(c.max)) { err.textContent = `ពិន្ទុជួរទី ${kh(i + 1)} (${fmt(vals[i])}) លើស/ក្រោមកម្រិត ០–${fmt(c.max)}`; return; }
+          entries.push({ uid: S.rows[i].uid, value: v });
+        }
+        if (!entries.length) { err.textContent = 'មិនមានពិន្ទុត្រឹមត្រូវទេ'; return; }
+        if (!confirm(`បិទភ្ជាប់ពិន្ទុ ${kh(entries.length)} នាក់ ចូលជួរ «${colName(c, cols().indexOf(c))}»? ពិន្ទុចាស់ក្នុងជួរនេះនឹងត្រូវជំនួស។`)) return;
+        m.dataset.busy = '1';
+        m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+        try {
+          if (S.onActivity) S.onActivity();
+          await api().setColumnValues(S.cls.id, S.mid, c.id, entries, c.label, expiryFor(S.cls, S.mid));
+          entries.forEach((e) => { const r = S.rows.find((x) => x.uid === e.uid); if (r) { r.s = r.s || {}; r.s[c.id] = e.value; } });
+          m.remove();
+          paint();
+        } catch (e) {
+          delete m.dataset.busy;
+          err.textContent = e.code === 'permission-denied' ? 'គ្មានសិទ្ធិកែ (ខែអាចត្រូវបានបិទ)' : (e.message || 'រក្សាទុកមិនបាន');
+          m.querySelectorAll('button').forEach((b) => { b.disabled = false; });
+        }
       });
     }
 

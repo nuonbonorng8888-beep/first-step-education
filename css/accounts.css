@@ -499,3 +499,7 @@ body:not(.light-theme) .member-cloud-note.ok { color: #4ade80; }
 }
 
 .sc-warn { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 10px 14px; border-radius: 12px; background: rgba(245, 179, 1, 0.18); color: var(--a-text); font-weight: 700; }
+
+.acc-del-class { margin-top: 6px; color: #e5484d; }
+.acc-btn.danger { background: #e5484d; box-shadow: 0 4px 0 #a82a2f; }
+.sc-bar .acc-btn.mcq { background: #16a34a; box-shadow: 0 4px 0 #0f7a37; }

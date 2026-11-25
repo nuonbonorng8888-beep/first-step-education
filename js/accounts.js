@@ -410,7 +410,8 @@
     const c = A.cls;
     main.innerHTML = `
       <div class="acc-main-head">
-        <div><h3>${esc(c.name)}</h3><small>ថ្នាក់ទី ${kh(c.grade || '?')} · ${kh(A.students.length)} សិស្ស</small></div>
+        <div><h3>${esc(c.name)}</h3><small>ថ្នាក់ទី ${kh(c.grade || '?')} · ${kh(A.students.length)} សិស្ស</small>
+          <button class="acc-btn ghost sm acc-del-class" data-a="del-class" title="លុបថ្នាក់នេះ">🗑️ លុបថ្នាក់</button></div>
         <div class="acc-tabs">
           <button class="acc-tab ${A.tab === 'students' ? 'active' : ''}" data-tab="students">👩‍🎓 សិស្ស</button>
           <button class="acc-tab ${A.tab === 'results' ? 'active' : ''}" data-tab="results">🧮 លទ្ធផលប្រអប់គណនា</button>
@@ -418,6 +419,7 @@
         </div>
       </div>
       <div class="acc-pane"></div>`;
+    main.querySelector('[data-a="del-class"]').addEventListener('click', deleteClassDialog);
     main.querySelectorAll('[data-tab]').forEach((b) => b.addEventListener('click', async () => {
       A.tab = b.dataset.tab;
       main.querySelectorAll('[data-tab]').forEach((x) => x.classList.toggle('active', x === b));
@@ -480,6 +482,39 @@
     A.root.appendChild(m);
     m.addEventListener('click', (e) => { if (e.target === m && !m.dataset.busy) m.remove(); });
     return m;
+  }
+
+  function deleteClassDialog() {
+    const c = A.cls;
+    const m = modal(`
+      <h3>🗑️ លុបថ្នាក់ ${esc(c.name)}</h3>
+      <p class="acc-muted">នឹងលុបជាអចិន្ត្រៃយ៍ ៖ <b>ថ្នាក់នេះ</b> · <b>សិស្ស ${kh(A.students.length)} នាក់</b> (គណនីចូលប្រើ) · <b>ពិន្ទុសកម្មភាពទាំងអស់</b>។ មិនអាចយកមកវិញបានទេ។</p>
+      <p class="acc-muted">💡 សូម Export Excel ពិន្ទុ និងបោះពុម្ពសន្លឹក ID មុនលុប បើនៅត្រូវការ។</p>
+      <label class="acc-field"><span>វាយឈ្មោះថ្នាក់ «${esc(c.name)}» ដើម្បីបញ្ជាក់</span><input id="acc-dc" autocomplete="off"></label>
+      <p class="acc-err"></p>
+      <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn danger" data-ok>លុបជាអចិន្ត្រៃយ៍</button></div>`);
+    const err = m.querySelector('.acc-err');
+    m.querySelector('#acc-dc').focus();
+    m.querySelector('[data-x]').addEventListener('click', () => m.remove());
+    m.querySelector('[data-ok]').addEventListener('click', async () => {
+      if (m.querySelector('#acc-dc').value.trim().toUpperCase() !== String(c.name).toUpperCase()) { err.textContent = 'ឈ្មោះថ្នាក់មិនត្រូវគ្នា'; return; }
+      m.dataset.busy = '1';
+      m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+      try {
+        await Cloud.deleteClassFull(c, A.students, (msg) => { err.textContent = msg; });
+        if (A.studentCache) delete A.studentCache[c.id];
+        m.remove();
+        A.cls = null;
+        A.tab = 'students';
+        if (window.App && App.showToast) App.showToast('✅ បានលុបថ្នាក់', 'success');
+        await loadHome();
+      } catch (e) {
+        delete m.dataset.busy;
+        err.textContent = (e.message || e.code) + ' — ការលុបអាចមិនទាន់ចប់។ សូមសាកម្តងទៀត។';
+        m.querySelectorAll('button').forEach((b) => { b.disabled = false; });
+        if (A.studentCache) delete A.studentCache[c.id];
+      }
+    });
   }
 
   function newClassDialog() {
