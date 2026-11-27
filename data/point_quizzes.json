@@ -6995,9 +6995,9 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $\\lim_{x \\to 2} (3x^2 - 4x + 5)$ ដោយការជំនួសផ្ទាល់ ៖",
         "options": [
-          "$5$",
-          "$9$",
           "$11$",
+          "$9$",
+          "$5$",
           "$7$"
         ],
         "correct": 1,
@@ -7011,12 +7011,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\lim_{x \\to 3} \\dfrac{2x + 1}{x - 1}$ ៖",
         "options": [
-          "$\\dfrac{7}{2}$",
+          "$3$",
           "$\\dfrac{5}{2}$",
-          "$4$",
-          "$3$"
+          "$\\dfrac{7}{2}$",
+          "$4$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "ជំនួស $x = 3$ ៖ $\\dfrac{2(3)+1}{3-1} = \\dfrac{7}{2}$។"
       },
       {
@@ -7028,11 +7028,11 @@
         "question": "គណនា $\\lim_{x \\to 4} \\sqrt{2x + 1}$ ៖",
         "options": [
           "$9$",
+          "$4$",
           "$\\sqrt{7}$",
-          "$3$",
-          "$4$"
+          "$3$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "ជំនួស $x = 4$ ៖ $\\sqrt{2(4)+1} = \\sqrt{9} = 3$។"
       },
       {
@@ -7043,12 +7043,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើ $\\lim_{x \\to x_0} c$ (ដែល $c$ ជាចំនួនថេរ) ស្មើនឹងអ្វី?",
         "options": [
-          "$0$",
+          "$c$",
           "$x_0$",
           "$cx_0$",
-          "$c$"
+          "$0$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "លីមីតនៃចំនួនថេរស្មើនឹងចំនួនថេរនោះដដែល ៖ $\\lim_{x \\to x_0} c = c$។"
       },
       {
@@ -7060,11 +7060,11 @@
         "question": "គេឱ្យ $\\lim_{x \\to 1} f(x) = 4$ និង $\\lim_{x \\to 1} g(x) = -2$។ គណនា $\\lim_{x \\to 1} [2f(x) - 3g(x)]$ ៖",
         "options": [
           "$10$",
+          "$14$",
           "$8$",
-          "$2$",
-          "$14$"
+          "$2$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "តាមលក្ខណៈលីមីត ៖ $2(4) - 3(-2) = 8 + 6 = 14$។"
       },
       {
@@ -7073,15 +7073,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណលីមីត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4} - 2}{x}$ ៖",
+        "question": "បើ $\\lim_{x \\to 2} \\dfrac{f(x) - 5}{x - 2} = 3$ តើតម្លៃ $\\lim_{x \\to 2} f(x)$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$\\dfrac{1}{4}$",
           "$0$",
-          "$\\dfrac{1}{2}$",
-          "$4$"
+          "$3$",
+          "$2$",
+          "$5$"
         ],
-        "correct": 0,
-        "explanation": "គុណកន្សោមឆ្លាស់ ៖ $\\lim_{x \\to 0} \\dfrac{(x+4)-4}{x(\\sqrt{x+4}+2)} = \\lim_{x \\to 0} \\dfrac{1}{\\sqrt{x+4}+2} = \\dfrac{1}{4}$។"
+        "correct": 3,
+        "explanation": "ដោយសារភាគបែងខិតជិត ០ ហើយលីមីតជាចំនួនពិត នោះភាគយកត្រូវតែខិតជិត ០ ៖ $\\lim_{x \\to 2} (f(x) - 5) = 0 \\Rightarrow \\lim_{x \\to 2} f(x) = 5$។"
       },
       {
         "id": "q7",
@@ -7089,42 +7089,204 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណលីមីត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\lim_{x \\to 2} \\dfrac{f(x) - 5}{x - 2} = 3$ តើតម្លៃ $\\lim_{x \\to 2} f(x)$ ស្មើនឹងប៉ុន្មាន?",
+        "question": "គណនា $\\lim_{x\\to 4}\\dfrac{3x^2+1}{x+3}$ ៖",
         "options": [
-          "$3$",
-          "$5$",
-          "$2$",
-          "$0$"
+          "$\\dfrac{50}{7}$",
+          "$7$",
+          "$\\dfrac{49}{8}$",
+          "$\\dfrac{48}{7}$"
         ],
         "correct": 1,
-        "explanation": "ដោយសារភាគបែងខិតជិត ០ ហើយលីមីតជាចំនួនពិត នោះភាគយកត្រូវតែខិតជិត ០ ៖ $\\lim_{x \\to 2} (f(x) - 5) = 0 \\Rightarrow \\lim_{x \\to 2} f(x) = 5$។"
+        "explanation": "$\\dfrac{49}{7}=7$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណលីមីត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនា $\\lim_{x \\to 1} \\dfrac{x^3 - 1}{x - 1}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $2x - 1 \\le f(x) \\le x^2$ ចំពោះគ្រប់ $x$ គណនា $\\lim_{x \\to 1} f(x)$ តាមទ្រឹស្តីបទညៀប (Squeeze Theorem) ៖",
         "options": [
+          "មិនមានលីមីត",
           "$0$",
           "$1$",
-          "$3$",
           "$2$"
         ],
         "correct": 2,
-        "explanation": "ដាក់ជាកត្តា ៖ $x^3 - 1 = (x-1)(x^2+x+1)$។ សម្រួល $(x-1)$ នាំឱ្យបាន $1^2+1+1 = 3$។"
+        "explanation": "$\\lim_{x \\to 1} (2x-1) = 1$ និង $\\lim_{x \\to 1} x^2 = 1$។ តាមទ្រឹស្តីបទညៀប $\\lim_{x \\to 1} f(x) = 1$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណលីមីត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $2x+3\\le f(x)\\le x^2+3$ ចំពោះគ្រប់ $x$ នោះ $\\lim_{x\\to 2}f(x)$ តាមទ្រឹស្តីបទជាប់ក្រៀប ស្មើ ៖",
+        "options": [
+          "$8$",
+          "$7$",
+          "$6$",
+          "$4$"
+        ],
+        "correct": 1,
+        "explanation": "$2(2)+3=7$ និង $2^2+3=7$ ដូចនេះលីមីត $7$"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណលីមីត",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to 4}\\sqrt{x^2+3x-12}$ ៖",
+        "options": [
+          "$4$",
+          "$5$",
+          "$3$",
+          "$16$"
+        ],
+        "correct": 0,
+        "explanation": "$16+12-12=16$ ដូចនេះ $\\sqrt{16}=4$"
+      }
+    ],
+    "2": [
+      {
+        "id": "q1",
+        "questionNumber": 1,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x \\to 2} \\dfrac{x^2 - 4}{x - 2}$ ៖",
+        "options": [
+          "$\\infty$",
+          "$2$",
+          "$0$",
+          "$4$"
+        ],
+        "correct": 3,
+        "explanation": "រាង $\\left[\\dfrac{0}{0}\\right]$។ ដាក់ជាកត្តា ៖ $\\dfrac{(x-2)(x+2)}{x-2} = x + 2 \\to 2 + 2 = 4$។"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x \\to 2} (2x^2 + 4x + 5)$ ៖",
+        "options": [
+          "$23$",
+          "$21$",
+          "$13$",
+          "$5$"
+        ],
+        "correct": 1,
+        "explanation": "អនុគមន៍ពហុធា ⇒ ជំនួស $x = 2$ ៖ $2(2)^2 + 4(2) + 5 = 21$។"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x \\to -2} (3x^2 - 2x - 3)$ ៖",
+        "options": [
+          "$16$",
+          "$5$",
+          "$13$",
+          "$-11$"
+        ],
+        "correct": 2,
+        "explanation": "អនុគមន៍ពហុធា ⇒ ជំនួស $x = -2$ ៖ $3(-2)^2 - 2(-2) - 3 = 13$។"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេដឹងថា $\\lim_{x \\to -1} f(x) = -3$ និង $\\lim_{x \\to -1} g(x) = 2$។ គណនា $\\lim_{x \\to -1} [2f(x) - g(x)]$ ៖",
+        "options": [
+          "$-8$",
+          "$-10$",
+          "$-5$",
+          "$-4$"
+        ],
+        "correct": 0,
+        "explanation": "$\\lim_{x \\to -1} [2f(x) - g(x)] = 2(-3) - 2 = -8$។"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4} - 2}{x}$ ៖",
+        "options": [
+          "$0$",
+          "$4$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "correct": 2,
+        "explanation": "គុណកន្សោមឆ្លាស់ ៖ $\\lim_{x \\to 0} \\dfrac{(x+4)-4}{x(\\sqrt{x+4}+2)} = \\lim_{x \\to 0} \\dfrac{1}{\\sqrt{x+4}+2} = \\dfrac{1}{4}$។"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\lim_{x \\to 1} \\dfrac{x^2 - 3x + 2}{x^2 - 1}$ ៖",
+        "options": [
+          "$\\dfrac{1}{2}$",
+          "$1$",
+          "$-\\dfrac{1}{2}$",
+          "$-1$"
+        ],
+        "correct": 2,
+        "explanation": "$\\dfrac{(x-1)(x-2)}{(x-1)(x+1)} = \\dfrac{x-2}{x+1} \\to \\dfrac{1-2}{1+1} = -\\dfrac{1}{2}$។"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\sqrt{1+x} - 1}{x}$ ៖",
+        "options": [
+          "$\\dfrac{1}{2}$",
+          "$2$",
+          "$1$",
+          "$0$"
+        ],
+        "correct": 0,
+        "explanation": "គុណឆ្លាស់ ៖ $\\dfrac{(1+x)-1}{x(\\sqrt{1+x}+1)} = \\dfrac{1}{\\sqrt{1+x}+1} \\to \\dfrac{1}{2}$។"
+      },
+      {
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x \\to 1} \\dfrac{x^3 - 1}{x - 1}$ ៖",
+        "options": [
+          "$3$",
+          "$2$",
+          "$1$",
+          "$0$"
+        ],
+        "correct": 0,
+        "explanation": "ដាក់ជាកត្តា ៖ $x^3 - 1 = (x-1)(x^2+x+1)$។ សម្រួល $(x-1)$ នាំឱ្យបាន $1^2+1+1 = 3$។"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃ $a$ ដើម្បីឱ្យ $\\lim_{x \\to 3} \\dfrac{x^2 - ax + 6}{x - 3}$ មានតម្លៃជាចំនួនពិត ៖",
         "options": [
-          "$a = 6$",
           "$a = 2$",
+          "$a = 6$",
           "$a = 3$",
           "$a = 5$"
         ],
@@ -7134,190 +7296,18 @@
       {
         "id": "q10",
         "questionNumber": 10,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណលីមីត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $2x - 1 \\le f(x) \\le x^2$ ចំពោះគ្រប់ $x$ គណនា $\\lim_{x \\to 1} f(x)$ តាមទ្រឹស្តីបទညៀប (Squeeze Theorem) ៖",
-        "options": [
-          "$1$",
-          "មិនមានលីមីត",
-          "$2$",
-          "$0$"
-        ],
-        "correct": 0,
-        "explanation": "$\\lim_{x \\to 1} (2x-1) = 1$ និង $\\lim_{x \\to 1} x^2 = 1$។ តាមទ្រឹស្តីបទညៀប $\\lim_{x \\to 1} f(x) = 1$។"
-      }
-    ],
-    "2": [
-      {
-        "id": "q1",
-        "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 4} \\dfrac{x^2 - 7x + 12}{x - 4}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x \\to 7} \\dfrac{\\sqrt{x+2} - 3}{x - 7}$ ៖",
         "options": [
-          "$0$",
-          "$-1$",
-          "$7$",
-          "$1$"
-        ],
-        "correct": 3,
-        "explanation": "រាង $\\frac{0}{0}$ ៖ $\\dfrac{x^2 - 7x + 12}{x - 4} = \\dfrac{(x - 4)(x - 3)}{x - 4} = x - 3$ ⇒ លីមីត $= 1$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q2",
-        "questionNumber": 2,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 1} \\dfrac{x^3 - 1}{x - 1}$ ៖",
-        "options": [
-          "$4$",
-          "$3$",
-          "$2$",
-          "$1$"
-        ],
-        "correct": 1,
-        "explanation": "$x^3 - a^3 = (x - a)(x^2 + ax + a^2)$ ⇒ លីមីត $= 3a^2 = 3(1)^2 = 3$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q3",
-        "questionNumber": 3,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -1} \\dfrac{x^2 - 2x - 3}{x + 1}$ ៖",
-        "options": [
-          "$0$",
-          "$4$",
-          "$-4$",
-          "$2$"
-        ],
-        "correct": 2,
-        "explanation": "រាង $\\frac{0}{0}$ ៖ $\\dfrac{x^2 - 2x - 3}{x + 1} = \\dfrac{(x + 1)(x - 3)}{x + 1} = x - 3$ ⇒ លីមីត $= -4$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 2} (2x^2 + 4x + 5)$ ៖",
-        "options": [
-          "$21$",
-          "$23$",
-          "$13$",
-          "$5$"
-        ],
-        "correct": 0,
-        "explanation": "អនុគមន៍ពហុធា ⇒ ជំនួស $x = 2$ ៖ $2(2)^2 + 4(2) + 5 = 21$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -2} (3x^2 - 2x - 3)$ ៖",
-        "options": [
-          "$13$",
-          "$5$",
-          "$16$",
-          "$-11$"
-        ],
-        "correct": 0,
-        "explanation": "អនុគមន៍ពហុធា ⇒ ជំនួស $x = -2$ ៖ $3(-2)^2 - 2(-2) - 3 = 13$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q6",
-        "questionNumber": 6,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេដឹងថា $\\lim_{x \\to -1} f(x) = -3$ និង $\\lim_{x \\to -1} g(x) = 2$។ គណនា $\\lim_{x \\to -1} [2f(x) - g(x)]$ ៖",
-        "options": [
-          "$-5$",
-          "$-8$",
-          "$-4$",
-          "$-10$"
-        ],
-        "correct": 1,
-        "explanation": "$\\lim_{x \\to -1} [2f(x) - g(x)] = 2(-3) - 2 = -8$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 4} \\dfrac{x^2 - 6x + 8}{x - 4}$ ៖",
-        "options": [
-          "$-2$",
-          "$0$",
+          "$\\dfrac{1}{3}$",
           "$6$",
-          "$2$"
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{1}{6}$"
         ],
         "correct": 3,
-        "explanation": "រាង $\\frac{0}{0}$ ៖ $\\dfrac{x^2 - 6x + 8}{x - 4} = \\dfrac{(x - 4)(x - 2)}{x - 4} = x - 2$ ⇒ លីមីត $= 2$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q8",
-        "questionNumber": 8,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -1} (x^2 - x - 5)$ ៖",
-        "options": [
-          "$-2$",
-          "$-7$",
-          "$-3$",
-          "$-5$"
-        ],
-        "correct": 2,
-        "explanation": "អនុគមន៍ពហុធា ⇒ ជំនួស $x = -1$ ៖ $1(-1)^2 - 1(-1) - 5 = -3$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q9",
-        "questionNumber": 9,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេដឹងថា $\\lim_{x \\to 4} f(x) = -4$ និង $\\lim_{x \\to 4} g(x) = 3$។ គណនា $\\lim_{x \\to 4} [f(x) \\cdot g(x)]$ ៖",
-        "options": [
-          "$-7$",
-          "$-12$",
-          "$-1$",
-          "$-11$"
-        ],
-        "correct": 1,
-        "explanation": "លីមីតនៃផលគុណ ស្មើផលគុណនៃលីមីត ៖ $(-4)(3) = -12$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q10",
-        "questionNumber": 10,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ប្រមាណវិធីលើលីមីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេដឹងថា $\\lim_{x \\to 3} f(x) = -4$ និង $\\lim_{x \\to 3} g(x) = 3$។ គណនា $\\lim_{x \\to 3} \\dfrac{f(x)}{g(x)}$ ៖",
-        "options": [
-          "$-\\dfrac{3}{4}$",
-          "$-7$",
-          "$-\\dfrac{4}{3}$",
-          "$-12$"
-        ],
-        "correct": 2,
-        "explanation": "លីមីតនៃផលចែក ( $\\lim g \\ne 0$ ) ៖ $\\dfrac{-4}{3} = -\\dfrac{4}{3}$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "គុណឆ្លាស់ ៖ $\\dfrac{x+2-9}{(x-7)(\\sqrt{x+2}+3)} = \\dfrac{1}{\\sqrt{x+2}+3} \\to \\dfrac{1}{3+3} = \\dfrac{1}{6}$។"
       }
     ],
     "3": [
@@ -7329,10 +7319,10 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើអនុគមន៍ $f(x)$ មានលីមីតត្រង់ $x_0$ លុះត្រាតែលក្ខខណ្ឌណាត្រូវផ្ទៀងផ្ទាត់?",
         "options": [
-          "លីមីតឆ្វេង និងស្តាំមានសញ្ញាផ្ទុយគ្នា",
           "$f(x_0) = 0$",
+          "$\\lim_{x \\to x_0^-} f(x) > 0$",
           "$\\lim_{x \\to x_0^-} f(x) = \\lim_{x \\to x_0^+} f(x) = L$",
-          "$\\lim_{x \\to x_0^-} f(x) > 0$"
+          "លីមីតឆ្វេង និងស្តាំមានសញ្ញាផ្ទុយគ្នា"
         ],
         "correct": 2,
         "explanation": "លីមីត $\\lim_{x \\to x_0} f(x) = L$ មាន លុះត្រាតែលីមីតឆ្វេងស្មើនឹងលីមីតស្តាំស្មើ $L$។"
@@ -7345,12 +7335,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\lim_{x \\to 0^+} \\dfrac{1}{x}$ ៖",
         "options": [
-          "$+\\infty$",
-          "$-\\infty$",
+          "$1$",
           "$0$",
-          "$1$"
+          "$-\\infty$",
+          "$+\\infty$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "កាលណា $x \\to 0^+$ ($x > 0$) នោះ $\\dfrac{1}{x} \\to +\\infty$។"
       },
       {
@@ -7361,10 +7351,10 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\lim_{x \\to 0^-} \\dfrac{1}{x}$ ៖",
         "options": [
-          "$+\\infty$",
+          "$0$",
           "$-\\infty$",
-          "$-1$",
-          "$0$"
+          "$+\\infty$",
+          "$-1$"
         ],
         "correct": 1,
         "explanation": "កាលណា $x \\to 0^-$ ($x < 0$) នោះ $\\dfrac{1}{x} \\to -\\infty$។"
@@ -7377,12 +7367,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គេឱ្យ $f(x) = \\begin{cases} 2x + 1 & \\text{បើ } x \\ge 1 \\\\ 3x - 1 & \\text{បើ } x < 1 \\end{cases}$។ គណនាលីមីតឆ្វេង $\\lim_{x \\to 1^-} f(x)$ ៖",
         "options": [
+          "$2$",
           "$3$",
-          "$0$",
           "$1$",
-          "$2$"
+          "$0$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "$\\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^-} (3x - 1) = 3(1) - 1 = 2$។"
       },
       {
@@ -7393,12 +7383,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ចំពោះអនុគមន៍ដដែលខាងលើ តើ $\\lim_{x \\to 1} f(x)$ មានដែរឬទេ? (ដឹងថា $\\lim_{x \\to 1^+} f(x) = 3$) ៖",
         "options": [
-          "គ្មានលីមីតទេ ព្រោះលីមីតឆ្វេង ($2$) ខុសពីលីមីតស្តាំ ($3$)",
-          "មាន គឺស្មើ $2$",
+          "មាន គឺស្មើ $2.5$",
           "មាន គឺស្មើ $3$",
-          "មាន គឺស្មើ $2.5$"
+          "គ្មានលីមីតទេ ព្រោះលីមីតឆ្វេង ($2$) ខុសពីលីមីតស្តាំ ($3$)",
+          "មាន គឺស្មើ $2$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "ដោយសារ $\\lim_{x \\to 1^-} f(x) = 2 \\ne \\lim_{x \\to 1^+} f(x) = 3$ ដូច្នេះគ្មានលីមីតត្រង់ $x = 1$ ឡើយ។"
       },
       {
@@ -7409,12 +7399,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនា $\\lim_{x \\to 2^+} \\dfrac{|x - 2|}{x - 2}$ ៖",
         "options": [
-          "$-1$",
           "$1$",
-          "គ្មានលីមីត",
-          "$0$"
+          "$-1$",
+          "$0$",
+          "គ្មានលីមីត"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "កាលណា $x \\to 2^+$ ($x > 2$) នោះ $|x - 2| = x - 2$។ ដូច្នេះផលធៀបស្មើ $\\dfrac{x-2}{x-2} = 1$។"
       },
       {
@@ -7425,12 +7415,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនា $\\lim_{x \\to 2^-} \\dfrac{|x - 2|}{x - 2}$ ៖",
         "options": [
-          "$2$",
+          "$0$",
           "$1$",
-          "$-1$",
-          "$0$"
+          "$2$",
+          "$-1$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "កាលណា $x \\to 2^-$ ($x < 2$) នោះ $|x - 2| = -(x - 2)$។ ដូច្នេះផលធៀបស្មើ $\\dfrac{-(x-2)}{x-2} = -1$។"
       },
       {
@@ -7438,15 +7428,15 @@
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតខាងឆ្វេង និងលីមីតខាងស្តាំ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃ $k$ ដើម្បីឱ្យ $\\lim_{x \\to 2} f(x)$ មាន ដែល $f(x) = \\begin{cases} kx + 1 & \\text{បើ } x \\le 2 \\\\ x^2 - k & \\text{បើ } x > 2 \\end{cases}$ ៖",
         "options": [
-          "$k = 2$",
-          "$k = 3$",
           "$k = 0$",
-          "$k = 1$"
+          "$k = 1$",
+          "$k = 2$",
+          "$k = 3$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$\\lim_{x \\to 2^-} f(x) = 2k + 1$ និង $\\lim_{x \\to 2^+} f(x) = 4 - k$។ ស្មើគ្នា ៖ $2k + 1 = 4 - k \\iff 3k = 3 \\iff k = 1$។"
       },
       {
@@ -7454,15 +7444,15 @@
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតខាងឆ្វេង និងលីមីតខាងស្តាំ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនា $\\lim_{x \\to 3^+} \\dfrac{2x}{x - 3}$ ៖",
         "options": [
           "$-\\infty$",
-          "$6$",
           "$+\\infty$",
+          "$6$",
           "$0$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "ភាគយកខិតទៅ $6 > 0$ ហើយភាគបែងខិតទៅ $0^+$ ដូច្នេះលីមីតគឺ $+\\infty$។"
       },
       {
@@ -7470,15 +7460,15 @@
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតខាងឆ្វេង និងលីមីតខាងស្តាំ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនា $\\lim_{x \\to 3^-} \\dfrac{2x}{x - 3}$ ៖",
         "options": [
-          "$-6$",
           "$-\\infty$",
+          "$+\\infty$",
           "$0$",
-          "$+\\infty$"
+          "$-6$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "ភាគយកខិតទៅ $6 > 0$ ហើយភាគបែងខិតទៅ $0^-$ ដូច្នេះលីមីតគឺ $-\\infty$។"
       }
     ],
@@ -7491,14 +7481,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\lim_{x \\to -\\infty} (-3x^3 - x^2 + 4)$ ៖",
         "options": [
-          "$+\\infty$",
-          "$0$",
           "$-3$",
-          "$-\\infty$"
+          "$-\\infty$",
+          "$0$",
+          "$+\\infty$"
         ],
-        "correct": 0,
-        "explanation": "លីមីតនៃពហុធាត្រង់អនន្ត ស្មើលីមីតនៃតួដឺក្រេខ្ពស់បំផុត ៖ $\\lim_{x \\to -\\infty} -3x^{3} = +\\infty$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "លីមីតនៃពហុធាត្រង់អនន្ត ស្មើលីមីតនៃតួដឺក្រេខ្ពស់បំផុត ៖ $\\lim_{x \\to -\\infty} -3x^{3} = +\\infty$។"
       },
       {
         "id": "q2",
@@ -7508,14 +7497,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\lim_{x \\to +\\infty} (\\dfrac{5}{x^{3}} - 1)$ ៖",
         "options": [
-          "$0$",
           "$+\\infty$",
-          "$4$",
-          "$-1$"
+          "$0$",
+          "$-1$",
+          "$4$"
         ],
-        "correct": 3,
-        "explanation": "$\\lim_{x \\to +\\infty} \\dfrac{5}{x^{3}} = 0$ ⇒ លីមីត $= -1$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$\\lim_{x \\to +\\infty} \\dfrac{5}{x^{3}} = 0$ ⇒ លីមីត $= -1$។"
       },
       {
         "id": "q3",
@@ -7525,14 +7513,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\lim_{x \\to -\\infty} (\\dfrac{2}{x^{3}} + 4)$ ៖",
         "options": [
-          "$6$",
           "$4$",
+          "$6$",
           "$0$",
           "$+\\infty$"
         ],
-        "correct": 1,
-        "explanation": "$\\lim_{x \\to -\\infty} \\dfrac{2}{x^{3}} = 0$ ⇒ លីមីត $= 4$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$\\lim_{x \\to -\\infty} \\dfrac{2}{x^{3}} = 0$ ⇒ លីមីត $= 4$។"
       },
       {
         "id": "q4",
@@ -7543,106 +7530,84 @@
         "question": "គណនា $\\lim_{x \\to -\\infty} x^{6}$ ៖",
         "options": [
           "$-\\infty$",
-          "$0$",
           "$+\\infty$",
+          "$0$",
           "$1$"
         ],
-        "correct": 2,
-        "explanation": "$n = 6$ ជាចំនួនគូ ⇒ $\\lim_{x \\to -\\infty} x^{6} = +\\infty$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$n = 6$ ជាចំនួនគូ ⇒ $\\lim_{x \\to -\\infty} x^{6} = +\\infty$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតត្រង់អនន្តនៃអនុគមន៍ស្វ័យគុណ និងពហុធា",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} (\\dfrac{2}{x^{2}} - 3)$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $_{x\\to +\\infty}\\lim e^{-x}$",
         "options": [
-          "$-3$",
+          "$+\\infty$",
+          "$1$",
           "$0$",
-          "$-1$",
-          "$+\\infty$"
+          "មិនកំណត់"
         ],
-        "correct": 0,
-        "explanation": "$\\lim_{x \\to -\\infty} \\dfrac{2}{x^{2}} = 0$ ⇒ លីមីត $= -3$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $0$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតត្រង់អនន្តនៃអនុគមន៍ស្វ័យគុណ និងពហុធា",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} (-x^4 + 5x^3 + 4x^2 + 4x - 2)$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}(3x^{3}+6x^{2}+x+1)$ ៖",
         "options": [
           "$+\\infty$",
-          "$-1$",
           "$-\\infty$",
-          "$0$"
+          "$0$",
+          "$3$"
         ],
-        "correct": 2,
-        "explanation": "លីមីតនៃពហុធាត្រង់អនន្ត ស្មើលីមីតនៃតួដឺក្រេខ្ពស់បំផុត ៖ $\\lim_{x \\to +\\infty} -x^{4} = -\\infty$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "តួដឺក្រេខ្ពស់បំផុតកំណត់ ៖ $+\\infty$"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតត្រង់អនន្តនៃអនុគមន៍ស្វ័យគុណ និងពហុធា",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} (-x^3 - 5x^2 - 5)$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\lim_{x\\to -\\infty}(-x^{5}+x^{4}+2x^{3}+x^{2}-3x-1)$ ៖",
         "options": [
-          "$-1$",
-          "$0$",
           "$-\\infty$",
-          "$+\\infty$"
+          "$+\\infty$",
+          "$0$",
+          "$-1$"
         ],
-        "correct": 3,
-        "explanation": "លីមីតនៃពហុធាត្រង់អនន្ត ស្មើលីមីតនៃតួដឺក្រេខ្ពស់បំផុត ៖ $\\lim_{x \\to -\\infty} -x^{3} = +\\infty$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "តួដឺក្រេខ្ពស់បំផុតកំណត់ ៖ $+\\infty$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតត្រង់អនន្តនៃអនុគមន៍ស្វ័យគុណ និងពហុធា",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} (x^3 - 2x^2 - 3x - 3)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}(x^{3}-x^{2})$ ៖",
         "options": [
-          "$1$",
-          "$+\\infty$",
+          "$-\\infty$",
           "$0$",
-          "$-\\infty$"
+          "$+\\infty$",
+          "$1$"
         ],
-        "correct": 1,
-        "explanation": "លីមីតនៃពហុធាត្រង់អនន្ត ស្មើលីមីតនៃតួដឺក្រេខ្ពស់បំផុត ៖ $\\lim_{x \\to +\\infty} x^{3} = +\\infty$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "ដាក់តួខ្ពស់ជាកត្តារួម ៖ លីមីតតាមតួ $x^3$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតត្រង់អនន្តនៃអនុគមន៍ស្វ័យគុណ និងពហុធា",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} (-2x^4 + x^3 - 6x^2)$ ៖",
-        "options": [
-          "$+\\infty$",
-          "$0$",
-          "$-\\infty$",
-          "$-2$"
-        ],
-        "correct": 2,
-        "explanation": "លីមីតនៃពហុធាត្រង់អនន្ត ស្មើលីមីតនៃតួដឺក្រេខ្ពស់បំផុត ៖ $\\lim_{x \\to -\\infty} -2x^{4} = -\\infty$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q10",
-        "questionNumber": 10,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ លីមីតត្រង់អនន្តនៃអនុគមន៍ស្វ័យគុណ និងពហុធា",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} x^{7}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}(3x^{4}+\\dfrac{3}{x^2})$ ៖",
         "options": [
           "$+\\infty$",
           "$-\\infty$",
@@ -7650,14 +7615,93 @@
           "$1$"
         ],
         "correct": 0,
-        "explanation": "$n = 7$ ជាចំនួនសេស ⇒ $\\lim_{x \\to +\\infty} x^{7} = +\\infty$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "ប្រើ $\\lim\\dfrac{c}{x^n}=0$ និងតួដឺក្រេខ្ពស់"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ លីមីតត្រង់អនន្តនៃអនុគមន៍ស្វ័យគុណ និងពហុធា",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}(2x^{4}-x^{2})$ ៖",
+        "options": [
+          "$-\\infty$",
+          "$0$",
+          "$1$",
+          "$+\\infty$"
+        ],
+        "correct": 3,
+        "explanation": "ដាក់តួខ្ពស់ជាកត្តារួម ៖ លីមីតតាមតួ $x^4$"
       }
     ],
     "5": [
       {
         "id": "q1",
         "questionNumber": 1,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x \\to +\\infty} (3x^{4} - 5x^{3})$ ៖",
+        "options": [
+          "$0$",
+          "$+\\infty$",
+          "$-2$",
+          "$-\\infty$"
+        ],
+        "correct": 1,
+        "explanation": "រាង $\\infty - \\infty$ ៖ $3x^{4} - 5x^{3} = x^{4}\\left(3 - \\dfrac{5}{x}\\right)$ ⇒ $+\\infty$។"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x \\to +\\infty} (x^{2} - 2x)$ ៖",
+        "options": [
+          "$0$",
+          "$-1$",
+          "$-\\infty$",
+          "$+\\infty$"
+        ],
+        "correct": 3,
+        "explanation": "រាង $\\infty - \\infty$ ៖ $x^{2} - 2x = x^{2}\\left(1 - \\dfrac{2}{x}\\right)$ ⇒ $+\\infty$។"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to -\\infty}(3x^{4}-3x^{3})$ (រាង $+\\infty-\\infty$) ៖",
+        "options": [
+          "$-\\infty$",
+          "$0$",
+          "$+\\infty$",
+          "$3$"
+        ],
+        "correct": 2,
+        "explanation": "ដាក់ $x^4$ ជាកត្តារួម ហើយប្រើតួខ្ពស់បំផុត"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}(2x^{3}-5x^{2})$ (រាង $+\\infty-\\infty$) ៖",
+        "options": [
+          "$-\\infty$",
+          "$0$",
+          "$2$",
+          "$+\\infty$"
+        ],
+        "correct": 3,
+        "explanation": "ដាក់ $x^3$ ជាកត្តារួម ហើយប្រើតួខ្ពស់បំផុត"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -7669,76 +7713,7 @@
           "$\\dfrac{5}{2}$"
         ],
         "correct": 3,
-        "explanation": "គុណនឹងកន្សោមឆ្លាស់ ៖ $\\dfrac{5x + 2}{\\sqrt{x^2 + 5x + 2} + x} \\to \\dfrac{5}{2}$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q2",
-        "questionNumber": 2,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x + 6} - \\sqrt{x}\\right)$ ៖",
-        "options": [
-          "$0$",
-          "$3$",
-          "$+\\infty$",
-          "$6$"
-        ],
-        "correct": 0,
-        "explanation": "$\\sqrt{x + 6} - \\sqrt{x} = \\dfrac{6}{\\sqrt{x + 6} + \\sqrt{x}} \\to 0$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q3",
-        "questionNumber": 3,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x + 8} - \\sqrt{x}\\right)$ ៖",
-        "options": [
-          "$8$",
-          "$0$",
-          "$+\\infty$",
-          "$4$"
-        ],
-        "correct": 1,
-        "explanation": "$\\sqrt{x + 8} - \\sqrt{x} = \\dfrac{8}{\\sqrt{x + 8} + \\sqrt{x}} \\to 0$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} (3x^{4} - 5x^{3})$ ៖",
-        "options": [
-          "$-2$",
-          "$0$",
-          "$+\\infty$",
-          "$-\\infty$"
-        ],
-        "correct": 2,
-        "explanation": "រាង $\\infty - \\infty$ ៖ $3x^{4} - 5x^{3} = x^{4}\\left(3 - \\dfrac{5}{x}\\right)$ ⇒ $+\\infty$។",
-        "src": "genpq-g11b_plan"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 3x} - \\sqrt{x^2 + 4x}\\right)$ ៖",
-        "options": [
-          "$-\\dfrac{1}{2}$",
-          "$+\\infty$",
-          "$0$",
-          "$-1$"
-        ],
-        "correct": 0,
-        "explanation": "$\\dfrac{(-1)x}{\\sqrt{x^2 + 3x} + \\sqrt{x^2 + 4x}} \\to \\dfrac{-1}{2}$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "គុណនឹងកន្សោមឆ្លាស់ ៖ $\\dfrac{5x + 2}{\\sqrt{x^2 + 5x + 2} + x} \\to \\dfrac{5}{2}$។"
       },
       {
         "id": "q6",
@@ -7746,16 +7721,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 3x} - \\sqrt{x^2 + 6x}\\right)$ ៖",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x + 6} - \\sqrt{x}\\right)$ ៖",
         "options": [
-          "$+\\infty$",
-          "$-\\dfrac{3}{2}$",
+          "$6$",
+          "$3$",
           "$0$",
-          "$-3$"
+          "$+\\infty$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{(-3)x}{\\sqrt{x^2 + 3x} + \\sqrt{x^2 + 6x}} \\to \\dfrac{-3}{2}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$\\sqrt{x + 6} - \\sqrt{x} = \\dfrac{6}{\\sqrt{x + 6} + \\sqrt{x}} \\to 0$។"
       },
       {
         "id": "q7",
@@ -7763,67 +7737,63 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 - 4x} - \\sqrt{x^2 + 2x}\\right)$ ៖",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 3x} - \\sqrt{x^2 + 4x}\\right)$ ៖",
         "options": [
           "$0$",
           "$+\\infty$",
-          "$-3$",
-          "$-6$"
+          "$-\\dfrac{1}{2}$",
+          "$-1$"
         ],
         "correct": 2,
-        "explanation": "$\\dfrac{(-6)x}{\\sqrt{x^2 - 4x} + \\sqrt{x^2 + 2x}} \\to \\dfrac{-6}{2}$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$\\dfrac{(-1)x}{\\sqrt{x^2 + 3x} + \\sqrt{x^2 + 4x}} \\to \\dfrac{-1}{2}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 3x - 1} - x\\right)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}(\\sqrt{x^2+4x+2}-x)$ ៖",
         "options": [
-          "$3$",
+          "$4$",
           "$0$",
-          "$+\\infty$",
-          "$\\dfrac{3}{2}$"
+          "$-2$",
+          "$2$"
         ],
         "correct": 3,
-        "explanation": "គុណនឹងកន្សោមឆ្លាស់ ៖ $\\dfrac{3x - 1}{\\sqrt{x^2 + 3x - 1} + x} \\to \\dfrac{3}{2}$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$\\dfrac{4x+2}{\\sqrt{x^2+4x+2}+x}\\to \\dfrac{4}{2}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 5x} - \\sqrt{x^2 + 6x}\\right)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}(\\sqrt{x^2+8x}-\\sqrt{x^2+7x})$ ៖",
         "options": [
-          "$0$",
-          "$+\\infty$",
-          "$-1$",
-          "$-\\dfrac{1}{2}$"
+          "$-\\dfrac{1}{2}$",
+          "$\\dfrac{1}{2}$",
+          "$1$",
+          "$0$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{(-1)x}{\\sqrt{x^2 + 5x} + \\sqrt{x^2 + 6x}} \\to \\dfrac{-1}{2}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$\\dfrac{(8-7)x}{\\sqrt{x^2+8x}+\\sqrt{x^2+7x}}\\to \\dfrac{1}{2}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតមានរាងមិនកំណត់ ∞ − ∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} (x^{2} - 2x)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}(\\sqrt{9x^2+6x}-3x)$ ៖",
         "options": [
+          "$2$",
           "$0$",
-          "$-\\infty$",
-          "$+\\infty$",
-          "$-1$"
+          "$\\dfrac{1}{2}$",
+          "$1$"
         ],
-        "correct": 2,
-        "explanation": "រាង $\\infty - \\infty$ ៖ $x^{2} - 2x = x^{2}\\left(1 - \\dfrac{2}{x}\\right)$ ⇒ $+\\infty$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "$\\dfrac{6x}{\\sqrt{9x^2+6x}+3x}\\to \\dfrac{6}{6}$"
       }
     ],
     "6": [
@@ -7832,68 +7802,64 @@
         "questionNumber": 1,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2 + 9}}{2x - 2}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{3x^2 + 5}{2x^2 - 1}$ ៖",
         "options": [
-          "$-1$",
-          "$2$",
-          "$1$",
+          "$\\dfrac{3}{2}$",
+          "$3$",
+          "$+\\infty$",
           "$0$"
         ],
         "correct": 0,
-        "explanation": "$\\sqrt{4x^2 + \\dots} = |x|\\sqrt{4 + \\dots}$ ហើយ $|x| = -x$ ⇒ លីមីត $= -1$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "រាង $\\left[\\dfrac{\\infty}{\\infty}\\right]$។ យកតួដឺក្រេខ្ពស់ជាងគេ ៖ $\\lim_{x \\to +\\infty} \\dfrac{3x^2}{2x^2} = \\dfrac{3}{2}$។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{6x^3 - 5x^2 - 2x - 5}{x^3 + 3x^2 - 2}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{5x + 2}{x^2 + 1}$ ៖",
         "options": [
-          "$\\dfrac{1}{6}$",
-          "$6$",
+          "$5$",
           "$0$",
+          "$2$",
           "$+\\infty$"
         ],
         "correct": 1,
-        "explanation": "ដឺក្រេភាគយក = ដឺក្រេភាគបែង ⇒ លីមីត = ផលធៀបមេគុណតួខ្ពស់ $\\dfrac{6}{1} = 6$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "ដឺក្រេភាគបែងធំជាងដឺក្រេភាគយក ដូច្នេះលីមីតស្មើ $0$។"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{-2x^3 + 4x^2 - x + 4}{x^2 + 3x + 2}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{4x^3 - 1}{2x^2 + 3}$ ៖",
         "options": [
-          "$+\\infty$",
           "$0$",
           "$-\\infty$",
-          "$-2$"
+          "$+\\infty$",
+          "$2$"
         ],
         "correct": 2,
-        "explanation": "ដឺក្រេភាគយកធំជាងភាគបែង ១ ៖ $\\lim_{x \\to +\\infty} \\dfrac{-2x^{3}}{x^{2}} = \\lim_{x \\to +\\infty} -2x = -\\infty$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "ដឺក្រេភាគយកធំជាងដឺក្រេភាគបែង ៖ $\\lim_{x \\to +\\infty} \\dfrac{4x^3}{2x^2} = \\lim 2x = +\\infty$។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{3x^3 + 2x^2 - 3x - 4}{-x^2 + x - 1}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $_{x\\to \\pm \\infty}\\lim \\dfrac{x}{x+1}$",
         "options": [
+          "$\\pm \\infty$",
           "$0$",
-          "$-3$",
-          "$-\\infty$",
-          "$+\\infty$"
+          "$-1$",
+          "$1$"
         ],
         "correct": 3,
-        "explanation": "ដឺក្រេភាគយកធំជាងភាគបែង ១ ៖ $\\lim_{x \\to -\\infty} \\dfrac{3x^{3}}{-x^{2}} = \\lim_{x \\to -\\infty} -3x = +\\infty$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ឃ. $1$"
       },
       {
         "id": "q5",
@@ -7901,16 +7867,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2 + 1}}{2x + 3}$ ៖",
+        "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2 + 9}}{2x - 2}$ ៖",
         "options": [
-          "$0$",
           "$1$",
+          "$-1$",
           "$2$",
-          "$-1$"
+          "$0$"
         ],
-        "correct": 3,
-        "explanation": "$\\sqrt{4x^2 + \\dots} = |x|\\sqrt{4 + \\dots}$ ហើយ $|x| = -x$ ⇒ លីមីត $= -1$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$\\sqrt{4x^2 + \\dots} = |x|\\sqrt{4 + \\dots}$ ហើយ $|x| = -x$ ⇒ លីមីត $= -1$។"
       },
       {
         "id": "q6",
@@ -7918,16 +7883,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{3x^2 + 3x + 1}{-x - 2}$ ៖",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{-2x^3 + 4x^2 - x + 4}{x^2 + 3x + 2}$ ៖",
         "options": [
-          "$-3$",
+          "$-2$",
           "$0$",
           "$+\\infty$",
           "$-\\infty$"
         ],
-        "correct": 2,
-        "explanation": "ដឺក្រេភាគយកធំជាងភាគបែង ១ ៖ $\\lim_{x \\to -\\infty} \\dfrac{3x^{2}}{-x} = \\lim_{x \\to -\\infty} -3x = +\\infty$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "ដឺក្រេភាគយកធំជាងភាគបែង ១ ៖ $\\lim_{x \\to +\\infty} \\dfrac{-2x^{3}}{x^{2}} = \\lim_{x \\to +\\infty} -2x = -\\infty$។"
       },
       {
         "id": "q7",
@@ -7935,67 +7899,63 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{5x + 3}{x^2 + 4}$ ៖",
+        "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{3x^3 + 2x^2 - 3x - 4}{-x^2 + x - 1}$ ៖",
         "options": [
           "$+\\infty$",
           "$0$",
-          "$5$",
-          "$-\\infty$"
+          "$-\\infty$",
+          "$-3$"
         ],
-        "correct": 1,
-        "explanation": "ដឺក្រេភាគយកតូចជាងដឺក្រេភាគបែង ⇒ លីមីត $= 0$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "ដឺក្រេភាគយកធំជាងភាគបែង ១ ៖ $\\lim_{x \\to -\\infty} \\dfrac{3x^{3}}{-x^{2}} = \\lim_{x \\to -\\infty} -3x = +\\infty$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{x^3 + x - 5}{x^2 + 3x + 2}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2 + 1}}{x + 1}$ ៖",
         "options": [
-          "$+\\infty$",
-          "$0$",
-          "$1$",
-          "$-\\infty$"
+          "$-4$",
+          "$2$",
+          "$-2$",
+          "$4$"
         ],
-        "correct": 0,
-        "explanation": "ដឺក្រេភាគយកធំជាងភាគបែង ១ ៖ $\\lim_{x \\to +\\infty} \\dfrac{x^{3}}{x^{2}} = \\lim_{x \\to +\\infty} x = +\\infty$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "កាលណា $x \\to -\\infty$ នោះ $\\sqrt{x^2} = |x| = -x$។ ភាគយក $\\approx -2x$ ដូច្នេះលីមីតគឺ $\\dfrac{-2x}{x} = -2$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{2x^2 - 3x + 5}{-x - 1}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to -\\infty}\\dfrac{-2x^3-x}{2x^2+1}$ ៖",
         "options": [
-          "$+\\infty$",
-          "$-2$",
           "$-\\infty$",
-          "$0$"
+          "$0$",
+          "$+\\infty$",
+          "$-1$"
         ],
         "correct": 2,
-        "explanation": "ដឺក្រេភាគយកធំជាងភាគបែង ១ ៖ $\\lim_{x \\to +\\infty} \\dfrac{2x^{2}}{-x} = \\lim_{x \\to +\\infty} -2x = -\\infty$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$\\dfrac{-2x^3}{2x^2}=-1x$ ហើយ $x\\to -\\infty$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតមានរាងមិនកំណត់ ∞/∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{4x - 5}{x^2 + 5x + 2}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty}\\dfrac{\\sqrt{25x^2+1}}{5x+3}$ ៖",
         "options": [
-          "$+\\infty$",
-          "$-\\infty$",
-          "$4$",
-          "$0$"
+          "$1$",
+          "$-1$",
+          "$0$",
+          "$+\\infty$"
         ],
-        "correct": 3,
-        "explanation": "ដឺក្រេភាគយកតូចជាងដឺក្រេភាគបែង ⇒ លីមីត $= 0$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "ពេល $x\\to +\\infty$ $\\sqrt{25x^2}=5|x|$ ដូចនេះលទ្ធផល $1$"
       }
     ]
   },
