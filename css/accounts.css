@@ -579,3 +579,24 @@ body.ex-running { overscroll-behavior: none; }
 .sc-role .sc-lead:hover { border-color: var(--a-blue); color: var(--a-blue); }
 .sc-role .sc-lead.on { border-style: solid; border-color: #f5b301; background: rgba(245, 179, 1, 0.22); color: var(--a-text); }
 .sc-tip { margin: 0; padding: 8px 12px; border-radius: 10px; background: rgba(47, 111, 237, 0.10); color: var(--a-text); font-size: calc(0.86 * var(--a-fs)); }
+
+/* lesson → points picker, preview list, flags */
+.ex-lesbox { border-radius: 9px; }
+.ex-lesrow { display: flex; align-items: center; gap: 6px; }
+.ex-lesrow .ex-les { flex: 1 1 auto; }
+.ex-pt-toggle { flex: 0 0 auto; border: 1px solid var(--a-line); background: var(--a-surface); color: var(--a-text-2); border-radius: 8px; padding: 4px 10px; font-family: inherit; font-size: calc(0.8 * var(--a-fs)); }
+.ex-points { margin: 0 0 6px 34px; display: flex; flex-direction: column; gap: 2px; }
+.ex-pt { display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 8px; font-size: calc(0.84 * var(--a-fs)); color: var(--a-text); cursor: pointer; text-align: left; }
+.ex-pt:hover { background: var(--a-surface); }
+.ex-pt input[type="checkbox"] { flex: 0 0 18px; width: 18px; height: 18px; min-height: 0; padding: 0; margin: 0; }
+.ex-pt span { flex: 1 1 auto; }
+.ex-pt small { color: var(--a-text-2); }
+.ex-prev-list { margin: 8px 0; padding-left: 0; list-style: none; counter-reset: q; display: grid; gap: 10px; }
+.ex-prev-list > li { counter-increment: q; padding: 12px; border: 1px solid var(--a-line); border-radius: 14px; background: var(--a-surface); position: relative; }
+.ex-prev-list > li::before { content: counter(q); position: absolute; top: 10px; right: 12px; color: var(--a-text-2); font-weight: 800; }
+.ex-prev-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 6px; font-size: calc(0.78 * var(--a-fs)); color: var(--a-text-2); padding-right: 28px; }
+.ex-prev-meta b { padding: 0 8px; border-radius: 99px; background: var(--a-surface-2); color: var(--a-text); }
+.ex-prev-meta em { font-style: normal; color: #d97706; font-weight: 700; }
+.ex-prev-act { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.ex-flag { float: right; border: none; background: transparent; font-size: 1rem; opacity: 0.6; }
+.ex-flag:hover { opacity: 1; }

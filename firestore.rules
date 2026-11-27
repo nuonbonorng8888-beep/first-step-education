@@ -100,6 +100,17 @@ service cloud.firestore {
         && request.resource.data.lastAt == request.time;
     }
 
+    // ---------- reports of wrong questions ----------
+    // Any signed-in teacher or student may report; only the admin reads / clears them.
+    match /qflags/{fid} {
+      allow create: if hasProfile()
+        && request.resource.data.keys().hasOnly(['qid', 'les', 'p', 'note', 'by', 'role', 'cid', 'at'])
+        && request.resource.data.qid is string && request.resource.data.qid.size() < 80
+        && request.resource.data.by == request.auth.uid
+        && request.resource.data.at == request.time;
+      allow read, delete: if isAdmin();
+    }
+
     // ---------- classes ----------
     match /classes/{cid} {
       allow read: if isAdmin() ||

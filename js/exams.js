@@ -67,7 +67,9 @@
     return m;
   }
 
-  /* ----- question bank (teacher side only; students get a snapshot inside the exam) ----- */
+  /* ----- question bank (teacher side only; students get a snapshot inside the exam) -----
+     Default source = the curated per-point questions (label «ចំណុចទី …»), which were checked for
+     point order. Extra / QB / unlabelled questions are only used when the teacher ticks the box. */
   let bank = null;
   async function loadBank() {
     if (bank) return bank;
@@ -76,19 +78,27 @@
     const d = await r.json();
     bank = d.questions.filter((q) => q.kind === 'mcq' && Array.isArray(q.o) && q.o.length === 4 && Number.isInteger(q.a)
       && !/<(img|svg|div|table|canvas)/.test(q.q + q.o.join('')) && !q.o.every((o) => String(o).length <= 2));
+    bank.forEach((q) => { q._cur = /^ចំណុចទី/.test(q.p || ''); });
     return bank;
   }
   const gradePrefix = (cls) => 'les-g' + (parseInt(cls.grade, 10) || 7);
   const LEVELS = ['ងាយ', 'មធ្យម', 'ពិបាក'];
+  const KHD = '០១២៣៤៥៦៧៨៩';
+  const pointNo = (label) => { const m = String(label).match(/ចំណុចទី\s*([0-9០-៩]+)/); return m ? parseInt(m[1].replace(/[០-៩]/g, (d) => KHD.indexOf(d)), 10) : 999; };
+  const shortPoint = (label) => { const s = String(label); return s.length > 70 ? s.slice(0, 68) + '…' : s; };
 
-  function pickQuestions(pool, lessonIds, n, level) {
-    const rng = Math.random;
-    let p = pool.filter((q) => lessonIds.includes(q.lesId));
+  /* sel: [{ lesId, points: null | [pointLabel,...] }] */
+  function candidates(pool, sel, level, includeExtra) {
+    let p = pool.filter((q) => sel.some((s) => s.lesId === q.lesId && (!s.points || s.points.includes(q.p))) && (includeExtra || q._cur));
     if (level !== 'all') p = p.filter((q) => q.level === level);
     const seen = new Set();
-    p = p.filter((q) => { const k = q.q.trim(); if (seen.has(k)) return false; seen.add(k); return true; });
+    return p.filter((q) => { const k = q.q.trim(); if (seen.has(k)) return false; seen.add(k); return true; });
+  }
+  function pickQuestions(pool, sel, n, level, includeExtra) {
+    const rng = Math.random;
+    const p = candidates(pool, sel, level, includeExtra);
     const by = {};
-    p.forEach((q) => { (by[q.lesId] = by[q.lesId] || []).push(q); });
+    p.forEach((q) => { const k = q.lesId + '|' + (q._cur ? q.p : 'x'); (by[k] = by[k] || []).push(q); });
     Object.keys(by).forEach((k) => { by[k] = shuffled(by[k], rng); });
     const out = [];
     const keys = Object.keys(by);
@@ -154,13 +164,13 @@
     let pool;
     try { pool = await loadBank(); } catch (e) { toast(e.message, 'error'); return; }
     const pre = gradePrefix(ctx.cls);
-    const lessons = [];
     const seen = new Map();
     pool.filter((q) => q.lesId.startsWith(pre)).forEach((q) => {
-      const s = seen.get(q.lesId) || { id: q.lesId, label: q.l, n: 0 };
-      s.n++; seen.set(q.lesId, s);
+      const s = seen.get(q.lesId) || { id: q.lesId, label: q.l, n: 0, x: 0, points: new Map() };
+      if (q._cur) { s.n++; s.points.set(q.p, (s.points.get(q.p) || 0) + 1); } else s.x++;
+      seen.set(q.lesId, s);
     });
-    seen.forEach((v) => lessons.push(v));
+    const lessons = [...seen.values()];
     const lessonKey = (id) => { const p = id.split('-'); return { book: p[1] || '', nums: p.slice(2).map((x) => parseInt(x, 10) || 0) }; };
     lessons.sort((a, b) => {
       const x = lessonKey(a.id), y = lessonKey(b.id);
@@ -174,11 +184,21 @@
     nowD.setSeconds(0, 0);
     const local = `${nowD.getFullYear()}-${pad(nowD.getMonth() + 1)}-${pad(nowD.getDate())}T${pad(nowD.getHours())}:${pad(nowD.getMinutes())}`;
     const cols = ctx.cols();
+    const lessonBox = (l) => `
+      <div class="ex-lesbox">
+        <div class="ex-lesrow">
+          <label class="ex-les"><input type="checkbox" class="ex-lcb" value="${esc(l.id)}"><span>${bookTag(l.id)}${esc(l.label)}</span><small>${l.n}${l.x ? ` +${l.x}` : ''}</small></label>
+          ${l.points.size ? '<button type="button" class="ex-pt-toggle" title="ជ្រើសតាមចំណុច">ចំណុច ▾</button>' : ''}
+        </div>
+        <div class="ex-points" hidden>${[...l.points.entries()].sort((a, b) => pointNo(a[0]) - pointNo(b[0])).map(([lab, c]) => `<label class="ex-pt"><input type="checkbox" class="ex-pcb" data-les="${esc(l.id)}" value="${esc(lab)}"><span>${esc(shortPoint(lab))}</span><small>${c}</small></label>`).join('')}</div>
+      </div>`;
     const m = modalIn(root, `
+      <div id="ex-form">
       <h3>➕ បង្កើតការប្រឡង MCQ</h3>
       <label class="acc-field"><span>ឈ្មោះការប្រឡង</span><input id="ex-t" maxlength="60" placeholder="ឧ. តេស្តខ្លី មេរៀនទី ១"></label>
-      <div class="acc-field"><span>ជ្រើសមេរៀន (${lessons.length ? 'សំណួរត្រូវបានបែងចែកស្មើគ្នា' : 'គ្មានសំណួរសម្រាប់ថ្នាក់នេះ'})</span>
-        <div class="ex-lessons">${lessons.map((l) => `<label class="ex-les"><input type="checkbox" value="${esc(l.id)}"><span>${bookTag(l.id)}${esc(l.label)}</span><small>${l.n}</small></label>`).join('')}</div></div>
+      <div class="acc-field"><span>ជ្រើសមេរៀន ឬចុច «ចំណុច ▾» ដើម្បីជ្រើសតាមចំណុច (ចំនួនខាងស្តាំ = សំណួរដែលបានផ្ទៀងផ្ទាត់ · +n = សំណួរបន្ថែមមិនទាន់ផ្ទៀងផ្ទាត់)</span>
+        <div class="ex-lessons">${lessons.map(lessonBox).join('')}</div></div>
+      <label class="sc-check"><input type="checkbox" id="ex-extra"> រួមទាំងសំណួរបន្ថែម/QB (មិនទាន់ផ្ទៀងផ្ទាត់ — អាចខុសមេរៀន ចំណុច ឬកម្រិត ដូច្នេះត្រូវពិនិត្យមុនផ្សាយ)</label>
       <div class="acc-row2">
         <label class="acc-field"><span>ចំនួនសំណួរ</span><input id="ex-n" type="number" min="3" max="40" value="10"></label>
         <label class="acc-field"><span>កម្រិត</span><select id="ex-lv"><option value="all">ចម្រុះ</option>${LEVELS.map((l) => `<option>${l}</option>`).join('')}</select></label>
@@ -195,58 +215,159 @@
         <label class="acc-field"><span>ភ្ជាប់ទៅជួរសកម្មភាព</span><select id="ex-c"><option value="">➕ បង្កើតជួរថ្មី</option>${cols.map((c, i) => `<option value="${esc(c.id)}">${esc(c.label || ('សកម្មភាព ' + (i + 1)))} (/${c.max})</option>`).join('')}</select></label>
         <label class="acc-field"><span>ពិន្ទុអតិបរមាក្នុងជួរថ្មី</span><input id="ex-m" type="number" min="1" step="0.5" value="5"></label>
       </div>
-      <p class="acc-muted">ពិន្ទុប្រឡងត្រូវបំលែងតាមសមាមាត្រទៅជួរ (ឧ. ត្រូវ ៨/១០ ក្នុងជួរអតិបរមា ៥ = ៤)។ សិស្សធ្វើបានតែ ១ ដង។ សំណួរនិងចម្លើយត្រូវបានរៀបខុសគ្នាសម្រាប់សិស្សម្នាក់ៗ។</p>
+      <p class="acc-muted">ពិន្ទុប្រឡងត្រូវបំលែងតាមសមាមាត្រទៅជួរ (ឧ. ត្រូវ ៨/១០ ក្នុងជួរអតិបរមា ៥ = ៤)។ សិស្សធ្វើបានតែ ១ ដង។ សំណួរនិងចម្លើយត្រូវបានរៀបខុសគ្នាសម្រាប់សិស្សម្នាក់ៗ។ <b>ជំហានបន្ទាប់អ្នកនឹងឃើញសំណួរទាំងអស់ ហើយលុប/ជំនួសបាន មុនផ្សាយ។</b></p>
       <p class="acc-err"></p>
-      <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>បង្កើតការប្រឡង</button></div>`, true);
+      <div class="acc-modal-actions"><button class="acc-btn ghost" data-x>បោះបង់</button><button class="acc-btn" data-ok>បន្ទាប់ → មើលសំណួរ</button></div>
+      </div>
+      <div id="ex-prev" hidden></div>`, true);
     const err = m.querySelector('.acc-err');
     m.querySelector('[data-x]').addEventListener('click', () => m.remove());
-    m.querySelector('[data-ok]').addEventListener('click', async () => {
+    m.querySelectorAll('.ex-pt-toggle').forEach((b) => b.addEventListener('click', () => {
+      const box = b.closest('.ex-lesbox').querySelector('.ex-points');
+      box.hidden = !box.hidden;
+      b.textContent = box.hidden ? 'ចំណុច ▾' : 'ចំណុច ▴';
+    }));
+    // ticking a point implies its lesson; the lesson box alone means "all verified points"
+    m.querySelectorAll('.ex-pcb').forEach((c) => c.addEventListener('change', () => {
+      const box = c.closest('.ex-lesbox');
+      const any = box.querySelectorAll('.ex-pcb:checked').length > 0;
+      box.querySelector('.ex-lcb').checked = any || box.querySelector('.ex-lcb').checked;
+    }));
+
+    m.querySelector('[data-ok]').addEventListener('click', () => {
       const title = m.querySelector('#ex-t').value.trim();
-      const ids = [...m.querySelectorAll('.ex-lessons input:checked')].map((x) => x.value);
+      const sel = [];
+      m.querySelectorAll('.ex-lesbox').forEach((box) => {
+        const lcb = box.querySelector('.ex-lcb');
+        const pts = [...box.querySelectorAll('.ex-pcb:checked')].map((x) => x.value);
+        if (pts.length) sel.push({ lesId: lcb.value, points: pts });
+        else if (lcb.checked) sel.push({ lesId: lcb.value, points: null });
+      });
       const n = Math.round(Number(m.querySelector('#ex-n').value));
       const lv = m.querySelector('#ex-lv').value;
+      const extra = m.querySelector('#ex-extra').checked;
       const startMs = new Date(m.querySelector('#ex-s').value).getTime();
       const dur = Math.round(Number(m.querySelector('#ex-d').value));
       const perQ = Number(m.querySelector('#ex-q').value);
       const maxLeaves = Number(m.querySelector('#ex-l').value);
-      let colId = m.querySelector('#ex-c').value;
+      const colId0 = m.querySelector('#ex-c').value;
       const colMax = Number(m.querySelector('#ex-m').value);
       if (!title) { err.textContent = 'សូមវាយឈ្មោះការប្រឡង'; return; }
-      if (!ids.length) { err.textContent = 'សូមជ្រើសមេរៀនយ៉ាងតិច ១'; return; }
+      if (!sel.length) { err.textContent = 'សូមជ្រើសមេរៀន ឬចំណុចយ៉ាងតិច ១'; return; }
       if (!(n >= 3 && n <= 40)) { err.textContent = 'ចំនួនសំណួរត្រូវនៅចន្លោះ ៣–៤០'; return; }
       if (!isFinite(startMs)) { err.textContent = 'សូមជ្រើសម៉ោងចាប់ផ្តើម'; return; }
       if (startMs < now() - 60000) { err.textContent = 'ម៉ោងចាប់ផ្តើមបានកន្លងហួសហើយ'; return; }
       if (!(dur >= 3)) { err.textContent = 'រយៈពេលយ៉ាងតិច ៣ នាទី'; return; }
-      if (!colId && !(colMax > 0)) { err.textContent = 'ពិន្ទុអតិបរមាក្នុងជួរមិនត្រឹមត្រូវ'; return; }
-      const qs = pickQuestions(pool, ids, n, lv);
-      if (qs.length < 3) { err.textContent = `សំណួរមិនគ្រប់ (រកបាន ${qs.length})។ សូមជ្រើសមេរៀនបន្ថែម ឬកម្រិត «ចម្រុះ»`; return; }
-      if (qs.length < n && !confirm(`រកបានតែ ${qs.length} សំណួរ (ស្នើ ${n})។ បន្តដែរឬទេ?`)) return;
-      const eid = 'e' + Date.now().toString(36);
-      const exam = {
-        title, monthId: ctx.mid(), colId: '', startAt: new Date(startMs), endAt: new Date(startMs + dur * 60000),
-        durationMin: dur, total: qs.length, perQ, maxLeaves, synced: false,
-        questions: qs.map((q) => ({ id: q.id, q: q.q, o: q.o, k: keyHash(eid, q.id, q.a) }))
-      };
-      const key = { correct: qs.map((q) => q.a), expl: qs.map((q) => q.e || '') };
-      m.dataset.busy = '1';
-      m.querySelectorAll('button').forEach((b) => { b.disabled = true; });
-      try {
-        // link / create the activity column first
-        const next = ctx.cols().map((c) => Object.assign({}, c));
-        if (colId) { const c = next.find((x) => x.id === colId); c.exam = eid; }
-        else { colId = ctx.newColId(); next.push({ id: colId, label: title, max: colMax, day: '', exam: eid }); }
-        exam.colId = colId;
-        await ctx.saveCols(next);
-        await api().createExam(ctx.cls.id, eid, exam, key);
-        m.remove();
-        toast('✅ បានបង្កើតការប្រឡង', 'success');
-        done();
-      } catch (e) {
-        delete m.dataset.busy;
-        err.textContent = e.code === 'permission-denied' ? 'គ្មានសិទ្ធិ (ត្រូវ Publish firestore.rules ថ្មី)' : (e.message || e.code);
-        m.querySelectorAll('button').forEach((b) => { b.disabled = false; });
-      }
+      if (!colId0 && !(colMax > 0)) { err.textContent = 'ពិន្ទុអតិបរមាក្នុងជួរមិនត្រឹមត្រូវ'; return; }
+      const qs = pickQuestions(pool, sel, n, lv, extra);
+      if (qs.length < 3) { err.textContent = `សំណួរមិនគ្រប់ (រកបាន ${qs.length})។ សូមជ្រើសមេរៀន/ចំណុចបន្ថែម កម្រិត «ចម្រុះ» ឬធីក «រួមទាំងសំណួរបន្ថែម»`; return; }
+      err.textContent = '';
+      const params = { title, startMs, dur, perQ, maxLeaves, colId: colId0, colMax, n };
+      showPreview(m, ctx, pool, sel, lv, extra, qs, params, done);
     });
+  }
+
+  /* second step: the teacher reads every question, removes or swaps bad ones, then publishes */
+  function showPreview(m, ctx, pool, sel, lv, extra, qs, params, done) {
+    const form = m.querySelector('#ex-form');
+    const prev = m.querySelector('#ex-prev');
+    form.hidden = true;
+    prev.hidden = false;
+    const label = ['ក', 'ខ', 'គ', 'ឃ'];
+    function paint() {
+      prev.innerHTML = `
+        <h3>👀 ពិនិត្យសំណួរមុនផ្សាយ (${qs.length})</h3>
+        <p class="acc-muted">ពិនិត្យសំណួរនីមួយៗ ៖ <b>🔄 ជំនួស</b> ដោយសំណួរផ្សេងពីមេរៀន/ចំណុចដូចគ្នា · <b>🗑 លុប</b> · <b>🚩 រាយការណ៍</b> បើខុសមេរៀន ខុសចំណុច ខុសកម្រិត ឬចម្លើយមិនត្រឹមត្រូវ (ខ្ញុំនឹងកែក្នុងធនាគារ)។ ចម្លើយត្រឹមត្រូវមានសញ្ញា ✔។</p>
+        <ol class="ex-prev-list">${qs.map((q, i) => `
+          <li data-i="${i}">
+            <div class="ex-prev-meta"><span>${esc(String(q.l || '').replace(/\s*\(.*$/, ''))}</span><span>${esc(shortPoint(q.p || ''))}</span><b class="lv-${esc(q.level)}">${esc(q.level || '')}</b>${q._cur ? '' : '<em>⚠️ មិនទាន់ផ្ទៀងផ្ទាត់</em>'}</div>
+            <div class="ex-q">${html(q.q)}</div>
+            <ul class="ex-opts">${q.o.map((o, j) => `<li class="${j === q.a ? 'ok' : ''}">${label[j]}. ${html(o)}${j === q.a ? ' ✔' : ''}</li>`).join('')}</ul>
+            <div class="ex-prev-act"><button class="acc-btn ghost sm" data-rep="${i}">🔄 ជំនួស</button><button class="acc-btn ghost sm" data-rm="${i}">🗑 លុប</button><button class="acc-btn ghost sm" data-flag="${i}">🚩 រាយការណ៍</button></div>
+          </li>`).join('')}</ol>
+        <p class="acc-err ex-prev-err"></p>
+        <div class="acc-modal-actions"><button class="acc-btn ghost" data-back>← ត្រឡប់កែការកំណត់</button><button class="acc-btn" data-pub>✅ ផ្សាយការប្រឡង (${qs.length} សំណួរ)</button></div>`;
+      renderMath(prev);
+      prev.querySelectorAll('[data-rm]').forEach((b) => b.addEventListener('click', () => {
+        if (qs.length <= 3) { toast('ត្រូវមានយ៉ាងតិច ៣ សំណួរ', 'warning'); return; }
+        qs.splice(Number(b.dataset.rm), 1); paint();
+      }));
+      prev.querySelectorAll('[data-rep]').forEach((b) => b.addEventListener('click', () => {
+        const i = Number(b.dataset.rep);
+        const cur = qs[i];
+        const used = new Set(qs.map((q) => q.id));
+        const all = candidates(pool, sel, 'all', extra).filter((q) => !used.has(q.id));
+        const samePt = all.filter((q) => q.lesId === cur.lesId && q.p === cur.p && q.level === cur.level);
+        const sameLes = all.filter((q) => q.lesId === cur.lesId && q.level === cur.level);
+        const any = all.filter((q) => (lv === 'all' || q.level === lv));
+        const from = samePt.length ? samePt : (sameLes.length ? sameLes : any);
+        if (!from.length) { toast('គ្មានសំណួរផ្សេងសម្រាប់ជំនួសទេ', 'warning'); return; }
+        qs[i] = from[Math.floor(Math.random() * from.length)];
+        paint();
+      }));
+      prev.querySelectorAll('[data-flag]').forEach((b) => b.addEventListener('click', async () => {
+        const q = qs[Number(b.dataset.flag)];
+        let note = '';
+        try { note = prompt('មូលហេតុ (ស្រេចចិត្ត) ឧ. ខុសមេរៀន / ខុសចំណុច / ខុសកម្រិត / ចម្លើយខុស', '') || ''; } catch (e) {}
+        try { await api().flagQuestion({ qid: q.id, les: q.lesId, p: q.p, note }); b.textContent = '🚩 បានរាយការណ៍'; b.disabled = true; } catch (e) { toast(e.code === 'permission-denied' ? 'គ្មានសិទ្ធិ (ត្រូវ Publish firestore.rules ថ្មី)' : (e.message || 'រាយការណ៍មិនបាន'), 'error'); }
+      }));
+      prev.querySelector('[data-back]').addEventListener('click', () => { prev.hidden = true; form.hidden = false; });
+      prev.querySelector('[data-pub]').addEventListener('click', () => publish(m, prev, ctx, qs, params, done));
+    }
+    paint();
+  }
+
+  async function publish(m, prev, ctx, qs, params, done) {
+    const err = prev.querySelector('.ex-prev-err');
+    const eid = 'e' + Date.now().toString(36);
+    let colId = params.colId;
+    const exam = {
+      title: params.title, monthId: ctx.mid(), colId: '', startAt: new Date(params.startMs), endAt: new Date(params.startMs + params.dur * 60000),
+      durationMin: params.dur, total: qs.length, perQ: params.perQ, maxLeaves: params.maxLeaves, synced: false,
+      questions: qs.map((q) => ({ id: q.id, q: q.q, o: q.o, k: keyHash(eid, q.id, q.a), les: q.lesId || '', p: q.p || '' }))
+    };
+    const key = { correct: qs.map((q) => q.a), expl: qs.map((q) => q.e || '') };
+    m.dataset.busy = '1';
+    prev.querySelectorAll('button').forEach((b) => { b.disabled = true; });
+    try {
+      const next = ctx.cols().map((c) => Object.assign({}, c));
+      if (colId) { const c = next.find((x) => x.id === colId); c.exam = eid; }
+      else { colId = ctx.newColId(); next.push({ id: colId, label: params.title, max: params.colMax, day: '', exam: eid }); }
+      exam.colId = colId;
+      await ctx.saveCols(next);
+      await api().createExam(ctx.cls.id, eid, exam, key);
+      m.remove();
+      toast('✅ បានបង្កើតការប្រឡង', 'success');
+      done();
+    } catch (e) {
+      delete m.dataset.busy;
+      err.textContent = e.code === 'permission-denied' ? 'គ្មានសិទ្ធិ (ត្រូវ Publish firestore.rules ថ្មី)' : (e.message || e.code);
+      prev.querySelectorAll('button').forEach((b) => { b.disabled = false; });
+    }
+  }
+
+  /* Admin: questions reported as wrong (to be fixed in the bank in batches) */
+  async function openFlags(container) {
+    container.innerHTML = '<div class="acc-center small"><div class="acc-spin"></div></div>';
+    try {
+      const [flags, pool] = await Promise.all([api().listQFlags(), loadBank().catch(() => [])]);
+      const byQ = new Map();
+      flags.forEach((f) => { const g = byQ.get(f.qid) || { qid: f.qid, les: f.les, p: f.p, items: [] }; g.items.push(f); byQ.set(f.qid, g); });
+      const byId = new Map(pool.map((q) => [q.id, q]));
+      const groups = [...byQ.values()].sort((a, b) => b.items.length - a.items.length);
+      container.innerHTML = `<div class="acc-main-head"><div><h3>🚩 សំណួរដែលបានរាយការណ៍</h3><small>${groups.length} សំណួរ · ${flags.length} ការរាយការណ៍</small></div></div>
+        ${groups.length ? groups.map((g) => { const q = byId.get(g.qid); return `<section class="sc-card ex-flag-card" data-q="${esc(g.qid)}">
+          <div class="ex-prev-meta"><span>${esc(g.les || '')}</span><span>${esc(shortPoint(g.p || ''))}</span><b>${g.items.length} ដង</b><span>${esc(g.qid)}</span></div>
+          ${q ? `<div class="ex-q">${html(q.q)}</div><ul class="ex-opts">${q.o.map((o, j) => `<li class="${j === q.a ? 'ok' : ''}">${'ក ខ គ ឃ'.split(' ')[j]}. ${html(o)}${j === q.a ? ' ✔' : ''}</li>`).join('')}</ul>` : '<p class="acc-muted">រកមិនឃើញសំណួរនេះក្នុងធនាគារទេ (ប្រហែលត្រូវបានលុបរួច)។</p>'}
+          <div class="ex-expl">${g.items.map((f) => esc(f.note || '(គ្មានមូលហេតុ)') + ' <small>— ' + esc(f.role || '') + '</small>').join('<br>')}</div>
+          <div class="ex-prev-act"><button class="acc-btn ghost sm" data-done="${esc(g.qid)}">✔ ដោះស្រាយរួច (លុបការរាយការណ៍)</button></div></section>`; }).join('') : '<p class="acc-muted">មិនទាន់មានការរាយការណ៍ទេ។</p>'}`;
+      renderMath(container);
+      container.querySelectorAll('[data-done]').forEach((b) => b.addEventListener('click', async () => {
+        const g = byQ.get(b.dataset.done);
+        b.disabled = true;
+        try { await api().deleteQFlags(g.items.map((f) => f.id)); b.closest('section').remove(); } catch (e) { toast(e.message, 'error'); b.disabled = false; }
+      }));
+    } catch (e) { container.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code)}</p>`; }
   }
 
   /* verified scores: recompute from the answers with the teacher-only key */
@@ -421,10 +542,16 @@
       const key = await api().getExamKey(p.classId, ex.id);
       const ans = (r && r.answers) || [];
       body.innerHTML = `<div class="sc sc-member"><button class="acc-btn ghost sm" data-a="back">← ត្រឡប់</button><h3 class="ex-h">${esc(ex.title)} · ${r ? r.score : '?'}/${ex.total}</h3>
-        ${ex.questions.map((q, i) => { const c = key.correct[i], a = ans[i]; return `<section class="sc-card"><div class="ex-q">${i + 1}. ${html(q.q)}</div>
+        ${ex.questions.map((q, i) => { const c = key.correct[i], a = ans[i]; return `<section class="sc-card"><div class="ex-q">${i + 1}. ${html(q.q)}</div><button class="ex-flag" data-flag="${i}" title="រាយការណ៍សំណួរនេះថាខុស">🚩</button>
           <ul class="ex-opts">${q.o.map((o, j) => `<li class="${j === c ? 'ok' : (j === a ? 'bad' : '')}">${'ក ខ គ ឃ'.split(' ')[j]}. ${html(o)}${j === c ? ' ✔' : (j === a ? ' ✘ (ចម្លើយរបស់អ្នក)' : '')}</li>`).join('')}</ul>
           ${key.expl && key.expl[i] ? `<div class="ex-expl">💡 ${html(key.expl[i])}</div>` : ''}</section>`; }).join('')}</div>`;
       body.querySelector('[data-a="back"]').addEventListener('click', back);
+      body.querySelectorAll('[data-flag]').forEach((b) => b.addEventListener('click', async () => {
+        const q = ex.questions[Number(b.dataset.flag)];
+        let note = '';
+        try { note = prompt('សំណួរនេះខុសយ៉ាងដូចម្តេច? (ស្រេចចិត្ត)', '') || ''; } catch (e) {}
+        try { await api().flagQuestion({ qid: q.id, les: q.les, p: q.p, note }); b.textContent = '🚩 បានរាយការណ៍'; b.disabled = true; toast('សូមអរគុណ! លោកគ្រូនឹងពិនិត្យ', 'success'); } catch (e) { toast('រាយការណ៍មិនបាន', 'error'); }
+      }));
       renderMath(body);
     } catch (e) { body.innerHTML = `<p class="acc-err">⚠️ ${esc(e.message || e.code)}</p><button class="acc-btn ghost sm" data-a="back">← ត្រឡប់</button>`; body.querySelector('[data-a="back"]').addEventListener('click', back); }
   }
@@ -572,5 +699,5 @@
     paintQ();
   }
 
-  window.Exams = { openManager, openStudent, autoSync, syncScores };
+  window.Exams = { openManager, openStudent, autoSync, syncScores, openFlags };
 })();

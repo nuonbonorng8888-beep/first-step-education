@@ -377,7 +377,7 @@
           <select class="acc-class-select" aria-label="ជ្រើសថ្នាក់">
             ${A.classes.map((c) => `<option value="${c.id}" ${A.cls && A.cls.id === c.id ? 'selected' : ''}>${esc(c.name)} · ថ្នាក់ទី ${kh(c.grade || '?')}</option>`).join('')}
           </select>
-          ${Cloud.isAdmin() ? '<button class="acc-btn ghost wide" data-a="teachers">👨‍🏫 គ្រប់គ្រងគណនីគ្រូ</button>' : ''}
+          ${Cloud.isAdmin() ? '<button class="acc-btn ghost wide" data-a="teachers">👨‍🏫 គ្រប់គ្រងគណនីគ្រូ</button><button class="acc-btn ghost wide" data-a="flags">🚩 សំណួរដែលបានរាយការណ៍</button>' : ''}
         </aside>
         <main class="acc-main"></main>
       </div>`;
@@ -385,6 +385,8 @@
     A.root.querySelectorAll('[data-cid]').forEach((b) => b.addEventListener('click', () => selectClass(b.dataset.cid)));
     A.root.querySelector('.acc-class-select').addEventListener('change', (e) => selectClass(e.target.value));
     A.root.querySelector('[data-a="new-class"]').addEventListener('click', newClassDialog);
+    const fl = A.root.querySelector('[data-a="flags"]');
+    if (fl) fl.addEventListener('click', () => { A.root.querySelectorAll('.acc-class').forEach((b) => b.classList.remove('active')); if (window.Exams) Exams.openFlags(A.root.querySelector('.acc-main')); });
     const t = A.root.querySelector('[data-a="teachers"]');
     if (t) t.addEventListener('click', renderTeachers);
     if (!A.cls) {

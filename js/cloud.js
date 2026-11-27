@@ -1038,6 +1038,27 @@
         .set(Object.assign({}, result, { submittedAt: ts() }));
     },
 
+    /* ----- reports of wrong questions ----- */
+    async flagQuestion(f) {
+      await ready();
+      await db.collection('qflags').add({
+        qid: String(f.qid || '').slice(0, 79), les: String(f.les || '').slice(0, 60), p: String(f.p || '').slice(0, 120),
+        note: String(f.note || '').slice(0, 200), by: profile.uid, role: profile.role, cid: profile.classId || '', at: ts()
+      });
+    },
+    async listQFlags() {
+      await ready();
+      const snap = await db.collection('qflags').get();
+      return snap.docs.map((d) => Object.assign({ id: d.id }, d.data()));
+    },
+    async deleteQFlags(ids) {
+      await ready();
+      for (let i = 0; i < ids.length; i += 400) {
+        const b = db.batch();
+        ids.slice(i, i + 400).forEach((id) => b.delete(db.collection('qflags').doc(id)));
+        await b.commit();
+      }
+    },
     /* student: the class settings */
     async myClass() {
       await ready();
