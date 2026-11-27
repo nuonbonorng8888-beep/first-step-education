@@ -2767,161 +2767,161 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "អនុគមន៍លោការីត $y = \\log_a x$ ($a > 0, a \\ne 1$) មានដែនកំណត់ ៖",
         "options": [
-          "$D = (0, +\\infty)$",
           "$D = \\mathbb{R}$",
           "$D = \\mathbb{R}^*$",
+          "$D = (0, +\\infty)$",
           "$D = [0, +\\infty)$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "កន្សោមក្នុងលោការីតត្រូវតែវិជ្ជមានដាច់ខាត ($x > 0$) នាំឱ្យដែនកំណត់គឺ $D = ]0, +\\infty[$។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាតម្លៃនៃ $\\log_2 32$ ៖",
         "options": [
           "$4$",
           "$8$",
-          "$5$",
-          "$6$"
+          "$6$",
+          "$5$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$\\log_2 32 = \\log_2(2^5) = 5$។"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាតម្លៃនៃ $\\log_3 1$ ៖",
         "options": [
-          "$1$",
           "$0$",
+          "$3$",
           "គ្មានកំណត់",
-          "$3$"
+          "$1$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "$\\log_a 1 = 0$ ចំពោះគ្រប់គោល $a > 0, a \\ne 1$។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "រូបមន្តផលបូកលោការីត $\\log_a M + \\log_a N$ ($M, N > 0$) ស្មើនឹង ៖",
+        "question": "តម្លៃនៃ $\\log _{a}1$ ( $a> 0, a\\ne 1$ ) គឺ",
         "options": [
-          "$\\log_a\\left(\\dfrac{M}{N}\\right)$",
-          "$\\log_a(M + N)$",
-          "$(\\log_a M)(\\log_a N)$",
-          "$\\log_a(MN)$"
+          "$a$",
+          "$0$",
+          "មិនកំណត់",
+          "$1$"
         ],
-        "correct": 3,
-        "explanation": "រូបមន្តគ្រឹះ ៖ $\\log_a M + \\log_a N = \\log_a(MN)$។"
+        "correct": 1,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $0$"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាតម្លៃនៃ $A = \\log_2 12 - \\log_2 3$ ៖",
+        "question": "ដែនកំណត់នៃអនុគមន៍ $f(x) = \\ln (x-3)$ គឺ",
         "options": [
-          "$4$",
-          "$2$",
-          "$3$",
-          "$1$"
+          "$(0, +\\infty )$",
+          "$(-\\infty , 3)$",
+          "$(3, +\\infty )$",
+          "$[3, +\\infty )$"
         ],
-        "correct": 1,
-        "explanation": "$A = \\log_2\\left(\\dfrac{12}{3}\\right) = \\log_2 4 = 2$។"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $(3, +\\infty )$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាតម្លៃនៃ $B = 3^{\\log_3 7} + \\log_2 32$ ៖",
+        "question": "គេឱ្យ $f(x)=2x+5$។ គណនា $f^{-1}(15)$ ៖",
         "options": [
-          "$10$",
-          "$11$",
-          "$12$",
-          "$15$"
+          "$6$",
+          "$4$",
+          "$35$",
+          "$5$"
         ],
-        "correct": 2,
-        "explanation": "$3^{\\log_3 7} = 7$ និង $\\log_2 32 = \\log_2 2^5 = 5$ នាំឱ្យ $B = 7 + 5 = 12$។"
+        "correct": 3,
+        "explanation": "$f(x)=15$ ទាញ $x=5$ ដូចនេះ $f^{-1}(15)=5$។"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបមន្តប្តូរគោលលោការីតពីគោល $a$ ទៅគោល $c$ គឺ ៖",
+        "question": "ដែនកំណត់នៃអនុគមន៍ $y=\\log_{3}(x-2)$ គឺ ៖",
         "options": [
-          "$\\log_a b = \\log_c b \\cdot \\log_c a$",
-          "$\\log_a b = \\log_c(b - a)$",
-          "$\\log_a b = \\dfrac{\\log_c b}{\\log_c a}$",
-          "$\\log_a b = \\dfrac{\\log_c a}{\\log_c b}$"
+          "$[2,+\\infty)$",
+          "$(-\\infty,2)$",
+          "$(2,+\\infty)$",
+          "$(-2,+\\infty)$"
         ],
         "correct": 2,
-        "explanation": "រូបមន្តប្តូរគោល ៖ $\\log_a b = \\dfrac{\\log_c b}{\\log_c a}$។"
+        "explanation": "$x-2>0$ ទាញ $x>2$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនាផលគុណ $P = \\log_2 3 \\cdot \\log_3 4 \\cdot \\log_4 5 \\dots \\log_{31} 32$ ៖",
+        "question": "រកដែនកំណត់នៃអនុគមន៍ $y = \\log_2(x^2 - 5x + 6)$ ៖",
         "options": [
-          "$4$",
-          "$6$",
-          "$16$",
-          "$5$"
+          "$(2, 3)$",
+          "$[2, 3]$",
+          "$(-\\infty, 2] \\cup [3, +\\infty)$",
+          "$(-\\infty, 2) \\cup (3, +\\infty)$"
         ],
         "correct": 3,
-        "explanation": "ប្តូរជាគោល ១០ ៖ $P = \\dfrac{\\log 3}{\\log 2} \\cdot \\dfrac{\\log 4}{\\log 3} \\dots \\dfrac{\\log 32}{\\log 31} = \\dfrac{\\log 32}{\\log 2} = \\log_2 32 = 5$។"
+        "explanation": "លក្ខខណ្ឌ ៖ $x^2 - 5x + 6 > 0 \\Leftrightarrow (x - 2)(x - 3) > 0 \\Rightarrow x < 2$ ឬ $x > 3$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "រកដែនកំណត់នៃអនុគមន៍ $y = \\log_2(x^2 - 5x + 6)$ ៖",
+        "question": "ដែនកំណត់នៃអនុគមន៍ $y=\\log_2(x^2-5x+6)$ គឺ ៖",
         "options": [
-          "$[2, 3]$",
-          "$(2, 3)$",
-          "$(-\\infty, 2) \\cup (3, +\\infty)$",
-          "$(-\\infty, 2] \\cup [3, +\\infty)$"
+          "$(2,3)$",
+          "$[2,3]$",
+          "$(-\\infty,2)\\cup(3,+\\infty)$",
+          "$(-\\infty,2]\\cup[3,+\\infty)$"
         ],
         "correct": 2,
-        "explanation": "លក្ខខណ្ឌ ៖ $x^2 - 5x + 6 > 0 \\Leftrightarrow (x - 2)(x - 3) > 0 \\Rightarrow x < 2$ ឬ $x > 3$។"
+        "explanation": "$x^2-5x+6>0$ ទាញ $x<2$ ឬ $x>3$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ក្រាបនៃអនុគមន៍លោការីត",
+        "pointTitle": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "បើ $\\log_2 3 = a$ និង $\\log_2 5 = b$ ចូរសរសេរ $\\log_2 45$ ជាអនុគមន៍នៃ $a$ និង $b$ ៖",
+        "question": "បន្ទាត់អាស៊ីមតូតឈរនៃក្រាប $y=\\log_{5}(x-2)-1$ គឺ ៖",
         "options": [
-          "$a + 2b$",
-          "$2a + b$",
-          "$a^2 + b$",
-          "$a^2 b$"
+          "$x=2$",
+          "$x=-2$",
+          "$y=-1$",
+          "$x=1$"
         ],
-        "correct": 1,
-        "explanation": "$\\log_2 45 = \\log_2(3^2 \\times 5) = \\log_2(3^2) + \\log_2 5 = 2\\log_2 3 + \\log_2 5 = 2a + b$។"
+        "correct": 0,
+        "explanation": "$x-2=0$ ទាញ $x=2$។"
       }
     ],
     "2": [
@@ -2930,68 +2930,64 @@
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{2} 8^{3}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រូបមន្តផលបូកលោការីត $\\log_a M + \\log_a N$ ($M, N > 0$) ស្មើនឹង ៖",
         "options": [
-          "$10$",
-          "$3$",
-          "$9$",
-          "$6$"
+          "$(\\log_a M)(\\log_a N)$",
+          "$\\log_a(MN)$",
+          "$\\log_a(M + N)$",
+          "$\\log_a\\left(\\dfrac{M}{N}\\right)$"
         ],
-        "correct": 2,
-        "explanation": "$\\log_a x^m = m \\log_a x = 3 \\times 3 = 9$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "រូបមន្តគ្រឹះ ៖ $\\log_a M + \\log_a N = \\log_a(MN)$។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{2} 20 - \\log_{2} 5$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំពោះ $x> 0, y> 0$ គេបាន $\\log _{a}(xy)$ ស្មើនឹង",
         "options": [
-          "$15$",
-          "$2$",
-          "$3$",
-          "$4$"
+          "$\\dfrac{\\log _{a}x}{\\log _{a}y}$",
+          "$\\log _{a}x+ \\log _{a}y$",
+          "$\\log _{a}x-\\log _{a}y$",
+          "$\\log _{a}x\\cdot \\log _{a}y$"
         ],
         "correct": 1,
-        "explanation": "$\\log_a \\dfrac{x}{y} = \\log_{2} 4 = 2$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $\\log _{a}x+ \\log _{a}y$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{2} 16 - \\log_{2} 2$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំពោះ $x> 0, y> 0$ គេបាន $\\log _{a}\\dfrac{x}{y}$ ស្មើនឹង",
         "options": [
-          "$14$",
-          "$8$",
-          "$4$",
-          "$3$"
+          "$\\log _{a}(x-y)$",
+          "$\\log _{a}x-\\log _{a}y$",
+          "$\\log _{a}x+ \\log _{a}y$",
+          "$\\dfrac{\\log _{a}x}{\\log _{a}y}$"
         ],
-        "correct": 3,
-        "explanation": "$\\log_a \\dfrac{x}{y} = \\log_{2} 8 = 3$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $\\log _{a}x-\\log _{a}y$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{3} 9 - \\log_{3} 3$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រូបមន្តប្តូរគោល៖ $\\log _{a}x$ ស្មើនឹង",
         "options": [
-          "$1$",
-          "$6$",
-          "$3$",
-          "$2$"
+          "$\\dfrac{\\log _{b}a}{\\log _{b}x}$",
+          "$\\log _{b}x\\cdot \\log _{b}a$",
+          "$\\dfrac{\\log _{b}x}{\\log _{b}a}$",
+          "$\\log _{b}x-\\log _{b}a$"
         ],
-        "correct": 0,
-        "explanation": "$\\log_a \\dfrac{x}{y} = \\log_{3} 3 = 1$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $\\dfrac{\\log _{b}x}{\\log _{b}a}$"
       },
       {
         "id": "q5",
@@ -2999,16 +2995,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{3} 9^{2}$ ៖",
+        "question": "គណនាតម្លៃនៃ $A = \\log_2 12 - \\log_2 3$ ៖",
         "options": [
-          "$5$",
-          "$3$",
           "$2$",
+          "$3$",
+          "$1$",
           "$4$"
         ],
-        "correct": 3,
-        "explanation": "$\\log_a x^m = m \\log_a x = 2 \\times 2 = 4$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$A = \\log_2\\left(\\dfrac{12}{3}\\right) = \\log_2 4 = 2$។"
       },
       {
         "id": "q6",
@@ -3016,16 +3011,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{9} 27$ ដោយប្រើរូបមន្តប្តូរគោល ៖",
+        "question": "រូបមន្តប្តូរគោលលោការីតពីគោល $a$ ទៅគោល $c$ គឺ ៖",
         "options": [
-          "$\\dfrac{2}{3}$",
-          "$\\dfrac{3}{2}$",
-          "$1$",
-          "$3$"
+          "$\\log_a b = \\dfrac{\\log_c a}{\\log_c b}$",
+          "$\\log_a b = \\dfrac{\\log_c b}{\\log_c a}$",
+          "$\\log_a b = \\log_c(b - a)$",
+          "$\\log_a b = \\log_c b \\cdot \\log_c a$"
         ],
         "correct": 1,
-        "explanation": "$\\log_{9} 27 = \\dfrac{\\log_{3} 27}{\\log_{3} 9} = \\dfrac{3}{2}$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "រូបមន្តប្តូរគោល ៖ $\\log_a b = \\dfrac{\\log_c b}{\\log_c a}$។"
       },
       {
         "id": "q7",
@@ -3033,67 +3027,63 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{2} 4 + \\log_{2} 8$ ៖",
+        "question": "គណនា $\\log _{2}64 + \\log _{4}256$",
         "options": [
-          "$6$",
-          "$4$",
-          "$5$",
+          "$11$",
+          "$10$",
+          "$13$",
           "$12$"
         ],
-        "correct": 2,
-        "explanation": "$\\log_a x + \\log_a y = \\log_a(xy) = \\log_{2} 32 = 5$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $10$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{3} 27 - \\log_{3} 3$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាផលគុណ $P = \\log_2 3 \\cdot \\log_3 4 \\cdot \\log_4 5 \\dots \\log_{31} 32$ ៖",
         "options": [
-          "$2$",
-          "$9$",
-          "$24$",
-          "$3$"
+          "$6$",
+          "$16$",
+          "$4$",
+          "$5$"
         ],
-        "correct": 0,
-        "explanation": "$\\log_a \\dfrac{x}{y} = \\log_{3} 9 = 2$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "ប្តូរជាគោល ១០ ៖ $P = \\dfrac{\\log 3}{\\log 2} \\cdot \\dfrac{\\log 4}{\\log 3} \\dots \\dfrac{\\log 32}{\\log 31} = \\dfrac{\\log 32}{\\log 2} = \\log_2 32 = 5$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{3} 81^{3}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $\\log_2 3 = a$ និង $\\log_2 5 = b$ ចូរសរសេរ $\\log_2 45$ ជាអនុគមន៍នៃ $a$ និង $b$ ៖",
         "options": [
-          "$3$",
-          "$7$",
-          "$12$",
-          "$4$"
+          "$2a + b$",
+          "$a^2 b$",
+          "$a + 2b$",
+          "$a^2 + b$"
         ],
-        "correct": 2,
-        "explanation": "$\\log_a x^m = m \\log_a x = 3 \\times 4 = 12$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$\\log_2 45 = \\log_2(3^2 \\times 5) = \\log_2(3^2) + \\log_2 5 = 2\\log_2 3 + \\log_2 5 = 2a + b$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\log_{4} 8$ ដោយប្រើរូបមន្តប្តូរគោល ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $n= 2021!$ ចូរគណនា $F=\\dfrac{1}{\\log _{2}n}+\\dfrac{1}{\\log _{3}n}+\\dfrac{1}{\\log _{4}n}+ \\cdots +\\dfrac{1}{\\log _{2021}n}$",
         "options": [
-          "$2$",
-          "$1$",
-          "$\\dfrac{2}{3}$",
-          "$\\dfrac{3}{2}$"
+          "$F= n$",
+          "$F= \\dfrac{n}{2}$",
+          "$F= 1$",
+          "$F= 0$"
         ],
-        "correct": 3,
-        "explanation": "$\\log_{4} 8 = \\dfrac{\\log_{2} 8}{\\log_{2} 4} = \\dfrac{3}{2}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $F= 1$"
       }
     ],
     "3": [
@@ -3122,9 +3112,9 @@
         "question": "ដោះស្រាយសមីការ $\\log_2(x - 3) = 3$ ៖",
         "options": [
           "$x = 11$",
+          "$x = 9$",
           "$x = 12$",
-          "$x = 8$",
-          "$x = 9$"
+          "$x = 8$"
         ],
         "correct": 0,
         "explanation": "លក្ខខណ្ឌ $x > 3$ ៖ $x - 3 = 2^3 = 8 \\Rightarrow x = 11$។"
@@ -3135,15 +3125,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការលោការីត",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយសមីការ $\\log_3(2x - 1) = 0$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\log_5(3x - 2) = \\log_5(x + 6)$ ៖",
         "options": [
+          "$x = 3$",
           "$x = 2$",
-          "$x = 0$",
-          "$x = 0.5$",
-          "$x = 1$"
+          "$x = 4$",
+          "$x = 5$"
         ],
-        "correct": 3,
-        "explanation": "លក្ខខណ្ឌ $2x - 1 > 0$។ $\\log_3(2x - 1) = 0 \\iff 2x - 1 = 3^0 = 1 \\iff x = 1$ (ផ្ទៀងផ្ទាត់លក្ខខណ្ឌ)។"
+        "correct": 2,
+        "explanation": "$3x - 2 = x + 6 \\Rightarrow 2x = 8 \\Rightarrow x = 4$ (ផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x > \\dfrac{2}{3}$)។"
       },
       {
         "id": "q4",
@@ -3151,15 +3141,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការលោការីត",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយសមីការ $\\log_5(3x - 2) = \\log_5(x + 6)$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\log _{2}x= 5$",
         "options": [
-          "$x = 3$",
-          "$x = 5$",
-          "$x = 4$",
-          "$x = 2$"
+          "$x= 25$",
+          "$x= 32$",
+          "$x= 10$",
+          "$x= \\dfrac{5}{2}$"
         ],
-        "correct": 2,
-        "explanation": "$3x - 2 = x + 6 \\Rightarrow 2x = 8 \\Rightarrow x = 4$ (ផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $x > \\dfrac{2}{3}$)។"
+        "correct": 1,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $x= 32$"
       },
       {
         "id": "q5",
@@ -3169,12 +3159,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការ $\\log_2(x + 2) + \\log_2(x - 2) = 5$ ៖",
         "options": [
-          "$x = -6$",
-          "$x = 5$",
+          "$x = \\pm 6$",
           "$x = 6$",
-          "$x = \\pm 6$"
+          "$x = -6$",
+          "$x = 5$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "លក្ខខណ្ឌ $x > 2$ ៖ $\\log_2(x^2 - 4) = 5 \\Rightarrow x^2 - 4 = 32 \\Rightarrow x^2 = 36 \\Rightarrow x = 6$ (បោះបង់ $-6$)។"
       },
       {
@@ -3185,8 +3175,8 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការ $\\log_3^2 x - 4\\log_3 x + 3 = 0$ ៖",
         "options": [
-          "$x = 1, x = 3$",
           "$x = 3, x = 9$",
+          "$x = 1, x = 3$",
           "$x = 9, x = 27$",
           "$x = 3, x = 27$"
         ],
@@ -3203,8 +3193,8 @@
         "options": [
           "$x = 1$",
           "$x = -2$",
-          "$x = 1, x = -2$",
-          "$x = 2$"
+          "$x = 2$",
+          "$x = 1, x = -2$"
         ],
         "correct": 0,
         "explanation": "លក្ខខណ្ឌ $x > 0$ ៖ $x(x+1) = 2^1 = 2 \\Rightarrow x^2 + x - 2 = 0 \\Rightarrow x = 1$ (បោះបង់ $-2$)។"
@@ -3218,11 +3208,11 @@
         "question": "ដោះស្រាយសមីការ $x^{\\log_2 x} = 16$ ៖",
         "options": [
           "$x = 4$",
+          "$x = 16$",
           "$x = 4, x = \\dfrac{1}{4}$",
-          "$x = 2, x = \\dfrac{1}{2}$",
-          "$x = 16$"
+          "$x = 2, x = \\dfrac{1}{2}$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "បំពាក់ $\\log_2$ ទាំងសងខាង ៖ $\\log_2(x^{\\log_2 x}) = \\log_2 16 \\Rightarrow (\\log_2 x)^2 = 4 \\Rightarrow \\log_2 x = \\pm 2 \\Rightarrow x = 4, \\dfrac{1}{4}$។"
       },
       {
@@ -3233,12 +3223,12 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការ $\\log_2 x + \\log_4 x = 3$ ៖",
         "options": [
-          "$x = 16$",
           "$x = 4$",
+          "$x = 16$",
           "$x = 8$",
           "$x = 2$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "$\\log_2 x + \\frac{1}{2}\\log_2 x = 3 \\Rightarrow \\frac{3}{2}\\log_2 x = 3 \\Rightarrow \\log_2 x = 2 \\Rightarrow x = 4$។"
       },
       {
@@ -3249,12 +3239,12 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការ $\\log_3(x - 2) + \\log_3(x - 4) = 1$ ៖",
         "options": [
-          "$x = 5$",
-          "$x = 5, x = 1$",
           "$x = 1$",
-          "$x = 6$"
+          "$x = 5$",
+          "$x = 6$",
+          "$x = 5, x = 1$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "លក្ខខណ្ឌ $x > 4$ ៖ $(x-2)(x-4) = 3 \\Rightarrow x^2 - 6x + 8 = 3 \\Rightarrow x^2 - 6x + 5 = 0 \\Rightarrow x = 5$ (បោះបង់ $1$)។"
       }
     ],
@@ -3267,12 +3257,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមីការ $\\log_2 x > 3$ ៖",
         "options": [
-          "$x < 8$",
-          "$x > 8$",
+          "$x > 6$",
           "$x \\ge 8$",
-          "$x > 6$"
+          "$x < 8$",
+          "$x > 8$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "លក្ខខណ្ឌ $x > 0$។ ដោយគោល $2 > 1$ ៖ $x > 2^3 = 8$។"
       },
       {
@@ -3284,11 +3274,11 @@
         "question": "ដោះស្រាយវិសមីការ $\\log_{\\frac{1}{2}} x \\ge 2$ ៖",
         "options": [
           "$x > 0$",
-          "$x \\le \\dfrac{1}{4}$",
           "$0 < x \\le \\dfrac{1}{4}$",
-          "$x \\ge \\dfrac{1}{4}$"
+          "$x \\ge \\dfrac{1}{4}$",
+          "$x \\le \\dfrac{1}{4}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "លក្ខខណ្ឌ $x > 0$។ គោល $\\dfrac{1}{2} < 1$ នាំឱ្យប្តូរទិស ៖ $x \\le \\left(\\dfrac{1}{2}\\right)^{2} = \\dfrac{1}{4}$។ ប្រសព្វបាន $0 < x \\le \\dfrac{1}{4}$។"
       },
       {
@@ -3300,9 +3290,9 @@
         "question": "ដោះស្រាយវិសមីការ $\\log_3(x - 1) \\le 2$ ៖",
         "options": [
           "$1 < x \\le 10$",
-          "$1 \\le x \\le 10$",
+          "$x > 1$",
           "$x \\le 10$",
-          "$x > 1$"
+          "$1 \\le x \\le 10$"
         ],
         "correct": 0,
         "explanation": "លក្ខខណ្ឌ $x - 1 > 0 \\Rightarrow x > 1$។ $x - 1 \\le 3^2 = 9 \\Rightarrow x \\le 10$។ សំណុំចម្លើយ $1 < x \\le 10$។"
@@ -3313,15 +3303,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ វិសមីការលោការីត",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយវិសមីការ $\\log_2 x < 0$ ៖",
+        "question": "ដោះស្រាយវិសមីការ $\\log _{7}(x-2) > 0$",
         "options": [
-          "$x < 0$",
-          "$x < 1$",
-          "$0 < x < 1$",
-          "$x > 0$"
+          "$x\\in [3, +\\infty )$",
+          "$x\\in (-\\infty , 3]$",
+          "$x\\in (3, +\\infty )$",
+          "$x\\in (-\\infty , 3)$"
         ],
         "correct": 2,
-        "explanation": "លក្ខខណ្ឌ $x > 0$។ $\\log_2 x < \\log_2 1$ ហើយគោល $2 > 1$ នាំឱ្យ $x < 1$។ ដូចនេះ $0 < x < 1$។"
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $x\\in (3, +\\infty )$"
       },
       {
         "id": "q5",
@@ -3331,12 +3321,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយវិសមីការ $\\log_2(2x - 4) < 3$ ៖",
         "options": [
-          "$4 < x < 6$",
-          "$2 < x < 8$",
           "$2 < x < 6$",
-          "$x < 6$"
+          "$2 < x < 8$",
+          "$x < 6$",
+          "$4 < x < 6$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "លក្ខខណ្ឌ $2x - 4 > 0 \\Rightarrow x > 2$។ $2x - 4 < 2^3 = 8 \\Rightarrow 2x < 12 \\Rightarrow x < 6$ នាំឱ្យ $2 < x < 6$។"
       },
       {
@@ -3347,12 +3337,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយវិសមីការ $\\log_{\\frac{1}{3}}(x + 1) > -1$ ៖",
         "options": [
-          "$x < 2$",
-          "$x > 2$",
           "$-1 < x < 3$",
-          "$-1 < x < 2$"
+          "$-1 < x < 2$",
+          "$x < 2$",
+          "$x > 2$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "លក្ខខណ្ឌ $x > -1$។ គោល $\\dfrac{1}{3} < 1$ ៖ $x + 1 < (\\dfrac{1}{3})^{-1} = 3 \\Rightarrow x < 2$ នាំឱ្យ $-1 < x < 2$។"
       },
       {
@@ -3363,12 +3353,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយវិសមីការ $\\log_2^2 x - 3\\log_2 x + 2 \\le 0$ ៖",
         "options": [
-          "$2 \\le x \\le 4$",
-          "$1 \\le x \\le 2$",
           "$0 < x \\le 4$",
-          "$x \\le 2$ ឬ $x \\ge 4$"
+          "$1 \\le x \\le 2$",
+          "$x \\le 2$ ឬ $x \\ge 4$",
+          "$2 \\le x \\le 4$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$(\\log_2 x - 1)(\\log_2 x - 2) \\le 0 \\Rightarrow 1 \\le \\log_2 x \\le 2 \\Rightarrow 2^1 \\le x \\le 2^2 \\Rightarrow 2 \\le x \\le 4$។"
       },
       {
@@ -3380,11 +3370,11 @@
         "question": "ដោះស្រាយវិសមីការ $\\log_2(x - 1) + \\log_2(x + 1) \\le 3$ ៖",
         "options": [
           "$1 < x < 3$",
-          "$1 < x \\le 3$",
           "$x \\le 3$",
+          "$1 < x \\le 3$",
           "$-3 \\le x \\le 3$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "លក្ខខណ្ឌ $x > 1$ ៖ $\\log_2(x^2 - 1) \\le 3 \\Rightarrow x^2 - 1 \\le 8 \\Rightarrow x^2 \\le 9 \\Rightarrow -3 \\le x \\le 3$។ ប្រសព្វបាន $1 < x \\le 3$។"
       },
       {
@@ -3395,12 +3385,12 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយវិសមីការ $\\log_x 2 > 1$ ៖",
         "options": [
-          "$x > 2$",
           "$1 < x < 2$",
-          "$x > 1$",
-          "$0 < x < 1$"
+          "$0 < x < 1$",
+          "$x > 2$",
+          "$x > 1$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "$\\frac{1}{\\log_2 x} > 1$។ ចំពោះ $x > 1$ ៖ $\\log_2 x > 0$ នាំឱ្យ $1 > \\log_2 x \\Rightarrow x < 2$។ ដូចនេះ $1 < x < 2$។"
       },
       {
@@ -3411,12 +3401,12 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយវិសមីការ $\\log_{\\frac{1}{2}}(x^2 - 5x + 6) \\ge -1$ ៖",
         "options": [
-          "$(2, 3)$",
           "$[1, 2] \\cup [3, 4]$",
-          "$[1, 2) \\cup (3, 4]$",
-          "$[1, 4]$"
+          "$[1, 4]$",
+          "$(2, 3)$",
+          "$[1, 2) \\cup (3, 4]$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "លក្ខខណ្ឌ $x < 2$ ឬ $x > 3$។ $x^2 - 5x + 6 \\le (\\dfrac{1}{2})^{-1} = 2 \\Rightarrow x^2 - 5x + 4 \\le 0 \\Rightarrow 1 \\le x \\le 4$។ ប្រសព្វបាន $[1, 2) \\cup (3, 4]$។"
       }
     ],
@@ -3427,16 +3417,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\log 10$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\ln(2x - 1) = 0$ ៖",
         "options": [
-          "$2$",
-          "$10$",
-          "$-1$",
-          "$1$"
+          "$x = 2$",
+          "$x = 0.5$",
+          "$x = 0$",
+          "$x = 1$"
         ],
         "correct": 3,
-        "explanation": "$\\log 10^{1} = 1$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$2x - 1 = e^0 = 1 \\Rightarrow 2x = 2 \\Rightarrow x = 1$។"
       },
       {
         "id": "q2",
@@ -3444,16 +3433,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\ln e^{7}$ ៖",
+        "question": "ដោះស្រាយវិសមីការ $\\ln x < 0$ ៖",
         "options": [
-          "$1$",
-          "$7$",
-          "$8$",
-          "$e^{7}$"
+          "$x < 1$",
+          "$x > 0$",
+          "$0 < x < 1$",
+          "$x < 0$"
         ],
-        "correct": 1,
-        "explanation": "$\\ln e^x = x$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "លក្ខខណ្ឌ $x > 0$។ $\\ln x < \\ln 1 \\Rightarrow 0 < x < 1$។"
       },
       {
         "id": "q3",
@@ -3461,16 +3449,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\ln e^{8}$ ៖",
+        "question": "គណនា $\\log 1000$ ( លោការីតគោល $10$ )",
         "options": [
-          "$9$",
-          "$1$",
-          "$8$",
-          "$e^{8}$"
+          "$3$",
+          "$100$",
+          "$2$",
+          "$10$"
         ],
-        "correct": 2,
-        "explanation": "$\\ln e^x = x$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ក. $3$"
       },
       {
         "id": "q4",
@@ -3478,118 +3465,111 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\ln e^{3}$ ៖",
+        "question": "គណនា $\\ln e^{5}$",
         "options": [
-          "$3$",
-          "$e^{3}$",
-          "$4$",
-          "$1$"
+          "$5$",
+          "$1$",
+          "$5e$",
+          "$e$"
         ],
         "correct": 0,
-        "explanation": "$\\ln e^x = x$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ក. $5$"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយសមីការ $\\log x = 1$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនាតម្លៃនៃ $B = 3^{\\log_3 7} + \\ln(e^5)$ ៖",
         "options": [
-          "$1$",
           "$11$",
-          "$100$",
-          "$10$"
+          "$10$",
+          "$12$",
+          "$15$"
         ],
-        "correct": 3,
-        "explanation": "$x = 10^{1} = 10$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "$3^{\\log_3 7} = 7$ និង $\\ln(e^5) = 5$ នាំឱ្យ $B = 7 + 5 = 12$។"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\ln e^{6}$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $e^{\\ln 11}+10^{\\log 2}$ ៖",
         "options": [
-          "$1$",
-          "$6$",
-          "$7$",
-          "$e^{6}$"
+          "$13$",
+          "$22$",
+          "$12$",
+          "$14$"
         ],
-        "correct": 1,
-        "explanation": "$\\ln e^x = x$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$11+2=13$។"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយសមីការ $\\ln x = 3$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\ln e^{6}+\\log 10^{6}$ ៖",
         "options": [
-          "$x = \\ln 3$",
-          "$x = 3$",
-          "$x = e^{3}$",
-          "$x = 10^{3}$"
+          "$36$",
+          "$13$",
+          "$12$",
+          "$0$"
         ],
         "correct": 2,
-        "explanation": "$x = e^{3}$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$6+6=12$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $e^{\\ln 11}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $e^{2x}= 5$",
         "options": [
-          "$11$",
-          "$e^{11}$",
-          "$12$",
-          "$1$"
+          "$x= \\dfrac{1}{2}\\ln 5$",
+          "$x= \\ln 10$",
+          "$x= \\dfrac{5}{2}$",
+          "$x= 2\\ln 5$"
         ],
         "correct": 0,
-        "explanation": "$e^{\\ln x} = x$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ក. $x= \\dfrac{1}{2}\\ln 5$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយសមីការ $\\log x = 2$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $10^x=2$ ៖",
         "options": [
-          "$20$",
-          "$2$",
-          "$100$",
-          "$1000$"
+          "$x=\\ln 2$",
+          "$x=\\dfrac{2}{10}$",
+          "$x=\\log 2$",
+          "$x=10\\log 2$"
         ],
         "correct": 2,
-        "explanation": "$x = 10^{2} = 100$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$x=\\log 10^x=\\log 2$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\ln e^{5}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $e^{2x}-3e^x+2=0$ ៖",
         "options": [
-          "$e^{5}$",
-          "$5$",
-          "$1$",
-          "$6$"
+          "$x=1$ ឬ $x=2$",
+          "$x=\\ln 2$ ឬ $x=\\ln 2$",
+          "$x=\\ln 1$ ឬ $x=\\ln 3$",
+          "$x=0$ ឬ $x=\\ln 2$"
         ],
-        "correct": 1,
-        "explanation": "$\\ln e^x = x$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "$t=e^x:\\ t^2-3t+2=0$ ទាញ $t=1,2$។"
       }
     ],
     "6": [
@@ -3598,21 +3578,84 @@
         "questionNumber": 1,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សូលុយស្យុងមួយមាន $[H^+] = 10^{-9}$ mol/L។ គណនា pH ($pH = -\\log[H^+]$) ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សូលុយស្យុងមួយមាន $[H^+]=10^{-6}$ mol/L។ គណនា pH ($pH=-\\log[H^+]$) ៖",
         "options": [
-          "$-9$",
-          "$10$",
-          "$9$",
-          "$1$"
+          "$-6$",
+          "$7$",
+          "$6$",
+          "$5$"
         ],
         "correct": 2,
-        "explanation": "$pH = -\\log 10^{-9} = 9$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$pH=-\\log 10^{-6}=6$។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំនួនបាក់តេរីកើន 3 ដងរៀងរាល់ម៉ោង $A=A_0\\cdot 3^t$។ ក្រោយប៉ុន្មានម៉ោង ទើបចំនួនធំជាងដើម 27 ដង?",
+        "options": [
+          "4 ម៉ោង",
+          "2 ម៉ោង",
+          "27 ម៉ោង",
+          "3 ម៉ោង"
+        ],
+        "correct": 3,
+        "explanation": "$3^t=27$ ទាញ $t=3$។"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "កម្រិតសំឡេង $L=10\\log\\dfrac{I}{I_0}$ (dB)។ បើ $\\dfrac{I}{I_0}=10^{2}$ នោះ $L$ ស្មើ ៖",
+        "options": [
+          "2 dB",
+          "20 dB",
+          "100 dB",
+          "30 dB"
+        ],
+        "correct": 1,
+        "explanation": "$L=10\\log 10^{2}=20$។"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "កម្រិតរញ្ជួយដី $M=\\log\\dfrac{I}{I_0}$។ បើ $\\dfrac{I}{I_0}=10^{7}$ នោះ $M$ ស្មើ ៖",
+        "options": [
+          "$10000000$",
+          "$8$",
+          "$6$",
+          "$7$"
+        ],
+        "correct": 3,
+        "explanation": "$M=\\log 10^{7}=7$។"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សូលុយស្យុងមួយមាន $[H^+] = 10^{-9}$ mol/L។ គណនា pH ($pH = -\\log[H^+]$) ៖",
+        "options": [
+          "$-9$",
+          "$1$",
+          "$10$",
+          "$9$"
+        ],
+        "correct": 3,
+        "explanation": "$pH = -\\log 10^{-9} = 9$។"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -3624,76 +3667,7 @@
           "$-12$"
         ],
         "correct": 1,
-        "explanation": "$pH = -\\log 10^{-12} = 12$។",
-        "src": "genpq-g11a_extra"
-      },
-      {
-        "id": "q3",
-        "questionNumber": 3,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កម្រិតរញ្ជួយដី (រីកទ័រ) $M = \\log \\dfrac{I}{I_0}$។ រញ្ជួយកម្រិត $6$ មានអាំងតង់ស៊ីតេធំជាងកម្រិត $5$ ប៉ុន្មានដង?",
-        "options": [
-          "$10$",
-          "$1$",
-          "$100$",
-          "$11$"
-        ],
-        "correct": 0,
-        "explanation": "$\\log \\dfrac{I_1}{I_2} = 1 \\Rightarrow \\dfrac{I_1}{I_2} = 10^{1} = 10$។",
-        "src": "genpq-g11a_extra"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រាក់កើនទ្វេដងរៀងរាល់ឆ្នាំ ($A = A_0 \\cdot 2^t$)។ ក្រោយប៉ុន្មានឆ្នាំ ទើបប្រាក់ធំជាងដើម $32$ ដង?",
-        "options": [
-          "$6$",
-          "$4$",
-          "$16$",
-          "$5$"
-        ],
-        "correct": 3,
-        "explanation": "$2^t = 32 \\Rightarrow t = \\log_2 32 = 5$ ឆ្នាំ។",
-        "src": "genpq-g11a_extra"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កម្រិតរញ្ជួយដី (រីកទ័រ) $M = \\log \\dfrac{I}{I_0}$។ រញ្ជួយកម្រិត $7$ មានអាំងតង់ស៊ីតេធំជាងកម្រិត $5$ ប៉ុន្មានដង?",
-        "options": [
-          "$2$",
-          "$100$",
-          "$1000$",
-          "$20$"
-        ],
-        "correct": 1,
-        "explanation": "$\\log \\dfrac{I_1}{I_2} = 2 \\Rightarrow \\dfrac{I_1}{I_2} = 10^{2} = 100$។",
-        "src": "genpq-g11a_extra"
-      },
-      {
-        "id": "q6",
-        "questionNumber": 6,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សូលុយស្យុងមួយមាន $[H^+] = 10^{-11}$ mol/L។ គណនា pH ($pH = -\\log[H^+]$) ៖",
-        "options": [
-          "$-1$",
-          "$12$",
-          "$11$",
-          "$-11$"
-        ],
-        "correct": 2,
-        "explanation": "$pH = -\\log 10^{-11} = 11$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$pH = -\\log 10^{-12} = 12$។"
       },
       {
         "id": "q7",
@@ -3701,67 +3675,63 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សូលុយស្យុងមួយមាន $[H^+] = 10^{-4}$ mol/L។ គណនា pH ($pH = -\\log[H^+]$) ៖",
+        "question": "កម្រិតរញ្ជួយដី (រីកទ័រ) $M = \\log \\dfrac{I}{I_0}$។ រញ្ជួយកម្រិត $6$ មានអាំងតង់ស៊ីតេធំជាងកម្រិត $5$ ប៉ុន្មានដង?",
         "options": [
-          "$-4$",
-          "$5$",
-          "$6$",
-          "$4$"
+          "$10$",
+          "$11$",
+          "$100$",
+          "$1$"
         ],
-        "correct": 3,
-        "explanation": "$pH = -\\log 10^{-4} = 4$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$\\log \\dfrac{I_1}{I_2} = 1 \\Rightarrow \\dfrac{I_1}{I_2} = 10^{1} = 10$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កម្រិតរញ្ជួយដី (រីកទ័រ) $M = \\log \\dfrac{I}{I_0}$។ រញ្ជួយកម្រិត $8$ មានអាំងតង់ស៊ីតេធំជាងកម្រិត $5$ ប៉ុន្មានដង?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "កម្រិតសំឡេង (dB) កំណត់ដោយ $L= 10\\log \\dfrac{I}{I}_{0}$ ។ បើអាំងតង់ស៊ីតេ $I$ កើន $100$ ដង តើ $L$ កើនប៉ុន្មាន\ndB?",
         "options": [
-          "$1000$",
-          "$10\\,000$",
-          "$30$",
-          "$3$"
+          "$2$ dB",
+          "$10$ dB",
+          "$20$ dB",
+          "$100$ dB"
         ],
-        "correct": 0,
-        "explanation": "$\\log \\dfrac{I_1}{I_2} = 3 \\Rightarrow \\dfrac{I_1}{I_2} = 10^{3} = 1000$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $20$ dB"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រាក់កើនទ្វេដងរៀងរាល់ឆ្នាំ ($A = A_0 \\cdot 2^t$)។ ក្រោយប៉ុន្មានឆ្នាំ ទើបប្រាក់ធំជាងដើម $64$ ដង?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ប្រាក់ $P$ ផ្ញើដោយការប្រាក់សមាសធាតុ $8\\%$ ក្នុងមួយឆ្នាំ ។ តើត្រូវរយៈពេលប្រហែលប៉ុន្មានឆ្នាំ\nទើបប្រាក់កើនទ្វេដង? ( $\\ln 2 \\approx 0.693, \\ln 1.08 \\approx 0.077$ )",
         "options": [
-          "$5$",
-          "$7$",
-          "$32$",
-          "$6$"
+          "$25$ ឆ្នាំ",
+          "$12$ ឆ្នាំ",
+          "$9$ ឆ្នាំ",
+          "$8$ ឆ្នាំ"
         ],
-        "correct": 3,
-        "explanation": "$2^t = 64 \\Rightarrow t = \\log_2 64 = 6$ ឆ្នាំ។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $9$ ឆ្នាំ"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រាក់កើនទ្វេដងរៀងរាល់ឆ្នាំ ($A = A_0 \\cdot 2^t$)។ ក្រោយប៉ុន្មានឆ្នាំ ទើបប្រាក់ធំជាងដើម $8$ ដង?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ម៉ាស 160 g មានកន្លះជីវិត 5 ឆ្នាំ $m(t)=160\\left(\\dfrac{1}{2}\\right)^{t/5}$។ ក្រោយប៉ុន្មានឆ្នាំ នៅសល់ 20 g?",
         "options": [
-          "$2$",
-          "$5$",
-          "$3$",
-          "$4$"
+          "15 ឆ្នាំ",
+          "20 ឆ្នាំ",
+          "16 ឆ្នាំ",
+          "3 ឆ្នាំ"
         ],
-        "correct": 2,
-        "explanation": "$2^t = 8 \\Rightarrow t = \\log_2 8 = 3$ ឆ្នាំ។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$\\left(\\dfrac{1}{2}\\right)^{t/5}=\\dfrac{1}{8}$ ទាញ $t=15$។"
       }
     ]
   },

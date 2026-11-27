@@ -1,0 +1,77 @@
+{
+  "lesson": "les-g11b-2-2",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនទី ២ ៖ អនុគមន៍លោការីត (ទំព័រ ៧២ - ៨៨)",
+  "book_pages": "48-63 (uploads/pdfs/g11b_ch2_les2.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ អនុគមន៍ច្រាស និងក្រាបអនុគមន៍លោការីត"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ លក្ខណៈលោការីត និងរូបមន្តប្តូរគោល"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ សមីការលោការីត"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ វិសមីការលោការីត"
+    },
+    {
+      "n": 5,
+      "title": "ចំណុចទី ៥ ៖ លោការីតគោល ១០ និងលោការីតនេពែ"
+    },
+    {
+      "n": 6,
+      "title": "ចំណុចទី ៦ ៖ ការអនុវត្តលើអនុគមន៍លោការីត"
+    }
+  ],
+  "notes": "Textbook sections: 1 inverse functions, 2 log function (2.1 definition, 2.2 properties+change of base, 2.3 graph), 3 equations/inequalities, 4 applications. P1 merges 1+2.1+2.3. P5 (log10/ln) is a short app-only point.",
+  "removed": [
+    "qb11_les-g11b-2-2_43"
+  ],
+  "rewritten": [
+    "qb11_les-g11b-2-2_15",
+    "qb11_les-g11b-2-2_16",
+    "qb11_les-g11b-2-2_21",
+    "qb11_les-g11b-2-2_25",
+    "qb11_les-g11b-2-2_26",
+    "qb11_les-g11b-2-2_32"
+  ],
+  "bank_levels": {
+    "1": {
+      "e": 12,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 21,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "5": {
+      "e": 14,
+      "m": 10,
+      "h": 10
+    },
+    "6": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
