@@ -1,0 +1,51 @@
+{
+  "lesson": "les-g11b-5-4",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនទី ៣ ៖ អថេរភាព និងក្រាបនៃអនុគមន៍ (ទំព័រ ៣៦ - ៥៣)",
+  "book_pages": "36-53 (uploads/pdfs/g11b_ch5_les4.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ អនុគមន៍ពហុធាដឺក្រេទី ៣"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ អនុគមន៍ប៊ីការេ"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ អាស៊ីមតូតនៃក្រាបហ៊ីពែរបូល"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ អថេរភាព និងក្រាបនៃហ៊ីពែរបូល"
+    }
+  ],
+  "notes": "Variation and graphs: cubic, biquadratic, asymptotes of homographic function, variation/graph of hyperbola. Oblique-asymptote items kept as extras. g0540 key fixed to m=1; g0558 deleted.",
+  "removed": [
+    "q_g11_0558"
+  ],
+  "bank_levels": {
+    "1": {
+      "e": 14,
+      "m": 10,
+      "h": 11
+    },
+    "2": {
+      "e": 10,
+      "m": 14,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 15,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
