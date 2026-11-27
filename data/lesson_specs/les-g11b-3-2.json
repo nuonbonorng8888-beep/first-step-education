@@ -1,0 +1,53 @@
+{
+  "lesson": "les-g11b-3-2",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនទី ២ ៖ រូបមន្តត្រីកោណមាត្រ (ទំព័រ ១១០ - ១១៩)",
+  "book_pages": "110-119 (uploads/pdfs/g11b_ch3_les2.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ រូបមន្តផលបូក និងផលដក"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ រូបមន្តមុំឌុប និងកន្លះមុំ"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ រូបមន្តបំប្លែងពីផលគុណទៅជាផលបូក"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ រូបមន្តបំប្លែងពីផលបូកទៅជាផលគុណ"
+    }
+  ],
+  "notes": "Sections: 1 sum/difference, 2 double and half angle (+triple angle), 3 product-to-sum, 4 sum-to-product. g0232/Q06 rewritten (no all-of-the-above), g0260 key was wrong (5 roots).",
+  "fixed": [
+    "q_g11_0232",
+    "qb11_les-g11b-3-2_06",
+    "q_g11_0260"
+  ],
+  "bank_levels": {
+    "1": {
+      "e": 12,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 11,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
