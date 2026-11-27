@@ -7969,14 +7969,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ចល័តមួយមានចម្ងាយ $s(t) = 2t^2 + 8t$ (ម៉ែត្រ)។ ល្បឿនមធ្យមពី $t = 2$ ដល់ $t = 4$ វិនាទី គឺ ៖",
         "options": [
-          "$24\\text{ m/s}$",
-          "$20\\text{ m/s}$",
           "$40\\text{ m/s}$",
-          "$16\\text{ m/s}$"
+          "$24\\text{ m/s}$",
+          "$16\\text{ m/s}$",
+          "$20\\text{ m/s}$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{s(4) - s(2)}{4 - 2} = \\dfrac{64 - 24}{2} = 20$ m/s។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "$\\dfrac{s(4) - s(2)}{4 - 2} = \\dfrac{64 - 24}{2} = 20$ m/s។"
       },
       {
         "id": "q2",
@@ -7986,14 +7985,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ចល័តមួយមានចម្ងាយ $s(t) = 2t^2 + 2t$ (ម៉ែត្រ)។ ល្បឿនមធ្យមពី $t = 0$ ដល់ $t = 4$ វិនាទី គឺ ៖",
         "options": [
-          "$40\\text{ m/s}$",
-          "$18\\text{ m/s}$",
           "$11\\text{ m/s}$",
-          "$10\\text{ m/s}$"
+          "$40\\text{ m/s}$",
+          "$10\\text{ m/s}$",
+          "$18\\text{ m/s}$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{s(4) - s(0)}{4 - 0} = \\dfrac{40 - 0}{4} = 10$ m/s។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$\\dfrac{s(4) - s(0)}{4 - 0} = \\dfrac{40 - 0}{4} = 10$ m/s។"
       },
       {
         "id": "q3",
@@ -8003,14 +8001,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "អត្រាបម្រែបម្រួលមធ្យមនៃ $f(x) = 2x^2 + x + 4$ ពី $x = 2$ ដល់ $x = 3$ គឺ ៖",
         "options": [
-          "$9$",
-          "$12$",
           "$11$",
-          "$10$"
+          "$10$",
+          "$9$",
+          "$12$"
         ],
-        "correct": 2,
-        "explanation": "$\\dfrac{f(3) - f(2)}{3 - (2)} = \\dfrac{25 - (14)}{1} = 11$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$\\dfrac{f(3) - f(2)}{3 - (2)} = \\dfrac{25 - (14)}{1} = 11$។"
       },
       {
         "id": "q4",
@@ -8020,116 +8017,109 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "អត្រាបម្រែបម្រួលមធ្យមនៃ $f(x) = 3x^2 - x - 2$ ពី $x = -2$ ដល់ $x = 0$ គឺ ៖",
         "options": [
+          "$-13$",
           "$-7$",
           "$-6$",
-          "$-13$",
           "$-14$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{f(0) - f(-2)}{0 - (-2)} = \\dfrac{-2 - (12)}{2} = -7$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$\\dfrac{f(0) - f(-2)}{0 - (-2)} = \\dfrac{-2 - (12)}{2} = -7$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អត្រាបម្រែបម្រួលមធ្យម",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អត្រាបម្រែបម្រួលមធ្យមនៃ $f(x) = x^2 - 3x + 4$ ពី $x = -2$ ដល់ $x = 2$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អត្រាបម្រែបម្រួលមធ្យមនៃ $f(x)=-x^{3}+2x^{2}+2x+1$ ពី $x=0$ ដល់ $x=3$ ស្មើ ៖",
         "options": [
-          "$-7$",
+          "$0$",
+          "$-1$",
           "$-2$",
-          "$-12$",
-          "$-3$"
+          "$1$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{f(2) - f(-2)}{2 - (-2)} = \\dfrac{2 - (14)}{4} = -3$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$\\dfrac{f(3)-f(0)}{3}=-1$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អត្រាបម្រែបម្រួលមធ្យម",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចល័តមួយមានចម្ងាយ $s(t) = 5t^2 + 10t$ (ម៉ែត្រ)។ ល្បឿនមធ្យមពី $t = 0$ ដល់ $t = 1$ វិនាទី គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អត្រាបម្រែបម្រួលមធ្យមនៃ $f(x)=x^{2}-3x-1$ ពី $x=-1$ ដល់ $x=5$ ស្មើ ៖",
         "options": [
-          "$15\\text{ m/s}$",
-          "$20\\text{ m/s}$",
-          "$14\\text{ m/s}$",
-          "$16\\text{ m/s}$"
+          "$2$",
+          "$0$",
+          "$1$",
+          "$-1$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{s(1) - s(0)}{1 - 0} = \\dfrac{15 - 0}{1} = 15$ m/s។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$\\dfrac{f(5)-f(-1)}{5-(-1)}=1$"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អត្រាបម្រែបម្រួលមធ្យម",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អត្រាបម្រែបម្រួលមធ្យមនៃ $f(x) = x^2 + x$ ពី $x = 3$ ដល់ $x = 6$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ចល័តមួយមានចម្ងាយ $s(t)=2t^{2}+3t$ (ម៉ែត្រ)។ ល្បឿនមធ្យមពី $t=3$ ដល់ $t=5$ វិនាទី គឺ ៖",
         "options": [
-          "$11$",
-          "$30$",
-          "$10$",
-          "$7$"
+          "$20$",
+          "$18$",
+          "$19$",
+          "$-19$"
         ],
         "correct": 2,
-        "explanation": "$\\dfrac{f(6) - f(3)}{6 - (3)} = \\dfrac{42 - (12)}{3} = 10$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$\\dfrac{s(5)-s(3)}{2}=19$ m/s"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អត្រាបម្រែបម្រួលមធ្យម",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចល័តមួយមានចម្ងាយ $s(t) = 2t^2 + 2t$ (ម៉ែត្រ)។ ល្បឿនមធ្យមពី $t = 0$ ដល់ $t = 3$ វិនាទី គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អត្រាបម្រែបម្រួលមធ្យមនៃ $f(x)=2x^2+bx$ ពី $x=1$ ដល់ $x=2$ ស្មើ $11$។ រកតម្លៃ $b$ ៖",
         "options": [
-          "$9\\text{ m/s}$",
-          "$8\\text{ m/s}$",
-          "$24\\text{ m/s}$",
-          "$14\\text{ m/s}$"
+          "$5$",
+          "$6$",
+          "$4$",
+          "$-5$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{s(3) - s(0)}{3 - 0} = \\dfrac{24 - 0}{3} = 8$ m/s។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$2(3)+b=11$ ទាញ $b=5$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អត្រាបម្រែបម្រួលមធ្យម",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចល័តមួយមានចម្ងាយ $s(t) = 2t^2 + t$ (ម៉ែត្រ)។ ល្បឿនមធ្យមពី $t = 2$ ដល់ $t = 3$ វិនាទី គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អត្រាបម្រែបម្រួលមធ្យមនៃ $f(x)=x^2$ ពី $x=3$ ដល់ $x=4$ ស្មើ ៖",
         "options": [
-          "$13\\text{ m/s}$",
-          "$12\\text{ m/s}$",
-          "$11\\text{ m/s}$",
-          "$7\\text{ m/s}$"
+          "$8$",
+          "$7$",
+          "$6$",
+          "$-7$"
         ],
-        "correct": 2,
-        "explanation": "$\\dfrac{s(3) - s(2)}{3 - 2} = \\dfrac{21 - 10}{1} = 11$ m/s។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$\\dfrac{(4)^2-3^2}{1}=2\\cdot 3+1=7$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អត្រាបម្រែបម្រួលមធ្យម",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចល័តមួយមានចម្ងាយ $s(t) = 5t^2 + 4t$ (ម៉ែត្រ)។ ល្បឿនមធ្យមពី $t = 0$ ដល់ $t = 2$ វិនាទី គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចល័តមួយមានចម្ងាយ $s(t)=t^{3}+4t^{2}+3t$ (ម៉ែត្រ)។ ល្បឿនមធ្យមក្នុង 2 វិនាទីដំបូង គឺ ៖",
         "options": [
-          "$28\\text{ m/s}$",
-          "$24\\text{ m/s}$",
-          "$15\\text{ m/s}$",
-          "$14\\text{ m/s}$"
+          "$16$",
+          "$15$",
+          "$14$",
+          "$-15$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{s(2) - s(0)}{2 - 0} = \\dfrac{28 - 0}{2} = 14$ m/s។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$\\dfrac{s(2)-s(0)}{2}=15$ m/s"
       }
     ],
     "2": [
@@ -8141,15 +8131,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើរូបមន្តនិយមន័យដេរីវេនៃអនុគមន៍ $f$ ត្រង់ $x_0$ តាមលីមីតគឺ ៖",
         "options": [
+          "$f'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0 + h) + f(x_0)}{h}$",
           "$f'(x_0) = \\dfrac{f(x_0)}{x_0}$",
-          "$f'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0 + h) - f(x_0)}{h}$",
           "$f'(x_0) = \\lim_{x \\to 0} \\dfrac{f(x) - f(x_0)}{x}$",
-          "$f'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0 + h) + f(x_0)}{h}$"
+          "$f'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0 + h) - f(x_0)}{h}$"
         ],
-        "correct": 1,
-        "explanation": "និយមន័យដេរីវេ ៖ $f'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0 + h) - f(x_0)}{h}$ (ឬ $\\lim_{x \\to x_0} \\dfrac{f(x) - f(x_0)}{x - x_0}$)។",
-        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"170\" x2=\"300\" y2=\"170\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><path d=\"M 60,150 Q 140,130 180,90 T 290,30\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"260\" y=\"25\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = f(x)</text><line x1=\"100\" y1=\"150\" x2=\"260\" y2=\"30\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"90\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"188\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(x₀, f(x₀))</text><text x=\"120\" y=\"55\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">បន្ទាត់ប៉ះ (T) ៖ មេគុណប្រាប់ទិស m = f'(x₀)</text><line x1=\"180\" y1=\"90\" x2=\"180\" y2=\"170\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"180\" y1=\"90\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"175\" y=\"185\" font-size=\"10\" fill=\"#334155\">x₀</text><text x=\"32\" y=\"94\" font-size=\"10\" fill=\"#334155\">y₀</text></svg>",
-        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"170\" x2=\"300\" y2=\"170\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.5\"/><path d=\"M 60,150 Q 140,130 180,90 T 290,30\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><text x=\"260\" y=\"25\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">y = f(x)</text><line x1=\"100\" y1=\"150\" x2=\"260\" y2=\"30\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"180\" cy=\"90\" r=\"4.5\" fill=\"#ef4444\"/><text x=\"188\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(x₀, f(x₀))</text><text x=\"120\" y=\"55\" font-size=\"10\" font-weight=\"700\" fill=\"#dc2626\">បន្ទាត់ប៉ះ (T) ៖ មេគុណប្រាប់ទិស m = f'(x₀)</text><line x1=\"180\" y1=\"90\" x2=\"180\" y2=\"170\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"180\" y1=\"90\" x2=\"50\" y2=\"90\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"175\" y=\"185\" font-size=\"10\" fill=\"#334155\">x₀</text><text x=\"32\" y=\"94\" font-size=\"10\" fill=\"#334155\">y₀</text></svg>"
+        "correct": 3,
+        "explanation": "និយមន័យដេរីវេ ៖ $f'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0 + h) - f(x_0)}{h}$ (ឬ $\\lim_{x \\to x_0} \\dfrac{f(x) - f(x_0)}{x - x_0}$)។"
       },
       {
         "id": "q2",
@@ -8160,9 +8148,9 @@
         "question": "គណនាដេរីវេនៃ $f(x) = x^2$ ត្រង់ $x = 3$ តាមនិយមន័យ ៖",
         "options": [
           "$12$",
-          "$9$",
+          "$3$",
           "$6$",
-          "$3$"
+          "$9$"
         ],
         "correct": 2,
         "explanation": "$f'(3) = \\lim_{h \\to 0} \\dfrac{(3+h)^2 - 3^2}{h} = \\lim_{h \\to 0} \\dfrac{6h + h^2}{h} = \\lim (6+h) = 6$។"
@@ -8176,9 +8164,9 @@
         "question": "បើអនុគមន៍ $f$ មានដេរីវេត្រង់ $x_0$ តើអាចសន្និដ្ឋានអំពីភាពជាប់បានដូចម្តេច?",
         "options": [
           "$f$ ត្រូវតែជាប់ត្រង់ $x_0$ ជានិច្ច",
-          "$f$ មិនប្រាកដជាជាប់ទេ",
+          "$f$ ត្រូវតែដាច់ត្រង់ $x_0$",
           "$f(x_0) = 0$",
-          "$f$ ត្រូវតែដាច់ត្រង់ $x_0$"
+          "$f$ មិនប្រាកដជាជាប់ទេ"
         ],
         "correct": 0,
         "explanation": "ទ្រឹស្តីបទ ៖ បើអនុគមន៍មួយមានដេរីវេត្រង់ $x_0$ នោះវាពិតជាជាប់ត្រង់ $x_0$។"
@@ -8191,12 +8179,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាដេរីវេនៃ $f(x) = 5x - 2$ ត្រង់ $x = 1$ ៖",
         "options": [
-          "$0$",
           "$-2$",
-          "$3$",
-          "$5$"
+          "$5$",
+          "$0$",
+          "$3$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$f'(x) = 5$ ចំពោះគ្រប់ $x$ ដូច្នេះ $f'(1) = 5$។"
       },
       {
@@ -8207,12 +8195,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $f(x) = \\sqrt{x}$ ត្រង់ $x = 4$ តាមលីមីត ៖",
         "options": [
-          "$\\dfrac{1}{4}$",
           "$2$",
           "$4$",
+          "$\\dfrac{1}{4}$",
           "$\\dfrac{1}{2}$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "$f'(4) = \\lim_{x \\to 4} \\dfrac{\\sqrt{x} - 2}{x - 4} = \\lim_{x \\to 4} \\dfrac{1}{\\sqrt{x} + 2} = \\dfrac{1}{4}$។"
       },
       {
@@ -8223,12 +8211,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $f(x) = \\dfrac{1}{x}$ ត្រង់ $x = 2$ ៖",
         "options": [
-          "$-\\dfrac{1}{2}$",
           "$-\\dfrac{1}{4}$",
+          "$-\\dfrac{1}{2}$",
           "$\\dfrac{1}{2}$",
           "$\\dfrac{1}{4}$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "$f'(x) = -\\dfrac{1}{x^2}$ នាំឱ្យ $f'(2) = -\\dfrac{1}{2^2} = -\\dfrac{1}{4}$។"
       },
       {
@@ -8239,12 +8227,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើអនុគមន៍ $f(x) = |x|$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
         "options": [
-          "មាន គឺ $f'(0) = -1$",
           "មាន គឺ $f'(0) = 0$",
-          "គ្មានទេ ព្រោះដេរីវេឆ្វេង ($-1$) ខុសពីដេរីវេស្តាំ ($+1$)",
-          "មាន គឺ $f'(0) = 1$"
+          "មាន គឺ $f'(0) = 1$",
+          "មាន គឺ $f'(0) = -1$",
+          "គ្មានទេ ព្រោះដេរីវេឆ្វេង ($-1$) ខុសពីដេរីវេស្តាំ ($+1$)"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "ដេរីវេឆ្វេងស្មើ $-1$ និងដេរីវេស្តាំស្មើ $+1$ មិនស្មើគ្នា ដូច្នេះ $f$ គ្មានដេរីវេត្រង់ចំណុចកាច់ $x = 0$ ឡើយ។"
       },
       {
@@ -8252,15 +8240,15 @@
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេត្រង់ចំណុចមួយ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $f'(2) = 5$។ គណនា $\\lim_{h \\to 0} \\dfrac{f(2 + 3h) - f(2)}{h}$ ៖",
         "options": [
-          "$3$",
-          "$5$",
           "$10$",
-          "$15$"
+          "$15$",
+          "$3$",
+          "$5$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$\\lim_{h \\to 0} 3 \\cdot \\dfrac{f(2+3h) - f(2)}{3h} = 3 f'(2) = 3(5) = 15$។"
       },
       {
@@ -8268,15 +8256,15 @@
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេត្រង់ចំណុចមួយ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $f'(a) = 4$។ គណនា $\\lim_{x \\to a} \\dfrac{x f(a) - a f(x)}{x - a}$ ៖",
         "options": [
-          "$0$",
-          "$f(a) + a f'(a)$",
           "$f(a) - a f'(a)$",
-          "$a f'(a)$"
+          "$a f'(a)$",
+          "$f(a) + a f'(a)$",
+          "$0$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$\\lim_{x \\to a} \\dfrac{x f(a) - a f(a) - a(f(x) - f(a))}{x - a} = f(a) - a f'(a)$។"
       },
       {
@@ -8284,15 +8272,15 @@
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេត្រង់ចំណុចមួយ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "តើអនុគមន៍ $f(x) = x^{\\frac{2}{3}}$ មានបន្ទាត់ប៉ះឈរត្រង់ចំណុចណា?",
         "options": [
-          "$x = -1$",
-          "$x = 0$",
+          "គ្មានទេ",
           "$x = 1$",
-          "គ្មានទេ"
+          "$x = 0$",
+          "$x = -1$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$f'(x) = \\dfrac{2}{3}x^{-\\dfrac{1}{3}} = \\dfrac{2}{3\\sqrt[3]{x}}$។ កាលណា $x \\to 0$ នោះ $f'(x) \\to \\infty$ បង្កើតបានបន្ទាត់ប៉ះឈរត្រង់ $x = 0$។"
       }
     ],
@@ -8302,68 +8290,64 @@
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $f(x) = \\dfrac{3}{x}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $f(x)=x^{2}+3x-1$ តាមនិយមន័យ គឺ $f'(x)=$ ៖",
         "options": [
-          "$-\\dfrac{3}{2x^2}$",
-          "$-\\dfrac{3}{x}$",
-          "$-\\dfrac{3}{x^2}$",
-          "$\\dfrac{3}{x^2}$"
+          "$x^{2}+3x$",
+          "$x+3$",
+          "$2x+4$",
+          "$2x+3$"
         ],
-        "correct": 2,
-        "explanation": "$\\dfrac{f(x + h) - f(x)}{h} = \\dfrac{-3}{x(x + h)} \\to -\\dfrac{3}{x^2}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "ប្រើ $\\dfrac{f(x+h)-f(x)}{h}=2x+3+1h$ ហើយឱ្យ $h\\to 0$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $f(x) = \\dfrac{1}{x}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $f(x)=4x+5$ គឺ ៖",
         "options": [
-          "$-\\dfrac{1}{x^2}$",
-          "$-\\dfrac{1}{2x^2}$",
-          "$\\dfrac{1}{x^2}$",
-          "$-\\dfrac{1}{x}$"
+          "$5$",
+          "$4x$",
+          "$4$",
+          "$9$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{f(x + h) - f(x)}{h} = \\dfrac{-1}{x(x + h)} \\to -\\dfrac{1}{x^2}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$f'(x)=4$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តាមនិយមន័យ ដេរីវេនៃ $f(x) = -2x^2 - x + 4$ គឺ $f'(x) =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $f(x)=-2x^{2}+4x+5$ តាមនិយមន័យ គឺ $f'(x)=$ ៖",
         "options": [
-          "$-4x + 3$",
-          "$-4x - 1$",
-          "$-2x^2 - x$",
-          "$-2x - 1$"
+          "$-2x^{2}+4x$",
+          "$-2x+4$",
+          "$-4x+5$",
+          "$-4x+4$"
         ],
-        "correct": 1,
-        "explanation": "$\\lim_{h \\to 0} \\dfrac{f(x + h) - f(x)}{h} = \\lim_{h \\to 0} (-4x - 1 - 2h) = -4x - 1$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "ប្រើ $\\dfrac{f(x+h)-f(x)}{h}=-4x+4+-2h$ ហើយឱ្យ $h\\to 0$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $f(x) = 6\\sqrt{x}$ ( $x > 0$ ) គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $f(x)=2x+5$ គឺ ៖",
         "options": [
-          "$6\\sqrt{x}$",
-          "$\\dfrac{6}{\\sqrt{x}}$",
-          "$\\dfrac{6}{2x}$",
-          "$\\dfrac{3}{\\sqrt{x}}$"
+          "$5$",
+          "$2$",
+          "$2x$",
+          "$7$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{\\sqrt{x + h} - \\sqrt{x}}{h} = \\dfrac{1}{\\sqrt{x + h} + \\sqrt{x}} \\to \\dfrac{1}{2\\sqrt{x}}$ ⇒ $f'(x) = \\dfrac{3}{\\sqrt{x}}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$f'(x)=2$"
       },
       {
         "id": "q5",
@@ -8371,16 +8355,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តាមនិយមន័យ ដេរីវេនៃ $f(x) = x^2 + 6x - 3$ គឺ $f'(x) =$ ៖",
+        "question": "ដេរីវេនៃ $f(x) = \\dfrac{3}{x}$ គឺ ៖",
         "options": [
-          "$2x + 3$",
-          "$x + 6$",
-          "$2x + 6$",
-          "$x^2 + 6x$"
+          "$-\\dfrac{3}{x^2}$",
+          "$-\\dfrac{3}{2x^2}$",
+          "$-\\dfrac{3}{x}$",
+          "$\\dfrac{3}{x^2}$"
         ],
-        "correct": 2,
-        "explanation": "$\\lim_{h \\to 0} \\dfrac{f(x + h) - f(x)}{h} = \\lim_{h \\to 0} (2x + 6 + h) = 2x + 6$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$\\dfrac{f(x + h) - f(x)}{h} = \\dfrac{-3}{x(x + h)} \\to -\\dfrac{3}{x^2}$។"
       },
       {
         "id": "q6",
@@ -8388,16 +8371,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តាមនិយមន័យ ដេរីវេនៃ $f(x) = 4x^2 - 2x - 4$ គឺ $f'(x) =$ ៖",
+        "question": "ដេរីវេនៃ $f(x) = \\dfrac{1}{x}$ គឺ ៖",
         "options": [
-          "$4x - 2$",
-          "$8x - 2$",
-          "$4x^2 - 2x$",
-          "$8x - 6$"
+          "$-\\dfrac{1}{x}$",
+          "$\\dfrac{1}{x^2}$",
+          "$-\\dfrac{1}{x^2}$",
+          "$-\\dfrac{1}{2x^2}$"
         ],
-        "correct": 1,
-        "explanation": "$\\lim_{h \\to 0} \\dfrac{f(x + h) - f(x)}{h} = \\lim_{h \\to 0} (8x - 2 + 4h) = 8x - 2$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$\\dfrac{f(x + h) - f(x)}{h} = \\dfrac{-1}{x(x + h)} \\to -\\dfrac{1}{x^2}$។"
       },
       {
         "id": "q7",
@@ -8405,67 +8387,63 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តាមនិយមន័យ ដេរីវេនៃ $f(x) = 2x^2 + x + 3$ គឺ $f'(x) =$ ៖",
+        "question": "តាមនិយមន័យ ដេរីវេនៃ $f(x) = -2x^2 - x + 4$ គឺ $f'(x) =$ ៖",
         "options": [
-          "$4x + 1$",
-          "$4x + 4$",
-          "$2x^2 + x$",
-          "$2x + 1$"
+          "$-2x^2 - x$",
+          "$-4x + 3$",
+          "$-2x - 1$",
+          "$-4x - 1$"
         ],
-        "correct": 0,
-        "explanation": "$\\lim_{h \\to 0} \\dfrac{f(x + h) - f(x)}{h} = \\lim_{h \\to 0} (4x + 1 + 2h) = 4x + 1$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "$\\lim_{h \\to 0} \\dfrac{f(x + h) - f(x)}{h} = \\lim_{h \\to 0} (-4x - 1 - 2h) = -4x - 1$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $f(x) = -\\dfrac{2}{x}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចំពោះ $f(x)=3x^{2}$ កន្សោម $\\dfrac{f(x+h)-f(x)}{h}$ ($h\\ne 0$) ស្មើ ៖",
         "options": [
-          "$-\\dfrac{2}{x^2}$",
-          "$\\dfrac{2}{x}$",
-          "$\\dfrac{2}{2x^2}$",
-          "$\\dfrac{2}{x^2}$"
+          "$6x$",
+          "$3x+h$",
+          "$6x+h$",
+          "$6x+3h$"
         ],
         "correct": 3,
-        "explanation": "$\\dfrac{f(x + h) - f(x)}{h} = \\dfrac{2}{x(x + h)} \\to \\dfrac{2}{x^2}$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "ពន្លាត $3(x+h)^2+0(x+h)-(3x^{2})$ រួចចែកនឹង $h$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំពោះ $f(x) = x^2 - 4x$ កន្សោម $\\dfrac{f(x + h) - f(x)}{h} \\ (h \\ne 0)$ ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $f(x)=3x^{3}-2x^{2}+4x+4$ នោះ $f'(-1)$ ស្មើ ៖",
         "options": [
-          "$x + h - 4$",
-          "$2x + h - 4$",
-          "$2x - 4$",
-          "$2x + h$"
+          "$18$",
+          "$16$",
+          "$17$",
+          "$-17$"
         ],
-        "correct": 1,
-        "explanation": "$f(x + h) - f(x) = 2xh + h^2 - 4h$ ចែកនឹង $h$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$f'(x)=9x^{2}-4x+4$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អនុគមន៍ដេរីវេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $f(x) = 4\\sqrt{x}$ ( $x > 0$ ) គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេនៃ $f(x)=\\dfrac{2}{x^{3}}$ គឺ ៖",
         "options": [
-          "$\\dfrac{2}{\\sqrt{x}}$",
-          "$\\dfrac{4}{2x}$",
-          "$\\dfrac{4}{\\sqrt{x}}$",
-          "$4\\sqrt{x}$"
+          "$-\\dfrac{6}{x^{4}}$",
+          "$\\dfrac{6}{x^{4}}$",
+          "$-\\dfrac{6}{x^{3}}$",
+          "$-\\dfrac{2}{x^{4}}$"
         ],
         "correct": 0,
-        "explanation": "$\\dfrac{\\sqrt{x + h} - \\sqrt{x}}{h} = \\dfrac{1}{\\sqrt{x + h} + \\sqrt{x}} \\to \\dfrac{1}{2\\sqrt{x}}$ ⇒ $f'(x) = \\dfrac{2}{\\sqrt{x}}$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$f(x)=2x^{-3}$ ទាញ $f'(x)=-\\dfrac{6}{x^{4}}$"
       }
     ],
     "4": [
@@ -8475,16 +8453,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = 3x^{3}$។ គណនា $f'(3)$ ៖",
+        "question": "តើមួយណាជារូបមន្តដេរីវេនៃស្វ័យគុណ?",
         "options": [
-          "$54$",
-          "$82$",
-          "$243$",
-          "$81$"
+          "$(x^{n})' = x^{n-1}$",
+          "$(x^{n})' = nx^{n-1}$",
+          "$(x^{n})' = nx^{n+1}$",
+          "$(x^{n})' = nx^{n}$"
         ],
-        "correct": 3,
-        "explanation": "$f'(x) = 9x^{2}$ ⇒ $f'(3) = 81$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $(x^{n})' = nx^{n-1}$"
       },
       {
         "id": "q2",
@@ -8492,16 +8469,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = -x^{3}$។ គណនា $f'(2)$ ៖",
+        "question": "តើមួយណាជាដេរីវេនៃ $x^{2}$ ?",
         "options": [
-          "$-11$",
-          "$-8$",
-          "$-12$",
-          "$-24$"
+          "$x$",
+          "$x^{2} + 2$",
+          "$2x^{2}$",
+          "$2x$"
         ],
-        "correct": 2,
-        "explanation": "$f'(x) = -3x^{2}$ ⇒ $f'(2) = -12$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ឃ. $2x$"
       },
       {
         "id": "q3",
@@ -8509,16 +8485,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = 2x^{3}$។ គណនា $f'(2)$ ៖",
+        "question": "ដេរីវេនៃអនុគមន៍ថេរ $f(x) = c$ គឺ",
         "options": [
-          "$16$",
-          "$24$",
-          "$48$",
-          "$25$"
+          "$x$",
+          "$c$",
+          "$0$",
+          "$1$"
         ],
-        "correct": 1,
-        "explanation": "$f'(x) = 6x^{2}$ ⇒ $f'(2) = 24$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $0$"
       },
       {
         "id": "q4",
@@ -8526,118 +8501,111 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃ $f(x) = \\dfrac{1}{x^{3}}$ គឺ ៖",
+        "question": "គណនាដេរីវេនៃអនុគមន៍ស្វ័យគុណ $f(x) = x^5$ ៖",
         "options": [
-          "$-\\dfrac{3}{x^{4}}$",
-          "$-\\dfrac{1}{x^{4}}$",
-          "$-\\dfrac{3}{x^{3}}$",
-          "$\\dfrac{3}{x^{4}}$"
+          "$4x^5$",
+          "$5x^5$",
+          "$\\dfrac{x^6}{6}$",
+          "$5x^4$"
         ],
-        "correct": 0,
-        "explanation": "$f(x) = x^{-3}$ ⇒ $f'(x) = -3x^{-4} = -\\dfrac{3}{x^{4}}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "រូបមន្ត $(x^n)' = n x^{n-1}$ នាំឱ្យ $(x^5)' = 5x^4$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃ $f(x) = -2x^{3}$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ដេរីវេនៃ $f(x)=x^{5}$ គឺ ៖",
         "options": [
-          "$-6x^{3}$",
-          "$-4x^{2}$",
-          "$-2x^{2}$",
-          "$-6x^{2}$"
+          "$5x^{4}$",
+          "$5x^{5}$",
+          "$x^{4}$",
+          "$5x^{6}$"
         ],
-        "correct": 3,
-        "explanation": "$(ax^n)' = anx^{n-1}$ ⇒ $f'(x) = -6x^{2}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$(x^n)'=nx^{n-1}$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃ $f(x) = 2x^{5}$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $f(x)=3x^{3}$។ គណនា $f'(-1)$ ៖",
         "options": [
-          "$2x^{4}$",
-          "$10x^{5}$",
-          "$10x^{4}$",
-          "$8x^{4}$"
+          "$10$",
+          "$9$",
+          "$8$",
+          "$-9$"
         ],
-        "correct": 2,
-        "explanation": "$(ax^n)' = anx^{n-1}$ ⇒ $f'(x) = 10x^{4}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$f'(x)=9x^{2}$"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃ $f(x) = 5x^{7}$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ដេរីវេនៃ $f(x)=5x^{4}$ គឺ ៖",
         "options": [
-          "$35x^{6}$",
-          "$35x^{7}$",
-          "$30x^{6}$",
-          "$5x^{6}$"
+          "$20x^{4}$",
+          "$20x^{3}$",
+          "$5x^{3}$",
+          "$19x^{4}$"
         ],
-        "correct": 0,
-        "explanation": "$(ax^n)' = anx^{n-1}$ ⇒ $f'(x) = 35x^{6}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$(5x^4)'=20x^3$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃ $f(x) = \\dfrac{2}{x^{3}}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាដេរីវេនៃ $f(x)=2x^{8}$ ត្រង់ $x=1$ ៖",
         "options": [
-          "$-\\dfrac{2}{x^{4}}$",
-          "$-\\dfrac{6}{x^{4}}$",
-          "$-\\dfrac{6}{x^{3}}$",
-          "$\\dfrac{6}{x^{4}}$"
+          "$17$",
+          "$16$",
+          "$15$",
+          "$-16$"
         ],
         "correct": 1,
-        "explanation": "$f(x) = 2x^{-3}$ ⇒ $f'(x) = -6x^{-4} = -\\dfrac{6}{x^{4}}$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$f'(x)=16x^{7}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃអនុគមន៍ថេរ $f(x) = \\sqrt{2}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាដេរីវេនៃ $f(x)=\\dfrac{2}{x^{3}}$ ត្រង់ $x=1$ ៖",
         "options": [
-          "$0$",
-          "$x$",
-          "$1$",
-          "$\\sqrt{2}$"
+          "$6$",
+          "$-5$",
+          "$-7$",
+          "$-6$"
         ],
-        "correct": 0,
-        "explanation": "ដេរីវេនៃចំនួនថេរ ស្មើ $0$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "$f'(x)=-\\dfrac{6}{x^{4}}$ ដូចនេះ $-6$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃចំនួនថេរ ស្វ័យគុណ និងផលគុណនឹងចំនួនថេរ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃ $f(x) = \\dfrac{1}{x^{2}}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេនៃ $f(x)=\\dfrac{3}{x^{3}}$ គឺ ៖",
         "options": [
-          "$-\\dfrac{2}{x^{2}}$",
-          "$\\dfrac{2}{x^{3}}$",
-          "$-\\dfrac{1}{x^{3}}$",
-          "$-\\dfrac{2}{x^{3}}$"
+          "$\\dfrac{9}{x^{4}}$",
+          "$-\\dfrac{3}{x^{4}}$",
+          "$-\\dfrac{9}{x^{4}}$",
+          "$-\\dfrac{9}{x^{3}}$"
         ],
-        "correct": 3,
-        "explanation": "$f(x) = x^{-2}$ ⇒ $f'(x) = -2x^{-3} = -\\dfrac{2}{x^{3}}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$f(x)=3x^{-3}$ ទាញ $f'(x)=-\\dfrac{9}{x^{4}}$"
       }
     ],
     "5": [
@@ -8647,16 +8615,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = 4x^3 + 3x^2 + 2x + 5$។ គណនា $f'(-1)$ ៖",
+        "question": "គណនាដេរីវេនៃ $f(x) = 4x^3 - 7x + 9$ ៖",
         "options": [
-          "$2$",
-          "$13$",
-          "$-8$",
-          "$8$"
+          "$12x^2 - 7$",
+          "$7x^2 - 4$",
+          "$12x^2 - 7x$",
+          "$12x^3 - 7$"
         ],
-        "correct": 3,
-        "explanation": "$f'(x) = 12x^2 + 6x + 2$ ⇒ $f'(-1) = 8$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$f'(x) = 4(3x^2) - 7(1) + 0 = 12x^2 - 7$។"
       },
       {
         "id": "q2",
@@ -8664,16 +8631,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃ $f(x) = 4x^4 - 6x^3 - 6x^2 + 6$ គឺ ៖",
+        "question": "គេឱ្យ $f(x) = 4x^3 + 3x^2 + 2x + 5$។ គណនា $f'(-1)$ ៖",
         "options": [
-          "$16x^4 - 18x^3 - 12x^2 + 6$",
-          "$16x^3 - 18x^2 - 12x$",
-          "$12x^3 - 12x^2 - 6x$",
-          "$4x^3 - 6x^2 - 6x$"
+          "$-8$",
+          "$13$",
+          "$2$",
+          "$8$"
         ],
-        "correct": 1,
-        "explanation": "ដេរីវេនៃផលបូក/ផលដក ស្មើផលបូក/ផលដកនៃដេរីវេ ⇒ $f'(x) = 16x^3 - 18x^2 - 12x$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "$f'(x) = 12x^2 + 6x + 2$ ⇒ $f'(-1) = 8$។"
       },
       {
         "id": "q3",
@@ -8681,16 +8647,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = -x^4 - x^3 - 5x^2 - 3$។ គណនា $f'(-2)$ ៖",
+        "question": "ដេរីវេនៃ $f(x) = 4x^4 - 6x^3 - 6x^2 + 6$ គឺ ៖",
         "options": [
-          "$37$",
-          "$-31$",
-          "$40$",
-          "$-40$"
+          "$16x^4 - 18x^3 - 12x^2 + 6$",
+          "$4x^3 - 6x^2 - 6x$",
+          "$16x^3 - 18x^2 - 12x$",
+          "$12x^3 - 12x^2 - 6x$"
         ],
         "correct": 2,
-        "explanation": "$f'(x) = -4x^3 - 3x^2 - 10x$ ⇒ $f'(-2) = 40$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "ដេរីវេនៃផលបូក/ផលដក ស្មើផលបូក/ផលដកនៃដេរីវេ ⇒ $f'(x) = 16x^3 - 18x^2 - 12x$។"
       },
       {
         "id": "q4",
@@ -8698,118 +8663,111 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = -2x^3 + 4x^2 - 5x + 5$។ គណនា $f'(2)$ ៖",
+        "question": "ដេរីវេនៃ $f(x) = x^3 + 2x^2 + 5x + 5$ គឺ ៖",
         "options": [
-          "$-13$",
-          "$-8$",
-          "$13$",
-          "$-5$"
+          "$3x^3 + 4x^2 + 5x + 5$",
+          "$x^2 + 2x + 5$",
+          "$2x^2 + 2x + 5$",
+          "$3x^2 + 4x + 5$"
         ],
-        "correct": 0,
-        "explanation": "$f'(x) = -6x^2 + 8x - 5$ ⇒ $f'(2) = -13$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "ដេរីវេនៃផលបូក/ផលដក ស្មើផលបូក/ផលដកនៃដេរីវេ ⇒ $f'(x) = 3x^2 + 4x + 5$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដេរីវេនៃ $f(x) = x^3 + 2x^2 + 5x + 5$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនាដេរីវេនៃ $f(x) = 4x^{3} -2x$",
         "options": [
-          "$3x^3 + 4x^2 + 5x + 5$",
-          "$x^2 + 2x + 5$",
-          "$3x^2 + 4x + 5$",
-          "$2x^2 + 2x + 5$"
+          "$12x-2$",
+          "$12x^{2} -2$",
+          "$4x^{2} -2$",
+          "$12x^{2} + 2$"
         ],
-        "correct": 2,
-        "explanation": "ដេរីវេនៃផលបូក/ផលដក ស្មើផលបូក/ផលដកនៃដេរីវេ ⇒ $f'(x) = 3x^2 + 4x + 5$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $12x^{2} -2$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = -2x^4 + 2x^3 + 4x^2 - 2x - 3$។ គណនា $f'(2)$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "បើ $f(x) = 2x^{2} + 4x$ រក $f'(x)$",
         "options": [
-          "$-26$",
-          "$-29$",
-          "$-7$",
-          "$26$"
+          "$4x+ 2$",
+          "$2x+ 4$",
+          "$4x+ 4$",
+          "$2x-4$"
         ],
-        "correct": 0,
-        "explanation": "$f'(x) = -8x^3 + 6x^2 + 8x - 2$ ⇒ $f'(2) = -26$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $4x+ 4$"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = -2x^2 - 4x$។ គណនា $f'(-2)$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនាដេរីវេនៃ $f(x) = x^{4} -6x^{2} + 9$",
         "options": [
-          "$7$",
-          "$4$",
-          "$-4$",
-          "$0$"
+          "$2x^{3} -6x$",
+          "$4x^{3} -12x$",
+          "$4x^{3} + 12x$",
+          "$4x^{2} -12$"
         ],
         "correct": 1,
-        "explanation": "$f'(x) = -4x - 4$ ⇒ $f'(-2) = 4$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $4x^{3} -12x$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = -2x^3 - x^2 + 5x + 3$។ គណនា $f'(1)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គេឱ្យ $f(x)=-2x^{4}+4x^{3}+2x^{2}+4x+1$។ គណនា $f'(2)+f'(-2)$ ៖",
         "options": [
-          "$0$",
-          "$5$",
-          "$3$",
-          "$-3$"
+          "$105$",
+          "$104$",
+          "$103$",
+          "$-104$"
         ],
-        "correct": 3,
-        "explanation": "$f'(x) = -6x^2 - 2x + 5$ ⇒ $f'(1) = -3$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$f'(x)=-8x^{3}+12x^{2}+4x+4$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = -2x^3 - 2x^2 - 3x$។ គណនា $f'(2)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកតម្លៃ $x$ ដែល $f'(x)=0$ ចំពោះ $f(x)=2x^{3}+18x^{2}+48x$ ៖",
         "options": [
-          "$35$",
-          "$-32$",
-          "$-30$",
-          "$-35$"
+          "$x=4$ ឬ $x=2$",
+          "$x=-3$ ឬ $x=-2$",
+          "$x=-4$ ឬ $x=-2$",
+          "$x=-4$ ឬ $x=-1$"
         ],
-        "correct": 3,
-        "explanation": "$f'(x) = -6x^2 - 4x - 3$ ⇒ $f'(2) = -35$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "ដោះស្រាយ $f'(x)=6x^{2}+36x+48=0$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេនៃផលបូក និងផលដកនៃអនុគមន៍",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $f(x) = x^2 - 5x - 5$។ គណនា $f'(-1)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គេឱ្យ $f(x)=x^3+1x^2+bx$ ហើយ $f'(1)=2$។ រកតម្លៃ $b$ ៖",
         "options": [
-          "$-7$",
-          "$1$",
-          "$7$",
-          "$-12$"
+          "$-3$",
+          "$-2$",
+          "$-4$",
+          "$3$"
         ],
         "correct": 0,
-        "explanation": "$f'(x) = 2x - 5$ ⇒ $f'(-1) = -7$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$f'(x)=3x^2+2x+b$ ទាញ $3+2+b=2$ ដូចនេះ $b=-3$"
       }
     ],
     "6": [
@@ -8818,68 +8776,64 @@
         "questionNumber": 1,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = (3x + 4)(2x^2 + 1)$។ គណនា $f'(1)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "តើរូបមន្តដេរីវេនៃផលគុណ $(uv)'$ ស្មើនឹងអ្វី?",
         "options": [
-          "$37$",
-          "$9$",
-          "$12$",
-          "$41$"
+          "$u'v'$",
+          "$u'v - uv'$",
+          "$u'v + uv'$",
+          "$\\dfrac{u'v + uv'}{v^2}$"
         ],
-        "correct": 0,
-        "explanation": "$(uv)' = u'v + uv'$ ⇒ $f'(x) = 3(2x^2 + 1) + (3x + 4)(4x)$ ⇒ $f'(1) = 37$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "រូបមន្តដេរីវេផលគុណ ៖ $(uv)' = u'v + uv'$។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = (x + 2)(-x^2 + 2)$។ គណនា $f'(-1)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "តើរូបមន្តដេរីវេនៃផលចែក $\\left(\\dfrac{u}{v}\\right)'$ ស្មើនឹងអ្វី?",
         "options": [
-          "$4$",
-          "$3$",
-          "$2$",
-          "$1$"
+          "$\\dfrac{uv' - u'v}{v^2}$",
+          "$\\dfrac{u'v - uv'}{v^2}$",
+          "$\\dfrac{u'}{v'}$",
+          "$\\dfrac{u'v + uv'}{v^2}$"
         ],
         "correct": 1,
-        "explanation": "$(uv)' = u'v + uv'$ ⇒ $f'(x) = 1(-x^2 + 2) + (x + 2)(-2x)$ ⇒ $f'(-1) = 3$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "រូបមន្តដេរីវេផលចែក ៖ $\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^2}$។"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $f(x) = \\dfrac{-x - 5}{2x + 2}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x)=(-x-2)(-2x-2)$។ គណនា $f'(1)$ ៖",
         "options": [
-          "$\\dfrac{-8}{(2x + 2)^2}$",
-          "$\\dfrac{8}{2x + 2}$",
-          "$\\dfrac{-12}{(2x + 2)^2}$",
-          "$\\dfrac{8}{(2x + 2)^2}$"
+          "$10$",
+          "$11$",
+          "$9$",
+          "$-10$"
         ],
-        "correct": 3,
-        "explanation": "$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$ ⇒ ភាគយក $-1(2x + 2) - (-x - 5)(2) = 8$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$f'(x)=-1(-2x-2)-2(-x-2)$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = (3x + 1)(2x^2 - 1)$។ គណនា $f'(1)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x)=(2x-1)(2x+3)$។ គណនា $f'(2)$ ៖",
         "options": [
-          "$12$",
-          "$23$",
+          "$21$",
+          "$20$",
           "$19$",
-          "$3$"
+          "$-20$"
         ],
-        "correct": 2,
-        "explanation": "$(uv)' = u'v + uv'$ ⇒ $f'(x) = 3(2x^2 - 1) + (3x + 1)(4x)$ ⇒ $f'(1) = 19$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$f'(x)=2(2x+3)+2(2x-1)$"
       },
       {
         "id": "q5",
@@ -8887,16 +8841,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $f(x) = \\dfrac{3x - 3}{2x + 3}$ គឺ ៖",
+        "question": "គេឱ្យ $f(x) = (3x + 4)(2x^2 + 1)$។ គណនា $f'(1)$ ៖",
         "options": [
-          "$\\dfrac{15}{(2x + 3)^2}$",
-          "$\\dfrac{15}{2x + 3}$",
-          "$\\dfrac{3}{(2x + 3)^2}$",
-          "$\\dfrac{-15}{(2x + 3)^2}$"
+          "$37$",
+          "$41$",
+          "$9$",
+          "$12$"
         ],
         "correct": 0,
-        "explanation": "$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$ ⇒ ភាគយក $3(2x + 3) - (3x - 3)(2) = 15$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$(uv)' = u'v + uv'$ ⇒ $f'(x) = 3(2x^2 + 1) + (3x + 4)(4x)$ ⇒ $f'(1) = 37$។"
       },
       {
         "id": "q6",
@@ -8904,16 +8857,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = \\dfrac{2x - 2}{2x - 4}$។ គណនា $f'(1)$ ៖",
+        "question": "ដេរីវេនៃ $f(x) = \\dfrac{-x - 5}{2x + 2}$ គឺ ៖",
         "options": [
-          "$1$",
-          "$-1$",
-          "$2$",
-          "$0$"
+          "$\\dfrac{8}{2x + 2}$",
+          "$\\dfrac{-12}{(2x + 2)^2}$",
+          "$\\dfrac{-8}{(2x + 2)^2}$",
+          "$\\dfrac{8}{(2x + 2)^2}$"
         ],
-        "correct": 1,
-        "explanation": "$f'(x) = \\dfrac{-4}{(2x - 4)^2}$ ⇒ $f'(1) = -1$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$ ⇒ ភាគយក $-1(2x + 2) - (-x - 5)(2) = 8$។"
       },
       {
         "id": "q7",
@@ -8921,67 +8873,63 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $f(x) = \\dfrac{2x + 1}{x - 3}$ គឺ ៖",
+        "question": "ដេរីវេនៃ $f(x) = \\dfrac{3x - 3}{2x + 3}$ គឺ ៖",
         "options": [
-          "$\\dfrac{7}{(x - 3)^2}$",
-          "$\\dfrac{-7}{x - 3}$",
-          "$\\dfrac{-5}{(x - 3)^2}$",
-          "$\\dfrac{-7}{(x - 3)^2}$"
+          "$\\dfrac{15}{(2x + 3)^2}$",
+          "$\\dfrac{-15}{(2x + 3)^2}$",
+          "$\\dfrac{15}{2x + 3}$",
+          "$\\dfrac{3}{(2x + 3)^2}$"
         ],
-        "correct": 3,
-        "explanation": "$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$ ⇒ ភាគយក $2(x - 3) - (2x + 1)(1) = -7$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$ ⇒ ភាគយក $3(2x + 3) - (3x - 3)(2) = 15$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = (2x - 2)(-x^2 + 2)$។ គណនា $f'(-1)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាដេរីវេនៃ $f(x) = \\dfrac{2x^{2}+1}{x}$",
         "options": [
-          "$2$",
-          "$-8$",
-          "$-6$",
-          "$4$"
+          "$\\dfrac{2x^{2}-1}{x^{2}}$",
+          "$\\dfrac{4x-2}{x^{2}}$",
+          "$2x-\\dfrac{1}{x^{2}}$",
+          "$\\dfrac{4x^{2}-1}{x^{2}}$"
         ],
-        "correct": 2,
-        "explanation": "$(uv)' = u'v + uv'$ ⇒ $f'(x) = 2(-x^2 + 2) + (2x - 2)(-2x)$ ⇒ $f'(-1) = -6$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ក. $\\dfrac{2x^{2}-1}{x^{2}}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = (2x - 4)(2x^2 - 1)$។ គណនា $f'(-1)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាដេរីវេនៃ $f(x) = \\dfrac{9x^{2}+2}{3x^{3}}$",
         "options": [
-          "$30$",
-          "$-8$",
-          "$2$",
-          "$26$"
+          "$\\dfrac{-3}{x^{2}}$",
+          "$\\dfrac{-3x^{2}+6}{x^{4}}$",
+          "$\\dfrac{-3x^{2}-2}{x^{4}}$",
+          "$\\dfrac{-3x^{2}-6}{x^{4}}$"
         ],
-        "correct": 3,
-        "explanation": "$(uv)' = u'v + uv'$ ⇒ $f'(x) = 2(2x^2 - 1) + (2x - 4)(4x)$ ⇒ $f'(-1) = 26$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $\\dfrac{-3x^{2}-2}{x^{4}}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ដេរីវេនៃផលគុណ និងផលចែកនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = (2x - 1)(x^2 - 2)$។ គណនា $f'(1)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាដេរីវេនៃ $f(x) = \\dfrac{x^2 - 1}{x^2 + 1}$ ៖",
         "options": [
-          "$-2$",
-          "$4$",
-          "$0$",
-          "$2$"
+          "$\\dfrac{4}{(x^2+1)^2}$",
+          "$-\\dfrac{4x}{(x^2+1)^2}$",
+          "$\\dfrac{4x}{(x^2+1)^2}$",
+          "$\\dfrac{2x}{(x^2+1)^2}$"
         ],
         "correct": 2,
-        "explanation": "$(uv)' = u'v + uv'$ ⇒ $f'(x) = 2(x^2 - 2) + (2x - 1)(2x)$ ⇒ $f'(1) = 0$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$f'(x) = \\dfrac{2x(x^2+1) - 2x(x^2-1)}{(x^2+1)^2} = \\dfrac{2x^3+2x - 2x^3+2x}{(x^2+1)^2} = \\dfrac{4x}{(x^2+1)^2}$។"
       }
     ],
     "7": [
@@ -8990,68 +8938,64 @@
         "questionNumber": 1,
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី ២ នៃ $f(x) = \\dfrac{2}{x}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនាដេរីវេទីពីរ $y''$ នៃអនុគមន៍ $y = x^4$ ៖",
         "options": [
-          "$\\dfrac{2}{x^3}$",
-          "$\\dfrac{4}{x^3}$",
-          "$-\\dfrac{4}{x^3}$",
-          "$-\\dfrac{2}{x^2}$"
+          "$12x^3$",
+          "$4x^3$",
+          "$24x$",
+          "$12x^2$"
         ],
-        "correct": 1,
-        "explanation": "$f'(x) = -\\dfrac{2}{x^2} = -2x^{-2}$ ⇒ $f''(x) = 4x^{-3} = \\dfrac{4}{x^3}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "$y' = 4x^3 \\Rightarrow y'' = (4x^3)' = 12x^2$។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី ២ នៃ $f(x) = \\dfrac{3}{x}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេទី ២ នៃ $f(x)=2x^{4}-x^{3}+2x^{2}-x-2$ គឺ $f''(x)=$ ៖",
         "options": [
-          "$\\dfrac{3}{x^3}$",
-          "$-\\dfrac{3}{x^2}$",
-          "$-\\dfrac{6}{x^3}$",
-          "$\\dfrac{6}{x^3}$"
+          "$8x^{3}-3x^{2}+4x-1$",
+          "$25x^{2}-5x+5$",
+          "$24x^{2}-6x+4$",
+          "$24x^{3}-6x^{2}+4x$"
         ],
-        "correct": 3,
-        "explanation": "$f'(x) = -\\dfrac{3}{x^2} = -3x^{-2}$ ⇒ $f''(x) = 6x^{-3} = \\dfrac{6}{x^3}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$f'(x)=8x^{3}-3x^{2}+4x-1$ ហើយ $f''(x)=24x^{2}-6x+4$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី ២ នៃ $f(x) = x^3 + x^2 + 2x - 5$ គឺ $f''(x) =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេទី ២ នៃ $f(x)=-x^{3}+x^{2}-2$ គឺ $f''(x)=$ ៖",
         "options": [
-          "$9x + 4$",
-          "$3x^2 + 2x + 2$",
-          "$6x + 2$",
-          "$6x + 4$"
+          "$-6x+2$",
+          "$-3x^{2}+2x$",
+          "$-5x+3$",
+          "$-6x^{2}+2x$"
         ],
-        "correct": 2,
-        "explanation": "$f'(x) = 3x^2 + 2x + 2$ ⇒ $f''(x) = 6x + 2$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$f'(x)=-3x^{2}+2x$ ហើយ $f''(x)=-6x+2$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = -x^4 - 4x^3 + 4x^2 + 2x$។ គណនា $f''(1)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេទី ២ នៃ $f(x)=3x^{3}+4x^{2}-2x+2$ គឺ $f''(x)=$ ៖",
         "options": [
-          "$-28$",
-          "$-6$",
-          "$28$",
-          "$-26$"
+          "$18x+8$",
+          "$9x^{2}+8x-2$",
+          "$19x+9$",
+          "$18x^{2}+8x$"
         ],
         "correct": 0,
-        "explanation": "$f''(x) = -12x^2 - 24x + 8$ ⇒ $f''(1) = -28$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$f'(x)=9x^{2}+8x-2$ ហើយ $f''(x)=18x+8$"
       },
       {
         "id": "q5",
@@ -9059,16 +9003,15 @@
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី ២ នៃ $f(x) = 2x^3 - 4x^2 + x - 3$ គឺ $f''(x) =$ ៖",
+        "question": "ដេរីវេទី ២ នៃ $f(x) = \\dfrac{2}{x}$ គឺ ៖",
         "options": [
-          "$18x - 16$",
-          "$12x - 6$",
-          "$12x - 8$",
-          "$6x^2 - 8x + 1$"
+          "$\\dfrac{4}{x^3}$",
+          "$-\\dfrac{2}{x^2}$",
+          "$\\dfrac{2}{x^3}$",
+          "$-\\dfrac{4}{x^3}$"
         ],
-        "correct": 2,
-        "explanation": "$f'(x) = 6x^2 - 8x + 1$ ⇒ $f''(x) = 12x - 8$។",
-        "src": "genpq-g11b_plan"
+        "correct": 0,
+        "explanation": "$f'(x) = -\\dfrac{2}{x^2} = -2x^{-2}$ ⇒ $f''(x) = 4x^{-3} = \\dfrac{4}{x^3}$។"
       },
       {
         "id": "q6",
@@ -9076,16 +9019,15 @@
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = 3x^4 + 2x^3 - 4x^2 - 4x + 3$។ គណនា $f''(2)$ ៖",
+        "question": "ដេរីវេទី ២ នៃ $f(x) = x^3 + x^2 + 2x - 5$ គឺ $f''(x) =$ ៖",
         "options": [
-          "$162$",
-          "$160$",
-          "$-160$",
-          "$100$"
+          "$6x + 4$",
+          "$6x + 2$",
+          "$3x^2 + 2x + 2$",
+          "$9x + 4$"
         ],
         "correct": 1,
-        "explanation": "$f''(x) = 36x^2 + 12x - 8$ ⇒ $f''(2) = 160$។",
-        "src": "genpq-g11b_plan"
+        "explanation": "$f'(x) = 3x^2 + 2x + 2$ ⇒ $f''(x) = 6x + 2$។"
       },
       {
         "id": "q7",
@@ -9093,67 +9035,63 @@
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី ២ នៃ $f(x) = \\dfrac{1}{x}$ គឺ ៖",
+        "question": "ដេរីវេទី ២ នៃ $f(x) = 2x^3 - 4x^2 + x - 3$ គឺ $f''(x) =$ ៖",
         "options": [
-          "$\\dfrac{2}{x^3}$",
-          "$-\\dfrac{1}{x^2}$",
-          "$-\\dfrac{2}{x^3}$",
-          "$\\dfrac{1}{x^3}$"
+          "$12x - 6$",
+          "$6x^2 - 8x + 1$",
+          "$12x - 8$",
+          "$18x - 16$"
         ],
-        "correct": 0,
-        "explanation": "$f'(x) = -\\dfrac{1}{x^2} = -1x^{-2}$ ⇒ $f''(x) = 2x^{-3} = \\dfrac{2}{x^3}$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$f'(x) = 6x^2 - 8x + 1$ ⇒ $f''(x) = 12x - 8$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី ២ នៃ $f(x) = -x^4 + x^3 + 3x^2 + 3x + 3$ គឺ $f''(x) =$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាដេរីវេទី $n$ នៃ $y = \\dfrac{1}{x}$ ៖",
         "options": [
-          "$-16x^2 + 9x + 12$",
-          "$-4x^3 + 3x^2 + 6x + 3$",
-          "$-12x^2 + 6x + 8$",
-          "$-12x^2 + 6x + 6$"
+          "$-\\dfrac{n!}{x^{n+1}}$",
+          "$\\dfrac{(-1)^n n!}{x^{n+1}}$",
+          "$\\dfrac{n!}{x^{n+1}}$",
+          "$\\dfrac{(-1)^n}{x^{n+1}}$"
         ],
-        "correct": 3,
-        "explanation": "$f'(x) = -4x^3 + 3x^2 + 6x + 3$ ⇒ $f''(x) = -12x^2 + 6x + 6$។",
-        "src": "genpq-g11b_plan"
+        "correct": 1,
+        "explanation": "$y' = -x^{-2}$, $y'' = 2x^{-3}$, $y''' = -6x^{-4}$ តាមអនុមានរួម $y^{(n)} = (-1)^n n! x^{-(n+1)} = \\dfrac{(-1)^n n!}{x^{n+1}}$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី ២ នៃ $f(x) = 3x^4 - x^3 + 5x^2 + x - 2$ គឺ $f''(x) =$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកតម្លៃ $x$ ដែល $f''(x)=0$ ចំពោះ $f(x)=2x^{3}-3x^{2}+4x$ ៖",
         "options": [
-          "$48x^2 - 9x + 20$",
-          "$36x^2 - 6x + 10$",
-          "$36x^2 - 6x + 12$",
-          "$12x^3 - 3x^2 + 10x + 1$"
+          "$-\\dfrac{1}{2}$",
+          "$\\dfrac{3}{2}$",
+          "$\\dfrac{5}{2}$",
+          "$\\dfrac{1}{2}$"
         ],
-        "correct": 1,
-        "explanation": "$f'(x) = 12x^3 - 3x^2 + 10x + 1$ ⇒ $f''(x) = 36x^2 - 6x + 10$។",
-        "src": "genpq-g11b_plan"
+        "correct": 3,
+        "explanation": "$f''(x)=12x-6=0$ ទាញ $x=\\dfrac{1}{2}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 7,
         "pointTitle": "ចំណុចទី ៧ ៖ ដេរីវេទី ២",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី ២ នៃ $f(x) = 2x^4 - 3x^3 + 4x^2 + 5x + 5$ គឺ $f''(x) =$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គេឱ្យ $f(x)=-2x^{4}-2x^{3}+3x^{2}+2x+1$។ គណនា $f''(2)$ ៖",
         "options": [
-          "$8x^3 - 9x^2 + 8x + 5$",
-          "$32x^2 - 27x + 16$",
-          "$24x^2 - 18x + 10$",
-          "$24x^2 - 18x + 8$"
+          "$-113$",
+          "$-115$",
+          "$-114$",
+          "$114$"
         ],
-        "correct": 3,
-        "explanation": "$f'(x) = 8x^3 - 9x^2 + 8x + 5$ ⇒ $f''(x) = 24x^2 - 18x + 8$។",
-        "src": "genpq-g11b_plan"
+        "correct": 2,
+        "explanation": "$f''(x)=-24x^{2}-12x+6$"
       }
     ]
   },
