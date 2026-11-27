@@ -1,0 +1,42 @@
+{
+  "lesson": "les-g11b-3-3",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនទី ៤ ៖ សមីការ និងវិសមីការត្រីកោណមាត្រ (ទំព័រ ១២៨ - ១៤១)",
+  "book_pages": "128-141 (uploads/pdfs/g11b_ch3_les3.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ សមីការត្រីកោណមាត្រគ្រឹះ"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ វិសមីការត្រីកោណមាត្រ"
+    }
+  ],
+  "notes": "Sections: 1-2 numbers with equal cos/sin, 3 equations (3.1 cos, 3.2 sin, 3.3 tan, 3.4 cot), inequalities. Auxiliary-angle equations kept in P2 (appear in QB). X1_9 removed (no valid answer).",
+  "removed": [
+    "g11a_extra_g11b-3-3_1_9"
+  ],
+  "bank_levels": {
+    "1": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 13,
+      "m": 25,
+      "h": 19
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}

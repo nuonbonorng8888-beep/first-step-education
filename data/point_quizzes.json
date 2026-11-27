@@ -5204,68 +5204,64 @@
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងចន្លោះ $[0, \\pi]$ រកមុំផ្សេងទៀតដែលមានស៊ីនុសស្មើ $\\sin\\dfrac{2\\pi}{3}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការ $\\sin x = \\sin \\alpha$ មានសំណុំចម្លើយទូទៅគឺ ៖",
         "options": [
-          "$-\\dfrac{2\\pi}{3}$",
-          "$\\dfrac{5\\pi}{3}$",
-          "$\\dfrac{4\\pi}{3}$",
-          "$\\dfrac{\\pi}{3}$"
+          "$x = \\alpha + k\\pi$",
+          "$x = -\\alpha + 2k\\pi$",
+          "$x = \\alpha + 2k\\pi$ ឬ $x = \\pi - \\alpha + 2k\\pi$ ($k \\in \\mathbb{Z}$)",
+          "$x = \\pm \\alpha + 2k\\pi$"
         ],
-        "correct": 3,
-        "explanation": "$\\sin\\alpha = \\sin(\\pi - \\alpha)$ ⇒ $\\dfrac{\\pi}{3}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ចម្លើយទូទៅនៃស៊ីនុស ៖ $x = \\alpha + 2k\\pi$ ឬ $x = \\pi - \\alpha + 2k\\pi$ ($k \\in \\mathbb{Z}$)។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\sin \\alpha = \\sin \\beta$ លុះត្រាតែ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការ $\\cos x = \\cos \\alpha$ មានសំណុំចម្លើយទូទៅគឺ ៖",
         "options": [
-          "$\\alpha = \\pm \\beta + 2k\\pi$",
-          "$\\alpha = -\\beta + 2k\\pi$",
-          "$\\alpha = \\beta + 2k\\pi \\text{ ឬ } \\alpha = \\pi - \\beta + 2k\\pi$",
-          "$\\alpha = \\beta + k\\pi$"
+          "$x = \\alpha + k\\pi$",
+          "$x = \\pm \\alpha + k\\pi$",
+          "$x = \\alpha + 2k\\pi$ ឬ $x = \\pi - \\alpha + 2k\\pi$",
+          "$x = \\pm \\alpha + 2k\\pi$ ($k \\in \\mathbb{Z}$)"
         ],
-        "correct": 2,
-        "explanation": "ចំណុចពីរមានអរដោនេដូចគ្នា ⇒ ឆ្លុះធៀបនឹងអ័ក្ស $Oy$ ⇒ $\\alpha = \\pi - \\beta + 2k\\pi$ ឬស្មើគ្នា។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "ចម្លើយទូទៅនៃកូស៊ីនុស ៖ $x = \\pm \\alpha + 2k\\pi$ ($k \\in \\mathbb{Z}$)។"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\cos \\alpha = \\cos \\beta$ លុះត្រាតែ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយទូទៅនៃសមីការ $cosx= \\cos \\alpha$ គឺ",
         "options": [
-          "$\\alpha = \\pi - \\beta + 2k\\pi$",
-          "$\\alpha = \\pm \\beta + 2k\\pi$",
-          "$\\alpha = \\beta + 2k\\pi \\text{ តែប៉ុណ្ណោះ}$",
-          "$\\alpha = \\beta + k\\pi$"
+          "$x= \\alpha + 2k\\pi , k\\in \\mathbb{Z}$",
+          "$x= \\pm \\alpha + 2k\\pi , k\\in \\mathbb{Z}$",
+          "$x= \\pi -\\alpha +$ $2k\\pi , k\\in \\mathbb{Z}$",
+          "$x= \\alpha + k\\pi , k\\in \\mathbb{Z}$"
         ],
         "correct": 1,
-        "explanation": "ចំណុចពីរលើរង្វង់ត្រីកោណមាត្រមានអាប់ស៊ីសដូចគ្នា ⇒ ឆ្លុះធៀបនឹងអ័ក្ស $Ox$ ⇒ $\\alpha = \\pm \\beta + 2k\\pi$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $x= \\pm \\alpha + 2k\\pi , k\\in \\mathbb{Z}$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងចន្លោះ $[0, \\pi]$ រកមុំផ្សេងទៀតដែលមានស៊ីនុសស្មើ $\\sin\\dfrac{\\pi}{4}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយទូទៅនៃសមីការ $sinx= \\sin \\alpha$ គឺ",
         "options": [
-          "$\\dfrac{3\\pi}{4}$",
-          "$-\\dfrac{\\pi}{4}$",
-          "$\\dfrac{5\\pi}{4}$",
-          "$\\dfrac{7\\pi}{4}$"
+          "$x= -\\alpha + 2k\\pi , k\\in \\mathbb{Z}$",
+          "$x= \\alpha + k\\pi , k\\in \\mathbb{Z}$",
+          "$x= \\alpha + 2k\\pi$ ឬ $x= \\pi -\\alpha + 2k\\pi , k\\in \\mathbb{Z}$",
+          "$x= \\pm \\alpha + 2k\\pi , k\\in \\mathbb{Z}$"
         ],
-        "correct": 0,
-        "explanation": "$\\sin\\alpha = \\sin(\\pi - \\alpha)$ ⇒ $\\dfrac{3\\pi}{4}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ គ. $x= \\alpha + 2k\\pi$ ឬ $x= \\pi -\\alpha + 2k\\pi , k\\in \\mathbb{Z}$"
       },
       {
         "id": "q5",
@@ -5273,16 +5269,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងចន្លោះ $[0, \\pi]$ រកមុំផ្សេងទៀតដែលមានស៊ីនុសស្មើ $\\sin\\dfrac{\\pi}{3}$ ៖",
+        "question": "ក្នុងចន្លោះ $[0, \\pi]$ រកមុំផ្សេងទៀតដែលមានស៊ីនុសស្មើ $\\sin\\dfrac{2\\pi}{3}$ ៖",
         "options": [
-          "$\\dfrac{2\\pi}{3}$",
-          "$\\dfrac{4\\pi}{3}$",
-          "$-\\dfrac{\\pi}{3}$",
-          "$\\dfrac{5\\pi}{3}$"
+          "$\\dfrac{\\pi}{3}$",
+          "$-\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{5\\pi}{3}$",
+          "$\\dfrac{4\\pi}{3}$"
         ],
         "correct": 0,
-        "explanation": "$\\sin\\alpha = \\sin(\\pi - \\alpha)$ ⇒ $\\dfrac{2\\pi}{3}$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\sin\\alpha = \\sin(\\pi - \\alpha)$ ⇒ $\\dfrac{\\pi}{3}$។"
       },
       {
         "id": "q6",
@@ -5290,16 +5285,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងចន្លោះ $(0, 2\\pi)$ រកមុំផ្សេងទៀតដែលមានកូស៊ីនុសស្មើ $\\cos\\dfrac{4\\pi}{4}$ ៖",
+        "question": "$\\sin \\alpha = \\sin \\beta$ លុះត្រាតែ ៖",
         "options": [
-          "$\\dfrac{8\\pi}{4}$",
-          "$\\dfrac{2\\pi}{4}$",
-          "$\\dfrac{4\\pi}{4}$",
-          "$-\\dfrac{4\\pi}{4}$"
+          "$\\alpha = \\beta + k\\pi$",
+          "$\\alpha = -\\beta + 2k\\pi$",
+          "$\\alpha = \\pm \\beta + 2k\\pi$",
+          "$\\alpha = \\beta + 2k\\pi \\text{ ឬ } \\alpha = \\pi - \\beta + 2k\\pi$"
         ],
-        "correct": 2,
-        "explanation": "$\\cos\\alpha = \\cos(2\\pi - \\alpha)$ ⇒ $\\dfrac{4\\pi}{4}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "ចំណុចពីរមានអរដោនេដូចគ្នា ⇒ ឆ្លុះធៀបនឹងអ័ក្ស $Oy$ ⇒ $\\alpha = \\pi - \\beta + 2k\\pi$ ឬស្មើគ្នា។"
       },
       {
         "id": "q7",
@@ -5307,67 +5301,63 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងចន្លោះ $(0, 2\\pi)$ រកមុំផ្សេងទៀតដែលមានកូស៊ីនុសស្មើ $\\cos\\dfrac{5\\pi}{4}$ ៖",
+        "question": "$\\cos \\alpha = \\cos \\beta$ លុះត្រាតែ ៖",
         "options": [
-          "$\\dfrac{2\\pi}{4}$",
-          "$-\\dfrac{5\\pi}{4}$",
-          "$\\dfrac{9\\pi}{4}$",
-          "$\\dfrac{3\\pi}{4}$"
+          "$\\alpha = \\pi - \\beta + 2k\\pi$",
+          "$\\alpha = \\pm \\beta + 2k\\pi$",
+          "$\\alpha = \\beta + k\\pi$",
+          "$\\alpha = \\beta + 2k\\pi \\text{ តែប៉ុណ្ណោះ}$"
         ],
-        "correct": 3,
-        "explanation": "$\\cos\\alpha = \\cos(2\\pi - \\alpha)$ ⇒ $\\dfrac{3\\pi}{4}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "ចំណុចពីរលើរង្វង់ត្រីកោណមាត្រមានអាប់ស៊ីសដូចគ្នា ⇒ ឆ្លុះធៀបនឹងអ័ក្ស $Ox$ ⇒ $\\alpha = \\pm \\beta + 2k\\pi$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងចន្លោះ $(0, 2\\pi)$ រកមុំផ្សេងទៀតដែលមានកូស៊ីនុសស្មើ $\\cos\\dfrac{4\\pi}{6}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $\\cos 7x=\\cos 3x$ ៖",
         "options": [
-          "$\\dfrac{10\\pi}{6}$",
-          "$\\dfrac{8\\pi}{6}$",
-          "$-\\dfrac{4\\pi}{6}$",
-          "$\\dfrac{2\\pi}{6}$"
+          "$x=\\dfrac{k\\pi}{4}$ ឬ $x=\\dfrac{k\\pi}{10}$",
+          "$x=\\dfrac{k\\pi}{2}$ ឬ $x=\\dfrac{k\\pi}{5}$",
+          "$x=\\dfrac{2k\\pi}{7}$ ឬ $x=\\dfrac{2k\\pi}{3}$",
+          "$x=\\dfrac{k\\pi}{2}$ ឬ $x=\\dfrac{2k\\pi}{5}$"
         ],
         "correct": 1,
-        "explanation": "$\\cos\\alpha = \\cos(2\\pi - \\alpha)$ ⇒ $\\dfrac{8\\pi}{6}$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$7x=\\pm 3x+2k\\pi$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងចន្លោះ $[0, \\pi]$ រកមុំផ្សេងទៀតដែលមានស៊ីនុសស្មើ $\\sin\\dfrac{2\\pi}{6}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $\\sin 5x=\\sin 2x$ ៖",
         "options": [
-          "$-\\dfrac{2\\pi}{6}$",
-          "$\\dfrac{4\\pi}{6}$",
-          "$\\dfrac{8\\pi}{6}$",
-          "$\\dfrac{10\\pi}{6}$"
+          "$x=\\dfrac{2k\\pi}{3}$ ឬ $x=\\dfrac{2k\\pi}{7}$",
+          "$x=\\dfrac{k\\pi}{3}$ ឬ $x=\\dfrac{\\pi+k\\pi}{7}$",
+          "$x=\\dfrac{\\pi+2k\\pi}{3}$ ឬ $x=\\dfrac{2k\\pi}{7}$",
+          "$x=\\dfrac{2k\\pi}{3}$ ឬ $x=\\dfrac{\\pi+2k\\pi}{7}$"
         ],
-        "correct": 1,
-        "explanation": "$\\sin\\alpha = \\sin(\\pi - \\alpha)$ ⇒ $\\dfrac{4\\pi}{6}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "$5x=2x+2k\\pi$ ឬ $5x=\\pi-2x+2k\\pi$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួនដែលមានកូស៊ីនុស ឬស៊ីនុសដូចគ្នា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងចន្លោះ $[0, \\pi]$ រកមុំផ្សេងទៀតដែលមានស៊ីនុសស្មើ $\\sin\\dfrac{3\\pi}{4}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $\\cos (x+\\dfrac{\\pi}{4})=\\cos 2x$ ៖",
         "options": [
-          "$-\\dfrac{3\\pi}{4}$",
-          "$\\dfrac{7\\pi}{4}$",
-          "$\\dfrac{\\pi}{4}$",
-          "$\\dfrac{5\\pi}{4}$"
+          "$x=-\\dfrac{\\pi}{4}+2k\\pi$ ឬ $x=-\\dfrac{\\pi}{12}+\\dfrac{2k\\pi}{3}$",
+          "$x=\\dfrac{\\pi}{4}+2k\\pi$ ឬ $x=-\\dfrac{\\pi}{12}+\\dfrac{2k\\pi}{3}$",
+          "$x=\\dfrac{\\pi}{4}+2k\\pi$ ឬ $x=\\dfrac{\\pi}{12}+\\dfrac{2k\\pi}{3}$",
+          "$x=\\dfrac{\\pi}{4}+k\\pi$ ឬ $x=-\\dfrac{\\pi}{12}+\\dfrac{k\\pi}{3}$"
         ],
-        "correct": 2,
-        "explanation": "$\\sin\\alpha = \\sin(\\pi - \\alpha)$ ⇒ $\\dfrac{\\pi}{4}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "$x+\\dfrac{\\pi}{4}=2x+2k\\pi$ ឬ $x+\\dfrac{\\pi}{4}=-2x+2k\\pi$។"
       }
     ],
     "2": [
@@ -5377,53 +5367,19 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការត្រីកោណមាត្រគ្រឹះ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "សមីការ $\\sin x = \\sin \\alpha$ មានសំណុំចម្លើយទូទៅគឺ ៖",
+        "question": "សមីការ $\\tan x = \\tan \\alpha$ មានសំណុំចម្លើយទូទៅគឺ ៖",
         "options": [
-          "$x = \\alpha + k\\pi$",
-          "$x = \\alpha + 2k\\pi$ ឬ $x = \\pi - \\alpha + 2k\\pi$ ($k \\in \\mathbb{Z}$)",
-          "$x = -\\alpha + 2k\\pi$",
-          "$x = \\pm \\alpha + 2k\\pi$"
+          "$x = \\pm \\alpha + k\\pi$",
+          "$x = \\alpha + k\\pi$ ($k \\in \\mathbb{Z}$)",
+          "$x = \\alpha + 2k\\pi$",
+          "$x = \\pi - \\alpha + k\\pi$"
         ],
         "correct": 1,
-        "explanation": "ចម្លើយទូទៅនៃស៊ីនុស ៖ $x = \\alpha + 2k\\pi$ ឬ $x = \\pi - \\alpha + 2k\\pi$ ($k \\in \\mathbb{Z}$)។",
-        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>",
-        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>"
+        "explanation": "ចម្លើយទូទៅនៃតង់សង់ ៖ $x = \\alpha + k\\pi$ ($k \\in \\mathbb{Z}$)។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សមីការត្រីកោណមាត្រគ្រឹះ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សមីការ $\\cos x = \\cos \\alpha$ មានសំណុំចម្លើយទូទៅគឺ ៖",
-        "options": [
-          "$x = \\alpha + 2k\\pi$ ឬ $x = \\pi - \\alpha + 2k\\pi$",
-          "$x = \\alpha + k\\pi$",
-          "$x = \\pm \\alpha + k\\pi$",
-          "$x = \\pm \\alpha + 2k\\pi$ ($k \\in \\mathbb{Z}$)"
-        ],
-        "correct": 3,
-        "explanation": "ចម្លើយទូទៅនៃកូស៊ីនុស ៖ $x = \\pm \\alpha + 2k\\pi$ ($k \\in \\mathbb{Z}$)។"
-      },
-      {
-        "id": "q3",
-        "questionNumber": 3,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សមីការត្រីកោណមាត្រគ្រឹះ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សមីការ $\\tan x = \\tan \\alpha$ មានសំណុំចម្លើយទូទៅគឺ ៖",
-        "options": [
-          "$x = \\alpha + 2k\\pi$",
-          "$x = \\pm \\alpha + k\\pi$",
-          "$x = \\alpha + k\\pi$ ($k \\in \\mathbb{Z}$)",
-          "$x = \\pi - \\alpha + k\\pi$"
-        ],
-        "correct": 2,
-        "explanation": "ចម្លើយទូទៅនៃតង់សង់ ៖ $x = \\alpha + k\\pi$ ($k \\in \\mathbb{Z}$)។"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការត្រីកោណមាត្រគ្រឹះ",
         "level": "កម្រិត 1 (ងាយ)",
@@ -5438,6 +5394,38 @@
         "explanation": "$\\sin x = 0 \\Leftrightarrow x = k\\pi$ ($k \\in \\mathbb{Z}$)។"
       },
       {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការត្រីកោណមាត្រគ្រឹះ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "បើ $\\sin \\theta = 1$ នោះ $\\theta = \\cdots$",
+        "options": [
+          "$\\theta = 2k\\pi , k\\in \\mathbb{Z}$",
+          "$\\theta = \\dfrac{\\pi}{2}+ 2k\\pi , k\\in \\mathbb{Z}$",
+          "$\\theta =\\dfrac{(2k+1)\\pi}{2}, k\\in \\mathbb{Z}$",
+          "$\\theta = \\dfrac{k\\pi}{2}, k\\in \\mathbb{Z}$"
+        ],
+        "correct": 1,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ខ. $\\theta = \\dfrac{\\pi}{2}+ 2k\\pi , k\\in \\mathbb{Z}$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការត្រីកោណមាត្រគ្រឹះ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "បើ $\\sin \\theta = -1$ នោះ $\\theta = \\cdots$",
+        "options": [
+          "$\\theta = \\dfrac{3\\pi}{2}+ 2k\\pi , k\\in \\mathbb{Z}$",
+          "$\\theta = k\\pi , k\\in \\mathbb{Z}$",
+          "$\\theta = \\dfrac{k\\pi}{2}, k\\in \\mathbb{Z}$",
+          "$\\theta =\\dfrac{(2k+1)\\pi}{2}, k\\in \\mathbb{Z}$"
+        ],
+        "correct": 0,
+        "explanation": "ចម្លើយត្រឹមត្រូវ ៖ ក. $\\theta = \\dfrac{3\\pi}{2}+ 2k\\pi , k\\in \\mathbb{Z}$"
+      },
+      {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 2,
@@ -5445,12 +5433,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការ $\\cos x = \\dfrac{1}{2}$ ៖",
         "options": [
-          "$x = \\pm \\dfrac{\\pi}{4} + 2k\\pi$",
           "$x = \\dfrac{\\pi}{3} + k\\pi$",
           "$x = \\pm \\dfrac{\\pi}{3} + 2k\\pi$",
+          "$x = \\pm \\dfrac{\\pi}{4} + 2k\\pi$",
           "$x = \\pm \\dfrac{\\pi}{6} + 2k\\pi$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "$\\cos x = \\cos\\dfrac{\\pi}{3} \\Rightarrow x = \\pm \\dfrac{\\pi}{3} + 2k\\pi$ ($k \\in \\mathbb{Z}$)។"
       },
       {
@@ -5461,12 +5449,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការ $\\sin x = -\\dfrac{1}{2}$ ៖",
         "options": [
-          "$x = \\pm \\dfrac{\\pi}{6} + 2k\\pi$",
+          "$x = -\\dfrac{\\pi}{6} + 2k\\pi$ ឬ $x = \\dfrac{7\\pi}{6} + 2k\\pi$",
           "$x = -\\dfrac{\\pi}{3} + 2k\\pi$",
           "$x = \\dfrac{\\pi}{6} + k\\pi$",
-          "$x = -\\dfrac{\\pi}{6} + 2k\\pi$ ឬ $x = \\dfrac{7\\pi}{6} + 2k\\pi$"
+          "$x = \\pm \\dfrac{\\pi}{6} + 2k\\pi$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "$\\sin x = \\sin(-\\pi/6) \\Rightarrow x = -\\pi/6 + 2k\\pi$ ឬ $x = \\pi - (-\\pi/6) + 2k\\pi = 7\\pi/6 + 2k\\pi$។"
       },
       {
@@ -5477,12 +5465,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការ $\\tan x = \\sqrt{3}$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{3} + k\\pi$",
+          "$x = \\dfrac{\\pi}{3} + 2k\\pi$",
           "$x = \\pm \\dfrac{\\pi}{3} + 2k\\pi$",
           "$x = \\dfrac{\\pi}{6} + k\\pi$",
-          "$x = \\dfrac{\\pi}{3} + 2k\\pi$"
+          "$x = \\dfrac{\\pi}{3} + k\\pi$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$\\tan x = \\tan\\dfrac{\\pi}{3} \\Rightarrow x = \\dfrac{\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$)។"
       },
       {
@@ -5493,12 +5481,12 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការ $\\cos\\left(2x - \\dfrac{\\pi}{4}\\right) = 0$ ៖",
         "options": [
+          "$x = \\dfrac{3\\pi}{8} + k\\pi$",
           "$x = \\dfrac{\\pi}{8} + \\dfrac{k\\pi}{2}$",
           "$x = \\dfrac{3\\pi}{8} + \\dfrac{k\\pi}{2}$",
-          "$x = \\dfrac{3\\pi}{8} + k\\pi$",
           "$x = \\dfrac{\\pi}{4} + k\\pi$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$2x - \\pi/4 = \\pi/2 + k\\pi \\Rightarrow 2x = 3\\pi/4 + k\\pi \\Rightarrow x = \\dfrac{3\\pi}{8} + \\dfrac{k\\pi}{2}$ ($k \\in \\mathbb{Z}$)។"
       },
       {
@@ -5509,10 +5497,10 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកចំនួនឫសនៃសមីការ $\\sin 2x = 1$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
-          "៣ ឫស",
+          "៤ ឫស",
           "១ ឫស",
           "២ ឫស",
-          "៤ ឫស"
+          "៣ ឫស"
         ],
         "correct": 2,
         "explanation": "$2x = \\pi/2 + 2k\\pi \\Rightarrow x = \\pi/4 + k\\pi$។ ក្នុង $[0, 2\\pi]$ មាន $x = \\pi/4, 5\\pi/4$ (សរុប ២ ឫស)។"
@@ -5525,8 +5513,8 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "សមីការ $\\sin x = m$ មានឫសក្នុង $\\mathbb{R}$ លុះត្រាតែ ៖",
         "options": [
-          "$m \\ge 1$",
           "$m > 0$",
+          "$m \\ge 1$",
           "$m \\in \\mathbb{R}$",
           "$-1 \\le m \\le 1$"
         ],
@@ -5543,10 +5531,10 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមីការ $\\sin x > 0$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
-          "$x \\in (\\pi, 2\\pi)$",
+          "$x \\in (0, 2\\pi)$",
           "$x \\in (0, \\pi)$",
           "$x \\in [0, \\pi]$",
-          "$x \\in (0, 2\\pi)$"
+          "$x \\in (\\pi, 2\\pi)$"
         ],
         "correct": 1,
         "explanation": "ស៊ីនុសវិជ្ជមានក្នុងកាដ្រង់ទី I និង II ពោលគឺ $x \\in (0, \\pi)$។"
@@ -5559,12 +5547,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមីការ $\\cos x > 0$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
-          "$x \\in \\left[0, \\dfrac{\\pi}{2}\\right) \\cup \\left(\\dfrac{3\\pi}{2}, 2\\pi\\right]$",
-          "$x \\in (0, \\pi)$",
           "$x \\in [0, 2\\pi]$",
+          "$x \\in (0, \\pi)$",
+          "$x \\in \\left[0, \\dfrac{\\pi}{2}\\right) \\cup \\left(\\dfrac{3\\pi}{2}, 2\\pi\\right]$",
           "$x \\in (\\pi/2, 3\\pi/2)$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "កូស៊ីនុសវិជ្ជមានក្នុងកាដ្រង់ទី I និង IV នាំឱ្យ $x \\in [0, \\pi/2) \\cup (3\\pi/2, 2\\pi]$។"
       },
       {
@@ -5575,9 +5563,9 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមីការ $\\sin x \\ge \\dfrac{1}{2}$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
+          "$\\left[\\dfrac{\\pi}{3}, \\dfrac{2\\pi}{3}\\right]$",
           "$\\left[0, \\dfrac{\\pi}{6}\\right]$",
           "$\\left[\\dfrac{5\\pi}{6}, 2\\pi\\right]$",
-          "$\\left[\\dfrac{\\pi}{3}, \\dfrac{2\\pi}{3}\\right]$",
           "$\\left[\\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}\\right]$"
         ],
         "correct": 3,
@@ -5591,12 +5579,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមីការ $\\cos x \\le \\dfrac{\\sqrt{2}}{2}$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
-          "$\\left[\\dfrac{\\pi}{2}, \\dfrac{3\\pi}{2}\\right]$",
-          "$\\left[0, \\dfrac{\\pi}{4}\\right]$",
           "$\\left[\\dfrac{\\pi}{4}, \\dfrac{7\\pi}{4}\\right]$",
-          "$\\left[\\dfrac{7\\pi}{4}, 2\\pi\\right]$"
+          "$\\left[\\dfrac{\\pi}{2}, \\dfrac{3\\pi}{2}\\right]$",
+          "$\\left[\\dfrac{7\\pi}{4}, 2\\pi\\right]$",
+          "$\\left[0, \\dfrac{\\pi}{4}\\right]$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "កូស៊ីនុសតូចជាង $\\dfrac{\\sqrt{2}}{2}$ ចាប់ពីមុំ $\\pi/4$ ដល់ $7\\pi/4$។"
       },
       {
@@ -5607,12 +5595,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយវិសមីការ $\\tan x \\ge 1$ ក្នុងចន្លោះ $\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$ ៖",
         "options": [
-          "$\\left(0, \\dfrac{\\pi}{4}\\right]$",
-          "$\\left[-\\dfrac{\\pi}{4}, \\dfrac{\\pi}{4}\\right]$",
           "$\\left[\\dfrac{\\pi}{4}, \\dfrac{\\pi}{2}\\right)$",
+          "$\\left[-\\dfrac{\\pi}{4}, \\dfrac{\\pi}{4}\\right]$",
+          "$\\left(0, \\dfrac{\\pi}{4}\\right]$",
           "$\\left[\\dfrac{\\pi}{4}, \\pi\\right]$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$\\tan x \\ge 1 \\Leftrightarrow \\pi/4 \\le x < \\pi/2$។"
       },
       {
@@ -5623,9 +5611,9 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយវិសមីការ $2\\sin x - \\sqrt{3} < 0$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
-          "$[0, 2\\pi]$",
-          "$\\left[0, \\dfrac{\\pi}{3}\\right) \\cup \\left(\\dfrac{2\\pi}{3}, 2\\pi\\right]$",
           "$\\left[0, \\dfrac{\\pi}{6}\\right)$",
+          "$\\left[0, \\dfrac{\\pi}{3}\\right) \\cup \\left(\\dfrac{2\\pi}{3}, 2\\pi\\right]$",
+          "$[0, 2\\pi]$",
           "$\\left(\\dfrac{\\pi}{3}, \\dfrac{2\\pi}{3}\\right)$"
         ],
         "correct": 1,
@@ -5639,12 +5627,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយវិសមីការ $2\\cos^2 x - 3\\cos x + 1 \\le 0$ ៖",
         "options": [
-          "$\\cos x \\in \\left[\\dfrac{1}{2}, 1\\right]$",
-          "$\\cos x \\le \\dfrac{1}{2}$",
           "$\\cos x \\ge 1$",
-          "$\\cos x \\in [1, 2]$"
+          "$\\cos x \\le \\dfrac{1}{2}$",
+          "$\\cos x \\in [1, 2]$",
+          "$\\cos x \\in \\left[\\dfrac{1}{2}, 1\\right]$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$(2\\cos x - 1)(\\cos x - 1) \\le 0 \\Rightarrow \\dfrac{1}{2} \\le \\cos x \\le 1$។"
       },
       {
@@ -5655,12 +5643,12 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយវិសមីការ $2\\cos^2 x - 3\\cos x + 1 \\le 0$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
-          "$[0, 2\\pi]$",
-          "$\\left[0, \\dfrac{\\pi}{6}\\right]$",
           "$\\left[\\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}\\right]$",
-          "$\\left[0, \\dfrac{\\pi}{3}\\right] \\cup \\left[\\dfrac{5\\pi}{3}, 2\\pi\\right]$"
+          "$[0, 2\\pi]$",
+          "$\\left[0, \\dfrac{\\pi}{3}\\right] \\cup \\left[\\dfrac{5\\pi}{3}, 2\\pi\\right]$",
+          "$\\left[0, \\dfrac{\\pi}{6}\\right]$"
         ],
-        "correct": 3,
+        "correct": 2,
         "explanation": "$\\dfrac{1}{2} \\le \\cos x \\le 1 \\Rightarrow x \\in [0, \\pi/3] \\cup [5\\pi/3, 2\\pi]$។"
       },
       {
@@ -5688,11 +5676,11 @@
         "question": "ដោះស្រាយវិសមីការ $\\sqrt{3}\\tan x - 1 < 0$ ក្នុងចន្លោះ $\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$ ៖",
         "options": [
           "$\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{3}\\right)$",
-          "$\\left[0, \\dfrac{\\pi}{6}\\right)$",
+          "$\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{6}\\right)$",
           "$\\left(0, \\dfrac{\\pi}{6}\\right)$",
-          "$\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{6}\\right)$"
+          "$\\left[0, \\dfrac{\\pi}{6}\\right)$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$\\tan x < \\dfrac{1}{\\sqrt{3}} = \\tan(\\pi/6) \\Rightarrow -\\pi/2 < x < \\pi/6$។"
       }
     ]
