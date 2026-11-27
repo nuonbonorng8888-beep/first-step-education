@@ -1,0 +1,67 @@
+{
+  "lesson": "les-g11b-5-3",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនទី ២ ៖ អនុវត្តន៍ដេរីវេ (ទំព័រ ២២ - ៣៥)",
+  "book_pages": "22-35 (uploads/pdfs/g11b_ch5_les3.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ បន្ទាត់ប៉ះនឹងក្រាបតាងអនុគមន៍"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ ទិសដៅអថេរភាពនៃអនុគមន៍"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ អតិបរមាធៀប និងអប្បបរមាធៀប"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ តម្លៃអតិបរមា និងអប្បបរមា"
+    },
+    {
+      "n": 5,
+      "title": "ចំណុចទី ៥ ៖ ចំណុចរបត់នៃខ្សែកោង"
+    },
+    {
+      "n": 6,
+      "title": "ចំណុចទី ៦ ៖ ល្បឿននៃចលនាត្រង់"
+    }
+  ],
+  "notes": "Applications of derivatives: tangent, variation, local extrema, absolute extrema/optimisation, inflection, rectilinear motion. Includes 2 tangent items from 5-1.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "5": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "6": {
+      "e": 10,
+      "m": 14,
+      "h": 10
+    }
+  }
+}
