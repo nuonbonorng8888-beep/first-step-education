@@ -5695,10 +5695,10 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសដែលមាន $m$ ជួរដេក និង $n$ ជួរឈរ មានវិមាត្រ (ឬលំដាប់) ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$m^n$",
           "$m + n$",
+          "$n \\times m$",
           "$m \\times n$",
-          "$n \\times m$"
+          "$m^n$"
         ],
         "correct": 2,
         "explanation": "តាមនិយមន័យ ម៉ាទ្រីសមាន $m$ ជួរដេក និង $n$ ជួរឈរ ហៅថាម៉ាទ្រីសវិមាត្រ $m \\times n$ (អានថា $m$ គុណ $n$)។"
@@ -5711,15 +5711,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គេឱ្យម៉ាទ្រីស $A = \\begin{pmatrix} 2 & -1 & 4 \\\\ 0 & 5 & 3 \\end{pmatrix}$។ តើម៉ាទ្រីស $A$ មានវិមាត្រប៉ុន្មាន?",
         "options": [
-          "$2 \\times 2$",
-          "$2 \\times 3$",
           "$3 \\times 2$",
-          "$3 \\times 3$"
+          "$2 \\times 3$",
+          "$3 \\times 3$",
+          "$2 \\times 2$"
         ],
         "correct": 1,
-        "explanation": "ម៉ាទ្រីស $A$ មាន ២ ជួរដេក និង ៣ ជួរឈរ ដូច្នេះវិមាត្ររបស់វាគឺ $2 \\times 3$។",
-        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"185\" x2=\"70\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"150\" x2=\"120\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"120,150 114,147 114,153\" fill=\"#94a3b8\"/><text x=\"100\" y=\"165\" font-size=\"10\" fill=\"#64748b\">i</text><line x1=\"70\" y1=\"150\" x2=\"70\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"70,100 67,106 73,106\" fill=\"#94a3b8\"/><text x=\"58\" y=\"115\" font-size=\"10\" fill=\"#64748b\">j</text><line x1=\"70\" y1=\"150\" x2=\"170\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"170,110 162,110 165,116\" fill=\"#2563eb\"/><text x=\"175\" y=\"112\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">T(i)</text><line x1=\"70\" y1=\"150\" x2=\"130\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><polygon points=\"130,50 123,54 128,58\" fill=\"#ef4444\"/><text x=\"135\" y=\"52\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">T(j)</text><polygon points=\"70,150 170,110 230,10 130,50\" fill=\"rgba(37, 99, 235, 0.1)\" stroke=\"#2563eb\" stroke-dasharray=\"2,2\"/><text x=\"150\" y=\"180\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">បំលែងលីនេអ៊ែរ ៖ ផ្ទៃ = |det(M)|</text></svg>",
-        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"185\" x2=\"70\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"150\" x2=\"120\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"120,150 114,147 114,153\" fill=\"#94a3b8\"/><text x=\"100\" y=\"165\" font-size=\"10\" fill=\"#64748b\">i</text><line x1=\"70\" y1=\"150\" x2=\"70\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"70,100 67,106 73,106\" fill=\"#94a3b8\"/><text x=\"58\" y=\"115\" font-size=\"10\" fill=\"#64748b\">j</text><line x1=\"70\" y1=\"150\" x2=\"170\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"170,110 162,110 165,116\" fill=\"#2563eb\"/><text x=\"175\" y=\"112\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">T(i)</text><line x1=\"70\" y1=\"150\" x2=\"130\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><polygon points=\"130,50 123,54 128,58\" fill=\"#ef4444\"/><text x=\"135\" y=\"52\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">T(j)</text><polygon points=\"70,150 170,110 230,10 130,50\" fill=\"rgba(37, 99, 235, 0.1)\" stroke=\"#2563eb\" stroke-dasharray=\"2,2\"/><text x=\"150\" y=\"180\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">បំលែងលីនេអ៊ែរ ៖ ផ្ទៃ = |det(M)|</text></svg>"
+        "explanation": "ម៉ាទ្រីស $A$ មាន ២ ជួរដេក និង ៣ ជួរឈរ ដូច្នេះវិមាត្ររបស់វាគឺ $2 \\times 3$។"
       },
       {
         "id": "q3",
@@ -5729,12 +5727,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ចំពោះម៉ាទ្រីស $A = \\begin{pmatrix} 7 & -2 \\\\ 4 & 9 \\\\ 1 & 0 \\end{pmatrix}$ តើធាតុ $a_{21}$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$7$",
-          "$9$",
+          "$4$",
           "$-2$",
-          "$4$"
+          "$7$",
+          "$9$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "ធាតុ $a_{21}$ គឺជាធាតុស្ថិតនៅជួរដេកទី ២ និងជួរឈរទី ១ គឺ $a_{21} = 4$។"
       },
       {
@@ -5745,12 +5743,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសជួរដេក (Row Matrix) ជាម៉ាទ្រីសដែលមានលក្ខណៈបែបណា?",
         "options": [
-          "មានតែ ១ ជួរដេកគត់ ($1 \\times n$)",
+          "មានចំនួនជួរដេកស្មើចំនួនជួរឈរ",
           "មានគ្រប់ធាតុស្មើ ០",
           "មានតែ ១ ជួរឈរគត់ ($m \\times 1$)",
-          "មានចំនួនជួរដេកស្មើចំនួនជួរឈរ"
+          "មានតែ ១ ជួរដេកគត់ ($1 \\times n$)"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "ម៉ាទ្រីសជួរដេក គឺជាម៉ាទ្រីសដែលមានតែ ១ ជួរដេកគត់ ពោលគឺមានវិមាត្រ $1 \\times n$។"
       },
       {
@@ -5761,12 +5759,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គេឱ្យ $A = (a_{ij})$ ជាម៉ាទ្រីសវិមាត្រ $2 \\times 2$ ដែល $a_{ij} = 2i - j$។ តើម៉ាទ្រីស $A$ ស្មើនឹង ៖",
         "options": [
-          "$\\begin{pmatrix} 1 & 0 \\\\ 3 & 2 \\end{pmatrix}$",
           "$\\begin{pmatrix} 0 & 1 \\\\ 2 & 3 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 2 & 1 \\\\ 4 & 3 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 0 \\\\ 3 & 2 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "$a_{11} = 2(1)-1 = 1$, $a_{12} = 2(1)-2 = 0$, $a_{21} = 2(2)-1 = 3$, $a_{22} = 2(2)-2 = 2$។ នាំឱ្យ $A = \\begin{pmatrix} 1 & 0 \\\\ 3 & 2 \\end{pmatrix}$។"
       },
       {
@@ -5777,12 +5775,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើម៉ាទ្រីសណាជាម៉ាទ្រីសជួរឈរ (Column Matrix)?",
         "options": [
-          "$\\begin{pmatrix} 0 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 2 & 3 \\end{pmatrix}$",
           "$\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 0 & 0 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 2 & 3 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "ម៉ាទ្រីសជួរឈរគឺជាម៉ាទ្រីសដែលមានវិមាត្រ $m \\times 1$ (មានតែ ១ ជួរឈរគត់) គឺ $\\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}$ វិមាត្រ $3 \\times 1$។"
       },
       {
@@ -5806,11 +5804,11 @@
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងវិមាត្រនៃម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $B = (b_{ij})$ វិមាត្រ $3 \\times 2$ ដែល $b_{ij} = i^2 + j$។ គណនាផលបូកធាតុនៅជួរដេកទី ២ ៖",
         "options": [
-          "$13$",
           "$7$",
+          "$13$",
           "$9$",
           "$11$"
         ],
@@ -5822,32 +5820,32 @@
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងវិមាត្រនៃម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គេឱ្យម៉ាទ្រីស $M = \\begin{pmatrix} x & 2y \\\\ 3z & w \\end{pmatrix}$។ បើ $m_{11} + m_{22} = 10$ និង $m_{12} - m_{21} = 1$ ចំពោះ $y=2, z=1$ រកតម្លៃ $x+w$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ម៉ាទ្រីសការ៉េ $A$ លំដាប់ $n$ មានធាតុ $a_{ij}$ ដែល $a_{ij} = 0$ គ្រប់ $i \\ne j$ និង $a_{ii} = c$ ($c \\ne 0$)។ តើ $A$ ហៅថាម៉ាទ្រីសអ្វី?",
         "options": [
-          "$10$",
-          "$11$",
-          "$8$",
-          "$9$"
+          "ម៉ាទ្រីសត្រីកោណលើ",
+          "ម៉ាទ្រីសជួរដេក",
+          "ម៉ាទ្រីសស្កាលែ (Scalar matrix)",
+          "ម៉ាទ្រីសសូន្យ"
         ],
-        "correct": 0,
-        "explanation": "$m_{11} = x$ និង $m_{22} = w$។ ដូច្នេះ $x + w = m_{11} + m_{22} = 10$ ដោយផ្ទាល់។"
+        "correct": 2,
+        "explanation": "ម៉ាទ្រីសអង្កត់ទ្រូងដែលធាតុទាំងអស់នៅលើអង្កត់ទ្រូងស្មើគ្នាថេរ $c$ ហៅថាម៉ាទ្រីសស្កាលែ (បើ $c=1$ ហៅថាម៉ាទ្រីសឯកតា)។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យ និងវិមាត្រនៃម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ម៉ាទ្រីសការ៉េ $A$ លំដាប់ $n$ មានធាតុ $a_{ij}$ ដែល $a_{ij} = 0$ គ្រប់ $i \\ne j$ និង $a_{ii} = c$ ($c \\ne 0$)។ តើ $A$ ហៅថាម៉ាទ្រីសអ្វី?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ម៉ាទ្រីស $A=(a_{ij})$ មាន $a_{ij}=i^j-j^i+ij$។ តើ $a_{23}$ ស្មើប៉ុន្មាន?",
         "options": [
-          "ម៉ាទ្រីសជួរដេក",
-          "ម៉ាទ្រីសត្រីកោណលើ",
-          "ម៉ាទ្រីសស្កាលែ (Scalar matrix)",
-          "ម៉ាទ្រីសសូន្យ"
+          "$6$",
+          "$5$",
+          "$-5$",
+          "$7$"
         ],
-        "correct": 2,
-        "explanation": "ម៉ាទ្រីសអង្កត់ទ្រូងដែលធាតុទាំងអស់នៅលើអង្កត់ទ្រូងស្មើគ្នាថេរ $c$ ហៅថាម៉ាទ្រីសស្កាលែ (បើ $c=1$ ហៅថាម៉ាទ្រីសឯកតា)។"
+        "correct": 1,
+        "explanation": "$2^3-3^2+2\\times3=5$"
       }
     ],
     "2": [
@@ -5860,11 +5858,11 @@
         "question": "តើម៉ាទ្រីសពីរ $A$ និង $B$ ស្មើគ្នា ($A = B$) លុះត្រាតែលក្ខខណ្ឌណាត្រូវផ្ទៀងផ្ទាត់?",
         "options": [
           "មានតែចំនួនជួរដេកស្មើគ្នា",
-          "មានវិមាត្រដូចគ្នា និងធាតុត្រូវគ្នានីមួយៗស្មើគ្នា",
+          "មានតែផលបូកធាតុស្មើគ្នា",
           "មានដេទែរមីណង់ស្មើគ្នា",
-          "មានតែផលបូកធាតុស្មើគ្នា"
+          "មានវិមាត្រដូចគ្នា និងធាតុត្រូវគ្នានីមួយៗស្មើគ្នា"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "$A = B \\iff A$ និង $B$ មានវិមាត្រដូចគ្នា និង $a_{ij} = b_{ij}$ គ្រប់គូ $(i, j)$។"
       },
       {
@@ -5875,12 +5873,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសឯកតា $I_2$ (លំដាប់ ២) មានទម្រង់ដូចម្តេច?",
         "options": [
-          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
           "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "ម៉ាទ្រីសឯកតា $I_2 = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ មានធាតុលើអង្កត់ទ្រូងធំស្មើ ១ និងធាតុផ្សេងទៀតស្មើ ០។"
       },
       {
@@ -5907,12 +5905,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសការ៉េ (Square Matrix) គឺជាម៉ាទ្រីសដែលមានលក្ខណៈបែបណា?",
         "options": [
-          "ចំនួនជួរដេកធំជាងចំនួនជួរឈរ",
           "មានវិមាត្រ $1 \\times n$",
-          "គ្រប់ធាតុទាំងអស់ស្មើគ្នា",
-          "ចំនួនជួរដេកស្មើនឹងចំនួនជួរឈរ ($m = n$)"
+          "ចំនួនជួរដេកធំជាងចំនួនជួរឈរ",
+          "ចំនួនជួរដេកស្មើនឹងចំនួនជួរឈរ ($m = n$)",
+          "គ្រប់ធាតុទាំងអស់ស្មើគ្នា"
         ],
-        "correct": 3,
+        "correct": 2,
         "explanation": "ម៉ាទ្រីសការ៉េ គឺជាម៉ាទ្រីសដែលមានចំនួនជួរដេកស្មើនឹងចំនួនជួរឈរ ($m = n$)។"
       },
       {
@@ -5923,12 +5921,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $a, b$ បើ $\\begin{pmatrix} 2a+b & 4 \\\\ 1 & a-b \\end{pmatrix} = \\begin{pmatrix} 7 & 4 \\\\ 1 & 2 \\end{pmatrix}$ ៖",
         "options": [
-          "$a = 3, b = 1$",
-          "$a = 1, b = 5$",
           "$a = 4, b = -1$",
-          "$a = 2, b = 3$"
+          "$a = 1, b = 5$",
+          "$a = 2, b = 3$",
+          "$a = 3, b = 1$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "ប្រព័ន្ធសមីការ ៖ $2a + b = 7$ និង $a - b = 2$។ បូកបញ្ចូលគ្នា ៖ $3a = 9 \\Rightarrow a = 3$។ ជំនួស $b = 3 - 2 = 1$។"
       },
       {
@@ -5940,11 +5938,11 @@
         "question": "តើម៉ាទ្រីសត្រីកោណលើ (Upper Triangular Matrix) ជាម៉ាទ្រីសដែលមានលក្ខណៈបែបណា?",
         "options": [
           "ធាតុអង្កត់ទ្រូងធំស្មើ ០",
+          "គ្រប់ធាតុទាំងអស់សុទ្ធតែវិជ្ជមាន",
           "ធាតុទាំងអស់ក្រោមអង្កត់ទ្រូងធំសុទ្ធតែស្មើ ០ ($a_{ij}=0$ ចំពោះ $i > j$)",
-          "ធាតុទាំងអស់លើអង្កត់ទ្រូងធំស្មើ ០",
-          "គ្រប់ធាតុទាំងអស់សុទ្ធតែវិជ្ជមាន"
+          "ធាតុទាំងអស់លើអង្កត់ទ្រូងធំស្មើ ០"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "ម៉ាទ្រីសត្រីកោណលើ មានធាតុស្ថិតនៅខាងក្រោមអង្កត់ទ្រូងធំស្មើ ០ ទាំងអស់ ($a_{ij} = 0$ គ្រប់ $i > j$)។"
       },
       {
@@ -5955,12 +5953,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $x$ បើ $\\begin{pmatrix} x^2 - 3x & 2 \\\\ 0 & 5 \\end{pmatrix} = \\begin{pmatrix} 4 & 2 \\\\ 0 & 5 \\end{pmatrix}$ និងដឹងថា $x < 0$ ៖",
         "options": [
-          "$x = -2$",
-          "$x = 4$",
+          "$x = -1$",
           "$x = -4$",
-          "$x = -1$"
+          "$x = -2$",
+          "$x = 4$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "$x^2 - 3x = 4 \\iff x^2 - 3x - 4 = 0 \\iff (x-4)(x+1) = 0$។ ដោយសារ $x < 0$ នាំឱ្យ $x = -1$។"
       },
       {
@@ -5968,15 +5966,15 @@
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ម៉ាទ្រីសស្មើគ្នា និងប្រភេទម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យម៉ាទ្រីសឆ្លុះ (Symmetric Matrix) $A = \\begin{pmatrix} 2 & x+1 \\\\ 3x-5 & 7 \\end{pmatrix}$។ រកតម្លៃ $x$ ៖",
         "options": [
           "$x = 4$",
-          "$x = 5$",
           "$x = 3$",
+          "$x = 5$",
           "$x = 2$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "ម៉ាទ្រីសឆ្លុះលុះត្រាតែ $a_{12} = a_{21} \\iff x + 1 = 3x - 5 \\iff 2x = 6 \\iff x = 3$។"
       },
       {
@@ -5984,15 +5982,15 @@
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ម៉ាទ្រីសស្មើគ្នា និងប្រភេទម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃ $x, y$ បើ $\\begin{pmatrix} 2^x & 3 \\\\ 8 & 3^y \\end{pmatrix} = \\begin{pmatrix} 16 & 3 \\\\ 8 & 27 \\end{pmatrix}$ ៖",
         "options": [
+          "$x = 4, y = 3$",
           "$x = 3, y = 4$",
           "$x = 2, y = 3$",
-          "$x = 4, y = 3$",
           "$x = 4, y = 2$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$2^x = 16 = 2^4 \\Rightarrow x = 4$ និង $3^y = 27 = 3^3 \\Rightarrow y = 3$។"
       },
       {
@@ -6000,15 +5998,15 @@
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ម៉ាទ្រីសស្មើគ្នា និងប្រភេទម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $A$ ជាម៉ាទ្រីសឆ្លាស់ (Skew-symmetric matrix) មានន័យថា $A^T = -A$។ តើធាតុនៅលើអង្កត់ទ្រូងធំរបស់ $A$ ត្រូវតែមានតម្លៃស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$0$",
           "ចំនួនពិតណាក៏បាន",
-          "$-1$",
-          "$1$"
+          "$1$",
+          "$0$",
+          "$-1$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "ដោយសារ $A^T = -A$ នោះធាតុអង្កត់ទ្រូង $a_{ii} = -a_{ii} \\iff 2a_{ii} = 0 \\iff a_{ii} = 0$ ជានិច្ច។"
       }
     ],
@@ -6022,8 +6020,8 @@
         "question": "តើម៉ាទ្រីសពីរអាចបូក ឬដកគ្នាបានលុះត្រាតែមានលក្ខខណ្ឌអ្វី?",
         "options": [
           "មានវិមាត្រដូចគ្នា",
-          "ចំនួនជួរឈរស្មើចំនួនជួរដេក",
           "ជាម៉ាទ្រីសការ៉េទាំងពីរ",
+          "ចំនួនជួរឈរស្មើចំនួនជួរដេក",
           "មានដេទែរមីណង់ខុសពី ០"
         ],
         "correct": 0,
@@ -6037,12 +6035,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $A + B$ បើ $A = \\begin{pmatrix} 1 & 3 \\\\ 2 & 4 \\end{pmatrix}$ និង $B = \\begin{pmatrix} 2 & -1 \\\\ 0 & 3 \\end{pmatrix}$ ៖",
         "options": [
-          "$\\begin{pmatrix} 2 & 2 \\\\ 2 & 12 \\end{pmatrix}$",
           "$\\begin{pmatrix} -1 & 4 \\\\ 2 & 1 \\end{pmatrix}$",
           "$\\begin{pmatrix} 3 & 2 \\\\ 2 & 7 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 2 & 2 \\\\ 2 & 12 \\end{pmatrix}$",
           "$\\begin{pmatrix} 3 & 4 \\\\ 2 & 1 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "$A + B = \\begin{pmatrix} 1+2 & 3+(-1) \\\\ 2+0 & 4+3 \\end{pmatrix} = \\begin{pmatrix} 3 & 2 \\\\ 2 & 7 \\end{pmatrix}$។"
       },
       {
@@ -6054,11 +6052,11 @@
         "question": "គេឱ្យ $A = \\begin{pmatrix} 3 & -2 \\\\ 1 & 4 \\end{pmatrix}$។ គណនាម៉ាទ្រីស $2A$ ៖",
         "options": [
           "$\\begin{pmatrix} 5 & 0 \\\\ 3 & 6 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 6 & -4 \\\\ 2 & 8 \\end{pmatrix}$",
           "$\\begin{pmatrix} 6 & -2 \\\\ 1 & 8 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 6 & -4 \\\\ 2 & 8 \\end{pmatrix}$",
           "$\\begin{pmatrix} 9 & -4 \\\\ 1 & 16 \\end{pmatrix}$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$2A = \\begin{pmatrix} 2(3) & 2(-2) \\\\ 2(1) & 2(4) \\end{pmatrix} = \\begin{pmatrix} 6 & -4 \\\\ 2 & 8 \\end{pmatrix}$។"
       },
       {
@@ -6069,9 +6067,9 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $A - B$ បើ $A = \\begin{pmatrix} 5 & 7 \\\\ 3 & 2 \\end{pmatrix}$ និង $B = \\begin{pmatrix} 2 & 4 \\\\ 1 & 5 \\end{pmatrix}$ ៖",
         "options": [
-          "$\\begin{pmatrix} 7 & 11 \\\\ 4 & 7 \\end{pmatrix}$",
-          "$\\begin{pmatrix} -3 & -3 \\\\ -2 & 3 \\end{pmatrix}$",
           "$\\begin{pmatrix} 3 & 3 \\\\ 2 & 3 \\end{pmatrix}$",
+          "$\\begin{pmatrix} -3 & -3 \\\\ -2 & 3 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 7 & 11 \\\\ 4 & 7 \\end{pmatrix}$",
           "$\\begin{pmatrix} 3 & 3 \\\\ 2 & -3 \\end{pmatrix}$"
         ],
         "correct": 3,
@@ -6085,12 +6083,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនា $3A - 2B$ បើ $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 3 \\end{pmatrix}$ និង $B = \\begin{pmatrix} 2 & 1 \\\\ -1 & 4 \\end{pmatrix}$ ៖",
         "options": [
-          "$\\begin{pmatrix} -1 & 4 \\\\ 2 & 1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 7 & 8 \\\\ -2 & 1 \\end{pmatrix}$",
           "$\\begin{pmatrix} -1 & 4 \\\\ -2 & 17 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 4 \\\\ 2 & -1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 7 & 8 \\\\ -2 & 1 \\end{pmatrix}$"
+          "$\\begin{pmatrix} -1 & 4 \\\\ 2 & 1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 4 \\\\ 2 & -1 \\end{pmatrix}$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "$3A = \\begin{pmatrix} 3 & 6 \\\\ 0 & 9 \\end{pmatrix}$, $2B = \\begin{pmatrix} 4 & 2 \\\\ -2 & 8 \\end{pmatrix}$។ $3A - 2B = \\begin{pmatrix} 3-4 & 6-2 \\\\ 0-(-2) & 9-8 \\end{pmatrix} = \\begin{pmatrix} -1 & 4 \\\\ 2 & 1 \\end{pmatrix}$។"
       },
       {
@@ -6101,12 +6099,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកម៉ាទ្រីស $X$ បើ $2X + \\begin{pmatrix} 1 & 4 \\\\ 2 & 0 \\end{pmatrix} = \\begin{pmatrix} 5 & 8 \\\\ 6 & 4 \\end{pmatrix}$ ៖",
         "options": [
-          "$\\begin{pmatrix} 4 & 4 \\\\ 4 & 4 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$",
           "$\\begin{pmatrix} 3 & 6 \\\\ 4 & 2 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 4 & 4 \\\\ 4 & 4 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "$2X = \\begin{pmatrix} 5-1 & 8-4 \\\\ 6-2 & 4-0 \\end{pmatrix} = \\begin{pmatrix} 4 & 4 \\\\ 4 & 4 \\end{pmatrix} \\Rightarrow X = \\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$។"
       },
       {
@@ -6117,12 +6115,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើលក្ខណៈណាខាងក្រោមនេះមិនពិតចំពោះផលបូកម៉ាទ្រីស?",
         "options": [
-          "$A + B = B + A$ (ត្រឡប់)",
-          "$A + B = A - B$ ចំពោះគ្រប់ $A, B$",
           "$A + O = A$ (ធាតុណឺត)",
-          "$(A + B) + C = A + (B + C)$ (ផ្តុំ)"
+          "$A + B = B + A$ (ត្រឡប់)",
+          "$(A + B) + C = A + (B + C)$ (ផ្តុំ)",
+          "$A + B = A - B$ ចំពោះគ្រប់ $A, B$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "ផលបូក និងផលដកមិនស្មើគ្នាទេ លើកលែងតែ $B$ ជាម៉ាទ្រីសសូន្យ $O$។ ដូច្នេះជម្រើស ទី ៤ មិនពិតជាទូទៅ។"
       },
       {
@@ -6130,15 +6128,15 @@
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលបូក ផលដក និងផលគុណម៉ាទ្រីសនឹងចំនួនពិត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $A = \\begin{pmatrix} x & 2 \\\\ 1 & y \\end{pmatrix}$ និង $B = \\begin{pmatrix} 3 & -1 \\\\ 4 & 2 \\end{pmatrix}$។ បើ $2A - B = \\begin{pmatrix} 5 & 5 \\\\ -2 & 4 \\end{pmatrix}$ រកតម្លៃ $x + y$ ៖",
         "options": [
-          "$6$",
-          "$8$",
+          "$5$",
           "$7$",
-          "$5$"
+          "$6$",
+          "$8$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "$2x - 3 = 5 \\Rightarrow 2x = 8 \\Rightarrow x = 4$។ $2y - 2 = 4 \\Rightarrow 2y = 6 \\Rightarrow y = 3$។ ដូច្នេះ $x + y = 4 + 3 = 7$។"
       },
       {
@@ -6146,15 +6144,15 @@
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលបូក ផលដក និងផលគុណម៉ាទ្រីសនឹងចំនួនពិត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកចំនួនពិត $k$ និង $m$ ដែលផ្ទៀងផ្ទាត់ $k \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} + m \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix} = \\begin{pmatrix} 3 & -2 \\\\ -2 & 3 \\end{pmatrix}$ ៖",
         "options": [
-          "$k = -2, m = 3$",
-          "$k = 3, m = -2$",
           "$k = 1, m = 2$",
-          "$k = 3, m = 2$"
+          "$k = 3, m = 2$",
+          "$k = 3, m = -2$",
+          "$k = -2, m = 3$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "ផលបូកគឺ $\\begin{pmatrix} k & m \\\\ m & k \\end{pmatrix} = \\begin{pmatrix} 3 & -2 \\\\ -2 & 3 \\end{pmatrix} \\Rightarrow k = 3, m = -2$។"
       },
       {
@@ -6162,15 +6160,15 @@
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលបូក ផលដក និងផលគុណម៉ាទ្រីសនឹងចំនួនពិត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$។ រកម៉ាទ្រីស $P$ ដែលផ្ទៀងផ្ទាត់ $A + A^T = 2P$ ៖",
         "options": [
-          "$\\begin{pmatrix} 1 & 5 \\\\ 5 & 4 \\end{pmatrix}$",
           "$\\begin{pmatrix} 2 & 5 \\\\ 5 & 8 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 2.5 \\\\ 2.5 & 4 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 5 \\\\ 5 & 4 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 2.5 \\\\ 2.5 & 4 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$A^T = \\begin{pmatrix} 1 & 3 \\\\ 2 & 4 \\end{pmatrix}$ នាំឱ្យ $A + A^T = \\begin{pmatrix} 2 & 5 \\\\ 5 & 8 \\end{pmatrix}$។ ដូចនេះ $P = \\dfrac{1}{2}(A + A^T) = \\begin{pmatrix} 1 & 2.5 \\\\ 2.5 & 4 \\end{pmatrix}$។"
       }
     ],
@@ -6183,12 +6181,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើផលគុណម៉ាទ្រីស $AB$ អាចគណនាបានលុះត្រាតែលក្ខខណ្ឌណាត្រូវផ្ទៀងផ្ទាត់?",
         "options": [
-          "ម៉ាទ្រីសទាំងពីរមានវិមាត្រដូចគ្នា",
           "$A$ និង $B$ ត្រូវតែជាម៉ាទ្រីសការ៉េ",
-          "ចំនួនជួរដេកនៃ $A$ ស្មើនឹងចំនួនជួរឈរនៃ $B$",
-          "ចំនួនជួរឈរនៃ $A$ ស្មើនឹងចំនួនជួរដេកនៃ $B$"
+          "ម៉ាទ្រីសទាំងពីរមានវិមាត្រដូចគ្នា",
+          "ចំនួនជួរឈរនៃ $A$ ស្មើនឹងចំនួនជួរដេកនៃ $B$",
+          "ចំនួនជួរដេកនៃ $A$ ស្មើនឹងចំនួនជួរឈរនៃ $B$"
         ],
-        "correct": 3,
+        "correct": 2,
         "explanation": "ដើម្បីគុណ $A_{m \\times k}$ នឹង $B_{p \\times n}$ បាន លុះត្រាតែ $k = p$ (ចំនួនជួរឈរនៃ $A$ ស្មើចំនួនជួរដេកនៃ $B$)។ ផលគុណ $AB$ មានវិមាត្រ $m \\times n$។"
       },
       {
@@ -6199,12 +6197,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $A$ មានវិមាត្រ $2 \\times 3$ និង $B$ មានវិមាត្រ $3 \\times 4$ តើម៉ាទ្រីស $AB$ មានវិមាត្រប៉ុន្មាន?",
         "options": [
-          "$2 \\times 4$",
           "$4 \\times 2$",
           "$2 \\times 3$",
-          "$3 \\times 3$"
+          "$3 \\times 3$",
+          "$2 \\times 4$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "វិមាត្រនៃ $AB$ គឺ $2 \\times 4$ ព្រោះ $A$ មាន ២ ជួរដេក និង $B$ មាន ៤ ជួរឈរ។"
       },
       {
@@ -6217,8 +6215,8 @@
         "options": [
           "$\\begin{pmatrix} 3 \\\\ 8 \\end{pmatrix}$",
           "$\\begin{pmatrix} 11 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 7 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 3 & 8 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 3 & 8 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 7 \\end{pmatrix}$"
         ],
         "correct": 1,
         "explanation": "$\\begin{pmatrix} 1 & 2 \\end{pmatrix} \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} = (1 \\times 3 + 2 \\times 4) = (3 + 8) = (11)$។"
@@ -6231,12 +6229,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ជាទូទៅ ចំពោះផលគុណម៉ាទ្រីស តើលក្ខណៈត្រឡប់ $AB = BA$ ពិតដែរឬទេ?",
         "options": [
+          "មិនពិតជាទូទៅ ($AB \\ne BA$)",
           "ពិតលុះត្រាតែវិមាត្រខុសគ្នា",
           "ពិតជានិច្ចចំពោះគ្រប់ម៉ាទ្រីស",
-          "មិនពិតជាទូទៅ ($AB \\ne BA$)",
           "ពិតតែចំពោះម៉ាទ្រីសសូន្យប៉ុណ្ណោះ"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "ផលគុណម៉ាទ្រីសមិនមានលក្ខណៈត្រឡប់ជាទូទៅទេ ពោលគឺ $AB \\ne BA$។"
       },
       {
@@ -6247,12 +6245,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនា $AB$ បើ $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$ និង $B = \\begin{pmatrix} 2 & 0 \\\\ 1 & 3 \\end{pmatrix}$ ៖",
         "options": [
-          "$\\begin{pmatrix} 4 & 0 \\\\ 0 & 3 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 4 & 6 \\\\ 1 & 3 \\end{pmatrix}$",
           "$\\begin{pmatrix} 2 & 6 \\\\ 1 & 3 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 4 & 6 \\\\ 1 & 3 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 4 & 0 \\\\ 0 & 3 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "$AB = \\begin{pmatrix} 1(2)+2(1) & 1(0)+2(3) \\\\ 0(2)+1(1) & 0(0)+1(3) \\end{pmatrix} = \\begin{pmatrix} 4 & 6 \\\\ 1 & 3 \\end{pmatrix}$។"
       },
       {
@@ -6264,11 +6262,11 @@
         "question": "គេឱ្យ $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ និង $I = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$។ គណនា $A \\cdot I$ ៖",
         "options": [
           "$\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 4 \\end{pmatrix}$",
           "$\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 4 \\end{pmatrix}$",
           "$\\begin{pmatrix} 4 & 3 \\\\ 2 & 1 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "ម៉ាទ្រីសឯកតា $I$ ជាធាតុណឺតនៃផលគុណម៉ាទ្រីស ៖ $A \\cdot I = I \\cdot A = A$។"
       },
       {
@@ -6279,12 +6277,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គេឱ្យ $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$។ គណនា $A^2 = A \\cdot A$ ៖",
         "options": [
-          "$\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
           "$\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 2 & 2 \\\\ 0 & 2 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 2 & 2 \\\\ 0 & 2 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$A^2 = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1+0 & 1+1 \\\\ 0+0 & 0+1 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$។"
       },
       {
@@ -6292,15 +6290,15 @@
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណរវាងម៉ាទ្រីស និងម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $A = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}$ គណនា $A^2$ ៖",
         "options": [
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
           "$\\begin{pmatrix} 0 & 2 \\\\ 0 & 0 \\end{pmatrix}$",
           "$\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$A^2 = \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix} \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix} = O$ (ម៉ាទ្រីសនិលប៉ូតង់)។"
       },
       {
@@ -6308,15 +6306,15 @@
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណរវាងម៉ាទ្រីស និងម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $A = \\begin{pmatrix} 2 & 1 \\\\ -1 & 3 \\end{pmatrix}$ និង $X = \\begin{pmatrix} x \\\\ y \\end{pmatrix}$។ បើ $AX = \\begin{pmatrix} 5 \\\\ 8 \\end{pmatrix}$ រក $x$ និង $y$ ៖",
         "options": [
-          "$x = 1, y = 3$",
           "$x = 0, y = 5$",
-          "$x = 3, y = -1$",
-          "$x = 2, y = 1$"
+          "$x = 1, y = 3$",
+          "$x = 2, y = 1$",
+          "$x = 3, y = -1$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "$AX = \\begin{pmatrix} 2x+y \\\\ -x+3y \\end{pmatrix} = \\begin{pmatrix} 5 \\\\ 8 \\end{pmatrix}$។ ពី $y = 5 - 2x \\Rightarrow -x + 3(5-2x) = 8 \\Rightarrow -7x = -7 \\Rightarrow x = 1, y = 3$។"
       },
       {
@@ -6324,15 +6322,15 @@
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណរវាងម៉ាទ្រីស និងម៉ាទ្រីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $A$ និង $B$ ជាម៉ាទ្រីសការ៉េលំដាប់ $n$។ តើសមភាព $(A+B)^2 = A^2 + 2AB + B^2$ ពិតនៅពេលណា?",
         "options": [
           "ពិតលុះត្រាតែ $A = B$",
-          "ពិតលុះត្រាតែ $AB = BA$",
           "ពិតលុះត្រាតែ $det(A)=1$",
+          "ពិតលុះត្រាតែ $AB = BA$",
           "ពិតជានិច្ចចំពោះគ្រប់ម៉ាទ្រីស"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$(A+B)^2 = A^2 + AB + BA + B^2$។ សមីការស្មើនឹង $A^2 + 2AB + B^2$ លុះត្រាតែ $AB = BA$។"
       }
     ],
@@ -6345,12 +6343,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសការ៉េ $A$ មានម៉ាទ្រីសច្រាស $A^{-1}$ លុះត្រាតែលក្ខខណ្ឌណាត្រូវផ្ទៀងផ្ទាត់?",
         "options": [
-          "$\\det(A) \\ne 0$",
-          "$A$ ជាម៉ាទ្រីសសូន្យ",
           "$\\det(A) = 0$",
-          "គ្រប់ធាតុនៃ $A$ ត្រូវតែវិជ្ជមាន"
+          "គ្រប់ធាតុនៃ $A$ ត្រូវតែវិជ្ជមាន",
+          "$\\det(A) \\ne 0$",
+          "$A$ ជាម៉ាទ្រីសសូន្យ"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "ម៉ាទ្រីស $A$ មានច្រាស $A^{-1}$ លុះត្រាតែ $\\det(A) \\ne 0$ (ម៉ាទ្រីសមិនពិសេស)។"
       },
       {
@@ -6361,12 +6359,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គេឱ្យ $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ ដែល $ad - bc \\ne 0$។ តើ $A^{-1}$ ស្មើនឹងរូបមន្តណា?",
         "options": [
-          "$\\dfrac{1}{ad-bc} \\begin{pmatrix} a & -c \\\\ -b & d \\end{pmatrix}$",
-          "$\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$",
           "$\\dfrac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$",
+          "$\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$",
+          "$\\dfrac{1}{ad-bc} \\begin{pmatrix} a & -c \\\\ -b & d \\end{pmatrix}$",
           "$\\dfrac{1}{ad-bc} \\begin{pmatrix} -d & b \\\\ c & -a \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "រូបមន្តម៉ាទ្រីសច្រាសលំដាប់ ២ គឺ $A^{-1} = \\dfrac{1}{\\det(A)} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$។"
       },
       {
@@ -6377,12 +6375,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាម៉ាទ្រីសច្រាសនៃ $A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$ ៖",
         "options": [
-          "$\\begin{pmatrix} \\dfrac{1}{3} & 0 \\\\ 0 & \\dfrac{1}{2} \\end{pmatrix}$",
-          "$\\begin{pmatrix} \\dfrac{1}{2} & 0 \\\\ 0 & \\dfrac{1}{3} \\end{pmatrix}$",
           "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix}$",
-          "$\\begin{pmatrix} -2 & 0 \\\\ 0 & -3 \\end{pmatrix}$"
+          "$\\begin{pmatrix} \\dfrac{1}{3} & 0 \\\\ 0 & \\dfrac{1}{2} \\end{pmatrix}$",
+          "$\\begin{pmatrix} -2 & 0 \\\\ 0 & -3 \\end{pmatrix}$",
+          "$\\begin{pmatrix} \\dfrac{1}{2} & 0 \\\\ 0 & \\dfrac{1}{3} \\end{pmatrix}$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "$\\det(A) = 2(3) - 0 = 6$។ $A^{-1} = \\dfrac{1}{6} \\begin{pmatrix} 3 & 0 \\\\ 0 & 2 \\end{pmatrix} = \\begin{pmatrix} \\dfrac{1}{2} & 0 \\\\ 0 & \\dfrac{1}{3} \\end{pmatrix}$។"
       },
       {
@@ -6393,12 +6391,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីស $A \\cdot A^{-1}$ ស្មើនឹងអ្វី?",
         "options": [
-          "$A$",
-          "$O$ (ម៉ាទ្រីសសូន្យ)",
           "$2I$",
-          "$I$ (ម៉ាទ្រីសឯកតា)"
+          "$I$ (ម៉ាទ្រីសឯកតា)",
+          "$O$ (ម៉ាទ្រីសសូន្យ)",
+          "$A$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "តាមនិយមន័យម៉ាទ្រីសច្រាស $A \\cdot A^{-1} = A^{-1} \\cdot A = I$។"
       },
       {
@@ -6409,12 +6407,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកម៉ាទ្រីសច្រាសនៃ $A = \\begin{pmatrix} 3 & 5 \\\\ 1 & 2 \\end{pmatrix}$ ៖",
         "options": [
-          "$\\begin{pmatrix} 2 & -5 \\\\ -1 & 3 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix}$",
+          "$\\begin{pmatrix} -2 & 5 \\\\ 1 & -3 \\end{pmatrix}$",
           "$\\begin{pmatrix} 1 & -5 \\\\ -1 & 2 \\end{pmatrix}$",
-          "$\\begin{pmatrix} -2 & 5 \\\\ 1 & -3 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 2 & -5 \\\\ -1 & 3 \\end{pmatrix}$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$\\det(A) = 3(2) - 5(1) = 6 - 5 = 1$។ នាំឱ្យ $A^{-1} = \\dfrac{1}{1}\\begin{pmatrix} 2 & -5 \\\\ -1 & 3 \\end{pmatrix} = \\begin{pmatrix} 2 & -5 \\\\ -1 & 3 \\end{pmatrix}$។"
       },
       {
@@ -6425,12 +6423,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើម៉ាទ្រីស $M = \\begin{pmatrix} 2 & 4 \\\\ 3 & 6 \\end{pmatrix}$ មានម៉ាទ្រីសច្រាសដែរឬទេ?",
         "options": [
-          "គ្មានទេព្រោះធាតុមិនស្មើគ្នា",
-          "មានម៉ាទ្រីសច្រាស ព្រោះគ្រប់ធាតុវិជ្ជមាន",
           "មានម៉ាទ្រីសច្រាស ព្រោះជាម៉ាទ្រីសការ៉េ",
-          "គ្មានម៉ាទ្រីសច្រាសទេ ព្រោះ $\\det(M) = 0$"
+          "គ្មានម៉ាទ្រីសច្រាសទេ ព្រោះ $\\det(M) = 0$",
+          "មានម៉ាទ្រីសច្រាស ព្រោះគ្រប់ធាតុវិជ្ជមាន",
+          "គ្មានទេព្រោះធាតុមិនស្មើគ្នា"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$\\det(M) = 2(6) - 4(3) = 12 - 12 = 0$។ ដោយសារ $\\det(M) = 0$ ម៉ាទ្រីស $M$ ជាម៉ាទ្រីសពិសេស គ្មានម៉ាទ្រីសច្រាសឡើយ។"
       },
       {
@@ -6441,10 +6439,10 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $x$ ដើម្បីឱ្យម៉ាទ្រីស $A = \\begin{pmatrix} x & 6 \\\\ 2 & 3 \\end{pmatrix}$ គ្មានម៉ាទ្រីសច្រាស ៖",
         "options": [
-          "$x = -4$",
           "$x = 1$",
+          "$x = 0$",
           "$x = 4$",
-          "$x = 0$"
+          "$x = -4$"
         ],
         "correct": 2,
         "explanation": "ម៉ាទ្រីសគ្មានច្រាសកាលណា $\\det(A) = 0 \\iff 3x - 12 = 0 \\iff 3x = 12 \\iff x = 4$។"
@@ -6454,15 +6452,15 @@
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ម៉ាទ្រីសច្រាស A^(-1)",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $A = \\begin{pmatrix} 4 & 7 \\\\ 1 & 2 \\end{pmatrix}$។ គណនាម៉ាទ្រីស $(A^{-1})^{-1}$ ៖",
         "options": [
-          "$\\begin{pmatrix} 2 & -7 \\\\ -1 & 4 \\end{pmatrix}$",
           "$\\begin{pmatrix} 4 & 7 \\\\ 1 & 2 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 2 & -7 \\\\ -1 & 4 \\end{pmatrix}$",
           "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
           "$\\begin{pmatrix} -4 & -7 \\\\ -1 & -2 \\end{pmatrix}$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "តាមលក្ខណៈម៉ាទ្រីសច្រាស $(A^{-1})^{-1} = A = \\begin{pmatrix} 4 & 7 \\\\ 1 & 2 \\end{pmatrix}$។"
       },
       {
@@ -6470,13 +6468,13 @@
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ម៉ាទ្រីសច្រាស A^(-1)",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "តើលក្ខណៈណាខាងក្រោមនេះត្រឹមត្រូវចំពោះផលគុណនៃម៉ាទ្រីសច្រាស $(AB)^{-1}$?",
         "options": [
+          "$(AB)^{-1} = A^{-1} + B^{-1}$",
           "$(AB)^{-1} = -AB$",
-          "$(AB)^{-1} = A^{-1} B^{-1}$",
           "$(AB)^{-1} = B^{-1} A^{-1}$",
-          "$(AB)^{-1} = A^{-1} + B^{-1}$"
+          "$(AB)^{-1} = A^{-1} B^{-1}$"
         ],
         "correct": 2,
         "explanation": "រូបមន្តច្រាសនៃផលគុណគឺ $(AB)^{-1} = B^{-1} A^{-1}$ (ត្រឡប់លំដាប់)។"
@@ -6486,15 +6484,15 @@
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ម៉ាទ្រីសច្រាស A^(-1)",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការម៉ាទ្រីស $AX = B$ ដែល $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 5 \\end{pmatrix}$ និង $B = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$ ៖",
         "options": [
+          "$X = \\begin{pmatrix} 2 \\\\ 0 \\end{pmatrix}$",
           "$X = \\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix}$",
           "$X = \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$",
-          "$X = \\begin{pmatrix} 2 \\\\ 0 \\end{pmatrix}$",
           "$X = \\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix}$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "$\\det(A) = 5-6 = -1$។ $A^{-1} = \\dfrac{1}{-1}\\begin{pmatrix} 5 & -2 \\\\ -3 & 1 \\end{pmatrix} = \\begin{pmatrix} -5 & 2 \\\\ 3 & -1 \\end{pmatrix}$។ $X = A^{-1}B = \\begin{pmatrix} -5(1)+2(2) \\\\ 3(1)-1(2) \\end{pmatrix} = \\begin{pmatrix} -1 \\\\ 1 \\end{pmatrix}$។"
       }
     ]
