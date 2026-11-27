@@ -1,0 +1,42 @@
+{
+  "lesson": "les-g11b-4-2",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនទី ២ ៖ ដេទែរមីណង់ (ទំព័រ ១៨០ - ១៨៧)",
+  "book_pages": "129-137 (uploads/pdfs/g11b_ch4_les2.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ ដេទែរមីណង់លំដាប់ ២"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ ដេទែរមីណង់លំដាប់ ៣"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ ការដោះស្រាយប្រព័ន្ធសមីការលីនេអ៊ែរតាមរូបមន្តក្រាមែរ"
+    }
+  ],
+  "notes": "Sections: 1 order-2 determinant, 2 order-3 (Sarrus, cofactors), 3 Cramer. Properties and invertibility questions filed under P1/P2. Fixed g0366 key, g0389 statement; Q50 removed.",
+  "removed": [
+    "qb11_les-g11b-4-2_50"
+  ],
+  "bank_levels": {
+    "1": {
+      "e": 22,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 14,
+      "m": 16,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
