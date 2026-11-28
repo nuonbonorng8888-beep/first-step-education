@@ -30709,16 +30709,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "កន្សោម $\\ln 5^{4}$ ស្មើ ៖",
+        "question": "គណនា $\\log_{3} 81 - \\log_{3} 3 + \\log_{3} \\dfrac{1}{3}$ ៖",
         "options": [
-          "$(\\ln 5)^{4}$",
-          "$\\ln 20$",
-          "$4 + \\ln 5$",
-          "$4\\ln 5$"
+          "$3$",
+          "$4$",
+          "$2$",
+          "$1$"
         ],
-        "correct": 3,
-        "explanation": "$\\ln a^n = n\\ln a$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$(4) - (1) + (-1) = 2$។"
       },
       {
         "id": "q2",
@@ -30726,16 +30725,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "កន្សោម $\\ln 3 + \\ln 4$ ស្មើ ៖",
+        "question": "គណនា $\\log_{3} 2187 - \\log_{3} 27 + \\log_{3} \\dfrac{1}{3}$ ៖",
         "options": [
-          "$\\ln 12$",
-          "$\\ln 3 \\cdot \\ln 4$",
-          "$\\ln 7$",
-          "$3\\ln 4$"
+          "$4$",
+          "$3$",
+          "$5$",
+          "$6$"
         ],
-        "correct": 0,
-        "explanation": "$\\ln a + \\ln b = \\ln(ab)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$(7) - (3) + (-1) = 3$។"
       },
       {
         "id": "q3",
@@ -30743,16 +30741,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "កន្សោម $\\ln 7^{2}$ ស្មើ ៖",
+        "question": "គណនា $\\log_{2} 64 - \\log_{2} 8 + \\log_{2} \\dfrac{1}{2}$ ៖",
         "options": [
-          "$(\\ln 7)^{2}$",
-          "$2 + \\ln 7$",
-          "$2\\ln 7$",
-          "$\\ln 14$"
+          "$2$",
+          "$5$",
+          "$3$",
+          "$4$"
         ],
-        "correct": 2,
-        "explanation": "$\\ln a^n = n\\ln a$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$(6) - (3) + (-1) = 2$។"
       },
       {
         "id": "q4",
@@ -30760,290 +30757,273 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "កន្សោម $\\ln 9 + \\ln 2$ ស្មើ ៖",
+        "question": "គណនា $\\log_{5} 15625 - \\log_{5} 25 + \\log_{5} \\dfrac{1}{5}$ ៖",
         "options": [
-          "$\\ln 11$",
-          "$\\ln 18$",
-          "$9\\ln 2$",
-          "$\\ln 9 \\cdot \\ln 2$"
+          "$2$",
+          "$4$",
+          "$5$",
+          "$3$"
         ],
-        "correct": 1,
-        "explanation": "$\\ln a + \\ln b = \\ln(ab)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$(6) - (2) + (-1) = 3$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សម្រួល $\\ln(e^{5}) - \\ln\\left(\\dfrac{1}{e}\\right)$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "កន្សោម $\\dfrac{\\ln 8}{\\ln 2}$ ស្មើ ៖",
         "options": [
-          "$6$",
-          "$5$",
-          "$-6$",
+          "$8$",
+          "$3$",
+          "$2$",
           "$4$"
         ],
-        "correct": 0,
-        "explanation": "$5 - (-1) = 6$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$\\ln 2^{3}=3\\ln 2$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\ln e^{6} + \\ln 1 + e^{\\ln 2}$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "កន្សោម $\\ln 72-\\ln 8$ ស្មើ ៖",
         "options": [
-          "$12$",
-          "$8$",
-          "$9$",
-          "$6$"
+          "$\\ln 64$",
+          "$\\dfrac{\\ln 72}{\\ln 8}$",
+          "$\\ln 9$",
+          "$\\ln 576$"
         ],
-        "correct": 1,
-        "explanation": "$\\ln e^{6} = 6 , \\ \\ln 1 = 0 , \\ e^{\\ln 2} = 2$ ⇒ $8$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "ln a − ln b = ln(a/b)"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "កន្សោម $\\ln 9 + \\ln 5$ ស្មើ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "កន្សោម $2\\ln 7+\\ln 2$ ស្មើ ៖",
         "options": [
-          "$\\ln 14$",
-          "$\\ln 9 \\cdot \\ln 5$",
-          "$\\ln 45$",
-          "$9\\ln 5$"
+          "$\\ln 98$",
+          "$\\ln 16$",
+          "$\\ln 28$",
+          "$\\ln 51$"
         ],
-        "correct": 2,
-        "explanation": "$\\ln a + \\ln b = \\ln(ab)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "ប្រើ ln aᵏ = k ln a ហើយ ln a + ln b = ln ab"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សម្រួល $\\ln(e^{6}) - \\ln\\left(\\dfrac{1}{e}\\right)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "កន្សោម $e^{3\\ln 5}$ ស្មើ ៖",
         "options": [
-          "$6$",
-          "$5$",
-          "$-7$",
-          "$7$"
+          "$15$",
+          "$45$",
+          "$243$",
+          "$125$"
         ],
         "correct": 3,
-        "explanation": "$6 - (-1) = 7$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$e^{k\\ln n}=n^k$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "កន្សោម $\\ln 8 + \\ln 5$ ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តាង $a=\\ln 2,\\ b=\\ln 3$។ $\\ln 54$ ស្មើ ៖",
         "options": [
-          "$\\ln 40$",
-          "$\\ln 8 \\cdot \\ln 5$",
-          "$8\\ln 5$",
-          "$\\ln 13$"
+          "$3a+b$",
+          "$a+3b$",
+          "$2a+3b$",
+          "$a+4b$"
         ],
-        "correct": 0,
-        "explanation": "$\\ln a + \\ln b = \\ln(ab)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$54=2^{1}3^{3}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លោការីតនេពែ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "កន្សោម $\\ln 81 - \\ln 9$ ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "កន្សោម $\\ln (e^{2})-\\ln (e^{-6})$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{\\ln 81}{\\ln 9}$",
-          "$\\ln 9$",
-          "$\\ln 72$",
-          "$\\ln 729$"
+          "$-4$",
+          "$-8$",
+          "$8$",
+          "$12$"
         ],
-        "correct": 1,
-        "explanation": "$\\ln a - \\ln b = \\ln\\dfrac{a}{b}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$2-(-6)$"
       }
     ],
     "2": [
       {
-        "id": "g12a_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្រាបនៃអនុគមន៍ $y = \\ln x$ ៖",
         "options": [
           "កើនដាច់ខាតលើ $(0, +\\infty)$ និងមានអាស៊ីមតូតឈរ $x = 0$",
-          "ចុះដាច់ខាតលើ $(0, +\\infty)$",
           "ឆ្លងកាត់គល់កូអរដោនេ $O$",
-          "មានអាស៊ីមតូតដេក $y = 0$"
+          "មានអាស៊ីមតូតដេក $y = 0$",
+          "ចុះដាច់ខាតលើ $(0, +\\infty)$"
         ],
         "correct": 0,
-        "explanation": "$y' = \\dfrac{1}{x} > 0$ កើនដាច់ខាត, $\\lim_{x \\to 0^+} \\ln x = -\\infty$ នាំឱ្យបន្ទាត់ $x = 0$ (អ័ក្ស $Oy$) ជាអាស៊ីមតូតឈរ។",
-        "diagram": ""
+        "explanation": "$y' = \\dfrac{1}{x} > 0$ កើនដាច់ខាត, $\\lim_{x \\to 0^+} \\ln x = -\\infty$ នាំឱ្យបន្ទាត់ $x = 0$ (អ័ក្ស $Oy$) ជាអាស៊ីមតូតឈរ។"
       },
       {
-        "id": "g12a_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ភាពកោងនៃក្រាប $y = \\ln x$ ៖",
         "options": [
-          "កោងផ្ងារឡើងលើ",
-          "កោងផ្កាប់ចុះក្រោម (Concave down) លើ $(0, +\\infty)$ ទាំងមូល",
           "ប្តូរភាពកោងត្រង់ $x = e$",
-          "មានចំណុចរបត់ត្រង់ $(1, 0)$"
+          "កោងផ្កាប់ចុះក្រោម (Concave down) លើ $(0, +\\infty)$ ទាំងមូល",
+          "មានចំណុចរបត់ត្រង់ $(1, 0)$",
+          "កោងផ្ងារឡើងលើ"
         ],
         "correct": 1,
-        "explanation": "$y'' = -\\dfrac{1}{x}^2 < 0, \\forall x > 0$ ដូច្នេះក្រាបកោងផ្កាប់ចុះក្រោមជានិច្ច (គ្មានចំណុចរបត់)។",
-        "diagram": ""
+        "explanation": "$y'' = -\\dfrac{1}{x}^2 < 0, \\forall x > 0$ ដូច្នេះក្រាបកោងផ្កាប់ចុះក្រោមជានិច្ច (គ្មានចំណុចរបត់)។"
       },
       {
-        "id": "g12a_p1_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អាស៊ីមតូតឈរនៃក្រាប $y=\\ln (x + 4)$ គឺ ៖",
+        "options": [
+          "$x=4$",
+          "$x=-4$",
+          "$x=0$",
+          "$y=-4$"
+        ],
+        "correct": 1,
+        "explanation": "$x + 4>0$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $y=\\ln (4x + 1)$ គឺ ៖",
+        "options": [
+          "$\\dfrac{1}{4x + 1}$",
+          "$\\dfrac{4x + 1}{4}$",
+          "$\\dfrac{4}{4x + 1}$",
+          "$4\\ln (4x + 1)$"
+        ],
+        "correct": 2,
+        "explanation": "$(\\ln u)'=\\dfrac{u'}{u}$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចបរមាធៀបនៃអនុគមន៍ $f(x) = x - \\ln x$ ចំពោះ $x > 0$ ៖",
         "options": [
+          "អតិបរមាធៀបត្រង់ $x = 1$",
           "អប្បបរមាត្រង់ $x = e$",
           "គ្មានបរមាទេ",
-          "អតិបរមាធៀបត្រង់ $x = 1$",
           "អប្បបរមាធៀបត្រង់ $x = 1$ ស្មើនឹង $1$"
         ],
         "correct": 3,
-        "explanation": "$f'(x) = 1 - \\dfrac{1}{x} = 0 \\iff x = 1$។ $f''(1) = 1 > 0$ នាំឱ្យជាអប្បបរមាធៀប $f(1) = 1 - 0 = 1$។",
-        "diagram": ""
+        "explanation": "$f'(x) = 1 - \\dfrac{1}{x} = 0 \\iff x = 1$។ $f''(1) = 1 > 0$ នាំឱ្យជាអប្បបរមាធៀប $f(1) = 1 - 0 = 1$។"
       },
       {
-        "id": "g12a_p1_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចបរមាធៀបនៃ $f(x) = x^2 \\ln x$ ($x > 0$) ៖",
         "options": [
+          "អតិបរមាត្រង់ $x = 1$",
           "គ្មានបរមាទេ",
-          "អប្បបរមាត្រង់ $x = 1$",
           "អប្បបរមាត្រង់ $x = e^{-\\dfrac{1}{2}} = \\dfrac{1}{\\sqrt{e}}$",
-          "អតិបរមាត្រង់ $x = 1$"
+          "អប្បបរមាត្រង់ $x = 1$"
         ],
         "correct": 2,
-        "explanation": "$f'(x) = 2x \\ln x + x = x(2\\ln x + 1) = 0 \\iff \\ln x = -\\dfrac{1}{2} \\iff x = e^{-\\dfrac{1}{2}}$។ ជាអប្បបរមាធៀប។",
-        "diagram": ""
+        "explanation": "$f'(x) = 2x \\ln x + x = x(2\\ln x + 1) = 0 \\iff \\ln x = -\\dfrac{1}{2} \\iff x = e^{-\\dfrac{1}{2}}$។ ជាអប្បបរមាធៀប។"
       },
       {
-        "id": "g12a_p1_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចំណុចរបត់នៃក្រាប $y = x^2 \\ln x$ ៖",
         "options": [
-          "$(e^{-1}, -e^{-2})$",
-          "$\\left(e^{-\\dfrac{3}{2}}, -\\dfrac{3}{2}e^{-3}\\right)$",
           "$(e, e^2)$",
-          "$(1, 0)$"
+          "$(1, 0)$",
+          "$\\left(e^{-\\dfrac{3}{2}}, -\\dfrac{3}{2}e^{-3}\\right)$",
+          "$(e^{-1}, -e^{-2})$"
         ],
-        "correct": 1,
-        "explanation": "$f''(x) = 2\\ln x + 1 + 2 = 2\\ln x + 3 = 0 \\iff \\ln x = -\\dfrac{3}{2} \\iff x = e^{-\\dfrac{3}{2}}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$f''(x) = 2\\ln x + 1 + 2 = 2\\ln x + 3 = 0 \\iff \\ln x = -\\dfrac{3}{2} \\iff x = e^{-\\dfrac{3}{2}}$។"
       },
       {
-        "id": "g12a_p1_06",
-        "questionNumber": 6,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការបន្ទាត់ប៉ះនឹងក្រាប $y = \\ln x$ ត្រង់ចំណុច $(1, 0)$ គឺ ៖",
-        "options": [
-          "$y = x - 1$",
-          "$y = 2x - 2$",
-          "$y = x + 1$",
-          "$y = x$"
-        ],
-        "correct": 0,
-        "explanation": "$y'(1) = \\dfrac{1}{1} = 1$។ សមីការបន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 1) \\iff y = x - 1$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_07",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ពីសមីការបន្ទាត់ប៉ះ $y = x - 1$ និងភាពកោងផ្កាប់នៃ $y = \\ln x$ គេទាញបានវិសមភាពគ្រឹះ ៖",
-        "options": [
-          "$\\ln x \\ge x - 1$",
-          "$\\ln x \\le x$",
-          "$\\ln x = x - 1$",
-          "$\\ln x \\le x - 1, \\forall x > 0$"
-        ],
-        "correct": 3,
-        "explanation": "ដោយសារបន្ទាត់ប៉ះនៅខាងលើខ្សែកោងកោងផ្កាប់ គេបាន $\\ln x \\le x - 1$ ចំពោះគ្រប់ $x > 0$ (ស្មើគ្នាតែត្រង់ $x = 1$)។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកអាស៊ីមតូតឈរនៃក្រាប $f(x) = \\dfrac{\\ln x}{x - 1}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ពីសមីការបន្ទាត់ប៉ះ $y = x - 1$ និងភាពកោងផ្កាប់នៃ $y = \\ln x$ គេទាញបានវិសមភាពគ្រឹះ ៖",
         "options": [
-          "$x = e$",
-          "$x = 1$",
-          "គ្មានអាស៊ីមតូតឈរត្រង់ $x = 1$ ទេ (មានត្រង់ $x = 0$ ខាងស្តាំ)",
-          "$y = 1$"
+          "$\\ln x \\le x$",
+          "$\\ln x \\le x - 1, \\forall x > 0$",
+          "$\\ln x \\ge x - 1$",
+          "$\\ln x = x - 1$"
         ],
-        "correct": 2,
-        "explanation": "$\\lim_{x \\to 1} \\dfrac{\\ln x}{x - 1} = 1$ (លីមីតកំណត់ ដូច្នេះ $x=1$ មិនមែនអាស៊ីមតូតទេ)។ ប៉ុន្តែ $\\lim_{x \\to 0^+} f(x) = +\\infty$ នាំឱ្យ $x = 0$ ជាអាស៊ីមតូតឈរ។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "ដោយសារបន្ទាត់ប៉ះនៅខាងលើខ្សែកោងកោងផ្កាប់ គេបាន $\\ln x \\le x - 1$ ចំពោះគ្រប់ $x > 0$ (ស្មើគ្នាតែត្រង់ $x = 1$)។"
       },
       {
-        "id": "g12a_p1_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចំនួនឫសនៃសមីការ $\\ln x = \\dfrac{1}{x}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកអាស៊ីមតូតឈរនៃក្រាប $f(x) = \\dfrac{\\ln x}{x - 1}$ ៖",
         "options": [
-          "មានឫសពីរ",
-          "គ្មានឫសពិត",
-          "មានអនន្តឫស",
-          "មានឫសតែមួយគត់"
+          "$x = e$",
+          "$y = 1$",
+          "$x = 1$",
+          "គ្មានអាស៊ីមតូតឈរត្រង់ $x = 1$ ទេ (មានត្រង់ $x = 0$ ខាងស្តាំ)"
         ],
         "correct": 3,
-        "explanation": "$f(x) = \\ln x - \\dfrac{1}{x}$ កើនដាច់ខាតពី $-\\infty$ ទៅ $+\\infty$ លើ $(0, +\\infty)$ នាំឱ្យកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ (ឫសតែមួយគត់)។",
-        "diagram": ""
+        "explanation": "$\\lim_{x \\to 1} \\dfrac{\\ln x}{x - 1} = 1$ (លីមីតកំណត់ ដូច្នេះ $x=1$ មិនមែនអាស៊ីមតូតទេ)។ ប៉ុន្តែ $\\lim_{x \\to 0^+} f(x) = +\\infty$ នាំឱ្យ $x = 0$ ជាអាស៊ីមតូតឈរ។"
       },
       {
-        "id": "g12a_p1_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍លោការីតនេពែ ៖ ក្រាប និងដេរីវេ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ក្រាបនៃ $y = \\ln|x|$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចំនួនឫសនៃសមីការ $\\ln x = \\dfrac{1}{x}$ គឺ ៖",
         "options": [
-          "ជាអនុគមន៍គូ ឆ្លុះធៀបនឹងអ័ក្ស $Oy$ និងមានអាស៊ីមតូតឈរ $x = 0$",
-          "ជាអនុគមន៍សេស ឆ្លុះធៀបនឹង $O$",
-          "មានដែនកំណត់តែ $x > 0$",
-          "មានអតិបរមា"
+          "មានឫសតែមួយគត់",
+          "មានអនន្តឫស",
+          "គ្មានឫសពិត",
+          "មានឫសពីរ"
         ],
         "correct": 0,
-        "explanation": "$f(-x) = \\ln|-x| = \\ln|x| = f(x)$ ដូច្នេះជាអនុគមន៍គូ មានមែកពីរសងខាងឆ្លុះនឹងអ័ក្ស $Oy$។",
-        "diagram": ""
+        "explanation": "$f(x) = \\ln x - \\dfrac{1}{x}$ កើនដាច់ខាតពី $-\\infty$ ទៅ $+\\infty$ លើ $(0, +\\infty)$ នាំឱ្យកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ (ឫសតែមួយគត់)។"
       }
     ],
     "3": [
@@ -31052,68 +31032,64 @@
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $\\ln x + \\ln(x + 6) = \\ln 7$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយសមីការ $\\ln (4x + 1)=1$ ៖",
         "options": [
-          "$7$",
-          "$-7$",
-          "$1$",
-          "$6$"
+          "$x=\\dfrac{e^{1}+1}{4}$",
+          "$x=\\dfrac{e^{1}-1}{4}$",
+          "$x=e^{1}$",
+          "$x=1$"
         ],
-        "correct": 2,
-        "explanation": "$x(x + 6) = 7$ ⇒ $x = 1$ ឬ $x = -7$ ; លក្ខខណ្ឌ $x > 0$ ⇒ $x = 1$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "លើកជាអិចស្ប៉ូណង់"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $\\ln x + \\ln(x + 5) = \\ln 6$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការ $\\ln (x-5)$ មានន័យពេល ៖",
         "options": [
-          "$1$",
-          "$6$",
-          "$5$",
-          "$-6$"
+          "$x>5$",
+          "$x<5$",
+          "$x\\ge 5$",
+          "$x>-5$"
         ],
         "correct": 0,
-        "explanation": "$x(x + 5) = 6$ ⇒ $x = 1$ ឬ $x = -6$ ; លក្ខខណ្ឌ $x > 0$ ⇒ $x = 1$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "អាគុយម៉ង់ត្រូវ > 0"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $\\ln(2x + 1) = 3$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយសមីការ $\\ln (5x + 4)=2$ ៖",
         "options": [
-          "$x = 3$",
-          "$x = \\dfrac{e^{3} - 1}{2}$",
-          "$x = \\dfrac{e^{3} + 1}{2}$",
-          "$x = \\dfrac{e^{3}}{2}$"
+          "$x=\\dfrac{e^{2}+4}{5}$",
+          "$x=e^{2}$",
+          "$x=\\dfrac{e^{2}-4}{5}$",
+          "$x=2$"
         ],
-        "correct": 1,
-        "explanation": "$\\ln(2x + 1) = 3 \\Leftrightarrow 2x + 1 = e^{3}$ ⇒ $x = \\dfrac{e^{3} - 1}{2}$ ( $2x + 1 = e^{3} > 0$ )។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "លើកជាអិចស្ប៉ូណង់"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $\\ln(2x + 3) = 4$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការ $\\ln (x-2)$ មានន័យពេល ៖",
         "options": [
-          "$x = \\dfrac{e^{4}}{2}$",
-          "$x = \\dfrac{e^{4} + 3}{2}$",
-          "$x = 4$",
-          "$x = \\dfrac{e^{4} - 3}{2}$"
+          "$x>2$",
+          "$x<2$",
+          "$x\\ge 2$",
+          "$x>-2$"
         ],
-        "correct": 3,
-        "explanation": "$\\ln(2x + 3) = 4 \\Leftrightarrow 2x + 3 = e^{4}$ ⇒ $x = \\dfrac{e^{4} - 3}{2}$ ( $2x + 3 = e^{4} > 0$ )។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "អាគុយម៉ង់ត្រូវ > 0"
       },
       {
         "id": "q5",
@@ -31121,16 +31097,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $\\ln x + \\ln(x + 3) = \\ln 4$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\ln x + \\ln(x + 6) = \\ln 7$ ៖",
         "options": [
-          "$1$",
-          "$4$",
-          "$3$",
-          "$-4$"
+          "$7$",
+          "$-7$",
+          "$6$",
+          "$1$"
         ],
-        "correct": 0,
-        "explanation": "$x(x + 3) = 4$ ⇒ $x = 1$ ឬ $x = -4$ ; លក្ខខណ្ឌ $x > 0$ ⇒ $x = 1$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$x(x + 6) = 7$ ⇒ $x = 1$ ឬ $x = -7$ ; លក្ខខណ្ឌ $x > 0$ ⇒ $x = 1$។"
       },
       {
         "id": "q6",
@@ -31138,16 +31113,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\ln x + \\ln y = 3 \\\\ \\ln x - \\ln y = -1 \\end{cases}$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\ln x + \\ln(x + 5) = \\ln 6$ ៖",
         "options": [
-          "$(e^{3}, e^{-1})$",
-          "$(e, e^{2})$",
-          "$(1, 2)$",
-          "$(e^{2}, e)$"
+          "$1$",
+          "$-6$",
+          "$6$",
+          "$5$"
         ],
-        "correct": 1,
-        "explanation": "បូក ៖ $2\\ln x = 2 \\Rightarrow \\ln x = 1$ ; ដក ៖ $\\ln y = 2$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$x(x + 5) = 6$ ⇒ $x = 1$ ឬ $x = -6$ ; លក្ខខណ្ឌ $x > 0$ ⇒ $x = 1$។"
       },
       {
         "id": "q7",
@@ -31155,67 +31129,63 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយវិសមីការ $\\ln(2x - 5) < 0$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\ln(2x + 1) = 3$ ៖",
         "options": [
-          "$x > 3$",
-          "$2 < x < \\dfrac{5}{2}$",
-          "$x < 3$",
-          "$\\dfrac{5}{2} < x < 3$"
+          "$x = \\dfrac{e^{3}}{2}$",
+          "$x = 3$",
+          "$x = \\dfrac{e^{3} - 1}{2}$",
+          "$x = \\dfrac{e^{3} + 1}{2}$"
         ],
-        "correct": 3,
-        "explanation": "$0 < 2x - 5 < 1$ ⇒ $\\dfrac{5}{2} < x < 3$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$\\ln(2x + 1) = 3 \\Leftrightarrow 2x + 1 = e^{3}$ ⇒ $x = \\dfrac{e^{3} - 1}{2}$ ( $2x + 1 = e^{3} > 0$ )។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\ln x + \\ln y = 7 \\\\ \\ln x - \\ln y = 1 \\end{cases}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $\\ln x+\\ln (x+2)=\\ln 3$ ៖",
         "options": [
-          "$(4, 3)$",
-          "$(e^{7}, e)$",
-          "$(e^{4}, e^{3})$",
-          "$(e^{3}, e^{4})$"
+          "$x=-3$",
+          "$x=3$",
+          "$x=2$",
+          "$x=1$"
         ],
-        "correct": 2,
-        "explanation": "បូក ៖ $2\\ln x = 8 \\Rightarrow \\ln x = 4$ ; ដក ៖ $\\ln y = 3$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$x(x+2)=3$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\ln x + \\ln y = 2 \\\\ \\ln x - \\ln y = 0 \\end{cases}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases}\\ln x+\\ln y=4\\\\\\ln x-\\ln y=2\\end{cases}$ ៖",
         "options": [
-          "$(e^{2}, e^{0})$",
-          "$(e^{2}, e)$",
-          "$(1, 1)$",
-          "$(e, e)$"
+          "$(e^{1},e^{3})$",
+          "$(e^{3},e^{1})$",
+          "$(3,1)$",
+          "$(e^{4},e^{2})$"
         ],
-        "correct": 3,
-        "explanation": "បូក ៖ $2\\ln x = 2 \\Rightarrow \\ln x = 1$ ; ដក ៖ $\\ln y = 1$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "បូក និងដកសមីការ"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ វិសមីការ និងប្រព័ន្ធលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $\\ln(3x - 2) = 3$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយវិសមីការ $\\ln (5x - 2)<\\ln 3$ ៖",
         "options": [
-          "$x = \\dfrac{e^{3} + 2}{3}$",
-          "$x = 3$",
-          "$x = \\dfrac{e^{3} - 2}{3}$",
-          "$x = \\dfrac{e^{3}}{3}$"
+          "$x<1$",
+          "$1<x<2$",
+          "$\\dfrac{3}{5}<x<1$",
+          "$\\dfrac{2}{5}<x<1$"
         ],
-        "correct": 0,
-        "explanation": "$\\ln(3x - 2) = 3 \\Leftrightarrow 3x - 2 = e^{3}$ ⇒ $x = \\dfrac{e^{3} + 2}{3}$ ( $3x - 2 = e^{3} > 0$ )។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$0<5x - 2<3$"
       }
     ],
     "4": [
@@ -31224,21 +31194,84 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\ln(x^2 + 3x + 2)$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $y=\\ln (4x)$ គឺ ៖",
         "options": [
-          "$2x + 3\\ln(x^2 + 3x + 2)$",
-          "$\\dfrac{2x + 3}{x^2 + 3x + 2}$",
-          "$\\dfrac{2x + 3}{2x + 3}$",
-          "$\\dfrac{1}{x^2 + 3x + 2}$"
+          "$\\dfrac{1}{x}$",
+          "$\\dfrac{4}{x}$",
+          "$\\dfrac{1}{4x}$",
+          "$4\\ln x$"
         ],
-        "correct": 1,
-        "explanation": "$(\\ln u)' = \\dfrac{u'}{u}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$\\ln (kx)=\\ln k+\\ln x$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $y=\\ln (x+2)$ គឺ ៖",
+        "options": [
+          "$\\dfrac{1}{x}$",
+          "$\\dfrac{1}{x+2}$",
+          "$\\dfrac{2}{x+2}$",
+          "$\\ln (x+2)$"
+        ],
+        "correct": 1,
+        "explanation": "(ln u)' = u'/u"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $y=\\ln (5x)$ គឺ ៖",
+        "options": [
+          "$\\dfrac{1}{x}$",
+          "$\\dfrac{5}{x}$",
+          "$\\dfrac{1}{5x}$",
+          "$5\\ln x$"
+        ],
+        "correct": 0,
+        "explanation": "$\\ln (kx)=\\ln k+\\ln x$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $y=\\ln (x+3)$ គឺ ៖",
+        "options": [
+          "$\\dfrac{1}{x+3}$",
+          "$\\dfrac{1}{x}$",
+          "$\\dfrac{3}{x+3}$",
+          "$\\ln (x+3)$"
+        ],
+        "correct": 0,
+        "explanation": "(ln u)' = u'/u"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ដេរីវេនៃ $y = \\ln(x^2 + 3x + 2)$ គឺ ៖",
+        "options": [
+          "$\\dfrac{2x + 3}{x^2 + 3x + 2}$",
+          "$2x + 3\\ln(x^2 + 3x + 2)$",
+          "$\\dfrac{1}{x^2 + 3x + 2}$",
+          "$\\dfrac{2x + 3}{2x + 3}$"
+        ],
+        "correct": 0,
+        "explanation": "$(\\ln u)' = \\dfrac{u'}{u}$។"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -31250,12 +31283,11 @@
           "$x = \\dfrac{1}{e}$"
         ],
         "correct": 3,
-        "explanation": "$f'(x) = \\ln x + 1 = 0 \\Rightarrow x = e^{-1} = \\dfrac{1}{e}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$f'(x) = \\ln x + 1 = 0 \\Rightarrow x = e^{-1} = \\dfrac{1}{e}$។"
       },
       {
-        "id": "q3",
-        "questionNumber": 3,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -31267,127 +31299,55 @@
           "$0$"
         ],
         "correct": 2,
-        "explanation": "$f'(x) = \\dfrac{1 - \\ln x}{x^2} = 0 \\Rightarrow x = e$ ⇒ $f(e) = \\dfrac{1}{e}$។",
-        "src": "genpq-g12b_plan"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\ln(6x)$ គឺ ៖",
-        "options": [
-          "$\\dfrac{1}{x}$",
-          "$\\dfrac{6}{x}$",
-          "$\\dfrac{1}{6x}$",
-          "$6\\ln x$"
-        ],
-        "correct": 0,
-        "explanation": "$(\\ln 6x)' = \\dfrac{6}{6x} = \\dfrac{1}{x}$។",
-        "src": "genpq-g12b_plan"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\ln(x^2 + 2x + 2)$ គឺ ៖",
-        "options": [
-          "$\\dfrac{1}{x^2 + 2x + 2}$",
-          "$\\dfrac{2x + 2}{2x + 2}$",
-          "$\\dfrac{2x + 2}{x^2 + 2x + 2}$",
-          "$2x + 2\\ln(x^2 + 2x + 2)$"
-        ],
-        "correct": 2,
-        "explanation": "$(\\ln u)' = \\dfrac{u'}{u}$។",
-        "src": "genpq-g12b_plan"
-      },
-      {
-        "id": "q6",
-        "questionNumber": 6,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\ln(x^2 + x + 2)$ គឺ ៖",
-        "options": [
-          "$\\dfrac{2x + 1}{2x + 1}$",
-          "$\\dfrac{2x + 1}{x^2 + x + 2}$",
-          "$2x + 1\\ln(x^2 + x + 2)$",
-          "$\\dfrac{1}{x^2 + x + 2}$"
-        ],
-        "correct": 1,
-        "explanation": "$(\\ln u)' = \\dfrac{u'}{u}$។",
-        "src": "genpq-g12b_plan"
-      },
-      {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\ln(3x)$ គឺ ៖",
-        "options": [
-          "$\\dfrac{1}{3x}$",
-          "$\\dfrac{3}{x}$",
-          "$3\\ln x$",
-          "$\\dfrac{1}{x}$"
-        ],
-        "correct": 3,
-        "explanation": "$(\\ln 3x)' = \\dfrac{3}{3x} = \\dfrac{1}{x}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$f'(x) = \\dfrac{1 - \\ln x}{x^2} = 0 \\Rightarrow x = e$ ⇒ $f(e) = \\dfrac{1}{e}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\ln(x^2 + x + 5)$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេនៃ $y=\\dfrac{\\ln x}{x^4}$ គឺ ៖",
         "options": [
-          "$\\dfrac{2x + 1}{x^2 + x + 5}$",
-          "$\\dfrac{2x + 1}{2x + 1}$",
-          "$\\dfrac{1}{x^2 + x + 5}$",
-          "$2x + 1\\ln(x^2 + x + 5)$"
+          "$\\dfrac{1-4\\ln x}{x^{5}}$",
+          "$\\dfrac{1}{x^{5}}$",
+          "$\\dfrac{1+4\\ln x}{x^{5}}$",
+          "$\\dfrac{1-\\ln x}{x^{5}}$"
         ],
         "correct": 0,
-        "explanation": "$(\\ln u)' = \\dfrac{u'}{u}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "ដេរីវេផលចែក"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\ln(4x)$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេនៃ $y=(\\ln x)^{4}$ គឺ ៖",
         "options": [
-          "$\\dfrac{1}{x}$",
-          "$\\dfrac{4}{x}$",
-          "$\\dfrac{1}{4x}$",
-          "$4\\ln x$"
+          "$\\dfrac{(\\ln x)^{3}}{x}$",
+          "$4(\\ln x)^{3}$",
+          "$\\dfrac{4(\\ln x)^{3}}{x}$",
+          "$\\dfrac{4}{x}$"
         ],
-        "correct": 0,
-        "explanation": "$(\\ln 4x)' = \\dfrac{4}{4x} = \\dfrac{1}{x}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "វិធានខ្សែច្រវាក់"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សិក្សាអនុគមន៍ដែលទាក់ទងនឹងលោការីតនេពែ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\ln(5x)$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេនៃ $y=\\ln (x^{2} + 4x + 5)$ គឺ ៖",
         "options": [
-          "$\\dfrac{5}{x}$",
-          "$5\\ln x$",
-          "$\\dfrac{1}{5x}$",
-          "$\\dfrac{1}{x}$"
+          "$\\dfrac{1}{x^{2} + 4x + 5}$",
+          "$\\dfrac{2x + 4}{2x + 4}$",
+          "$2x + 4\\ln (x^{2} + 4x + 5)$",
+          "$\\dfrac{2x + 4}{x^{2} + 4x + 5}$"
         ],
         "correct": 3,
-        "explanation": "$(\\ln 5x)' = \\dfrac{5}{5x} = \\dfrac{1}{x}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "(ln u)' = u'/u"
       }
     ],
     "5": [
@@ -31396,68 +31356,64 @@
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយ $50 e^{2t} = 200$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយសមីការ $100e^{2t}=400$ ៖",
         "options": [
-          "$t = \\dfrac{\\ln 4}{2}$",
-          "$t = \\dfrac{4}{2}$",
-          "$t = 2\\ln 4$",
-          "$t = \\ln 4$"
+          "$t=\\dfrac{\\ln 400}{2}$",
+          "$t=\\dfrac{\\ln 4}{2}$",
+          "$t=\\ln 4$",
+          "$t=2\\ln 4$"
         ],
-        "correct": 0,
-        "explanation": "$e^{2t} = 4 \\Rightarrow 2t = \\ln 4$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$e^{2t}=4$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយ $10 e^{2t} = 50$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយសមីការ $6e^{3t}=48$ ៖",
         "options": [
-          "$t = \\ln 5$",
-          "$t = \\dfrac{5}{2}$",
-          "$t = \\dfrac{\\ln 5}{2}$",
-          "$t = 2\\ln 5$"
+          "$t=\\dfrac{\\ln 48}{3}$",
+          "$t=\\ln 8$",
+          "$t=3\\ln 8$",
+          "$t=\\dfrac{\\ln 8}{3}$"
         ],
-        "correct": 2,
-        "explanation": "$e^{2t} = 5 \\Rightarrow 2t = \\ln 5$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$e^{3t}=8$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រជាជនកើនតាម $P(t) = P_0 e^{0.1 t}$។ រយៈពេលដែលប្រជាជនកើនទ្វេដង គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយសមីការ $12e^{5t}=60$ ៖",
         "options": [
-          "$t = \\ln 20$",
-          "$t = 10\\ln 2$",
-          "$t = 20$",
-          "$t = 0.1\\ln 2$"
+          "$t=\\dfrac{\\ln 60}{5}$",
+          "$t=\\ln 5$",
+          "$t=\\dfrac{\\ln 5}{5}$",
+          "$t=5\\ln 5$"
         ],
-        "correct": 1,
-        "explanation": "$e^{0.1 t} = 2 \\Rightarrow t = \\dfrac{\\ln 2}{0.1} = 10\\ln 2$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$e^{5t}=5$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រជាជនកើនតាម $P(t) = P_0 e^{0.2 t}$។ រយៈពេលដែលប្រជាជនកើនទ្វេដង គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយសមីការ $8e^{7t}=56$ ៖",
         "options": [
-          "$t = \\ln 10$",
-          "$t = 0.2\\ln 2$",
-          "$t = 10$",
-          "$t = 5\\ln 2$"
+          "$t=\\dfrac{\\ln 56}{7}$",
+          "$t=\\ln 7$",
+          "$t=7\\ln 7$",
+          "$t=\\dfrac{\\ln 7}{7}$"
         ],
         "correct": 3,
-        "explanation": "$e^{0.2 t} = 2 \\Rightarrow t = \\dfrac{\\ln 2}{0.2} = 5\\ln 2$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$e^{7t}=7$"
       },
       {
         "id": "q5",
@@ -31465,16 +31421,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សារធាតុមួយមាន $m(t) = m_0 e^{-kt}$ និងរយៈពេលពាក់កណ្តាលជីវិត $T = 5$ ឆ្នាំ។ តម្លៃ $k$ គឺ ៖",
+        "question": "ដោះស្រាយ $50 e^{2t} = 200$ ៖",
         "options": [
-          "$\\dfrac{\\ln 2}{5}$",
-          "$5\\ln 2$",
-          "$\\dfrac{1}{10}$",
-          "$\\dfrac{5}{\\ln 2}$"
+          "$t = \\ln 4$",
+          "$t = 2\\ln 4$",
+          "$t = \\dfrac{\\ln 4}{2}$",
+          "$t = \\dfrac{4}{2}$"
         ],
-        "correct": 0,
-        "explanation": "$e^{-kT} = \\dfrac{1}{2} \\Rightarrow kT = \\ln 2 \\Rightarrow k = \\dfrac{\\ln 2}{5}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$e^{2t} = 4 \\Rightarrow 2t = \\ln 4$។"
       },
       {
         "id": "q6",
@@ -31482,16 +31437,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សារធាតុមួយមាន $m(t) = m_0 e^{-kt}$ និងរយៈពេលពាក់កណ្តាលជីវិត $T = 20$ ឆ្នាំ។ តម្លៃ $k$ គឺ ៖",
+        "question": "ដោះស្រាយ $10 e^{2t} = 50$ ៖",
         "options": [
-          "$20\\ln 2$",
-          "$\\dfrac{\\ln 2}{20}$",
-          "$\\dfrac{1}{40}$",
-          "$\\dfrac{20}{\\ln 2}$"
+          "$t = \\ln 5$",
+          "$t = \\dfrac{\\ln 5}{2}$",
+          "$t = 2\\ln 5$",
+          "$t = \\dfrac{5}{2}$"
         ],
         "correct": 1,
-        "explanation": "$e^{-kT} = \\dfrac{1}{2} \\Rightarrow kT = \\ln 2 \\Rightarrow k = \\dfrac{\\ln 2}{20}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$e^{2t} = 5 \\Rightarrow 2t = \\ln 5$។"
       },
       {
         "id": "q7",
@@ -31499,67 +31453,63 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយ $100 e^{2t} = 300$ ៖",
+        "question": "ប្រជាជនកើនតាម $P(t) = P_0 e^{0.1 t}$។ រយៈពេលដែលប្រជាជនកើនទ្វេដង គឺ ៖",
         "options": [
-          "$t = 2\\ln 3$",
-          "$t = \\dfrac{3}{2}$",
-          "$t = \\ln 3$",
-          "$t = \\dfrac{\\ln 3}{2}$"
+          "$t = 20$",
+          "$t = \\ln 20$",
+          "$t = 0.1\\ln 2$",
+          "$t = 10\\ln 2$"
         ],
         "correct": 3,
-        "explanation": "$e^{2t} = 3 \\Rightarrow 2t = \\ln 3$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$e^{0.1 t} = 2 \\Rightarrow t = \\dfrac{\\ln 2}{0.1} = 10\\ln 2$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ប្រជាជនកើនតាម $P(t) = P_0 e^{0.05 t}$។ រយៈពេលដែលប្រជាជនកើនទ្វេដង គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ប្រជាជនកើនតាម $P(t)=P_0e^{\\dfrac{1}{10}t}$។ រយៈពេលកើនទ្វេដងគឺ ៖",
         "options": [
-          "$t = 0.05\\ln 2$",
-          "$t = \\ln 40$",
-          "$t = 20\\ln 2$",
-          "$t = 40$"
+          "$t=\\dfrac{1}{10}\\ln 2$",
+          "$t=10\\ln 2$",
+          "$t=10\\ln 3$",
+          "$t=20$"
         ],
-        "correct": 2,
-        "explanation": "$e^{0.05 t} = 2 \\Rightarrow t = \\dfrac{\\ln 2}{0.05} = 20\\ln 2$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$e^{\\dfrac{1}{10}t}=2$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយ $200 e^{2t} = 600$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ប្រជាជនកើនតាម $P(t)=P_0e^{\\dfrac{1}{4}t}$។ រយៈពេលដែលកើនដល់ $3P_0$ គឺ ៖",
         "options": [
-          "$t = \\ln 3$",
-          "$t = \\dfrac{\\ln 3}{2}$",
-          "$t = \\dfrac{3}{2}$",
-          "$t = 2\\ln 3$"
+          "$t=\\dfrac{1}{4}\\ln 3$",
+          "$t=4\\ln 2$",
+          "$t=\\ln 12$",
+          "$t=4\\ln 3$"
         ],
-        "correct": 1,
-        "explanation": "$e^{2t} = 3 \\Rightarrow 2t = \\ln 3$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$e^{\\dfrac{1}{4}t}=3$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សារធាតុមួយមាន $m(t) = m_0 e^{-kt}$ និងរយៈពេលពាក់កណ្តាលជីវិត $T = 10$ ឆ្នាំ។ តម្លៃ $k$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សារធាតុវិទ្យុសកម្ម $m(t)=m_0e^{-kt}$ មានអាយុកន្លះ $T=12$ ឆ្នាំ។ ពេលវេលាដែលនៅសល់ $\\dfrac{m_0}{4}$ គឺ ៖",
         "options": [
-          "$\\dfrac{10}{\\ln 2}$",
-          "$10\\ln 2$",
-          "$\\dfrac{\\ln 2}{10}$",
-          "$\\dfrac{1}{20}$"
+          "$24$",
+          "$12$",
+          "$48$",
+          "$6$"
         ],
-        "correct": 2,
-        "explanation": "$e^{-kT} = \\dfrac{1}{2} \\Rightarrow kT = \\ln 2 \\Rightarrow k = \\dfrac{\\ln 2}{10}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "សល់ 1/4 = ពីរអាយុកន្លះ"
       }
     ]
   },
