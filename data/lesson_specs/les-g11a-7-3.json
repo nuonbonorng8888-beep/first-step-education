@@ -1,0 +1,42 @@
+{
+  "lesson": "les-g11a-7-3",
+  "grade": 11,
+  "course": "advanced",
+  "title": "មេរៀនបន្ថែម ៣ ៖ ស្វ័យគុណទី n និងឫសទី n នៃចំនួនកុំផ្លិច (មាតិកាថ្នាក់ទី ១២)",
+  "book_pages": "",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ រូបមន្តដឺម័រ (De Moivre's Theorem): $[r(\\cos \\theta + i \\sin \\theta)]^n = r^n [\\cos(n\\theta) + i \\sin(n\\theta)]$"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ ឫសទី $n$ នៃចំនួនកុំផ្លិច $z = r(\\cos \\theta + i \\sin \\theta)$ ៖ $w_k = \\sqrt[n]{r}\\left[\\cos\\left(\\dfrac{\\theta + 2k\\pi}{n}\\right) + i\\sin\\left(\\dfrac{\\theta + 2k\\pi}{n}\\right)\\right]$ ($k = 0, 1, \\dots, n-1$)"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ ឫសទី $n$ នៃឯកតា និងការបកស្រាយធរណីមាត្រ (កំពូលនៃពហុកោណនិយ័ត)"
+    }
+  ],
+  "notes": "កែ Q29/Q30/Q42 (បាត់និទស្សន្ត); លុប Q46 (អត្ថបទខូច); រូប QB ៥ ផ្ទៀងផ្ទាត់រួច",
+  "removed": [
+    "qb11_les-g11a-7-3_46"
+  ],
+  "bank_levels": {
+    "1": {
+      "e": 11,
+      "m": 11,
+      "h": 10
+    },
+    "2": {
+      "e": 11,
+      "m": 10,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
