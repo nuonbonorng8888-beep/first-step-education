@@ -26642,173 +26642,164 @@
   "les-g12a-2-2": {
     "1": [
       {
-        "id": "g12a_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "អនុគមន៍ $f$ ជាប់ត្រង់ចំណុច $x = x_0$ លុះត្រាតែផ្ទៀងផ្ទាត់លក្ខខណ្ឌបីគឺ ៖",
         "options": [
-          "$f'(x_0) = 0$",
-          "$f(x_0)$ កំណត់, $\\lim_{x \\to x_0} f(x)$ មាន, និង $\\lim_{x \\to x_0} f(x) = f(x_0)$",
+          "$f(x_0) > 0$",
           "$\\lim_{x \\to x_0} f(x) = 0$",
-          "$f(x_0) > 0$"
+          "$f'(x_0) = 0$",
+          "$f(x_0)$ កំណត់, $\\lim_{x \\to x_0} f(x)$ មាន, និង $\\lim_{x \\to x_0} f(x) = f(x_0)$"
         ],
-        "correct": 1,
-        "explanation": "លក្ខខណ្ឌភាពជាប់ត្រង់ចំណុចមួយ៖ ត្រូវមានតម្លៃត្រង់ចំណុចនោះ មានលីមីត ហើយតម្លៃទាំងពីរស្មើគ្នា។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "លក្ខខណ្ឌភាពជាប់ត្រង់ចំណុចមួយ៖ ត្រូវមានតម្លៃត្រង់ចំណុចនោះ មានលីមីត ហើយតម្លៃទាំងពីរស្មើគ្នា។"
       },
       {
-        "id": "g12a_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "អនុគមន៍ពហុធា $P(x) = a_n x^n + \\cdots + a_0$ ៖",
         "options": [
+          "ជាប់លើ $\\mathbb{R}$ ជានិច្ច",
           "ជាប់តែលើ $[0, +\\infty)$",
-          "ជាប់លើចន្លោះកំណត់មួយគត់",
           "មិនជាប់ត្រង់ $x=0$",
-          "ជាប់លើ $\\mathbb{R}$ ជានិច្ច"
+          "ជាប់លើចន្លោះកំណត់មួយគត់"
         ],
-        "correct": 3,
-        "explanation": "ទ្រឹស្តីបទ៖ គ្រប់អនុគមន៍ពហុធាជាប់លើសំណុំចំនួនពិត $\\mathbb{R}$ ទាំងមូល។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ទ្រឹស្តីបទ៖ គ្រប់អនុគមន៍ពហុធាជាប់លើសំណុំចំនួនពិត $\\mathbb{R}$ ទាំងមូល។"
       },
       {
-        "id": "g12a_p1_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x)=6x+2$។ គណនា $\\lim_{x\\to 2}f(x)$ ដើម្បីពិនិត្យភាពជាប់ត្រង់ $x=2$ ៖",
+        "options": [
+          "$15$",
+          "$-14$",
+          "$14$",
+          "$28$"
+        ],
+        "correct": 2,
+        "explanation": "អនុគមន៍ពហុធា ជាប់ ⇒ លីមីត = f(2)"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x)=3x+8$។ គណនា $\\lim_{x\\to 2}f(x)$ ដើម្បីពិនិត្យភាពជាប់ត្រង់ $x=2$ ៖",
+        "options": [
+          "$15$",
+          "$14$",
+          "$-14$",
+          "$28$"
+        ],
+        "correct": 1,
+        "explanation": "អនុគមន៍ពហុធា ជាប់ ⇒ លីមីត = f(2)"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} \\dfrac{x^2 - 9}{x - 3} & \\text{បើ } x \\neq 3 \\\\ m & \\text{បើ } x = 3 \\end{cases}$ ជាប់ត្រង់ $x = 3$ ៖",
         "options": [
-          "$m = 9$",
-          "$m = 3$",
+          "$m = 0$",
           "$m = 6$",
-          "$m = 0$"
+          "$m = 3$",
+          "$m = 9$"
         ],
-        "correct": 2,
-        "explanation": "$\\lim_{x \\to 3} \\dfrac{(x-3)(x+3)}{x-3} = 3 + 3 = 6$។ ដើម្បីឱ្យជាប់ត្រង់ $x=3$ ត្រូវឱ្យ $f(3) = m = 6$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\lim_{x \\to 3} \\dfrac{(x-3)(x+3)}{x-3} = 3 + 3 = 6$។ ដើម្បីឱ្យជាប់ត្រង់ $x=3$ ត្រូវឱ្យ $f(3) = m = 6$។"
       },
       {
-        "id": "g12a_p1_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ចំណុចមិនជាប់ដែលអាចលុបបាន (Removable discontinuity) កើតឡើងកាលណា ៖",
         "options": [
-          "$\\lim_{x \\to x_0} f(x)$ មាន (ជាចំនួនពិត) តែ $\\neq f(x_0)$ ឬ $f(x_0)$ គ្មានន័យ",
+          "លីមីតឆ្វេងខុសពីលីមីតស្តាំ",
           "លីមីតស្មើ $\\pm\\infty$",
-          "អនុគមន៍មានដេរីវេ",
-          "លីមីតឆ្វេងខុសពីលីមីតស្តាំ"
+          "$\\lim_{x \\to x_0} f(x)$ មាន (ជាចំនួនពិត) តែ $\\neq f(x_0)$ ឬ $f(x_0)$ គ្មានន័យ",
+          "អនុគមន៍មានដេរីវេ"
         ],
-        "correct": 0,
-        "explanation": "ចំណុចមិនជាប់អាចលុបបានកាលណាមានលីមីតកំណត់ គេគ្រាន់តែពង្រីកតាមភាពជាប់ដោយកំណត់ $f(x_0) = L$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ចំណុចមិនជាប់អាចលុបបានកាលណាមានលីមីតកំណត់ គេគ្រាន់តែពង្រីកតាមភាពជាប់ដោយកំណត់ $f(x_0) = L$។"
       },
       {
-        "id": "g12a_p1_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បើ $f$ និង $g$ ជាប់ត្រង់ $x_0$ នោះផលចែក $\\dfrac{f}{g}$ ជាប់ត្រង់ $x_0$ លុះត្រាតែ ៖",
         "options": [
-          "$f(x_0) \\neq 0$",
-          "$g(x_0) \\neq 0$",
+          "$g'(x_0) \\neq 0$",
           "$f(x_0) = g(x_0)$",
-          "$g'(x_0) \\neq 0$"
+          "$g(x_0) \\neq 0$",
+          "$f(x_0) \\neq 0$"
         ],
-        "correct": 1,
-        "explanation": "ផលចែកជាប់លុះត្រាតែភាគបែងខុសពីសូន្យត្រង់ចំណុចនោះ ($g(x_0) \\neq 0$)។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ផលចែកជាប់លុះត្រាតែភាគបែងខុសពីសូន្យត្រង់ចំណុចនោះ ($g(x_0) \\neq 0$)។"
       },
       {
-        "id": "g12a_p1_06",
-        "questionNumber": 6,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{1}{x^2 - 4}$ មិនជាប់ត្រង់ចំណុចណាខ្លះ?",
-        "options": [
-          "$x = 2$ តែមួយគត់",
-          "$x = 0$",
-          "$x = 4$",
-          "$x = 2$ និង $x = -2$"
-        ],
-        "correct": 3,
-        "explanation": "ភាគបែងស្មើ ០ ត្រង់ $x^2 - 4 = 0 \\iff x = \\pm 2$ ដូច្នេះមិនជាប់ត្រង់ $x = \\pm 2$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_07",
-        "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកតម្លៃ $a$ និង $b$ ដើម្បីឱ្យ $f(x) = \\begin{cases} ax + 1 & \\text{បើ } x < 1 \\\\ 3 & \\text{បើ } x = 1 \\\\ bx^2 + 2 & \\text{បើ } x > 1 \\end{cases}$ ជាប់ត្រង់ $x = 1$ ៖",
-        "options": [
-          "$a = 2, b = 1$",
-          "$a = 3, b = 1$",
-          "$a = 1, b = 2$",
-          "$a = 2, b = 2$"
-        ],
-        "correct": 0,
-        "explanation": "លីមីតឆ្វេង៖ $a(1) + 1 = a + 1 = 3 \\iff a = 2$។ លីមីតស្តាំ៖ $b(1)^2 + 2 = b + 2 = 3 \\iff b = 1$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $\\lim_{x \\to 2} f(x) = 5$ និង $f(2) = 5$ នោះ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកតម្លៃ $a$ និង $b$ ដើម្បីឱ្យ $f(x) = \\begin{cases} ax + 1 & \\text{បើ } x < 1 \\\\ 3 & \\text{បើ } x = 1 \\\\ bx^2 + 2 & \\text{បើ } x > 1 \\end{cases}$ ជាប់ត្រង់ $x = 1$ ៖",
         "options": [
-          "$f$ ដាច់ត្រង់ $2$",
-          "$f$ ជាប់ត្រង់ $2$",
-          "$f$ មិនកំណត់ត្រង់ $2$",
-          "មិនអាចសន្និដ្ឋានបាន"
+          "$a = 3, b = 1$",
+          "$a = 2, b = 1$",
+          "$a = 1, b = 2$",
+          "$a = 2, b = 2$"
         ],
         "correct": 1,
-        "explanation": "$\\lim_{x \\to 2} f(x) = f(2)$ ជាលក្ខខណ្ឌនៃភាពជាប់ត្រង់ $2$។"
+        "explanation": "លីមីតឆ្វេង៖ $a(1) + 1 = a + 1 = 3 \\iff a = 2$។ លីមីតស្តាំ៖ $b(1)^2 + 2 = b + 2 = 3 \\iff b = 1$។"
       },
       {
-        "id": "g12a_p1_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "អនុគមន៍ $f(x) = \\dfrac{\\sin x}{x}$ អាចពង្រីកតាមភាពជាប់ត្រង់ $x = 0$ ដោយកំណត់ ៖",
         "options": [
           "$f(0) = -1$",
-          "$f(0) = 1$",
+          "$f(0) = 0$",
           "មិនអាចពង្រីកបាន",
-          "$f(0) = 0$"
+          "$f(0) = 1$"
         ],
-        "correct": 1,
-        "explanation": "ដោយសារ $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ គេអាចពង្រីកតាមភាពជាប់ដោយកំណត់ $f(0) = 1$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ដោយសារ $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ គេអាចពង្រីកតាមភាពជាប់ដោយកំណត់ $f(0) = 1$។"
       },
       {
-        "id": "g12a_p1_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ភាពជាប់ត្រង់មួយចំណុច",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "តើអនុគមន៍ $f(x) = |x|$ ជាប់ត្រង់ $x = 0$ ដែរឬទេ?",
         "options": [
           "គ្មានលីមីតត្រង់ $0$",
+          "ជាប់ ព្រោះ $\\lim_{x \\to 0} |x| = 0 = f(0)$ (តែគ្មានដេរីវេត្រង់ $0$)",
           "មិនជាប់ទេ",
-          "ជាប់លុះត្រាតែ $x > 0$",
-          "ជាប់ ព្រោះ $\\lim_{x \\to 0} |x| = 0 = f(0)$ (តែគ្មានដេរីវេត្រង់ $0$)"
+          "ជាប់លុះត្រាតែ $x > 0$"
         ],
-        "correct": 3,
-        "explanation": "អនុគមន៍ $|x|$ ជាប់ត្រង់ $0$ ពីព្រោះលីមីតស្មើតម្លៃអនុគមន៍ ប៉ុន្តែវាគ្មានដេរីវេត្រង់ $0$ ទេ (ដេរីវេឆ្វេង $-1 \\neq 1$ ដេរីវេស្តាំ)។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "អនុគមន៍ $|x|$ ជាប់ត្រង់ $0$ ពីព្រោះលីមីតស្មើតម្លៃអនុគមន៍ ប៉ុន្តែវាគ្មានដេរីវេត្រង់ $0$ ទេ (ដេរីវេឆ្វេង $-1 \\neq 1$ ដេរីវេស្តាំ)។"
       }
     ],
     "2": [
@@ -26820,14 +26811,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $f$ និង $g$ ជាប់ត្រង់ $a$ នោះ $\\dfrac{f}{g}$ ៖",
         "options": [
-          "ជាប់ត្រង់ $a$ បើ $g(a) \\ne 0$",
-          "ជាប់លុះត្រាតែ $f(a) = g(a)$",
+          "អាចជាប់ ឬមិនជាប់ គ្មានលក្ខខណ្ឌ",
           "មិនជាប់ត្រង់ $a$",
-          "អាចជាប់ ឬមិនជាប់ គ្មានលក្ខខណ្ឌ"
+          "ជាប់លុះត្រាតែ $f(a) = g(a)$",
+          "ជាប់ត្រង់ $a$ បើ $g(a) \\ne 0$"
         ],
-        "correct": 0,
-        "explanation": "លក្ខណៈនៃអនុគមន៍ជាប់ ៖ ផលបូក ផលគុណ ផលគុណនឹងចំនួនថេរ និងផលចែក (ភាគបែងមិនសូន្យ) នៃអនុគមន៍ជាប់ ជាអនុគមន៍ជាប់។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "លក្ខណៈនៃអនុគមន៍ជាប់ ៖ ផលបូក ផលគុណ ផលគុណនឹងចំនួនថេរ និងផលចែក (ភាគបែងមិនសូន្យ) នៃអនុគមន៍ជាប់ ជាអនុគមន៍ជាប់។"
       },
       {
         "id": "q2",
@@ -26837,14 +26827,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "អនុគមន៍ $f(x) = \\sqrt{x + 5}$ ជាប់លើ ៖",
         "options": [
-          "$(-5, +\\infty)$",
-          "$[-5, +\\infty)$",
           "$\\mathbb{R}$",
-          "$(-\\infty, -5]$"
+          "$(-\\infty, -5]$",
+          "$[-5, +\\infty)$",
+          "$(-5, +\\infty)$"
         ],
-        "correct": 1,
-        "explanation": "អនុគមន៍ឫសការេជាប់លើដែនកំណត់ $x + 5 \\ge 0$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "អនុគមន៍ឫសការេជាប់លើដែនកំណត់ $x + 5 \\ge 0$។"
       },
       {
         "id": "q3",
@@ -26854,14 +26843,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "អនុគមន៍ពហុធា $f(x) = 2x^3 + 3x^2 - 2x - 4$ ជាប់លើ ៖",
         "options": [
-          "$(0, +\\infty)$",
-          "$[0, +\\infty)$",
           "$\\mathbb{R}$",
-          "$\\mathbb{R} \\setminus \\{0\\}$"
+          "$[0, +\\infty)$",
+          "$\\mathbb{R} \\setminus \\{0\\}$",
+          "$(0, +\\infty)$"
         ],
-        "correct": 2,
-        "explanation": "អនុគមន៍ពហុធាជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "អនុគមន៍ពហុធាជាប់លើ $\\mathbb{R}$។"
       },
       {
         "id": "q4",
@@ -26872,115 +26860,108 @@
         "question": "អនុគមន៍ពហុធា $f(x) = 2x^3 - 5x^2 - 2$ ជាប់លើ ៖",
         "options": [
           "$[0, +\\infty)$",
-          "$\\mathbb{R} \\setminus \\{0\\}$",
+          "$\\mathbb{R}$",
           "$(0, +\\infty)$",
-          "$\\mathbb{R}$"
+          "$\\mathbb{R} \\setminus \\{0\\}$"
         ],
-        "correct": 3,
-        "explanation": "អនុគមន៍ពហុធាជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "អនុគមន៍ពហុធាជាប់លើ $\\mathbb{R}$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអនុគមន៍ជាប់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ពហុធា $f(x) = 4x^3 + 5x^2 - 1$ ជាប់លើ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{1}{x^2-7x+6}$ ជាប់លើ ៖",
         "options": [
           "$\\mathbb{R}$",
-          "$(0, +\\infty)$",
-          "$[0, +\\infty)$",
-          "$\\mathbb{R} \\setminus \\{0\\}$"
+          "$\\mathbb{R}\\setminus\\{1, 6\\}$",
+          "$\\mathbb{R}\\setminus\\{1\\}$",
+          "$(1, 6)$"
         ],
-        "correct": 0,
-        "explanation": "អនុគមន៍ពហុធាជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "ភាគបែងមិនសូន្យ"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអនុគមន៍ជាប់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x + 3}{x^2 - 7x + 12}$ ជាប់លើសំណុំ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{1}{x^2-5x+6}$ ជាប់លើ ៖",
         "options": [
-          "$\\mathbb{R} \\setminus \\{-4, -3\\}$",
           "$\\mathbb{R}$",
-          "$(3, 4)$",
-          "$\\mathbb{R} \\setminus \\{3, 4\\}$"
+          "$\\mathbb{R}\\setminus\\{2\\}$",
+          "$\\mathbb{R}\\setminus\\{2, 3\\}$",
+          "$(2, 3)$"
         ],
-        "correct": 3,
-        "explanation": "អនុគមន៍សនិទានជាប់លើដែនកំណត់របស់វា ; ភាគបែងសូន្យត្រង់ $x = 3$ និង $x = 4$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "ភាគបែងមិនសូន្យ"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអនុគមន៍ជាប់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $f(x) = \\sqrt{x - 1}$ ជាប់លើ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{1}{x^2-11x+28}$ ជាប់លើ ៖",
         "options": [
           "$\\mathbb{R}$",
-          "$(1, +\\infty)$",
-          "$[1, +\\infty)$",
-          "$(-\\infty, 1]$"
+          "$\\mathbb{R}\\setminus\\{4, 7\\}$",
+          "$\\mathbb{R}\\setminus\\{4\\}$",
+          "$(4, 7)$"
         ],
-        "correct": 2,
-        "explanation": "អនុគមន៍ឫសការេជាប់លើដែនកំណត់ $x - 1 \\ge 0$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "ភាគបែងមិនសូន្យ"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអនុគមន៍ជាប់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $f(x) = \\sqrt{x + 3}$ ជាប់លើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\sqrt{x^2-3x-4}$ ជាប់លើ ៖",
         "options": [
-          "$(-3, +\\infty)$",
-          "$[-3, +\\infty)$",
-          "$\\mathbb{R}$",
-          "$(-\\infty, -3]$"
+          "$[-1, 4]$",
+          "$(-\\infty, -1) \\cup (4, +\\infty)$",
+          "$(-\\infty, -1] \\cup [4, +\\infty)$",
+          "$\\mathbb{R}$"
         ],
-        "correct": 1,
-        "explanation": "អនុគមន៍ឫសការេជាប់លើដែនកំណត់ $x + 3 \\ge 0$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$x^2-3x-4\\ge 0$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអនុគមន៍ជាប់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ពហុធា $f(x) = 4x^3 - x^2 + 4x - 1$ ជាប់លើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\ln(x^2+2x-3)$ ជាប់លើ ៖",
         "options": [
-          "$(0, +\\infty)$",
-          "$\\mathbb{R} \\setminus \\{0\\}$",
+          "$(-\\infty, -3] \\cup [1, +\\infty)$",
+          "$(-3, 1)$",
           "$\\mathbb{R}$",
-          "$[0, +\\infty)$"
+          "$(-\\infty, -3) \\cup (1, +\\infty)$"
         ],
-        "correct": 2,
-        "explanation": "អនុគមន៍ពហុធាជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$x^2+2x-3>0$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអនុគមន៍ជាប់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x}{x^2 + 5x + 6}$ ជាប់លើសំណុំ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\sqrt{x^2-9x+18}$ ជាប់លើ ៖",
         "options": [
-          "$\\mathbb{R} \\setminus \\{-3, -2\\}$",
-          "$\\mathbb{R} \\setminus \\{2, 3\\}$",
-          "$(-3, -2)$",
+          "$(-\\infty, 3] \\cup [6, +\\infty)$",
+          "$[3, 6]$",
+          "$(-\\infty, 3) \\cup (6, +\\infty)$",
           "$\\mathbb{R}$"
         ],
         "correct": 0,
-        "explanation": "អនុគមន៍សនិទានជាប់លើដែនកំណត់របស់វា ; ភាគបែងសូន្យត្រង់ $x = -3$ និង $x = -2$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$x^2-9x+18\\ge 0$"
       }
     ],
     "3": [
@@ -26989,68 +26970,64 @@
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f$ ជាប់លើចន្លោះបិទ $[a, b]$ លុះត្រាតែ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x)=\\begin{cases}3x+m,& x<-1\\\\x^2+2,& x\\ge -1\\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
         "options": [
-          "$f$ ជាប់ត្រង់ $a$ និង $b$ ប៉ុណ្ណោះ",
-          "$f$ មានលីមីតត្រង់គ្រប់ចំណុច",
-          "$f$ ជាប់លើ $(a, b)$ ជាប់ខាងស្តាំត្រង់ $a$ និងជាប់ខាងឆ្វេងត្រង់ $b$",
-          "$f(a) = f(b)$"
+          "$7$",
+          "$6$",
+          "$-6$",
+          "$9$"
         ],
-        "correct": 2,
-        "explanation": "និយមន័យភាពជាប់លើចន្លោះបិទ។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$-3+m=3$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} -x + m & x < 3 \\\\ x^2 - 2 & x \\ge 3 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x)=\\begin{cases}-x+m,& x<3\\\\x^2-2,& x\\ge 3\\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
         "options": [
-          "$7$",
+          "$11$",
+          "$-10$",
           "$10$",
-          "$9$",
-          "$-10$"
+          "$9$"
         ],
-        "correct": 1,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to 3^-} f(x) = f(3)$ ⇒ $-3 + m = 7$ ⇒ $m = 10$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$-3+m=7$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} x + m & x < -2 \\\\ x^2 - 2 & x \\ge -2 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x)=\\begin{cases}2x+m,& x<3\\\\x^2+1,& x\\ge 3\\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
         "options": [
-          "$4$",
           "$5$",
-          "$2$",
-          "$-4$"
+          "$4$",
+          "$-4$",
+          "$6$"
         ],
-        "correct": 0,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to -2^-} f(x) = f(-2)$ ⇒ $-2 + m = 2$ ⇒ $m = 4$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$6+m=10$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} 2x + m & x < -1 \\\\ x^2 + 2 & x \\ge -1 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x)=\\begin{cases}x+m,& x<1\\\\x^2+6,& x\\ge 1\\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
         "options": [
-          "$3$",
-          "$-5$",
           "$7$",
-          "$5$"
+          "$-6$",
+          "$4$",
+          "$6$"
         ],
         "correct": 3,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to -1^-} f(x) = f(-1)$ ⇒ $-2 + m = 3$ ⇒ $m = 5$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$1+m=7$"
       },
       {
         "id": "q5",
@@ -27058,16 +27035,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} 3x + m & x < -2 \\\\ x^2 - 1 & x \\ge -2 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "question": "អនុគមន៍ $f$ ជាប់លើចន្លោះបិទ $[a, b]$ លុះត្រាតែ ៖",
         "options": [
-          "$3$",
-          "$12$",
-          "$-9$",
-          "$9$"
+          "$f$ ជាប់ត្រង់ $a$ និង $b$ ប៉ុណ្ណោះ",
+          "$f$ ជាប់លើ $(a, b)$ ជាប់ខាងស្តាំត្រង់ $a$ និងជាប់ខាងឆ្វេងត្រង់ $b$",
+          "$f$ មានលីមីតត្រង់គ្រប់ចំណុច",
+          "$f(a) = f(b)$"
         ],
-        "correct": 3,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to -2^-} f(x) = f(-2)$ ⇒ $-6 + m = 3$ ⇒ $m = 9$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "និយមន័យភាពជាប់លើចន្លោះបិទ។"
       },
       {
         "id": "q6",
@@ -27075,16 +27051,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} -x + m & x < -2 \\\\ x^2 + 1 & x \\ge -2 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} -x + m & x < 3 \\\\ x^2 - 2 & x \\ge 3 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
         "options": [
-          "$-3$",
-          "$3$",
-          "$5$",
-          "$2$"
+          "$10$",
+          "$-10$",
+          "$9$",
+          "$7$"
         ],
-        "correct": 1,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to -2^-} f(x) = f(-2)$ ⇒ $2 + m = 5$ ⇒ $m = 3$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to 3^-} f(x) = f(3)$ ⇒ $-3 + m = 7$ ⇒ $m = 10$។"
       },
       {
         "id": "q7",
@@ -27092,67 +27067,63 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} 2x + m & x < 3 \\\\ x^2 + 2 & x \\ge 3 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} x + m & x < -2 \\\\ x^2 - 2 & x \\ge -2 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
         "options": [
           "$5$",
-          "$7$",
-          "$-5$",
-          "$11$"
+          "$2$",
+          "$-4$",
+          "$4$"
         ],
-        "correct": 0,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to 3^-} f(x) = f(3)$ ⇒ $6 + m = 11$ ⇒ $m = 5$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to -2^-} f(x) = f(-2)$ ⇒ $-2 + m = 2$ ⇒ $m = 4$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} 3x + m & x < -2 \\\\ x^2 + 1 & x \\ge -2 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $f$ ជាប់លើចន្លោះបិទ $[a, b]$ នោះ $f$ ៖",
         "options": [
-          "$5$",
-          "$14$",
-          "$11$",
-          "$-11$"
+          "កាត់អ័ក្សអាប់ស៊ីសជានិច្ច",
+          "មានដេរីវេលើ $[a, b]$ ជានិច្ច",
+          "កើនដាច់ខាតលើ $[a, b]$",
+          "មានតម្លៃអតិបរមាដាច់ខាត និងអប្បបរមាដាច់ខាតលើ $[a, b]$ (ទ្រឹស្តីបទ Weierstrass)"
         ],
-        "correct": 2,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to -2^-} f(x) = f(-2)$ ⇒ $-6 + m = 5$ ⇒ $m = 11$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "ទ្រឹស្តីបទតម្លៃខ្ពស់បំផុត និងទាបបំផុត (Extreme Value Theorem / Weierstrass)៖ អនុគមន៍ជាប់លើចន្លោះបិទតែងតែមានអតិបរមា និងអប្បបរមាដាច់ខាត។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} 3x + m & x < 1 \\\\ x^2 + 4 & x \\ge 1 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកតម្លៃ $a,b$ ដើម្បីឱ្យ $f(x)=\\begin{cases}ax+1,& x<2\\\\5,& x=2\\\\bx^2+3,& x>2\\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
         "options": [
-          "$3$",
-          "$-2$",
-          "$2$",
-          "$5$"
+          "$a=3,\\ b=2$",
+          "$a=2,\\ b=2$",
+          "$a=2,\\ b=3$",
+          "$a=-2,\\ b=2$"
         ],
-        "correct": 2,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to 1^-} f(x) = f(1)$ ⇒ $3 + m = 5$ ⇒ $m = 2$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$f$ ជាប់លើ $\\mathbb{R}$ ⟺ ជាប់ត្រង់ $x=2$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ភាពជាប់លើចន្លោះ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} 3x + m & x < 0 \\\\ x^2 + 2 & x \\ge 0 \\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកតម្លៃ $a,b$ ដើម្បីឱ្យ $f(x)=\\begin{cases}ax+1,& x<3\\\\7,& x=3\\\\bx^2+2,& x>3\\end{cases}$ ជាប់លើ $\\mathbb{R}$ ៖",
         "options": [
-          "$3$",
-          "$-2$",
-          "$5$",
-          "$2$"
+          "$a=5,\\ b=2$",
+          "$a=3,\\ b=5$",
+          "$a=2,\\ b=5$",
+          "$a=2,\\ b=6$"
         ],
-        "correct": 3,
-        "explanation": "ត្រូវឱ្យ $\\lim_{x \\to 0^-} f(x) = f(0)$ ⇒ $0 + m = 2$ ⇒ $m = 2$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$f$ ជាប់លើ $\\mathbb{R}$ ⟺ ជាប់ត្រង់ $x=3$"
       }
     ],
     "4": [
@@ -27161,68 +27132,64 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = |x + 2|$ ជាប់លើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អនុគមន៍ $f(x)=\\sqrt{2-x}$ ជាប់លើ ៖",
         "options": [
-          "$(-2, +\\infty)$",
-          "$[-2, +\\infty)$",
-          "$\\mathbb{R} \\setminus \\{-2\\}$",
+          "$(-\\infty, 2)$",
+          "$(-\\infty, 2]$",
+          "$[2, +\\infty)$",
           "$\\mathbb{R}$"
         ],
-        "correct": 3,
-        "explanation": "$|u|$ និង $u = x + 2$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$2-x\\ge 0$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\ln(x + 2)$ ជាប់លើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អនុគមន៍ $f(x)=\\ln(6-x)$ ជាប់លើ ៖",
         "options": [
-          "$(-2, +\\infty)$",
-          "$(-\\infty, -2)$",
-          "$\\mathbb{R}$",
-          "$[-2, +\\infty)$"
+          "$(-\\infty, 6]$",
+          "$(6, +\\infty)$",
+          "$(-\\infty, 6)$",
+          "$\\mathbb{R}$"
         ],
-        "correct": 0,
-        "explanation": "$\\ln u$ ជាប់ពេល $u > 0$ ⇒ $x > -2$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$6-x>0$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{1}{\\sqrt{x + 1}}$ ជាប់លើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អនុគមន៍ $f(x)=\\sqrt{6-x}$ ជាប់លើ ៖",
         "options": [
-          "$[-1, +\\infty)$",
-          "$(-\\infty, -1)$",
-          "$(-1, +\\infty)$",
-          "$\\mathbb{R} \\setminus \\{-1\\}$"
+          "$(-\\infty, 6]$",
+          "$(-\\infty, 6)$",
+          "$[6, +\\infty)$",
+          "$\\mathbb{R}$"
         ],
-        "correct": 2,
-        "explanation": "ត្រូវឱ្យ $x + 1 > 0$ ⇒ $(-1, +\\infty)$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$6-x\\ge 0$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = |x - 1|$ ជាប់លើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អនុគមន៍ $f(x)=\\ln(2-x)$ ជាប់លើ ៖",
         "options": [
-          "$\\mathbb{R} \\setminus \\{1\\}$",
-          "$\\mathbb{R}$",
-          "$[1, +\\infty)$",
-          "$(1, +\\infty)$"
+          "$(-\\infty, 2)$",
+          "$(-\\infty, 2]$",
+          "$(2, +\\infty)$",
+          "$\\mathbb{R}$"
         ],
-        "correct": 1,
-        "explanation": "$|u|$ និង $u = x - 1$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$2-x>0$"
       },
       {
         "id": "q5",
@@ -27230,16 +27197,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = |x|$ ជាប់លើ ៖",
+        "question": "អនុគមន៍ $f(x) = |x + 2|$ ជាប់លើ ៖",
         "options": [
-          "$\\mathbb{R}$",
-          "$(0, +\\infty)$",
-          "$[0, +\\infty)$",
-          "$\\mathbb{R} \\setminus \\{0\\}$"
+          "$(-2, +\\infty)$",
+          "$\\mathbb{R} \\setminus \\{-2\\}$",
+          "$[-2, +\\infty)$",
+          "$\\mathbb{R}$"
         ],
-        "correct": 0,
-        "explanation": "$|u|$ និង $u = x$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$|u|$ និង $u = x + 2$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់លើ $\\mathbb{R}$។"
       },
       {
         "id": "q6",
@@ -27247,16 +27213,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = |x + 5|$ ជាប់លើ ៖",
+        "question": "អនុគមន៍ $f(x) = \\ln(x + 2)$ ជាប់លើ ៖",
         "options": [
-          "$\\mathbb{R} \\setminus \\{-5\\}$",
-          "$(-5, +\\infty)$",
-          "$[-5, +\\infty)$",
+          "$[-2, +\\infty)$",
+          "$(-2, +\\infty)$",
+          "$(-\\infty, -2)$",
           "$\\mathbb{R}$"
         ],
-        "correct": 3,
-        "explanation": "$|u|$ និង $u = x + 5$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$\\ln u$ ជាប់ពេល $u > 0$ ⇒ $x > -2$។"
       },
       {
         "id": "q7",
@@ -27264,67 +27229,63 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\ln(x - 5)$ ជាប់លើ ៖",
+        "question": "អនុគមន៍ $f(x) = \\dfrac{1}{\\sqrt{x + 1}}$ ជាប់លើ ៖",
         "options": [
-          "$[5, +\\infty)$",
-          "$\\mathbb{R}$",
-          "$(5, +\\infty)$",
-          "$(-\\infty, 5)$"
+          "$\\mathbb{R} \\setminus \\{-1\\}$",
+          "$(-\\infty, -1)$",
+          "$(-1, +\\infty)$",
+          "$[-1, +\\infty)$"
         ],
         "correct": 2,
-        "explanation": "$\\ln u$ ជាប់ពេល $u > 0$ ⇒ $x > 5$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "ត្រូវឱ្យ $x + 1 > 0$ ⇒ $(-1, +\\infty)$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = |x - 2|$ ជាប់លើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\sqrt{36-x^2}$ ជាប់លើ ៖",
         "options": [
-          "$[2, +\\infty)$",
+          "$(-6, 6)$",
+          "$(-\\infty, -6] \\cup [6, +\\infty)$",
           "$\\mathbb{R}$",
-          "$(2, +\\infty)$",
-          "$\\mathbb{R} \\setminus \\{2\\}$"
+          "$[-6, 6]$"
         ],
-        "correct": 1,
-        "explanation": "$|u|$ និង $u = x - 2$ ជាប់លើ $\\mathbb{R}$ ⇒ អនុគមន៍បណ្តាក់ជាប់លើ $\\mathbb{R}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$36-x^2\\ge 0$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍បណ្តាក់ $f(x) = \\sqrt{x^2 - 2x - 15}$ ជាប់លើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{1}{\\sqrt{x^2-9}}$ ជាប់លើ ៖",
         "options": [
-          "$(-\\infty, -3] \\cup [5, +\\infty)$",
-          "$[-3, 5]$",
-          "$(-\\infty, -3) \\cup (5, +\\infty)$",
-          "$\\mathbb{R}$"
+          "$(-\\infty, -3) \\cup (3, +\\infty)$",
+          "$(-\\infty, -3] \\cup [3, +\\infty)$",
+          "$(-3, 3)$",
+          "$\\mathbb{R}\\setminus\\{3, -3\\}$"
         ],
         "correct": 0,
-        "explanation": "$u(x) = x^2 - 2x - 15 \\ge 0$ ហើយ $\\sqrt{u}$ ជាប់ ⇒ ជាប់លើ $(-\\infty, -3] \\cup [5, +\\infty)$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$x^2-9>0$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ភាពជាប់នៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\ln(x - 3)$ ជាប់លើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\sqrt{16-x^2}$ ជាប់លើ ៖",
         "options": [
-          "$[3, +\\infty)$",
-          "$(3, +\\infty)$",
-          "$(-\\infty, 3)$",
+          "$(-4, 4)$",
+          "$[-4, 4]$",
+          "$(-\\infty, -4] \\cup [4, +\\infty)$",
           "$\\mathbb{R}$"
         ],
         "correct": 1,
-        "explanation": "$\\ln u$ ជាប់ពេល $u > 0$ ⇒ $x > 3$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$16-x^2\\ge 0$"
       }
     ],
     "5": [
@@ -27333,68 +27294,64 @@
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 - 1}{x - 1}$ បន្លាយតាមភាពជាប់ត្រង់ $x = 1$ ដោយកំណត់ $f(1) =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{x^2-7x+10}{x-2}$ បន្លាយតាមភាពជាប់ត្រង់ $x=2$ ដោយកំណត់ $f(2)=$ ៖",
         "options": [
+          "$-3$",
           "$-2$",
           "$3$",
-          "$0$",
-          "$2$"
+          "$-6$"
         ],
-        "correct": 3,
-        "explanation": "$f(x) = x + 1$ ចំពោះ $x \\ne 1$ ⇒ $f(1) = 2$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "ដាក់កត្តា"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 - 9x + 20}{x - 5}$ បន្លាយតាមភាពជាប់ត្រង់ $x = 5$ ដោយកំណត់ $f(5) =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{x^2-64}{x-8}$ បន្លាយតាមភាពជាប់ត្រង់ $x=8$ ដោយកំណត់ $f(8)=$ ៖",
         "options": [
-          "$9$",
-          "$1$",
-          "$0$",
-          "$-1$"
+          "$17$",
+          "$-16$",
+          "$16$",
+          "$32$"
         ],
-        "correct": 1,
-        "explanation": "$f(x) = x - 4$ ចំពោះ $x \\ne 5$ ⇒ $f(5) = 1$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "ប្រើលីមីត"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 + 6x + 5}{x + 1}$ បន្លាយតាមភាពជាប់ត្រង់ $x = -1$ ដោយកំណត់ $f(-1) =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{x^2-5x+4}{x-1}$ បន្លាយតាមភាពជាប់ត្រង់ $x=1$ ដោយកំណត់ $f(1)=$ ៖",
         "options": [
-          "$4$",
+          "$-2$",
+          "$3$",
           "$-6$",
-          "$-4$",
-          "$0$"
+          "$-3$"
         ],
-        "correct": 0,
-        "explanation": "$f(x) = x + 5$ ចំពោះ $x \\ne -1$ ⇒ $f(-1) = 4$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "ដាក់កត្តា"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 + 3x + 2}{x + 2}$ បន្លាយតាមភាពជាប់ត្រង់ $x = -2$ ដោយកំណត់ $f(-2) =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{x^2-16}{x-4}$ បន្លាយតាមភាពជាប់ត្រង់ $x=4$ ដោយកំណត់ $f(4)=$ ៖",
         "options": [
-          "$0$",
-          "$-3$",
-          "$-1$",
-          "$1$"
+          "$9$",
+          "$-8$",
+          "$8$",
+          "$16$"
         ],
         "correct": 2,
-        "explanation": "$f(x) = x + 1$ ចំពោះ $x \\ne -2$ ⇒ $f(-2) = -1$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "ប្រើលីមីត"
       },
       {
         "id": "q5",
@@ -27402,16 +27359,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 - 7x + 10}{x - 2}$ បន្លាយតាមភាពជាប់ត្រង់ $x = 2$ ដោយកំណត់ $f(2) =$ ៖",
+        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 - 1}{x - 1}$ បន្លាយតាមភាពជាប់ត្រង់ $x = 1$ ដោយកំណត់ $f(1) =$ ៖",
         "options": [
-          "$7$",
           "$3$",
-          "$-3$",
+          "$-2$",
+          "$2$",
           "$0$"
         ],
         "correct": 2,
-        "explanation": "$f(x) = x - 5$ ចំពោះ $x \\ne 2$ ⇒ $f(2) = -3$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$f(x) = x + 1$ ចំពោះ $x \\ne 1$ ⇒ $f(1) = 2$។"
       },
       {
         "id": "q6",
@@ -27419,16 +27375,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 - 25}{x - 5}$ បន្លាយតាមភាពជាប់ត្រង់ $x = 5$ ដោយកំណត់ $f(5) =$ ៖",
+        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 - 9x + 20}{x - 5}$ បន្លាយតាមភាពជាប់ត្រង់ $x = 5$ ដោយកំណត់ $f(5) =$ ៖",
         "options": [
-          "$10$",
-          "$11$",
-          "$-10$",
-          "$0$"
+          "$1$",
+          "$0$",
+          "$9$",
+          "$-1$"
         ],
         "correct": 0,
-        "explanation": "$f(x) = x + 5$ ចំពោះ $x \\ne 5$ ⇒ $f(5) = 10$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$f(x) = x - 4$ ចំពោះ $x \\ne 5$ ⇒ $f(5) = 1$។"
       },
       {
         "id": "q7",
@@ -27436,239 +27391,225 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃបន្លាយតាមភាពជាប់នៃ $f(x) = \\dfrac{x^3 - 27}{x - 3}$ ត្រង់ $x = 3$ គឺ ៖",
+        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 + 6x + 5}{x + 1}$ បន្លាយតាមភាពជាប់ត្រង់ $x = -1$ ដោយកំណត់ $f(-1) =$ ៖",
         "options": [
-          "$28$",
+          "$-4$",
           "$0$",
-          "$9$",
-          "$27$"
+          "$-6$",
+          "$4$"
         ],
         "correct": 3,
-        "explanation": "$\\lim_{x \\to 3} f(x) = 3a^2 = 27$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$f(x) = x + 5$ ចំពោះ $x \\ne -1$ ⇒ $f(-1) = 4$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃបន្លាយតាមភាពជាប់នៃ $f(x) = \\dfrac{\\sqrt{x - 1} - 1}{x - 2}$ ត្រង់ $x = 2$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{\\sqrt{x+2}-2}{x-2}$ បន្លាយតាមភាពជាប់ត្រង់ $x=2$ ដោយកំណត់ $f(2)=$ ៖",
         "options": [
-          "$1$",
+          "$\\dfrac{5}{4}$",
+          "$-\\dfrac{1}{4}$",
           "$\\dfrac{1}{2}$",
-          "$2$",
-          "$0$"
+          "$\\dfrac{1}{4}$"
         ],
-        "correct": 1,
-        "explanation": "$\\lim_{x \\to 2} f(x) = \\dfrac{1}{2}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "គុណនឹងកន្សោមឆ្លាស់"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{x^2 - 7x + 12}{x - 3}$ បន្លាយតាមភាពជាប់ត្រង់ $x = 3$ ដោយកំណត់ $f(3) =$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{\\sin 3x}{5x}$ បន្លាយតាមភាពជាប់ត្រង់ $x=0$ ដោយកំណត់ $f(0)=$ ៖",
         "options": [
-          "$0$",
-          "$7$",
-          "$-1$",
-          "$1$"
+          "$\\dfrac{3}{5}$",
+          "$\\dfrac{8}{5}$",
+          "$-\\dfrac{3}{5}$",
+          "$\\dfrac{6}{5}$"
         ],
-        "correct": 2,
-        "explanation": "$f(x) = x - 4$ ចំពោះ $x \\ne 3$ ⇒ $f(3) = -1$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "sin u / u → 1"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុគមន៍បន្លាយតាមភាពជាប់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = \\dfrac{\\sin 4x}{x}$ បន្លាយតាមភាពជាប់ត្រង់ $0$ ដោយកំណត់ $f(0) =$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=\\dfrac{1-\\cos 3x}{x^2}$ បន្លាយតាមភាពជាប់ត្រង់ $x=0$ ដោយកំណត់ $f(0)=$ ៖",
         "options": [
-          "$4$",
-          "$\\dfrac{1}{4}$",
-          "$0$",
-          "$1$"
+          "$\\dfrac{11}{2}$",
+          "$\\dfrac{9}{2}$",
+          "$-\\dfrac{9}{2}$",
+          "$9$"
         ],
-        "correct": 0,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{\\sin 4x}{x} = 4$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "1−cos u = 2sin²(u/2)"
       }
     ],
     "6": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ទ្រឹស្តីបទតម្លៃកណ្តាល៖ បើ $f$ ជាប់លើ $[a, b]$ ហើយ $k$ នៅចន្លោះ $f(a)$ និង $f(b)$ នោះ ៖",
         "options": [
-          "គ្រប់ $c \\in (a, b)$ សុទ្ធតែ $f(c) = k$",
           "មាន $c \\in (a, b)$ យ៉ាងតិចមួយ ដែល $f(c) = k$",
-          "$f'(c) = 0$",
-          "$f(a) = f(b)$"
+          "$f(a) = f(b)$",
+          "គ្រប់ $c \\in (a, b)$ សុទ្ធតែ $f(c) = k$",
+          "$f'(c) = 0$"
         ],
-        "correct": 1,
-        "explanation": "ទ្រឹស្តីបទតម្លៃកណ្តាល (IVT) ធានាអត្ថិភាពនៃតម្លៃ $c \\in (a, b)$ យ៉ាងហោចណាស់មួយដែល $f(c) = k$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ទ្រឹស្តីបទតម្លៃកណ្តាល (IVT) ធានាអត្ថិភាពនៃតម្លៃ $c \\in (a, b)$ យ៉ាងហោចណាស់មួយដែល $f(c) = k$។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $f$ ជាប់លើ $[a, b]$ ហើយ $f(a) \\cdot f(b) < 0$ នោះសមីការ $f(x) = 0$ ៖",
         "options": [
-          "មានឫសយ៉ាងតិចមួយក្នុងចន្លោះបើក $(a, b)$",
           "គ្មានឫសក្នុង $(a, b)$",
           "មានឫសតែពីរគត់",
-          "ឫសទាំងនោះវិជ្ជមាន"
+          "ឫសទាំងនោះវិជ្ជមាន",
+          "មានឫសយ៉ាងតិចមួយក្នុងចន្លោះបើក $(a, b)$"
         ],
-        "correct": 0,
-        "explanation": "ដោយសារ $f(a)$ និង $f(b)$ មានសញ្ញាផ្ទុយគ្នា ($f(a)f(b) < 0$) ក្រាបត្រូវកាត់អ័ក្ស $Ox$ យ៉ាងតិចម្តងក្នុង $(a, b)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ដោយសារ $f(a)$ និង $f(b)$ មានសញ្ញាផ្ទុយគ្នា ($f(a)f(b) < 0$) ក្រាបត្រូវកាត់អ័ក្ស $Ox$ យ៉ាងតិចម្តងក្នុង $(a, b)$។"
       },
       {
-        "id": "g12a_p2_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការ $x^{3} + x - 6=0$ មានឫសក្នុងចន្លោះ ៖",
+        "options": [
+          "$(0, 1)$",
+          "$(-2, -1)$",
+          "$(1, 2)$",
+          "$(-3, -2)$"
+        ],
+        "correct": 2,
+        "explanation": "$f(1)=-4,\\ f(2)=4$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការ $x^{3} + x - 9=0$ មានឫសក្នុងចន្លោះ ៖",
+        "options": [
+          "$(3, 4)$",
+          "$(2, 3)$",
+          "$(-4, -3)$",
+          "$(1, 2)$"
+        ],
+        "correct": 3,
+        "explanation": "$f(1)=-7,\\ f(2)=1$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បង្ហាញថាសមីការ $x^3 + 2x - 1 = 0$ មានឫសក្នុងចន្លោះណា?",
         "options": [
           "$(2, 3)$",
-          "$(-1, 0)$",
+          "$(0, 1)$",
           "$(1, 2)$",
-          "$(0, 1)$"
+          "$(-1, 0)$"
         ],
-        "correct": 3,
-        "explanation": "$f(0) = -1 < 0$ និង $f(1) = 1 + 2 - 1 = 2 > 0$។ តាម IVT មានឫសយ៉ាងតិចមួយក្នុង $(0, 1)$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$f(0) = -1 < 0$ និង $f(1) = 1 + 2 - 1 = 2 > 0$។ តាម IVT មានឫសយ៉ាងតិចមួយក្នុង $(0, 1)$។"
       },
       {
-        "id": "g12a_p2_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដើម្បីឱ្យសមីការ $f(x) = 0$ មានឫសតែមួយគត់ (Unique root) ក្នុង $[a, b]$ លក្ខខណ្ឌបន្ថែមគឺ ៖",
         "options": [
-          "$f$ ជាអនុគមន៍គូ",
+          "$f(a) = f(b)$",
           "$f'(x) = 0$",
           "$f$ កើនដាច់ខាត ឬចុះដាច់ខាត (ម៉ូណូតូនដាច់ខាត) លើ $[a, b]$",
-          "$f(a) = f(b)$"
+          "$f$ ជាអនុគមន៍គូ"
         ],
         "correct": 2,
-        "explanation": "បើ $f$ ម៉ូណូតូនដាច់ខាត (Strictly monotonic) ក្រាបកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ នាំឱ្យឫសមានតែមួយគត់។",
-        "diagram": ""
+        "explanation": "បើ $f$ ម៉ូណូតូនដាច់ខាត (Strictly monotonic) ក្រាបកាត់អ័ក្ស $Ox$ បានតែមួយដងគត់ នាំឱ្យឫសមានតែមួយគត់។"
       },
       {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បង្ហាញថាសមីការ $\\cos x = x$ មានឫសក្នុងចន្លោះ ៖",
         "options": [
-          "គ្មានឫសទេ",
-          "$\\left(0, \\dfrac{\\pi}{2}\\right)$",
+          "$(\\pi, 2\\pi)$",
           "$(-1, 0)$",
-          "$(\\pi, 2\\pi)$"
+          "$\\left(0, \\dfrac{\\pi}{2}\\right)$",
+          "គ្មានឫសទេ"
         ],
-        "correct": 1,
-        "explanation": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 > 0$ និង $f(\\dfrac{\\pi}{2}) = 0 - \\dfrac{\\pi}{2} < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\dfrac{\\pi}{2})$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "តាង $f(x) = \\cos x - x$។ $f(0) = 1 > 0$ និង $f(\\dfrac{\\pi}{2}) = 0 - \\dfrac{\\pi}{2} < 0$។ ដូច្នេះមានឫសក្នុង $(0, \\dfrac{\\pi}{2})$។"
       },
       {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
+        "id": "q8",
+        "questionNumber": 8,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការពហុធាដឺក្រេសេស $a_n x^n + \\cdots + a_0 = 0$ ($n$ សេស) ៖",
-        "options": [
-          "គ្មានឫសពិតទេ",
-          "មានតែឫសកុំផ្លិច",
-          "មានឫសយ៉ាងតិចពីរ",
-          "តែងតែមានឫសពិតយ៉ាងតិចមួយលើ $\\mathbb{R}$ ជានិច្ច"
-        ],
-        "correct": 3,
-        "explanation": "លីមីតត្រង់ $-\\infty$ និង $+\\infty$ មានសញ្ញាផ្ទុយគ្នា ដូច្នេះតាម IVT តែងតែមានឫសពិតយ៉ាងតិចមួយ។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "វិធីពុះកណ្តាល (Bisection method) ប្រើទ្រឹស្តីបទតម្លៃកណ្តាលដើម្បី ៖",
         "options": [
           "គណនាឫសប្រហាក់ប្រហែលនៃសមីការដោយបង្រួមចន្លោះជាពីរស្មើៗគ្នាម្តងមួយៗ",
           "រកដេរីវេទីពីរ",
-          "គណនាអាំងតេក្រាល",
-          "រកសមីការបន្ទាត់ប៉ះ"
+          "រកសមីការបន្ទាត់ប៉ះ",
+          "គណនាអាំងតេក្រាល"
         ],
         "correct": 0,
-        "explanation": "វិធីពុះជាពីរ (Bisection) គណនាតម្លៃកណ្តាល $m = \\dfrac{a+b}{2}$ ហើយជ្រើសយកពាក់កណ្តាលចន្លោះដែលមានសញ្ញាផ្ទុយគ្នាដើម្បីរំកិលទៅជិតឫស។",
-        "diagram": ""
+        "explanation": "វិធីពុះជាពីរ (Bisection) គណនាតម្លៃកណ្តាល $m = \\dfrac{a+b}{2}$ ហើយជ្រើសយកពាក់កណ្តាលចន្លោះដែលមានសញ្ញាផ្ទុយគ្នាដើម្បីរំកិលទៅជិតឫស។"
       },
       {
-        "id": "g12a_p2_08",
-        "questionNumber": 8,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ទ្រឹស្តីបទចំណុចថេរ (Brouwer Fixed Point Theorem 1D)៖ បើ $f: [0, 1] \\to [0, 1]$ ជាប់ នោះ ៖",
-        "options": [
-          "$f'(c) = 1$",
-          "$f(1) = 1$ ជានិច្ច",
-          "មាន $c \\in [0, 1]$ ដែល $f(c) = c$",
-          "$f(0) = 0$ ជានិច្ច"
-        ],
-        "correct": 2,
-        "explanation": "តាង $g(x) = f(x) - x$។ $g(0) = f(0) \\ge 0$ និង $g(1) = f(1) - 1 \\le 0$ នាំឱ្យមាន $c$ ដែល $g(c) = 0 \\iff f(c) = c$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "សមីការ $x^4 - 4x - 1 = 0$ មានឫសក្នុងចន្លោះណាខ្លះ?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ទ្រឹស្តីបទចំណុចថេរ (Brouwer Fixed Point Theorem 1D)៖ បើ $f: [0, 1] \\to [0, 1]$ ជាប់ នោះ ៖",
         "options": [
-          "$(0, 1)$ និង $(2, 3)$",
-          "$(-1, 0)$ និង $(1, 2)$",
-          "$(-2, -1)$ និង $(0, 1)$",
-          "គ្មានឫសពិត"
+          "$f(0) = 0$ ជានិច្ច",
+          "$f'(c) = 1$",
+          "$f(1) = 1$ ជានិច្ច",
+          "មាន $c \\in [0, 1]$ ដែល $f(c) = c$"
         ],
-        "correct": 1,
-        "explanation": "$f(-1) = 1 + 4 - 1 = 4 > 0, f(0) = -1 < 0 \\implies (-1, 0)$។ $f(1) = 1 - 4 - 1 = -4 < 0, f(2) = 16 - 8 - 1 = 7 > 0 \\implies (1, 2)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "តាង $g(x) = f(x) - x$។ $g(0) = f(0) \\ge 0$ និង $g(1) = f(1) - 1 \\le 0$ នាំឱ្យមាន $c$ ដែល $g(c) = 0 \\iff f(c) = c$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ ទ្រឹស្តីបទតម្លៃកណ្តាល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $f$ មិនជាប់លើ $[a, b]$ តើទ្រឹស្តីបទតម្លៃកណ្តាលនៅតែធានាអត្ថិភាពឫសដែរឬទេ?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សមីការ $x^4 - 4x - 1 = 0$ មានឫសក្នុងចន្លោះណាខ្លះ?",
         "options": [
-          "ធានាលុះត្រាតែ $f(a)f(b) < 0$",
-          "អាស្រ័យលើដែនកំណត់",
-          "នៅតែធានាជានិច្ច",
-          "មិនធានាទេ (ភាពជាប់ជាលក្ខខណ្ឌចាំបាច់)"
+          "$(-1, 0)$ និង $(1, 2)$",
+          "$(-2, -1)$ និង $(0, 1)$",
+          "$(0, 1)$ និង $(2, 3)$",
+          "គ្មានឫសពិត"
         ],
-        "correct": 3,
-        "explanation": "ភាពជាប់ (Continuity) ជាលក្ខខណ្ឌមិនអាចខ្វះបាន បើដាច់ក្រាបអាចលោតរំលងតម្លៃ $k$ បាន។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$f(-1) = 1 + 4 - 1 = 4 > 0, f(0) = -1 < 0 \\implies (-1, 0)$។ $f(1) = 1 - 4 - 1 = -4 < 0, f(2) = 16 - 8 - 1 = 7 > 0 \\implies (1, 2)$។"
       }
     ]
   },
