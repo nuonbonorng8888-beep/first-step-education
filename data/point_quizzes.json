@@ -103358,28 +103358,27 @@
   "les-g12a-6-4": {
     "1": [
       {
-        "id": "g12a_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "មាឌសូលីតបដិវត្តន៍ដែលបានមកពីរង្វិលជុំវិញអ័ក្ស $Ox$ នៃផ្ទៃខណ្ឌដោយ $y = f(x)$, $x = a, x = b$ គឺ ៖",
         "options": [
           "$V = \\pi \\int_a^b f(x) dx$",
+          "$V = 2\\pi \\int_a^b f(x) dx$",
           "$V = \\pi \\int_a^b [f(x)]^2 dx$",
-          "$V = \\int_a^b f(x) dx$",
-          "$V = 2\\pi \\int_a^b f(x) dx$"
+          "$V = \\int_a^b f(x) dx$"
         ],
-        "correct": 1,
-        "explanation": "រូបមន្តវិធីបន្ទះមូល (Disk method) ជុំវិញ $Ox$៖ $V = \\pi \\int_a^b [f(x)]^2 dx$ (ផ្ទៃកាត់បន្ទះមូល $\\pi r^2 = \\pi [f(x)]^2$)។",
-        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n  </defs>\n  <!-- Central Axis Ox -->\n  <line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <text x=\"303\" y=\"105\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">x</text>\n  <!-- 3D Solid profile -->\n  <path d=\"M 80 70 Q 150 40 230 60 L 230 140 Q 150 160 80 130 Z\" fill=\"#eff6ff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/>\n  <!-- Top and bottom curve -->\n  <path d=\"M 70 73 Q 150 40 240 58\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n  <path d=\"M 70 127 Q 150 160 240 142\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-dasharray=\"4,4\"/>\n  <!-- Ellipses at ends and middle slice -->\n  <ellipse cx=\"80\" cy=\"100\" rx=\"8\" ry=\"30\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <ellipse cx=\"230\" cy=\"100\" rx=\"12\" ry=\"40\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <!-- Disk element at x -->\n  <ellipse cx=\"160\" cy=\"100\" rx=\"10\" ry=\"46\" fill=\"#bfdbfe\" fill-opacity=\"0.6\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n  <line x1=\"160\" y1=\"100\" x2=\"160\" y2=\"54\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n  <text x=\"165\" y=\"80\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">r = f(x)</text>\n  <text x=\"75\" y=\"115\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">a</text>\n  <text x=\"225\" y=\"115\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">b</text>\n  <text x=\"110\" y=\"180\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#1e40af\" font-weight=\"bold\">V = π ∫ₐᵇ [f(x)]² dx</text>\n</svg>"
+        "correct": 2,
+        "explanation": "រូបមន្តវិធីបន្ទះមូល (Disk method) ជុំវិញ $Ox$៖ $V = \\pi \\int_a^b [f(x)]^2 dx$ (ផ្ទៃកាត់បន្ទះមូល $\\pi r^2 = \\pi [f(x)]^2$)។"
       },
       {
-        "id": "g12a_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "មាឌសូលីតបដិវត្តន៍ជុំវិញ $Ox$ នៃផ្ទៃក្រោមក្រាប $y = \\sqrt{x}$ លើ $[0, 4]$ គឺ ៖",
         "options": [
           "$4\\pi$",
@@ -103391,25 +103390,56 @@
         "explanation": "$V = \\pi\\int_0^4 (\\sqrt{x})^2\\,dx = \\pi\\left[\\dfrac{x^2}{2}\\right]_0^4 = 8\\pi$។"
       },
       {
-        "id": "g12a_p1_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "មាឌកោណបដិវត្តន៍ដែលកើតពី $y=x$ ពី $x=0$ ដល់ $x=6$ ជុំវិញអ័ក្ស $Ox$ ស្មើ ៖",
+        "options": [
+          "$18\\pi$",
+          "$216\\pi$",
+          "$72\\pi$",
+          "$144\\pi$"
+        ],
+        "correct": 2,
+        "explanation": "$V=\\pi\\int_0^{6}x^2dx$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "មាឌបដិវត្តន៍នៃ $y=5$ ពី $x=0$ ដល់ $x=2$ ជុំវិញអ័ក្ស $Ox$ ស្មើ ៖",
+        "options": [
+          "$10\\pi$",
+          "$50\\pi$",
+          "$100\\pi$",
+          "$25\\pi$"
+        ],
+        "correct": 1,
+        "explanation": "$V=\\pi\\int_0^{2}5^2dx$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាមាឌសូលីតបដិវត្តន៍រង្វិលជុំវិញ $Ox$ នៃផ្ទៃក្រោមបន្ទាត់ $y = 2x$ ពី $x = 0$ ដល់ $x = 3$ ៖",
         "options": [
+          "$12\\pi$",
           "$18\\pi$",
           "$72\\pi$",
-          "$12\\pi$",
           "$36\\pi$"
         ],
         "correct": 3,
-        "explanation": "$V = \\pi \\int_0^3 (2x)^2 dx = 4\\pi \\int_0^3 x^2 dx = 4\\pi [\\frac{x^3}{3}]_0^3 = 4\\pi(9) = 36\\pi$ (រូបកោណ)។",
-        "diagram": ""
+        "explanation": "$V = \\pi \\int_0^3 (2x)^2 dx = 4\\pi \\int_0^3 x^2 dx = 4\\pi [\\frac{x^3}{3}]_0^3 = 4\\pi(9) = 36\\pi$ (រូបកោណ)។"
       },
       {
-        "id": "g12a_p1_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -103417,70 +103447,66 @@
         "options": [
           "$8\\pi$",
           "$4\\pi$",
-          "$2\\pi$",
-          "$16\\pi$"
+          "$16\\pi$",
+          "$2\\pi$"
         ],
         "correct": 0,
-        "explanation": "$V = \\pi \\int_0^4 (\\sqrt{x})^2 dx = \\pi \\int_0^4 x dx = \\pi [\\frac{x^2}{2}]_0^4 = \\pi \\cdot 8 = 8\\pi$ (ប៉ារ៉ាបូឡូអ៊ីត)។",
-        "diagram": ""
+        "explanation": "$V = \\pi \\int_0^4 (\\sqrt{x})^2 dx = \\pi \\int_0^4 x dx = \\pi [\\frac{x^2}{2}]_0^4 = \\pi \\cdot 8 = 8\\pi$ (ប៉ារ៉ាបូឡូអ៊ីត)។"
       },
       {
-        "id": "g12a_p1_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាមាឌសូលីតបដិវត្តន៍រង្វិលជុំវិញ $Ox$ នៃ $y = e^x$ ពី $x = 0$ ដល់ $x = 1$ ៖",
         "options": [
-          "$\\pi e^2$",
-          "$\\dfrac{\\pi(e - 1)}{2}$",
           "$\\pi(e - 1)$",
-          "$\\dfrac{\\pi(e^2 - 1)}{2}$"
+          "$\\dfrac{\\pi(e^2 - 1)}{2}$",
+          "$\\pi e^2$",
+          "$\\dfrac{\\pi(e - 1)}{2}$"
         ],
-        "correct": 3,
-        "explanation": "$V = \\pi \\int_0^1 (e^x)^2 dx = \\pi \\int_0^1 e^{2x} dx = \\pi [\\frac{e^{2x}}{2}]_0^1 = \\dfrac{\\pi(e^2 - 1)}{2}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$V = \\pi \\int_0^1 (e^x)^2 dx = \\pi \\int_0^1 e^{2x} dx = \\pi [\\frac{e^{2x}}{2}]_0^1 = \\dfrac{\\pi(e^2 - 1)}{2}$។"
       },
       {
-        "id": "g12a_p1_06",
-        "questionNumber": 6,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតកើតពីរង្វិលជុំវិញ $Ox$ នៃផ្ទៃចន្លោះខ្សែកោងពីរ $f(x) \\ge g(x) \\ge 0$ (Washer method) គឺ ៖",
-        "options": [
-          "$V = \\pi \\int_a^b [f(x) - g(x)]^2 dx$",
-          "$V = \\pi \\int_a^b f(x)g(x) dx$",
-          "$V = \\pi \\int_a^b ([f(x)]^2 - [g(x)]^2) dx$",
-          "$V = 2\\pi \\int_a^b [f(x) - g(x)] dx$"
-        ],
-        "correct": 2,
-        "explanation": "វិធីរង្វង់ចិញ្ចៀន (Washer method)៖ $V = \\pi \\int_a^b (R^2 - r^2) dx = \\pi \\int_a^b ([f(x)]^2 - [g(x)]^2) dx$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_07",
-        "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "មាឌស្វ៊ែរកាំ $R$ បង្កើតឡើងពីរង្វិលកន្លះរង្វង់ $y = \\sqrt{R^2 - x^2}$ ជុំវិញ $Ox$ ស្មើនឹង ៖",
-        "options": [
-          "$V = \\dfrac{4}{3}\\pi R^3$",
-          "$V = 2\\pi R^3$",
-          "$V = \\pi R^3$",
-          "$V = \\dfrac{2}{3}\\pi R^3$"
-        ],
-        "correct": 0,
-        "explanation": "$V = \\pi \\int_{-R}^R (R^2 - x^2) dx = 2\\pi [R^2 x - \\frac{x^3}{3}]_0^R = 2\\pi(R^3 - \\frac{R^3}{3}) = \\dfrac{4}{3}\\pi R^3$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "មាឌស្វ៊ែរកាំ $R$ បង្កើតឡើងពីរង្វិលកន្លះរង្វង់ $y = \\sqrt{R^2 - x^2}$ ជុំវិញ $Ox$ ស្មើនឹង ៖",
+        "options": [
+          "$V = \\dfrac{2}{3}\\pi R^3$",
+          "$V = \\pi R^3$",
+          "$V = 2\\pi R^3$",
+          "$V = \\dfrac{4}{3}\\pi R^3$"
+        ],
+        "correct": 3,
+        "explanation": "$V = \\pi \\int_{-R}^R (R^2 - x^2) dx = 2\\pi [R^2 x - \\frac{x^3}{3}]_0^R = 2\\pi(R^3 - \\frac{R^3}{3}) = \\dfrac{4}{3}\\pi R^3$។"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "មាឌសូលីតកើតពីរង្វិលជុំវិញ $Ox$ នៃផ្ទៃខណ្ឌដោយ $y = x$ និង $y = x^2$ ៖",
+        "options": [
+          "$\\dfrac{\\pi}{15}$",
+          "$\\dfrac{\\pi}{6}$",
+          "$\\dfrac{4\\pi}{15}$",
+          "$\\dfrac{2\\pi}{15}$"
+        ],
+        "correct": 3,
+        "explanation": "$V = \\pi \\int_0^1 (x^2 - x^4) dx = \\pi [\\frac{x^3}{3} - \\frac{x^5}{5}]_0^1 = \\pi(\\frac{1}{3} - \\frac{1}{5}) = \\dfrac{2\\pi}{15}$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "មាឌសូលីតបដិវត្តន៍ជុំវិញ $Ox$ នៃផ្ទៃក្រោមបន្ទាត់ $y = 2$ លើ $[0, 3]$ គឺ ៖",
         "options": [
           "$12\\pi$",
@@ -103490,39 +103516,6 @@
         ],
         "correct": 0,
         "explanation": "$V = \\pi\\int_0^3 2^2\\,dx = 12\\pi$ (ស៊ីឡាំងកាំ $2$ កម្ពស់ $3$)។"
-      },
-      {
-        "id": "g12a_p1_09",
-        "questionNumber": 9,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "មាឌសូលីតបដិវត្តន៍ជុំវិញ $Ox$ នៃផ្ទៃក្រោមបន្ទាត់ $y = x$ លើ $[0, 3]$ គឺ ៖",
-        "options": [
-          "$3\\pi$",
-          "$27\\pi$",
-          "$\\dfrac{9\\pi}{2}$",
-          "$9\\pi$"
-        ],
-        "correct": 3,
-        "explanation": "$V = \\pi\\int_0^3 x^2\\,dx = \\pi\\left[\\dfrac{x^3}{3}\\right]_0^3 = 9\\pi$ (កោន)។"
-      },
-      {
-        "id": "g12a_p1_10",
-        "questionNumber": 10,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអាប់ស៊ីស",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "មាឌសូលីតកើតពីរង្វិលជុំវិញ $Ox$ នៃផ្ទៃខណ្ឌដោយ $y = x$ និង $y = x^2$ ៖",
-        "options": [
-          "$\\dfrac{2\\pi}{15}$",
-          "$\\dfrac{\\pi}{15}$",
-          "$\\dfrac{\\pi}{6}$",
-          "$\\dfrac{4\\pi}{15}$"
-        ],
-        "correct": 0,
-        "explanation": "$V = \\pi \\int_0^1 (x^2 - x^4) dx = \\pi [\\frac{x^3}{3} - \\frac{x^5}{5}]_0^1 = \\pi(\\frac{1}{3} - \\frac{1}{5}) = \\dfrac{2\\pi}{15}$។",
-        "diagram": ""
       }
     ],
     "2": [
@@ -103531,68 +103524,64 @@
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្ស $Oy$ នៃផ្ទៃខណ្ឌដោយ $x = g(y)$ , $y = c , y = d$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "មាឌសូលីតបដិវត្តន៍ដែលបានមកពីរង្វិលជុំវិញអ័ក្ស $Oy$ នៃផ្ទៃខណ្ឌដោយ $x = g(y)$, $y = c, y = d$ គឺ ៖",
         "options": [
-          "$\\int_c^d [g(y)]^2\\,dy$",
-          "$\\pi\\int_c^d [g(y)]^2\\,dy$",
-          "$\\pi\\int_c^d g(y)\\,dy$",
-          "$2\\pi\\int_c^d [g(y)]^2\\,dy$"
+          "$V = \\int_c^d [g(y)]^2 dy$",
+          "$V = \\pi \\int_c^d [g(y)]^2 dy$",
+          "$V = \\pi \\int_c^d g(y) dy$",
+          "$V = 2\\pi \\int_c^d [g(y)]^2 dy$"
         ],
         "correct": 1,
-        "explanation": "រូបមន្តមាឌរង្វិលជុំវិញ $Oy$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "វិធីបន្ទះមូលជុំវិញអ័ក្ស $Oy$៖ $V = \\pi \\int_c^d [g(y)]^2 dy$។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x$ អ័ក្ស $Oy$ និង $y = 6$ ជុំវិញ $Oy$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "មាឌកោណបដិវត្តន៍ដែលកើតពី $x=y$ ពី $y=0$ ដល់ $y=4$ ជុំវិញអ័ក្ស $Oy$ ស្មើ ៖",
         "options": [
-          "$216\\pi$",
-          "$108\\pi$",
-          "$72\\pi$",
-          "$18\\pi$"
+          "$8\\pi$",
+          "$64\\pi$",
+          "$\\dfrac{64\\pi}{3}$",
+          "$\\dfrac{128\\pi}{3}$"
         ],
         "correct": 2,
-        "explanation": "$V = \\pi\\int_0^{6} y^2\\,dy = 72\\pi$ (កោន)។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$V=\\pi\\int_0^{4}y^2dy$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតបដិវត្តន៍ដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x^2$ ( $x \\ge 0$ ) អ័ក្ស $Oy$ និងបន្ទាត់ $y = 3$ ជុំវិញអ័ក្ស $Oy$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "មាឌបដិវត្តន៍នៃ $x=5$ ពី $y=0$ ដល់ $y=2$ ជុំវិញអ័ក្ស $Oy$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{11}{2}\\pi$",
-          "$3\\pi$",
-          "$9\\pi$",
-          "$\\dfrac{9}{2}\\pi$"
+          "$10\\pi$",
+          "$100\\pi$",
+          "$25\\pi$",
+          "$50\\pi$"
         ],
         "correct": 3,
-        "explanation": "$V = \\pi\\int_0^{3} x^2\\,dy = \\pi\\int_0^{3} y\\,dy = \\dfrac{9}{2}\\pi$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$V=\\pi\\int_0^{2}5^2dy$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតបដិវត្តន៍ដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x^2$ ( $x \\ge 0$ ) អ័ក្ស $Oy$ និងបន្ទាត់ $y = 2$ ជុំវិញអ័ក្ស $Oy$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "មាឌកោណបដិវត្តន៍ដែលកើតពី $x=y$ ពី $y=0$ ដល់ $y=12$ ជុំវិញអ័ក្ស $Oy$ ស្មើ ៖",
         "options": [
-          "$2\\pi$",
-          "$4\\pi$",
-          "$\\dfrac{8}{3}\\pi$",
-          "$\\dfrac{4}{3}\\pi$"
+          "$72\\pi$",
+          "$576\\pi$",
+          "$1728\\pi$",
+          "$1152\\pi$"
         ],
-        "correct": 0,
-        "explanation": "$V = \\pi\\int_0^{2} x^2\\,dy = \\pi\\int_0^{2} y\\,dy = 2\\pi$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$V=\\pi\\int_0^{12}y^2dy$"
       },
       {
         "id": "q5",
@@ -103600,16 +103589,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតបដិវត្តន៍ដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x^2$ ( $x \\ge 0$ ) អ័ក្ស $Oy$ និងបន្ទាត់ $y = 5$ ជុំវិញអ័ក្ស $Oy$ គឺ ៖",
+        "question": "មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្ស $Oy$ នៃផ្ទៃខណ្ឌដោយ $x = g(y)$ , $y = c , y = d$ គឺ ៖",
         "options": [
-          "$\\dfrac{125}{3}\\pi$",
-          "$\\dfrac{25}{2}\\pi$",
-          "$\\dfrac{25}{3}\\pi$",
-          "$25\\pi$"
+          "$2\\pi\\int_c^d [g(y)]^2\\,dy$",
+          "$\\pi\\int_c^d [g(y)]^2\\,dy$",
+          "$\\int_c^d [g(y)]^2\\,dy$",
+          "$\\pi\\int_c^d g(y)\\,dy$"
         ],
         "correct": 1,
-        "explanation": "$V = \\pi\\int_0^{5} x^2\\,dy = \\pi\\int_0^{5} y\\,dy = \\dfrac{25}{2}\\pi$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "រូបមន្តមាឌរង្វិលជុំវិញ $Oy$។"
       },
       {
         "id": "q6",
@@ -103617,16 +103605,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x$ អ័ក្ស $Oy$ និង $y = 2$ ជុំវិញ $Oy$ គឺ ៖",
+        "question": "មាឌសូលីតដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x$ អ័ក្ស $Oy$ និង $y = 6$ ជុំវិញ $Oy$ គឺ ៖",
         "options": [
-          "$4\\pi$",
-          "$8\\pi$",
-          "$2\\pi$",
-          "$\\dfrac{8}{3}\\pi$"
+          "$72\\pi$",
+          "$108\\pi$",
+          "$216\\pi$",
+          "$18\\pi$"
         ],
-        "correct": 3,
-        "explanation": "$V = \\pi\\int_0^{2} y^2\\,dy = \\dfrac{8}{3}\\pi$ (កោន)។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$V = \\pi\\int_0^{6} y^2\\,dy = 72\\pi$ (កោន)។"
       },
       {
         "id": "q7",
@@ -103634,239 +103621,225 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតបដិវត្តន៍ដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x^2$ ( $x \\ge 0$ ) អ័ក្ស $Oy$ និងបន្ទាត់ $y = 1$ ជុំវិញអ័ក្ស $Oy$ គឺ ៖",
+        "question": "មាឌសូលីតបដិវត្តន៍ដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x^2$ ( $x \\ge 0$ ) អ័ក្ស $Oy$ និងបន្ទាត់ $y = 3$ ជុំវិញអ័ក្ស $Oy$ គឺ ៖",
         "options": [
-          "$\\dfrac{1}{2}\\pi$",
-          "$\\dfrac{3}{2}\\pi$",
-          "$\\dfrac{1}{3}\\pi$",
-          "$1\\pi$"
+          "$3\\pi$",
+          "$\\dfrac{11}{2}\\pi$",
+          "$\\dfrac{9}{2}\\pi$",
+          "$9\\pi$"
         ],
-        "correct": 0,
-        "explanation": "$V = \\pi\\int_0^{1} x^2\\,dy = \\pi\\int_0^{1} y\\,dy = \\dfrac{1}{2}\\pi$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$V = \\pi\\int_0^{3} x^2\\,dy = \\pi\\int_0^{3} y\\,dy = \\dfrac{9}{2}\\pi$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x$ អ័ក្ស $Oy$ និង $y = 4$ ជុំវិញ $Oy$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាមាឌសូលីតបដិវត្តន៍រង្វិលជុំវិញ $Oy$ នៃផ្ទៃខណ្ឌដោយ $y = x^2$ និង $y = 4$ ៖",
         "options": [
-          "$32\\pi$",
           "$8\\pi$",
-          "$\\dfrac{64}{3}\\pi$",
-          "$64\\pi$"
+          "$16\\pi$",
+          "$4\\pi$",
+          "$32\\pi$"
         ],
-        "correct": 2,
-        "explanation": "$V = \\pi\\int_0^{4} y^2\\,dy = \\dfrac{64}{3}\\pi$ (កោន)។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$y = x^2 \\implies x = \\sqrt{y}$។ $V = \\pi \\int_0^4 (\\sqrt{y})^2 dy = \\pi \\int_0^4 y dy = \\pi [\\frac{y^2}{2}]_0^4 = 8\\pi$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x$ អ័ក្ស $Oy$ និង $y = 5$ ជុំវិញ $Oy$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "វិធីសំបកស៊ីឡាំង (Cylindrical shells) សម្រាប់រង្វិលជុំវិញអ័ក្ស $Oy$ គឺ ៖",
         "options": [
-          "$\\dfrac{25}{2}\\pi$",
-          "$\\dfrac{125}{2}\\pi$",
-          "$\\dfrac{125}{3}\\pi$",
-          "$125\\pi$"
+          "$V = 2\\pi \\int_a^b [f(x)]^2 dx$",
+          "$V = \\pi \\int_a^b x^2 dx$",
+          "$V = 2\\pi \\int_a^b x f(x) dx$",
+          "$V = \\pi \\int_a^b [f(x)]^2 dx$"
         ],
         "correct": 2,
-        "explanation": "$V = \\pi\\int_0^{5} y^2\\,dy = \\dfrac{125}{3}\\pi$ (កោន)។",
-        "src": "genpq-g12c_plan"
+        "explanation": "Cylindrical shells method: $V = 2\\pi \\int_a^b (\\text{កាំ})(\\text{កម្ពស់}) dx = 2\\pi \\int_a^b x f(x) dx$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ មាឌសូលីតបដិវត្តន៍ជុំវិញអ័ក្សអរដោនេ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "មាឌសូលីតដែលបានពីការរង្វិលផ្ទៃខណ្ឌដោយ $y = x$ អ័ក្ស $Oy$ និង $y = 3$ ជុំវិញ $Oy$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "មាឌបដិវត្តន៍នៃ $x=y^{5}$ ពី $y=0$ ដល់ $y=1$ ជុំវិញអ័ក្ស $Oy$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{27}{2}\\pi$",
-          "$9\\pi$",
-          "$27\\pi$",
-          "$\\dfrac{9}{2}\\pi$"
+          "$\\dfrac{\\pi}{11}$",
+          "$\\dfrac{\\pi}{6}$",
+          "$\\dfrac{\\pi}{10}$",
+          "$\\dfrac{2\\pi}{11}$"
         ],
-        "correct": 1,
-        "explanation": "$V = \\pi\\int_0^{3} y^2\\,dy = 9\\pi$ (កោន)។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$V=\\pi\\int_0^1y^{10}dy$"
       }
     ],
     "3": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តប្រវែងធ្នូនៃខ្សែកោង $y = f(x)$ ពី $x = a$ ដល់ $x = b$ គឺ ៖",
         "options": [
-          "$L = \\sqrt{1 + [f'(b) - f'(a)]^2}$",
           "$L = \\int_a^b \\sqrt{1 + [f'(x)]^2} dx$",
           "$L = \\int_a^b \\sqrt{1 + f(x)} dx$",
-          "$L = \\int_a^b [1 + f'(x)] dx$"
+          "$L = \\int_a^b [1 + f'(x)] dx$",
+          "$L = \\sqrt{1 + [f'(b) - f'(a)]^2}$"
         ],
-        "correct": 1,
-        "explanation": "ធាតុប្រវែងធ្នូ $ds = \\sqrt{dx^2 + dy^2} = \\sqrt{1 + (y')^2} dx$ នាំឱ្យ $L = \\int_a^b \\sqrt{1 + [f'(x)]^2} dx$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ធាតុប្រវែងធ្នូ $ds = \\sqrt{dx^2 + dy^2} = \\sqrt{1 + (y')^2} dx$ នាំឱ្យ $L = \\int_a^b \\sqrt{1 + [f'(x)]^2} dx$។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ប្រវែងធ្នូនៃខ្សែកោងតាមសមីការប៉ារ៉ាម៉ែត្រ $x = x(t), y = y(t)$ ពី $t = t_1$ ដល់ $t = t_2$ គឺ ៖",
         "options": [
-          "$L = \\int_{t_1}^{t_2} \\sqrt{[x'(t)]^2 + [y'(t)]^2} dt$",
           "$L = \\int_{t_1}^{t_2} [x'(t) + y'(t)] dt$",
           "$L = \\int_{t_1}^{t_2} \\sqrt{x(t)^2 + y(t)^2} dt$",
+          "$L = \\int_{t_1}^{t_2} \\sqrt{[x'(t)]^2 + [y'(t)]^2} dt$",
           "$L = \\sqrt{[x'(t_2)]^2 + [y'(t_2)]^2}$"
         ],
-        "correct": 0,
-        "explanation": "សមីការប៉ារ៉ាម៉ែត្រ៖ $L = \\int_{t_1}^{t_2} \\sqrt{(x')^2 + (y')^2} dt$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "សមីការប៉ារ៉ាម៉ែត្រ៖ $L = \\int_{t_1}^{t_2} \\sqrt{(x')^2 + (y')^2} dt$។"
       },
       {
-        "id": "g12a_p2_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ប្រវែងធ្នូនៃបន្ទាត់ $y=\\dfrac{5}{12}x$ ពី $x=0$ ដល់ $x=12$ ស្មើ ៖",
+        "options": [
+          "$13$",
+          "$17$",
+          "$60$",
+          "$14$"
+        ],
+        "correct": 0,
+        "explanation": "$\\sqrt{12^2+5^2}$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ប្រវែងធ្នូនៃបន្ទាត់ $y=\\dfrac{4}{3}x$ ពី $x=0$ ដល់ $x=9$ ស្មើ ៖",
+        "options": [
+          "$21$",
+          "$15$",
+          "$108$",
+          "$16$"
+        ],
+        "correct": 1,
+        "explanation": "$\\sqrt{9^2+12^2}$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាប្រវែងអង្កត់ត្រង់ $y = 2x + 1$ ពី $x = 0$ ដល់ $x = 3$ ដោយរូបមន្តប្រវែងធ្នូ ៖",
         "options": [
-          "$\\sqrt{5}$",
-          "$6$",
+          "$5$",
           "$3\\sqrt{5}$",
-          "$5$"
+          "$6$",
+          "$\\sqrt{5}$"
         ],
-        "correct": 2,
-        "explanation": "$y' = 2 \\implies \\sqrt{1 + (y')^2} = \\sqrt{1 + 4} = \\sqrt{5}$។ $L = \\int_0^3 \\sqrt{5} dx = 3\\sqrt{5}$ (ផ្ទៀងផ្ទាត់តាមពីតាករ $\\sqrt{3^2 + 6^2} = 3\\sqrt{5}$)។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$y' = 2 \\implies \\sqrt{1 + (y')^2} = \\sqrt{1 + 4} = \\sqrt{5}$។ $L = \\int_0^3 \\sqrt{5} dx = 3\\sqrt{5}$ (ផ្ទៀងផ្ទាត់តាមពីតាករ $\\sqrt{3^2 + 6^2} = 3\\sqrt{5}$)។"
       },
       {
-        "id": "g12a_p2_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បរិមាត្ររង្វង់កាំ $R$ ប៉ារ៉ាម៉ែត្រ $x = R\\cos t, y = R\\sin t$ ($0 \\le t \\le 2\\pi$) ស្មើនឹង ៖",
         "options": [
-          "$\\pi R^2$",
           "$\\pi R$",
           "$4\\pi R$",
+          "$\\pi R^2$",
           "$2\\pi R$"
         ],
         "correct": 3,
-        "explanation": "$x' = -R\\sin t, y' = R\\cos t \\implies \\sqrt{(x')^2 + (y')^2} = R$។ $L = \\int_0^{2\\pi} R dt = 2\\pi R$។",
-        "diagram": ""
+        "explanation": "$x' = -R\\sin t, y' = R\\cos t \\implies \\sqrt{(x')^2 + (y')^2} = R$។ $L = \\int_0^{2\\pi} R dt = 2\\pi R$។"
       },
       {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាប្រវែងធ្នូនៃ $y = \\dfrac{2}{3}x^{\\frac{3}{2}}$ ពី $x = 0$ ដល់ $x = 3$ ៖",
-        "options": [
-          "$4$",
-          "$\\dfrac{14}{3}$",
-          "$\\dfrac{16}{3}$",
-          "$5$"
-        ],
-        "correct": 1,
-        "explanation": "$y' = x^{\\frac{1}{2}} \\implies 1 + (y')^2 = 1 + x$។ $L = \\int_0^3 \\sqrt{1+x} dx = [\\frac{2}{3}(1+x)^{\\frac{3}{2}}]_0^3 = \\frac{2}{3}(4^{\\frac{3}{2}} - 1) = \\frac{2}{3}(8 - 1) = \\dfrac{14}{3}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាប្រវែងធ្នូនៃ $y = \\ln(\\cos x)$ ពី $x = 0$ ដល់ $x = \\dfrac{\\pi}{4}$ ៖",
-        "options": [
-          "$\\ln(\\sqrt{2} + 1)$",
-          "$\\dfrac{\\pi}{4}$",
-          "$\\ln 2$",
-          "$\\sqrt{2} - 1$"
-        ],
-        "correct": 0,
-        "explanation": "$y' = -\\tan x \\implies 1 + (y')^2 = 1 + \\tan^2 x = \\sec^2 x$។ $L = \\int_0^{\\dfrac{\\pi}{4}} \\sec x dx = [\\ln|\\sec x + \\tan x|]_0^{\\dfrac{\\pi}{4}} = \\ln(\\sqrt{2} + 1)$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
+        "id": "q7",
         "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ផ្ទៃក្រឡាខាងនៃសូលីតបដិវត្តន៍រង្វិលជុំវិញអ័ក្ស $Ox$ (Surface area of revolution) គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ប្រវែងធ្នូនៃ $y=\\dfrac{e^x+e^{-x}}{2}$ ពី $x=0$ ដល់ $x=\\ln 2$ ស្មើ ៖",
         "options": [
-          "$S = 2\\pi \\int_a^b \\sqrt{1 + [f'(x)]^2} dx$",
-          "$S = \\pi \\int_a^b [f(x)]^2 dx$",
-          "$S = \\int_a^b f(x) dx$",
-          "$S = 2\\pi \\int_a^b f(x) \\sqrt{1 + [f'(x)]^2} dx$"
+          "$1$",
+          "$\\dfrac{3}{2}$",
+          "$\\dfrac{7}{4}$",
+          "$\\dfrac{3}{4}$"
         ],
         "correct": 3,
-        "explanation": "ផ្ទៃក្រឡាខាងនៃសូលីតបដិវត្តន៍៖ $S = 2\\pi \\int_a^b y ds = 2\\pi \\int_a^b f(x) \\sqrt{1 + [f'(x)]^2} dx$។",
-        "diagram": ""
+        "explanation": "$L=\\sinh(\\ln 2)=\\dfrac{2-1/2}{2}$"
       },
       {
-        "id": "g12a_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ផ្ទៃក្រឡាស្វ៊ែរកាំ $R$ បង្កើតឡើងពីរង្វិល $y = \\sqrt{R^2 - x^2}$ ជុំវិញ $Ox$ ស្មើនឹង ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាប្រវែងធ្នូនៃ $y = \\dfrac{2}{3}x^{\\frac{3}{2}}$ ពី $x = 0$ ដល់ $x = 3$ ៖",
         "options": [
-          "$2\\pi R^2$",
-          "$8\\pi R^2$",
-          "$4\\pi R^2$",
-          "$\\dfrac{4}{3}\\pi R^3$"
+          "$\\dfrac{16}{3}$",
+          "$\\dfrac{14}{3}$",
+          "$5$",
+          "$4$"
         ],
-        "correct": 2,
-        "explanation": "$y \\sqrt{1 + (y')^2} = y \\sqrt{1 + \\dfrac{x^2}{y^2}} = \\sqrt{y^2 + x^2} = R$។ $S = 2\\pi \\int_{-R}^R R dx = 2\\pi R (2R) = 4\\pi R^2$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$y' = x^{\\frac{1}{2}} \\implies 1 + (y')^2 = 1 + x$។ $L = \\int_0^3 \\sqrt{1+x} dx = [\\frac{2}{3}(1+x)^{\\frac{3}{2}}]_0^3 = \\frac{2}{3}(4^{\\frac{3}{2}} - 1) = \\frac{2}{3}(8 - 1) = \\dfrac{14}{3}$។"
       },
       {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ប្រវែងធ្នូនៃខ្សែច្រវាក់កាតេណារ (Catenary) $y = a \\cosh(\\dfrac{x}{a})$ ពី $x = 0$ ដល់ $x = x_0$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាប្រវែងធ្នូនៃ $y = \\ln(\\cos x)$ ពី $x = 0$ ដល់ $x = \\dfrac{\\pi}{4}$ ៖",
         "options": [
-          "$x_0$",
-          "$a \\sinh(x_0/a)$",
-          "$a(e^{x_0/a} - 1)$",
-          "$a \\cosh(x_0/a)$"
+          "$\\sqrt{2} - 1$",
+          "$\\dfrac{\\pi}{4}$",
+          "$\\ln 2$",
+          "$\\ln(\\sqrt{2} + 1)$"
         ],
-        "correct": 1,
-        "explanation": "$y' = \\sinh(\\dfrac{x}{a}) \\implies 1 + (y')^2 = 1 + \\sinh^2(\\dfrac{x}{a}) = \\cosh^2(\\dfrac{x}{a})$។ $L = \\int_0^{x_0} \\cosh(\\dfrac{x}{a}) dx = a \\sinh(x_0/a)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$y' = -\\tan x \\implies 1 + (y')^2 = 1 + \\tan^2 x = \\sec^2 x$។ $L = \\int_0^{\\dfrac{\\pi}{4}} \\sec x dx = [\\ln|\\sec x + \\tan x|]_0^{\\dfrac{\\pi}{4}} = \\ln(\\sqrt{2} + 1)$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ប្រវែងធ្នូនៃក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "លក្ខខណ្ឌដើម្បីឱ្យរូបមន្តប្រវែងធ្នូ $\\int_a^b \\sqrt{1 + [f'(x)]^2} dx$ អាចអនុវត្តបានគឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ផ្ទៃក្រឡាខាងនៃសូលីតបដិវត្តន៍រង្វិលជុំវិញអ័ក្ស $Ox$ (Surface area of revolution) គឺ ៖",
         "options": [
-          "$f''(x) = 0$",
-          "$f(x) > 0$",
-          "$f$ ត្រូវតែជាពហុធា",
-          "$f'(x)$ ជាប់លើ $[a, b]$ (ខ្សែកោងរលូន Smooth curve)"
+          "$S = 2\\pi \\int_a^b f(x) \\sqrt{1 + [f'(x)]^2} dx$",
+          "$S = \\pi \\int_a^b [f(x)]^2 dx$",
+          "$S = \\int_a^b f(x) dx$",
+          "$S = 2\\pi \\int_a^b \\sqrt{1 + [f'(x)]^2} dx$"
         ],
-        "correct": 3,
-        "explanation": "ខ្សែកោងត្រូវតែរលូន ពោលគឺដេរីវេ $f'(x)$ ជាប់លើចន្លោះបិទ $[a, b]$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ផ្ទៃក្រឡាខាងនៃសូលីតបដិវត្តន៍៖ $S = 2\\pi \\int_a^b y ds = 2\\pi \\int_a^b f(x) \\sqrt{1 + [f'(x)]^2} dx$។"
       }
     ]
   },
