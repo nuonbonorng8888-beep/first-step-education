@@ -41788,147 +41788,155 @@
   "les-g12b-4-1": {
     "1": [
       {
-        "id": "g12b_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "អនុគមន៍ $F(x)$ ជាព្រីមីទីវនៃ $f(x)$ លើចន្លោះ $I$ លុះត្រាតែ ៖",
         "options": [
           "$F'(x) = f(x), \\forall x \\in I$",
-          "$f'(x) = F(x), \\forall x \\in I$",
+          "$F(x) = f(x) + C$",
           "$F''(x) = f(x)$",
-          "$F(x) = f(x) + C$"
+          "$f'(x) = F(x), \\forall x \\in I$"
         ],
         "correct": 0,
-        "explanation": "និយមន័យ៖ $F(x)$ ជាព្រីមីទីវនៃ $f(x)$ លុះត្រាតែដេរីវេនៃ $F(x)$ ស្មើ $f(x)$ ($F'(x) = f(x)$)។",
-        "diagram": ""
+        "explanation": "និយមន័យ៖ $F(x)$ ជាព្រីមីទីវនៃ $f(x)$ លុះត្រាតែដេរីវេនៃ $F(x)$ ស្មើ $f(x)$ ($F'(x) = f(x)$)។"
       },
       {
-        "id": "g12b_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $F(x)$ ជាព្រីមីទីវមួយនៃ $f(x)$ នោះព្រីមីទីវទូទៅ (អាំងតេក្រាលមិនកំណត់) គឺ ៖",
         "options": [
-          "$\\int f(x) dx = F'(x) + C$",
           "$\\int f(x) dx = f(x) + C$",
-          "$\\int f(x) dx = F(x) \\cdot C$",
-          "$\\int f(x) dx = F(x) + C$ ($C \\in \\mathbb{R}$)"
+          "$\\int f(x) dx = F'(x) + C$",
+          "$\\int f(x) dx = F(x) + C$ ($C \\in \\mathbb{R}$)",
+          "$\\int f(x) dx = F(x) \\cdot C$"
         ],
-        "correct": 3,
-        "explanation": "គ្រប់ព្រីមីទីវនៃ $f(x)$ ខុសគ្នាត្រឹមចំនួនថេរ $C$ មួយ ដូច្នេះព្រីមីទីវទូទៅគឺ $F(x) + C$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "គ្រប់ព្រីមីទីវនៃ $f(x)$ ខុសគ្នាត្រឹមចំនួនថេរ $C$ មួយ ដូច្នេះព្រីមីទីវទូទៅគឺ $F(x) + C$។"
       },
       {
-        "id": "g12b_p1_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "លក្ខណៈលីនេអ៊ែរនៃអាំងតេក្រាលមិនកំណត់៖ $\\int [af(x) + bg(x)] dx$ ស្មើនឹង ៖",
         "options": [
-          "$a+b + \\int f(x)dx$",
-          "$ab \\int f(x)g(x)dx$",
+          "$\\int f(x)dx + \\int g(x)dx + ab$",
           "$a \\int f(x)dx + b \\int g(x)dx$",
-          "$\\int f(x)dx + \\int g(x)dx + ab$"
+          "$a+b + \\int f(x)dx$",
+          "$ab \\int f(x)g(x)dx$"
         ],
-        "correct": 2,
-        "explanation": "លក្ខណៈលីនេអ៊ែរអនុញ្ញាតឱ្យទាញមេគុណថេរចេញក្រៅ និងបំបែកផលបូកបាន។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "លក្ខណៈលីនេអ៊ែរអនុញ្ញាតឱ្យទាញមេគុណថេរចេញក្រៅ និងបំបែកផលបូកបាន។"
       },
       {
-        "id": "g12b_p1_04",
+        "id": "q4",
         "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 9x^{2} + 6x + 3$ ដែល $F(0) = 0$ ៖",
+        "options": [
+          "$F(x) = 9x^{3} + 6x^{2} + 3x$",
+          "$F(x) = \\dfrac{9}{2}x^{3} + 6x^{2} + 3x$",
+          "$F(x) = 18x^{3} + 6x^{2}$",
+          "$F(x) = 3x^{3} + 3x^{2} + 3x$"
+        ],
+        "correct": 3,
+        "explanation": "$F(x) = 3x^{3} + 3x^{2} + 3x + C$ ហើយ $F(0) = 0 \\implies C = 0$។"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកព្រីមីទីវ $F(x)$ នៃ $f(x) = 2x - 3$ ដែលផ្ទៀងផ្ទាត់ $F(1) = 2$ ៖",
         "options": [
-          "$F(x) = x^2 - 3x + 2$",
-          "$F(x) = x^2 - 3x + 4$",
           "$F(x) = 2x^2 - 3x + 3$",
-          "$F(x) = x^2 - 3x$"
+          "$F(x) = x^2 - 3x$",
+          "$F(x) = x^2 - 3x + 2$",
+          "$F(x) = x^2 - 3x + 4$"
         ],
-        "correct": 1,
-        "explanation": "$F(x) = x^2 - 3x + C$។ $F(1) = 1 - 3 + C = 2 \\iff -2 + C = 2 \\iff C = 4$។ ដូច្នេះ $F(x) = x^2 - 3x + 4$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$F(x) = x^2 - 3x + C$។ $F(1) = 1 - 3 + C = 2 \\iff -2 + C = 2 \\iff C = 4$។ ដូច្នេះ $F(x) = x^2 - 3x + 4$។"
       },
       {
-        "id": "g12b_p1_05",
-        "questionNumber": 5,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តើអនុគមន៍ $F(x) = \\dfrac{x-1}{x+1}$ ជាព្រីមីទីវនៃអនុគមន៍ណា?",
         "options": [
-          "$f(x) = \\ln|x+1|$",
           "$f(x) = \\dfrac{-2}{(x+1)^2}$",
+          "$f(x) = \\ln|x+1|$",
           "$f(x) = \\dfrac{1}{(x+1)^2}$",
           "$f(x) = \\dfrac{2}{(x+1)^2}$"
         ],
         "correct": 3,
-        "explanation": "$F'(x) = \\dfrac{1(x+1) - (x-1)(1)}{(x+1)^2} = \\dfrac{2}{(x+1)^2} = f(x)$។",
-        "diagram": ""
+        "explanation": "$F'(x) = \\dfrac{1(x+1) - (x-1)(1)}{(x+1)^2} = \\dfrac{2}{(x+1)^2} = f(x)$។"
       },
       {
-        "id": "g12b_p1_06",
-        "questionNumber": 6,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដេរីវេនៃអាំងតេក្រាលមិនកំណត់ $\\left(\\int f(x) dx\\right)'$ ស្មើនឹង ៖",
         "options": [
-          "$f'(x)$",
           "$f(x)$",
           "$F(x)$",
+          "$f'(x)$",
           "$f(x) + C$"
         ],
-        "correct": 1,
-        "explanation": "ប្រតិបត្តិការដេរីវេ និងព្រីមីទីវជាប្រតិបត្តិការច្រាសគ្នា៖ $\\left(\\int f(x) dx\\right)' = f(x)$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12b_p1_07",
-        "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកព្រីមីទីវ $F(x)$ នៃ $f(x) = e^x + 2x$ ដែលក្រាបរបស់វាឆ្លងកាត់គល់កូអរដោនេ $O(0, 0)$ ៖",
-        "options": [
-          "$F(x) = e^x + x^2 - 1$",
-          "$F(x) = e^x + x^2 + 1$",
-          "$F(x) = e^x + 2x^2 - 1$",
-          "$F(x) = e^x + x^2$"
-        ],
         "correct": 0,
-        "explanation": "$F(x) = e^x + x^2 + C$។ កាត់ $(0, 0) \\implies F(0) = e^0 + 0 + C = 0 \\iff 1 + C = 0 \\iff C = -1$។",
-        "diagram": ""
+        "explanation": "ប្រតិបត្តិការដេរីវេ និងព្រីមីទីវជាប្រតិបត្តិការច្រាសគ្នា៖ $\\left(\\int f(x) dx\\right)' = f(x)$។"
       },
       {
-        "id": "g12b_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $F(x)$ និង $G(x)$ ជាព្រីមីទីវពីរផ្សេងគ្នានៃ $f(x)$ លើ $\\mathbb{R}$ នោះ ៖",
         "options": [
-          "$\\dfrac{F(x)}{G(x)} = C$",
           "$F(x) = G(x)$",
+          "$\\dfrac{F(x)}{G(x)} = C$",
           "$F(x) - G(x) = C$ (ថេរ)",
           "$F'(x) - G'(x) = C$"
         ],
         "correct": 2,
-        "explanation": "$(F(x) - G(x))' = f(x) - f(x) = 0$ នាំឱ្យ $F(x) - G(x)$ ជាចំនួនថេរ $C$ ជានិច្ច។",
-        "diagram": ""
+        "explanation": "$(F(x) - G(x))' = f(x) - f(x) = 0$ នាំឱ្យ $F(x) - G(x)$ ជាចំនួនថេរ $C$ ជានិច្ច។"
       },
       {
-        "id": "g12b_p1_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកអនុគមន៍ $f(x)$ បើដឹងថា $f''(x) = 6x$, $f'(0) = 2$, និង $f(0) = 1$ ៖",
+        "options": [
+          "$f(x) = 3x^2 + 2x + 1$",
+          "$f(x) = 2x^3 + 2x + 1$",
+          "$f(x) = x^3 + 2x + 1$",
+          "$f(x) = x^3 + x + 2$"
+        ],
+        "correct": 2,
+        "explanation": "$f'(x) = \\int 6x dx = 3x^2 + C_1$។ $f'(0) = 2 \\implies C_1 = 2$។ $f(x) = \\int (3x^2 + 2) dx = x^3 + 2x + C_2$។ $f(0) = 1 \\implies C_2 = 1$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ព្រីមីទីវទូទៅនៃ $f(x) = 2x - 3$ គឺ ៖",
         "options": [
           "$x^2 - 3x + C$",
@@ -41938,49 +41946,31 @@
         ],
         "correct": 0,
         "explanation": "$(x^2 - 3x)' = 2x - 3$។"
-      },
-      {
-        "id": "g12b_p1_10",
-        "questionNumber": 10,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ព្រីមីទីវ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកអនុគមន៍ $f(x)$ បើដឹងថា $f''(x) = 6x$, $f'(0) = 2$, និង $f(0) = 1$ ៖",
-        "options": [
-          "$f(x) = 3x^2 + 2x + 1$",
-          "$f(x) = x^3 + x + 2$",
-          "$f(x) = x^3 + 2x + 1$",
-          "$f(x) = 2x^3 + 2x + 1$"
-        ],
-        "correct": 2,
-        "explanation": "$f'(x) = \\int 6x dx = 3x^2 + C_1$។ $f'(0) = 2 \\implies C_1 = 2$។ $f(x) = \\int (3x^2 + 2) dx = x^3 + 2x + C_2$។ $f(0) = 1 \\implies C_2 = 1$។",
-        "diagram": ""
       }
     ],
     "2": [
       {
-        "id": "g12b_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តព្រីមីទីវនៃ $\\int x^n dx$ ($n \\neq -1$) គឺ ៖",
         "options": [
           "x^{n+1} + C",
-          "$\\dfrac{x^n}{n} + C$",
           "$\\dfrac{x^{n+1}}{n+1} + C$",
-          "$n x^{n-1} + C$"
+          "$n x^{n-1} + C$",
+          "$\\dfrac{x^n}{n} + C$"
         ],
-        "correct": 2,
-        "explanation": "រូបមន្តស្វ័យគុណ៖ $\\int x^n dx = \\dfrac{x^{n+1}}{n+1} + C$ ចំពោះ $n \\neq -1$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "រូបមន្តស្វ័យគុណ៖ $\\int x^n dx = \\dfrac{x^{n+1}}{n+1} + C$ ចំពោះ $n \\neq -1$។"
       },
       {
-        "id": "g12b_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តព្រីមីទីវនៃ $\\int \\dfrac{1}{x} dx$ គឺ ៖",
         "options": [
           "$-\\dfrac{1}{x^2} + C$",
@@ -41989,15 +41979,14 @@
           "$\\ln|x| + C$"
         ],
         "correct": 3,
-        "explanation": "$\\int \\dfrac{1}{x} dx = \\ln|x| + C$។",
-        "diagram": ""
+        "explanation": "$\\int \\dfrac{1}{x} dx = \\ln|x| + C$។"
       },
       {
-        "id": "g12b_p2_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តព្រីមីទីវនៃ $\\int e^x dx$ គឺ ៖",
         "options": [
           "$e^x + C$",
@@ -42006,29 +41995,43 @@
           "$x e^x + C$"
         ],
         "correct": 0,
-        "explanation": "ព្រីមីទីវនៃ $e^x$ គឺស្មើខ្លួនវាដដែល៖ $\\int e^x dx = e^x + C$។",
-        "diagram": ""
+        "explanation": "ព្រីមីទីវនៃ $e^x$ គឺស្មើខ្លួនវាដដែល៖ $\\int e^x dx = e^x + C$។"
       },
       {
-        "id": "g12b_p2_04",
+        "id": "q4",
         "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int (2x + 3)^{3}\\,dx$ ៖",
+        "options": [
+          "$\\dfrac{(2x + 3)^{4}}{4} + C$",
+          "$\\dfrac{(2x + 3)^{4}}{8} + C$",
+          "$\\dfrac{(2x + 3)^{4}}{2} + C$",
+          "$6(2x + 3)^{2} + C$"
+        ],
+        "correct": 1,
+        "explanation": "តាង $u = 2x + 3$ , $du = 2\\,dx$ ⇒ $\\dfrac{(2x + 3)^{4}}{8} + C$។"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាព្រីមីទីវ $\\int (3x^2 - 4x + 5) dx$ ៖",
         "options": [
           "$3x^3 - 4x^2 + 5x + C$",
-          "$x^3 - 2x^2 + 5x + C$",
           "$6x - 4 + C$",
+          "$x^3 - 2x^2 + 5x + C$",
           "$x^3 - 4x^2 + 5x + C$"
         ],
-        "correct": 1,
-        "explanation": "$\\int (3x^2 - 4x + 5) dx = 3\\left(\\dfrac{x^3}{3}\\right) - 4\\left(\\dfrac{x^2}{2}\\right) + 5x + C = x^3 - 2x^2 + 5x + C$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$\\int (3x^2 - 4x + 5) dx = 3\\left(\\dfrac{x^3}{3}\\right) - 4\\left(\\dfrac{x^2}{2}\\right) + 5x + C = x^3 - 2x^2 + 5x + C$។"
       },
       {
-        "id": "g12b_p2_05",
-        "questionNumber": 5,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -42036,97 +42039,75 @@
         "options": [
           "$-\\dfrac{1}{x} + \\dfrac{1}{2\\sqrt{x}} + C$",
           "$\\dfrac{1}{x} + \\sqrt{x} + C$",
-          "$-\\dfrac{1}{x^3} + \\dfrac{1}{2\\sqrt{x}} + C$",
-          "$-\\dfrac{1}{x} + 2\\sqrt{x} + C$"
+          "$-\\dfrac{1}{x} + 2\\sqrt{x} + C$",
+          "$-\\dfrac{1}{x^3} + \\dfrac{1}{2\\sqrt{x}} + C$"
         ],
-        "correct": 3,
-        "explanation": "$\\int x^{-2} dx + \\int x^{-\\dfrac{1}{2}} dx = -x^{-1} + \\dfrac{x^{\\frac{1}{2}}}{\\dfrac{1}{2}} + C = -\\dfrac{1}{x} + 2\\sqrt{x} + C$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$\\int x^{-2} dx + \\int x^{-\\dfrac{1}{2}} dx = -x^{-1} + \\dfrac{x^{\\frac{1}{2}}}{\\dfrac{1}{2}} + C = -\\dfrac{1}{x} + 2\\sqrt{x} + C$។"
       },
       {
-        "id": "g12b_p2_06",
-        "questionNumber": 6,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាព្រីមីទីវ $\\int e^{3x} dx$ ៖",
         "options": [
-          "$\\dfrac{1}{3}e^x + C$",
           "$e^{3x} + C$",
-          "$\\dfrac{1}{3}e^{3x} + C$",
-          "$3e^{3x} + C$"
+          "$3e^{3x} + C$",
+          "$\\dfrac{1}{3}e^x + C$",
+          "$\\dfrac{1}{3}e^{3x} + C$"
         ],
-        "correct": 2,
-        "explanation": "$\\int e^{ax} dx = \\dfrac{1}{a}e^{ax} + C \\implies \\dfrac{1}{3}e^{3x} + C$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$\\int e^{ax} dx = \\dfrac{1}{a}e^{ax} + C \\implies \\dfrac{1}{3}e^{3x} + C$។"
       },
       {
-        "id": "g12b_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាព្រីមីទីវ $\\int \\dfrac{1}{2x + 1} dx$ ៖",
-        "options": [
-          "$\\ln|2x + 1| + C$",
-          "$\\dfrac{1}{2}\\ln|2x + 1| + C$",
-          "$2\\ln|2x + 1| + C$",
-          "$-\\dfrac{2}{(2x+1)^2} + C$"
-        ],
-        "correct": 1,
-        "explanation": "$\\int \\dfrac{1}{ax+b} dx = \\dfrac{1}{a}\\ln|ax+b| + C \\implies \\dfrac{1}{2}\\ln|2x+1| + C$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12b_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាព្រីមីទីវ $\\int \\dfrac{x^2 - 1}{x} dx$ ៖",
         "options": [
           "$\\dfrac{x^2}{2} - \\ln|x| + C$",
-          "$\\dfrac{x^3}{3} - x + C$",
           "$\\dfrac{2x}{1} + C$",
+          "$\\dfrac{x^3}{3} - x + C$",
           "$x^2 - \\ln|x| + C$"
         ],
         "correct": 0,
-        "explanation": "បំបែកជាពីរតួ៖ $\\int \\left(x - \\dfrac{1}{x}\\right) dx = \\dfrac{x^2}{2} - \\ln|x| + C$។",
-        "diagram": ""
+        "explanation": "បំបែកជាពីរតួ៖ $\\int \\left(x - \\dfrac{1}{x}\\right) dx = \\dfrac{x^2}{2} - \\ln|x| + C$។"
       },
       {
-        "id": "g12b_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាព្រីមីទីវ $\\int (2x - 1)^5 dx$ ៖",
         "options": [
           "$5(2x - 1)^4 + C$",
-          "$\\dfrac{(2x - 1)^6}{6} + C$",
           "$\\dfrac{(2x - 1)^6}{12} + C$",
+          "$\\dfrac{(2x - 1)^6}{6} + C$",
           "$\\dfrac{(2x - 1)^6}{2} + C$"
         ],
-        "correct": 2,
-        "explanation": "$\\int (ax+b)^n dx = \\dfrac{(ax+b)^{n+1}}{a(n+1)} + C = \\dfrac{(2x-1)^6}{2 \\times 6} + C = \\dfrac{(2x-1)^6}{12} + C$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\int (ax+b)^n dx = \\dfrac{(ax+b)^{n+1}}{a(n+1)} + C = \\dfrac{(2x-1)^6}{2 \\times 6} + C = \\dfrac{(2x-1)^6}{12} + C$។"
       },
       {
-        "id": "g12b_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាព្រីមីទីវ $\\int \\dfrac{e^x}{e^x + 1} dx$ ៖",
         "options": [
-          "$\\dfrac{1}{e^x + 1} + C$",
-          "$\\ln(e^x + 1) + C$",
+          "$e^x + 1 + C$",
           "$\\ln|e^x| + C$",
-          "$e^x + 1 + C$"
+          "$\\ln(e^x + 1) + C$",
+          "$\\dfrac{1}{e^x + 1} + C$"
         ],
-        "correct": 1,
-        "explanation": "រាង $\\int \\dfrac{u'}{u} dx = \\ln|u| + C$។ ដោយ $u = e^x + 1 > 0$ នាំឱ្យបាន $\\ln(e^x + 1) + C$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "រាង $\\int \\dfrac{u'}{u} dx = \\ln|u| + C$។ ដោយ $u = e^x + 1 > 0$ នាំឱ្យបាន $\\ln(e^x + 1) + C$។"
       }
     ],
     "3": [
@@ -42138,14 +42119,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\int \\sin 5x\\,dx$ ៖",
         "options": [
+          "$-5\\cos 5x + C$",
           "$\\dfrac{1}{5}\\cos 5x + C$",
-          "$\\dfrac{1}{5}\\sin 5x + C$",
           "$-\\dfrac{1}{5}\\cos 5x + C$",
-          "$-5\\cos 5x + C$"
+          "$\\dfrac{1}{5}\\sin 5x + C$"
         ],
         "correct": 2,
-        "explanation": "$\\int \\sin kx\\,dx = -\\dfrac{1}{k}\\cos kx + C$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\int \\sin kx\\,dx = -\\dfrac{1}{k}\\cos kx + C$។"
       },
       {
         "id": "q2",
@@ -42155,14 +42135,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\int \\dfrac{1}{\\cos^2 x}\\,dx$ ៖",
         "options": [
-          "$\\cot x + C$",
-          "$\\dfrac{1}{\\cos x} + C$",
+          "$\\tan x + C$",
           "$-\\tan x + C$",
-          "$\\tan x + C$"
+          "$\\cot x + C$",
+          "$\\dfrac{1}{\\cos x} + C$"
         ],
-        "correct": 3,
-        "explanation": "$(\\tan x)' = \\dfrac{1}{\\cos^2 x}$ ⇒ $\\tan x + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$(\\tan x)' = \\dfrac{1}{\\cos^2 x}$ ⇒ $\\tan x + C$។"
       },
       {
         "id": "q3",
@@ -42172,14 +42151,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\int \\sin^2 x\\,dx$ ៖",
         "options": [
+          "$-\\dfrac{\\cos 2x}{2} + C$",
           "$\\dfrac{\\sin^3 x}{3} + C$",
-          "$\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C$",
           "$\\dfrac{x}{2} + \\dfrac{\\sin 2x}{4} + C$",
-          "$-\\dfrac{\\cos 2x}{2} + C$"
+          "$\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C$"
         ],
-        "correct": 1,
-        "explanation": "ប្រើរូបមន្តបន្ថយដឺក្រេ $\\sin^2 x = \\dfrac{1 - \\cos 2x}{2}$ , $\\cos^2 x = \\dfrac{1 + \\cos 2x}{2}$ , $\\sin x\\cos x = \\dfrac{\\sin 2x}{2}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "ប្រើរូបមន្តបន្ថយដឺក្រេ $\\sin^2 x = \\dfrac{1 - \\cos 2x}{2}$ , $\\cos^2 x = \\dfrac{1 + \\cos 2x}{2}$ , $\\sin x\\cos x = \\dfrac{\\sin 2x}{2}$។"
       },
       {
         "id": "q4",
@@ -42189,288 +42167,271 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\int \\sin x\\cos x\\,dx$ ៖",
         "options": [
-          "$-\\dfrac{\\cos 2x}{4} + C$",
-          "$\\dfrac{\\sin 2x}{2} + C$",
           "$\\sin x - \\cos x + C$",
-          "$\\dfrac{\\cos 2x}{4} + C$"
+          "$-\\dfrac{\\cos 2x}{4} + C$",
+          "$\\dfrac{\\cos 2x}{4} + C$",
+          "$\\dfrac{\\sin 2x}{2} + C$"
         ],
-        "correct": 0,
-        "explanation": "ប្រើរូបមន្តបន្ថយដឺក្រេ $\\sin^2 x = \\dfrac{1 - \\cos 2x}{2}$ , $\\cos^2 x = \\dfrac{1 + \\cos 2x}{2}$ , $\\sin x\\cos x = \\dfrac{\\sin 2x}{2}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "ប្រើរូបមន្តបន្ថយដឺក្រេ $\\sin^2 x = \\dfrac{1 - \\cos 2x}{2}$ , $\\cos^2 x = \\dfrac{1 + \\cos 2x}{2}$ , $\\sin x\\cos x = \\dfrac{\\sin 2x}{2}$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int \\cos 3x\\,dx$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\int (\\sin x + \\cos x)\\,dx$ ៖",
         "options": [
-          "$3\\sin 3x + C$",
-          "$-\\dfrac{1}{3}\\cos 3x + C$",
-          "$-\\dfrac{1}{3}\\sin 3x + C$",
-          "$\\dfrac{1}{3}\\sin 3x + C$"
+          "$\\sin x - \\cos x + C$",
+          "$\\cos x - \\sin x + C$",
+          "$-\\sin x - \\cos x + C$",
+          "$\\sin x + \\cos x + C$"
         ],
-        "correct": 3,
-        "explanation": "$\\int \\cos kx\\,dx = \\dfrac{1}{k}\\sin kx + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$\\int \\sin x\\,dx = -\\cos x$ និង $\\int \\cos x\\,dx = \\sin x$ ៖ ចម្លើយ $\\sin x - \\cos x + C$។"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int \\sin 2x\\,dx$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនាព្រីមីទីវ $\\int \\sin^2 x dx$ ៖",
         "options": [
-          "$\\dfrac{1}{2}\\sin 2x + C$",
-          "$-\\dfrac{1}{2}\\cos 2x + C$",
-          "$-2\\cos 2x + C$",
-          "$\\dfrac{1}{2}\\cos 2x + C$"
+          "$\\dfrac{\\sin^3 x}{3} + C$",
+          "$\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C$",
+          "$-\\cos^2 x + C$",
+          "$\\dfrac{x}{2} + \\dfrac{\\sin 2x}{4} + C$"
         ],
         "correct": 1,
-        "explanation": "$\\int \\sin kx\\,dx = -\\dfrac{1}{k}\\cos kx + C$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "ប្រើរូបមន្តបន្ថយដឺក្រេ $\\sin^2 x = \\dfrac{1 - \\cos 2x}{2}$៖ $\\int \\dfrac{1 - \\cos 2x}{2} dx = \\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C$។"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int \\cos^2 x\\,dx$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\int \\sin(3x+4)dx$ ៖",
         "options": [
-          "$\\dfrac{x}{2} + \\dfrac{\\sin 2x}{4} + C$",
-          "$\\dfrac{\\sin 2x}{2} + C$",
-          "$\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C$",
-          "$\\dfrac{\\cos^3 x}{3} + C$"
+          "$\\dfrac{\\cos(3x+4)}{3}+C$",
+          "$-\\dfrac{\\cos(3x+4)}{3}+C$",
+          "$-\\cos(3x+4)+C$",
+          "$-3\\cos(3x+4)+C$"
         ],
-        "correct": 0,
-        "explanation": "ប្រើរូបមន្តបន្ថយដឺក្រេ $\\sin^2 x = \\dfrac{1 - \\cos 2x}{2}$ , $\\cos^2 x = \\dfrac{1 + \\cos 2x}{2}$ , $\\sin x\\cos x = \\dfrac{\\sin 2x}{2}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "វិធានខ្សែច្រវាក់បញ្ច្រាស"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int \\cos 4x\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int \\sin^2 3x dx$ ៖",
         "options": [
-          "$4\\sin 4x + C$",
-          "$-\\dfrac{1}{4}\\cos 4x + C$",
-          "$\\dfrac{1}{4}\\sin 4x + C$",
-          "$-\\dfrac{1}{4}\\sin 4x + C$"
+          "$\\dfrac{x}{2}+\\dfrac{\\sin 6x}{12}+C$",
+          "$\\dfrac{\\sin^3 3x}{3}+C$",
+          "$\\dfrac{x}{2}-\\dfrac{\\sin 6x}{2}+C$",
+          "$\\dfrac{x}{2}-\\dfrac{\\sin 6x}{12}+C$"
         ],
-        "correct": 2,
-        "explanation": "$\\int \\cos kx\\,dx = \\dfrac{1}{k}\\sin kx + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$\\sin^2 u=\\dfrac{1-\\cos 2u}{2}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int \\cos x\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int \\sin 2x\\cos 2x dx$ ៖",
         "options": [
-          "$\\sin x + C$",
-          "$-\\cos x + C$",
-          "$-\\sin x + C$",
-          "$\\cos x + C$"
+          "$\\dfrac{\\sin^2 2x}{2}+C$",
+          "$\\dfrac{\\cos^2 2x}{4}+C$",
+          "$\\sin^2 2x+C$",
+          "$\\dfrac{\\sin^2 2x}{4}+C$"
         ],
-        "correct": 0,
-        "explanation": "$\\int \\cos kx\\,dx = \\dfrac{1}{k}\\sin kx + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "u = sin kx ⇒ ∫u du/k"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ អាំងតេក្រាលមិនកំណត់នៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int \\sin x\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int 2\\cos 2x\\,dx$ ៖",
         "options": [
-          "$-\\sin x + C$",
-          "$\\sin x + C$",
-          "$-\\cos x + C$",
-          "$\\cos x + C$"
+          "$4\\sin 2x + C$",
+          "$-\\sin 2x + C$",
+          "$\\sin 2x + C$",
+          "$2\\sin x + C$"
         ],
         "correct": 2,
-        "explanation": "$\\int \\sin kx\\,dx = -\\dfrac{1}{k}\\cos kx + C$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\int \\cos 2x\\,dx = \\dfrac{1}{2}\\sin 2x$ នាំឱ្យ $\\int 2\\cos 2x\\,dx = \\sin 2x + C$។"
       }
     ],
     "4": [
       {
-        "id": "g12b_p3_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តអាំងតេក្រាលដោយផ្នែកគឺ ៖",
         "options": [
-          "$\\int u dv = uv - \\int u' v' dx$",
-          "$\\int u dv = uv - \\int v du$",
+          "$\\int u dv = u'v - uv'$",
           "$\\int u dv = uv + \\int v du$",
-          "$\\int u dv = u'v - uv'$"
+          "$\\int u dv = uv - \\int u' v' dx$",
+          "$\\int u dv = uv - \\int v du$"
         ],
-        "correct": 1,
-        "explanation": "រូបមន្តអាំងតេក្រាលដោយផ្នែក៖ $\\int u dv = uv - \\int v du$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "រូបមន្តអាំងតេក្រាលដោយផ្នែក៖ $\\int u dv = uv - \\int v du$។"
       },
       {
-        "id": "g12b_p3_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងវិធីប្តូរអថេរ បើគេតាង $u = g(x)$ នោះ ឌីផេរ៉ង់ស្យែល $du$ ស្មើនឹង ៖",
         "options": [
-          "$g(x) dx$",
-          "$\\dfrac{dx}{g'(x)}$",
           "$g''(x) dx$",
-          "$g'(x) dx$"
+          "$\\dfrac{dx}{g'(x)}$",
+          "$g'(x) dx$",
+          "$g(x) dx$"
         ],
-        "correct": 3,
-        "explanation": "តាមនិយមន័យឌីផេរ៉ង់ស្យែល៖ $du = g'(x) dx$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "តាមនិយមន័យឌីផេរ៉ង់ស្យែល៖ $du = g'(x) dx$។"
       },
       {
-        "id": "g12b_p3_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int xe^{6x}dx$ ដោយផ្នែក ៖",
+        "options": [
+          "$(\\dfrac{x}{6}+\\dfrac{1}{36})e^{6x}+C$",
+          "$xe^{6x}+C$",
+          "$\\dfrac{x^2}{2}e^{6x}+C$",
+          "$(\\dfrac{x}{6}-\\dfrac{1}{36})e^{6x}+C$"
+        ],
+        "correct": 3,
+        "explanation": "u=x, v'=e^{kx}"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int 2xe^{x^2+4}dx$ ដោយប្តូរអថេរ ៖",
+        "options": [
+          "$e^{x^2+4}+C$",
+          "$2e^{x^2+4}+C$",
+          "$\\dfrac{e^{x^2+4}}{2}+C$",
+          "$x^2e^{x^2+4}+C$"
+        ],
+        "correct": 0,
+        "explanation": "u = x²+k, du = 2x dx"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាព្រីមីទីវ $I = \\int 2x(x^2 + 1)^4 dx$ ដោយប្តូរអថេរ ៖",
         "options": [
+          "$\\dfrac{(x^2 + 1)^4}{4} + C$",
           "$\\dfrac{(x^2 + 1)^5}{5} + C$",
-          "$(x^2 + 1)^5 + C$",
           "$\\dfrac{(x^2 + 1)^5}{10} + C$",
-          "$\\dfrac{(x^2 + 1)^4}{4} + C$"
+          "$(x^2 + 1)^5 + C$"
         ],
-        "correct": 0,
-        "explanation": "តាង $u = x^2 + 1 \\implies du = 2x dx$។ $I = \\int u^4 du = \\dfrac{u^5}{5} + C = \\dfrac{(x^2+1)^5}{5} + C$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "តាង $u = x^2 + 1 \\implies du = 2x dx$។ $I = \\int u^4 du = \\dfrac{u^5}{5} + C = \\dfrac{(x^2+1)^5}{5} + C$។"
       },
       {
-        "id": "g12b_p3_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាព្រីមីទីវ $I = \\int x e^{x^2} dx$ ៖",
         "options": [
-          "$e^{x^2} + C$",
-          "$\\dfrac{1}{2}x^2 e^{x^2} + C$",
           "$\\dfrac{1}{2}e^{x^2} + C$",
-          "$2e^{x^2} + C$"
+          "$2e^{x^2} + C$",
+          "$\\dfrac{1}{2}x^2 e^{x^2} + C$",
+          "$e^{x^2} + C$"
         ],
-        "correct": 2,
-        "explanation": "តាង $u = x^2 \\implies du = 2x dx \\implies x dx = \\dfrac{du}{2}$។ $I = \\dfrac{1}{2}\\int e^u du = \\dfrac{1}{2}e^{x^2} + C$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "តាង $u = x^2 \\implies du = 2x dx \\implies x dx = \\dfrac{du}{2}$។ $I = \\dfrac{1}{2}\\int e^u du = \\dfrac{1}{2}e^{x^2} + C$។"
       },
       {
-        "id": "g12b_p3_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាព្រីមីទីវ $I = \\int x e^x dx$ ដោយប្រើអាំងតេក្រាលដោយផ្នែក ៖",
         "options": [
           "$(x - 1)e^x + C$",
-          "$(x + 1)e^x + C$",
           "$x^2 e^x + C$",
-          "$x e^x - e + C$"
+          "$x e^x - e + C$",
+          "$(x + 1)e^x + C$"
         ],
         "correct": 0,
-        "explanation": "តាង $u = x \\implies du = dx$; $dv = e^x dx \\implies v = e^x$។ $I = x e^x - \\int e^x dx = x e^x - e^x + C = (x - 1)e^x + C$។",
-        "diagram": ""
+        "explanation": "តាង $u = x \\implies du = dx$; $dv = e^x dx \\implies v = e^x$។ $I = x e^x - \\int e^x dx = x e^x - e^x + C = (x - 1)e^x + C$។"
       },
       {
-        "id": "g12b_p3_06",
-        "questionNumber": 6,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាព្រីមីទីវ $\\int \\dfrac{\\ln x}{x} dx$ ៖",
-        "options": [
-          "$\\dfrac{1}{x^2} + C$",
-          "$\\dfrac{(\\ln x)^2}{2} + C$",
-          "$\\ln x + C$",
-          "$(\\ln x)^2 + C$"
-        ],
-        "correct": 1,
-        "explanation": "តាង $u = \\ln x \\implies du = \\dfrac{dx}{x}$។ $\\int u du = \\dfrac{u^2}{2} + C = \\dfrac{(\\ln x)^2}{2} + C$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12b_p3_07",
-        "questionNumber": 7,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាព្រីមីទីវ $I = \\int \\ln x dx$ ដោយប្រើអាំងតេក្រាលដោយផ្នែក ៖",
-        "options": [
-          "$\\dfrac{1}{x} + C$",
-          "$x \\ln x + x + C$",
-          "$x \\ln x + C$",
-          "$x \\ln x - x + C$"
-        ],
-        "correct": 3,
-        "explanation": "តាង $u = \\ln x \\implies du = \\frac{dx}{x}$; $dv = dx \\implies v = x$។ $I = x \\ln x - \\int x \\cdot \\frac{1}{x} dx = x \\ln x - x + C$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12b_p3_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាព្រីមីទីវ $I = \\int (2x + 1)e^{2x} dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាព្រីមីទីវ $I = \\int \\ln x dx$ ដោយប្រើអាំងតេក្រាលដោយផ្នែក ៖",
         "options": [
-          "$\\dfrac{1}{2}x e^{2x} + C$",
-          "$(2x - 1)e^{2x} + C$",
-          "$x e^{2x} + C$",
-          "$(x + 1)e^{2x} + C$"
+          "$\\dfrac{1}{x} + C$",
+          "$x \\ln x - x + C$",
+          "$x \\ln x + C$",
+          "$x \\ln x + x + C$"
         ],
-        "correct": 2,
-        "explanation": "តាង $u = 2x+1 \\implies du = 2dx$; $dv = e^{2x}dx \\implies v = \\frac{1}{2}e^{2x}$។ $I = \\frac{1}{2}(2x+1)e^{2x} - \\int e^{2x}dx = (x + \\frac{1}{2})e^{2x} - \\frac{1}{2}e^{2x} + C = x e^{2x} + C$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "តាង $u = \\ln x \\implies du = \\frac{dx}{x}$; $dv = dx \\implies v = x$។ $I = x \\ln x - \\int x \\cdot \\frac{1}{x} dx = x \\ln x - x + C$។"
       },
       {
-        "id": "g12b_p3_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាព្រីមីទីវ $\\int \\dfrac{x}{\\sqrt{x^2 + 9}} dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាព្រីមីទីវ $I = \\int (2x + 1)e^{2x} dx$ ៖",
         "options": [
-          "$\\ln(x^2 + 9) + C$",
-          "$2\\sqrt{x^2 + 9} + C$",
-          "$\\sqrt{x^2 + 9} + C$",
-          "$\\dfrac{1}{2}\\sqrt{x^2 + 9} + C$"
+          "$(2x - 1)e^{2x} + C$",
+          "$(x + 1)e^{2x} + C$",
+          "$\\dfrac{1}{2}x e^{2x} + C$",
+          "$x e^{2x} + C$"
         ],
-        "correct": 2,
-        "explanation": "តាង $u = x^2 + 9 \\implies du = 2x dx \\implies x dx = \\frac{du}{2}$។ $\\int \\dfrac{du}{2\\sqrt{u}} = \\sqrt{u} + C = \\sqrt{x^2 + 9} + C$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "តាង $u = 2x+1 \\implies du = 2dx$; $dv = e^{2x}dx \\implies v = \\frac{1}{2}e^{2x}$។ $I = \\frac{1}{2}(2x+1)e^{2x} - \\int e^{2x}dx = (x + \\frac{1}{2})e^{2x} - \\frac{1}{2}e^{2x} + C = x e^{2x} + C$។"
       },
       {
-        "id": "g12b_p3_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ គណនាអាំងតេក្រាលដោយប្តូរអថេរ និងដោយផ្នែក",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាព្រីមីទីវ $I = \\int x^2 e^x dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាព្រីមីទីវ $\\int \\dfrac{x}{\\sqrt{x^2 + 9}} dx$ ៖",
         "options": [
-          "$(x^2 - 2x)e^x + C$",
-          "$(x^2 + 2x + 2)e^x + C$",
-          "$(2x - 2)e^x + C$",
-          "$(x^2 - 2x + 2)e^x + C$"
+          "$\\ln(x^2 + 9) + C$",
+          "$\\sqrt{x^2 + 9} + C$",
+          "$2\\sqrt{x^2 + 9} + C$",
+          "$\\dfrac{1}{2}\\sqrt{x^2 + 9} + C$"
         ],
-        "correct": 3,
-        "explanation": "ធ្វើអាំងតេក្រាលដោយផ្នែកពីរដង៖ $I = x^2 e^x - 2\\int x e^x dx = x^2 e^x - 2(x - 1)e^x + C = (x^2 - 2x + 2)e^x + C$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "តាង $u = x^2 + 9 \\implies du = 2x dx \\implies x dx = \\frac{du}{2}$។ $\\int \\dfrac{du}{2\\sqrt{u}} = \\sqrt{u} + C = \\sqrt{x^2 + 9} + C$។"
       }
     ],
     "5": [
@@ -42479,68 +42440,64 @@
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{1}{(x - 3)(x + 1)}\\,dx$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int\\dfrac{2}{x+3}dx$ ៖",
         "options": [
-          "$-\\dfrac{1}{4}\\ln\\left|\\dfrac{x - 3}{x + 1}\\right| + C$",
-          "$\\dfrac{1}{4}\\ln\\left|\\dfrac{x - 3}{x + 1}\\right| + C$",
-          "$\\ln|(x - 3)(x + 1)| + C$",
-          "$\\ln\\left|\\dfrac{x - 3}{x + 1}\\right| + C$"
+          "$\\dfrac{2}{(x+3)^2}+C$",
+          "$\\ln|2x+3|+C$",
+          "$2\\ln|x+3|+C$",
+          "$-\\dfrac{2}{(x+3)^2}+C$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{1}{(x - 3)(x + 1)} = \\dfrac{1}{4}\\left(\\dfrac{1}{x - 3} - \\dfrac{1}{x + 1}\\right)$ ⇒ $\\dfrac{1}{4}\\ln\\left|\\dfrac{x - 3}{x + 1}\\right| + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "∫k/(x+a) = k ln|x+a|"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{1}{x + 1}\\,dx$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int\\dfrac{5}{x+4}dx$ ៖",
         "options": [
-          "$\\dfrac{1}{x + 1} + C$",
-          "$-\\dfrac{1}{(x + 1)^2} + C$",
-          "$2\\ln|x + 1| + C$",
-          "$\\ln|x + 1| + C$"
+          "$\\dfrac{5}{(x+4)^2}+C$",
+          "$5\\ln|x+4|+C$",
+          "$\\ln|5x+4|+C$",
+          "$-\\dfrac{5}{(x+4)^2}+C$"
         ],
-        "correct": 3,
-        "explanation": "$\\int \\dfrac{1}{x + a}dx = \\ln|x + a| + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "∫k/(x+a) = k ln|x+a|"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{2x - 5}{x^2 - 5x + 8}\\,dx$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int\\dfrac{5}{x+5}dx$ ៖",
         "options": [
-          "$\\ln|x^2 - 5x + 8| + C$",
-          "$(2x - 5)\\ln|x^2 - 5x + 8| + C$",
-          "$\\dfrac{1}{x^2 - 5x + 8} + C$",
-          "$2\\ln|x^2 - 5x + 8| + C$"
+          "$\\dfrac{5}{(x+5)^2}+C$",
+          "$\\ln|5x+5|+C$",
+          "$5\\ln|x+5|+C$",
+          "$-\\dfrac{5}{(x+5)^2}+C$"
         ],
-        "correct": 0,
-        "explanation": "ភាគយកជាដេរីវេនៃភាគបែង ⇒ $\\int \\dfrac{u'}{u}dx = \\ln|u| + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "∫k/(x+a) = k ln|x+a|"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{2x - 3}{x^2 - 3x + 4}\\,dx$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int\\dfrac{5}{x+6}dx$ ៖",
         "options": [
-          "$(2x - 3)\\ln|x^2 - 3x + 4| + C$",
-          "$2\\ln|x^2 - 3x + 4| + C$",
-          "$\\ln|x^2 - 3x + 4| + C$",
-          "$\\dfrac{1}{x^2 - 3x + 4} + C$"
+          "$\\dfrac{5}{(x+6)^2}+C$",
+          "$\\ln|5x+6|+C$",
+          "$5\\ln|x+6|+C$",
+          "$-\\dfrac{5}{(x+6)^2}+C$"
         ],
         "correct": 2,
-        "explanation": "ភាគយកជាដេរីវេនៃភាគបែង ⇒ $\\int \\dfrac{u'}{u}dx = \\ln|u| + C$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "∫k/(x+a) = k ln|x+a|"
       },
       {
         "id": "q5",
@@ -42548,16 +42505,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{3}{x - 1}\\,dx$ ៖",
+        "question": "គណនា $\\int \\dfrac{1}{(x - 3)(x + 1)}\\,dx$ ៖",
         "options": [
-          "$-\\dfrac{3}{(x - 1)^2} + C$",
-          "$\\dfrac{3}{x - 1} + C$",
-          "$3\\ln|x - 1| + C$",
-          "$\\ln|3x - 1| + C$"
+          "$-\\dfrac{1}{4}\\ln\\left|\\dfrac{x - 3}{x + 1}\\right| + C$",
+          "$\\ln\\left|\\dfrac{x - 3}{x + 1}\\right| + C$",
+          "$\\dfrac{1}{4}\\ln\\left|\\dfrac{x - 3}{x + 1}\\right| + C$",
+          "$\\ln|(x - 3)(x + 1)| + C$"
         ],
         "correct": 2,
-        "explanation": "$\\int \\dfrac{1}{x + a}dx = \\ln|x + a| + C$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\dfrac{1}{(x - 3)(x + 1)} = \\dfrac{1}{4}\\left(\\dfrac{1}{x - 3} - \\dfrac{1}{x + 1}\\right)$ ⇒ $\\dfrac{1}{4}\\ln\\left|\\dfrac{x - 3}{x + 1}\\right| + C$។"
       },
       {
         "id": "q6",
@@ -42565,16 +42521,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{1}{(x + 2)(x)}\\,dx$ ៖",
+        "question": "គណនា $\\int \\dfrac{1}{x + 1}\\,dx$ ៖",
         "options": [
-          "$\\ln\\left|\\dfrac{x + 2}{x}\\right| + C$",
-          "$\\ln|(x + 2)(x)| + C$",
-          "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x + 2}{x}\\right| + C$",
-          "$-\\dfrac{1}{2}\\ln\\left|\\dfrac{x + 2}{x}\\right| + C$"
+          "$-\\dfrac{1}{(x + 1)^2} + C$",
+          "$\\ln|x + 1| + C$",
+          "$2\\ln|x + 1| + C$",
+          "$\\dfrac{1}{x + 1} + C$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{1}{(x + 2)(x)} = -\\dfrac{1}{2}\\left(\\dfrac{1}{x + 2} - \\dfrac{1}{x}\\right)$ ⇒ $-\\dfrac{1}{2}\\ln\\left|\\dfrac{x + 2}{x}\\right| + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$\\int \\dfrac{1}{x + a}dx = \\ln|x + a| + C$។"
       },
       {
         "id": "q7",
@@ -42582,67 +42537,63 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{4}{x - 4}\\,dx$ ៖",
+        "question": "គណនា $\\int \\dfrac{2x - 5}{x^2 - 5x + 8}\\,dx$ ៖",
         "options": [
-          "$\\ln|4x - 4| + C$",
-          "$4\\ln|x - 4| + C$",
-          "$-\\dfrac{4}{(x - 4)^2} + C$",
-          "$\\dfrac{4}{x - 4} + C$"
+          "$\\ln|x^2 - 5x + 8| + C$",
+          "$\\dfrac{1}{x^2 - 5x + 8} + C$",
+          "$(2x - 5)\\ln|x^2 - 5x + 8| + C$",
+          "$2\\ln|x^2 - 5x + 8| + C$"
         ],
-        "correct": 1,
-        "explanation": "$\\int \\dfrac{1}{x + a}dx = \\ln|x + a| + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "ភាគយកជាដេរីវេនៃភាគបែង ⇒ $\\int \\dfrac{u'}{u}dx = \\ln|u| + C$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{2x + 4}{x^2 + 4x + 9}\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int\\dfrac{2x+3}{x^2+3x+7}dx$ ៖",
         "options": [
-          "$\\ln|x^2 + 4x + 9| + C$",
-          "$(2x + 4)\\ln|x^2 + 4x + 9| + C$",
-          "$2\\ln|x^2 + 4x + 9| + C$",
-          "$\\dfrac{1}{x^2 + 4x + 9} + C$"
+          "$\\ln(x^2+3x+7)+C$",
+          "$\\dfrac{1}{x^2+3x+7}+C$",
+          "$2\\ln(x^2+3x+7)+C$",
+          "$\\ln|2x+3|+C$"
         ],
         "correct": 0,
-        "explanation": "ភាគយកជាដេរីវេនៃភាគបែង ⇒ $\\int \\dfrac{u'}{u}dx = \\ln|u| + C$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "ភាគយក = ដេរីវេនៃភាគបែង"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{1}{x - 5}\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int\\dfrac{2x+4}{x^2+4x+7}dx$ ៖",
         "options": [
-          "$-\\dfrac{1}{(x - 5)^2} + C$",
-          "$2\\ln|x - 5| + C$",
-          "$\\ln|x - 5| + C$",
-          "$\\dfrac{1}{x - 5} + C$"
+          "$\\dfrac{1}{x^2+4x+7}+C$",
+          "$\\ln(x^2+4x+7)+C$",
+          "$2\\ln(x^2+4x+7)+C$",
+          "$\\ln|2x+4|+C$"
         ],
-        "correct": 2,
-        "explanation": "$\\int \\dfrac{1}{x + a}dx = \\ln|x + a| + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "ភាគយក = ដេរីវេនៃភាគបែង"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int \\dfrac{1}{(x + 1)(x + 3)}\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int\\dfrac{x}{(x-2)(x-3)}dx$ (បំបែកជាប្រភាគសាមញ្ញ) ៖",
         "options": [
-          "$\\ln|(x + 1)(x + 3)| + C$",
-          "$-\\dfrac{1}{2}\\ln\\left|\\dfrac{x + 1}{x + 3}\\right| + C$",
-          "$\\ln\\left|\\dfrac{x + 1}{x + 3}\\right| + C$",
-          "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x + 1}{x + 3}\\right| + C$"
+          "$-2\\ln|x-2|+3\\ln|x-3|+C$",
+          "$3\\ln|x-2|-2\\ln|x-3|+C$",
+          "$2\\ln|x-2|-3\\ln|x-3|+C$",
+          "$-2\\ln|x-2|-3\\ln|x-3|+C$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{1}{(x + 1)(x + 3)} = \\dfrac{1}{2}\\left(\\dfrac{1}{x + 1} - \\dfrac{1}{x + 3}\\right)$ ⇒ $\\dfrac{1}{2}\\ln\\left|\\dfrac{x + 1}{x + 3}\\right| + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$\\dfrac{x}{(x-2)(x-3)}=\\dfrac{-2}{x-2}+\\dfrac{3}{x-3}$"
       }
     ],
     "6": [
@@ -42651,68 +42602,64 @@
         "questionNumber": 1,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 2t + 6$ (m/s) និង $s(0) = 9$។ ទីតាំងនៅ $t = 2$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ល្បឿន $v(t)=6t+1$ m/s និង $s(0)=3$។ ទីតាំងនៅ $t=3$ គឺ ៖",
         "options": [
-          "$13\\text{ m}$",
-          "$16\\text{ m}$",
-          "$25\\text{ m}$",
-          "$10\\text{ m}$"
+          "$34\\text{ m}$",
+          "$19\\text{ m}$",
+          "$33\\text{ m}$",
+          "$30\\text{ m}$"
         ],
         "correct": 2,
-        "explanation": "$s(t) = t^{2} + 6t + 9$ ⇒ $s(2) = 25$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$s(t)=3t^2+t+3$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 6t + 2$ (m/s) និង $s(0) = 8$។ ទីតាំងនៅ $t = 5$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ល្បឿន $v(t)=2t+1$ m/s និង $s(0)=3$។ ទីតាំងនៅ $t=2$ គឺ ៖",
         "options": [
-          "$93\\text{ m}$",
-          "$32\\text{ m}$",
-          "$83\\text{ m}$",
-          "$85\\text{ m}$"
+          "$9\\text{ m}$",
+          "$10\\text{ m}$",
+          "$5\\text{ m}$",
+          "$6\\text{ m}$"
         ],
         "correct": 0,
-        "explanation": "$s(t) = 3t^{2} + 2t + 8$ ⇒ $s(5) = 93$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$s(t)=1t^2+t+3$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 6x + 1$ ដែល $F(1) = 5$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ល្បឿន $v(t)=4t+1$ m/s និង $s(0)=1$។ ទីតាំងនៅ $t=3$ គឺ ៖",
         "options": [
-          "$F(x) = 3x^{2} + x + 2$",
-          "$F(x) = 3x^{2} + x + 1$",
-          "$F(x) = 3x^{2} + x + 5$",
-          "$F(x) = 6x^{2} + x + 1$"
+          "$23\\text{ m}$",
+          "$22\\text{ m}$",
+          "$13\\text{ m}$",
+          "$21\\text{ m}$"
         ],
         "correct": 1,
-        "explanation": "$F(x) = 3x^{2} + x + C$ ; $F(1) = 5$ ⇒ $C = 1$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$s(t)=2t^2+t+1$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 6t + 5$ (m/s) និង $s(0) = 6$។ ទីតាំងនៅ $t = 4$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ល្បឿន $v(t)=6t+1$ m/s និង $s(0)=5$។ ទីតាំងនៅ $t=1$ គឺ ៖",
         "options": [
-          "$29\\text{ m}$",
-          "$68\\text{ m}$",
-          "$54\\text{ m}$",
-          "$74\\text{ m}$"
+          "$10\\text{ m}$",
+          "$7\\text{ m}$",
+          "$4\\text{ m}$",
+          "$9\\text{ m}$"
         ],
         "correct": 3,
-        "explanation": "$s(t) = 3t^{2} + 5t + 6$ ⇒ $s(4) = 74$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$s(t)=3t^2+t+5$"
       },
       {
         "id": "q5",
@@ -42720,16 +42667,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 4x$ ដែល $F(-1) = 2$ ៖",
+        "question": "ចល័តមួយមានល្បឿន $v(t) = 2t + 6$ (m/s) និង $s(0) = 9$។ ទីតាំងនៅ $t = 2$ គឺ ៖",
         "options": [
-          "$F(x) = 2x^{2} + 2$",
-          "$F(x) = 2x^{2}$",
-          "$F(x) = 4x^{2}$",
-          "$F(x) = 2x^{2} + 1$"
+          "$13\\text{ m}$",
+          "$25\\text{ m}$",
+          "$10\\text{ m}$",
+          "$16\\text{ m}$"
         ],
         "correct": 1,
-        "explanation": "$F(x) = 2x^{2} + C$ ; $F(-1) = 2$ ⇒ $C = 0$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$s(t) = t^{2} + 6t + 9$ ⇒ $s(2) = 25$។"
       },
       {
         "id": "q6",
@@ -42737,16 +42683,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 4t + 5$ (m/s) និង $s(0) = 6$។ ទីតាំងនៅ $t = 2$ គឺ ៖",
+        "question": "ចល័តមួយមានល្បឿន $v(t) = 6t + 2$ (m/s) និង $s(0) = 8$។ ទីតាំងនៅ $t = 5$ គឺ ៖",
         "options": [
-          "$13\\text{ m}$",
-          "$14\\text{ m}$",
-          "$18\\text{ m}$",
-          "$24\\text{ m}$"
+          "$85\\text{ m}$",
+          "$83\\text{ m}$",
+          "$32\\text{ m}$",
+          "$93\\text{ m}$"
         ],
         "correct": 3,
-        "explanation": "$s(t) = 2t^{2} + 5t + 6$ ⇒ $s(2) = 24$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$s(t) = 3t^{2} + 2t + 8$ ⇒ $s(5) = 93$។"
       },
       {
         "id": "q7",
@@ -42754,67 +42699,63 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 4t + 5$ (m/s) និង $s(0) = 10$។ ទីតាំងនៅ $t = 2$ គឺ ៖",
+        "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 6x + 1$ ដែល $F(1) = 5$ ៖",
         "options": [
-          "$28\\text{ m}$",
-          "$18\\text{ m}$",
-          "$29\\text{ m}$",
-          "$13\\text{ m}$"
+          "$F(x) = 6x^{2} + x + 1$",
+          "$F(x) = 3x^{2} + x + 2$",
+          "$F(x) = 3x^{2} + x + 1$",
+          "$F(x) = 3x^{2} + x + 5$"
         ],
-        "correct": 0,
-        "explanation": "$s(t) = 2t^{2} + 5t + 10$ ⇒ $s(2) = 28$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$F(x) = 3x^{2} + x + C$ ; $F(1) = 5$ ⇒ $C = 1$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 6x - 1$ ដែល $F(1) = -4$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចល័តមួយមានល្បឿន $v(t) = 3t^2 - 4t + 1$ (គិតជា $\\,\\dfrac{\\text{m}}{\\text{s}}$)។ រកចម្ងាយចរ $s(t)$ ដឹងថា $s(0) = 5\\text{ m}$ ៖",
         "options": [
-          "$F(x) = 3x^{2} - x - 4$",
-          "$F(x) = 6x^{2} - x - 6$",
-          "$F(x) = 3x^{2} - x - 6$",
-          "$F(x) = 3x^{2} - x - 5$"
+          "$s(t) = 6t - 4$",
+          "$s(t) = t^3 - 2t^2 + t + 5$",
+          "$s(t) = 3t^3 - 4t^2 + t + 5$",
+          "$s(t) = t^3 - 2t^2 + t$"
         ],
-        "correct": 2,
-        "explanation": "$F(x) = 3x^{2} - x + C$ ; $F(1) = -4$ ⇒ $C = -6$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$s(t) = \\int v(t) dt = t^3 - 2t^2 + t + C$។ $s(0) = 5 \\implies C = 5$។ ដូច្នេះ $s(t) = t^3 - 2t^2 + t + 5$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 2x + 4$ ដែល $F(2) = -1$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សំទុះ $a(t)=24t$ m/s², $v(0)=1$ m/s និង $s(0)=1$ m។ ទីតាំងនៅ $t=1$ គឺ ៖",
         "options": [
-          "$F(x) = 2x^{2} + 4x - 13$",
-          "$F(x) = x^{2} + 4x - 13$",
-          "$F(x) = x^{2} + 4x - 1$",
-          "$F(x) = x^{2} + 4x - 12$"
+          "$7\\text{ m}$",
+          "$13\\text{ m}$",
+          "$6\\text{ m}$",
+          "$10\\text{ m}$"
         ],
-        "correct": 1,
-        "explanation": "$F(x) = x^{2} + 4x + C$ ; $F(2) = -1$ ⇒ $C = -13$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$v=12t^2+1,\\ s=4t^3+1t+1$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានល្បឿន $v(t) = 4t + 3$ (m/s) និង $s(0) = 4$។ ទីតាំងនៅ $t = 2$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សំទុះ $a(t)=6t$ m/s², $v(0)=3$ m/s និង $s(0)=1$ m។ ទីតាំងនៅ $t=3$ គឺ ៖",
         "options": [
-          "$12\\text{ m}$",
-          "$11\\text{ m}$",
-          "$18\\text{ m}$",
-          "$14\\text{ m}$"
+          "$38\\text{ m}$",
+          "$30\\text{ m}$",
+          "$37\\text{ m}$",
+          "$64\\text{ m}$"
         ],
         "correct": 2,
-        "explanation": "$s(t) = 2t^{2} + 3t + 4$ ⇒ $s(2) = 18$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$v=3t^2+3,\\ s=1t^3+3t+1$"
       }
     ]
   },
