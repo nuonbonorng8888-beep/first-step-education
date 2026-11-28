@@ -43531,7 +43531,7 @@
     "topic": "វិធីសាស្ត្រការេតូចបំផុត និងការប៉ាន់ស្មានតាមសមីការ $y = ax + b$",
     "objective": "ចេះរកសមីការបន្ទាត់តម្រែតម្រង់ និងធ្វើការទស្សន៍ទាយប៉ាន់ស្មានតម្លៃទិន្នន័យ",
     "totalPoints": 3,
-    "totalPointsCount": 9,
+    "totalPointsCount": 27,
     "points": [
       {
         "pointNumber": 1,
@@ -43539,7 +43539,7 @@
         "pointTitle": "ចំណុចទី ១ ៖ ទំនាក់ទំនងលីនេអ៊ែរ",
         "topic": "កូវ៉ារ្យង់ និងសញ្ញានៃទំនាក់ទំនង",
         "objective": "យល់ និងអនុវត្តទំនាក់ទំនងលីនេអ៊ែរ",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $\\text{Cov}(x, y) = \\dfrac{1}{n}\\sum (x_i - \\bar{x})(y_i - \\bar{y})$\n  - $\\text{Cov} > 0$ ៖ វិជ្ជមាន ; $\\text{Cov} < 0$ ៖ អវិជ្ជមាន",
         "exercises": [
           {
@@ -43553,6 +43553,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យមធ្យមនៃ $xy$ ស្មើ $28$, $\\bar x=4$, $\\bar y=6$។ គណនា $\\text{Cov}(x,y)$ ៖",
+            "solution": "$\\text{Cov}(x,y)=\\overline{xy}-\\bar x\\bar y$\n\nចម្លើយ ៖ $4$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_9_2_p1_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យមធ្យមនៃ $xy$ ស្មើ $12$, $\\bar x=2$, $\\bar y=5$។ គណនា $\\text{Cov}(x,y)$ ៖",
+            "solution": "$\\text{Cov}(x,y)=\\overline{xy}-\\bar x\\bar y$\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_9_2_p1_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរសិក្សាទំនាក់ទំនងលីនេអ៊ែរ ៖",
@@ -43561,13 +43581,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "កូវ៉ារ្យង់ $\\text{Cov}(x, y) = \\dfrac{1}{n}\\sum (x_i - \\bar{x})(y_i - \\bar{y})$ នៃទិន្នន័យ $\\begin{array}{|c|c|c|c|c|c|} \\hline x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & 3 & 1 & -1 & -3 & -5 \\\\ \\hline \\end{array}$ គឺ ៖",
+            "solution": "$\\bar{x} = 3 , \\ \\text{Var}(x) = 2$ ហើយ $y = -2x + 5$ ⇒ $\\text{Cov} = -2 \\times 2 = -4$។\n\nចម្លើយ ៖ $-4$",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-9-2_1_10"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ទិន្នន័យ $(1, 2), (2, 4), (3, 6)$ មាន $\\bar{x} = 2, \\bar{y} = 4$។ គណនា $\\text{Cov}(x, y) = \\dfrac{1}{n}\\sum (x_i - \\bar{x})(y_i - \\bar{y})$ ៖",
+            "solution": "$\\dfrac{(-1)(-2) + 0 + (1)(2)}{3} = \\dfrac{4}{3}$។\n\nចម្លើយ ៖ $\\dfrac{4}{3}$",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-9-2_1_7s"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរសិក្សាទំនាក់ទំនងលីនេអ៊ែរ ៖",
             "question": "ទិន្នន័យ ៖ $\\begin{array}{|c|c|c|c|c|c|} \\hline x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & 5 & 9 & 10 & 14 & 17 \\\\ \\hline \\end{array}$\nក. គណនា $\\bar{x}$ និង $\\bar{y}$។\nខ. គណនា $\\text{Cov}(x, y)$។\nគ. តើទំនាក់ទំនងលីនេអ៊ែរជាវិជ្ជមាន ឬអវិជ្ជមាន?",
             "solution": "ក. $\\bar{x} = 3 , \\ \\bar{y} = 11$\nខ. $\\text{Cov}(x, y) = \\dfrac{29}{5}$\nគ. វិជ្ជមាន ( $\\text{Cov} > 0$ )",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\text{Cov}(x,y)=\\dfrac{1}{n}\\sum(x_i-\\bar x)(y_i-\\bar y)$ នៃទិន្នន័យ $\\begin{array}{|c|c|c|c|c|c|}\\hline x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & 2 & 7 & 5 & 2 & 3 \\\\ \\hline \\end{array}$ ៖",
+            "solution": "$\\bar x=3,\\ \\text{Cov}(x,y)=\\dfrac{1}{5}\\sum(x_i-3)y_i=\\dfrac{-3}{5}$\n\nចម្លើយ ៖ $-\\dfrac{3}{5}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_9_2_p1_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\text{Cov}(x,y)=\\dfrac{1}{n}\\sum(x_i-\\bar x)(y_i-\\bar y)$ នៃទិន្នន័យ $\\begin{array}{|c|c|c|c|c|c|}\\hline x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & 12 & 5 & 9 & 7 & 6 \\\\ \\hline \\end{array}$ ៖",
+            "solution": "$\\bar x=3,\\ \\text{Cov}(x,y)=\\dfrac{1}{5}\\sum(x_i-3)y_i=\\dfrac{-10}{5}$\n\nចម្លើយ ៖ $-2$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_9_2_p1_18"
           }
         ]
       },
@@ -43578,7 +43638,7 @@
         "topic": "$y = ax + b$ , $a = \\dfrac{\\text{Cov}(x, y)}{V(x)}$",
         "objective": "ចេះគណនាមេគុណប្រាប់ទិស $a$ និងចំនួនថេរ $b$ នៃបន្ទាត់តម្រែតម្រង់",
         "summary": "<div class=\"ws-sum-section-title\">១. បន្ទាត់តម្រែតម្រង់នៃ $Y$ ធៀបនឹង $X$ ៖</div>\n<div class=\"ws-sum-text\">តាមវិធីសាស្ត្រការេតូចបំផុត (Method of Least Squares) សមីការបន្ទាត់តម្រែតម្រង់នៃ $Y$ លើ $X$ មានទម្រង់ ៖</div>\n<div class=\"ws-sum-formula\">$$(\\Delta): y = ax + b$$</div>\n<div class=\"ws-sum-text\">ដែល ៖</div>\n<div class=\"ws-sum-formula\">$$a = \\dfrac{\\text{Cov}(X, Y)}{\\sigma_X^2} = \\dfrac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sum (x_i - \\bar{x})^2} \\quad \\text{និង} \\quad b = \\bar{y} - a\\bar{x}$$</div>\n<div class=\"ws-sum-section-title\">២. លក្ខណៈសម្គាល់ ៖</div>\n<div class=\"ws-sum-text\">បន្ទាត់ $(\\Delta)$ កាត់តាមចំណុចមធ្យម $G(\\bar{x}, \\bar{y})$ ជានិច្ច ព្រោះ $\\bar{y} = a\\bar{x} + b$។</div>",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "exercises": [
           {
             "id": "ex1",
@@ -43591,6 +43651,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេមានសមីការបន្ទាត់តម្រែតម្រង់ $y = 1.5x + 10$។ ប៉ាន់ស្មានតម្លៃ $y$ នៅពេល $x = 20$ ៖",
+            "solution": "$y = 1.5(20) + 10 = 30 + 10 = 40$។\n\nចម្លើយ ៖ $40$",
+            "src": "qb-gen",
+            "qid": "q_g12_0892"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $\\text{Cov}(x,y)=6$ និង $\\sigma_x^2=3$ នោះមេគុណប្រាប់ទិស $a$ នៃបន្ទាត់តម្រែតម្រង់ $y$ លើ $x$ ស្មើ ៖",
+            "solution": "$a=\\dfrac{\\text{Cov}(x,y)}{\\sigma_x^2}$\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_9_2_p2_04"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "សរសេរសមីការបន្ទាត់ពីទិន្នន័យតារាង ៖",
             "question": "គេឱ្យតារាងទិន្នន័យ ៖\n- $X$ ៖ 1, 2, 3, 4, 5\n- $Y$ ៖ 3, 5, 7, 9, 11\nរកសមីការបន្ទាត់តម្រែតម្រង់នៃ $Y$ លើ $X$។",
@@ -43599,7 +43679,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-9-2-p1-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ហេតុអ្វីបានជាការធ្វើ Extrapolation ឆ្ងាយពីចន្លោះទិន្នន័យដើមអាចមានគ្រោះថ្នាក់?",
+            "solution": "លំនាំលីនេអ៊ែរអាចផ្លាស់ប្តូរទៅជារាងកោង ឬឆ្អែត (Saturation) នៅខាងក្រៅចន្លោះទិន្នន័យសង្កេត។\n\nចម្លើយ ៖ ព្រោះទំនាក់ទំនងលីនេអ៊ែរអាចលែងមានសុពលភាពនៅខាងក្រៅចន្លោះនោះ",
+            "src": "qb-gen",
+            "qid": "q_g12_0894"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $\\text{Cov}(x,y)=12$, $\\sigma_x^2=3$, $\\bar x=1,\\ \\bar y=6$។ សមីការបន្ទាត់តម្រែតម្រង់ $y$ លើ $x$ គឺ ៖",
+            "solution": "$a=4,\\ b=\\bar y-a\\bar x=2$\n\nចម្លើយ ៖ $y=4x+2$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_9_2_p2_08"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "សរសេរសមីការបន្ទាត់តម្រែតម្រង់លីនេអ៊ែរតាមវិធីការ៉េអប្បបរមា (Least Squares Method) ៖",
@@ -43607,6 +43707,26 @@
             "rubric": "ក. ០.៥០ ពិន្ទុ | ខ. ០.៥០ ពិន្ទុ",
             "question": "ក. រកសមីការបន្ទាត់តម្រែតម្រង់ $y = ax + b$ នៃ $Y$ លើ $X$ ផ្អែកលើទិន្នន័យមេរៀនមុន ($\\bar{x} = 6, \\bar{y} = 7, \\text{Cov}(X, Y) = 8.4, s_x^2 = 8$)។\nខ. បង្ហាញថាបន្ទាត់តម្រែតម្រង់កាត់តាមចំណុចមធ្យម $G(\\bar{x}, \\bar{y})$ ជានិច្ច។",
             "solution": "<strong>ក. រកសមីការបន្ទាត់តម្រែតម្រង់ ៖</strong>\n- មេគុណប្រាប់ទិស ៖ $a = \\dfrac{\\text{Cov}(X, Y)}{s_x^2} = \\dfrac{8.4}{8} = 1.05$\n- មេគុណ $b$ ៖ $b = \\bar{y} - a\\bar{x} = 7 - 1.05(6) = 7 - 6.30 = 0.70$\n- ដូចនេះ សមីការបន្ទាត់តម្រែតម្រង់គឺ ៖ $y = 1.05x + 0.70$។ *(០.៥០ ពិន្ទុ)*\n\n<strong>ខ. បង្ហាញកាត់តាម $G(\\bar{x}, \\bar{y})$ ៖</strong>\n- ជំនួស $x = \\bar{x}$ ចូលសមីការបន្ទាត់ ៖\n  $y = a\\bar{x} + b = a\\bar{x} + (\\bar{y} - a\\bar{x}) = \\bar{y}$\n- នាំឱ្យចំណុច $G(\\bar{x}, \\bar{y}) = (6, 7)$ ស្ថិតនៅលើបន្ទាត់តម្រែតម្រង់ជានិច្ច (ពិត)។ *(០.៥០ ពិន្ទុ)*"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ចំណុចទិន្នន័យជាក់ស្តែងគឺ $(4, 15)$។ បន្ទាត់តម្រែតម្រង់គឺ $\\hat{y} = 3x + 2$។ គណនាសំណល់ $e$ ៖",
+            "solution": "$\\hat{y} = 3(4) + 2 = 14$។ សំណល់ $e = y - \\hat{y} = 15 - 14 = 1$។\n\nចម្លើយ ៖ $1$",
+            "src": "qb-gen",
+            "qid": "q_g12_0897"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $a = 2$, $\\bar{x} = 3$ និង $\\bar{y} = 10$ នោះ $b$ នៃបន្ទាត់ $y = ax + b$ គឺ ៖",
+            "solution": "$b = \\bar{y} - a\\bar{x} = 10 - 6 = 4$។\n\nចម្លើយ ៖ $4$",
+            "src": "qb-gen",
+            "qid": "q_g12_0890s"
           }
         ]
       },
@@ -43617,7 +43737,7 @@
         "topic": "$r = \\dfrac{\\text{Cov}(x, y)}{\\sigma_x \\sigma_y}$",
         "objective": "ចេះគណនាកូវ៉ារ្យ៉ង់ និងមេគុណទំនាក់ទំនង $r$ ដើម្បីវាស់កម្រិតទំនាក់ទំនងរវាងពីរអថេរ",
         "summary": "<div class=\"ws-sum-section-title\">១. កូវ៉ារ្យ៉ង់ (Covariance) ៖</div>\n<div class=\"ws-sum-formula\">$$\\text{Cov}(X, Y) = \\dfrac{1}{n}\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y}) = \\dfrac{1}{n}\\sum_{i=1}^n x_i y_i - \\bar{x}\\bar{y}$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">បើ $\\text{Cov}(X, Y) > 0$ ៖ អថេរទាំងពីរប្រែប្រួលក្នុងទិសដៅដូចគ្នា (ទំនាក់ទំនងវិជ្ជមាន)</li>\n  <li class=\"ws-sum-item\">បើ $\\text{Cov}(X, Y) < 0$ ៖ អថេរទាំងពីរប្រែប្រួលក្នុងទិសដៅផ្ទុយគ្នា (ទំនាក់ទំនងអវិជ្ជមាន)</li>\n</ul>\n<div class=\"ws-sum-section-title\">២. មេគុណទំនាក់ទំនងលីនេអ៊ែរ (Linear Correlation Coefficient) ៖</div>\n<div class=\"ws-sum-formula\">$$r = \\dfrac{\\text{Cov}(X, Y)}{\\sigma_X \\cdot \\sigma_Y} \\quad (-1 \\le r \\le 1)$$</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$|r| \\ge 0.85$ ៖ ទំនាក់ទំនងលីនេអ៊ែរខ្លាំងខ្លាំង (អាចតម្រែតម្រង់បានល្អ)</li>\n  <li class=\"ws-sum-item\">$r = 1$ ឬ $r = -1$ ៖ គ្រប់ចំណុចស្ថិតនៅលើបន្ទាត់តែមួយ</li>\n</ul>",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "exercises": [
           {
             "id": "ex1",
@@ -43630,6 +43750,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $\\text{Cov}(x,y)=-9,\\ \\sigma_x=3,\\ \\sigma_y=5$។ មេគុណទំនាក់ទំនង $r$ ស្មើ ៖",
+            "solution": "$r=\\dfrac{\\text{Cov}(x,y)}{\\sigma_x\\sigma_y}$\n\nចម្លើយ ៖ $-0.6$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_9_2_p3_01"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $\\text{Cov}(x,y)=9,\\ \\sigma_x=3,\\ \\sigma_y=5$។ មេគុណទំនាក់ទំនង $r$ ស្មើ ៖",
+            "solution": "$r=\\dfrac{\\text{Cov}(x,y)}{\\sigma_x\\sigma_y}$\n\nចម្លើយ ៖ $0.6$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_9_2_p3_05"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "គណនាមេគុណទំនាក់ទំនងលីនេអ៊ែរ $r$ ៖",
             "question": "បន្តពីទិន្នន័យខាងលើ ដឹងថាវ៉ារ្យ៉ង់ $\\sigma_X^2 = \\dfrac{2}{3}$ និង $\\sigma_Y^2 = 6$។\n\nក. គណនាមេគុណទំនាក់ទំនងលីនេអ៊ែរ $r$។\n\nខ. ធ្វើការបកស្រាយលទ្ធផលនៃ $r$។",
@@ -43638,7 +43778,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-9-1-p2-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $\\text{Cov}(X, Y) = 12$, $\\sigma_x = 3$ និង $\\sigma_y = 5$។ គណនាមេគុណទំនាក់ទំនង $r$ ៖",
+            "solution": "$r = \\dfrac{12}{3 \\times 5} = \\dfrac{12}{15} = 0.8$។\n\nចម្លើយ ៖ $0.8$",
+            "src": "qb-gen",
+            "qid": "q_g12_0876"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ទិន្នន័យ $\\begin{array}{|c|c|c|c|c|c|} \\hline x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & 1 & 0 & -1 & -2 & -3 \\\\ \\hline \\end{array}$ មានទំនាក់ទំនងលីនេអ៊ែរ ៖",
+            "solution": "ចំណុចទាំងអស់នៅលើបន្ទាត់ $y = -x + 2$ ⇒ $r = -1$។\n\nចម្លើយ ៖ អវិជ្ជមាន ( $r = -1$ )",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-9-2_1_9"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "គណនាមេគុណទំនាក់ទំនងលីនេអ៊ែរភៀរសុន (Pearson Correlation Coefficient) ៖",
@@ -43646,6 +43806,26 @@
             "rubric": "ក. ០.៥០ ពិន្ទុ | ខ. ០.៥០ ពិន្ទុ",
             "question": "ក. គណនាមេគុណទំនាក់ទំនង $r$ រវាង $X$ និង $Y$ ពីទិន្នន័យក្នុងចំណុចទី ១ ខាងលើ។\nខ. វាយតម្លៃកម្រិត និងភាពខ្លាំងនៃទំនាក់ទំនងរវាងអថេរទាំងពីរ។",
             "solution": "<strong>ក. គណនាមេគុណ $r$ ៖</strong>\n- គណនាវ៉ារ្យ៉ង់នៃ $X$ ៖\n  $s_x^2 = \\dfrac{1}{5}\\sum x_i^2 - \\bar{x}^2 = \\dfrac{4 + 16 + 36 + 64 + 100}{5} - 36 = \\dfrac{220}{5} - 36 = 44 - 36 = 8 \\Rightarrow s_x = \\sqrt{8} = 2\\sqrt{2} \\approx 2.828$\n- គណនាវ៉ារ្យ៉ង់នៃ $Y$ ៖\n  $\\sum y_i^2 = 9 + 25 + 49 + 64 + 144 = 291$\n  $s_y^2 = \\dfrac{291}{5} - 49 = 58.2 - 49 = 9.2 \\Rightarrow s_y = \\sqrt{9.2} \\approx 3.033$\n- មេគុណទំនាក់ទំនង ៖\n  $r = \\dfrac{\\text{Cov}(X, Y)}{s_x s_y} = \\dfrac{8.4}{\\sqrt{8} \\times \\sqrt{9.2}} = \\dfrac{8.4}{\\sqrt{73.6}} = \\dfrac{8.4}{8.579} \\approx 0.979$។ *(០.៥០ ពិន្ទុ)*\n\n<strong>ខ. វាយតម្លៃទំនាក់ទំនង ៖</strong>\n- ដោយ $r \\approx 0.98$ ជិតស្មើនឹង $1$\n- នេះបញ្ជាក់ថាអថេរ $X$ និង $Y$ មាន <strong>ទំនាក់ទំនងលីនេអ៊ែរវិជ្ជមានយ៉ាងខ្លាំងក្លា (Very Strong Positive Linear Correlation)</strong>។ *(០.៥០ ពិន្ទុ)*"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $Y = -2X + 5$ នោះមេគុណទំនាក់ទំនង $r$ ស្មើនឹង ៖",
+            "solution": "ចំណុចទាំងអស់នៅលើបន្ទាត់ត្រង់ដែលមានមេគុណប្រាប់ទិសអវិជ្ជមាន ($a = -2 < 0$) នាំឱ្យ $r = -1$ ឥតខ្ចោះ។\n\nចម្លើយ ៖ $-1$",
+            "src": "qb-gen",
+            "qid": "q_g12_0879"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $r = 0$ នោះបន្ទាត់តម្រែតម្រង់នៃ $y$ លើ $x$ ក្លាយជា ៖",
+            "solution": "ពេល $r = 0 \\implies a = 0$ នាំឱ្យ $y = 0x + \\bar{y} \\iff y = \\bar{y}$ (ការទស្សន៍ទាយល្អបំផុតគឺតម្លៃមធ្យម)។\n\nចម្លើយ ៖ $y = \\bar{y}$ (បន្ទាត់ដេក)",
+            "src": "qb-gen",
+            "qid": "q_g12_0890"
           }
         ]
       }
