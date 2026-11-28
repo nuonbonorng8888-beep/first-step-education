@@ -1,0 +1,40 @@
+{
+  "lesson": "les-g11b-7-1",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនទី ១ ៖ រង្វាស់ទីតាំងនៃទិន្នន័យ (ទំព័រ ១៣៦ - ១៤៣)",
+  "book_pages": "219-227 (uploads/pdfs/g11b_ch7_les1.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ រង្វាស់ទីតាំងនៃទិន្នន័យមិនផ្តុំជាតារាងប្រេកង់"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ រង្វាស់ទីតាំងនៃទិន្នន័យផ្តុំជាតារាងប្រេកង់"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ រង្វាស់ទីតាំងនៃទិន្នន័យផ្តុំជាថ្នាក់"
+    }
+  ],
+  "notes": "Position measures (quartiles/deciles/percentiles) by book convention: (n+1)p with averaging for raw and frequency data, np interpolation for grouped. Q36 rewritten (60.5), Q38 key fixed (82).",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 17,
+      "m": 17,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 15,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
