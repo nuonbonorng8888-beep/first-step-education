@@ -28428,346 +28428,326 @@
   "les-g12a-3-2": {
     "1": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តការប៉ាន់ប្រមាណលីនេអ៊ែរ (Linear approximation) នៃ $f(x)$ ក្បែរ $x_0$ គឺ ៖",
         "options": [
-          "$L(x) = f'(x_0)(x - x_0)$",
           "$L(x) = f(x_0) + \\dfrac{x - x_0}{f'(x_0)}$",
-          "$L(x) = f(x_0) + f(x)(x - x_0)$",
-          "$L(x) = f(x_0) + f'(x_0)(x - x_0)$"
+          "$L(x) = f'(x_0)(x - x_0)$",
+          "$L(x) = f(x_0) + f'(x_0)(x - x_0)$",
+          "$L(x) = f(x_0) + f(x)(x - x_0)$"
         ],
-        "correct": 3,
-        "explanation": "ការប៉ាន់ប្រមាណលីនេអ៊ែរគឺជាសមីការបន្ទាត់ប៉ះត្រង់ $x_0$៖ $L(x) = f(x_0) + f'(x_0)(x - x_0)$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ការប៉ាន់ប្រមាណលីនេអ៊ែរគឺជាសមីការបន្ទាត់ប៉ះត្រង់ $x_0$៖ $L(x) = f(x_0) + f'(x_0)(x - x_0)$។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ឌីផេរ៉ង់ស្យែលនៃអនុគមន៍ $y = f(x)$ កំណត់ដោយ ៖",
         "options": [
           "$dy = f'(x) dx$",
-          "$dy = f''(x) dx$",
+          "$dy = f(x) dx$",
           "$dy = \\dfrac{f'(x)}{dx}$",
-          "$dy = f(x) dx$"
+          "$dy = f''(x) dx$"
         ],
         "correct": 0,
-        "explanation": "តាមនិយមន័យឌីផេរ៉ង់ស្យែល៖ $dy = f'(x) dx$។",
-        "diagram": ""
+        "explanation": "តាមនិយមន័យឌីផេរ៉ង់ស្យែល៖ $dy = f'(x) dx$។"
       },
       {
-        "id": "g12a_p2_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $y=3x^{2} + 2$។ គណនាឌីផេរ៉ង់ស្យែល $dy$ ត្រង់ $x=2$ និង $dx=0.01$ ៖",
+        "options": [
+          "$0.12$",
+          "$0.24$",
+          "$0.06$",
+          "$0.22$"
+        ],
+        "correct": 0,
+        "explanation": "$dy=f'(x)dx$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $y=x^{2} + 3x$។ គណនាឌីផេរ៉ង់ស្យែល $dy$ ត្រង់ $x=2$ និង $dx=0.1$ ៖",
+        "options": [
+          "$1.4$",
+          "$0.35$",
+          "$0.7$",
+          "$0.8$"
+        ],
+        "correct": 2,
+        "explanation": "$dy=f'(x)dx$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ប្រើការប៉ាន់ប្រមាណលីនេអ៊ែរ ប៉ាន់ស្មានតម្លៃនៃ $\\sqrt{4.08}$ ៖",
         "options": [
           "$2.01$",
+          "$2.08$",
           "$2.04$",
-          "$2.02$",
-          "$2.08$"
+          "$2.02$"
         ],
-        "correct": 2,
-        "explanation": "$f(x) = \\sqrt{x}, x_0 = 4, dx = 0.08$។ $f(4) = 2, f'(4) = \\dfrac{1}{4} = 0.25$។ $\\sqrt{4.08} \\approx 2 + 0.25(0.08) = 2 + 0.02 = 2.02$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$f(x) = \\sqrt{x}, x_0 = 4, dx = 0.08$។ $f(4) = 2, f'(4) = \\dfrac{1}{4} = 0.25$។ $\\sqrt{4.08} \\approx 2 + 0.25(0.08) = 2 + 0.02 = 2.02$។"
       },
       {
-        "id": "g12a_p2_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រូបមន្តប៉ាន់ប្រមាណលីនេអ៊ែរគ្រឹះក្បែរ $x = 0$៖ $(1 + x)^n \\approx$ ៖",
         "options": [
-          "$1 + \\dfrac{x}{n}$",
-          "$1 + nx$",
           "$n + x$",
+          "$1 + nx$",
+          "$1 + \\dfrac{x}{n}$",
           "$1 + x^n$"
         ],
         "correct": 1,
-        "explanation": "ក្បែរ $0$៖ $(1+x)^n \\approx 1 + n(0)^{n-1} x = 1 + nx$។",
-        "diagram": ""
+        "explanation": "ក្បែរ $0$៖ $(1+x)^n \\approx 1 + n(0)^{n-1} x = 1 + nx$។"
       },
       {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាឌីផេរ៉ង់ស្យែល $dy$ នៃអនុគមន៍ $y = x^3 - 4x + 1$ ៖",
         "options": [
-          "$dy = 6x dx$",
           "$dy = (x^3 - 4x) dx$",
           "$dy = (3x^2 - 4)$",
+          "$dy = 6x dx$",
           "$dy = (3x^2 - 4) dx$"
         ],
         "correct": 3,
-        "explanation": "$dy = y' dx = (3x^2 - 4) dx$។",
-        "diagram": ""
+        "explanation": "$dy = y' dx = (3x^2 - 4) dx$។"
       },
       {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំហុសធៀប (Relative error) នៃបរិមាណ $y$ កំណត់ដោយរូបមន្ត ៖",
-        "options": [
-          "$\\dfrac{\\Delta y}{y} \\approx \\dfrac{dy}{y}$",
-          "$dy \\times y$",
-          "$\\Delta y - y$",
-          "$\\dfrac{y}{dy}$"
-        ],
-        "correct": 0,
-        "explanation": "កំហុសធៀបគឺផលធៀបនៃកំហុសដាច់ខាតធៀបនឹងតម្លៃពិត៖ $\\dfrac{\\Delta y}{y} \\approx \\dfrac{dy}{y}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ប៉ាន់ស្មានតម្លៃនៃ $(1.003)^8$ ដោយប្រើការប៉ាន់ប្រមាណលីនេអ៊ែរ ៖",
-        "options": [
-          "$1.008$",
-          "$1.032$",
-          "$1.024$",
-          "$1.016$"
-        ],
-        "correct": 2,
-        "explanation": "$(1 + x)^n \\approx 1 + nx$ ជាមួយ $x = 0.003, n = 8$៖ $1 + 8(0.003) = 1 + 0.024 = 1.024$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ការវាស់កាំស្វ៊ែរមួយមានកំហុសប្រហែល $1\\%$ ($\\dfrac{dr}{r} = 0.01$)។ រកកំហុសភាគរយប៉ាន់ស្មាននៃមាឌស្វ៊ែរ $\\dfrac{dV}{V}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ប៉ាន់ស្មានតម្លៃនៃ $(1.003)^8$ ដោយប្រើការប៉ាន់ប្រមាណលីនេអ៊ែរ ៖",
         "options": [
-          "$4\\%$",
-          "$3\\%$",
-          "$0.33\\%$",
-          "$1\\%$"
+          "$1.008$",
+          "$1.024$",
+          "$1.016$",
+          "$1.032$"
         ],
         "correct": 1,
-        "explanation": "$V = \\frac{4}{3}\\pi r^3 \\implies \\ln V = \\ln(4\\pi/3) + 3\\ln r \\implies \\dfrac{dV}{V} = 3\\dfrac{dr}{r} = 3(1\\%) = 3\\%$។",
-        "diagram": ""
+        "explanation": "$(1 + x)^n \\approx 1 + nx$ ជាមួយ $x = 0.003, n = 8$៖ $1 + 8(0.003) = 1 + 0.024 = 1.024$។"
       },
       {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ប៉ាន់ស្មានតម្លៃនៃ $\\ln(1.05)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ការវាស់កាំស្វ៊ែរមួយមានកំហុសប្រហែល $1\\%$ ($\\dfrac{dr}{r} = 0.01$)។ រកកំហុសភាគរយប៉ាន់ស្មាននៃមាឌស្វ៊ែរ $\\dfrac{dV}{V}$ ៖",
         "options": [
-          "$0.10$",
-          "$0.05$",
-          "$0.048$",
-          "$0.052$"
+          "$3\\%$",
+          "$1\\%$",
+          "$4\\%$",
+          "$0.33\\%$"
         ],
-        "correct": 1,
-        "explanation": "ក្បែរ $0$: $\\ln(1 + x) \\approx x$ ដូច្នេះ $\\ln(1 + 0.05) \\approx 0.05$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$V = \\frac{4}{3}\\pi r^3 \\implies \\ln V = \\ln(4\\pi/3) + 3\\ln r \\implies \\dfrac{dV}{V} = 3\\dfrac{dr}{r} = 3(1\\%) = 3\\%$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ អនុវត្តន៍ក្នុងការគណនាតម្លៃប្រហែល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើក្រាបកោងផ្ងារឡើងលើ ($f''(x) > 0$) នោះតម្លៃប៉ាន់ប្រមាណលីនេអ៊ែរ $L(x)$ ធៀបនឹងតម្លៃពិត $f(x)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ប៉ាន់ស្មានតម្លៃនៃ $\\ln(1.05)$ ៖",
         "options": [
-          "តូចជាងតម្លៃពិត $L(x) < f(x)$ (Underestimate)",
-          "ស្មើគ្នាជានិច្ច",
-          "មិនអាចប្រៀបធៀបបាន",
-          "ធំជាងតម្លៃពិត"
+          "$0.05$",
+          "$0.048$",
+          "$0.10$",
+          "$0.052$"
         ],
         "correct": 0,
-        "explanation": "ដោយសារបន្ទាត់ប៉ះស្ថិតនៅខាងក្រោមកោងផ្ងារឡើងលើ ដូច្នេះតម្លៃប៉ាន់ប្រមាណតាមបន្ទាត់ប៉ះតែងតែតូចជាងតម្លៃពិត។",
-        "diagram": ""
+        "explanation": "ក្បែរ $0$: $\\ln(1 + x) \\approx x$ ដូច្នេះ $\\ln(1 + 0.05) \\approx 0.05$។"
       }
     ],
     "2": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "អត្រាបម្រែបម្រួលខណៈ (Instantaneous rate of change) នៃបរិមាណ $y = f(t)$ ធៀបនឹងពេល $t$ គឺ ៖",
         "options": [
-          "ផលបូក $y + t$",
           "ផលធៀប $\\dfrac{y}{t}$",
-          "ដេរីវេ $\\dfrac{dy}{dt} = f'(t)$",
-          "អាំងតេក្រាល $\\int y dt$"
+          "ផលបូក $y + t$",
+          "អាំងតេក្រាល $\\int y dt$",
+          "ដេរីវេ $\\dfrac{dy}{dt} = f'(t)$"
         ],
-        "correct": 2,
-        "explanation": "អត្រាបម្រែបម្រួលខណៈគឺជាដេរីវេនៃអនុគមន៍ធៀបនឹងអថេរពេល $t$៖ $\\dfrac{dy}{dt}$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "អត្រាបម្រែបម្រួលខណៈគឺជាដេរីវេនៃអនុគមន៍ធៀបនឹងអថេរពេល $t$៖ $\\dfrac{dy}{dt}$។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើកាំ $r$ នៃរង្វង់មួយប្រែប្រួលតាមពេល $t$ នោះអត្រាបម្រែបម្រួលនៃផ្ទៃក្រឡា $A = \\pi r^2$ គឺ ៖",
         "options": [
-          "$\\dfrac{dA}{dt} = \\pi r^2 \\dfrac{dr}{dt}$",
           "$\\dfrac{dA}{dt} = 2\\pi r \\dfrac{dr}{dt}$",
           "$\\dfrac{dA}{dt} = \\pi \\left(\\dfrac{dr}{dt}\\right)^2$",
-          "$\\dfrac{dA}{dt} = 2\\pi r$"
+          "$\\dfrac{dA}{dt} = 2\\pi r$",
+          "$\\dfrac{dA}{dt} = \\pi r^2 \\dfrac{dr}{dt}$"
         ],
-        "correct": 1,
-        "explanation": "តាមវិធានខ្សែច្រវាក់៖ $\\dfrac{dA}{dt} = \\dfrac{dA}{dr} \\cdot \\dfrac{dr}{dt} = 2\\pi r \\dfrac{dr}{dt}$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "តាមវិធានខ្សែច្រវាក់៖ $\\dfrac{dA}{dt} = \\dfrac{dA}{dr} \\cdot \\dfrac{dr}{dt} = 2\\pi r \\dfrac{dr}{dt}$។"
       },
       {
-        "id": "g12a_p2_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ជ្រុងការ៉េមួយកើនក្នុងអត្រា $5\\text{ cm/s}$។ អត្រាកំណើនផ្ទៃក្រឡានៅពេលជ្រុង $8\\text{ cm}$ គឺ ៖",
+        "options": [
+          "$80\\text{ cm}^2/\\text{s}$",
+          "$40\\text{ cm}^2/\\text{s}$",
+          "$320\\text{ cm}^2/\\text{s}$",
+          "$10\\text{ cm}^2/\\text{s}$"
+        ],
+        "correct": 0,
+        "explanation": "$A=s^2 ⇒ A'=2ss'$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំណុចមួយផ្លាស់ទីលើក្រាប $y=x^3$។ បើ $x$ កើនក្នុងអត្រា $2$ ឯកតា/s នោះ $y$ កើនក្នុងអត្រាប៉ុន្មាននៅត្រង់ $x=5$ ៖",
+        "options": [
+          "$150$",
+          "$50$",
+          "$30$",
+          "$75$"
+        ],
+        "correct": 0,
+        "explanation": "$y'=3x^2x'$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ប៉េងប៉ោងរាងស្វ៊ែរមួយត្រូវគេច្រកខ្យល់ក្នុងអត្រា $100\\text{ cm}^3/\\text{s}$ ($\\dfrac{dV}{dt} = 100$)។ រកអត្រាបម្រែបម្រួលនៃកាំ $\\dfrac{dr}{dt}$ នៅខណៈដែលកាំ $r = 5\\text{ cm}$ ៖",
         "options": [
-          "$\\dfrac{4}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$",
-          "$\\dfrac{2}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$",
           "$4\\pi\\,\\dfrac{\\text{cm}}{\\text{s}}$",
-          "$\\dfrac{1}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$"
+          "$\\dfrac{1}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$",
+          "$\\dfrac{4}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$",
+          "$\\dfrac{2}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$"
         ],
-        "correct": 3,
-        "explanation": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$V = \\frac{4}{3}\\pi r^3 \\implies \\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$។ $100 = 4\\pi(25) \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\implies \\dfrac{dr}{dt} = \\dfrac{1}{\\pi}\\,\\dfrac{\\text{cm}}{\\text{s}}$។"
       },
       {
-        "id": "g12a_p2_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ជណ្តើរប្រវែង $5\\text{ m}$ ច្រត់នឹងជញ្ជាំងបញ្ឈរ។ ជើងជណ្តើររអិលចេញពីជញ្ជាំងក្នុងល្បឿន $2\\,\\dfrac{\\text{m}}{\\text{s}}$ ($\\dfrac{dx}{dt} = 2$)។ រកល្បឿនដែលចុងជណ្តើរខាងលើរអិលចុះក្រោមនៅពេលជើងជណ្តើរនៅឆ្ងាយពីជញ្ជាំង $3\\text{ m}$ ៖",
         "options": [
-          "$-1.5\\,\\dfrac{\\text{m}}{\\text{s}}$",
-          "$-0.75\\,\\dfrac{\\text{m}}{\\text{s}}$",
           "$-1\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$-0.75\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$-1.5\\,\\dfrac{\\text{m}}{\\text{s}}$",
           "$-2\\,\\dfrac{\\text{m}}{\\text{s}}$"
         ],
-        "correct": 0,
-        "explanation": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\,\\dfrac{\\text{m}}{\\text{s}}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$x^2 + y^2 = 25$។ ពេល $x = 3 \\implies y = 4$។ ដេរីវេ៖ $2x \\dfrac{dx}{dt} + 2y \\dfrac{dy}{dt} = 0 \\iff 3(2) + 4\\dfrac{dy}{dt} = 0 \\implies \\dfrac{dy}{dt} = -1.5\\,\\dfrac{\\text{m}}{\\text{s}}$។"
       },
       {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ការ៉េមួយមានជ្រុងកើនឡើងក្នុងអត្រា $3\\,\\dfrac{\\text{cm}}{\\text{s}}$។ រកអត្រាកំណើនផ្ទៃក្រឡាការ៉េនៅពេលជ្រុងមានប្រវែង $10\\text{ cm}$ ៖",
         "options": [
-          "$30\\text{ cm}^2/\\text{s}$",
-          "$20\\text{ cm}^2/\\text{s}$",
+          "$90\\text{ cm}^2/\\text{s}$",
           "$60\\text{ cm}^2/\\text{s}$",
-          "$90\\text{ cm}^2/\\text{s}$"
-        ],
-        "correct": 2,
-        "explanation": "$A = x^2 \\implies \\dfrac{dA}{dt} = 2x \\dfrac{dx}{dt} = 2(10)(3) = 60\\text{ cm}^2/\\text{s}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំណុចមួយផ្លាស់ទីលើប៉ារ៉ាបូល $y = x^2$។ បើអាប់ស៊ីស $x$ កើនក្នុងអត្រា $2\\text{ ឯកតា/s}$ តើអរដោនេ $y$ កើនក្នុងអត្រាប៉ុន្មាននៅត្រង់ $x = 3$?",
-        "options": [
-          "$18\\text{ ឯកតា/s}$",
-          "$4\\text{ ឯកតា/s}$",
-          "$6\\text{ ឯកតា/s}$",
-          "$12\\text{ ឯកតា/s}$"
-        ],
-        "correct": 3,
-        "explanation": "$\\dfrac{dy}{dt} = 2x \\dfrac{dx}{dt} = 2(3)(2) = 12\\text{ ឯកតា/s}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ធុងរាងកោណផ្កាប់មានកម្ពស់ $12\\text{ m}$ និងកាំមាត់ខាងលើ $4\\text{ m}$។ ទឹកហូរចូលក្នុងអត្រា $2\\text{ m}^3/\\text{min}$។ រកអត្រាកម្ពស់ទឹកកើនឡើងនៅពេលទឹកមានជម្រៅ $h = 6\\text{ m}$ ៖",
-        "options": [
-          "$\\dfrac{1}{4\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
-          "$\\dfrac{1}{2\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
-          "$\\dfrac{2}{\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
-          "$\\dfrac{1}{\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$"
+          "$20\\text{ cm}^2/\\text{s}$",
+          "$30\\text{ cm}^2/\\text{s}$"
         ],
         "correct": 1,
-        "explanation": "តាមត្រីកោណដូចគ្នា $\\dfrac{r}{h} = \\dfrac{4}{12} = \\dfrac{1}{3} \\implies r = \\dfrac{h}{3}$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$។",
-        "diagram": ""
+        "explanation": "$A = x^2 \\implies \\dfrac{dA}{dt} = 2x \\dfrac{dx}{dt} = 2(10)(3) = 60\\text{ cm}^2/\\text{s}$។"
       },
       {
-        "id": "g12a_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "មនុស្សម្នាក់កម្ពស់ $1.8\\text{ m}$ ដើរចេញពីបង្គោលភ្លើងកម្ពស់ $5.4\\text{ m}$ ក្នុងល្បឿន $1.2\\,\\dfrac{\\text{m}}{\\text{s}}$។ រកល្បឿនដែលស្រមោលរបស់គាត់លាតសន្ធឹងវែងទៅមុខ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ធុងរាងកោណផ្កាប់មានកម្ពស់ $12\\text{ m}$ និងកាំមាត់ខាងលើ $4\\text{ m}$។ ទឹកហូរចូលក្នុងអត្រា $2\\text{ m}^3/\\text{min}$។ រកអត្រាកម្ពស់ទឹកកើនឡើងនៅពេលទឹកមានជម្រៅ $h = 6\\text{ m}$ ៖",
         "options": [
-          "$0.6\\,\\dfrac{\\text{m}}{\\text{s}}$",
-          "$0.8\\,\\dfrac{\\text{m}}{\\text{s}}$",
-          "$1.8\\,\\dfrac{\\text{m}}{\\text{s}}$",
-          "$1.2\\,\\dfrac{\\text{m}}{\\text{s}}$"
+          "$\\dfrac{2}{\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
+          "$\\dfrac{1}{4\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
+          "$\\dfrac{1}{\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$",
+          "$\\dfrac{1}{2\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$"
         ],
-        "correct": 0,
-        "explanation": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = \\dfrac{x}{2}$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\,\\dfrac{\\text{m}}{\\text{s}}$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "តាមត្រីកោណដូចគ្នា $\\dfrac{r}{h} = \\dfrac{4}{12} = \\dfrac{1}{3} \\implies r = \\dfrac{h}{3}$។ $V = \\frac{1}{3}\\pi r^2 h = \\frac{\\pi}{27} h^3$។ $\\dfrac{dV}{dt} = \\frac{\\pi}{9} h^2 \\dfrac{dh}{dt}$។ $2 = \\frac{\\pi}{9}(36)\\dfrac{dh}{dt} = 4\\pi \\dfrac{dh}{dt} \\implies \\dfrac{dh}{dt} = \\dfrac{1}{2\\pi}\\,\\dfrac{\\text{m}}{\\text{min}}$។"
       },
       {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "នាវា A ចេញដំណើរទៅទិសខាងកើតក្នុងល្បឿន $20\\,\\dfrac{\\text{km}}{\\text{h}}$ និងនាវា B ចេញដំណើរពីកំពង់ផែដដែលទៅទិសខាងជើងក្នុងល្បឿន $15\\,\\dfrac{\\text{km}}{\\text{h}}$។ រកអត្រាកំណើនចម្ងាយរវាងនាវាទាំងពីរ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "មនុស្សម្នាក់កម្ពស់ $1.8\\text{ m}$ ដើរចេញពីបង្គោលភ្លើងកម្ពស់ $5.4\\text{ m}$ ក្នុងល្បឿន $1.2\\,\\dfrac{\\text{m}}{\\text{s}}$។ រកល្បឿនដែលស្រមោលរបស់គាត់លាតសន្ធឹងវែងទៅមុខ ៖",
         "options": [
-          "អាស្រ័យនឹងពេល $t$",
-          "$35\\,\\dfrac{\\text{km}}{\\text{h}}$",
-          "$25\\,\\dfrac{\\text{km}}{\\text{h}}$ ថេរជានិច្ច",
-          "$20\\,\\dfrac{\\text{km}}{\\text{h}}$"
+          "$0.6\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$1.8\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$1.2\\,\\dfrac{\\text{m}}{\\text{s}}$",
+          "$0.8\\,\\dfrac{\\text{m}}{\\text{s}}$"
         ],
-        "correct": 2,
-        "explanation": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\,\\dfrac{\\text{km}}{\\text{h}}$ ថេរជានិច្ច។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "តាង $x$ ជាចម្ងាយពីបង្គោល និង $s$ ជាប្រវែងស្រមោល។ $\\dfrac{s}{1.8} = \\dfrac{x + s}{5.4} \\iff 3s = x + s \\iff 2s = x \\iff s = \\dfrac{x}{2}$។ $\\dfrac{ds}{dt} = \\frac{1}{2}\\dfrac{dx}{dt} = \\frac{1.2}{2} = 0.6\\,\\dfrac{\\text{m}}{\\text{s}}$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អត្រាបម្រែបម្រួល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "មុំ $\\theta$ នៃត្រីកោណកែងប្រែប្រួលតាមពេល។ បើ $\\sin \\theta = \\dfrac{y}{L}$ (ដែល $L$ ថេរ) នោះ $\\dfrac{d\\theta}{dt}$ ស្មើនឹង ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "នាវា A ចេញដំណើរទៅទិសខាងកើតក្នុងល្បឿន $20\\,\\dfrac{\\text{km}}{\\text{h}}$ និងនាវា B ចេញដំណើរពីកំពង់ផែដដែលទៅទិសខាងជើងក្នុងល្បឿន $15\\,\\dfrac{\\text{km}}{\\text{h}}$។ រកអត្រាកំណើនចម្ងាយរវាងនាវាទាំងពីរ ៖",
         "options": [
-          "$\\dfrac{1}{L \\cos \\theta} \\dfrac{dy}{dt}$",
-          "$\\dfrac{\\cos \\theta}{L} \\dfrac{dy}{dt}$",
-          "$\\dfrac{1}{L} \\dfrac{dy}{dt}$",
-          "$L \\cos \\theta \\dfrac{dy}{dt}$"
+          "$25\\,\\dfrac{\\text{km}}{\\text{h}}$ ថេរជានិច្ច",
+          "$20\\,\\dfrac{\\text{km}}{\\text{h}}$",
+          "$35\\,\\dfrac{\\text{km}}{\\text{h}}$",
+          "អាស្រ័យនឹងពេល $t$"
         ],
         "correct": 0,
-        "explanation": "ដេរីវេអង្គទាំងពីរ៖ $\\cos \\theta \\dfrac{d\\theta}{dt} = \\dfrac{1}{L} \\dfrac{dy}{dt} \\iff \\dfrac{d\\theta}{dt} = \\dfrac{1}{L \\cos \\theta} \\dfrac{dy}{dt}$។",
-        "diagram": ""
+        "explanation": "$z^2 = x^2 + y^2 = (20t)^2 + (15t)^2 = 400t^2 + 225t^2 = 625t^2 \\implies z = 25t$។ អត្រាកំណើន $\\dfrac{dz}{dt} = 25\\,\\dfrac{\\text{km}}{\\text{h}}$ ថេរជានិច្ច។"
       }
     ],
     "3": [
@@ -28776,68 +28756,64 @@
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានទីតាំង $x(t) = t^3 - 2t^2 + 3t$ (ម៉ែត្រ)។ ល្បឿននៅខណៈ $t = 5$ វិនាទី គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចល័តមួយមានទីតាំង $x(t)=t^{3} + t^{2} + t$ (ម៉ែត្រ)។ ល្បឿននៅខណៈ $t=3$ វិនាទី គឺ ៖",
         "options": [
-          "$26\\text{ m/s}$",
-          "$61\\text{ m/s}$",
-          "$58\\text{ m/s}$",
-          "$90\\text{ m/s}$"
+          "$35$",
+          "$-34$",
+          "$39$",
+          "$34$"
         ],
-        "correct": 2,
-        "explanation": "$v(t) = x'(t) = 3t^2 - 4t + 3$ ⇒ $v(5) = 58$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$v=x'(t)=3t^{2} + 2t + 1$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានទីតាំង $x(t) = 2t^3 + 2t^2 + 2t$ (ម៉ែត្រ)។ សំទុះនៅខណៈ $t = 4$ វិនាទី គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចល័តមួយមានទីតាំង $x(t)=2t^{3} - 3t^{2} + t$ (ម៉ែត្រ)។ ល្បឿននៅខណៈ $t=3$ វិនាទី គឺ ៖",
         "options": [
-          "$56\\text{ m/s}^2$",
-          "$52\\text{ m/s}^2$",
-          "$48\\text{ m/s}^2$",
-          "$114\\text{ m/s}^2$"
+          "$38$",
+          "$-37$",
+          "$37$",
+          "$30$"
         ],
-        "correct": 1,
-        "explanation": "$a(t) = x''(t) = 12t + 4$ ⇒ $a(4) = 52$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$v=x'(t)=6t^{2} - 6t + 1$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចលនាលំយោលមួយមាន $x(t) = 10\\cos 3t$។ សំទុះ $a(t)$ ស្មើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចល័តមួយមានទីតាំង $x(t)=t^{3} - 5t^{2} + 6t$ (ម៉ែត្រ)។ ល្បឿននៅខណៈ $t=3$ វិនាទី គឺ ៖",
         "options": [
-          "$9 x(t)$",
-          "$-90 x(t)$",
-          "$-3 x(t)$",
-          "$-9 x(t)$"
+          "$3$",
+          "$4$",
+          "$-3$",
+          "$0$"
         ],
-        "correct": 3,
-        "explanation": "$a(t) = x''(t) = -90\\cos 3t = -9 x(t)$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$v=x'(t)=3t^{2} - 10t + 6$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចលនាលំយោលមួយមាន $x(t) = 10\\sin 3t$ (cm)។ ល្បឿន $v(t)$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចល័តមួយមានទីតាំង $x(t)=3t^{3} - t^{2} + 2t$ (ម៉ែត្រ)។ ល្បឿននៅខណៈ $t=3$ វិនាទី គឺ ៖",
         "options": [
-          "$30\\cos 3t$",
-          "$-90\\sin 3t$",
-          "$10\\cos 3t$",
-          "$-30\\cos 3t$"
+          "$77$",
+          "$78$",
+          "$-77$",
+          "$154$"
         ],
         "correct": 0,
-        "explanation": "$v(t) = x'(t) = 10 \\cdot 3\\cos 3t = 30\\cos 3t$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$v=x'(t)=9t^{2} - 2t + 2$"
       },
       {
         "id": "q5",
@@ -28845,16 +28821,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចលនាលំយោលមួយមាន $x(t) = 3\\cos 4t$។ សំទុះ $a(t)$ ស្មើ ៖",
+        "question": "ចល័តមួយមានទីតាំង $x(t) = t^3 - 2t^2 + 3t$ (ម៉ែត្រ)។ ល្បឿននៅខណៈ $t = 5$ វិនាទី គឺ ៖",
         "options": [
-          "$-16 x(t)$",
-          "$16 x(t)$",
-          "$-4 x(t)$",
-          "$-48 x(t)$"
+          "$90\\text{ m/s}$",
+          "$58\\text{ m/s}$",
+          "$61\\text{ m/s}$",
+          "$26\\text{ m/s}$"
         ],
-        "correct": 0,
-        "explanation": "$a(t) = x''(t) = -48\\cos 4t = -16 x(t)$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$v(t) = x'(t) = 3t^2 - 4t + 3$ ⇒ $v(5) = 58$។"
       },
       {
         "id": "q6",
@@ -28862,16 +28837,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចលនាលំយោលមួយមាន $x(t) = 2\\sin 3t$ (cm)។ ល្បឿន $v(t)$ គឺ ៖",
+        "question": "ចល័តមួយមានទីតាំង $x(t) = 2t^3 + 2t^2 + 2t$ (ម៉ែត្រ)។ សំទុះនៅខណៈ $t = 4$ វិនាទី គឺ ៖",
         "options": [
-          "$-18\\sin 3t$",
-          "$-6\\cos 3t$",
-          "$2\\cos 3t$",
-          "$6\\cos 3t$"
+          "$48\\text{ m/s}^2$",
+          "$114\\text{ m/s}^2$",
+          "$52\\text{ m/s}^2$",
+          "$56\\text{ m/s}^2$"
         ],
-        "correct": 3,
-        "explanation": "$v(t) = x'(t) = 2 \\cdot 3\\cos 3t = 6\\cos 3t$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$a(t) = x''(t) = 12t + 4$ ⇒ $a(4) = 52$។"
       },
       {
         "id": "q7",
@@ -28879,67 +28853,63 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានទីតាំង $x(t) = 2t^3 - 4t^2 + 3t$ (ម៉ែត្រ)។ ល្បឿននៅខណៈ $t = 5$ វិនាទី គឺ ៖",
+        "question": "ចលនាលំយោលមួយមាន $x(t) = 10\\cos 3t$។ សំទុះ $a(t)$ ស្មើ ៖",
         "options": [
-          "$116\\text{ m/s}$",
-          "$165\\text{ m/s}$",
-          "$113\\text{ m/s}$",
-          "$52\\text{ m/s}$"
+          "$-9 x(t)$",
+          "$-3 x(t)$",
+          "$9 x(t)$",
+          "$-90 x(t)$"
         ],
-        "correct": 2,
-        "explanation": "$v(t) = x'(t) = 6t^2 - 8t + 3$ ⇒ $v(5) = 113$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$a(t) = x''(t) = -90\\cos 3t = -9 x(t)$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចលនាលំយោលមួយមាន $x(t) = 2\\cos 3t$។ សំទុះ $a(t)$ ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចល័តមួយមានទីតាំង $x(t)=2t^{3} - 12t^{2} + 18t$។ សំទុះនៅខណៈពេលដែលល្បឿនសូន្យដំបូង ($t=1$) ស្មើ ៖",
         "options": [
-          "$9 x(t)$",
-          "$-9 x(t)$",
-          "$-3 x(t)$",
-          "$-18 x(t)$"
+          "$-12$",
+          "$12$",
+          "$-6$",
+          "$-11$"
         ],
-        "correct": 1,
-        "explanation": "$a(t) = x''(t) = -18\\cos 3t = -9 x(t)$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$a=x''(t)=12t-24$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចល័តមួយមានទីតាំង $x(t) = t^3 + 4t$ (ម៉ែត្រ)។ សំទុះនៅខណៈ $t = 5$ វិនាទី គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចលនាលំយោលមួយមាន $x(t)=8\\sin 2t$។ សំទុះអតិបរមា (ទំហំ) គឺ ៖",
         "options": [
-          "$30\\text{ m/s}^2$",
-          "$79\\text{ m/s}^2$",
-          "$32\\text{ m/s}^2$",
-          "$31\\text{ m/s}^2$"
+          "$16$",
+          "$8$",
+          "$4$",
+          "$32$"
         ],
-        "correct": 0,
-        "explanation": "$a(t) = x''(t) = 6t$ ⇒ $a(5) = 30$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$a=-32\\sin 2t$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ល្បឿន និងសំទុះនៃចលនា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចលនាលំយោលមួយមាន $x(t) = 7\\sin 2t$ (cm)។ ល្បឿន $v(t)$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចល័តមួយមានទីតាំង $x(t)=2t^{3} - 12t^{2} + 18t$។ ល្បឿនសូន្យនៅខណៈពេល ៖",
         "options": [
-          "$-14\\cos 2t$",
-          "$7\\cos 2t$",
-          "$14\\cos 2t$",
-          "$-28\\sin 2t$"
+          "$t=2\\,\\ t=4$",
+          "$t=-1\\,\\ t=-3$",
+          "$t=1$",
+          "$t=1\\,\\ t=3$"
         ],
-        "correct": 2,
-        "explanation": "$v(t) = x'(t) = 7 \\cdot 2\\cos 2t = 14\\cos 2t$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$v=6(t-1)(t-3)$"
       }
     ]
   },
