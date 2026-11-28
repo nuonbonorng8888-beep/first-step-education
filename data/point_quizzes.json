@@ -46817,17 +46817,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្នុងរង្វង់ត្រីកោណមាត្រ (កាំ $R = 1$) ចំណុច $M$ ត្រូវគ្នានឹងមុំ $\\alpha$ មានកូអរដោនេគឺ ៖",
+        "question": "ក្នុងត្រីកោណកែង $ABC$ កែងត្រង់ $A$ រូបមន្តគណនាស៊ីនុសនៃមុំស្រួច $B$ គឺ ៖<div style=\"text-align:center;margin:12px 0;\">\n<svg width=\"340\" height=\"220\" viewBox=\"0 0 340 220\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;max-width:100%;height:auto;box-shadow:0 2px 4px rgba(0,0,0,0.05);\">\n  <!-- Right triangle ABC, right at C -->\n  <polygon points=\"50,180 270,180 270,40\" fill=\"#eff6ff\" stroke=\"#2563eb\" stroke-width=\"2.5\" />\n  <!-- Right angle mark at C(270, 180) -->\n  <path d=\"M 252 180 L 252 162 L 270 162\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"2\" />\n  <!-- Angle theta arc at A(50, 180) -->\n  <path d=\"M 90 180 A 40 40 0 0 0 85 158\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"2.5\" />\n  <text x=\"96\" y=\"172\" fill=\"#7c3aed\" font-size=\"14\" font-weight=\"bold\" font-family=\"sans-serif\">θ</text>\n  <!-- Vertices labels -->\n  <text x=\"32\" y=\"186\" fill=\"#1e293b\" font-size=\"14\" font-weight=\"bold\" font-family=\"sans-serif\">A</text>\n  <text x=\"278\" y=\"186\" fill=\"#1e293b\" font-size=\"14\" font-weight=\"bold\" font-family=\"sans-serif\">C</text>\n  <text x=\"272\" y=\"32\" fill=\"#1e293b\" font-size=\"14\" font-weight=\"bold\" font-family=\"sans-serif\">B</text>\n  <!-- Sides labels: Hypotenuse, Opposite, Adjacent -->\n  <text x=\"130\" y=\"100\" fill=\"#2563eb\" font-size=\"13\" font-weight=\"bold\" font-family=\"sans-serif\" transform=\"rotate(-32.5 130 100)\">អ៊ីប៉ូតេនុស (c)</text>\n  <text x=\"280\" y=\"115\" fill=\"#dc2626\" font-size=\"13\" font-weight=\"bold\" font-family=\"sans-serif\">ជ្រុងឈម (a)</text>\n  <text x=\"135\" y=\"202\" fill=\"#059669\" font-size=\"13\" font-weight=\"bold\" font-family=\"sans-serif\">ជ្រុងជាប់ (b)</text>\n</svg>\n<div style=\"font-size:0.78rem;color:#64748b;margin-top:4px;\">រូប ៖ ផលធៀបត្រីកោណមាត្រ $\\sin\\theta = \\dfrac{a}{c}, \\cos\\theta = \\dfrac{b}{c}, \\tan\\theta = \\dfrac{a}{b}$</div>\n</div>",
         "options": [
-          "$M(\\sin \\alpha, \\cos \\alpha)$",
-          "$M(\\cos \\alpha, \\sin \\alpha)$",
-          "$M(\\tan \\alpha, \\cot \\alpha)$",
-          "$M(1, \\alpha)$"
+          "$\\sin B = \\dfrac{BC}{AC}$",
+          "$\\sin B = \\dfrac{\\text{ជ្រុងជាប់}}{\\text{អ៊ីប៉ូតេនុស}} = \\dfrac{AB}{BC}$",
+          "$\\sin B = \\dfrac{\\text{ជ្រុងឈម}}{\\text{អ៊ីប៉ូតេនុស}} = \\dfrac{AC}{BC}$",
+          "$\\sin B = \\dfrac{\\text{ជ្រុងឈម}}{\\text{ជ្រុងជាប់}} = \\dfrac{AC}{AB}$"
         ],
-        "correct": 1,
-        "explanation": "អាប់ស៊ីសនៃ $M$ គឺជា $\\cos \\alpha$ ហើយអរដោនេនៃ $M$ គឺជា $\\sin \\alpha$ នាំឱ្យ $M(\\cos \\alpha, \\sin \\alpha)$។",
-        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"265\" y=\"104\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">cos α</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">sin α</text><line x1=\"160\" y1=\"100\" x2=\"210\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"210\" cy=\"50\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"215\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">M(cos α, sin α)</text><path d=\"M 185 100 A 25 25 0 0 0 178 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">α</text><text x=\"190\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">I (+,+)</text><text x=\"115\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">II (-,+)</text><text x=\"115\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">III (-,-)</text><text x=\"190\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">IV (+,-)</text></svg>",
-        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"265\" y=\"104\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">cos α</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">sin α</text><line x1=\"160\" y1=\"100\" x2=\"210\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"210\" cy=\"50\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"215\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">M(cos α, sin α)</text><path d=\"M 185 100 A 25 25 0 0 0 178 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">α</text><text x=\"190\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">I (+,+)</text><text x=\"115\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">II (-,+)</text><text x=\"115\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">III (-,-)</text><text x=\"190\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">IV (+,-)</text></svg>"
+        "correct": 2,
+        "explanation": "ស៊ីនុសស្មើជ្រុងឈមចែកអ៊ីប៉ូតេនុស ៖ $\\sin B = \\dfrac{AC}{BC}$។"
       },
       {
         "id": "q2",
@@ -46835,15 +46833,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្នុងត្រីកោណ $ABC$ កែងត្រង់ $C$ ផលធៀប $\\sin A$ ស្មើនឹង ៖",
+        "question": "ក្នុងត្រីកោណកែង $ABC$ កែងត្រង់ $A$ រូបមន្តគណនាកូស៊ីនុសនៃមុំ $B$ គឺ ៖",
         "options": [
-          "$\\dfrac{BC}{AB}$",
-          "$\\dfrac{AC}{AB}$",
-          "$\\dfrac{BC}{AC}$",
-          "$\\dfrac{AB}{BC}$"
+          "$\\cos B = \\dfrac{\\text{ជ្រុងជាប់}}{\\text{ជ្រុងឈម}} = \\dfrac{AB}{AC}$",
+          "$\\cos B = \\dfrac{\\text{ជ្រុងជាប់}}{\\text{អ៊ីប៉ូតេនុស}} = \\dfrac{AB}{BC}$",
+          "$\\cos B = \\dfrac{BC}{AB}$",
+          "$\\cos B = \\dfrac{\\text{ជ្រុងឈម}}{\\text{អ៊ីប៉ូតេនុស}} = \\dfrac{AC}{BC}$"
         ],
-        "correct": 0,
-        "explanation": "$\\sin A = \\dfrac{\\text{ជ្រុងទល់មុខ}}{\\text{អ៊ីប៉ូតេនុស}} = \\dfrac{BC}{AB}$។"
+        "correct": 1,
+        "explanation": "កូស៊ីនុសស្មើជ្រុងជាប់ចែកអ៊ីប៉ូតេនុស ៖ $\\cos B = \\dfrac{AB}{BC}$។"
       },
       {
         "id": "q3",
@@ -46851,19 +46849,67 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្នុងត្រីកោណ $ABC$ កែងត្រង់ $C$ ផលធៀប $\\tan A$ ស្មើនឹង ៖",
+        "question": "ក្នុងត្រីកោណកែង $ABC$ កែងត្រង់ $A$ រូបមន្តគណនាតង់សង់នៃមុំ $B$ គឺ ៖",
         "options": [
-          "$\\dfrac{AC}{BC}$",
-          "$\\dfrac{BC}{AC}$",
-          "$\\dfrac{BC}{AB}$",
-          "$\\dfrac{AC}{AB}$"
+          "$\\tan B = \\dfrac{AC}{BC}$",
+          "$\\tan B = \\dfrac{AB}{BC}$",
+          "$\\tan B = \\dfrac{\\text{ជ្រុងជាប់}}{\\text{ជ្រុងឈម}} = \\dfrac{AB}{AC}$",
+          "$\\tan B = \\dfrac{\\text{ជ្រុងឈម}}{\\text{ជ្រុងជាប់}} = \\dfrac{AC}{AB}$"
         ],
-        "correct": 1,
-        "explanation": "$\\tan A = \\dfrac{\\text{ជ្រុងទល់មុខ}}{\\text{ជ្រុងជាប់}} = \\dfrac{BC}{AC}$។"
+        "correct": 3,
+        "explanation": "តង់សង់ស្មើជ្រុងឈមចែកជ្រុងជាប់ ៖ $\\tan B = \\dfrac{AC}{AB}$។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ត្រីកោណកែងមួយមានជ្រុងកែង $AB = 3\\text{ cm}, AC = 4\\text{ cm}$ និងអ៊ីប៉ូតេនុស $BC = 5\\text{ cm}$។ គណនា $\\sin B$ ៖",
+        "options": [
+          "$\\dfrac{4}{5}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{3}{5}$",
+          "$\\dfrac{4}{3}$"
+        ],
+        "correct": 0,
+        "explanation": "$\\sin B = \\dfrac{\\text{ឈម}}{\\text{អ៊ីប៉ូតេនុស}} = \\dfrac{AC}{BC} = \\dfrac{4}{5}$។"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ត្រីកោណកែង $ABC$ កែងត្រង់ $A$ មាន $AC = 6\\text{ cm}$ និង $\\sin B = 0.6$។ រកប្រវែងអ៊ីប៉ូតេនុស $BC$ ៖",
+        "options": [
+          "$7.5\\text{ cm}$",
+          "$10\\text{ cm}$",
+          "$8\\text{ cm}$",
+          "$12\\text{ cm}$"
+        ],
+        "correct": 1,
+        "explanation": "$BC = \\dfrac{AC}{\\sin B} = \\dfrac{6}{0.6} = 10\\text{ cm}$។"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ផ្លូវឡើងភ្នំមួយមានជម្រាល $10^\\circ$។ បើរថយន្តបើកបរបានចម្ងាយ $500\\text{ m}$ តាមផ្លូវជម្រាលនោះ តើវាឡើងបានកម្ពស់ប៉ុន្មាន? (ដឹង $\\sin 10^\\circ \\approx 0.1736$)",
+        "options": [
+          "$\\approx 492\\text{ m}$",
+          "$\\approx 100\\text{ m}$",
+          "$\\approx 50\\text{ m}$",
+          "$\\approx 86.8\\text{ m}$"
+        ],
+        "correct": 3,
+        "explanation": "$h = 500 \\times \\sin 10^\\circ \\approx 500 \\times 0.1736 = 86.8\\text{ m}$។"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -46878,56 +46924,24 @@
         "explanation": "អ៊ីប៉ូតេនុស $= 5$ ៖ $\\sin = \\dfrac{3}{5}$។"
       },
       {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ត្រីកោណ $ABC$ កែងត្រង់ $B$ មាន $AB = 5$ និង $BC = 12$។ $\\cos A$ ស្មើ ៖",
-        "options": [
-          "$\\dfrac{12}{13}$",
-          "$\\dfrac{5}{12}$",
-          "$\\dfrac{12}{5}$",
-          "$\\dfrac{5}{13}$"
-        ],
-        "correct": 3,
-        "explanation": "$AC = 13$ ៖ $\\cos A = \\dfrac{AB}{AC} = \\dfrac{5}{13}$។"
-      },
-      {
-        "id": "q6",
-        "questionNumber": 6,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងត្រីកោណកែងមួយ $\\tan A = \\dfrac{3}{4}$ និងអ៊ីប៉ូតេនុសស្មើ $10$។ ជ្រុងទល់មុខមុំ $A$ ស្មើ ៖",
-        "options": [
-          "$6$",
-          "$8$",
-          "$3$",
-          "$7.5$"
-        ],
-        "correct": 0,
-        "explanation": "ជ្រុងទល់មុខ $3k$ ជ្រុងជាប់ $4k$ អ៊ីប៉ូតេនុស $5k = 10 \\Rightarrow k = 2$ ៖ ជ្រុងទល់មុខ $= 6$។"
-      },
-      {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាតម្លៃនៃ $\\tan 135^\\circ$ ៖",
-        "options": [
-          "$1$",
-          "$-1$",
-          "$-\\sqrt{3}$",
-          "$0$"
-        ],
-        "correct": 1,
-        "explanation": "$\\tan 135^\\circ = \\tan(180^\\circ - 45^\\circ) = -\\tan 45^\\circ = -1$។"
-      },
-      {
         "id": "q8",
         "questionNumber": 8,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "យន្តហោះមួយចុះចតតាមជម្រាលមុំចុះ $3^\\circ$។ បើយន្តហោះនៅកម្ពស់ $600\\text{ m}$ ធៀបនឹងព្រលាន តើចម្ងាយតាមខ្សែបន្ទាត់ដីទៅព្រលានប្រហែលប៉ុន្មាន? (ដឹង $\\tan 3^\\circ \\approx 0.0524$)",
+        "options": [
+          "$\\approx 11450\\text{ m}$",
+          "$\\approx 3140\\text{ m}$",
+          "$\\approx 6000\\text{ m}$",
+          "$\\approx 1200\\text{ m}$"
+        ],
+        "correct": 0,
+        "explanation": "$d = \\dfrac{600}{\\tan 3^\\circ} \\approx \\dfrac{600}{0.0524} \\approx 11450\\text{ m}$។"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 3 (លំបាក)",
@@ -46942,8 +46956,8 @@
         "explanation": "ជ្រុងទល់មុខតូចជាងអ៊ីប៉ូតេនុស ហើយវិជ្ជមាន ៖ $0 < \\sin A < 1$។"
       },
       {
-        "id": "q9",
-        "questionNumber": 9,
+        "id": "q10",
+        "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
         "level": "កម្រិត 3 (លំបាក)",
@@ -46956,22 +46970,6 @@
         ],
         "correct": 3,
         "explanation": "$\\sin A = \\dfrac{BC}{AB}$ និង $\\cos B = \\dfrac{BC}{AB}$ ៖ $\\sin A = \\cos B$។"
-      },
-      {
-        "id": "q10",
-        "questionNumber": 10,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ តង់សង់ ស៊ីនុស និងកូស៊ីនុស",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "បំប្លែងមុំ $225^\\circ$ ជារ៉ាដ្យង់ ៖",
-        "options": [
-          "$\\dfrac{3\\pi}{4}\\text{ rad}$",
-          "$\\dfrac{4\\pi}{3}\\text{ rad}$",
-          "$\\dfrac{7\\pi}{4}\\text{ rad}$",
-          "$\\dfrac{5\\pi}{4}\\text{ rad}$"
-        ],
-        "correct": 3,
-        "explanation": "$225^\\circ \\times \\dfrac{\\pi}{180^\\circ} = \\dfrac{5\\pi}{4}\\text{ rad}$។"
       }
     ],
     "2": [
@@ -46980,68 +46978,64 @@
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃនៃ $\\cos 45^\\circ$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "បើ $\\tan\\alpha = 1$ តើមុំស្រួច $\\alpha$ ស្មើប៉ុន្មានដឺក្រេ?",
         "options": [
-          "$\\dfrac{1}{2}$",
-          "$1$",
-          "$\\dfrac{\\sqrt{3}}{2}$",
-          "$\\dfrac{\\sqrt{2}}{2}$"
+          "$90^\\circ$",
+          "$60^\\circ$",
+          "$45^\\circ$",
+          "$30^\\circ$"
         ],
-        "correct": 3,
-        "explanation": "ពីត្រីកោណកែងសមបាត ៖ $\\cos 45^\\circ = \\dfrac{\\sqrt{2}}{2}$។",
-        "src": "genpq-g10b_points"
+        "correct": 2,
+        "explanation": "កាលណា $\\tan\\alpha = 1$ ជ្រុងឈមស្មើជ្រុងជាប់ (ត្រីកោណកែងសមបាត) នាំឱ្យ $\\alpha = 45^\\circ$។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ត្រីកោណកែងសមបាតមានជ្រុងមុំកែង $8$។ គណនាអ៊ីប៉ូតេនុស ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "តើតម្លៃនៃ $\\cos 30^\\circ$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$8\\sqrt{3}$",
-          "$8\\sqrt{2}$",
-          "$\\dfrac{8\\sqrt{2}}{2}$",
-          "$16$"
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$\\dfrac{\\sqrt{3}}{2}$",
+          "$\\sqrt{3}$",
+          "$\\dfrac{1}{2}$"
         ],
         "correct": 1,
-        "explanation": "$\\cos 45^\\circ = \\dfrac{8}{c}$ ⇒ $c = 8\\sqrt{2}$។",
-        "src": "genpq-g10b_points"
+        "explanation": "តាមតារាងតម្លៃមុំពិសេស $\\cos 30^\\circ = \\dfrac{\\sqrt{3}}{2}$។"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ត្រីកោណ $ABC$ កែងត្រង់ $C$ មាន $\\angle A = 30^\\circ$ និងអ៊ីប៉ូតេនុស $AB = 6$។ គណនា $BC$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "តើតម្លៃនៃ $\\tan 45^\\circ$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$3$",
-          "$4$",
-          "$6$",
-          "$12$"
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$\\sqrt{3}$",
+          "$1$",
+          "$\\dfrac{\\sqrt{3}}{3}$"
         ],
-        "correct": 0,
-        "explanation": "$BC = AB \\sin 30^\\circ = 6 \\times \\dfrac{1}{2} = 3$។",
-        "src": "genpq-g10b_points"
+        "correct": 2,
+        "explanation": "$\\tan 45^\\circ = 1$។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃនៃ $\\tan 45^\\circ$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "តើតម្លៃនៃ $\\sin 60^\\circ$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$\\dfrac{\\sqrt{2}}{2}$",
-          "$\\dfrac{\\sqrt{3}}{2}$",
           "$1$",
-          "$\\dfrac{1}{2}$"
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{\\sqrt{3}}{2}$"
         ],
-        "correct": 2,
-        "explanation": "ពីត្រីកោណកែងសមបាត ៖ $\\tan 45^\\circ = 1$។",
-        "src": "genpq-g10b_points"
+        "correct": 3,
+        "explanation": "$\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{2}$។"
       },
       {
         "id": "q5",
@@ -47049,16 +47043,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ត្រីកោណកែងសមបាតមានជ្រុងមុំកែង $3$។ គណនាអ៊ីប៉ូតេនុស ៖",
+        "question": "គណនាតម្លៃនៃកន្សោម $B = \\tan 30^\\circ \\times \\tan 60^\\circ$ ៖",
         "options": [
-          "$3\\sqrt{3}$",
-          "$\\dfrac{3\\sqrt{2}}{2}$",
-          "$3\\sqrt{2}$",
-          "$6$"
+          "$3$",
+          "$\\sqrt{3}$",
+          "$1$",
+          "$\\dfrac{1}{3}$"
         ],
         "correct": 2,
-        "explanation": "$\\cos 45^\\circ = \\dfrac{3}{c}$ ⇒ $c = 3\\sqrt{2}$។",
-        "src": "genpq-g10b_points"
+        "explanation": "$B = \\dfrac{\\sqrt{3}}{3} \\times \\sqrt{3} = 1$។"
       },
       {
         "id": "q6",
@@ -47066,16 +47059,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\sin 30^\\circ + \\cos 60^\\circ$ ៖",
+        "question": "គណនាតម្លៃនៃ $C = 2\\sin 45^\\circ \\cos 45^\\circ$ ៖",
         "options": [
-          "$\\dfrac{1}{2}$",
-          "$\\sqrt{3}$",
+          "$\\sqrt{2}$",
+          "$\\dfrac{\\sqrt{2}}{2}$",
           "$1$",
-          "$\\dfrac{\\sqrt{3}}{2}$"
+          "$\\dfrac{1}{2}$"
         ],
         "correct": 2,
-        "explanation": "$\\dfrac{1}{2} + \\dfrac{1}{2} = 1$។",
-        "src": "genpq-g10b_points"
+        "explanation": "$C = 2 \\times \\dfrac{\\sqrt{2}}{2} \\times \\dfrac{\\sqrt{2}}{2} = 2 \\times \\dfrac{2}{4} = 1$។"
       },
       {
         "id": "q7",
@@ -47083,67 +47075,63 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃនៃ $\\tan 30^\\circ$ គឺ ៖",
+        "question": "ត្រីកោណកែងមួយមានអ៊ីប៉ូតេនុស $8\\text{ cm}$ និងមុំមួយស្មើ $60^\\circ$។ រកប្រវែងជ្រុងកែងតូច ៖",
         "options": [
-          "$1$",
-          "$\\dfrac{\\sqrt{3}}{3}$",
-          "$\\dfrac{1}{2}$",
-          "$\\dfrac{\\sqrt{2}}{2}$"
+          "$4\\text{ cm}$",
+          "$2\\text{ cm}$",
+          "$6\\text{ cm}$",
+          "$4\\sqrt{3}\\text{ cm}$"
         ],
-        "correct": 1,
-        "explanation": "ពីត្រីកោណសម័ង្សពុះពាក់កណ្តាល ៖ $\\tan 30^\\circ = \\dfrac{\\sqrt{3}}{3}$។",
-        "src": "genpq-g10b_points"
+        "correct": 0,
+        "explanation": "ជ្រុងកែងតូចជាជ្រុងជាប់នឹងមុំ $60^\\circ$ ៖ $8 \\times \\cos 60^\\circ = 8 \\times \\dfrac{1}{2} = 4\\text{ cm}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃនៃ $\\sin 60^\\circ$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចតុកោណកែងមួយមានបណ្តោយ $12\\text{ cm}$ និងអង្កត់ទ្រូងបង្កើតបានមុំ $30^\\circ$ ជាមួយបណ្តោយ។ រកប្រវែងអង្កត់ទ្រូង ៖",
         "options": [
-          "$\\dfrac{\\sqrt{3}}{2}$",
-          "$1$",
-          "$\\dfrac{\\sqrt{2}}{2}$",
-          "$\\dfrac{1}{2}$"
+          "$24\\text{ cm}$",
+          "$16\\text{ cm}$",
+          "$8\\sqrt{3}\\text{ cm}$",
+          "$12\\sqrt{3}\\text{ cm}$"
         ],
-        "correct": 0,
-        "explanation": "ពីត្រីកោណសម័ង្សពុះពាក់កណ្តាល ៖ $\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{2}$។",
-        "src": "genpq-g10b_points"
+        "correct": 2,
+        "explanation": "$d = \\dfrac{12}{\\cos 30^\\circ} = \\dfrac{12}{\\sqrt{3}/2} = \\dfrac{24}{\\sqrt{3}} = 8\\sqrt{3}\\text{ cm}$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ត្រីកោណ $ABC$ កែងត្រង់ $C$ មាន $\\angle A = 30^\\circ$ និងអ៊ីប៉ូតេនុស $AB = 20$។ គណនា $BC$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ត្រីកោណសម័ង្សមួយមានជ្រុង $12$។ គណនាកម្ពស់ ៖",
         "options": [
-          "$11$",
-          "$20$",
-          "$40$",
-          "$10$"
+          "$6$",
+          "$6\\sqrt{2}$",
+          "$6\\sqrt{3}$",
+          "$12\\sqrt{3}$"
         ],
-        "correct": 3,
-        "explanation": "$BC = AB \\sin 30^\\circ = 20 \\times \\dfrac{1}{2} = 10$។",
-        "src": "genpq-g10b_points"
+        "correct": 2,
+        "explanation": "កម្ពស់ = a sin 60 ដឺក្រេ"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្លៃផលធៀបត្រីកោណមាត្រនៃមុំពិសេស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $2\\sin 45^\\circ \\cos 45^\\circ$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\left(\\sin 60\\circ+\\cos 60\\circ\\right)^2$ ៖",
         "options": [
-          "$0$",
-          "$1$",
+          "$\\dfrac{\\sqrt{3}}{2} + 2$",
+          "$\\dfrac{\\sqrt{3}}{2} + 1$",
           "$2$",
-          "$3$"
+          "$1$"
         ],
         "correct": 1,
-        "explanation": "ជំនួសតម្លៃពិសេស ៖ $2\\sin 45^\\circ \\cos 45^\\circ = 1$។",
-        "src": "genpq-g10b_points"
+        "explanation": "ពន្លាតរួចជំនួស"
       }
     ],
     "3": [
@@ -47153,15 +47141,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "រូបមន្តគ្រឹះត្រីកោណមាត្រ $\\sin^2 \\alpha + \\cos^2 \\alpha$ ស្មើនឹង ៖",
+        "question": "រូបមន្តគ្រឹះត្រីកោណមាត្រ $\\sin^2\\alpha + \\cos^2\\alpha$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$1$",
-          "$-1$",
+          "$0$",
           "$2$",
-          "$0$"
+          "$\\tan\\alpha$",
+          "$1$"
         ],
-        "correct": 0,
-        "explanation": "ចំពោះគ្រប់មុំ $\\alpha$, $\\sin^2 \\alpha + \\cos^2 \\alpha = 1$ ជានិច្ច។"
+        "correct": 3,
+        "explanation": "តាមទ្រឹស្តីបទពីតាក័រក្នុងត្រីកោណកែង $\\sin^2\\alpha + \\cos^2\\alpha = 1$ ជានិច្ច។"
       },
       {
         "id": "q2",
@@ -47169,15 +47157,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ទំនាក់ទំនងរវាង $\\tan \\alpha$ និង $\\cos \\alpha$ គឺ ៖",
+        "question": "រូបមន្តទំនាក់ទំនងរវាង $\\tan\\alpha, \\sin\\alpha$ និង $\\cos\\alpha$ គឺ ៖",
         "options": [
-          "$\\tan^2 \\alpha - 1 = \\dfrac{1}{\\cos^2 \\alpha}$",
-          "$1 + \\tan^2 \\alpha = \\dfrac{1}{\\cos^2 \\alpha}$",
-          "$1 + \\tan^2 \\alpha = \\sin^2 \\alpha$",
-          "$1 + \\tan^2 \\alpha = \\cos^2 \\alpha$"
+          "$\\tan\\alpha = \\sin\\alpha \\times \\cos\\alpha$",
+          "$\\tan\\alpha = \\dfrac{\\cos\\alpha}{\\sin\\alpha}$",
+          "$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha}$",
+          "$\\tan\\alpha = \\sin^2\\alpha + \\cos^2\\alpha$"
         ],
-        "correct": 1,
-        "explanation": "$1 + \\tan^2 \\alpha = 1 + \\dfrac{\\sin^2 \\alpha}{\\cos^2 \\alpha} = \\dfrac{\\cos^2 \\alpha + \\sin^2 \\alpha}{\\cos^2 \\alpha} = \\dfrac{1}{\\cos^2 \\alpha}$។"
+        "correct": 2,
+        "explanation": "$\\tan\\alpha = \\dfrac{\\text{ឈម}}{\\text{ជាប់}} = \\dfrac{\\text{ឈម}/\\text{អ៊ី}}{\\text{ជាប់}/\\text{អ៊ី}} = \\dfrac{\\sin\\alpha}{\\cos\\alpha}$។"
       },
       {
         "id": "q3",
@@ -47185,31 +47173,31 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ផលគុណ $\\tan \\alpha \\times \\cot \\alpha$ ស្មើនឹង ៖",
+        "question": "បើ $\\sin\\alpha = \\dfrac{3}{5}$ រកតម្លៃ $\\cos\\alpha$ (មុំស្រួច) ៖",
         "options": [
-          "$0$",
-          "$\\sin \\alpha$",
-          "$-1$",
-          "$1$"
+          "$\\dfrac{4}{5}$",
+          "$\\dfrac{2}{5}$",
+          "$\\dfrac{5}{4}$",
+          "$\\dfrac{1}{5}$"
         ],
-        "correct": 3,
-        "explanation": "$\\cot \\alpha = \\dfrac{1}{\\tan \\alpha} \\implies \\tan \\alpha \\cot \\alpha = 1$។"
+        "correct": 0,
+        "explanation": "$\\cos^2\\alpha = 1 - \\sin^2\\alpha = 1 - \\dfrac{9}{25} = \\dfrac{16}{25} \\implies \\cos\\alpha = \\dfrac{4}{5}$។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\cos \\alpha = \\dfrac{3}{5}$ និង $0 < \\alpha < \\dfrac{\\pi}{2}$ (កាដ្រង់ទី ១) គណនា $\\sin \\alpha$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "បើ $\\sin\\alpha = \\dfrac{3}{5}$ រកតម្លៃ $\\tan\\alpha$ ៖",
         "options": [
-          "$\\dfrac{16}{25}$",
-          "$-\\dfrac{4}{5}$",
-          "$\\dfrac{4}{5}$",
-          "$\\dfrac{2}{5}$"
+          "$\\dfrac{3}{5}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{4}{3}$",
+          "$\\dfrac{4}{5}$"
         ],
-        "correct": 2,
-        "explanation": "$\\sin^2 \\alpha = 1 - \\left(\\dfrac{3}{5}\\right)^2 = \\dfrac{16}{25}$។ ដោយ $\\alpha \\in \\text{I} \\implies \\sin \\alpha = \\dfrac{4}{5}$។"
+        "correct": 1,
+        "explanation": "$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha} = \\dfrac{\\frac{3}{5}}{\\frac{4}{5}} = \\dfrac{3}{4}$។"
       },
       {
         "id": "q5",
@@ -47217,15 +47205,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\tan \\alpha$ តាមទិន្នន័យសំណួរទី ៤ ៖",
+        "question": "រូបមន្តទំនាក់ទំនងរវាង $\\tan\\alpha$ និង $\\cos\\alpha$ គឺ ៖",
         "options": [
-          "$\\dfrac{4}{3}$",
-          "$\\dfrac{3}{4}$",
-          "$1$",
-          "$\\dfrac{5}{3}$"
+          "$1 + \\cos^2\\alpha = \\dfrac{1}{\\tan^2\\alpha}$",
+          "$\\tan^2\\alpha + \\cos^2\\alpha = 1$",
+          "$1 - \\tan^2\\alpha = \\cos^2\\alpha$",
+          "$1 + \\tan^2\\alpha = \\dfrac{1}{\\cos^2\\alpha}$"
         ],
-        "correct": 0,
-        "explanation": "$\\tan \\alpha = \\dfrac{\\sin \\alpha}{\\cos \\alpha} = \\dfrac{\\dfrac{4}{5}}{\\dfrac{3}{5}} = \\dfrac{4}{3}$។"
+        "correct": 3,
+        "explanation": "$1 + \\tan^2\\alpha = 1 + \\dfrac{\\sin^2\\alpha}{\\cos^2\\alpha} = \\dfrac{\\cos^2\\alpha + \\sin^2\\alpha}{\\cos^2\\alpha} = \\dfrac{1}{\\cos^2\\alpha}$។"
       },
       {
         "id": "q6",
@@ -47233,15 +47221,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\tan \\alpha = 2$ គណនាតម្លៃនៃ $\\dfrac{1}{\\cos^2 \\alpha}$ ៖",
+        "question": "បើ $\\tan\\alpha = 2$ គណនា $\\cos^2\\alpha$ ៖",
         "options": [
-          "$4$",
-          "$\\sqrt{5}$",
-          "$5$",
-          "$3$"
+          "$\\dfrac{1}{5}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{2}{5}$",
+          "$\\dfrac{4}{5}$"
         ],
-        "correct": 2,
-        "explanation": "$\\dfrac{1}{\\cos^2 \\alpha} = 1 + \\tan^2 \\alpha = 1 + 2^2 = 5$។"
+        "correct": 0,
+        "explanation": "$\\dfrac{1}{\\cos^2\\alpha} = 1 + \\tan^2\\alpha = 1 + 4 = 5 \\implies \\cos^2\\alpha = \\dfrac{1}{5}$។"
       },
       {
         "id": "q7",
@@ -47249,15 +47237,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលកន្សោម $A = (1 - \\cos \\alpha)(1 + \\cos \\alpha)$ ៖",
+        "question": "បើ $\\cos \\alpha = \\dfrac{3}{5}$ និង $0 < \\alpha < \\dfrac{\\pi}{2}$ (កាដ្រង់ទី ១) គណនា $\\sin \\alpha$ ៖",
         "options": [
-          "$\\tan^2 \\alpha$",
-          "$1$",
-          "$\\cos^2 \\alpha$",
-          "$\\sin^2 \\alpha$"
+          "$-\\dfrac{4}{5}$",
+          "$\\dfrac{16}{25}$",
+          "$\\dfrac{2}{5}$",
+          "$\\dfrac{4}{5}$"
         ],
         "correct": 3,
-        "explanation": "$(1 - \\cos \\alpha)(1 + \\cos \\alpha) = 1 - \\cos^2 \\alpha = \\sin^2 \\alpha$។"
+        "explanation": "$\\sin^2 \\alpha = 1 - \\left(\\dfrac{3}{5}\\right)^2 = \\dfrac{16}{25}$។ ដោយ $\\alpha \\in \\text{I} \\implies \\sin \\alpha = \\dfrac{4}{5}$។"
       },
       {
         "id": "q8",
@@ -47265,15 +47253,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "សម្រួលកន្សោម $B = \\dfrac{\\sin x}{1 + \\cos x} + \\dfrac{1 + \\cos x}{\\sin x}$ ៖",
+        "question": "សម្រួលកន្សោម $N = \\cos^4\\alpha - \\sin^4\\alpha + 2\\sin^2\\alpha$ ៖",
         "options": [
-          "$\\dfrac{1}{\\sin x}$",
-          "$\\dfrac{2}{\\sin x}$",
+          "$0$",
           "$2$",
-          "$\\dfrac{2}{\\cos x}$"
+          "$1$",
+          "$\\cos^2\\alpha$"
         ],
-        "correct": 1,
-        "explanation": "$B = \\dfrac{\\sin^2 x + (1 + \\cos x)^2}{\\sin x(1 + \\cos x)} = \\dfrac{\\sin^2 x + 1 + 2\\cos x + \\cos^2 x}{\\sin x(1 + \\cos x)} = \\dfrac{2 + 2\\cos x}{\\sin x(1 + \\cos x)} = \\dfrac{2}{\\sin x}$។"
+        "correct": 2,
+        "explanation": "$(\\cos^2\\alpha - \\sin^2\\alpha)(\\cos^2\\alpha + \\sin^2\\alpha) + 2\\sin^2\\alpha = \\cos^2\\alpha - \\sin^2\\alpha + 2\\sin^2\\alpha = \\cos^2\\alpha + \\sin^2\\alpha = 1$។"
       },
       {
         "id": "q9",
@@ -47281,15 +47269,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "បើ $\\sin x + \\cos x = \\dfrac{1}{2}$ គណនាផលគុណ $\\sin x \\cos x$ ៖",
+        "question": "សម្រួលកន្សោម $B = \\dfrac{\\sin x}{1 + \\cos x} + \\dfrac{1 + \\cos x}{\\sin x}$ ៖",
         "options": [
-          "$\\dfrac{1}{8}$",
-          "$-\\dfrac{3}{8}$",
-          "$\\dfrac{3}{8}$",
-          "$-\\dfrac{1}{4}$"
+          "$\\dfrac{1}{\\sin x}$",
+          "$\\dfrac{2}{\\cos x}$",
+          "$2$",
+          "$\\dfrac{2}{\\sin x}$"
         ],
-        "correct": 1,
-        "explanation": "លើកជាការេ ៖ $(\\sin x + \\cos x)^2 = 1 + 2\\sin x \\cos x = \\dfrac{1}{4} \\implies 2\\sin x \\cos x = \\dfrac{1}{4} - 1 = -\\dfrac{3}{4} \\implies \\sin x \\cos x = -\\dfrac{3}{8}$។"
+        "correct": 3,
+        "explanation": "$B = \\dfrac{\\sin^2 x + (1 + \\cos x)^2}{\\sin x(1 + \\cos x)} = \\dfrac{\\sin^2 x + 1 + 2\\cos x + \\cos^2 x}{\\sin x(1 + \\cos x)} = \\dfrac{2 + 2\\cos x}{\\sin x(1 + \\cos x)} = \\dfrac{2}{\\sin x}$។"
       },
       {
         "id": "q10",
@@ -47297,15 +47285,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងរវាងផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "សម្រួល $C = \\sin^4 x - \\cos^4 x + 2\\cos^2 x$ ៖",
+        "question": "បើ $\\sin x + \\cos x = \\dfrac{1}{2}$ គណនាផលគុណ $\\sin x \\cos x$ ៖",
         "options": [
-          "$\\sin^2 x$",
-          "$0$",
-          "$2$",
-          "$1$"
+          "$\\dfrac{1}{8}$",
+          "$\\dfrac{3}{8}$",
+          "$-\\dfrac{3}{8}$",
+          "$-\\dfrac{1}{4}$"
         ],
-        "correct": 3,
-        "explanation": "$\\sin^4 x - \\cos^4 x = (\\sin^2 x - \\cos^2 x)(\\sin^2 x + \\cos^2 x) = \\sin^2 x - \\cos^2 x$។ នាំឱ្យ $C = \\sin^2 x - \\cos^2 x + 2\\cos^2 x = \\sin^2 x + \\cos^2 x = 1$។"
+        "correct": 2,
+        "explanation": "លើកជាការេ ៖ $(\\sin x + \\cos x)^2 = 1 + 2\\sin x \\cos x = \\dfrac{1}{4} \\implies 2\\sin x \\cos x = \\dfrac{1}{4} - 1 = -\\dfrac{3}{4} \\implies \\sin x \\cos x = -\\dfrac{3}{8}$។"
       }
     ],
     "4": [
@@ -47315,17 +47303,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្នុងកាដ្រង់ទី ១ ($0 < \\alpha < 90^\\circ$) តើអនុគមន៍ត្រីកោណមាត្រណាខ្លះមានសញ្ញាវិជ្ជមាន?",
+        "question": "គណនាតម្លៃនៃ $D = \\cos^2 30^\\circ + \\sin^2 30^\\circ$ ៖",
         "options": [
-          "តែ \\tan មួយគត់",
-          "តែ \\sin មួយគត់",
-          "តែ \\cos មួយគត់",
-          "គ្រប់អនុគមន៍ទាំងអស់ (\\sin, \\cos, \\tan, \\cot)"
+          "$1$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{1}{2}$"
         ],
-        "correct": 3,
-        "explanation": "ក្នុងកាដ្រង់ទី ១ គ្រប់អនុគមន៍ត្រីកោណមាត្រសុទ្ធតែមានតម្លៃវិជ្ជមាន $+$ ទាំងអស់។",
-        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"265\" y=\"104\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">cos α</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">sin α</text><line x1=\"160\" y1=\"100\" x2=\"210\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"210\" cy=\"50\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"215\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">M(cos α, sin α)</text><path d=\"M 185 100 A 25 25 0 0 0 178 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">α</text><text x=\"190\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">I (+,+)</text><text x=\"115\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">II (-,+)</text><text x=\"115\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">III (-,-)</text><text x=\"190\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">IV (+,-)</text></svg>",
-        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"max-width:100%;height:auto;background:#ffffff;border-radius:8px;border:1px solid #e2e8f0;\"><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"#f8fafc\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"100\" x2=\"260\" y2=\"100\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"265\" y=\"104\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">cos α</text><line x1=\"160\" y1=\"180\" x2=\"160\" y2=\"20\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"165\" y=\"25\" font-family=\"sans-serif\" font-size=\"11\" font-weight=\"bold\" fill=\"#0f172a\">sin α</text><line x1=\"160\" y1=\"100\" x2=\"210\" y2=\"50\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><circle cx=\"210\" cy=\"50\" r=\"3.5\" fill=\"#ef4444\"/><text x=\"215\" y=\"45\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#ef4444\">M(cos α, sin α)</text><path d=\"M 185 100 A 25 25 0 0 0 178 82\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"1.5\"/><text x=\"185\" y=\"90\" font-family=\"sans-serif\" font-size=\"10\" font-weight=\"bold\" fill=\"#2563eb\">α</text><text x=\"190\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">I (+,+)</text><text x=\"115\" y=\"130\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">II (-,+)</text><text x=\"115\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">III (-,-)</text><text x=\"190\" y=\"70\" font-family=\"sans-serif\" font-size=\"9\" fill=\"#64748b\">IV (+,-)</text></svg>"
+        "correct": 0,
+        "explanation": "តាមរូបមន្តគ្រឹះ $\\cos^2\\alpha + \\sin^2\\alpha = 1$ ចំពោះគ្រប់មុំ $\\alpha$។"
       },
       {
         "id": "q2",
@@ -47333,15 +47319,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្នុងកាដ្រង់ទី ២ ($90^\\circ < \\alpha < 180^\\circ$) តើអនុគមន៍ណាមានសញ្ញាវិជ្ជមាន?",
+        "question": "បើមុំពីរ $\\alpha$ និង $\\beta$ ជាមុំបំពេញគ្នា ($\\alpha + \\beta = 90^\\circ$) តើ $\\sin\\alpha$ ស្មើនឹងអ្វី?",
         "options": [
-          "$\\tan \\alpha > 0$",
-          "$\\sin \\alpha > 0$ (ឯ $\\cos, \\tan, \\cot < 0$)",
-          "គ្រប់អនុគមន៍",
-          "$\\cos \\alpha > 0$"
+          "$\\cos\\beta$",
+          "$1 - \\cos\\beta$",
+          "$\\sin\\beta$",
+          "$\\tan\\beta$"
         ],
-        "correct": 1,
-        "explanation": "ក្នុងកាដ្រង់ទី ២ អរដោនេវិជ្ជមាន $\\implies \\sin \\alpha > 0$ ខណៈ $\\cos \\alpha < 0$។"
+        "correct": 0,
+        "explanation": "មុំបំពេញគ្នាមាន $\\sin\\alpha = \\cos(90^\\circ - \\alpha) = \\cos\\beta$។"
       },
       {
         "id": "q3",
@@ -47349,31 +47335,31 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្នុងកាដ្រង់ទី ៣ ($180^\\circ < \\alpha < 270^\\circ$) តើអនុគមន៍ណាមានសញ្ញាវិជ្ជមាន?",
+        "question": "គណនាតម្លៃនៃ $\\sin 40^\\circ - \\cos 50^\\circ$ ៖",
         "options": [
-          "គ្មាន",
-          "$\\sin \\alpha$",
-          "$\\tan \\alpha$ និង $\\cot \\alpha$",
-          "$\\cos \\alpha$"
+          "$\\sin 10^\\circ$",
+          "$-1$",
+          "$0$",
+          "$1$"
         ],
         "correct": 2,
-        "explanation": "ក្នុងកាដ្រង់ទី ៣ ទាំង $\\sin$ និង $\\cos$ សុទ្ធតែអវិជ្ជមាន នាំឱ្យផលធៀប $\\tan$ និង $\\cot$ វិជ្ជមាន។"
+        "explanation": "ដោយសារ $40^\\circ + 50^\\circ = 90^\\circ$ នាំឱ្យ $\\sin 40^\\circ = \\cos 50^\\circ$ ដូច្នេះ $\\sin 40^\\circ - \\cos 50^\\circ = 0$។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ក្នុងកាដ្រង់ទី ៤ ($270^\\circ < \\alpha < 360^\\circ$) តើអនុគមន៍ណាមានសញ្ញាវិជ្ជមាន?",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "បើ $\\sin 70^\\circ = a$ គណនា $\\cos 20^\\circ$ ជាអនុគមន៍នៃ $a$ ៖",
         "options": [
-          "$\\cos \\alpha > 0$",
-          "$\\tan \\alpha > 0$",
-          "$\\sin \\alpha > 0$",
-          "$\\cot \\alpha > 0$"
+          "$1 - a$",
+          "$a$",
+          "$\\sqrt{1 - a^2}$",
+          "$\\dfrac{1}{a}$"
         ],
-        "correct": 0,
-        "explanation": "ក្នុងកាដ្រង់ទី ៤ អាប់ស៊ីសវិជ្ជមាន នាំឱ្យ $\\cos \\alpha > 0$ ឯ $\\sin \\alpha < 0$។"
+        "correct": 1,
+        "explanation": "ដោយសារ $70^\\circ + 20^\\circ = 90^\\circ \\implies \\cos 20^\\circ = \\sin 70^\\circ = a$។"
       },
       {
         "id": "q5",
@@ -47381,15 +47367,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\sin \\alpha > 0$ និង $\\cos \\alpha < 0$ តើមុំ $\\alpha$ ស្ថិតក្នុងកាដ្រង់ណា?",
+        "question": "ក្នុងត្រីកោណកែង $ABC$ កែងត្រង់ $A$ តើ $\\sin B$ និង $\\cos C$ មានទំនាក់ទំនងដូចម្តេច?",
         "options": [
-          "កាដ្រង់ទី ៤",
-          "កាដ្រង់ទី ៣",
-          "កាដ្រង់ទី ២",
-          "កាដ្រង់ទី ១"
+          "$\\sin B = -\\cos C$",
+          "$\\sin B + \\cos C = 1$",
+          "$\\sin B = \\cos C$",
+          "$\\sin B \\times \\cos C = 1$"
         ],
         "correct": 2,
-        "explanation": "$\\sin > 0$ និង $\\cos < 0$ គឺកាដ្រង់ទី ២។"
+        "explanation": "មុំ $B$ និង $C$ ជាមុំបំពេញគ្នា ($B + C = 90^\\circ$) ដូច្នេះ $\\sin B = \\cos C = \\dfrac{AC}{BC}$។"
       },
       {
         "id": "q6",
@@ -47397,15 +47383,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\sin \\alpha < 0$ និង $\\tan \\alpha > 0$ តើមុំ $\\alpha$ ស្ថិតក្នុងកាដ្រង់ណា?",
+        "question": "គណនាតម្លៃនៃ $\\dfrac{\\tan 25^\\circ}{\\cot 65^\\circ}$ (ដែល $\\cot 65^\\circ = \\dfrac{1}{\\tan 65^\\circ}$) ៖",
         "options": [
-          "កាដ្រង់ទី ៣",
-          "កាដ្រង់ទី ៤",
-          "កាដ្រង់ទី ១",
-          "កាដ្រង់ទី ២"
+          "$1$",
+          "$0$",
+          "$2$",
+          "$\\tan 40^\\circ$"
         ],
         "correct": 0,
-        "explanation": "$\\tan > 0$ នៅកាដ្រង់ I និង III។ ដោយ $\\sin < 0$ នាំឱ្យមុំស្ថិតក្នុងកាដ្រង់ទី ៣។"
+        "explanation": "$\\tan 25^\\circ \\times \\tan 65^\\circ = 1$ ព្រោះ $25^\\circ + 65^\\circ = 90^\\circ$ ដូច្នេះផលធៀបស្មើ $1$។"
       },
       {
         "id": "q7",
@@ -47413,15 +47399,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "កំណត់សញ្ញានៃកន្សោម $A = \\sin 140^\\circ \\cdot \\cos 210^\\circ$ ៖",
+        "question": "គណនាតម្លៃនៃកន្សោម $\\sin^2 35^\\circ + \\sin^2 55^\\circ$ ៖",
         "options": [
-          "$A > 0$ (វិជ្ជមាន)",
-          "មិនអាចកំណត់",
-          "$A = 0$",
-          "$A < 0$ (អវិជ្ជមាន)"
+          "$\\dfrac{1}{2}$",
+          "$1$",
+          "$0$",
+          "$2$"
         ],
-        "correct": 3,
-        "explanation": "$140^\\circ \\in \\text{II} \\implies \\sin 140^\\circ > 0$។ $210^\\circ \\in \\text{III} \\implies \\cos 210^\\circ < 0$ នាំឱ្យផលគុណ $A < 0$។"
+        "correct": 1,
+        "explanation": "$\\sin 55^\\circ = \\cos 35^\\circ$ នាំឱ្យ $\\sin^2 35^\\circ + \\cos^2 35^\\circ = 1$។"
       },
       {
         "id": "q8",
@@ -47429,15 +47415,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "កំណត់សញ្ញានៃ $B = \\tan 310^\\circ \\cdot \\sin 290^\\circ$ ៖",
+        "question": "រកតម្លៃ $x$ បើ $\\sin(2x - 10^\\circ) = \\cos(x + 40^\\circ)$ (មុំស្រួច) ៖",
         "options": [
-          "$B = 0$",
-          "$B > 0$ (វិជ្ជមាន)",
-          "ស្មើ 1",
-          "$B < 0$ (អវិជ្ជមាន)"
+          "$x = 20^\\circ$",
+          "$x = 30^\\circ$",
+          "$x = 15^\\circ$",
+          "$x = 25^\\circ$"
         ],
-        "correct": 1,
-        "explanation": "$310^\\circ, 290^\\circ \\in \\text{IV} \\implies \\tan 310^\\circ < 0$ និង $\\sin 290^\\circ < 0$។ ផលគុណ $(-)(-) = + > 0$។"
+        "correct": 0,
+        "explanation": "មុំបំពេញគ្នា ៖ $(2x - 10^\\circ) + (x + 40^\\circ) = 90^\\circ \\iff 3x + 30^\\circ = 90^\\circ \\iff 3x = 60^\\circ \\implies x = 20^\\circ$។"
       },
       {
         "id": "q9",
@@ -47445,15 +47431,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "បើ $\\cos x = -0.6$ និង $\\pi < x < 2\\pi$ រកកាដ្រង់នៃ $x$ ៖",
+        "question": "គណនាតម្លៃនៃ $A = \\sin^2 30^\\circ + \\sin^2 60^\\circ + \\cos 180^\\circ$ ៖",
         "options": [
-          "កាដ្រង់ទី ៤",
-          "កាដ្រង់ទី ២",
-          "កាដ្រង់ទី ១",
-          "កាដ្រង់ទី ៣"
+          "$1$",
+          "$0$",
+          "$-1$",
+          "$2$"
         ],
-        "correct": 3,
-        "explanation": "$\\pi < x < 2\\pi$ គឺកាដ្រង់ទី ៣ ឬ ៤។ ដោយ $\\cos x < 0$ នាំឱ្យ $x$ ត្រូវតែស្ថិតក្នុងកាដ្រង់ទី ៣។"
+        "correct": 1,
+        "explanation": "$\\sin^2 30^\\circ + \\sin^2 60^\\circ = \\left(\\dfrac{1}{2}\\right)^2 + (\\dfrac{\\sqrt{3}}{2})^2 = \\dfrac{1}{4} + \\dfrac{3}{4} = 1$។ $\\cos 180^\\circ = -1$ នាំឱ្យ $A = 1 - 1 = 0$។"
       },
       {
         "id": "q10",
@@ -47461,15 +47447,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការពន្លាតនៃផលធៀបត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "សញ្ញានៃ $\\sin(-\\alpha)$ និង $\\cos(-\\alpha)$ ធៀបនឹង $\\sin \\alpha$ និង $\\cos \\alpha$ គឺ ៖",
+        "question": "បំប្លែងមុំ $\\dfrac{2\\pi}{3}\\text{ rad}$ ជាដឺក្រេ ៖",
         "options": [
-          "$\\sin(-\\alpha) = -\\sin \\alpha$ និង $\\cos(-\\alpha) = \\cos \\alpha$",
-          "ទាំងពីរមានសញ្ញាដក",
-          "ទាំងពីរមានសញ្ញាបូក",
-          "$\\cos(-\\alpha) = -\\cos \\alpha$"
+          "$60^\\circ$",
+          "$150^\\circ$",
+          "$135^\\circ$",
+          "$120^\\circ$"
         ],
-        "correct": 0,
-        "explanation": "ស៊ីនុសជាអនុគមន៍សេស $\\sin(-\\alpha) = -\\sin \\alpha$ និងកូស៊ីនុសជាអនុគមន៍គូ $\\cos(-\\alpha) = \\cos \\alpha$។"
+        "correct": 3,
+        "explanation": "$\\dfrac{2\\pi}{3} \\times \\dfrac{180^\\circ}{\\pi} = 2 \\times 60^\\circ = 120^\\circ$។"
       }
     ]
   },
