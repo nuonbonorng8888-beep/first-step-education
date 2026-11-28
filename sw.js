@@ -1,6 +1,6 @@
 // 1st Step Education PWA Service Worker
 // Keep ASSET_VERSION equal to the ?v= numbers in index.html.
-const ASSET_VERSION = '275';
+const ASSET_VERSION = '276';
 const CACHE_NAME = '1st-step-v' + ASSET_VERSION;
 
 // Small files needed to open the app offline. Big data files
