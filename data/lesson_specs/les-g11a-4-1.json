@@ -1,0 +1,58 @@
+{
+  "lesson": "les-g11a-4-1",
+  "grade": 11,
+  "course": "advanced",
+  "title": "មេរៀនទី ៣ ៖ ការបំប្លែងលីនេអ៊ែរ (ទំព័រ ១៨៨ - ២១៧)",
+  "book_pages": "g11a_ch4_les1.pdf pp.1-30 (book 188-217)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ ការបំប្លែងលីនេអ៊ែរ"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ ការបំប្លែងឆ្លុះ"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ ការបំប្លែងចាំង"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ ការបំប្លែងវិល"
+    },
+    {
+      "n": 5,
+      "title": "ចំណុចទី ៥ ៖ ការបំប្លែងលីនេអ៊ែរបណ្តាក់"
+    }
+  ],
+  "notes": "Linear transformations. All existing keys verified (30 image items checked). 50 QB items assigned to points by content.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 13,
+      "m": 10,
+      "h": 12
+    },
+    "2": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "5": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}

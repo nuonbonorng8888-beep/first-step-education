@@ -17715,15 +17715,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើបំលែង $T: \\mathbb{R}^2 \\to \\mathbb{R}^2$ ជាបំលែងលីនេអ៊ែរលុះត្រាតែលក្ខខណ្ឌណាត្រូវផ្ទៀងផ្ទាត់?",
         "options": [
+          "$T(0) = 1$",
           "$T(u + v) = T(u) - T(v)$",
-          "$T(u + v) = T(u) + T(v)$ និង $T(cu) = c T(u)$",
           "$T(u \\cdot v) = T(u) \\cdot T(v)$",
-          "$T(0) = 1$"
+          "$T(u + v) = T(u) + T(v)$ និង $T(cu) = c T(u)$"
         ],
-        "correct": 1,
-        "explanation": "តាមនិយមន័យ បំលែង $T$ ជាបំលែងលីនេអ៊ែរ លុះត្រាតែវាផ្ទៀងផ្ទាត់លក្ខណៈបូក $T(u+v) = T(u)+T(v)$ និងលក្ខណៈគុណស្កាលែ $T(cu) = cT(u)$។",
-        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"185\" x2=\"70\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"150\" x2=\"120\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"120,150 114,147 114,153\" fill=\"#94a3b8\"/><text x=\"100\" y=\"165\" font-size=\"10\" fill=\"#64748b\">i</text><line x1=\"70\" y1=\"150\" x2=\"70\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"70,100 67,106 73,106\" fill=\"#94a3b8\"/><text x=\"58\" y=\"115\" font-size=\"10\" fill=\"#64748b\">j</text><line x1=\"70\" y1=\"150\" x2=\"170\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"170,110 162,110 165,116\" fill=\"#2563eb\"/><text x=\"175\" y=\"112\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">T(i)</text><line x1=\"70\" y1=\"150\" x2=\"130\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><polygon points=\"130,50 123,54 128,58\" fill=\"#ef4444\"/><text x=\"135\" y=\"52\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">T(j)</text><polygon points=\"70,150 170,110 230,10 130,50\" fill=\"rgba(37, 99, 235, 0.1)\" stroke=\"#2563eb\" stroke-dasharray=\"2,2\"/><text x=\"150\" y=\"180\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">បំលែងលីនេអ៊ែរ ៖ ផ្ទៃ = |det(M)|</text></svg>",
-        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"185\" x2=\"70\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"70\" y1=\"150\" x2=\"120\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"120,150 114,147 114,153\" fill=\"#94a3b8\"/><text x=\"100\" y=\"165\" font-size=\"10\" fill=\"#64748b\">i</text><line x1=\"70\" y1=\"150\" x2=\"70\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><polygon points=\"70,100 67,106 73,106\" fill=\"#94a3b8\"/><text x=\"58\" y=\"115\" font-size=\"10\" fill=\"#64748b\">j</text><line x1=\"70\" y1=\"150\" x2=\"170\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><polygon points=\"170,110 162,110 165,116\" fill=\"#2563eb\"/><text x=\"175\" y=\"112\" font-size=\"10\" font-weight=\"700\" fill=\"#2563eb\">T(i)</text><line x1=\"70\" y1=\"150\" x2=\"130\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><polygon points=\"130,50 123,54 128,58\" fill=\"#ef4444\"/><text x=\"135\" y=\"52\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">T(j)</text><polygon points=\"70,150 170,110 230,10 130,50\" fill=\"rgba(37, 99, 235, 0.1)\" stroke=\"#2563eb\" stroke-dasharray=\"2,2\"/><text x=\"150\" y=\"180\" font-size=\"10\" font-weight=\"700\" fill=\"#0f172a\">បំលែងលីនេអ៊ែរ ៖ ផ្ទៃ = |det(M)|</text></svg>"
+        "correct": 3,
+        "explanation": "តាមនិយមន័យ បំលែង $T$ ជាបំលែងលីនេអ៊ែរ លុះត្រាតែវាផ្ទៀងផ្ទាត់លក្ខណៈបូក $T(u+v) = T(u)+T(v)$ និងលក្ខណៈគុណស្កាលែ $T(cu) = cT(u)$។"
       },
       {
         "id": "q2",
@@ -17734,11 +17732,11 @@
         "question": "តើបំលែងលីនេអ៊ែរតែងតែប្រែក្លាយគល់កូអរដោនេ $O(0, 0)$ ទៅជាចំណុចណា?",
         "options": [
           "$(0, 1)$",
-          "$(1, 1)$",
           "មិនកំណត់",
-          "$O(0, 0)$ ដដែលជានិច្ច ព្រោះ $T(0) = 0$"
+          "$O(0, 0)$ ដដែលជានិច្ច ព្រោះ $T(0) = 0$",
+          "$(1, 1)$"
         ],
-        "correct": 3,
+        "correct": 2,
         "explanation": "គ្រប់បំលែងលីនេអ៊ែរតែងតែបម្លែងវ៉ិចទ័រសូន្យទៅជាវ៉ិចទ័រសូន្យ ៖ $T(0) = 0$។"
       },
       {
@@ -17750,8 +17748,8 @@
         "question": "គេឱ្យបំលែង $T(x, y) = (2x + y, 3x - 4y)$។ រកម៉ាទ្រីសតំណាង $M$ នៃ $T$ ៖",
         "options": [
           "$M = \\begin{pmatrix} 2 & 1 \\\\ 3 & -4 \\end{pmatrix}$",
-          "$M = \\begin{pmatrix} 2 & -4 \\\\ 3 & 1 \\end{pmatrix}$",
           "$M = \\begin{pmatrix} 2 & 3 \\\\ 1 & -4 \\end{pmatrix}$",
+          "$M = \\begin{pmatrix} 2 & -4 \\\\ 3 & 1 \\end{pmatrix}$",
           "$M = \\begin{pmatrix} 1 & 2 \\\\ -4 & 3 \\end{pmatrix}$"
         ],
         "correct": 0,
@@ -17765,12 +17763,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើបំលែងណាខាងក្រោមនេះមិនមែនជាបំលែងលីនេអ៊ែរ?",
         "options": [
-          "$T(x, y) = (x+y, 0)$",
           "$T(x, y) = (2x, 3y)$",
           "$T(x, y) = (x + 1, y)$",
+          "$T(x, y) = (x+y, 0)$",
           "$T(x, y) = (y, -x)$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "$T(0, 0) = (1, 0) \\ne (0, 0)$ ដូច្នេះ $T(x, y) = (x+1, y)$ ជាបំលែងកាត់រំកិល (Translation) មិនមែនជាបំលែងលីនេអ៊ែរឡើយ។"
       },
       {
@@ -17781,12 +17779,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គេឱ្យម៉ាទ្រីសតំណាង $A = \\begin{pmatrix} 3 & -1 \\\\ 2 & 4 \\end{pmatrix}$។ រករូបភាពនៃចំណុច $P(2, -1)$ ៖",
         "options": [
-          "$P'(7, 0)$",
           "$P'(6, -4)$",
+          "$P'(7, 0)$",
           "$P'(5, 2)$",
           "$P'(7, -8)$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "$\\begin{pmatrix} 3 & -1 \\\\ 2 & 4 \\end{pmatrix}\\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 3(2)-1(-1) \\\\ 2(2)+4(-1) \\end{pmatrix} = \\begin{pmatrix} 7 \\\\ 0 \\end{pmatrix}$។"
       },
       {
@@ -17797,12 +17795,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកម៉ាទ្រីសនៃបំលែងលីនេអ៊ែរដែលបម្លែង $e_1(1, 0) \\mapsto (3, 2)$ និង $e_2(0, 1) \\mapsto (-1, 4)$ ៖",
         "options": [
-          "$\\begin{pmatrix} 3 & 2 \\\\ -1 & 4 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 2 & 4 \\\\ 3 & -1 \\end{pmatrix}$",
           "$\\begin{pmatrix} 3 & -1 \\\\ 2 & 4 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 3 & 2 \\\\ -1 & 4 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 2 & 4 \\\\ 3 & -1 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "ជួរឈរនៃម៉ាទ្រីសតំណាង គឺជារូបភាពនៃគោលស្តង់ដា $T(e_1)$ និង $T(e_2)$ ៖ $\\begin{pmatrix} 3 & -1 \\\\ 2 & 4 \\end{pmatrix}$។"
       },
       {
@@ -17814,11 +17812,11 @@
         "question": "តើបំលែងលីនេអ៊ែររក្សាភាពស្របគ្នានៃបន្ទាត់ និងសមាមាត្រនៃអង្កត់ដែរឬទេ?",
         "options": [
           "មិនរក្សាភាពស្របគ្នាទេ",
-          "រក្សាភាពស្របគ្នា និងសមាមាត្រនៃអង្កត់ជានិច្ច",
+          "មិនកំណត់",
           "ប្រែក្លាយបន្ទាត់ទៅជារង្វង់",
-          "មិនកំណត់"
+          "រក្សាភាពស្របគ្នា និងសមាមាត្រនៃអង្កត់ជានិច្ច"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "លក្ខណៈធរណីមាត្រនៃបំលែងលីនេអ៊ែរ គឺបម្លែងបន្ទាត់ទៅជាបន្ទាត់ និងរក្សាភាពស្របគ្នានិងសមាមាត្រ។"
       },
       {
@@ -17826,15 +17824,15 @@
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ការបំប្លែងលីនេអ៊ែរ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យបំលែង $T$ មានម៉ាទ្រីស $M$។ បើរូបភាពធរណីមាត្រមួយមានផ្ទៃក្រឡា $S$ តើរូបភាពថ្មីមានផ្ទៃក្រឡា $S'$ ស្មើនឹងអ្វី?",
         "options": [
-          "$S' = S / \\det(M)$",
           "$S' = S$",
           "$S' = \\det(M) + S$",
-          "$S' = |\\det(M)| \\times S$"
+          "$S' = |\\det(M)| \\times S$",
+          "$S' = S / \\det(M)$"
         ],
-        "correct": 3,
+        "correct": 2,
         "explanation": "ដេទែរមីណង់នៃម៉ាទ្រីសតំណាងជាមេគុណពង្រីកផ្ទៃក្រឡា ៖ $S' = |\\det(M)| \\cdot S$។"
       },
       {
@@ -17842,15 +17840,15 @@
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ការបំប្លែងលីនេអ៊ែរ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "តើបំលែងលីនេអ៊ែរណាដែលមានម៉ាទ្រីសតំណាង $M = \\begin{pmatrix} 1 & k \\\\ 0 & 1 \\end{pmatrix}$?",
         "options": [
+          "ចំណាំងប្លាត",
           "បំលែងចម្រើន",
           "បំលែងកាត់ទទឹងផ្ដេក (Horizontal Shear)",
-          "ចំណាំងប្លាត",
           "បំលែងវិល"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "ម៉ាទ្រីស $\\begin{pmatrix} 1 & k \\\\ 0 & 1 \\end{pmatrix}$ តំណាងឱ្យ Shear តាមទិសដេកស្របនឹងអ័ក្ស $Ox$។"
       },
       {
@@ -17858,15 +17856,15 @@
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ការបំប្លែងលីនេអ៊ែរ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកស្នូល (Kernel) នៃបំលែងលីនេអ៊ែរ $T(x, y) = (x - y, 2x - 2y)$ ៖",
         "options": [
+          "ប្លង់ទាំងមូល",
           "បន្ទាត់ $y = x$",
           "បន្ទាត់ $y = -x$",
-          "ប្លង់ទាំងមូល",
           "ចំណុចទោល $(0, 0)$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "$\\ker(T) = \\{(x, y) \\mid T(x, y) = (0, 0)\\} \\iff x - y = 0 \\iff y = x$ (បន្ទាត់ពុះទីមួយ)។"
       }
     ],
@@ -17879,12 +17877,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសនៃចំណាំងប្លាតធៀបនឹងអ័ក្សអាប់ស៊ីស ($Ox$) គឺ ៖",
         "options": [
-          "$R_x = \\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$R_x = \\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+          "$R_x = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
           "$R_x = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
-          "$R_x = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
+          "$R_x = \\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$R_x = \\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "ចំណាំងប្លាតធៀបនឹង $Ox$ រក្សា $x$ និងដូរសញ្ញា $y$ ៖ $(x, y) \\mapsto (x, -y)$ ត្រូវគ្នានឹង $\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$។"
       },
       {
@@ -17895,12 +17893,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសនៃចំណាំងប្លាតធៀបនឹងអ័ក្សអ័រដោនេ ($Oy$) គឺ ៖",
         "options": [
-          "$R_y = \\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$R_y = \\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$",
+          "$R_y = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
           "$R_y = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
-          "$R_y = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$"
+          "$R_y = \\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$R_y = \\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "ចំណាំងប្លាតធៀបនឹង $Oy$ ដូរសញ្ញា $x$ និងរក្សា $y$ ៖ $(x, y) \\mapsto (-x, y)$ ត្រូវគ្នានឹង $\\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$។"
       },
       {
@@ -17911,12 +17909,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសនៃចំណាំងប្លាតធៀបនឹងបន្ទាត់ $y = x$ គឺ ៖",
         "options": [
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
           "$\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "ប្តូរតួនាទី $x$ និង $y$ ៖ $(x, y) \\mapsto (y, x)$ ត្រូវគ្នានឹង $\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$។"
       },
       {
@@ -17928,11 +17926,11 @@
         "question": "តើម៉ាទ្រីសនៃចំណាំងប្លាតធៀបនឹងបន្ទាត់ $y = -x$ គឺ ៖",
         "options": [
           "$\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$",
+          "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
           "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "$(x, y) \\mapsto (-y, -x)$ ត្រូវគ្នានឹង $\\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$។"
       },
       {
@@ -17943,10 +17941,10 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រករូបភាពនៃចំណុច $A(3, -5)$ តាមចំណាំងប្លាតធៀបនឹងអ័ក្ស $Ox$ ៖",
         "options": [
-          "$A'(-5, 3)$",
           "$A'(-3, 5)$",
+          "$A'(-3, -5)$",
           "$A'(3, 5)$",
-          "$A'(-3, -5)$"
+          "$A'(-5, 3)$"
         ],
         "correct": 2,
         "explanation": "$Ox$ ដូរសញ្ញា $y$ ៖ $(3, -5) \\mapsto (3, 5)$។"
@@ -17960,11 +17958,11 @@
         "question": "តើដេទែរមីណង់នៃម៉ាទ្រីសចំណាំងប្លាតអ័ក្សណាមួយតែងតែស្មើនឹងប៉ុន្មានជានិច្ច?",
         "options": [
           "$0$",
-          "$1$",
+          "$-1$",
           "$2$",
-          "$-1$"
+          "$1$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "ចំណាំងប្លាតប្តូរទិសដៅតម្រង់ទិស (Orientation) នៃប្លង់ ដូច្នេះ $\\det(R) = -1$ ជានិច្ច។"
       },
       {
@@ -17988,7 +17986,39 @@
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ការបំប្លែងឆ្លុះ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកម៉ាទ្រីសចំណាំងប្លាតធៀបនឹងបន្ទាត់កាត់គល់ $O$ បង្កើតមុំ $\\theta$ ជាមួយអ័ក្ស $Ox$ ៖",
+        "options": [
+          "$\\begin{pmatrix} \\cos 2\\theta & \\sin 2\\theta \\\\ \\sin 2\\theta & -\\cos 2\\theta \\end{pmatrix}$",
+          "$\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$",
+          "$\\begin{pmatrix} \\sin 2\\theta & \\cos 2\\theta \\\\ \\cos 2\\theta & -\\sin 2\\theta \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$"
+        ],
+        "correct": 0,
+        "explanation": "រូបមន្តទូទៅនៃចំណាំងប្លាតធៀបបន្ទាត់មុំ $\\theta$ គឺ $\\begin{pmatrix} \\cos 2\\theta & \\sin 2\\theta \\\\ \\sin 2\\theta & -\\cos 2\\theta \\end{pmatrix}$។"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ការបំប្លែងឆ្លុះ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រករូបភាពនៃបន្ទាត់ $2x - 3y + 1 = 0$ តាមចំណាំងប្លាតធៀបនឹងអ័ក្ស $Ox$ ៖",
+        "options": [
+          "$3x - 2y + 1 = 0$",
+          "$2x + 3y + 1 = 0$",
+          "$2x - 3y - 1 = 0$",
+          "$-2x - 3y + 1 = 0$"
+        ],
+        "correct": 1,
+        "explanation": "ជំនួស $y$ ដោយ $-y$ ៖ $2x - 3(-y) + 1 = 0 \\iff 2x + 3y + 1 = 0$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ការបំប្លែងឆ្លុះ",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រករូបភាពនៃចំណុច $A(3, -2)$ តាមចំណាំងឆ្លុះធៀបនឹងបន្ទាត់ $y = -x$ ៖",
         "options": [
           "$(-3, 2)$",
@@ -17998,38 +18028,6 @@
         ],
         "correct": 3,
         "explanation": "ចំណាំងឆ្លុះធៀបនឹង $y = -x$ ប្តូរ $(x, y) \\to (-y, -x)$ ៖ $A(3, -2) \\to (2, -3)$។"
-      },
-      {
-        "id": "q9",
-        "questionNumber": 9,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ការបំប្លែងឆ្លុះ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកម៉ាទ្រីសចំណាំងប្លាតធៀបនឹងបន្ទាត់កាត់គល់ $O$ បង្កើតមុំ $\\theta$ ជាមួយអ័ក្ស $Ox$ ៖",
-        "options": [
-          "$\\begin{pmatrix} \\cos 2\\theta & \\sin 2\\theta \\\\ \\sin 2\\theta & -\\cos 2\\theta \\end{pmatrix}$",
-          "$\\begin{pmatrix} \\sin 2\\theta & \\cos 2\\theta \\\\ \\cos 2\\theta & -\\sin 2\\theta \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$"
-        ],
-        "correct": 0,
-        "explanation": "រូបមន្តទូទៅនៃចំណាំងប្លាតធៀបបន្ទាត់មុំ $\\theta$ គឺ $\\begin{pmatrix} \\cos 2\\theta & \\sin 2\\theta \\\\ \\sin 2\\theta & -\\cos 2\\theta \\end{pmatrix}$។"
-      },
-      {
-        "id": "q10",
-        "questionNumber": 10,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ការបំប្លែងឆ្លុះ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រករូបភាពនៃបន្ទាត់ $2x - 3y + 1 = 0$ តាមចំណាំងប្លាតធៀបនឹងអ័ក្ស $Ox$ ៖",
-        "options": [
-          "$-2x - 3y + 1 = 0$",
-          "$2x + 3y + 1 = 0$",
-          "$2x - 3y - 1 = 0$",
-          "$3x - 2y + 1 = 0$"
-        ],
-        "correct": 1,
-        "explanation": "ជំនួស $y$ ដោយ $-y$ ៖ $2x - 3(-y) + 1 = 0 \\iff 2x + 3y + 1 = 0$។"
       }
     ],
     "3": [
@@ -18041,12 +18039,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើម៉ាទ្រីសនៃបំលែងចម្រើន (Homothety) ផ្ចិត $O$ ផលធៀប $k$ គឺ ៖",
         "options": [
-          "$H_k = \\begin{pmatrix} k & 0 \\\\ 0 & k \\end{pmatrix}$",
           "$H_k = \\begin{pmatrix} 0 & k \\\\ k & 0 \\end{pmatrix}$",
           "$H_k = \\begin{pmatrix} 1 & 0 \\\\ 0 & k \\end{pmatrix}$",
-          "$H_k = \\begin{pmatrix} k & 0 \\\\ 0 & 1 \\end{pmatrix}$"
+          "$H_k = \\begin{pmatrix} k & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$H_k = \\begin{pmatrix} k & 0 \\\\ 0 & k \\end{pmatrix}$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "បំលែងចម្រើនពង្រីក ឬបង្រួមគ្រប់កូអរដោនេ $k$ ដង ៖ $H_k = \\begin{pmatrix} k & 0 \\\\ 0 & k \\end{pmatrix} = kI$។"
       },
       {
@@ -18057,12 +18055,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើដេទែរមីណង់នៃម៉ាទ្រីសបំលែងចម្រើន $H_k$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "$2k$",
           "$1$",
           "$k$",
-          "$k^2$"
+          "$k^2$",
+          "$2k$"
         ],
-        "correct": 3,
+        "correct": 2,
         "explanation": "$\\det(H_k) = k \\cdot k - 0 = k^2$។"
       },
       {
@@ -18073,12 +18071,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រករូបភាពនៃចំណុច $A(3, -2)$ តាមបំលែងចម្រើន $H_3$ (ផលធៀប ៣) ៖",
         "options": [
-          "$A'(6, -5)$",
-          "$A'(0, 0)$",
           "$A'(9, -6)$",
-          "$A'(1, -\\dfrac{2}{3})$"
+          "$A'(1, -\\dfrac{2}{3})$",
+          "$A'(6, -5)$",
+          "$A'(0, 0)$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$A' = (3 \\times 3, 3 \\times (-2)) = (9, -6)$។"
       },
       {
@@ -18105,17 +18103,33 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ត្រីកោណមួយមានផ្ទៃក្រឡា $12\\text{ cm}^2$។ រកផ្ទៃក្រឡារូបភាពរបស់វាតាមបំលែងចម្រើនផលធៀប $k = 2$ ៖",
         "options": [
-          "$24\\text{ cm}^2$",
-          "$12\\text{ cm}^2$",
           "$36\\text{ cm}^2$",
-          "$48\\text{ cm}^2$"
+          "$48\\text{ cm}^2$",
+          "$12\\text{ cm}^2$",
+          "$24\\text{ cm}^2$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "ផ្ទៃក្រឡាថ្មី $S' = k^2 S = 2^2 \\times 12 = 4 \\times 12 = 48\\text{ cm}^2$។"
       },
       {
         "id": "q6",
         "questionNumber": 6,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ការបំប្លែងចាំង",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តើបំលែងចម្រើនច្រាស $H_k^{-1}$ ($k \\ne 0$) ស្មើនឹងអ្វី?",
+        "options": [
+          "$H_{-k}$",
+          "$I$",
+          "$H_k$",
+          "$H_{\\dfrac{1}{k}}$"
+        ],
+        "correct": 3,
+        "explanation": "ច្រាសនៃបំលែងចម្រើនផលធៀប $k$ គឺជាបំលែងចម្រើនផលធៀប $\\dfrac{1}{k}$ ៖ $H_k^{-1} = H_{\\dfrac{1}{k}}$។"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការបំប្លែងចាំង",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -18130,33 +18144,17 @@
         "explanation": "$\\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix}\\begin{pmatrix} -1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ 6 \\end{pmatrix}$។"
       },
       {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ការបំប្លែងចាំង",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តើបំលែងចម្រើនច្រាស $H_k^{-1}$ ($k \\ne 0$) ស្មើនឹងអ្វី?",
-        "options": [
-          "$I$",
-          "$H_{\\dfrac{1}{k}}$",
-          "$H_k$",
-          "$H_{-k}$"
-        ],
-        "correct": 1,
-        "explanation": "ច្រាសនៃបំលែងចម្រើនផលធៀប $k$ គឺជាបំលែងចម្រើនផលធៀប $\\dfrac{1}{k}$ ៖ $H_k^{-1} = H_{\\dfrac{1}{k}}$។"
-      },
-      {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការបំប្លែងចាំង",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រករូបភាពនៃបន្ទាត់ $2x - y + 4 = 0$ តាមបំលែងចម្រើន $H_2$ ៖",
         "options": [
+          "$2x - y + 2 = 0$",
           "$x - 2y + 8 = 0$",
-          "$4x - 2y + 4 = 0$",
           "$2x - y + 8 = 0$",
-          "$2x - y + 2 = 0$"
+          "$4x - 2y + 4 = 0$"
         ],
         "correct": 2,
         "explanation": "$(x, y) = (2x_0, 2y_0) \\Rightarrow x_0 = \\dfrac{x}{2}, y_0 = \\dfrac{y}{2}$។ ជំនួស ៖ $2(\\dfrac{x}{2}) - (\\dfrac{y}{2}) + 4 = 0 \\iff x - \\dfrac{y}{2} + 4 = 0 \\iff 2x - y + 8 = 0$។"
@@ -18166,11 +18164,11 @@
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការបំប្លែងចាំង",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រករូបភាពនៃរង្វង់ $x^2 + y^2 = 4$ តាមបំលែងចម្រើន $H_3$ ៖",
         "options": [
-          "$x^2 + y^2 = 16$",
           "$x^2 + y^2 = 9$",
+          "$x^2 + y^2 = 16$",
           "$x^2 + y^2 = 36$",
           "$x^2 + y^2 = 12$"
         ],
@@ -18182,15 +18180,15 @@
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការបំប្លែងចាំង",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "តើបំលែងចម្រើនរក្សាមុំរវាងបន្ទាត់ពីរដែរឬទេ?",
         "options": [
+          "មិនកំណត់",
           "រក្សារង្វាស់មុំជានិច្ច (ជាបំលែងកុងហ្វម Conformal)",
           "គុណមុំនឹង $k$",
-          "មិនរក្សាមុំទេ",
-          "មិនកំណត់"
+          "មិនរក្សាមុំទេ"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "បំលែងចម្រើនរក្សារូបរាង និងមុំធរណីមាត្រទាំងអស់ (រក្សាភាពដូចគ្នា)។"
       }
     ],
@@ -18204,9 +18202,9 @@
         "question": "តើម៉ាទ្រីសនៃបំលែងវិលជុំវិញគល់ $O$ មុំ $\\theta$ តាមទិសវិជ្ជមាន (ច្រាសទ្រនិចនាឡិកា) គឺ ៖",
         "options": [
           "$R_\\theta = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$",
-          "$R_\\theta = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
           "$R_\\theta = \\begin{pmatrix} \\cos\\theta & \\sin\\theta \\\\ -\\sin\\theta & \\cos\\theta \\end{pmatrix}$",
-          "$R_\\theta = \\begin{pmatrix} \\sin\\theta & \\cos\\theta \\\\ \\cos\\theta & -\\sin\\theta \\end{pmatrix}$"
+          "$R_\\theta = \\begin{pmatrix} \\sin\\theta & \\cos\\theta \\\\ \\cos\\theta & -\\sin\\theta \\end{pmatrix}$",
+          "$R_\\theta = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$"
         ],
         "correct": 0,
         "explanation": "ម៉ាទ្រីសបំលែងវិល ៖ $R_\\theta = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$។"
@@ -18236,11 +18234,11 @@
         "question": "រកម៉ាទ្រីសនៃបំលែងវិលមុំ $90^\\circ$ ($\\pi/2$) ជុំវិញគល់ $O$ ៖",
         "options": [
           "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
           "$\\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$\\cos 90^\\circ = 0, \\sin 90^\\circ = 1$ នាំឱ្យ $R_{90^\\circ} = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$។"
       },
       {
@@ -18251,12 +18249,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រករូបភាពនៃចំណុច $A(2, 0)$ តាមបំលែងវិលមុំ $90^\\circ$ ជុំវិញគល់ $O$ ៖",
         "options": [
-          "$A'(-2, 0)$",
           "$A'(2, 2)$",
           "$A'(0, -2)$",
-          "$A'(0, 2)$"
+          "$A'(0, 2)$",
+          "$A'(-2, 0)$"
         ],
-        "correct": 3,
+        "correct": 2,
         "explanation": "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 2 \\\\ 0 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 2 \\end{pmatrix}$ គឺ $A'(0, 2)$។"
       },
       {
@@ -18267,12 +18265,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកម៉ាទ្រីសនៃបំលែងវិលមុំ $180^\\circ$ ($\\pi$) ជុំវិញគល់ $O$ ៖",
         "options": [
-          "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
           "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$",
+          "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$\\cos\\pi = -1, \\sin\\pi = 0$ នាំឱ្យបាន $-I = \\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$។"
       },
       {
@@ -18284,9 +18282,9 @@
         "question": "គណនាផលគុណម៉ាទ្រីសនៃបំលែងវិលពីរ $R_{\\alpha} \\cdot R_{\\beta}$ ៖",
         "options": [
           "$R_{\\alpha + \\beta}$",
+          "$R_{\\alpha \\beta}$",
           "$R_{\\alpha - \\beta}$",
-          "$I$",
-          "$R_{\\alpha \\beta}$"
+          "$I$"
         ],
         "correct": 0,
         "explanation": "ការវិលមុំ $\\alpha$ រួចវិលមុំ $\\beta$ ស្មើនឹងការវិលសរុបមុំ $(\\alpha + \\beta)$ ៖ $R_\\alpha R_\\beta = R_{\\alpha+\\beta}$។"
@@ -18300,11 +18298,11 @@
         "question": "តើបំលែងវិលច្រាស $R_\\theta^{-1}$ ស្មើនឹងអ្វី?",
         "options": [
           "$-R_\\theta$",
+          "$I$",
           "$R_{-\\theta} = R_\\theta^T$",
-          "$R_\\theta$",
-          "$I$"
+          "$R_\\theta$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "បំលែងវិលច្រាស គឺវិលត្រឡប់ក្រោយមុំ $-\\theta$ ដែលស្មើនឹងម៉ាទ្រីសត្រង់ស្ប៉ូសេ $R_\\theta^T$ (ព្រោះជាម៉ាទ្រីសអរតូកូណាល់)។"
       },
       {
@@ -18312,15 +18310,15 @@
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការបំប្លែងវិល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រករូបភាពនៃចំណុច $P(4, 2)$ តាមបំលែងវិលមុំ $60^\\circ$ ($\\pi/3$) ៖",
         "options": [
-          "$(4\\sqrt{3}, 2)$",
-          "$(1, \\sqrt{3})$",
           "$(2, 2\\sqrt{3})$",
-          "$(2 - \\sqrt{3},\\; 2\\sqrt{3} + 1)$"
+          "$(2 - \\sqrt{3},\\; 2\\sqrt{3} + 1)$",
+          "$(4\\sqrt{3}, 2)$",
+          "$(1, \\sqrt{3})$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$x' = 4\\cos 60^\\circ - 2\\sin 60^\\circ = 2 - \\sqrt{3}$។ $y' = 4\\sin 60^\\circ + 2\\cos 60^\\circ = 2\\sqrt{3} + 1$។"
       },
       {
@@ -18328,15 +18326,15 @@
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការបំប្លែងវិល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "តើបំលែងវិលរក្សាប្រវែង និងមុំរវាងវ៉ិចទ័រដែរឬទេ?",
         "options": [
-          "មិនរក្សាទាំងពីរ",
-          "រក្សាតែមុំ មិនរក្សាប្រវែង",
           "រក្សាទាំងប្រវែង និងមុំជានិច្ច (ជាអ៊ីសូមេទ្រី Isometry)",
+          "រក្សាតែមុំ មិនរក្សាប្រវែង",
+          "មិនរក្សាទាំងពីរ",
           "រក្សាតែប្រវែង មិនរក្សាមុំ"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "បំលែងវិលគឺជាបំលែងអ៊ីសូមេទ្រីផ្ទាល់ (Direct Isometry) ដែលរក្សាប្រវែង មុំ និងទិសដៅតម្រង់ទិសនៃប្លង់។"
       },
       {
@@ -18344,15 +18342,15 @@
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ការបំប្លែងវិល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនា $R_{30^\\circ}^{12}$ ៖",
         "options": [
           "$R_{90^\\circ}$",
+          "$-I$",
           "$I$ (ម៉ាទ្រីសឯកតា)",
-          "$O$",
-          "$-I$"
+          "$O$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$R_{30^\\circ}^{12} = R_{12 \\times 30^\\circ} = R_{360^\\circ} = I$ (វិលបាន ១ ជុំពេញត្រឡប់មកដើមវិញ)។"
       }
     ],
@@ -18366,9 +18364,9 @@
         "question": "តើផលបណ្តាក់នៃបំលែងលីនេអ៊ែរពីរ $T_2 \\circ T_1$ មានម៉ាទ្រីសតំណាងស្មើនឹងអ្វី?",
         "options": [
           "$M_2 \\cdot M_1$ (ផលគុណម៉ាទ្រីសតាមលំដាប់)",
+          "$M_1 \\cdot M_2$",
           "$M_1 + M_2$",
-          "$M_2 - M_1$",
-          "$M_1 \\cdot M_2$"
+          "$M_2 - M_1$"
         ],
         "correct": 0,
         "explanation": "ម៉ាទ្រីសនៃផលបណ្តាក់ $T_2 \\circ T_1$ ស្មើនឹងផលគុណម៉ាទ្រីស $M_2 \\cdot M_1$។"
@@ -18381,8 +18379,8 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើបំលែងលីនេអ៊ែរ $T$ មានបំលែងច្រាស $T^{-1}$ នៅពេលណា?",
         "options": [
-          "$\\det(M) = 0$",
           "គ្រប់ករណី",
+          "$\\det(M) = 0$",
           "$\\det(M) = 1$",
           "$\\det(M) \\ne 0$"
         ],
@@ -18397,12 +18395,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើ $(T_2 \\circ T_1)^{-1}$ ស្មើនឹងរូបមន្តណា?",
         "options": [
-          "$-(T_2 \\circ T_1)$",
-          "$T_2^{-1} \\circ T_1^{-1}$",
+          "$T_1 \\circ T_2$",
           "$T_1^{-1} \\circ T_2^{-1}$",
-          "$T_1 \\circ T_2$"
+          "$-(T_2 \\circ T_1)$",
+          "$T_2^{-1} \\circ T_1^{-1}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "រូបមន្តច្រាសនៃផលបណ្តាក់ ៖ $(T_2 \\circ T_1)^{-1} = T_1^{-1} \\circ T_2^{-1}$ (ត្រឡប់លំដាប់)។"
       },
       {
@@ -18413,12 +18411,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គេឱ្យ $T_1$ មានម៉ាទ្រីស $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$ និង $T_2$ មានម៉ាទ្រីស $B = \\begin{pmatrix} 2 & 0 \\\\ 1 & 3 \\end{pmatrix}$។ រកម៉ាទ្រីសនៃ $T_2 \\circ T_1$ ៖",
         "options": [
-          "$\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 2 & 4 \\\\ 1 & 5 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 4 & 6 \\\\ 1 & 3 \\end{pmatrix}$",
           "$\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 4 & 6 \\\\ 1 & 3 \\end{pmatrix}$"
+          "$\\begin{pmatrix} 2 & 4 \\\\ 1 & 5 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$B A = \\begin{pmatrix} 2 & 0 \\\\ 1 & 3 \\end{pmatrix}\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 2(1)+0 & 2(2)+0 \\\\ 1(1)+3(0) & 1(2)+3(1) \\end{pmatrix} = \\begin{pmatrix} 2 & 4 \\\\ 1 & 5 \\end{pmatrix}$។"
       },
       {
@@ -18427,15 +18425,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការបំប្លែងលីនេអ៊ែរបណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកម៉ាទ្រីសនៃបំលែងច្រាស $T^{-1}$ បើ $M = \\begin{pmatrix} 2 & 5 \\\\ 1 & 3 \\end{pmatrix}$ ៖",
+        "question": "បើធ្វើចំណាំងប្លាតធៀបនឹងអ័ក្ស $Ox$ ចំនួន ២ ដងជាប់គ្នា ($R_x \\circ R_x$) តើទទួលបានបំលែងអ្វី?",
         "options": [
-          "$\\begin{pmatrix} -3 & 5 \\\\ 1 & -2 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-          "$\\begin{pmatrix} 3 & -5 \\\\ -1 & 2 \\end{pmatrix}$"
+          "បំលែងសូន្យ",
+          "ចំណាំងប្លាត $Oy$",
+          "បំលែងវិល $180^\\circ$",
+          "បំលែងអត្តសញ្ញាណ $I$ (Identity)"
         ],
         "correct": 3,
-        "explanation": "$\\det(M) = 6 - 5 = 1$។ $M^{-1} = \\begin{pmatrix} 3 & -5 \\\\ -1 & 2 \\end{pmatrix}$។"
+        "explanation": "$R_x^2 = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}^2 = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = I$ (បំលែងអាំងវ៉ូលុយទីវ)។"
       },
       {
         "id": "q6",
@@ -18443,15 +18441,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការបំប្លែងលីនេអ៊ែរបណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តើផលបណ្តាក់នៃបំលែងលីនេអ៊ែរមានលក្ខណៈត្រឡប់ជាទូទៅដែរឬទេ?",
+        "question": "គណនាផលបណ្តាក់នៃបំលែងចម្រើនពីរ $H_k \\circ H_m$ ៖",
         "options": [
-          "មិនមានលក្ខណៈត្រឡប់ទេ ($T_1 \\circ T_2 \\ne T_2 \\circ T_1$ ជាទូទៅ)",
-          "មានតែពេលម៉ាទ្រីសការ៉េ",
-          "មានលក្ខណៈត្រឡប់ជានិច្ច",
-          "មិនកំណត់"
+          "$H_{km}$ (ផលធៀប $k \\times m$)",
+          "$I$",
+          "$H_{k+m}$",
+          "$H_{\\dfrac{k}{m}}$"
         ],
         "correct": 0,
-        "explanation": "ដូចផលគុណម៉ាទ្រីស ផលបណ្តាក់នៃបំលែងពីរមិនមានលក្ខណៈត្រឡប់ជាទូទៅឡើយ។"
+        "explanation": "$(kI)(mI) = km I^2 = (km)I = H_{km}$។"
       },
       {
         "id": "q7",
@@ -18459,63 +18457,63 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការបំប្លែងលីនេអ៊ែរបណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកកូអរដោនេដើមនៃចំណុច $P$ បើរូបភាពរបស់វាគឺ $P'(3, 4)$ តាមបំលែង $T(x, y) = (x + y, 2x - y)$ ៖",
+        "question": "រកម៉ាទ្រីសនៃបំលែងច្រាស $T^{-1}$ បើ $M = \\begin{pmatrix} 2 & 5 \\\\ 1 & 3 \\end{pmatrix}$ ៖",
         "options": [
-          "$P(1, 2)$",
-          "$P(\\dfrac{7}{3}, \\dfrac{2}{3})$",
-          "$P(3, 1)$",
-          "$P(2, 1)$"
+          "$\\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$\\begin{pmatrix} -3 & 5 \\\\ 1 & -2 \\end{pmatrix}$",
+          "$\\begin{pmatrix} 3 & -5 \\\\ -1 & 2 \\end{pmatrix}$"
         ],
-        "correct": 1,
-        "explanation": "$x + y = 3$ និង $2x - y = 4$។ បូកបញ្ចូលគ្នា ៖ $3x = 7 \\Rightarrow x = \\dfrac{7}{3}$។ $y = 3 - \\dfrac{7}{3} = \\dfrac{2}{3}$។"
+        "correct": 3,
+        "explanation": "$\\det(M) = 6 - 5 = 1$។ $M^{-1} = \\begin{pmatrix} 3 & -5 \\\\ -1 & 2 \\end{pmatrix}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការបំប្លែងលីនេអ៊ែរបណ្តាក់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គេឱ្យ $T$ ជាបំលែងវិលមុំ $45^\\circ$ ហើយ $S$ ជាចំណាំងប្លាតធៀប $Ox$។ តើ $\\det(T \\circ S)$ ស្មើនឹងប៉ុន្មាន?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាផលបណ្តាក់នៃចំណាំងប្លាតធៀប $Ox$ បន្ទាប់មកធៀប $Oy$ ($R_y \\circ R_x$) ៖",
         "options": [
-          "$\\sqrt{2}$",
-          "$1$",
-          "$-1$",
-          "$0$"
+          "$\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$ (ស៊ីមេទ្រីធៀបគល់ $O$ ឬវិល $180^\\circ$)",
+          "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
+          "$I$",
+          "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$"
         ],
-        "correct": 2,
-        "explanation": "$\\det(T \\circ S) = \\det(T) \\times \\det(S) = (1) \\times (-1) = -1$។"
+        "correct": 0,
+        "explanation": "$R_y R_x = \\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}\\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix} = \\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix} = -I$ (ស៊ីមេទ្រីធៀបគល់ $O$)។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការបំប្លែងលីនេអ៊ែរបណ្តាក់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "តើបំលែងលីនេអ៊ែរ $T$ ដែលផ្ទៀងផ្ទាត់ $T^2 = T$ ហៅថាបំលែងអ្វី?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គេឱ្យ $T$ ជាបំលែងវិលមុំ $45^\\circ$ ហើយ $S$ ជាចំណាំងប្លាតធៀប $Ox$។ តើ $\\det(T \\circ S)$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
-          "បំលែងវិល",
-          "បំលែងចំណោល (Projection / Idempotent)",
-          "បំលែងចម្រើន",
-          "បំលែងអាំងវ៉ូលុយទីវ"
+          "$\\sqrt{2}$",
+          "$-1$",
+          "$0$",
+          "$1$"
         ],
         "correct": 1,
-        "explanation": "បំលែងដែលផ្ទៀងផ្ទាត់ $T^2 = T$ ហៅថាបំលែងចំណោល (Projection)។"
+        "explanation": "$\\det(T \\circ S) = \\det(T) \\times \\det(S) = (1) \\times (-1) = -1$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការបំប្លែងលីនេអ៊ែរបណ្តាក់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $M^2 = I$ ($M \\ne \\pm I$) តើបំលែងនោះជាបំលែងអ្វី?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តើបំលែងលីនេអ៊ែរ $T$ ដែលផ្ទៀងផ្ទាត់ $T^2 = T$ ហៅថាបំលែងអ្វី?",
         "options": [
+          "បំលែងអាំងវ៉ូលុយទីវ",
           "បំលែងចម្រើន",
-          "បំលែងវិល $90^\\circ$",
-          "បំលែងចំណាំងប្លាត (Symmetry / Involution)",
-          "បំលែងសូន្យ"
+          "បំលែងវិល",
+          "បំលែងចំណោល (Projection / Idempotent)"
         ],
-        "correct": 2,
-        "explanation": "ម៉ាទ្រីសដែល $M^2 = I$ តំណាងឱ្យបំលែងចំណាំងប្លាត (Symmetry)។"
+        "correct": 3,
+        "explanation": "បំលែងដែលផ្ទៀងផ្ទាត់ $T^2 = T$ ហៅថាបំលែងចំណោល (Projection)។"
       }
     ]
   },
