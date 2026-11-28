@@ -22598,15 +22598,15 @@
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តម្រុយអរតូណរម៉ាល់នៃលំហ (O, i, j, k) និងកូអរដោនេនៃចំណុច និងវ៉ិចទ័រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងតម្រុយអរតូណរម៉ាល់ $(O, \\vec{i}, \\vec{j}, \\vec{k})$ នៃលំហ គេឱ្យ $\\vec{u} = 2\\vec{i} - 3\\vec{j} + 5\\vec{k}$។ កូអរដោនេនៃ $\\vec{u}$ គឺ ៖",
         "options": [
           "$(2, 3, 5)$",
-          "$(2, -3, 5)$",
           "$(5, -3, 2)$",
-          "$(-2, 3, -5)$"
+          "$(-2, 3, -5)$",
+          "$(2, -3, 5)$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "តាមនិយមន័យ បើ $\\vec{u} = x\\vec{i} + y\\vec{j} + z\\vec{k}$ នោះកូអរដោនេគឺ $(x, y, z) = (2, -3, 5)$។"
       },
       {
@@ -22614,15 +22614,15 @@
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តម្រុយអរតូណរម៉ាល់នៃលំហ (O, i, j, k) និងកូអរដោនេនៃចំណុច និងវ៉ិចទ័រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គេឱ្យចំណុច $A(1, 2, -1)$ និង $B(4, 0, 3)$។ កូអរដោនេនៃវ៉ិចទ័រ $\\vec{AB}$ គឺ ៖",
         "options": [
-          "$(-3, 2, -4)$",
           "$(3, 2, 4)$",
           "$(5, 2, 2)$",
-          "$(3, -2, 4)$"
+          "$(3, -2, 4)$",
+          "$(-3, 2, -4)$"
         ],
-        "correct": 3,
+        "correct": 2,
         "explanation": "$\\vec{AB} = (x_B - x_A, y_B - y_A, z_B - z_A) = (4-1, 0-2, 3-(-1)) = (3, -2, 4)$។"
       },
       {
@@ -22630,13 +22630,13 @@
         "questionNumber": 3,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តម្រុយអរតូណរម៉ាល់នៃលំហ (O, i, j, k) និងកូអរដោនេនៃចំណុច និងវ៉ិចទ័រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តចម្ងាយរវាងពីរចំណុច $A(x_A, y_A, z_A)$ និង $B(x_B, y_B, z_B)$ ក្នុងលំហគឺ ៖",
         "options": [
           "$AB = \\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2 + (z_B-z_A)^2}$",
-          "$AB = \\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2}$",
+          "$AB = |x_B-x_A| + |y_B-y_A| + |z_B-z_A|$",
           "$AB = (x_B-x_A) + (y_B-y_A) + (z_B-z_A)$",
-          "$AB = |x_B-x_A| + |y_B-y_A| + |z_B-z_A|$"
+          "$AB = \\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2}$"
         ],
         "correct": 0,
         "explanation": "ចម្ងាយរវាងពីរចំណុចក្នុងលំហគឺ $AB = \\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2 + (z_B-z_A)^2}$។"
@@ -22646,15 +22646,15 @@
         "questionNumber": 4,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តម្រុយអរតូណរម៉ាល់នៃលំហ (O, i, j, k) និងកូអរដោនេនៃចំណុច និងវ៉ិចទ័រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាប្រវែងកូអរដោនេ (ណម) នៃវ៉ិចទ័រ $\\vec{u} = (2, -1, 2)$ ៖",
         "options": [
-          "$5$",
-          "$\\sqrt{5}$",
+          "$9$",
           "$3$",
-          "$9$"
+          "$5$",
+          "$\\sqrt{5}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "$\\|\\vec{u}\\| = \\sqrt{2^2 + (-1)^2 + 2^2} = \\sqrt{4 + 1 + 4} = \\sqrt{9} = 3$។"
       },
       {
@@ -22666,9 +22666,9 @@
         "question": "គេឱ្យ $A(2, -1, 3)$ និង $B(4, 3, -1)$។ កូអរដោនេចំណុចកណ្ដាល $I$ នៃអង្កត់ $AB$ គឺ ៖",
         "options": [
           "$(1, 2, -2)$",
-          "$(6, 2, 2)$",
+          "$(2, 4, -4)$",
           "$(3, 1, 1)$",
-          "$(2, 4, -4)$"
+          "$(6, 2, 2)$"
         ],
         "correct": 2,
         "explanation": "$x_I = \\dfrac{2+4}{2} = 3$, $y_I = \\dfrac{-1+3}{2} = 1$, $z_I = \\dfrac{3-1}{2} = 1 \\Rightarrow I(3, 1, 1)$។"
@@ -22681,12 +22681,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គេឱ្យ $\\vec{u} = (1, 2, -1)$ និង $\\vec{v} = (3, -1, 2)$។ គណនាវ៉ិចទ័រ $2\\vec{u} + 3\\vec{v}$ ៖",
         "options": [
-          "$(11, 1, 4)$",
-          "$(7, 1, 5)$",
           "$(11, 7, 4)$",
-          "$(8, 1, 4)$"
+          "$(7, 1, 5)$",
+          "$(8, 1, 4)$",
+          "$(11, 1, 4)$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$2\\vec{u} = (2, 4, -2)$, $3\\vec{v} = (9, -3, 6) \\Rightarrow 2\\vec{u} + 3\\vec{v} = (2+9, 4-3, -2+6) = (11, 1, 4)$។"
       },
       {
@@ -22697,12 +22697,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $m$ ដើម្បីឱ្យវ៉ិចទ័រ $\\vec{u} = (2, m, -4)$ និង $\\vec{v} = (1, 3, -2)$ កូលីនេអ៊ែរនឹងគ្នា ៖",
         "options": [
+          "$m = 6$",
           "$m = 2$",
           "$m = 3$",
-          "$m = -6$",
-          "$m = 6$"
+          "$m = -6$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "វ៉ិចទ័រកូលីនេអ៊ែរគ្នាកាលណា $\\dfrac{2}{1} = \\dfrac{m}{3} = \\dfrac{-4}{-2} = 2 \\Rightarrow m = 2 \\times 3 = 6$។"
       },
       {
@@ -22710,27 +22710,11 @@
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តម្រុយអរតូណរម៉ាល់នៃលំហ (O, i, j, k) និងកូអរដោនេនៃចំណុច និងវ៉ិចទ័រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យចំណុច $A(1, 0, 2), B(2, -1, 3), C(0, 1, 4)$។ រកកូអរដោនេទីប្រជុំទម្ងន់ $G$ នៃត្រីកោណ $ABC$ ៖",
-        "options": [
-          "$(1, 1, 3)$",
-          "$(1, 0, 3)$",
-          "$(0, 0, 3)$",
-          "$(3, 0, 9)$"
-        ],
-        "correct": 1,
-        "explanation": "$x_G = \\dfrac{1+2+0}{3} = 1$, $y_G = \\dfrac{0-1+1}{3} = 0$, $z_G = \\dfrac{2+3+4}{3} = 3 \\Rightarrow G(1, 0, 3)$។"
-      },
-      {
-        "id": "q9",
-        "questionNumber": 9,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ តម្រុយអរតូណរម៉ាល់នៃលំហ (O, i, j, k) និងកូអរដោនេនៃចំណុច និងវ៉ិចទ័រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យចំណុច $A(1, 2, 3), B(0, 1, 2), C(2, 3, 1)$។ រកកូអរដោនេកំពូល $D$ នៃប្រលេឡូក្រាម $ABCD$ ៖",
         "options": [
-          "$D(-1, 0, 4)$",
           "$D(1, 4, 0)$",
+          "$D(-1, 0, 4)$",
           "$D(3, 4, 2)$",
           "$D(3, 2, 0)$"
         ],
@@ -22738,20 +22722,36 @@
         "explanation": "$ABCD$ ជាប្រលេឡូក្រាម $\\iff \\vec{AB} = \\vec{DC} \\iff (x_C - x_D = x_B - x_A) \\Rightarrow x_D = x_A - x_B + x_C = 1 - 0 + 2 = 3$។ ស្រដៀងគ្នា $y_D = 2 - 1 + 3 = 4, z_D = 3 - 2 + 1 = 2 \\Rightarrow D(3, 4, 2)$។"
       },
       {
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ តម្រុយអរតូណរម៉ាល់នៃលំហ (O, i, j, k) និងកូអរដោនេនៃចំណុច និងវ៉ិចទ័រ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកវ៉ិចទ័រឯកតា $\\vec{e}$ ដែលមានទិសដៅដូច $\\vec{u} = (1, -2, 2)$ ៖",
+        "options": [
+          "$\\left(\\dfrac{1}{9}, -\\dfrac{2}{9}, \\dfrac{2}{9}\\right)$",
+          "$\\left(\\dfrac{1}{3}, -\\dfrac{2}{3}, \\dfrac{2}{3}\\right)$",
+          "$(1, -2, 2)$",
+          "$\\left(\\dfrac{1}{\\sqrt{5}}, -\\dfrac{2}{\\sqrt{5}}, 0\\right)$"
+        ],
+        "correct": 1,
+        "explanation": "$\\|\\vec{u}\\| = \\sqrt{1+4+4} = 3$។ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = \\left(\\dfrac{1}{3}, -\\dfrac{2}{3}, \\dfrac{2}{3}\\right)$។"
+      },
+      {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ តម្រុយអរតូណរម៉ាល់នៃលំហ (O, i, j, k) និងកូអរដោនេនៃចំណុច និងវ៉ិចទ័រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកវ៉ិចទ័រឯកតា $\\vec{e}$ ដែលមានទិសដៅដូច $\\vec{u} = (1, -2, 2)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចំណុច $M$ ស្ថិតលើអង្កត់ $[AB]$ ដែល $A(1,2,3)$ និង $B(7,5,9)$ ហើយ $AM:MB=2:1$។ កូអរដោនេរបស់ $M$ គឺ ៖",
         "options": [
-          "$\\left(\\dfrac{1}{9}, -\\dfrac{2}{9}, \\dfrac{2}{9}\\right)$",
-          "$(1, -2, 2)$",
-          "$\\left(\\dfrac{1}{\\sqrt{5}}, -\\dfrac{2}{\\sqrt{5}}, 0\\right)$",
-          "$\\left(\\dfrac{1}{3}, -\\dfrac{2}{3}, \\dfrac{2}{3}\\right)$"
+          "$(5, 4, 7)$",
+          "$(3, 3, 5)$",
+          "$(4, 3, 6)$",
+          "$(8, 7, 12)$"
         ],
-        "correct": 3,
-        "explanation": "$\\|\\vec{u}\\| = \\sqrt{1+4+4} = 3$។ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = \\left(\\dfrac{1}{3}, -\\dfrac{2}{3}, \\dfrac{2}{3}\\right)$។"
+        "correct": 0,
+        "explanation": "$\\vec{AM}=\\dfrac{2}{3}\\vec{AB}$"
       }
     ],
     "2": [
@@ -22759,13 +22759,13 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $\\vec{u} = (x, y, z)$ និង $\\vec{v} = (x', y', z')$ នោះរូបមន្តផលគុណស្កាលែ $\\vec{u} \\cdot \\vec{v}$ គឺ ៖",
         "options": [
           "$\\vec{u} \\cdot \\vec{v} = (xx', yy', zz')$",
-          "$\\vec{u} \\cdot \\vec{v} = \\sqrt{xx' + yy' + zz'}$",
           "$\\vec{u} \\cdot \\vec{v} = xy' - yx' + zz'$",
+          "$\\vec{u} \\cdot \\vec{v} = \\sqrt{xx' + yy' + zz'}$",
           "$\\vec{u} \\cdot \\vec{v} = xx' + yy' + zz'$"
         ],
         "correct": 3,
@@ -22775,62 +22775,62 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាផលគុណស្កាលែននៃ $\\vec{u} = (1, 2, 3)$ និង $\\vec{v} = (4, -1, 2)$ ៖",
         "options": [
-          "$8$",
+          "$12$",
           "$10$",
-          "$6$",
-          "$12$"
+          "$8$",
+          "$6$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "$\\vec{u} \\cdot \\vec{v} = (1)(4) + (2)(-1) + (3)(2) = 4 - 2 + 6 = 8$។"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "លក្ខខណ្ឌចាំបាច់ និងគ្រប់គ្រាន់ដើម្បីឱ្យពីរវ៉ិចទ័រមិនសូន្យ $\\vec{u}$ និង $\\vec{v}$ អរតូកូណាល់គ្នា (កែងគ្នា) គឺ ៖",
         "options": [
-          "$\\vec{u} = k\\vec{v}$",
           "$\\vec{u} \\cdot \\vec{v} = 0$",
           "$\\vec{u} \\cdot \\vec{v} = 1$",
+          "$\\vec{u} = k\\vec{v}$",
           "$\\|\\vec{u}\\| = \\|\\vec{v}\\|$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "ពីរវ៉ិចទ័រកែងគ្នាលុះត្រាតែផលគុណស្កាលែនរបស់វាស្មើ ០ គឺ $\\vec{u} \\cdot \\vec{v} = 0$។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "កូស៊ីនុសនៃមុំ $\\theta$ រវាងពីរវ៉ិចទ័រ $\\vec{u}$ និង $\\vec{v}$ កំណត់ដោយរូបមន្ត ៖",
         "options": [
           "$\\cos\\theta = \\vec{u} \\cdot \\vec{v}$",
-          "$\\cos\\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u} + \\vec{v}\\|}$",
           "$\\cos\\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|}$",
-          "$\\cos\\theta = \\dfrac{\\|\\vec{u}\\| \\|\\vec{v}\\|}{\\vec{u} \\cdot \\vec{v}}$"
+          "$\\cos\\theta = \\dfrac{\\|\\vec{u}\\| \\|\\vec{v}\\|}{\\vec{u} \\cdot \\vec{v}}$",
+          "$\\cos\\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u} + \\vec{v}\\|}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "តាមនិយមន័យផលគុណស្កាលែន $\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\|\\|\\vec{v}\\|\\cos\\theta \\Rightarrow \\cos\\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|}$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $m$ ដើម្បីឱ្យ $\\vec{u} = (m, 2, -1)$ និង $\\vec{v} = (3, -1, 4)$ កែងគ្នា ៖",
         "options": [
           "$m = 6$",
           "$m = 2$",
-          "$m = 0$",
-          "$m = -2$"
+          "$m = -2$",
+          "$m = 0$"
         ],
         "correct": 1,
         "explanation": "$\\vec{u} \\perp \\vec{v} \\iff \\vec{u} \\cdot \\vec{v} = 0 \\iff 3m - 2 - 4 = 0 \\iff 3m = 6 \\iff m = 2$។"
@@ -22839,81 +22839,81 @@
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាមុំរវាងពីរវ៉ិចទ័រ $\\vec{u} = (1, 1, 0)$ និង $\\vec{v} = (0, 1, 1)$ ៖",
         "options": [
-          "$45^\\circ$ ($\\dfrac{\\pi}{4}$)",
           "$30^\\circ$ ($\\dfrac{\\pi}{6}$)",
-          "$60^\\circ$ ($\\dfrac{\\pi}{3}$)",
-          "$90^\\circ$ ($\\dfrac{\\pi}{2}$)"
+          "$90^\\circ$ ($\\dfrac{\\pi}{2}$)",
+          "$45^\\circ$ ($\\dfrac{\\pi}{4}$)",
+          "$60^\\circ$ ($\\dfrac{\\pi}{3}$)"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$\\vec{u}\\cdot\\vec{v} = 1$។ $\\|\\vec{u}\\| = \\sqrt{2}, \\|\\vec{v}\\| = \\sqrt{2}$។ $\\cos\\theta = \\dfrac{1}{\\sqrt{2}\\cdot\\sqrt{2}} = \\dfrac{1}{2} \\Rightarrow \\theta = 60^\\circ$។"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គេឱ្យ $A(1, 2, 0), B(3, 1, 2), C(2, 4, 1)$។ គណនាផលគុណស្កាលែន $\\vec{AB} \\cdot \\vec{AC}$ ៖",
         "options": [
-          "$-2$",
+          "$2$",
           "$4$",
           "$0$",
-          "$2$"
+          "$-2$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "$\\vec{AB} = (2, -1, 2)$, $\\vec{AC} = (1, 2, 1)$។ $\\vec{AB} \\cdot \\vec{AC} = (2)(1) + (-1)(2) + (2)(1) = 2 - 2 + 2 = 2$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\|\\vec{u}\\| = 3, \\|\\vec{v}\\| = 4$ និង $\\vec{u} \\cdot \\vec{v} = -6$។ គណនា $\\|\\vec{u} + \\vec{v}\\|$ ៖",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ត្រីកោណ $ABC$ មានកំពូល $A(1, 0, 1), B(2, 2, 0), C(3, -1, 1)$។ តើត្រីកោណនេះជាប្រភេទត្រីកោណអ្វី?",
         "options": [
-          "$\\sqrt{13}$",
-          "$5$",
-          "$\\sqrt{37}$",
-          "$7$"
+          "ត្រីកោណកែងត្រង់ $A$",
+          "ត្រីកោណសមបាតកំពូល $B$",
+          "ត្រីកោណសម័ង្ស",
+          "ត្រីកោណកែងត្រង់ $C$"
         ],
         "correct": 0,
-        "explanation": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + 2\\vec{u}\\cdot\\vec{v} + \\|\\vec{v}\\|^2 = 9 + 2(-6) + 16 = 25 - 12 = 13 \\Rightarrow \\|\\vec{u}+\\vec{v}\\| = \\sqrt{13}$។"
+        "explanation": "$\\vec{AB}=(1,2,-1)$, $\\vec{AC}=(2,-1,0)$ ⇒ $\\vec{AB}\\cdot\\vec{AC}=2-2+0=0$ ⇒ $AB\\perp AC$ ⇒ ត្រីកោណកែងត្រង់ $A$ (ព្រោះ $AB=\\sqrt{6}\\ne AC=\\sqrt{5}$ មិនមែនសមបាត)។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ត្រីកោណ $ABC$ មានកំពូល $A(1, 0, 1), B(2, 2, 0), C(0, 1, 3)$។ តើត្រីកោណនេះជាប្រភេទត្រីកោណអ្វី?",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកចំណោលកែងស្កាលែននៃ $\\vec{u} = (2, 3, 1)$ លើ $\\vec{v} = (1, 2, 2)$ ៖",
         "options": [
-          "ត្រីកោណសមបាតកំពូល $B$",
-          "ត្រីកោណសម័ង្ស",
-          "ត្រីកោណកែងត្រង់ $C$",
-          "ត្រីកោណកែងត្រង់ $A$"
+          "$3$",
+          "$\\dfrac{10}{3}$",
+          "$\\dfrac{10}{\\sqrt{14}}$",
+          "$10$"
         ],
-        "correct": 3,
-        "explanation": "$\\vec{AB} = (1, 2, -1)$, $\\vec{AC} = (-1, 1, 2)$។ $\\vec{AB} \\cdot \\vec{AC} = (1)(-1) + (2)(1) + (-1)(2) = -1 + 2 - 2 = -1 \\neq 0$។ រក $\\vec{BA} = (-1, -2, 1), \\vec{BC} = (-2, -1, 3) \\Rightarrow \\vec{BA}\\cdot\\vec{BC} = 2+2+3=7$។ ចំណែក $\\vec{CA} = (1, -1, -2), \\vec{CB} = (2, 1, -3) \\Rightarrow \\vec{CA}\\cdot\\vec{CB} = 2 - 1 + 6 = 7$។ ពិនិត្យ $AB = \\sqrt{1+4+1}=\\sqrt{6}, AC = \\sqrt{1+1+4}=\\sqrt{6} \\Rightarrow AB = AC$ ជាត្រីកោណសមបាតកំពូល $A$។ (បើ $\\vec{AB} \\perp \\vec{AC}$ គឺកែងត្រង់ $A$)។"
+        "correct": 1,
+        "explanation": "$\\text{proj}_{\\vec{v}} \\vec{u} = \\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|} = \\dfrac{2(1)+3(2)+1(2)}{\\sqrt{1+4+4}} = \\dfrac{10}{3}$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u.v = xx' + yy' + zz'",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកចំណោលកែងស្កាលែននៃ $\\vec{u} = (2, 3, 1)$ លើ $\\vec{v} = (1, 2, 2)$ ៖",
+        "pointTitle": "ចំណុចទី ២ ៖ ផលគុណស្កាលែននៃពីរវ៉ិចទ័រក្នុងលំហ u·v = xx' + yy' + zz'",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $|\\vec{u}|=5$, $|\\vec{v}|=6$ និង $\\vec{u}\\cdot\\vec{v}=9$ នោះ $|\\vec{u}-\\vec{v}|$ ស្មើ ៖",
         "options": [
-          "$3$",
-          "$10$",
-          "$\\dfrac{10}{3}$",
-          "$\\dfrac{10}{\\sqrt{14}}$"
+          "$\\sqrt{79}$",
+          "$\\sqrt{61}$",
+          "$\\sqrt{43}$",
+          "$\\sqrt{2}$"
         ],
         "correct": 2,
-        "explanation": "$\\text{proj}_{\\vec{v}} \\vec{u} = \\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|} = \\dfrac{2(1)+3(2)+1(2)}{\\sqrt{1+4+4}} = \\dfrac{10}{3}$។"
+        "explanation": "$|\\vec{u}-\\vec{v}|^2=|\\vec{u}|^2+|\\vec{v}|^2-2\\vec{u}\\cdot\\vec{v}=43$"
       }
     ],
     "3": [
@@ -22921,14 +22921,14 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ផលគុណវ៉ិចទ័រ $\\vec{u} \\times \\vec{v}$ ជាអ្វី?",
         "options": [
-          "ជាវ៉ិចទ័រស្មើ ០ ជានិច្ច",
           "ជាវ៉ិចទ័រស្របនឹង $\\vec{u}$",
+          "ជាចំនួនស្កាលែពិត",
           "ជាវ៉ិចទ័រកែងនឹងទាំង $\\vec{u}$ និង $\\vec{v}$",
-          "ជាចំនួនស្កាលែពិត"
+          "ជាវ៉ិចទ័រស្មើ ០ ជានិច្ច"
         ],
         "correct": 2,
         "explanation": "តាមនិយមន័យ $\\vec{u} \\times \\vec{v}$ គឺជាវ៉ិចទ័រមួយដែលកែងនឹងប្លង់កំណត់ដោយ $\\vec{u}$ និង $\\vec{v}$ (កែងនឹង $\\vec{u}$ ផង និងកែងនឹង $\\vec{v}$ ផង)។"
@@ -22937,30 +22937,30 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "លក្ខណៈត្រឡប់នៃផលគុណវ៉ិចទ័រគឺ ៖",
         "options": [
+          "$\\vec{u} \\times \\vec{u} = 1$",
           "$\\vec{u} \\times \\vec{v} = \\vec{v} \\times \\vec{u}$",
-          "$\\vec{v} \\times \\vec{u} = -(\\vec{u} \\times \\vec{v})$",
           "$\\vec{u} \\times \\vec{v} = 0$",
-          "$\\vec{u} \\times \\vec{u} = 1$"
+          "$\\vec{v} \\times \\vec{u} = -(\\vec{u} \\times \\vec{v})$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "ផលគុណវ៉ិចទ័រមានលក្ខណៈប្រឆាំងត្រឡប់ (anticommutative) គឺ $\\vec{v} \\times \\vec{u} = -(\\vec{u} \\times \\vec{v})$។"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "តើ $\\vec{u} \\times \\vec{u}$ ស្មើនឹងប៉ុន្មាន ចំពោះគ្រប់វ៉ិចទ័រ $\\vec{u}$?",
         "options": [
           "$\\vec{0}$",
-          "$2\\vec{u}$",
+          "$\\|\\vec{u}\\|^2$",
           "$1$",
-          "$\\|\\vec{u}\\|^2$"
+          "$2\\vec{u}$"
         ],
         "correct": 0,
         "explanation": "ផលគុណវ៉ិចទ័ររវាងវ៉ិចទ័រមួយនឹងខ្លួនឯងស្មើ $\\vec{0}$ ជានិច្ច ព្រោះមុំស្មើ ០ ($|\\sin 0| = 0$)។"
@@ -22969,39 +22969,39 @@
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងតម្រុយអរតូណរម៉ាល់ទិសដៅវិជ្ជមាន តើ $\\vec{i} \\times \\vec{j}$ ស្មើនឹងអ្វី?",
         "options": [
           "$1$",
-          "$\\vec{0}$",
+          "$\\vec{k}$",
           "$-\\vec{k}$",
-          "$\\vec{k}$"
+          "$\\vec{0}$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "តាមក្បួនដៃស្តាំ ក្នុងប្រព័ន្ធកូអរដោនេទិសដៅវិជ្ជមាន $\\vec{i} \\times \\vec{j} = \\vec{k}$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាផលគុណវ៉ិចទ័រ $\\vec{u} \\times \\vec{v}$ ដោយ $\\vec{u} = (1, 0, 2)$ និង $\\vec{v} = (0, 1, 1)$ ៖",
         "options": [
           "$(2, 1, -1)$",
+          "$(2, -1, 1)$",
           "$(-2, 1, 1)$",
-          "$(-2, -1, 1)$",
-          "$(2, -1, 1)$"
+          "$(-2, -1, 1)$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$\\vec{u} \\times \\vec{v} = \\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ 1 & 0 & 2 \\\\ 0 & 1 & 1 \\end{vmatrix} = \\vec{i}(0-2) - \\vec{j}(1-0) + \\vec{k}(1-0) = (-2, -1, 1)$។"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "លក្ខខណ្ឌចាំបាច់ និងគ្រប់គ្រាន់ដើម្បីឱ្យពីរវ៉ិចទ័រ $\\vec{u}$ និង $\\vec{v}$ កូលីនេអ៊ែរគ្នាគឺ ៖",
         "options": [
@@ -23017,56 +23017,40 @@
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនា $\\vec{j} \\times \\vec{i}$ ៖",
         "options": [
           "$\\vec{j}$",
-          "$\\vec{0}$",
+          "$-\\vec{k}$",
           "$\\vec{k}$",
-          "$-\\vec{k}$"
+          "$\\vec{0}$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$\\vec{j} \\times \\vec{i} = -(\\vec{i} \\times \\vec{j}) = -\\vec{k}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\vec{u} = (2, 1, -1)$ និង $\\vec{v} = (1, -1, 2)$។ គណនាណម $\\|\\vec{u} \\times \\vec{v}\\|$ ៖",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សមភាពឡាហ្ក្រង់ (Lagrange's Identity) ភ្ជាប់ផលគុណវ៉ិចទ័រ និងផលគុណស្កាលែនគឺ ៖",
         "options": [
-          "$\\sqrt{27}$",
-          "$\\sqrt{35}$",
-          "$6$",
-          "$35$"
+          "$\\|\\vec{u} \\times \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 \\|\\vec{v}\\|^2 - (\\vec{u} \\cdot \\vec{v})^2$",
+          "$\\|\\vec{u} \\times \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 \\|\\vec{v}\\|^2 + (\\vec{u} \\cdot \\vec{v})^2$",
+          "$\\vec{u} \\times \\vec{v} = \\vec{u} \\cdot \\vec{v}$",
+          "$\\|\\vec{u} \\times \\vec{v}\\| = \\|\\vec{u}\\| + \\|\\vec{v}\\|$"
         ],
-        "correct": 1,
-        "explanation": "$\\vec{u} \\times \\vec{v} = (2-1)\\vec{i} \\dots  = (1, -5, -3)$។ $\\|\\vec{u}\\times\\vec{v}\\| = \\sqrt{1+25+9} = \\sqrt{35}$។"
+        "correct": 0,
+        "explanation": "សមភាពឡាហ្ក្រង់ ៖ $\\|\\vec{u}\\times\\vec{v}\\|^2 = \\|\\vec{u}\\|^2\\|\\vec{v}\\|^2\\sin^2\\theta = \\|\\vec{u}\\|^2\\|\\vec{v}\\|^2(1-\\cos^2\\theta) = \\|\\vec{u}\\|^2\\|\\vec{v}\\|^2 - (\\vec{u}\\cdot\\vec{v})^2$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "សមភាពឡាហ្ក្រង់ (Lagrange's Identity) ភ្ជាប់ផលគុណវ៉ិចទ័រ និងផលគុណស្កាលែនគឺ ៖",
-        "options": [
-          "$\\vec{u} \\times \\vec{v} = \\vec{u} \\cdot \\vec{v}$",
-          "$\\|\\vec{u} \\times \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 \\|\\vec{v}\\|^2 + (\\vec{u} \\cdot \\vec{v})^2$",
-          "$\\|\\vec{u} \\times \\vec{v}\\| = \\|\\vec{u}\\| + \\|\\vec{v}\\|$",
-          "$\\|\\vec{u} \\times \\vec{v}\\|^2 = \\|\\vec{u}\\|^2 \\|\\vec{v}\\|^2 - (\\vec{u} \\cdot \\vec{v})^2$"
-        ],
-        "correct": 3,
-        "explanation": "សមភាពឡាហ្ក្រង់ ៖ $\\|\\vec{u}\\times\\vec{v}\\|^2 = \\|\\vec{u}\\|^2\\|\\vec{v}\\|^2\\sin^2\\theta = \\|\\vec{u}\\|^2\\|\\vec{v}\\|^2(1-\\cos^2\\theta) = \\|\\vec{u}\\|^2\\|\\vec{v}\\|^2 - (\\vec{u}\\cdot\\vec{v})^2$។"
-      },
-      {
-        "id": "q10",
-        "questionNumber": 10,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u x v) និងលក្ខណៈ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $\\|\\vec{u}\\| = 2, \\|\\vec{v}\\| = 5$ និង $\\vec{u} \\cdot \\vec{v} = 6$។ គណនា $\\|\\vec{u} \\times \\vec{v}\\|$ ៖",
         "options": [
           "$10$",
@@ -23076,6 +23060,22 @@
         ],
         "correct": 1,
         "explanation": "តាមសមភាពឡាហ្ក្រង់ $\\|\\vec{u}\\times\\vec{v}\\|^2 = (2^2)(5^2) - 6^2 = 100 - 36 = 64 \\Rightarrow \\|\\vec{u}\\times\\vec{v}\\| = \\sqrt{64} = 8$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណវ៉ិចទ័រ (Cross Product: u ⨯ v) និងលក្ខណៈ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $(\\vec{u}\\times\\vec{v})\\cdot\\vec{u}$ ដោយ $\\vec{u}=(1, 2, 3)$ និង $\\vec{v}=(4, 5, 6)$ ៖",
+        "options": [
+          "$54$",
+          "$32$",
+          "$0$",
+          "$1$"
+        ],
+        "correct": 2,
+        "explanation": "ផលគុណវ៉ិចទ័រកែងនឹង $\\vec{u}$"
       }
     ],
     "4": [
@@ -23083,14 +23083,14 @@
         "id": "q1",
         "questionNumber": 1,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ផ្ទៃក្រឡានៃប្រលេឡូក្រាមដែលសង់លើពីរវ៉ិចទ័រ $\\vec{u}$ និង $\\vec{v}$ កំណត់ដោយរូបមន្ត ៖",
         "options": [
           "$S = \\|\\vec{u} \\times \\vec{v}\\|$",
-          "$S = \\dfrac{1}{2}\\|\\vec{u} \\times \\vec{v}\\|$",
+          "$S = \\vec{u} \\cdot \\vec{v}$",
           "$S = \\|\\vec{u}\\| + \\|\\vec{v}\\|$",
-          "$S = \\vec{u} \\cdot \\vec{v}$"
+          "$S = \\dfrac{1}{2}\\|\\vec{u} \\times \\vec{v}\\|$"
         ],
         "correct": 0,
         "explanation": "ផ្ទៃក្រឡាប្រលេឡូក្រាមដែលសង់លើពីរវ៉ិចទ័រ $\\vec{u}, \\vec{v}$ គឺ $S = \\|\\vec{u} \\times \\vec{v}\\|$។"
@@ -23099,12 +23099,12 @@
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ផ្ទៃក្រឡានៃត្រីកោណ $ABC$ កំណត់ដោយរូបមន្ត ៖",
         "options": [
-          "$S_{ABC} = \\|\\vec{AB} \\times \\vec{AC}\\|$",
           "$S_{ABC} = \\dfrac{1}{2} |\\vec{AB} \\cdot \\vec{AC}|$",
+          "$S_{ABC} = \\|\\vec{AB} \\times \\vec{AC}\\|$",
           "$S_{ABC} = \\dfrac{1}{6} \\|\\vec{AB} \\times \\vec{AC}\\|$",
           "$S_{ABC} = \\dfrac{1}{2} \\|\\vec{AB} \\times \\vec{AC}\\|$"
         ],
@@ -23115,78 +23115,78 @@
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "មាឌនៃប្រលេពីប៉ែតដែលសង់លើបីវ៉ិចទ័រ $\\vec{u}, \\vec{v}, \\vec{w}$ កំណត់ដោយរូបមន្ត ៖",
         "options": [
+          "$V = \\dfrac{1}{6} |(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}|$",
           "$V = \\|\\vec{u} \\times \\vec{v}\\| \\cdot \\|\\vec{w}\\|$",
           "$V = |(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}|$",
-          "$V = (\\vec{u} \\times \\vec{v}) \\times \\vec{w}$",
-          "$V = \\dfrac{1}{6} |(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}|$"
+          "$V = (\\vec{u} \\times \\vec{v}) \\times \\vec{w}$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "មាឌនៃប្រលេពីប៉ែតគឺ $V = |(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}|$ (តម្លៃដាច់ខាតនៃផលគុណចម្រុះ)។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "មាឌនៃតេត្រាអែត $ABCD$ កំណត់ដោយរូបមន្ត ៖",
         "options": [
           "$V = \\dfrac{1}{3} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$",
-          "$V = \\dfrac{1}{2} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$",
           "$V = \\dfrac{1}{6} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$",
-          "$V = |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$"
+          "$V = |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$",
+          "$V = \\dfrac{1}{2} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "មាឌតេត្រាអែតស្មើ $\\dfrac{1}{6}$ នៃមាឌប្រលេពីប៉ែត គឺ $V = \\dfrac{1}{6} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាផ្ទៃក្រឡាប្រលេឡូក្រាមដែលសង់លើ $\\vec{u} = (2, 0, 0)$ និង $\\vec{v} = (0, 3, 0)$ ៖",
         "options": [
           "$\\sqrt{13}$",
+          "$6$",
           "$3$",
-          "$12$",
-          "$6$"
+          "$12$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$\\vec{u} \\times \\vec{v} = (0, 0, 6)$។ $S = \\|\\vec{u} \\times \\vec{v}\\| = 6$។"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាផ្ទៃក្រឡាត្រីកោណ $ABC$ ដែលមានកំពូល $A(0, 0, 0), B(2, 0, 0), C(0, 4, 0)$ ៖",
         "options": [
+          "$8$",
           "$\\sqrt{20}$",
-          "$4$",
           "$2$",
-          "$8$"
+          "$4$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "$\\vec{AB} = (2, 0, 0), \\vec{AC} = (0, 4, 0) \\Rightarrow \\vec{AB} \\times \\vec{AC} = (0, 0, 8)$។ $S = \\dfrac{1}{2} \\times 8 = 4$។"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "លក្ខខណ្ឌចាំបាច់ និងគ្រប់គ្រាន់ដើម្បីឱ្យបួនចំណុច $A, B, C, D$ ស្ថិតក្នុងប្លង់តែមួយ (កូប្លាណែ) គឺ ៖",
         "options": [
           "$(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD} = 0$",
-          "$\\vec{AB} \\cdot \\vec{AC} = 0$",
+          "$(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD} > 0$",
           "$\\vec{AB} \\times \\vec{AC} = \\vec{0}$",
-          "$(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD} > 0$"
+          "$\\vec{AB} \\cdot \\vec{AC} = 0$"
         ],
         "correct": 0,
         "explanation": "បួនចំណុចកូប្លាណែលុះត្រាតែមាឌតេត្រាអែតសង់លើចំណុចទាំងបួនស្មើ ០ ពោលគឺ $(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD} = 0$។"
@@ -23195,49 +23195,49 @@
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាមាឌប្រលេពីប៉ែតសង់លើ $\\vec{u} = (1, 0, 0), \\vec{v} = (0, 2, 0), \\vec{w} = (1, 1, 3)$ ៖",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាកម្ពស់ $h$ គូសចេញពីកំពូល $D$ នៃតេត្រាអែត $ABCD$ ចុះមកបាត $ABC$ ៖",
         "options": [
-          "$2$",
-          "$3$",
-          "$6$",
-          "$1$"
+          "$h = \\dfrac{\\|\\vec{AB} \\times \\vec{AC}\\|}{|(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|}$",
+          "$h = \\dfrac{1}{3} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$",
+          "$h = \\dfrac{|(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|}{\\|\\vec{AB} \\times \\vec{AC}\\|}$",
+          "$h = \\|\\vec{AD}\\|$"
         ],
         "correct": 2,
-        "explanation": "$\\vec{u} \\times \\vec{v} = (0, 0, 2)$។ ផលគុណចម្រុះ $(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w} = (0)(1) + (0)(1) + (2)(3) = 6 \\Rightarrow V = 6$។"
+        "explanation": "$V = \\dfrac{1}{3} S_{\\text{base}} \\cdot h \\iff \\dfrac{1}{6}|(\\vec{AB}\\times\\vec{AC})\\cdot\\vec{AD}| = \\dfrac{1}{3} \\left(\\dfrac{1}{2}\\|\\vec{AB}\\times\\vec{AC}\\|\\right) h \\Rightarrow h = \\dfrac{|(\\vec{AB}\\times\\vec{AC})\\cdot\\vec{AD}|}{\\|\\vec{AB}\\times\\vec{AC}\\|}$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាកម្ពស់ $h$ គូសចេញពីកំពូល $D$ នៃតេត្រាអែត $ABCD$ ចុះមកបាត $ABC$ ៖",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គេឱ្យ $A(1, 1, 1), B(2, 3, 1), C(1, 2, 3)$។ គណនាផ្ទៃក្រឡាត្រីកោណ $ABC$ ៖",
         "options": [
-          "$h = \\dfrac{\\|\\vec{AB} \\times \\vec{AC}\\|}{|(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|}$",
-          "$h = \\dfrac{1}{3} |(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|$",
-          "$h = \\|\\vec{AD}\\|$",
-          "$h = \\dfrac{|(\\vec{AB} \\times \\vec{AC}) \\cdot \\vec{AD}|}{\\|\\vec{AB} \\times \\vec{AC}\\|}$"
+          "$\\dfrac{\\sqrt{21}}{2}$",
+          "$\\dfrac{\\sqrt{17}}{2}$",
+          "$3$",
+          "$\\dfrac{3}{2}$"
         ],
-        "correct": 3,
-        "explanation": "$V = \\dfrac{1}{3} S_{\\text{base}} \\cdot h \\iff \\dfrac{1}{6}|(\\vec{AB}\\times\\vec{AC})\\cdot\\vec{AD}| = \\dfrac{1}{3} \\left(\\dfrac{1}{2}\\|\\vec{AB}\\times\\vec{AC}\\|\\right) h \\Rightarrow h = \\dfrac{|(\\vec{AB}\\times\\vec{AC})\\cdot\\vec{AD}|}{\\|\\vec{AB}\\times\\vec{AC}\\|}$។"
+        "correct": 0,
+        "explanation": "$\\vec{AB}=(1,2,0)$, $\\vec{AC}=(0,1,2)$ ⇒ $\\vec{AB}\\times\\vec{AC}=(4,-2,1)$ ⇒ $S=\\dfrac{1}{2}\\sqrt{21}$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ និងមាឌប្រលេពីប៉ែត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គេឱ្យ $A(1, 1, 1), B(2, 3, 1), C(1, 2, 3)$។ គណនាផ្ទៃក្រឡាត្រីកោណ $ABC$ ៖",
+        "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ផលគុណវ៉ិចទ័រក្នុងការគណនាផ្ទៃក្រឡាត្រីកោណ (S = 1/2 |AB ⨯ AC|) និងមាឌប្រលេពីប៉ែត (V = |(u ⨯ v) · w|)",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាកម្ពស់ចុះពីកំពូល $D$ មកបាត $ABC$ នៃតេត្រាអែត $ABCD$ ដែល $A(0, 1, 1), B(0, 1, 3), C(-2, 1, 3), D(-3, 3, 0)$ ៖",
         "options": [
-          "$\\sqrt{17}$",
-          "$\\dfrac{3}{2}$",
-          "$\\dfrac{\\sqrt{17}}{2}$",
-          "$3$"
+          "$2$",
+          "$3$",
+          "$4$",
+          "$\\dfrac{4}{3}$"
         ],
-        "correct": 2,
-        "explanation": "$\\vec{AB} = (1, 2, 0), \\vec{AC} = (0, 1, 2)$។ $\\vec{AB} \\times \\vec{AC} = (4-0)\\vec{i} - (2-0)\\vec{j} + (1-0)\\vec{k} = (4, -2, 1)$។ $\\|\\vec{AB}\\times\\vec{AC}\\| = \\sqrt{16+4+1} = \\sqrt{21}$។ (ចម្លើយត្រឹមត្រូវគឺ $\\dfrac{\\sqrt{21}}{2}$)។ ជ្រើសជម្រើសជិតបំផុត។"
+        "correct": 0,
+        "explanation": "$h=\\dfrac{|(\\vec{AB}\\times\\vec{AC})\\cdot\\vec{AD}|}{|\\vec{AB}\\times\\vec{AC}|}=\\dfrac{8}{4}$"
       }
     ]
   },
