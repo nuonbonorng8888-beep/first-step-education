@@ -35422,13 +35422,12 @@
         "question": "សមីការឌីផេរ៉ង់ស្យែល $y'' = 3y$ ជាសមីការលំដាប់ទី ៖",
         "options": [
           "$3$",
-          "$1$",
           "$2$",
+          "$1$",
           "$0$"
         ],
-        "correct": 2,
-        "explanation": "លំដាប់ = លំដាប់ខ្ពស់បំផុតនៃដេរីវេ ⇒ $2$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "លំដាប់ = លំដាប់ខ្ពស់បំផុតនៃដេរីវេ ⇒ $2$។"
       },
       {
         "id": "q2",
@@ -35439,13 +35438,12 @@
         "question": "ចម្លើយទូទៅនៃ $y' = 2y$ គឺ $y = Ce^{2x}$។ បើ $y(0) = 9$ នោះ $C =$ ៖",
         "options": [
           "$18$",
-          "$0$",
           "$2$",
-          "$9$"
+          "$9$",
+          "$0$"
         ],
-        "correct": 3,
-        "explanation": "$y(0) = C = 9$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$y(0) = C = 9$។"
       },
       {
         "id": "q3",
@@ -35456,13 +35454,12 @@
         "question": "ចម្លើយទូទៅនៃ $y' = 4y$ គឺ $y = Ce^{4x}$។ បើ $y(0) = 6$ នោះ $C =$ ៖",
         "options": [
           "$6$",
+          "$4$",
           "$0$",
-          "$24$",
-          "$4$"
+          "$24$"
         ],
         "correct": 0,
-        "explanation": "$y(0) = C = 6$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$y(0) = C = 6$។"
       },
       {
         "id": "q4",
@@ -35472,116 +35469,109 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ចម្លើយទូទៅនៃ $y' = 2y$ គឺ $y = Ce^{2x}$។ បើ $y(0) = 6$ នោះ $C =$ ៖",
         "options": [
-          "$0$",
-          "$6$",
           "$12$",
-          "$2$"
+          "$2$",
+          "$0$",
+          "$6$"
         ],
-        "correct": 1,
-        "explanation": "$y(0) = C = 6$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$y(0) = C = 6$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណសមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សមីការឌីផេរ៉ង់ស្យែល $y' + 2y = x$ ជាសមីការលំដាប់ទី ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "អនុគមន៍ $y=Cx^{7}$ ផ្ទៀងផ្ទាត់សមីការឌីផេរ៉ង់ស្យែលណាមួយ ៖",
         "options": [
-          "$3$",
-          "$2$",
-          "$0$",
-          "$1$"
+          "$xy'=y$",
+          "$y'=7y$",
+          "$xy'=7y$",
+          "$xy'=8y$"
         ],
-        "correct": 3,
-        "explanation": "លំដាប់ = លំដាប់ខ្ពស់បំផុតនៃដេរីវេ ⇒ $1$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$y'=7Cx^{6}$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណសមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សមីការឌីផេរ៉ង់ស្យែល $y'' + 3y' + y = 0$ ជាសមីការលំដាប់ទី ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ចម្លើយនៃ $y'=3y$ ដែល $y(1)=2$ គឺ ៖",
         "options": [
-          "$1$",
-          "$0$",
-          "$2$",
-          "$3$"
+          "$y=2e^{3(x-1)}$",
+          "$y=2e^{3x}$",
+          "$y=2e^{3(x+1)}$",
+          "$y=e^{3(x-1)}$"
         ],
-        "correct": 2,
-        "explanation": "លំដាប់ = លំដាប់ខ្ពស់បំផុតនៃដេរីវេ ⇒ $2$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$C=2e^{-3}$"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណសមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចម្លើយទូទៅនៃ $y' = 3y$ គឺ $y = Ce^{3x}$។ បើ $y(0) = 3$ នោះ $C =$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ចំពោះ $y=4e^{5x}$ ដេរីវេ $y'$ ស្មើ ៖",
         "options": [
-          "$3$",
-          "$9$",
-          "$4$",
-          "$0$"
+          "$9e^{5x}$",
+          "$4e^{5x}$",
+          "$5e^{5x}$",
+          "$20e^{5x}$"
         ],
-        "correct": 0,
-        "explanation": "$y(0) = C = 3$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$(e^{kx})'=ke^{kx}$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណសមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ណាជាចម្លើយនៃ $y' = 2y$?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $y=Ce^{4x}+2$ ផ្ទៀងផ្ទាត់សមីការណា ៖",
         "options": [
-          "$y = 2x$",
-          "$y = e^{2x}$",
-          "$y = e^{-2x}$",
-          "$y = x^{2}$"
+          "$y'-4y=8$",
+          "$y'+4y=-8$",
+          "$y'-4y=-2$",
+          "$y'-4y=-8$"
         ],
-        "correct": 1,
-        "explanation": "$y = e^{2x} \\Rightarrow y' = 2e^{2x} = 2y$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$y'=aCe^{ax}=a(y-b)$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណសមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ណាជាចម្លើយនៃ $y' = 4y$?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $y=Ce^{x^{2}}$ ផ្ទៀងផ្ទាត់សមីការណា ៖",
         "options": [
-          "$y = e^{-4x}$",
-          "$y = e^{4x}$",
-          "$y = 4x$",
-          "$y = x^{4}$"
+          "$y'=2xy$",
+          "$y'=2x^{2}y$",
+          "$y'=x^{2}y$",
+          "$y'=2y$"
         ],
-        "correct": 1,
-        "explanation": "$y = e^{4x} \\Rightarrow y' = 4e^{4x} = 4y$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$(e^{u})'=u'e^u$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សញ្ញាណសមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ណាជាចម្លើយនៃ $y' = -2y$?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "$y=C_1e^{2x}+C_2e^{3x}$ ជាចម្លើយទូទៅនៃសមីការ ៖",
         "options": [
-          "$y = e^{x}$",
-          "$y = e^{2x}$",
-          "$y = -2x$",
-          "$y = e^{-2x}$"
+          "$y''-5y'+6y=0$",
+          "$y''+5y'+6y=0$",
+          "$y''-5y'-6y=0$",
+          "$y''-6y'+5y=0$"
         ],
-        "correct": 3,
-        "explanation": "$y = e^{-2x} \\Rightarrow y' = -2e^{-2x} = -2y$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$r^2-5r+6=0$"
       }
     ],
     "2": [
@@ -35590,68 +35580,64 @@
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx} = 6x - 1$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx}=15x^{4}$ គឺ ៖",
         "options": [
-          "$y = 6 + C$",
-          "$y = 3x^{2} - x$",
-          "$y = 6x^{2} - x + C$",
-          "$y = 3x^{2} - x + C$"
+          "$y=15x^{5}+C$",
+          "$y=3x^{5}+C$",
+          "$y=3x^{4}+C$",
+          "$y=3x^{5}$"
         ],
-        "correct": 3,
-        "explanation": "$y = \\int (6x - 1)\\,dx$ ⇒ $y = 3x^{2} - x + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "អាំងតេក្រាលជាប់ថេរ C"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយនៃ $y\\,y' = x$ ដែល $y(0) = 2$ ( $y > 0$ ) ផ្ទៀងផ្ទាត់ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx}=9x^{2}$ គឺ ៖",
         "options": [
-          "$y^2 = x^2 - 4$",
-          "$y^2 = x^2 + 2$",
-          "$y^2 = x^2 + 4$",
-          "$y = x + 2$"
+          "$y=9x^{3}+C$",
+          "$y=3x^{3}+C$",
+          "$y=3x^{2}+C$",
+          "$y=3x^{3}$"
         ],
-        "correct": 2,
-        "explanation": "$y\\,dy = x\\,dx \\Rightarrow \\dfrac{y^2}{2} = \\dfrac{x^2}{2} + C$ ; $y(0) = 2$ ⇒ $y^2 = x^2 + 4$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "អាំងតេក្រាលជាប់ថេរ C"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយនៃ $y\\,y' = x$ ដែល $y(0) = 3$ ( $y > 0$ ) ផ្ទៀងផ្ទាត់ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx}=3x^{2}$ គឺ ៖",
         "options": [
-          "$y^2 = x^2 + 9$",
-          "$y^2 = x^2 + 3$",
-          "$y^2 = x^2 - 9$",
-          "$y = x + 3$"
+          "$y=3x^{3}+C$",
+          "$y=x^{3}+C$",
+          "$y=x^{2}+C$",
+          "$y=x^{3}$"
         ],
-        "correct": 0,
-        "explanation": "$y\\,dy = x\\,dx \\Rightarrow \\dfrac{y^2}{2} = \\dfrac{x^2}{2} + C$ ; $y(0) = 3$ ⇒ $y^2 = x^2 + 9$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "អាំងតេក្រាលជាប់ថេរ C"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y' = xy$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx}=5x^{4}$ គឺ ៖",
         "options": [
-          "$y = Ce^{x^3}$",
-          "$y = Ce^{x^2}$",
-          "$y = Ce^{2x}$",
-          "$y = x^2 + C$"
+          "$y=5x^{5}+C$",
+          "$y=x^{5}+C$",
+          "$y=x^{4}+C$",
+          "$y=x^{5}$"
         ],
         "correct": 1,
-        "explanation": "$\\dfrac{dy}{y} = 2x\\,dx \\Rightarrow \\ln|y| = x^2 + c$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "អាំងតេក្រាលជាប់ថេរ C"
       },
       {
         "id": "q5",
@@ -35659,16 +35645,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $y' = 6xy$ គឺ ៖",
+        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx} = 6x - 1$ គឺ ៖",
         "options": [
-          "$y = Ce^{3x^3}$",
-          "$y = 3x^2 + C$",
-          "$y = Ce^{6x}$",
-          "$y = Ce^{3x^2}$"
+          "$y = 3x^{2} - x + C$",
+          "$y = 6 + C$",
+          "$y = 3x^{2} - x$",
+          "$y = 6x^{2} - x + C$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{dy}{y} = 6x\\,dx \\Rightarrow \\ln|y| = 3x^2 + c$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$y = \\int (6x - 1)\\,dx$ ⇒ $y = 3x^{2} - x + C$។"
       },
       {
         "id": "q6",
@@ -35676,16 +35661,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx} = 6x$ គឺ ៖",
+        "question": "ចម្លើយនៃ $y\\,y' = x$ ដែល $y(0) = 2$ ( $y > 0$ ) ផ្ទៀងផ្ទាត់ ៖",
         "options": [
-          "$y = 3x^{2} + C$",
-          "$y = 3x^{2}$",
-          "$y = 6x^{2} + C$",
-          "$y = 6 + C$"
+          "$y^2 = x^2 + 2$",
+          "$y^2 = x^2 + 4$",
+          "$y = x + 2$",
+          "$y^2 = x^2 - 4$"
         ],
-        "correct": 0,
-        "explanation": "$y = \\int (6x)\\,dx$ ⇒ $y = 3x^{2} + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$y\\,dy = x\\,dx \\Rightarrow \\dfrac{y^2}{2} = \\dfrac{x^2}{2} + C$ ; $y(0) = 2$ ⇒ $y^2 = x^2 + 4$។"
       },
       {
         "id": "q7",
@@ -35693,410 +35677,387 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយនៃ $y\\,y' = x$ ដែល $y(0) = 4$ ( $y > 0$ ) ផ្ទៀងផ្ទាត់ ៖",
+        "question": "ចម្លើយនៃ $y\\,y' = x$ ដែល $y(0) = 3$ ( $y > 0$ ) ផ្ទៀងផ្ទាត់ ៖",
         "options": [
-          "$y^2 = x^2 + 4$",
-          "$y = x + 4$",
-          "$y^2 = x^2 + 16$",
-          "$y^2 = x^2 - 16$"
+          "$y = x + 3$",
+          "$y^2 = x^2 - 9$",
+          "$y^2 = x^2 + 9$",
+          "$y^2 = x^2 + 3$"
         ],
         "correct": 2,
-        "explanation": "$y\\,dy = x\\,dx \\Rightarrow \\dfrac{y^2}{2} = \\dfrac{x^2}{2} + C$ ; $y(0) = 4$ ⇒ $y^2 = x^2 + 16$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$y\\,dy = x\\,dx \\Rightarrow \\dfrac{y^2}{2} = \\dfrac{x^2}{2} + C$ ; $y(0) = 3$ ⇒ $y^2 = x^2 + 9$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx} = 4x - 4$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចម្លើយទូទៅនៃ $xy'=5y$ ($x>0$) គឺ ៖",
         "options": [
-          "$y = 4x^{2} - 4x + C$",
-          "$y = 2x^{2} - 4x + C$",
-          "$y = 4 + C$",
-          "$y = 2x^{2} - 4x$"
+          "$y=Cx^{5}$",
+          "$y=Ce^{5x}$",
+          "$y=x^{5}+C$",
+          "$y=Cx^{6}$"
         ],
-        "correct": 1,
-        "explanation": "$y = \\int (4x - 4)\\,dx$ ⇒ $y = 2x^{2} - 4x + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$\\dfrac{dy}{y}=5\\dfrac{dx}{x}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយនៃ $y\\,y' = x$ ដែល $y(0) = 7$ ( $y > 0$ ) ផ្ទៀងផ្ទាត់ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចម្លើយទូទៅនៃ $y'=2xy$ គឺ ៖",
         "options": [
-          "$y^2 = x^2 + 7$",
-          "$y^2 = x^2 - 49$",
-          "$y^2 = x^2 + 49$",
-          "$y = x + 7$"
+          "$y=Ce^{2x^2}$",
+          "$y=Ce^{2x}$",
+          "$y=Ce^{x^2}$",
+          "$y=C2x^2$"
         ],
         "correct": 2,
-        "explanation": "$y\\,dy = x\\,dx \\Rightarrow \\dfrac{y^2}{2} = \\dfrac{x^2}{2} + C$ ; $y(0) = 7$ ⇒ $y^2 = x^2 + 49$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\dfrac{dy}{y}=2xdx$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការ dy/dx = f(x) និងសមីការបំបែកអថេរបាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃ $\\dfrac{dy}{dx} = 6x - 5$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចម្លើយទូទៅនៃ $y'=2y^2$ (ក្រៅពី $y=0$) គឺ ៖",
         "options": [
-          "$y = 3x^{2} - 5x$",
-          "$y = 6x^{2} - 5x + C$",
-          "$y = 6 + C$",
-          "$y = 3x^{2} - 5x + C$"
+          "$y=\\dfrac{1}{2x+C}$",
+          "$y=-\\dfrac{1}{x+C}$",
+          "$y=-\\dfrac{1}{2x+C}$",
+          "$y=Ce^{2x}$"
         ],
-        "correct": 3,
-        "explanation": "$y = \\int (6x - 5)\\,dx$ ⇒ $y = 3x^{2} - 5x + C$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$\\dfrac{dy}{y^2}=2dx$"
       }
     ],
     "3": [
       {
-        "id": "g12a_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ចម្លើយទូទៅនៃសមីការឌីផេរ៉ង់ស្យែល $y' + ay = 0$ (ដែល $a$ ជាចំនួនថេរ) គឺ ៖",
         "options": [
           "$y = C e^{ax}$",
-          "$y = Ce^x + a$",
+          "$y = C e^{-ax}$ ($C \\in \\mathbb{R}$)",
           "$y = -ax + C$",
-          "$y = C e^{-ax}$ ($C \\in \\mathbb{R}$)"
+          "$y = Ce^x + a$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{y'}{y} = -a \\implies \\ln|y| = -ax + c \\implies y = C e^{-ax}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\dfrac{y'}{y} = -a \\implies \\ln|y| = -ax + c \\implies y = C e^{-ax}$។"
       },
       {
-        "id": "g12a_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយសមីការឌីផេរ៉ង់ស្យែល $y' - 3y = 0$ ៖",
         "options": [
           "$y = 3e^x + C$",
+          "$y = C e^{-3x}$",
           "$y = C e^{3x}$",
-          "$y = 3x + C$",
-          "$y = C e^{-3x}$"
+          "$y = 3x + C$"
         ],
-        "correct": 1,
-        "explanation": "$y' - 3y = 0 \\implies a = -3 \\implies y = C e^{-(-3)x} = C e^{3x}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$y' - 3y = 0 \\implies a = -3 \\implies y = C e^{-(-3)x} = C e^{3x}$។"
       },
       {
-        "id": "g12a_p1_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយទូទៅនៃ $y'+9y=0$ គឺ ៖",
+        "options": [
+          "$y=Ce^{9x}$",
+          "$y=-9x+C$",
+          "$y=Ce^{-9x}$",
+          "$y=Ce^x+9$"
+        ],
+        "correct": 2,
+        "explanation": "$y=Ce^{-ax}$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយទូទៅនៃ $y'-7y=0$ គឺ ៖",
+        "options": [
+          "$y=Ce^{-7x}$",
+          "$y=7x+C$",
+          "$y=Ce^{7x}$",
+          "$y=Ce^x+7$"
+        ],
+        "correct": 2,
+        "explanation": "$y=Ce^{ax}$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចម្លើយនៃសមីការ $y' + 2y = 0$ ដែលផ្ទៀងផ្ទាត់លក្ខខណ្ឌដើម $y(0) = 4$ ៖",
         "options": [
-          "$y = 4e^{2x}$",
-          "$y = 2e^{-2x}$",
           "$y = 4e^{-2x}$",
+          "$y = 2e^{-2x}$",
+          "$y = 4e^{2x}$",
           "$y = e^{-2x} + 3$"
         ],
-        "correct": 2,
-        "explanation": "$y = C e^{-2x}$។ $y(0) = C e^0 = C = 4 \\implies y = 4e^{-2x}$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$y = C e^{-2x}$។ $y(0) = C e^0 = C = 4 \\implies y = 4e^{-2x}$។"
       },
       {
-        "id": "g12a_p1_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សមីការឌីផេរ៉ង់ស្យែលបំបែកអថេរបាន $\\dfrac{dy}{dx} = 2xy$ មានចម្លើយទូទៅជា ៖",
         "options": [
-          "$y = C e^{x^2}$",
-          "$y = x^2 + C$",
+          "$y = C e^x$",
           "$y = C e^{2x}$",
-          "$y = C e^x$"
+          "$y = x^2 + C$",
+          "$y = C e^{x^2}$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{dy}{y} = 2x dx \\implies \\ln|y| = x^2 + c \\implies y = C e^{x^2}$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$\\dfrac{dy}{y} = 2x dx \\implies \\ln|y| = x^2 + c \\implies y = C e^{x^2}$។"
       },
       {
-        "id": "g12a_p1_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ច្បាប់បំបែកវិទ្យុសកម្ម $\\dfrac{dN}{dt} = -\\lambda N$ មានចម្លើយគឺ ៖",
         "options": [
+          "$N(t) = N_0 e^{-\\lambda t}$",
           "$N(t) = N_0 - \\lambda t$",
-          "$N(t) = N_0 e^{\\lambda t}$",
           "$N(t) = \\dfrac{N_0}{\\lambda t}$",
-          "$N(t) = N_0 e^{-\\lambda t}$"
+          "$N(t) = N_0 e^{\\lambda t}$"
         ],
-        "correct": 3,
-        "explanation": "ច្បាប់បំបែកវិទ្យុសកម្មជាសមីការលំដាប់ ១ អូម៉ូសែន៖ $N(t) = N_0 e^{-\\lambda t}$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ច្បាប់បំបែកវិទ្យុសកម្មជាសមីការលំដាប់ ១ អូម៉ូសែន៖ $N(t) = N_0 e^{-\\lambda t}$។"
       },
       {
-        "id": "g12a_p1_06",
-        "questionNumber": 6,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកអឌ្ឍជីវិត (Half-life, $T_{\\dfrac{1}{2}}$) នៃសារធាតុវិទ្យុសកម្មដែលមានថេរបំបែក $\\lambda$ ៖",
-        "options": [
-          "$T_{\\dfrac{1}{2}} = 2\\lambda$",
-          "$T_{\\dfrac{1}{2}} = \\dfrac{1}{2\\lambda}$",
-          "$T_{\\dfrac{1}{2}} = \\dfrac{\\ln 2}{\\lambda}$",
-          "$T_{\\dfrac{1}{2}} = \\dfrac{\\lambda}{\\ln 2}$"
-        ],
-        "correct": 2,
-        "explanation": "$N(T) = N_0/2 \\implies e^{-\\lambda T} = \\dfrac{1}{2} \\iff -\\lambda T = -\\ln 2 \\iff T = \\dfrac{\\ln 2}{\\lambda}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_07",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយសមីការ $x y' - y = 0$ ($x > 0$) ៖",
-        "options": [
-          "$y = x + C$",
-          "$y = C x$",
-          "$y = C e^x$",
-          "$y = \\dfrac{C}{x}$"
-        ],
-        "correct": 1,
-        "explanation": "$\\dfrac{y'}{y} = \\dfrac{1}{x} \\implies \\ln|y| = \\ln x + c \\implies y = Cx$ (បន្ទាត់កាត់គល់ $O$)។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកខ្សែកោងកាត់តាម $A(1, 2)$ ដែលមេគុណប្រាប់ទិសបន្ទាត់ប៉ះត្រង់គ្រប់ចំណុចសមាមាត្រនឹងអរដោនេ $y$ (មេគុណសមាមាត្រ $k = 3$) ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $x y' - y = 0$ ($x > 0$) ៖",
         "options": [
-          "$y = 2e^{3(x-1)}$",
-          "$y = 3x - 1$",
-          "$y = e^{3x} + 1$",
-          "$y = 2e^{3x}$"
+          "$y = C e^x$",
+          "$y = \\dfrac{C}{x}$",
+          "$y = C x$",
+          "$y = x + C$"
         ],
-        "correct": 0,
-        "explanation": "$y' = 3y \\implies y = C e^{3x}$។ $y(1) = 2 \\implies C e^3 = 2 \\implies C = 2e^{-3}$។ ដូច្នេះ $y = 2e^{3(x-1)}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$\\dfrac{y'}{y} = \\dfrac{1}{x} \\implies \\ln|y| = \\ln x + c \\implies y = Cx$ (បន្ទាត់កាត់គល់ $O$)។"
       },
       {
-        "id": "g12a_p1_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចម្លើយនៃ $y' = 5y$ ដែល $y(0) = 2$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកខ្សែកោងកាត់តាម $A(1, 2)$ ដែលមេគុណប្រាប់ទិសបន្ទាត់ប៉ះត្រង់គ្រប់ចំណុចសមាមាត្រនឹងអរដោនេ $y$ (មេគុណសមាមាត្រ $k = 3$) ៖",
         "options": [
-          "$5e^{2x}$",
-          "$2e^{5x}$",
-          "$e^{5x} + 1$",
-          "$2e^{-5x}$"
+          "$y = e^{3x} + 1$",
+          "$y = 2e^{3(x-1)}$",
+          "$y = 3x - 1$",
+          "$y = 2e^{3x}$"
         ],
         "correct": 1,
-        "explanation": "$y = Ce^{5x}$ ហើយ $y(0) = C = 2$ ៖ $y = 2e^{5x}$។"
+        "explanation": "$y' = 3y \\implies y = C e^{3x}$។ $y(1) = 2 \\implies C e^3 = 2 \\implies C = 2e^{-3}$។ ដូច្នេះ $y = 2e^{3(x-1)}$។"
       },
       {
-        "id": "g12a_p1_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ y' + ay = 0",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "លក្ខខណ្ឌដើម្បីឱ្យគ្រប់ចម្លើយនៃ $y' + ay = 0$ ខិតទៅរក $0$ កាលណា $x \\to +\\infty$ គឺ ៖",
         "options": [
-          "$a = 0$",
-          "$a > 0$",
           "$a < 0$",
-          "គ្រប់ $a \\in \\mathbb{R}$"
+          "គ្រប់ $a \\in \\mathbb{R}$",
+          "$a = 0$",
+          "$a > 0$"
         ],
-        "correct": 1,
-        "explanation": "$y = C e^{-ax}$។ កាលណា $x \\to +\\infty$, $e^{-ax} \\to 0 \\iff -a < 0 \\iff a > 0$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$y = C e^{-ax}$។ កាលណា $x \\to +\\infty$, $e^{-ax} \\to 0 \\iff -a < 0 \\iff a > 0$។"
       }
     ],
     "4": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ចម្លើយទូទៅនៃសមីការមិនអូម៉ូសែន $y' + ay = f(x)$ មានទម្រង់ ៖",
         "options": [
           "$y = y_h + y_p$ ($y_h$ ជាចម្លើយអូម៉ូសែន, $y_p$ ជាចម្លើយដោយឡែក)",
-          "$y = y_h \\cdot y_p$",
+          "$y = y_h - y_p$",
           "$y = f(x) + C$",
-          "$y = y_h - y_p$"
+          "$y = y_h \\cdot y_p$"
         ],
         "correct": 0,
-        "explanation": "ចម្លើយទូទៅស្មើនឹងចម្លើយទូទៅនៃសមីការអូម៉ូសែន បូកចម្លើយដោយឡែកមួយនៃសមីការមិនអូម៉ូសែន៖ $y = y_h + y_p$។",
-        "diagram": ""
+        "explanation": "ចម្លើយទូទៅស្មើនឹងចម្លើយទូទៅនៃសមីការអូម៉ូសែន បូកចម្លើយដោយឡែកមួយនៃសមីការមិនអូម៉ូសែន៖ $y = y_h + y_p$។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $f(x) = b$ (ចំនួនថេរ) នោះចម្លើយដោយឡែកថេរ $y_p$ នៃ $y' + ay = b$ ($a \\neq 0$) គឺ ៖",
         "options": [
-          "$y_p = b - a$",
-          "$y_p = ab$",
           "$y_p = \\dfrac{a}{b}$",
-          "$y_p = \\dfrac{b}{a}$"
+          "$y_p = b - a$",
+          "$y_p = \\dfrac{b}{a}$",
+          "$y_p = ab$"
         ],
-        "correct": 3,
-        "explanation": "បើ $y_p$ ថេរ $\\implies y_p' = 0$។ ជំនួសចូល៖ $0 + a y_p = b \\iff y_p = \\dfrac{b}{a}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "បើ $y_p$ ថេរ $\\implies y_p' = 0$។ ជំនួសចូល៖ $0 + a y_p = b \\iff y_p = \\dfrac{b}{a}$។"
       },
       {
-        "id": "g12a_p2_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយដោយឡែកថេរ $y_p$ នៃ $y'+5y=5$ គឺ ៖",
+        "options": [
+          "$25$",
+          "$10$",
+          "$0$",
+          "$1$"
+        ],
+        "correct": 3,
+        "explanation": "$ay_p=b\\Rightarrow y_p=\\dfrac{b}{a}$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចម្លើយដោយឡែកថេរ $y_p$ នៃ $y'+5y=7$ គឺ ៖",
+        "options": [
+          "$\\dfrac{7}{5}$",
+          "$\\dfrac{5}{7}$",
+          "$35$",
+          "$12$"
+        ],
+        "correct": 0,
+        "explanation": "$ay_p=b\\Rightarrow y_p=\\dfrac{b}{a}$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការឌីផេរ៉ង់ស្យែល $y' + 2y = 6$ ៖",
         "options": [
-          "$y = 3e^{-2x} + C$",
+          "$y = C e^{-2x} + 6$",
           "$y = C e^{2x} + 3$",
-          "$y = C e^{-2x} + 3$",
-          "$y = C e^{-2x} + 6$"
+          "$y = 3e^{-2x} + C$",
+          "$y = C e^{-2x} + 3$"
         ],
-        "correct": 2,
-        "explanation": "$y_h = C e^{-2x}$។ $y_p = \\dfrac{6}{2} = 3$។ ដូច្នេះ $y = C e^{-2x} + 3$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$y_h = C e^{-2x}$។ $y_p = \\dfrac{6}{2} = 3$។ ដូច្នេះ $y = C e^{-2x} + 3$។"
       },
       {
-        "id": "g12a_p2_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចម្លើយនៃ $y' - y = 2$ ដែលផ្ទៀងផ្ទាត់ $y(0) = 1$ ៖",
         "options": [
-          "$y = e^x + 2$",
+          "$y = 3e^{-x} - 2$",
           "$y = 3e^x - 2$",
           "$y = -2e^x + 3$",
-          "$y = 3e^{-x} - 2$"
+          "$y = e^x + 2$"
         ],
         "correct": 1,
-        "explanation": "$y = C e^x - 2$។ $y(0) = C - 2 = 1 \\implies C = 3$។ ដូច្នេះ $y = 3e^x - 2$។",
-        "diagram": ""
+        "explanation": "$y = C e^x - 2$។ $y(0) = C - 2 = 1 \\implies C = 3$។ ដូច្នេះ $y = 3e^x - 2$។"
       },
       {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "កត្តាអាំងតេក្រាល (Integrating factor) សម្រាប់សមីការ $y' + P(x)y = Q(x)$ គឺ ៖",
         "options": [
-          "$I(x) = e^{\\int P(x) dx}$",
           "$I(x) = P(x) Q(x)$",
           "$I(x) = \\int P(x) dx$",
+          "$I(x) = e^{\\int P(x) dx}$",
           "$I(x) = e^{-\\int P(x) dx}$"
         ],
-        "correct": 0,
-        "explanation": "គុណអង្គទាំងពីរនឹង $I(x) = e^{\\int P(x) dx}$ ធ្វើឱ្យអង្គខាងឆ្វេងក្លាយជា $[y \\cdot I(x)]'$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកចម្លើយដោយឡែក $y_p$ នៃសមីការ $y' + y = 2x + 1$ ដែលមានរាង $y_p = Ax + B$ ៖",
-        "options": [
-          "$y_p = x - 1$",
-          "$y_p = 2x + 1$",
-          "$y_p = 2x - 1$",
-          "$y_p = 2x + 3$"
-        ],
         "correct": 2,
-        "explanation": "$y_p' = A$។ $A + (Ax + B) = 2x + 1 \\iff Ax + (A+B) = 2x + 1$។ នាំឱ្យ $A = 2$ និង $2 + B = 1 \\iff B = -1$។ ដូច្នេះ $y_p = 2x - 1$។",
-        "diagram": ""
+        "explanation": "គុណអង្គទាំងពីរនឹង $I(x) = e^{\\int P(x) dx}$ ធ្វើឱ្យអង្គខាងឆ្វេងក្លាយជា $[y \\cdot I(x)]'$។"
       },
       {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកចម្លើយដោយឡែក $y_p$ នៃសមីការ $y' - 2y = e^{3x}$ ៖",
-        "options": [
-          "$y_p = x e^{3x}$",
-          "$y_p = e^{3x}$",
-          "$y_p = \\dfrac{1}{3}e^{3x}$",
-          "$y_p = 2e^{3x}$"
-        ],
-        "correct": 1,
-        "explanation": "សាក $y_p = A e^{3x} \\implies y_p' = 3A e^{3x}$។ $3A e^{3x} - 2A e^{3x} = e^{3x} \\iff A e^{3x} = e^{3x} \\implies A = 1$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $y' - 2y = e^{2x}$ (អនុភាពជាន់គ្នានឹងចម្លើយអូម៉ូសែន) នោះចម្លើយដោយឡែកត្រូវមានរាង ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកចម្លើយដោយឡែក $y_p$ នៃសមីការ $y' + y = 2x + 1$ ដែលមានរាង $y_p = Ax + B$ ៖",
         "options": [
-          "$y_p = A e^{-2x}$",
-          "$y_p = A e^{2x}$",
-          "$y_p = A x^2 e^{2x}$",
-          "$y_p = A x e^{2x}$"
+          "$y_p = 2x - 1$",
+          "$y_p = 2x + 1$",
+          "$y_p = x - 1$",
+          "$y_p = 2x + 3$"
         ],
-        "correct": 3,
-        "explanation": "ដោយសារ $e^{2x}$ ជាចម្លើយអូម៉ូសែន ត្រូវគុណថែម $x$ នាំឱ្យមានរាង $y_p = A x e^{2x}$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$y_p' = A$។ $A + (Ax + B) = 2x + 1 \\iff Ax + (A+B) = 2x + 1$។ នាំឱ្យ $A = 2$ និង $2 + B = 1 \\iff B = -1$។ ដូច្នេះ $y_p = 2x - 1$។"
       },
       {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយសមីការ $x y' + y = 3x^2$ ($x > 0$) ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកចម្លើយដោយឡែក $y_p$ នៃសមីការ $y' - 2y = e^{3x}$ ៖",
         "options": [
-          "$y = x^2 + C$",
-          "$y = x^3 + C$",
-          "$y = 3x^2 + C$",
-          "$y = x^2 + \\dfrac{C}{x}$"
+          "$y_p = 2e^{3x}$",
+          "$y_p = x e^{3x}$",
+          "$y_p = \\dfrac{1}{3}e^{3x}$",
+          "$y_p = e^{3x}$"
         ],
         "correct": 3,
-        "explanation": "អង្គខាងឆ្វេងគឺ $(xy)' = 3x^2 \\implies xy = \\int 3x^2 dx = x^3 + C \\implies y = x^2 + \\dfrac{C}{x}$។",
-        "diagram": ""
+        "explanation": "សាក $y_p = A e^{3x} \\implies y_p' = 3A e^{3x}$។ $3A e^{3x} - 2A e^{3x} = e^{3x} \\iff A e^{3x} = e^{3x} \\implies A = 1$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ សមីការ y' + ay = p(x)",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ច្បាប់ត្រជាក់នៃញូតុន (Newton's law of cooling)៖ $\\dfrac{dT}{dt} = -k(T - T_a)$ មានចម្លើយគឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $y' - 2y = e^{2x}$ (អនុភាពជាន់គ្នានឹងចម្លើយអូម៉ូសែន) នោះចម្លើយដោយឡែកត្រូវមានរាង ៖",
         "options": [
-          "$T(t) = T_0 e^{-kt}$",
-          "$T(t) = T_a e^{kt}$",
-          "$T(t) = T_a + (T_0 - T_a)e^{-kt}$",
-          "$T(t) = T_a - T_0 e^{-kt}$"
+          "$y_p = A x^2 e^{2x}$",
+          "$y_p = A x e^{2x}$",
+          "$y_p = A e^{2x}$",
+          "$y_p = A e^{-2x}$"
         ],
-        "correct": 2,
-        "explanation": "តាង $u = T - T_a \\implies u' = -ku \\implies u = C e^{-kt}$។ $T(0) = T_0 \\implies C = T_0 - T_a$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "ដោយសារ $e^{2x}$ ជាចម្លើយអូម៉ូសែន ត្រូវគុណថែម $x$ នាំឱ្យមានរាង $y_p = A x e^{2x}$។"
       }
     ],
     "5": [
@@ -36105,68 +36066,64 @@
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំនួនបាក់តេរី $N$ ផ្ទៀងផ្ទាត់ $N' = 0.2N$ និង $N(0) = 1000$។ រក $N(t)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំនួនកោសិកា $N$ ផ្ទៀងផ្ទាត់ $N'=0.1N$ និង $N(0)=500$។ រក $N(t)$ ៖",
         "options": [
-          "$N(t) = e^{0.2t}$",
-          "$N(t) = 1000e^{-0.2t}$",
-          "$N(t) = 1000e^{0.2t}$",
-          "$N(t) = 1000 + 0.2t$"
+          "$N(t)=500e^{0.1t}$",
+          "$N(t)=500e^{-0.1t}$",
+          "$N(t)=500+0.1t$",
+          "$N(t)=e^{0.1t}$"
         ],
-        "correct": 2,
-        "explanation": "$N' = kN \\Rightarrow N = N(0)e^{kt}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$N=N_0e^{kt}$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $y' = ky$ ហើយ $y(0) = 50$ , $y(2) = 200$ នោះ $k =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំនួនកោសិកា $N$ ផ្ទៀងផ្ទាត់ $N'=0.05N$ និង $N(0)=100$។ រក $N(t)$ ៖",
         "options": [
-          "$\\dfrac{2}{\\ln 4}$",
-          "$\\dfrac{\\ln 4}{2}$",
-          "$2\\ln 4$",
-          "$\\dfrac{4}{2}$"
+          "$N(t)=100e^{-0.05t}$",
+          "$N(t)=100e^{0.05t}$",
+          "$N(t)=100+0.05t$",
+          "$N(t)=e^{0.05t}$"
         ],
         "correct": 1,
-        "explanation": "$50e^{2k} = 200 \\Rightarrow e^{2k} = 4 \\Rightarrow k = \\dfrac{\\ln 4}{2}$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$N=N_0e^{kt}$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $y' = ky$ ហើយ $y(0) = 50$ , $y(10) = 150$ នោះ $k =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំនួនកោសិកា $N$ ផ្ទៀងផ្ទាត់ $N'=0.3N$ និង $N(0)=2000$។ រក $N(t)$ ៖",
         "options": [
-          "$\\dfrac{\\ln 3}{10}$",
-          "$\\dfrac{3}{10}$",
-          "$10\\ln 3$",
-          "$\\dfrac{10}{\\ln 3}$"
+          "$N(t)=2000e^{-0.3t}$",
+          "$N(t)=2000+0.3t$",
+          "$N(t)=e^{0.3t}$",
+          "$N(t)=2000e^{0.3t}$"
         ],
-        "correct": 0,
-        "explanation": "$50e^{10k} = 150 \\Rightarrow e^{10k} = 3 \\Rightarrow k = \\dfrac{\\ln 3}{10}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$N=N_0e^{kt}$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $y' = ky$ ហើយ $y(0) = 200$ , $y(10) = 800$ នោះ $k =$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំនួនកោសិកា $N$ ផ្ទៀងផ្ទាត់ $N'=0.2N$ និង $N(0)=2000$។ រក $N(t)$ ៖",
         "options": [
-          "$\\dfrac{10}{\\ln 4}$",
-          "$\\dfrac{4}{10}$",
-          "$10\\ln 4$",
-          "$\\dfrac{\\ln 4}{10}$"
+          "$N(t)=2000e^{-0.2t}$",
+          "$N(t)=2000+0.2t$",
+          "$N(t)=2000e^{0.2t}$",
+          "$N(t)=e^{0.2t}$"
         ],
-        "correct": 3,
-        "explanation": "$200e^{10k} = 800 \\Rightarrow e^{10k} = 4 \\Rightarrow k = \\dfrac{\\ln 4}{10}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$N=N_0e^{kt}$"
       },
       {
         "id": "q5",
@@ -36174,16 +36131,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $y' = ky$ ហើយ $y(0) = 50$ , $y(10) = 100$ នោះ $k =$ ៖",
+        "question": "ចំនួនបាក់តេរី $N$ ផ្ទៀងផ្ទាត់ $N' = 0.2N$ និង $N(0) = 1000$។ រក $N(t)$ ៖",
         "options": [
-          "$10\\ln 2$",
-          "$\\dfrac{2}{10}$",
-          "$\\dfrac{10}{\\ln 2}$",
-          "$\\dfrac{\\ln 2}{10}$"
+          "$N(t) = 1000e^{0.2t}$",
+          "$N(t) = 1000e^{-0.2t}$",
+          "$N(t) = 1000 + 0.2t$",
+          "$N(t) = e^{0.2t}$"
         ],
-        "correct": 3,
-        "explanation": "$50e^{10k} = 100 \\Rightarrow e^{10k} = 2 \\Rightarrow k = \\dfrac{\\ln 2}{10}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$N' = kN \\Rightarrow N = N(0)e^{kt}$។"
       },
       {
         "id": "q6",
@@ -36191,16 +36147,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តាមច្បាប់ញូតុន $T' = -k(T - 25)$ និង $T(0) = 90$។ ចម្លើយគឺ ៖",
+        "question": "បើ $y' = ky$ ហើយ $y(0) = 50$ , $y(2) = 200$ នោះ $k =$ ៖",
         "options": [
-          "$T(t) = 25 + 65e^{-kt}$",
-          "$T(t) = 25 - 65e^{-kt}$",
-          "$T(t) = 90 + 25e^{-kt}$",
-          "$T(t) = 90e^{-kt}$"
+          "$2\\ln 4$",
+          "$\\dfrac{2}{\\ln 4}$",
+          "$\\dfrac{\\ln 4}{2}$",
+          "$\\dfrac{4}{2}$"
         ],
-        "correct": 0,
-        "explanation": "តាង $u = T - 25$ ⇒ $u' = -ku$ ⇒ $u = 65e^{-kt}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$50e^{2k} = 200 \\Rightarrow e^{2k} = 4 \\Rightarrow k = \\dfrac{\\ln 4}{2}$។"
       },
       {
         "id": "q7",
@@ -36208,67 +36163,63 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តាមច្បាប់ញូតុន $T' = -k(T - 20)$ និង $T(0) = 100$។ ចម្លើយគឺ ៖",
+        "question": "បើ $y' = ky$ ហើយ $y(0) = 50$ , $y(10) = 150$ នោះ $k =$ ៖",
         "options": [
-          "$T(t) = 100e^{-kt}$",
-          "$T(t) = 20 + 80e^{-kt}$",
-          "$T(t) = 100 + 20e^{-kt}$",
-          "$T(t) = 20 - 80e^{-kt}$"
+          "$\\dfrac{3}{10}$",
+          "$\\dfrac{10}{\\ln 3}$",
+          "$10\\ln 3$",
+          "$\\dfrac{\\ln 3}{10}$"
         ],
-        "correct": 1,
-        "explanation": "តាង $u = T - 20$ ⇒ $u' = -ku$ ⇒ $u = 80e^{-kt}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$50e^{10k} = 150 \\Rightarrow e^{10k} = 3 \\Rightarrow k = \\dfrac{\\ln 3}{10}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តាមច្បាប់ញូតុន $T' = -k(T - 30)$ និង $T(0) = 90$។ ចម្លើយគឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បាក់តេរីមួយប្រភេទកើនឡើងទ្វេដងរៀងរាល់ $3$ ម៉ោងម្តង។ បើដំបូងមាន $1000$ ក្បាល តើសមីការកំណើនគឺ ៖",
         "options": [
-          "$T(t) = 90 + 30e^{-kt}$",
-          "$T(t) = 90e^{-kt}$",
-          "$T(t) = 30 + 60e^{-kt}$",
-          "$T(t) = 30 - 60e^{-kt}$"
+          "$N(t) = 2000 t$",
+          "$N(t) = 1000 e^{2t}$",
+          "$N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$",
+          "$N(t) = 1000 \\cdot 2^{3t}$"
         ],
         "correct": 2,
-        "explanation": "តាង $u = T - 30$ ⇒ $u' = -ku$ ⇒ $u = 60e^{-kt}$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$N(t) = N_0 a^t$។ ត្រង់ $t = 3 \\implies N(3) = 2000 = 1000 a^3 \\implies a = 2^{\\frac{1}{3}}$ នាំឱ្យ $N(t) = 1000 \\cdot 2^{\\frac{t}{3}}$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $y' = ky$ ហើយ $y(0) = 200$ , $y(2) = 600$ នោះ $k =$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ភេសជ្ជៈមួយមាន $T(0)=126$°C ក្នុងបន្ទប់ $30$°C ។ តាមច្បាប់ញូតុន ក្រោយ ១ ម៉ោង $T-30$ ថយមកពាក់កណ្តាល។ ក្រោយ 3 ម៉ោង $T$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{3}{2}$",
-          "$2\\ln 3$",
-          "$\\dfrac{\\ln 3}{2}$",
-          "$\\dfrac{2}{\\ln 3}$"
+          "$78$",
+          "$42$",
+          "$36$",
+          "$15$"
         ],
-        "correct": 2,
-        "explanation": "$200e^{2k} = 600 \\Rightarrow e^{2k} = 3 \\Rightarrow k = \\dfrac{\\ln 3}{2}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$T=30+96(1/2)^t$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ អនុវត្តន៍សមីការឌីផេរ៉ង់ស្យែលលំដាប់ទី ១",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $y' = ky$ ហើយ $y(0) = 100$ , $y(10) = 200$ នោះ $k =$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ភេសជ្ជៈមួយមាន $T(0)=185$°C ក្នុងបន្ទប់ $25$°C ។ តាមច្បាប់ញូតុន ក្រោយ ១ ម៉ោង $T-25$ ថយមកពាក់កណ្តាល។ ក្រោយ 3 ម៉ោង $T$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{\\ln 2}{10}$",
-          "$\\dfrac{2}{10}$",
-          "$10\\ln 2$",
-          "$\\dfrac{10}{\\ln 2}$"
+          "$105$",
+          "$35$",
+          "$23$",
+          "$45$"
         ],
-        "correct": 0,
-        "explanation": "$100e^{10k} = 200 \\Rightarrow e^{10k} = 2 \\Rightarrow k = \\dfrac{\\ln 2}{10}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$T=25+160(1/2)^t$"
       }
     ]
   },
