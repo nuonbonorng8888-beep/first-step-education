@@ -1,0 +1,58 @@
+{
+  "lesson": "les-g11a-6-02",
+  "grade": 11,
+  "course": "advanced",
+  "title": "មេរៀនទី ២ ៖ បន្សំ (ទំព័រ ៩២ - ១០១)",
+  "book_pages": "no PDF (book pp.92-101)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ បន្សំនៃ r ធាតុយកពី n ធាតុ"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ លក្ខណៈនៃបន្សំ"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ ចម្លាស់ដែលមានធាតុដូចគ្នា (ចម្លាស់បែងចែក)"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ ការពន្លាតទ្វេធានៃ (1 + a)ⁿ"
+    },
+    {
+      "n": 5,
+      "title": "ចំណុចទី ៥ ៖ ទ្រឹស្តីបទទ្វេធា"
+    }
+  ],
+  "notes": "Combinations and binomial theorem. Existing generated items spot-checked correct; added missing levels per point.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "5": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
