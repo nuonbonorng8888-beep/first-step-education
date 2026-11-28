@@ -1,0 +1,49 @@
+{
+  "lesson": "les-g11b-7-3",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនបន្ថែម ៖ គំនូសតាងបំណែងចែក និងបំណែងចែកណ័រម៉ាល់ (ក្រៅសៀវភៅគោល)",
+  "book_pages": "238-246 (uploads/pdfs/g11b_ch7_les3.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ គំនូសតាងបំណែងចែកប្រេកង់ និងអ៊ីស្តូក្រាម"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ បំណែងចែកណ័រម៉ាល់ និងខ្សែកោងកណ្ដឹង"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ ក្បួនជាក់ស្តែង (Empirical Rule: 68 - 95 - 99.7)"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ ពិន្ទុស្តង់ដា Z (Z-score = (x - μ) / σ)"
+    }
+  ],
+  "notes": "Extra lesson (outside the core textbook): histogram, normal distribution, empirical rule, z-score. Point 4 already had enough items; Q16 junk and Q02 letter-option fixed.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 12,
+      "m": 10,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 17,
+      "m": 23,
+      "h": 22
+    }
+  }
+}
