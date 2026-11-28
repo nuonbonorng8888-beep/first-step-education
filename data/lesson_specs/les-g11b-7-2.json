@@ -1,0 +1,49 @@
+{
+  "lesson": "les-g11b-7-2",
+  "grade": 11,
+  "course": "basic",
+  "title": "មេរៀនទី ២ ៖ រង្វាស់នៃគម្លាត (ទំព័រ ១៤៤ - ១៥៨)",
+  "book_pages": "228-237 (uploads/pdfs/g11b_ch7_les2.pdf)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ រ៉ង់ (វិសាលភាព)"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ វ៉ារ្យង់ និងគម្លាតស្តង់ដានៃស្ថិតិសកល"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ វ៉ារ្យង់ និងគម្លាតស្តង់ដានៃស្ថិតិគំរូ"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ វ៉ារ្យង់ និងគម្លាតស្តង់ដាសម្រាប់ទិន្នន័យផ្តុំជាតារាងប្រេកង់"
+    }
+  ],
+  "notes": "Dispersion: range/IQR, population variance, sample variance (n-1), frequency/grouped variance. Q41 junk text removed, Q43 formula typo fixed.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 14,
+      "m": 11,
+      "h": 10
+    },
+    "2": {
+      "e": 14,
+      "m": 27,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
