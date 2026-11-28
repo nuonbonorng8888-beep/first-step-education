@@ -36876,87 +36876,87 @@
   "les-g12b-1-1": {
     "1": [
       {
-        "id": "g12b_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $A = \\lim_{x \\to 2} (3x^2 - 5x + 4)$ ៖",
         "options": [
-          "$6$",
-          "$10$",
           "$4$",
-          "$8$"
+          "$8$",
+          "$10$",
+          "$6$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "ដោយជំនួស $x = 2$ ៖ $A = 3(2^2) - 5(2) + 4 = 12 - 10 + 4 = 6$។"
       },
       {
-        "id": "g12b_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $B = \\lim_{x \\to -1} \\dfrac{2x + 5}{x + 3}$ ៖",
         "options": [
+          "$\\dfrac{3}{2}$",
           "$\\dfrac{7}{2}$",
           "$2$",
-          "$\\dfrac{3}{2}$",
           "$1$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "ជំនួស $x = -1$ ៖ $B = \\dfrac{2(-1) + 5}{-1 + 3} = \\dfrac{3}{2}$។"
       },
       {
-        "id": "g12b_p1_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $C = \\lim_{x \\to 0} \\sqrt{4 - 3x}$ ៖",
         "options": [
-          "$4$",
-          "$2$",
           "$0$",
-          "$-2$"
+          "$-2$",
+          "$2$",
+          "$4$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "ជំនួស $x = 0$ ៖ $C = \\sqrt{4 - 0} = 2$។"
       },
       {
-        "id": "g12b_p1_04",
+        "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $\\lim_{x \\to a} f(x) = L$ និង $\\lim_{x \\to a} g(x) = M$ នោះ $\\lim_{x \\to a} [f(x) \\cdot g(x)]$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{L}{M}$",
-          "$L^M$",
           "$L + M$",
-          "$L \\cdot M$"
+          "$L \\cdot M$",
+          "$\\dfrac{L}{M}$",
+          "$L^M$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "តាមលក្ខណៈលីមីត លីមីតនៃផលគុណស្មើផលគុណនៃលីមីត គឺ $L \\cdot M$។"
       },
       {
-        "id": "g12b_p1_05",
+        "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាលីមីត $D = \\lim_{x \\to 1} \\dfrac{x^3 + 2x - 3}{x + 1}$ ៖",
         "options": [
-          "$-1$",
+          "$\\dfrac{3}{2}$",
           "$0$",
           "$1$",
-          "$\\dfrac{3}{2}$"
+          "$-1$"
         ],
         "correct": 1,
         "explanation": "ជំនួស $x = 1$ ៖ $D = \\dfrac{1 + 2 - 3}{1 + 1} = \\dfrac{0}{2} = 0$ (មិនមែនជារាងមិនកំណត់ទេ)។"
       },
       {
-        "id": "g12b_p1_06",
+        "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
@@ -36964,23 +36964,23 @@
         "question": "គណនាលីមីតខាងស្តាំ $\\lim_{x \\to 2^+} \\dfrac{1}{x - 2}$ ៖",
         "options": [
           "$+\\infty$",
-          "$0$",
           "$1$",
+          "$0$",
           "$-\\infty$"
         ],
         "correct": 0,
         "explanation": "ពេល $x \\to 2^+$ គេបាន $x - 2 > 0$ និងខិតជិត $0$ ដូច្នេះ $\\dfrac{1}{0^+} = +\\infty$។"
       },
       {
-        "id": "g12b_p1_07",
+        "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាលីមីតខាងឆ្វេង $\\lim_{x \\to 3^-} \\dfrac{2x}{x - 3}$ ៖",
         "options": [
-          "$6$",
           "$+\\infty$",
+          "$6$",
           "$-\\infty$",
           "$0$"
         ],
@@ -36988,93 +36988,93 @@
         "explanation": "ភាគយកខិតជិត $6 > 0$ ភាគបែងខិតជិត $0^-$ ដូច្នេះ $\\dfrac{6}{0^-} = -\\infty$។"
       },
       {
-        "id": "g12b_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\lim_{x \\to 2^-} f(x) = 5$ និង $\\lim_{x \\to 2^+} f(x) = 5$ តើយើងអាចសន្និដ្ឋានថាយ៉ាងណា?",
-        "options": [
-          "$\\lim_{x \\to 2} f(x)$ មិនមាន",
-          "$f(2) = 5$",
-          "$f$ មិនជាប់ត្រង់ $2$",
-          "$\\lim_{x \\to 2} f(x) = 5$"
-        ],
-        "correct": 3,
-        "explanation": "កាលណាលីមីតខាងឆ្វេងស្មើនឹងលីមីតខាងស្តាំ នោះលីមីតត្រង់ចំណុចនោះមានតម្លៃស្មើនឹងតម្លៃរួមនោះ គឺ $5$។"
-      },
-      {
-        "id": "g12b_p1_09",
-        "questionNumber": 9,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $\\lim_{x \\to 1} \\dfrac{f(x) - 3}{x - 1} = 4$ រកតម្លៃនៃ $\\lim_{x \\to 1} f(x)$ ៖",
         "options": [
           "$0$",
-          "$7$",
+          "$3$",
           "$4$",
-          "$3$"
+          "$7$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "ដោយសារភាគបែងខិតជិត ០ ហើយលីមីតមានតម្លៃកំណត់ ៤ នាំឱ្យភាគយកត្រូវតែខិតជិត ០ ៖ $\\lim_{x \\to 1} (f(x) - 3) = 0 \\Rightarrow \\lim_{x \\to 1} f(x) = 3$។"
       },
       {
-        "id": "g12b_p1_10",
-        "questionNumber": 10,
+        "id": "q9",
+        "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃ $a$ ដើម្បីឱ្យ $\\lim_{x \\to 2} \\dfrac{x^2 + ax - 6}{x - 2}$ ជាចំនួនពិតកំណត់ ៖",
         "options": [
-          "$a = -1$",
           "$a = 1$",
+          "$a = -1$",
           "$a = 2$",
           "$a = 3$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "ដើម្បីឱ្យលីមីតមានតម្លៃកំណត់ ភាគយកត្រូវស្មើ ០ ត្រង់ $x = 2$ ៖ $2^2 + 2a - 6 = 0 \\iff 4 + 2a - 6 = 0 \\iff 2a = 2 \\iff a = 1$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to -\\infty} \\dfrac{3x^{2} + 2x + 1}{6x^{2} - x + 4}$ ៖",
+        "options": [
+          "$\\dfrac{3}{2}$",
+          "$-\\dfrac{1}{2}$",
+          "$1$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "correct": 3,
+        "explanation": "ចែកភាគយក និងភាគបែងនឹង x²"
       }
     ],
     "2": [
       {
-        "id": "g12b_p3_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "កន្សោមឆ្លាស់នៃ $\\sqrt{x} - 2$ គឺ ៖",
         "options": [
           "$\\sqrt{x} + 2$",
-          "$\\sqrt{x} - 2$",
           "$x + 2$",
+          "$\\sqrt{x} - 2$",
           "$x - 4$"
         ],
         "correct": 0,
         "explanation": "កន្សោមឆ្លាស់នៃ $A - B$ គឺ $A + B$ ដូច្នេះកន្សោមឆ្លាស់នៃ $\\sqrt{x} - 2$ គឺ $\\sqrt{x} + 2$។"
       },
       {
-        "id": "g12b_p3_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $M = \\lim_{x \\to 4} \\dfrac{\\sqrt{x} - 2}{x - 4}$ ៖",
         "options": [
           "$\\dfrac{1}{2}$",
-          "$2$",
           "$4$",
+          "$2$",
           "$\\dfrac{1}{4}$"
         ],
         "correct": 3,
         "explanation": "គុណកន្សោមឆ្លាស់ ៖ $\\lim_{x \\to 4} \\dfrac{x - 4}{(x - 4)(\\sqrt{x} + 2)} = \\dfrac{1}{2 + 2} = \\dfrac{1}{4}$។"
       },
       {
-        "id": "g12b_p3_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $M = \\lim_{x \\to 0} \\dfrac{\\sqrt{x + 1} - 1}{x}$ ៖",
         "options": [
           "$1$",
@@ -37086,39 +37086,39 @@
         "explanation": "$\\lim_{x \\to 0} \\dfrac{(x + 1) - 1}{x(\\sqrt{x + 1} + 1)} = \\dfrac{1}{1 + 1} = \\dfrac{1}{2}$។"
       },
       {
-        "id": "g12b_p3_04",
+        "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $M = \\lim_{x \\to 1} \\dfrac{\\sqrt{x + 3} - 2}{x - 1}$ ៖",
         "options": [
+          "$\\dfrac{1}{3}$",
           "$\\dfrac{1}{2}$",
-          "$1$",
           "$\\dfrac{1}{4}$",
-          "$\\dfrac{1}{3}$"
+          "$1$"
         ],
         "correct": 2,
         "explanation": "$\\lim_{x \\to 1} \\dfrac{x + 3 - 4}{(x - 1)(\\sqrt{x+3} + 2)} = \\dfrac{1}{2 + 2} = \\dfrac{1}{4}$។"
       },
       {
-        "id": "g12b_p3_05",
+        "id": "q5",
         "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាលីមីត $M = \\lim_{x \\to 2} \\dfrac{\\sqrt{2x + 5} - 3}{x - 2}$ ៖",
         "options": [
-          "$3$",
-          "$\\dfrac{1}{3}$",
           "$\\dfrac{2}{3}$",
-          "$\\dfrac{1}{6}$"
+          "$\\dfrac{1}{3}$",
+          "$\\dfrac{1}{6}$",
+          "$3$"
         ],
         "correct": 1,
         "explanation": "$\\lim_{x \\to 2} \\dfrac{2x + 5 - 9}{(x - 2)(\\sqrt{2x+5} + 3)} = \\lim_{x \\to 2} \\dfrac{2(x - 2)}{(x - 2)(3 + 3)} = \\dfrac{2}{6} = \\dfrac{1}{3}$។"
       },
       {
-        "id": "g12b_p3_06",
+        "id": "q6",
         "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
@@ -37127,22 +37127,22 @@
         "options": [
           "$3$",
           "$\\dfrac{3}{2}$",
-          "$6$",
-          "$0$"
+          "$0$",
+          "$6$"
         ],
         "correct": 0,
         "explanation": "$\\lim_{x \\to 0} \\dfrac{(1 + 3x) - (1 - 3x)}{x(\\sqrt{1+3x} + \\sqrt{1-3x})} = \\lim_{x \\to 0} \\dfrac{6x}{x(1 + 1)} = \\dfrac{6}{2} = 3$។"
       },
       {
-        "id": "g12b_p3_07",
+        "id": "q7",
         "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាលីមីត $M = \\lim_{x \\to 7} \\dfrac{x - 7}{\\sqrt{x + 2} - 3}$ ៖",
         "options": [
-          "$9$",
           "$\\dfrac{1}{6}$",
+          "$9$",
           "$6$",
           "$3$"
         ],
@@ -37150,52 +37150,52 @@
         "explanation": "$\\lim_{x \\to 7} \\dfrac{(x - 7)(\\sqrt{x+2} + 3)}{x + 2 - 9} = \\lim_{x \\to 7} (\\sqrt{x+2} + 3) = 3 + 3 = 6$។"
       },
       {
-        "id": "g12b_p3_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាលីមីត $M = \\lim_{x \\to 3} \\dfrac{\\sqrt{x + 1} - 2}{x^2 - 9}$ ៖",
-        "options": [
-          "$\\dfrac{1}{4}$",
-          "$\\dfrac{1}{6}$",
-          "$\\dfrac{1}{12}$",
-          "$\\dfrac{1}{24}$"
-        ],
-        "correct": 3,
-        "explanation": "$\\lim_{x \\to 3} \\dfrac{x - 3}{(x - 3)(x + 3)(\\sqrt{x+1} + 2)} = \\dfrac{1}{(6)(4)} = \\dfrac{1}{24}$។"
-      },
-      {
-        "id": "g12b_p3_09",
-        "questionNumber": 9,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាលីមីត $M = \\lim_{x \\to 1} \\dfrac{\\sqrt[3]{x} - 1}{x - 1}$ ៖",
         "options": [
-          "$1$",
-          "$\\dfrac{1}{3}$",
+          "$3$",
           "$\\dfrac{2}{3}$",
-          "$3$"
+          "$\\dfrac{1}{3}$",
+          "$1$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "ប្រើរូបមន្ត $a^3 - b^3$ ៖ $\\lim_{x \\to 1} \\dfrac{x - 1}{(x - 1)(\\sqrt[3]{x^2} + \\sqrt[3]{x} + 1)} = \\dfrac{1}{1 + 1 + 1} = \\dfrac{1}{3}$។"
       },
       {
-        "id": "g12b_p3_10",
+        "id": "q9",
+        "questionNumber": 9,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាលីមីត $M = \\lim_{x \\to 0} \\dfrac{\\sqrt{1 + x + x^2} - 1}{x}$ ៖",
+        "options": [
+          "$1$",
+          "$0$",
+          "$2$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "correct": 3,
+        "explanation": "$\\lim_{x \\to 0} \\dfrac{x + x^2}{x(\\sqrt{1+x+x^2} + 1)} = \\lim_{x \\to 0} \\dfrac{1 + x}{\\sqrt{1+x+x^2} + 1} = \\dfrac{1}{1 + 1} = \\dfrac{1}{2}$។"
+      },
+      {
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាលីមីត $M = \\lim_{x \\to 0} \\dfrac{\\sqrt{1 + x + x^2} - 1}{x}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to 4} \\dfrac{\\sqrt{x}-2}{x-4}$ ៖",
         "options": [
-          "$\\dfrac{1}{2}$",
-          "$0$",
-          "$2$",
-          "$1$"
+          "$\\dfrac{5}{4}$",
+          "$-\\dfrac{1}{4}$",
+          "$\\dfrac{1}{4}$",
+          "$\\dfrac{1}{2}$"
         ],
-        "correct": 0,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{x + x^2}{x(\\sqrt{1+x+x^2} + 1)} = \\lim_{x \\to 0} \\dfrac{1 + x}{\\sqrt{1+x+x^2} + 1} = \\dfrac{1}{1 + 1} = \\dfrac{1}{2}$។"
+        "correct": 2,
+        "explanation": "គុណនឹងកន្សោមឆ្លាស់"
       }
     ],
     "3": [
@@ -37204,68 +37204,64 @@
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{5}{\\sqrt{x^2 + 1} + x}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to +\\infty} \\dfrac{5\\cos x}{x}$ ៖",
         "options": [
-          "$\\dfrac{5}{2}$",
-          "$+\\infty$",
           "$5$",
+          "$1$",
+          "$+\\infty$",
           "$0$"
         ],
         "correct": 3,
-        "explanation": "ភាគបែង $\\to +\\infty$ ⇒ លីមីត $= 0$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "|cos x| ≤ 1 ហើយ 1/x → 0"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{4x^2 + 4}{9x^2 + 4x}}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to 2} (3x+1)^2$ ៖",
         "options": [
-          "$+\\infty$",
-          "$\\dfrac{2}{3}$",
-          "$0$",
-          "$\\dfrac{4}{9}$"
+          "$49$",
+          "$50$",
+          "$-49$",
+          "$98$"
         ],
-        "correct": 1,
-        "explanation": "លីមីតនៃអនុគមន៍បណ្តាក់ ៖ $\\dfrac{4x^{2} + \\dots}{9x^{2} + \\dots} \\to \\dfrac{4}{9}$ ហើយ $\\sqrt{u}$ ជាប់ ⇒ $\\dfrac{2}{3}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "លីមីតនៃអនុគមន៍បណ្តាក់"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} (6x + \\sin x)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to 2} (2x+3)^2$ ៖",
         "options": [
-          "$-\\infty$",
-          "$0$",
-          "$+\\infty$",
-          "$6$"
+          "$50$",
+          "$-49$",
+          "$49$",
+          "$98$"
         ],
         "correct": 2,
-        "explanation": "$6x + \\sin x \\ge 6x - 1$ ហើយ $6x - 1 \\to +\\infty$ ⇒ $+\\infty$ (តាមការប្រៀបធៀប)។",
-        "src": "genpq-g12a_plan"
+        "explanation": "លីមីតនៃអនុគមន៍បណ្តាក់"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{16x^2 + 2}{x^2 + 4x}}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to 2} (1x+5)^2$ ៖",
         "options": [
-          "$4$",
-          "$0$",
-          "$16$",
-          "$+\\infty$"
+          "$49$",
+          "$50$",
+          "$-49$",
+          "$98$"
         ],
         "correct": 0,
-        "explanation": "លីមីតនៃអនុគមន៍បណ្តាក់ ៖ $\\dfrac{16x^{2} + \\dots}{x^{2} + \\dots} \\to 16$ ហើយ $\\sqrt{u}$ ជាប់ ⇒ $4$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "លីមីតនៃអនុគមន៍បណ្តាក់"
       },
       {
         "id": "q5",
@@ -37273,16 +37269,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} (x^2 - 3\\cos x)$ ៖",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{5}{\\sqrt{x^2 + 1} + x}$ ៖",
         "options": [
-          "$0$",
           "$+\\infty$",
-          "$-\\infty$",
-          "$-3$"
+          "$0$",
+          "$5$",
+          "$\\dfrac{5}{2}$"
         ],
         "correct": 1,
-        "explanation": "$x^2 - 3\\cos x \\ge x^2 - 3$ ហើយ $x^2 - 3 \\to +\\infty$ ⇒ $+\\infty$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "ភាគបែង $\\to +\\infty$ ⇒ លីមីត $= 0$។"
       },
       {
         "id": "q6",
@@ -37290,16 +37285,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} (x^2 - 5\\cos x)$ ៖",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{4x^2 + 4}{9x^2 + 4x}}$ ៖",
         "options": [
           "$+\\infty$",
-          "$0$",
-          "$-5$",
-          "$-\\infty$"
+          "$\\dfrac{4}{9}$",
+          "$\\dfrac{2}{3}$",
+          "$0$"
         ],
-        "correct": 0,
-        "explanation": "$x^2 - 5\\cos x \\ge x^2 - 5$ ហើយ $x^2 - 5 \\to +\\infty$ ⇒ $+\\infty$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "លីមីតនៃអនុគមន៍បណ្តាក់ ៖ $\\dfrac{4x^{2} + \\dots}{9x^{2} + \\dots} \\to \\dfrac{4}{9}$ ហើយ $\\sqrt{u}$ ជាប់ ⇒ $\\dfrac{2}{3}$។"
       },
       {
         "id": "q7",
@@ -37307,112 +37301,108 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to -\\infty} (x^2 - 2\\cos x)$ ៖",
+        "question": "គណនា $\\lim_{x \\to +\\infty} (6x + \\sin x)$ ៖",
         "options": [
+          "$+\\infty$",
           "$-\\infty$",
-          "$-2$",
           "$0$",
-          "$+\\infty$"
+          "$6$"
         ],
-        "correct": 3,
-        "explanation": "$x^2 - 2\\cos x \\ge x^2 - 2$ ហើយ $x^2 - 2 \\to +\\infty$ ⇒ $+\\infty$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$6x + \\sin x \\ge 6x - 1$ ហើយ $6x - 1 \\to +\\infty$ ⇒ $+\\infty$ (តាមការប្រៀបធៀប)។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} (4x + \\sin x)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty} \\sqrt{\\dfrac{4x^2+3}{x^2+x}}$ ៖",
         "options": [
-          "$4$",
-          "$0$",
-          "$+\\infty$",
-          "$-\\infty$"
+          "$3$",
+          "$2$",
+          "$-2$",
+          "$4$"
         ],
-        "correct": 2,
-        "explanation": "$4x + \\sin x \\ge 4x - 1$ ហើយ $4x - 1 \\to +\\infty$ ⇒ $+\\infty$ (តាមការប្រៀបធៀប)។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "លីមីតនៃអនុគមន៍បណ្តាក់"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{5\\sin 2x}{x}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty} \\dfrac{5x+\\sin x}{2x+\\cos x}$ ៖",
         "options": [
-          "$1$",
-          "$5$",
-          "$+\\infty$",
-          "$0$"
+          "$\\dfrac{5}{2}$",
+          "$\\dfrac{7}{2}$",
+          "$-\\dfrac{5}{2}$",
+          "$5$"
         ],
-        "correct": 3,
-        "explanation": "$-\\dfrac{5}{x} \\le \\dfrac{5\\sin 2x}{x} \\le \\dfrac{5}{x}$ ហើយអង្គសងខាង $\\to 0$ ⇒ លីមីត $= 0$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "ចែកនឹង x រួចប្រើទ្រឹស្តីបទហ្សង់ដាម៉ង"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{6}{\\sqrt{x^2 + 1} + x}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty} \\dfrac{2x+\\sin x}{3x+\\cos x}$ ៖",
         "options": [
-          "$6$",
-          "$0$",
-          "$+\\infty$",
-          "$3$"
+          "$\\dfrac{5}{3}$",
+          "$-\\dfrac{2}{3}$",
+          "$\\dfrac{2}{3}$",
+          "$\\dfrac{4}{3}$"
         ],
-        "correct": 1,
-        "explanation": "ភាគបែង $\\to +\\infty$ ⇒ លីមីត $= 0$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "ចែកនឹង x រួចប្រើទ្រឹស្តីបទហ្សង់ដាម៉ង"
       }
     ],
     "4": [
       {
-        "id": "g12b_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $L = \\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}$ ៖",
         "options": [
           "$9$",
-          "$3$",
           "$0$",
+          "$3$",
           "$6$"
         ],
         "correct": 3,
         "explanation": "រាងមិនកំណត់ $[\\dfrac{0}{0}]$ ៖ $\\lim_{x \\to 3} \\dfrac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) = 3 + 3 = 6$។"
       },
       {
-        "id": "g12b_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $L = \\lim_{x \\to 2} \\dfrac{x^2 - 4}{x - 2}$ ៖",
         "options": [
+          "$1$",
           "$4$",
           "$2$",
-          "$1$",
           "$0$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "$\\lim_{x \\to 2} (x + 2) = 4$។"
       },
       {
-        "id": "g12b_p2_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $L = \\lim_{x \\to -1} \\dfrac{x^2 - 1}{x + 1}$ ៖",
         "options": [
-          "$0$",
           "$2$",
+          "$0$",
           "$-2$",
           "$1$"
         ],
@@ -37420,55 +37410,55 @@
         "explanation": "$\\lim_{x \\to -1} (x - 1) = -1 - 1 = -2$។"
       },
       {
-        "id": "g12b_p2_04",
+        "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $L = \\lim_{x \\to 1} \\dfrac{x^2 - 3x + 2}{x - 1}$ ៖",
         "options": [
-          "$2$",
           "$-1$",
           "$0$",
-          "$1$"
+          "$1$",
+          "$2$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "$\\lim_{x \\to 1} \\dfrac{(x - 1)(x - 2)}{x - 1} = \\lim_{x \\to 1} (x - 2) = 1 - 2 = -1$។"
       },
       {
-        "id": "g12b_p2_05",
+        "id": "q5",
         "questionNumber": 5,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាលីមីត $L = \\lim_{x \\to 2} \\dfrac{x^2 - 5x + 6}{x^2 - 4}$ ៖",
         "options": [
-          "$1$",
           "$-\\dfrac{1}{4}$",
-          "$\\dfrac{1}{4}$",
-          "$-\\dfrac{1}{2}$"
+          "$-\\dfrac{1}{2}$",
+          "$1$",
+          "$\\dfrac{1}{4}$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "$\\lim_{x \\to 2} \\dfrac{(x - 2)(x - 3)}{(x - 2)(x + 2)} = \\lim_{x \\to 2} \\dfrac{x - 3}{x + 2} = \\dfrac{2 - 3}{2 + 2} = -\\dfrac{1}{4}$។"
       },
       {
-        "id": "g12b_p2_06",
+        "id": "q6",
         "questionNumber": 6,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាលីមីត $L = \\lim_{x \\to 1} \\dfrac{x^3 - 1}{x - 1}$ ៖",
         "options": [
+          "$0$",
           "$2$",
           "$1$",
-          "$0$",
           "$3$"
         ],
         "correct": 3,
         "explanation": "$\\lim_{x \\to 1} \\dfrac{(x - 1)(x^2 + x + 1)}{x - 1} = 1 + 1 + 1 = 3$។"
       },
       {
-        "id": "g12b_p2_07",
+        "id": "q7",
         "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
@@ -37476,105 +37466,105 @@
         "question": "គណនាលីមីត $L = \\lim_{x \\to -2} \\dfrac{x^3 + 8}{x^2 - 4}$ ៖",
         "options": [
           "$3$",
-          "$0$",
+          "$-\\dfrac{3}{2}$",
           "$-3$",
-          "$-\\dfrac{3}{2}$"
+          "$0$"
         ],
         "correct": 2,
         "explanation": "$\\lim_{x \\to -2} \\dfrac{(x + 2)(x^2 - 2x + 4)}{(x + 2)(x - 2)} = \\dfrac{4 + 4 + 4}{-2 - 2} = \\dfrac{12}{-4} = -3$។"
       },
       {
-        "id": "g12b_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាលីមីត $L = \\lim_{x \\to 3} \\dfrac{2x^2 - 5x - 3}{x^2 - 9}$ ៖",
-        "options": [
-          "$\\dfrac{7}{6}$",
-          "$\\dfrac{5}{6}$",
-          "$1$",
-          "$\\dfrac{7}{3}$"
-        ],
-        "correct": 0,
-        "explanation": "$\\lim_{x \\to 3} \\dfrac{(x - 3)(2x + 1)}{(x - 3)(x + 3)} = \\dfrac{2(3) + 1}{3 + 3} = \\dfrac{7}{6}$។"
-      },
-      {
-        "id": "g12b_p2_09",
-        "questionNumber": 9,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាលីមីត $L = \\lim_{x \\to 1} \\dfrac{x^4 - 1}{x^3 - 1}$ ៖",
         "options": [
-          "$\\dfrac{3}{4}$",
           "$\\dfrac{4}{3}$",
           "$\\dfrac{2}{3}$",
-          "$1$"
+          "$1$",
+          "$\\dfrac{3}{4}$"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "$\\lim_{x \\to 1} \\dfrac{(x - 1)(x + 1)(x^2 + 1)}{(x - 1)(x^2 + x + 1)} = \\dfrac{(2)(2)}{3} = \\dfrac{4}{3}$។"
       },
       {
-        "id": "g12b_p2_10",
-        "questionNumber": 10,
+        "id": "q9",
+        "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃ $m$ ដើម្បីឱ្យ $\\lim_{x \\to 2} \\dfrac{x^2 - (m + 2)x + 2m}{x - 2} = 5$ ៖",
         "options": [
           "$m = 3$",
           "$m = 5$",
-          "$m = -3$",
-          "$m = 2$"
+          "$m = 2$",
+          "$m = -3$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$x^2 - (m+2)x + 2m = (x - 2)(x - m)$។ $\\lim_{x \\to 2} (x - m) = 2 - m = 5 \\Rightarrow m = -3$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ លីមីតរាងមិនកំណត់ 0/0",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាលីមីត $L=\\lim_{x \\to 2}\\dfrac{x^3-8}{x-2}$ ៖",
+        "options": [
+          "$12$",
+          "$13$",
+          "$11$",
+          "$-12$"
+        ],
+        "correct": 0,
+        "explanation": "$x^3-a^3=(x-a)(x^2+ax+a^2)$"
       }
     ],
     "5": [
       {
-        "id": "g12b_p4_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $P = \\lim_{x \\to +\\infty} \\dfrac{3x + 1}{2x - 5}$ ៖",
         "options": [
           "$3$",
-          "$+\\infty$",
+          "$0$",
           "$\\dfrac{3}{2}$",
-          "$0$"
+          "$+\\infty$"
         ],
         "correct": 2,
         "explanation": "យកផលធៀបនៃតួមានដឺក្រេខ្ពស់បំផុត ៖ $\\lim_{x \\to +\\infty} \\dfrac{3x}{2x} = \\dfrac{3}{2}$។"
       },
       {
-        "id": "g12b_p4_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $P = \\lim_{x \\to +\\infty} \\dfrac{2x^2 - 4x + 1}{5x^2 + 3}$ ៖",
         "options": [
-          "$\\dfrac{1}{3}$",
+          "$0$",
           "$\\dfrac{2}{5}$",
-          "$+\\infty$",
-          "$0$"
+          "$\\dfrac{1}{3}$",
+          "$+\\infty$"
         ],
         "correct": 1,
         "explanation": "ដឺក្រេភាគយកស្មើដឺក្រេភាគបែង ៖ $\\lim_{x \\to +\\infty} \\dfrac{2x^2}{5x^2} = \\dfrac{2}{5}$។"
       },
       {
-        "id": "g12b_p4_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $P = \\lim_{x \\to +\\infty} \\dfrac{4x + 7}{x^2 + 1}$ ៖",
         "options": [
-          "$4$",
           "$1$",
+          "$4$",
           "$+\\infty$",
           "$0$"
         ],
@@ -37582,39 +37572,39 @@
         "explanation": "ដឺក្រេភាគយក ($1$) តូចជាងដឺក្រេភាគបែង ($2$) នាំឱ្យលីមីតស្មើ $0$។"
       },
       {
-        "id": "g12b_p4_04",
+        "id": "q4",
         "questionNumber": 4,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $P = \\lim_{x \\to +\\infty} \\dfrac{x^3 - 2}{x^2 + 4}$ ៖",
         "options": [
           "$+\\infty$",
           "$0$",
-          "$1$",
-          "$-\\infty$"
+          "$-\\infty$",
+          "$1$"
         ],
         "correct": 0,
         "explanation": "ដឺក្រេភាគយកធំជាងដឺក្រេភាគបែង ៖ $\\lim_{x \\to +\\infty} \\dfrac{x^3}{x^2} = \\lim_{x \\to +\\infty} x = +\\infty$។"
       },
       {
-        "id": "g12b_p4_05",
+        "id": "q5",
         "questionNumber": 5,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាលីមីត $P = \\lim_{x \\to +\\infty} \\dfrac{\\sqrt{4x^2 + 1}}{x + 3}$ ៖",
         "options": [
-          "$4$",
-          "$2$",
           "$1$",
-          "$+\\infty$"
+          "$+\\infty$",
+          "$2$",
+          "$4$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$\\lim_{x \\to +\\infty} \\dfrac{2x\\sqrt{1 + \\dfrac{1}{4x^2}}}{x(1 + \\dfrac{3}{x})} = \\dfrac{2}{1} = 2$។"
       },
       {
-        "id": "g12b_p4_06",
+        "id": "q6",
         "questionNumber": 6,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
@@ -37622,76 +37612,76 @@
         "question": "គណនាលីមីត $P = \\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2 + 1}}{x + 3}$ ៖",
         "options": [
           "$-2$",
-          "$4$",
+          "$2$",
           "$-\\infty$",
-          "$2$"
+          "$4$"
         ],
         "correct": 0,
         "explanation": "ពេល $x < 0$ គេបាន $\\sqrt{x^2} = |x| = -x$ នាំឱ្យ $\\lim_{x \\to -\\infty} \\dfrac{-2x}{x} = -2$។"
       },
       {
-        "id": "g12b_p4_07",
+        "id": "q7",
         "questionNumber": 7,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាលីមីត $P = \\lim_{x \\to +\\infty} (\\sqrt{x^2 + 2x} - x)$ ៖",
         "options": [
-          "$2$",
           "$+\\infty$",
-          "$1$",
-          "$0$"
+          "$2$",
+          "$0$",
+          "$1$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "រាង $[\\infty - \\infty]$ គុណកន្សោមឆ្លាស់ ៖ $\\lim_{x \\to +\\infty} \\dfrac{2x}{\\sqrt{x^2+2x} + x} = \\dfrac{2}{1 + 1} = 1$។"
       },
       {
-        "id": "g12b_p4_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាលីមីត $P = \\lim_{x \\to +\\infty} (\\sqrt{x^2 + 4x} - \\sqrt{x^2 - 2x})$ ៖",
-        "options": [
-          "$6$",
-          "$1$",
-          "$2$",
-          "$3$"
-        ],
-        "correct": 3,
-        "explanation": "គុណកន្សោមឆ្លាស់ ៖ $\\lim_{x \\to +\\infty} \\dfrac{(x^2+4x) - (x^2-2x)}{\\sqrt{x^2+4x} + \\sqrt{x^2-2x}} = \\lim_{x \\to +\\infty} \\dfrac{6x}{x(1 + 1)} = \\dfrac{6}{2} = 3$។"
-      },
-      {
-        "id": "g12b_p4_09",
-        "questionNumber": 9,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកតម្លៃ $a > 0$ ដើម្បីឱ្យ $\\lim_{x \\to +\\infty} (\\sqrt{a x^2 + 6x} - 2x) = \\dfrac{3}{2}$ ៖",
         "options": [
+          "$a = 9$",
           "$a = 2$",
-          "$a = 1$",
           "$a = 4$",
-          "$a = 9$"
+          "$a = 1$"
         ],
         "correct": 2,
         "explanation": "ដើម្បីកុំឱ្យចេញ $\\pm\\infty$ ត្រូវតែ $\\sqrt{a} = 2 \\Rightarrow a = 4$។ ពេល $a=4$ លីមីតគឺ $\\dfrac{6}{2\\sqrt{4}} = \\dfrac{6}{4} = \\dfrac{3}{2}$ (ពិត)។"
       },
       {
-        "id": "g12b_p4_10",
-        "questionNumber": 10,
+        "id": "q9",
+        "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាលីមីត $P = \\lim_{x \\to +\\infty} \\dfrac{2^{x+1} + 3^{x+1}}{2^x + 3^x}$ ៖",
         "options": [
           "$3$",
-          "$+\\infty$",
           "$1$",
-          "$2$"
+          "$2$",
+          "$+\\infty$"
         ],
         "correct": 0,
         "explanation": "ចែកភាគយក និងភាគបែងនឹង $3^x$ (គោលធំជាងគេ) ៖ $\\lim_{x \\to +\\infty} \\dfrac{2\\left(\\dfrac{2}{3}\\right)^{x} + 3}{\\left(\\dfrac{2}{3}\\right)^{x} + 1} = \\dfrac{0 + 3}{0 + 1} = 3$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ លីមីតរាងមិនកំណត់ ∞/∞ និង ∞ − ∞",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាលីមីត $L=\\lim_{x \\to +\\infty}(\\sqrt{x^2+2x}-x)$ ៖",
+        "options": [
+          "$2$",
+          "$1$",
+          "$\\dfrac{1}{2}$",
+          "$0$"
+        ],
+        "correct": 1,
+        "explanation": "$\\dfrac{2x}{\\sqrt{x^2+2x}+x}$"
       }
     ],
     "6": [
@@ -37700,68 +37690,64 @@
         "questionNumber": 1,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{1 - \\cos 6x}{x^2}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to 0} \\dfrac{\\sin 4x}{x}$ ៖",
         "options": [
-          "$0$",
-          "$18$",
-          "$36$",
-          "$3$"
+          "$5$",
+          "$-4$",
+          "$8$",
+          "$4$"
         ],
-        "correct": 1,
-        "explanation": "$1 - \\cos 6x = 2\\sin^2 \\dfrac{6x}{2}$ ⇒ $\\to \\dfrac{36}{2} = 18$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$\\lim\\dfrac{\\sin u}{u}=1$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\sin 2x}{6x}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to 0} \\dfrac{e^{5x}-1}{x}$ ៖",
         "options": [
-          "$\\dfrac{1}{3}$",
-          "$12$",
-          "$3$",
-          "$1$"
+          "$6$",
+          "$5$",
+          "$-5$",
+          "$10$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{\\sin 2x}{6x} = \\dfrac{2}{6} \\cdot \\dfrac{\\sin 2x}{2x} \\to \\dfrac{1}{3}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$\\lim\\dfrac{e^u-1}{u}=1$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{e^x}{x^{5}}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "លីមីតគ្រឹះត្រីកោណមាត្រ $\\lim_{x \\to 0} \\dfrac{\\sin x}{x}$ ស្មើនឹង ៖",
         "options": [
           "$0$",
           "$1$",
-          "$+\\infty$",
-          "$-\\infty$"
+          "$\\infty$",
+          "$-1$"
         ],
-        "correct": 2,
-        "explanation": "កំណើនប្រៀបធៀប ៖ $\\dfrac{e^x}{x^n} \\to +\\infty$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "លីមីតគ្រឹះត្រីកោណមាត្រ៖ $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ (មុំ $x$ គិតជាដឺក្រេឬរ៉ាដ្យង់ គឺរ៉ាដ្យង់)។"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\ln(1 + 5x)}{4x}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\lim_{x\\to 0} \\dfrac{e^{4x}-1}{x}$ ៖",
         "options": [
-          "$9$",
-          "$0$",
-          "$\\dfrac{4}{5}$",
-          "$\\dfrac{5}{4}$"
+          "$5$",
+          "$-4$",
+          "$8$",
+          "$4$"
         ],
         "correct": 3,
-        "explanation": "$\\dfrac{\\ln(1 + u)}{u} \\to 1$ ⇒ $\\dfrac{5}{4}$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$\\lim\\dfrac{e^u-1}{u}=1$"
       },
       {
         "id": "q5",
@@ -37769,16 +37755,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{e^{x} - 1}{4x}$ ៖",
+        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{1 - \\cos 6x}{x^2}$ ៖",
         "options": [
-          "$\\dfrac{5}{4}$",
-          "$\\dfrac{1}{4}$",
-          "$4$",
+          "$36$",
+          "$18$",
+          "$3$",
           "$0$"
         ],
         "correct": 1,
-        "explanation": "$\\dfrac{e^{u} - 1}{u} \\to 1$ ⇒ $\\dfrac{1}{4}$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$1 - \\cos 6x = 2\\sin^2 \\dfrac{6x}{2}$ ⇒ $\\to \\dfrac{36}{2} = 18$។"
       },
       {
         "id": "q6",
@@ -37786,16 +37771,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\sin 2x}{x}$ ៖",
+        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\sin 2x}{6x}$ ៖",
         "options": [
-          "$\\dfrac{1}{2}$",
-          "$1$",
           "$3$",
-          "$2$"
+          "$12$",
+          "$\\dfrac{1}{3}$",
+          "$1$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{\\sin 2x}{x} = \\dfrac{2}{1} \\cdot \\dfrac{\\sin 2x}{2x} \\to 2$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$\\dfrac{\\sin 2x}{6x} = \\dfrac{2}{6} \\cdot \\dfrac{\\sin 2x}{2x} \\to \\dfrac{1}{3}$។"
       },
       {
         "id": "q7",
@@ -37803,67 +37787,63 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\ln(1 + 6x)}{5x}$ ៖",
+        "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{e^x}{x^{5}}$ ៖",
         "options": [
-          "$\\dfrac{6}{5}$",
-          "$11$",
-          "$0$",
-          "$\\dfrac{5}{6}$"
+          "$+\\infty$",
+          "$1$",
+          "$-\\infty$",
+          "$0$"
         ],
         "correct": 0,
-        "explanation": "$\\dfrac{\\ln(1 + u)}{u} \\to 1$ ⇒ $\\dfrac{6}{5}$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "កំណើនប្រៀបធៀប ៖ $\\dfrac{e^x}{x^n} \\to +\\infty$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\ln(1 + 6x)}{4x}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{x\\to +\\infty} x\\sin\\dfrac{3}{x}$ ៖",
         "options": [
-          "$\\dfrac{2}{3}$",
-          "$10$",
-          "$\\dfrac{3}{2}$",
-          "$0$"
+          "$4$",
+          "$-3$",
+          "$6$",
+          "$3$"
         ],
-        "correct": 2,
-        "explanation": "$\\dfrac{\\ln(1 + u)}{u} \\to 1$ ⇒ $\\dfrac{3}{2}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "តាង u=a/x → 0"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\ln(1 + 4x)}{x}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាលីមីត $\\lim_{x \\to 0} (\\cos x)^{\\dfrac{1}{x}^2}$ ៖",
         "options": [
-          "$\\dfrac{1}{4}$",
-          "$0$",
-          "$4$",
-          "$5$"
+          "$e$",
+          "$1$",
+          "$e^{-\\dfrac{1}{2}}$",
+          "$0$"
         ],
         "correct": 2,
-        "explanation": "$\\dfrac{\\ln(1 + u)}{u} \\to 1$ ⇒ $4$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$\\ln y = \\dfrac{\\ln \\cos x}{x^2} = \\dfrac{\\ln(1 - (1-\\cos x))}{-(1-\\cos x)} \\cdot \\dfrac{-(1-\\cos x)}{x^2} \\to -\\dfrac{1}{2} \\implies y \\to e^{-\\dfrac{1}{2}}$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ លីមីតនៃអនុគមន៍មិនពីជគណិត",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\tan 4x}{\\sin 3x}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាលីមីត $\\lim_{x \\to \\frac{\\pi}{2}} \\dfrac{1 - \\sin x}{(\\dfrac{\\pi}{2} - x)^2}$ ៖",
         "options": [
+          "$\\dfrac{1}{2}$",
+          "$0$",
           "$1$",
-          "$12$",
-          "$\\dfrac{3}{4}$",
-          "$\\dfrac{4}{3}$"
+          "$2$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{\\tan 4x}{4x} \\to 1$ , $\\dfrac{3x}{\\sin 3x} \\to 1$ ⇒ $\\dfrac{4}{3}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "តាង $t = \\dfrac{\\pi}{2} - x \\to 0 \\implies x = \\dfrac{\\pi}{2} - t$។ $\\sin x = \\cos t$។ $\\lim_{t \\to 0} \\dfrac{1 - \\cos t}{t^2} = \\dfrac{1}{2}$។"
       }
     ]
   },
