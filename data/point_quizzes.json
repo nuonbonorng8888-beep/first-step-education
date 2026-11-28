@@ -108228,68 +108228,64 @@
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arcsin(0)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\arccos 1$ ៖",
         "options": [
-          "$\\dfrac{3\\pi}{4}$",
-          "$\\dfrac{\\pi}{4}$",
           "$0$",
+          "$\\dfrac{\\pi}{2}$",
+          "$\\pi$",
           "$\\dfrac{\\pi}{3}$"
         ],
-        "correct": 2,
-        "explanation": "$\\sin(0) = 0$ ហើយ $0$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arcsin$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$\\cos(0)=1$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arccos(-\\dfrac{1}{2})$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\arcsin \\dfrac{\\sqrt{3}}{2}$ ៖",
         "options": [
+          "$\\dfrac{\\pi}{6}$",
           "$\\dfrac{2\\pi}{3}$",
-          "$\\dfrac{5\\pi}{6}$",
-          "$-\\dfrac{\\pi}{4}$",
-          "$\\pi$"
+          "$\\dfrac{\\pi}{3}$",
+          "$-\\dfrac{\\pi}{3}$"
         ],
-        "correct": 0,
-        "explanation": "$\\cos(\\dfrac{2\\pi}{3}) = -\\dfrac{1}{2}$ ហើយ $\\dfrac{2\\pi}{3}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arccos$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "$\\sin(\\dfrac{\\pi}{3})=\\dfrac{\\sqrt{3}}{2}$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arccos(-\\dfrac{\\sqrt{2}}{2})$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដែនកំណត់នៃអនុគមន៍ $y=\\arcsin x$ គឺ ៖",
         "options": [
-          "$0$",
-          "$\\dfrac{\\pi}{3}$",
-          "$-\\dfrac{\\pi}{3}$",
-          "$\\dfrac{3\\pi}{4}$"
+          "$\\mathbb{R}$",
+          "$[0,1]$",
+          "$(-1,1)$",
+          "$[-1,1]$"
         ],
         "correct": 3,
-        "explanation": "$\\cos(\\dfrac{3\\pi}{4}) = -\\dfrac{\\sqrt{2}}{2}$ ហើយ $\\dfrac{3\\pi}{4}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arccos$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "ដែននៃអនុគមន៍ច្រាស"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arctan(-1)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\arctan 0$ ៖",
         "options": [
-          "$\\dfrac{\\pi}{6}$",
-          "$-\\dfrac{\\pi}{4}$",
-          "$-\\dfrac{\\pi}{6}$",
-          "$\\dfrac{\\pi}{2}$"
+          "$0$",
+          "$\\dfrac{\\pi}{2}$",
+          "$\\pi$",
+          "$\\dfrac{\\pi}{3}$"
         ],
-        "correct": 1,
-        "explanation": "$\\tan(-\\dfrac{\\pi}{4}) = -1$ ហើយ $-\\dfrac{\\pi}{4}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arctan$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$\\tan(0)=0$"
       },
       {
         "id": "q5",
@@ -108297,16 +108293,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arctan(\\sqrt{3})$ ៖",
+        "question": "គណនា $\\arcsin(0)$ ៖",
         "options": [
-          "$\\pi$",
-          "$-\\dfrac{\\pi}{3}$",
           "$\\dfrac{\\pi}{3}$",
+          "$\\dfrac{\\pi}{4}$",
+          "$0$",
           "$\\dfrac{3\\pi}{4}$"
         ],
         "correct": 2,
-        "explanation": "$\\tan(\\dfrac{\\pi}{3}) = \\sqrt{3}$ ហើយ $\\dfrac{\\pi}{3}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arctan$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\sin(0) = 0$ ហើយ $0$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arcsin$។"
       },
       {
         "id": "q6",
@@ -108314,16 +108309,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arctan(\\dfrac{\\sqrt{3}}{3})$ ៖",
+        "question": "គណនា $\\arccos(-\\dfrac{1}{2})$ ៖",
         "options": [
-          "$\\dfrac{\\pi}{6}$",
-          "$\\dfrac{\\pi}{3}$",
-          "$0$",
-          "$\\dfrac{\\pi}{4}$"
+          "$\\dfrac{2\\pi}{3}$",
+          "$-\\dfrac{\\pi}{4}$",
+          "$\\pi$",
+          "$\\dfrac{5\\pi}{6}$"
         ],
         "correct": 0,
-        "explanation": "$\\tan(\\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{3}}{3}$ ហើយ $\\dfrac{\\pi}{6}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arctan$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\cos(\\dfrac{2\\pi}{3}) = -\\dfrac{1}{2}$ ហើយ $\\dfrac{2\\pi}{3}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arccos$។"
       },
       {
         "id": "q7",
@@ -108331,67 +108325,63 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arccos(0)$ ៖",
+        "question": "គណនា $\\arccos(-\\dfrac{\\sqrt{2}}{2})$ ៖",
         "options": [
           "$0$",
-          "$\\dfrac{\\pi}{2}$",
-          "$-\\dfrac{\\pi}{4}$",
-          "$\\dfrac{5\\pi}{6}$"
+          "$\\dfrac{3\\pi}{4}$",
+          "$\\dfrac{\\pi}{3}$",
+          "$-\\dfrac{\\pi}{3}$"
         ],
         "correct": 1,
-        "explanation": "$\\cos(\\dfrac{\\pi}{2}) = 0$ ហើយ $\\dfrac{\\pi}{2}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arccos$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\cos(\\dfrac{3\\pi}{4}) = -\\dfrac{\\sqrt{2}}{2}$ ហើយ $\\dfrac{3\\pi}{4}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arccos$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arctan(1)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\arccos(-\\dfrac{1}{2})$ ៖",
         "options": [
-          "$\\pi$",
-          "$-\\dfrac{\\pi}{3}$",
           "$\\dfrac{2\\pi}{3}$",
-          "$\\dfrac{\\pi}{4}$"
+          "$-\\dfrac{\\pi}{6}$",
+          "$\\dfrac{\\pi}{3}$",
+          "$-\\dfrac{2\\pi}{3}$"
         ],
-        "correct": 3,
-        "explanation": "$\\tan(\\dfrac{\\pi}{4}) = 1$ ហើយ $\\dfrac{\\pi}{4}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arctan$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$\\arccos(-x)=\\pi-\\arccos x$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arccos(-1)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\arcsin \\dfrac{\\sqrt{3}}{2}+\\arccos(-\\dfrac{\\sqrt{3}}{2})$ ៖",
         "options": [
-          "$\\dfrac{\\pi}{2}$",
-          "$\\pi$",
-          "$\\dfrac{\\pi}{6}$",
-          "$\\dfrac{\\pi}{3}$"
+          "$-\\dfrac{2\\pi}{3}$",
+          "$-\\dfrac{\\pi}{6}$",
+          "$-\\dfrac{7\\pi}{6}$",
+          "$\\dfrac{7\\pi}{6}$"
         ],
-        "correct": 1,
-        "explanation": "$\\cos(\\pi) = -1$ ហើយ $\\pi$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arccos$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "$\\dfrac{\\pi}{3}+\\dfrac{5\\pi}{6}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arcsin(\\dfrac{\\sqrt{3}}{2})$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\arctan(-\\sqrt{3})$ ៖",
         "options": [
-          "$0$",
-          "$\\dfrac{3\\pi}{4}$",
-          "$\\dfrac{\\pi}{3}$",
-          "$\\dfrac{\\pi}{2}$"
+          "$-\\dfrac{\\pi}{3}$",
+          "$\\dfrac{5\\pi}{6}$",
+          "$\\dfrac{4\\pi}{3}$",
+          "$\\dfrac{\\pi}{3}$"
         ],
-        "correct": 2,
-        "explanation": "$\\sin(\\dfrac{\\pi}{3}) = \\dfrac{\\sqrt{3}}{2}$ ហើយ $\\dfrac{\\pi}{3}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arcsin$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "ជាអនុគមន៍សេស"
       }
     ],
     "2": [
@@ -108400,68 +108390,64 @@
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arctan 7 + \\arctan \\dfrac{1}{7}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោយ $\\arctan \\dfrac{\\sqrt{3}}{3}=\\dfrac{\\pi}{6}$ គណនា $\\arctan(-\\dfrac{\\sqrt{3}}{3})$",
         "options": [
-          "$0$",
-          "$\\dfrac{\\pi}{4}$",
-          "$\\dfrac{\\pi}{2}$",
-          "$\\pi$"
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{7\\pi}{6}$",
+          "$-\\dfrac{\\pi}{6}$",
+          "$\\dfrac{\\pi}{6}$"
         ],
         "correct": 2,
-        "explanation": "$\\arctan x + \\arctan \\dfrac{1}{x} = \\dfrac{\\pi}{2}$ ចំពោះ $x > 0$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\arctan(-x)=-\\arctan x$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\arccos(-\\dfrac{2}{5})$ ស្មើនឹង ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោយ $\\arccos \\dfrac{\\sqrt{2}}{2}=\\dfrac{\\pi}{4}$ គណនា $\\arccos(-\\dfrac{\\sqrt{2}}{2})$",
         "options": [
-          "$-\\arccos \\dfrac{2}{5}$",
-          "$\\pi - \\arccos \\dfrac{2}{5}$",
-          "$\\dfrac{\\pi}{2} - \\arccos \\dfrac{2}{5}$",
-          "$\\arccos \\dfrac{2}{5}$"
+          "$-\\dfrac{\\pi}{4}$",
+          "$\\dfrac{\\pi}{4}$",
+          "$\\dfrac{3\\pi}{4}$",
+          "$-\\dfrac{3\\pi}{4}$"
         ],
-        "correct": 1,
-        "explanation": "$\\arccos(-x) = \\pi - \\arccos x$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "$\\arccos(-x)=\\pi-\\arccos x$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\arccos(-\\dfrac{2}{3})$ ស្មើនឹង ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\arcsin \\dfrac{\\sqrt{3}}{2}+\\arccos \\dfrac{\\sqrt{3}}{2}$ ៖",
         "options": [
-          "$\\pi - \\arccos \\dfrac{2}{3}$",
-          "$\\dfrac{\\pi}{2} - \\arccos \\dfrac{2}{3}$",
-          "$-\\arccos \\dfrac{2}{3}$",
-          "$\\arccos \\dfrac{2}{3}$"
+          "$\\dfrac{\\pi}{2}$",
+          "$0$",
+          "$-\\dfrac{\\pi}{2}$",
+          "$\\pi$"
         ],
         "correct": 0,
-        "explanation": "$\\arccos(-x) = \\pi - \\arccos x$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\arcsin x+\\arccos x=\\pi/2$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\arcsin(-\\dfrac{1}{4})$ ស្មើនឹង ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោយ $\\arcsin \\dfrac{\\sqrt{3}}{2}=\\dfrac{\\pi}{3}$ គណនា $\\arcsin(-\\dfrac{\\sqrt{3}}{2})$",
         "options": [
-          "$\\arcsin \\dfrac{1}{4}$",
-          "$\\pi - \\arcsin \\dfrac{1}{4}$",
-          "$\\arccos \\dfrac{1}{4}$",
-          "$-\\arcsin \\dfrac{1}{4}$"
+          "$\\dfrac{5\\pi}{6}$",
+          "$\\dfrac{4\\pi}{3}$",
+          "$-\\dfrac{\\pi}{3}$",
+          "$\\dfrac{\\pi}{3}$"
         ],
-        "correct": 3,
-        "explanation": "$\\arcsin(-x) = -\\arcsin x$ (អនុគមន៍សេស)។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "$\\arcsin(-x)=-\\arcsin x$"
       },
       {
         "id": "q5",
@@ -108469,16 +108455,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\arccos(-\\dfrac{1}{3})$ ស្មើនឹង ៖",
+        "question": "គណនា $\\arctan 7 + \\arctan \\dfrac{1}{7}$ ៖",
         "options": [
-          "$-\\arccos \\dfrac{1}{3}$",
-          "$\\dfrac{\\pi}{2} - \\arccos \\dfrac{1}{3}$",
-          "$\\pi - \\arccos \\dfrac{1}{3}$",
-          "$\\arccos \\dfrac{1}{3}$"
+          "$0$",
+          "$\\dfrac{\\pi}{2}$",
+          "$\\pi$",
+          "$\\dfrac{\\pi}{4}$"
         ],
-        "correct": 2,
-        "explanation": "$\\arccos(-x) = \\pi - \\arccos x$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "$\\arctan x + \\arctan \\dfrac{1}{x} = \\dfrac{\\pi}{2}$ ចំពោះ $x > 0$។"
       },
       {
         "id": "q6",
@@ -108486,16 +108471,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\arcsin(-\\dfrac{3}{4})$ ស្មើនឹង ៖",
+        "question": "$\\arccos(-\\dfrac{2}{5})$ ស្មើនឹង ៖",
         "options": [
-          "$-\\arcsin \\dfrac{3}{4}$",
-          "$\\pi - \\arcsin \\dfrac{3}{4}$",
-          "$\\arcsin \\dfrac{3}{4}$",
-          "$\\arccos \\dfrac{3}{4}$"
+          "$\\dfrac{\\pi}{2} - \\arccos \\dfrac{2}{5}$",
+          "$-\\arccos \\dfrac{2}{5}$",
+          "$\\pi - \\arccos \\dfrac{2}{5}$",
+          "$\\arccos \\dfrac{2}{5}$"
         ],
-        "correct": 0,
-        "explanation": "$\\arcsin(-x) = -\\arcsin x$ (អនុគមន៍សេស)។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "$\\arccos(-x) = \\pi - \\arccos x$។"
       },
       {
         "id": "q7",
@@ -108503,67 +108487,63 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\arcsin(-\\dfrac{1}{3})$ ស្មើនឹង ៖",
+        "question": "$\\arccos(-\\dfrac{2}{3})$ ស្មើនឹង ៖",
         "options": [
-          "$\\arcsin \\dfrac{1}{3}$",
-          "$\\pi - \\arcsin \\dfrac{1}{3}$",
-          "$\\arccos \\dfrac{1}{3}$",
-          "$-\\arcsin \\dfrac{1}{3}$"
+          "$\\arccos \\dfrac{2}{3}$",
+          "$\\dfrac{\\pi}{2} - \\arccos \\dfrac{2}{3}$",
+          "$-\\arccos \\dfrac{2}{3}$",
+          "$\\pi - \\arccos \\dfrac{2}{3}$"
         ],
         "correct": 3,
-        "explanation": "$\\arcsin(-x) = -\\arcsin x$ (អនុគមន៍សេស)។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\arccos(-x) = \\pi - \\arccos x$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\arccos(-\\dfrac{3}{4})$ ស្មើនឹង ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\arcsin(-\\dfrac{\\sqrt{3}}{2})+\\arccos(-\\dfrac{\\sqrt{3}}{2})$ ៖",
         "options": [
-          "$\\arccos \\dfrac{3}{4}$",
-          "$\\pi - \\arccos \\dfrac{3}{4}$",
-          "$-\\arccos \\dfrac{3}{4}$",
-          "$\\dfrac{\\pi}{2} - \\arccos \\dfrac{3}{4}$"
+          "$0$",
+          "$\\dfrac{\\pi}{2}$",
+          "$-\\dfrac{\\pi}{2}$",
+          "$\\pi$"
         ],
         "correct": 1,
-        "explanation": "$\\arccos(-x) = \\pi - \\arccos x$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "ផលបូកស្មើ $\\pi/2$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\arcsin \\dfrac{1}{4} + \\arccos \\dfrac{1}{4}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\arctan(-2)+\\arctan(-\\dfrac{1}{2})$ ៖",
         "options": [
           "$\\dfrac{\\pi}{2}$",
-          "$\\dfrac{\\pi}{4}$",
+          "$-\\dfrac{\\pi}{2}$",
           "$\\pi$",
-          "$0$"
+          "$\\dfrac{3\\pi}{2}$"
         ],
-        "correct": 0,
-        "explanation": "$\\arcsin x + \\arccos x = \\dfrac{\\pi}{2}$ ចំពោះ $-1 \\le x \\le 1$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "$\\arctan x+\\arctan(1/x)=-\\pi/2 (x<0)$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "$\\arcsin(-\\dfrac{2}{5})$ ស្មើនឹង ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\arctan 4-\\arctan(-\\dfrac{1}{4})$ ៖",
         "options": [
-          "$\\arcsin \\dfrac{2}{5}$",
-          "$\\pi - \\arcsin \\dfrac{2}{5}$",
-          "$\\arccos \\dfrac{2}{5}$",
-          "$-\\arcsin \\dfrac{2}{5}$"
+          "$\\dfrac{\\pi}{2}$",
+          "$-\\dfrac{\\pi}{2}$",
+          "$0$",
+          "$\\pi$"
         ],
-        "correct": 3,
-        "explanation": "$\\arcsin(-x) = -\\arcsin x$ (អនុគមន៍សេស)។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$\\arctan x+\\arctan(1/x)=\\pi/2$"
       }
     ],
     "3": [
@@ -108575,14 +108555,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "សំណុំរូបភាពនៃអនុគមន៍ $y = \\arctan x$ គឺ ៖",
         "options": [
-          "$[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$",
-          "$(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$",
           "$[0, \\pi]$",
+          "$(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$",
+          "$[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$",
           "$[0, 2\\pi]$"
         ],
         "correct": 1,
-        "explanation": "$y = \\arctan x$ មានសំណុំរូបភាព $(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$y = \\arctan x$ មានសំណុំរូបភាព $(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$។"
       },
       {
         "id": "q2",
@@ -108592,14 +108571,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើចំណុចណាស្ថិតនៅលើក្រាបនៃ $y = \\arccos x$?",
         "options": [
-          "$(-1, \\pi)$",
-          "$(\\pi, -1)$",
           "$(1, \\pi)$",
+          "$(\\pi, -1)$",
+          "$(-1, \\pi)$",
           "$(-1, 0)$"
         ],
-        "correct": 0,
-        "explanation": "ជំនួស $x$ ក្នុងអនុគមន៍ ⇒ $(-1, \\pi)$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ជំនួស $x$ ក្នុងអនុគមន៍ ⇒ $(-1, \\pi)$។"
       },
       {
         "id": "q3",
@@ -108609,14 +108587,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "សំណុំរូបភាពនៃអនុគមន៍ $y = \\arcsin x$ គឺ ៖",
         "options": [
-          "$(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$",
-          "$[0, 2\\pi]$",
           "$[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$",
-          "$[0, \\pi]$"
+          "$[0, 2\\pi]$",
+          "$[0, \\pi]$",
+          "$(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$"
         ],
-        "correct": 2,
-        "explanation": "$y = \\arcsin x$ មានសំណុំរូបភាព $[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$y = \\arcsin x$ មានសំណុំរូបភាព $[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$។"
       },
       {
         "id": "q4",
@@ -108626,116 +108603,109 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "សំណុំរូបភាពនៃអនុគមន៍ $y = \\arccos x$ គឺ ៖",
         "options": [
-          "$[0, 2\\pi]$",
           "$(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$",
           "$[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$",
+          "$[0, 2\\pi]$",
           "$[0, \\pi]$"
         ],
         "correct": 3,
-        "explanation": "$y = \\arccos x$ មានសំណុំរូបភាព $[0, \\pi]$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$y = \\arccos x$ មានសំណុំរូបភាព $[0, \\pi]$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ក្រាប និងតារាងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដែនកំណត់នៃអនុគមន៍ $y = \\arccos x$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សំណុំតម្លៃនៃ $y=\\arccos x$ ចំពោះ $x\\in [-1,0]$ គឺ ៖",
         "options": [
-          "$\\mathbb{R}$",
-          "$(-1, 1)$",
-          "$[0, 1]$",
-          "$[-1, 1]$"
+          "$[0,\\dfrac{\\pi}{2}]$",
+          "$[-\\dfrac{\\pi}{2},0]$",
+          "$[0,\\pi]$",
+          "$[\\dfrac{\\pi}{2},\\pi]$"
         ],
         "correct": 3,
-        "explanation": "$y = \\arccos x$ មានដែនកំណត់ $[-1, 1]$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "ប្រើអថេរភាព"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ក្រាប និងតារាងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "តើចំណុចណាស្ថិតនៅលើក្រាបនៃ $y = \\arctan x$?",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តម្លៃនៃអនុគមន៍ $y=\\arcsin x$ ត្រង់ $x=0$ ស្មើ ៖",
         "options": [
-          "$(1, \\dfrac{\\pi}{4})$",
-          "$(1, \\dfrac{\\pi}{2})$",
-          "$(0, \\dfrac{\\pi}{4})$",
-          "$(\\dfrac{\\pi}{4}, 1)$"
+          "$\\dfrac{\\pi}{2}$",
+          "$0$",
+          "$\\pi$",
+          "$\\dfrac{\\pi}{3}$"
         ],
-        "correct": 0,
-        "explanation": "ជំនួស $x$ ក្នុងអនុគមន៍ ⇒ $(1, \\dfrac{\\pi}{4})$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "ជំនួស"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ក្រាប និងតារាងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $y = \\arccos x$ ជាអនុគមន៍ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តើចំណុចណាដែលមាន $x=\\dfrac{\\sqrt{3}}{2}$ ស្ថិតនៅលើក្រាបនៃ $y=\\arcsin x$ ?",
         "options": [
-          "ខួប",
-          "គូ",
-          "មិនគូ មិនសេស",
-          "សេស"
+          "$(\\dfrac{\\pi}{3},\\dfrac{\\sqrt{3}}{2})$",
+          "$(\\dfrac{\\sqrt{3}}{2},\\dfrac{\\pi}{6})$",
+          "$(\\dfrac{\\sqrt{3}}{2},\\dfrac{\\pi}{3})$",
+          "$(-\\dfrac{\\sqrt{3}}{2},\\dfrac{\\pi}{3})$"
         ],
         "correct": 2,
-        "explanation": "$\\arccos(-x) = \\pi - \\arccos x$ ⇒ មិនគូ មិនសេស។",
-        "src": "genpq-g11a_extra"
+        "explanation": "ជំនួស $x$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ក្រាប និងតារាងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $y = \\arctan x$ ជាអនុគមន៍ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ត្រង់ $x=\\dfrac{\\sqrt{2}}{2}$ តម្លៃនៃ $y=2\\arcsin x$ ស្មើ ៖",
         "options": [
-          "គូ",
-          "សេស",
-          "ខួប",
-          "មិនគូ មិនសេស"
+          "$\\dfrac{\\pi}{2}$",
+          "$0$",
+          "$-\\dfrac{\\pi}{2}$",
+          "$\\pi$"
         ],
-        "correct": 1,
-        "explanation": "$\\arctan(-x) = -\\arctan x$ ⇒ សេស",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$2\\cdot \\dfrac{\\pi}{4}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ក្រាប និងតារាងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "អនុគមន៍ $y = \\arcsin x$ ជាអនុគមន៍ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តម្លៃធំបំផុតនៃអនុគមន៍ $y=\\arccos x$ ក្នុងចន្លោះ $[0,\\dfrac{\\sqrt{2}}{2}]$ ស្មើ ៖",
         "options": [
-          "មិនគូ មិនសេស",
-          "ខួប",
-          "គូ",
-          "សេស"
+          "$0$",
+          "$-\\dfrac{\\pi}{2}$",
+          "$\\dfrac{\\pi}{2}$",
+          "$\\pi$"
         ],
-        "correct": 3,
-        "explanation": "$\\arcsin(-x) = -\\arcsin x$ ⇒ សេស",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ត្រង់ $x=0$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ក្រាប និងតារាងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "តើចំណុចណាស្ថិតនៅលើក្រាបនៃ $y = \\arcsin x$?",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តម្លៃធំបំផុតនៃអនុគមន៍ $y=\\arcsin x$ ក្នុងចន្លោះ $[0,\\dfrac{\\sqrt{3}}{2}]$ ស្មើ ៖",
         "options": [
-          "$(1, \\pi)$",
-          "$(1, \\dfrac{\\pi}{2})$",
-          "$(\\dfrac{\\pi}{2}, 1)$",
-          "$(0, \\dfrac{\\pi}{2})$"
+          "$\\dfrac{\\pi}{6}$",
+          "$\\dfrac{2\\pi}{3}$",
+          "$-\\dfrac{\\pi}{3}$",
+          "$\\dfrac{\\pi}{3}$"
         ],
-        "correct": 1,
-        "explanation": "ជំនួស $x$ ក្នុងអនុគមន៍ ⇒ $(1, \\dfrac{\\pi}{2})$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "អនុគមន៍កើន ត្រង់ $x=\\dfrac{\\sqrt{3}}{2}$"
       }
     ],
     "4": [
@@ -108744,119 +108714,112 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\sin(\\arcsin \\dfrac{3}{7})$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\cos(\\arccos \\dfrac{4}{7})$ ៖",
         "options": [
-          "$-\\dfrac{3}{7}$",
-          "$\\dfrac{3}{7}$",
+          "$-\\dfrac{4}{7}$",
+          "$1$",
           "$0$",
-          "$1$"
+          "$\\dfrac{4}{7}$"
         ],
-        "correct": 1,
-        "explanation": "$\\sin(\\arcsin x) = x$ ចំពោះ $x \\in [-1, 1]$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "$\\cos(\\arccos x)=x$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\tan(\\arccos \\dfrac{7}{25})$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\sin(\\arcsin \\dfrac{1}{4})$ ៖",
         "options": [
-          "$\\dfrac{7}{24}$",
-          "$\\dfrac{25}{7}$",
-          "$\\dfrac{24}{7}$",
-          "$\\dfrac{24}{25}$"
+          "$-\\dfrac{1}{4}$",
+          "$\\dfrac{1}{4}$",
+          "$1$",
+          "$0$"
         ],
-        "correct": 2,
-        "explanation": "$\\cos\\alpha = \\dfrac{7}{25} \\Rightarrow \\sin\\alpha = \\dfrac{24}{25}$ ⇒ $\\tan\\alpha = \\dfrac{24}{7}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 1,
+        "explanation": "$\\sin(\\arcsin x)=x$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\sin(\\arcsin \\dfrac{1}{3})$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\sin(\\arcsin \\dfrac{1}{2})$ ៖",
         "options": [
-          "$\\dfrac{1}{3}$",
-          "$0$",
+          "$-\\dfrac{1}{2}$",
           "$1$",
-          "$-\\dfrac{1}{3}$"
+          "$\\dfrac{1}{2}$",
+          "$0$"
         ],
-        "correct": 0,
-        "explanation": "$\\sin(\\arcsin x) = x$ ចំពោះ $x \\in [-1, 1]$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "$\\sin(\\arcsin x)=x$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\sin(\\arcsin \\dfrac{2}{5})$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\sin(\\arcsin -\\dfrac{1}{5})$ ៖",
         "options": [
-          "$0$",
-          "$-\\dfrac{2}{5}$",
+          "$\\dfrac{1}{5}$",
           "$1$",
-          "$\\dfrac{2}{5}$"
+          "$0$",
+          "$-\\dfrac{1}{5}$"
         ],
         "correct": 3,
-        "explanation": "$\\sin(\\arcsin x) = x$ ចំពោះ $x \\in [-1, 1]$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\sin(\\arcsin x)=x$"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\tan(\\arccos \\dfrac{5}{13})$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\arcsin(\\sin \\dfrac{5\\pi}{4})$ ៖",
         "options": [
-          "$\\dfrac{13}{5}$",
-          "$\\dfrac{5}{12}$",
-          "$\\dfrac{12}{13}$",
-          "$\\dfrac{12}{5}$"
+          "$-\\dfrac{\\pi}{4}$",
+          "$\\dfrac{5\\pi}{4}$",
+          "$\\dfrac{3\\pi}{4}$",
+          "$\\dfrac{\\pi}{4}$"
         ],
-        "correct": 3,
-        "explanation": "$\\cos\\alpha = \\dfrac{5}{13} \\Rightarrow \\sin\\alpha = \\dfrac{12}{13}$ ⇒ $\\tan\\alpha = \\dfrac{12}{5}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$x\\in [-\\pi/2,\\pi/2]$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\cos(\\arcsin \\dfrac{3}{5})$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\arctan(\\tan \\dfrac{\\pi}{6})$ ៖",
         "options": [
-          "$\\dfrac{5}{4}$",
-          "$\\dfrac{4}{5}$",
-          "$\\dfrac{3}{5}$",
-          "$\\dfrac{3}{4}$"
+          "$\\dfrac{\\pi}{3}$",
+          "$\\dfrac{\\pi}{6}$",
+          "$\\dfrac{5\\pi}{6}$",
+          "$-\\dfrac{\\pi}{6}$"
         ],
         "correct": 1,
-        "explanation": "តាង $\\alpha = \\arcsin \\dfrac{3}{5}$ ⇒ $\\cos\\alpha = \\sqrt{1 - \\dfrac{9}{25}} = \\dfrac{4}{5}$ (ព្រោះ $\\cos\\alpha \\ge 0$)។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$x\\in (-\\pi/2,\\pi/2)$"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\tan(\\arccos \\dfrac{8}{17})$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\cos(\\arcsin\\dfrac{7}{25})$ ៖",
         "options": [
-          "$\\dfrac{17}{8}$",
-          "$\\dfrac{8}{15}$",
-          "$\\dfrac{15}{8}$",
-          "$\\dfrac{15}{17}$"
+          "$\\dfrac{7}{25}$",
+          "$\\dfrac{24}{7}$",
+          "$\\dfrac{25}{24}$",
+          "$\\dfrac{24}{25}$"
         ],
-        "correct": 2,
-        "explanation": "$\\cos\\alpha = \\dfrac{8}{17} \\Rightarrow \\sin\\alpha = \\dfrac{15}{17}$ ⇒ $\\tan\\alpha = \\dfrac{15}{8}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "$\\cos=\\sqrt{1-\\sin^2}$"
       },
       {
         "id": "q8",
@@ -108864,16 +108827,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\tan(\\arccos \\dfrac{3}{5})$ ៖",
+        "question": "គណនា $\\sin(\\arcsin \\dfrac{3}{7})$ ៖",
         "options": [
-          "$\\dfrac{4}{3}$",
-          "$\\dfrac{4}{5}$",
-          "$\\dfrac{3}{4}$",
-          "$\\dfrac{5}{3}$"
+          "$1$",
+          "$-\\dfrac{3}{7}$",
+          "$0$",
+          "$\\dfrac{3}{7}$"
         ],
-        "correct": 0,
-        "explanation": "$\\cos\\alpha = \\dfrac{3}{5} \\Rightarrow \\sin\\alpha = \\dfrac{4}{5}$ ⇒ $\\tan\\alpha = \\dfrac{4}{3}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "$\\sin(\\arcsin x) = x$ ចំពោះ $x \\in [-1, 1]$។"
       },
       {
         "id": "q9",
@@ -108881,16 +108843,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\cos(\\arcsin \\dfrac{7}{25})$ ៖",
+        "question": "គណនា $\\tan(\\arccos \\dfrac{7}{25})$ ៖",
         "options": [
-          "$\\dfrac{7}{24}$",
           "$\\dfrac{24}{25}$",
-          "$\\dfrac{7}{25}$",
-          "$\\dfrac{25}{24}$"
+          "$\\dfrac{24}{7}$",
+          "$\\dfrac{7}{24}$",
+          "$\\dfrac{25}{7}$"
         ],
         "correct": 1,
-        "explanation": "តាង $\\alpha = \\arcsin \\dfrac{7}{25}$ ⇒ $\\cos\\alpha = \\sqrt{1 - \\dfrac{49}{625}} = \\dfrac{24}{25}$ (ព្រោះ $\\cos\\alpha \\ge 0$)។",
-        "src": "genpq-g11a_extra"
+        "explanation": "$\\cos\\alpha = \\dfrac{7}{25} \\Rightarrow \\sin\\alpha = \\dfrac{24}{25}$ ⇒ $\\tan\\alpha = \\dfrac{24}{7}$។"
       },
       {
         "id": "q10",
@@ -108898,16 +108859,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
-        "question": "គណនា $\\sin(\\arcsin -\\dfrac{1}{4})$ ៖",
+        "question": "គណនា $\\sin(\\arcsin \\dfrac{1}{3})$ ៖",
         "options": [
-          "$\\dfrac{1}{4}$",
           "$0$",
-          "$1$",
-          "$-\\dfrac{1}{4}$"
+          "$-\\dfrac{1}{3}$",
+          "$\\dfrac{1}{3}$",
+          "$1$"
         ],
-        "correct": 3,
-        "explanation": "$\\sin(\\arcsin x) = x$ ចំពោះ $x \\in [-1, 1]$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "$\\sin(\\arcsin x) = x$ ចំពោះ $x \\in [-1, 1]$។"
       }
     ]
   },

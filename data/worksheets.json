@@ -36011,7 +36011,7 @@
     "topic": "អនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
     "objective": "ស្គាល់ គណនា និងអនុវត្តអនុគមន៍ arcsin, arccos, arctan",
     "totalPoints": 3,
-    "totalPointsCount": 12,
+    "totalPointsCount": 34,
     "summary": "  - $y = \\arcsin x \\iff \\sin y = x , \\ y \\in [-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$\n  - $y = \\arccos x \\iff \\cos y = x , \\ y \\in [0, \\pi]$\n  - $y = \\arctan x \\iff \\tan y = x , \\ y \\in (-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$",
     "exercises": [
       {
@@ -36049,7 +36049,7 @@
         "pointTitle": "ចំណុចទី ១ ៖ សេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "topic": "$\\arcsin$, $\\arccos$, $\\arctan$ និងតម្លៃពិសេស",
         "objective": "យល់ និងអនុវត្តសេចក្តីផ្តើម និងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $y = \\arcsin x \\iff \\sin y = x , \\ y \\in [-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$\n  - $y = \\arccos x \\iff \\cos y = x , \\ y \\in [0, \\pi]$\n  - $y = \\arctan x \\iff \\tan y = x , \\ y \\in (-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$",
         "exercises": [
           {
@@ -36063,6 +36063,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arccos \\dfrac{\\sqrt{3}}{2}$ ៖",
+            "solution": "$\\cos(\\dfrac{\\pi}{6})=\\dfrac{\\sqrt{3}}{2}$\n\nចម្លើយ ៖ $\\dfrac{\\pi}{6}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p1_05"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arccos \\dfrac{1}{2}$ ៖",
+            "solution": "$\\cos(\\dfrac{\\pi}{3})=\\dfrac{1}{2}$\n\nចម្លើយ ៖ $\\dfrac{\\pi}{3}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p1_09"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរគណនាតម្លៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
@@ -36071,13 +36091,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arccos(-\\dfrac{\\sqrt{2}}{2})$ ៖",
+            "solution": "$\\cos(\\dfrac{3\\pi}{4}) = -\\dfrac{\\sqrt{2}}{2}$ ហើយ $\\dfrac{3\\pi}{4}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arccos$។\n\nចម្លើយ ៖ $\\dfrac{3\\pi}{4}$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-0_1_6"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arctan(1)$ ៖",
+            "solution": "$\\tan(\\dfrac{\\pi}{4}) = 1$ ហើយ $\\dfrac{\\pi}{4}$ ស្ថិតក្នុងសំណុំរូបភាពនៃ $\\arctan$។\n\nចម្លើយ ៖ $\\dfrac{\\pi}{4}$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-0_1_11"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរគណនាតម្លៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
             "question": "គណនា ៖\nក. $\\arcsin(\\dfrac{\\sqrt{3}}{2})$\nខ. $\\arccos(-\\dfrac{\\sqrt{2}}{2})$\nគ. $\\arctan(0)$\nឃ. $\\arccos(1)$\nង. $\\arcsin(1)$",
             "solution": "ក. $\\dfrac{\\pi}{3}$\nខ. $\\dfrac{3\\pi}{4}$\nគ. $0$\nឃ. $0$\nង. $\\dfrac{\\pi}{2}$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arctan(-\\sqrt{3})$ ៖",
+            "solution": "ជាអនុគមន៍សេស\n\nចម្លើយ ៖ $-\\dfrac{\\pi}{3}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p1_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arcsin \\dfrac{\\sqrt{2}}{2}+\\arccos(-\\dfrac{\\sqrt{2}}{2})$ ៖",
+            "solution": "$\\dfrac{\\pi}{4}+\\dfrac{3\\pi}{4}$\n\nចម្លើយ ៖ $\\pi$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p1_18"
           }
         ]
       },
@@ -36087,7 +36147,7 @@
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "topic": "$\\arcsin x + \\arccos x = \\dfrac{\\pi}{2}$ ...",
         "objective": "យល់ និងអនុវត្តរូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $\\arcsin x + \\arccos x = \\dfrac{\\pi}{2}$\n  - $\\arcsin(-x) = -\\arcsin x$ , $\\arccos(-x) = \\pi - \\arccos x$\n  - $\\arctan x + \\arctan\\dfrac{1}{x} = \\dfrac{\\pi}{2}$ ($x > 0$)",
         "exercises": [
           {
@@ -36101,6 +36161,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arcsin \\dfrac{\\sqrt{3}}{2}+\\arccos \\dfrac{\\sqrt{3}}{2}$ ៖",
+            "solution": "$\\arcsin x+\\arccos x=\\pi/2$\n\nចម្លើយ ៖ $\\dfrac{\\pi}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p2_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arcsin \\dfrac{1}{2}+\\arccos \\dfrac{1}{2}$ ៖",
+            "solution": "$\\arcsin x+\\arccos x=\\pi/2$\n\nចម្លើយ ៖ $\\dfrac{\\pi}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p2_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរអនុវត្តរូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
@@ -36109,13 +36189,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "$\\arccos(-\\dfrac{2}{3})$ ស្មើនឹង ៖",
+            "solution": "$\\arccos(-x) = \\pi - \\arccos x$។\n\nចម្លើយ ៖ $\\pi - \\arccos \\dfrac{2}{3}$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-0_2_19"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "$\\arccos(-\\dfrac{3}{4})$ ស្មើនឹង ៖",
+            "solution": "$\\arccos(-x) = \\pi - \\arccos x$។\n\nចម្លើយ ៖ $\\pi - \\arccos \\dfrac{3}{4}$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-0_2_24"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរអនុវត្តរូបមន្តអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
             "question": "ក. បង្ហាញថា $\\arcsin x + \\arccos x = \\dfrac{\\pi}{2}$ ហើយគណនា $\\arcsin \\dfrac{1}{5} + \\arccos \\dfrac{1}{5}$។\nខ. គណនា $\\arctan 5 + \\arctan \\dfrac{1}{5}$។\nគ. សម្រួល $\\arccos(-\\dfrac{1}{5}) + \\arccos \\dfrac{1}{5}$។",
             "solution": "ក. តាង $\\alpha = \\arcsin x$ ⇒ $\\cos(\\dfrac{\\pi}{2} - \\alpha) = x$ ⇒ $\\arccos x = \\dfrac{\\pi}{2} - \\alpha$ ; តម្លៃ $\\dfrac{\\pi}{2}$\nខ. $\\dfrac{\\pi}{2}$\nគ. $\\pi - \\arccos \\dfrac{1}{5} + \\arccos \\dfrac{1}{5} = \\pi$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arctan 4-\\arctan(-\\dfrac{1}{4})$ ៖",
+            "solution": "$\\arctan x+\\arctan(1/x)=\\pi/2$\n\nចម្លើយ ៖ $\\dfrac{\\pi}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p2_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arctan(-5)+\\arctan(-\\dfrac{1}{5})$ ៖",
+            "solution": "$\\arctan x+\\arctan(1/x)=-\\pi/2 (x<0)$\n\nចម្លើយ ៖ $-\\dfrac{\\pi}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p2_18"
           }
         ]
       },
@@ -36125,7 +36245,7 @@
         "pointTitle": "ចំណុចទី ៣ ៖ ក្រាប និងតារាងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "topic": "ដែនកំណត់ សំណុំរូបភាព និងក្រាប",
         "objective": "យល់ និងអនុវត្តក្រាប និងតារាងអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "totalPoints": 3,
+        "totalPoints": 7.0,
         "summary": "  - ក្រាប $y = \\arcsin x$ ឆ្លុះនឹងក្រាប $y = \\sin x$ (លើ $[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$) ធៀប $y = x$\n  - $\\arcsin$, $\\arctan$ កើន ; $\\arccos$ ចុះ",
         "exercises": [
           {
@@ -36139,6 +36259,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សំណុំរូបភាពនៃអនុគមន៍ $y = \\arcsin x$ គឺ ៖",
+            "solution": "$y = \\arcsin x$ មានសំណុំរូបភាព $[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$។\n\nចម្លើយ ៖ $[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-0_3_32"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "អនុគមន៍ $y = \\arctan x$ ជាអនុគមន៍ ៖",
+            "solution": "$\\arctan(-x) = -\\arctan x$ ⇒ សេស\n\nចម្លើយ ៖ សេស",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-0_3_37"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរសិក្សាក្រាបនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
@@ -36147,13 +36287,33 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរសិក្សាក្រាបនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
             "question": "ក. សរសេរដែនកំណត់ និងសំណុំរូបភាពនៃ $y = \\arcsin x , \\ y = \\arccos x , \\ y = \\arctan x$។\nខ. ពន្យល់របៀបសង់ក្រាប $y = \\arctan x$ ពីក្រាប $y = \\tan x$ លើ $(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$។\nគ. តើ $\\arctan x$ ជាអនុគមន៍កើន ឬចុះ?",
             "solution": "ក. $[-1, 1] \\to [-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$ ; $[-1, 1] \\to [0, \\pi]$ ; $\\mathbb{R} \\to (-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$\nខ. យកឆ្លុះនៃក្រាប $y = \\tan x$ (លើ $(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2})$) ធៀបនឹងបន្ទាត់ $y = x$\nគ. កើនលើដែនកំណត់របស់វា",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "តម្លៃតូចបំផុតនៃអនុគមន៍ $y=\\arccos x$ ក្នុងចន្លោះ $[0,\\dfrac{1}{2}]$ ស្មើ ៖",
+            "solution": "អនុគមន៍ចុះ ត្រង់ $x=\\dfrac{1}{2}$\n\nចម្លើយ ៖ $\\dfrac{\\pi}{3}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p3_04"
+          },
+          {
+            "id": "ex7",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ត្រង់ $x=\\dfrac{\\sqrt{3}}{2}$ តម្លៃនៃ $y=2\\arcsin x$ ស្មើ ៖",
+            "solution": "$2\\cdot \\dfrac{\\pi}{3}$\n\nចម្លើយ ៖ $\\dfrac{2\\pi}{3}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p3_08"
           }
         ]
       },
@@ -36163,7 +36323,7 @@
         "pointTitle": "ចំណុចទី ៤ ៖ លក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "topic": "$\\sin(\\arcsin x) = x$ , $\\cos(\\arcsin x) = \\sqrt{1 - x^2}$",
         "objective": "យល់ និងអនុវត្តលក្ខណៈអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $\\sin(\\arcsin x) = x$ ($x \\in [-1, 1]$)\n  - $\\arcsin(\\sin\\theta) = \\theta$ លុះត្រាតែ $\\theta \\in [-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$\n  - $\\cos(\\arcsin x) = \\sqrt{1 - x^2}$",
         "exercises": [
           {
@@ -36177,6 +36337,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\sin(\\arcsin \\dfrac{1}{2})$ ៖",
+            "solution": "$\\sin(\\arcsin x)=x$\n\nចម្លើយ ៖ $\\dfrac{1}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p4_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\tan(\\arctan \\dfrac{2}{7})$ ៖",
+            "solution": "$\\tan(\\arctan x)=x$\n\nចម្លើយ ៖ $\\dfrac{2}{7}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p4_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរអនុវត្តលក្ខណៈនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
@@ -36185,13 +36365,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\cos(\\arcsin\\dfrac{7}{25})$ ៖",
+            "solution": "$\\cos=\\sqrt{1-\\sin^2}$\n\nចម្លើយ ៖ $\\dfrac{24}{25}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p4_13"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\arccos(\\cos -\\dfrac{\\pi}{4})$ ៖",
+            "solution": "$x\\in [0,\\pi]$\n\nចម្លើយ ៖ $\\dfrac{\\pi}{4}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_0_p4_18"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរអនុវត្តលក្ខណៈនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ ៖",
             "question": "ក. គណនា $\\cos(\\arcsin \\dfrac{5}{13})$ និង $\\tan(\\arcsin \\dfrac{5}{13})$។\nខ. គណនា $\\sin(2\\arcsin \\dfrac{5}{13})$។\nគ. គណនា $\\arccos(\\cos\\dfrac{4\\pi}{3})$។",
             "solution": "ក. $\\dfrac{12}{13}$ ; $\\dfrac{5}{12}$\nខ. $2 \\cdot \\dfrac{5}{13} \\cdot \\dfrac{12}{13} = \\dfrac{120}{169}$\nគ. $\\cos\\dfrac{4\\pi}{3} = -\\dfrac{1}{2}$ ⇒ $\\arccos(-\\dfrac{1}{2}) = \\dfrac{2\\pi}{3}$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\sin(\\arcsin \\dfrac{1}{3})$ ៖",
+            "solution": "$\\sin(\\arcsin x) = x$ ចំពោះ $x \\in [-1, 1]$។\n\nចម្លើយ ៖ $\\dfrac{1}{3}$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-0_4_45"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\tan(\\arccos \\dfrac{3}{5})$ ៖",
+            "solution": "$\\cos\\alpha = \\dfrac{3}{5} \\Rightarrow \\sin\\alpha = \\dfrac{4}{5}$ ⇒ $\\tan\\alpha = \\dfrac{4}{3}$។\n\nចម្លើយ ៖ $\\dfrac{4}{3}$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-0_4_50"
           }
         ]
       }
