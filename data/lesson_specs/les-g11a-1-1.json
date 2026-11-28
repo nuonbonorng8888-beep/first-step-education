@@ -1,0 +1,49 @@
+{
+  "lesson": "les-g11a-1-1",
+  "grade": 11,
+  "course": "advanced",
+  "title": "មេរៀនទី ៤ ៖ ផលបូកតួនៃស្វ៊ីតផ្សេងៗ (ទំព័រ ២៤ - ៣៥)",
+  "book_pages": "g11a_ch1_les1.pdf pp.1-15 (book 24-35)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ របៀបគណនាផលបូក"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ គណនាផលបូកតាមលំនាំគំរូ"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ និមិត្តសញ្ញា Σ សម្រាប់ផលបូកនៃស្វ៊ីត"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ របៀបកំណត់តួទី n តាមផលសងតួនៃស្វ៊ីត"
+    }
+  ],
+  "notes": "Sums of sequences: telescoping, pattern sums, Sigma, nth term from differences. All existing keys verified correct.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
