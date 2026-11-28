@@ -36230,6 +36230,70 @@
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការសម្គាល់នៃ $2y''-5y'+2y=0$ គឺ ៖",
+        "options": [
+          "$2r^2+5r+2=0$",
+          "$2r^2-5r+2=0$",
+          "$2r^2-5r-2=0$",
+          "$2r-5+2=0$"
+        ],
+        "correct": 1,
+        "explanation": "ជំនួស y'' ដោយ r², y' ដោយ r, y ដោយ 1"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការសម្គាល់នៃ $y''-y'-2y=0$ គឺ ៖",
+        "options": [
+          "$r^2-r-2=0$",
+          "$r^2+r-2=0$",
+          "$r^2-r+2=0$",
+          "$r-1-2=0$"
+        ],
+        "correct": 0,
+        "explanation": "ជំនួស y'' ដោយ r², y' ដោយ r, y ដោយ 1"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការសម្គាល់នៃ $y''-6y'+8y=0$ គឺ ៖",
+        "options": [
+          "$r^2+6r+8=0$",
+          "$r^2-6r-8=0$",
+          "$r^2-6r+8=0$",
+          "$r-6+8=0$"
+        ],
+        "correct": 2,
+        "explanation": "ជំនួស y'' ដោយ r², y' ដោយ r, y ដោយ 1"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការសម្គាល់នៃ $y''+y'+y=0$ គឺ ៖",
+        "options": [
+          "$r^2+r+1=0$",
+          "$r^2-r+1=0$",
+          "$r^2+r-1=0$",
+          "$r+1+1=0$"
+        ],
+        "correct": 0,
+        "explanation": "ជំនួស y'' ដោយ r², y' ដោយ r, y ដោយ 1"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សមីការសម្គាល់នៃ $y'' - 5y' + 6y = 0$ គឺ ៖",
         "options": [
@@ -36239,12 +36303,11 @@
           "$r - 5 + 6 = 0$"
         ],
         "correct": 1,
-        "explanation": "ជំនួស $y'' \\to r^2$, $y' \\to r$, $y \\to 1$ ៖ $r^2 - 5r + 6 = 0$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "ជំនួស $y'' \\to r^2$, $y' \\to r$, $y \\to 1$ ៖ $r^2 - 5r + 6 = 0$។"
       },
       {
-        "id": "q2",
-        "questionNumber": 2,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -36256,12 +36319,11 @@
           "$r^2 - 4 = 0$"
         ],
         "correct": 2,
-        "explanation": "គ្មានតួ $y'$ ៖ $r^2 + 4 = 0$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "គ្មានតួ $y'$ ៖ $r^2 + 4 = 0$។"
       },
       {
-        "id": "q3",
-        "questionNumber": 3,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -36273,217 +36335,140 @@
           "$2r - 3 + 1 = 0$"
         ],
         "correct": 0,
-        "explanation": "មេគុណដដែល ៖ $2r^2 - 3r + 1 = 0$។",
-        "src": "genpq-g12c_plan"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ឫសនៃសមីការសម្គាល់នៃ $y'' - 3y' + 2y = 0$ គឺ ៖",
-        "options": [
-          "$r = -1, r = -2$",
-          "$r = 3, r = 2$",
-          "$r = 1$ (ឌុប)",
-          "$r = 1, r = 2$"
-        ],
-        "correct": 3,
-        "explanation": "$r^2 - 3r + 2 = (r - 1)(r - 2) = 0$។",
-        "src": "genpq-g12c_plan"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ឫសនៃសមីការសម្គាល់នៃ $y'' + 6y' + 9y = 0$ គឺ ៖",
-        "options": [
-          "$r = 3$ (ឌុប)",
-          "$r = -3$ (ឌុប)",
-          "$r = \\pm 3$",
-          "$r = \\pm 3i$"
-        ],
-        "correct": 1,
-        "explanation": "$r^2 + 6r + 9 = (r + 3)^2 = 0$។",
-        "src": "genpq-g12c_plan"
-      },
-      {
-        "id": "q6",
-        "questionNumber": 6,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ឫសនៃសមីការសម្គាល់នៃ $y'' + 9y = 0$ គឺ ៖",
-        "options": [
-          "$r = \\pm 3$",
-          "$r = 9$",
-          "$r = \\pm 3i$",
-          "$r = -9$"
-        ],
-        "correct": 2,
-        "explanation": "$r^2 = -9 \\iff r = \\pm 3i$។",
-        "src": "genpq-g12c_plan"
-      },
-      {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ឌីសគ្រីមីណង់នៃសមីការសម្គាល់របស់ $y'' - 2y' + 5y = 0$ គឺ ៖",
-        "options": [
-          "$\\Delta = -16 < 0$",
-          "$\\Delta = 24 > 0$",
-          "$\\Delta = 0$",
-          "$\\Delta = 16 > 0$"
-        ],
-        "correct": 0,
-        "explanation": "$r^2 - 2r + 5 = 0$ ៖ $\\Delta = 4 - 20 = -16 < 0$ (ឫសកុំផ្លិច)។",
-        "src": "genpq-g12c_plan"
+        "explanation": "មេគុណដដែល ៖ $2r^2 - 3r + 1 = 0$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ឫសនៃសមីការសម្គាល់នៃ $y'' - 2y' + 5y = 0$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តម្លៃ $m>0$ ដែល $y''+my'+16y=0$ មានឫសឌុប គឺ ៖",
         "options": [
-          "$-1 \\pm 2i$",
-          "$1 \\pm 4i$",
-          "$2 \\pm i$",
-          "$1 \\pm 2i$"
+          "$m=4$",
+          "$m=8$",
+          "$m=16$",
+          "$m=32$"
         ],
-        "correct": 3,
-        "explanation": "$r = \\dfrac{2 \\pm \\sqrt{-16}}{2} = 1 \\pm 2i$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$m^2-416=0$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការ $y'' + 3y' - 4y = 0$ ជាសមីការឌីផេរ៉ង់ស្យែល ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សមីការ $y''+my'+9y=0$ មានឫសកុំផ្លិចឆ្លាស់គ្នា លុះត្រាតែ ៖",
         "options": [
-          "លីនេអ៊ែរលំដាប់ទី ២ អូម៉ូសែន មេគុណថេរ",
-          "លំដាប់ទី ១",
-          "មិនលីនេអ៊ែរ",
-          "លំដាប់ទី ៣"
+          "$-6<m<6$",
+          "$m>6$",
+          "$m<-6$",
+          "$|m|>6$"
         ],
         "correct": 0,
-        "explanation": "ដេរីវេខ្ពស់បំផុតគឺ $y''$ អង្គទីពីរស្មើ $0$ ហើយមេគុណថេរ។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\Delta=m^2-36<0$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការលីនេអ៊ែរលំដាប់ទី ២ និងសមីការសម្គាល់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការសម្គាល់ $r^2 + r - 6 = 0$ ត្រូវគ្នានឹងសមីការឌីផេរ៉ង់ស្យែល ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តម្លៃ $m>0$ ដែល $y''+my'+49y=0$ មានឫសឌុប គឺ ៖",
         "options": [
-          "$y'' - y' + 6y = 0$",
-          "$y'' + y' - 6y = 0$",
-          "$y' + y - 6 = 0$",
-          "$y'' + 6y' - y = 0$"
+          "$m=7$",
+          "$m=49$",
+          "$m=28$",
+          "$m=14$"
         ],
-        "correct": 1,
-        "explanation": "$r^2 \\to y''$, $r \\to y'$, $1 \\to y$ ៖ $y'' + y' - 6y = 0$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$m^2-449=0$"
       }
     ],
     "2": [
       {
-        "id": "g12a_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "សមីការសំគាល់ (Characteristic equation) នៃសមីការ $a y'' + b y' + c y = 0$ គឺ ៖",
         "options": [
           "$a r^2 + b r + c = 0$",
-          "$a r + b = 0$",
           "$r^2 + b r + c = 0$",
-          "$a r^2 + c = 0$"
+          "$a r^2 + c = 0$",
+          "$a r + b = 0$"
         ],
         "correct": 0,
-        "explanation": "ជំនួស $y = e^{rx}$ នាំឱ្យសមីការសំគាល់គឺ $a r^2 + b r + c = 0$។",
-        "diagram": ""
+        "explanation": "ជំនួស $y = e^{rx}$ នាំឱ្យសមីការសំគាល់គឺ $a r^2 + b r + c = 0$។"
       },
       {
-        "id": "g12a_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $\\Delta = b^2 - 4ac > 0$ សមីការសំគាល់មានឫសពីរផ្សេងគ្នា $r_1, r_2$ នោះចម្លើយទូទៅគឺ ៖",
         "options": [
-          "$y = e^{\\alpha x}(C_1 \\cos \\beta x + C_2 \\sin \\beta x)$",
-          "$y = C_1 e^{r_1 x} \\cdot C_2 e^{r_2 x}$",
           "$y = (C_1 + C_2 x)e^{r_1 x}$",
-          "$y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$"
+          "$y = e^{\\alpha x}(C_1 \\cos \\beta x + C_2 \\sin \\beta x)$",
+          "$y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$",
+          "$y = C_1 e^{r_1 x} \\cdot C_2 e^{r_2 x}$"
         ],
-        "correct": 3,
-        "explanation": "ករណីឫសពិតពីរផ្សេងគ្នា៖ $y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$ ($C_1, C_2 \\in \\mathbb{R}$)។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ករណីឫសពិតពីរផ្សេងគ្នា៖ $y = C_1 e^{r_1 x} + C_2 e^{r_2 x}$ ($C_1, C_2 \\in \\mathbb{R}$)។"
       },
       {
-        "id": "g12a_p1_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $\\Delta = 0$ សមីការសំគាល់មានឫសឌុប $r_0 = -\\dfrac{b}{2a}$ នោះចម្លើយទូទៅគឺ ៖",
         "options": [
           "$y = C_1 e^{r_0 x} + C_2 e^{-r_0 x}$",
           "$y = (C_1 x + C_2) e^{r_0 x}$",
-          "$y = C_1 x e^{r_0 x}$",
-          "$y = C_1 e^{r_0 x}$"
+          "$y = C_1 e^{r_0 x}$",
+          "$y = C_1 x e^{r_0 x}$"
         ],
         "correct": 1,
-        "explanation": "ករណីឫសឌុប៖ $y = (C_1 x + C_2) e^{r_0 x}$។",
-        "diagram": ""
+        "explanation": "ករណីឫសឌុប៖ $y = (C_1 x + C_2) e^{r_0 x}$។"
       },
       {
-        "id": "g12a_p1_04",
+        "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $\\Delta < 0$ សមីការសំគាល់មានឫសកុំផ្លិចឆ្លាស់គ្នា $r = \\alpha \\pm i\\beta$ នោះចម្លើយទូទៅគឺ ៖",
         "options": [
-          "$y = C_1 e^{(\\alpha + i\\beta)x}$",
+          "$y = e^{\\beta x} (C_1 \\cos \\alpha x + C_2 \\sin \\alpha x)$",
           "$y = C_1 \\cos \\beta x + C_2 \\sin \\beta x$",
-          "$y = e^{\\alpha x} (C_1 \\cos \\beta x + C_2 \\sin \\beta x)$",
-          "$y = e^{\\beta x} (C_1 \\cos \\alpha x + C_2 \\sin \\alpha x)$"
+          "$y = C_1 e^{(\\alpha + i\\beta)x}$",
+          "$y = e^{\\alpha x} (C_1 \\cos \\beta x + C_2 \\sin \\beta x)$"
         ],
-        "correct": 2,
-        "explanation": "ករណីឫសកុំផ្លិច៖ $y = e^{\\alpha x}(C_1 \\cos \\beta x + C_2 \\sin \\beta x)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ករណីឫសកុំផ្លិច៖ $y = e^{\\alpha x}(C_1 \\cos \\beta x + C_2 \\sin \\beta x)$។"
       },
       {
-        "id": "g12a_p1_05",
+        "id": "q5",
         "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការឌីផេរ៉ង់ស្យែល $y'' - 5y' + 6y = 0$ ៖",
         "options": [
-          "$y = C_1 e^{-2x} + C_2 e^{-3x}$",
           "$y = (C_1 x + C_2)e^{2x}$",
+          "$y = C_1 e^{-2x} + C_2 e^{-3x}$",
           "$y = C_1 e^{2x} + C_2 e^{3x}$",
           "$y = C_1 e^{5x} + C_2 e^{6x}$"
         ],
         "correct": 2,
-        "explanation": "សមីការសំគាល់ $r^2 - 5r + 6 = 0 \\iff (r-2)(r-3) = 0 \\implies r_1 = 2, r_2 = 3$ នាំឱ្យ $y = C_1 e^{2x} + C_2 e^{3x}$។",
-        "diagram": ""
+        "explanation": "សមីការសំគាល់ $r^2 - 5r + 6 = 0 \\iff (r-2)(r-3) = 0 \\implies r_1 = 2, r_2 = 3$ នាំឱ្យ $y = C_1 e^{2x} + C_2 e^{3x}$។"
       },
       {
-        "id": "g12a_p1_06",
+        "id": "q6",
         "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
@@ -36492,251 +36477,237 @@
         "options": [
           "$y = (C_1 x + C_2) e^{2x}$",
           "$y = C_1 e^{2x}$",
-          "$y = C_1 e^{2x} + C_2 e^{-2x}$",
-          "$y = (C_1 x^2 + C_2)e^{2x}$"
+          "$y = (C_1 x^2 + C_2)e^{2x}$",
+          "$y = C_1 e^{2x} + C_2 e^{-2x}$"
         ],
         "correct": 0,
-        "explanation": "$r^2 - 4r + 4 = 0 \\iff (r-2)^2 = 0 \\implies r_0 = 2$ (ឫសឌុប) នាំឱ្យ $y = (C_1 x + C_2)e^{2x}$។",
-        "diagram": ""
+        "explanation": "$r^2 - 4r + 4 = 0 \\iff (r-2)^2 = 0 \\implies r_0 = 2$ (ឫសឌុប) នាំឱ្យ $y = (C_1 x + C_2)e^{2x}$។"
       },
       {
-        "id": "g12a_p1_07",
+        "id": "q7",
         "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការឌីផេរ៉ង់ស្យែល $y'' + 9y = 0$ (លំយោលអាម៉ូនិច) ៖",
         "options": [
-          "$y = C_1 e^{9x}$",
+          "$y = (C_1 x + C_2)\\cos 3x$",
           "$y = C_1 \\cos 3x + C_2 \\sin 3x$",
           "$y = C_1 e^{3x} + C_2 e^{-3x}$",
-          "$y = (C_1 x + C_2)\\cos 3x$"
+          "$y = C_1 e^{9x}$"
         ],
         "correct": 1,
-        "explanation": "$r^2 + 9 = 0 \\iff r = \\pm 3i$ ($\\alpha = 0, \\beta = 3$) នាំឱ្យ $y = C_1 \\cos 3x + C_2 \\sin 3x$។",
-        "diagram": ""
+        "explanation": "$r^2 + 9 = 0 \\iff r = \\pm 3i$ ($\\alpha = 0, \\beta = 3$) នាំឱ្យ $y = C_1 \\cos 3x + C_2 \\sin 3x$។"
       },
       {
-        "id": "g12a_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការឌីផេរ៉ង់ស្យែល $y'' - 2y' + 2y = 0$ ៖",
         "options": [
-          "$y = C_1 e^x + C_2 e^{-x}$",
-          "$y = (C_1 x + C_2)e^x$",
           "$y = e^{-x} (C_1 \\cos x + C_2 \\sin x)$",
+          "$y = (C_1 x + C_2)e^x$",
+          "$y = C_1 e^x + C_2 e^{-x}$",
           "$y = e^x (C_1 \\cos x + C_2 \\sin x)$"
         ],
         "correct": 3,
-        "explanation": "$r^2 - 2r + 2 = 0 \\iff (r-1)^2 = -1 \\implies r = 1 \\pm i$ ($\\alpha = 1, \\beta = 1$) នាំឱ្យ $y = e^x(C_1 \\cos x + C_2 \\sin x)$។",
-        "diagram": ""
+        "explanation": "$r^2 - 2r + 2 = 0 \\iff (r-1)^2 = -1 \\implies r = 1 \\pm i$ ($\\alpha = 1, \\beta = 1$) នាំឱ្យ $y = e^x(C_1 \\cos x + C_2 \\sin x)$។"
       },
       {
-        "id": "g12a_p1_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកសមីការឌីផេរ៉ង់ស្យែលដែលមានចម្លើយទូទៅ $y = C_1 e^{-x} + C_2 e^{4x}$ ៖",
         "options": [
-          "$y'' - 3y' - 4y = 0$",
           "$y'' + 3y' - 4y = 0$",
+          "$y'' + 4y = 0$",
           "$y'' - 5y' + 4y = 0$",
-          "$y'' + 4y = 0$"
+          "$y'' - 3y' - 4y = 0$"
         ],
-        "correct": 0,
-        "explanation": "ឫសគឺ $-1$ និង $4$។ សមីការសំគាល់ $(r+1)(r-4) = r^2 - 3r - 4 = 0$ ត្រូវនឹង $y'' - 3y' - 4y = 0$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ឫសគឺ $-1$ និង $4$។ សមីការសំគាល់ $(r+1)(r-4) = r^2 - 3r - 4 = 0$ ត្រូវនឹង $y'' - 3y' - 4y = 0$។"
       },
       {
-        "id": "g12a_p1_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដំណោះស្រាយសមីការអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការ $y'' - y = 0$ ៖",
         "options": [
-          "$y = (C_1 x + C_2)e^x$",
+          "$y = C_1 e^x + C_2 e^{-x}$",
           "$y = C_1 e^x$",
-          "$y = C_1 \\cos x + C_2 \\sin x$",
-          "$y = C_1 e^x + C_2 e^{-x}$"
+          "$y = (C_1 x + C_2)e^x$",
+          "$y = C_1 \\cos x + C_2 \\sin x$"
         ],
-        "correct": 3,
-        "explanation": "$r^2 - 1 = 0 \\implies r = \\pm 1$ នាំឱ្យ $y = C_1 e^x + C_2 e^{-x}$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$r^2 - 1 = 0 \\implies r = \\pm 1$ នាំឱ្យ $y = C_1 e^x + C_2 e^{-x}$។"
       }
     ],
     "3": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ចំពោះសមីការ $a y'' + b y' + c y = f(x)$ ចម្លើយទូទៅគឺ ៖",
         "options": [
           "$y = y_h \\cdot y_p$",
-          "$y = y_h + y_p$ ($y_h$ ជាចម្លើយសមីការអូម៉ូសែន, $y_p$ ជាចម្លើយដោយឡែក)",
           "$y = y_h$",
+          "$y = y_h + y_p$ ($y_h$ ជាចម្លើយសមីការអូម៉ូសែន, $y_p$ ជាចម្លើយដោយឡែក)",
           "$y = y_p$"
         ],
-        "correct": 1,
-        "explanation": "ចម្លើយទូទៅនៃសមីការលំដាប់ ២ មិនអូម៉ូសែនស្មើផលបូក $y = y_h + y_p$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ចម្លើយទូទៅនៃសមីការលំដាប់ ២ មិនអូម៉ូសែនស្មើផលបូក $y = y_h + y_p$។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ដើម្បីកំណត់តម្លៃថេរ $C_1, C_2$ ក្នុងចម្លើយទូទៅនៃសមីការលំដាប់ ២ គេត្រូវការលក្ខខណ្ឌដើមចំនួន ៖",
         "options": [
-          "២ លក្ខខណ្ឌ (ដូចជា $y(x_0) = y_0$ និង $y'(x_0) = y'_0$)",
+          "១ លក្ខខណ្ឌ",
           "មិនត្រូវការលក្ខខណ្ឌទេ",
           "៣ លក្ខខណ្ឌ",
-          "១ លក្ខខណ្ឌ"
+          "២ លក្ខខណ្ឌ (ដូចជា $y(x_0) = y_0$ និង $y'(x_0) = y'_0$)"
         ],
-        "correct": 0,
-        "explanation": "ដោយសារមានចំនួនថេរមិនទាក់ទងគ្នាពីរ ($C_1, C_2$) គេត្រូវការលក្ខខណ្ឌដើម ២ ដើម្បីកំណត់ចម្លើយតែមួយគត់។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ដោយសារមានចំនួនថេរមិនទាក់ទងគ្នាពីរ ($C_1, C_2$) គេត្រូវការលក្ខខណ្ឌដើម ២ ដើម្បីកំណត់ចម្លើយតែមួយគត់។"
       },
       {
-        "id": "g12a_p2_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រកចម្លើយដោយឡែកថេរ $y_p$ នៃ $y''-3y'+2y=4$ ៖",
+        "options": [
+          "$y_p=2$",
+          "$y_p=\\dfrac{1}{2}$",
+          "$y_p=4$",
+          "$y_p=8$"
+        ],
+        "correct": 0,
+        "explanation": "$by_p=c$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រកចម្លើយដោយឡែកថេរ $y_p$ នៃ $y''-3y'+2y=3$ ៖",
+        "options": [
+          "$y_p=\\dfrac{2}{3}$",
+          "$y_p=3$",
+          "$y_p=\\dfrac{3}{2}$",
+          "$y_p=6$"
+        ],
+        "correct": 2,
+        "explanation": "$by_p=c$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចម្លើយនៃ $y'' + 4y = 0$ ដែលផ្ទៀងផ្ទាត់ $y(0) = 0$ និង $y'(0) = 6$ ៖",
         "options": [
-          "$y = 3\\cos 2x$",
-          "$y = 2\\sin 3x$",
+          "$y = 3\\sin 2x$",
           "$y = 6\\sin 2x$",
-          "$y = 3\\sin 2x$"
+          "$y = 2\\sin 3x$",
+          "$y = 3\\cos 2x$"
         ],
-        "correct": 3,
-        "explanation": "$y = C_1 \\cos 2x + C_2 \\sin 2x$។ $y(0) = C_1 = 0$។ $y' = 2C_2 \\cos 2x \\implies y'(0) = 2C_2 = 6 \\iff C_2 = 3$។ ដូច្នេះ $y = 3\\sin 2x$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$y = C_1 \\cos 2x + C_2 \\sin 2x$។ $y(0) = C_1 = 0$។ $y' = 2C_2 \\cos 2x \\implies y'(0) = 2C_2 = 6 \\iff C_2 = 3$។ ដូច្នេះ $y = 3\\sin 2x$។"
       },
       {
-        "id": "g12a_p2_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចម្លើយដោយឡែក $y_p$ នៃសមីការ $y'' - 3y' + 2y = 4$ ៖",
         "options": [
-          "$y_p = -2$",
           "$y_p = 4$",
           "$y_p = 2$",
+          "$y_p = -2$",
           "$y_p = 2x$"
         ],
-        "correct": 2,
-        "explanation": "យក $y_p = k$ (ថេរ) $\\implies y_p' = 0, y_p'' = 0$។ ជំនួសចូល៖ $2k = 4 \\iff k = 2$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "យក $y_p = k$ (ថេរ) $\\implies y_p' = 0, y_p'' = 0$។ ជំនួសចូល៖ $2k = 4 \\iff k = 2$។"
       },
       {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកចម្លើយដោយឡែក $y_p$ នៃសមីការ $y'' + y = 2\\cos x$ ៖",
         "options": [
-          "$y_p = \\cos x$",
+          "$y_p = \\sin x$",
           "$y_p = x \\sin x$",
-          "$y_p = x \\cos x$",
-          "$y_p = \\sin x$"
+          "$y_p = \\cos x$",
+          "$y_p = x \\cos x$"
         ],
         "correct": 1,
-        "explanation": "ដោយសារ $\\cos x$ ជាចម្លើយអូម៉ូសែន ត្រូវគុណថែម $x$: $y_p = x(A\\cos x + B\\sin x)$។ គណនារកបាន $y_p = x\\sin x$។",
-        "diagram": ""
+        "explanation": "ដោយសារ $\\cos x$ ជាចម្លើយអូម៉ូសែន ត្រូវគុណថែម $x$: $y_p = x(A\\cos x + B\\sin x)$។ គណនារកបាន $y_p = x\\sin x$។"
       },
       {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយសមីការ $y'' - 4y = 8x$ ៖",
-        "options": [
-          "$y = (C_1 x + C_2)e^{2x} - 2x$",
-          "$y = C_1 e^{4x} - 2x$",
-          "$y = C_1 e^{2x} + C_2 e^{-2x} - 2x$",
-          "$y = C_1 e^{2x} + C_2 e^{-2x} + 2x$"
-        ],
-        "correct": 2,
-        "explanation": "$y_h = C_1 e^{2x} + C_2 e^{-2x}$។ តាង $y_p = Ax + B \\implies -4(Ax+B) = 8x \\implies A = -2, B = 0$។ ដូច្នេះ $y = C_1 e^{2x} + C_2 e^{-2x} - 2x$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកចម្លើយនៃ $y'' - 2y' + y = 0$ ដែលផ្ទៀងផ្ទាត់ $y(0) = 1$ និង $y'(0) = 3$ ៖",
-        "options": [
-          "$y = (3x + 1)e^x$",
-          "$y = (x + 1)e^x$",
-          "$y = e^x + 2x$",
-          "$y = (2x + 1)e^x$"
-        ],
-        "correct": 3,
-        "explanation": "$y = (C_1 x + C_2)e^x$។ $y(0) = C_2 = 1$។ $y' = C_1 e^x + (C_1 x + 1)e^x \\implies y'(0) = C_1 + 1 = 3 \\iff C_1 = 2$។ ដូច្នេះ $y = (2x + 1)e^x$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចម្លើយពិសេសថេរនៃ $y'' + 4y = 8$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $y'' - 4y = 8x$ ៖",
         "options": [
-          "$y_p = 8$",
-          "$y_p = 4$",
-          "$y_p = 2$",
-          "$y_p = \\dfrac{1}{2}$"
+          "$y = (C_1 x + C_2)e^{2x} - 2x$",
+          "$y = C_1 e^{2x} + C_2 e^{-2x} + 2x$",
+          "$y = C_1 e^{4x} - 2x$",
+          "$y = C_1 e^{2x} + C_2 e^{-2x} - 2x$"
         ],
-        "correct": 2,
-        "explanation": "$y_p = k$ ៖ $0 + 4k = 8 \\iff k = 2$។"
+        "correct": 3,
+        "explanation": "$y_h = C_1 e^{2x} + C_2 e^{-2x}$។ តាង $y_p = Ax + B \\implies -4(Ax+B) = 8x \\implies A = -2, B = 0$។ ដូច្នេះ $y = C_1 e^{2x} + C_2 e^{-2x} - 2x$។"
       },
       {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បាតុភូតរ៉េសូណង់ (Resonance) កើតឡើងកាលណា ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកចម្លើយនៃ $y'' - 2y' + y = 0$ ដែលផ្ទៀងផ្ទាត់ $y(0) = 1$ និង $y'(0) = 3$ ៖",
         "options": [
-          "$\\omega = 0$",
-          "ប្រេកង់នៃកម្លាំងបង្ខំ $\\omega$ ស្មើនឹងប្រេកង់ផ្ទាល់ $\\omega_0$ នៃប្រព័ន្ធ",
-          "$\\omega > \\omega_0$",
-          "កម្លាំងកកិតធំខ្លាំង"
+          "$y = (2x + 1)e^x$",
+          "$y = (x + 1)e^x$",
+          "$y = (3x + 1)e^x$",
+          "$y = e^x + 2x$"
         ],
-        "correct": 1,
-        "explanation": "បាតុភូតរ៉េសូណង់កើតឡើងពេលប្រេកង់បង្ខំស្មើប្រេកង់ធម្មជាតិ ធ្វើឱ្យអំព្លីទុតលំយោលកើនឡើងធំសម្បើម។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$y = (C_1 x + C_2)e^x$។ $y(0) = C_2 = 1$។ $y' = C_1 e^x + (C_1 x + 1)e^x \\implies y'(0) = C_1 + 1 = 3 \\iff C_1 = 2$។ ដូច្នេះ $y = (2x + 1)e^x$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដំណោះស្រាយសមីការមិនអូម៉ូសែនលំដាប់ទី ២",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយសមីការ $y'' + y = 1$ ដោយដឹងថា $y(0) = 2$ និង $y'(0) = 0$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បាតុភូតរ៉េសូណង់ (Resonance) កើតឡើងកាលណា ៖",
         "options": [
-          "$y = 2\\cos x$",
-          "$y = 2\\cos x - 1$",
-          "$y = \\sin x + 1$",
-          "$y = \\cos x + 1$"
+          "កម្លាំងកកិតធំខ្លាំង",
+          "$\\omega > \\omega_0$",
+          "ប្រេកង់នៃកម្លាំងបង្ខំ $\\omega$ ស្មើនឹងប្រេកង់ផ្ទាល់ $\\omega_0$ នៃប្រព័ន្ធ",
+          "$\\omega = 0$"
         ],
-        "correct": 3,
-        "explanation": "$y_h = C_1 \\cos x + C_2 \\sin x$។ $y_p = 1$។ $y = C_1 \\cos x + C_2 \\sin x + 1$។ $y(0) = C_1 + 1 = 2 \\implies C_1 = 1$។ $y'(0) = C_2 = 0$។ ដូច្នេះ $y = \\cos x + 1$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "បាតុភូតរ៉េសូណង់កើតឡើងពេលប្រេកង់បង្ខំស្មើប្រេកង់ធម្មជាតិ ធ្វើឱ្យអំព្លីទុតលំយោលកើនឡើងធំសម្បើម។"
       }
     ],
     "4": [
@@ -36745,68 +36716,64 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃសមីការចលនាលំយោល $x'' + 36x = 0$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការចលនា $x''+25x=0$ មានប្រេកង់មុំ $\\omega$ ស្មើ ៖",
         "options": [
-          "$x = (A + Bt)e^{6t}$",
-          "$x = A\\cos 36t + B\\sin 36t$",
-          "$x = A\\cos 6t + B\\sin 6t$",
-          "$x = Ae^{6t} + Be^{-6t}$"
+          "$25\\text{ rad/s}$",
+          "$5\\text{ rad/s}$",
+          "$\\dfrac{1}{5}\\text{ rad/s}$",
+          "$6\\text{ rad/s}$"
         ],
-        "correct": 2,
-        "explanation": "$r^2 + 36 = 0 \\Rightarrow r = \\pm 6i$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$\\omega^2=25$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ម៉ាស $m = 1$ kg ភ្ជាប់រឺស័រ $k = 4$ N/m ផ្ទៀងផ្ទាត់ $mx'' + kx = 0$។ ប្រេកង់មុំ $\\omega$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការចលនា $x''+121x=0$ មានប្រេកង់មុំ $\\omega$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{1}{4}\\text{ rad/s}$",
-          "$2\\text{ rad/s}$",
-          "$3\\text{ rad/s}$",
-          "$4\\text{ rad/s}$"
+          "$121\\text{ rad/s}$",
+          "$11\\text{ rad/s}$",
+          "$\\dfrac{1}{11}\\text{ rad/s}$",
+          "$12\\text{ rad/s}$"
         ],
         "correct": 1,
-        "explanation": "$\\omega = \\sqrt{\\dfrac{k}{m}} = \\sqrt{4} = 2$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\omega^2=121$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ខួបនៃចលនា $x'' + 25x = 0$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការចលនា $x''+36x=0$ មានប្រេកង់មុំ $\\omega$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{2\\pi}{5}$",
-          "$5\\pi$",
-          "$\\dfrac{\\pi}{5}$",
-          "$\\dfrac{2\\pi}{25}$"
+          "$36\\text{ rad/s}$",
+          "$\\dfrac{1}{6}\\text{ rad/s}$",
+          "$6\\text{ rad/s}$",
+          "$7\\text{ rad/s}$"
         ],
-        "correct": 0,
-        "explanation": "$T = \\dfrac{2\\pi}{\\omega} , \\ \\omega = 5$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$\\omega^2=36$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ខួបនៃចលនា $x'' + 36x = 0$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សមីការចលនា $x''+64x=0$ មានប្រេកង់មុំ $\\omega$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{2\\pi}{36}$",
-          "$6\\pi$",
-          "$\\dfrac{\\pi}{6}$",
-          "$\\dfrac{\\pi}{3}$"
+          "$64\\text{ rad/s}$",
+          "$8\\text{ rad/s}$",
+          "$\\dfrac{1}{8}\\text{ rad/s}$",
+          "$9\\text{ rad/s}$"
         ],
-        "correct": 3,
-        "explanation": "$T = \\dfrac{2\\pi}{\\omega} , \\ \\omega = 6$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$\\omega^2=64$"
       },
       {
         "id": "q5",
@@ -36814,16 +36781,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ម៉ាស $m = 1$ kg ភ្ជាប់រឺស័រ $k = 16$ N/m ផ្ទៀងផ្ទាត់ $mx'' + kx = 0$។ ប្រេកង់មុំ $\\omega$ គឺ ៖",
+        "question": "ចម្លើយទូទៅនៃសមីការចលនាលំយោល $x'' + 36x = 0$ គឺ ៖",
         "options": [
-          "$16\\text{ rad/s}$",
-          "$\\dfrac{1}{16}\\text{ rad/s}$",
-          "$4\\text{ rad/s}$",
-          "$5\\text{ rad/s}$"
+          "$x = (A + Bt)e^{6t}$",
+          "$x = Ae^{6t} + Be^{-6t}$",
+          "$x = A\\cos 6t + B\\sin 6t$",
+          "$x = A\\cos 36t + B\\sin 36t$"
         ],
         "correct": 2,
-        "explanation": "$\\omega = \\sqrt{\\dfrac{k}{m}} = \\sqrt{16} = 4$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$r^2 + 36 = 0 \\Rightarrow r = \\pm 6i$។"
       },
       {
         "id": "q6",
@@ -36831,16 +36797,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ម៉ាស $m = 4$ kg ភ្ជាប់រឺស័រ $k = 16$ N/m ផ្ទៀងផ្ទាត់ $mx'' + kx = 0$។ ប្រេកង់មុំ $\\omega$ គឺ ៖",
+        "question": "ម៉ាស $m = 1$ kg ភ្ជាប់រឺស័រ $k = 4$ N/m ផ្ទៀងផ្ទាត់ $mx'' + kx = 0$។ ប្រេកង់មុំ $\\omega$ គឺ ៖",
         "options": [
           "$2\\text{ rad/s}$",
-          "$64\\text{ rad/s}$",
           "$4\\text{ rad/s}$",
-          "$\\dfrac{1}{4}\\text{ rad/s}$"
+          "$\\dfrac{1}{4}\\text{ rad/s}$",
+          "$3\\text{ rad/s}$"
         ],
         "correct": 0,
-        "explanation": "$\\omega = \\sqrt{\\dfrac{k}{m}} = \\sqrt{4} = 2$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\omega = \\sqrt{\\dfrac{k}{m}} = \\sqrt{4} = 2$។"
       },
       {
         "id": "q7",
@@ -36848,67 +36813,63 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ម៉ាស $m = 1$ kg ភ្ជាប់រឺស័រ $k = 9$ N/m ផ្ទៀងផ្ទាត់ $mx'' + kx = 0$។ ប្រេកង់មុំ $\\omega$ គឺ ៖",
+        "question": "ខួបនៃចលនា $x'' + 25x = 0$ គឺ ៖",
         "options": [
-          "$4\\text{ rad/s}$",
-          "$3\\text{ rad/s}$",
-          "$\\dfrac{1}{9}\\text{ rad/s}$",
-          "$9\\text{ rad/s}$"
+          "$\\dfrac{2\\pi}{25}$",
+          "$\\dfrac{\\pi}{5}$",
+          "$5\\pi$",
+          "$\\dfrac{2\\pi}{5}$"
         ],
-        "correct": 1,
-        "explanation": "$\\omega = \\sqrt{\\dfrac{k}{m}} = \\sqrt{9} = 3$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$T = \\dfrac{2\\pi}{\\omega} , \\ \\omega = 5$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ម៉ាស $m = 2$ kg ភ្ជាប់រឺស័រ $k = 8$ N/m ផ្ទៀងផ្ទាត់ $mx'' + kx = 0$។ ប្រេកង់មុំ $\\omega$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សមីការលំយោលបង្ខំ (Forced oscillation) កើតឡើងកាលណា ៖",
         "options": [
-          "$4\\text{ rad/s}$",
-          "$16\\text{ rad/s}$",
-          "$\\dfrac{1}{4}\\text{ rad/s}$",
-          "$2\\text{ rad/s}$"
+          "$f(t) = 0$",
+          "$y'' = 0$",
+          "អង្គទីពីរ $f(t) = F_0 \\cos(\\omega t) \\neq 0$",
+          "គ្មានកម្លាំងកកិត"
         ],
-        "correct": 3,
-        "explanation": "$\\omega = \\sqrt{\\dfrac{k}{m}} = \\sqrt{4} = 2$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "កាលណាមានកម្លាំងខាងក្រៅជួយជម្រុញតាមខួប $F(t) = F_0 \\cos(\\omega t)$ សមីការក្លាយជាសមីការមិនអូម៉ូសែននៃលំយោលបង្ខំ។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃសមីការចលនាលំយោល $x'' + 9x = 0$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចលនា $x''+4x=0$ ដែល $x(0)=7,\\ x'(0)=48$។ អំព្លីទុតនៃលំយោលស្មើ ៖",
         "options": [
-          "$x = A\\cos 3t + B\\sin 3t$",
-          "$x = (A + Bt)e^{3t}$",
-          "$x = A\\cos 9t + B\\sin 9t$",
-          "$x = Ae^{3t} + Be^{-3t}$"
+          "$25$",
+          "$31$",
+          "$168$",
+          "$24$"
         ],
         "correct": 0,
-        "explanation": "$r^2 + 9 = 0 \\Rightarrow r = \\pm 3i$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$x=7\\cos2t+24\\sin2t,\\ A=\\sqrt{a^2+b^2}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ចលនាលំយោល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចម្លើយទូទៅនៃសមីការចលនាលំយោល $x'' + 16x = 0$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ម៉ាស $m=3$ kg ភ្ជាប់រឺស័រ $k=12$ N/m ផ្ទៀងផ្ទាត់ $mx''+kx=0$។ ប្រេកង់មុំ $\\omega$ ស្មើ ៖",
         "options": [
-          "$x = A\\cos 16t + B\\sin 16t$",
-          "$x = A\\cos 4t + B\\sin 4t$",
-          "$x = (A + Bt)e^{4t}$",
-          "$x = Ae^{4t} + Be^{-4t}$"
+          "$2\\text{ rad/s}$",
+          "$4\\text{ rad/s}$",
+          "$6\\text{ rad/s}$",
+          "$12\\text{ rad/s}$"
         ],
-        "correct": 1,
-        "explanation": "$r^2 + 16 = 0 \\Rightarrow r = \\pm 4i$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$\\omega=\\sqrt{k/m}$"
       }
     ]
   },
