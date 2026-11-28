@@ -31523,14 +31523,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងលំហ កន្សោម $\\overrightarrow{DM} + \\overrightarrow{MB}$ ស្មើ ៖",
         "options": [
-          "$\\vec{0}$",
           "$\\overrightarrow{BD}$",
-          "$\\overrightarrow{DB}$",
-          "$\\overrightarrow{DM}$"
+          "$\\overrightarrow{DM}$",
+          "$\\vec{0}$",
+          "$\\overrightarrow{DB}$"
         ],
-        "correct": 2,
-        "explanation": "ទំនាក់ទំនងសាល ៖ $\\overrightarrow{DM} + \\overrightarrow{MB} = \\overrightarrow{DB}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "ទំនាក់ទំនងសាល ៖ $\\overrightarrow{DM} + \\overrightarrow{MB} = \\overrightarrow{DB}$។"
       },
       {
         "id": "q2",
@@ -31540,14 +31539,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "កំណត់ $m$ ដើម្បីឱ្យ $\\vec{u}(-2, 1, -4)$ និង $\\vec{v}(-4, 2, m)$ ជាវ៉ិចទ័ររួមបន្ទាត់ ៖",
         "options": [
-          "$-8$",
           "$2$",
           "$-2$",
+          "$-8$",
           "$8$"
         ],
-        "correct": 0,
-        "explanation": "$\\vec{v} = 2\\vec{u}$ ⇒ $m = 2 \\times -4 = -8$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$\\vec{v} = 2\\vec{u}$ ⇒ $m = 2 \\times -4 = -8$។"
       },
       {
         "id": "q3",
@@ -31557,14 +31555,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងលំហ កន្សោម $\\overrightarrow{CD} + \\overrightarrow{DQ}$ ស្មើ ៖",
         "options": [
-          "$\\overrightarrow{QC}$",
           "$\\overrightarrow{CQ}$",
           "$\\vec{0}$",
-          "$\\overrightarrow{CD}$"
+          "$\\overrightarrow{CD}$",
+          "$\\overrightarrow{QC}$"
         ],
-        "correct": 1,
-        "explanation": "ទំនាក់ទំនងសាល ៖ $\\overrightarrow{CD} + \\overrightarrow{DQ} = \\overrightarrow{CQ}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "ទំនាក់ទំនងសាល ៖ $\\overrightarrow{CD} + \\overrightarrow{DQ} = \\overrightarrow{CQ}$។"
       },
       {
         "id": "q4",
@@ -31574,460 +31571,433 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គេឱ្យ $\\vec{u}(2, 2, -1)$ និង $\\vec{v}(-1, -2, 4)$។ កូអរដោនេនៃ $\\vec{u} + 2\\vec{v}$ គឺ ៖",
         "options": [
-          "$(3, 2, 2)$",
           "$(4, 6, -9)$",
-          "$(1, 0, 3)$",
-          "$(0, -2, 7)$"
+          "$(0, -2, 7)$",
+          "$(3, 2, 2)$",
+          "$(1, 0, 3)$"
         ],
-        "correct": 3,
-        "explanation": "បូកកូអរដោនេតាមលំដាប់ ⇒ $(0, -2, 7)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "បូកកូអរដោនេតាមលំដាប់ ⇒ $(0, -2, 7)$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ វ៉ិចទ័រក្នុងលំហ និងប្រមាណវិធី",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $\\vec{u}(5, 5, -1)$។ វ៉ិចទ័រ $3\\vec{u}$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $\\vec{u}(-3, 1, 4),\\ \\vec{v}(1, -4, 4)$។ កូអរដោនេនៃ $4\\vec{u}+3\\vec{v}$ គឺ ៖",
         "options": [
-          "$(-15, -15, 3)$",
-          "$(8, 8, 2)$",
-          "$(15, 15, -3)$",
-          "$(15, 5, -1)$"
+          "$(9, 8, -28)$",
+          "$(-9, 28, -8)$",
+          "$(-9, -8, 28)$",
+          "$(-8, -9, 28)$"
         ],
         "correct": 2,
-        "explanation": "$k\\vec{u} = (ku_1, ku_2, ku_3)$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "គណនាតាមកូអរដោនេ"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ វ៉ិចទ័រក្នុងលំហ និងប្រមាណវិធី",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $\\vec{u}(3, 1, 3)$ និង $\\vec{v}(-6, -2, m)$ ជាវ៉ិចទ័ររួមបន្ទាត់ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "កំណត់ $m$ ដើម្បីឱ្យ $\\vec{u}(2, 1, 3)$ និង $\\vec{v}(-6,m,-9)$ ជាវ៉ិចទ័ររួមបន្ទាត់ ៖",
         "options": [
-          "$-6$",
+          "$3$",
+          "$1$",
           "$-2$",
-          "$6$",
-          "$1$"
+          "$-3$"
         ],
-        "correct": 0,
-        "explanation": "$\\vec{v} = -2\\vec{u}$ ⇒ $m = -2 \\times 3 = -6$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "មានចំនួន k ដែល v = k u"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ វ៉ិចទ័រក្នុងលំហ និងប្រមាណវិធី",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "កំណត់ $m$ ដើម្បីឱ្យ $\\vec{u}(1, 1, -1)$ និង $\\vec{v}(2, 2, m)$ ជាវ៉ិចទ័ររួមបន្ទាត់ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គេឱ្យ $\\vec{u}(-1, -2, 3),\\ \\vec{v}(0, 3, -2)$។ កូអរដោនេនៃ $4\\vec{u}+2\\vec{v}$ គឺ ៖",
         "options": [
-          "$1$",
-          "$-2$",
-          "$-1$",
-          "$2$"
+          "$(4, 2, -8)$",
+          "$(-4, 8, -2)$",
+          "$(-4, -2, 8)$",
+          "$(-2, -4, 8)$"
         ],
-        "correct": 1,
-        "explanation": "$\\vec{v} = 2\\vec{u}$ ⇒ $m = 2 \\times -1 = -2$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "គណនាតាមកូអរដោនេ"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ វ៉ិចទ័រក្នុងលំហ និងប្រមាណវិធី",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្នុងលំហ កន្សោម $\\overrightarrow{MP} + \\overrightarrow{PQ}$ ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ក្នុងលំហ $A(4, 4, -5),\\ B(3, 4, -1),\\ C(-1, -4, -2)$ ។ រកកូអរដោនេ $D$ ដើម្បីឱ្យ $ABCD$ ជាប្រលេឡូក្រាម ៖",
         "options": [
-          "$\\vec{0}$",
-          "$\\overrightarrow{MP}$",
-          "$\\overrightarrow{QM}$",
-          "$\\overrightarrow{MQ}$"
+          "$(8, 12, -4)$",
+          "$(0, -4, -6)$",
+          "$(-2, -4, 2)$",
+          "$(6, 4, -8)$"
         ],
-        "correct": 3,
-        "explanation": "ទំនាក់ទំនងសាល ៖ $\\overrightarrow{MP} + \\overrightarrow{PQ} = \\overrightarrow{MQ}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$\\vec{AB}=\\vec{DC}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ វ៉ិចទ័រក្នុងលំហ និងប្រមាណវិធី",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $\\vec{u}(-1, 2, 1)$ និង $\\vec{v}(-4, 4, -3)$។ កូអរដោនេនៃ $\\vec{u} + 3\\vec{v}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គេឱ្យ $\\vec{u}(3, -1, 3),\\ \\vec{v}(2, -3, -1),\\ \\vec{w}(-1, 5, 5)$ ហើយ $\\vec{w}=a\\vec{u}+b\\vec{v}$។ តម្លៃនៃ $a+b$ ស្មើ ៖",
         "options": [
-          "$(-7, 10, 0)$",
-          "$(11, -10, 10)$",
-          "$(-13, 14, -8)$",
-          "$(-5, 6, -2)$"
+          "$3$",
+          "$1$",
+          "$-2$",
+          "$-1$"
         ],
-        "correct": 2,
-        "explanation": "បូកកូអរដោនេតាមលំដាប់ ⇒ $(-13, 14, -8)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$a=1,\\ b=-2$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ វ៉ិចទ័រក្នុងលំហ និងប្រមាណវិធី",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ក្នុងលំហ កន្សោម $\\overrightarrow{NQ} + \\overrightarrow{QC}$ ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "$\\vec{u}(0, 3, -1)$ និង $\\vec{v}(0,m,n)$ ជាវ៉ិចទ័រកូលីនេអ៊ែរ។ គូ $(m,n)$ ស្មើ ៖",
         "options": [
-          "$\\overrightarrow{NQ}$",
-          "$\\overrightarrow{NC}$",
-          "$\\overrightarrow{CN}$",
-          "$\\vec{0}$"
+          "$(2, -6)$",
+          "$(6, -2)$",
+          "$(-6, 2)$",
+          "$(-5, 2)$"
         ],
-        "correct": 1,
-        "explanation": "ទំនាក់ទំនងសាល ៖ $\\overrightarrow{NQ} + \\overrightarrow{QC} = \\overrightarrow{NC}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$\\vec{v}=-2\\vec{u}$"
       }
     ],
     "2": [
       {
-        "id": "g12a_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "កូអរដោនេនៃវ៉ិចទ័រ $\\vec{AB}$ កំណត់ពីចំណុច $A(x_A, y_A, z_A)$ និង $B(x_B, y_B, z_B)$ គឺ ៖",
         "options": [
-          "$\\vec{AB} = (x_A + x_B, y_A + y_B, z_A + z_B)$",
           "$\\vec{AB} = \\left(\\dfrac{x_A+x_B}{2}, \\dfrac{y_A+y_B}{2}, \\dfrac{z_A+z_B}{2}\\right)$",
           "$\\vec{AB} = (x_A - x_B, y_A - y_B, z_A - z_B)$",
+          "$\\vec{AB} = (x_A + x_B, y_A + y_B, z_A + z_B)$",
           "$\\vec{AB} = (x_B - x_A, y_B - y_A, z_B - z_A)$"
         ],
         "correct": 3,
-        "explanation": "វ៉ិចទ័រ $\\vec{AB}$ យកកូអរដោនេចុងដកដើម៖ $(x_B - x_A, y_B - y_A, z_B - z_A)$។",
-        "diagram": ""
+        "explanation": "វ៉ិចទ័រ $\\vec{AB}$ យកកូអរដោនេចុងដកដើម៖ $(x_B - x_A, y_B - y_A, z_B - z_A)$។"
       },
       {
-        "id": "g12a_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ប្រវែង (ម៉ូឌុល) នៃវ៉ិចទ័រ $\\vec{u} = (x, y, z)$ គណនាតាមរូបមន្ត ៖",
         "options": [
           "$\\|\\vec{u}\\| = \\sqrt{x + y + z}$",
-          "$\\|\\vec{u}\\| = |x| + |y| + |z|$",
+          "$\\|\\vec{u}\\| = x^2 + y^2 + z^2$",
           "$\\|\\vec{u}\\| = \\sqrt{x^2 + y^2 + z^2}$",
-          "$\\|\\vec{u}\\| = x^2 + y^2 + z^2$"
+          "$\\|\\vec{u}\\| = |x| + |y| + |z|$"
         ],
         "correct": 2,
-        "explanation": "ប្រវែងវ៉ិចទ័រក្នុងលំហ $\\|\\vec{u}\\| = \\sqrt{x^2 + y^2 + z^2}$។",
-        "diagram": ""
+        "explanation": "ប្រវែងវ៉ិចទ័រក្នុងលំហ $\\|\\vec{u}\\| = \\sqrt{x^2 + y^2 + z^2}$។"
       },
       {
-        "id": "g12a_p1_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "កូអរដោនេចំណុចកណ្តាល $I$ នៃអង្កត់ $AB$ គឺ ៖",
         "options": [
-          "$I(x_B - x_A, y_B - y_A, z_B - z_A)$",
           "$I\\left(\\dfrac{x_A + x_B}{2}, \\dfrac{y_A + y_B}{2}, \\dfrac{z_A + z_B}{2}\\right)$",
+          "$I(x_B - x_A, y_B - y_A, z_B - z_A)$",
           "$I(x_A + x_B, y_A + y_B, z_A + z_B)$",
           "$I(2x_A, 2y_A, 2z_A)$"
         ],
-        "correct": 1,
-        "explanation": "ចំណុចកណ្តាលជាមធ្យមនព្វន្ធនៃកូអរដោនេទាំងពីរ៖ $\\left(\\dfrac{x_A+x_B}{2}, \\dfrac{y_A+y_B}{2}, \\dfrac{z_A+z_B}{2}\\right)$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ចំណុចកណ្តាលជាមធ្យមនព្វន្ធនៃកូអរដោនេទាំងពីរ៖ $\\left(\\dfrac{x_A+x_B}{2}, \\dfrac{y_A+y_B}{2}, \\dfrac{z_A+z_B}{2}\\right)$។"
       },
       {
-        "id": "g12a_p1_04",
+        "id": "q4",
         "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនាប្រវែងវ៉ិចទ័រ $\\vec{u} = (-1, -2, -2)$ ៖",
+        "options": [
+          "$9$",
+          "$4$",
+          "$3$",
+          "$5$"
+        ],
+        "correct": 2,
+        "explanation": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គេឱ្យ $A(1, 2, -1)$ និង $B(3, -2, 5)$។ រកប្រវែងអង្កត់ $AB$ ៖",
         "options": [
-          "$\\sqrt{56} = 2\\sqrt{14}$",
           "$6$",
+          "$\\sqrt{56} = 2\\sqrt{14}$",
           "$\\sqrt{44}$",
           "$8$"
         ],
-        "correct": 0,
-        "explanation": "$\\vec{AB} = (2, -4, 6)$។ $AB = \\sqrt{2^2 + (-4)^2 + 6^2} = \\sqrt{4 + 16 + 36} = \\sqrt{56} = 2\\sqrt{14}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\vec{AB} = (2, -4, 6)$។ $AB = \\sqrt{2^2 + (-4)^2 + 6^2} = \\sqrt{4 + 16 + 36} = \\sqrt{56} = 2\\sqrt{14}$។"
       },
       {
-        "id": "g12a_p1_05",
-        "questionNumber": 5,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "វ៉ិចទ័រពីរ $\\vec{u} = (x, y, z)$ និង $\\vec{v} = (x', y', z')$ កូលីនេអ៊ែរគ្នា (ស្របគ្នា) លុះត្រាតែ ៖",
         "options": [
-          "មាន $k \\in \\mathbb{R}$ ដែល $\\vec{u} = k\\vec{v} \\iff \\dfrac{x}{x'} = \\dfrac{y}{y'} = \\dfrac{z}{z'}$",
           "$\\|\\vec{u}\\| = \\|\\vec{v}\\|$",
-          "$x + y + z = x' + y' + z'$",
-          "$\\vec{u} \\cdot \\vec{v} = 0$"
+          "មាន $k \\in \\mathbb{R}$ ដែល $\\vec{u} = k\\vec{v} \\iff \\dfrac{x}{x'} = \\dfrac{y}{y'} = \\dfrac{z}{z'}$",
+          "$\\vec{u} \\cdot \\vec{v} = 0$",
+          "$x + y + z = x' + y' + z'$"
         ],
-        "correct": 0,
-        "explanation": "វ៉ិចទ័រកូលីនេអ៊ែរគ្នាកាលណាកូអរដោនេរបស់វាសមាមាត្រគ្នា៖ $\\vec{u} = k\\vec{v}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "វ៉ិចទ័រកូលីនេអ៊ែរគ្នាកាលណាកូអរដោនេរបស់វាសមាមាត្រគ្នា៖ $\\vec{u} = k\\vec{v}$។"
       },
       {
-        "id": "g12a_p1_06",
-        "questionNumber": 6,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកកូអរដោនេទម្ងន់ $G$ នៃត្រីកោណ $ABC$ ក្នុងលំហ ៖",
         "options": [
-          "$G(x_A+x_B+x_C, y_A+y_B+y_C, z_A+z_B+z_C)$",
-          "$G\\left(\\dfrac{x_A+x_B+x_C}{3}, \\dfrac{y_A+y_B+y_C}{3}, \\dfrac{z_A+z_B+z_C}{3}\\right)$",
           "$G\\left(\\dfrac{x_A+x_B+x_C}{2}, \\dots\\right)$",
-          "$G(0, 0, 0)$"
+          "$G(x_A+x_B+x_C, y_A+y_B+y_C, z_A+z_B+z_C)$",
+          "$G(0, 0, 0)$",
+          "$G\\left(\\dfrac{x_A+x_B+x_C}{3}, \\dfrac{y_A+y_B+y_C}{3}, \\dfrac{z_A+z_B+z_C}{3}\\right)$"
         ],
-        "correct": 1,
-        "explanation": "ទីប្រជុំទម្ងន់ត្រីកោណជាមធ្យមកំពូលទាំងបី៖ $G = \\dfrac{A + B + C}{3}$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ទីប្រជុំទម្ងន់ត្រីកោណជាមធ្យមកំពូលទាំងបី៖ $G = \\dfrac{A + B + C}{3}$។"
       },
       {
-        "id": "g12a_p1_07",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកតម្លៃ $m$ ដើម្បីឱ្យ $\\vec{u} = (2, m, -4)$ និង $\\vec{v} = (1, 3, -2)$ កូលីនេអ៊ែរគ្នា ៖",
-        "options": [
-          "$m = 3$",
-          "$m = 2$",
-          "$m = 6$",
-          "$m = -6$"
-        ],
-        "correct": 2,
-        "explanation": "សមាមាត្រ៖ $\\dfrac{2}{1} = \\dfrac{m}{3} = \\dfrac{-4}{-2} = 2 \\implies m = 6$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $A(1, 0, 2), B(2, 3, 1), C(0, -3, 3)$។ តើបីចំណុច $A, B, C$ រត់ត្រង់ជួរគ្នាដែរឬទេ?",
         "options": [
+          "រត់ត្រង់ជួរគ្នា ព្រោះ $\\vec{AC} = -\\vec{AB}$",
           "មិនរត់ត្រង់ជួរគ្នាទេ",
-          "កែងគ្នាត្រង់ A",
           "បង្កើតបានជាត្រីកោណសម័ង្ស",
-          "រត់ត្រង់ជួរគ្នា ព្រោះ $\\vec{AC} = -\\vec{AB}$"
+          "កែងគ្នាត្រង់ A"
         ],
-        "correct": 3,
-        "explanation": "$\\vec{AB} = (1, 3, -1)$ និង $\\vec{AC} = (-1, -3, 1) = -\\vec{AB}$ នាំឱ្យកូលីនេអ៊ែរគ្នា ដូច្នេះ $A, B, C$ រត់ត្រង់ជួរគ្នា។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$\\vec{AB} = (1, 3, -1)$ និង $\\vec{AC} = (-1, -3, 1) = -\\vec{AB}$ នាំឱ្យកូលីនេអ៊ែរគ្នា ដូច្នេះ $A, B, C$ រត់ត្រង់ជួរគ្នា។"
       },
       {
-        "id": "g12a_p1_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកកូអរដោនេកំពូល $D$ ដើម្បីឱ្យ $ABCD$ ជាប្រលេឡូក្រាម ដឹងថា $A(1, 2, 3), B(2, -1, 4), C(0, 1, 5)$ ៖",
         "options": [
-          "$D(-1, 4, 4)$",
           "$D(1, 4, 4)$",
           "$D(3, -2, 2)$",
+          "$D(-1, 4, 4)$",
           "$D(1, 0, 6)$"
         ],
-        "correct": 0,
-        "explanation": "$ABCD$ ជាប្រលេឡូក្រាម $\\iff \\vec{AB} = \\vec{DC} \\iff (1, -3, 1) = (0 - x_D, 1 - y_D, 5 - z_D) \\implies D(-1, 4, 4)$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$ABCD$ ជាប្រលេឡូក្រាម $\\iff \\vec{AB} = \\vec{DC} \\iff (1, -3, 1) = (0 - x_D, 1 - y_D, 5 - z_D) \\implies D(-1, 4, 4)$។"
       },
       {
-        "id": "g12a_p1_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តម្រុយ និងកូអរដោនេក្នុងលំហ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "វ៉ិចទ័រឯកតាស្របនឹង $\\vec{u} = (1, 2, 2)$ គឺ ៖",
         "options": [
+          "$\\vec{e} = \\left(\\dfrac{1}{5}, \\dfrac{2}{5}, \\dfrac{2}{5}\\right)$",
           "$\\vec{e} = (\\dfrac{1}{9}, \\dfrac{2}{9}, \\dfrac{2}{9})$",
           "$\\vec{e} = (1, 2, 2)$",
-          "$\\vec{e} = \\left(\\dfrac{1}{5}, \\dfrac{2}{5}, \\dfrac{2}{5}\\right)$",
           "$\\vec{e} = \\left(\\dfrac{1}{3}, \\dfrac{2}{3}, \\dfrac{2}{3}\\right)$"
         ],
         "correct": 3,
-        "explanation": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។ វ៉ិចទ័រឯកតាគឺ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = (\\dfrac{1}{3}, \\dfrac{2}{3}, \\dfrac{2}{3})$។",
-        "diagram": ""
+        "explanation": "$\\|\\vec{u}\\| = \\sqrt{1 + 4 + 4} = 3$។ វ៉ិចទ័រឯកតាគឺ $\\vec{e} = \\dfrac{\\vec{u}}{\\|\\vec{u}\\|} = (\\dfrac{1}{3}, \\dfrac{2}{3}, \\dfrac{2}{3})$។"
       }
     ],
     "3": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តផលគុណស្កាលែនព្វន្ធនៃ $\\vec{u} = (x, y, z)$ និង $\\vec{v} = (x', y', z')$ គឺ ៖",
         "options": [
-          "$\\vec{u} \\cdot \\vec{v} = x x' + y y' + z z'$",
+          "$\\vec{u} \\cdot \\vec{v} = x y' - y x'$",
           "$\\vec{u} \\cdot \\vec{v} = \\sqrt{x x' + y y' + z z'}$",
           "$\\vec{u} \\cdot \\vec{v} = (x x', y y', z z')$",
-          "$\\vec{u} \\cdot \\vec{v} = x y' - y x'$"
+          "$\\vec{u} \\cdot \\vec{v} = x x' + y y' + z z'$"
         ],
-        "correct": 0,
-        "explanation": "ផលគុណស្កាលែតាមកូអរដោនេ៖ $\\vec{u} \\cdot \\vec{v} = x x' + y y' + z z'$ (ជាចំនួនស្កាលែ)។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ផលគុណស្កាលែតាមកូអរដោនេ៖ $\\vec{u} \\cdot \\vec{v} = x x' + y y' + z z'$ (ជាចំនួនស្កាលែ)។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "លក្ខខណ្ឌចាំបាច់ និងគ្រប់គ្រាន់ដើម្បីឱ្យពីរវ៉ិចទ័រកែងគ្នា $\\vec{u} \\perp \\vec{v}$ គឺ ៖",
         "options": [
           "$\\vec{u} = k\\vec{v}$",
-          "$\\vec{u} \\cdot \\vec{v} = 0$",
           "$\\vec{u} \\cdot \\vec{v} = 1$",
+          "$\\vec{u} \\cdot \\vec{v} = 0$",
           "$\\|\\vec{u}\\| = \\|\\vec{v}\\|$"
         ],
-        "correct": 1,
-        "explanation": "ពីរវ៉ិចទ័រកែងគ្នា $\\iff \\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\|\\vec{v}\\| \\cos 90^\\circ = 0$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ពីរវ៉ិចទ័រកែងគ្នា $\\iff \\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\|\\vec{v}\\| \\cos 90^\\circ = 0$។"
       },
       {
-        "id": "g12a_p2_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "កូស៊ីនុសនៃមុំ $\\theta$ រវាងពីរវ៉ិចទ័រ $\\vec{u}$ និង $\\vec{v}$ គណនាតាមរូបមន្ត ៖",
         "options": [
-          "$\\cos \\theta = \\vec{u} \\cdot \\vec{v}$",
-          "$\\cos \\theta = \\dfrac{x x'}{y y'}$",
           "$\\cos \\theta = \\dfrac{\\|\\vec{u}\\| \\|\\vec{v}\\|}{\\vec{u} \\cdot \\vec{v}}$",
-          "$\\cos \\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|}$"
+          "$\\cos \\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|}$",
+          "$\\cos \\theta = \\dfrac{x x'}{y y'}$",
+          "$\\cos \\theta = \\vec{u} \\cdot \\vec{v}$"
         ],
-        "correct": 3,
-        "explanation": "$\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\|\\vec{v}\\| \\cos \\theta \\implies \\cos \\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|}$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\|\\vec{v}\\| \\cos \\theta \\implies \\cos \\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|}$។"
       },
       {
-        "id": "g12a_p2_04",
+        "id": "q4",
         "questionNumber": 4,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\vec{u}\\cdot\\vec{v}$ ដោយ $\\vec{u}(-1, -3, -1),\\ \\vec{v}(1, -2, 0)$ ៖",
+        "options": [
+          "$11$",
+          "$5$",
+          "$-5$",
+          "$6$"
+        ],
+        "correct": 1,
+        "explanation": "$\\vec{u}\\cdot\\vec{v}=xx'+yy'+zz'$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាផលគុណស្កាលែ $\\vec{u} \\cdot \\vec{v}$ បើ $\\vec{u} = (1, -2, 3)$ និង $\\vec{v} = (4, 1, -1)$ ៖",
         "options": [
-          "$9$",
-          "$3$",
           "$-1$",
-          "$0$"
+          "$0$",
+          "$3$",
+          "$9$"
         ],
-        "correct": 2,
-        "explanation": "$\\vec{u} \\cdot \\vec{v} = 1(4) + (-2)(1) + 3(-1) = 4 - 2 - 3 = -1$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$\\vec{u} \\cdot \\vec{v} = 1(4) + (-2)(1) + 3(-1) = 4 - 2 - 3 = -1$។"
       },
       {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $m$ ដើម្បីឱ្យ $\\vec{u} = (m, 2, -1)$ កែងនឹង $\\vec{v} = (3, -1, 4)$ ៖",
         "options": [
-          "$m = 6$",
+          "$m = 0$",
           "$m = -2$",
-          "$m = 2$",
-          "$m = 0$"
+          "$m = 6$",
+          "$m = 2$"
         ],
-        "correct": 2,
-        "explanation": "$\\vec{u} \\perp \\vec{v} \\iff 3m + 2(-1) + (-1)(4) = 0 \\iff 3m - 6 = 0 \\iff m = 2$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$\\vec{u} \\perp \\vec{v} \\iff 3m + 2(-1) + (-1)(4) = 0 \\iff 3m - 6 = 0 \\iff m = 2$។"
       },
       {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាមុំ $\\theta$ រវាង $\\vec{u} = (1, 1, 0)$ និង $\\vec{v} = (0, 1, 1)$ ៖",
         "options": [
-          "$45^\\circ$",
+          "$60^\\circ$ (ឬ $\\dfrac{\\pi}{3}$)",
           "$30^\\circ$",
           "$90^\\circ$",
-          "$60^\\circ$ (ឬ $\\dfrac{\\pi}{3}$)"
-        ],
-        "correct": 3,
-        "explanation": "$\\vec{u} \\cdot \\vec{v} = 1(0) + 1(1) + 0(1) = 1$។ $\\|\\vec{u}\\| = \\sqrt{2}, \\|\\vec{v}\\| = \\sqrt{2}$។ $\\cos \\theta = \\dfrac{1}{2} \\implies \\theta = 60^\\circ$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ការ៉េស្កាលែ $\\vec{u}^2 = \\vec{u} \\cdot \\vec{u}$ ស្មើនឹង ៖",
-        "options": [
-          "$\\|\\vec{u}\\|^2$",
-          "$1$",
-          "$2\\|\\vec{u}\\|$",
-          "$0$"
+          "$45^\\circ$"
         ],
         "correct": 0,
-        "explanation": "តាមនិយមន័យ៖ $\\vec{u} \\cdot \\vec{u} = \\|\\vec{u}\\| \\|\\vec{u}\\| \\cos 0^\\circ = \\|\\vec{u}\\|^2$។",
-        "diagram": ""
+        "explanation": "$\\vec{u} \\cdot \\vec{v} = 1(0) + 1(1) + 0(1) = 1$។ $\\|\\vec{u}\\| = \\sqrt{2}, \\|\\vec{v}\\| = \\sqrt{2}$។ $\\cos \\theta = \\dfrac{1}{2} \\implies \\theta = 60^\\circ$។"
       },
       {
-        "id": "g12a_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គេឱ្យ $\\|\\vec{u}\\| = 3, \\|\\vec{v}\\| = 4$ និងមុំរវាងពួកវា $\\theta = 120^\\circ$។ គណនា $\\|\\vec{u} + \\vec{v}\\|$ ៖",
         "options": [
           "$7$",
-          "$\\sqrt{13}$",
           "$5$",
+          "$\\sqrt{13}$",
           "$\\sqrt{37}$"
         ],
-        "correct": 1,
-        "explanation": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2\\vec{u}\\cdot\\vec{v} = 9 + 16 + 2(3)(4)\\cos 120^\\circ = 25 + 24(-\\dfrac{1}{2}) = 25 - 12 = 13 \\implies \\sqrt{13}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$\\|\\vec{u}+\\vec{v}\\|^2 = \\|\\vec{u}\\|^2 + \\|\\vec{v}\\|^2 + 2\\vec{u}\\cdot\\vec{v} = 9 + 16 + 2(3)(4)\\cos 120^\\circ = 25 + 24(-\\dfrac{1}{2}) = 25 - 12 = 13 \\implies \\sqrt{13}$។"
       },
       {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ចំណោលកែងស្កាលែនៃ $\\vec{u}$ លើទិសដៅ $\\vec{v}$ (Scalar projection) គឺ ៖",
         "options": [
-          "$\\vec{u} \\cdot \\vec{v}$",
-          "$\\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{v}\\|}$",
           "$\\|\\vec{u}\\| \\sin \\theta$",
-          "$\\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\|}$"
+          "$\\vec{u} \\cdot \\vec{v}$",
+          "$\\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\|}$",
+          "$\\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{v}\\|}$"
         ],
-        "correct": 1,
-        "explanation": "$\\text{proj}_{\\vec{v}} \\vec{u} = \\|\\vec{u}\\| \\cos \\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{v}\\|}$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$\\text{proj}_{\\vec{v}} \\vec{u} = \\|\\vec{u}\\| \\cos \\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{v}\\|}$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ផលគុណស្កាលែនៃពីរវ៉ិចទ័រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ត្រីកោណ $ABC$ ដែលមាន $A(1, 0, 0), B(0, 1, 0), C(0, 0, 1)$ ជាត្រីកោណអ្វី?",
         "options": [
-          "ត្រីកោណកែងធម្មតា",
-          "ត្រីកោណសមបាតមិនសម័ង្ស",
           "ត្រីកោណសម័ង្ស",
-          "ត្រីកោណកែងសមបាត"
+          "ត្រីកោណកែងសមបាត",
+          "ត្រីកោណសមបាតមិនសម័ង្ស",
+          "ត្រីកោណកែងធម្មតា"
         ],
-        "correct": 2,
-        "explanation": "$AB = \\sqrt{1+1} = \\sqrt{2}$, $BC = \\sqrt{1+1} = \\sqrt{2}$, $CA = \\sqrt{1+1} = \\sqrt{2}$។ ជ្រុងទាំងបីស្មើគ្នា $\\sqrt{2}$ ជាត្រីកោណសម័ង្ស។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$AB = \\sqrt{1+1} = \\sqrt{2}$, $BC = \\sqrt{1+1} = \\sqrt{2}$, $CA = \\sqrt{1+1} = \\sqrt{2}$។ ជ្រុងទាំងបីស្មើគ្នា $\\sqrt{2}$ ជាត្រីកោណសម័ង្ស។"
       }
     ],
     "4": [
@@ -32039,14 +32009,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ប្រវែងវ៉ិចទ័រ $\\vec{u}(4, -4, -7)$ គឺ ៖",
         "options": [
-          "$15$",
           "$8$",
-          "$81$",
-          "$9$"
+          "$9$",
+          "$15$",
+          "$81$"
         ],
-        "correct": 3,
-        "explanation": "$\\|\\vec{u}\\| = \\sqrt{81} = 9$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$\\|\\vec{u}\\| = \\sqrt{81} = 9$។"
       },
       {
         "id": "q2",
@@ -32057,13 +32026,12 @@
         "question": "ចំណុចកណ្តាលនៃ $[AB]$ ដែល $A(1, -1, -3)$ , $B(7, -10, -1)$ គឺ ៖",
         "options": [
           "$I(8, -11, -4)$",
-          "$I(4, -\\dfrac{11}{2}, -2)$",
+          "$I(6, -9, 2)$",
           "$I(3, -\\dfrac{9}{2}, 1)$",
-          "$I(6, -9, 2)$"
+          "$I(4, -\\dfrac{11}{2}, -2)$"
         ],
-        "correct": 1,
-        "explanation": "$I\\left(\\dfrac{x_A + x_B}{2}, \\dfrac{y_A + y_B}{2}, \\dfrac{z_A + z_B}{2}\\right)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$I\\left(\\dfrac{x_A + x_B}{2}, \\dfrac{y_A + y_B}{2}, \\dfrac{z_A + z_B}{2}\\right)$។"
       },
       {
         "id": "q3",
@@ -32073,14 +32041,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ចំណុចកណ្តាលនៃ $[AB]$ ដែល $A(1, 1, 2)$ , $B(-3, 0, 10)$ គឺ ៖",
         "options": [
-          "$I(-4, -1, 8)$",
-          "$I(-2, 1, 12)$",
           "$I(-1, \\dfrac{1}{2}, 6)$",
-          "$I(-2, -\\dfrac{1}{2}, 4)$"
+          "$I(-2, 1, 12)$",
+          "$I(-2, -\\dfrac{1}{2}, 4)$",
+          "$I(-4, -1, 8)$"
         ],
-        "correct": 2,
-        "explanation": "$I\\left(\\dfrac{x_A + x_B}{2}, \\dfrac{y_A + y_B}{2}, \\dfrac{z_A + z_B}{2}\\right)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$I\\left(\\dfrac{x_A + x_B}{2}, \\dfrac{y_A + y_B}{2}, \\dfrac{z_A + z_B}{2}\\right)$។"
       },
       {
         "id": "q4",
@@ -32090,116 +32057,109 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ចម្ងាយរវាង $A(3, 1, -1)$ និង $B(6, 5, -13)$ គឺ ៖",
         "options": [
-          "$13$",
           "$14$",
           "$169$",
+          "$13$",
           "$19$"
         ],
-        "correct": 0,
-        "explanation": "$AB = \\sqrt{3^2 + 4^2 + (-12)^2} = \\sqrt{169} = 13$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$AB = \\sqrt{3^2 + 4^2 + (-12)^2} = \\sqrt{169} = 13$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណស្កាលែតាមកូអរដោនេ និងចម្ងាយរវាងពីរចំណុច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចម្ងាយរវាង $A(3, -3, -2)$ និង $B(13, -14, 0)$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ចម្ងាយរវាង $A(-2, 2, 3),\\ B(4, -4, 10)$ គឺ ៖",
         "options": [
-          "$15$",
-          "$225$",
-          "$23$",
-          "$16$"
+          "$121$",
+          "$19$",
+          "$12$",
+          "$11$"
         ],
-        "correct": 0,
-        "explanation": "$AB = \\sqrt{10^2 + (-11)^2 + 2^2} = \\sqrt{225} = 15$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$AB=\\sqrt{(x_B-x_A)^2+...}$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណស្កាលែតាមកូអរដោនេ និងចម្ងាយរវាងពីរចំណុច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចម្ងាយរវាង $A(-2, 1, 1)$ និង $B(-4, -10, 11)$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ប្រវែងនៃវ៉ិចទ័រ $\\vec{u}(-2, 5, -14)$ គឺ ៖",
         "options": [
-          "$225$",
           "$15$",
-          "$16$",
-          "$23$"
+          "$225$",
+          "$21$",
+          "$16$"
         ],
-        "correct": 1,
-        "explanation": "$AB = \\sqrt{(-2)^2 + (-11)^2 + 10^2} = \\sqrt{225} = 15$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$\\sqrt{4+25+196}=15$"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណស្កាលែតាមកូអរដោនេ និងចម្ងាយរវាងពីរចំណុច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចម្ងាយរវាង $A(-3, 0, -1)$ និង $B(3, 3, 1)$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ចម្ងាយរវាង $A(-4, -1, 1),\\ B(-2, -4, 7)$ គឺ ៖",
         "options": [
-          "$8$",
           "$49$",
           "$11$",
-          "$7$"
+          "$7$",
+          "$8$"
         ],
-        "correct": 3,
-        "explanation": "$AB = \\sqrt{6^2 + 3^2 + 2^2} = \\sqrt{49} = 7$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$AB=\\sqrt{(x_B-x_A)^2+...}$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណស្កាលែតាមកូអរដោនេ និងចម្ងាយរវាងពីរចំណុច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ប្រវែងវ៉ិចទ័រ $\\vec{u}(4, 12, -3)$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ត្រីកោណ $ABC$ ដែល $A(-4, 4, -1),\\ B(-6, 10, -10),\\ C(-2, 10, 8)$ ជា ៖",
         "options": [
-          "$19$",
-          "$169$",
-          "$13$",
-          "$12$"
+          "$ត្រីកោណសម័ង្ស$",
+          "$ត្រីកោណកែងត្រង់ A$",
+          "$ត្រីកោណសមបាតត្រង់ A$",
+          "$ត្រីកោណធម្មតា$"
         ],
         "correct": 2,
-        "explanation": "$\\|\\vec{u}\\| = \\sqrt{169} = 13$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$AB=AC=11$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណស្កាលែតាមកូអរដោនេ និងចម្ងាយរវាងពីរចំណុច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ប្រវែងវ៉ិចទ័រ $\\vec{u}(2, 6, -9)$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ក្នុងលំហ $A(5,0,0),\\ B(0,3,0),\\ C(0,0,3)$ ។ ផលបូក $AB^2+AC^2$ ស្មើ ៖",
         "options": [
-          "$11$",
-          "$17$",
-          "$121$",
-          "$10$"
+          "$43$",
+          "$128$",
+          "$68$",
+          "$86$"
         ],
-        "correct": 0,
-        "explanation": "$\\|\\vec{u}\\| = \\sqrt{121} = 11$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$AB^2=a^2+b^2,\\ AC^2=a^2+c^2$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណស្កាលែតាមកូអរដោនេ និងចម្ងាយរវាងពីរចំណុច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ប្រវែងវ៉ិចទ័រ $\\vec{u}(12, 4, 3)$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចម្ងាយពី $O$ ទៅ $M(3, 12, 24)$ ស្មើ ៖",
         "options": [
-          "$169$",
-          "$13$",
-          "$19$",
-          "$12$"
+          "$9$",
+          "$243$",
+          "$27$",
+          "$28$"
         ],
-        "correct": 1,
-        "explanation": "$\\|\\vec{u}\\| = \\sqrt{169} = 13$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$OM=3\\times9$"
       }
     ],
     "5": [
@@ -32208,68 +32168,64 @@
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំពោះវ៉ិចទ័រមិនសូន្យ $\\vec{u}$ ដែលមានកូស៊ីនុសប្រាប់ទិស $\\cos\\alpha, \\cos\\beta, \\cos\\gamma$ គេបាន ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $\\vec{u}(4, -4, 7)$។ $\\cos\\beta$ (មុំជាមួយអ័ក្ស $Oy$) ស្មើ ៖",
         "options": [
-          "$\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 0$",
-          "$\\cos\\alpha + \\cos\\beta + \\cos\\gamma = 1$",
-          "$\\cos\\alpha\\cos\\beta\\cos\\gamma = 1$",
-          "$\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$"
+          "$\\dfrac{4}{9}$",
+          "$-\\dfrac{4}{81}$",
+          "$-\\dfrac{4}{9}$",
+          "$\\dfrac{9}{4}$"
         ],
-        "correct": 3,
-        "explanation": "$\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = \\dfrac{a^2 + b^2 + c^2}{\\|\\vec{u}\\|^2} = 1$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$|u|=9$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(-2, 6, -9)$។ $\\cos\\gamma$ (មុំជាមួយអ័ក្ស $Oz$) ស្មើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $\\vec{u}(2, 5, -14)$។ $\\cos\\beta$ (មុំជាមួយអ័ក្ស $Oy$) ស្មើ ៖",
         "options": [
-          "$-\\dfrac{9}{11}$",
-          "$\\dfrac{9}{11}$",
-          "$-\\dfrac{9}{121}$",
-          "$-\\dfrac{2}{11}$"
+          "$-\\dfrac{1}{3}$",
+          "$\\dfrac{1}{3}$",
+          "$\\dfrac{1}{45}$",
+          "$3$"
         ],
-        "correct": 0,
-        "explanation": "$\\cos\\gamma = \\dfrac{c}{\\|\\vec{u}\\|} = \\dfrac{-9}{11}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$|u|=15$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(-2, -6, -9)$។ $\\cos\\beta$ (មុំជាមួយអ័ក្ស $Oy$) ស្មើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $\\vec{u}(6, -6, 17)$។ $\\cos\\beta$ (មុំជាមួយអ័ក្ស $Oy$) ស្មើ ៖",
         "options": [
-          "$-\\dfrac{9}{11}$",
-          "$-\\dfrac{6}{11}$",
-          "$\\dfrac{6}{11}$",
-          "$-\\dfrac{6}{121}$"
+          "$\\dfrac{6}{19}$",
+          "$-\\dfrac{6}{361}$",
+          "$\\dfrac{19}{6}$",
+          "$-\\dfrac{6}{19}$"
         ],
-        "correct": 1,
-        "explanation": "$\\cos\\beta = \\dfrac{b}{\\|\\vec{u}\\|} = \\dfrac{-6}{11}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$|u|=19$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(-1, 4, 8)$។ $\\cos\\gamma$ (មុំជាមួយអ័ក្ស $Oz$) ស្មើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $\\vec{u}(-6, 6, -7)$។ $\\cos\\alpha$ (មុំជាមួយអ័ក្ស $Ox$) ស្មើ ៖",
         "options": [
-          "$-\\dfrac{1}{9}$",
-          "$-\\dfrac{8}{9}$",
-          "$\\dfrac{8}{9}$",
-          "$\\dfrac{8}{81}$"
+          "$\\dfrac{6}{11}$",
+          "$-\\dfrac{6}{121}$",
+          "$-\\dfrac{6}{11}$",
+          "$\\dfrac{11}{6}$"
         ],
         "correct": 2,
-        "explanation": "$\\cos\\gamma = \\dfrac{c}{\\|\\vec{u}\\|} = \\dfrac{8}{9}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$|u|=11$"
       },
       {
         "id": "q5",
@@ -32277,16 +32233,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(1, 4, -8)$។ $\\cos\\gamma$ (មុំជាមួយអ័ក្ស $Oz$) ស្មើ ៖",
+        "question": "ចំពោះវ៉ិចទ័រមិនសូន្យ $\\vec{u}$ ដែលមានកូស៊ីនុសប្រាប់ទិស $\\cos\\alpha, \\cos\\beta, \\cos\\gamma$ គេបាន ៖",
         "options": [
-          "$-\\dfrac{8}{81}$",
-          "$-\\dfrac{8}{9}$",
-          "$\\dfrac{1}{9}$",
-          "$\\dfrac{8}{9}$"
+          "$\\cos\\alpha + \\cos\\beta + \\cos\\gamma = 1$",
+          "$\\cos\\alpha\\cos\\beta\\cos\\gamma = 1$",
+          "$\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 0$",
+          "$\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = 1$"
         ],
-        "correct": 1,
-        "explanation": "$\\cos\\gamma = \\dfrac{c}{\\|\\vec{u}\\|} = \\dfrac{-8}{9}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = \\dfrac{a^2 + b^2 + c^2}{\\|\\vec{u}\\|^2} = 1$។"
       },
       {
         "id": "q6",
@@ -32294,16 +32249,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(2, 6, 9)$។ $\\cos\\beta$ (មុំជាមួយអ័ក្ស $Oy$) ស្មើ ៖",
+        "question": "គេឱ្យ $\\vec{u}(-2, 6, -9)$។ $\\cos\\gamma$ (មុំជាមួយអ័ក្ស $Oz$) ស្មើ ៖",
         "options": [
-          "$\\dfrac{6}{11}$",
-          "$-\\dfrac{6}{11}$",
-          "$\\dfrac{6}{121}$",
+          "$-\\dfrac{9}{121}$",
+          "$-\\dfrac{2}{11}$",
+          "$-\\dfrac{9}{11}$",
           "$\\dfrac{9}{11}$"
         ],
-        "correct": 0,
-        "explanation": "$\\cos\\beta = \\dfrac{b}{\\|\\vec{u}\\|} = \\dfrac{6}{11}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$\\cos\\gamma = \\dfrac{c}{\\|\\vec{u}\\|} = \\dfrac{-9}{11}$។"
       },
       {
         "id": "q7",
@@ -32311,67 +32265,63 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(1, 2, -2)$។ $\\cos\\alpha$ (មុំជាមួយអ័ក្ស $Ox$) ស្មើ ៖",
+        "question": "គេឱ្យ $\\vec{u}(-2, -6, -9)$។ $\\cos\\beta$ (មុំជាមួយអ័ក្ស $Oy$) ស្មើ ៖",
         "options": [
-          "$\\dfrac{1}{9}$",
-          "$\\dfrac{2}{3}$",
-          "$\\dfrac{1}{3}$",
-          "$-\\dfrac{1}{3}$"
+          "$\\dfrac{6}{11}$",
+          "$-\\dfrac{6}{11}$",
+          "$-\\dfrac{9}{11}$",
+          "$-\\dfrac{6}{121}$"
         ],
-        "correct": 2,
-        "explanation": "$\\cos\\alpha = \\dfrac{a}{\\|\\vec{u}\\|} = \\dfrac{1}{3}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$\\cos\\beta = \\dfrac{b}{\\|\\vec{u}\\|} = \\dfrac{-6}{11}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(-2, 2, -1)$។ $\\cos\\alpha$ (មុំជាមួយអ័ក្ស $Ox$) ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "វ៉ិចទ័រមួយមាន $\\cos\\alpha=\\dfrac{1}{2},\\ \\cos\\beta=\\dfrac{1}{2}$។ $\\cos\\gamma$ ស្មើ ៖",
         "options": [
-          "$\\dfrac{1}{3}$",
-          "$-\\dfrac{2}{9}$",
-          "$\\dfrac{2}{3}$",
-          "$-\\dfrac{2}{3}$"
+          "$\\pm\\sqrt{\\dfrac{1}{2}}$",
+          "$\\sqrt{\\dfrac{1}{2}}$",
+          "$\\pm \\dfrac{3}{2}$",
+          "$\\pm \\dfrac{3}{4}$"
         ],
-        "correct": 3,
-        "explanation": "$\\cos\\alpha = \\dfrac{a}{\\|\\vec{u}\\|} = \\dfrac{-2}{3}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(1, 4, 8)$។ $\\cos\\beta$ (មុំជាមួយអ័ក្ស $Oy$) ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "វ៉ិចទ័រឯកតាស្របទិសជាមួយ $\\vec{u}(2, 3, 6)$ គឺ ៖",
         "options": [
-          "$-\\dfrac{4}{9}$",
-          "$\\dfrac{8}{9}$",
-          "$\\dfrac{4}{9}$",
-          "$\\dfrac{4}{81}$"
+          "$(\\dfrac{2}{49}, \\dfrac{3}{49}, \\dfrac{6}{49})$",
+          "$(\\dfrac{2}{7}, \\dfrac{3}{7}, \\dfrac{6}{7})$",
+          "$(-\\dfrac{2}{7}, -\\dfrac{3}{7}, -\\dfrac{6}{7})$",
+          "$(2, 3, 6)$"
         ],
-        "correct": 2,
-        "explanation": "$\\cos\\beta = \\dfrac{b}{\\|\\vec{u}\\|} = \\dfrac{4}{9}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$|u|=7$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ កូស៊ីនុសប្រាប់ទិស",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $\\vec{u}(2, -2, -1)$។ $\\cos\\gamma$ (មុំជាមួយអ័ក្ស $Oz$) ស្មើ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "វ៉ិចទ័រមួយមាន $\\cos\\alpha=\\dfrac{1}{2},\\ \\cos\\beta=\\dfrac{1}{3}$។ $\\cos\\gamma$ ស្មើ ៖",
         "options": [
-          "$-\\dfrac{1}{9}$",
-          "$\\dfrac{2}{3}$",
-          "$\\dfrac{1}{3}$",
-          "$-\\dfrac{1}{3}$"
+          "$\\sqrt{\\dfrac{23}{36}}$",
+          "$\\pm \\dfrac{59}{36}$",
+          "$\\pm \\dfrac{8}{9}$",
+          "$\\pm\\sqrt{\\dfrac{23}{36}}$"
         ],
         "correct": 3,
-        "explanation": "$\\cos\\gamma = \\dfrac{c}{\\|\\vec{u}\\|} = \\dfrac{-1}{3}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$\\cos^2\\alpha+\\cos^2\\beta+\\cos^2\\gamma=1$"
       }
     ]
   },
