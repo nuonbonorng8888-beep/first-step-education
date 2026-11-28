@@ -40333,14 +40333,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\lim_{n \\to +\\infty} \\left(1 + \\dfrac{2}{n}\\right)^n$ ៖",
         "options": [
-          "$e^{2}$",
           "$1$",
-          "$e^{3}$",
-          "$+\\infty$"
+          "$e^{2}$",
+          "$+\\infty$",
+          "$e^{3}$"
         ],
-        "correct": 0,
-        "explanation": "$\\lim \\left(1 + \\dfrac{a}{n}\\right)^n = e^a$ ⇒ $e^{2}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$\\lim \\left(1 + \\dfrac{a}{n}\\right)^n = e^a$ ⇒ $e^{2}$។"
       },
       {
         "id": "q2",
@@ -40351,13 +40350,12 @@
         "question": "សម្រួល $e^{6} \\cdot e^{1}$ ៖",
         "options": [
           "$2e^{7}$",
+          "$e^{5}$",
           "$e^{7}$",
-          "$e^{6}$",
-          "$e^{5}$"
+          "$e^{6}$"
         ],
-        "correct": 1,
-        "explanation": "$e^a e^b = e^{a+b}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$e^a e^b = e^{a+b}$។"
       },
       {
         "id": "q3",
@@ -40368,13 +40366,12 @@
         "question": "គណនា $\\lim_{n \\to +\\infty} \\left(1 + \\dfrac{1}{n}\\right)^n$ ៖",
         "options": [
           "$+\\infty$",
-          "$1$",
           "$e^{2}$",
+          "$1$",
           "$e$"
         ],
         "correct": 3,
-        "explanation": "$\\lim \\left(1 + \\dfrac{a}{n}\\right)^n = e^a$ ⇒ $e$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$\\lim \\left(1 + \\dfrac{a}{n}\\right)^n = e^a$ ⇒ $e$។"
       },
       {
         "id": "q4",
@@ -40384,345 +40381,341 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "សម្រួល $e^{2} \\cdot e^{4}$ ៖",
         "options": [
-          "$2e^{6}$",
-          "$e^{2}$",
           "$e^{6}$",
-          "$e^{8}$"
+          "$e^{8}$",
+          "$e^{2}$",
+          "$2e^{6}$"
         ],
-        "correct": 2,
-        "explanation": "$e^a e^b = e^{a+b}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$e^a e^b = e^{a+b}$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួន e",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\ln(e^{1})$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សម្រួល $(e^{3})^{2}$ ៖",
         "options": [
-          "$3$",
-          "$2$",
-          "$0$",
-          "$1$"
+          "$e^{6}$",
+          "$e^{7}$",
+          "$e^{-6}$",
+          "$e^{12}$"
         ],
-        "correct": 3,
-        "explanation": "$\\ln e^x = x$ ⇒ $1$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "គុណនិទស្សន្ត"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួន e",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សម្រួល $\\dfrac{e^{4}}{e^{1}} \\cdot (e^{2})^{3}$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "សម្រួល $e^{7}\\times e^{4}$ ៖",
         "options": [
-          "$e^{10}$",
-          "$e^{9}$",
-          "$e^{8}$",
-          "$e^{6}$"
+          "$e^{12}$",
+          "$e^{-11}$",
+          "$e^{22}$",
+          "$e^{11}$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{e^{4}}{e^{1}} = e^{3} , \\ (e^2)^{3} = e^{6}$ ⇒ $e^{9}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "បូកនិទស្សន្ត"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួន e",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "តម្លៃប្រហែលនៃចំនួន $e$ គឺ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\lim_{n\\to +\\infty}\\left(1+\\dfrac{6}{n}\\right)^n$ ៖",
         "options": [
-          "$e \\approx 2.718$",
-          "$e \\approx 2.236$",
-          "$e \\approx 3.142$",
-          "$e \\approx 1.414$"
+          "$e^{7}$",
+          "$e^{-6}$",
+          "$e^{12}$",
+          "$e^{6}$"
         ],
-        "correct": 0,
-        "explanation": "$e \\approx 2.718281828$ (ចំនួនអសនិទាន)។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$(1+\\dfrac{a}{n})^n\\to e^a$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួន e",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សម្រួល $\\dfrac{e^{7}}{e^{3}} \\cdot (e^{2})^{4}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{n\\to +\\infty}\\left(\\dfrac{n+5}{n+2}\\right)^n$ ៖",
         "options": [
-          "$e^{8}$",
-          "$e^{15}$",
-          "$e^{12}$",
-          "$e^{10}$"
+          "$e^{4}$",
+          "$e^{-3}$",
+          "$e^{3}$",
+          "$e^{6}$"
         ],
         "correct": 2,
-        "explanation": "$\\dfrac{e^{7}}{e^{3}} = e^{4} , \\ (e^2)^{4} = e^{8}$ ⇒ $e^{12}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$(1+\\dfrac{3}{n+2})^n\\to e^{3}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួន e",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "សម្រួល $\\dfrac{e^{4}}{e^{3}} \\cdot (e^{2})^{1}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{n\\to +\\infty}\\left(\\dfrac{n}{n+3}\\right)^n$ ៖",
         "options": [
-          "$e^{2}$",
-          "$e^{4}$",
-          "$e^{6}$",
-          "$e^{3}$"
+          "$e^{-2}$",
+          "$e^{3}$",
+          "$e^{-3}$",
+          "$e^{-6}$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{e^{4}}{e^{3}} = e^{1} , \\ (e^2)^{1} = e^{2}$ ⇒ $e^{3}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 2,
+        "explanation": "$\\dfrac{n}{n+k}=(1+\\dfrac{k}{n})^{-1}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ចំនួន e",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\ln(e^{4})$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\lim_{n\\to +\\infty}\\left(\\dfrac{n+6}{n+1}\\right)^n$ ៖",
         "options": [
-          "$0$",
-          "$5$",
-          "$4$",
-          "$\\dfrac{1}{4}$"
+          "$e^{6}$",
+          "$e^{-5}$",
+          "$e^{10}$",
+          "$e^{5}$"
         ],
-        "correct": 2,
-        "explanation": "$\\ln e^x = x$ ⇒ $4$។",
-        "src": "genpq-g12b_plan"
+        "correct": 3,
+        "explanation": "$(1+\\dfrac{5}{n+1})^n\\to e^{5}$"
       }
     ],
     "2": [
       {
-        "id": "g12b_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ដែនកំណត់នៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល $f(x) = e^x$ គឺ ៖",
         "options": [
-          "$\\mathbb{R} = (-\\infty, +\\infty)$",
+          "$\\mathbb{R}^*$",
           "$[0, +\\infty)$",
-          "$(0, +\\infty)$",
-          "$\\mathbb{R}^*$"
+          "$\\mathbb{R} = (-\\infty, +\\infty)$",
+          "$(0, +\\infty)$"
         ],
-        "correct": 0,
-        "explanation": "អនុគមន៍ $e^x$ មានន័យចំពោះគ្រប់ចំនួនពិត $x$ ដូច្នេះដែនកំណត់គឺ $\\mathbb{R}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "អនុគមន៍ $e^x$ មានន័យចំពោះគ្រប់ចំនួនពិត $x$ ដូច្នេះដែនកំណត់គឺ $\\mathbb{R}$។"
       },
       {
-        "id": "g12b_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "សំណុំតម្លៃនៃអនុគមន៍ $f(x) = e^x$ គឺ ៖",
         "options": [
-          "$(-\\infty, 0)$",
-          "$[0, +\\infty)$",
           "$(0, +\\infty)$",
+          "$[0, +\\infty)$",
+          "$(-\\infty, 0)$",
           "$\\mathbb{R}$"
         ],
-        "correct": 2,
-        "explanation": "ចំពោះគ្រប់ $x \\in \\mathbb{R}$, $e^x > 0$ ជានិច្ច ដូច្នេះសំណុំតម្លៃគឺ $(0, +\\infty)$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ចំពោះគ្រប់ $x \\in \\mathbb{R}$, $e^x > 0$ ជានិច្ច ដូច្នេះសំណុំតម្លៃគឺ $(0, +\\infty)$។"
       },
       {
-        "id": "g12b_p1_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "លក្ខណៈនៃស្វ័យគុណ៖ $e^a \\cdot e^b$ ស្មើនឹង ៖",
         "options": [
           "$e^{a-b}$",
           "$e^{a+b}$",
-          "$(e^a)^b$",
-          "$e^{ab}$"
+          "$e^{ab}$",
+          "$(e^a)^b$"
         ],
         "correct": 1,
-        "explanation": "តាមរូបមន្តស្វ័យគុណ៖ $e^a \\cdot e^b = e^{a+b}$។",
-        "diagram": ""
+        "explanation": "តាមរូបមន្តស្វ័យគុណ៖ $e^a \\cdot e^b = e^{a+b}$។"
       },
       {
-        "id": "g12b_p1_04",
+        "id": "q4",
         "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយសមីការ $7^{x+1}=7^{3}$ ៖",
+        "options": [
+          "$x=4$",
+          "$x=2$",
+          "$x=3$",
+          "$x=-2$"
+        ],
+        "correct": 1,
+        "explanation": "ស្មើគោល ⇒ ស្មើនិទស្សន្ត"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ក្រាបនៃអនុគមន៍ $y = e^x$ កាត់អ័ក្សអរដោនេត្រង់ចំណុច ៖",
         "options": [
-          "$(0, e)$",
-          "$(1, e)$",
           "$(1, 0)$",
+          "$(1, e)$",
+          "$(0, e)$",
           "$(0, 1)$"
         ],
         "correct": 3,
-        "explanation": "ត្រង់ $x = 0 \\implies y = e^0 = 1$។ ក្រាបកាត់អ័ក្ស $Oy$ ត្រង់ $(0, 1)$ ជានិច្ច។",
-        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"20\" y1=\"150\" x2=\"300\" y2=\"150\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"120\" y1=\"185\" x2=\"120\" y2=\"15\" stroke=\"#334155\" stroke-width=\"1.5\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">x</text>\n  <text x=\"128\" y=\"22\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#334155\">y</text>\n  <!-- Line y = x -->\n  <line x1=\"50\" y1=\"190\" x2=\"220\" y2=\"20\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <text x=\"225\" y=\"30\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#64748b\">y = x</text>\n  <!-- Exponential y = e^x -->\n  <path d=\"M 30 148 Q 120 145 150 110 T 195 25\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n  <circle cx=\"120\" cy=\"115\" r=\"3.5\" fill=\"#2563eb\"/>\n  <text x=\"75\" y=\"112\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#2563eb\">(0, 1)</text>\n  <text x=\"175\" y=\"45\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#2563eb\" font-weight=\"bold\">y = e^x</text>\n  <!-- Logarithmic y = ln x -->\n  <path d=\"M 125 185 Q 130 155 155 125 T 285 85\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/>\n  <circle cx=\"155\" cy=\"150\" r=\"3.5\" fill=\"#16a34a\"/>\n  <text x=\"145\" y=\"165\" font-family=\"Arial, sans-serif\" font-size=\"10\" fill=\"#16a34a\">(1, 0)</text>\n  <text x=\"250\" y=\"78\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#16a34a\" font-weight=\"bold\">y = ln x</text>\n</svg>"
+        "explanation": "ត្រង់ $x = 0 \\implies y = e^0 = 1$។ ក្រាបកាត់អ័ក្ស $Oy$ ត្រង់ $(0, 1)$ ជានិច្ច។"
       },
       {
-        "id": "g12b_p1_05",
-        "questionNumber": 5,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ក្រាបនៃ $y = e^x$ មានអាស៊ីមតូតដេកមួយគឺបន្ទាត់ ៖",
         "options": [
-          "$y = 0$ (ខាង $-\\infty$)",
           "$y = 1$",
           "$y = x$",
+          "$y = 0$ (ខាង $-\\infty$)",
           "$x = 0$"
         ],
-        "correct": 0,
-        "explanation": "ដោយសារ $\\lim_{x \\to -\\infty} e^x = 0$ នាំឱ្យបន្ទាត់ $y = 0$ (អ័ក្សអាប់ស៊ីស) ជាអាស៊ីមតូតដេកខាង $-\\infty$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ដោយសារ $\\lim_{x \\to -\\infty} e^x = 0$ នាំឱ្យបន្ទាត់ $y = 0$ (អ័ក្សអាប់ស៊ីស) ជាអាស៊ីមតូតដេកខាង $-\\infty$។"
       },
       {
-        "id": "g12b_p1_06",
-        "questionNumber": 6,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សាមញ្ញកន្សោម $A = \\dfrac{(e^x)^3 \\cdot e^{-x}}{e^{2x}}$ ៖",
         "options": [
-          "$e^{2x}$",
-          "$e^{-x}$",
           "$1$",
-          "$e^x$"
+          "$e^{2x}$",
+          "$e^x$",
+          "$e^{-x}$"
         ],
-        "correct": 2,
-        "explanation": "$A = \\dfrac{e^{3x} \\cdot e^{-x}}{e^{2x}} = \\dfrac{e^{2x}}{e^{2x}} = 1$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$A = \\dfrac{e^{3x} \\cdot e^{-x}}{e^{2x}} = \\dfrac{e^{2x}}{e^{2x}} = 1$។"
       },
       {
-        "id": "g12b_p1_07",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $y = a^x$ (ដែល $0 < a < 1$) ៖",
-        "options": [
-          "កើនដាច់ខាតលើ $\\mathbb{R}$",
-          "មានអតិបរមា",
-          "ជាអនុគមន៍ថេរ",
-          "ចុះដាច់ខាតលើ $\\mathbb{R}$"
-        ],
-        "correct": 3,
-        "explanation": "កាលណាគោល $0 < a < 1$ នោះអនុគមន៍ $a^x$ ចុះដាច់ខាតលើ $\\mathbb{R}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12b_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកដែនកំណត់នៃអនុគមន៍ $f(x) = \\dfrac{1}{e^x - 1}$ ៖",
         "options": [
-          "$(0, +\\infty)$",
-          "$\\mathbb{R} \\setminus \\{0\\}$",
+          "$[0, +\\infty)$",
           "$\\mathbb{R}$",
-          "$[0, +\\infty)$"
+          "$(0, +\\infty)$",
+          "$\\mathbb{R} \\setminus \\{0\\}$"
         ],
-        "correct": 1,
-        "explanation": "ភាគបែងខុសពីសូន្យ៖ $e^x - 1 \\neq 0 \\iff e^x \\neq 1 \\iff x \\neq 0$។ ដូច្នេះ $D = \\mathbb{R} \\setminus \\{0\\}$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "ភាគបែងខុសពីសូន្យ៖ $e^x - 1 \\neq 0 \\iff e^x \\neq 1 \\iff x \\neq 0$។ ដូច្នេះ $D = \\mathbb{R} \\setminus \\{0\\}$។"
       },
       {
-        "id": "g12b_p1_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ប្រៀបធៀប $e^\\pi$ និង $\\pi^e$ ៖",
         "options": [
-          "$e^\\pi < \\pi^e$",
           "$e^\\pi = \\pi^e$",
+          "$e^\\pi < \\pi^e$",
           "$e^\\pi > \\pi^e$",
           "មិនអាចប្រៀបធៀបបាន"
         ],
         "correct": 2,
-        "explanation": "អនុគមន៍ $f(x) = \\dfrac{\\ln x}{x}$ មានអតិបរមាត្រង់ $x = e$ នាំឱ្យ $\\dfrac{\\ln e}{e} > \\dfrac{\\ln \\pi}{\\pi} \\iff \\pi \\ln e > e \\ln \\pi \\iff \\ln(e^\\pi) > \\ln(\\pi^e) \\iff e^\\pi > \\pi^e$។",
-        "diagram": ""
+        "explanation": "អនុគមន៍ $f(x) = \\dfrac{\\ln x}{x}$ មានអតិបរមាត្រង់ $x = e$ នាំឱ្យ $\\dfrac{\\ln e}{e} > \\dfrac{\\ln \\pi}{\\pi} \\iff \\pi \\ln e > e \\ln \\pi \\iff \\ln(e^\\pi) > \\ln(\\pi^e) \\iff e^\\pi > \\pi^e$។"
       },
       {
-        "id": "g12b_p1_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អនុគមន៍អិចស្ប៉ូណង់ស្យែល ៖ និយមន័យ លក្ខណៈ និងក្រាប",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ក្រាបនៃ $y = e^{-x}$ ឆ្លុះគ្នានឹងក្រាប $y = e^x$ ធៀបនឹង ៖",
         "options": [
           "អ័ក្សអរដោនេ $Oy$",
-          "អ័ក្សអាប់ស៊ីស $Ox$",
           "បន្ទាត់ $y = x$",
+          "អ័ក្សអាប់ស៊ីស $Ox$",
           "គល់កូអរដោនេ $O$"
         ],
         "correct": 0,
-        "explanation": "ដោយសារ $f(-x) = e^{-x}$ ក្រាបនៃ $f(-x)$ ឆ្លុះគ្នានឹងក្រាបនៃ $f(x)$ ធៀបនឹងអ័ក្សអរដោនេ $Oy$។",
-        "diagram": ""
+        "explanation": "ដោយសារ $f(-x) = e^{-x}$ ក្រាបនៃ $f(-x)$ ឆ្លុះគ្នានឹងក្រាបនៃ $f(x)$ ធៀបនឹងអ័ក្សអរដោនេ $Oy$។"
       }
     ],
     "3": [
       {
-        "id": "g12b_p3_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តដេរីវេនៃ $(e^x)'$ គឺ ៖",
         "options": [
-          "$e^x$",
-          "$x e^{x-1}$",
           "$\\dfrac{e^x}{\\ln e}$",
-          "$e^{x+1}$"
+          "$e^x$",
+          "$e^{x+1}$",
+          "$x e^{x-1}$"
         ],
-        "correct": 0,
-        "explanation": "ដេរីវេនៃ $e^x$ គឺស្មើខ្លួនវាដដែល៖ $(e^x)' = e^x$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "ដេរីវេនៃ $e^x$ គឺស្មើខ្លួនវាដដែល៖ $(e^x)' = e^x$។"
       },
       {
-        "id": "g12b_p3_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តដេរីវេនៃអនុគមន៍បណ្តាក់ $(e^u)'$ គឺ ៖",
         "options": [
+          "u' e^{u-1}",
           "$u e^u$",
-          "$e^u$",
           "$u' e^u$",
-          "u' e^{u-1}"
+          "$e^u$"
         ],
         "correct": 2,
-        "explanation": "វិធានខ្សែច្រវាក់៖ $(e^u)' = u' e^u$។",
-        "diagram": ""
+        "explanation": "វិធានខ្សែច្រវាក់៖ $(e^u)' = u' e^u$។"
       },
       {
-        "id": "g12b_p3_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាលីមីត $\\lim_{x \\to +\\infty} e^x$ ៖",
         "options": [
-          "$1$",
           "$+\\infty$",
-          "$0$",
-          "$e$"
+          "$e$",
+          "$1$",
+          "$0$"
         ],
-        "correct": 1,
-        "explanation": "$\\lim_{x \\to +\\infty} e^x = +\\infty$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$\\lim_{x \\to +\\infty} e^x = +\\infty$។"
       },
       {
-        "id": "g12b_p3_04",
+        "id": "q4",
         "questionNumber": 4,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $y=e^{-x + 3}$ គឺ ៖",
+        "options": [
+          "$-1e^{-x + 3}$",
+          "$e^{-x + 3}$",
+          "$2e^{-x + 3}$",
+          "$-1e^{-2x + 3}$"
+        ],
+        "correct": 0,
+        "explanation": "(e^u)' = u' e^u"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -40734,110 +40727,87 @@
           "$0$"
         ],
         "correct": 3,
-        "explanation": "$\\lim_{x \\to -\\infty} e^x = 0$។",
-        "diagram": ""
+        "explanation": "$\\lim_{x \\to -\\infty} e^x = 0$។"
       },
       {
-        "id": "g12b_p3_05",
-        "questionNumber": 5,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $f(x) = e^{3x^2 - 2x}$ ៖",
         "options": [
           "$f'(x) = (6x - 2)e^{3x^2 - 2x}$",
-          "$f'(x) = e^{3x^2 - 2x}$",
           "$f'(x) = (3x^2 - 2x)e^{6x-2}$",
-          "$f'(x) = 6x e^{3x^2 - 2x}$"
+          "$f'(x) = 6x e^{3x^2 - 2x}$",
+          "$f'(x) = e^{3x^2 - 2x}$"
         ],
         "correct": 0,
-        "explanation": "$u = 3x^2 - 2x \\implies u' = 6x - 2$។ ដូច្នេះ $f'(x) = u' e^u = (6x - 2)e^{3x^2 - 2x}$។",
-        "diagram": ""
+        "explanation": "$u = 3x^2 - 2x \\implies u' = 6x - 2$។ ដូច្នេះ $f'(x) = u' e^u = (6x - 2)e^{3x^2 - 2x}$។"
       },
       {
-        "id": "g12b_p3_06",
-        "questionNumber": 6,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $f(x) = x \\cdot e^x$ ៖",
         "options": [
           "$f'(x) = x e^x$",
-          "$f'(x) = (x + 1)e^x$",
           "$f'(x) = e^x$",
-          "$f'(x) = (x - 1)e^x$"
+          "$f'(x) = (x - 1)e^x$",
+          "$f'(x) = (x + 1)e^x$"
         ],
-        "correct": 1,
-        "explanation": "$f'(x) = (x)' e^x + x (e^x)' = 1 \\cdot e^x + x e^x = (x + 1)e^x$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$f'(x) = (x)' e^x + x (e^x)' = 1 \\cdot e^x + x e^x = (x + 1)e^x$។"
       },
       {
-        "id": "g12b_p3_07",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាលីមីតគ្រឹះ $\\lim_{x \\to 0} \\dfrac{e^x - 1}{x}$ ៖",
-        "options": [
-          "$e$",
-          "$0$",
-          "$1$",
-          "$+\\infty$"
-        ],
-        "correct": 2,
-        "explanation": "តាមនិយមន័យដេរីវេនៃ $e^x$ ត្រង់ $x=0$៖ $\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = (e^x)'_{x=0} = e^0 = 1$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12b_p3_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាលីមីតកំណើនប្រៀបធៀប $\\lim_{x \\to +\\infty} \\dfrac{e^x}{x^n}$ ($n > 0$) ៖",
         "options": [
           "$0$",
-          "$1$",
           "$\\dfrac{1}{n}$",
-          "$+\\infty$"
+          "$+\\infty$",
+          "$1$"
         ],
-        "correct": 3,
-        "explanation": "អិចស្ប៉ូណង់ស្យែលកើនលឿនជាងពហុធាត្រង់ $+\\infty$ ដូច្នេះ $\\lim_{x \\to +\\infty} \\dfrac{e^x}{x^n} = +\\infty$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "អិចស្ប៉ូណង់ស្យែលកើនលឿនជាងពហុធាត្រង់ $+\\infty$ ដូច្នេះ $\\lim_{x \\to +\\infty} \\dfrac{e^x}{x^n} = +\\infty$។"
       },
       {
-        "id": "g12b_p3_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "គណនាលីមីត $\\lim_{x \\to -\\infty} x e^x$ ៖",
         "options": [
-          "$-1$",
-          "$0$",
           "$+\\infty$",
-          "$-\\infty$"
+          "$-\\infty$",
+          "$0$",
+          "$-1$"
         ],
-        "correct": 1,
-        "explanation": "តាង $t = -x \\to +\\infty$: $\\lim_{x \\to -\\infty} x e^x = \\lim_{t \\to +\\infty} (-t e^{-t}) = \\lim_{t \\to +\\infty} \\left(-\\dfrac{t}{e^t}\\right) = 0$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "តាង $t = -x \\to +\\infty$: $\\lim_{x \\to -\\infty} x e^x = \\lim_{t \\to +\\infty} (-t e^{-t}) = \\lim_{t \\to +\\infty} \\left(-\\dfrac{t}{e^t}\\right) = 0$។"
       },
       {
-        "id": "g12b_p3_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេ និងលីមីតនៃអនុគមន៍អិចស្ប៉ូណង់ស្យែល",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកចំណុចបរមាធៀបនៃអនុគមន៍ $f(x) = (x - 2)e^x$ ៖",
         "options": [
+          "អតិបរមាត្រង់ $x = 1$",
           "អប្បបរមាត្រង់ $x = 2$",
           "គ្មានបរមាទេ",
-          "អតិបរមាត្រង់ $x = 1$",
           "អប្បបរមាត្រង់ $x = 1$"
         ],
         "correct": 3,
-        "explanation": "$f'(x) = 1 \\cdot e^x + (x - 2)e^x = (x - 1)e^x$។ $f'(x) = 0 \\iff x = 1$។ សញ្ញាដេរីវេប្តូរពី - ទៅ + នាំឱ្យជាអប្បបរមាធៀបត្រង់ $x = 1$ ($f(1) = -e$)។",
-        "diagram": ""
+        "explanation": "$f'(x) = 1 \\cdot e^x + (x - 2)e^x = (x - 1)e^x$។ $f'(x) = 0 \\iff x = 1$។ សញ្ញាដេរីវេប្តូរពី - ទៅ + នាំឱ្យជាអប្បបរមាធៀបត្រង់ $x = 1$ ($f(1) = -e$)។"
       }
     ],
     "4": [
@@ -40846,68 +40816,64 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំនួនបាក់តេរី $N(t) = 100 e^{0.2 t}$។ ចំនួនបាក់តេរីនៅ $t = 10$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំនួនបាក់តេរី $N(t)=300e^{\\dfrac{1}{5}t}$។ ចំនួនបាក់តេរីនៅ $t=5$ គឺ ៖",
         "options": [
-          "$300$",
-          "$100 e^{2}$",
-          "$100 e^{10}$",
-          "$100 e^{3}$"
+          "$300e$",
+          "$300e^{2}$",
+          "$1500$",
+          "$300e^{5}$"
         ],
-        "correct": 1,
-        "explanation": "$N(10) = 100 e^{0.2 \\times 10} = 100 e^{2}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$N(5)=300e^{1}$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំនួនបាក់តេរី $N(t) = 1000 e^{0.5 t}$។ ចំនួនបាក់តេរីនៅ $t = 10$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ម៉ាស $m(t)=50e^{-kt}$។ ដេរីវេ $m'(t)$ ស្មើ ៖",
         "options": [
-          "$1000 e^{10}$",
-          "$1000 e^{6}$",
-          "$6000$",
-          "$1000 e^{5}$"
+          "$km(t)$",
+          "$-km(t)$",
+          "$-k$",
+          "$-50e^{-kt}$"
         ],
-        "correct": 3,
-        "explanation": "$N(10) = 1000 e^{0.5 \\times 10} = 1000 e^{5}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$m'=-k50e^{-kt}=-km$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំនួនបាក់តេរី $N(t) = 200 e^{0.5 t}$។ ចំនួនបាក់តេរីនៅ $t = 5$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ចំនួនបាក់តេរី $N(t)=50e^{\\dfrac{1}{2}t}$។ ចំនួនបាក់តេរីនៅ $t=4$ គឺ ៖",
         "options": [
-          "$200 e^{\\dfrac{5}{2}}$",
-          "$200 e^{\\dfrac{7}{2}}$",
-          "$200 e^{5}$",
-          "$700$"
+          "$50e^{3}$",
+          "$50e^{2}$",
+          "$200$",
+          "$50e^{4}$"
         ],
-        "correct": 0,
-        "explanation": "$N(5) = 200 e^{0.5 \\times 5} = 200 e^{\\dfrac{5}{2}}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$N(4)=50e^{2}$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ម៉ាសសារធាតុវិទ្យុសកម្ម $m(t) = 100 e^{-kt}$។ អត្រាបម្រែបម្រួល $m'(t)$ ស្មើ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ម៉ាស $m(t)=80e^{-kt}$។ ដេរីវេ $m'(t)$ ស្មើ ៖",
         "options": [
-          "$-100e^{-kt}$",
           "$km(t)$",
+          "$-k$",
           "$-km(t)$",
-          "$-k$"
+          "$-80e^{-kt}$"
         ],
         "correct": 2,
-        "explanation": "$m'(t) = -k \\cdot 100e^{-kt} = -km(t)$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$m'=-k80e^{-kt}=-km$"
       },
       {
         "id": "q5",
@@ -40915,16 +40881,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ម៉ាសសារធាតុវិទ្យុសកម្ម $m(t) = 1000 e^{-kt}$។ អត្រាបម្រែបម្រួល $m'(t)$ ស្មើ ៖",
+        "question": "ចំនួនបាក់តេរី $N(t) = 100 e^{0.2 t}$។ ចំនួនបាក់តេរីនៅ $t = 10$ គឺ ៖",
         "options": [
-          "$km(t)$",
-          "$-k$",
-          "$-1000e^{-kt}$",
-          "$-km(t)$"
+          "$100 e^{10}$",
+          "$100 e^{2}$",
+          "$300$",
+          "$100 e^{3}$"
         ],
-        "correct": 3,
-        "explanation": "$m'(t) = -k \\cdot 1000e^{-kt} = -km(t)$។",
-        "src": "genpq-g12b_plan"
+        "correct": 1,
+        "explanation": "$N(10) = 100 e^{0.2 \\times 10} = 100 e^{2}$។"
       },
       {
         "id": "q6",
@@ -40932,16 +40897,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = (x - 2)e^x$ មានអប្បបរមាធៀបត្រង់ ៖",
+        "question": "ចំនួនបាក់តេរី $N(t) = 1000 e^{0.5 t}$។ ចំនួនបាក់តេរីនៅ $t = 10$ គឺ ៖",
         "options": [
-          "$x = 1$",
-          "$x = 2$",
-          "$x = 3$",
-          "$x = 0$"
+          "$1000 e^{5}$",
+          "$6000$",
+          "$1000 e^{6}$",
+          "$1000 e^{10}$"
         ],
         "correct": 0,
-        "explanation": "$f'(x) = (x - 1)e^x$ ; $e^x > 0$ ⇒ ប្តូរសញ្ញាពី $-$ ទៅ $+$ ត្រង់ $x = 1$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$N(10) = 1000 e^{0.5 \\times 10} = 1000 e^{5}$។"
       },
       {
         "id": "q7",
@@ -40949,67 +40913,63 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "អនុគមន៍ $f(x) = (x - 3)e^x$ មានអប្បបរមាធៀបត្រង់ ៖",
+        "question": "ចំនួនបាក់តេរី $N(t) = 200 e^{0.5 t}$។ ចំនួនបាក់តេរីនៅ $t = 5$ គឺ ៖",
         "options": [
-          "$x = 0$",
-          "$x = 4$",
-          "$x = 2$",
-          "$x = 3$"
+          "$200 e^{5}$",
+          "$200 e^{\\dfrac{7}{2}}$",
+          "$200 e^{\\dfrac{5}{2}}$",
+          "$700$"
         ],
         "correct": 2,
-        "explanation": "$f'(x) = (x - 2)e^x$ ; $e^x > 0$ ⇒ ប្តូរសញ្ញាពី $-$ ទៅ $+$ ត្រង់ $x = 2$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$N(5) = 200 e^{0.5 \\times 5} = 200 e^{\\dfrac{5}{2}}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំនួនបាក់តេរី $N(t) = 100 e^{0.1 t}$។ ចំនួនបាក់តេរីនៅ $t = 20$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចំនួនបាក់តេរី $N(t)=N_0e^{1/5t}$ (ឯកតា t ជាម៉ោង)។ ពេលវេលាកើនទ្វេដងគឺ ៖",
         "options": [
-          "$300$",
-          "$100 e^{2}$",
-          "$100 e^{20}$",
-          "$100 e^{3}$"
+          "$5\\ln 2$",
+          "$5$",
+          "$\\ln 2$",
+          "$\\dfrac{\\ln 2}{5}$"
         ],
-        "correct": 1,
-        "explanation": "$N(20) = 100 e^{0.1 \\times 20} = 100 e^{2}$។",
-        "src": "genpq-g12b_plan"
+        "correct": 0,
+        "explanation": "$2=e^{t/5}$ ⇒ $t=5\\ln 2$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំនួនបាក់តេរី $N(t) = 100 e^{0.5 t}$។ ចំនួនបាក់តេរីនៅ $t = 5$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សារធាតុវិទ្យុសកម្ម $m(t)=m_0e^{-\\dfrac{t}{2}}$។ អាយុកន្លះ (half-life) គឺ ៖",
         "options": [
-          "$100 e^{5}$",
-          "$350$",
-          "$100 e^{\\dfrac{5}{2}}$",
-          "$100 e^{\\dfrac{7}{2}}$"
+          "$2$",
+          "$\\dfrac{\\ln 2}{2}$",
+          "$2\\ln 2$",
+          "$\\ln 2$"
         ],
         "correct": 2,
-        "explanation": "$N(5) = 100 e^{0.5 \\times 5} = 100 e^{\\dfrac{5}{2}}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$e^{-T/2}=\\dfrac{1}{2}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ អនុវត្តន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ចំនួនបាក់តេរី $N(t) = 100 e^{0.1 t}$។ ចំនួនបាក់តេរីនៅ $t = 10$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អនុគមន៍ $f(x)=(x-5)e^x$ មានអប្បបរមាធៀបស្មើ ៖",
         "options": [
-          "$100 e^{10}$",
-          "$100 e^{1}$",
-          "$100 e^{2}$",
-          "$200$"
+          "$e^{4}$",
+          "$-e^{4}$",
+          "$-e^{5}$",
+          "$-e^{3}$"
         ],
         "correct": 1,
-        "explanation": "$N(10) = 100 e^{0.1 \\times 10} = 100 e^{1}$។",
-        "src": "genpq-g12b_plan"
+        "explanation": "$f'=(x-4)e^x$ ⇒ $f(4)=-e^{4}$"
       }
     ]
   },
