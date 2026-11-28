@@ -1,0 +1,58 @@
+{
+  "lesson": "les-g11a-6-1",
+  "grade": 11,
+  "course": "advanced",
+  "title": "មេរៀនបន្ថែម ៖ ប្រូបាបមានលក្ខខណ្ឌ (មាតិកាថ្នាក់ទី ១២)",
+  "book_pages": "g11a_ch6_les1.pdf (book pp.123-128 conditional probability, partial)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ និយមន័យប្រូបាបមានលក្ខខណ្ឌ P(A|B) = P(A ∩ B) / P(B) (P(B) > 0)"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ ផលគុណប្រូបាប៖ P(A ∩ B) = P(B) * P(A|B)"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ ព្រឹត្តិការណ៍ឯករាជ្យ (P(A ∩ B) = P(A) * P(B))"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ រូបមន្តប្រូបាបសរុប (Law of Total Probability)"
+    },
+    {
+      "n": 5,
+      "title": "ចំណុចទី ៥ ៖ ទ្រឹស្តីបទបាយែស (Bayes' Theorem) និងការអនុវត្តក្នុងការវិភាគទិន្នន័យជាក់ស្តែង"
+    }
+  ],
+  "notes": "Conditional probability. Fixed Q08 Q22 Q37 (lost complement bars). All other keys verified. Items without proper point labels re-pointed by content; random-variable items kept as extras.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 15,
+      "m": 12,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "3": {
+      "e": 11,
+      "m": 10,
+      "h": 10
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "5": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
