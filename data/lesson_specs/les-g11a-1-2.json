@@ -1,0 +1,40 @@
+{
+  "lesson": "les-g11a-1-2",
+  "grade": 11,
+  "course": "advanced",
+  "title": "មេរៀនទី ៥ ៖ ទំនាក់ទំនងតួនៃស្វ៊ីត (ទំព័រ ៣៦ - ៤៣)",
+  "book_pages": "g11a_ch1_les2.pdf pp.16-23 (book 36-43)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ កំណត់តួទី n ដោយប្រើស្វ៊ីតជំនួយ"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ ទំនាក់ទំនងរវាង a_n និង S_n"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ ទំនាក់ទំនងកំណើនក្នុងទម្រង់ a_{n+2} + pa_{n+1} + qa_n = 0"
+    }
+  ],
+  "notes": "Recurrence relations. All existing keys verified correct.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
