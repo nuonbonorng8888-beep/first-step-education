@@ -16852,7 +16852,7 @@
     "topic": "លីមីតនៃអនុគមន៍ត្រីកោណមាត្រ អិចស្ប៉ូណង់ស្យែល និងលោការីត",
     "objective": "ចេះប្រើប្រាស់រូបមន្ត $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$, $\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = 1$ និងបំបាត់រាងមិនកំណត់ $[1^\\infty]$",
     "totalPoints": 3,
-    "totalPointsCount": 18,
+    "totalPointsCount": 54,
     "points": [
       {
         "pointNumber": 1,
@@ -16860,7 +16860,7 @@
         "pointTitle": "ចំណុចទី ១ ៖ លីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
         "topic": "លីមីតត្រង់ចំនួនកំណត់ ត្រង់អនន្ត និងប្រមាណវិធីលើលីមីត",
         "objective": "យល់ និងអនុវត្តលីមីតនៃអនុគមន៍ត្រង់ចំនួនកំណត់ និងត្រង់អនន្ត",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - ពហុធា ៖ $\\lim_{x \\to a} P(x) = P(a)$\n  - ប្រមាណវិធី ៖ លីមីតនៃផលបូក ផលគុណ ផលចែក\n  - ត្រង់អនន្ត ៖ យកតួដឺក្រេខ្ពស់បំផុត",
         "exercises": [
           {
@@ -16874,6 +16874,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{4x^{2} + 3x + 1}{6x^{2} + 5x - 2}$ ៖",
+            "solution": "ចែកភាគយក និងភាគបែងនឹង $x^2$ ៖ លីមីត $= \\dfrac{4}{6} = \\dfrac{2}{3}$។\n\nចម្លើយ ៖ $\\dfrac{2}{3}$",
+            "src": "qb-gen",
+            "qid": "gen_les-g12a-2-1_003"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេដឹងថា $\\lim_{x \\to 3} f(x) = -5$ និង $\\lim_{x \\to 3} g(x) = 3$។ គណនា $\\lim_{x \\to 3} \\dfrac{f(x)}{g(x)}$ ៖",
+            "solution": "លីមីតនៃផលចែក ( $\\lim g \\ne 0$ ) ៖ $\\dfrac{-5}{3} = -\\dfrac{5}{3}$។\n\nចម្លើយ ៖ $-\\dfrac{5}{3}$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-2-1_1_8"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរគណនាលីមីតដោយប្រើប្រមាណវិធីលើលីមីត ៖",
@@ -16882,13 +16902,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to 4} \\dfrac{x^{2} - 4x}{x - 4}$ ៖",
+            "solution": "ទម្រង់មិនកំណត់ $\\dfrac{0}{0}$ ៖ $\\lim_{x \\to 4} \\dfrac{(x - 4)(x)}{x - 4} = \\lim_{x \\to 4} (x) = 4$។\n\nចម្លើយ ៖ $4$",
+            "src": "qb-gen",
+            "qid": "gen_les-g12a-2-1_007"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{x^2 - 4x + 3}{x^3 + 2x^2 + 4x - 3}$ ៖",
+            "solution": "ដឺក្រេភាគយកតូចជាងដឺក្រេភាគបែង ⇒ លីមីត $= 0$។\n\nចម្លើយ ៖ $0$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-2-1_1_12"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរគណនាលីមីតដោយប្រើប្រមាណវិធីលើលីមីត ៖",
             "question": "ក. គណនា $\\lim_{x \\to -2} (x^2 + 4x + 5)$។\nខ. គណនា $\\lim_{x \\to 1} \\dfrac{x^2 - 5x + 4}{x - 1}$។\nគ. គេដឹងថា $\\lim_{x \\to 1} f(x) = 0$ និង $\\lim_{x \\to 1} g(x) = 3$។ គណនា $\\lim_{x \\to 1} \\dfrac{3f(x) + g(x)}{g(x)}$។",
             "solution": "ក. ជំនួសផ្ទាល់ ៖ $= 1$\nខ. រាង $\\frac{0}{0}$ ៖ $\\dfrac{(x - 1)(x - 4)}{x - 1} = x - 4$ ⇒ $-3$\nគ. $\\dfrac{3(0) + 3}{3} = 1$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 2} \\dfrac{x^{3}-8}{x-2}$ ៖",
+            "solution": "$x^n-a^n=(x-a)(x^{n-1}+...+a^{n-1})$\n\nចម្លើយ ៖ $12$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p1_04"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 6} \\dfrac{x^2+3x-54}{x-6}$ ៖",
+            "solution": "ដាក់ x-c ជាកត្តារួម\n\nចម្លើយ ៖ $15$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p1_09"
           }
         ]
       },
@@ -16898,7 +16958,7 @@
         "pointTitle": "ចំណុចទី ២ ៖ លីមីតនៃអនុគមន៍អសនិទាន",
         "topic": "គុណនឹងកន្សោមឆ្លាស់",
         "objective": "យល់ និងអនុវត្តលីមីតនៃអនុគមន៍អសនិទាន",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - គុណនឹងកន្សោមឆ្លាស់ $\\sqrt{A} + B$\n  - ពេល $x \\to -\\infty$ ៖ $\\sqrt{x^2} = |x| = -x$",
         "exercises": [
           {
@@ -16912,6 +16972,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to +\\infty} 5\\sqrt{x}$ ៖",
+            "solution": "$\\sqrt{x}\\to +\\infty$\n\nចម្លើយ ៖ $+\\infty$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p2_02"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to +\\infty} 3\\sqrt{x}$ ៖",
+            "solution": "$\\sqrt{x}\\to +\\infty$\n\nចម្លើយ ៖ $+\\infty$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p2_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍អសនិទាន ៖",
@@ -16920,13 +17000,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 2x + 4} - x\\right)$ ៖",
+            "solution": "គុណនឹងកន្សោមឆ្លាស់ ⇒ $\\dfrac{2x + 4}{\\sqrt{x^2 + 2x + 4} + x} \\to 1$។\n\nចម្លើយ ៖ $1$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-2-1_2_19"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{9x^2 + 8}}{x - 3}$ ៖",
+            "solution": "$\\sqrt{x^2} = |x|$ ហើយ $|x| = -x$ ⇒ លីមីត $= -3$។\n\nចម្លើយ ៖ $-3$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-2-1_2_24"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍អសនិទាន ៖",
             "question": "ក. គណនា $\\lim_{x \\to 0} \\dfrac{\\sqrt{x + 4} - 2}{x}$។\nខ. គណនា $\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 4x} - x\\right)$។\nគ. គណនា $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{x^2 + 1}}{x + 2}$។",
             "solution": "ក. $\\dfrac{1}{\\sqrt{x + 4} + 2} \\to \\dfrac{1}{4}$\nខ. $\\dfrac{4x}{\\sqrt{x^2 + 4x} + x} \\to 2$\nគ. $\\sqrt{x^2 + 1} = -x\\sqrt{1 + \\dfrac{1}{x^2}}$ ⇒ $-1$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 9} \\dfrac{\\sqrt{x}-3}{x-9}$ ៖",
+            "solution": "គុណនឹងកន្សោមឆ្លាស់\n\nចម្លើយ ៖ $\\dfrac{1}{6}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p2_12"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to +\\infty} \\sqrt{x^2+6x}-\\sqrt{x^2+2x}$ ៖",
+            "solution": "គុណ និងចែកនឹងកន្សោមឆ្លាស់\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p2_17"
           }
         ]
       },
@@ -16936,7 +17056,7 @@
         "pointTitle": "ចំណុចទី ៣ ៖ លីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
         "topic": "លីមីតនៃ $f(u(x))$ និងទ្រឹស្តីបទប្រៀបធៀប",
         "objective": "យល់ និងអនុវត្តលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - បើ $\\lim_{x \\to a} u(x) = b$ ហើយ $f$ ជាប់ត្រង់ $b$ នោះ $\\lim f(u(x)) = f(b)$\n  - ប្រៀបធៀប ៖ $g \\le f \\le h$ ហើយ $\\lim g = \\lim h = L$ ⇒ $\\lim f = L$\n  - $f \\ge g$ ហើយ $\\lim g = +\\infty$ ⇒ $\\lim f = +\\infty$",
         "exercises": [
           {
@@ -16950,6 +17070,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 2} (1x+5)^2$ ៖",
+            "solution": "លីមីតនៃអនុគមន៍បណ្តាក់\n\nចម្លើយ ៖ $49$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p3_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to +\\infty} \\dfrac{5\\cos x}{x}$ ៖",
+            "solution": "|cos x| ≤ 1 ហើយ 1/x → 0\n\nចម្លើយ ៖ $0$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p3_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប ៖",
@@ -16958,13 +17098,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{16x^2 + 5}{x^2 + x}}$ ៖",
+            "solution": "លីមីតនៃអនុគមន៍បណ្តាក់ ៖ $\\dfrac{16x^{2} + \\dots}{x^{2} + \\dots} \\to 16$ ហើយ $\\sqrt{u}$ ជាប់ ⇒ $4$។\n\nចម្លើយ ៖ $4$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-2-1_3_32"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to +\\infty} \\dfrac{4}{\\sqrt{x^2 + 1} + x}$ ៖",
+            "solution": "ភាគបែង $\\to +\\infty$ ⇒ លីមីត $= 0$។\n\nចម្លើយ ៖ $0$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-2-1_3_37"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរគណនាលីមីតនៃអនុគមន៍បណ្តាក់ និងលីមីតតាមការប្រៀបធៀប ៖",
             "question": "ក. គណនា $\\lim_{x \\to +\\infty} \\sqrt{\\dfrac{16x^2 + 1}{9x^2 + 3}}$។\nខ. បង្ហាញថា $-\\dfrac{1}{x} \\le \\dfrac{\\cos x}{x} \\le \\dfrac{1}{x}$ ចំពោះ $x > 0$ រួចគណនា $\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x}$។\nគ. គណនា $\\lim_{x \\to +\\infty} (5x - \\sin x)$។",
             "solution": "ក. $\\dfrac{16x^2 + 1}{9x^2 + 3} \\to \\dfrac{16}{9}$ ⇒ $\\dfrac{4}{3}$\nខ. $-1 \\le \\cos x \\le 1$ ចែកនឹង $x > 0$ ; អង្គសងខាង $\\to 0$ ⇒ $0$\nគ. $5x - \\sin x \\ge 5x - 1 \\to +\\infty$ ⇒ $+\\infty$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to +\\infty} 3x-\\cos x$ ៖",
+            "solution": "$3x-\\cos x\\ge 3x-1$\n\nចម្លើយ ៖ $+\\infty$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p3_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to +\\infty} x^{2}+3\\sin x$ ៖",
+            "solution": "$x^2+3\\sin x\\ge x^2-3$\n\nចម្លើយ ៖ $+\\infty$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p3_18"
           }
         ]
       },
@@ -16986,6 +17166,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to 0} \\dfrac{e^x - 1}{x}$ តាមឡូពីតាល់ ៖",
+            "solution": "រាង $[\\dfrac{0}{0}]$ ៖ $\\lim_{x \\to 0} \\dfrac{(e^x-1)'}{(x)'} = \\lim_{x \\to 0} \\dfrac{e^x}{1} = 1$។\n\nចម្លើយ ៖ $\\lim_{x \\to 0} \\dfrac{e^x}{1} = 1$",
+            "src": "qb-gen",
+            "qid": "q_g11_1024"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 3} \\dfrac{x^2-9}{x-3}$ ៖",
+            "solution": "ដាក់កត្តា (x−a)(x+a)\n\nចម្លើយ ៖ $6$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p4_03"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "គណនាលីមីតរាងមិនកំណត់ដោយគុណកន្សោមឆ្លាស់ ៖",
             "question": "គណនាលីមីត $K = \\lim_{x \\to 1} \\dfrac{\\sqrt{x + 3} - 2}{x^2 - 1}$។",
@@ -16994,7 +17194,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-2-1-p2-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\tan x - x}{x^3}$ ៖",
+            "solution": "ឡូពីតាល់ ៖ $\\lim \\dfrac{\\sec^2 x - 1}{3x^2} = \\lim \\dfrac{\\tan^2 x}{3x^2} = \\dfrac{1}{3}\\left(\\lim \\dfrac{\\tan x}{x}\\right)^2 = \\dfrac{1}{3}$។\n\nចម្លើយ ៖ $\\dfrac{1}{3}$",
+            "src": "qb-gen",
+            "qid": "q_g11_1027"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 2} \\dfrac{x^2-5x+6}{x-2}$ ៖",
+            "solution": "ដាក់កត្តា (x−a)(x−b)\n\nចម្លើយ ៖ $-1$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p4_08"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "គណនាលីមីតរាងមិនកំណត់ផ្សេងៗ ៖",
@@ -17002,9 +17222,29 @@
             "rubric": "ក. $C = 12$ (០.៤ ពិន្ទុ) | ខ. $D = 3$ (០.៣ ពិន្ទុ) | គ. $E = -2$ (០.៣ ពិន្ទុ)",
             "question": "ក. គណនា $C = \\lim_{x \\to 2} \\dfrac{x^3 - 8}{x^2 - 3x + 2}$។\n\nខ. គណនា $D = \\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 + 6x} - x\\right)$។\n\nគ. គណនា $E = \\lim_{x \\to -\\infty} \\dfrac{2x + 1}{\\sqrt{x^2 + 3}}$។",
             "solution": "ក. $C = \\lim_{x \\to 2} \\dfrac{(x - 2)(x^2 + 2x + 4)}{(x - 2)(x - 1)} = \\dfrac{4 + 4 + 4}{1} = 12$។\n\nខ. រាង $\\infty - \\infty$ ៖ $D = \\lim_{x \\to +\\infty} \\dfrac{6x}{\\sqrt{x^2 + 6x} + x} = \\lim_{x \\to +\\infty} \\dfrac{6}{\\sqrt{1 + \\frac{6}{x}} + 1} = 3$។\n\nគ. ពេល $x < 0$ ៖ $\\sqrt{x^2 + 3} = -x\\sqrt{1 + \\frac{3}{x^2}}$ ៖ $E = \\lim_{x \\to -\\infty} \\dfrac{x\\left(2 + \\frac{1}{x}\\right)}{-x\\sqrt{1 + \\frac{3}{x^2}}} = -2$។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាលីមីត $\\lim_{x \\to 0} x^2 \\sin\\left(\\dfrac{1}{x}\\right)$ ៖",
+            "solution": "ទ្រឹស្តីបទညៀប (Squeeze theorem)៖ $-1 \\le \\sin\\left(\\dfrac{1}{x}\\right) \\le 1 \\implies -x^2 \\le x^2\\sin\\left(\\dfrac{1}{x}\\right) \\le x^2$។ ដោយ $\\lim x^2 = 0$ នាំឱ្យលីមីតស្មើ $0$។\n\nចម្លើយ ៖ $0$",
+            "src": "qb-gen",
+            "qid": "q_g12_0477"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 3} \\dfrac{\\dfrac{1}{x}-\\dfrac{1}{3}}{x-3}$ ៖",
+            "solution": "$\\dfrac{1}{x}-\\dfrac{1}{3}=\\dfrac{3-x}{3x}$\n\nចម្លើយ ៖ $-\\dfrac{1}{9}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p4_05"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>លីមីតអិចស្ប៉ូណង់ស្យែល និងលោការីត ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{\\ln(1 + x)}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{a^x - 1}{x} = \\ln a$</li>\n</ul>"
       },
       {
@@ -17025,6 +17265,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\sin 5x}{x}$ ៖",
+            "solution": "$\\lim_{x \\to 0} 5 \\cdot \\dfrac{\\sin 5x}{5x} = 5 \\times 1 = 5$។\n\nចម្លើយ ៖ $5$",
+            "src": "qb-gen",
+            "qid": "q_g11_0423"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 0} \\dfrac{\\tan 3x}{x}$ ៖",
+            "solution": "tan u / u → 1\n\nចម្លើយ ៖ $3$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p5_02"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "គណនាលីមីតត្រីកោណមាត្រកម្រិតមធ្យម ៖",
             "question": "គណនាលីមីត ៖\n$M = \\lim_{x \\to 0} \\dfrac{\\tan x - \\sin x}{x^3}$។",
@@ -17033,7 +17293,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-2-1-p1-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\tan 2x}{\\sin 6x}$ ៖",
+            "solution": "$\\lim_{x \\to 0} \\dfrac{\\frac{\\tan 2x}{2x} \\cdot 2}{\\frac{\\sin 6x}{6x} \\cdot 6} = \\dfrac{2}{6} = \\dfrac{1}{3}$។\n\nចម្លើយ ៖ $\\dfrac{1}{3}$",
+            "src": "qb-gen",
+            "qid": "q_g11_0427"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 0} \\dfrac{\\sin 3x}{\\sin 7x}$ ៖",
+            "solution": "ចែកភាគយក/ភាគបែងនឹង x\n\nចម្លើយ ៖ $\\dfrac{3}{7}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p5_08"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "គណនាលីមីតត្រីកោណមាត្រកម្រិតខ្ពស់ ៖",
@@ -17041,9 +17321,29 @@
             "rubric": "ក. ០.៥០ ពិន្ទុ | ខ. ០.៥០ ពិន្ទុ",
             "question": "ក. គណនា $A = \\lim_{x \\to 0} \\dfrac{1 - \\cos x \\cos 2x \\cos 3x}{x^2}$។\nខ. គណនា $B = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 4x}$។",
             "solution": "<strong>ក. គណនា $A$ ៖</strong>\n- ថែមថយតួត្រីកោណមាត្រនៅភាគយក ៖\n  $1 - \\cos x \\cos 2x \\cos 3x = (1 - \\cos x) + \\cos x(1 - \\cos 2x) + \\cos x \\cos 2x(1 - \\cos 3x)$\n- ចែកនឹង $x^2$ រួចគណនាលីមីតតួនីមួយៗ ៖\n  + $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2}$\n  + $\\lim_{x \\to 0} \\cos x \\cdot \\dfrac{1 - \\cos 2x}{x^2} = 1 \\cdot \\dfrac{2^2}{2} = 2$\n  + $\\lim_{x \\to 0} \\cos x \\cos 2x \\cdot \\dfrac{1 - \\cos 3x}{x^2} = 1 \\cdot 1 \\cdot \\dfrac{3^2}{2} = \\dfrac{9}{2}$\n- នាំឱ្យ $A = \\dfrac{1}{2} + 2 + \\dfrac{9}{2} = \\dfrac{10}{2} + 2 = 5 + 2 = 7$។ *(០.៥០ ពិន្ទុ)*\n\n<strong>ខ. គណនា $B$ ៖</strong>\n- បំបែកភាគបែង $\\cos 4x = 2\\cos^2 2x - 1 = \\cos^2 2x - \\sin^2 2x = (\\cos^2 x - \\sin^2 x)^2 - 4\\sin^2 x\\cos^2 x$\n  ឬ $\\cos 4x = 1 - 2\\sin^2 2x = 1 - 8\\sin^2 x\\cos^2 x$\n- ម្យ៉ាងទៀត $\\cos 4x = \\sin\\left(\\dfrac{\\pi}{2} - 4x\\right)$។ តាង $t = x - \\dfrac{\\pi}{4} \\iff x = t + \\dfrac{\\pi}{4}$\n  កាលណា $x \\to \\dfrac{\\pi}{4} \\Rightarrow t \\to 0$\n  $\\cos x - \\sin x = \\sqrt{2}\\cos\\left(x + \\dfrac{\\pi}{4}\\right) = \\sqrt{2}\\cos\\left(t + \\dfrac{\\pi}{2}\\right) = -\\sqrt{2}\\sin t$\n  $\\cos 4x = \\cos(4t + \\pi) = -\\cos 4t$\n  $\\Rightarrow \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 4x} = \\lim_{t \\to 0} \\dfrac{-\\sqrt{2}\\sin t}{-\\cos 4t}$ (កំហុសពិនិត្យ ៖ $\\cos 4x = 0$ ត្រង់ $x = \\pi/4$)\n  $\\cos 4x = -\\sin 4t$ មិនមែន $-\\cos 4t$ ទេ ព្រោះ $4\\left(t + \\dfrac{\\pi}{4}\\right) = 4t + \\pi \\Rightarrow \\cos(4t + \\pi) = -\\cos 4t = -1 \\neq 0$\n  ត្រួតពិនិត្យ ៖ $\\cos\\left(4 \\times \\dfrac{\\pi}{4}\\right) = \\cos\\pi = -1 \\neq 0$! ភាគបែងមិនមែនសូន្យទេ! ចម្លើយគឺ $\\dfrac{0}{-1} = 0$!\n  ប្រសិនបើជា $\\cos 2x$ ៖ $\\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos 2x} = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{\\cos x - \\sin x}{\\cos^2 x - \\sin^2 x} = \\lim_{x \\to \\frac{\\pi}{4}} \\dfrac{1}{\\cos x + \\sin x} = \\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}$។ *(០.៥០ ពិន្ទុ)*"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x \\to 0} \\dfrac{\\cos 3x - \\cos x}{x^2}$ ៖",
+            "solution": "$\\cos 3x - \\cos x = -2\\sin 2x \\sin x$។ $\\lim_{x \\to 0} \\dfrac{-2\\sin 2x \\sin x}{x^2} = -2(2)(1) = -4$។\n\nចម្លើយ ៖ $-4$",
+            "src": "qb-gen",
+            "qid": "q_g11_0430"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 0} \\dfrac{\\tan 5x}{\\sin 2x}$ ៖",
+            "solution": "tan u ~ u និង sin u ~ u\n\nចម្លើយ ៖ $\\dfrac{5}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p5_05"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>លីមីតត្រីកោណមាត្រសំខាន់ៗ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{\\tan x}{x} = 1, \\quad \\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2} = \\dfrac{1}{2}$</li>\n</ul>"
       },
       {
@@ -17064,6 +17364,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 0} \\dfrac{e^{4x}-1}{x}$ ៖",
+            "solution": "$\\lim\\dfrac{e^u-1}{u}=1$\n\nចម្លើយ ៖ $4$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p6_01"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to +\\infty} (1+\\dfrac{4}{x})^x$ ៖",
+            "solution": "$(1+\\dfrac{a}{x})^x\\to e^a$\n\nចម្លើយ ៖ $e^{4}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p6_06"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "គណនាលីមីតប្រភាគរាង $1^\\infty$ ៖",
             "question": "គណនាលីមីត $L = \\lim_{x \\to +\\infty} \\left(\\dfrac{x + 2}{x - 1}\\right)^x$។",
@@ -17072,7 +17392,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-2-1-p3-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាលីមីត $\\lim_{x \\to 0} \\dfrac{\\ln(1 + 4x)}{2x}$ ៖",
+            "solution": "$\\lim_{x \\to 0} \\dfrac{\\ln(1 + 4x)}{4x} \\cdot \\dfrac{4}{2} = 1 \\cdot 2 = 2$។\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_g12_0484"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាលីមីត $\\lim_{x \\to 0} \\dfrac{a^x - 1}{x}$ ($a > 0, a \\neq 1$) ៖",
+            "solution": "$a^x = e^{x \\ln a} \\implies \\lim_{x \\to 0} \\dfrac{e^{x \\ln a} - 1}{x \\ln a} \\cdot \\ln a = \\ln a$។\n\nចម្លើយ ៖ $\\ln a$",
+            "src": "qb-gen",
+            "qid": "q_g12_0486"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "គណនាលីមីតរាងមិនកំណត់ $1^\\infty$ កម្រិតស៊ីជម្រៅ ៖",
@@ -17080,9 +17420,29 @@
             "rubric": "ក. ០.៥០ ពិន្ទុ | ខ. ០.៥០ ពិន្ទុ",
             "question": "ក. គណនា $E = \\lim_{x \\to 0} (1 + \\sin 3x)^{\\frac{2}{x}}$។\nខ. គណនា $F = \\lim_{x \\to +\\infty} \\left(\\dfrac{x^2 + 2x - 1}{x^2 - x + 2}\\right)^{3x + 1}$។",
             "solution": "<strong>ក. គណនា $E$ ៖</strong>\n- រាងមិនកំណត់ $1^\\infty$ ត្រង់ $x = 0$\n- សរសេរជាទម្រង់អិចស្ប៉ូណង់ស្យែល ៖ $E = \\lim_{x \\to 0} \\left[(1 + \\sin 3x)^{\\frac{1}{\\sin 3x}}\\right]^{\\frac{2\\sin 3x}{x}}$\n- យើងដឹងថា $\\lim_{u \\to 0} (1 + u)^{\\frac{1}{u}} = e$ ចំពោះ $u = \\sin 3x \\to 0$\n- គណនាលីមីតស្វ័យគុណ ៖ $\\lim_{x \\to 0} \\dfrac{2\\sin 3x}{x} = 2 \\times 3 = 6$\n- ដូចនេះ $E = e^6$។ *(០.៥០ ពិន្ទុ)*\n\n<strong>ខ. គណនា $F$ ៖</strong>\n- កាលណា $x \\to +\\infty$, $\\dfrac{x^2+2x-1}{x^2-x+2} \\to 1$ និង $3x + 1 \\to +\\infty$ (រាង $1^\\infty$)\n- ប្រើរូបមន្ត $\\lim f(x)^{g(x)} = e^{\\lim g(x)(f(x) - 1)}$ ៖\n  $f(x) - 1 = \\dfrac{x^2 + 2x - 1 - (x^2 - x + 2)}{x^2 - x + 2} = \\dfrac{3x - 3}{x^2 - x + 2}$\n- គណនាលីមីតស្វ័យគុណ ៖\n  $\\lim_{x \\to +\\infty} (3x + 1) \\cdot \\dfrac{3x - 3}{x^2 - x + 2} = \\lim_{x \\to +\\infty} \\dfrac{9x^2 - 6x - 3}{x^2 - x + 2} = 9$\n- ដូចនេះ $F = e^9$។ *(០.៥០ ពិន្ទុ)*"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាលីមីត $\\lim_{x \\to 0} (\\cos x)^{\\dfrac{1}{x}^2}$ ៖",
+            "solution": "$\\ln y = \\dfrac{\\ln \\cos x}{x^2} = \\dfrac{\\ln(1 - (1-\\cos x))}{-(1-\\cos x)} \\cdot \\dfrac{-(1-\\cos x)}{x^2} \\to -\\dfrac{1}{2} \\implies y \\to e^{-\\dfrac{1}{2}}$។\n\nចម្លើយ ៖ $e^{-\\dfrac{1}{2}}$",
+            "src": "qb-gen",
+            "qid": "q_g12_0489"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\lim_{x\\to 0} \\dfrac{e^{x}-e^{-x}}{2x}$ ៖",
+            "solution": "e^x−e^{−x}=(e^x−1)−(e^{−x}−1)\n\nចម្លើយ ៖ $1$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_2_1_p6_12"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>រាងមិនកំណត់ $[1^\\infty]$ & ចំនួន $e$ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$\\lim_{x \\to \\pm\\infty} \\left(1 + \\dfrac{1}{x}\\right)^x = e, \\quad \\lim_{u \\to 0} (1 + u)^{\\frac{1}{u}} = e$</li>\n  <li class=\"ws-sum-item\">រូបមន្តទូទៅ ៖ $\\lim_{x \\to a} [u(x)]^{v(x)} = e^{\\lim_{x \\to a} v(x)[u(x) - 1]}$។</li>\n</ul>"
       }
     ],
