@@ -27616,113 +27616,123 @@
   "les-g12a-3-1": {
     "1": [
       {
-        "id": "g12a_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "អនុគមន៍ $f$ មានដេរីវេត្រង់ $x_0$ លុះត្រាតែ ៖",
         "options": [
-          "ដេរីវេឆ្វេងស្មើដេរីវេស្តាំ $f'_-(x_0) = f'_+(x_0)$ (ជាចំនួនពិតកំណត់)",
-          "$f(x_0) = 0$",
           "$f'(x_0) > 0$",
-          "$f$ ជាប់ត្រង់ $x_0$"
+          "ដេរីវេឆ្វេងស្មើដេរីវេស្តាំ $f'_-(x_0) = f'_+(x_0)$ (ជាចំនួនពិតកំណត់)",
+          "$f$ ជាប់ត្រង់ $x_0$",
+          "$f(x_0) = 0$"
         ],
-        "correct": 0,
-        "explanation": "មានដេរីវេត្រង់ $x_0 \\iff$ លីមីតផលធៀបកំណើនកាលណា $x \\to x_0^-$ និង $x \\to x_0^+$ មានតម្លៃស្មើគ្នាជាចំនួនកំណត់។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "មានដេរីវេត្រង់ $x_0 \\iff$ លីមីតផលធៀបកំណើនកាលណា $x \\to x_0^-$ និង $x \\to x_0^+$ មានតម្លៃស្មើគ្នាជាចំនួនកំណត់។"
       },
       {
-        "id": "g12a_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ទំនាក់ទំនងរវាងភាពមានដេរីវេ និងភាពជាប់ ៖",
         "options": [
-          "មានដេរីវេ $\\iff$ ជាប់",
-          "ជាប់ $\\implies$ មានដេរីវេជានិច្ច",
           "គ្មានទំនាក់ទំនងគ្នាទេ",
-          "មានដេរីវេ $\\implies$ ជាប់ (តែច្រាសមកវិញមិនប្រាកដ)"
+          "មានដេរីវេ $\\iff$ ជាប់",
+          "មានដេរីវេ $\\implies$ ជាប់ (តែច្រាសមកវិញមិនប្រាកដ)",
+          "ជាប់ $\\implies$ មានដេរីវេជានិច្ច"
         ],
-        "correct": 3,
-        "explanation": "ទ្រឹស្តីបទ៖ បើមានដេរីវេត្រង់ $x_0$ នាំឱ្យជាប់ត្រង់នោះ។ ផ្ទុយទៅវិញ ជាប់មិនប្រាកដថាមានដេរីវេទេ (ឧទាហរណ៍ $|x|$ ត្រង់ $0$)។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ទ្រឹស្តីបទ៖ បើមានដេរីវេត្រង់ $x_0$ នាំឱ្យជាប់ត្រង់នោះ។ ផ្ទុយទៅវិញ ជាប់មិនប្រាកដថាមានដេរីវេទេ (ឧទាហរណ៍ $|x|$ ត្រង់ $0$)។"
       },
       {
-        "id": "g12a_p1_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x) = 3x^{3} - 4x^{2} - 3x - 9$។ គណនា $f'(0)$ ៖",
+        "options": [
+          "$-3$",
+          "$-8$",
+          "$-9$",
+          "$0$"
+        ],
+        "correct": 0,
+        "explanation": "$f'(x) = 9x^{2} - 8x - 3$ ⇒ $f'(0) = -3$។"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 1,
+        "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x) = 2x^{3} + x^{2} - 4x - 8$។ គណនា $f'(1)$ ៖",
+        "options": [
+          "$6$",
+          "$4$",
+          "$0$",
+          "$-9$"
+        ],
+        "correct": 1,
+        "explanation": "$f'(x) = 6x^{2} + 2x - 4$ ⇒ $f'(1) = 4$។"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ក្រាបនៃ $f(x) = |x|$ ត្រង់ $x = 0$ មានចំណុចកាច់ (Corner point) ពីព្រោះ ៖",
         "options": [
-          "$f(0)$ គ្មានន័យ",
-          "$f'(0) = 0$",
           "$f'_-(0) = -1 \\neq 1 = f'_+(0)$",
-          "$f$ មិនជាប់ត្រង់ $0$"
+          "$f$ មិនជាប់ត្រង់ $0$",
+          "$f'(0) = 0$",
+          "$f(0)$ គ្មានន័យ"
         ],
-        "correct": 2,
-        "explanation": "ដេរីវេឆ្វេងស្មើ $-1$ ខុសពីដេរីវេស្តាំស្មើ $1$ នាំឱ្យគ្មានដេរីវេត្រង់ $0$ ហើយក្រាបមានចំណុចកាច់។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "ដេរីវេឆ្វេងស្មើ $-1$ ខុសពីដេរីវេស្តាំស្មើ $1$ នាំឱ្យគ្មានដេរីវេត្រង់ $0$ ហើយក្រាបមានចំណុចកាច់។"
       },
       {
-        "id": "g12a_p1_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "អនុគមន៍ $f(x) = \\sqrt[3]{x}$ ជាប់ត្រង់ $x = 0$ ប៉ុន្តែ ៖",
         "options": [
-          "មិនជាប់ត្រង់ $0$",
-          "គ្មានដេរីវេត្រង់ $x = 0$ ព្រោះបន្ទាត់ប៉ះឈរ ($f'(0) = \\infty$)",
+          "មានដេរីវេស្មើ ០",
           "មានដេរីវេស្មើ ១",
-          "មានដេរីវេស្មើ ០"
+          "មិនជាប់ត្រង់ $0$",
+          "គ្មានដេរីវេត្រង់ $x = 0$ ព្រោះបន្ទាត់ប៉ះឈរ ($f'(0) = \\infty$)"
         ],
-        "correct": 1,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{\\sqrt[3]{x} - 0}{x} = \\lim_{x \\to 0} \\dfrac{1}{x^{\\frac{2}{3}}} = +\\infty$ នាំឱ្យបន្ទាត់ប៉ះជាបន្ទាត់ឈរ ដូច្នេះគ្មានដេរីវេជាចំនួនពិតទេ។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$\\lim_{x \\to 0} \\dfrac{\\sqrt[3]{x} - 0}{x} = \\lim_{x \\to 0} \\dfrac{1}{x^{\\frac{2}{3}}} = +\\infty$ នាំឱ្យបន្ទាត់ប៉ះជាបន្ទាត់ឈរ ដូច្នេះគ្មានដេរីវេជាចំនួនពិតទេ។"
       },
       {
-        "id": "g12a_p1_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $m$ ដើម្បីឱ្យ $f(x) = \\begin{cases} x^2 & \\text{បើ } x \\le 1 \\\\ mx - 1 & \\text{បើ } x > 1 \\end{cases}$ មានដេរីវេត្រង់ $x = 1$ ៖",
         "options": [
           "$m = 2$",
-          "$m = 0$",
           "$m = -2$",
+          "$m = 0$",
           "$m = 1$"
         ],
         "correct": 0,
-        "explanation": "ដើម្បីមានដេរីវេ មុនដំបូងត្រូវជាប់៖ $1^2 = m(1) - 1 \\iff m = 2$។ ពេល $m=2$: $f'_-(1) = 2(1) = 2$ និង $f'_+(1) = 2$ ស្មើគ្នាពិតប្រាកដ។",
-        "diagram": ""
+        "explanation": "ដើម្បីមានដេរីវេ មុនដំបូងត្រូវជាប់៖ $1^2 = m(1) - 1 \\iff m = 2$។ ពេល $m=2$: $f'_-(1) = 2(1) = 2$ និង $f'_+(1) = 2$ ស្មើគ្នាពិតប្រាកដ។"
       },
       {
-        "id": "g12a_p1_06",
-        "questionNumber": 6,
+        "id": "q8",
+        "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សមីការបន្ទាត់ប៉ះឈរទៅនឹងក្រាប $y = f(x)$ ត្រង់ $(x_0, y_0)$ កើតឡើងកាលណា ៖",
-        "options": [
-          "$f(x_0) = 0$",
-          "$f'(x_0) = 0$",
-          "$\\lim_{x \\to x_0} \\dfrac{f(x) - f(x_0)}{x - x_0} = \\pm\\infty$",
-          "$f'(x_0) = 1$"
-        ],
-        "correct": 2,
-        "explanation": "កាលណាលីមីតដេរីវេស្មើ $\\pm\\infty$ បន្ទាត់ប៉ះជាបន្ទាត់ឈរដែលមានសមីការ $x = x_0$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "តើអនុគមន៍ $f(x) = x |x|$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
         "options": [
           "មាន ហើយ $f'(0) = 1$",
@@ -27731,402 +27741,363 @@
           "មាន ហើយ $f'(0) = -1$"
         ],
         "correct": 1,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{x|x| - 0}{x} = \\lim_{x \\to 0} |x| = 0$ ដូច្នេះមានដេរីវេត្រង់ $0$ ហើយ $f'(0) = 0$។",
-        "diagram": ""
+        "explanation": "$\\lim_{x \\to 0} \\dfrac{x|x| - 0}{x} = \\lim_{x \\to 0} |x| = 0$ ដូច្នេះមានដេរីវេត្រង់ $0$ ហើយ $f'(0) = 0$។"
       },
       {
-        "id": "g12a_p2_08",
-        "questionNumber": 8,
-        "pointNumber": 1,
-        "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "តើអនុគមន៍ $f(x) = \\begin{cases} x^2 \\sin\\left(\\dfrac{1}{x}\\right) & \\text{បើ } x \\neq 0 \\\\ 0 & \\text{បើ } x = 0 \\end{cases}$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
-        "options": [
-          "មាន ហើយ $f'(0) = 1$",
-          "មិនជាប់ត្រង់ 0",
-          "គ្មានដេរីវេទេ",
-          "មាន ហើយ $f'(0) = 0$"
-        ],
-        "correct": 3,
-        "explanation": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin\\left(\\dfrac{1}{x}\\right) - 0}{x} = \\lim_{x \\to 0} x \\sin\\left(\\dfrac{1}{x}\\right) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ចំពោះអនុគមន៍ខាងលើ ដេរីវេ $f'(x)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តើអនុគមន៍ $f(x) = \\begin{cases} x^2 \\sin\\left(\\dfrac{1}{x}\\right) & \\text{បើ } x \\neq 0 \\\\ 0 & \\text{បើ } x = 0 \\end{cases}$ មានដេរីវេត្រង់ $x = 0$ ដែរឬទេ?",
         "options": [
-          "មិនជាប់ត្រង់ $x = 0$",
-          "ស្មើ 0 គ្រប់ $x$",
-          "ជាប់ត្រង់ $x = 0$",
-          "គ្មានដេរីវេត្រង់ $x \\neq 0$"
+          "មាន ហើយ $f'(0) = 1$",
+          "គ្មានដេរីវេទេ",
+          "មាន ហើយ $f'(0) = 0$",
+          "មិនជាប់ត្រង់ 0"
         ],
-        "correct": 0,
-        "explanation": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin\\left(\\dfrac{1}{x}\\right) - \\cos\\left(\\dfrac{1}{x}\\right)$។ កាលណា $x \\to 0$ តួ $\\cos\\left(\\dfrac{1}{x}\\right)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$\\lim_{x \\to 0} \\dfrac{x^2 \\sin\\left(\\dfrac{1}{x}\\right) - 0}{x} = \\lim_{x \\to 0} x \\sin\\left(\\dfrac{1}{x}\\right) = 0$ (តាមទ្រឹស្តីបទညៀប) នាំឱ្យ $f'(0) = 0$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ដេរីវេនៃអនុគមន៍ត្រង់ x₀",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើក្រាបមានចំណុច cusp (ចំណុចចំពុះ) ត្រង់ $x_0$ នោះ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចំពោះអនុគមន៍ខាងលើ ដេរីវេ $f'(x)$ ៖",
         "options": [
-          "ដេរីវេស្មើ ០",
-          "បន្ទាត់ប៉ះដេក",
-          "ដេរីវេឆ្វេង និងស្តាំមានសញ្ញាអនន្តផ្ទុយគ្នា ($+\\infty$ និង $-\\infty$)",
-          "អនុគមន៍មិនជាប់"
+          "ជាប់ត្រង់ $x = 0$",
+          "គ្មានដេរីវេត្រង់ $x \\neq 0$",
+          "មិនជាប់ត្រង់ $x = 0$",
+          "ស្មើ 0 គ្រប់ $x$"
         ],
         "correct": 2,
-        "explanation": "ចំណុច Cusp (ចំពុះ) កើតឡើងពេលលីមីតដេរីវេឆ្វេងនិងស្តាំជាអនន្តផ្ទុយគ្នាមួយ $+\\infty$ មួយ $-\\infty$។",
-        "diagram": ""
+        "explanation": "ចំពោះ $x \\neq 0$: $f'(x) = 2x \\sin\\left(\\dfrac{1}{x}\\right) - \\cos\\left(\\dfrac{1}{x}\\right)$។ កាលណា $x \\to 0$ តួ $\\cos\\left(\\dfrac{1}{x}\\right)$ គ្មានលីមីត ដូច្នេះ $f'(x)$ មិនជាប់ត្រង់ $0$។"
       }
     ],
     "2": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "វិធានខ្សែច្រវាក់ (Chain rule)៖ ដេរីវេនៃ $(f \\circ g)'(x) = [f(g(x))]'$ ស្មើនឹង ៖",
         "options": [
           "$f'(g(x)) \\cdot g'(x)$",
+          "$f'(x) \\cdot g'(x)$",
           "$f(g'(x)) \\cdot g(x)$",
-          "$f'(g'(x))$",
-          "$f'(x) \\cdot g'(x)$"
+          "$f'(g'(x))$"
         ],
         "correct": 0,
-        "explanation": "វិធានខ្សែច្រវាក់៖ $(f(g(x)))' = f'(g(x)) \\cdot g'(x)$។",
-        "diagram": ""
+        "explanation": "វិធានខ្សែច្រវាក់៖ $(f(g(x)))' = f'(g(x)) \\cdot g'(x)$។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តដេរីវេនៃអនុគមន៍ច្រាស $(f^{-1})'(y_0)$ ដែល $y_0 = f(x_0)$ គឺ ៖",
         "options": [
-          "$(f^{-1})'(y_0) = f'(y_0)$",
+          "$(f^{-1})'(y_0) = -f'(x_0)$",
           "$(f^{-1})'(y_0) = \\dfrac{1}{x_0}$",
           "$(f^{-1})'(y_0) = \\dfrac{1}{f'(x_0)}$ (បើ $f'(x_0) \\neq 0$)",
-          "$(f^{-1})'(y_0) = -f'(x_0)$"
+          "$(f^{-1})'(y_0) = f'(y_0)$"
         ],
         "correct": 2,
-        "explanation": "រូបមន្តដេរីវេអនុគមន៍ច្រាស៖ $(f^{-1})'(y_0) = \\dfrac{1}{f'(f^{-1}(y_0))} = \\dfrac{1}{f'(x_0)}$។",
-        "diagram": ""
+        "explanation": "រូបមន្តដេរីវេអនុគមន៍ច្រាស៖ $(f^{-1})'(y_0) = \\dfrac{1}{f'(f^{-1}(y_0))} = \\dfrac{1}{f'(x_0)}$។"
       },
       {
-        "id": "g12a_p2_03",
+        "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x)=(4x-3)^{3}$។ គណនា $f'(1)$ ៖",
+        "options": [
+          "$13$",
+          "$-12$",
+          "$24$",
+          "$12$"
+        ],
+        "correct": 3,
+        "explanation": "$f'(x)=12(4x-3)^{2}$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x)=(x+2)^{3}$។ គណនា $f'(1)$ ៖",
+        "options": [
+          "$28$",
+          "$-27$",
+          "$27$",
+          "$54$"
+        ],
+        "correct": 2,
+        "explanation": "$f'(x)=3(1x+2)^{2}$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $y = (3x^2 - 2)^5$ ៖",
         "options": [
           "$6x(3x^2 - 2)^4$",
-          "$15x(3x^2 - 2)^4$",
           "$5(3x^2 - 2)^4$",
+          "$15x(3x^2 - 2)^4$",
           "$30x(3x^2 - 2)^4$"
         ],
         "correct": 3,
-        "explanation": "$y' = 5(3x^2 - 2)^4 \\cdot (3x^2 - 2)' = 5(3x^2 - 2)^4 \\cdot (6x) = 30x(3x^2 - 2)^4$។",
-        "diagram": ""
+        "explanation": "$y' = 5(3x^2 - 2)^4 \\cdot (3x^2 - 2)' = 5(3x^2 - 2)^4 \\cdot (6x) = 30x(3x^2 - 2)^4$។"
       },
       {
-        "id": "g12a_p2_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $y = \\sqrt{x^3 + 1}$ ៖",
         "options": [
-          "$\\dfrac{1}{2\\sqrt{x^3 + 1}}$",
+          "$\\dfrac{3x^2}{\\sqrt{x^3 + 1}}$",
           "$\\dfrac{3x^2}{2\\sqrt{x^3 + 1}}$",
           "$\\dfrac{x^2}{2\\sqrt{x^3 + 1}}$",
-          "$\\dfrac{3x^2}{\\sqrt{x^3 + 1}}$"
+          "$\\dfrac{1}{2\\sqrt{x^3 + 1}}$"
         ],
         "correct": 1,
-        "explanation": "$(\\sqrt{u})' = \\dfrac{u'}{2\\sqrt{u}} = \\dfrac{3x^2}{2\\sqrt{x^3+1}}$។",
-        "diagram": ""
+        "explanation": "$(\\sqrt{u})' = \\dfrac{u'}{2\\sqrt{u}} = \\dfrac{3x^2}{2\\sqrt{x^3+1}}$។"
       },
       {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គេឱ្យ $f(x) = x^3 + x$។ គណនា $(f^{-1})'(2)$ ដោយដឹងថា $f(1) = 2$ ៖",
         "options": [
-          "$\\dfrac{1}{2}$",
           "$1$",
+          "$4$",
           "$\\dfrac{1}{4}$",
-          "$4$"
+          "$\\dfrac{1}{2}$"
         ],
         "correct": 2,
-        "explanation": "$f'(x) = 3x^2 + 1 \\implies f'(1) = 4$។ តាមរូបមន្ត $(f^{-1})'(2) = \\dfrac{1}{f'(1)} = \\dfrac{1}{4}$។",
-        "diagram": ""
+        "explanation": "$f'(x) = 3x^2 + 1 \\implies f'(1) = 4$។ តាមរូបមន្ត $(f^{-1})'(2) = \\dfrac{1}{f'(1)} = \\dfrac{1}{4}$។"
       },
       {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាដេរីវេនៃ $y = e^{x^2 + 3x}$ ៖",
-        "options": [
-          "$(x^2 + 3x)e^{2x+3}$",
-          "$(2x + 3)e^{x^2 + 3x}$",
-          "$e^{x^2 + 3x}$",
-          "$2x e^{x^2 + 3x}$"
-        ],
-        "correct": 1,
-        "explanation": "$(e^u)' = u' e^u = (2x+3)e^{x^2+3x}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាដេរីវេនៃ $y = \\ln(x + \\sqrt{x^2 + 1})$ ៖",
-        "options": [
-          "$\\dfrac{1}{\\sqrt{x^2 + 1}}$",
-          "$\\dfrac{x}{\\sqrt{x^2 + 1}}$",
-          "$\\dfrac{1}{x + \\sqrt{x^2 + 1}}$",
-          "$\\dfrac{2}{\\sqrt{x^2 + 1}}$"
-        ],
-        "correct": 0,
-        "explanation": "$y' = \\dfrac{1 + \\frac{2x}{2\\sqrt{x^2+1}}}{x + \\sqrt{x^2+1}} = \\dfrac{\\frac{\\sqrt{x^2+1}+x}{\\sqrt{x^2+1}}}{x + \\sqrt{x^2+1}} = \\dfrac{1}{\\sqrt{x^2+1}}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គេឱ្យ $g(x) = f(x^2)$។ បើ $f'(4) = 5$ នោះ $g'(2)$ ស្មើនឹង ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាដេរីវេនៃ $y = \\ln(x + \\sqrt{x^2 + 1})$ ៖",
         "options": [
-          "$10$",
-          "$40$",
-          "$5$",
-          "$20$"
+          "$\\dfrac{1}{\\sqrt{x^2 + 1}}$",
+          "$\\dfrac{2}{\\sqrt{x^2 + 1}}$",
+          "$\\dfrac{x}{\\sqrt{x^2 + 1}}$",
+          "$\\dfrac{1}{x + \\sqrt{x^2 + 1}}$"
         ],
-        "correct": 3,
-        "explanation": "$g'(x) = 2x f'(x^2) \\implies g'(2) = 2(2) f'(4) = 4 \\times 5 = 20$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$y' = \\dfrac{1 + \\frac{2x}{2\\sqrt{x^2+1}}}{x + \\sqrt{x^2+1}} = \\dfrac{\\frac{\\sqrt{x^2+1}+x}{\\sqrt{x^2+1}}}{x + \\sqrt{x^2+1}} = \\dfrac{1}{\\sqrt{x^2+1}}$។"
       },
       {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដេរីវេនៃ $y = x^x$ ចំពោះ $x > 0$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គេឱ្យ $g(x) = f(x^2)$។ បើ $f'(4) = 5$ នោះ $g'(2)$ ស្មើនឹង ៖",
         "options": [
-          "$x \\cdot x^{x-1}$",
-          "$x^x \\ln x$",
-          "$x^x$",
-          "$x^x (1 + \\ln x)$"
+          "$10$",
+          "$20$",
+          "$5$",
+          "$40$"
         ],
-        "correct": 3,
-        "explanation": "$\\ln y = x \\ln x \\implies \\dfrac{y'}{y} = 1 \\cdot \\ln x + x \\cdot \\frac{1}{x} = \\ln x + 1 \\implies y' = x^x(1 + \\ln x)$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$g'(x) = 2x f'(x^2) \\implies g'(2) = 2(2) f'(4) = 4 \\times 5 = 20$។"
       },
       {
-        "id": "g12a_p2_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ ដេរីវេនៃអនុគមន៍បណ្តាក់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើក្រាប $y = f(x)$ មានបន្ទាត់ប៉ះដេកត្រង់ $(x_0, y_0)$ ($f'(x_0) = 0$) នោះក្រាបនៃ $f^{-1}$ ត្រង់ $(y_0, x_0)$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេនៃ $y = x^x$ ចំពោះ $x > 0$ គឺ ៖",
         "options": [
-          "មានបន្ទាត់ប៉ះឈរ",
-          "គ្មានបន្ទាត់ប៉ះ",
-          "កាត់កាត់អ័ក្ស $Ox$",
-          "មានបន្ទាត់ប៉ះដេក"
+          "$x^x \\ln x$",
+          "$x^x$",
+          "$x \\cdot x^{x-1}$",
+          "$x^x (1 + \\ln x)$"
         ],
-        "correct": 0,
-        "explanation": "បន្ទាត់ប៉ះនៃ $f^{-1}$ ឆ្លុះគ្នានឹងបន្ទាត់ប៉ះនៃ $f$ ធៀបនឹង $y=x$ ដូច្នេះបន្ទាត់ដេកក្លាយជាបន្ទាត់ឈរ។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$\\ln y = x \\ln x \\implies \\dfrac{y'}{y} = 1 \\cdot \\ln x + x \\cdot \\frac{1}{x} = \\ln x + 1 \\implies y' = x^x(1 + \\ln x)$។"
       }
     ],
     "3": [
       {
-        "id": "g12a_p3_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តដេរីវេនៃ $(\\sin x)'$ និង $(\\cos x)'$ គឺ ៖",
         "options": [
-          "$(\\sin x)' = \\cos x$ និង $(\\cos x)' = -\\sin x$",
-          "$(\\sin x)' = \\cos x$ និង $(\\cos x)' = \\cos x$",
           "$(\\sin x)' = -\\cos x$ និង $(\\cos x)' = \\sin x$",
+          "$(\\sin x)' = \\cos x$ និង $(\\cos x)' = \\cos x$",
+          "$(\\sin x)' = \\cos x$ និង $(\\cos x)' = -\\sin x$",
           "$(\\sin x)' = -\\sin x$"
         ],
-        "correct": 0,
-        "explanation": "$(\\sin x)' = \\cos x$ និង $(\\cos x)' = -\\sin x$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$(\\sin x)' = \\cos x$ និង $(\\cos x)' = -\\sin x$។"
       },
       {
-        "id": "g12a_p3_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តដេរីវេនៃ $(\\tan x)'$ គឺ ៖",
         "options": [
-          "$-\\dfrac{1}{\\sin^2 x}$",
-          "$\\cot x$",
           "$\\dfrac{1}{\\cos^2 x} = 1 + \\tan^2 x$",
-          "$\\dfrac{1}{\\sin x}$"
+          "$-\\dfrac{1}{\\sin^2 x}$",
+          "$\\dfrac{1}{\\sin x}$",
+          "$\\cot x$"
         ],
-        "correct": 2,
-        "explanation": "$(\\tan x)' = \\dfrac{1}{\\cos^2 x} = 1 + \\tan^2 x$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$(\\tan x)' = \\dfrac{1}{\\cos^2 x} = 1 + \\tan^2 x$។"
       },
       {
-        "id": "g12a_p3_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រូបមន្តដេរីវេនៃ $(\\cot x)'$ គឺ ៖",
         "options": [
-          "$-\\dfrac{1}{\\cos^2 x}$",
           "$\\tan x$",
+          "$-\\dfrac{1}{\\sin^2 x} = -(1 + \\cot^2 x)$",
           "$\\dfrac{1}{\\sin^2 x}$",
-          "$-\\dfrac{1}{\\sin^2 x} = -(1 + \\cot^2 x)$"
+          "$-\\dfrac{1}{\\cos^2 x}$"
         ],
-        "correct": 3,
-        "explanation": "$(\\cot x)' = -\\dfrac{1}{\\sin^2 x} = -(1 + \\cot^2 x)$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "$(\\cot x)' = -\\dfrac{1}{\\sin^2 x} = -(1 + \\cot^2 x)$។"
       },
       {
-        "id": "g12a_p3_04",
+        "id": "q4",
         "questionNumber": 4,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គេឱ្យ $f(x)=\\sin 3x$។ គណនា $f'(0)$ ៖",
+        "options": [
+          "$1$",
+          "$0$",
+          "$3$",
+          "$4$"
+        ],
+        "correct": 2,
+        "explanation": "$f'=3\\cos 3x$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $y = \\sin(3x - 1)$ ៖",
         "options": [
+          "$3\\sin(3x - 1)$",
           "$-3\\cos(3x - 1)$",
-          "$3\\cos(3x - 1)$",
           "$\\cos(3x - 1)$",
-          "$3\\sin(3x - 1)$"
+          "$3\\cos(3x - 1)$"
         ],
-        "correct": 1,
-        "explanation": "$(\\sin u)' = u' \\cos u = 3\\cos(3x - 1)$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$(\\sin u)' = u' \\cos u = 3\\cos(3x - 1)$។"
       },
       {
-        "id": "g12a_p3_05",
-        "questionNumber": 5,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $y = \\cos^3 x$ ៖",
         "options": [
-          "$3\\cos^2 x \\sin x$",
           "$-3\\sin^2 x$",
-          "$-3\\cos^2 x \\sin x$",
-          "$3\\cos^2 x$"
+          "$3\\cos^2 x$",
+          "$3\\cos^2 x \\sin x$",
+          "$-3\\cos^2 x \\sin x$"
         ],
-        "correct": 2,
-        "explanation": "$(u^3)' = 3u^2 u' = 3\\cos^2 x (-\\sin x) = -3\\cos^2 x \\sin x$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "$(u^3)' = 3u^2 u' = 3\\cos^2 x (-\\sin x) = -3\\cos^2 x \\sin x$។"
       },
       {
-        "id": "g12a_p3_06",
-        "questionNumber": 6,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $y = e^x \\sin x$ ៖",
         "options": [
           "$e^x(\\sin x - \\cos x)$",
-          "$e^x \\cos x$",
           "$e^x + \\cos x$",
-          "$e^x(\\sin x + \\cos x)$"
+          "$e^x(\\sin x + \\cos x)$",
+          "$e^x \\cos x$"
         ],
-        "correct": 3,
-        "explanation": "$y' = (e^x)' \\sin x + e^x (\\sin x)' = e^x \\sin x + e^x \\cos x = e^x(\\sin x + \\cos x)$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "$y' = (e^x)' \\sin x + e^x (\\sin x)' = e^x \\sin x + e^x \\cos x = e^x(\\sin x + \\cos x)$។"
       },
       {
-        "id": "g12a_p3_07",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដេរីវេទីពីរនៃ $y = \\sin 2x$ គឺ ៖",
-        "options": [
-          "$-4\\sin 2x$",
-          "$4\\sin 2x$",
-          "$-2\\sin 2x$",
-          "$-4\\cos 2x$"
-        ],
-        "correct": 0,
-        "explanation": "$y' = 2\\cos 2x \\implies y'' = 2(-2\\sin 2x) = -4\\sin 2x$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p3_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាដេរីវេនៃ $y = \\ln|\\cos x|$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេទីពីរនៃ $y = \\sin 2x$ គឺ ៖",
         "options": [
-          "$-\\cot x$",
-          "$-\\tan x$",
-          "$\\tan x$",
-          "$\\dfrac{1}{\\cos x}$"
+          "$-4\\cos 2x$",
+          "$-4\\sin 2x$",
+          "$4\\sin 2x$",
+          "$-2\\sin 2x$"
         ],
         "correct": 1,
-        "explanation": "$(\\ln u)' = \\dfrac{u'}{u} = \\dfrac{-\\sin x}{\\cos x} = -\\tan x$។",
-        "diagram": ""
+        "explanation": "$y' = 2\\cos 2x \\implies y'' = 2(-2\\sin 2x) = -4\\sin 2x$។"
       },
       {
-        "id": "g12a_p3_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដេរីវេនៃ $y = \\sin x\\cos x$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាដេរីវេនៃ $y = \\ln|\\cos x|$ ៖",
         "options": [
-          "$\\sin 2x$",
-          "$-\\sin 2x$",
-          "$1$",
-          "$\\cos 2x$"
+          "$-\\tan x$",
+          "$-\\cot x$",
+          "$\\tan x$",
+          "$\\dfrac{1}{\\cos x}$"
         ],
-        "correct": 3,
-        "explanation": "$y' = \\cos x \\cdot \\cos x + \\sin x \\cdot (-\\sin x) = \\cos^2 x - \\sin^2 x = \\cos 2x$។"
+        "correct": 0,
+        "explanation": "$(\\ln u)' = \\dfrac{u'}{u} = \\dfrac{-\\sin x}{\\cos x} = -\\tan x$។"
       },
       {
-        "id": "g12a_p3_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ដេរីវេនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកសមីការបន្ទាត់ប៉ះនឹងក្រាប $y = \\sin x$ ត្រង់ចំណុចគល់កូអរដោនេ $O(0, 0)$ ៖",
         "options": [
-          "$y = -x$",
           "$y = x$",
           "$y = 0$",
+          "$y = -x$",
           "$x = 0$"
         ],
-        "correct": 1,
-        "explanation": "$y'(0) = \\cos 0 = 1$។ បន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 0) \\iff y = x$។",
-        "diagram": ""
+        "correct": 0,
+        "explanation": "$y'(0) = \\cos 0 = 1$។ បន្ទាត់ប៉ះ៖ $y - 0 = 1(x - 0) \\iff y = x$។"
       }
     ],
     "4": [
@@ -28135,68 +28106,64 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\arcsin 3x$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $f(x)=\\arctan 3x$ គឺ ៖",
         "options": [
-          "$\\dfrac{1}{\\sqrt{1 - 9x^2}}$",
-          "$\\dfrac{3}{\\sqrt{1 - 9x^2}}$",
-          "$\\dfrac{3}{1 + 9x^2}$",
-          "$-\\dfrac{3}{\\sqrt{1 - 9x^2}}$"
+          "$\\dfrac{1}{1+9x^2}$",
+          "$\\dfrac{3}{1+3x^2}$",
+          "$\\dfrac{3}{\\sqrt{1-9x^2}}$",
+          "$\\dfrac{3}{1+9x^2}$"
         ],
-        "correct": 1,
-        "explanation": "$(\\arctan u)' = \\dfrac{u'}{1 + u^2}$ , $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1 - u^2}}$ ជាមួយ $u = 3x$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$(\\arctan u)'=\\dfrac{u'}{1+u^2}$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\arctan x$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $f(x)=\\arcsin 3x$ គឺ ៖",
         "options": [
-          "$\\dfrac{1}{1 - x^2}$",
-          "$\\dfrac{1}{\\sqrt{1 - x^2}}$",
-          "$\\dfrac{1}{1 + x^2}$",
-          "$-\\dfrac{1}{1 + x^2}$"
+          "$\\dfrac{3}{\\sqrt{1-9x^2}}$",
+          "$\\dfrac{1}{\\sqrt{1-9x^2}}$",
+          "$-\\dfrac{3}{\\sqrt{1-9x^2}}$",
+          "$\\dfrac{3}{1+9x^2}$"
         ],
-        "correct": 2,
-        "explanation": "រូបមន្តដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖ $(\\arctan x)' = \\dfrac{1}{1 + x^2}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$(\\arcsin u)'=\\dfrac{u'}{\\sqrt{1-u^2}}$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\arctan 3x$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $f(x)=\\arctan 7x$ គឺ ៖",
         "options": [
-          "$\\dfrac{3}{\\sqrt{1 - 9x^2}}$",
-          "$\\dfrac{3}{1 + 3x^2}$",
-          "$\\dfrac{1}{1 + 9x^2}$",
-          "$\\dfrac{3}{1 + 9x^2}$"
+          "$\\dfrac{7}{1+49x^2}$",
+          "$\\dfrac{1}{1+49x^2}$",
+          "$\\dfrac{7}{1+7x^2}$",
+          "$\\dfrac{7}{\\sqrt{1-49x^2}}$"
         ],
-        "correct": 3,
-        "explanation": "$(\\arctan u)' = \\dfrac{u'}{1 + u^2}$ , $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1 - u^2}}$ ជាមួយ $u = 3x$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$(\\arctan u)'=\\dfrac{u'}{1+u^2}$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = \\arctan x$។ គណនា $f'(3)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេនៃ $f(x)=\\arcsin 8x$ គឺ ៖",
         "options": [
-          "$\\dfrac{1}{10}$",
-          "$\\dfrac{1}{9}$",
-          "$\\dfrac{3}{10}$",
-          "$\\dfrac{1}{4}$"
+          "$\\dfrac{1}{\\sqrt{1-64x^2}}$",
+          "$\\dfrac{8}{\\sqrt{1-64x^2}}$",
+          "$-\\dfrac{8}{\\sqrt{1-64x^2}}$",
+          "$\\dfrac{8}{1+64x^2}$"
         ],
-        "correct": 0,
-        "explanation": "$f'(x) = \\dfrac{1}{1 + x^2}$ ⇒ $f'(3) = \\dfrac{1}{10}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$(\\arcsin u)'=\\dfrac{u'}{\\sqrt{1-u^2}}$"
       },
       {
         "id": "q5",
@@ -28204,16 +28171,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\arccos x$ គឺ ៖",
+        "question": "ដេរីវេនៃ $y = \\arcsin 3x$ គឺ ៖",
         "options": [
-          "$-\\dfrac{1}{\\sqrt{1 - x^2}}$",
-          "$\\dfrac{1}{\\sqrt{1 - x^2}}$",
-          "$-\\dfrac{1}{1 + x^2}$",
-          "$\\dfrac{1}{\\sqrt{1 + x^2}}$"
+          "$-\\dfrac{3}{\\sqrt{1 - 9x^2}}$",
+          "$\\dfrac{3}{\\sqrt{1 - 9x^2}}$",
+          "$\\dfrac{1}{\\sqrt{1 - 9x^2}}$",
+          "$\\dfrac{3}{1 + 9x^2}$"
         ],
-        "correct": 0,
-        "explanation": "រូបមន្តដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖ $(\\arccos x)' = -\\dfrac{1}{\\sqrt{1 - x^2}}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$(\\arctan u)' = \\dfrac{u'}{1 + u^2}$ , $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1 - u^2}}$ ជាមួយ $u = 3x$។"
       },
       {
         "id": "q6",
@@ -28221,16 +28187,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\arcsin 2x$ គឺ ៖",
+        "question": "ដេរីវេនៃ $y = \\arctan x$ គឺ ៖",
         "options": [
-          "$\\dfrac{1}{\\sqrt{1 - 4x^2}}$",
-          "$\\dfrac{2}{1 + 4x^2}$",
-          "$-\\dfrac{2}{\\sqrt{1 - 4x^2}}$",
-          "$\\dfrac{2}{\\sqrt{1 - 4x^2}}$"
+          "$-\\dfrac{1}{1 + x^2}$",
+          "$\\dfrac{1}{1 - x^2}$",
+          "$\\dfrac{1}{\\sqrt{1 - x^2}}$",
+          "$\\dfrac{1}{1 + x^2}$"
         ],
         "correct": 3,
-        "explanation": "$(\\arctan u)' = \\dfrac{u'}{1 + u^2}$ , $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1 - u^2}}$ ជាមួយ $u = 2x$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "រូបមន្តដេរីវេនៃអនុគមន៍ច្រាសត្រីកោណមាត្រ ៖ $(\\arctan x)' = \\dfrac{1}{1 + x^2}$។"
       },
       {
         "id": "q7",
@@ -28238,67 +28203,63 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $f(x) = \\arctan x$។ គណនា $f'(1)$ ៖",
+        "question": "ដេរីវេនៃ $y = \\arctan 3x$ គឺ ៖",
         "options": [
-          "$-\\dfrac{1}{2}$",
-          "$\\dfrac{1}{2}$",
-          "$\\dfrac{3}{2}$",
-          "$1$"
+          "$\\dfrac{3}{1 + 9x^2}$",
+          "$\\dfrac{1}{1 + 9x^2}$",
+          "$\\dfrac{3}{1 + 3x^2}$",
+          "$\\dfrac{3}{\\sqrt{1 - 9x^2}}$"
         ],
-        "correct": 1,
-        "explanation": "$f'(x) = \\dfrac{1}{1 + x^2}$ ⇒ $f'(1) = \\dfrac{1}{2}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$(\\arctan u)' = \\dfrac{u'}{1 + u^2}$ , $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1 - u^2}}$ ជាមួយ $u = 3x$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\arctan 2x$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គេឱ្យ $f(x)=\\arctan 2x$។ គណនា $f'(0)$ ៖",
         "options": [
-          "$\\dfrac{2}{1 + 2x^2}$",
-          "$\\dfrac{1}{1 + 4x^2}$",
-          "$\\dfrac{2}{1 + 4x^2}$",
-          "$\\dfrac{2}{\\sqrt{1 - 4x^2}}$"
+          "$1$",
+          "$0$",
+          "$2$",
+          "$3$"
         ],
         "correct": 2,
-        "explanation": "$(\\arctan u)' = \\dfrac{u'}{1 + u^2}$ , $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1 - u^2}}$ ជាមួយ $u = 2x$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "1+(ax)² = 1 ត្រង់ x=0"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\arctan 4x$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេនៃ $f(x)=\\arcsin \\dfrac{x}{6}$ គឺ ៖",
         "options": [
-          "$\\dfrac{4}{1 + 16x^2}$",
-          "$\\dfrac{1}{1 + 16x^2}$",
-          "$\\dfrac{4}{1 + 4x^2}$",
-          "$\\dfrac{4}{\\sqrt{1 - 16x^2}}$"
+          "$\\dfrac{1}{\\sqrt{36-x^2}}$",
+          "$\\dfrac{1}{6\\sqrt{1-x^2}}$",
+          "$\\dfrac{6}{\\sqrt{36-x^2}}$",
+          "$\\dfrac{1}{\\sqrt{1-36x^2}}$"
         ],
         "correct": 0,
-        "explanation": "$(\\arctan u)' = \\dfrac{u'}{1 + u^2}$ , $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1 - u^2}}$ ជាមួយ $u = 4x$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$\\dfrac{1/6}{\\sqrt{1-x^2/36}}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ដេរីវេនៃអនុគមន៍ច្រាសនៃអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេនៃ $y = \\arcsin 4x$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេនៃ $f(x)=\\arctan(x^4)$ គឺ ៖",
         "options": [
-          "$\\dfrac{1}{\\sqrt{1 - 16x^2}}$",
-          "$\\dfrac{4}{1 + 16x^2}$",
-          "$\\dfrac{4}{\\sqrt{1 - 16x^2}}$",
-          "$-\\dfrac{4}{\\sqrt{1 - 16x^2}}$"
+          "$\\dfrac{x^{3}}{1+x^{8}}$",
+          "$\\dfrac{4x^{3}}{1+x^4}$",
+          "$\\dfrac{4x^{3}}{1+x^{8}}$",
+          "$\\dfrac{1}{1+x^{8}}$"
         ],
         "correct": 2,
-        "explanation": "$(\\arctan u)' = \\dfrac{u'}{1 + u^2}$ , $(\\arcsin u)' = \\dfrac{u'}{\\sqrt{1 - u^2}}$ ជាមួយ $u = 4x$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "វិធានខ្សែច្រវាក់"
       }
     ],
     "5": [
@@ -28307,68 +28268,64 @@
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $3$ នៃ $y = x^{6}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេទី 2 នៃ $f(x)=x^4$ គឺ ៖",
         "options": [
-          "$18x^{3}$",
-          "$216x^{3}$",
-          "$120x^{3}$",
-          "$120x^{4}$"
+          "$12x^{3}$",
+          "$12x^{2}$",
+          "$16x^{2}$",
+          "$3x^{2}$"
         ],
-        "correct": 2,
-        "explanation": "$y^{(3)} = 6 \\cdot 5 \\cdot 4 x^{3} = 120x^{3}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "ដេរីវេដដែលៗ"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $n$ នៃ $y = \\dfrac{1}{x}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេទី 4 នៃ $f(x)=x^8$ គឺ ៖",
         "options": [
-          "$\\dfrac{(-1)^n n!}{x^{n}}$",
-          "$\\dfrac{(-1)^n n!}{x^{n+1}}$",
-          "$\\dfrac{n!}{x^{n+1}}$",
-          "$\\dfrac{(-1)^{n} n}{x^{n+1}}$"
+          "$1680x^{5}$",
+          "$1680x^{4}$",
+          "$4096x^{4}$",
+          "$210x^{4}$"
         ],
         "correct": 1,
-        "explanation": "$y' = -\\dfrac{1}{x^2} , y'' = \\dfrac{2}{x^3} , y''' = -\\dfrac{6}{x^4}$ ⇒ $y^{(n)} = \\dfrac{(-1)^n n!}{x^{n+1}}$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "ដេរីវេដដែលៗ"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $n$ នៃ $y = \\dfrac{2}{x}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេទី 2 នៃ $f(x)=x^5$ គឺ ៖",
         "options": [
-          "$\\dfrac{(-1)^{n} 2 n}{x^{n+1}}$",
-          "$\\dfrac{2 \\cdot n!}{x^{n+1}}$",
-          "$\\dfrac{(-1)^n 2 \\cdot n!}{x^{n}}$",
-          "$\\dfrac{(-1)^n 2 \\cdot n!}{x^{n+1}}$"
+          "$20x^{4}$",
+          "$25x^{3}$",
+          "$4x^{3}$",
+          "$20x^{3}$"
         ],
         "correct": 3,
-        "explanation": "$y' = -\\dfrac{2}{x^2} , y'' = \\dfrac{4}{x^3} , y''' = -\\dfrac{12}{x^4}$ ⇒ $y^{(n)} = \\dfrac{(-1)^n 2 \\cdot n!}{x^{n+1}}$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "ដេរីវេដដែលៗ"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $2$ នៃ $y = x^{7}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដេរីវេទី 2 នៃ $f(x)=x^8$ គឺ ៖",
         "options": [
-          "$42x^{5}$",
-          "$49x^{5}$",
-          "$42x^{6}$",
-          "$14x^{5}$"
+          "$56x^{7}$",
+          "$64x^{6}$",
+          "$56x^{6}$",
+          "$7x^{6}$"
         ],
-        "correct": 0,
-        "explanation": "$y^{(2)} = 7 \\cdot 6 x^{5} = 42x^{5}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "ដេរីវេដដែលៗ"
       },
       {
         "id": "q5",
@@ -28376,16 +28333,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $n = 2$ នៃ $y = e^{5x}$ គឺ ៖",
+        "question": "ដេរីវេទី $3$ នៃ $y = x^{6}$ គឺ ៖",
         "options": [
-          "$10 e^{5x}$",
-          "$32 e^{5x}$",
-          "$e^{5x}$",
-          "$25 e^{5x}$"
+          "$120x^{4}$",
+          "$216x^{3}$",
+          "$18x^{3}$",
+          "$120x^{3}$"
         ],
         "correct": 3,
-        "explanation": "$y^{(n)} = a^n e^{ax} = 5^{2} e^{5x}$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$y^{(3)} = 6 \\cdot 5 \\cdot 4 x^{3} = 120x^{3}$។"
       },
       {
         "id": "q6",
@@ -28393,16 +28349,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $n = 4$ នៃ $y = e^{3x}$ គឺ ៖",
+        "question": "ដេរីវេទី $n$ នៃ $y = \\dfrac{1}{x}$ គឺ ៖",
         "options": [
-          "$12 e^{3x}$",
-          "$81 e^{3x}$",
-          "$64 e^{3x}$",
-          "$e^{3x}$"
+          "$\\dfrac{(-1)^{n} n}{x^{n+1}}$",
+          "$\\dfrac{n!}{x^{n+1}}$",
+          "$\\dfrac{(-1)^n n!}{x^{n+1}}$",
+          "$\\dfrac{(-1)^n n!}{x^{n}}$"
         ],
-        "correct": 1,
-        "explanation": "$y^{(n)} = a^n e^{ax} = 3^{4} e^{3x}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$y' = -\\dfrac{1}{x^2} , y'' = \\dfrac{2}{x^3} , y''' = -\\dfrac{6}{x^4}$ ⇒ $y^{(n)} = \\dfrac{(-1)^n n!}{x^{n+1}}$។"
       },
       {
         "id": "q7",
@@ -28410,67 +28365,63 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $2$ នៃ $y = \\sin 4x$ គឺ ៖",
+        "question": "ដេរីវេទី $n$ នៃ $y = \\dfrac{2}{x}$ គឺ ៖",
         "options": [
-          "$-64\\cos 4x$",
-          "$16\\cos 4x$",
-          "$-16\\sin 4x$",
-          "$256\\sin 4x$"
+          "$\\dfrac{(-1)^{n} 2 n}{x^{n+1}}$",
+          "$\\dfrac{(-1)^n 2 \\cdot n!}{x^{n+1}}$",
+          "$\\dfrac{(-1)^n 2 \\cdot n!}{x^{n}}$",
+          "$\\dfrac{2 \\cdot n!}{x^{n+1}}$"
         ],
-        "correct": 2,
-        "explanation": "ដេរីវេម្តងៗ គុណនឹង $4$ ហើយ $\\sin \\to \\cos \\to -\\sin \\to -\\cos$ ⇒ $y^{(2)} = -16\\sin 4x$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$y' = -\\dfrac{2}{x^2} , y'' = \\dfrac{4}{x^3} , y''' = -\\dfrac{12}{x^4}$ ⇒ $y^{(n)} = \\dfrac{(-1)^n 2 \\cdot n!}{x^{n+1}}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $3$ នៃ $y = x^{4}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេទី $n$ នៃ $y = \\sin x$ កំណត់ដោយរូបមន្ត ៖",
         "options": [
-          "$24x$",
-          "$12x$",
-          "$64x$",
-          "$24x^{2}$"
+          "$(-1)^n \\sin x$",
+          "$(-1)^n \\cos x$",
+          "$\\cos\\left(x + \\dfrac{n\\pi}{2}\\right)$",
+          "$\\sin\\left(x + \\dfrac{n\\pi}{2}\\right)$"
         ],
-        "correct": 0,
-        "explanation": "$y^{(3)} = 4 \\cdot 3 \\cdot 2 x = 24x$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$y' = \\cos x = \\sin(x + \\dfrac{\\pi}{2})$, $y'' = \\sin(x + \\pi)$, ... $y^{(n)} = \\sin(x + n\\pi/2)$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $n = 5$ នៃ $y = e^{4x}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេទី 4 នៃ $f(x)=e^{3x}$ គឺ ៖",
         "options": [
-          "$20 e^{4x}$",
-          "$e^{4x}$",
-          "$625 e^{4x}$",
-          "$1024 e^{4x}$"
+          "$3e^{3x}$",
+          "$81e^{3x}$",
+          "$12e^{3x}$",
+          "$243e^{3x}$"
         ],
-        "correct": 3,
-        "explanation": "$y^{(n)} = a^n e^{ax} = 4^{5} e^{4x}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "(e^{ax})^{(n)} = a^n e^{ax}"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ដេរីវេលំដាប់ខ្ពស់",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដេរីវេទី $2$ នៃ $y = x^{4}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដេរីវេទី 4 នៃ $f(x)=\\sin 2x$ គឺ ៖",
         "options": [
-          "$8x^{2}$",
-          "$12x^{3}$",
-          "$12x^{2}$",
-          "$16x^{2}$"
+          "$-16\\sin 2x$",
+          "$16\\cos 2x$",
+          "$4\\sin 2x$",
+          "$16\\sin 2x$"
         ],
-        "correct": 2,
-        "explanation": "$y^{(2)} = 4 \\cdot 3 x^{2} = 12x^{2}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "រង្វិលជុំ ៤ ដង"
       }
     ]
   },
