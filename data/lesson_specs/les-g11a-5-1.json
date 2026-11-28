@@ -1,0 +1,49 @@
+{
+  "lesson": "les-g11a-5-1",
+  "grade": 11,
+  "course": "advanced",
+  "title": "មេរៀនទី ៤ ៖ អនុវត្តន៍ដេរីវេចំពោះសមីការ និងវិសមីការ (ទំព័រ ៥៤ - ៧៦)",
+  "book_pages": "g11a_ch5_les1.pdf pp.1-14 (book 54-76)",
+  "points": [
+    {
+      "n": 1,
+      "title": "ចំណុចទី ១ ៖ ការអនុវត្តដេរីវេចំពោះសមីការដឺក្រេទី ៣"
+    },
+    {
+      "n": 2,
+      "title": "ចំណុចទី ២ ៖ ការអនុវត្តដេរីវេចំពោះសមីការប៊ីការេ"
+    },
+    {
+      "n": 3,
+      "title": "ចំណុចទី ៣ ៖ ការអនុវត្តដេរីវេចំពោះវិសមីការដឺក្រេទី ៣"
+    },
+    {
+      "n": 4,
+      "title": "ចំណុចទី ៤ ៖ ការអនុវត្តដេរីវេចំពោះវិសមីការដែលអង្គទី ១ ជាកន្សោមប៊ីការេ"
+    }
+  ],
+  "notes": "Derivative applied to cubic/biquadratic equations and inequalities. All existing keys verified (incl. 3 image items). QB items assigned to points by content.",
+  "removed": [],
+  "bank_levels": {
+    "1": {
+      "e": 16,
+      "m": 19,
+      "h": 10
+    },
+    "2": {
+      "e": 10,
+      "m": 13,
+      "h": 10
+    },
+    "3": {
+      "e": 10,
+      "m": 10,
+      "h": 18
+    },
+    "4": {
+      "e": 10,
+      "m": 10,
+      "h": 10
+    }
+  }
+}
