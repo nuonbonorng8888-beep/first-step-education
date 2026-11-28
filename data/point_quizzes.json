@@ -24701,14 +24701,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ម៉ូឌុលនៃ $z = 4 - 3i$ គឺ ៖",
         "options": [
-          "$5$",
           "$7$",
           "$25$",
-          "$\\sqrt{7}$"
+          "$\\sqrt{7}$",
+          "$5$"
         ],
-        "correct": 0,
-        "explanation": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{16 + 9} = 5$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{16 + 9} = 5$។"
       },
       {
         "id": "q2",
@@ -24718,14 +24717,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គេឱ្យ $z = 3 - 4i$។ គណនា $|z^{3}|$ ៖",
         "options": [
+          "$75$",
           "$15$",
           "$125$",
-          "$75$",
           "$25$"
         ],
-        "correct": 1,
-        "explanation": "$|z^{3}| = |z|^{3} = 5^{3} = 125$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$|z^{3}| = |z|^{3} = 5^{3} = 125$។"
       },
       {
         "id": "q3",
@@ -24736,13 +24734,12 @@
         "question": "ម៉ូឌុលនៃ $z = -4 - 3i$ គឺ ៖",
         "options": [
           "$25$",
-          "$7$",
           "$5$",
+          "$7$",
           "$\\sqrt{7}$"
         ],
-        "correct": 2,
-        "explanation": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{16 + 9} = 5$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{16 + 9} = 5$។"
       },
       {
         "id": "q4",
@@ -24752,174 +24749,166 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ម៉ូឌុលនៃ $z = -15 - 8i$ គឺ ៖",
         "options": [
+          "$17$",
           "$289$",
           "$23$",
-          "$\\sqrt{161}$",
-          "$17$"
+          "$\\sqrt{161}$"
         ],
-        "correct": 3,
-        "explanation": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{225 + 64} = 17$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{225 + 64} = 17$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុលនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $z_1 = 3 - 4i$ និង $z_2 = -8 + 15i$។ គណនា $|z_1 z_2|$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $|\\bar{z}|$ ដោយ $z=8 + 15i$ ៖",
         "options": [
-          "$170$",
-          "$22$",
-          "$161$",
-          "$85$"
+          "$289$",
+          "$23$",
+          "$-17$",
+          "$17$"
         ],
         "correct": 3,
-        "explanation": "$|z_1 z_2| = |z_1| \\cdot |z_2| = 5 \\cdot 17 = 85$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$|\\bar{z}|=|z|=17$"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុលនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $z_1 = 6 + 8i$ និង $z_2 = 5 - 12i$។ គណនា $\\left|\\dfrac{z_1}{z_2}\\right|$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនាម៉ូឌុលនៃ $z=1 + i$ ៖",
         "options": [
-          "$130$",
-          "$\\dfrac{13}{10}$",
-          "$\\dfrac{10}{13}$",
-          "$\\dfrac{14}{17}$"
+          "$\\sqrt{3}$",
+          "$2$",
+          "$\\sqrt{4}$",
+          "$\\sqrt{2}$"
         ],
-        "correct": 2,
-        "explanation": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{|z_1|}{|z_2|} = \\dfrac{10}{13}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$|z|=\\sqrt{1+1}$"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុលនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $z_1 = 8 - 15i$ និង $z_2 = -6 + 8i$។ គណនា $|z_1 z_2|$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "បើ $|z_1|=5$ និង $|z_2|=12$ នោះ $|z_1z_2|$ ស្មើ ៖",
         "options": [
-          "$170$",
-          "$27$",
-          "$322$",
-          "$340$"
+          "$17$",
+          "$60$",
+          "$61$",
+          "$3600$"
         ],
-        "correct": 0,
-        "explanation": "$|z_1 z_2| = |z_1| \\cdot |z_2| = 17 \\cdot 10 = 170$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$|z_1z_2|=|z_1||z_2|$"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុលនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ម៉ូឌុលនៃ $z = -6 + 8i$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកចំនួនពិត $b>0$ ដើម្បីឱ្យ $|3+bi|=5$ ៖",
         "options": [
-          "$14$",
-          "$10$",
-          "$100$",
-          "$2\\sqrt{7}$"
+          "$2$",
+          "$8$",
+          "$4$",
+          "$5$"
         ],
-        "correct": 1,
-        "explanation": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{36 + 64} = 10$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$a^2+b^2=25$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុលនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "ម៉ូឌុលនៃ $z = 5 - 12i$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $|z|=\\sqrt{5}$ នោះ $z\\bar{z}$ ស្មើ ៖",
         "options": [
-          "$\\sqrt{119}$",
-          "$13$",
-          "$17$",
-          "$169$"
+          "$\\sqrt{5}$",
+          "$5$",
+          "$10$",
+          "$25$"
         ],
         "correct": 1,
-        "explanation": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{25 + 144} = 13$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$z\\bar{z}=|z|^2$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុលនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គេឱ្យ $z = 6 - 8i$។ គណនា $|z^{2}|$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $|z|=5$ នោះ $|z^2|$ ស្មើ ៖",
         "options": [
+          "$25$",
           "$10$",
-          "$200$",
-          "$20$",
-          "$100$"
+          "$5$",
+          "$125$"
         ],
-        "correct": 3,
-        "explanation": "$|z^{2}| = |z|^{2} = 10^{2} = 100$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$|z^2|=|z|^2$"
       }
     ],
     "2": [
       {
-        "id": "g12b_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "អាគុយម៉ង់ចម្បង $\\theta = \\text{Arg}(z)$ នៃចំនួនកុំផ្លិច $z \\neq 0$ ស្ថិតក្នុងចន្លោះ ៖",
         "options": [
           "$(-\\pi, \\pi]$ (ឬ $[0, 2\\pi)$)",
-          "$[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$",
+          "$[0, +\\infty)$",
           "$[0, \\pi]$",
-          "$[0, +\\infty)$"
+          "$[-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}]$"
         ],
         "correct": 0,
-        "explanation": "អាគុយម៉ង់ចម្បងត្រូវបានកំណត់ក្នុងចន្លោះ $(-\\pi, \\pi]$ (ឬ $[0, 2\\pi)$)។",
-        "diagram": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 200\" style=\"background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;max-width:100%;height:auto;\">\n  <defs>\n    <marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#334155\"/>\n    </marker>\n    <marker id=\"arrow-blue\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n      <path d=\"M 0 1.5 L 10 5 L 0 8.5 z\" fill=\"#2563eb\"/>\n    </marker>\n  </defs>\n  <!-- Grid -->\n  <line x1=\"40\" y1=\"160\" x2=\"280\" y2=\"160\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"80\" x2=\"280\" y2=\"80\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <line x1=\"40\" y1=\"40\" x2=\"280\" y2=\"40\" stroke=\"#f1f5f9\" stroke-width=\"1\"/>\n  <!-- Axes -->\n  <line x1=\"30\" y1=\"140\" x2=\"290\" y2=\"140\" stroke=\"#334155\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <line x1=\"120\" y1=\"180\" x2=\"120\" y2=\"20\" stroke=\"#334155\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/>\n  <text x=\"295\" y=\"145\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#334155\" font-weight=\"bold\">Re (x)</text>\n  <text x=\"125\" y=\"25\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#334155\" font-weight=\"bold\">Im (y)</text>\n  <text x=\"108\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#64748b\">O</text>\n  <!-- Point M(a, b) -->\n  <line x1=\"120\" y1=\"140\" x2=\"220\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"2.5\" marker-end=\"url(#arrow-blue)\"/>\n  <line x1=\"220\" y1=\"140\" x2=\"220\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <line x1=\"120\" y1=\"60\" x2=\"220\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"1.5\" stroke-dasharray=\"4,4\"/>\n  <circle cx=\"220\" cy=\"60\" r=\"4.5\" fill=\"#ef4444\"/>\n  <text x=\"228\" y=\"58\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#ef4444\" font-weight=\"bold\">M(z = a + bi)</text>\n  <text x=\"215\" y=\"155\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#475569\">a</text>\n  <text x=\"105\" y=\"65\" font-family=\"Arial, sans-serif\" font-size=\"11\" fill=\"#475569\">b</text>\n  <!-- Angle theta and modulus r -->\n  <path d=\"M 150 140 A 30 30 0 0 0 145 120\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\"/>\n  <text x=\"155\" y=\"128\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#d97706\" font-weight=\"bold\">θ</text>\n  <text x=\"160\" y=\"90\" font-family=\"Arial, sans-serif\" font-size=\"12\" fill=\"#2563eb\" font-weight=\"bold\">r = |z|</text>\n</svg>"
+        "explanation": "អាគុយម៉ង់ចម្បងត្រូវបានកំណត់ក្នុងចន្លោះ $(-\\pi, \\pi]$ (ឬ $[0, 2\\pi)$)។"
       },
       {
-        "id": "g12b_p1_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រកអាគុយម៉ង់នៃចំនួនកុំផ្លិច $z = 1 + i$ ៖",
         "options": [
           "$\\dfrac{\\pi}{3}$",
-          "$\\dfrac{\\pi}{6}$",
           "$\\dfrac{\\pi}{2}$",
+          "$\\dfrac{\\pi}{6}$",
           "$\\dfrac{\\pi}{4}$"
         ],
         "correct": 3,
         "explanation": "$a = 1, b = 1 > 0$ ស្ថិតក្នុងកាដ្រង់ទីមួយ ៖ $\\tan\\theta = 1 \\Rightarrow \\theta = \\dfrac{\\pi}{4}$។"
       },
       {
-        "id": "g12b_p1_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រកអាគុយម៉ង់នៃចំនួនកុំផ្លិច $z = -3$ (ចំនួនពិតអវិជ្ជមាន) ៖",
         "options": [
+          "$-\\dfrac{\\pi}{2}$",
           "$0$",
-          "$\\dfrac{\\pi}{2}$",
           "$\\pi$",
-          "$-\\dfrac{\\pi}{2}$"
+          "$\\dfrac{\\pi}{2}$"
         ],
         "correct": 2,
         "explanation": "ចំណុចនៅលើអ័ក្សពិតខាងឆ្វេងមានអាគុយម៉ង់ $\\theta = \\pi$។"
       },
       {
-        "id": "g12b_p1_04",
+        "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "រកអាគុយម៉ង់នៃចំនួនកុំផ្លិច $z = 4i$ (ចំនួននិម្មិតសុទ្ធវិជ្ជមាន) ៖",
         "options": [
           "$-\\dfrac{\\pi}{2}$",
@@ -24931,7 +24920,7 @@
         "explanation": "ចំណុចនៅលើអ័ក្សនិម្មិតខាងលើមានអាគុយម៉ង់ $\\theta = \\dfrac{\\pi}{2}$។"
       },
       {
-        "id": "g12b_p1_05",
+        "id": "q5",
         "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
@@ -24947,75 +24936,59 @@
         "explanation": "$r = \\sqrt{1 + 3} = 2$។ $\\cos\\theta = \\dfrac{1}{2}, \\sin\\theta = -\\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = -\\dfrac{\\pi}{3}$ (កាដ្រង់ទី ៤)។"
       },
       {
-        "id": "g12b_p1_06",
+        "id": "q6",
         "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកម៉ូឌុល និងអាគុយម៉ង់នៃ $z = -\\sqrt{3} + i$ ៖",
         "options": [
-          "$r = 2, \\theta = -\\dfrac{5\\pi}{6}$",
-          "$r = 4, \\theta = \\dfrac{2\\pi}{3}$",
           "$r = 2, \\theta = \\dfrac{5\\pi}{6}$",
-          "$r = 2, \\theta = \\dfrac{\\pi}{6}$"
+          "$r = 2, \\theta = \\dfrac{\\pi}{6}$",
+          "$r = 2, \\theta = -\\dfrac{5\\pi}{6}$",
+          "$r = 4, \\theta = \\dfrac{2\\pi}{3}$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$r = 2$។ $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}, \\sin\\theta = \\dfrac{1}{2}$ (កាដ្រង់ទី ២) $\\Rightarrow \\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$។"
       },
       {
-        "id": "g12b_p1_07",
+        "id": "q7",
         "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បើ $\\text{Arg}(z) = \\theta$ តើ $\\text{Arg}(\\bar{z})$ ស្មើនឹងប៉ុន្មាន?",
         "options": [
+          "$\\theta$",
           "$\\pi - \\theta$",
           "$\\pi + \\theta$",
-          "$\\theta$",
           "$-\\theta$"
         ],
         "correct": 3,
         "explanation": "ចំនួនកុំផ្លិចឆ្លាស់ $\\bar{z}$ ឆ្លុះធៀបនឹងអ័ក្សពិត ដូច្នេះអាគុយម៉ង់របស់វាគឺ $-\\theta$។"
       },
       {
-        "id": "g12b_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកម៉ូឌុល និងអាគុយម៉ង់នៃ $z = -2 - 2i$ ៖",
-        "options": [
-          "$r = 2\\sqrt{2}, \\theta = -\\dfrac{3\\pi}{4}$",
-          "$r = 2, \\theta = \\pi$",
-          "$r = 2\\sqrt{2}, \\theta = \\dfrac{3\\pi}{4}$",
-          "$r = 4, \\theta = -\\dfrac{\\pi}{4}$"
-        ],
-        "correct": 0,
-        "explanation": "$r = \\sqrt{4+4} = 2\\sqrt{2}$។ កាដ្រង់ទី ៣ ៖ $\\cos\\theta = -\\dfrac{\\sqrt{2}}{2}, \\sin\\theta = -\\dfrac{\\sqrt{2}}{2} \\Rightarrow \\theta = -\\dfrac{3\\pi}{4}$ (ឬ $\\dfrac{5\\pi}{4}$)។"
-      },
-      {
-        "id": "g12b_p1_09",
-        "questionNumber": 9,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $z = 1 + \\cos\\alpha + i\\sin\\alpha$ ($\\alpha \\in (0, \\pi)$) រកអាគុយម៉ង់នៃ $z$ ៖",
         "options": [
-          "$\\dfrac{\\pi - \\alpha}{2}$",
-          "$\\alpha$",
           "$\\dfrac{\\alpha}{2}$",
+          "$\\alpha$",
+          "$\\dfrac{\\pi - \\alpha}{2}$",
           "$2\\alpha$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$z = 2\\cos^2(\\alpha/2) + 2i\\sin(\\alpha/2)\\cos(\\alpha/2) = 2\\cos(\\alpha/2)[\\cos(\\alpha/2) + i\\sin(\\alpha/2)]$ នាំឱ្យ $\\text{Arg}(z) = \\dfrac{\\alpha}{2}$។"
       },
       {
-        "id": "g12b_p1_10",
-        "questionNumber": 10,
+        "id": "q9",
+        "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "អាគុយម៉ង់ចម្បងនៃ $z = -1 - i$ គឺ ៖",
         "options": [
           "$\\dfrac{\\pi}{4}$",
@@ -25025,75 +24998,91 @@
         ],
         "correct": 1,
         "explanation": "$z$ នៅកាដ្រង់ទី ៣ ៖ $\\cos\\theta = \\sin\\theta = -\\dfrac{\\sqrt{2}}{2}$ នាំឱ្យ $\\theta = -\\dfrac{3\\pi}{4}$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ អាគុយម៉ង់នៃចំនួនកុំផ្លិច",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកអាគុយម៉ង់ចម្បងនៃ $z=-1 - \\sqrt{3}i$ ៖",
+        "options": [
+          "$\\dfrac{2\\pi}{3}$",
+          "$\\dfrac{\\pi}{3}$",
+          "$-\\dfrac{2\\pi}{3}$",
+          "$-\\dfrac{\\pi}{3}$"
+        ],
+        "correct": 2,
+        "explanation": "ពិនិត្យចតុភាគ ដើម្បីជ្រើសមុំត្រឹមត្រូវក្នុង (−π, π]"
       }
     ],
     "3": [
       {
-        "id": "g12b_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ទម្រង់ត្រីកោណមាត្រទូទៅនៃចំនួនកុំផ្លិច $z$ គឺ ៖",
         "options": [
-          "$z = r(\\cos\\theta - i\\sin\\theta)$",
-          "$z = r(\\cos\\theta + i\\sin\\theta)$",
           "$z = \\cos\\theta + i\\sin\\theta$",
-          "$z = r(\\sin\\theta + i\\cos\\theta)$"
+          "$z = r(\\sin\\theta + i\\cos\\theta)$",
+          "$z = r(\\cos\\theta + i\\sin\\theta)$",
+          "$z = r(\\cos\\theta - i\\sin\\theta)$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "ទម្រង់ត្រីកោណមាត្រគឺ $z = r(\\cos\\theta + i\\sin\\theta)$ ដែល $r = |z| > 0$ និង $\\theta = \\text{Arg}(z)$។"
       },
       {
-        "id": "g12b_p2_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "សរសេរ $z = 1 + i$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
-          "$z = \\sqrt{2}\\left(\\cos\\dfrac{\\pi}{2} + i\\sin\\dfrac{\\pi}{2}\\right)$",
-          "$z = 2\\left(\\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}\\right)$",
           "$z = \\sqrt{2}\\left(\\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}\\right)$",
-          "$z = \\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}$"
+          "$z = \\sqrt{2}\\left(\\cos\\dfrac{\\pi}{2} + i\\sin\\dfrac{\\pi}{2}\\right)$",
+          "$z = \\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}$",
+          "$z = 2\\left(\\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}\\right)$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$r = \\sqrt{1+1} = \\sqrt{2}, \\theta = \\dfrac{\\pi}{4} \\Rightarrow z = \\sqrt{2}(\\cos(\\dfrac{\\pi}{4}) + i\\sin(\\dfrac{\\pi}{4}))$។"
       },
       {
-        "id": "g12b_p2_03",
+        "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "សរសេរ $z = -2i$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
           "$z = -2\\left(\\cos\\dfrac{\\pi}{2} + i\\sin\\dfrac{\\pi}{2}\\right)$",
+          "$z = 2\\left(\\cos\\left(-\\dfrac{\\pi}{2}\\right) + i\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right)$",
           "$z = 2(\\cos 0 + i\\sin 0)$",
-          "$z = 2(\\cos\\pi + i\\sin\\pi)$",
-          "$z = 2\\left(\\cos\\left(-\\dfrac{\\pi}{2}\\right) + i\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right)$"
+          "$z = 2(\\cos\\pi + i\\sin\\pi)$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "ម៉ូឌុល $r = 2$ អាគុយម៉ង់ $\\theta = -\\dfrac{\\pi}{2}$ (ឬ $3\\pi/2$) ៖ $z = 2(\\cos(-\\dfrac{\\pi}{2}) + i\\sin(-\\dfrac{\\pi}{2}))$។"
       },
       {
-        "id": "g12b_p2_04",
+        "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បំប្លែង $z = 4\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$ ទៅជាទម្រង់ពីជគណិត ៖",
         "options": [
-          "$2 + 2i\\sqrt{3}$",
-          "$2\\sqrt{3} + 2i$",
+          "$2 - 2i\\sqrt{3}$",
           "$4 + 4i$",
-          "$2 - 2i\\sqrt{3}$"
+          "$2\\sqrt{3} + 2i$",
+          "$2 + 2i\\sqrt{3}$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$z = 4\\left(\\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}\\right) = 2 + 2i\\sqrt{3}$។"
       },
       {
-        "id": "g12b_p2_05",
+        "id": "q5",
         "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
@@ -25109,109 +25098,125 @@
         "explanation": "$r = 2$។ $\\cos\\theta = -\\dfrac{1}{2}, \\sin\\theta = \\dfrac{\\sqrt{3}}{2} \\Rightarrow \\theta = \\dfrac{2\\pi}{3}$។ ដូច្នេះ $z = 2(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។"
       },
       {
-        "id": "g12b_p2_06",
+        "id": "q6",
         "questionNumber": 6,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "បំប្លែង $z = 2\\left(\\cos\\dfrac{5\\pi}{6} + i\\sin\\dfrac{5\\pi}{6}\\right)$ ជាទម្រង់ពីជគណិត ៖",
         "options": [
-          "$-\\sqrt{3} - i$",
+          "$-1 + i\\sqrt{3}$",
           "$\\sqrt{3} - i$",
           "$-\\sqrt{3} + i$",
-          "$-1 + i\\sqrt{3}$"
+          "$-\\sqrt{3} - i$"
         ],
         "correct": 2,
         "explanation": "$z = 2\\left(-\\dfrac{\\sqrt{3}}{2} + \\dfrac{1}{2}i\\right) = -\\sqrt{3} + i$។"
       },
       {
-        "id": "g12b_p2_07",
+        "id": "q7",
         "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "សរសេរ $z = -5$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
+          "$5(\\cos(-\\pi) - i\\sin\\pi)$",
           "$5(\\cos\\pi + i\\sin\\pi)$",
-          "$-5(\\cos 0 + i\\sin 0)$",
           "$5(\\cos 0 + i\\sin 0)$",
-          "$5(\\cos(-\\pi) - i\\sin\\pi)$"
+          "$-5(\\cos 0 + i\\sin 0)$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "ម៉ូឌុល $r = 5$ អាគុយម៉ង់ $\\theta = \\pi$ ៖ $z = 5(\\cos\\pi + i\\sin\\pi)$។"
       },
       {
-        "id": "g12b_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សរសេរ $z = \\sin\\alpha + i\\cos\\alpha$ ជាទម្រង់ត្រីកោណមាត្រត្រឹមត្រូវ ៖",
-        "options": [
-          "$\\sin\\left(\\dfrac{\\pi}{2} - \\alpha\\right) + i\\cos\\left(\\dfrac{\\pi}{2} - \\alpha\\right)$",
-          "$\\cos\\left(\\dfrac{\\pi}{2} - \\alpha\\right) + i\\sin\\left(\\dfrac{\\pi}{2} - \\alpha\\right)$",
-          "$\\cos(-\\alpha) + i\\sin(-\\alpha)$",
-          "$\\cos\\alpha + i\\sin\\alpha$"
-        ],
-        "correct": 1,
-        "explanation": "ដោយប្រើមុំបំពេញ ៖ $\\sin\\alpha = \\cos(\\dfrac{\\pi}{2} - \\alpha)$ និង $\\cos\\alpha = \\sin(\\dfrac{\\pi}{2} - \\alpha)$។"
-      },
-      {
-        "id": "g12b_p2_09",
-        "questionNumber": 9,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "សរសេរ $z = 1 - \\cos\\theta + i\\sin\\theta$ ($\\theta \\in (0, 2\\pi)$) ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
           "$2\\sin\\dfrac{\\theta}{2}\\left(\\cos\\dfrac{\\theta}{2} + i\\sin\\dfrac{\\theta}{2}\\right)$",
+          "$2\\cos\\dfrac{\\theta}{2}\\left(\\cos\\dfrac{\\theta}{2} + i\\sin\\dfrac{\\theta}{2}\\right)$",
           "$1 + \\cos\\theta + i\\sin\\theta$",
-          "$2\\sin\\dfrac{\\theta}{2}\\left[\\cos\\left(\\dfrac{\\pi - \\theta}{2}\\right) + i\\sin\\left(\\dfrac{\\pi - \\theta}{2}\\right)\\right]$",
-          "$2\\cos\\dfrac{\\theta}{2}\\left(\\cos\\dfrac{\\theta}{2} + i\\sin\\dfrac{\\theta}{2}\\right)$"
+          "$2\\sin\\dfrac{\\theta}{2}\\left[\\cos\\left(\\dfrac{\\pi - \\theta}{2}\\right) + i\\sin\\left(\\dfrac{\\pi - \\theta}{2}\\right)\\right]$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$1 - \\cos\\theta = 2\\sin^2(\\theta/2)$ និង $\\sin\\theta = 2\\sin(\\theta/2)\\cos(\\theta/2)$ នាំឱ្យ $z = 2\\sin(\\theta/2)[\\sin(\\theta/2) + i\\cos(\\theta/2)] = 2\\sin(\\theta/2)[\\cos\\dfrac{(\\pi-\\theta}{2}) + i\\sin\\dfrac{(\\pi-\\theta}{2})]$។"
       },
       {
-        "id": "g12b_p2_10",
-        "questionNumber": 10,
+        "id": "q9",
+        "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "សរសេរទម្រង់អយល័រ (Euler's form) $z = r e^{i\\theta}$ នៃ $z = -1 - i$ ៖",
         "options": [
           "$\\sqrt{2} e^{i \\dfrac{\\pi}{4}}$",
+          "$\\sqrt{2} e^{i 3\\pi/4}$",
           "$\\sqrt{2} e^{-i 3\\pi/4}$",
-          "$2 e^{-i 3\\pi/4}$",
-          "$\\sqrt{2} e^{i 3\\pi/4}$"
+          "$2 e^{-i 3\\pi/4}$"
+        ],
+        "correct": 2,
+        "explanation": "$r = \\sqrt{2}, \\theta = -3\\pi/4$ នាំឱ្យ $z = \\sqrt{2} e^{-i 3\\pi/4}$ (ឬ $\\sqrt{2} e^{i 5\\pi/4}$)។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បំប្លែង $z=-4\\left(\\cos \\dfrac{2\\pi}{3} + i\\sin \\dfrac{2\\pi}{3}\\right)$ ទៅជាទម្រង់ត្រីកោណមាត្រត្រឹមត្រូវ ($r>0$) ៖",
+        "options": [
+          "$4\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)$",
+          "$4\\left(\\cos\\left(-\\dfrac{\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{\\pi}{3}\\right)\\right)$",
+          "$4\\left(\\cos \\dfrac{2\\pi}{3} + i\\sin \\dfrac{2\\pi}{3}\\right)$",
+          "$4\\left(\\cos\\left(-\\dfrac{2\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{2\\pi}{3}\\right)\\right)$"
         ],
         "correct": 1,
-        "explanation": "$r = \\sqrt{2}, \\theta = -3\\pi/4$ នាំឱ្យ $z = \\sqrt{2} e^{-i 3\\pi/4}$ (ឬ $\\sqrt{2} e^{i 5\\pi/4}$)។"
+        "explanation": "-z មានអាគុយម៉ង់ θ+π"
       }
     ],
     "4": [
       {
-        "id": "g12b_p3_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1)$ និង $z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)$ នោះផលគុណ $z_1 z_2$ ស្មើ ៖",
         "options": [
-          "$r_1 r_2[\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)]$",
-          "$r_1 r_2(\\cos\\theta_1\\cos\\theta_2 + i\\sin\\theta_1\\sin\\theta_2)$",
+          "$r_1 r_2[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)]$",
           "$(r_1 + r_2)[\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)]$",
-          "$r_1 r_2[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)]$"
+          "$r_1 r_2(\\cos\\theta_1\\cos\\theta_2 + i\\sin\\theta_1\\sin\\theta_2)$",
+          "$r_1 r_2[\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)]$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "ពេលគុណពីរចំនួនកុំផ្លិចទម្រង់ត្រីកោណមាត្រ គេគុណម៉ូឌុល និងបូកអាគុយម៉ង់។"
       },
       {
-        "id": "g12b_p3_02",
+        "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនាផលគុណ $z = 2\\left(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6}\\right) \\times 3\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$ ៖",
+        "options": [
+          "$6i$",
+          "$-6i$",
+          "$-6$",
+          "$6$"
+        ],
+        "correct": 0,
+        "explanation": "$r = 2 \\times 3 = 6$។ $\\theta = \\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}$។ $z = 6(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2})) = 6(0 + i) = 6i$។"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនាផលគុណ $z_1 z_2$ ដែល $z_1 = 3\\left(\\cos\\dfrac{\\pi}{5} + i\\sin\\dfrac{\\pi}{5}\\right)$ និង $z_2 = 2\\left(\\cos\\dfrac{\\pi}{10} + i\\sin\\dfrac{\\pi}{10}\\right)$ ៖",
         "options": [
           "$5\\left(\\cos\\dfrac{3\\pi}{10} + i\\sin\\dfrac{3\\pi}{10}\\right)$",
@@ -25223,27 +25228,11 @@
         "explanation": "គុណម៉ូឌុល $3 \\times 2 = 6$ និងបូកអាគុយម៉ង់ $\\dfrac{\\pi}{5} + \\dfrac{\\pi}{10} = \\dfrac{3\\pi}{10}$។"
       },
       {
-        "id": "g12b_p3_03",
-        "questionNumber": 3,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "គណនាផលគុណ $z = 2\\left(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6}\\right) \\times 3\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$ ៖",
-        "options": [
-          "$-6i$",
-          "$6i$",
-          "$-6$",
-          "$6$"
-        ],
-        "correct": 1,
-        "explanation": "$r = 2 \\times 3 = 6$។ $\\theta = \\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}$។ $z = 6(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2})) = 6(0 + i) = 6i$។"
-      },
-      {
-        "id": "g12b_p3_04",
+        "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $z^2$ ដែល $z = 2\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$ ៖",
         "options": [
           "$-2 + 2\\sqrt{3}i$",
@@ -25255,99 +25244,99 @@
         "explanation": "$z^2 = z \\cdot z = 4\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right) = 4\\left(-\\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}\\right) = -2 + 2\\sqrt{3}i$។"
       },
       {
-        "id": "g12b_p3_05",
+        "id": "q5",
         "questionNumber": 5,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គេឱ្យ $z_1 = 1 + i$ និង $z_2 = \\sqrt{3} + i$។ រកអាគុយម៉ង់នៃផលគុណ $z_1 z_2$ ៖",
         "options": [
-          "$\\dfrac{\\pi}{12}$",
+          "$\\dfrac{5\\pi}{12}$",
           "$\\dfrac{7\\pi}{12}$",
-          "$\\dfrac{\\pi}{3}$",
-          "$\\dfrac{5\\pi}{12}$"
+          "$\\dfrac{\\pi}{12}$",
+          "$\\dfrac{\\pi}{3}$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "$\\text{Arg}(z_1) = \\dfrac{\\pi}{4}$ និង $\\text{Arg}(z_2) = \\dfrac{\\pi}{6}$។ $\\text{Arg}(z_1 z_2) = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{12}$។"
       },
       {
-        "id": "g12b_p3_06",
+        "id": "q6",
         "questionNumber": 6,
-        "pointNumber": 4,
-        "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បើ $\\arg(z_1) = \\dfrac{\\pi}{6}$ និង $\\arg(z_2) = \\dfrac{\\pi}{3}$ នោះ $\\arg(z_1 z_2)$ ស្មើ ៖",
-        "options": [
-          "$\\dfrac{\\pi}{18}$",
-          "$\\dfrac{\\pi}{6}$",
-          "$-\\dfrac{\\pi}{6}$",
-          "$\\dfrac{\\pi}{2}$"
-        ],
-        "correct": 3,
-        "explanation": "$\\arg(z_1 z_2) = \\arg(z_1) + \\arg(z_2) = \\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}$។"
-      },
-      {
-        "id": "g12b_p3_07",
-        "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាតម្លៃពិតប្រាកដនៃ $\\cos\\dfrac{\\pi}{12}$ ៖",
         "options": [
-          "$\\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$",
-          "$\\dfrac{\\sqrt{2} + 1}{4}$",
+          "$\\dfrac{\\sqrt{3} + 1}{2}$",
           "$\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$",
-          "$\\dfrac{\\sqrt{3} + 1}{2}$"
+          "$\\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$",
+          "$\\dfrac{\\sqrt{2} + 1}{4}$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "$\\cos(\\dfrac{\\pi}{12}) = \\cos(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\cos(\\dfrac{\\pi}{4})\\cos(\\dfrac{\\pi}{6}) + \\sin(\\dfrac{\\pi}{4})\\sin(\\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}+\\sqrt{2}}{4}$។"
       },
       {
-        "id": "g12b_p3_08",
-        "questionNumber": 8,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាតម្លៃពិតប្រាកដនៃ $\\sin\\dfrac{\\pi}{12}$ ៖",
         "options": [
+          "$\\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$",
           "$\\dfrac{\\sqrt{2} - 1}{4}$",
           "$\\dfrac{\\sqrt{3} - 1}{2}$",
-          "$\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$",
-          "$\\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$"
+          "$\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "$\\sin(\\dfrac{\\pi}{12}) = \\sin(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$។"
       },
       {
-        "id": "g12b_p3_09",
+        "id": "q8",
+        "questionNumber": 8,
+        "pointNumber": 4,
+        "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1)$ និង $z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)$ តើ $\\text{Arg}(z_1 z_2)$ ស្មើអ្វី?",
+        "options": [
+          "$\\dfrac{\\theta_1}{\\theta_2}$",
+          "$\\theta_1 - \\theta_2$",
+          "$\\theta_1 \\theta_2$",
+          "$\\theta_1 + \\theta_2$"
+        ],
+        "correct": 3,
+        "explanation": "អាគុយម៉ង់នៃផលគុណស្មើផលបូកនៃអាគុយម៉ង់ ៖ $\\text{Arg}(z_1 z_2) = \\theta_1 + \\theta_2$ (ម៉ូឌុលូ $2\\pi$)។"
+      },
+      {
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $z = \\dfrac{1 + i}{\\sqrt{3} - i}$ រកទម្រង់ត្រីកោណមាត្រនៃ $z$ ៖",
         "options": [
-          "$\\dfrac{\\sqrt{2}}{2}\\left(\\cos\\dfrac{5\\pi}{12} + i\\sin\\dfrac{5\\pi}{12}\\right)$",
-          "$\\sqrt{2}\\left(\\cos\\dfrac{\\pi}{12} + i\\sin\\dfrac{\\pi}{12}\\right)$",
           "$2\\left(\\cos\\dfrac{5\\pi}{12} + i\\sin\\dfrac{5\\pi}{12}\\right)$",
-          "$\\dfrac{\\sqrt{2}}{2}\\left(\\cos\\dfrac{\\pi}{12} + i\\sin\\dfrac{\\pi}{12}\\right)$"
+          "$\\dfrac{\\sqrt{2}}{2}\\left(\\cos\\dfrac{\\pi}{12} + i\\sin\\dfrac{\\pi}{12}\\right)$",
+          "$\\sqrt{2}\\left(\\cos\\dfrac{\\pi}{12} + i\\sin\\dfrac{\\pi}{12}\\right)$",
+          "$\\dfrac{\\sqrt{2}}{2}\\left(\\cos\\dfrac{5\\pi}{12} + i\\sin\\dfrac{5\\pi}{12}\\right)$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$|1+i| = \\sqrt{2}, \\theta_1 = \\dfrac{\\pi}{4}$។ $|\\sqrt{3}-i| = 2, \\theta_2 = -\\dfrac{\\pi}{6}$។ ម៉ូឌុល $r = \\dfrac{\\sqrt{2}}{2}$។ $\\theta = \\dfrac{\\pi}{4} - (-\\dfrac{\\pi}{6}) = 5\\pi/12$។"
       },
       {
-        "id": "g12b_p3_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "បើ $z = \\cos\\theta + i\\sin\\theta$ គណនា $\\dfrac{z - 1}{z + 1}$ ($z \\neq -1$) ៖",
         "options": [
-          "$i\\cot\\dfrac{\\theta}{2}$",
           "$\\tan\\dfrac{\\theta}{2}$",
           "$i\\tan\\dfrac{\\theta}{2}$",
-          "$-i\\cot\\dfrac{\\theta}{2}$"
+          "$-i\\cot\\dfrac{\\theta}{2}$",
+          "$i\\cot\\dfrac{\\theta}{2}$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "$\\dfrac{z-1}{z+1} = \\dfrac{e^{i\\theta}-1}{e^{i\\theta}+1} = \\dfrac{e^{i\\theta/2}(e^{i\\theta/2}-e^{-i\\theta/2})}{e^{i\\theta/2}(e^{i\\theta/2}+e^{-i\\theta/2})} = \\dfrac{2i\\sin(\\theta/2)}{2\\cos(\\theta/2)} = i\\tan\\dfrac{\\theta}{2}$ (ជានិម្មិតសុទ្ធ)។"
       }
     ],
@@ -25357,68 +25346,64 @@
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 9\\left(\\cos \\left(-\\dfrac{\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{\\pi}{6}\\right)\\right)$ និង $z_2 = 2\\left(\\cos \\left(-\\dfrac{\\pi}{2}\\right) + i\\sin \\left(-\\dfrac{\\pi}{2}\\right)\\right)$។ ម៉ូឌុលនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ផលចែក $\\dfrac{z_1}{z_2}$ ($z_2 \\neq 0$) កំណត់ដោយ ៖",
         "options": [
-          "$18$",
-          "$7$",
-          "$\\dfrac{2}{9}$",
-          "$\\dfrac{9}{2}$"
+          "$\\dfrac{r_1}{r_2}[\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)]$",
+          "$\\dfrac{r_1}{r_2}[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)]$",
+          "$(r_1 - r_2)[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)]$",
+          "$\\dfrac{r_1}{r_2}\\left(\\dfrac{\\cos\\theta_1}{\\cos\\theta_2} + i\\dfrac{\\sin\\theta_1}{\\sin\\theta_2}\\right)$"
         ],
-        "correct": 3,
-        "explanation": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{r_1}{r_2} = \\dfrac{9}{2}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "ពេលចែកពីរចំនួនកុំផ្លិចទម្រង់ត្រីកោណមាត្រ គេចែកម៉ូឌុល និងដកអាគុយម៉ង់។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 8\\left(\\cos \\left(-\\dfrac{\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{\\pi}{6}\\right)\\right)$ និង $z_2 = 3\\left(\\cos \\left(-\\dfrac{3\\pi}{4}\\right) + i\\sin \\left(-\\dfrac{3\\pi}{4}\\right)\\right)$។ ទម្រង់ត្រីកោណមាត្រនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនាផលចែក $z = \\dfrac{6(\\cos\\pi + i\\sin\\pi)}{2(\\cos(\\dfrac{\\pi}{3}) + i\\sin(\\dfrac{\\pi}{3}))}$ ៖",
         "options": [
-          "$\\dfrac{3}{8}\\left(\\cos \\dfrac{7\\pi}{12} + i\\sin \\dfrac{7\\pi}{12}\\right)$",
-          "$24\\left(\\cos \\dfrac{7\\pi}{12} + i\\sin \\dfrac{7\\pi}{12}\\right)$",
-          "$\\dfrac{8}{3}\\left(\\cos \\dfrac{7\\pi}{12} + i\\sin \\dfrac{7\\pi}{12}\\right)$",
-          "$\\dfrac{8}{3}\\left(\\cos \\left(-\\dfrac{11\\pi}{12}\\right) + i\\sin \\left(-\\dfrac{11\\pi}{12}\\right)\\right)$"
+          "$3\\left(\\cos\\dfrac{4\\pi}{3} + i\\sin\\dfrac{4\\pi}{3}\\right)$",
+          "$3(\\cos\\pi - i\\sin\\pi)$",
+          "$3\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$",
+          "$4\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$"
         ],
         "correct": 2,
-        "explanation": "ចែកម៉ូឌុល និងដកអាគុយម៉ង់ ៖ $\\dfrac{8}{3}\\left(\\cos \\dfrac{7\\pi}{12} + i\\sin \\dfrac{7\\pi}{12}\\right)$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$r = \\dfrac{6}{2} = 3$។ $\\theta = \\pi - \\dfrac{\\pi}{3} = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 9\\left(\\cos \\left(-\\dfrac{5\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{5\\pi}{6}\\right)\\right)$ និង $z_2 = 2\\left(\\cos \\left(-\\dfrac{5\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{5\\pi}{6}\\right)\\right)$។ ម៉ូឌុលនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\dfrac{9\\left(\\cos\\left(-\\dfrac{\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{\\pi}{3}\\right)\\right)}{3\\left(\\cos \\dfrac{\\pi}{2} + i\\sin \\dfrac{\\pi}{2}\\right)}$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
-          "$18$",
-          "$\\dfrac{9}{2}$",
-          "$7$",
-          "$\\dfrac{2}{9}$"
+          "$3\\left(\\cos \\dfrac{5\\pi}{6} + i\\sin \\dfrac{5\\pi}{6}\\right)$",
+          "$3\\left(\\cos \\dfrac{\\pi}{6} + i\\sin \\dfrac{\\pi}{6}\\right)$",
+          "$3\\left(\\cos\\left(-\\dfrac{5\\pi}{6}\\right) + i\\sin\\left(-\\dfrac{5\\pi}{6}\\right)\\right)$",
+          "$3\\left(\\cos\\left(-\\dfrac{\\pi}{6}\\right) + i\\sin\\left(-\\dfrac{\\pi}{6}\\right)\\right)$"
         ],
-        "correct": 1,
-        "explanation": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{r_1}{r_2} = \\dfrac{9}{2}$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "គុណ/ចែកម៉ូឌុល បូក/ដកអាគុយម៉ង់"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 8\\left(\\cos \\pi + i\\sin \\pi\\right)$ និង $z_2 = 2\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)$។ ម៉ូឌុលនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\dfrac{6\\left(\\cos \\dfrac{\\pi}{4} + i\\sin \\dfrac{\\pi}{4}\\right)}{3\\left(\\cos\\left(-\\dfrac{3\\pi}{4}\\right) + i\\sin\\left(-\\dfrac{3\\pi}{4}\\right)\\right)}$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
-          "$4$",
-          "$6$",
-          "$16$",
-          "$\\dfrac{1}{4}$"
+          "$2\\left(\\cos 0 + i\\sin 0\\right)$",
+          "$2\\left(\\cos\\left(-\\dfrac{\\pi}{2}\\right) + i\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right)$",
+          "$2\\left(\\cos \\dfrac{\\pi}{2} + i\\sin \\dfrac{\\pi}{2}\\right)$",
+          "$2\\left(\\cos \\pi + i\\sin \\pi\\right)$"
         ],
-        "correct": 0,
-        "explanation": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{r_1}{r_2} = \\dfrac{8}{2} = 4$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "គុណ/ចែកម៉ូឌុល បូក/ដកអាគុយម៉ង់"
       },
       {
         "id": "q5",
@@ -25426,16 +25411,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 4\\left(\\cos \\dfrac{\\pi}{2} + i\\sin \\dfrac{\\pi}{2}\\right)$ និង $z_2 = 2\\left(\\cos \\dfrac{\\pi}{2} + i\\sin \\dfrac{\\pi}{2}\\right)$។ ម៉ូឌុលនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "question": "គេឱ្យ $z_1 = 1 + i$ និង $z_2 = \\sqrt{3} + i$។ រកអាគុយម៉ង់នៃផលចែក $\\dfrac{z_1}{z_2}$ ៖",
         "options": [
-          "$2$",
-          "$3$",
-          "$8$",
-          "$\\dfrac{1}{2}$"
+          "$\\dfrac{5\\pi}{12}$",
+          "$\\dfrac{\\pi}{12}$",
+          "$-\\dfrac{\\pi}{12}$",
+          "$\\dfrac{\\pi}{6}$"
         ],
-        "correct": 0,
-        "explanation": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{r_1}{r_2} = \\dfrac{4}{2} = 2$។",
-        "src": "genpq-g12a_plan"
+        "correct": 1,
+        "explanation": "$\\text{Arg}\\left(\\dfrac{z_1}{z_2}\\right) = \\text{Arg}(z_1) - \\text{Arg}(z_2) = \\dfrac{\\pi}{4} - \\dfrac{\\pi}{6} = \\dfrac{\\pi}{12}$។"
       },
       {
         "id": "q6",
@@ -25443,16 +25427,15 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 6\\left(\\cos \\left(-\\dfrac{\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{\\pi}{6}\\right)\\right)$ និង $z_2 = 3\\left(\\cos \\left(-\\dfrac{\\pi}{4}\\right) + i\\sin \\left(-\\dfrac{\\pi}{4}\\right)\\right)$។ អាគុយម៉ង់មួយនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "question": "គេឱ្យ $z_1 = 9\\left(\\cos \\left(-\\dfrac{\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{\\pi}{6}\\right)\\right)$ និង $z_2 = 2\\left(\\cos \\left(-\\dfrac{\\pi}{2}\\right) + i\\sin \\left(-\\dfrac{\\pi}{2}\\right)\\right)$។ ម៉ូឌុលនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
         "options": [
-          "$-\\dfrac{5\\pi}{12}$",
-          "$\\dfrac{\\pi}{12}$",
-          "$\\dfrac{7\\pi}{12}$",
-          "$-\\dfrac{\\pi}{12}$"
+          "$7$",
+          "$\\dfrac{9}{2}$",
+          "$\\dfrac{2}{9}$",
+          "$18$"
         ],
         "correct": 1,
-        "explanation": "$\\arg\\dfrac{z_1}{z_2} = \\theta_1 - \\theta_2 = \\dfrac{\\pi}{12}$ (ម៉ូឌុល $2\\pi$)។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{r_1}{r_2} = \\dfrac{9}{2}$។"
       },
       {
         "id": "q7",
@@ -25460,73 +25443,133 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 9\\left(\\cos \\left(-\\dfrac{\\pi}{2}\\right) + i\\sin \\left(-\\dfrac{\\pi}{2}\\right)\\right)$ និង $z_2 = 3\\left(\\cos \\dfrac{2\\pi}{3} + i\\sin \\dfrac{2\\pi}{3}\\right)$។ ម៉ូឌុលនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "question": "គេឱ្យ $z_1 = 8\\left(\\cos \\left(-\\dfrac{\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{\\pi}{6}\\right)\\right)$ និង $z_2 = 3\\left(\\cos \\left(-\\dfrac{3\\pi}{4}\\right) + i\\sin \\left(-\\dfrac{3\\pi}{4}\\right)\\right)$។ ទម្រង់ត្រីកោណមាត្រនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
         "options": [
-          "$6$",
-          "$27$",
-          "$\\dfrac{1}{3}$",
-          "$3$"
+          "$\\dfrac{8}{3}\\left(\\cos \\dfrac{7\\pi}{12} + i\\sin \\dfrac{7\\pi}{12}\\right)$",
+          "$24\\left(\\cos \\dfrac{7\\pi}{12} + i\\sin \\dfrac{7\\pi}{12}\\right)$",
+          "$\\dfrac{3}{8}\\left(\\cos \\dfrac{7\\pi}{12} + i\\sin \\dfrac{7\\pi}{12}\\right)$",
+          "$\\dfrac{8}{3}\\left(\\cos \\left(-\\dfrac{11\\pi}{12}\\right) + i\\sin \\left(-\\dfrac{11\\pi}{12}\\right)\\right)$"
         ],
-        "correct": 3,
-        "explanation": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{r_1}{r_2} = \\dfrac{9}{3} = 3$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "ចែកម៉ូឌុល និងដកអាគុយម៉ង់ ៖ $\\dfrac{8}{3}\\left(\\cos \\dfrac{7\\pi}{12} + i\\sin \\dfrac{7\\pi}{12}\\right)$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 8\\left(\\cos \\left(-\\dfrac{2\\pi}{3}\\right) + i\\sin \\left(-\\dfrac{2\\pi}{3}\\right)\\right)$ និង $z_2 = 1\\left(\\cos \\dfrac{\\pi}{6} + i\\sin \\dfrac{\\pi}{6}\\right)$។ អាគុយម៉ង់មួយនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\dfrac{4\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)}{2\\left(\\cos 0 + i\\sin 0\\right)}$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
-          "$-\\dfrac{\\pi}{3}$",
-          "$\\dfrac{5\\pi}{6}$",
-          "$-\\dfrac{5\\pi}{6}$",
-          "$-\\dfrac{\\pi}{2}$"
+          "$2\\left(\\cos\\left(-\\dfrac{\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{\\pi}{3}\\right)\\right)$",
+          "$2\\left(\\cos\\left(-\\dfrac{2\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{2\\pi}{3}\\right)\\right)$",
+          "$2\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)$",
+          "$2\\left(\\cos \\dfrac{2\\pi}{3} + i\\sin \\dfrac{2\\pi}{3}\\right)$"
         ],
         "correct": 2,
-        "explanation": "$\\arg\\dfrac{z_1}{z_2} = \\theta_1 - \\theta_2 = -\\dfrac{5\\pi}{6}$ (ម៉ូឌុល $2\\pi$)។",
-        "src": "genpq-g12a_plan"
+        "explanation": "គុណ/ចែកម៉ូឌុល បូក/ដកអាគុយម៉ង់"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z = 9\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)$។ ទម្រង់ត្រីកោណមាត្រនៃ $\\dfrac{1}{z}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\dfrac{10\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)}{5\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)}$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
-          "$-\\dfrac{1}{9}\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)$",
-          "$9\\left(\\cos \\left(-\\dfrac{\\pi}{3}\\right) + i\\sin \\left(-\\dfrac{\\pi}{3}\\right)\\right)$",
-          "$\\dfrac{1}{9}\\left(\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}\\right)$",
-          "$\\dfrac{1}{9}\\left(\\cos \\left(-\\dfrac{\\pi}{3}\\right) + i\\sin \\left(-\\dfrac{\\pi}{3}\\right)\\right)$"
+          "$2\\left(\\cos \\pi + i\\sin \\pi\\right)$",
+          "$2\\left(\\cos \\dfrac{\\pi}{2} + i\\sin \\dfrac{\\pi}{2}\\right)$",
+          "$2\\left(\\cos\\left(-\\dfrac{\\pi}{2}\\right) + i\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right)$",
+          "$2\\left(\\cos 0 + i\\sin 0\\right)$"
         ],
         "correct": 3,
-        "explanation": "$\\dfrac{1}{z} = \\dfrac{1}{r}\\left[\\cos(-\\theta) + i\\sin(-\\theta)\\right]$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "គុណ/ចែកម៉ូឌុល បូក/ដកអាគុយម៉ង់"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គេឱ្យ $z_1 = 3\\left(\\cos \\dfrac{\\pi}{6} + i\\sin \\dfrac{\\pi}{6}\\right)$ និង $z_2 = 2\\left(\\cos \\left(-\\dfrac{3\\pi}{4}\\right) + i\\sin \\left(-\\dfrac{3\\pi}{4}\\right)\\right)$។ ទម្រង់ត្រីកោណមាត្រនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\dfrac{3\\left(\\cos \\dfrac{\\pi}{6} + i\\sin \\dfrac{\\pi}{6}\\right)}{3\\left(\\cos\\left(-\\dfrac{\\pi}{2}\\right) + i\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right)}$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
         "options": [
-          "$6\\left(\\cos \\dfrac{11\\pi}{12} + i\\sin \\dfrac{11\\pi}{12}\\right)$",
-          "$\\dfrac{2}{3}\\left(\\cos \\dfrac{11\\pi}{12} + i\\sin \\dfrac{11\\pi}{12}\\right)$",
-          "$\\dfrac{3}{2}\\left(\\cos \\dfrac{11\\pi}{12} + i\\sin \\dfrac{11\\pi}{12}\\right)$",
-          "$\\dfrac{3}{2}\\left(\\cos \\left(-\\dfrac{7\\pi}{12}\\right) + i\\sin \\left(-\\dfrac{7\\pi}{12}\\right)\\right)$"
+          "$\\cos \\dfrac{2\\pi}{3} + i\\sin \\dfrac{2\\pi}{3}$",
+          "$\\cos\\left(-\\dfrac{2\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{2\\pi}{3}\\right)$",
+          "$\\cos\\left(-\\dfrac{\\pi}{3}\\right) + i\\sin\\left(-\\dfrac{\\pi}{3}\\right)$",
+          "$\\cos \\dfrac{\\pi}{3} + i\\sin \\dfrac{\\pi}{3}$"
         ],
-        "correct": 2,
-        "explanation": "ចែកម៉ូឌុល និងដកអាគុយម៉ង់ ៖ $\\dfrac{3}{2}\\left(\\cos \\dfrac{11\\pi}{12} + i\\sin \\dfrac{11\\pi}{12}\\right)$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "គុណ/ចែកម៉ូឌុល បូក/ដកអាគុយម៉ង់"
       }
     ],
     "6": [
       {
         "id": "q1",
         "questionNumber": 1,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រករូបភាពនៃ $M(3 - 5i)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $\\pi$ ៖",
+        "options": [
+          "$-3 - 5i$",
+          "$3 + 5i$",
+          "$-3 + 5i$",
+          "$3 - 5i$"
+        ],
+        "correct": 2,
+        "explanation": "$z'-\\omega=e^{i\\theta}(z-\\omega)$"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រករូបភាពនៃ $M(-4 - 4i)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $\\pi$ ៖",
+        "options": [
+          "$4 - 4i$",
+          "$-4 + 4i$",
+          "$-4 - 4i$",
+          "$4 + 4i$"
+        ],
+        "correct": 3,
+        "explanation": "$z'-\\omega=e^{i\\theta}(z-\\omega)$"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រករូបភាពនៃ $M(6)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$ ៖",
+        "options": [
+          "$6i$",
+          "$-6i$",
+          "$6$",
+          "$1 + 6i$"
+        ],
+        "correct": 0,
+        "explanation": "$z'-\\omega=e^{i\\theta}(z-\\omega)$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 6,
+        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រករូបភាពនៃ $M(3 + i)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$ ៖",
+        "options": [
+          "$-1 - 3i$",
+          "$-1 + 3i$",
+          "$1 + 3i$",
+          "$1 - 3i$"
+        ],
+        "correct": 1,
+        "explanation": "$z'-\\omega=e^{i\\theta}(z-\\omega)$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -25538,76 +25581,7 @@
           "$1 + 9i$"
         ],
         "correct": 2,
-        "explanation": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = -5 + 6i$។",
-        "src": "genpq-g12a_plan"
-      },
-      {
-        "id": "q2",
-        "questionNumber": 2,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បំប្លែងវិលផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$ មានកន្សោមកុំផ្លិច ៖",
-        "options": [
-          "$z' = iz$",
-          "$z' = \\bar{z}$",
-          "$z' = -iz$",
-          "$z' = -z$"
-        ],
-        "correct": 0,
-        "explanation": "$z' = (\\cos\\theta + i\\sin\\theta) z$ ជាមួយ $\\theta = \\dfrac{\\pi}{2}$ ⇒ $z' = iz$។",
-        "src": "genpq-g12a_plan"
-      },
-      {
-        "id": "q3",
-        "questionNumber": 3,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបភាពនៃ $M(1 - i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-5 + i)$ មុំ $\\dfrac{\\pi}{2}$ មានអាហ្វិក ៖",
-        "options": [
-          "$1 + i$",
-          "$-3 + 7i$",
-          "$7 - 3i$",
-          "$2 + 6i$"
-        ],
-        "correct": 1,
-        "explanation": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = -3 + 7i$។",
-        "src": "genpq-g12a_plan"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបភាពនៃចំណុច $M(-6 + 3i)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $\\pi$ មានអាហ្វិក ៖",
-        "options": [
-          "$-6 - 3i$",
-          "$3 + 6i$",
-          "$3 - 6i$",
-          "$6 - 3i$"
-        ],
-        "correct": 3,
-        "explanation": "$z' = e^{i\\theta} z = -1 \\cdot (-6 + 3i) = 6 - 3i$។",
-        "src": "genpq-g12a_plan"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 6,
-        "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបភាពនៃចំណុច $M(-5 + i)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $-\\dfrac{\\pi}{2}$ មានអាហ្វិក ៖",
-        "options": [
-          "$1 + 5i$",
-          "$5 + i$",
-          "$-1 - 5i$",
-          "$1 - 5i$"
-        ],
-        "correct": 0,
-        "explanation": "$z' = e^{i\\theta} z = -i \\cdot (-5 + i) = 1 + 5i$។",
-        "src": "genpq-g12a_plan"
+        "explanation": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = -5 + 6i$។"
       },
       {
         "id": "q6",
@@ -25615,16 +25589,15 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបភាពនៃចំណុច $M(6 + 5i)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$ មានអាហ្វិក ៖",
+        "question": "បំប្លែងវិលផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$ មានកន្សោមកុំផ្លិច ៖",
         "options": [
-          "$5 - 6i$",
-          "$5 + 6i$",
-          "$-5 + 6i$",
-          "$-6 + 5i$"
+          "$z' = -z$",
+          "$z' = -iz$",
+          "$z' = \\bar{z}$",
+          "$z' = iz$"
         ],
-        "correct": 2,
-        "explanation": "$z' = e^{i\\theta} z = i \\cdot (6 + 5i) = -5 + 6i$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$z' = (\\cos\\theta + i\\sin\\theta) z$ ជាមួយ $\\theta = \\dfrac{\\pi}{2}$ ⇒ $z' = iz$។"
       },
       {
         "id": "q7",
@@ -25632,67 +25605,63 @@
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបភាពនៃ $M(-3 - 2i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-5 + 3i)$ មុំ $\\dfrac{\\pi}{2}$ មានអាហ្វិក ៖",
+        "question": "រូបភាពនៃ $M(1 - i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-5 + i)$ មុំ $\\dfrac{\\pi}{2}$ មានអាហ្វិក ៖",
         "options": [
-          "$5$",
-          "$5 + 2i$",
-          "$2 - 3i$",
-          "$5i$"
+          "$-3 + 7i$",
+          "$1 + i$",
+          "$2 + 6i$",
+          "$7 - 3i$"
         ],
-        "correct": 3,
-        "explanation": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = 5i$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = -3 + 7i$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបភាពនៃ $M(-6 + 5i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(1 - 4i)$ មុំ $-\\dfrac{\\pi}{2}$ មានអាហ្វិក ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រករូបភាពនៃ $M(-1 - i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-5 + i)$ មុំ $\\dfrac{\\pi}{2}$ ៖",
         "options": [
-          "$9 + 7i$",
-          "$10 + 3i$",
-          "$3 + 10i$",
-          "$5 + 6i$"
+          "$-3 - 5i$",
+          "$3 + 5i$",
+          "$3 - 5i$",
+          "$-3 + 5i$"
         ],
-        "correct": 1,
-        "explanation": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = 10 + 3i$។",
-        "src": "genpq-g12a_plan"
+        "correct": 3,
+        "explanation": "$z'-\\omega=e^{i\\theta}(z-\\omega)$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "បំប្លែងវិលផ្ចិត $O$ មុំ $-\\dfrac{\\pi}{2}$ មានកន្សោមកុំផ្លិច ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រករូបភាពនៃ $M(4 + 2i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(3 + 4i)$ មុំ $\\dfrac{\\pi}{2}$ ៖",
         "options": [
-          "$z' = -z$",
-          "$z' = -iz$",
-          "$z' = \\bar{z}$",
-          "$z' = iz$"
+          "$5 + 5i$",
+          "$5 - 5i$",
+          "$-5 + 5i$",
+          "$-5 - 5i$"
         ],
-        "correct": 1,
-        "explanation": "$z' = (\\cos\\theta + i\\sin\\theta) z$ ជាមួយ $\\theta = -\\dfrac{\\pi}{2}$ ⇒ $z' = -iz$។",
-        "src": "genpq-g12a_plan"
+        "correct": 0,
+        "explanation": "$z'-\\omega=e^{i\\theta}(z-\\omega)$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 6,
         "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបភាពនៃ $M(3i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-3 - 2i)$ មុំ $\\pi$ មានអាហ្វិក ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រករូបភាពនៃ $M(4 - 2i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-1 - 2i)$ មុំ $\\pi$ ៖",
         "options": [
-          "$-3 - 5i$",
-          "$-7 - 6i$",
-          "$-3i$",
-          "$-6 - 7i$"
+          "$-6 + 2i$",
+          "$6 - 2i$",
+          "$-6 - 2i$",
+          "$6 + 2i$"
         ],
-        "correct": 3,
-        "explanation": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = -6 - 7i$។",
-        "src": "genpq-g12a_plan"
+        "correct": 2,
+        "explanation": "$z'-\\omega=e^{i\\theta}(z-\\omega)$"
       }
     ]
   },

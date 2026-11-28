@@ -16294,7 +16294,7 @@
         "pointTitle": "ចំណុចទី ១ ៖ ម៉ូឌុលនៃចំនួនកុំផ្លិច",
         "topic": "$|z| = \\sqrt{a^2 + b^2}$",
         "objective": "យល់ និងអនុវត្តម៉ូឌុលនៃចំនួនកុំផ្លិច",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $|z| = \\sqrt{a^2 + b^2} \\qquad |z_1 z_2| = |z_1||z_2| \\qquad \\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{|z_1|}{|z_2|}$\n  - $|\\bar{z}| = |z|$ , $|z^n| = |z|^n$",
         "exercises": [
           {
@@ -16308,6 +16308,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ម៉ូឌុលនៃ $z = -4 - 3i$ គឺ ៖",
+            "solution": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{16 + 9} = 5$។\n\nចម្លើយ ៖ $5$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-1-2_1_6"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ម៉ូឌុលនៃ $z = -6 + 8i$ គឺ ៖",
+            "solution": "$|z| = \\sqrt{a^2 + b^2} = \\sqrt{36 + 64} = 10$។\n\nចម្លើយ ៖ $10$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-1-2_1_11"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរគណនាម៉ូឌុលនៃចំនួនកុំផ្លិច ៖",
@@ -16316,13 +16336,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $|z_1|=5$ និង $|z_2|=12$ នោះ $|z_1z_2|$ ស្មើ ៖",
+            "solution": "$|z_1z_2|=|z_1||z_2|$\n\nចម្លើយ ៖ $60$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p1_13"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាម៉ូឌុលនៃ $z=2 + 3i$ ៖",
+            "solution": "$|z|=\\sqrt{4+9}$\n\nចម្លើយ ៖ $\\sqrt{13}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p1_18"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរគណនាម៉ូឌុលនៃចំនួនកុំផ្លិច ៖",
             "question": "គេឱ្យ $z_1 = 5 - 12i$ និង $z_2 = -8 + 15i$។\nក. គណនា $|z_1|$ និង $|z_2|$។\nខ. ទាញរក $|z_1 z_2|$ និង $\\left|\\dfrac{z_1}{z_2}\\right|$។\nគ. គណនា $|\\bar{z_1}|$ និង $|z_1^2|$។",
             "solution": "ក. $|z_1| = 13 , |z_2| = 17$\nខ. $|z_1 z_2| = 221$ , $\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{13}{17}$\nគ. $|\\bar{z_1}| = 13$ , $|z_1^2| = 169$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $|z|=5$ នោះ $|z^2|$ ស្មើ ៖",
+            "solution": "$|z^2|=|z|^2$\n\nចម្លើយ ៖ $25$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p1_03"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកចំនួនពិត $b>0$ ដើម្បីឱ្យ $|12+bi|=37$ ៖",
+            "solution": "$a^2+b^2=1369$\n\nចម្លើយ ៖ $35$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p1_08"
           }
         ]
       },
@@ -16344,6 +16404,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកអាគុយម៉ង់នៃចំនួនកុំផ្លិច $z = -3$ (ចំនួនពិតអវិជ្ជមាន) ៖",
+            "solution": "ចំណុចនៅលើអ័ក្សពិតខាងឆ្វេងមានអាគុយម៉ង់ $\\theta = \\pi$។\n\nចម្លើយ ៖ $\\pi$",
+            "src": "qb-gen",
+            "qid": "q_g12_0043"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកម៉ូឌុល $r$ នៃ $z=5 + 12i$ ៖",
+            "solution": "$r=\\sqrt{25+144}$\n\nចម្លើយ ៖ $13$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p2_04"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "កំណត់ម៉ូឌុល និងអាគុយម៉ង់ក្នុងកាដ្រង់ទី ២ ៖",
             "question": "គេឱ្យចំនួនកុំផ្លិច $z = -\\sqrt{2} + i\\sqrt{2}$។ រកម៉ូឌុល និងអាគុយម៉ង់នៃ $z$។",
@@ -16352,7 +16432,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-1-2-p1-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកម៉ូឌុល និងអាគុយម៉ង់នៃ $z = -\\sqrt{3} + i$ ៖",
+            "solution": "$r = 2$។ $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}, \\sin\\theta = \\dfrac{1}{2}$ (កាដ្រង់ទី ២) $\\Rightarrow \\theta = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}$។\n\nចម្លើយ ៖ $r = 2, \\theta = \\dfrac{5\\pi}{6}$",
+            "src": "qb-gen",
+            "qid": "q_g12_0046"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកម៉ូឌុលនៃ $z=1 + \\sqrt{3}i$ ៖",
+            "solution": "$r=\\sqrt{a^2+b^2}$\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p2_17"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "រកម៉ូឌុល និងអាគុយម៉ង់នៃចំនួនកុំផ្លិច ៖",
@@ -16360,9 +16460,29 @@
             "rubric": "ក. ម៉ូឌុល និងអាគុយម៉ង់នៃ $z_1, z_2$ (០.៤ ពិន្ទុ) | ខ. $\\dfrac{5\\pi}{6}$ និង $-\\dfrac{3\\pi}{4}$ (០.៣ ពិន្ទុ) | គ. $a = 4$ (០.៣ ពិន្ទុ)",
             "question": "ក. រកម៉ូឌុល និងអាគុយម៉ង់ចម្បងនៃ $z_1 = -1 + i$ និង $z_2 = \\sqrt{3} - i$។\n\nខ. រកអាគុយម៉ង់ចម្បងនៃ $-z_2$ និង $\\bar{z_1}$។\n\nគ. គេឱ្យ $z = (a + 1) + (2a - 3)i$ ($a \\in \\mathbb{R}$)។ រក $a$ ដើម្បីឱ្យ $\\arg(z) = \\dfrac{\\pi}{4}$។",
             "solution": "ក. • $|z_1| = \\sqrt{2}$ ; $\\cos\\theta = -\\dfrac{\\sqrt{2}}{2}$, $\\sin\\theta = \\dfrac{\\sqrt{2}}{2}$ នាំឱ្យ $\\arg(z_1) = \\dfrac{3\\pi}{4}$។\n• $|z_2| = 2$ ; $\\cos\\theta = \\dfrac{\\sqrt{3}}{2}$, $\\sin\\theta = -\\dfrac{1}{2}$ នាំឱ្យ $\\arg(z_2) = -\\dfrac{\\pi}{6}$។\n\nខ. • $-z_2 = -\\sqrt{3} + i$ មាន $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}$, $\\sin\\theta = \\dfrac{1}{2}$ នាំឱ្យ $\\arg(-z_2) = \\dfrac{5\\pi}{6}$។\n• $\\bar{z_1} = -1 - i$ នាំឱ្យ $\\arg(\\bar{z_1}) = -\\dfrac{3\\pi}{4}$។\n\nគ. $\\arg(z) = \\dfrac{\\pi}{4}$ លុះត្រាតែផ្នែកពិត = ផ្នែកនិម្មិត $> 0$ ៖ $a + 1 = 2a - 3 \\iff a = 4$ ពេលនោះ $z = 5 + 5i$ (វិជ្ជមាន) ✓។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកអាគុយម៉ង់ចម្បងនៃ $z=-1 - \\sqrt{3}i$ ៖",
+            "solution": "ពិនិត្យចតុភាគ ដើម្បីជ្រើសមុំត្រឹមត្រូវក្នុង (−π, π]\n\nចម្លើយ ៖ $-\\dfrac{2\\pi}{3}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p2_07"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $\\arg z=-\\dfrac{\\pi}{6}$ នោះ $\\arg\\bar{z}$ (ក្នុង $(-\\pi,\\pi]$) ស្មើ ៖",
+            "solution": "ចំនួនកុំផ្លិចឆ្លាស់មានអាគុយម៉ង់ផ្ទុយ\n\nចម្លើយ ៖ $\\dfrac{\\pi}{6}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p2_12"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>ម៉ូឌុល និងអាគុយម៉ង់ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ម៉ូឌុលនៃ $z = a+bi$ គឺ $r = |z| = \\sqrt{a^2 + b^2} \\ge 0$។</li>\n  <li class=\"ws-sum-item\">អាគុយម៉ង់ $\\theta = \\arg(z)$ កំណត់ដោយ $\\cos\\theta = \\dfrac{a}{r}$ និង $\\sin\\theta = \\dfrac{b}{r}$ ($-\\pi < \\theta \\le \\pi$ ឬ $0 \\le \\theta < 2\\pi$)។</li>\n</ul>"
       },
       {
@@ -16383,6 +16503,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សរសេរ $z=7\\left(\\cos \\dfrac{\\pi}{2} + i\\sin \\dfrac{\\pi}{2}\\right)$ ជាទម្រង់ពីជគណិត ៖",
+            "solution": "តម្លៃ cos និង sin នៃមុំពិសេស\n\nចម្លើយ ៖ $7i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p3_01"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សរសេរ $z=5\\left(\\cos\\left(-\\dfrac{\\pi}{2}\\right) + i\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right)$ ជាទម្រង់ពីជគណិត ៖",
+            "solution": "តម្លៃ cos និង sin នៃមុំពិសេស\n\nចម្លើយ ៖ $-5i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p3_05"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "បម្លែងពីទម្រង់ត្រីកោណមាត្រមកទម្រង់ពីជគណិត ៖",
             "question": "សរសេរជាទម្រង់ពីជគណិត $a+bi$ ៖ $z = 4\\left(\\cos\\dfrac{5\\pi}{6} + i\\sin\\dfrac{5\\pi}{6}\\right)$។",
@@ -16391,7 +16531,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-1-2-p2-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បំប្លែង $z = 2\\left(\\cos\\dfrac{5\\pi}{6} + i\\sin\\dfrac{5\\pi}{6}\\right)$ ជាទម្រង់ពីជគណិត ៖",
+            "solution": "$z = 2\\left(-\\dfrac{\\sqrt{3}}{2} + \\dfrac{1}{2}i\\right) = -\\sqrt{3} + i$។\n\nចម្លើយ ៖ $-\\sqrt{3} + i$",
+            "src": "qb-gen",
+            "qid": "q_g12_0056"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សរសេរ $z = -\\sqrt{3} + i$ ជាទម្រង់ត្រីកោណមាត្រ ៖",
+            "solution": "$|z| = 2$ ហើយអាគុយម៉ង់ $\\theta = \\dfrac{5\\pi}{6}$ ⇒ $2\\left(\\cos \\dfrac{5\\pi}{6} + i\\sin \\dfrac{5\\pi}{6}\\right)$។\n\nចម្លើយ ៖ $2\\left(\\cos \\dfrac{5\\pi}{6} + i\\sin \\dfrac{5\\pi}{6}\\right)$",
+            "src": "qb-gen",
+            "qid": "gen_les-g12a-1-2_002"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "សរសេរចំនួនកុំផ្លិចពីទម្រង់មួយទៅទម្រង់មួយទៀត ៖",
@@ -16399,9 +16559,19 @@
             "rubric": "ក. ទម្រង់ត្រីកោណមាត្រនៃ $z_1, z_2$ (០.៤ ពិន្ទុ) | ខ. $-3 + 3\\sqrt{3}i$ (០.៣ ពិន្ទុ) | គ. $w = 5\\left[\\cos\\left(-\\dfrac{5\\pi}{6}\\right) + i\\sin\\left(-\\dfrac{5\\pi}{6}\\right)\\right]$ (០.៣ ពិន្ទុ)",
             "question": "ក. សរសេរ $z_1 = -2\\sqrt{3} + 2i$ និង $z_2 = 3 - 3i$ ជាទម្រង់ត្រីកោណមាត្រ។\n\nខ. សរសេរ $z = 6\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$ ជាទម្រង់ពីជគណិត។\n\nគ. សរសេរ $w = -5\\left(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6}\\right)$ ជាទម្រង់ត្រីកោណមាត្រ (ម៉ូឌុលវិជ្ជមាន)។",
             "solution": "ក. • $|z_1| = \\sqrt{12 + 4} = 4$ ; $\\cos\\theta = -\\dfrac{\\sqrt{3}}{2}$, $\\sin\\theta = \\dfrac{1}{2}$ ៖ $z_1 = 4\\left(\\cos\\dfrac{5\\pi}{6} + i\\sin\\dfrac{5\\pi}{6}\\right)$។\n• $|z_2| = 3\\sqrt{2}$ ; $\\theta = -\\dfrac{\\pi}{4}$ ៖ $z_2 = 3\\sqrt{2}\\left[\\cos\\left(-\\dfrac{\\pi}{4}\\right) + i\\sin\\left(-\\dfrac{\\pi}{4}\\right)\\right]$។\n\nខ. $z = 6\\left(-\\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}\\right) = -3 + 3\\sqrt{3}i$។\n\nគ. $-1 = \\cos\\pi + i\\sin\\pi$ ដូចនេះ $w = 5\\left[\\cos\\left(\\dfrac{\\pi}{6} + \\pi\\right) + i\\sin\\left(\\dfrac{\\pi}{6} + \\pi\\right)\\right] = 5\\left[\\cos\\left(-\\dfrac{5\\pi}{6}\\right) + i\\sin\\left(-\\dfrac{5\\pi}{6}\\right)\\right]$។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សរសេរទម្រង់អយល័រ (Euler's form) $z = r e^{i\\theta}$ នៃ $z = -1 - i$ ៖",
+            "solution": "$r = \\sqrt{2}, \\theta = -3\\pi/4$ នាំឱ្យ $z = \\sqrt{2} e^{-i 3\\pi/4}$ (ឬ $\\sqrt{2} e^{i 5\\pi/4}$)។\n\nចម្លើយ ៖ $\\sqrt{2} e^{-i 3\\pi/4}$",
+            "src": "qb-gen",
+            "qid": "q_g12_0060"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 8.0,
         "summary": "<div class=\"ws-sum-text\"><strong>ទម្រង់ត្រីកោណមាត្រនៃចំនួនកុំផ្លិច ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចំនួនកុំផ្លិច $z = a+bi$ អាចសរសេរជា ៖ $z = r(\\cos\\theta + i\\sin\\theta)$ ដែល $r = |z| > 0$ និង $\\theta = \\arg(z)$។</li>\n  <li class=\"ws-sum-item\">ទម្រង់នេះងាយស្រួលបំផុតសម្រាប់គណនាផលគុណ ផលចែក និងស្វ័យគុណ។</li>\n</ul>"
       },
       {
@@ -16422,6 +16592,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាផលគុណ $z = 2\\left(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6}\\right) \\times 3\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$ ៖",
+            "solution": "$r = 2 \\times 3 = 6$។ $\\theta = \\dfrac{\\pi}{6} + \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}$។ $z = 6(\\cos(\\dfrac{\\pi}{2}) + i\\sin(\\dfrac{\\pi}{2})) = 6(0 + i) = 6i$។\n\nចម្លើយ ៖ $6i$",
+            "src": "qb-gen",
+            "qid": "q_g12_0063"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $z^2$ ដែល $z = 2\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$ ៖",
+            "solution": "$z^2 = z \\cdot z = 4\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right) = 4\\left(-\\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}\\right) = -2 + 2\\sqrt{3}i$។\n\nចម្លើយ ៖ $-2 + 2\\sqrt{3}i$",
+            "src": "qb-gen",
+            "qid": "q_g12_0064s"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "អនុវត្តគណនាតម្លៃត្រីកោណមាត្រច្បាស់លាស់ ៖",
             "question": "គេឱ្យ $z_1 = 1 + i$ និង $z_2 = \\sqrt{3} + i$។\n\nក. សរសេរ $z_1$ និង $z_2$ ជាទម្រង់ត្រីកោណមាត្រ រួចគណនា $Z = \\dfrac{z_1}{z_2}$ ជាទម្រង់ត្រីកោណមាត្រ។\n\nខ. សរសេរ $Z$ ជាទម្រង់ពីជគណិត រួចទាញរកតម្លៃពិតនៃ $\\cos\\dfrac{\\pi}{12}$។",
@@ -16430,7 +16620,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-1-2-p3-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាតម្លៃពិតប្រាកដនៃ $\\sin\\dfrac{\\pi}{12}$ ៖",
+            "solution": "$\\sin(\\dfrac{\\pi}{12}) = \\sin(\\dfrac{\\pi}{4} - \\dfrac{\\pi}{6}) = \\dfrac{\\sqrt{2}}{2}\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\dfrac{1}{2} = \\dfrac{\\sqrt{6}-\\sqrt{2}}{4}$។\n\nចម្លើយ ៖ $\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$",
+            "src": "qb-gen",
+            "qid": "q_g12_0068"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $z_1=3\\left(\\cos\\left(-\\dfrac{\\pi}{6}\\right) + i\\sin\\left(-\\dfrac{\\pi}{6}\\right)\\right)$ និង $z_2=2\\left(\\cos\\left(-\\dfrac{\\pi}{2}\\right) + i\\sin\\left(-\\dfrac{\\pi}{2}\\right)\\right)$ ។ ម៉ូឌុលនៃ $z_1z_2$ គឺ ៖",
+            "solution": "ម៉ូឌុលនៃផលគុណ = ផលគុណម៉ូឌុល\n\nចម្លើយ ៖ $6$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p4_17"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "គុណចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ ៖",
@@ -16438,9 +16648,29 @@
             "rubric": "ក. $z_1 z_2 = 6\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right) = 3 + 3\\sqrt{3}i$ (០.៥ ពិន្ទុ) | ខ. $z_1^2 = 4i$, $z_1^4 = -16$ (០.៥ ពិន្ទុ)",
             "question": "គេឱ្យ $z_1 = 2\\left(\\cos\\dfrac{\\pi}{4} + i\\sin\\dfrac{\\pi}{4}\\right)$ និង $z_2 = 3\\left(\\cos\\dfrac{\\pi}{12} + i\\sin\\dfrac{\\pi}{12}\\right)$។\n\nក. សរសេរ $z_1 z_2$ ជាទម្រង់ត្រីកោណមាត្រ រួចជាទម្រង់ពីជគណិត។\n\nខ. គណនា $z_1^2$ និង $z_1^4$ ដោយប្រើរូបមន្តផលគុណ។",
             "solution": "ក. គុណម៉ូឌុល និងបូកអាគុយម៉ង់ ៖ $z_1 z_2 = 6\\left[\\cos\\left(\\dfrac{\\pi}{4} + \\dfrac{\\pi}{12}\\right) + i\\sin\\left(\\dfrac{\\pi}{4} + \\dfrac{\\pi}{12}\\right)\\right] = 6\\left(\\cos\\dfrac{\\pi}{3} + i\\sin\\dfrac{\\pi}{3}\\right)$\n$= 6\\left(\\dfrac{1}{2} + i\\dfrac{\\sqrt{3}}{2}\\right) = 3 + 3\\sqrt{3}i$។\n\nខ. • $z_1^2 = z_1 \\cdot z_1 = 4\\left(\\cos\\dfrac{\\pi}{2} + i\\sin\\dfrac{\\pi}{2}\\right) = 4i$\n• $z_1^4 = z_1^2 \\cdot z_1^2 = 16(\\cos\\pi + i\\sin\\pi) = -16$។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1)$ និង $z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)$ តើ $\\text{Arg}(z_1 z_2)$ ស្មើអ្វី?",
+            "solution": "អាគុយម៉ង់នៃផលគុណស្មើផលបូកនៃអាគុយម៉ង់ ៖ $\\text{Arg}(z_1 z_2) = \\theta_1 + \\theta_2$ (ម៉ូឌុលូ $2\\pi$)។\n\nចម្លើយ ៖ $\\theta_1 + \\theta_2$",
+            "src": "qb-gen",
+            "qid": "q_g12_0050"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $z = \\cos\\theta + i\\sin\\theta$ គណនា $\\dfrac{z - 1}{z + 1}$ ($z \\neq -1$) ៖",
+            "solution": "$\\dfrac{z-1}{z+1} = \\dfrac{e^{i\\theta}-1}{e^{i\\theta}+1} = \\dfrac{e^{i\\theta/2}(e^{i\\theta/2}-e^{-i\\theta/2})}{e^{i\\theta/2}(e^{i\\theta/2}+e^{-i\\theta/2})} = \\dfrac{2i\\sin(\\theta/2)}{2\\cos(\\theta/2)} = i\\tan\\dfrac{\\theta}{2}$ (ជានិម្មិតសុទ្ធ)។\n\nចម្លើយ ៖ $i\\tan\\dfrac{\\theta}{2}$",
+            "src": "qb-gen",
+            "qid": "q_g12_0070"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>ផលគុណ និងផលចែកទម្រង់ត្រីកោណមាត្រ ៖</strong></div>\n<div class=\"ws-sum-text\">បើ $z_1 = r_1(\\cos\\theta_1 + i\\sin\\theta_1)$ និង $z_2 = r_2(\\cos\\theta_2 + i\\sin\\theta_2)$ ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$z_1 z_2 = r_1 r_2 [\\cos(\\theta_1 + \\theta_2) + i\\sin(\\theta_1 + \\theta_2)]$ (គុណម៉ូឌុល បូកអាគុយម៉ង់)</li>\n  <li class=\"ws-sum-item\">$\\dfrac{z_1}{z_2} = \\dfrac{r_1}{r_2} [\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)]$ (ចែកម៉ូឌុល ដកអាគុយម៉ង់)</li>\n</ul>"
       },
       {
@@ -16449,7 +16679,7 @@
         "pointTitle": "ចំណុចទី ៥ ៖ ផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
         "topic": "ចែកម៉ូឌុល និងដកអាគុយម៉ង់",
         "objective": "យល់ និងអនុវត្តផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ",
-        "totalPoints": 3,
+        "totalPoints": 6.0,
         "summary": "  - $\\dfrac{z_1}{z_2} = \\dfrac{r_1}{r_2}\\left[\\cos(\\theta_1 - \\theta_2) + i\\sin(\\theta_1 - \\theta_2)\\right]$\n  - $\\dfrac{1}{z} = \\dfrac{1}{r}\\left[\\cos(-\\theta) + i\\sin(-\\theta)\\right]$",
         "exercises": [
           {
@@ -16463,6 +16693,16 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាផលចែក $z = \\dfrac{6(\\cos\\pi + i\\sin\\pi)}{2(\\cos(\\dfrac{\\pi}{3}) + i\\sin(\\dfrac{\\pi}{3}))}$ ៖",
+            "solution": "$r = \\dfrac{6}{2} = 3$។ $\\theta = \\pi - \\dfrac{\\pi}{3} = 2\\pi/3$។ $z = 3(\\cos(2\\pi/3) + i\\sin(2\\pi/3))$។\n\nចម្លើយ ៖ $3\\left(\\cos\\dfrac{2\\pi}{3} + i\\sin\\dfrac{2\\pi}{3}\\right)$",
+            "src": "qb-gen",
+            "qid": "q_g12_0064"
+          },
+          {
+            "id": "ex3",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរគណនាផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ ៖",
@@ -16471,7 +16711,27 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex4",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $z_1 = 9\\left(\\cos \\left(-\\dfrac{5\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{5\\pi}{6}\\right)\\right)$ និង $z_2 = 2\\left(\\cos \\left(-\\dfrac{5\\pi}{6}\\right) + i\\sin \\left(-\\dfrac{5\\pi}{6}\\right)\\right)$។ ម៉ូឌុលនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+            "solution": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{r_1}{r_2} = \\dfrac{9}{2}$។\n\nចម្លើយ ៖ $\\dfrac{9}{2}$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-1-2_5_19"
+          },
+          {
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $z_1 = 9\\left(\\cos \\left(-\\dfrac{\\pi}{2}\\right) + i\\sin \\left(-\\dfrac{\\pi}{2}\\right)\\right)$ និង $z_2 = 3\\left(\\cos \\dfrac{2\\pi}{3} + i\\sin \\dfrac{2\\pi}{3}\\right)$។ ម៉ូឌុលនៃ $\\dfrac{z_1}{z_2}$ គឺ ៖",
+            "solution": "$\\left|\\dfrac{z_1}{z_2}\\right| = \\dfrac{r_1}{r_2} = \\dfrac{9}{3} = 3$។\n\nចម្លើយ ៖ $3$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-1-2_5_23"
+          },
+          {
+            "id": "ex6",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរគណនាផលចែកចំនួនកុំផ្លិចតាមទម្រង់ត្រីកោណមាត្រ ៖",
@@ -16487,7 +16747,7 @@
         "pointTitle": "ចំណុចទី ៦ ៖ បំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
         "topic": "$z' = (\\cos\\theta + i\\sin\\theta) z$",
         "objective": "យល់ និងអនុវត្តបំប្លែងវិលជុំវិញគល់តម្រុយក្នុងប្លង់កុំផ្លិច",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $z' = (\\cos\\theta + i\\sin\\theta)\\, z$\n  - មុំ $\\dfrac{\\pi}{2}$ ៖ $z' = iz$ ; មុំ $\\pi$ ៖ $z' = -z$\n  - ផ្ចិត $\\Omega(\\omega)$ ៖ $z' - \\omega = (\\cos\\theta + i\\sin\\theta)(z - \\omega)$",
         "exercises": [
           {
@@ -16501,6 +16761,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រករូបភាពនៃ $M(6)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$ ៖",
+            "solution": "$z'-\\omega=e^{i\\theta}(z-\\omega)$\n\nចម្លើយ ៖ $6i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p6_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រករូបភាពនៃ $M(1 - 6i)$ តាមបំប្លែងវិលផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$ ៖",
+            "solution": "$z'-\\omega=e^{i\\theta}(z-\\omega)$\n\nចម្លើយ ៖ $6 + i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p6_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរអនុវត្តបំប្លែងវិលក្នុងប្លង់កុំផ្លិច ៖",
@@ -16509,18 +16789,58 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រូបភាពនៃ $M(1 - i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-5 + i)$ មុំ $\\dfrac{\\pi}{2}$ មានអាហ្វិក ៖",
+            "solution": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = -3 + 7i$។\n\nចម្លើយ ៖ $-3 + 7i$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-1-2_6_32"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រូបភាពនៃ $M(-6 + 5i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(1 - 4i)$ មុំ $-\\dfrac{\\pi}{2}$ មានអាហ្វិក ៖",
+            "solution": "$z' - \\omega = e^{i\\theta}(z - \\omega)$ ⇒ $z' = 10 + 3i$។\n\nចម្លើយ ៖ $10 + 3i$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-1-2_6_37"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរអនុវត្តបំប្លែងវិលក្នុងប្លង់កុំផ្លិច ៖",
             "question": "ក. សរសេរកន្សោមកុំផ្លិចនៃបំប្លែងវិល $R$ ផ្ចិត $O$ មុំ $\\dfrac{\\pi}{2}$។\nខ. រករូបភាពនៃ $A(3 - i)$ តាម $R$។\nគ. រករូបភាពនៃ $A$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-2 - 3i)$ មុំ $\\dfrac{\\pi}{2}$។",
             "solution": "ក. $z' = \\left(\\cos\\dfrac{\\pi}{2} + i\\sin\\dfrac{\\pi}{2}\\right) z = iz$\nខ. $z' = i(3 - i) = 1 + 3i$\nគ. $z' = \\omega + i(z - \\omega) = (-2 - 3i) + i(5 + 2i) = -4 + 2i$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រករូបភាពនៃ $M(4 - 2i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(-1 - 2i)$ មុំ $\\pi$ ៖",
+            "solution": "$z'-\\omega=e^{i\\theta}(z-\\omega)$\n\nចម្លើយ ៖ $-6 - 2i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p6_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រករូបភាពនៃ $M(-1 + i)$ តាមបំប្លែងវិលផ្ចិត $\\Omega(4 + i)$ មុំ $\\pi$ ៖",
+            "solution": "$z'-\\omega=e^{i\\theta}(z-\\omega)$\n\nចម្លើយ ៖ $9 + i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_2_p6_18"
           }
         ]
       }
     ],
-    "totalPointsCount": 18
+    "totalPointsCount": 50
   },
   "les-g12a-2-1": {
     "lessonId": "les-g12a-2-1",
