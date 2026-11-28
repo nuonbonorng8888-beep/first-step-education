@@ -33960,13 +33960,12 @@
         "question": "គណនា $\\int_{0}^{3} (4x + 1)\\,dx$ ៖",
         "options": [
           "$21$",
+          "$-21$",
           "$20$",
-          "$22$",
-          "$-21$"
+          "$22$"
         ],
         "correct": 0,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $21$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $21$។"
       },
       {
         "id": "q2",
@@ -33976,14 +33975,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\int_{-1}^{1} (4x^3 - 3x^2 - 4x)\\,dx$ ៖",
         "options": [
-          "$2$",
+          "$-3$",
           "$-1$",
           "$-2$",
-          "$-3$"
+          "$2$"
         ],
         "correct": 2,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $-2$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $-2$។"
       },
       {
         "id": "q3",
@@ -33993,14 +33991,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\int_{-2}^{0} (2x - 1)\\,dx$ ៖",
         "options": [
-          "$6$",
+          "$0$",
           "$-6$",
-          "$-5$",
-          "$0$"
+          "$6$",
+          "$-5$"
         ],
         "correct": 1,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $-6$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $-6$។"
       },
       {
         "id": "q4",
@@ -34010,125 +34007,134 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "គណនា $\\int_{1}^{2} (2x + 4)\\,dx$ ៖",
         "options": [
-          "$8$",
-          "$-7$",
           "$12$",
+          "$-7$",
+          "$8$",
           "$7$"
         ],
         "correct": 3,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $7$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $7$។"
       },
       {
         "id": "q5",
         "questionNumber": 5,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int_{0}^{1} (x^3 - 4x^2 - 4x - 1)\\,dx$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\int_{-2}^{2} (3x^{2} - 2x - 3)\\,dx$ ៖",
         "options": [
-          "$\\dfrac{49}{12}$",
-          "$-\\dfrac{49}{12}$",
-          "$-\\dfrac{61}{12}$",
-          "$-\\dfrac{37}{12}$"
+          "$-8$",
+          "$-4$",
+          "$4$",
+          "$5$"
         ],
-        "correct": 1,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $-\\dfrac{49}{12}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$\\left[x^{3} - x^{2} - 3x\\right]_{-2}^{2} = (-2) - (-6) = 4$។"
       },
       {
         "id": "q6",
         "questionNumber": 6,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int_{-2}^{0} (2x^2 - 4x - 3)\\,dx$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\int_{0}^{1} (-3x^{2} + 2x - 1)\\,dx$ ៖",
         "options": [
-          "$-\\dfrac{22}{3}$",
-          "$\\dfrac{25}{3}$",
+          "$-1$",
           "$0$",
-          "$\\dfrac{22}{3}$"
+          "$-2$",
+          "$1$"
         ],
-        "correct": 3,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $\\dfrac{22}{3}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$\\left[-x^{3} + x^{2} - x\\right]_{0}^{1} = (-1) - 0 = -1$។"
       },
       {
         "id": "q7",
         "questionNumber": 7,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int_{0}^{2} (x^3 + x^2 + 4x + 4)\\,dx$ ៖",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនា $\\int_{-1}^{2} (-3x^{2} + 2x - 3)\\,dx$ ៖",
         "options": [
-          "$\\dfrac{68}{3}$",
-          "$\\dfrac{71}{3}$",
-          "$-\\dfrac{68}{3}$",
-          "$\\dfrac{65}{3}$"
+          "$-3$",
+          "$-15$",
+          "$15$",
+          "$-14$"
         ],
-        "correct": 0,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $\\dfrac{68}{3}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$\\left[-x^{3} + x^{2} - 3x\\right]_{-1}^{2} = (-10) - 5 = -15$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int_{1}^{4} (2x^3 - 3x^2 + 3x + 3)\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int_{1}^{9} \\sqrt{x}\\,dx$ ៖",
         "options": [
-          "$-96$",
-          "$97$",
-          "$96$",
-          "$100$"
+          "$26$",
+          "$2$",
+          "$\\dfrac{52}{3}$",
+          "$\\dfrac{55}{3}$"
         ],
         "correct": 2,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $96$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\int \\sqrt{x}dx=\\dfrac{2}{3}x\\sqrt{x}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int_{-1}^{0} (x + 3)\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int_{1}^{4} \\dfrac{1}{x^2}\\,dx$ ៖",
         "options": [
-          "$\\dfrac{5}{2}$",
-          "$0$",
-          "$-\\dfrac{5}{2}$",
-          "$\\dfrac{7}{2}$"
+          "$-\\dfrac{3}{4}$",
+          "$\\dfrac{3}{4}$",
+          "$\\dfrac{5}{4}$",
+          "$\\dfrac{7}{4}$"
         ],
-        "correct": 0,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $\\dfrac{5}{2}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$\\int x^{-2}dx=-\\dfrac{1}{x}$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ និយមន័យអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 1 (ងាយ)",
-        "question": "គណនា $\\int_{-2}^{0} (x^3 + x^2 - 4x + 4)\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int_{0}^{12} |x-6|\\,dx$ ៖",
         "options": [
-          "$-\\dfrac{44}{3}$",
-          "$\\dfrac{47}{3}$",
-          "$0$",
-          "$\\dfrac{44}{3}$"
+          "$18$",
+          "$12$",
+          "$36$",
+          "$37$"
         ],
-        "correct": 3,
-        "explanation": "$\\int_a^b f(x)dx = F(b) - F(a)$ ⇒ $\\dfrac{44}{3}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "បំបែកត្រង់ x=a"
       }
     ],
     "2": [
       {
-        "id": "g12a_p1_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "វិសមភាពត្រីកោណសម្រាប់អាំងតេក្រាលកំណត់គឺ ៖",
+        "options": [
+          "$\\int_a^b f(x) dx = \\int_a^b |f(x)| dx$",
+          "$\\int_a^b |f(x)| dx \\le \\left|\\int_a^b f(x) dx\\right|$",
+          "$\\left|\\int_a^b f(x) dx\\right| \\ge 0$",
+          "$\\left|\\int_a^b f(x) dx\\right| \\le \\int_a^b |f(x)| dx$ ($a < b$)"
+        ],
+        "correct": 3,
+        "explanation": "$\\left|\\int_a^b f(x) dx\\right| \\le \\int_a^b |f(x)| dx$។"
+      },
+      {
+        "id": "q2",
+        "questionNumber": 2,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "បើ $\\int_0^3 f(x)\\,dx = 6$ នោះ $\\int_0^3 [f(x) + 1]\\,dx$ ស្មើ ៖",
         "options": [
           "$7$",
@@ -34140,25 +34146,40 @@
         "explanation": "$\\int_0^3 f(x)\\,dx + \\int_0^3 1\\,dx = 6 + 3 = 9$។"
       },
       {
-        "id": "g12a_p1_02",
-        "questionNumber": 2,
+        "id": "q3",
+        "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
-        "question": "វិសមភាពត្រីកោណសម្រាប់អាំងតេក្រាលកំណត់គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "បើ $\\int_{1}^{2} f(x)\\,dx=4$ នោះ $\\int_{2}^{1} f(x)\\,dx$ ស្មើ ៖",
         "options": [
-          "$\\int_a^b |f(x)| dx \\le \\left|\\int_a^b f(x) dx\\right|$",
-          "$\\int_a^b f(x) dx = \\int_a^b |f(x)| dx$",
-          "$\\left|\\int_a^b f(x) dx\\right| \\le \\int_a^b |f(x)| dx$ ($a < b$)",
-          "$\\left|\\int_a^b f(x) dx\\right| \\ge 0$"
+          "$4$",
+          "$-4$",
+          "$0$",
+          "$-3$"
         ],
-        "correct": 2,
-        "explanation": "$\\left|\\int_a^b f(x) dx\\right| \\le \\int_a^b |f(x)| dx$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "ប្តូរគ្នាសញ្ញា"
       },
       {
-        "id": "g12a_p1_03",
-        "questionNumber": 3,
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "បើ $\\int_{0}^{1} f(x)\\,dx=4$ និង $\\int_{1}^{3} f(x)\\,dx=8$ នោះ $\\int_{0}^{3} f(x)\\,dx$ ស្មើ ៖",
+        "options": [
+          "$-4$",
+          "$32$",
+          "$13$",
+          "$12$"
+        ],
+        "correct": 3,
+        "explanation": "លក្ខណៈផលបូកចន្លោះ"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -34166,171 +34187,193 @@
         "options": [
           "$T \\int_0^a f(x) dx$",
           "$\\int_0^T f(x) dx$ (មិនអាស្រ័យលើ $a$)",
-          "$a \\int_0^T f(x) dx$",
-          "$0$"
+          "$0$",
+          "$a \\int_0^T f(x) dx$"
         ],
         "correct": 1,
-        "explanation": "អាំងតេក្រាលនៃអនុគមន៍ខួបលើចន្លោះដែលមានប្រវែងមួយខួប $T$ តែងតែស្មើគ្នាជានិច្ច មិនអាស្រ័យនឹងចំណុចចាប់ផ្តើម $a$ ឡើយ។",
-        "diagram": ""
+        "explanation": "អាំងតេក្រាលនៃអនុគមន៍ខួបលើចន្លោះដែលមានប្រវែងមួយខួប $T$ តែងតែស្មើគ្នាជានិច្ច មិនអាស្រ័យនឹងចំណុចចាប់ផ្តើម $a$ ឡើយ។"
       },
       {
-        "id": "g12a_p1_04",
-        "questionNumber": 4,
+        "id": "q6",
+        "questionNumber": 6,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាដេរីវេនៃ $F(x) = \\int_0^{x^2} \\cos t dt$ ៖",
         "options": [
-          "$2x \\cos(x^2)$",
           "$\\cos(x^2)$",
           "$\\sin(x^2)$",
+          "$2x \\cos(x^2)$",
           "$2x \\sin(x^2)$"
         ],
-        "correct": 0,
-        "explanation": "វិធាន Leibniz៖ $\\dfrac{d}{dx}\\left(\\int_a^{u(x)} f(t) dt\\right) = f(u(x)) \\cdot u'(x) = \\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "វិធាន Leibniz៖ $\\dfrac{d}{dx}\\left(\\int_a^{u(x)} f(t) dt\\right) = f(u(x)) \\cdot u'(x) = \\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$។"
       },
       {
-        "id": "g12a_p1_05",
-        "questionNumber": 5,
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "តម្លៃនៃអាំងតេក្រាល $\\int_{-2}^2 (x^5 - 3x^3 + \\sin x) dx$ ស្មើនឹង ៖",
         "options": [
           "$0$",
-          "$2$",
           "$4$",
+          "$2$",
           "$-4$"
         ],
         "correct": 0,
-        "explanation": "កន្សោមខាងក្នុងជាអនុគមន៍សេស ដូច្នេះអាំងតេក្រាលលើចន្លោះស៊ីមេទ្រី $[-2, 2]$ ស្មើ $0$ ជានិច្ច។",
-        "diagram": ""
+        "explanation": "កន្សោមខាងក្នុងជាអនុគមន៍សេស ដូច្នេះអាំងតេក្រាលលើចន្លោះស៊ីមេទ្រី $[-2, 2]$ ស្មើ $0$ ជានិច្ច។"
       },
       {
-        "id": "g12a_p1_06",
-        "questionNumber": 6,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនា $\\int_{-\\dfrac{\\pi}{4}}^{\\dfrac{\\pi}{4}} \\cos 2x dx$ ៖",
-        "options": [
-          "$0$",
-          "$1$",
-          "$\\dfrac{1}{2}$",
-          "$2$"
-        ],
-        "correct": 1,
-        "explanation": "$\\cos 2x$ ជាអនុគមន៍គូ៖ $2\\int_0^{\\dfrac{\\pi}{4}} \\cos 2x dx = 2\\left[\\frac{\\sin 2x}{2}\\right]_0^{\\dfrac{\\pi}{4}} = \\sin(\\dfrac{\\pi}{2}) - 0 = 1$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_07",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាលីមីត $\\lim_{n \\to +\\infty} \\sum_{k=1}^n \\dfrac{1}{n} \\left(\\dfrac{k}{n}\\right)^2$ (ផលបូក Riemann) ៖",
-        "options": [
-          "$\\dfrac{1}{2}$",
-          "$\\dfrac{1}{4}$",
-          "$\\dfrac{1}{3}$",
-          "$1$"
-        ],
-        "correct": 2,
-        "explanation": "ផលបូក Riemann ស្មើនឹង $\\int_0^1 x^2 dx = [\\frac{x^3}{3}]_0^1 = \\dfrac{1}{3}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p1_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "បើ $m \\le f(x) \\le M$ ចំពោះគ្រប់ $x \\in [a, b]$ នោះ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int_{-\\dfrac{\\pi}{4}}^{\\dfrac{\\pi}{4}} \\cos 2x dx$ ៖",
         "options": [
-          "$\\int_a^b f(x) dx = \\dfrac{m+M}{2}$",
-          "$m(b-a) = \\int_a^b f(x) dx$",
-          "$m \\le \\int_a^b f(x) dx \\le M$",
-          "$m(b - a) \\le \\int_a^b f(x) dx \\le M(b - a)$"
+          "$\\dfrac{1}{2}$",
+          "$2$",
+          "$0$",
+          "$1$"
         ],
         "correct": 3,
-        "explanation": "លក្ខណៈកម្រិតព្រំនៃអាំងតេក្រាល៖ $m(b - a) \\le \\int_a^b f(x) dx \\le M(b - a)$។",
-        "diagram": ""
+        "explanation": "$\\cos 2x$ ជាអនុគមន៍គូ៖ $2\\int_0^{\\dfrac{\\pi}{4}} \\cos 2x dx = 2\\left[\\frac{\\sin 2x}{2}\\right]_0^{\\dfrac{\\pi}{4}} = \\sin(\\dfrac{\\pi}{2}) - 0 = 1$។"
       },
       {
-        "id": "g12a_p1_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដេរីវេនៃ $G(x) = \\int_x^{2x} e^{-t^2} dt$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាលីមីត $\\lim_{n \\to +\\infty} \\sum_{k=1}^n \\dfrac{1}{n} \\left(\\dfrac{k}{n}\\right)^2$ (ផលបូក Riemann) ៖",
         "options": [
-          "$2e^{-4x^2} - e^{-x^2}$",
-          "$e^{-2x} - e^{-x}$",
-          "$2e^{-4x^2}$",
-          "$e^{-4x^2} - e^{-x^2}$"
+          "$\\dfrac{1}{2}$",
+          "$1$",
+          "$\\dfrac{1}{3}$",
+          "$\\dfrac{1}{4}$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{d}{dx}\\left(\\int_{v(x)}^{u(x)} f(t)dt\\right) = f(u(x))u'(x) - f(v(x))v'(x) = e^{-(2x)^2}(2) - e^{-x^2}(1) = 2e^{-4x^2} - e^{-x^2}$។",
-        "diagram": ""
+        "correct": 2,
+        "explanation": "ផលបូក Riemann ស្មើនឹង $\\int_0^1 x^2 dx = [\\frac{x^3}{3}]_0^1 = \\dfrac{1}{3}$។"
       },
       {
-        "id": "g12a_p1_10",
+        "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ លក្ខណៈនៃអាំងតេក្រាលកំណត់",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនា $\\int_0^1 x f'(x) dx$ បើ $f(1) = 3$ និង $\\int_0^1 f(x) dx = 2$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "បើ $m \\le f(x) \\le M$ ចំពោះគ្រប់ $x \\in [a, b]$ នោះ ៖",
         "options": [
-          "$5$",
-          "$1$",
-          "$3$",
-          "$-1$"
+          "$m \\le \\int_a^b f(x) dx \\le M$",
+          "$m(b - a) \\le \\int_a^b f(x) dx \\le M(b - a)$",
+          "$\\int_a^b f(x) dx = \\dfrac{m+M}{2}$",
+          "$m(b-a) = \\int_a^b f(x) dx$"
         ],
         "correct": 1,
-        "explanation": "ដោយផ្នែក៖ $[x f(x)]_0^1 - \\int_0^1 f(x) dx = 1 \\cdot f(1) - 0 - 2 = 3 - 2 = 1$។",
-        "diagram": ""
+        "explanation": "លក្ខណៈកម្រិតព្រំនៃអាំងតេក្រាល៖ $m(b - a) \\le \\int_a^b f(x) dx \\le M(b - a)$។"
       }
     ],
     "3": [
       {
-        "id": "g12a_p2_01",
+        "id": "q1",
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
-        "level": "កម្រិត 1 (មូលដ្ឋាន)",
+        "level": "កម្រិត 1 (ងាយ)",
         "question": "ពេលប្រើវិធីប្តូរអថេរក្នុងអាំងតេក្រាលកំណត់ ជំហានសំខាន់ដែលមិនត្រូវភ្លេចគឺ ៖",
         "options": [
-          "គុណនឹងថេរ $C$",
-          "លុបសញ្ញាអាំងតេក្រាលភ្លាមៗ",
+          "មិនបាច់ប្តូរអ្វីទាំងអស់",
           "ប្តូរព្រំដែននៃអាំងតេក្រាលទៅតាមអថេរថ្មី",
-          "មិនបាច់ប្តូរអ្វីទាំងអស់"
+          "លុបសញ្ញាអាំងតេក្រាលភ្លាមៗ",
+          "គុណនឹងថេរ $C$"
         ],
-        "correct": 2,
-        "explanation": "កាលណាប្តូរអថេរ $u = g(x)$ ត្រូវប្តូរព្រំដែន $x = a \\implies u = g(a)$ និង $x = b \\implies u = g(b)$។",
-        "diagram": ""
+        "correct": 1,
+        "explanation": "កាលណាប្តូរអថេរ $u = g(x)$ ត្រូវប្តូរព្រំដែន $x = a \\implies u = g(a)$ និង $x = b \\implies u = g(b)$។"
       },
       {
-        "id": "g12a_p2_02",
+        "id": "q2",
         "questionNumber": 2,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int_0^{\\pi/2}\\sin 2x dx$ ៖",
+        "options": [
+          "$\\dfrac{1}{2}$",
+          "$1$",
+          "$2$",
+          "$\\dfrac{1}{4}$"
+        ],
+        "correct": 1,
+        "explanation": "$[-\\dfrac{\\cos kx}{k}]_0^{\\pi/k}$"
+      },
+      {
+        "id": "q3",
+        "questionNumber": 3,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int_0^1 e^{4x}dx$ ៖",
+        "options": [
+          "$\\dfrac{e^{4}}{4}$",
+          "$e^{4}-1$",
+          "$\\dfrac{e^{4}-1}{4}$",
+          "$\\dfrac{e^{4}+1}{4}$"
+        ],
+        "correct": 2,
+        "explanation": "$[\\dfrac{e^{ax}}{a}]_0^1$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int_0^{\\pi/4}\\sin 4x dx$ ៖",
+        "options": [
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{1}{4}$",
+          "$2$",
+          "$\\dfrac{1}{8}$"
+        ],
+        "correct": 0,
+        "explanation": "$[-\\dfrac{\\cos kx}{k}]_0^{\\pi/k}$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "គណនាអាំងតេក្រាល $I = \\int_0^1 \\dfrac{x}{x^2 + 1} dx$ ៖",
         "options": [
-          "$\\dfrac{1}{2}$",
-          "$\\dfrac{1}{2}\\ln 2$",
+          "$\\ln 2$",
           "$1$",
-          "$\\ln 2$"
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{1}{2}\\ln 2$"
         ],
-        "correct": 1,
-        "explanation": "តាង $u = x^2 + 1 \\implies du = 2x dx$។ ព្រំដែនពី $1$ ទៅ $2$៖ $I = \\dfrac{1}{2}\\int_1^2 \\dfrac{du}{u} = \\dfrac{1}{2}\\ln 2$។",
-        "diagram": ""
+        "correct": 3,
+        "explanation": "តាង $u = x^2 + 1 \\implies du = 2x dx$។ ព្រំដែនពី $1$ ទៅ $2$៖ $I = \\dfrac{1}{2}\\int_1^2 \\dfrac{du}{u} = \\dfrac{1}{2}\\ln 2$។"
       },
       {
-        "id": "g12a_p2_03",
-        "questionNumber": 3,
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{2}} \\sin^2 x \\cos x dx$ ៖",
+        "options": [
+          "$1$",
+          "$\\dfrac{1}{2}$",
+          "$\\dfrac{2}{3}$",
+          "$\\dfrac{1}{3}$"
+        ],
+        "correct": 3,
+        "explanation": "តាង $u = \\sin x$: $x=0 \\implies u=0; x=\\dfrac{\\pi}{2} \\implies u=1$។ $I = \\int_0^1 u^2 du = \\dfrac{1}{3}$។"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -34345,120 +34388,52 @@
         "explanation": "$u$ ពី $1$ ដល់ $2$ ៖ $\\int_1^2 u\\,du = \\dfrac{4 - 1}{2} = \\dfrac{3}{2}$។"
       },
       {
-        "id": "g12a_p2_04",
-        "questionNumber": 4,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_0^1 e^{2x}\\,dx$ ៖",
-        "options": [
-          "$e^2 - 1$",
-          "$\\dfrac{e^2}{2}$",
-          "$2(e^2 - 1)$",
-          "$\\dfrac{e^2 - 1}{2}$"
-        ],
-        "correct": 3,
-        "explanation": "$\\left[\\dfrac{e^{2x}}{2}\\right]_0^1 = \\dfrac{e^2 - 1}{2}$។"
-      },
-      {
-        "id": "g12a_p2_05",
-        "questionNumber": 5,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{2}} \\sin^2 x \\cos x dx$ ៖",
-        "options": [
-          "$\\dfrac{2}{3}$",
-          "$\\dfrac{1}{2}$",
-          "$1$",
-          "$\\dfrac{1}{3}$"
-        ],
-        "correct": 3,
-        "explanation": "តាង $u = \\sin x$: $x=0 \\implies u=0; x=\\dfrac{\\pi}{2} \\implies u=1$។ $I = \\int_0^1 u^2 du = \\dfrac{1}{3}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_06",
-        "questionNumber": 6,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{4}} \\tan x dx$ ៖",
-        "options": [
-          "$1$",
-          "$\\dfrac{1}{2}\\ln 2$",
-          "$\\dfrac{\\sqrt{2}}{2}$",
-          "$\\ln 2$"
-        ],
-        "correct": 1,
-        "explanation": "$I = [-\\ln|\\cos x|]_0^{\\dfrac{\\pi}{4}} = -\\ln(\\dfrac{\\sqrt{2}}{2}) = \\ln(\\sqrt{2}) = \\dfrac{1}{2}\\ln 2$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_07",
-        "questionNumber": 7,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនាអាំងតេក្រាល $I = \\int_0^1 \\dfrac{1}{1 + x^2} dx$ ៖",
-        "options": [
-          "$\\dfrac{\\pi}{4}$",
-          "$\\dfrac{\\pi}{2}$",
-          "$\\dfrac{\\pi}{3}$",
-          "$1$"
-        ],
-        "correct": 0,
-        "explanation": "$I = [\\arctan x]_0^1 = \\arctan 1 - \\arctan 0 = \\dfrac{\\pi}{4}$។",
-        "diagram": ""
-      },
-      {
-        "id": "g12a_p2_08",
+        "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនា $\\int_1^e \\dfrac{\\ln x}{x}\\,dx$ (តាង $u = \\ln x$) ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{4}} \\tan x dx$ ៖",
         "options": [
           "$1$",
-          "$\\dfrac{1}{2}$",
-          "$e$",
-          "$\\dfrac{e}{2}$"
+          "$\\dfrac{\\sqrt{2}}{2}$",
+          "$\\dfrac{1}{2}\\ln 2$",
+          "$\\ln 2$"
         ],
-        "correct": 1,
-        "explanation": "$u$ ពី $0$ ដល់ $1$ ៖ $\\int_0^1 u\\,du = \\dfrac{1}{2}$។"
+        "correct": 2,
+        "explanation": "$I = [-\\ln|\\cos x|]_0^{\\dfrac{\\pi}{4}} = -\\ln(\\dfrac{\\sqrt{2}}{2}) = \\ln(\\sqrt{2}) = \\dfrac{1}{2}\\ln 2$។"
       },
       {
-        "id": "g12a_p2_09",
+        "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "គណនា $\\int_0^{\\pi} \\sin x\\cos x\\,dx$ (តាង $u = \\sin x$) ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^1 \\dfrac{1}{1 + x^2} dx$ ៖",
         "options": [
           "$1$",
-          "$\\dfrac{1}{2}$",
-          "$0$",
-          "$2$"
-        ],
-        "correct": 2,
-        "explanation": "$u$ ពី $0$ ដល់ $0$ ៖ $\\int_0^0 u\\,du = 0$។"
-      },
-      {
-        "id": "g12a_p2_10",
-        "questionNumber": 10,
-        "pointNumber": 3,
-        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "អាំងតេក្រាល Wallis $I_2 = \\int_0^{\\dfrac{\\pi}{2}} \\sin^2 x dx$ ស្មើនឹង ៖",
-        "options": [
-          "$\\dfrac{1}{2}$",
           "$\\dfrac{\\pi}{4}$",
-          "$\\dfrac{\\pi}{8}$",
+          "$\\dfrac{\\pi}{3}$",
           "$\\dfrac{\\pi}{2}$"
         ],
         "correct": 1,
-        "explanation": "$\\int_0^{\\dfrac{\\pi}{2}} \\dfrac{1 - \\cos 2x}{2} dx = [\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4}]_0^{\\dfrac{\\pi}{2}} = \\dfrac{\\pi}{4}$។",
-        "diagram": ""
+        "explanation": "$I = [\\arctan x]_0^1 = \\arctan 1 - \\arctan 0 = \\dfrac{\\pi}{4}$។"
+      },
+      {
+        "id": "q10",
+        "questionNumber": 10,
+        "pointNumber": 3,
+        "pointTitle": "ចំណុចទី ៣ ៖ គណនាអាំងតេក្រាលកំណត់ដោយប្តូរអថេរ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "អាំងតេក្រាល Wallis $I_2 = \\int_0^{\\dfrac{\\pi}{2}} \\sin^2 x dx$ ស្មើនឹង ៖",
+        "options": [
+          "$\\dfrac{\\pi}{8}$",
+          "$\\dfrac{\\pi}{4}$",
+          "$\\dfrac{\\pi}{2}$",
+          "$\\dfrac{1}{2}$"
+        ],
+        "correct": 1,
+        "explanation": "$\\int_0^{\\dfrac{\\pi}{2}} \\dfrac{1 - \\cos 2x}{2} dx = [\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4}]_0^{\\dfrac{\\pi}{2}} = \\dfrac{\\pi}{4}$។"
       }
     ],
     "4": [
@@ -34467,68 +34442,64 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_0^{1} xe^{x}\\,dx$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int_1^{e^4}\\dfrac{1}{x}dx$ ៖",
         "options": [
-          "$e$",
-          "$2e - 1$",
-          "$1$",
-          "$e - 1$"
+          "$5$",
+          "$4$",
+          "$e^{4}$",
+          "$e^{4}-1$"
         ],
-        "correct": 2,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[xe^x - e^x]_0^1 = 0 - (-1) = 1$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "$[\\ln x]_1^{e^4}$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រូបមន្តអាំងតេក្រាលកំណត់ដោយផ្នែកគឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int_0^1 xe^{5x}dx$ ដោយផ្នែក ៖",
         "options": [
-          "$\\int_a^b uv'\\,dx = [uv]_a^b + \\int_a^b u'v\\,dx$",
-          "$\\int_a^b uv'\\,dx = [uv]_a^b - \\int_a^b u'v\\,dx$",
-          "$\\int_a^b uv'\\,dx = u'v - \\int_a^b uv\\,dx$",
-          "$\\int_a^b uv'\\,dx = [u'v']_a^b$"
+          "$\\dfrac{4e^{5}+1}{25}$",
+          "$\\dfrac{6e^{5}-1}{25}$",
+          "$\\dfrac{e^{5}}{5}$",
+          "$\\dfrac{4e^{5}-1}{25}$"
         ],
-        "correct": 1,
-        "explanation": "រូបមន្តអាំងតេក្រាលដោយផ្នែក។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "u=x, v'=e^{kx}"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_1^{e} x\\ln x\\,dx$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ក្នុង $\\int_0^{\\pi} x\\sin x dx$ ជ្រើស $u$ និង $v'$ ៖",
         "options": [
-          "$\\dfrac{e^2 + 1}{2}$",
-          "$\\dfrac{e^2 - 1}{4}$",
-          "$\\dfrac{e^2}{2}$",
-          "$\\dfrac{e^2 + 1}{4}$"
+          "$u=\\sin x,\\ v'=x$",
+          "$u=1,\\ v'=x\\sin x$",
+          "$u=x\\sin x,\\ v'=1$",
+          "$u=x,\\ v'=\\sin x$"
         ],
         "correct": 3,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $\\left[\\dfrac{x^2}{2}\\ln x - \\dfrac{x^2}{4}\\right]_1^e = \\dfrac{e^2 + 1}{4}$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "LIATE: ពហុធាមុន"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_0^{\\frac{\\pi}{2}} x\\cos x\\,dx$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\int_1^{e^5}\\dfrac{1}{x}dx$ ៖",
         "options": [
-          "$\\dfrac{\\pi}{2} - 1$",
-          "$\\dfrac{\\pi}{2} + 1$",
-          "$\\dfrac{\\pi}{2}$",
-          "$1 - \\dfrac{\\pi}{2}$"
+          "$5$",
+          "$6$",
+          "$e^{5}$",
+          "$e^{5}-1$"
         ],
         "correct": 0,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[x\\sin x + \\cos x]_0^{\\pi/2} = \\dfrac{\\pi}{2} - 1$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$[\\ln x]_1^{e^5}$"
       },
       {
         "id": "q5",
@@ -34536,16 +34507,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_1^{e} \\ln x\\,dx$ ៖",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\dfrac{\\pi}{2}} x \\cos x dx$ ដោយផ្នែក ៖",
         "options": [
-          "$e - 1$",
-          "$e$",
+          "$\\dfrac{\\pi}{2} - 1$",
+          "$\\dfrac{\\pi}{2}$",
           "$1$",
-          "$0$"
+          "$\\dfrac{\\pi}{2} + 1$"
         ],
-        "correct": 2,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[x\\ln x - x]_1^e = 0 - (-1) = 1$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$I = [x\\sin x + \\cos x]_0^{\\dfrac{\\pi}{2}} = (\\frac{\\pi}{2} \\cdot 1 + 0) - (0 + 1) = \\dfrac{\\pi}{2} - 1$។"
       },
       {
         "id": "q6",
@@ -34553,16 +34523,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_0^{2} xe^{x}\\,dx$ ៖",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^1 x e^{-x} dx$ ៖",
         "options": [
-          "$e^{2} - 1$",
-          "$e^{2} + 1$",
-          "$2e^{2}$",
-          "$e^{2}$"
+          "$\\dfrac{1}{e}$",
+          "$2 - \\dfrac{1}{e}$",
+          "$1 - \\dfrac{2}{e}$",
+          "$1 - \\dfrac{1}{e}$"
         ],
-        "correct": 1,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[(x - 1)e^x]_0^2 = e^2 + 1$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$I = [-(x + 1)e^{-x}]_0^1 = -2e^{-1} - (-1) = 1 - \\dfrac{2}{e}$។"
       },
       {
         "id": "q7",
@@ -34570,67 +34539,63 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_0^{\\pi} x\\sin x\\,dx$ ៖",
+        "question": "គណនា $\\int_0^{1} xe^{x}\\,dx$ ៖",
         "options": [
-          "$-\\pi$",
-          "$2$",
-          "$2\\pi$",
-          "$\\pi$"
+          "$1$",
+          "$2e - 1$",
+          "$e - 1$",
+          "$e$"
         ],
-        "correct": 3,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[-x\\cos x + \\sin x]_0^{\\pi} = \\pi$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[xe^x - e^x]_0^1 = 0 - (-1) = 1$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_0^{1} (2x + 1)e^{x}\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_1^e (\\ln x)^2 dx$ ៖",
         "options": [
-          "$e + 1$",
+          "$e - 2$",
           "$e - 1$",
-          "$3e$",
-          "$2e$"
+          "$e$",
+          "$2$"
         ],
         "correct": 0,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[(2x - 1)e^x]_0^1 = e + 1$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "ដោយផ្នែកពីរដង៖ $[x(\\ln x)^2 - 2x\\ln x + 2x]_1^e = (e - 2e + 2e) - (0 - 0 + 2) = e - 2$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_0^{\\pi} x\\cos x\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនាអាំងតេក្រាល $I = \\int_0^{\\pi} x \\sin x dx$ ៖",
         "options": [
-          "$2$",
+          "$\\pi$",
           "$0$",
-          "$-2$",
-          "$\\pi$"
+          "$2\\pi$",
+          "$2$"
         ],
-        "correct": 2,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[x\\sin x + \\cos x]_0^{\\pi} = -1 - 1 = -2$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$I = [-x\\cos x + \\sin x]_0^\\pi = (-\\pi(-1) + 0) - (0) = \\pi$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ រូបមន្តអាំងតេក្រាលដោយផ្នែក",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\int_0^{3} xe^{x}\\,dx$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\int_1^e x^{7}\\ln x dx$ ៖",
         "options": [
-          "$3e^{3}$",
-          "$2e^{3} + 1$",
-          "$2e^{3} - 1$",
-          "$e^{3} + 1$"
+          "$\\dfrac{e^{8}-1}{64}$",
+          "$\\dfrac{e^{8}+1}{8}$",
+          "$\\dfrac{7e^{8}+1}{64}$",
+          "$\\dfrac{7e^{8}-1}{64}$"
         ],
-        "correct": 1,
-        "explanation": "អាំងតេក្រាលដោយផ្នែក ៖ $[(x - 1)e^x]_0^3 = 2e^3 + 1$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$[\\dfrac{x^{8}}{8}\\ln x-\\dfrac{x^{8}}{64}]_1^e$"
       }
     ],
     "5": [
@@ -34639,38 +34604,100 @@
         "questionNumber": 1,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = 6x^2 - 2x - 4$ លើ $[0, 1]$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ទ្រឹស្តីបទតម្លៃមធ្យមសម្រាប់អាំងតេក្រាលកំណត់៖ បើ $f$ ជាប់លើ $[a, b]$ នោះ ៖",
         "options": [
-          "$-2$",
-          "$-4$",
-          "$-1$",
-          "$-3$"
+          "មាន $c \\in [a, b]$ ដែល $\\int_a^b f(x) dx = f(c)(b - a)$",
+          "$\\int_a^b f(x) dx = \\dfrac{f(a) + f(b)}{2}$",
+          "$\\int_a^b f(x) dx = f'(c)(b - a)$",
+          "$f(c) = 0$"
         ],
-        "correct": 3,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = -3$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "Mean Value Theorem for Integrals៖ មាន $c \\in [a, b]$ ដែល $\\int_a^b f(x) dx = f(c)(b - a)$ (តម្លៃមធ្យម $\\mu = f(c)$)។"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = 6x + 4$ លើ $[-1, 1]$ គឺ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "តម្លៃមធ្យមនៃ $f(x)=9x^{2} + 3x$ លើ $[0,3]$ គឺ ៖",
         "options": [
-          "$4$",
-          "$3$",
-          "$8$",
-          "$5$"
+          "$\\dfrac{189}{2}$",
+          "$\\dfrac{191}{2}$",
+          "$\\dfrac{63}{2}$",
+          "$\\dfrac{65}{2}$"
         ],
-        "correct": 0,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{1}{2} \\cdot \\left(8\\right) = 4$។",
-        "src": "genpq-g12c_plan"
+        "correct": 2,
+        "explanation": "$\\dfrac{1}{b-a}\\int_a^bf$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "តម្លៃមធ្យមនៃ $f(x)=6x^{2}$ លើ $[1,2]$ គឺ ៖",
+        "options": [
+          "$15$",
+          "$14$",
+          "$-14$",
+          "$28$"
+        ],
+        "correct": 1,
+        "explanation": "$\\dfrac{1}{b-a}\\int_a^bf$"
+      },
+      {
+        "id": "q4",
+        "questionNumber": 4,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "តម្លៃមធ្យមនៃ $f(x)=6x^{2} + 3x$ លើ $[1,3]$ គឺ ៖",
+        "options": [
+          "$64$",
+          "$65$",
+          "$33$",
+          "$32$"
+        ],
+        "correct": 3,
+        "explanation": "$\\dfrac{1}{b-a}\\int_a^bf$"
+      },
+      {
+        "id": "q5",
+        "questionNumber": 5,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តម្លៃមធ្យមនៃ $f(x) = 6x^2 - 2x - 4$ លើ $[0, 1]$ គឺ ៖",
+        "options": [
+          "$-1$",
+          "$-4$",
+          "$-2$",
+          "$-3$"
+        ],
+        "correct": 3,
+        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = -3$។"
+      },
+      {
+        "id": "q6",
+        "questionNumber": 6,
+        "pointNumber": 5,
+        "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "តម្លៃមធ្យមនៃ $f(x) = 6x + 4$ លើ $[-1, 1]$ គឺ ៖",
+        "options": [
+          "$4$",
+          "$5$",
+          "$3$",
+          "$8$"
+        ],
+        "correct": 0,
+        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{1}{2} \\cdot \\left(8\\right) = 4$។"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -34682,127 +34709,55 @@
           "$96$"
         ],
         "correct": 1,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{1}{4} \\cdot \\left(96\\right) = 24$។",
-        "src": "genpq-g12c_plan"
-      },
-      {
-        "id": "q4",
-        "questionNumber": 4,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = 3x^2 + 4$ លើ $[0, 3]$ គឺ ៖",
-        "options": [
-          "$\\dfrac{35}{2}$",
-          "$14$",
-          "$13$",
-          "$39$"
-        ],
-        "correct": 2,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{1}{3} \\cdot \\left(39\\right) = 13$។",
-        "src": "genpq-g12c_plan"
-      },
-      {
-        "id": "q5",
-        "questionNumber": 5,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = 6x^2 + 4x$ លើ $[1, 2]$ គឺ ៖",
-        "options": [
-          "$21$",
-          "$22$",
-          "$19$",
-          "$20$"
-        ],
-        "correct": 3,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = 20$។",
-        "src": "genpq-g12c_plan"
-      },
-      {
-        "id": "q6",
-        "questionNumber": 6,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = x^2 + 3x$ លើ $[1, 2]$ គឺ ៖",
-        "options": [
-          "$\\dfrac{41}{6}$",
-          "$\\dfrac{47}{6}$",
-          "$7$",
-          "$\\dfrac{35}{6}$"
-        ],
-        "correct": 0,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{41}{6}$។",
-        "src": "genpq-g12c_plan"
-      },
-      {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 5,
-        "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = x^2 + 3x - 1$ លើ $[-1, 0]$ គឺ ៖",
-        "options": [
-          "$-2$",
-          "$-\\dfrac{13}{6}$",
-          "$-\\dfrac{7}{6}$",
-          "$-\\dfrac{19}{6}$"
-        ],
-        "correct": 1,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = -\\dfrac{13}{6}$។",
-        "src": "genpq-g12c_plan"
+        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{1}{4} \\cdot \\left(96\\right) = 24$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = 3x^2 + 3x + 2$ លើ $[-1, 3]$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ក្នុងទ្រឹស្តីបទតម្លៃមធ្យមអាំងតេក្រាល ចំពោះ $f(x)=x^2$ លើ $[0,4]$ តម្លៃ $c$ ស្មើ ៖",
         "options": [
-          "$13$",
-          "$20$",
-          "$12$",
-          "$48$"
+          "$\\dfrac{4}{\\sqrt{3}}$",
+          "$\\dfrac{4}{3}$",
+          "$\\dfrac{4}{2}$",
+          "$4$"
         ],
-        "correct": 2,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{1}{4} \\cdot \\left(48\\right) = 12$។",
-        "src": "genpq-g12c_plan"
+        "correct": 0,
+        "explanation": "$c^2=\\dfrac{16}{3}$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = 2x^2 + 3$ លើ $[-1, 0]$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តម្លៃមធ្យមនៃ $f(x)=\\sqrt{x}$ លើ $[0,25]$ គឺ ៖",
         "options": [
-          "$\\dfrac{11}{3}$",
-          "$\\dfrac{14}{3}$",
-          "$4$",
-          "$\\dfrac{8}{3}$"
+          "$\\dfrac{5}{3}$",
+          "$\\dfrac{10}{3}$",
+          "$10$",
+          "$\\dfrac{50}{3}$"
         ],
-        "correct": 0,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{11}{3}$។",
-        "src": "genpq-g12c_plan"
+        "correct": 1,
+        "explanation": "∫√x = (2/3)x√x"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ ការអនុវត្ត ៖ តម្លៃមធ្យមនៃអនុគមន៍",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "តម្លៃមធ្យមនៃ $f(x) = 3x^2 - x - 4$ លើ $[1, 3]$ គឺ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "តម្លៃមធ្យមនៃ $\\dfrac{1}{x}$ លើ $[1,e]$ គឺ ៖",
         "options": [
-          "$14$",
-          "$8$",
-          "$7$",
-          "$9$"
+          "$\\dfrac{1}{e}$",
+          "$1$",
+          "$\\dfrac{1}{e+1}$",
+          "$\\dfrac{1}{e-1}$"
         ],
-        "correct": 2,
-        "explanation": "$\\bar{f} = \\dfrac{1}{b - a}\\int_a^b f(x)dx = \\dfrac{1}{2} \\cdot \\left(14\\right) = 7$។",
-        "src": "genpq-g12c_plan"
+        "correct": 3,
+        "explanation": "$\\dfrac{1}{e-1}\\ln e$"
       }
     ]
   },
