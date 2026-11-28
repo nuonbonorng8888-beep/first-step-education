@@ -16903,15 +16903,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើសមីការ $a \\sin x + b \\cos x = c$ ($a^2 + b^2 \\ne 0$) មានឫសលុះត្រាតែលក្ខខណ្ឌណា?",
         "options": [
-          "$a^2 + b^2 < c^2$",
-          "$a^2 + b^2 \\ge c^2$",
           "$c = 0$",
-          "$a + b = c$"
+          "$a + b = c$",
+          "$a^2 + b^2 < c^2$",
+          "$a^2 + b^2 \\ge c^2$"
         ],
-        "correct": 1,
-        "explanation": "សមីការមានឫសលុះត្រាតែ $\\left|\\dfrac{c}{\\sqrt{a^2+b^2}}\\right| \\le 1 \\iff a^2 + b^2 \\ge c^2$។",
-        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>",
-        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>"
+        "correct": 3,
+        "explanation": "សមីការមានឫសលុះត្រាតែ $\\left|\\dfrac{c}{\\sqrt{a^2+b^2}}\\right| \\le 1 \\iff a^2 + b^2 \\ge c^2$។"
       },
       {
         "id": "q2",
@@ -16921,12 +16919,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដើម្បីដោះស្រាយសមីការ $a \\sin x + b \\cos x = c$ តើគេត្រូវចែកអង្គទាំងពីរនឹងអ្វី?",
         "options": [
-          "$a + b$",
           "$a^2 + b^2$",
-          "$c$",
-          "$\\sqrt{a^2 + b^2}$"
+          "$\\sqrt{a^2 + b^2}$",
+          "$a + b$",
+          "$c$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "គេចែកអង្គទាំងពីរនឹង $\\sqrt{a^2 + b^2}$ ដើម្បីបំប្លែងទៅជារាង $\\sin(x + \\varphi) = \\dfrac{c}{\\sqrt{a^2+b^2}}$។"
       },
       {
@@ -16937,12 +16935,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយសមីការ $\\sin x + \\cos x = \\sqrt{2}$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{4} + 2k\\pi$ ($k \\in \\mathbb{Z}$)",
           "$x = 2k\\pi$",
-          "$x = \\pi + 2k\\pi$",
-          "$x = \\dfrac{\\pi}{2} + 2k\\pi$"
+          "$x = \\dfrac{\\pi}{2} + 2k\\pi$",
+          "$x = \\dfrac{\\pi}{4} + 2k\\pi$ ($k \\in \\mathbb{Z}$)",
+          "$x = \\pi + 2k\\pi$"
         ],
-        "correct": 0,
+        "correct": 2,
         "explanation": "ចែក $\\sqrt{2}$ ៖ $\\sin(x + \\pi/4) = 1 \\iff x + \\pi/4 = \\pi/2 + 2k\\pi \\iff x = \\pi/4 + 2k\\pi$។"
       },
       {
@@ -16953,12 +16951,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "តើសមីការ $3\\sin x + 4\\cos x = 6$ មានឫសដែរឬទេ?",
         "options": [
-          "មានឫសតែមួយ",
-          "មិនអាចកំណត់",
           "គ្មានឫសទេ ព្រោះ $3^2 + 4^2 = 25 < 6^2 = 36$",
+          "មិនអាចកំណត់",
+          "មានឫសតែមួយ",
           "មានឫសច្រើន"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$a^2 + b^2 = 9 + 16 = 25 < 36 = c^2$ ដូច្នេះសមីការគ្មានឫសឡើយ។"
       },
       {
@@ -16969,12 +16967,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការ $\\sqrt{3}\\sin x - \\cos x = 1$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{3} + 2k\\pi$ ឬ $x = \\pi + 2k\\pi$",
           "$x = \\dfrac{\\pi}{6} + 2k\\pi$",
-          "$x = 2k\\pi$",
-          "$x = \\dfrac{2\\pi}{3} + 2k\\pi$"
+          "$x = \\dfrac{\\pi}{3} + 2k\\pi$ ឬ $x = \\pi + 2k\\pi$",
+          "$x = \\dfrac{2\\pi}{3} + 2k\\pi$",
+          "$x = 2k\\pi$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "ចែក ២ ៖ $\\sin(x - \\pi/6) = \\dfrac{1}{2} \\Rightarrow x - \\pi/6 = \\pi/6 + 2k\\pi \\Rightarrow x = \\pi/3 + 2k\\pi$ ឬ $x - \\pi/6 = 5\\pi/6 + 2k\\pi \\Rightarrow x = \\pi + 2k\\pi$។"
       },
       {
@@ -16985,12 +16983,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃអតិបរមានៃកន្សោម $f(x) = 3\\sin x + 4\\cos x$ ៖",
         "options": [
+          "$1$",
           "$7$",
           "$5$",
-          "$1$",
           "$25$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "កន្សោម $a\\sin x + b\\cos x$ មានតម្លៃអតិបរមាស្មើ $\\sqrt{a^2+b^2} = \\sqrt{3^2+4^2} = 5$។"
       },
       {
@@ -17001,12 +16999,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "រកតម្លៃ $m$ ដើម្បីឱ្យសមីការ $\\sin x + m\\cos x = 2$ មានឫស ៖",
         "options": [
-          "$m \\ge 2$",
           "$|m| \\le \\sqrt{3}$",
-          "$|m| \\ge \\sqrt{3}$",
-          "$m = 1$"
+          "$m = 1$",
+          "$m \\ge 2$",
+          "$|m| \\ge \\sqrt{3}$"
         ],
-        "correct": 2,
+        "correct": 3,
         "explanation": "លក្ខខណ្ឌមានឫស ៖ $1^2 + m^2 \\ge 2^2 \\iff m^2 \\ge 3 \\iff |m| \\ge \\sqrt{3}$។"
       },
       {
@@ -17014,15 +17012,15 @@
         "questionNumber": 8,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការដឺក្រេទី ១ ធៀបនឹង sin x និង cos x",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការ $\\sin 2x + \\sqrt{3}\\cos 2x = \\sqrt{2}$ ៖",
         "options": [
-          "$x = k\\pi$",
+          "$x = -\\dfrac{\\pi}{24} + k\\pi$ ឬ $x = \\dfrac{5\\pi}{24} + k\\pi$",
           "$x = \\dfrac{\\pi}{12} + k\\pi$",
-          "$x = \\dfrac{\\pi}{6} + k\\pi$",
-          "$x = -\\dfrac{\\pi}{24} + k\\pi$ ឬ $x = \\dfrac{5\\pi}{24} + k\\pi$"
+          "$x = k\\pi$",
+          "$x = \\dfrac{\\pi}{6} + k\\pi$"
         ],
-        "correct": 3,
+        "correct": 0,
         "explanation": "$\\sin(2x + \\pi/3) = \\dfrac{\\sqrt{2}}{2} = \\sin(\\pi/4)$។ $2x + \\pi/3 = \\pi/4 + 2k\\pi \\Rightarrow 2x = -\\pi/12 + 2k\\pi \\Rightarrow x = -\\pi/24 + k\\pi$ ឬ $2x + \\pi/3 = 3\\pi/4 + 2k\\pi \\Rightarrow 2x = 5\\pi/12 + 2k\\pi \\Rightarrow x = 5\\pi/24 + k\\pi$។"
       },
       {
@@ -17030,7 +17028,7 @@
         "questionNumber": 9,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការដឺក្រេទី ១ ធៀបនឹង sin x និង cos x",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "រកចំនួនឫសនៃសមីការ $\\sin x + \\cos x = 1$ លើចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
           "២ ឫស",
@@ -17046,15 +17044,15 @@
         "questionNumber": 10,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ សមីការដឺក្រេទី ១ ធៀបនឹង sin x និង cos x",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយសមីការ $a\\sin x + b\\cos x = c$ តាមការជំនួសអថេរ $t = \\tan(\\dfrac{x}{2})$ ($x \\ne \\pi + 2k\\pi$) នាំឱ្យបានសមីការដឺក្រេទីពីរណា?",
         "options": [
-          "$(c + b)t^2 - 2at + (c - b) = 0$",
           "$(c - b)t^2 + 2at + (c + b) = 0$",
+          "$(a+b)t^2 = c$",
           "$at^2 + bt + c = 0$",
-          "$(a+b)t^2 = c$"
+          "$(c + b)t^2 - 2at + (c - b) = 0$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "ជំនួស $\\sin x = \\dfrac{2t}{1+t^2}$ និង $\\cos x = \\dfrac{1-t^2}{1+t^2}$ នាំឱ្យ $2at + b(1-t^2) = c(1+t^2) \\iff (c+b)t^2 - 2at + (c-b) = 0$។"
       }
     ],
@@ -17068,11 +17066,11 @@
         "question": "ដោះស្រាយសមីការ $2\\cos^2 x - \\cos x = 0$ ៖",
         "options": [
           "$\\cos x = 1$ ឬ $\\cos x = 2$",
+          "$\\cos x = 0$ ឬ $\\cos x = \\dfrac{1}{2}$",
           "$\\cos x = -1$",
-          "$\\cos x = 0$ តែមួយគត់",
-          "$\\cos x = 0$ ឬ $\\cos x = \\dfrac{1}{2}$"
+          "$\\cos x = 0$ តែមួយគត់"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "ដាក់ $\\cos x$ ជាកត្តា ៖ $\\cos x (2\\cos x - 1) = 0 \\Rightarrow \\cos x = 0$ ឬ $\\cos x = \\dfrac{1}{2}$។"
       },
       {
@@ -17083,12 +17081,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយសមីការ $2\\sin^2 x - 3\\sin x + 1 = 0$ ៖",
         "options": [
-          "$\\sin x = 1$ ឬ $\\sin x = \\dfrac{1}{2}$",
           "$\\sin x = 1$ ឬ $\\sin x = 2$",
+          "$\\sin x = -1$",
           "$\\sin x = 0$",
-          "$\\sin x = -1$"
+          "$\\sin x = 1$ ឬ $\\sin x = \\dfrac{1}{2}$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "$a + b + c = 2 - 3 + 1 = 0 \\Rightarrow \\sin x = 1$ ឬ $\\sin x = \\dfrac{1}{2}$។"
       },
       {
@@ -17099,12 +17097,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយសមីការ $\\tan^2 x - 3 = 0$ ៖",
         "options": [
+          "$x = \\pm \\dfrac{\\pi}{3} + k\\pi$",
           "$x = \\pm \\dfrac{\\pi}{4} + k\\pi$",
           "$x = \\pm \\dfrac{\\pi}{6} + k\\pi$",
-          "$x = \\pm \\dfrac{\\pi}{3} + k\\pi$",
           "$x = \\dfrac{\\pi}{3} + k\\pi$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$\\tan x = \\pm \\sqrt{3} \\Rightarrow x = \\pm \\dfrac{\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$)។"
       },
       {
@@ -17131,8 +17129,8 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយសមីការ $2\\cos^2 x + 3\\sin x - 3 = 0$ ៖",
         "options": [
-          "$\\sin x = -1$",
           "$\\sin x = 0$",
+          "$\\sin x = -1$",
           "$\\sin x = 2$",
           "$\\sin x = 1$ ឬ $\\sin x = \\dfrac{1}{2}$"
         ],
@@ -17142,6 +17140,22 @@
       {
         "id": "q6",
         "questionNumber": 6,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការដឺក្រេទី ២ ធៀបនឹងអនុគមន៍ត្រីកោណមាត្រ",
+        "level": "កម្រិត 2 (មធ្យម)",
+        "question": "ដោះស្រាយសមីការ $4\\sin^2 x - 1 = 0$ លើ $[0, 2\\pi]$ ៖",
+        "options": [
+          "$\\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}$",
+          "$\\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}$",
+          "$\\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}, \\dfrac{7\\pi}{6}, \\dfrac{11\\pi}{6}$",
+          "$\\dfrac{\\pi}{3}, \\dfrac{2\\pi}{3}, \\dfrac{4\\pi}{3}, \\dfrac{5\\pi}{3}$"
+        ],
+        "correct": 2,
+        "explanation": "$\\sin^2 x = \\dfrac{1}{4} \\Rightarrow \\sin x = \\pm \\dfrac{1}{2}$។ ក្នុង $[0, 2\\pi]$ ឫសទាំង ៤ គឺ $\\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$។"
+      },
+      {
+        "id": "q7",
+        "questionNumber": 7,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការដឺក្រេទី ២ ធៀបនឹងអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
@@ -17156,24 +17170,24 @@
         "explanation": "តាង $t = \\sin x$ ៖ $2t^2 - t - 1 = (t - 1)(2t + 1) = 0 \\iff t = 1$ ឬ $t = -\\dfrac{1}{2}$ (ទទួលយកទាំងពីរ)។"
       },
       {
-        "id": "q7",
-        "questionNumber": 7,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សមីការដឺក្រេទី ២ ធៀបនឹងអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $4\\sin^2 x - 1 = 0$ លើ $[0, 2\\pi]$ ៖",
-        "options": [
-          "$\\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}, \\dfrac{7\\pi}{6}, \\dfrac{11\\pi}{6}$",
-          "$\\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}$",
-          "$\\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}$",
-          "$\\dfrac{\\pi}{3}, \\dfrac{2\\pi}{3}, \\dfrac{4\\pi}{3}, \\dfrac{5\\pi}{3}$"
-        ],
-        "correct": 0,
-        "explanation": "$\\sin^2 x = \\dfrac{1}{4} \\Rightarrow \\sin x = \\pm \\dfrac{1}{2}$។ ក្នុង $[0, 2\\pi]$ ឫសទាំង ៤ គឺ $\\pi/6, 5\\pi/6, 7\\pi/6, 11\\pi/6$។"
-      },
-      {
         "id": "q8",
         "questionNumber": 8,
+        "pointNumber": 2,
+        "pointTitle": "ចំណុចទី ២ ៖ សមីការដឺក្រេទី ២ ធៀបនឹងអនុគមន៍ត្រីកោណមាត្រ",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រកចំនួនឫសនៃសមីការ $2\\cos^2 x - 5\\cos x + 2 = 0$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
+        "options": [
+          "គ្មានឫស",
+          "២ ឫស",
+          "៤ ឫស",
+          "១ ឫស"
+        ],
+        "correct": 1,
+        "explanation": "$(2\\cos x - 1)(\\cos x - 2) = 0$។ ដោយ $\\cos x \\le 1$ នាំឱ្យយកតែ $\\cos x = \\dfrac{1}{2} \\Rightarrow x = \\pi/3, 5\\pi/3$ (២ ឫស)។"
+      },
+      {
+        "id": "q9",
+        "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការដឺក្រេទី ២ ធៀបនឹងអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
@@ -17188,8 +17202,8 @@
         "explanation": "$\\cos 2x = 2\\cos^2 x - 1$ ៖ $2\\cos^2 x + 3\\cos x + 1 = 0 \\iff (\\cos x + 1)(2\\cos x + 1) = 0 \\iff \\cos x = -1$ ឬ $\\cos x = -\\dfrac{1}{2}$។"
       },
       {
-        "id": "q9",
-        "questionNumber": 9,
+        "id": "q10",
+        "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ សមីការដឺក្រេទី ២ ធៀបនឹងអនុគមន៍ត្រីកោណមាត្រ",
         "level": "កម្រិត 3 (លំបាក)",
@@ -17202,22 +17216,6 @@
         ],
         "correct": 3,
         "explanation": "$\\cos x = 1 \\Rightarrow x = 0$ ; $\\cos x = \\dfrac{1}{2} \\Rightarrow x = \\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}$។ សរុប ៣ ឫស។"
-      },
-      {
-        "id": "q10",
-        "questionNumber": 10,
-        "pointNumber": 2,
-        "pointTitle": "ចំណុចទី ២ ៖ សមីការដឺក្រេទី ២ ធៀបនឹងអនុគមន៍ត្រីកោណមាត្រ",
-        "level": "កម្រិត 3 (លំបាក)",
-        "question": "រកចំនួនឫសនៃសមីការ $2\\cos^2 x - 5\\cos x + 2 = 0$ ក្នុងចន្លោះ $[0, 2\\pi]$ ៖",
-        "options": [
-          "៤ ឫស",
-          "១ ឫស",
-          "គ្មានឫស",
-          "២ ឫស"
-        ],
-        "correct": 3,
-        "explanation": "$(2\\cos x - 1)(\\cos x - 2) = 0$។ ដោយ $\\cos x \\le 1$ នាំឱ្យយកតែ $\\cos x = \\dfrac{1}{2} \\Rightarrow x = \\pi/3, 5\\pi/3$ (២ ឫស)។"
       }
     ],
     "3": [
@@ -17227,15 +17225,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "តើសមីការអូម៉ូសែនដឺក្រេទីពីរធៀបនឹង $\\sin x$ និង $\\cos x$ មានទម្រង់ទូទៅដូចម្តេច?",
+        "question": "សមីការអូម៉ូសែនដឺក្រេទី ២ មានទម្រង់ទូទៅ $a\\sin^2 x + b\\sin x \\cos x + c\\cos^2 x = 0$។ វិធីដោះស្រាយទូទៅគឺ ៖",
         "options": [
-          "$a\\sin x + b\\cos x = 0$",
-          "$\\sin 2x + \\cos 2x = 0$",
-          "$a\\sin^2 x + b\\cos x = c$",
-          "$a\\sin^2 x + b\\sin x \\cos x + c\\cos^2 x = 0$"
+          "ប្តូរជាកូស៊ីនុសទាំងអស់",
+          "ចែកនឹង $\\sin x$",
+          "ចែកនឹង $\\cos^2 x \\ne 0$ ដើម្បីបម្លែងជាសមីការដឺក្រេទី ២ តាម $\\tan x$",
+          "គុណនឹង $2$"
         ],
-        "correct": 3,
-        "explanation": "ទម្រង់អូម៉ូសែនដឺក្រេទីពីរ ៖ $a\\sin^2 x + b\\sin x \\cos x + c\\cos^2 x = 0$។"
+        "correct": 2,
+        "explanation": "ពិនិត្យករណី $\\cos x = 0$ រួចចែកនឹង $\\cos^2 x \\ne 0$ ទាញបាន $a\\tan^2 x + b\\tan x + c = 0$។"
       },
       {
         "id": "q2",
@@ -17243,15 +17241,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដើម្បីដោះស្រាយសមីការ $a\\sin^2 x + b\\sin x \\cos x + c\\cos^2 x = 0$ តើគេចែកអង្គទាំងពីរនឹងអ្វី (ចំពោះ $\\cos x \\ne 0$)?",
+        "question": "តើសមីការអូម៉ូសែនដឺក្រេទីពីរធៀបនឹង $\\sin x$ និង $\\cos x$ មានទម្រង់ទូទៅដូចម្តេច?",
         "options": [
-          "$\\cos^2 x$ ដើម្បីទទួលបានសមីការដឺក្រេទីពីរធៀបនឹង $\\tan x$",
-          "$\\cos x$",
-          "$\\sin 2x$",
-          "$\\sin x$"
+          "$\\sin 2x + \\cos 2x = 0$",
+          "$a\\sin^2 x + b\\sin x \\cos x + c\\cos^2 x = 0$",
+          "$a\\sin^2 x + b\\cos x = c$",
+          "$a\\sin x + b\\cos x = 0$"
         ],
-        "correct": 0,
-        "explanation": "ចែកនឹង $\\cos^2 x$ បាន ៖ $a\\tan^2 x + b\\tan x + c = 0$ ជាសមីការដឺក្រេទីពីរធៀបនឹង $\\tan x$។"
+        "correct": 1,
+        "explanation": "ទម្រង់អូម៉ូសែនដឺក្រេទីពីរ ៖ $a\\sin^2 x + b\\sin x \\cos x + c\\cos^2 x = 0$។"
       },
       {
         "id": "q3",
@@ -17259,15 +17257,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ដោះស្រាយសមីការ $\\sin^2 x - 3\\sin x\\cos x + 2\\cos^2 x = 0$ ៖",
+        "question": "ដើម្បីដោះស្រាយសមីការ $a\\sin^2 x + b\\sin x \\cos x + c\\cos^2 x = 0$ តើគេចែកអង្គទាំងពីរនឹងអ្វី (ចំពោះ $\\cos x \\ne 0$)?",
         "options": [
-          "គ្មានឫស",
-          "$\\tan x = 1$ ឬ $\\tan x = 2$",
-          "$\\tan x = -1$ ឬ $\\tan x = -2$",
-          "$\\tan x = 0$"
+          "$\\sin x$",
+          "$\\sin 2x$",
+          "$\\cos x$",
+          "$\\cos^2 x$ ដើម្បីទទួលបានសមីការដឺក្រេទីពីរធៀបនឹង $\\tan x$"
         ],
-        "correct": 1,
-        "explanation": "ចែក $\\cos^2 x$ ៖ $\\tan^2 x - 3\\tan x + 2 = 0 \\iff (\\tan x - 1)(\\tan x - 2) = 0 \\Rightarrow \\tan x = 1, 2$។"
+        "correct": 3,
+        "explanation": "ចែកនឹង $\\cos^2 x$ បាន ៖ $a\\tan^2 x + b\\tan x + c = 0$ ជាសមីការដឺក្រេទីពីរធៀបនឹង $\\tan x$។"
       },
       {
         "id": "q4",
@@ -17275,15 +17273,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
         "level": "កម្រិត 1 (ងាយ)",
-        "question": "ចំពោះ $\\tan x = 1$ រកសំណុំឫស $x$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\sin^2 x - 3\\sin x\\cos x + 2\\cos^2 x = 0$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{2} + k\\pi$",
-          "$x = \\dfrac{\\pi}{4} + 2k\\pi$",
-          "$x = \\dfrac{\\pi}{4} + k\\pi$ ($k \\in \\mathbb{Z}$)",
-          "$x = k\\pi$"
+          "$\\tan x = -1$ ឬ $\\tan x = -2$",
+          "គ្មានឫស",
+          "$\\tan x = 1$ ឬ $\\tan x = 2$",
+          "$\\tan x = 0$"
         ],
         "correct": 2,
-        "explanation": "$\\tan x = 1 = \\tan(\\pi/4) \\iff x = \\dfrac{\\pi}{4} + k\\pi$ ($k \\in \\mathbb{Z}$)។"
+        "explanation": "ចែក $\\cos^2 x$ ៖ $\\tan^2 x - 3\\tan x + 2 = 0 \\iff (\\tan x - 1)(\\tan x - 2) = 0 \\Rightarrow \\tan x = 1, 2$។"
       },
       {
         "id": "q5",
@@ -17291,15 +17289,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $\\sin^2 x - \\cos^2 x = 0$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\sin^2 x - 2\\sin x \\cos x - 3\\cos^2 x = 0$ ៖",
         "options": [
-          "$x = k\\pi$",
-          "$x = \\dfrac{\\pi}{4} + \\dfrac{k\\pi}{2}$",
-          "$x = \\dfrac{\\pi}{2} + k\\pi$",
-          "$x = \\dfrac{\\pi}{4} + k\\pi$"
+          "$\\tan x = -1$ ឬ $\\tan x = 3$",
+          "$\\tan x = 1$ ឬ $\\tan x = -3$",
+          "គ្មានឫស",
+          "$\\tan x = 2$"
         ],
-        "correct": 1,
-        "explanation": "$\\cos 2x = 0 \\iff 2x = \\dfrac{\\pi}{2} + k\\pi \\iff x = \\dfrac{\\pi}{4} + \\dfrac{k\\pi}{2}$ ($k \\in \\mathbb{Z}$)។"
+        "correct": 0,
+        "explanation": "ចែកនឹង $\\cos^2 x$ ៖ $\\tan^2 x - 2\\tan x - 3 = 0 \\Rightarrow (\\tan x + 1)(\\tan x - 3) = 0 \\Rightarrow \\tan x = -1, 3$។"
       },
       {
         "id": "q6",
@@ -17307,15 +17305,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយសមីការ $\\sin^2 x - (1+\\sqrt{3})\\sin x\\cos x + \\sqrt{3}\\cos^2 x = 0$ ៖",
+        "question": "ដោះស្រាយសមីការ $\\sin^2 x - \\cos^2 x = 0$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{4} + k\\pi$ ឬ $x = \\dfrac{\\pi}{3} + k\\pi$",
-          "គ្មានចម្លើយ",
           "$x = k\\pi$",
-          "$x = \\dfrac{\\pi}{6} + k\\pi$"
+          "$x = \\dfrac{\\pi}{2} + k\\pi$",
+          "$x = \\dfrac{\\pi}{4} + k\\pi$",
+          "$x = \\dfrac{\\pi}{4} + \\dfrac{k\\pi}{2}$"
         ],
-        "correct": 0,
-        "explanation": "$\\tan^2 x - (1+\\sqrt{3})\\tan x + \\sqrt{3} = 0 \\iff (\\tan x - 1)(\\tan x - \\sqrt{3}) = 0 \\Rightarrow \\tan x = 1, \\sqrt{3}$។ នាំឱ្យ $x = \\pi/4 + k\\pi$ ឬ $x = \\pi/3 + k\\pi$។"
+        "correct": 3,
+        "explanation": "$\\cos 2x = 0 \\iff 2x = \\dfrac{\\pi}{2} + k\\pi \\iff x = \\dfrac{\\pi}{4} + \\dfrac{k\\pi}{2}$ ($k \\in \\mathbb{Z}$)។"
       },
       {
         "id": "q7",
@@ -17323,63 +17321,63 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដើម្បីដោះស្រាយសមីការ $a\\sin^2 x + b\\sin x\\cos x + c\\cos^2 x = d$ ($d \\ne 0$) តើគេត្រូវបំប្លែង $d$ ដូចម្តេច?",
+        "question": "ដោះស្រាយសមីការ $\\sin^2 x - (1+\\sqrt{3})\\sin x\\cos x + \\sqrt{3}\\cos^2 x = 0$ ៖",
         "options": [
-          "ជំនួស $d = 1$",
-          "ដក $d$ ចេញ",
-          "ចែកនឹង $d$",
-          "ជំនួស $d = d(\\sin^2 x + \\cos^2 x)$"
+          "$x = \\dfrac{\\pi}{4} + k\\pi$ ឬ $x = \\dfrac{\\pi}{3} + k\\pi$",
+          "$x = \\dfrac{\\pi}{6} + k\\pi$",
+          "$x = k\\pi$",
+          "គ្មានចម្លើយ"
         ],
-        "correct": 3,
-        "explanation": "គេគុណ $d$ នឹង $(\\sin^2 x + \\cos^2 x)$ ដើម្បីបម្លែងអង្គស្តាំឱ្យទៅជាទម្រង់អូម៉ូសែនដឺក្រេទីពីរដែរ។"
+        "correct": 0,
+        "explanation": "$\\tan^2 x - (1+\\sqrt{3})\\tan x + \\sqrt{3} = 0 \\iff (\\tan x - 1)(\\tan x - \\sqrt{3}) = 0 \\Rightarrow \\tan x = 1, \\sqrt{3}$។ នាំឱ្យ $x = \\pi/4 + k\\pi$ ឬ $x = \\pi/3 + k\\pi$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយសមីការ $2\\sin^2 x + \\sin x\\cos x - \\cos^2 x = 1$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $\\sin^2 x + (\\sqrt{3}-1)\\sin x \\cos x - \\sqrt{3}\\cos^2 x = 0$ ៖",
         "options": [
-          "$x = k\\pi$",
-          "គ្មានឫស",
-          "$x = \\dfrac{\\pi}{4} + k\\pi$ ឬ $x = -\\arctan 2 + k\\pi$",
-          "$x = \\dfrac{\\pi}{4} + k\\pi$"
+          "$\\tan x = -1$ ឬ $\\tan x = \\sqrt{3}$",
+          "$\\tan x = 1$ ឬ $\\tan x = -\\sqrt{3}$",
+          "$\\tan x = \\sqrt{3}$",
+          "$\\tan x = 0$"
         ],
-        "correct": 2,
-        "explanation": "$2\\sin^2 x + \\sin x\\cos x - \\cos^2 x = \\sin^2 x + \\cos^2 x \\iff \\sin^2 x + \\sin x\\cos x - 2\\cos^2 x = 0 \\iff \\tan^2 x + \\tan x - 2 = 0 \\Rightarrow \\tan x = 1, -2$។"
+        "correct": 1,
+        "explanation": "$\\tan^2 x + (\\sqrt{3}-1)\\tan x - \\sqrt{3} = 0 \\Rightarrow (\\tan x - 1)(\\tan x + \\sqrt{3}) = 0 \\Rightarrow \\tan x = 1, -\\sqrt{3}$។"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "រកតម្លៃ $m$ ដើម្បីឱ្យសមីការ $\\sin^2 x + 2m\\sin x\\cos x + 3\\cos^2 x = 0$ គ្មានឫស ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $2\\sin^2 x + \\sin x \\cos x - \\cos^2 x = 1$ ៖",
         "options": [
-          "$m = 0$",
-          "$m > 3$",
-          "$|m| < \\sqrt{3}$",
-          "$|m| > \\sqrt{3}$"
+          "$\\tan x = 1$",
+          "$\\tan x = -2$",
+          "គ្មានឫស",
+          "$\\tan x = 1$ ឬ $\\tan x = -2$"
         ],
-        "correct": 2,
-        "explanation": "$\\tan^2 x + 2m\\tan x + 3 = 0$ គ្មានឫស $\\iff \\Delta' = m^2 - 3 < 0 \\iff |m| < \\sqrt{3}$។"
+        "correct": 3,
+        "explanation": "ជំនួស $1 = \\sin^2 x + \\cos^2 x$ ៖ $\\sin^2 x + \\sin x \\cos x - 2\\cos^2 x = 0$។ $\\cos x = 0$ មិនផ្ទៀងផ្ទាត់ ដូចនេះចែកនឹង $\\cos^2 x$ ៖ $\\tan^2 x + \\tan x - 2 = 0 \\iff (\\tan x - 1)(\\tan x + 2) = 0 \\Rightarrow \\tan x = 1$ ឬ $\\tan x = -2$។"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
-        "question": "ដោះស្រាយសមីការ $3\\sin^2 x + 5\\cos^2 x - 2 = 0$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយសមីការ $2\\sin^2 x + \\sin x\\cos x - \\cos^2 x = 1$ ៖",
         "options": [
-          "គ្មានឫសក្នុងសំណុំចំនួនពិត ព្រោះ $3\\sin^2 x + 5\\cos^2 x \\ge 3 > 2$",
-          "មានឫស",
-          "$x = \\pi/2$",
+          "គ្មានឫស",
+          "$x = \\dfrac{\\pi}{4} + k\\pi$ ឬ $x = -\\arctan 2 + k\\pi$",
+          "$x = \\dfrac{\\pi}{4} + k\\pi$",
           "$x = k\\pi$"
         ],
-        "correct": 0,
-        "explanation": "$3\\sin^2 x + 5\\cos^2 x = 3 + 2\\cos^2 x \\ge 3$ ចំពោះគ្រប់ $x$ ដូច្នេះមិនអាចស្មើ ២ បានឡើយ (គ្មានឫស)។"
+        "correct": 1,
+        "explanation": "$2\\sin^2 x + \\sin x\\cos x - \\cos^2 x = \\sin^2 x + \\cos^2 x \\iff \\sin^2 x + \\sin x\\cos x - 2\\cos^2 x = 0 \\iff \\tan^2 x + \\tan x - 2 = 0 \\Rightarrow \\tan x = 1, -2$។"
       }
     ],
     "4": [
@@ -17388,68 +17386,64 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{2}}{2} + 1 \\\\ \\sin x - \\cos y = \\dfrac{\\sqrt{2}}{2} - 1 \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases}\\sin x+\\cos y=1+1\\\\\\sin x-\\cos y=1-1\\end{cases}$ ដែល $x,y\\in [0,\\dfrac{\\pi}{2}]$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{4} , \\ y = 0$",
-          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{2}$",
-          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{4}$",
-          "$x = 0 , \\ y = \\dfrac{\\pi}{4}$"
+          "$x=0,\\ y=\\dfrac{\\pi}{2}$",
+          "$x=\\dfrac{\\pi}{2},\\ y=\\dfrac{\\pi}{2}$",
+          "$x=\\dfrac{\\pi}{2},\\ y=0$",
+          "$x=0,\\ y=0$"
         ],
-        "correct": 0,
-        "explanation": "បូក និងដក ⇒ $\\sin x = \\dfrac{\\sqrt{2}}{2} , \\ \\cos y = 1$ ⇒ $x = \\dfrac{\\pi}{4} , \\ y = 0$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "បូក/ដក ⇒ $\\sin x=1$, $\\cos y=1$"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{1}{2} \\\\ \\sin x - \\cos y = \\dfrac{1}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases}\\sin x+\\cos y=1+\\dfrac{\\sqrt{3}}{2}\\\\\\sin x-\\cos y=1-\\dfrac{\\sqrt{3}}{2}\\end{cases}$ ដែល $x,y\\in [0,\\dfrac{\\pi}{2}]$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{3} , \\ y = 0$",
-          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{6}$",
-          "$x = 0 , \\ y = \\dfrac{\\pi}{3}$",
-          "$x = \\dfrac{\\pi}{6} , \\ y = \\dfrac{\\pi}{2}$"
+          "$x=\\dfrac{\\pi}{6},\\ y=\\dfrac{\\pi}{2}$",
+          "$x=\\dfrac{\\pi}{2},\\ y=\\dfrac{\\pi}{3}$",
+          "$x=\\dfrac{\\pi}{2},\\ y=\\dfrac{\\pi}{6}$",
+          "$x=0,\\ y=\\dfrac{\\pi}{6}$"
         ],
-        "correct": 3,
-        "explanation": "បូក និងដក ⇒ $\\sin x = \\dfrac{1}{2} , \\ \\cos y = 0$ ⇒ $x = \\dfrac{\\pi}{6} , \\ y = \\dfrac{\\pi}{2}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "បូក/ដក ⇒ $\\sin x=1$, $\\cos y=\\dfrac{\\sqrt{3}}{2}$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{2}}{2} \\\\ \\sin x - \\cos y = -\\dfrac{\\sqrt{2}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases}\\sin x+\\cos y=\\dfrac{\\sqrt{3}}{2}+1\\\\\\sin x-\\cos y=\\dfrac{\\sqrt{3}}{2}-1\\end{cases}$ ដែល $x,y\\in [0,\\dfrac{\\pi}{2}]$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{4} , \\ y = 0$",
-          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{4}$",
-          "$x = 0 , \\ y = \\dfrac{\\pi}{4}$",
-          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{2}$"
+          "$x=0,\\ y=\\dfrac{\\pi}{3}$",
+          "$x=\\dfrac{\\pi}{3},\\ y=\\dfrac{\\pi}{2}$",
+          "$x=\\dfrac{\\pi}{3},\\ y=0$",
+          "$x=\\dfrac{\\pi}{6},\\ y=0$"
         ],
         "correct": 2,
-        "explanation": "បូក និងដក ⇒ $\\sin x = 0 , \\ \\cos y = \\dfrac{\\sqrt{2}}{2}$ ⇒ $x = 0 , \\ y = \\dfrac{\\pi}{4}$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "បូក/ដក ⇒ $\\sin x=\\dfrac{\\sqrt{3}}{2}$, $\\cos y=1$"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = 1 + \\dfrac{\\sqrt{3}}{2} \\\\ \\sin x - \\cos y = 1 - \\dfrac{\\sqrt{3}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases}\\sin x+\\cos y=\\dfrac{\\sqrt{3}}{2}\\\\\\sin x-\\cos y=-\\dfrac{\\sqrt{3}}{2}\\end{cases}$ ដែល $x,y\\in [0,\\dfrac{\\pi}{2}]$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{6} , \\ y = \\dfrac{\\pi}{2}$",
-          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{6}$",
-          "$x = 0 , \\ y = \\dfrac{\\pi}{3}$",
-          "$x = \\dfrac{\\pi}{3} , \\ y = 0$"
+          "$x=\\dfrac{\\pi}{6},\\ y=0$",
+          "$x=0,\\ y=\\dfrac{\\pi}{3}$",
+          "$x=\\dfrac{\\pi}{2},\\ y=\\dfrac{\\pi}{6}$",
+          "$x=0,\\ y=\\dfrac{\\pi}{6}$"
         ],
-        "correct": 1,
-        "explanation": "បូក និងដក ⇒ $\\sin x = 1 , \\ \\cos y = \\dfrac{\\sqrt{3}}{2}$ ⇒ $x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{6}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "បូក/ដក ⇒ $\\sin x=0$, $\\cos y=\\dfrac{\\sqrt{3}}{2}$"
       },
       {
         "id": "q5",
@@ -17457,16 +17451,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{3}}{2} \\\\ \\sin x - \\cos y = \\dfrac{\\sqrt{3}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{2}}{2} + 1 \\\\ \\sin x - \\cos y = \\dfrac{\\sqrt{2}}{2} - 1 \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{6} , \\ y = 0$",
-          "$x = \\dfrac{\\pi}{3} , \\ y = \\dfrac{\\pi}{2}$",
-          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{3}$",
-          "$x = 0 , \\ y = \\dfrac{\\pi}{6}$"
+          "$x = \\dfrac{\\pi}{4} , \\ y = 0$",
+          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{4}$",
+          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{2}$",
+          "$x = 0 , \\ y = \\dfrac{\\pi}{4}$"
         ],
-        "correct": 1,
-        "explanation": "បូក និងដក ⇒ $\\sin x = \\dfrac{\\sqrt{3}}{2} , \\ \\cos y = 0$ ⇒ $x = \\dfrac{\\pi}{3} , \\ y = \\dfrac{\\pi}{2}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "បូក និងដក ⇒ $\\sin x = \\dfrac{\\sqrt{2}}{2} , \\ \\cos y = 1$ ⇒ $x = \\dfrac{\\pi}{4} , \\ y = 0$។"
       },
       {
         "id": "q6",
@@ -17474,16 +17467,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = 1 + \\dfrac{1}{2} \\\\ \\sin x - \\cos y = 1 - \\dfrac{1}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{1}{2} \\\\ \\sin x - \\cos y = \\dfrac{1}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{3} , \\ y = \\dfrac{\\pi}{2}$",
-          "$x = \\dfrac{\\pi}{6} , \\ y = 0$",
-          "$x = 0 , \\ y = \\dfrac{\\pi}{6}$",
-          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{3}$"
+          "$x = \\dfrac{\\pi}{3} , \\ y = 0$",
+          "$x = 0 , \\ y = \\dfrac{\\pi}{3}$",
+          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{6}$",
+          "$x = \\dfrac{\\pi}{6} , \\ y = \\dfrac{\\pi}{2}$"
         ],
         "correct": 3,
-        "explanation": "បូក និងដក ⇒ $\\sin x = 1 , \\ \\cos y = \\dfrac{1}{2}$ ⇒ $x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{3}$។",
-        "src": "genpq-g11a_extra"
+        "explanation": "បូក និងដក ⇒ $\\sin x = \\dfrac{1}{2} , \\ \\cos y = 0$ ⇒ $x = \\dfrac{\\pi}{6} , \\ y = \\dfrac{\\pi}{2}$។"
       },
       {
         "id": "q7",
@@ -17491,67 +17483,63 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{1}{2} + \\dfrac{\\sqrt{2}}{2} \\\\ \\sin x - \\cos y = \\dfrac{1}{2} - \\dfrac{\\sqrt{2}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{2}}{2} \\\\ \\sin x - \\cos y = -\\dfrac{\\sqrt{2}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{6} , \\ y = \\dfrac{\\pi}{4}$",
-          "$x = \\dfrac{\\pi}{3} , \\ y = \\dfrac{\\pi}{4}$",
-          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{6}$",
-          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{3}$"
+          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{4}$",
+          "$x = \\dfrac{\\pi}{4} , \\ y = 0$",
+          "$x = 0 , \\ y = \\dfrac{\\pi}{4}$",
+          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{2}$"
         ],
-        "correct": 0,
-        "explanation": "បូក និងដក ⇒ $\\sin x = \\dfrac{1}{2} , \\ \\cos y = \\dfrac{\\sqrt{2}}{2}$ ⇒ $x = \\dfrac{\\pi}{6} , \\ y = \\dfrac{\\pi}{4}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "បូក និងដក ⇒ $\\sin x = 0 , \\ \\cos y = \\dfrac{\\sqrt{2}}{2}$ ⇒ $x = 0 , \\ y = \\dfrac{\\pi}{4}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{2}}{2} + \\dfrac{\\sqrt{3}}{2} \\\\ \\sin x - \\cos y = \\dfrac{\\sqrt{2}}{2} - \\dfrac{\\sqrt{3}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចំនួនគូ $(x,y)$ ក្នុង $[0,2\\pi)\\times[0,2\\pi)$ ដែលផ្ទៀងផ្ទាត់ $\\sin x=0$ និង $\\cos y=\\dfrac{\\sqrt{3}}{2}$ ស្មើ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{3} , \\ y = \\dfrac{\\pi}{4}$",
-          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{3}$",
-          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{6}$",
-          "$x = \\dfrac{\\pi}{6} , \\ y = \\dfrac{\\pi}{4}$"
+          "$5$",
+          "$9$",
+          "$3$",
+          "$4$"
         ],
-        "correct": 2,
-        "explanation": "បូក និងដក ⇒ $\\sin x = \\dfrac{\\sqrt{2}}{2} , \\ \\cos y = \\dfrac{\\sqrt{3}}{2}$ ⇒ $x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{6}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 3,
+        "explanation": "ចំនួន $x$ គុណចំនួន $y$"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = 1 + \\dfrac{\\sqrt{2}}{2} \\\\ \\sin x - \\cos y = 1 - \\dfrac{\\sqrt{2}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases}\\sin x+\\cos y=\\dfrac{\\sqrt{3}}{2}+0\\\\\\sin x\\cos y=0\\end{cases}$ ដែល $x,y\\in [0,\\dfrac{\\pi}{2}]$ និង $\\sin x>\\cos y$ ៖",
         "options": [
-          "$x = \\dfrac{\\pi}{4} , \\ y = 0$",
-          "$x = 0 , \\ y = \\dfrac{\\pi}{4}$",
-          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{4}$",
-          "$x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{2}$"
+          "$x=\\dfrac{\\pi}{3},\\ y=\\dfrac{\\pi}{2}$",
+          "$x=\\dfrac{\\pi}{2},\\ y=\\dfrac{\\pi}{3}$",
+          "$x=\\dfrac{\\pi}{3},\\ y=0$",
+          "$x=\\dfrac{\\pi}{6},\\ y=\\dfrac{\\pi}{2}$"
         ],
-        "correct": 2,
-        "explanation": "បូក និងដក ⇒ $\\sin x = 1 , \\ \\cos y = \\dfrac{\\sqrt{2}}{2}$ ⇒ $x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{4}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 0,
+        "explanation": "$t^2-(\\dfrac{\\sqrt{3}}{2}+0)t+0=0$"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{3}}{2} \\\\ \\sin x - \\cos y = -\\dfrac{\\sqrt{3}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "ចំនួនគូ $(x,y)$ ក្នុង $[0,2\\pi)\\times[0,2\\pi)$ ដែលផ្ទៀងផ្ទាត់ $\\sin x=1$ និង $\\cos y=\\dfrac{\\sqrt{2}}{2}$ ស្មើ ៖",
         "options": [
-          "$x = 0 , \\ y = \\dfrac{\\pi}{6}$",
-          "$x = \\dfrac{\\pi}{3} , \\ y = \\dfrac{\\pi}{2}$",
-          "$x = \\dfrac{\\pi}{6} , \\ y = 0$",
-          "$x = \\dfrac{\\pi}{2} , \\ y = \\dfrac{\\pi}{3}$"
+          "$3$",
+          "$5$",
+          "$2$",
+          "$1$"
         ],
-        "correct": 0,
-        "explanation": "បូក និងដក ⇒ $\\sin x = 0 , \\ \\cos y = \\dfrac{\\sqrt{3}}{2}$ ⇒ $x = 0 , \\ y = \\dfrac{\\pi}{6}$។",
-        "src": "genpq-g11a_extra"
+        "correct": 2,
+        "explanation": "ចំនួន $x$ គុណចំនួន $y$"
       }
     ],
     "5": [
@@ -17563,15 +17551,13 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមភាព $\\sin x > \\dfrac{1}{2}$ លើចន្លោះ $[0, 2\\pi)$ ៖",
         "options": [
-          "$\\dfrac{\\pi}{6} < x < \\dfrac{5\\pi}{6}$",
-          "$\\dfrac{5\\pi}{6} < x < 2\\pi$",
+          "$0 \\le x < \\dfrac{\\pi}{6}$",
           "$\\dfrac{\\pi}{3} < x < \\dfrac{2\\pi}{3}$",
-          "$0 \\le x < \\dfrac{\\pi}{6}$"
+          "$\\dfrac{\\pi}{6} < x < \\dfrac{5\\pi}{6}$",
+          "$\\dfrac{5\\pi}{6} < x < 2\\pi$"
         ],
-        "correct": 0,
-        "explanation": "នៅលើរង្វង់ត្រីកោណមាត្រ តម្លៃ $\\sin x > \\dfrac{1}{2}$ ត្រូវគ្នានឹងធ្នូចន្លោះ $\\pi/6$ និង $5\\pi/6$។",
-        "diagram": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>",
-        "illustration": "<svg viewBox=\"0 0 320 200\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background:#fff;border-radius:8px;max-width:100%;height:auto;\"><rect width=\"320\" height=\"200\" fill=\"#ffffff\" stroke=\"#e2e8f0\" stroke-width=\"1\"/><line x1=\"20\" y1=\"100\" x2=\"300\" y2=\"100\" stroke=\"#64748b\" stroke-width=\"1.2\"/><line x1=\"160\" y1=\"190\" x2=\"160\" y2=\"10\" stroke=\"#64748b\" stroke-width=\"1.2\"/><text x=\"285\" y=\"92\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">cos x</text><text x=\"168\" y=\"24\" font-size=\"10\" font-weight=\"700\" fill=\"#334155\">sin x</text><circle cx=\"160\" cy=\"100\" r=\"70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"160\" y1=\"100\" x2=\"195\" y2=\"39\" stroke=\"#ef4444\" stroke-width=\"2\"/><circle cx=\"195\" cy=\"39\" r=\"4\" fill=\"#ef4444\"/><line x1=\"195\" y1=\"39\" x2=\"195\" y2=\"100\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"195\" y1=\"39\" x2=\"160\" y2=\"39\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><text x=\"202\" y=\"38\" font-size=\"10\" font-weight=\"700\" fill=\"#ef4444\">M(cos θ, sin θ)</text><path d=\"M 180,100 A 20,20 0 0,0 170,82\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"88\" font-size=\"10\" font-weight=\"700\" fill=\"#b45309\">θ</text><text x=\"145\" y=\"115\" font-size=\"10\" fill=\"#64748b\">O</text><text x=\"232\" y=\"115\" font-size=\"9\" fill=\"#2563eb\">1</text><text x=\"145\" y=\"28\" font-size=\"9\" fill=\"#2563eb\">1</text></svg>"
+        "correct": 2,
+        "explanation": "នៅលើរង្វង់ត្រីកោណមាត្រ តម្លៃ $\\sin x > \\dfrac{1}{2}$ ត្រូវគ្នានឹងធ្នូចន្លោះ $\\pi/6$ និង $5\\pi/6$។"
       },
       {
         "id": "q2",
@@ -17581,12 +17567,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមភាព $\\cos x \\le \\dfrac{\\sqrt{2}}{2}$ លើចន្លោះ $[0, 2\\pi)$ ៖",
         "options": [
-          "$0 \\le x \\le \\dfrac{\\pi}{4}$",
-          "$\\dfrac{7\\pi}{4} \\le x < 2\\pi$",
           "$\\dfrac{\\pi}{4} \\le x \\le \\dfrac{7\\pi}{4}$",
-          "$\\dfrac{\\pi}{4} \\le x \\le \\dfrac{3\\pi}{4}$"
+          "$0 \\le x \\le \\dfrac{\\pi}{4}$",
+          "$\\dfrac{\\pi}{4} \\le x \\le \\dfrac{3\\pi}{4}$",
+          "$\\dfrac{7\\pi}{4} \\le x < 2\\pi$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "ចំណុចដែលមានអាប់ស៊ីស $\\le \\dfrac{\\sqrt{2}}{2}$ ស្ថិតនៅចន្លោះ $\\pi/4$ និង $7\\pi/4$។"
       },
       {
@@ -17597,12 +17583,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមភាព $\\tan x > 1$ លើចន្លោះ $\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$ ៖",
         "options": [
-          "$\\dfrac{\\pi}{4} < x < \\pi$",
           "$-\\dfrac{\\pi}{2} < x < \\dfrac{\\pi}{4}$",
+          "$\\dfrac{\\pi}{4} < x < \\dfrac{\\pi}{2}$",
           "$0 < x < \\dfrac{\\pi}{4}$",
-          "$\\dfrac{\\pi}{4} < x < \\dfrac{\\pi}{2}$"
+          "$\\dfrac{\\pi}{4} < x < \\pi$"
         ],
-        "correct": 3,
+        "correct": 1,
         "explanation": "$\\tan x > 1 \\iff \\dfrac{\\pi}{4} < x < \\dfrac{\\pi}{2}$។"
       },
       {
@@ -17613,12 +17599,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ដោះស្រាយវិសមភាព $\\sin x \\le 0$ លើចន្លោះ $[0, 2\\pi]$ ៖",
         "options": [
-          "$0 \\le x \\le \\pi$",
-          "$\\pi \\le x \\le 2\\pi$",
+          "$0 < x < \\pi$",
           "$\\dfrac{\\pi}{2} \\le x \\le \\dfrac{3\\pi}{2}$",
-          "$0 < x < \\pi$"
+          "$0 \\le x \\le \\pi$",
+          "$\\pi \\le x \\le 2\\pi$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "$\\sin x \\le 0$ ស្ថិតនៅកន្លះរង្វង់ក្រោម គឺ $[\\pi, 2\\pi]$។"
       },
       {
@@ -17629,9 +17615,9 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយវិសមភាព $2\\cos^2 x - \\cos x - 1 > 0$ លើចន្លោះ $[0, 2\\pi)$ ៖",
         "options": [
-          "$\\dfrac{4\\pi}{3} < x < 2\\pi$",
           "$0 \\le x < \\dfrac{2\\pi}{3}$",
           "$-\\dfrac{\\pi}{3} < x < \\dfrac{\\pi}{3}$",
+          "$\\dfrac{4\\pi}{3} < x < 2\\pi$",
           "$\\dfrac{2\\pi}{3} < x < \\dfrac{4\\pi}{3}$"
         ],
         "correct": 3,
@@ -17643,14 +17629,14 @@
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ វិសមីការ a cos x + b sin x > c",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "ដោះស្រាយវិសមភាព $\\sin 2x \\ge 0$ លើចន្លោះ $[0, \\pi]$ ៖",
+        "question": "ដោះស្រាយវិសមភាព $\\sin 2x \\ge 0$ លើចន្លោះ $[0, \\pi)$ ៖",
         "options": [
-          "$0 \\le x \\le \\pi$",
-          "$\\dfrac{\\pi}{4} \\le x \\le \\dfrac{3\\pi}{4}$",
           "$0 \\le x \\le \\dfrac{\\pi}{2}$",
-          "$\\dfrac{\\pi}{2} \\le x \\le \\pi$"
+          "$\\dfrac{\\pi}{2} \\le x \\le \\pi$",
+          "$0 \\le x \\le \\pi$",
+          "$\\dfrac{\\pi}{4} \\le x \\le \\dfrac{3\\pi}{4}$"
         ],
-        "correct": 2,
+        "correct": 0,
         "explanation": "$0 \\le 2x \\le \\pi \\iff 0 \\le x \\le \\dfrac{\\pi}{2}$។"
       },
       {
@@ -17661,12 +17647,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ដោះស្រាយវិសមភាព $\\sin x + \\cos x > 1$ លើចន្លោះ $[0, 2\\pi)$ ៖",
         "options": [
+          "$\\dfrac{\\pi}{4} < x < \\dfrac{3\\pi}{4}$",
           "$0 \\le x \\le \\dfrac{\\pi}{2}$",
           "$0 < x < \\dfrac{\\pi}{2}$",
-          "$\\dfrac{\\pi}{4} < x < \\dfrac{3\\pi}{4}$",
           "$\\pi < x < 2\\pi$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$\\sqrt{2}\\sin(x+\\pi/4) > 1 \\iff \\sin(x+\\pi/4) > \\dfrac{\\sqrt{2}}{2} \\iff \\pi/4 < x + \\pi/4 < 3\\pi/4 \\iff 0 < x < \\pi/2$។"
       },
       {
@@ -17674,15 +17660,15 @@
         "questionNumber": 8,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ វិសមីការ a cos x + b sin x > c",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយវិសមភាព $|\\sin x| \\le \\dfrac{1}{2}$ លើចន្លោះ $[0, 2\\pi)$ ៖",
         "options": [
-          "$\\left[0, \\dfrac{\\pi}{6}\\right] \\cup \\left[\\dfrac{5\\pi}{6}, \\dfrac{7\\pi}{6}\\right] \\cup \\left[\\dfrac{11\\pi}{6}, 2\\pi\\right)$",
-          "$\\left[0, \\dfrac{\\pi}{3}\\right]$",
           "$\\left[\\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}\\right]$",
-          "គ្មានចម្លើយ"
+          "$\\left[0, \\dfrac{\\pi}{6}\\right] \\cup \\left[\\dfrac{5\\pi}{6}, \\dfrac{7\\pi}{6}\\right] \\cup \\left[\\dfrac{11\\pi}{6}, 2\\pi\\right)$",
+          "គ្មានចម្លើយ",
+          "$\\left[0, \\dfrac{\\pi}{3}\\right]$"
         ],
-        "correct": 0,
+        "correct": 1,
         "explanation": "$-\\dfrac{1}{2} \\le \\sin x \\le \\dfrac{1}{2}$ ត្រូវគ្នានឹង ៤ ចម្រៀកជិតអ័ក្សដេក ៖ $[0, \\pi/6] \\cup [5\\pi/6, 7\\pi/6] \\cup [11\\pi/6, 2\\pi)$។"
       },
       {
@@ -17690,15 +17676,15 @@
         "questionNumber": 9,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ វិសមីការ a cos x + b sin x > c",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយវិសមភាព $\\tan^2 x - 3 \\le 0$ លើចន្លោះ $\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$ ៖",
         "options": [
-          "$0 \\le x \\le \\dfrac{\\pi}{3}$",
           "$-\\dfrac{\\pi}{3} \\le x \\le \\dfrac{\\pi}{3}$",
-          "គ្មានចម្លើយ",
-          "$-\\dfrac{\\pi}{6} \\le x \\le \\dfrac{\\pi}{6}$"
+          "$-\\dfrac{\\pi}{6} \\le x \\le \\dfrac{\\pi}{6}$",
+          "$0 \\le x \\le \\dfrac{\\pi}{3}$",
+          "គ្មានចម្លើយ"
         ],
-        "correct": 1,
+        "correct": 0,
         "explanation": "$-\\sqrt{3} \\le \\tan x \\le \\sqrt{3} \\iff -\\dfrac{\\pi}{3} \\le x \\le \\dfrac{\\pi}{3}$។"
       },
       {
@@ -17706,15 +17692,15 @@
         "questionNumber": 10,
         "pointNumber": 5,
         "pointTitle": "ចំណុចទី ៥ ៖ វិសមីការ a cos x + b sin x > c",
-        "level": "កម្រិត 3 (ស៊ីជម្រៅ)",
+        "level": "កម្រិត 3 (លំបាក)",
         "question": "ដោះស្រាយវិសមភាព $\\dfrac{\\cos x - \\dfrac{1}{2}}{\\sin x} \\ge 0$ លើចន្លោះ $(0, \\pi)$ ៖",
         "options": [
-          "$\\left[\\dfrac{\\pi}{3}, \\pi\\right)$",
-          "គ្មានឫស",
+          "$\\left(0, \\dfrac{\\pi}{2}\\right)$",
           "$\\left(0, \\dfrac{\\pi}{3}\\right]$",
-          "$\\left(0, \\dfrac{\\pi}{2}\\right)$"
+          "$\\left[\\dfrac{\\pi}{3}, \\pi\\right)$",
+          "គ្មានឫស"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "លើ $(0, \\pi)$ គេមាន $\\sin x > 0$ ជានិច្ច។ វិសមភាពក្លាយជា $\\cos x - \\dfrac{1}{2} \\ge 0 \\iff \\cos x \\ge \\dfrac{1}{2} \\iff 0 < x \\le \\pi/3$។"
       }
     ]

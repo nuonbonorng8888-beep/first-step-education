@@ -11188,7 +11188,7 @@
         "rubric": "ក. ពិនិត្យ $\\cos x = 0$ និងចែក $\\cos^2 x$ បង្កើតសមីការតង់សង់ (០.៥ ពិន្ទុ) | ខ. រកឫស $\\tan x = 1, \\dfrac{3}{2}$ និងទាញរកចម្លើយទូទៅ (០.៥ ពិន្ទុ)"
       }
     ],
-    "totalPointsCount": 15,
+    "totalPointsCount": 45,
     "points": [
       {
         "pointNumber": 1,
@@ -11196,7 +11196,7 @@
         "pointTitle": "ចំណុចទី ១ ៖ សមីការដឺក្រេទី ១ ធៀបនឹង sin x និង cos x",
         "topic": "$a\\sin x + b\\cos x = c$",
         "objective": "ចេះដោះស្រាយសមីការទម្រង់ $a\\sin x + b\\cos x = c$",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "exercises": [
           {
             "id": "ex1",
@@ -11209,6 +11209,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដើម្បីដោះស្រាយសមីការ $a \\sin x + b \\cos x = c$ តើគេត្រូវចែកអង្គទាំងពីរនឹងអ្វី?",
+            "solution": "គេចែកអង្គទាំងពីរនឹង $\\sqrt{a^2 + b^2}$ ដើម្បីបំប្លែងទៅជារាង $\\sin(x + \\varphi) = \\dfrac{c}{\\sqrt{a^2+b^2}}$។\n\nចម្លើយ ៖ $\\sqrt{a^2 + b^2}$",
+            "src": "qb-gen",
+            "qid": "q_g11_0912"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "តម្លៃអប្បបរមានៃ $8\\sin x+15\\cos x$ ស្មើ ៖",
+            "solution": "អប្បបរមា $-r$\n\nចម្លើយ ៖ $-17$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p1_03"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1.0,
             "instruction": "កំណត់លក្ខខណ្ឌឱ្យសមីការមានឫស ៖",
@@ -11217,12 +11237,53 @@
             "rubric": "សរសេរលក្ខខណ្ឌ $a^2 + b^2 \\ge c^2$ ត្រូវ (០.៤ ពិន្ទុ) | គណនានិងរកបាន $m \\le 1$ ត្រូវ (០.៦ ពិន្ទុ)"
           },
           {
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកតម្លៃអតិបរមានៃកន្សោម $f(x) = 3\\sin x + 4\\cos x$ ៖",
+            "solution": "កន្សោម $a\\sin x + b\\cos x$ មានតម្លៃអតិបរមាស្មើ $\\sqrt{a^2+b^2} = \\sqrt{3^2+4^2} = 5$។\n\nចម្លើយ ៖ $5$",
+            "src": "qb-gen",
+            "qid": "q_g11_0916"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ចំនួនគត់ $m$ ដែលសមីការ $3\\sin x+4\\cos x=m$ មានឫស មានប៉ុន្មាន?",
+            "solution": "$-5\\le m\\le 5$\n\nចម្លើយ ៖ $11$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p1_18"
+          },
+          {
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1.0,
             "instruction": "ដោះស្រាយសមីការលីនេអ៊ែរ $a\\sin x + b\\cos x = c$ ៖",
             "question": "ដោះស្រាយសមីការក្នុង $\\mathbb{R}$ ៖\n$\\sqrt{3}\\sin x - \\cos x = \\sqrt{2}$\n\nក. ចែកអង្គទាំងពីរនឹង $\\sqrt{a^2 + b^2} = 2$ រួចសរសេរជាទម្រង់ $\\sin(x - \\alpha) = m$។\n\nខ. រកចម្លើយទូទៅនៃសមីការ។",
             "solution": "ក. ចែកអង្គទាំងពីរនឹង $2$ ៖\n$\\dfrac{\\sqrt{3}}{2}\\sin x - \\dfrac{1}{2}\\cos x = \\dfrac{\\sqrt{2}}{2}$។\nជំនួស $\\dfrac{\\sqrt{3}}{2} = \\cos\\left(\\dfrac{\\pi}{6}\\right)$ និង $\\dfrac{1}{2} = \\sin\\left(\\dfrac{\\pi}{6}\\right)$ ៖\n$\\sin x \\cos\\left(\\dfrac{\\pi}{6}\\right) - \\cos x \\sin\\left(\\dfrac{\\pi}{6}\\right) = \\dfrac{\\sqrt{2}}{2}$\n$\\iff \\sin\\left(x - \\dfrac{\\pi}{6}\\right) = \\sin\\left(\\dfrac{\\pi}{4}\\right)$។\n\nខ. ដោះស្រាយ ៖\n• ករណី ១ ៖ $x - \\dfrac{\\pi}{6} = \\dfrac{\\pi}{4} + 2k\\pi \\iff x = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} + 2k\\pi = \\dfrac{5\\pi}{12} + 2k\\pi, k \\in \\mathbb{Z}$។\n• ករណី ២ ៖ $x - \\dfrac{\\pi}{6} = \\pi - \\dfrac{\\pi}{4} + 2k\\pi = \\dfrac{3\\pi}{4} + 2k\\pi \\iff x = \\dfrac{3\\pi}{4} + \\dfrac{\\pi}{6} + 2k\\pi = \\dfrac{11\\pi}{12} + 2k\\pi, k \\in \\mathbb{Z}$។\nដូចនេះ សំណុំចម្លើយគឺ $S = \\left\\{\\dfrac{5\\pi}{12} + 2k\\pi, \\dfrac{11\\pi}{12} + 2k\\pi \\mid k \\in \\mathbb{Z}\\right\\}$។",
-            "rubric": "ក. បំប្លែងទៅជា $\\sin(x - \\pi/6) = \\dfrac{\\sqrt{2}}{2}$ (០.៥ ពិន្ទុ) | ខ. រកឃើញចម្លើយទូទៅទាំងពីរត្រឹមត្រូវ (០.៥ ពិន្ទុ)"
+            "rubric": "ក. បំប្លែងទៅជា $\\sin(x - \\pi/6) = \\dfrac{\\sqrt{2}}{2}$ (០.៥ ពិន្ទុ) | ខ. រកឃើញចម្លើយទូទៅទាំងពីរត្រឹមត្រូវ (០.៥ ពិន្ទុ)",
+            "id": "ex7"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $a\\sin x + b\\cos x = c$ តាមការជំនួសអថេរ $t = \\tan(\\dfrac{x}{2})$ ($x \\ne \\pi + 2k\\pi$) នាំឱ្យបានសមីការដឺក្រេទីពីរណា?",
+            "solution": "ជំនួស $\\sin x = \\dfrac{2t}{1+t^2}$ និង $\\cos x = \\dfrac{1-t^2}{1+t^2}$ នាំឱ្យ $2at + b(1-t^2) = c(1+t^2) \\iff (c+b)t^2 - 2at + (c-b) = 0$។\n\nចម្លើយ ៖ $(c + b)t^2 - 2at + (c - b) = 0$",
+            "src": "qb-gen",
+            "qid": "q_g11_0920"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $\\sin x+\\sqrt{3}\\cos x=\\sqrt{3}$ ($k\\in \\mathbb{Z}$) ៖",
+            "solution": "$r=2$, $\\alpha=\\dfrac{\\pi}{3}$\n\nចម្លើយ ៖ $x=0+2k\\pi\\text{ ឬ }x=\\dfrac{\\pi}{3}+2k\\pi$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p1_11"
           }
         ],
         "summary": "<div class=\"ws-sum-text\"><strong>សមីការលីនេអ៊ែរ $a\\sin x + b\\cos x = c$ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">លក្ខខណ្ឌមានឫស ៖ $a^2 + b^2 \\ge c^2$</li>\n  <li class=\"ws-sum-item\">វិធីដោះស្រាយ ៖ ចែកអង្គទាំងពីរនឹង $\\sqrt{a^2 + b^2}$ រួចបំប្លែងជា $\\sin(x + \\varphi) = \\dfrac{c}{\\sqrt{a^2 + b^2}}$។</li>\n</ul>"
@@ -11233,7 +11294,7 @@
         "pointTitle": "ចំណុចទី ២ ៖ សមីការដឺក្រេទី ២ ធៀបនឹងអនុគមន៍ត្រីកោណមាត្រ",
         "topic": "តាងអថេរជំនួយ $t = \\sin x$ ឬ $t = \\cos x$",
         "objective": "ចេះដោះស្រាយសមីការដោយដាក់ជាផលគុណកត្តា ឬចែកនឹង $\\cos^2 x$",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "exercises": [
           {
             "id": "ex1",
@@ -11246,6 +11307,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $\\tan^2 x - 3 = 0$ ៖",
+            "solution": "$\\tan x = \\pm \\sqrt{3} \\Rightarrow x = \\pm \\dfrac{\\pi}{3} + k\\pi$ ($k \\in \\mathbb{Z}$)។\n\nចម្លើយ ៖ $x = \\pm \\dfrac{\\pi}{3} + k\\pi$",
+            "src": "qb-gen",
+            "qid": "q_g11_0283"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $2\\cos^2 x-\\cos x=0$ ៖ គេបាន",
+            "solution": "តាង $t=\\cos x$ $t=0$ ឬ $t=\\dfrac{1}{2}$\n\nចម្លើយ ៖ $\\cos x=0$ ឬ $\\cos x=\\dfrac{1}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p2_04"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1.0,
             "instruction": "ដោះស្រាយសមីការដឺក្រេទី ២ ធៀបនឹង $\\cos x$ ៖",
@@ -11254,12 +11335,53 @@
             "rubric": "តាងអថេរ និងរក $t = \\dfrac{1}{2}, 1$ (០.៤ ពិន្ទុ) | រកចម្លើយទូទៅទាំងពីរត្រូវ (០.៦ ពិន្ទុ)"
           },
           {
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ចំនួនឫសនៃសមីការ $2\\sin^2 x-2=0$ ក្នុងចន្លោះ $[0,2\\pi)$ ស្មើ ៖",
+            "solution": "រាប់ឫសនៃ $t=-1$ និង $t=1$\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p2_14"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ចំនួនឫសនៃសមីការ $2\\sin^2 x-\\sin x=0$ ក្នុងចន្លោះ $[0,2\\pi)$ ស្មើ ៖",
+            "solution": "រាប់ឫសនៃ $t=0$ និង $t=\\dfrac{1}{2}$\n\nចម្លើយ ៖ $4$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p2_18"
+          },
+          {
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1.0,
             "instruction": "ដោះស្រាយសមីការដឺក្រេទីពីរធៀបនឹងអនុបាតត្រីកោណមាត្រ ៖",
             "question": "ដោះស្រាយសមីការក្នុង $\\mathbb{R}$ ៖\n$2\\cos^2 x + 3\\sin x - 3 = 0$\n\nក. ប្តូរ $\\cos^2 x = 1 - \\sin^2 x$ រួចបង្កើតសមីការដឺក្រេទីពីរធៀបនឹង $\\sin x$។\n\nខ. ដោះស្រាយសមីការ និងរកចម្លើយទូទៅនៃ $x$។",
             "solution": "ក. ជំនួស $\\cos^2 x = 1 - \\sin^2 x$ ចូលក្នុងសមីការ ៖\n$2(1 - \\sin^2 x) + 3\\sin x - 3 = 0$\n$\\iff 2 - 2\\sin^2 x + 3\\sin x - 3 = 0$\n$\\iff -2\\sin^2 x + 3\\sin x - 1 = 0 \\iff 2\\sin^2 x - 3\\sin x + 1 = 0$។\n\nខ. តាង $t = \\sin x$ ដោយ $-1 \\le t \\le 1$ ៖\n$2t^2 - 3t + 1 = 0$។\nដោយ $a + b + c = 2 - 3 + 1 = 0$ នាំឱ្យឫសគឺ $t_1 = 1$ និង $t_2 = \\dfrac{1}{2}$ (យកទាំងពីរ)។\n• ចំពោះ $\\sin x = 1 \\iff x = \\dfrac{\\pi}{2} + 2k\\pi, k \\in \\mathbb{Z}$។\n• ចំពោះ $\\sin x = \\dfrac{1}{2} = \\sin\\left(\\dfrac{\\pi}{6}\\right)$ ៖\n$x = \\dfrac{\\pi}{6} + 2k\\pi$ ឬ $x = \\pi - \\dfrac{\\pi}{6} + 2k\\pi = \\dfrac{5\\pi}{6} + 2k\\pi, k \\in \\mathbb{Z}$។\nដូចនេះ សំណុំចម្លើយគឺ $S = \\left\\{\\dfrac{\\pi}{2} + 2k\\pi, \\dfrac{\\pi}{6} + 2k\\pi, \\dfrac{5\\pi}{6} + 2k\\pi \\mid k \\in \\mathbb{Z}\\right\\}$។",
-            "rubric": "ក. បំប្លែងជាសមីការដឺក្រេទីពីរ $2\\sin^2 x - 3\\sin x + 1 = 0$ (០.៤ ពិន្ទុ) | ខ. រកឫស $\\sin x = 1, \\dfrac{1}{2}$ និងទាញរកចម្លើយទូទៅ (០.៦ ពិន្ទុ)"
+            "rubric": "ក. បំប្លែងជាសមីការដឺក្រេទីពីរ $2\\sin^2 x - 3\\sin x + 1 = 0$ (០.៤ ពិន្ទុ) | ខ. រកឫស $\\sin x = 1, \\dfrac{1}{2}$ និងទាញរកចម្លើយទូទៅ (០.៦ ពិន្ទុ)",
+            "id": "ex7"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកចំនួនឫសនៃសមីការ $2\\cos^2 x - 3\\cos x + 1 = 0$ លើចន្លោះ $[0, 2\\pi)$ ៖",
+            "solution": "$\\cos x = 1 \\Rightarrow x = 0$ ; $\\cos x = \\dfrac{1}{2} \\Rightarrow x = \\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}$។ សរុប ៣ ឫស។\n\nចម្លើយ ៖ $3$",
+            "src": "qb-gen",
+            "qid": "q_g11_0289s"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ចំនួនតម្លៃ $t=\\cos x$ ដែលទទួលយកបាន (ក្នុង $[-1,1]$) ពីសមីការ $2\\cos^2 x-3\\cos x+1=0$ ស្មើ ៖",
+            "solution": "ពិនិត្យលក្ខខណ្ឌ $|t|\\le 1$\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p2_11"
           }
         ],
         "summary": "<div class=\"ws-sum-text\"><strong>សមីការដឺក្រេទីពីរធៀបនឹងអនុបាតត្រីកោណមាត្រ ៖</strong> តាង $t = \\sin x$ ឬ $t = \\cos x$ (លក្ខខណ្ឌ $-1 \\le t \\le 1$) បំប្លែងជាសមីការដឺក្រេទីពីរ $at^2 + bt + c = 0$។</div>"
@@ -11270,10 +11392,10 @@
         "pointTitle": "ចំណុចទី ៣ ៖ សមីការ a sin²x + b sin x cos x + c cos²x = d",
         "topic": "ចែកអង្គទាំងពីរនឹង $\\cos^2 x$",
         "objective": "ចេះដោះស្រាយសមីការអូម៉ូសែនដោយវិធីចែកនឹង $\\cos^2 x$ ឬ $\\cos^3 x$",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "exercises": [
           {
-            "id": "ex-g11a-3-1-p1-1",
+            "id": "ex1",
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
             "points": 1.0,
             "instruction": "ដោះស្រាយសមីការអូម៉ូសែនដឺក្រេទី ២ ៖",
@@ -11282,7 +11404,27 @@
             "rubric": "ពិនិត្យករណី $\\cos x = 0$ និងចែកនឹង $\\cos^2 x$ (០.៤ ពិន្ទុ), ដោះស្រាយសមីការតាម $\\tan x$ រកចម្លើយ (០.៦ ពិន្ទុ)"
           },
           {
-            "id": "ex-g11a-3-1-p1-2",
+            "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $\\sin^2 x - 3\\sin x\\cos x + 2\\cos^2 x = 0$ ៖",
+            "solution": "ចែក $\\cos^2 x$ ៖ $\\tan^2 x - 3\\tan x + 2 = 0 \\iff (\\tan x - 1)(\\tan x - 2) = 0 \\Rightarrow \\tan x = 1, 2$។\n\nចម្លើយ ៖ $\\tan x = 1$ ឬ $\\tan x = 2$",
+            "src": "qb-gen",
+            "qid": "q_g11_0923"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $\\sin^2 x-\\sin x\\cos x-6\\cos^2 x=0$ ៖ ចែកនឹង $\\cos^2 x$ គេបាន",
+            "solution": "$\\tan^2 x-1\\tan x-6=0$\n\nចម្លើយ ៖ $\\tan x=-2$ ឬ $\\tan x=3$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p3_03"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1.0,
             "instruction": "ដោះស្រាយសមីការត្រីកោណមាត្រ ៖",
@@ -11291,12 +11433,53 @@
             "rubric": "បំប្លែងតាមទម្រង់ $a\\sin X + b\\cos X$ (០.៥ ពិន្ទុ), រកចម្លើយទូទៅ និងជ្រើសរើសចម្លើយក្នុង $[0, \\pi]$ (០.៥ ពិន្ទុ)"
           },
           {
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $\\sin^2 x - (1+\\sqrt{3})\\sin x\\cos x + \\sqrt{3}\\cos^2 x = 0$ ៖",
+            "solution": "$\\tan^2 x - (1+\\sqrt{3})\\tan x + \\sqrt{3} = 0 \\iff (\\tan x - 1)(\\tan x - \\sqrt{3}) = 0 \\Rightarrow \\tan x = 1, \\sqrt{3}$។ នាំឱ្យ $x = \\pi/4 + k\\pi$ ឬ $x = \\pi/3 + k\\pi$។\n\nចម្លើយ ៖ $x = \\dfrac{\\pi}{4} + k\\pi$ ឬ $x = \\dfrac{\\pi}{3} + k\\pi$",
+            "src": "qb-gen",
+            "qid": "q_g11_0926"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សមីការ $\\sin^2 x-2\\sin x\\cos x-3\\cos^2 x=0$ មានជំនួស $t=\\tan x$ ។ ផលគុណតម្លៃ $t$ ទាំងពីរ ស្មើ ៖",
+            "solution": "$t^2-2t-3=0$\n\nចម្លើយ ៖ $-3$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p3_14"
+          },
+          {
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1.0,
             "instruction": "ដោះស្រាយសមីការអូម៉ូសែនដឺក្រេទី ២ ធៀបនឹង $\\sin x$ និង $\\cos x$ ៖",
             "question": "ដោះស្រាយសមីការក្នុង $\\mathbb{R}$ ៖\n$2\\sin^2 x - 5\\sin x \\cos x + 3\\cos^2 x = 0$\n\nក. ពិនិត្យករណី $\\cos x = 0$ រួចចែកអង្គទាំងពីរនឹង $\\cos^2 x \\neq 0$ ដើម្បីបង្កើតសមីការដឺក្រេទី ២ ធៀបនឹង $\\tan x$។\n\nខ. ដោះស្រាយសមីការរកចម្លើយទូទៅនៃ $x$។",
             "solution": "ក. ពិនិត្យករណី $\\cos x = 0$ ៖\nសមីការក្លាយជា $2\\sin^2 x = 0 \\iff \\sin x = 0$។\nផ្ទុយនឹងសមភាពគ្រឹះ $\\sin^2 x + \\cos^2 x = 1$ នាំឱ្យ $\\cos x = 0$ មិនមែនជាឫសនៃសមីការ។\n\nចែកអង្គទាំងពីរនឹង $\\cos^2 x \\neq 0$ ៖\n$2\\dfrac{\\sin^2 x}{\\cos^2 x} - 5\\dfrac{\\sin x \\cos x}{\\cos^2 x} + 3 = 0 \\iff 2\\tan^2 x - 5\\tan x + 3 = 0$។\n\nខ. ដោះស្រាយសមីការ ៖\nដោយ $a + b + c = 2 - 5 + 3 = 0$ នាំឱ្យឫសគឺ $\\tan x = 1$ ឬ $\\tan x = \\dfrac{3}{2}$។\n• ចំពោះ $\\tan x = 1 \\iff x = \\dfrac{\\pi}{4} + k\\pi, k \\in \\mathbb{Z}$។\n• ចំពោះ $\\tan x = \\dfrac{3}{2} \\iff x = \\arctan\\left(\\dfrac{3}{2}\\right) + k\\pi, k \\in \\mathbb{Z}$។\nដូចនេះ សំណុំចម្លើយគឺ $S = \\left\\{\\dfrac{\\pi}{4} + k\\pi, \\arctan\\left(\\dfrac{3}{2}\\right) + k\\pi \\mid k \\in \\mathbb{Z}\\right\\}$។",
-            "rubric": "ក. ពិនិត្យ $\\cos x = 0$ និងចែក $\\cos^2 x$ បង្កើតសមីការតង់សង់ (០.៥ ពិន្ទុ) | ខ. រកឫស $\\tan x = 1, \\dfrac{3}{2}$ និងទាញរកចម្លើយទូទៅ (០.៥ ពិន្ទុ)"
+            "rubric": "ក. ពិនិត្យ $\\cos x = 0$ និងចែក $\\cos^2 x$ បង្កើតសមីការតង់សង់ (០.៥ ពិន្ទុ) | ខ. រកឫស $\\tan x = 1, \\dfrac{3}{2}$ និងទាញរកចម្លើយទូទៅ (០.៥ ពិន្ទុ)",
+            "id": "ex7"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $2\\sin^2 x + \\sin x\\cos x - \\cos^2 x = 1$ ៖",
+            "solution": "$2\\sin^2 x + \\sin x\\cos x - \\cos^2 x = \\sin^2 x + \\cos^2 x \\iff \\sin^2 x + \\sin x\\cos x - 2\\cos^2 x = 0 \\iff \\tan^2 x + \\tan x - 2 = 0 \\Rightarrow \\tan x = 1, -2$។\n\nចម្លើយ ៖ $x = \\dfrac{\\pi}{4} + k\\pi$ ឬ $x = -\\arctan 2 + k\\pi$",
+            "src": "qb-gen",
+            "qid": "q_g11_0928"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សមីការ $2\\sin^2 x+\\sin x\\cos x-\\cos^2 x=1$ មានឫស $t=\\tan x$ ពីរ។ ផលគុណឫសទាំងពីរ ស្មើ ៖",
+            "solution": "ក្រោយជំនួស $1=\\sin^2+\\cos^2$\n\nចម្លើយ ៖ $-2$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p3_08"
           }
         ],
         "summary": "<div class=\"ws-sum-text\"><strong>រូបមន្តមុំបីដង (Triple Angle Formulas) ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$\\sin 3a = 3\\sin a - 4\\sin^3 a$</li>\n  <li class=\"ws-sum-item\">$\\cos 3a = 4\\cos^3 a - 3\\cos a$</li>\n  <li class=\"ws-sum-item\">$\\tan 3a = \\dfrac{3\\tan a - \\tan^3 a}{1 - 3\\tan^2 a}$</li>\n</ul>"
@@ -11307,7 +11490,7 @@
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រព័ន្ធសមីការត្រីកោណមាត្រ",
         "topic": "ដោះស្រាយដោយបូក/ដក ឬជំនួស",
         "objective": "យល់ និងអនុវត្តប្រព័ន្ធសមីការត្រីកោណមាត្រ",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - បូក ឬដកសមីការដើម្បីរក $\\sin x$, $\\cos y$\n  - ឬប្រើ $x + y$, $x - y$ និងរូបមន្តបំប្លែង\n  - ពិនិត្យចន្លោះដែលកំណត់",
         "exercises": [
           {
@@ -11321,6 +11504,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases}\\sin x+\\cos y=\\dfrac{\\sqrt{3}}{2}+1\\\\\\sin x-\\cos y=\\dfrac{\\sqrt{3}}{2}-1\\end{cases}$ ដែល $x,y\\in [0,\\dfrac{\\pi}{2}]$ ៖",
+            "solution": "បូក/ដក ⇒ $\\sin x=\\dfrac{\\sqrt{3}}{2}$, $\\cos y=1$\n\nចម្លើយ ៖ $x=\\dfrac{\\pi}{3},\\ y=0$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p4_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases}\\sin x+\\cos y=1\\\\\\sin x-\\cos y=-1\\end{cases}$ ដែល $x,y\\in [0,\\dfrac{\\pi}{2}]$ ៖",
+            "solution": "បូក/ដក ⇒ $\\sin x=0$, $\\cos y=1$\n\nចម្លើយ ៖ $x=0,\\ y=0$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p4_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរដោះស្រាយប្រព័ន្ធសមីការត្រីកោណមាត្រ ៖",
@@ -11329,13 +11532,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{2}}{2} \\\\ \\sin x - \\cos y = -\\dfrac{\\sqrt{2}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+            "solution": "បូក និងដក ⇒ $\\sin x = 0 , \\ \\cos y = \\dfrac{\\sqrt{2}}{2}$ ⇒ $x = 0 , \\ y = \\dfrac{\\pi}{4}$។\n\nចម្លើយ ៖ $x = 0 , \\ y = \\dfrac{\\pi}{4}$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-1_4_6"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយប្រព័ន្ធ $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{2}}{2} + \\dfrac{\\sqrt{3}}{2} \\\\ \\sin x - \\cos y = \\dfrac{\\sqrt{2}}{2} - \\dfrac{\\sqrt{3}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$ ៖",
+            "solution": "បូក និងដក ⇒ $\\sin x = \\dfrac{\\sqrt{2}}{2} , \\ \\cos y = \\dfrac{\\sqrt{3}}{2}$ ⇒ $x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{6}$។\n\nចម្លើយ ៖ $x = \\dfrac{\\pi}{4} , \\ y = \\dfrac{\\pi}{6}$",
+            "src": "qb-gen",
+            "qid": "g11a_extra_g11a-3-1_4_11"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរដោះស្រាយប្រព័ន្ធសមីការត្រីកោណមាត្រ ៖",
             "question": "ដោះស្រាយប្រព័ន្ធខាងក្រោម ៖\nក. $\\begin{cases} x + y = \\pi \\\\ \\sin x - \\sin y = 0 \\end{cases}$ ដែល $x, y \\in [0, \\pi]$\nខ. $\\begin{cases} \\sin x + \\cos y = \\dfrac{\\sqrt{3}}{2} \\\\ \\sin x - \\cos y = \\dfrac{\\sqrt{3}}{2} \\end{cases}$ ដែល $x, y \\in [0, \\dfrac{\\pi}{2}]$\nគ. ពិនិត្យចម្លើយ ខ. ដោយជំនួសចូលប្រព័ន្ធ។",
             "solution": "ក. $y = \\pi - x \\Rightarrow \\sin y = \\sin x$ ⇒ គ្រប់ $x \\in [0, \\pi]$ ជាមួយ $y = \\pi - x$\nខ. បូក និងដក ⇒ $\\sin x = \\dfrac{\\sqrt{3}}{2} , \\ \\cos y = 0$ ⇒ $x = \\dfrac{\\pi}{3} , \\ y = \\dfrac{\\pi}{2}$\nគ. $\\sin(\\dfrac{\\pi}{3}) = \\dfrac{\\sqrt{3}}{2} , \\ \\cos(\\dfrac{\\pi}{2}) = 0$ ✓",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ចំនួនគូ $(x,y)$ ក្នុង $[0,2\\pi)\\times[0,2\\pi)$ ដែលផ្ទៀងផ្ទាត់ $\\sin x=1$ និង $\\cos y=\\dfrac{\\sqrt{2}}{2}$ ស្មើ ៖",
+            "solution": "ចំនួន $x$ គុណចំនួន $y$\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p4_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ចំនួនគូ $(x,y)$ ក្នុង $[0,2\\pi)\\times[0,2\\pi)$ ដែលផ្ទៀងផ្ទាត់ $\\sin x=1$ និង $\\cos y=\\dfrac{1}{2}$ ស្មើ ៖",
+            "solution": "ចំនួន $x$ គុណចំនួន $y$\n\nចម្លើយ ៖ $2$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p4_18"
           }
         ]
       },
@@ -11345,10 +11588,10 @@
         "pointTitle": "ចំណុចទី ៥ ៖ វិសមីការ a cos x + b sin x > c",
         "topic": "បំប្លែងជា $R\\cos(x - \\varphi) > c$",
         "objective": "ចេះដោះស្រាយវិសមីការត្រីកោណមាត្រ និងបកស្រាយធ្នូចម្លើយលើរង្វង់ត្រីកោណមាត្រ",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "exercises": [
           {
-            "id": "ex-g11a-3-1-p4-1",
+            "id": "ex1",
             "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
             "points": 1.0,
             "instruction": "ដោះស្រាយវិសមីការត្រីកោណមាត្រ ៖",
@@ -11357,7 +11600,27 @@
             "rubric": "បំប្លែងទៅ $\\sin x \\ge \\dfrac{1}{2}$ (០.៤ ពិន្ទុ), បកស្រាយលើរង្វង់ត្រីកោណមាត្រ និងទាញរកចម្លើយ (០.៦ ពិន្ទុ)"
           },
           {
-            "id": "ex-g11a-3-1-p4-2",
+            "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយវិសមភាព $\\tan x > 1$ លើចន្លោះ $\\left(-\\dfrac{\\pi}{2}, \\dfrac{\\pi}{2}\\right)$ ៖",
+            "solution": "$\\tan x > 1 \\iff \\dfrac{\\pi}{4} < x < \\dfrac{\\pi}{2}$។\n\nចម្លើយ ៖ $\\dfrac{\\pi}{4} < x < \\dfrac{\\pi}{2}$",
+            "src": "qb-gen",
+            "qid": "q_g11_0943"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយវិសមភាព $\\sin x\\ge -\\dfrac{\\sqrt{2}}{2}$ លើ $[0,2\\pi)$ ៖",
+            "solution": "រង្វង់ត្រីកោណមាត្រ\n\nចម្លើយ ៖ $[0,\\dfrac{5\\pi}{4}]\\cup [\\dfrac{7\\pi}{4},2\\pi)$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p5_04"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1.0,
             "instruction": "ដោះស្រាយវិសមីការដឺក្រេទី ២ ៖",
@@ -11366,12 +11629,53 @@
             "rubric": "ដោះស្រាយវិសមភាពរក $-\\dfrac{1}{2} < \\cos x < 1$ (០.៥ ពិន្ទុ), កំណត់ធ្នូចម្លើយត្រឹមត្រូវ (០.៥ ពិន្ទុ)"
           },
           {
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយវិសមភាព $2\\cos^2 x - \\cos x - 1 > 0$ លើចន្លោះ $[0, 2\\pi)$ ៖",
+            "solution": "$(2\\cos x + 1)(\\cos x - 1) > 0$។ ដោយសារ $\\cos x - 1 \\le 0$ ជានិច្ច វិសមភាពក្លាយជា $2\\cos x + 1 < 0 \\iff \\cos x < -\\dfrac{1}{2} \\iff \\dfrac{2\\pi}{3} < x < \\dfrac{4\\pi}{3}$។\n\nចម្លើយ ៖ $\\dfrac{2\\pi}{3} < x < \\dfrac{4\\pi}{3}$",
+            "src": "qb-gen",
+            "qid": "q_g11_0945"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយវិសមភាព $\\sin x + \\cos x > 1$ លើចន្លោះ $[0, 2\\pi)$ ៖",
+            "solution": "$\\sqrt{2}\\sin(x+\\pi/4) > 1 \\iff \\sin(x+\\pi/4) > \\dfrac{\\sqrt{2}}{2} \\iff \\pi/4 < x + \\pi/4 < 3\\pi/4 \\iff 0 < x < \\pi/2$។\n\nចម្លើយ ៖ $0 < x < \\dfrac{\\pi}{2}$",
+            "src": "qb-gen",
+            "qid": "q_g11_0947"
+          },
+          {
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1.0,
             "instruction": "ដោះស្រាយវិសមីការត្រីកោណមាត្រកម្រិតខ្ពស់ ៖",
             "question": "ដោះស្រាយវិសមីការលើចន្លោះ $[0, 2\\pi]$ ៖\n$4\\sin^2 x - 1 \\le 0$\n\nក. ដាក់ជាផលគុណកត្តា $(2\\sin x - 1)(2\\sin x + 1) \\le 0$ និងកំណត់ដែនតម្លៃនៃ $\\sin x$។\n\nខ. កំណត់ធ្នូនៃសំណុំចម្លើយលើរង្វង់ត្រីកោណមាត្រ។",
             "solution": "ក. ដាក់ជាផលគុណកត្តា ៖\n$(2\\sin x - 1)(2\\sin x + 1) \\le 0 \\iff -\\dfrac{1}{2} \\le \\sin x \\le \\dfrac{1}{2}$។\n\nខ. លើរង្វង់ត្រីកោណមាត្រ $\\sin x$ តំណាងដោយអ័ក្សឈរ $Oy$។\nតម្លៃដែល $-\\dfrac{1}{2} \\le \\sin x \\le \\dfrac{1}{2}$ ស្ថិតនៅចន្លោះបន្ទាត់ដេក $y = -\\dfrac{1}{2}$ និង $y = \\dfrac{1}{2}$។\nលើចន្លោះ $[0, 2\\pi]$ ចំណុចព្រំដែនគឺ ៖\n• $\\sin x = \\dfrac{1}{2} \\implies x = \\dfrac{\\pi}{6}$ ឬ $x = \\dfrac{5\\pi}{6}$\n• $\\sin x = -\\dfrac{1}{2} \\implies x = \\dfrac{7\\pi}{6}$ ឬ $x = \\dfrac{11\\pi}{6}$។\n\nចន្លោះដែលផ្ទៀងផ្ទាត់ ៖\n• ធ្នូទីមួយ ៖ $x \\in \\left[0, \\dfrac{\\pi}{6}\\right]$\n• ធ្នូទីពីរ ៖ $x \\in \\left[\\dfrac{5\\pi}{6}, \\dfrac{7\\pi}{6}\\right]$\n• ធ្នូទីបី ៖ $x \\in \\left[\\dfrac{11\\pi}{6}, 2\\pi\\right]$។\nដូចនេះ សំណុំចម្លើយលើ $[0, 2\\pi]$ គឺ ៖\n$S = \\left[0, \\dfrac{\\pi}{6}\\right] \\cup \\left[\\dfrac{5\\pi}{6}, \\dfrac{7\\pi}{6}\\right] \\cup \\left[\\dfrac{11\\pi}{6}, 2\\pi\\right]$។",
-            "rubric": "ក. រកដែនតម្លៃ $-\\dfrac{1}{2} \\le \\sin x \\le \\dfrac{1}{2}$ (០.៤ ពិន្ទុ) | ខ. កំណត់ធ្នូចម្លើយទាំង ៣ លើរង្វង់ត្រីកោណមាត្រ (០.៦ ពិន្ទុ)"
+            "rubric": "ក. រកដែនតម្លៃ $-\\dfrac{1}{2} \\le \\sin x \\le \\dfrac{1}{2}$ (០.៤ ពិន្ទុ) | ខ. កំណត់ធ្នូចម្លើយទាំង ៣ លើរង្វង់ត្រីកោណមាត្រ (០.៦ ពិន្ទុ)",
+            "id": "ex7"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយវិសមភាព $\\dfrac{\\cos x - \\dfrac{1}{2}}{\\sin x} \\ge 0$ លើចន្លោះ $(0, \\pi)$ ៖",
+            "solution": "លើ $(0, \\pi)$ គេមាន $\\sin x > 0$ ជានិច្ច។ វិសមភាពក្លាយជា $\\cos x - \\dfrac{1}{2} \\ge 0 \\iff \\cos x \\ge \\dfrac{1}{2} \\iff 0 < x \\le \\pi/3$។\n\nចម្លើយ ៖ $\\left(0, \\dfrac{\\pi}{3}\\right]$",
+            "src": "qb-gen",
+            "qid": "q_g11_0950"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយវិសមភាព $\\sin x+\\sqrt{3}\\cos x>-1$ លើ $[0,2\\pi)$ ៖",
+            "solution": "បម្លែងទៅជា $r\\sin(x+\\alpha)$\n\nចម្លើយ ៖ $[0,\\dfrac{5\\pi}{6})\\cup (\\dfrac{3\\pi}{2},2\\pi)$",
+            "src": "qb-gen",
+            "qid": "q_les_g11a_3_1_p5_10"
           }
         ],
         "summary": "<div class=\"ws-sum-text\"><strong>សមីការត្រីកោណមាត្រអូម៉ូសែន ៖</strong> ទម្រង់ $a\\sin^2 x + b\\sin x \\cos x + c\\cos^2 x = d$ ៖ បើ $\\cos x \\neq 0$ ចែកអង្គទាំងពីរនឹង $\\cos^2 x$ បំប្លែងជាសមីការដឺក្រេទី២ នៃ $\\tan x$។</div>"
