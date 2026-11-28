@@ -21081,7 +21081,7 @@
     "topic": "សមីការប៉ារ៉ាម៉ែត្រនៃបន្ទាត់ សមីការទូទៅនៃប្លង់ គម្លាត និងសមីការស្វ៊ែរ",
     "objective": "ចេះសរសេរសមីការបន្ទាត់ ប្លង់ ស្វ៊ែរ និងគណនាគម្លាតពីចំណុចទៅប្លង់",
     "totalPoints": 3,
-    "totalPointsCount": 12,
+    "totalPointsCount": 36,
     "points": [
       {
         "pointNumber": 1,
@@ -21101,6 +21101,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "លក្ខខណ្ឌចាំបាច់ និងគ្រប់គ្រាន់ដើម្បីឱ្យពីរវ៉ិចទ័រ $\\vec{u}$ និង $\\vec{v}$ កូលីនេអ៊ែរគ្នា (ស្របគ្នា) គឺ ៖",
+            "solution": "$\\|\\vec{u} \\times \\vec{v}\\| = \\|\\vec{u}\\| \\|\\vec{v}\\| \\sin \\theta$។ កាលណាស្របគ្នា $\\theta = 0^\\circ$ ឬ $180^\\circ \\implies \\vec{u} \\times \\vec{v} = \\vec{0}$។\n\nចម្លើយ ៖ $\\vec{u} \\times \\vec{v} = \\vec{0}$",
+            "src": "qb-gen",
+            "qid": "q_g12_0643"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "តើ $\\vec{u}\\times(\\vec{v}+\\vec{w})$ ស្មើនឹងអ្វី?",
+            "solution": "ផលគុណវ៉ិចទ័រមានលក្ខណៈចែកចាយលើផលបូក\n\nចម្លើយ ៖ $\\vec{u}\\times\\vec{v}+\\vec{u}\\times\\vec{w}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p1_05"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "ផ្ទៀងផ្ទាត់លក្ខណៈប្រឆាំងស៊ីមេទ្រីនៃផលគុណវ៉ិចទ័រ ៖",
             "question": "គេឱ្យ $\\vec{u} = (2, -1, 1)$ និង $\\vec{v} = (1, 1, -2)$។\n\nក. គណនា $\\vec{u} \\times \\vec{v}$ និង $\\vec{v} \\times \\vec{u}$។\n\nខ. ផ្ទៀងផ្ទាត់ថា $\\vec{v} \\times \\vec{u} = -(\\vec{u} \\times \\vec{v})$។",
@@ -21109,7 +21129,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-5-2-p1-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\vec{u} \\times \\vec{u}$ សម្រាប់គ្រប់វ៉ិចទ័រ $\\vec{u}$ ៖",
+            "solution": "វ៉ិចទ័រមួយស្របនឹងខ្លួនវាជានិច្ច នាំឱ្យផលគុណវ៉ិចទ័រស្មើវ៉ិចទ័រសូន្យ $\\vec{0}$។\n\nចម្លើយ ៖ $\\vec{0}$",
+            "src": "qb-gen",
+            "qid": "q_g12_0646"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាផលគុណវ៉ិចទ័រ $\\vec{u}\\times\\vec{v}$ ដោយ $\\vec{u}=(0, 0, 3)$ និង $\\vec{v}=(3, 2, 0)$ ៖",
+            "solution": "$\\vec{u}\\times\\vec{v}=(-6, 9, 0)$\n\nចម្លើយ ៖ $(-6, 9, 0)$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p1_18"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "អនុវត្តលក្ខណៈនៃផលគុណវ៉ិចទ័រ ៖",
@@ -21117,9 +21157,29 @@
             "rubric": "ក. ផលគុណទាំងបីត្រូវ (០.៤ ពិន្ទុ) | ខ. $m = 2, n = 4$ (០.៦ ពិន្ទុ)",
             "question": "ក. គណនា $\\vec{i} \\times \\vec{j}$, $\\vec{j} \\times \\vec{k}$ និង $\\vec{k} \\times \\vec{i}$។\n\nខ. គេឱ្យ $\\vec{u} = (1, m, 2)$ និង $\\vec{v} = (2, 4, n)$។ រក $m, n$ ដើម្បីឱ្យ $\\vec{u} \\times \\vec{v} = \\vec{0}$ (វ៉ិចទ័រទាំងពីររួមទិស)។",
             "solution": "ក. $\\vec{i} \\times \\vec{j} = \\vec{k}$, $\\vec{j} \\times \\vec{k} = \\vec{i}$, $\\vec{k} \\times \\vec{i} = \\vec{j}$។\n\nខ. $\\vec{u} \\times \\vec{v} = (mn - 8,\\ 4 - n,\\ 4 - 2m)$។\n$\\vec{u} \\times \\vec{v} = \\vec{0} \\iff \\begin{cases} mn - 8 = 0 \\\\ 4 - n = 0 \\\\ 4 - 2m = 0 \\end{cases} \\iff m = 2, n = 4$ (ផ្ទៀងផ្ទាត់ $mn = 8$ ✓)។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "បើ $\\vec{u}$ និង $\\vec{v}$ រួមទិសគ្នា នោះ $\\vec{u} \\times \\vec{v}$ ស្មើនឹង ៖",
+            "solution": "$\\|\\vec{u} \\times \\vec{v}\\| = \\|\\vec{u}\\|\\|\\vec{v}\\|\\sin\\theta$ ហើយ $\\sin\\theta = 0$ ពេលរួមទិស ៖ $\\vec{u} \\times \\vec{v} = \\vec{0}$។\n\nចម្លើយ ៖ $\\vec{0}$",
+            "src": "qb-gen",
+            "qid": "q_g12_0649s"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $(\\vec{u}\\times\\vec{v})\\cdot\\vec{u}$ ដោយ $\\vec{u}=(2, -1, 1)$ និង $\\vec{v}=(1, 3, 0)$ ៖",
+            "solution": "ផលគុណវ៉ិចទ័រកែងនឹង $\\vec{u}$\n\nចម្លើយ ៖ $0$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p1_12"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>សមីការបន្ទាត់ក្នុងលំហ ៖</strong> កាត់តាម $M_0(x_0, y_0, z_0)$ មាន $\\vec{u} = (a, b, c)$ ជាវ៉ិចទ័រប្រាប់ទិស ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">សមីការប៉ារ៉ាម៉ែត្រ ៖ $\\begin{cases} x = x_0 + at \\\\ y = y_0 + bt \\\\ z = z_0 + ct \\end{cases} (t \\in \\mathbb{R})$</li>\n  <li class=\"ws-sum-item\">សមីការឆ្លុះ ៖ $\\dfrac{x - x_0}{a} = \\dfrac{y - y_0}{b} = \\dfrac{z - z_0}{c}$ ($abc \\neq 0$)។</li>\n</ul>"
       },
       {
@@ -21140,6 +21200,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "មាឌប្រលេពីប៉ែតសង់លើបីវ៉ិចទ័រ $\\vec{u}, \\vec{v}, \\vec{w}$ កំណត់ដោយ ៖",
+            "solution": "មាឌប្រលេពីប៉ែត = តម្លៃដាច់ខាតនៃផលគុណចម្រុះ៖ $V = |\\vec{u} \\cdot (\\vec{v} \\times \\vec{w})|$។\n\nចម្លើយ ៖ $V = |\\vec{u} \\cdot (\\vec{v} \\times \\vec{w})|$",
+            "src": "qb-gen",
+            "qid": "q_g12_0653"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាផ្ទៃក្រឡាត្រីកោណដែលមានកំពូល $O(0,0,0), A(5,0,0), B(0,5,0)$ ៖",
+            "solution": "$S=\\dfrac{1}{2}|\\vec{OA}\\times\\vec{OB}|$\n\nចម្លើយ ៖ $\\dfrac{25}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p2_05"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "គណនាក្រឡាផ្ទៃត្រីកោណតាមផលគុណវ៉ិចទ័រ ៖",
             "question": "គេឱ្យចំណុច $A(1, 0, 0)$, $B(0, 2, 0)$ និង $C(0, 0, 2)$។ គណនាក្រឡាផ្ទៃត្រីកោណ $ABC$។",
@@ -21148,7 +21228,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-5-2-p2-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាមាឌប្រលេពីប៉ែតដែលសង់លើ $\\vec{u}=(0, 3, 0), \\vec{v}=(1, 1, 0), \\vec{w}=(3, 1, 2)$ ៖",
+            "solution": "$V=|(\\vec{u}\\times\\vec{v})\\cdot\\vec{w}|=6$\n\nចម្លើយ ៖ $6$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p2_14"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាមាឌប្រលេពីប៉ែតដែលសង់លើ $\\vec{u}=(3, -1, 3), \\vec{v}=(1, 1, 0), \\vec{w}=(2, 0, -1)$ ៖",
+            "solution": "$V=|(\\vec{u}\\times\\vec{v})\\cdot\\vec{w}|=10$\n\nចម្លើយ ៖ $10$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p2_18"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "គណនាផលគុណខ្វែង (ផលគុណវ៉ិចទ័រ) នៃពីរវ៉ិចទ័រ ៖",
@@ -21156,9 +21256,29 @@
             "rubric": "ក. ០.៥០ ពិន្ទុ | ខ. ០.៥០ ពិន្ទុ",
             "question": "ក. គណនា $\\vec{w} = \\vec{u} \\times \\vec{v}$ ដោយ $\\vec{u} = (2, -1, 3)$ និង $\\vec{v} = (1, 2, -1)$។\nខ. បង្ហាញថា $\\vec{w} \\perp \\vec{u}$ និង $\\vec{w} \\perp \\vec{v}$។",
             "solution": "<strong>ក. គណនាផលគុណខ្វែង ៖</strong>\n- តាមរូបមន្តដេទែមីណង់ ៖\n  $\\vec{w} = \\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ 2 & -1 & 3 \\\\ 1 & 2 & -1 \\end{vmatrix}$\n  $= \\vec{i}\\begin{vmatrix} -1 & 3 \\\\ 2 & -1 \\end{vmatrix} - \\vec{j}\\begin{vmatrix} 2 & 3 \\\\ 1 & -1 \\end{vmatrix} + \\vec{k}\\begin{vmatrix} 2 & -1 \\\\ 1 & 2 \\end{vmatrix}$\n  $= \\vec{i}(1 - 6) - \\vec{j}(-2 - 3) + \\vec{k}(4 - (-1))$\n  $= -5\\vec{i} + 5\\vec{j} + 5\\vec{k} = (-5, 5, 5)$។ *(០.៥០ ពិន្ទុ)*\n\n<strong>ខ. ផ្ទៀងផ្ទាត់ភាពកែង ៖</strong>\n- $\\vec{w} \\cdot \\vec{u} = (-5)(2) + 5(-1) + 5(3) = -10 - 5 + 15 = 0 \\Rightarrow \\vec{w} \\perp \\vec{u}$\n- $\\vec{w} \\cdot \\vec{v} = (-5)(1) + 5(2) + 5(-1) = -5 + 10 - 5 = 0 \\Rightarrow \\vec{w} \\perp \\vec{v}$ (ពិត)។ *(០.៥០ ពិន្ទុ)*"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $A(1, 1, 1), B(2, 3, 4), C(3, 5, 7)$។ ផ្ទៃក្រឡានៃត្រីកោណ $ABC$ ស្មើ ៖",
+            "solution": "$\\vec{AB} = (1, 2, 3)$ និង $\\vec{AC} = (2, 4, 6) = 2\\vec{AB}$។ វ៉ិចទ័រទាំងពីរកូលីនេអ៊ែរគ្នា នាំឱ្យ $\\vec{AB} \\times \\vec{AC} = \\vec{0} \\implies S = 0$។\n\nចម្លើយ ៖ $0$ (ចំណុចទាំងបីរត់ត្រង់ជួរគ្នា)",
+            "src": "qb-gen",
+            "qid": "q_g12_0660"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាផ្ទៃក្រឡាត្រីកោណ $ABC$ ដែល $A(2, 0, -1), B(3, 1, 2), C(2, -2, -2)$ ៖",
+            "solution": "$\\vec{AB}\\times\\vec{AC}=(5, 1, -2), \\|\\ldots\\|=\\sqrt{30}$\n\nចម្លើយ ៖ $\\dfrac{\\sqrt{30}}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p2_11"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>សមីការប្លង់ & គម្លាត ៖</strong> ប្លង់ $(P): Ax + By + Cz + D = 0$ (ន័រម៉ាល់ $\\vec{n} = (A, B, C)$) ៖</div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">គម្លាតពី $M_0(x_0, y_0, z_0)$ ទៅប្លង់ $(P)$ ៖ $d(M_0, P) = \\dfrac{|Ax_0 + By_0 + Cz_0 + D|}{\\sqrt{A^2 + B^2 + C^2}}$។</li>\n</ul>"
       },
       {
@@ -21167,7 +21287,7 @@
         "pointTitle": "ចំណុចទី ៣ ៖ អនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ម៉ូម៉ង់នៃកម្លាំង",
         "topic": "$\\vec{M}_O = \\overrightarrow{OA} \\times \\vec{F}$",
         "objective": "យល់ និងអនុវត្តអនុវត្តន៍ក្នុងរូបវិទ្យា ៖ ម៉ូម៉ង់នៃកម្លាំង",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $\\vec{M}_O = \\overrightarrow{OA} \\times \\vec{F}$\n  - $\\vec{M}_O$ កែងនឹង $\\overrightarrow{OA}$ និង $\\vec{F}$",
         "exercises": [
           {
@@ -21181,6 +21301,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "កម្លាំង $\\vec{F}(0,4,0)$ ចាប់ត្រង់ចំណុច $A(4,0,0)$។ ប្រវែងម៉ូម៉ង់ $|\\vec{M}_O|$ ស្មើ ៖",
+            "solution": "$|OA||F|\\sin 90\\circ$\n\nចម្លើយ ៖ $16$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p3_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "កម្លាំង $\\vec{F}(0, 0, 4)$ មានចំណុចចាប់ $A$ ដែល $\\overrightarrow{OA}(0, 1, 0)$។ ម៉ូម៉ង់ $\\vec{M}_O=\\overrightarrow{OA}\\times\\vec{F}$ គឺ ៖",
+            "solution": "ផលគុណវ៉ិចទ័រនៃវ៉ិចទ័រអ័ក្ស\n\nចម្លើយ ៖ $(4, 0, 0)$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p3_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរអនុវត្តផលគុណវ៉ិចទ័រក្នុងរូបវិទ្យា ៖",
@@ -21189,13 +21329,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "កម្លាំង $\\vec{F}(3, 3, 2)$ មានចំណុចចាប់ $A$ ដែល $\\overrightarrow{OA}(-2, 2, 0)$។ ម៉ូម៉ង់ $\\vec{M}_O = \\overrightarrow{OA} \\times \\vec{F}$ គឺ ៖",
+            "solution": "$\\overrightarrow{OA} \\times \\vec{F} = (4, 4, -12)$ (គណនាតាមដេទែរមីណង់)។\n\nចម្លើយ ៖ $(4, 4, -12)$",
+            "src": "qb-gen",
+            "qid": "g12b_plan_g12a-5-2_3_6"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "កម្លាំង $\\vec{F}(1, -2, -1)$ មានចំណុចចាប់ $A$ ដែល $\\overrightarrow{OA}(-3, -3, 0)$។ ម៉ូម៉ង់ $\\vec{M}_O = \\overrightarrow{OA} \\times \\vec{F}$ គឺ ៖",
+            "solution": "$\\overrightarrow{OA} \\times \\vec{F} = (3, -3, 9)$ (គណនាតាមដេទែរមីណង់)។\n\nចម្លើយ ៖ $(3, -3, 9)$",
+            "src": "qb-gen",
+            "qid": "g12b_plan_g12a-5-2_3_11"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរអនុវត្តផលគុណវ៉ិចទ័រក្នុងរូបវិទ្យា ៖",
             "question": "កម្លាំង $\\vec{F}(-2, 0, -3)$ (N) មានចំណុចចាប់ $A$ ដែល $\\overrightarrow{OA}(-2, 1, -3)$ (m)។\nក. គណនាម៉ូម៉ង់ $\\vec{M}_O = \\overrightarrow{OA} \\times \\vec{F}$។\nខ. គណនាប្រវែង $\\|\\vec{M}_O\\|$។\nគ. ផ្ទៀងផ្ទាត់ថា $\\vec{M}_O \\cdot \\vec{F} = 0$។",
             "solution": "ក. $\\vec{M}_O = (-3, 0, 2)$\nខ. $\\sqrt{13}$ N·m\nគ. $(-3)(-2) + (0)(0) + (2)(-3) = 0$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "កម្លាំង $\\vec{F}(0, 2, 0)$ មានចំណុចចាប់ $A$ ដែល $\\overrightarrow{OA}(0, 1, 4)$។ ប្រវែងម៉ូម៉ង់ $|\\vec{M}_O|$ ស្មើ ៖",
+            "solution": "$\\vec{M}_O=(-8, 0, 0)$\n\nចម្លើយ ៖ $8$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p3_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "កម្លាំង $\\vec{F}(2, -1, 2)$ ចាប់ត្រង់ $A(-1, 3, 2)$។ ផលគុណស្កាលែ $\\vec{M}_O\\cdot\\overrightarrow{OA}$ ស្មើ ៖",
+            "solution": "ម៉ូម៉ង់កែងនឹង OA\n\nចម្លើយ ៖ $0$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p3_18"
           }
         ]
       },
@@ -21205,7 +21385,7 @@
         "pointTitle": "ចំណុចទី ៤ ៖ ផលគុណចម្រុះនៃបីវ៉ិចទ័រ",
         "topic": "$(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}$",
         "objective": "យល់ និងអនុវត្តផលគុណចម្រុះនៃបីវ៉ិចទ័រ",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w} = \\begin{vmatrix} u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\\\ w_1 & w_2 & w_3 \\end{vmatrix}$\n  - កូប្លាណែ ⇔ ផលគុណចម្រុះ $= 0$\n  - មាឌប្រលេពីប៉ែត $= |(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}|$ ; មាឌតេត្រាអែត $= \\dfrac{1}{6}|\\dots|$",
         "exercises": [
           {
@@ -21219,6 +21399,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាមាឌតេត្រាអែត $OABC$ ដែល $O(0,0,0), A(3,0,0), B(0,4,0), C(0,0,5)$ ៖",
+            "solution": "$V=\\dfrac{1}{6}|\\vec{OA}\\cdot(\\vec{OB}\\times\\vec{OC})|$\n\nចម្លើយ ៖ $10$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p4_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាផលគុណចម្រុះ $(\\vec{u}\\times\\vec{v})\\cdot\\vec{w}$ ដោយ $\\vec{u}(6,0,0),\\ \\vec{v}(0,2,0),\\ \\vec{w}(0,0,3)$ ៖",
+            "solution": "វ៉ិចទ័រអរតូកូណាល់ ⇒ គុណប្រវែង\n\nចម្លើយ ៖ $36$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p4_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរគណនាផលគុណចម្រុះនៃបីវ៉ិចទ័រ ៖",
@@ -21227,13 +21427,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $\\vec{u}(-1, 2, -1)$ , $\\vec{v}(1, 0, -1)$ , $\\vec{w}(1, -1, -3)$។ មាឌប្រលេពីប៉ែតដែលសង់លើ $\\vec{u}, \\vec{v}, \\vec{w}$ គឺ ៖",
+            "solution": "$V = |(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}| = 6$។\n\nចម្លើយ ៖ $6$",
+            "src": "qb-gen",
+            "qid": "g12b_plan_g12a-5-2_4_20"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គេឱ្យ $\\vec{u}(0, -2, 0)$ , $\\vec{v}(-1, 3, -1)$ , $\\vec{w}(3, -3, -1)$។ មាឌប្រលេពីប៉ែតដែលសង់លើ $\\vec{u}, \\vec{v}, \\vec{w}$ គឺ ៖",
+            "solution": "$V = |(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}| = 8$។\n\nចម្លើយ ៖ $8$",
+            "src": "qb-gen",
+            "qid": "g12b_plan_g12a-5-2_4_25"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរគណនាផលគុណចម្រុះនៃបីវ៉ិចទ័រ ៖",
             "question": "គេឱ្យ $\\vec{u}(2, -1, -3)$ , $\\vec{v}(2, 2, -1)$ , $\\vec{w}(3, 2, 2)$។\nក. គណនា $\\vec{u} \\times \\vec{v}$។\nខ. គណនាផលគុណចម្រុះ $(\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}$ ។ តើវ៉ិចទ័រទាំងបីកូប្លាណែឬទេ?\nគ. គណនាមាឌប្រលេពីប៉ែត និងមាឌតេត្រាអែតដែលសង់លើវ៉ិចទ័រទាំងបី។",
             "solution": "ក. $\\vec{u} \\times \\vec{v} = (7, -4, 6)$\nខ. $25$ ⇒ មិនកូប្លាណែ\nគ. $V = 25$ , $V_{tet} = \\dfrac{25}{6}$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាកម្ពស់ចុះពីកំពូល $D$ មកបាត $ABC$ នៃតេត្រាអែត $ABCD$ ដែល $A(0, 1, 1), B(2, 3, 2), C(-2, 4, 5), D(3, 4, 1)$ ៖",
+            "solution": "$h=\\dfrac{|(\\vec{AB}\\times\\vec{AC})\\cdot\\vec{AD}|}{|\\vec{AB}\\times\\vec{AC}|}=\\dfrac{15}{15}$\n\nចម្លើយ ៖ $1$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p4_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាកម្ពស់ចុះពីកំពូល $D$ មកបាត $ABC$ នៃតេត្រាអែត $ABCD$ ដែល $A(0, 1, 1), B(0, 4, 3), C(0, 3, 0), D(4, 5, 3)$ ៖",
+            "solution": "$h=\\dfrac{|(\\vec{AB}\\times\\vec{AC})\\cdot\\vec{AD}|}{|\\vec{AB}\\times\\vec{AC}|}=\\dfrac{28}{7}$\n\nចម្លើយ ៖ $4$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_5_2_p4_17"
           }
         ]
       }
