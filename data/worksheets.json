@@ -34171,6 +34171,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\left(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6}\\right)^6$ ៖",
+            "solution": "$\\cos(6 \\times \\dfrac{\\pi}{6}) + i\\sin(6 \\times \\dfrac{\\pi}{6}) = \\cos\\pi + i\\sin\\pi = -1$។\n\nចម្លើយ ៖ $-1$",
+            "src": "qb-gen",
+            "qid": "q_g12_0074"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $(\\cos \\dfrac{\\pi}{4} + i\\sin \\dfrac{\\pi}{4})^{6}$ ជាទម្រង់ពីជគណិត ៖",
+            "solution": "ដឺម័រ ៖ $r^n$ និងមុំ $n\\theta$\n\nចម្លើយ ៖ $-1i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p1_04"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "គណនាកន្សោមស្វ័យគុណចម្រុះ ៖",
             "question": "គណនាតម្លៃនៃកន្សោម $A = \\left(\\dfrac{\\sqrt{3} + i}{1 - i}\\right)^{12}$។",
@@ -34179,7 +34199,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-1-3-p1-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $(\\sqrt{3} + i)^{12}$ ៖",
+            "solution": "$r = 2, \\theta = \\dfrac{\\pi}{6}$។ $(\\sqrt{3}+i)^{12} = 2^{12} [\\cos(2\\pi) + i\\sin(2\\pi)] = 4096(1) = 4096$។\n\nចម្លើយ ៖ $4096$",
+            "src": "qb-gen",
+            "qid": "q_g12_0077"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $(3\\left(\\cos\\left(-\\dfrac{\\pi}{4}\\right) + i\\sin\\left(-\\dfrac{\\pi}{4}\\right)\\right))^{2}$ ជាទម្រង់ពីជគណិត ៖",
+            "solution": "ដឺម័រ ៖ $r^n$ និងមុំ $n\\theta$\n\nចម្លើយ ៖ $-9i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p1_18"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "អនុវត្តរូបមន្តដឺម័រ ៖",
@@ -34187,9 +34227,29 @@
             "rubric": "ក. ទម្រង់ត្រីកោណមាត្រ (០.៣ ពិន្ទុ) | ខ. $z^6 = -64$ (០.៤ ពិន្ទុ) | គ. $n = 12$ (០.៣ ពិន្ទុ)",
             "question": "ក. សរសេរ $z = \\sqrt{3} + i$ ជាទម្រង់ត្រីកោណមាត្រ។\n\nខ. គណនា $z^6$ ដោយប្រើរូបមន្តដឺម័រ។\n\nគ. រកចំនួនគត់វិជ្ជមាន $n$ តូចបំផុតដែល $z^n$ ជាចំនួនពិតវិជ្ជមាន។",
             "solution": "ក. $|z| = 2$, $\\cos\\theta = \\dfrac{\\sqrt{3}}{2}$, $\\sin\\theta = \\dfrac{1}{2}$ ៖ $z = 2\\left(\\cos\\dfrac{\\pi}{6} + i\\sin\\dfrac{\\pi}{6}\\right)$។\n\nខ. $z^6 = 2^6\\left(\\cos\\pi + i\\sin\\pi\\right) = -64$។\n\nគ. $z^n = 2^n\\left(\\cos\\dfrac{n\\pi}{6} + i\\sin\\dfrac{n\\pi}{6}\\right)$ ជាចំនួនពិតវិជ្ជមានកាលណា $\\dfrac{n\\pi}{6} = 2k\\pi \\iff n = 12k$ ៖ $n = 12$ (ពេលនោះ $z^{12} = 4096$)។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $(1 + \\sqrt{3}i)^{4}+(1 - \\sqrt{3}i)^{4}$ ៖",
+            "solution": "$z^n+\\bar{z}^n=2r^n\\cos n\\theta$\n\nចម្លើយ ៖ $-16$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p1_07"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $(\\cos \\dfrac{2\\pi}{3} + i\\sin \\dfrac{2\\pi}{3})^{-4}$ ៖",
+            "solution": "ស្វ័យគុណអវិជ្ជមានប្តូរសញ្ញាមុំ\n\nចម្លើយ ៖ $-\\dfrac{1}{2} - \\dfrac{\\sqrt{3}}{2}i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p1_12"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>រូបមន្តដឺម័រ (De Moivre) ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">ចំពោះគ្រប់ $n \\in \\mathbb{Z}$ ៖ $[r(\\cos\\theta + i\\sin\\theta)]^n = r^n(\\cos n\\theta + i\\sin n\\theta)$។</li>\n  <li class=\"ws-sum-item\">រូបមន្តនេះអនុវត្តសម្រាប់គណនាស្វ័យគុណខ្ពស់នៃចំនួនកុំផ្លិច និងស្រាយរូបមន្តត្រីកោណមាត្រ $\\cos n\\theta, \\sin n\\theta$។</li>\n</ul>"
       },
       {
@@ -34198,7 +34258,7 @@
         "pointTitle": "ចំណុចទី ២ ៖ អនុវត្តន៍ក្នុងត្រីកោណមាត្រ",
         "topic": "ប្រើរូបមន្តដឺម័រ ដើម្បីសរសេរ $\\cos n\\theta$ , $\\sin n\\theta$",
         "objective": "យល់ និងអនុវត្តអនុវត្តន៍ក្នុងត្រីកោណមាត្រ",
-        "totalPoints": 3,
+        "totalPoints": 7.0,
         "summary": "  - $(\\cos\\theta + i\\sin\\theta)^n = \\cos n\\theta + i\\sin n\\theta$\n  - $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$ , $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$\n  - $\\cos 3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$ , $\\sin 3\\theta = 3\\sin\\theta - 4\\sin^3\\theta$",
         "exercises": [
           {
@@ -34221,12 +34281,52 @@
           },
           {
             "id": "ex3",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោយប្រើរូបមន្តដឺម័រ $(\\cos\\theta + i\\sin\\theta)^{3} = \\cos 3\\theta + i\\sin 3\\theta$ គេបាន $\\cos 3\\theta =$ ៖",
+            "solution": "ពន្លាតអង្គខាងឆ្វេង រួចប្រៀបធៀបផ្នែកពិត ⇒ $\\cos 3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$។\n\nចម្លើយ ៖ $4\\cos^3\\theta - 3\\cos\\theta$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-1-3_2_6"
+          },
+          {
+            "id": "ex4",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\left(\\cos \\dfrac{3\\pi}{4} + i\\sin \\dfrac{3\\pi}{4}\\right)^{6}$ ៖",
+            "solution": "តាមរូបមន្តដឺម័រ $= \\cos \\dfrac{9\\pi}{2} + i\\sin \\dfrac{9\\pi}{2} = i$។\n\nចម្លើយ ៖ $i$",
+            "src": "qb-gen",
+            "qid": "g12a_plan_g12a-1-3_2_11"
+          },
+          {
+            "id": "ex5",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរអនុវត្តរូបមន្តដឺម័រក្នុងត្រីកោណមាត្រ ៖",
             "question": "ក. ពន្លាត $(\\cos\\theta + i\\sin\\theta)^{3}$ ដោយប្រើទ្រឹស្តីបទទ្វេធា។\nខ. ប្រើរូបមន្តដឺម័រ ដើម្បីទាញរក $\\cos 3\\theta$ និង $\\sin 3\\theta$ ជាអនុគមន៍នៃ $\\cos\\theta$ និង $\\sin\\theta$។\nគ. ប្រើលទ្ធផល ខ. ដើម្បីគណនា $\\cos 3\\theta$ និង $\\sin 3\\theta$ ចំពោះ $\\theta = \\dfrac{\\pi}{3}$។",
             "solution": "ក. $\\cos^3\\theta - 3\\cos\\theta\\sin^2\\theta + i(3\\cos^2\\theta\\sin\\theta - \\sin^3\\theta)$\nខ. $\\cos 3\\theta = 4\\cos^3\\theta - 3\\cos\\theta$ , $\\sin 3\\theta = 3\\sin\\theta - 4\\sin^3\\theta$\nគ. $\\cos \\pi = -1$ , $\\sin \\pi = 0$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោយប្រើរូបមន្តដឺម័រ គណនា $\\sin \\dfrac{2\\pi}{3}$ តាមរយៈ $(\\cos \\dfrac{\\pi}{12} + i\\sin \\dfrac{\\pi}{12})^{8}$ ៖",
+            "solution": "$n\\theta=\\dfrac{2\\pi}{3}$\n\nចម្លើយ ៖ $\\dfrac{\\sqrt{3}}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p2_13"
+          },
+          {
+            "id": "ex7",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោយប្រើរូបមន្តដឺម័រ គណនា $\\cos \\dfrac{\\pi}{4}$ តាមរយៈ $(\\cos \\dfrac{\\pi}{12} + i\\sin \\dfrac{\\pi}{12})^{3}$ ៖",
+            "solution": "$n\\theta=\\dfrac{\\pi}{4}$\n\nចម្លើយ ៖ $\\dfrac{\\sqrt{2}}{2}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p2_18"
           }
         ]
       },
@@ -34248,6 +34348,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សមីការ $z^{12}=1$ មានឫសខុសៗគ្នាចំនួន ៖",
+            "solution": "$z^n=1$ មាន $n$ ឫស\n\nចម្លើយ ៖ $12$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p3_01"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សមីការ $z^{7}=1$ មានឫសខុសៗគ្នាចំនួន ៖",
+            "solution": "$z^n=1$ មាន $n$ ឫស\n\nចម្លើយ ៖ $7$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p3_05"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "រកឫសគូបនៃចំនួនកុំផ្លិច ៖",
             "question": "ដោះស្រាយសមីការ $z^3 = 8i$ ក្នុងសំណុំ $\\mathbb{C}$។",
@@ -34256,7 +34376,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-1-3-p2-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ផលបូកនៃឫសទី $n$ ទាំងអស់នៃចំនួនកុំផ្លិចមួយ ($n \\ge 2$) ស្មើនឹង ៖",
+            "solution": "ផលបូកឫសទី $n$ ទាំងអស់នៃចំនួនកុំផ្លិចណាមួយតែងតែស្មើ ០ ជានិច្ច ព្រោះចំណុចរូបភាពជាកំពូលពហុកោណទៀងទាត់មានទីប្រជុំទម្ងន់នៅ $O$។\n\nចម្លើយ ៖ $0$",
+            "src": "qb-gen",
+            "qid": "q_g12_0087"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកឫសការេទាំងពីរនៃ $z=-8 + 6i$ ៖",
+            "solution": "$(1 + 3i)^2=-8 + 6i$\n\nចម្លើយ ៖ $\\pm(1 + 3i)$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p3_18"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "ដោះស្រាយសមីការដឺក្រេខ្ពស់ក្នុងសំណុំចំនួនកុំផ្លិច ៖",
@@ -34264,13 +34404,33 @@
             "rubric": "ក. ០.៥០ ពិន្ទុ | ខ. ០.៥០ ពិន្ទុ",
             "question": "ក. ដោះស្រាយសមីការ $z^4 - 2z^3 + 6z^2 - 2z + 5 = 0$ ដោយដឹងថាវាមានឫសនិម្មិតសុទ្ធ។\nខ. ដោះស្រាយសមីការ $z^3 - (3 + 2i)z^2 + (1 + 5i)z + 2 - 2i = 0$ ដោយដឹងថាវាមានឫសពិតមួយ។",
             "solution": "<strong>ក. ដោះស្រាយសមីការ $z^4 - 2z^3 + 6z^2 - 2z + 5 = 0$ ៖</strong>\n- តាង $z = bi$ ($b \\in \\mathbb{R}$) ជាឫសនិម្មិតសុទ្ធ ៖\n  $(bi)^4 - 2(bi)^3 + 6(bi)^2 - 2(bi) + 5 = 0 \\iff b^4 + 2ib^3 - 6b^2 - 2bi + 5 = 0$\n  $\\iff (b^4 - 6b^2 + 5) + i(2b^3 - 2b) = 0$\n- ប្រព័ន្ធសមីការ ៖ $\\begin{cases} 2b(b^2 - 1) = 0 \\\\ b^4 - 6b^2 + 5 = 0 \\end{cases}$\n- ពី $2b(b^2 - 1) = 0$ ដោយ $b \\neq 0$ នាំឱ្យ $b = \\pm 1$។ ជំនួសចូលសមីការទីមួយ ៖ $(\\pm 1)^4 - 6(\\pm 1)^2 + 5 = 0$ (ពិត)\n- នាំឱ្យសមីការមានឫសពីរគឺ $z = i$ និង $z = -i$ ពោលគឺចែកដាច់នឹង $(z - i)(z + i) = z^2 + 1$\n- ចែកពហុធា ៖ $z^4 - 2z^3 + 6z^2 - 2z + 5 = (z^2 + 1)(z^2 - 2z + 5) = 0$\n- ដោះស្រាយ $z^2 - 2z + 5 = 0$ ៖ $\\Delta' = 1 - 5 = -4 = (2i)^2 \\Rightarrow z = 1 \\pm 2i$\n- ដូចនេះ សំណុំចម្លើយគឺ $S = \\{i, -i, 1 + 2i, 1 - 2i\\}$។ *(០.៥០ ពិន្ទុ)*\n\n<strong>ខ. ដោះស្រាយសមីការមានឫសពិត ៖</strong>\n- តាង $x_0 \\in \\mathbb{R}$ ជាឫសពិត ៖\n  $x_0^3 - (3+2i)x_0^2 + (1+5i)x_0 + 2 - 2i = 0$\n  $\\iff (x_0^3 - 3x_0^2 + x_0 + 2) + i(-2x_0^2 + 5x_0 - 2) = 0$\n- ស្មើផ្នែកនិម្មិតនឹងសូន្យ ៖ $-2x_0^2 + 5x_0 - 2 = 0 \\iff 2x_0^2 - 5x_0 + 2 = 0 \\Rightarrow x_0 = 2$ ឬ $x_0 = \\dfrac{1}{2}$\n- ផ្ទៀងផ្ទាត់ក្នុងផ្នែកពិត ៖\n  + ចំពោះ $x_0 = 2$ ៖ $2^3 - 3(2^2) + 2 + 2 = 8 - 12 + 4 = 0$ (ត្រឹមត្រូវ)\n- នាំឱ្យ $z = 2$ ជាឫសពិត។ ចែកពហុធានឹង $(z - 2)$ ៖\n  $P(z) = (z - 2)(z^2 - (1 + 2i)z - 1 + i) = 0$\n- ដោះស្រាយ $z^2 - (1 + 2i)z - 1 + i = 0$ ៖\n  $\\Delta = (1 + 2i)^2 - 4(-1 + i) = 1 + 4i - 4 + 4 - 4i = 1$\n  $\\Rightarrow z = \\dfrac{(1 + 2i) \\pm 1}{2} \\Rightarrow z_1 = 1 + i$, $z_2 = i$\n- ដូចនេះ សំណុំចម្លើយគឺ $S = \\{2, 1 + i, i\\}$។ *(០.៥០ ពិន្ទុ)*"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ផលគុណនៃឫសទី ៤ ទាំងអស់នៃ $16$ ស្មើ ៖",
+            "solution": "$(-1)^{n-1}\\times16$\n\nចម្លើយ ៖ $-16$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p3_07"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ដោះស្រាយសមីការ $z^4=-64$ ក្នុង $\\mathbb{C}$ ៖",
+            "solution": "ម៉ូឌុល $64^{1/4}=2\\sqrt{2}$\n\nចម្លើយ ៖ $z=\\pm2\\pm 2i$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_1_3_p3_12"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>ឫសទី n នៃចំនួនកុំផ្លិច ៖</strong></div>\n<div class=\"ws-sum-text\">បើ $z = r(\\cos\\theta + i\\sin\\theta)$ នោះឫសទី $n$ ទាំង $n$ នៃ $z$ គឺ ៖</div>\n<div class=\"ws-sum-text\">$w_k = \\sqrt[n]{r}\\left[\\cos\\left(\\dfrac{\\theta + 2k\\pi}{n}\\right) + i\\sin\\left(\\dfrac{\\theta + 2k\\pi}{n}\\right)\\right]$ ដោយ $k = 0, 1, 2, \\dots, n-1$។</div>\n<div class=\"ws-sum-text\">ចំណុចរូបភាពនៃឫសទាំង $n$ បង្កើតបានជាកំពូលនៃពហុកោណនិយ័តមាន $n$ ជ្រុងចារឹកក្នុងរង្វង់ផ្ចិត $O$ កាំ $R = \\sqrt[n]{r}$។</div>"
       }
     ],
-    "totalPointsCount": 9
+    "totalPointsCount": 25
   },
   "les-g10-1-1": {
     "lessonId": "les-g10-1-1",
