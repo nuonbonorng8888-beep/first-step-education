@@ -21510,7 +21510,7 @@
     "topic": "និយមន័យ សមីការស្តង់ដានៃប៉ារ៉ាបូល កំពូល កំណុំ បន្ទាត់ប្រាប់ទិស",
     "objective": "ចេះសរសេរសមីការស្តង់ដា កំណត់លក្ខណៈធរណីមាត្រ និងសង់ក្រាបប៉ារ៉ាបូល",
     "totalPoints": 3,
-    "totalPointsCount": 18,
+    "totalPointsCount": 54,
     "points": [
       {
         "pointNumber": 1,
@@ -21530,6 +21530,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 9x^{2} + 4x + 1$ ដែល $F(0) = 0$ ៖",
+            "solution": "$F(x) = 3x^{3} + 2x^{2} + x + C$ ហើយ $F(0) = 0 \\implies C = 0$។\n\nចម្លើយ ៖ $F(x) = 3x^{3} + 2x^{2} + x$",
+            "src": "qb-gen",
+            "qid": "gen_les-g12a-6-1_002"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកព្រីមីទីវ $F$ នៃ $f(x)=9x^{2}+6x+1$ ដែល $F(0)=0$ ៖",
+            "solution": "ព្រីមីទីវរបស់ xⁿ គឺ xⁿ⁺¹/(n+1)\n\nចម្លើយ ៖ $3x^{3}+3x^{2}+x$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p1_02"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "រកព្រីមីទីវដែលផ្ទៀងផ្ទាត់លក្ខខណ្ឌ ៖",
             "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 4x^3 - 6x + 1$ ដែលផ្ទៀងផ្ទាត់ $F(1) = 3$។",
@@ -21538,7 +21558,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-6-1-p1-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកព្រីមីទីវ $F(x)$ នៃ $f(x) = 3x^2 - 4x$ ដែល $F(2) = 5$ ៖",
+            "solution": "$F(x) = x^3 - 2x^2 + C$។ $F(2) = 8 - 8 + C = 5 \\implies C = 5$។ ដូច្នេះ $F(x) = x^3 - 2x^2 + 5$។\n\nចម្លើយ ៖ $F(x) = x^3 - 2x^2 + 5$",
+            "src": "qb-gen",
+            "qid": "q_g12_0695"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកព្រីមីទីវ $F(x)$ នៃ $f(x)=3x^{2}+8x$ ដែល $F(1)=8$ ៖",
+            "solution": "រក C ពីលក្ខខណ្ឌ\n\nចម្លើយ ៖ $x^{3}+4x^{2}+3$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p1_14"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "កំណត់ព្រីមីទីវដោយប្រើដេរីវេ ៖",
@@ -21546,9 +21586,29 @@
             "rubric": "ក. បង្ហាញត្រូវ (០.៣ ពិន្ទុ) | ខ. $a = 2, b = 1$ (០.៤ ពិន្ទុ) | គ. $G(x) = (2x + 1)e^x - 1$ (០.៣ ពិន្ទុ)",
             "question": "ក. បង្ហាញថា $F(x) = x\\ln x - x$ ជាព្រីមីទីវនៃ $f(x) = \\ln x$ លើ $(0, +\\infty)$។\n\nខ. រកចំនួនពិត $a, b$ ដើម្បីឱ្យ $F(x) = (ax + b)e^x$ ជាព្រីមីទីវនៃ $f(x) = (2x + 3)e^x$។\n\nគ. រកព្រីមីទីវ $G$ នៃ $f(x) = (2x + 3)e^x$ ដែលផ្ទៀងផ្ទាត់ $G(0) = 0$។",
             "solution": "ក. $F'(x) = \\ln x + x \\cdot \\dfrac{1}{x} - 1 = \\ln x = f(x)$ ពិតប្រាកដមែន។\n\nខ. $F'(x) = ae^x + (ax + b)e^x = (ax + a + b)e^x$។\n$F'(x) = f(x) \\iff \\begin{cases} a = 2 \\\\ a + b = 3 \\end{cases} \\iff a = 2, b = 1$។\n\nគ. $G(x) = (2x + 1)e^x + C$ ; $G(0) = 1 + C = 0 \\iff C = -1$ ៖ $G(x) = (2x + 1)e^x - 1$។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាព្រីមីទីវ $\\int \\dfrac{1}{\\sqrt{1 - x^2}} dx$ លើ $(-1, 1)$ ៖",
+            "solution": "ព្រីមីទីវគ្រឹះ៖ $\\int \\dfrac{1}{\\sqrt{1 - x^2}} dx = \\arcsin x + C$។\n\nចម្លើយ ៖ $\\arcsin x + C$",
+            "src": "qb-gen",
+            "qid": "q_g12_0700"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int\\left(4x^3-\\dfrac{5}{x^2}+7\\right)dx$ ៖",
+            "solution": "$\\int x^{-2}dx=-x^{-1}$\n\nចម្លើយ ៖ $x^4+\\dfrac{5}{x}+7x+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p1_08"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>សមីការស្តង់ដាប៉ារ៉ាបូល ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">កំពូល $(0, 0)$, អ័ក្សដេក ៖ $y^2 = 4px$ (កំណុំ $(p, 0)$, បន្ទាត់ប្រាប់ទិស $x = -p$)</li>\n  <li class=\"ws-sum-item\">កំពូល $(0, 0)$, អ័ក្សឈរ ៖ $x^2 = 4py$ (កំណុំ $(0, p)$, បន្ទាត់ប្រាប់ទិស $y = -p$)</li>\n</ul>"
       },
       {
@@ -21557,7 +21617,7 @@
         "pointTitle": "ចំណុចទី ២ ៖ រូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
         "topic": "$\\int x^n dx$ , $\\int e^x dx$ , $\\int \\dfrac{dx}{x}$",
         "objective": "យល់ និងអនុវត្តរូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $\\int x^n dx = \\dfrac{x^{n+1}}{n + 1} + C \\qquad \\int e^{kx}dx = \\dfrac{e^{kx}}{k} + C \\qquad \\int \\dfrac{dx}{x} = \\ln|x| + C$\n  - $\\int (ax + b)^n dx = \\dfrac{(ax + b)^{n+1}}{a(n + 1)} + C$",
         "exercises": [
           {
@@ -21571,6 +21631,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int e^{2x}\\,dx$ ៖",
+            "solution": "$\\int e^{kx}dx = \\dfrac{1}{k}e^{kx} + C$។\n\nចម្លើយ ៖ $\\dfrac{1}{2}e^{2x} + C$",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-6-1_2_6"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int e^{4x}\\,dx$ ៖",
+            "solution": "$\\int e^{kx}dx = \\dfrac{1}{k}e^{kx} + C$។\n\nចម្លើយ ៖ $\\dfrac{1}{4}e^{4x} + C$",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-6-1_2_11"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរប្រើរូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់ ៖",
@@ -21579,13 +21659,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int(2x+1)^{3}dx$ ៖",
+            "solution": "(ax+b)ⁿ → (ax+b)ⁿ⁺¹/(a(n+1))\n\nចម្លើយ ៖ $\\dfrac{(2x+1)^{4}}{8}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p2_13"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int(2x+5)^{2}dx$ ៖",
+            "solution": "(ax+b)ⁿ → (ax+b)ⁿ⁺¹/(a(n+1))\n\nចម្លើយ ៖ $\\dfrac{(2x+5)^{3}}{6}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p2_18"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរប្រើរូបមន្តគ្រឹះនៃអាំងតេក្រាលមិនកំណត់ ៖",
             "question": "គណនាអាំងតេក្រាលមិនកំណត់ ៖\nក. $\\int (2x^{4} - 6x + 5)\\,dx$\nខ. $\\int \\left(e^{3x} + \\dfrac{5}{x}\\right)dx$\nគ. $\\int (2x + 1)^{4}\\,dx$",
             "solution": "ក. $\\dfrac{2}{5}x^{5} - 3x^{2} + 5x + C$\nខ. $\\dfrac{1}{3}e^{3x} + 5\\ln|x| + C$\nគ. $\\dfrac{(2x + 1)^{5}}{10} + C$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int\\dfrac{x^2+4}{x}dx$ ៖",
+            "solution": "$\\dfrac{x^2+4}{x}=x+\\dfrac{4}{x}$\n\nចម្លើយ ៖ $\\dfrac{x^2}{2}+4\\ln|x|+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p2_03"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int e^{4x+2}dx$ ៖",
+            "solution": "(e^{ax+b}) → e^{ax+b}/a\n\nចម្លើយ ៖ $\\dfrac{1}{4}e^{4x+2}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p2_08"
           }
         ]
       },
@@ -21607,6 +21727,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int \\sin 7xdx$ ៖",
+            "solution": "∫sin(kx) = −cos(kx)/k\n\nចម្លើយ ៖ $-\\dfrac{\\cos 7x}{7}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p3_01"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int \\cos 2xdx$ ៖",
+            "solution": "∫cos(kx) = sin(kx)/k\n\nចម្លើយ ៖ $\\dfrac{\\sin 2x}{2}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p3_06"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "គណនាអាំងតេក្រាលនៃ $\\sin(ax + b)$ និង $\\cos(ax + b)$ ៖",
             "question": "គណនា ៖\n\nក. $\\int \\sin 3x\\,dx$\n\nខ. $\\int \\cos\\left(2x - \\dfrac{\\pi}{3}\\right)dx$",
@@ -21615,7 +21755,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-6-1-p2-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាព្រីមីទីវ $\\int \\cos^2 x dx$ ៖",
+            "solution": "$\\cos^2 x = \\dfrac{1 + \\cos 2x}{2} \\implies \\dfrac{x}{2} + \\dfrac{\\sin 2x}{4} + C$។\n\nចម្លើយ ៖ $\\dfrac{x}{2} + \\dfrac{\\sin 2x}{4} + C$",
+            "src": "qb-gen",
+            "qid": "q_g12_0705"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int \\sin(4x+3)dx$ ៖",
+            "solution": "វិធានខ្សែច្រវាក់បញ្ច្រាស\n\nចម្លើយ ៖ $-\\dfrac{\\cos(4x+3)}{4}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p3_18"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "បំប្លែងកន្សោមត្រីកោណមាត្រ មុនគណនាអាំងតេក្រាល ៖",
@@ -21623,9 +21783,29 @@
             "rubric": "ក. $\\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C$ (០.៤ ពិន្ទុ) | ខ. $-\\dfrac{\\cos 2x}{4} + C$ (០.៣ ពិន្ទុ) | គ. $\\tan x - x + C$ (០.៣ ពិន្ទុ)",
             "question": "ក. ប្រើ $\\sin^2 x = \\dfrac{1 - \\cos 2x}{2}$ គណនា $\\int \\sin^2 x\\,dx$។\n\nខ. គណនា $\\int \\sin x\\cos x\\,dx$ (ប្រើ $\\sin 2x = 2\\sin x\\cos x$)។\n\nគ. គណនា $\\int \\tan^2 x\\,dx$ (ប្រើ $1 + \\tan^2 x = \\dfrac{1}{\\cos^2 x}$)។",
             "solution": "ក. $\\int \\sin^2 x\\,dx = \\int \\dfrac{1 - \\cos 2x}{2}\\,dx = \\dfrac{x}{2} - \\dfrac{\\sin 2x}{4} + C$។\n\nខ. $\\int \\sin x\\cos x\\,dx = \\int \\dfrac{\\sin 2x}{2}\\,dx = -\\dfrac{\\cos 2x}{4} + C$។\n\nគ. $\\int \\tan^2 x\\,dx = \\int \\left(\\dfrac{1}{\\cos^2 x} - 1\\right)dx = \\tan x - x + C$។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int 2\\cos 2x\\,dx$ ៖",
+            "solution": "$\\int \\cos 2x\\,dx = \\dfrac{1}{2}\\sin 2x$ នាំឱ្យ $\\int 2\\cos 2x\\,dx = \\sin 2x + C$។\n\nចម្លើយ ៖ $\\sin 2x + C$",
+            "src": "qb-gen",
+            "qid": "q_g12_0708s"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int\\dfrac{1}{\\cos^2 5x}dx$ ៖",
+            "solution": "(tan kx)' = k/cos²(kx)\n\nចម្លើយ ៖ $\\dfrac{\\tan 5x}{5}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p3_12"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>សមីការស្តង់ដាកំពូល $V(h, k)$ ៖</strong></div>\n<ul class=\"ws-sum-list\">\n  <li class=\"ws-sum-item\">$(y - k)^2 = 4p(x - h)$ (អ័ក្សដេក, កំណុំ $(h+p, k)$, បន្ទាត់ប្រាប់ទិស $x = h - p$)</li>\n  <li class=\"ws-sum-item\">$(x - h)^2 = 4p(y - k)$ (អ័ក្សឈរ, កំណុំ $(h, k+p)$, បន្ទាត់ប្រាប់ទិស $y = k - p$)</li>\n</ul>"
       },
       {
@@ -21646,6 +21826,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int xe^{x}dx$ ដោយផ្នែក ៖",
+            "solution": "u=x, v'=e^{kx}\n\nចម្លើយ ៖ $(x-1)e^x+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p4_01"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int 2xe^{x^2+3}dx$ ដោយប្តូរអថេរ ៖",
+            "solution": "u = x²+k, du = 2x dx\n\nចម្លើយ ៖ $e^{x^2+3}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p4_06"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "instruction": "គណនាអាំងតេក្រាលដោយផ្នែក ៖",
             "question": "គណនាដោយផ្នែក ៖ $\\int x e^{x}\\,dx$",
@@ -21654,7 +21854,27 @@
             "points": 1.0
           },
           {
-            "id": "ex-les-g12a-6-1-p3-3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាព្រីមីទីវ $I = \\int x \\sin x dx$ ដោយផ្នែក ៖",
+            "solution": "តាង $u = x \\implies du = dx; dv = \\sin x dx \\implies v = -\\cos x$។ $I = -x\\cos x - \\int(-\\cos x)dx = -x\\cos x + \\sin x + C$។\n\nចម្លើយ ៖ $-x\\cos x + \\sin x + C$",
+            "src": "qb-gen",
+            "qid": "q_g12_0713"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int \\cos x(\\sin x+3)^{3}dx$ ដោយប្តូរអថេរ ៖",
+            "solution": "u = sin x, du = cos x dx\n\nចម្លើយ ៖ $\\dfrac{(\\sin x+3)^{4}}{4}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p4_15"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "title": "លំហាត់អនុវត្តកម្រិតខ្ពស់ និងដោះស្រាយបញ្ហាស៊ីជម្រៅ (ប្រឡងបាក់ឌុប)",
             "instruction": "ជ្រើសវិធីប្តូរអថេរ ឬដោយផ្នែក ៖",
@@ -21662,9 +21882,29 @@
             "rubric": "ក. $\\dfrac{(\\ln x)^2}{2} + C$ (០.៣ ពិន្ទុ) | ខ. $x\\sin x + \\cos x + C$ (០.៤ ពិន្ទុ) | គ. $x\\ln x - x + C$ (០.៣ ពិន្ទុ)",
             "question": "ក. គណនា $\\int \\dfrac{\\ln x}{x}\\,dx$ (តាង $u = \\ln x$)។\n\nខ. គណនា $\\int x\\cos x\\,dx$ ដោយផ្នែក។\n\nគ. គណនា $\\int \\ln x\\,dx$ ដោយផ្នែក។",
             "solution": "ក. $u = \\ln x \\Rightarrow du = \\dfrac{dx}{x}$ ៖ $\\int u\\,du = \\dfrac{u^2}{2} + C = \\dfrac{(\\ln x)^2}{2} + C$។\n\nខ. $u = x, dv = \\cos x\\,dx \\Rightarrow v = \\sin x$ ៖ $\\int x\\cos x\\,dx = x\\sin x - \\int \\sin x\\,dx = x\\sin x + \\cos x + C$។\n\nគ. $u = \\ln x, dv = dx \\Rightarrow v = x$ ៖ $\\int \\ln x\\,dx = x\\ln x - \\int x \\cdot \\dfrac{1}{x}\\,dx = x\\ln x - x + C$។"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនាព្រីមីទីវ $\\int \\arctan x dx$ ដោយផ្នែក ៖",
+            "solution": "តាង $u = \\arctan x \\implies du = \\dfrac{dx}{1+x^2}; dv = dx \\implies v = x$។ $I = x\\arctan x - \\int \\dfrac{x}{1+x^2} dx = x\\arctan x - \\frac{1}{2}\\ln(1+x^2) + C$។\n\nចម្លើយ ៖ $x \\arctan x - \\dfrac{1}{2}\\ln(1 + x^2) + C$",
+            "src": "qb-gen",
+            "qid": "q_g12_0718"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int x\\cos x dx$ ដោយផ្នែក ៖",
+            "solution": "u=x, v'=cos kx\n\nចម្លើយ ៖ $\\dfrac{x\\sin x}{1}+\\dfrac{\\cos x}{1}+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p4_11"
           }
         ],
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "<div class=\"ws-sum-text\"><strong>សមីការទូទៅនៃប៉ារ៉ាបូល ៖</strong> $Ax^2 + Dx + Ey + F = 0$ ឬ $Cy^2 + Dx + Ey + F = 0$ ($AE = 0$ ឬ $CD = 0$)។ អនុវត្តក្នុងកញ្ចក់ឆ្លុះអុបទិក និងចានផ្កាយរណប។</div>"
       },
       {
@@ -21673,7 +21913,7 @@
         "pointTitle": "ចំណុចទី ៥ ៖ គណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
         "topic": "$\\int \\dfrac{u'}{u}dx = \\ln|u| + C$",
         "objective": "យល់ និងអនុវត្តគណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - $\\int \\dfrac{u'}{u}dx = \\ln|u| + C$\n  - បំបែកជាប្រភាគសាមញ្ញ ៖ $\\dfrac{1}{(x - p)(x - q)} = \\dfrac{1}{p - q}\\left(\\dfrac{1}{x - p} - \\dfrac{1}{x - q}\\right)$",
         "exercises": [
           {
@@ -21687,6 +21927,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int\\dfrac{5}{x+6}dx$ ៖",
+            "solution": "∫k/(x+a) = k ln|x+a|\n\nចម្លើយ ៖ $5\\ln|x+6|+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p5_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int\\dfrac{5}{x+3}dx$ ៖",
+            "solution": "∫k/(x+a) = k ln|x+a|\n\nចម្លើយ ៖ $5\\ln|x+3|+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p5_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរគណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន ៖",
@@ -21695,13 +21955,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int \\dfrac{2x - 4}{x^2 - 4x + 3}\\,dx$ ៖",
+            "solution": "ភាគយកជាដេរីវេនៃភាគបែង ⇒ $\\int \\dfrac{u'}{u}dx = \\ln|u| + C$។\n\nចម្លើយ ៖ $\\ln|x^2 - 4x + 3| + C$",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-6-1_5_19"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int \\dfrac{2x + 4}{x^2 + 4x + 1}\\,dx$ ៖",
+            "solution": "ភាគយកជាដេរីវេនៃភាគបែង ⇒ $\\int \\dfrac{u'}{u}dx = \\ln|u| + C$។\n\nចម្លើយ ៖ $\\ln|x^2 + 4x + 1| + C$",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-6-1_5_24"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរគណនាអាំងតេក្រាលនៃអនុគមន៍សនិទាន ៖",
             "question": "ក. គណនា $\\int \\dfrac{4}{x + 3}\\,dx$។\nខ. គណនា $\\int \\dfrac{2x + 4}{x^2 + 4x + 3}\\,dx$។\nគ. កំណត់ $A, B$ ដែល $\\dfrac{1}{(x - 1)(x - 2)} = \\dfrac{A}{x - 1} + \\dfrac{B}{x - 2}$ រួចគណនា $\\int \\dfrac{1}{(x - 1)(x - 2)}\\,dx$។",
             "solution": "ក. $4\\ln|x + 3| + C$\nខ. $\\ln|x^2 + 4x + 3| + C$\nគ. $A = -1 , B = 1$ ⇒ $-\\ln\\left|\\dfrac{x - 1}{x - 2}\\right| + C$",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int\\dfrac{2x+3}{x^2+3x+7}dx$ ៖",
+            "solution": "ភាគយក = ដេរីវេនៃភាគបែង\n\nចម្លើយ ៖ $\\ln(x^2+3x+7)+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p5_11"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "គណនា $\\int\\dfrac{x}{(x-2)(x-3)}dx$ (បំបែកជាប្រភាគសាមញ្ញ) ៖",
+            "solution": "$\\dfrac{x}{(x-2)(x-3)}=\\dfrac{-2}{x-2}+\\dfrac{3}{x-3}$\n\nចម្លើយ ៖ $-2\\ln|x-2|+3\\ln|x-3|+C$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p5_16"
           }
         ]
       },
@@ -21711,7 +22011,7 @@
         "pointTitle": "ចំណុចទី ៦ ៖ អនុវត្តន៍",
         "topic": "រកព្រីមីទីវតាមលក្ខខណ្ឌ និងចលនា",
         "objective": "យល់ និងអនុវត្តអនុវត្តន៍",
-        "totalPoints": 3,
+        "totalPoints": 9.0,
         "summary": "  - ព្រីមីទីវមួយផ្ទៀងផ្ទាត់លក្ខខណ្ឌ $F(x_0) = y_0$ ⇒ កំណត់ $C$\n  - $v(t) = s'(t)$ ⇒ $s(t) = \\int v(t)dt$ ; $a(t) = v'(t)$ ⇒ $v(t) = \\int a(t)dt$",
         "exercises": [
           {
@@ -21725,6 +22025,26 @@
           },
           {
             "id": "ex2",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ល្បឿន $v(t)=8t+1$ m/s និង $s(0)=2$។ ទីតាំងនៅ $t=2$ គឺ ៖",
+            "solution": "$s(t)=4t^2+t+2$\n\nចម្លើយ ៖ $20\\text{ m}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p6_03"
+          },
+          {
+            "id": "ex3",
+            "level": "កម្រិត ១ (ស្រួល / មូលដ្ឋានគ្រឹះ)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ល្បឿន $v(t)=2t+1$ m/s និង $s(0)=3$។ ទីតាំងនៅ $t=2$ គឺ ៖",
+            "solution": "$s(t)=1t^2+t+3$\n\nចម្លើយ ៖ $9\\text{ m}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p6_08"
+          },
+          {
+            "id": "ex4",
             "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
             "points": 1,
             "instruction": "ចូរអនុវត្តព្រីមីទីវ ៖",
@@ -21733,13 +22053,53 @@
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
           },
           {
-            "id": "ex3",
+            "id": "ex5",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "រកព្រីមីទីវ $F$ នៃ $f(x) = 4x - 3$ ដែល $F(-2) = 3$ ៖",
+            "solution": "$F(x) = 2x^{2} - 3x + C$ ; $F(-2) = 3$ ⇒ $C = -11$។\n\nចម្លើយ ៖ $F(x) = 2x^{2} - 3x - 11$",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-6-1_6_32"
+          },
+          {
+            "id": "ex6",
+            "level": "កម្រិត ២ (មធ្យម / ការយល់ដឹង និងអនុវត្ត)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "ចល័តមួយមានល្បឿន $v(t) = 4t + 2$ (m/s) និង $s(0) = 3$។ ទីតាំងនៅ $t = 2$ គឺ ៖",
+            "solution": "$s(t) = 2t^{2} + 2t + 3$ ⇒ $s(2) = 15$។\n\nចម្លើយ ៖ $15\\text{ m}$",
+            "src": "qb-gen",
+            "qid": "g12c_plan_g12a-6-1_6_37"
+          },
+          {
+            "id": "ex7",
             "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
             "points": 1,
             "instruction": "ចូរអនុវត្តព្រីមីទីវ ៖",
             "question": "ចល័តមួយមានសំទុះ $a(t) = 6$ (m/s²) ល្បឿនដំបូង $v(0) = 2$ និងទីតាំងដំបូង $s(0) = 2$។\nក. រក $v(t)$។\nខ. រក $s(t)$។\nគ. គណនាទីតាំងនៅ $t = 2$។",
             "solution": "ក. $v(t) = 6t + 2$\nខ. $s(t) = 3t^{2} + 2t + 2$\nគ. $s(2) = 18$ m",
             "rubric": "ក. (០.៣ ពិន្ទុ) | ខ. (០.៣ ពិន្ទុ) | គ. (០.៤ ពិន្ទុ)"
+          },
+          {
+            "id": "ex8",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សំទុះ $a(t)=6t$ m/s², $v(0)=3$ m/s និង $s(0)=1$ m។ ទីតាំងនៅ $t=3$ គឺ ៖",
+            "solution": "$v=3t^2+3,\\ s=1t^3+3t+1$\n\nចម្លើយ ៖ $37\\text{ m}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p6_13"
+          },
+          {
+            "id": "ex9",
+            "level": "កម្រិត ៣ (ពិបាក / គិតស៊ីជម្រៅ និងដោះស្រាយបញ្ហា)",
+            "points": 1.0,
+            "instruction": "ដោះស្រាយ ៖",
+            "question": "សំទុះ $a(t)=24t$ m/s², $v(0)=1$ m/s និង $s(0)=1$ m។ ទីតាំងនៅ $t=1$ គឺ ៖",
+            "solution": "$v=12t^2+1,\\ s=4t^3+1t+1$\n\nចម្លើយ ៖ $6\\text{ m}$",
+            "src": "qb-gen",
+            "qid": "q_les_g12a_6_1_p6_18"
           }
         ]
       }
