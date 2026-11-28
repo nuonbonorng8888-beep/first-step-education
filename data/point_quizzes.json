@@ -88561,12 +88561,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "ក្នុងវិធីចែកពហុធា $A(x) = B(x) \\cdot Q(x) + R(x)$ តើដឺក្រេនៃសំណល់ $R(x)$ ត្រូវយ៉ាងណាធៀបនឹងតួចែក $B(x)$?",
         "options": [
-          "$\\text{ដឺក្រេ}(R) < \\text{ដឺក្រេ}(B)$",
-          "$\\text{ដឺក្រេ}(R) > \\text{ដឺក្រេ}(B)$",
           "$\\text{ដឺក្រេ}(R) \\le \\text{ដឺក្រេ}(B)$",
-          "$\\text{ដឺក្រេ}(R) = \\text{ដឺក្រេ}(B)$"
+          "$\\text{ដឺក្រេ}(R) = \\text{ដឺក្រេ}(B)$",
+          "$\\text{ដឺក្រេ}(R) > \\text{ដឺក្រេ}(B)$",
+          "$\\text{ដឺក្រេ}(R) < \\text{ដឺក្រេ}(B)$"
         ],
-        "correct": 0,
+        "correct": 3,
         "explanation": "ដឺក្រេនៃសំណល់ $R(x)$ ត្រូវតែតូចជាងដឺក្រេនៃតួចែក $B(x)$ ដាច់ខាត។"
       },
       {
@@ -88578,11 +88578,11 @@
         "question": "រកផលចែកនៃ $(6x^3 - 4x^2 + 2x) \\div (2x)$ ៖",
         "options": [
           "$12x^4 - 8x^3 + 4x^2$",
-          "$3x^2 - 2x$",
           "$3x^2 - 2x + 1$",
+          "$3x^2 - 2x$",
           "$3x^3 - 2x^2 + x$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "$\\dfrac{6x^3}{2x} - \\dfrac{4x^2}{2x} + \\dfrac{2x}{2x} = 3x^2 - 2x + 1$។"
       },
       {
@@ -88593,12 +88593,12 @@
         "level": "កម្រិត 1 (ងាយ)",
         "question": "រកសំណល់នៃការចែក $(x^2 + 5x + 7) \\div (x + 2)$ ៖",
         "options": [
-          "$-1$",
-          "$1$",
+          "$3$",
           "$7$",
-          "$3$"
+          "$1$",
+          "$-1$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "$x^2 + 5x + 7 = (x + 2)(x + 3) + 1$ នាំឱ្យសំណល់គឺ $R = 1$។"
       },
       {
@@ -88606,16 +88606,16 @@
         "questionNumber": 4,
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ការចែកពហុធា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកផលចែក $Q(x)$ នៃការចែក $(2x^3 - 3x^2 + 4x - 5) \\div (x - 1)$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "វិធីចែកតាមកាត់ (ហ័រណឺ) ត្រូវបានប្រើប្រាស់ងាយស្រួលបំផុតនៅពេលតួចែកមានទម្រង់ណា?",
         "options": [
-          "$2x^2 + x + 3$",
-          "$2x^2 - 5x + 9$",
-          "$2x^2 - x - 3$",
-          "$2x^2 - x + 3$"
+          "$x - c$",
+          "$ax^3 + b$",
+          "$ax^2 + bx + c$",
+          "$x^3 - c$"
         ],
-        "correct": 3,
-        "explanation": "ចែកតាមលំដាប់ ៖ $\\dfrac{2x^3}{x} = 2x^2$, $-\\dfrac{x^2}{x} = -x$, $\\dfrac{3x}{x} = 3$ ផលចែកគឺ $2x^2 - x + 3$។"
+        "correct": 0,
+        "explanation": "ដ្យាក្រាមហ័រណឺ (Horner's Scheme) ត្រូវបានប្រើសម្រាប់ការចែកនឹងទ្វេធាដឺក្រេទីមួយ $x - c$។"
       },
       {
         "id": "q5",
@@ -88623,15 +88623,15 @@
         "pointNumber": 1,
         "pointTitle": "ចំណុចទី ១ ៖ ការចែកពហុធា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកសំណល់នៃការចែកពហុធានៅសំណួរទី ៤ $(2x^3 - 3x^2 + 4x - 5) \\div (x - 1)$ ៖",
+        "question": "រកផលចែក $Q(x)$ នៃការចែក $(2x^3 - 3x^2 + 4x - 5) \\div (x - 1)$ ៖",
         "options": [
-          "$2$",
-          "$-5$",
-          "$0$",
-          "$-2$"
+          "$2x^2 - x + 3$",
+          "$2x^2 - 5x + 9$",
+          "$2x^2 + x + 3$",
+          "$2x^2 - x - 3$"
         ],
-        "correct": 3,
-        "explanation": "$R = P(1) = 2(1)^3 - 3(1)^2 + 4(1) - 5 = 2 - 3 + 4 - 5 = -2$។"
+        "correct": 0,
+        "explanation": "ចែកតាមលំដាប់ ៖ $\\dfrac{2x^3}{x} = 2x^2$, $-\\dfrac{x^2}{x} = -x$, $\\dfrac{3x}{x} = 3$ ផលចែកគឺ $2x^2 - x + 3$។"
       },
       {
         "id": "q6",
@@ -88642,9 +88642,9 @@
         "question": "បើ $P(x)$ មានដឺក្រេ 5 និង $Q(x)$ មានដឺក្រេ 2 តើផលចែក $P(x) \\div Q(x)$ មានដឺក្រេប៉ុន្មាន?",
         "options": [
           "$3$",
-          "$2.5$",
+          "$7$",
           "$10$",
-          "$7$"
+          "$2.5$"
         ],
         "correct": 0,
         "explanation": "ដឺក្រេនៃផលចែកគឺ $\\text{ដឺក្រេ}(P) - \\text{ដឺក្រេ}(Q) = 5 - 2 = 3$។"
@@ -88657,12 +88657,12 @@
         "level": "កម្រិត 2 (មធ្យម)",
         "question": "ធ្វើវិធីចែក $(x^3 - 1) \\div (x - 1)$ ទទួលបានផលចែក ៖",
         "options": [
-          "$x^2 - 1$",
           "$x^2 - x + 1$",
           "$x^2 + x + 1$",
-          "$(x - 1)^2$"
+          "$(x - 1)^2$",
+          "$x^2 - 1$"
         ],
-        "correct": 2,
+        "correct": 1,
         "explanation": "តាមរូបមន្តផលដកគូប ៖ $x^3 - 1 = (x - 1)(x^2 + x + 1)$ ផលចែកគឺ $x^2 + x + 1$ (សំណល់ 0)។"
       },
       {
@@ -88673,12 +88673,12 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "រកផលចែក និងសំណល់នៃ $(x^4 - 3x^2 + 2) \\div (x^2 - 2)$ ៖",
         "options": [
-          "ផលចែក $x^2 - 1$, សំណល់ $2$",
-          "ផលចែក $x^2 - 1$, សំណល់ $0$",
           "ផលចែក $x^2 + 1$, សំណល់ $4$",
-          "ផលចែក $x^2 - 5$, សំណល់ $-8$"
+          "ផលចែក $x^2 - 1$, សំណល់ $2$",
+          "ផលចែក $x^2 - 5$, សំណល់ $-8$",
+          "ផលចែក $x^2 - 1$, សំណល់ $0$"
         ],
-        "correct": 1,
+        "correct": 3,
         "explanation": "$x^4 - 3x^2 + 2 = (x^2 - 2)(x^2 - 1) + 0$ នាំឱ្យផលចែកគឺ $x^2 - 1$ និងសំណល់ $0$។"
       },
       {
@@ -88689,12 +88689,12 @@
         "level": "កម្រិត 3 (លំបាក)",
         "question": "កំណត់តម្លៃ $m$ ដើម្បីឱ្យ $2x^3 - x^2 + mx - 6$ ចែកដាច់នឹង $x - 2$ ៖",
         "options": [
-          "$3$",
-          "$-3$",
+          "$6$",
           "$-6$",
-          "$6$"
+          "$-3$",
+          "$3$"
         ],
-        "correct": 1,
+        "correct": 2,
         "explanation": "ចែកដាច់ $\\iff P(2) = 0 \\implies 2(8) - 4 + 2m - 6 = 0 \\iff 16 - 10 + 2m = 0 \\iff 2m = -6 \\implies m = -3$។"
       },
       {
@@ -88720,68 +88720,64 @@
         "questionNumber": 1,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកពហុគុណរួមតូចបំផុត (ព.រ.ត.) នៃឯកធា $A = 15xy$ និង $B = 25x^{2}y^{3}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រកតួចែករួមធំបំផុត (ត.រ.ធ.) នៃឯកធា $A=6x^{4}y^{2},\\ B=9x^{3}y^{4}$ ៖",
         "options": [
-          "$75x^{2}y^{3}$",
-          "$75xy$",
-          "$5xy$",
-          "$375x^{2}y^{3}$"
+          "$x^{3}y^{2}$",
+          "$2x^{3}y^{2}$",
+          "$6x^{3}y^{2}$",
+          "$3x^{3}y^{2}$"
         ],
-        "correct": 0,
-        "explanation": "យកពហុគុណរួមតូចបំផុតនៃមេគុណ $75$ និងគ្រប់អថេរដែលមាននិទស្សន្តធំបំផុត ⇒ $75x^{2}y^{3}$។",
-        "src": "genpq-g10a_points"
+        "correct": 3,
+        "explanation": "ត.រ.ធ. ជាតួចែករួមមេគុណ និងអថេរស្វ័យគុណតូច"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកតួចែករួមធំបំផុត (ត.រ.ធ.) នៃឯកធា $A = 6x^{3}y$ និង $B = 9x^{2}y^{3}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រកពហុគុណរួមតូចបំផុត (ព.រ.ត.) នៃឯកធា $A=4xy,\\ B=14xy^{3}$ ៖",
         "options": [
-          "$18x^{3}y^{3}$",
-          "$3x^{3}y^{3}$",
-          "$3x^{2}y$",
-          "$54x^{2}y$"
+          "$26xy^{3}$",
+          "$29xy^{3}$",
+          "$-28xy^{3}$",
+          "$28xy^{3}$"
         ],
-        "correct": 2,
-        "explanation": "យកតួចែករួមធំបំផុតនៃមេគុណ $3$ និងអថេររួមដែលមាននិទស្សន្តតូចបំផុត ⇒ $3x^{2}y$។",
-        "src": "genpq-g10a_points"
+        "correct": 3,
+        "explanation": "ព.រ.ត. ជាពហុគុណរួមមេគុណ និងអថេរស្វ័យគុណធំ"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកតួចែករួមធំបំផុត (ត.រ.ធ.) នៃឯកធា $A = 14x^{4}y^{4}$ និង $B = 21x^{4}y$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រកតួចែករួមធំបំផុត (ត.រ.ធ.) នៃឯកធា $A=18x^{2}y^{2},\\ B=30x^{4}y^{2}$ ៖",
         "options": [
-          "$7x^{4}y^{4}$",
-          "$42x^{4}y^{4}$",
-          "$294x^{4}y$",
-          "$7x^{4}y$"
+          "$8x^{2}y^{2}$",
+          "$12x^{2}y^{2}$",
+          "$6x^{2}y^{2}$",
+          "$7x^{2}y^{2}$"
         ],
-        "correct": 3,
-        "explanation": "យកតួចែករួមធំបំផុតនៃមេគុណ $7$ និងអថេររួមដែលមាននិទស្សន្តតូចបំផុត ⇒ $7x^{4}y$។",
-        "src": "genpq-g10a_points"
+        "correct": 2,
+        "explanation": "ត.រ.ធ. ជាតួចែករួមមេគុណ និងអថេរស្វ័យគុណតូច"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រក ត.រ.ធ. នៃ $A = x^2 - 1$ និង $B = x^2 + 3x + 2$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "រកពហុគុណរួមតូចបំផុត (ព.រ.ត.) នៃឯកធា $A=4x^{3}y,\\ B=14xy^{2}$ ៖",
         "options": [
-          "$1$",
-          "$x + 1$",
-          "$x + 2$",
-          "$x - 1$"
+          "$28x^{3}y^{2}$",
+          "$-28x^{3}y^{2}$",
+          "$56x^{3}y^{2}$",
+          "$26x^{3}y^{2}$"
         ],
-        "correct": 1,
-        "explanation": "$A = (x + 1)(x - 1)$ ; $B = (x + 1)(x + 2)$ ⇒ $\\text{ត.រ.ធ.} = x + 1$។",
-        "src": "genpq-g10a_points"
+        "correct": 0,
+        "explanation": "ព.រ.ត. ជាពហុគុណរួមមេគុណ និងអថេរស្វ័យគុណធំ"
       },
       {
         "id": "q5",
@@ -88789,16 +88785,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកពហុគុណរួមតូចបំផុត (ព.រ.ត.) នៃឯកធា $A = 10x^{2}y^{3}$ និង $B = 15x^{2}y^{4}$ ៖",
+        "question": "រកពហុគុណរួមតូចបំផុត (ព.រ.ត.) នៃឯកធា $A = 15xy$ និង $B = 25x^{2}y^{3}$ ៖",
         "options": [
-          "$30x^{2}y^{4}$",
-          "$30x^{2}y^{3}$",
-          "$5x^{2}y^{3}$",
-          "$150x^{2}y^{4}$"
+          "$375x^{2}y^{3}$",
+          "$5xy$",
+          "$75x^{2}y^{3}$",
+          "$75xy$"
         ],
-        "correct": 0,
-        "explanation": "យកពហុគុណរួមតូចបំផុតនៃមេគុណ $30$ និងគ្រប់អថេរដែលមាននិទស្សន្តធំបំផុត ⇒ $30x^{2}y^{4}$។",
-        "src": "genpq-g10a_points"
+        "correct": 2,
+        "explanation": "យកពហុគុណរួមតូចបំផុតនៃមេគុណ $75$ និងគ្រប់អថេរដែលមាននិទស្សន្តធំបំផុត ⇒ $75x^{2}y^{3}$។"
       },
       {
         "id": "q6",
@@ -88806,16 +88801,15 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកតួចែករួមធំបំផុត (ត.រ.ធ.) នៃឯកធា $A = 15xy$ និង $B = 25x^{3}y^{2}$ ៖",
+        "question": "រកតួចែករួមធំបំផុត (ត.រ.ធ.) នៃឯកធា $A = 6x^{3}y$ និង $B = 9x^{2}y^{3}$ ៖",
         "options": [
-          "$5x^{3}y^{2}$",
-          "$75x^{3}y^{2}$",
-          "$375xy$",
-          "$5xy$"
+          "$3x^{3}y^{3}$",
+          "$3x^{2}y$",
+          "$18x^{3}y^{3}$",
+          "$54x^{2}y$"
         ],
-        "correct": 3,
-        "explanation": "យកតួចែករួមធំបំផុតនៃមេគុណ $5$ និងអថេររួមដែលមាននិទស្សន្តតូចបំផុត ⇒ $5xy$។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "យកតួចែករួមធំបំផុតនៃមេគុណ $3$ និងអថេររួមដែលមាននិទស្សន្តតូចបំផុត ⇒ $3x^{2}y$។"
       },
       {
         "id": "q7",
@@ -88823,67 +88817,63 @@
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រក ព.រ.ត. នៃ $A = (x - 1)^2(x - 3)$ និង $B = (x - 1)(x - 3)^2$ ៖",
+        "question": "រកតួចែករួមធំបំផុត (ត.រ.ធ.) នៃឯកធា $A = 14x^{4}y^{4}$ និង $B = 21x^{4}y$ ៖",
         "options": [
-          "$(x - 1)^3(x - 3)^3$",
-          "$(x - 1)(x - 3)$",
-          "$(x - 1)^2(x - 3)^2$",
-          "$(x - 1)^2(x - 3)$"
+          "$294x^{4}y$",
+          "$7x^{4}y^{4}$",
+          "$42x^{4}y^{4}$",
+          "$7x^{4}y$"
         ],
-        "correct": 2,
-        "explanation": "គ្រប់កត្តាដែលមាននិទស្សន្តធំបំផុត ⇒ $(x - 1)^2(x - 3)^2$។",
-        "src": "genpq-g10a_points"
+        "correct": 3,
+        "explanation": "យកតួចែករួមធំបំផុតនៃមេគុណ $7$ និងអថេររួមដែលមាននិទស្សន្តតូចបំផុត ⇒ $7x^{4}y$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រក ត.រ.ធ. នៃ $A = x^2 - 1$ និង $B = x^2 - 4x - 5$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រក ត.រ.ធ. នៃ $A=x^{2} + x - 12,\\ B=x^{2} + 5x + 4$ ៖",
         "options": [
-          "$x - 1$",
-          "$x + 1$",
-          "$1$",
-          "$x - 5$"
+          "$x + 4$",
+          "$-x + 4$",
+          "$x + 5$",
+          "$x + 3$"
         ],
-        "correct": 1,
-        "explanation": "$A = (x + 1)(x - 1)$ ; $B = (x + 1)(x - 5)$ ⇒ $\\text{ត.រ.ធ.} = x + 1$។",
-        "src": "genpq-g10a_points"
+        "correct": 0,
+        "explanation": "ដាក់ជាកត្តា រួចយកកត្តារួម"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រក ត.រ.ធ. នៃ $A = x^2 - 25$ និង $B = x^2 + x - 20$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រក ព.រ.ត. នៃ $A=x^{2} - 4x + 3,\\ B=x^{2} - 2x - 3$ ៖",
         "options": [
-          "$x - 5$",
-          "$1$",
-          "$x - 4$",
-          "$x + 5$"
+          "$\\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 2\\right)$",
+          "$\\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 1\\right)$",
+          "$\\left(x - 2\\right) \\left(x - 1\\right) \\left(x + 1\\right)$",
+          "$\\left(-x - 3\\right) \\left(x - 1\\right) \\left(x + 1\\right)$"
         ],
-        "correct": 3,
-        "explanation": "$A = (x + 5)(x - 5)$ ; $B = (x + 5)(x - 4)$ ⇒ $\\text{ត.រ.ធ.} = x + 5$។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "ព.រ.ត. = ផលគុណកត្តាទាំងអស់ស្វ័យគុណធំ"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 2,
         "pointTitle": "ចំណុចទី ២ ៖ តួចែករួមធំបំផុត និងពហុគុណរួមតូចបំផុតនៃពហុធា",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "រកពហុគុណរួមតូចបំផុត (ព.រ.ត.) នៃឯកធា $A = 16x^{4}y^{3}$ និង $B = 24xy^{3}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "រក ត.រ.ធ. នៃ $A=x^{2} + x - 20,\\ B=x^{2} - 16$ ៖",
         "options": [
-          "$8xy^{3}$",
-          "$48x^{4}y^{3}$",
-          "$384x^{4}y^{3}$",
-          "$48xy^{3}$"
+          "$x - 5$",
+          "$x - 4$",
+          "$-x - 4$",
+          "$x + 4$"
         ],
         "correct": 1,
-        "explanation": "យកពហុគុណរួមតូចបំផុតនៃមេគុណ $48$ និងគ្រប់អថេរដែលមាននិទស្សន្តធំបំផុត ⇒ $48x^{4}y^{3}$។",
-        "src": "genpq-g10a_points"
+        "explanation": "ដាក់ជាកត្តា រួចយកកត្តារួម"
       }
     ],
     "3": [
@@ -88892,68 +88882,64 @@
         "questionNumber": 1,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{x^2 - x - 12}{x^2 + 5x + 6}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សម្រួលប្រភាគ $\\dfrac{4x^{2} + 8x}{x^{2} + 2x}$ ៖",
         "options": [
-          "$\\dfrac{x - 4}{x + 2}$",
-          "$\\dfrac{x + 3}{x + 2}$",
-          "$\\dfrac{x + 4}{x - 2}$",
-          "$\\dfrac{x + 2}{x - 4}$"
+          "$\\dfrac{1}{4}$",
+          "$6$",
+          "$\\dfrac{4}{3}$",
+          "$4$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{(x + 3)(x - 4)}{(x + 3)(x + 2)} = \\dfrac{x - 4}{x + 2}$ (ដែល $x \\ne -3, x \\ne -2$)។",
-        "src": "genpq-g10a_points"
+        "correct": 3,
+        "explanation": "ដាក់កត្តារួមហើយសម្រួល"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{4x^2 + 20x}{x^2 - 25}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សម្រួលប្រភាគ $\\dfrac{4x^{2} - 64}{x - 4}$ ៖",
         "options": [
-          "$\\dfrac{x}{x - 5}$",
-          "$\\dfrac{4}{x - 5}$",
-          "$\\dfrac{4x}{x - 5}$",
-          "$\\dfrac{4x}{x + 5}$"
+          "$4\\left(x + 4\\right)$",
+          "$\\dfrac{1}{4\\left(x + 4\\right)}$",
+          "$\\dfrac{4\\left(x + 4\\right)}{3}$",
+          "$4\\left(x - 4\\right)$"
         ],
-        "correct": 2,
-        "explanation": "$\\dfrac{4x(x + 5)}{(x + 5)(x - 5)} = \\dfrac{4x}{x - 5}$។",
-        "src": "genpq-g10a_points"
+        "correct": 0,
+        "explanation": "$x^2-16=(x-4)(x+4)$"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{3x^2 + 3x}{x^2 - 1}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សម្រួលប្រភាគ $\\dfrac{4x^{2} + 8x}{2x^{2} + 4x}$ ៖",
         "options": [
-          "$\\dfrac{3}{x - 1}$",
-          "$\\dfrac{3x}{x - 1}$",
-          "$\\dfrac{x}{x - 1}$",
-          "$\\dfrac{3x}{x + 1}$"
+          "$\\dfrac{1}{2}$",
+          "$4$",
+          "$2$",
+          "$1$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{3x(x + 1)}{(x + 1)(x - 1)} = \\dfrac{3x}{x - 1}$។",
-        "src": "genpq-g10a_points"
+        "correct": 2,
+        "explanation": "ដាក់កត្តារួមហើយសម្រួល"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{3x^2 + 12x}{x^2 - 16}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "សម្រួលប្រភាគ $\\dfrac{2x^{2} - 32}{x - 4}$ ៖",
         "options": [
-          "$\\dfrac{3x}{x + 4}$",
-          "$\\dfrac{x}{x - 4}$",
-          "$\\dfrac{3}{x - 4}$",
-          "$\\dfrac{3x}{x - 4}$"
+          "$\\dfrac{1}{2\\left(x + 4\\right)}$",
+          "$2\\left(x + 4\\right)$",
+          "$x + 4$",
+          "$3\\left(x + 4\\right)$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{3x(x + 4)}{(x + 4)(x - 4)} = \\dfrac{3x}{x - 4}$។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "$x^2-16=(x-4)(x+4)$"
       },
       {
         "id": "q5",
@@ -88961,16 +88947,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{5x^2 - 20x}{x^2 - 16}$ ៖",
+        "question": "សម្រួលប្រភាគ $\\dfrac{x^2 - x - 12}{x^2 + 5x + 6}$ ៖",
         "options": [
-          "$\\dfrac{5}{x + 4}$",
-          "$\\dfrac{x}{x + 4}$",
-          "$\\dfrac{5x}{x + 4}$",
-          "$\\dfrac{5x}{x - 4}$"
+          "$\\dfrac{x - 4}{x + 2}$",
+          "$\\dfrac{x + 4}{x - 2}$",
+          "$\\dfrac{x + 3}{x + 2}$",
+          "$\\dfrac{x + 2}{x - 4}$"
         ],
-        "correct": 2,
-        "explanation": "$\\dfrac{5x(x - 4)}{(x - 4)(x + 4)} = \\dfrac{5x}{x + 4}$។",
-        "src": "genpq-g10a_points"
+        "correct": 0,
+        "explanation": "$\\dfrac{(x + 3)(x - 4)}{(x + 3)(x + 2)} = \\dfrac{x - 4}{x + 2}$ (ដែល $x \\ne -3, x \\ne -2$)។"
       },
       {
         "id": "q6",
@@ -88978,16 +88963,15 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{3x^2 - 9x}{x^2 - 9}$ ៖",
+        "question": "សម្រួលប្រភាគ $\\dfrac{4x^2 + 20x}{x^2 - 25}$ ៖",
         "options": [
-          "$\\dfrac{3}{x + 3}$",
-          "$\\dfrac{3x}{x + 3}$",
-          "$\\dfrac{x}{x + 3}$",
-          "$\\dfrac{3x}{x - 3}$"
+          "$\\dfrac{x}{x - 5}$",
+          "$\\dfrac{4}{x - 5}$",
+          "$\\dfrac{4x}{x + 5}$",
+          "$\\dfrac{4x}{x - 5}$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{3x(x - 3)}{(x - 3)(x + 3)} = \\dfrac{3x}{x + 3}$។",
-        "src": "genpq-g10a_points"
+        "correct": 3,
+        "explanation": "$\\dfrac{4x(x + 5)}{(x + 5)(x - 5)} = \\dfrac{4x}{x - 5}$។"
       },
       {
         "id": "q7",
@@ -88995,67 +88979,63 @@
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{5x^2 + 5x}{x^2 - 1}$ ៖",
+        "question": "សម្រួលប្រភាគ $\\dfrac{3x^2 + 3x}{x^2 - 1}$ ៖",
         "options": [
-          "$\\dfrac{5}{x - 1}$",
-          "$\\dfrac{x}{x - 1}$",
-          "$\\dfrac{5x}{x + 1}$",
-          "$\\dfrac{5x}{x - 1}$"
+          "$\\dfrac{3x}{x + 1}$",
+          "$\\dfrac{3x}{x - 1}$",
+          "$\\dfrac{3}{x - 1}$",
+          "$\\dfrac{x}{x - 1}$"
         ],
-        "correct": 3,
-        "explanation": "$\\dfrac{5x(x + 1)}{(x + 1)(x - 1)} = \\dfrac{5x}{x - 1}$។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "$\\dfrac{3x(x + 1)}{(x + 1)(x - 1)} = \\dfrac{3x}{x - 1}$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{x^2 + 3x + 2}{x^2 + 5x + 4}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សម្រួលប្រភាគ $\\dfrac{x^{2} - 25}{x^{2} + 9x + 20}$ ៖",
         "options": [
-          "$\\dfrac{x + 2}{x + 4}$",
-          "$\\dfrac{x + 1}{x + 4}$",
-          "$\\dfrac{x - 2}{x - 4}$",
-          "$\\dfrac{x + 4}{x + 2}$"
+          "$\\dfrac{x + 4}{x - 5}$",
+          "$\\dfrac{x - 5}{x + 4}$",
+          "$\\dfrac{x - 5}{x - 4}$",
+          "$\\dfrac{x - 5}{x + 3}$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{(x + 1)(x + 2)}{(x + 1)(x + 4)} = \\dfrac{x + 2}{x + 4}$ (ដែល $x \\ne -1, x \\ne -4$)។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "ដាក់កត្តាទាំងភាគយក និងភាគបែង ហើយសម្រួលកត្តារួម"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{4x^2 + 16x}{x^2 - 16}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សម្រួលប្រភាគ $\\dfrac{x^{3} - 64}{x^{2} - 16}$ ៖",
         "options": [
-          "$\\dfrac{4x}{x - 4}$",
-          "$\\dfrac{4x}{x + 4}$",
-          "$\\dfrac{4}{x - 4}$",
-          "$\\dfrac{x}{x - 4}$"
+          "$\\dfrac{x + 4}{x^{2} + 4x + 16}$",
+          "$\\dfrac{x^{2} + 4x + 16}{x + 4}$",
+          "$\\dfrac{x^{2} + 4x - 16}{x + 4}$",
+          "$\\dfrac{x^{2} + 4x + 17}{x + 4}$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{4x(x + 4)}{(x + 4)(x - 4)} = \\dfrac{4x}{x - 4}$។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "ប្រើសមភាពគួរឱ្យកត់សម្គាល់"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 3,
         "pointTitle": "ចំណុចទី ៣ ៖ ការសម្រួលប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "សម្រួលប្រភាគ $\\dfrac{x^2 + x - 6}{x^2 - x - 2}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "សម្រួលប្រភាគ $\\dfrac{x^{2} + 2x - 3}{x^{2} - 6x + 5}$ ៖",
         "options": [
-          "$\\dfrac{x + 1}{x + 3}$",
-          "$\\dfrac{x - 2}{x + 1}$",
-          "$\\dfrac{x - 3}{x - 1}$",
-          "$\\dfrac{x + 3}{x + 1}$"
+          "$\\dfrac{x - 5}{x + 3}$",
+          "$\\dfrac{x + 3}{-x - 5}$",
+          "$\\dfrac{-x + 3}{x - 5}$",
+          "$\\dfrac{x + 3}{x - 5}$"
         ],
         "correct": 3,
-        "explanation": "$\\dfrac{(x - 2)(x + 3)}{(x - 2)(x + 1)} = \\dfrac{x + 3}{x + 1}$ (ដែល $x \\ne 2, x \\ne -1$)។",
-        "src": "genpq-g10a_points"
+        "explanation": "ដាក់កត្តាទាំងភាគយក និងភាគបែង ហើយសម្រួលកត្តារួម"
       }
     ],
     "4": [
@@ -89064,68 +89044,64 @@
         "questionNumber": 1,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{x^2 - 9}{x + 4} \\times \\dfrac{x + 4}{x - 3}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\dfrac{x+2}{x-4}\\times\\dfrac{x-4}{x+3}$ ៖",
         "options": [
-          "$x - 3$",
-          "$x + 3$",
-          "$(x + 3)^2$",
-          "$\\dfrac{1}{x + 3}$"
+          "$\\dfrac{x + 3}{x + 2}$",
+          "$1$",
+          "$\\dfrac{x + 1}{x + 3}$",
+          "$\\dfrac{x + 2}{x + 3}$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{(x - 3)(x + 3)}{x + 4} \\times \\dfrac{x + 4}{x - 3} = x + 3$។",
-        "src": "genpq-g10a_points"
+        "correct": 3,
+        "explanation": "សម្រួលកត្តារួម"
       },
       {
         "id": "q2",
         "questionNumber": 2,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{2x}{x - 1} \\div \\dfrac{x}{x^2 - 1}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\dfrac{x^2-1}{x+3}\\div\\dfrac{x-1}{x+4}$ ៖",
         "options": [
-          "$2x(x + 1)$",
-          "$2(x - 1)$",
-          "$\\dfrac{2}{x + 1}$",
-          "$2(x + 1)$"
+          "$\\dfrac{x + 3}{\\left(x + 1\\right) \\left(x + 4\\right)}$",
+          "$\\dfrac{\\left(x + 1\\right) \\left(x + 4\\right)}{x + 3}$",
+          "$\\dfrac{\\left(x + 1\\right) \\left(x + 4\\right)}{-x + 3}$",
+          "$\\dfrac{\\left(x - 4\\right) \\left(x + 1\\right)}{x + 3}$"
         ],
-        "correct": 3,
-        "explanation": "គុណនឹងប្រភាគច្រាស ៖ $\\dfrac{2x}{x - 1} \\times \\dfrac{(x - 1)(x + 1)}{x} = 2(x + 1)$។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "ប្តូរចែកជាគុណនឹងប្រភាគច្រាស"
       },
       {
         "id": "q3",
         "questionNumber": 3,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{3x}{x + 1} \\div \\dfrac{x}{x^2 - 1}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\dfrac{x+4}{x-2}\\times\\dfrac{x-2}{x+5}$ ៖",
         "options": [
-          "$3(x - 1)$",
-          "$3x(x - 1)$",
-          "$\\dfrac{3}{x - 1}$",
-          "$3(x + 1)$"
+          "$\\dfrac{x + 5}{x + 4}$",
+          "$\\dfrac{x + 4}{x + 5}$",
+          "$\\dfrac{x - 4}{x + 5}$",
+          "$\\dfrac{x + 4}{-x + 5}$"
         ],
-        "correct": 0,
-        "explanation": "គុណនឹងប្រភាគច្រាស ៖ $\\dfrac{3x}{x + 1} \\times \\dfrac{(x + 1)(x - 1)}{x} = 3(x - 1)$។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "សម្រួលកត្តារួម"
       },
       {
         "id": "q4",
         "questionNumber": 4,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{x^2 - 1}{x - 3} \\times \\dfrac{x - 3}{x - 1}$ ៖",
+        "level": "កម្រិត 1 (ងាយ)",
+        "question": "គណនា $\\dfrac{x^2-16}{x+3}\\div\\dfrac{x-4}{x+4}$ ៖",
         "options": [
-          "$(x + 1)^2$",
-          "$x - 1$",
-          "$x + 1$",
-          "$\\dfrac{1}{x + 1}$"
+          "$\\dfrac{x + 3}{\\left(x + 4\\right)^{2}}$",
+          "$\\dfrac{\\left(x + 4\\right)^{2}}{x - 3}$",
+          "$\\dfrac{\\left(x + 4\\right)^{2}}{x + 3}$",
+          "$x + 4$"
         ],
         "correct": 2,
-        "explanation": "$\\dfrac{(x - 1)(x + 1)}{x - 3} \\times \\dfrac{x - 3}{x - 1} = x + 1$។",
-        "src": "genpq-g10a_points"
+        "explanation": "ប្តូរចែកជាគុណនឹងប្រភាគច្រាស"
       },
       {
         "id": "q5",
@@ -89133,16 +89109,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{5x}{x - 1} \\div \\dfrac{x}{x^2 - 1}$ ៖",
+        "question": "គណនា $\\dfrac{x^2 - 9}{x + 4} \\times \\dfrac{x + 4}{x - 3}$ ៖",
         "options": [
-          "$\\dfrac{5}{x + 1}$",
-          "$5x(x + 1)$",
-          "$5(x - 1)$",
-          "$5(x + 1)$"
+          "$x + 3$",
+          "$x - 3$",
+          "$(x + 3)^2$",
+          "$\\dfrac{1}{x + 3}$"
         ],
-        "correct": 3,
-        "explanation": "គុណនឹងប្រភាគច្រាស ៖ $\\dfrac{5x}{x - 1} \\times \\dfrac{(x - 1)(x + 1)}{x} = 5(x + 1)$។",
-        "src": "genpq-g10a_points"
+        "correct": 0,
+        "explanation": "$\\dfrac{(x - 3)(x + 3)}{x + 4} \\times \\dfrac{x + 4}{x - 3} = x + 3$។"
       },
       {
         "id": "q6",
@@ -89150,16 +89125,15 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{x^2 - 16}{x + 2} \\times \\dfrac{x + 2}{x + 4}$ ៖",
+        "question": "គណនា $\\dfrac{2x}{x - 1} \\div \\dfrac{x}{x^2 - 1}$ ៖",
         "options": [
-          "$x - 4$",
-          "$\\dfrac{1}{x - 4}$",
-          "$(x - 4)^2$",
-          "$x + 4$"
+          "$\\dfrac{2}{x + 1}$",
+          "$2x(x + 1)$",
+          "$2(x + 1)$",
+          "$2(x - 1)$"
         ],
-        "correct": 0,
-        "explanation": "$\\dfrac{(x + 4)(x - 4)}{x + 2} \\times \\dfrac{x + 2}{x + 4} = x - 4$។",
-        "src": "genpq-g10a_points"
+        "correct": 2,
+        "explanation": "គុណនឹងប្រភាគច្រាស ៖ $\\dfrac{2x}{x - 1} \\times \\dfrac{(x - 1)(x + 1)}{x} = 2(x + 1)$។"
       },
       {
         "id": "q7",
@@ -89167,67 +89141,63 @@
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
         "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{x^2 - 4}{x + 2} \\times \\dfrac{x + 2}{x - 2}$ ៖",
+        "question": "គណនា $\\dfrac{3x}{x + 1} \\div \\dfrac{x}{x^2 - 1}$ ៖",
         "options": [
-          "$x - 2$",
-          "$\\dfrac{1}{x + 2}$",
-          "$x + 2$",
-          "$(x + 2)^2$"
+          "$\\dfrac{3}{x - 1}$",
+          "$3(x - 1)$",
+          "$3(x + 1)$",
+          "$3x(x - 1)$"
         ],
-        "correct": 2,
-        "explanation": "$\\dfrac{(x - 2)(x + 2)}{x + 2} \\times \\dfrac{x + 2}{x - 2} = x + 2$។",
-        "src": "genpq-g10a_points"
+        "correct": 1,
+        "explanation": "គុណនឹងប្រភាគច្រាស ៖ $\\dfrac{3x}{x + 1} \\times \\dfrac{(x + 1)(x - 1)}{x} = 3(x - 1)$។"
       },
       {
         "id": "q8",
         "questionNumber": 8,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{4}{x - 5} + \\dfrac{2}{x + 5}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\dfrac{4}{x+2}-\\dfrac{2}{x-3}$ ៖",
         "options": [
-          "$\\dfrac{6}{x^2 - 25}$",
-          "$\\dfrac{6x + 10}{x^2 - 25}$",
-          "$\\dfrac{6}{2x}$",
-          "$\\dfrac{6x - 10}{x^2 - 25}$"
+          "$\\dfrac{\\left(x - 3\\right) \\left(x + 2\\right)}{2\\left(x - 8\\right)}$",
+          "$\\dfrac{2\\left(x - 8\\right)}{\\left(x - 3\\right) \\left(x + 2\\right)}$",
+          "$\\dfrac{2\\left(x - 8\\right)}{\\left(x + 2\\right) \\left(x + 3\\right)}$",
+          "$\\dfrac{2\\left(x - 8\\right)}{-\\left(x + 2\\right) \\left(x + 3\\right)}$"
         ],
         "correct": 1,
-        "explanation": "ភាគបែងរួម $(x - 5)(x + 5) = x^2 - 25$ ⇒ $\\dfrac{4(x + 5) + 2(x - 5)}{x^2 - 25} = \\dfrac{6x + 10}{x^2 - 25}$។",
-        "src": "genpq-g10a_points"
+        "explanation": "ដាក់ភាគបែងរួម រួចបូក ឬដកភាគយក"
       },
       {
         "id": "q9",
         "questionNumber": 9,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{x^2 - 1}{x - 2} \\times \\dfrac{x - 2}{x + 1}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\dfrac{x^2-16}{x^{2} - 16}\\times\\dfrac{x-4}{x+4}$ ៖",
         "options": [
-          "$x + 1$",
-          "$x - 1$",
-          "$\\dfrac{1}{x - 1}$",
-          "$(x - 1)^2$"
+          "$\\dfrac{x - 4}{x + 4}$",
+          "$\\dfrac{x + 4}{x - 4}$",
+          "$1$",
+          "$\\dfrac{x - 4}{x + 5}$"
         ],
-        "correct": 1,
-        "explanation": "$\\dfrac{(x + 1)(x - 1)}{x - 2} \\times \\dfrac{x - 2}{x + 1} = x - 1$។",
-        "src": "genpq-g10a_points"
+        "correct": 0,
+        "explanation": "ដាក់កត្តាភាគយក ភាគបែង រួចសម្រួល"
       },
       {
         "id": "q10",
         "questionNumber": 10,
         "pointNumber": 4,
         "pointTitle": "ចំណុចទី ៤ ៖ ប្រមាណវិធីលើប្រភាគសនិទាន",
-        "level": "កម្រិត 2 (មធ្យម)",
-        "question": "គណនា $\\dfrac{2}{x - 5} + \\dfrac{5}{x + 5}$ ៖",
+        "level": "កម្រិត 3 (លំបាក)",
+        "question": "គណនា $\\dfrac{2}{x-3}-\\dfrac{1}{x+2}$ ៖",
         "options": [
-          "$\\dfrac{7x - 15}{x^2 - 25}$",
-          "$\\dfrac{7}{2x}$",
-          "$\\dfrac{7}{x^2 - 25}$",
-          "$\\dfrac{7x + 15}{x^2 - 25}$"
+          "$\\dfrac{x + 7}{\\left(x - 3\\right) \\left(x + 2\\right)}$",
+          "$\\dfrac{\\left(x - 3\\right) \\left(x + 2\\right)}{x + 7}$",
+          "$\\dfrac{x + 8}{\\left(x - 3\\right) \\left(x + 2\\right)}$",
+          "$\\dfrac{x + 7}{\\left(x - 2\\right) \\left(x + 2\\right)}$"
         ],
         "correct": 0,
-        "explanation": "ភាគបែងរួម $(x - 5)(x + 5) = x^2 - 25$ ⇒ $\\dfrac{2(x + 5) + 5(x - 5)}{x^2 - 25} = \\dfrac{7x - 15}{x^2 - 25}$។",
-        "src": "genpq-g10a_points"
+        "explanation": "ដាក់ភាគបែងរួម រួចបូក ឬដកភាគយក"
       }
     ]
   },
